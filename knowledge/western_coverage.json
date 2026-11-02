@@ -1,24 +1,56 @@
 {
   "technique_id": 1,
-  "status": "Researching",
+  "status": "Core v1 Ready",
   "original_rankings_preserved": true,
+  "reviewed_against": "Original inventory: Hellenistic; medieval/traditional; modern psychological; natal; transits/progressions; electional",
   "variations": [
-    {"name": "Hellenistic", "status": "unverified", "gap": "Inventory's Arroyo/Hand mapping does not establish coverage. Locate original texts and modern critical translations; Brennan site access timed out."},
-    {"name": "medieval/traditional", "status": "page_leads_found", "source_ids": ["lilly-1647"], "gap": "Inspect original pages, distinguish later annotations, verify dignities and house conventions."},
-    {"name": "modern psychological", "status": "bibliographic_lead", "source_ids": ["arroyo-handbook"], "gap": "Authorized chapter access and interpretation extraction pending."},
-    {"name": "natal", "status": "component_started", "source_ids": ["lilly-1647", "arroyo-handbook", "usno-jd"], "gap": "Only Gregorian/UT1 calendar conversion implemented. Need ephemeris, local-time handling, zodiac, houses, aspects, and sourced interpretation."},
-    {"name": "transits/progressions", "status": "publisher_scope_verified_for_transits", "source_ids": ["hand-transits"], "gap": "Progressions require independent procedural sources and timing conventions. Transit rules not extracted."},
-    {"name": "electional", "status": "unverified", "gap": "Locate dedicated procedural authority; do not infer electional coverage from natal/transit books."}
+    {
+      "name": "Hellenistic",
+      "status": "core supported",
+      "scope": "Sect, named dignity/Lots profiles, profections, Spirit/Fortune releasing L1/L2; L3/L4 experimental chronology."
+    },
+    {
+      "name": "medieval/traditional",
+      "status": "core supported",
+      "scope": "Lilly-profile conditions/reception, seven classical planets and scoped house/planet/aspect components; full historical doctrines deferred."
+    },
+    {
+      "name": "modern psychological",
+      "status": "core supported with bounded interpretations",
+      "scope": "Ten-body charts, natal sign/house/aspect components, three personal-planet symbols and 29 documented transit pair records; missing direct meanings labeled."
+    },
+    {
+      "name": "natal",
+      "status": "core supported",
+      "scope": "Offline tropical charts, six houses, time/DST, major aspects and condition/readings."
+    },
+    {
+      "name": "transits/progressions",
+      "status": "core supported",
+      "scope": "Exact transits, secondary progression conventions, progressed Moon/phase context. Solar Returns supported separately."
+    },
+    {
+      "name": "electional",
+      "status": "experimental",
+      "scope": "Partial Ramesey search and strict rejected/indeterminate traces; no certified complete election."
+    }
   ],
-  "configuration_conflicts_to_research": [
-    "Tropical versus sidereal zodiac conventions",
-    "Whole-sign versus quadrant house construction and polar handling",
-    "Aspect orbs, applying/separating rules and traditional versus modern planets",
-    "Progression timescales and time-lord techniques"
+  "configuration_matrix": "knowledge/western_core_v1.json",
+  "refinement_backlog": "knowledge/western_refinement_backlog.json",
+  "source_catalogs": [
+    "sources.json",
+    "western_rules.json",
+    "transit_rules.json",
+    "core_interpretations.json",
+    "doctrine_sources.json",
+    "progression_methods.json",
+    "zodiacal_releasing.json",
+    "electional_requirements_v2.json"
   ],
-  "library_candidates": [
-    {"name": "Swiss Ephemeris", "source_id": "swisseph-api", "decision": "Not installed. Evaluate AGPL obligations before distribution or consider alternative."},
-    {"name": "Skyfield", "url": "https://rhodesmill.org/skyfield/", "checked_on": "2026-11-02", "decision": "Official docs confirm planetary/geocentric calculations. Evaluate license, time-data handling, kernel coverage and house calculation needs before adoption."}
-  ],
-  "next_action": "Complete chapter-level traditional source checks and choose an ephemeris integration; retain separate rules for conflicting schools."
+  "verification": {
+    "regression_tests": 63,
+    "cli_smoke_cases": 23,
+    "independent_numerical_references": "Swiss/Moshier and published fixtures retained"
+  },
+  "next_action": "Commit Western closure before Technique #2 resource/variation audit."
 }

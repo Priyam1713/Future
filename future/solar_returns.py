@@ -75,7 +75,8 @@ def register_knowledge(registry):
         'return_method',{'zodiac':'tropical','precession_correction':False,'houses':'placidus'},'proposed','traditional',[]))
 
 def markdown(r):
-    c=r['return_chart'];lines=['# Solar Return — July 1990 example','',
+    c=r['return_chart'];lines=['# Solar Return','',
+        f"Natal input: {r['natal']['birth']['local']} ({r['natal']['birth']['zone']}).",
         f"Return in UTC calendar year {r['return_year_utc']}: **{r['exact_utc']}**.",
         f"Selected location: {c['birth']['latitude']}, {c['birth']['longitude']}; house system: {c['settings']['houses']}.",
         f"Solar longitude residual: {r['solar_residual_degrees']:.9f} degrees.",'',
@@ -86,5 +87,14 @@ def markdown(r):
     lines+=['','## Interpretation scope','',r['interpretation']['coverage'],
         f"[Mary Fortier Shea, FAQ 1–3]({r['interpretation']['source']}): her method is tropical, nonprecessed and Placidus; relocation changes house placements and angles.",
         'Individual planet-pair meanings remain unsupported; the JSON contains complete natal, return and aspect calculations.','']
+    reading=r.get('reading',{})
+    if reading.get('coverage')=='compositional':
+        lines+=['','## Composed return house topics','',
+            'These are separately sourced modern topics, not direct Shea planet-house book delineations.','']
+        for p in reading['placements']:
+            topics='; '.join(x['text'] for x in p['house_components'])
+            lines.append(f"- {p['planet']}, return house {p['return_house']}: {topics}.")
+            for x in p['retrograde_reading']:lines.append(f"  Retrograde context: {x['text']} ([Shea FAQ 7]({x['url']})).")
+        lines+=['','[House-topic source](https://cafeastrology.com/?da_image=houses-of-the-natal-chart).','']
     lines.extend('- '+l for l in r['limitations'])
     return '\n'.join(lines)+'\n'

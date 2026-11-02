@@ -1,6 +1,6 @@
 # Future progress
 
-Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. #1 Core v1 candidate; final closure verification pending. #2 not started before the closure commit.
+Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. **#1 Western Astrology — Core v1 Ready** (verified source/local CLI scope). #2 resource/variation audit begins only after closure is committed.
 
 ## 2026-11-02 — inventory and research pass
 - Repository was empty. Cloned the requested remote successfully through Git; connector access returns 404.
@@ -132,3 +132,10 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - All 63 tests passed, retaining 59. Runtime versions fully pinned; installed license/notice metadata and hashes audited. Source/local CLI scope only; commercial/binary/kernel redistribution and full vulnerability automation deferred explicitly. No Swiss runtime or copyrighted book ingestion.
 - Permanent root AGENTS.md now applies 80/20 gates across the inventory while preserving 54 retained/six excluded decisions, accuracy/provenance/rights and one-technique ordering.
 - Next: final complete tests/CLI smoke checks, mark Core v1 Ready if acceptance passes, commit closure, then start #2 resource/variation audit. Commit: resolve with `git log --grep="freeze Western core scope"`.
+
+## 2026-11-02 — Western Core v1 closure (80/20 Pass 2)
+- Readiness pass `adb841e` pushed. All 63 regression tests pass (42.346s), preserving all prior 59, plus 23 public CLI smoke cases; pip check and diff validation pass. Independent numerical/source fixtures retained.
+- Every command exercised: calendar/retrieval, three natal traditions and optional annual context, transit JSON/Markdown, modern/traditional progressions, relocated/alternative-house Solar Returns JSON/Markdown, doctrines, profections, both releasing Lots and experimental election profiles. Invalid DST/configuration inputs reject.
+- Fixed hardcoded July-1990 heading in generic Solar Return Markdown; added readable composed house/retrograde context. Reproducible July-1990 examples: data/core-v1-natal-1990.json, core-v1-progressions-1990.json, core-v1-return-1990.*; acceptance trace: western-core-v1-smoke.json. Run `python -m scripts.smoke_western_core` to regenerate.
+- Marked **Core v1 Ready** in matrix, completion/variation audit and technique gap tracker. This is the practical verified source/local scope, not exhaustive completion, empirical validation or binary/commercial-distribution certification. Electional certification and absolute L3/L4 chronology remain explicitly experimental; P1/P2 backlog preserves deferred work.
+- Next: after committing closure, begin #2 resource/variation audit only, in exact inventory order. No #2 implementation in this closure. Commit: resolve with `git log --grep="close Western Core v1"`.

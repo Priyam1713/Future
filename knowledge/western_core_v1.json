@@ -1,48 +1,169 @@
 {
-  "technique_id":1,
-  "name":"Western Astrology",
-  "release":"core-v1",
-  "status":"Core v1 candidate",
-  "policy":"80/20 practical scope, not measured percentage coverage or exhaustive historical completion",
-  "original_inventory_dimensions":{
-    "traditions":["Hellenistic","medieval/traditional","modern psychological"],
-    "applications":["natal","transits/progressions","electional"],
-    "note":"Original six named variations preserved as separate configurable dimensions; returns and time-lords are explicit additional applications."
+  "technique_id": 1,
+  "name": "Western Astrology",
+  "release": "core-v1",
+  "status": "Core v1 Ready",
+  "policy": "80/20 practical scope, not measured percentage coverage or exhaustive historical completion",
+  "original_inventory_dimensions": {
+    "traditions": [
+      "Hellenistic",
+      "medieval/traditional",
+      "modern psychological"
+    ],
+    "applications": [
+      "natal",
+      "transits/progressions",
+      "electional"
+    ],
+    "note": "Original six named variations preserved as separate configurable dimensions; returns and time-lords are explicit additional applications."
   },
-  "supported":{
-    "natal":{"zodiac":"tropical","positions":"apparent geocentric true ecliptic/equinox of date; outer system barycenters","rulership":"traditional only",
-      "houses":["whole-sign","equal","porphyry","placidus","regiomontanus","campanus"],
-      "aspects":[0,60,90,120,180],"orbs":"explicit configurable major-aspect orbs in [0,15) degrees",
-      "time":"Pinned IANA data; DST gaps rejected and folds explicit; UTC/TT/modeled UT1; pre-1972 proleptic UTC",
-      "dates":"Astronomical UTC/TT epochs restricted to 1850–2149; internal epochs must also fit. Not an ancient-date release.",
-      "latitude":"Whole-sign/equal: strictly between poles; quadrant systems explicitly reject abs(latitude) >= 90 - obliquity, no fallback. Broad polar interpretation not claimed.",
-      "interpretation":"Source-scoped compositional components. Modern Sun/Moon/Mercury, signs, houses and aspect themes; traditional planets/houses/aspects. Other missing components and all direct natal pair gaps explicitly labeled."},
-    "transits":{"days":"1–30 integer days; offset-aware start","features":["planet and angle contacts","configurable aspects/orbs","applying/exact/separating","retrograde repetition","chronological grouping without lost event data"],
-      "interpretation":"29 source-specific modern pair records plus exact-tradition compositional components; source gaps remain visible."},
-    "secondary_progressions":{"age":"0–150 symbolic years, including requested future window","year_keys":["tropical","julian"],
-      "angles":["none","naibod-ra","solar-arc-mc","secondary-rotation"],"windows":"1–366 integer civil days",
-      "features":["positions/retrogrades","natal/mutual aspects","sign changes","progressed Moon contacts and lunation boundaries"],
-      "interpretation":"Modern lunar-phase and natal-house context. No modern reading silently assigned to traditional profiles. Direct pair delineations deferred."},
-    "solar_returns":{"years":"1850–2148 UTC calendar year","features":["exact solar return","caller-selected location","six houses","return/natal aspects and patterns"],
-      "interpretation":"Shea nonprecessed tropical Placidus methodology, separately composed modern house topics and selected inner retrograde symbolism. No book planet-house or direct pair readings claimed."},
-    "traditional":{"profiles":["Hellenistic sect-reversing Lots/Egyptian bounds/Dorothean triplicity","medieval Lilly-profile dignities, proximity and reception"],
-      "features":["astronomical sect","essential dignities/debilities","named receptions","solar proximity","Fortune/Spirit","annual whole-sign profections and explicit birthday policy"],
-      "limits":"Geometric visibility only; no arbitrary strength score or complete historical perfection doctrine."},
-    "zodiacal_releasing":{"profile":"brennan-2019-360","lots":["Spirit","Fortune"],"core_levels":[1,2],
-      "features":["360-day years","nested half-open boundaries","single Loosing of Bond per parent","coincident-lot Spirit shift","Fortune angular relationships"],
-      "window":"Up to five civil years per query within 120 symbolic years after birth"}
+  "supported": {
+    "natal": {
+      "zodiac": "tropical",
+      "positions": "apparent geocentric true ecliptic/equinox of date; outer system barycenters",
+      "rulership": "traditional only",
+      "houses": [
+        "whole-sign",
+        "equal",
+        "porphyry",
+        "placidus",
+        "regiomontanus",
+        "campanus"
+      ],
+      "aspects": [
+        0,
+        60,
+        90,
+        120,
+        180
+      ],
+      "orbs": "explicit configurable major-aspect orbs in [0,15) degrees",
+      "time": "Pinned IANA data; DST gaps rejected and folds explicit; UTC/TT/modeled UT1; pre-1972 proleptic UTC",
+      "dates": "Astronomical UTC/TT epochs restricted to 1850–2149; internal epochs must also fit. Not an ancient-date release.",
+      "latitude": "Whole-sign/equal: strictly between poles; quadrant systems explicitly reject abs(latitude) >= 90 - obliquity, no fallback. Broad polar interpretation not claimed.",
+      "interpretation": "Source-scoped compositional components. Modern Sun/Moon/Mercury, signs, houses and aspect themes; traditional planets/houses/aspects. Other missing components and all direct natal pair gaps explicitly labeled."
+    },
+    "transits": {
+      "days": "1–30 integer days; offset-aware start",
+      "features": [
+        "planet and angle contacts",
+        "configurable aspects/orbs",
+        "applying/exact/separating",
+        "retrograde repetition",
+        "chronological grouping without lost event data"
+      ],
+      "interpretation": "29 source-specific modern pair records plus exact-tradition compositional components; source gaps remain visible."
+    },
+    "secondary_progressions": {
+      "age": "0–150 symbolic years, including requested future window",
+      "year_keys": [
+        "tropical",
+        "julian"
+      ],
+      "angles": [
+        "none",
+        "naibod-ra",
+        "solar-arc-mc",
+        "secondary-rotation"
+      ],
+      "windows": "1–366 integer civil days",
+      "features": [
+        "positions/retrogrades",
+        "natal/mutual aspects",
+        "sign changes",
+        "progressed Moon contacts and lunation boundaries"
+      ],
+      "interpretation": "Modern lunar-phase and natal-house context. No modern reading silently assigned to traditional profiles. Direct pair delineations deferred."
+    },
+    "solar_returns": {
+      "years": "1850–2148 UTC calendar year",
+      "features": [
+        "exact solar return",
+        "caller-selected location",
+        "six houses",
+        "return/natal aspects and patterns"
+      ],
+      "interpretation": "Shea nonprecessed tropical Placidus methodology, separately composed modern house topics and selected inner retrograde symbolism. No book planet-house or direct pair readings claimed."
+    },
+    "traditional": {
+      "profiles": [
+        "Hellenistic sect-reversing Lots/Egyptian bounds/Dorothean triplicity",
+        "medieval Lilly-profile dignities, proximity and reception"
+      ],
+      "features": [
+        "astronomical sect",
+        "essential dignities/debilities",
+        "named receptions",
+        "solar proximity",
+        "Fortune/Spirit",
+        "annual whole-sign profections and explicit birthday policy"
+      ],
+      "limits": "Geometric visibility only; no arbitrary strength score or complete historical perfection doctrine."
+    },
+    "zodiacal_releasing": {
+      "profile": "brennan-2019-360",
+      "lots": [
+        "Spirit",
+        "Fortune"
+      ],
+      "core_levels": [
+        1,
+        2
+      ],
+      "features": [
+        "360-day years",
+        "nested half-open boundaries",
+        "single Loosing of Bond per parent",
+        "coincident-lot Spirit shift",
+        "Fortune angular relationships"
+      ],
+      "window": "Up to five civil years per query within 120 symbolic years after birth"
+    }
   },
-  "experimental":{
-    "electional":"Ramesey unused-money retention and rapid-use partial searches only; diagnostics/classifications retained. No complete eligible election certified; source-incomplete candidates stay indeterminate.",
-    "releasing_L3_L4":"Calculation retained and table/unit/boundary tests pass; published absolute L3/L4 chronology not independently verified."
+  "experimental": {
+    "electional": "Ramesey unused-money retention and rapid-use partial searches only; diagnostics/classifications retained. No complete eligible election certified; source-incomplete candidates stay indeterminate.",
+    "releasing_L3_L4": "Calculation retained and table/unit/boundary tests pass; published absolute L3/L4 chronology not independently verified."
   },
-  "unsupported":["sidereal zodiac / modern rulership selection","ancient/Egyptian calendar reconstruction","full observed heliacal visibility","primary directions","complete electional certification","unlicensed textbook ingestion","empirical personal-event probabilities"],
-  "acceptance_criteria":[
-    {"id":"regression","requirement":"All existing 59 tests and targeted additions pass; retain independent astronomical fixtures","status":"pending final closure"},
-    {"id":"cli","requirement":"JSON smoke tests for every public calculation command and Markdown forecast/return/releasing outputs","status":"pending final closure"},
-    {"id":"scope","requirement":"Supported/experimental/unsupported matrix, source isolation and P1/P2 backlog frozen","status":"defined"},
-    {"id":"rights","requirement":"Pinned runtime metadata/notices audited; no prohibited runtime or full-text distribution introduced","status":"passed for local/source scope"}
+  "unsupported": [
+    "sidereal zodiac / modern rulership selection",
+    "ancient/Egyptian calendar reconstruction",
+    "full observed heliacal visibility",
+    "primary directions",
+    "complete electional certification",
+    "unlicensed textbook ingestion",
+    "empirical personal-event probabilities"
   ],
-  "numerical_precision":"Root brackets and fixture tolerances are documented per module; neither equals birth-time certainty or predictive validity.",
-  "refinement_backlog":"knowledge/western_refinement_backlog.json"
+  "acceptance_criteria": [
+    {
+      "id": "regression",
+      "requirement": "All existing 59 tests and targeted additions pass; retain independent astronomical fixtures",
+      "status": "passed"
+    },
+    {
+      "id": "cli",
+      "requirement": "JSON smoke tests for every public calculation command and Markdown forecast/return/releasing outputs",
+      "status": "passed"
+    },
+    {
+      "id": "scope",
+      "requirement": "Supported/experimental/unsupported matrix, source isolation and P1/P2 backlog frozen",
+      "status": "passed"
+    },
+    {
+      "id": "rights",
+      "requirement": "Pinned runtime metadata/notices audited; no prohibited runtime or full-text distribution introduced",
+      "status": "passed"
+    }
+  ],
+  "numerical_precision": "Root brackets and fixture tolerances are documented per module; neither equals birth-time certainty or predictive validity.",
+  "refinement_backlog": "knowledge/western_refinement_backlog.json",
+  "acceptance_evidence": {
+    "tests": 63,
+    "prior_tests_retained": 59,
+    "cli_smoke_cases": 23,
+    "pip_check": "No broken requirements found",
+    "readiness_commit": "adb841e",
+    "smoke_report": "data/western-core-v1-smoke.json",
+    "closure": "Resolve commit with git log --grep='close Western Core v1'"
+  }
 }

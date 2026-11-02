@@ -1,8 +1,8 @@
 {
   "technique_id": 1,
   "date": "2026-11-02",
-  "status": "Core v1 candidate",
-  "basis": "80/20 directive supersedes exhaustive completion. Original inventory traditions/applications reviewed; source/local release scope frozen in western_core_v1.json. No Technique #2 work before closure.",
+  "status": "Core v1 Ready",
+  "basis": "Practical 80/20 source/local CLI release; supported matrix and P1/P2 refinements frozen. Exhaustive historical coverage is explicitly not claimed.",
   "variation_audit": [
     {
       "variation": "natal",
@@ -42,8 +42,8 @@
     "Complete lightweight dependency/rights audit for the source/local release scope."
   ],
   "next_assessments": [
-    "Finish Core v1 acceptance/CLI smoke checks and commit closure.",
-    "After closure commit, begin Technique #2 resource and variation audit; do not implement it during Western closure."
+    "After this closure is committed, begin Technique #2 in exact inventory order with resource/variation audit.",
+    "Revisit Western P1/P2 refinement according to ROI; electional certification and L3/L4 chronology remain experimental/deferred."
   ],
   "out_of_scope": "Horary question-chart interpretation remains Technique 5. No supernatural access or empirical predictive accuracy is claimed.",
   "procedure_status": [
@@ -170,8 +170,10 @@
   "validation": {
     "test_count": 63,
     "prior_tests_retained": 59,
-    "status": "Pass 1: all 63 tests passed; final closure smoke checks pending",
-    "election_commit": "fe4b3d9"
+    "status": "passed",
+    "cli_smoke_cases": 23,
+    "dependency_metadata": "audited; pip check passed",
+    "readiness_commit": "adb841e"
   },
   "refinement_backlog": "knowledge/western_refinement_backlog.json",
   "configuration_matrix": "knowledge/western_core_v1.json"
