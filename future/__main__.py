@@ -67,22 +67,26 @@ def main():
     transit.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
     transit.add_argument('--bodies',help='Comma-separated transiting planets')
     transit.add_argument('--orbs',help='JSON mapping of aspect angle to orb')
+    transit.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
     if args.command=='forecast':
         from datetime import datetime
         from .natal import SkyfieldEphemeris, Settings, chart
         from .transits import forecast
-        from .western import load_context,interpreter,natal_context
+        from .western import load_context,interpreter,natal_context,traditional_configuration_context
         e=SkyfieldEphemeris(args.kernel)
         n=chart(e,args.local,args.zone,args.latitude,args.longitude,Settings(tradition=args.tradition,houses=args.houses),args.fold)
         registry=load_registry(args.database)
         try:
             records=load_context(registry,args.tradition)
             n['knowledge_context']=natal_context(records,n)
+            n['traditional_configuration_context']=traditional_configuration_context(n)
             result=forecast(e,n,datetime.fromisoformat(args.start),args.days,
                             {int(k):float(v) for k,v in json.loads(args.orbs).items()} if args.orbs else None,
                             args.bodies.split(',') if args.bodies else None,interpreter(records,n))
-            print(json.dumps(result,indent=2))
+            from .forecast_report import present,markdown
+            result=present(result)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
         finally: registry.close()
         return
     if args.command == 'natal':

@@ -38,3 +38,13 @@
 - Limits: source coverage still partial, three-hour sampling cannot guarantee detection of multiple unseen reversals in one cell; numerical root tolerance is not absolute accuracy or predictive validity. No calibrated life-event probabilities.
 - Next: deepen authorized planet-pair transit interpretations and historical validation; then quadrant houses, progressions, expanded traditions and electional. Technique #1 remains Developing.
 - Commit: transit milestone (resolve with `git log --grep="source-grounded natal transit"`).
+
+## 2026-11-02 — source-grounded interpretation and forecast presentation
+- Added 29 concise source-checked transit records: Cafe Astrology practitioner compilation and Robert Hand's indexed Jupiter discussion, with individual locators, exceptions, aspect sets and condition fields. Hand's general pair scope remains explicit; no aspect-specific Hand text invented.
+- Matcher distinguishes documented / compositional / unsupported, exact condition matches and source/tradition isolation. Traditional house-ruler/dignity calculation metadata is separate from modern interpretive records.
+- Added numerical orb-entry/exit intervals, clipped duration reporting, canonical event IDs, non-destructive themes, ongoing/brief views, active/applying views and repeated-contact groups. No probability or importance scores.
+- Complete Delhi 1990 birth example: 133 exact contacts preserved; 143 configurations, 32 active at start, 15 repeated patterns. Direct pair coverage: 28 exact contacts; remaining 105 compositional. Markdown report plus full JSON saved as forecast-1990-november-2026.*.
+- All 24 tests pass: conditional selection/provenance, isolation, dates/locations, event partition completeness, repeated retrograde groups, station tangencies and clipped orb durations; existing independent Swiss reference tests retained. Existing registry rule versions remain unchanged.
+- Gaps: direct coverage remains sparse; no full historical/Hellenistic transit pair library, complete licensed book ingestion, or verified house/dignity-specific transit delineations. Numerical precision remains separate from symbolic predictive validity.
+- Next: quadrant houses, secondary progressions, and deeper Western source coverage. Technique #1 remains Developing.
+- Commit: forecast presentation pass (resolve with `git log --grep="enrich transit interpretations"`).

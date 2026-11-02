@@ -56,4 +56,16 @@ The curated `knowledge/western_rules.json` contains source-checked summaries of 
 
 Transit roots use 3-hour scans, refined sampled stations and bisection to a 0.25-second bracket. This numerical resolution does not imply equivalent absolute accuracy. Swiss/Moshier independent fixtures verify Mercury positions and both retrograde/direct passes; analytical trajectories test boundaries, wraps and close station contacts. Kernel, model and birth-time uncertainty still affect absolute timing, especially at slow motion.
 
+## Read a complete forecast
+
+The new complete example is `data/forecast-1990-november-2026.md`, with all underlying data in the adjacent JSON. It uses the July 15, 1990 Delhi birth and November 2–December 2, 2026 window. The older August 2000 natal example is separate.
+
+```powershell
+python -m future forecast "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209 "2026-11-02T00:00:00+00:00" --format markdown
+```
+
+JSON retains the full event list and adds clipped intervals within the selected orb, ongoing configurations, brief contacts, active/applying contacts and recurrence groups referencing canonical event IDs. Same-target-house themes are geometric groupings; they do not imply corroboration or merged predictions. The 24-hour duration bins and 0.01°/day near-station flag are explicit display conventions, not predictive scores. A clipped duration is only time inside this forecast window; it is not a claim about total transit duration.
+
+`knowledge/transit_rules.json` contains 29 short, source-specific planet-pair records keyed by tradition, transiting body, natal target, aspect set, conditions and source. Records distinguish direct delineation scope (including Hand's general across-aspect pair discussion) from compositional context. Missing condition context cannot satisfy a constrained rule. No rule is silently reversed or transferred to another tradition. Source review status does not imply empirical predictive verification. Traditional sign rulership/dignity calculations are separately labeled even when the reading school is modern. Detailed historical/Hellenistic pair rules, house/dignity-specific transit delineations and full authorized book coverage remain gaps.
+
 Sources retain author, edition, access and ingestion policy. Rules retain technique, variation, tradition, version, exact locator, operation, parameters, evidence type, verification state and fixture references. Different authorities use distinct IDs; changed rules use new versions. Only verified rules in the exact requested scope are selected. Verification here means procedural/example agreement, not predictive accuracy. The registry is a local trusted research store; ingesting arbitrary external rule JSON as verified is unsupported.

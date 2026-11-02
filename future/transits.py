@@ -14,6 +14,19 @@ def phase(error, speed, exact_tolerance=1e-5):
 def branches(angle):
     return [angle] if angle in (0,180) else [angle,-angle]
 
+def orb_intervals(times,samples,target,orb,evaluate):
+    """Exact numerical orb boundary crossings, clipped to the requested window."""
+    if orb==0: return []
+    cuts=sorted(set([times[0],times[-1]]+
+          roots(times,samples,(target-orb)%360,evaluate)+roots(times,samples,(target+orb)%360,evaluate)))
+    spans=[]
+    for a,b in zip(cuts,cuts[1:]):
+        if abs(signed(evaluate(a+(b-a)/2)-target))<=orb:
+            if spans and spans[-1][1]==a: spans[-1]=(spans[-1][0],b)
+            else: spans.append((a,b))
+    return [{'start_utc':a.isoformat(),'end_utc':b.isoformat(),'hours_in_window':(b-a).total_seconds()/3600,
+             'start_clipped':a==times[0],'end_clipped':b==times[-1]} for a,b in spans]
+
 def roots(sample_times, sample_longitudes, target, evaluate):
     """Bracket real angular crossings; reject the antipodal wrap discontinuity.
 
@@ -73,7 +86,7 @@ def forecast(ephemeris, natal, start, days=30, orbs=None, bodies=None, interpret
     targets={n:p['longitude'] for n,p in natal['planets'].items()}
     targets.update(natal['angles'])
     _,current=ephemeris.positions(start)
-    events=[]; active=[]
+    events=[]; active=[]; configurations=[]
     for body in bodies:
         samples=ephemeris.longitudes(body,times)
         @lru_cache(maxsize=8192)
@@ -83,18 +96,36 @@ def forecast(ephemeris, natal, start, days=30, orbs=None, bodies=None, interpret
             for angle,orb in orbs.items():
                 for branch in branches(angle):
                     error=signed(current[body]['longitude']-lon-branch)
-                    common={'transiting':body,'natal_target':target,'aspect_degrees':angle,'branch_degrees':branch}
-                    interpretation=interpreter(body,target,angle) if interpreter else []
+                    cid=f'{body}:{target}:{angle}:{branch}'
+                    common={'configuration_id':cid,'transiting':body,'natal_target':target,'aspect_degrees':angle,'branch_degrees':branch}
+                    context={'phase':phase(error,speed),'retrograde':speed<0,
+                             'natal_house':natal['planets'].get(target,{}).get('house'),
+                             'dignity':natal.get('traditional_configuration_context',{}).get('planets',{}).get(target,{}).get('dignities',[]),
+                             'rulership':natal['settings']['rulership']}
+                    interpretation=interpreter(body,target,angle,context) if interpreter else []
                     if abs(error)<=orb:
                         active.append(dict(common,orb=abs(error),phase=phase(error,speed),retrograde=speed<0,
+                                           speed_degrees_per_day=speed,near_station=abs(speed)<.01,
                                            interpretations=interpretation))
-                    for t in roots(times,samples,(lon+branch)%360,evaluate):
+                    contacts=roots(times,samples,(lon+branch)%360,evaluate)
+                    spans=orb_intervals(times,samples,(lon+branch)%360,orb,evaluate)
+                    if spans or contacts:
+                        configurations.append(dict(common,orb_limit=orb,intervals=spans,
+                            hours_in_window=sum(s['hours_in_window'] for s in spans),interpretations=interpretation))
+                    for t in contacts:
                         before,after=t-timedelta(minutes=1),t+timedelta(minutes=1)
                         motion=signed(evaluate(after)-evaluate(before))*720
                         residual=abs(signed(evaluate(t)-lon-branch))
+                        exact_context=dict(context,phase='exact',retrograde=motion<0)
                         events.append(dict(common,exact_utc=t.isoformat(),phase='exact',retrograde=motion<0,
-                            longitude=evaluate(t),angular_residual_degrees=residual,interpretations=interpretation))
+                            speed_degrees_per_day=motion,
+                            near_station=abs(motion)<.01,
+                            transit_natal_house=int(((evaluate(t)-natal['house_cusps'][0])%360)//30)+1,
+                            longitude=evaluate(t),angular_residual_degrees=residual,
+                            interpretation_context=exact_context,
+                            interpretations=interpreter(body,target,angle,exact_context) if interpreter else []))
     events.sort(key=lambda e:(e['exact_utc'],e['transiting'],e['natal_target'],e['aspect_degrees']))
+    for i,event in enumerate(events,1): event['id']=f'event-{i:04d}'
     groups={}
     for event in events:
         key=(event['transiting'],event['natal_target'],event['aspect_degrees'],event['branch_degrees'])
@@ -106,7 +137,9 @@ def forecast(ephemeris, natal, start, days=30, orbs=None, bodies=None, interpret
     return {'technique_id':1,'application':'transits','natal_summary':natal,
             'window':{'start_utc':start.isoformat(),'end_utc':end.isoformat(),'end_exclusive':True},
             'current_planets':{b:current[b] for b in bodies},'active_at_start':active,'exact_events':events,
+            'configurations':configurations,
             'precision':{'root_bracket_seconds':.25,'scan_hours':3,'coordinate_validation_tolerance_degrees':.01,
+                         'near_station_speed_threshold_degrees_per_day':.01,
                          'note':'Root precision is numerical convergence, not absolute timing accuracy; near stations timing is less certain.'},
             'predictive_validity':'Traditional symbolic interpretation; no calibrated probability or demonstrated personal-event accuracy.',
             'limitations':['Fixed natal positions and angles; no progressed targets.',
