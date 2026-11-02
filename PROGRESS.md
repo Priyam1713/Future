@@ -56,4 +56,14 @@
 - Quadrants reject abs(latitude) >= 90 - true obliquity. Placidus semi-arcs fail there; the other systems' polar orientation is outside this release's validation. No substitute system. Equal and whole-sign remain available.
 - Knowledge: knowledge/house_methods.json; example: data/house-comparison-1990.json. Swiss remains a development oracle only.
 - Next: secondary progressions with explicit year-length and angle conventions, followed by independent tests.
-- Commit: quadrant pass (resolve with `git log --grep="verify four quadrant"`).
+- Commit: `baa00be` (pushed).
+
+## 2026-11-02 — secondary progressions
+- Implemented secondary planets using continuous TT day-for-year scaling, explicit tropical/Julian year keys, signs, retrogrades, progressed-to-natal and mutual aspects, lunar phase sectors, next-year sign ingresses, progressed Moon contacts and lunation boundaries.
+- Angle choices: none, Naibod RA, true solar-arc MC, or actual secondary rotation. Directed-angle options are explicitly distinguished from secondary planetary motion and from solar-arc/primary planetary directions. All six house systems supported within their declared domains.
+- Knowledge: six separately scoped source records registered with provenance. Calculated Moon natal-house and Sun-sign context linked to sources. Pair readings remain compositional; no transit delineations silently reused as direct progression readings.
+- All 32 tests pass, preserving original 24. Swiss/Moshier independent references cover eight age/year-key cases, 96 angle/house combinations, planetary longitudes (<0.01 degree), cusps (<0.02 degree), aspect selections, historical/leap-year inputs, lunar sign ingress and a progressed new Moon (real-date tolerance one hour). Root and grouping tests remain passing.
+- Corrected reference clock mismatch for future leap-second assumptions; fixed known offset is explicit. Historical pre-1972 proleptic UTC is declared, not conflated with reconstructed UT1.
+- Examples: data/house-comparison-1990.{md,json}; data/progressed-1990-2026.{md,json}. July 1990 example at Nov 2, 2026: progressed Moon 29.253959 Leo; Virgo ingress Nov 22, 2026 ~04:42 UTC. Naibod/Placidus progressed ASC 18.585770 Sagittarius, MC 1.031850 Libra.
+- Remaining #1 scope: Hellenistic sect/time-lords/lots and traditional bounds/triplicities/reception remain incomplete; interpretive tradition presets currently have limited scope. Expand direct progression readings, validate more historical time conventions, then other documented timing methods and electional applications. No Technique #2 work started.
+- Commit: secondary pass (resolve with `git log --grep="verified secondary progressions"`).

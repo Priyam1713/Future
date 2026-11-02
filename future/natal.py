@@ -71,6 +71,16 @@ class SkyfieldEphemeris:
         if not 1850 <= utc.year <= 2149:
             raise ValueError('This release supports 1850 through 2149 (DE440s)')
         t = self.ts.from_datetime(utc)
+        return self.positions_at_tt(t.tt)
+
+    def longitudes_at_tt(self,name,jds):
+        t=self.ts.tt_jd(jds)
+        return self.kernel['earth'].at(t).observe(self.kernel[BODIES[name]]).apparent().frame_latlon(ecliptic_frame)[1].degrees
+
+    def positions_at_tt(self,jd):
+        t=self.ts.tt_jd(jd)
+        if not 1850<=int(t.tt_calendar()[0])<=2149:
+            raise ValueError('Supported ephemeris years: 1850 through 2149')
         result = {}
         for name, target in BODIES.items():
             def longitude(time):

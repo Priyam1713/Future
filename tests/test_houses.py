@@ -34,5 +34,13 @@ class HouseTests(unittest.TestCase):
             with self.assertRaisesRegex(HouseGeometryError,'no fallback'):cusps(45,70,23.44,name)
         self.assertEqual(len(cusps(45,80,23.44,'equal')),12)
         self.assertEqual(len(cusps(45,-80,23.44,'whole-sign')),12)
+    def test_quadrant_transit_assignments(self):
+        from future.transits import forecast
+        e=SkyfieldEphemeris('data/de440s.bsp');self.addCleanup(e.kernel.close)
+        n=chart(e,'1990-07-15T14:30','Asia/Kolkata',28.6139,77.209,Settings(houses='placidus'))
+        report=forecast(e,n,datetime.fromisoformat('2026-11-02T00:00:00+00:00'),1,bodies=['Moon'])
+        self.assertTrue(report['exact_events'])
+        for event in report['exact_events']:
+            self.assertEqual(event['transit_natal_house'],house_for(event['longitude'],n['house_cusps']))
 
 if __name__=='__main__':unittest.main()

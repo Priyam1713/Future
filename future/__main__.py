@@ -69,7 +69,36 @@ def main():
     transit.add_argument('--bodies',help='Comma-separated transiting planets')
     transit.add_argument('--orbs',help='JSON mapping of aspect angle to orb')
     transit.add_argument('--format',choices=['json','markdown'],default='json')
+    prog=sub.add_parser('progressions')
+    prog.add_argument('local')
+    prog.add_argument('zone')
+    prog.add_argument('latitude',type=float)
+    prog.add_argument('longitude',type=float)
+    prog.add_argument('target',help='ISO target datetime with explicit offset')
+    prog.add_argument('--fold',type=int,choices=[0,1])
+    prog.add_argument('--houses',choices=SYSTEMS,default='placidus')
+    prog.add_argument('--tradition',default='modern psychological')
+    prog.add_argument('--year-key',choices=['tropical','julian'],default='tropical')
+    prog.add_argument('--angles',choices=['none','naibod-ra','solar-arc-mc','secondary-rotation'],default='naibod-ra')
+    prog.add_argument('--window-days',type=int,default=365)
+    prog.add_argument('--orbs')
+    prog.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
     args = parser.parse_args()
+    if args.command=='progressions':
+        from datetime import datetime
+        from .natal import SkyfieldEphemeris,Settings
+        from .progressions import progress,register_knowledge
+        e=SkyfieldEphemeris(args.kernel)
+        try:
+            registry=load_registry(args.database)
+            try:register_knowledge(registry)
+            finally:registry.close()
+            result=progress(e,args.local,args.zone,args.latitude,args.longitude,datetime.fromisoformat(args.target),
+                Settings(tradition=args.tradition,houses=args.houses),args.fold,args.year_key,args.angles,
+                {int(k):float(v) for k,v in json.loads(args.orbs).items()} if args.orbs else None,args.window_days)
+            print(json.dumps(result,indent=2))
+        finally:e.kernel.close()
+        return
     if args.command=='forecast':
         from datetime import datetime
         from .natal import SkyfieldEphemeris, Settings, chart

@@ -1,0 +1,15 @@
+{
+ "technique_id":1,
+ "reviewed_on":"2026-11-02",
+ "records":[
+  {"id":"secondary.day-year","tradition":"modern Western","type":"procedure","statement":"Planets at N days after birth correspond symbolically to age N years.","source":"https://www.astro.com/faq/fq_fh_owtype_e.htm","locator":"Progressed chart","author":"Astrodienst FAQ","status":"source_checked"},
+  {"id":"secondary.angle-options","tradition":"Astrodienst","type":"procedure","statement":"Naibod advances natal ARMC by 0.98564733 degrees per year; solar-arc-MC instead advances ecliptic MC by the progressed Sun arc. Actual secondary rotation uses the sidereal time at the progressed epoch.","source":"https://www.astro.com/faq/fq_fh_owtype_e.htm","locator":"Progressed chart, angle options","author":"Astrodienst FAQ","status":"source_checked","exception":"The first two are directed-angle conventions combined with secondary planets; do not call all planets solar-arc directed."},
+  {"id":"secondary.natal-vs-mutual","tradition":"modern Western","type":"interpretation","statement":"Progressed-to-natal contacts emphasize the natal factor; mutual progressed aspects describe interaction between evolving factors.","source":"https://www.astro.com/astrowiki/en/Secondary_Directions","locator":"Interpretation: points to consider","status":"source_checked"},
+  {"id":"secondary.moon-house","tradition":"modern Western","type":"interpretation","statement":"The progressed Moon highlights topics of the natal house it traverses. A sign or house ingress is interpreted as an orientation shift.","source":"https://www.astro.com/astrowiki/en/Secondary_Directions","locator":"Interpretation and Periods of time","status":"source_checked"},
+  {"id":"secondary.sun-sign","tradition":"Cafe Astrology","type":"interpretation","statement":"A progressed solar sign adds a symbolic developmental emphasis; it does not replace the natal Sun sign.","source":"https://cafeastrology.com/progressedsunsigns.html","locator":"Opening paragraphs","status":"source_checked"},
+  {"id":"secondary.lunation","tradition":"Cafe Astrology","type":"interpretation","statement":"A progressed new Moon symbolizes a new chapter, first quarter a building stage, and full Moon culmination; subsequent waning phases concern release and sharing.","source":"https://cafeastrology.com/secondaryprogressions.html","locator":"The Progressed Lunation Cycle","status":"source_checked"}
+ ],
+ "implementation_choices":{"year_keys":{"tropical":365.24219,"julian":365.25},"time_scale":"TT for continuous uniform symbolic days; target and birth civil timestamps converted by pinned Skyfield timescale data.","default_angles":"naibod-ra","default_orbs":"One degree for each selected major aspect; explicit project configuration, not attributed as universal historical doctrine."},
+ "coverage":"General documented procedures and compositional symbolism only. Direct progression planet-pair readings are unsupported pending source verification.",
+ "rights":"Concise original research notes; no books or articles ingested. Some Astrodienst direct links are browser-challenged; indexed text checked."
+}
