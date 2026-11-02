@@ -1,6 +1,6 @@
 # Future progress
 
-Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. **#1 Western Astrology — Core v1 Ready**, closed/pushed `ec5f69b` (source/local CLI scope). **#2 Vedic Astrology — Researching**, resource audit only; no implementation yet.
+Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. **#1 Western Astrology — Core v1 Ready**, closed/pushed `ec5f69b`. **#2 Vedic Astrology — Core v1 Ready**, bounded source/local CLI scope; #3 audit begins after this closure is committed.
 
 ## 2026-11-02 — inventory and research pass
 - Repository was empty. Cloned the requested remote successfully through Git; connector access returns 404.
@@ -160,3 +160,12 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - PVR Chart1 planets agree within 0.04 degree and Lagna sign agrees. Printed exact Ascendant differs ~8.9 arcminutes from both independent engines: preserved as unresolved source discrepancy, never fitted away. Existing pre-1972 and future UTC assumptions explicit.
 - Reproducible Delhi July1990 D1 in data/vedic-d1-1990.*. Named profile and source traces accompany output; nodes' contested dignity/aspect/co-rule schools and degree-specific Mars moolatrikona remain unsupported. Domain: 1850–2149 astronomical epochs, abs(latitude)<66 degrees.
 - Next: source-verified Vimshottari/D9, published examples and core release acceptance. Commit: resolve with `git log --grep="implement verified sidereal D1"`.
+
+## 2026-11-03 — #2 Pass 3: Vimshottari/D9 and Core v1 closure
+- D1 pass `77f6807` pushed separately. Added Moon-birthstar MD/AD sequence, full-parent initial ADs, remaining birth balance, exact half-open transitions and current/upcoming reports. Explicit savana360 and solar365.2425 options; no alternative dasha schools silently imported.
+- Added Parashari D9 modality mapping, symbolic longitudes/Lagna, D9 house frame and classical sign flags; no D1 degree-specific dignities or independent physical retrograde interpretation applied to D9. D9 meanings and active-lord context are source-scoped/compositional, not event forecasts.
+- All 73 tests pass, retaining all 63 prior Western tests. Independent Swiss/Moshier D9 harmonic references, twelve separate rational-arithmetic dasha cases, PVR D9 Example16 and complete Chart54 birth/position/D9-sign comparison pass. Source fixture Jupiter transcription corrected by revisiting image (15 Li29, not 6 Li29).
+- PVR Example50 fraction 257/800, balance2.24875 years and Venus AD durations verified. Stated savana arithmetic gives 2002-07-16 23:02 UTC; printed approximate July15 date inconsistent, explicitly preserved as a source discrepancy. No forced date match or fabricated Raman example. Moon error bound .0005 degree implies a derived dasha-date bound up to ~6.6h at 20 solar years; source rounding/birth-time uncertainty separate from arithmetic resolution.
+- 12 Vedic and 23 Western public CLI smoke cases pass; pip check clean. Full July1990 report: data/vedic-core-1990.*; at 2026-11-03 UTC: D1 Libra Lagna, Revati pada4, D9 Taurus Lagna, Moon/Mars under savana profile. Source book/images inspected locally only; temporary files removed, none redistributed. No new runtime dependency or Swiss runtime.
+- Frozen knowledge/vedic_core_v1.json marks **Core v1 Ready**, with supported/experimental/unsupported matrix and P1/P2 backlog for Jaimini, KP, Prashna, other vargas, advanced dashas, direct interpretations and historical/source gaps. Ready is practical source/local scope, not exhaustive coverage or empirical validity.
+- Next: commit/push this closure before #3 Chinese Astrology resource/variation audit. Commit: resolve with `git log --grep="close Vedic Core v1"`.

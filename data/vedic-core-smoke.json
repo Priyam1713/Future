@@ -1,0 +1,55 @@
+{
+  "technique_id": 2,
+  "passed": 12,
+  "cases": [
+    {
+      "case": "D1/D9/Vimshottari savana JSON",
+      "status": "passed"
+    },
+    {
+      "case": "D1/D9/Vimshottari Markdown",
+      "status": "passed"
+    },
+    {
+      "case": "Explicit solar year",
+      "status": "passed"
+    },
+    {
+      "case": "D1-only interface",
+      "status": "passed"
+    },
+    {
+      "case": "Historical IANA D1",
+      "status": "passed"
+    },
+    {
+      "case": "Unresolved DST fold",
+      "status": "rejected as required"
+    },
+    {
+      "case": "DST fold zero",
+      "status": "passed"
+    },
+    {
+      "case": "DST fold one",
+      "status": "passed"
+    },
+    {
+      "case": "DST gap",
+      "status": "rejected as required"
+    },
+    {
+      "case": "Offset missing on dasha target",
+      "status": "rejected as required"
+    },
+    {
+      "case": "Unsupported node request",
+      "status": "rejected as required"
+    },
+    {
+      "case": "Unsupported year request",
+      "status": "rejected as required"
+    }
+  ],
+  "scope": "CLI contract and explicit rejection behavior; independent/published calculation fixtures are in tests/fixtures/."
+}

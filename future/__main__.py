@@ -138,6 +138,9 @@ def main():
     jy.add_argument('local');jy.add_argument('zone');jy.add_argument('latitude',type=float);jy.add_argument('longitude',type=float)
     jy.add_argument('--fold',type=int,choices=[0,1]);jy.add_argument('--format',choices=['json','markdown'],default='json')
     jy.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
+    jy.add_argument('--d9',action='store_true',help='Add separately labeled Navamsa')
+    jy.add_argument('--target',help='Offset-aware target for Vimshottari current/upcoming periods')
+    jy.add_argument('--year-key',choices=['pvr-2000-savana','solar-365.2425'],default='pvr-2000-savana')
     args = parser.parse_args()
     if args.command=='jyotish':
         from .natal import SkyfieldEphemeris
@@ -146,6 +149,9 @@ def main():
         try:
             register_knowledge(registry)
             result=d1(e,args.local,args.zone,args.latitude,args.longitude,args.fold)
+            from .vedic_timing import enrich
+            from datetime import datetime
+            result=enrich(result,datetime.fromisoformat(args.target) if args.target else None,args.year_key,args.d9)
             print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
         finally:registry.close();e.kernel.close()
         return

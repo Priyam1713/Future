@@ -28,6 +28,7 @@ for local,zone,lat,lon in [('1990-07-15T14:30','Asia/Kolkata',28.6139,77.209),
     cases.append(dict(local=local,zone=zone,latitude=lat,longitude=lon,utc=utc.isoformat(),jd_tt=tt,
         ayanamsha_true=s.get_ayanamsa_ex(tt,s.FLG_MOSEPH)[1],ascendant=axes[0],positions=positions,
         moon_nakshatra_index=int(ps['Moon'][0]*27/360),moon_pada=int(ps['Moon'][0]*108/360)%4+1,
-        sun_above_horizon=altitude>=0))
+        sun_above_horizon=altitude>=0,
+        d9_longitudes={n:(p['longitude']*9)%360 for n,p in positions.items()},d9_ascendant=(axes[0]*9)%360))
 Path('tests/fixtures/vedic_reference.json').write_text(json.dumps({'oracle':'Swiss Ephemeris 2.10.3.2/Moshier, SIDM_LAHIRI default; mean nodes; shared pinned Skyfield UT1 input for independent Swiss house geometry, not independent delta-T validation. Explicit pre-1972 proleptic UTC TT offset 42.184s and post-2017 frozen 69.184s.',
     'tolerances':{'positions_degrees':.01,'ascendant_degrees':.02,'ayanamsha_arcseconds':1},'cases':cases},indent=2)+'\n',encoding='utf-8')

@@ -1,7 +1,7 @@
 {
   "technique_id": 2,
   "name": "Vedic Astrology (Jyotish)",
-  "status": "Developing",
+  "status": "Core v1 Ready",
   "date": "2026-11-02",
   "western_closure_commit": "ec5f69b",
   "implementation_started": true,
@@ -19,12 +19,12 @@
       "source_id": "vedic-raman-judge",
       "title": "How to Judge a Horoscope",
       "author": "B. V. Raman",
-      "finding": "Publisher records located for Vol.1 and Vol.2. Vol.1 listing: ISBN 9789392510120, 2022 sixth reprint, 312 pages; Vol.2 description explicitly covers houses VII\u2013XII. Listings are not procedural verification."
+      "finding": "Publisher records located for Vol.1 and Vol.2. Vol.1 listing: ISBN 9789392510120, 2022 sixth reprint, 312 pages; Vol.2 description explicitly covers houses VII–XII. Listings are not procedural verification."
     },
     {
       "rank": 3,
       "source_id": "vedic-rao-chara",
-      "title": "Predicting Through Jaimini\u2019s Chara Dasha",
+      "title": "Predicting Through Jaimini’s Chara Dasha",
       "author": "K. N. Rao",
       "finding": "Title and K.N. Rao attribution confirmed in BVB prescribed reading, p.23. Detailed edition/page mapping unavailable; retailer page counts conflict. Do not expand author initials from inconsistent catalog metadata."
     }
@@ -38,7 +38,8 @@
         "vedic-raman-judge",
         "vedic-pvr-book"
       ],
-      "coverage": "D1 and selected dignity/house/ruler rules first; exact procedures not yet extracted."
+      "coverage": "D1 and selected dignity/house/ruler rules first; exact procedures not yet extracted.",
+      "core_status": "bounded core implemented (D9 only for vargas)"
     },
     {
       "name": "Jaimini",
@@ -47,7 +48,8 @@
         "vedic-rao-chara",
         "vedic-bisaria-chara"
       ],
-      "coverage": "Separate seven/eight karaka and Chara-dasha conventions. Do not import sign-aspect rules or period sequences into Parashari silently."
+      "coverage": "Separate seven/eight karaka and Chara-dasha conventions. Do not import sign-aspect rules or period sequences into Parashari silently.",
+      "core_status": "unsupported; P1/P2 refinement"
     },
     {
       "name": "Nakshatra",
@@ -55,7 +57,8 @@
       "source_ids": [
         "vedic-pvr-book"
       ],
-      "coverage": "Birth Moon mansion and pada, with exact boundary/source tables to verify before implementation."
+      "coverage": "Birth Moon mansion and pada, with exact boundary/source tables to verify before implementation.",
+      "core_status": "bounded core implemented (D9 only for vargas)"
     },
     {
       "name": "Vimshottari dasha",
@@ -64,7 +67,8 @@
         "vedic-pvr-book",
         "vedic-bisaria-chara"
       ],
-      "coverage": "Birth Moon degree dependency identified by practitioner source; order/lengths, starting balance, subdivisions and year convention require direct procedural inspection."
+      "coverage": "Birth Moon degree dependency identified by practitioner source; order/lengths, starting balance, subdivisions and year convention require direct procedural inspection.",
+      "core_status": "bounded core implemented (D9 only for vargas)"
     },
     {
       "name": "divisional vargas",
@@ -73,19 +77,22 @@
         "vedic-bphs-santhanam-catalog",
         "vedic-pvr-book"
       ],
-      "coverage": "Start with source-verified D9 mapping and boundaries. Do not apply one formula to all vargas or assume their house conventions."
+      "coverage": "Start with source-verified D9 mapping and boundaries. Do not apply one formula to all vargas or assume their house conventions.",
+      "core_status": "bounded core implemented (D9 only for vargas)"
     },
     {
       "name": "prashna",
       "priority": "P2 refinement",
       "source_ids": [],
-      "coverage": "Dedicated Vedic question-chart source not verified. Preserve this inventory subtype; do not conflate it with Western Horary Technique #5."
+      "coverage": "Dedicated Vedic question-chart source not verified. Preserve this inventory subtype; do not conflate it with Western Horary Technique #5.",
+      "core_status": "unsupported; P1/P2 refinement"
     },
     {
       "name": "KP",
       "priority": "P1/P2 refinement",
       "source_ids": [],
-      "coverage": "Dedicated Krishnamurti procedural source not yet verified. Sub-lords, cusps and ayanamsha must remain a separate named school."
+      "coverage": "Dedicated Krishnamurti procedural source not yet verified. Sub-lords, cusps and ayanamsha must remain a separate named school.",
+      "core_status": "unsupported; P1/P2 refinement"
     }
   ],
   "supplemental_source_findings": [
@@ -102,14 +109,6 @@
       "finding": "Official interface documents named sidereal modes and licensing. Reference oracle only; no runtime integration licensed or selected for #2."
     }
   ],
-  "configuration_decisions_pending": [
-    "Choose an exactly defined Lahiri/Chitrapaksha profile after anchor, precession, nutation and mean/true longitude conventions are independently checked. Lahiri-like labels are not interchangeable definitions.",
-    "Reuse Skyfield/time/house geometry without changing frozen Western settings; build a separately named sidereal layer only after verification. Never subtract an unverified constant ayanamsha.",
-    "Choose a sourced mean-node Rahu/Ketu model for the first slice; true nodes remain a separate option. Existing Western seven-planet calculations alone do not constitute a nine-graha chart.",
-    "Keep rashi whole-sign placement separate from bhava/house-cusp methods and divisional charts.",
-    "Name Vimshottari year length/time scale and birth-balance calculation; do not reuse Western 360-day releasing units by analogy.",
-    "Keep Parashari graha aspects, Jaimini sign aspects, KP sub-lords and their interpretation rules isolated."
-  ],
   "proposed_80_20_sequence": [
     "Inspect accessible primary procedural chapters and exact examples for sidereal definition, nakshatras, Vimshottari and D9; resolve rights/access gaps with other legitimate sources if needed.",
     "Implement D1 seven classical planets plus explicitly modeled nodes, sidereal ASC, whole-sign houses, Moon nakshatra/pada and sourced sign rulers/dignities.",
@@ -123,7 +122,18 @@
     "Retain all Western tests and interfaces; different symbolic systems agreeing is not statistical predictive evidence."
   ],
   "rights_policy": "Metadata and short original research summaries only. Author-hosted free availability is not assumed to license wholesale translation ingestion or redistribution; no paid books, pirated scans or proprietary implementation code copied.",
-  "next_action": "Resource/procedure extraction for the proposed first slice; no #2 executable rules or numerical engine implemented in this audit.",
+  "next_action": "After closure commit, Technique #3 resource/variation audit. Remaining #2 refinements are in vedic_core_v1.json.",
   "resolved_conventions": "knowledge/vedic_conventions.json",
-  "source_access_update": "PVR non-www author PDF successfully inspected; new versioned procedural source record added without rewriting historical registry records."
+  "source_access_update": "PVR non-www author PDF successfully inspected; new versioned procedural source record added without rewriting historical registry records.",
+  "core_manifest": "knowledge/vedic_core_v1.json",
+  "historical_preimplementation_questions": [
+    "Choose an exactly defined Lahiri/Chitrapaksha profile after anchor, precession, nutation and mean/true longitude conventions are independently checked. Lahiri-like labels are not interchangeable definitions.",
+    "Reuse Skyfield/time/house geometry without changing frozen Western settings; build a separately named sidereal layer only after verification. Never subtract an unverified constant ayanamsha.",
+    "Choose a sourced mean-node Rahu/Ketu model for the first slice; true nodes remain a separate option. Existing Western seven-planet calculations alone do not constitute a nine-graha chart.",
+    "Keep rashi whole-sign placement separate from bhava/house-cusp methods and divisional charts.",
+    "Name Vimshottari year length/time scale and birth-balance calculation; do not reuse Western 360-day releasing units by analogy.",
+    "Keep Parashari graha aspects, Jaimini sign aspects, KP sub-lords and their interpretation rules isolated."
+  ],
+  "configuration_decisions_pending": [],
+  "current_procedural_source": "vedic-pvr-procedures-v1: author-hosted PDF inspected; exact locators in vedic_conventions.json."
 }

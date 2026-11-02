@@ -1,5 +1,9 @@
 # Future
 
+Vedic core CLI (Technique #2): `python -m future jyotish "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209 --d9 --target "2026-11-03T00:00:00+00:00" --format markdown`. The fixed profile, supported scope and P1/P2 refinements are in `knowledge/vedic_core_v1.json`; exact calculation conventions and source locators are in `knowledge/vedic_conventions.json`. Savana 360-day years are the default; `--year-key solar-365.2425` selects the documented alternative. Neither is silently mixed with Western timing methods.
+
+**Technique #2: Core v1 Ready** for its bounded Parashari D1/nakshatra/Vimshottari MD-AD/D9 source/local scope. Acceptance: 73 tests (all prior 63 retained), 12 Vedic and 23 Western CLI smoke cases. Run `python -m scripts.smoke_vedic_core` for `data/vedic-core-1990.json` and its Markdown report. Source discrepancies, year-length differences and period-date sensitivity are reported explicitly; a microsecond-formatted computed boundary is not real-world precision or predictive confidence. Jaimini, KP, Prashna and other vargas/dashas remain in P1/P2 refinement.
+
 Development follows the permanent **80/20 directive** in `AGENTS.md`: stabilize a verified practical core, label experimental/unsupported features, record P1/P2 refinement, and then continue in inventory order. Exhaustive historical completion is not the release gate. Western Core v1 scope is frozen in `knowledge/western_core_v1.json`; `knowledge/western_refinement_backlog.json` preserves deferred work.
 
 **Technique #1: Core v1 Ready** for its documented source/local CLI scope. Acceptance: 63 tests and 23 CLI smoke cases. Run `python -m unittest discover -s tests -q` and `python -m scripts.smoke_western_core`. New July-1990 natal/progression/return examples are under `data/core-v1-*`; results expose composed and missing interpretation coverage. See `THIRD_PARTY_NOTICES.md` for the lightweight dependency audit and distribution limits.

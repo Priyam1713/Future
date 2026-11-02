@@ -1,0 +1,65 @@
+{
+  "technique_id": 2,
+  "name": "Vedic Astrology (Jyotish)",
+  "status": "Core v1 Ready",
+  "date": "2026-11-03",
+  "policy": "80/20 verified practical core; source/local CLI, not exhaustive tradition coverage",
+  "profile": "parashari-core-lahiri1956-mean-node",
+  "supported": {
+    "D1": "Nine grahas, sidereal Ascendant, twelve rashis, whole-sign houses, explicit apparent coordinates and mean nodes; astronomical epochs 1850–2149, abs(latitude)<66.",
+    "ayanamsha": "Revised true Lahiri 1956 anchor + pinned Skyfield Capitaine2003/IAU2000A realization, named lahiri-1956-skyfield; no hidden correction to Swiss model.",
+    "nakshatra": "27 equal mansions, four padas, Moon starting lord and boundary sensitivity; names from PVR Table2.",
+    "conditions": "Classical sign lords, ownership/exaltation/debilitation, unambiguous moolatrikona intervals and full whole-sign graha aspects. No strength score.",
+    "Vimshottari": "Moon birthstar Mahadasha/Antardasha, full-parent initial AD sequence, birth balance, current/upcoming periods; fixed elapsed savana360 or explicit solar365.2425 years, half-open timestamps, target ages 0–120 selected years.",
+    "D9": "Modality-based Navamsa mapping, symbolic longitudes and Lagna, separate D9 whole-sign house frame and sign dignities; literal same-sign D1/D9 flags, not an inferred strength total.",
+    "interpretation": "Source-labeled dignity/aspect and active-lord conditions, selected D9 methodology; compositional only, no direct personal-event or compatibility reading.",
+    "interfaces": "jyotish JSON/Markdown; optional --d9, --target, --year-key. Existing Western interfaces retained."
+  },
+  "experimental": [
+    "Comparisons to rounded published charts where exact original ephemeris/time realization is not specified; precision/contradictions disclosed."
+  ],
+  "unsupported": [
+    "True/osculating nodes",
+    "Alternative ayanamshas/KP settings",
+    "Node dignity/aspect/co-rulership schools",
+    "Disputed Mars degree-specific moolatrikona",
+    "Jaimini/Chara dasha",
+    "KP sub-lords",
+    "Prashna",
+    "Vargas beyond D9",
+    "Deeper/alternative dashas",
+    "Advanced yogas/shadbala",
+    "Ancient astronomical dates",
+    "Direct outcome probabilities"
+  ],
+  "verification": {
+    "independent": "Six Swiss/Moshier position/node/ASC charts at common explicit TT/UT1 inputs; time-model independence is not claimed. D9 harmonic-reference calculation differs from production modality algorithm.",
+    "symbolic": "Independent rational Vimshottari implementation with Swiss Moon inputs; same documented symbolic rule, not an independent prediction method.",
+    "published": "PVR Chart1 planets and Lagna sign; Chart54 complete birth inputs, D1 positions and D9 signs; D9 Example16; Vimshottari Example50 exact fraction/balance and Venus AD duration table.",
+    "source_limits": "Chart1 exact ASC differs ~8.9 arcminutes from both engines; source civil July15 date in Example50 conflicts with stated fixed elapsed savana arithmetic (July16). No reproduction of those exact discrepant values claimed. Raman worked-page access not verified.",
+    "precision": "Position tolerance .01 degree, ASC .02 degree, ayanamsha1 arcsecond; dasha Moon agreement .0005 degree with derived time-sensitivity bound, not an arbitrary probability/confidence score. Published rounding and birth-time uncertainty remain material.",
+    "full_regression": "73 passing tests, including all prior 63 Western tests",
+    "cli_smoke": {
+      "vedic": 12,
+      "western": 23,
+      "pip_check": "No broken requirements found"
+    }
+  },
+  "licensing": "Existing pinned Skyfield/JPL local/source policy retained; no dependency added and no Swiss runtime or book text/images distributed. Procedural numeric facts and short original source-located summaries only.",
+  "backlog": {
+    "P1": [
+      "Direct source-backed interpretations for the core",
+      "Jaimini seven/eight karaka and Chara-dasha profiles when source-verified",
+      "Selected additional vargas by use case",
+      "Resolve published/source discrepancies when reliable evidence becomes available"
+    ],
+    "P2": [
+      "KP and Prashna as distinct schools",
+      "True nodes/additional ayanamshas with independent tests",
+      "Advanced dashas/yogas/shadbala",
+      "Historical time/calendar expansion",
+      "API/UI and packaging review"
+    ]
+  },
+  "next": "Commit closure before beginning Technique #3 resource/variation audit; retain bounded named profile and P1/P2 refinement."
+}

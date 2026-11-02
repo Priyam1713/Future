@@ -104,7 +104,7 @@ def d1(e,local,zone,latitude,longitude,fold=None,profile=PROFILE):
         p['rules_houses']=[(s-asc_sign)%12+1 for s,r in enumerate(TABLES['rulers']) if r==body] if body in CLASSICAL else []
     observer=e.kernel['earth']+wgs84.latlon(latitude,longitude)
     altitude=float(observer.at(t).observe(e.kernel['sun']).apparent().altaz()[0].degrees)
-    return {'technique_id':2,'application':'D1/Rashi','profile':profile,'release_status':'developing',
+    return {'technique_id':2,'application':'D1/Rashi','profile':profile,'release_status':'Core v1 Ready',
         'birth':{'local':local,'zone':zone,'utc':utc.isoformat(),'latitude':latitude,'longitude':longitude},
         'times':{'jd_tt':float(t.tt),'jd_ut1':float(t.ut1),'delta_t_seconds':float(t.delta_t)},
         'ayanamsha':ayan,'ascendant':{'longitude':sid_asc,'sign_index':asc_sign,'sign':SIGNS[asc_sign],'degree_in_sign':sid_asc-asc_sign*30},
@@ -124,7 +124,20 @@ def markdown(r):
         f"Profile: {r['profile']}. Lagna: {r['ascendant']['sign']} {r['ascendant']['degree_in_sign']:.5f} degrees.",
         f"Moon: {r['moon_nakshatra']['name']}, pada {r['moon_nakshatra']['pada']}, lord {r['moon_nakshatra']['lord']}.",'',
         '| Graha | Rashi | Degree | D1 house | Retrograde | Sign dignity |','|---|---|---|---|---|---|']
-    for n,p in r['planets'].items():lines.append(f"| {n} | {p['sign']} | {p['degree_in_sign']:.5f} | {p['house']} | {p['retrograde']} | {', '.join(p['dignity']['flags']) or 'none / unsupported for nodes'} |")
+    for n,p in r['planets'].items():lines.append(f"| {n} | {p['sign']} | {p['degree_in_sign']:.5f} | {p['house']} | {p['retrograde']} | {', '.join(p['dignity']['flags']) or ('unsupported' if n not in CLASSICAL else 'none')} |")
+    if 'd9' in r:
+        lines+=['','## D9 / Navamsa','',f"D9 Lagna: {r['d9']['ascendant']['sign']}. Symbolic chart, separate from D1.",'',
+            '| Graha | D9 rashi | D9 house | Same rashi as D1 |','|---|---|---|---|']
+        for n,p in r['d9']['planets'].items():lines.append(f"| {n} | {p['sign']} | {p['house']} | {p['same_rashi_as_d1']} |")
+        lines+=['',r['d9']['interpretation']['topics'],r['d9']['interpretation']['limitation']]
+    if 'vimshottari' in r:
+        d=r['vimshottari'];c=d['current']
+        lines+=['','## Vimshottari','',f"Target: {d['target_utc']}; year convention: {d['year_key']} ({d['year_days']} elapsed days).",
+            f"Current: **{c['mahadasa']['lord']} / {c['antardasha']['lord']}**. AD ends {c['antardasha']['end_exclusive_utc']}.",
+            f"Birth balance: {d['birth_balance']['lord']}, {d['birth_balance']['years_remaining']:.8f} selected years.",'',
+            '| Upcoming MD | Start UTC | End UTC |','|---|---|---|']
+        for p in d['upcoming']['mahadasas']:lines.append(f"| {p['lord']} | {p['start_inclusive_utc']} | {p['end_exclusive_utc']} |")
+        lines+=['','Full-parent AD boundaries and source trace are in JSON. Birth-time uncertainty is not an exact-event confidence score.']
     lines+=['','Whole-sign graha aspects and complete rule traces are in JSON. No strength total or event probability is inferred.','']
     lines += [f"- [{s['author']}]({s['url']}) — {s.get('locator',s['edition'])}" for s in r['sources']]
     lines += ['','Unsupported: '+ '; '.join(r['unsupported']),r['predictive_validity']]

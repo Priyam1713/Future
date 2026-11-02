@@ -6,15 +6,15 @@ Moon: Revati, pada 4, lord Mercury.
 
 | Graha | Rashi | Degree | D1 house | Retrograde | Sign dignity |
 |---|---|---|---|---|---|
-| Sun | Gemini | 28.89820 | 9 | False | none / unsupported for nodes |
-| Moon | Pisces | 27.77534 | 6 | False | none / unsupported for nodes |
-| Mercury | Cancer | 12.80943 | 10 | False | none / unsupported for nodes |
-| Venus | Gemini | 0.53266 | 9 | False | none / unsupported for nodes |
+| Sun | Gemini | 28.89820 | 9 | False | none |
+| Moon | Pisces | 27.77534 | 6 | False | none |
+| Mercury | Cancer | 12.80943 | 10 | False | none |
+| Venus | Gemini | 0.53266 | 9 | False | none |
 | Mars | Aries | 8.12965 | 7 | False | own_sign |
-| Jupiter | Gemini | 28.79243 | 9 | False | none / unsupported for nodes |
-| Saturn | Sagittarius | 28.24414 | 3 | True | none / unsupported for nodes |
-| Rahu | Capricorn | 14.38748 | 4 | True | none / unsupported for nodes |
-| Ketu | Cancer | 14.38748 | 10 | True | none / unsupported for nodes |
+| Jupiter | Gemini | 28.79243 | 9 | False | none |
+| Saturn | Sagittarius | 28.24414 | 3 | True | none |
+| Rahu | Capricorn | 14.38748 | 4 | True | unsupported |
+| Ketu | Cancer | 14.38748 | 10 | True | unsupported |
 
 Whole-sign graha aspects and complete rule traces are in JSON. No strength total or event probability is inferred.
 
