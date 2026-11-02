@@ -1,5 +1,9 @@
 # Future progress
 
+## Numerology calculation pass — 2026-11-03
+- Implemented named Pythagorean date/name core and personal cycles with exact traces, explicit name basis/Y roles, strict character validation and JSON/Markdown CLI. Four new tests cover published acceptance facts, independent mapping/digital-root checks, invalid/leap/separator inputs and calendar transitions.
+- All87 tests pass, preserving83 previous tests. Chaldean/Lo Shu/gematria remain unsupported; no new dependency.
+
 ## Numerology minimum convention freeze — 2026-11-03
 - Frozen decoz-component-reduction profile and published acceptance facts. Core retains11/22/33; daily-guide cycles use sequential single-digit reductions and calendar years, keeping method-specific compounds separate from aggregate formula.
 - Explicit ASCII separator/token policy and caller-supplied per-occurrence Y roles; no inferred transliteration. Chaldean/Campbell/Lo Shu/gematria do not block Pythagorean implementation.

@@ -148,7 +148,17 @@ def main():
     bz.add_argument('--profile',choices=PROFILES,default='civil-zi23')
     bz.add_argument('--format',choices=['json','markdown'],default='json')
     bz.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
+    nu=sub.add_parser('numerology')
+    nu.add_argument('birth');nu.add_argument('name');nu.add_argument('target')
+    nu.add_argument('--basis',required=True,choices=['birth','current'])
+    nu.add_argument('--y-roles',default='')
+    nu.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='numerology':
+        from .numerology import calculate,markdown
+        r=calculate(args.birth,args.name,args.basis,args.target,args.y_roles)
+        print(markdown(r) if args.format=='markdown' else json.dumps(r,indent=2))
+        return
     if args.command=='bazi':
         from .natal import SkyfieldEphemeris
         from .chinese import chart,register_knowledge,markdown
