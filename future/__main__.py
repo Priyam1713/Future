@@ -34,6 +34,7 @@ def load_registry(path=':memory:'):
 
 
 def main():
+    from .houses import SYSTEMS
     parser = argparse.ArgumentParser(description='Local knowledge pipeline and first astronomy component')
     parser.add_argument('--database', default=':memory:')
     sub = parser.add_subparsers(dest='command', required=True)
@@ -50,7 +51,7 @@ def main():
     natal.add_argument('latitude', type=float)
     natal.add_argument('longitude', type=float)
     natal.add_argument('--fold', type=int, choices=[0,1])
-    natal.add_argument('--houses', choices=['whole-sign','equal'], default='whole-sign')
+    natal.add_argument('--houses', choices=SYSTEMS, default='whole-sign')
     natal.add_argument('--tradition', default='modern psychological')
     natal.add_argument('--kernel', default=str(ROOT/'data/de440s.bsp'))
     natal.add_argument('--orbs', help='JSON mapping of aspect angle to orb')
@@ -62,7 +63,7 @@ def main():
     transit.add_argument('start',help='ISO datetime with explicit UTC offset')
     transit.add_argument('--days',type=int,default=30)
     transit.add_argument('--fold',type=int,choices=[0,1])
-    transit.add_argument('--houses',choices=['whole-sign','equal'],default='whole-sign')
+    transit.add_argument('--houses',choices=SYSTEMS,default='whole-sign')
     transit.add_argument('--tradition',default='modern psychological')
     transit.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
     transit.add_argument('--bodies',help='Comma-separated transiting planets')

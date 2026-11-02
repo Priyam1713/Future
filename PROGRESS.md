@@ -48,3 +48,12 @@
 - Gaps: direct coverage remains sparse; no full historical/Hellenistic transit pair library, complete licensed book ingestion, or verified house/dignity-specific transit delineations. Numerical precision remains separate from symbolic predictive validity.
 - Next: quadrant houses, secondary progressions, and deeper Western source coverage. Technique #1 remains Developing.
 - Commit: forecast presentation pass (resolve with `git log --grep="enrich transit interpretations"`).
+
+## 2026-11-02 — quadrant houses
+- Original Porphyry ecliptic trisection, Regiomontanus equator projection, Campanus prime-vertical projection and iterative Placidus semi-arc constructions integrated in natal/forecast CLI. Corrected transit assignments to use unequal cusp sectors.
+- All twelve cusps, exact cusp boundaries and longitude-wrap assignments verified. Frozen Swiss references: 36 spherical frames x four systems (both hemispheres, equator, 65 degrees) plus five astronomical dates including 1879 and leap day 2000. Spherical agreement <0.000001 degree; date-based agreement <0.02 degree with explicit UT1 alignment.
+- All 27 tests pass, retaining earlier 24. Found and fixed an overly narrow Placidus right-ascension bracket. Historical UTC/UT1 differences are not hidden in reference comparisons.
+- Quadrants reject abs(latitude) >= 90 - true obliquity. Placidus semi-arcs fail there; the other systems' polar orientation is outside this release's validation. No substitute system. Equal and whole-sign remain available.
+- Knowledge: knowledge/house_methods.json; example: data/house-comparison-1990.json. Swiss remains a development oracle only.
+- Next: secondary progressions with explicit year-length and angle conventions, followed by independent tests.
+- Commit: quadrant pass (resolve with `git log --grep="verify four quadrant"`).

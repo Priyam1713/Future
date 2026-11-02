@@ -9,6 +9,7 @@ from pathlib import Path
 from itertools import combinations
 from skyfield.api import load, load_file
 from skyfield.framelib import ecliptic_frame
+from .houses import SYSTEMS,cusps,house_for,frame
 
 SIGNS = 'Aries Taurus Gemini Cancer Leo Virgo Libra Scorpio Sagittarius Capricorn Aquarius Pisces'.split()
 BODIES = {'Sun': 'sun', 'Moon': 'moon', 'Mercury': 'mercury', 'Venus': 'venus', 'Mars': 'mars barycenter',
@@ -112,27 +113,24 @@ def aspects(planets, orbs):
 def chart(ephemeris, local, zone, latitude, longitude, settings=Settings(), fold=None, orbs=None):
     if not all(math.isfinite(v) for v in (latitude,longitude)) or not -90 < latitude < 90 or not -180 <= longitude <= 180:
         raise ValueError('Invalid latitude/longitude')
-    if abs(latitude) >= 66:
-        raise ValueError('Polar horizon geometry is not supported in this release')
-    if settings.tradition not in ('Hellenistic','medieval/traditional','modern psychological') or settings.application != 'natal' or settings.zodiac != 'tropical' or settings.houses not in ('whole-sign','equal') or settings.rulership != 'traditional':
+    if settings.tradition not in ('Hellenistic','medieval/traditional','modern psychological') or settings.application != 'natal' or settings.zodiac != 'tropical' or settings.houses not in SYSTEMS or settings.rulership != 'traditional':
         raise ValueError('Unsupported configuration')
     utc = birth_utc(local,zone,fold)
     t, planets = ephemeris.positions(utc)
     asc, mc = angles(t,latitude,longitude)
-    start = math.floor(asc/30)*30 if settings.houses == 'whole-sign' else asc
-    cusps = [(start+i*30)%360 for i in range(12)]
+    house_cusps = cusps(frame(t,longitude)[0],latitude,frame(t,longitude)[1],settings.houses)
     if settings.tradition != 'modern psychological':
         planets = {k:v for k,v in planets.items() if k not in ('Uranus','Neptune','Pluto')}
     for p in planets.values():
         p.update(placement(p['longitude']))
-        p['house'] = int(((p['longitude']-start)%360)//30)+1
+        p['house'] = house_for(p['longitude'],house_cusps)
     return {'technique_id':1,'settings':asdict(settings),'birth':{'local':local,'zone':zone,'utc':utc.isoformat(),'latitude':latitude,'longitude':longitude},
             'times':{'jd_ut1':float(t.ut1),'jd_tt':float(t.tt),'delta_t_seconds':float(t.delta_t),'dut1_seconds':float(t.dut1)},
-            'angles':{'ascendant':asc,'midheaven':mc},'house_cusps':cusps,'planets':planets,
+            'angles':{'ascendant':asc,'midheaven':mc},'house_cusps':house_cusps,'planets':planets,
             'aspects':aspects(planets,DEFAULT_ORBS if orbs is None else orbs),
             'conventions':{'coordinates':'apparent geocentric true ecliptic/equinox of date; outer planets use system barycenters',
                            'time':'IANA tzdata 2025.2; Skyfield builtin leap seconds and modeled delta T',
                            'orbs':DEFAULT_ORBS if orbs is None else orbs},
             'reproducibility':{'skyfield':'1.54','kernel_sha256':ephemeris.digest},
             'limitations':['UT1 uses bundled delta-T model; historical time-zone records and birth times may be uncertain.',
-                           'Whole-sign and equal houses only; no polar charts or predictive timing yet.']}
+                           'Quadrant systems reject the polar domain explicitly; assignments use ecliptic longitude sectors, not mundane latitude.']}

@@ -3,6 +3,7 @@ from datetime import datetime, timedelta, timezone
 import math
 from functools import lru_cache
 from .natal import signed, aspects, DEFAULT_ORBS
+from .houses import house_for
 
 def phase(error, speed, exact_tolerance=1e-5):
     if abs(error) <= exact_tolerance:
@@ -120,7 +121,7 @@ def forecast(ephemeris, natal, start, days=30, orbs=None, bodies=None, interpret
                         events.append(dict(common,exact_utc=t.isoformat(),phase='exact',retrograde=motion<0,
                             speed_degrees_per_day=motion,
                             near_station=abs(motion)<.01,
-                            transit_natal_house=int(((evaluate(t)-natal['house_cusps'][0])%360)//30)+1,
+                            transit_natal_house=house_for(evaluate(t),natal['house_cusps']),
                             longitude=evaluate(t),angular_residual_degrees=residual,
                             interpretation_context=exact_context,
                             interpretations=interpreter(body,target,angle,exact_context) if interpreter else []))

@@ -1,0 +1,18 @@
+{
+  "technique_id": 1,
+  "source": "https://radixpro.com/dl/UserManual.pdf",
+  "author": "Jan Kampherbeek",
+  "locator": "Appendix: House systems",
+  "reviewed_on": "2026-11-02",
+  "methods": [
+    {"id":"porphyry","construction":"Trisect ecliptic arcs between ASC, IC, DSC and MC."},
+    {"id":"placidus","construction":"Solve ecliptic points whose right ascension offsets equal one-third/two-thirds of their semi-diurnal or semi-nocturnal arcs."},
+    {"id":"regiomontanus","construction":"Trisect celestial-equator quadrants; project via great circles through the north/south horizon axis."},
+    {"id":"campanus","construction":"Trisect prime-vertical quadrants; project via great circles through the north/south horizon axis."}
+  ],
+  "implementation":"Original vector geometry and semi-arc root solver; Swiss only supplies test references.",
+  "assignment":"Half-open ecliptic-longitude sectors, not latitude-aware mundane placement.",
+  "polar_policy":"All quadrant methods explicitly reject abs(latitude) >= 90 - true obliquity. Placidus semi-arcs become circumpolar; other methods may be defined but polar orientation is outside this release's validated domain. No fallback.",
+  "interpretation":"A house-system choice changes geometric placements. It does not establish that a reading has greater predictive validity. System-specific interpretive rules are not treated as interchangeable.",
+  "rights":"Mathematical constructions summarized; no source code or book text copied."
+}
