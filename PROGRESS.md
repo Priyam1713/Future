@@ -1,5 +1,9 @@
 # Future progress
 
+## Numerology minimum convention freeze — 2026-11-03
+- Frozen decoz-component-reduction profile and published acceptance facts. Core retains11/22/33; daily-guide cycles use sequential single-digit reductions and calendar years, keeping method-specific compounds separate from aggregate formula.
+- Explicit ASCII separator/token policy and caller-supplied per-occurrence Y roles; no inferred transliteration. Chaldean/Campbell/Lo Shu/gematria do not block Pythagorean implementation.
+
 ## 2026-11-03 — #4 procedural source verification in progress
 - Resumed c0239a1; read permanent policy and Numerology audit. Inspected Decoz author pages for core name numbers, pronunciation-dependent Y and personal-cycle formulas.
 - Recorded versioned findings in numerology_pass1_findings.json. Require explicit Y classification; do not silently infer pronunciation/transliteration. Retained component-reduction worked-example leads with independent executable verification pending.

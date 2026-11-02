@@ -1,0 +1,16 @@
+{
+ "technique_id":4,"profile":"decoz-component-reduction","version":1,
+ "core":"Reduce date components/name parts separately, retaining11/22/33 at every core reduction stage. Keep original totals and digit-sum steps.",
+ "birthday":"Retain actual day1–31 as Birthday number; show reduced/master companion separately, never replace original day.",
+ "cycles":"Calendar Jan1 year transition; reduce cycles to1–9 without masters. Use sequential Sun/birth-month-day → year → month → day method from daily guide; compounds belong to that method, not aggregate formula.",
+ "name_policy":"Explicit birth/current basis. ASCII A–Z case-insensitive only; ASCII space separates name parts. Hyphen/apostrophe join letters inside a part and are recorded as zero-value separators. This token policy is an explicit implementation convention, not claimed universal Decoz doctrine. Reject other characters/diacritics rather than transliterate. Every Y occurrence requires caller-specified vowel/consonant role, ordered left-to-right. No vowels/consonants in entire name yields unsupported null for that number.",
+ "sources":[
+ {"id":"numerology-decoz-life-path-v1","url":"https://www.worldnumerology.com/numerology-life-path/","locator":"Calculation steps; October15,1998 example"},
+ {"id":"numerology-decoz-expression-v1","url":"https://www.worldnumerology.com/numerology-expression/","locator":"Thomas Cruise Mapother example; name selection"},
+ {"id":"numerology-decoz-guide-v1","url":"https://www.worldnumerology.com/do-your-own-reading/","locator":"Birthday, Heart's Desire, Personality and personal-cycle sections"},
+ {"id":"numerology-decoz-daily-v1","url":"https://www.worldnumerology.com/free-forecasts/daily-number-forecast/","locator":"Steps1–4, September12/October12,2026 example"},
+ {"id":"numerology-decoz-vowels-v1","url":"https://www.worldnumerology.com/numerology-soul-urge/","locator":"Vowel and pronunciation-dependent Y calculation"}
+ ],
+ "unsupported":["Chaldean","Lo Shu","gematria","automatic pronunciation/transliteration","birthday-based personal-year transition","aggregate-method compound interpretations"],
+ "rights":"Factual procedures and short original summaries only; no copyrighted corpus ingested."
+}
