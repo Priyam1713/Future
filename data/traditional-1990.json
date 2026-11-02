@@ -1,0 +1,837 @@
+{
+  "natal": {
+    "technique_id": 1,
+    "settings": {
+      "tradition": "medieval/traditional",
+      "application": "natal",
+      "zodiac": "tropical",
+      "houses": "regiomontanus",
+      "rulership": "traditional"
+    },
+    "birth": {
+      "local": "1990-07-15T14:30",
+      "zone": "Asia/Kolkata",
+      "utc": "1990-07-15T09:00:00+00:00",
+      "latitude": 28.6139,
+      "longitude": 77.209
+    },
+    "times": {
+      "jd_ut1": 2448087.874999344,
+      "jd_tt": 2448087.875661852,
+      "delta_t_seconds": 57.240707175000004,
+      "dut1_seconds": -0.05670717500000677
+    },
+    "angles": {
+      "ascendant": 227.92295539054038,
+      "midheaven": 142.82040025539212
+    },
+    "house_cusps": [
+      227.92295539054038,
+      255.09376576051324,
+      287.2852669342476,
+      322.8204002553921,
+      355.290378331284,
+      22.665629698764405,
+      47.92295539054038,
+      75.09376576051324,
+      107.2852669342476,
+      142.82040025539212,
+      175.290378331284,
+      202.66562969876443
+    ],
+    "planets": {
+      "Sun": {
+        "longitude": 112.62691414131217,
+        "speed_degrees_per_day": 0.9539152264153472,
+        "retrograde": false,
+        "sign": "Cancer",
+        "degree_in_sign": 22.62691414131217,
+        "house": 9
+      },
+      "Moon": {
+        "longitude": 21.50405287152079,
+        "speed_degrees_per_day": 14.007683654517677,
+        "retrograde": false,
+        "sign": "Aries",
+        "degree_in_sign": 21.50405287152079,
+        "house": 5
+      },
+      "Mercury": {
+        "longitude": 126.53814659587589,
+        "speed_degrees_per_day": 1.8813552571543823,
+        "retrograde": false,
+        "sign": "Leo",
+        "degree_in_sign": 6.538146595875887,
+        "house": 9
+      },
+      "Venus": {
+        "longitude": 84.2613762298219,
+        "speed_degrees_per_day": 1.1991017407666504,
+        "retrograde": false,
+        "sign": "Gemini",
+        "degree_in_sign": 24.261376229821906,
+        "house": 8
+      },
+      "Mars": {
+        "longitude": 31.85836473296035,
+        "speed_degrees_per_day": 0.6700673297729054,
+        "retrograde": false,
+        "sign": "Taurus",
+        "degree_in_sign": 1.85836473296035,
+        "house": 6
+      },
+      "Jupiter": {
+        "longitude": 112.52114190078923,
+        "speed_degrees_per_day": 0.22361663957894962,
+        "retrograde": false,
+        "sign": "Cancer",
+        "degree_in_sign": 22.52114190078923,
+        "house": 9
+      },
+      "Saturn": {
+        "longitude": 291.9728578778487,
+        "speed_degrees_per_day": -0.07407273218404953,
+        "retrograde": true,
+        "sign": "Capricorn",
+        "degree_in_sign": 21.972857877848696,
+        "house": 3
+      }
+    },
+    "aspects": [
+      {
+        "bodies": [
+          "Sun",
+          "Moon"
+        ],
+        "angle": 90.0,
+        "separation": 91.12286126979137,
+        "orb": 1.1228612697913718
+      },
+      {
+        "bodies": [
+          "Sun",
+          "Jupiter"
+        ],
+        "angle": 0.0,
+        "separation": 0.10577224052292422,
+        "orb": 0.10577224052292422
+      },
+      {
+        "bodies": [
+          "Sun",
+          "Saturn"
+        ],
+        "angle": 180.0,
+        "separation": 179.34594373653653,
+        "orb": 0.6540562634634739
+      },
+      {
+        "bodies": [
+          "Moon",
+          "Venus"
+        ],
+        "angle": 60.0,
+        "separation": 62.75732335830111,
+        "orb": 2.7573233583011074
+      },
+      {
+        "bodies": [
+          "Moon",
+          "Jupiter"
+        ],
+        "angle": 90.0,
+        "separation": 91.01708902926845,
+        "orb": 1.0170890292684476
+      },
+      {
+        "bodies": [
+          "Moon",
+          "Saturn"
+        ],
+        "angle": 90.0,
+        "separation": 89.5311949936721,
+        "orb": 0.4688050063278979
+      },
+      {
+        "bodies": [
+          "Mercury",
+          "Mars"
+        ],
+        "angle": 90.0,
+        "separation": 94.67978186291555,
+        "orb": 4.679781862915547
+      },
+      {
+        "bodies": [
+          "Jupiter",
+          "Saturn"
+        ],
+        "angle": 180.0,
+        "separation": 179.45171597705945,
+        "orb": 0.5482840229405497
+      }
+    ],
+    "conventions": {
+      "coordinates": "apparent geocentric true ecliptic/equinox of date; outer planets use system barycenters",
+      "time": "IANA tzdata 2025.2; Skyfield builtin leap seconds and modeled delta T",
+      "orbs": {
+        "0": 8.0,
+        "60": 4.0,
+        "90": 6.0,
+        "120": 6.0,
+        "180": 8.0
+      }
+    },
+    "reproducibility": {
+      "skyfield": "1.54",
+      "kernel_sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    },
+    "limitations": [
+      "UT1 uses bundled delta-T model; historical time-zone records and birth times may be uncertain.",
+      "Quadrant systems reject the polar domain explicitly; assignments use ecliptic longitude sectors, not mundane latitude."
+    ]
+  },
+  "conditions": {
+    "technique_id": 1,
+    "application": "traditional planetary conditions",
+    "tradition": "medieval/traditional",
+    "settings": {
+      "bounds": "lilly-ptolemaic",
+      "triplicity": "lilly",
+      "solar": "lilly-ca113",
+      "lots": "fixed-day-fortune",
+      "reception": "dignity-occupancy"
+    },
+    "sect": {
+      "type": "day",
+      "sun_center_altitude_degrees": 61.36635193383075,
+      "convention": "Topocentric apparent center, geometric horizon, no refraction or terrain; altitude >= 0 is day.",
+      "boundary_sensitive": false
+    },
+    "planets": {
+      "Sun": {
+        "longitude": 112.62691414131217,
+        "sign": "Cancer",
+        "rulers": {
+          "domicile": "Moon",
+          "exaltation": "Jupiter",
+          "triplicity": "Mars",
+          "participating": null,
+          "bound": "Mercury",
+          "face": "Moon",
+          "detriment": "Saturn",
+          "fall": "Mars"
+        },
+        "own_dignities": [],
+        "debilities": [],
+        "peregrine_in_selected_primary_rulers": true,
+        "sect_affiliation": "day",
+        "of_chart_sect": true,
+        "retrograde": false,
+        "longitude_speed_degrees_per_day": 0.9539152264153472,
+        "near_station": false,
+        "solar": null,
+        "solar_longitude_phase": "conjunct",
+        "exceptions": [
+          "Mercury affiliation uses morning/evening longitude phase, not an observed heliacal rise.",
+          "Participating triplicity lord is reported separately, not counted as primary triplicity dignity."
+        ]
+      },
+      "Moon": {
+        "longitude": 21.50405287152079,
+        "sign": "Aries",
+        "rulers": {
+          "domicile": "Mars",
+          "exaltation": "Sun",
+          "triplicity": "Sun",
+          "participating": null,
+          "bound": "Mars",
+          "face": "Venus",
+          "detriment": "Venus",
+          "fall": "Saturn"
+        },
+        "own_dignities": [],
+        "debilities": [],
+        "peregrine_in_selected_primary_rulers": true,
+        "sect_affiliation": "night",
+        "of_chart_sect": false,
+        "retrograde": false,
+        "longitude_speed_degrees_per_day": 14.007683654517677,
+        "near_station": false,
+        "solar": {
+          "state": "outside_beams",
+          "longitude_distance_degrees": 91.12286126979137,
+          "same_sign": false,
+          "system": "lilly-ca113",
+          "actual_naked_eye_visibility": "not inferred; requires atmosphere, extinction and heliacal-rise model"
+        },
+        "solar_longitude_phase": "west_of_sun",
+        "exceptions": [
+          "Mercury affiliation uses morning/evening longitude phase, not an observed heliacal rise.",
+          "Participating triplicity lord is reported separately, not counted as primary triplicity dignity."
+        ]
+      },
+      "Mercury": {
+        "longitude": 126.53814659587589,
+        "sign": "Leo",
+        "rulers": {
+          "domicile": "Sun",
+          "exaltation": null,
+          "triplicity": "Sun",
+          "participating": null,
+          "bound": "Mercury",
+          "face": "Saturn",
+          "detriment": "Saturn",
+          "fall": null
+        },
+        "own_dignities": [
+          "bound"
+        ],
+        "debilities": [],
+        "peregrine_in_selected_primary_rulers": false,
+        "sect_affiliation": "night",
+        "of_chart_sect": false,
+        "retrograde": false,
+        "longitude_speed_degrees_per_day": 1.8813552571543823,
+        "near_station": false,
+        "solar": {
+          "state": "under_beams",
+          "longitude_distance_degrees": 13.91123245456373,
+          "same_sign": false,
+          "system": "lilly-ca113",
+          "actual_naked_eye_visibility": "not inferred; requires atmosphere, extinction and heliacal-rise model"
+        },
+        "solar_longitude_phase": "east_of_sun",
+        "exceptions": [
+          "Mercury affiliation uses morning/evening longitude phase, not an observed heliacal rise.",
+          "Participating triplicity lord is reported separately, not counted as primary triplicity dignity."
+        ]
+      },
+      "Venus": {
+        "longitude": 84.2613762298219,
+        "sign": "Gemini",
+        "rulers": {
+          "domicile": "Mercury",
+          "exaltation": null,
+          "triplicity": "Saturn",
+          "participating": null,
+          "bound": "Saturn",
+          "face": "Sun",
+          "detriment": "Jupiter",
+          "fall": null
+        },
+        "own_dignities": [],
+        "debilities": [],
+        "peregrine_in_selected_primary_rulers": true,
+        "sect_affiliation": "night",
+        "of_chart_sect": false,
+        "retrograde": false,
+        "longitude_speed_degrees_per_day": 1.1991017407666504,
+        "near_station": false,
+        "solar": {
+          "state": "outside_beams",
+          "longitude_distance_degrees": 28.365537911490264,
+          "same_sign": false,
+          "system": "lilly-ca113",
+          "actual_naked_eye_visibility": "not inferred; requires atmosphere, extinction and heliacal-rise model"
+        },
+        "solar_longitude_phase": "west_of_sun",
+        "exceptions": [
+          "Mercury affiliation uses morning/evening longitude phase, not an observed heliacal rise.",
+          "Participating triplicity lord is reported separately, not counted as primary triplicity dignity."
+        ]
+      },
+      "Mars": {
+        "longitude": 31.85836473296035,
+        "sign": "Taurus",
+        "rulers": {
+          "domicile": "Venus",
+          "exaltation": "Moon",
+          "triplicity": "Venus",
+          "participating": null,
+          "bound": "Venus",
+          "face": "Mercury",
+          "detriment": "Mars",
+          "fall": null
+        },
+        "own_dignities": [],
+        "debilities": [
+          "detriment"
+        ],
+        "peregrine_in_selected_primary_rulers": true,
+        "sect_affiliation": "night",
+        "of_chart_sect": false,
+        "retrograde": false,
+        "longitude_speed_degrees_per_day": 0.6700673297729054,
+        "near_station": false,
+        "solar": {
+          "state": "outside_beams",
+          "longitude_distance_degrees": 80.76854940835182,
+          "same_sign": false,
+          "system": "lilly-ca113",
+          "actual_naked_eye_visibility": "not inferred; requires atmosphere, extinction and heliacal-rise model"
+        },
+        "solar_longitude_phase": "west_of_sun",
+        "exceptions": [
+          "Mercury affiliation uses morning/evening longitude phase, not an observed heliacal rise.",
+          "Participating triplicity lord is reported separately, not counted as primary triplicity dignity."
+        ]
+      },
+      "Jupiter": {
+        "longitude": 112.52114190078923,
+        "sign": "Cancer",
+        "rulers": {
+          "domicile": "Moon",
+          "exaltation": "Jupiter",
+          "triplicity": "Mars",
+          "participating": null,
+          "bound": "Mercury",
+          "face": "Moon",
+          "detriment": "Saturn",
+          "fall": "Mars"
+        },
+        "own_dignities": [
+          "exaltation"
+        ],
+        "debilities": [],
+        "peregrine_in_selected_primary_rulers": false,
+        "sect_affiliation": "day",
+        "of_chart_sect": true,
+        "retrograde": false,
+        "longitude_speed_degrees_per_day": 0.22361663957894962,
+        "near_station": false,
+        "solar": {
+          "state": "cazimi",
+          "longitude_distance_degrees": 0.10577224052292422,
+          "same_sign": true,
+          "system": "lilly-ca113",
+          "actual_naked_eye_visibility": "not inferred; requires atmosphere, extinction and heliacal-rise model"
+        },
+        "solar_longitude_phase": "west_of_sun",
+        "exceptions": [
+          "Mercury affiliation uses morning/evening longitude phase, not an observed heliacal rise.",
+          "Participating triplicity lord is reported separately, not counted as primary triplicity dignity."
+        ]
+      },
+      "Saturn": {
+        "longitude": 291.9728578778487,
+        "sign": "Capricorn",
+        "rulers": {
+          "domicile": "Saturn",
+          "exaltation": "Mars",
+          "triplicity": "Venus",
+          "participating": null,
+          "bound": "Saturn",
+          "face": "Sun",
+          "detriment": "Moon",
+          "fall": "Jupiter"
+        },
+        "own_dignities": [
+          "domicile",
+          "bound"
+        ],
+        "debilities": [],
+        "peregrine_in_selected_primary_rulers": false,
+        "sect_affiliation": "day",
+        "of_chart_sect": true,
+        "retrograde": true,
+        "longitude_speed_degrees_per_day": -0.07407273218404953,
+        "near_station": false,
+        "solar": {
+          "state": "outside_beams",
+          "longitude_distance_degrees": 179.34594373653653,
+          "same_sign": false,
+          "system": "lilly-ca113",
+          "actual_naked_eye_visibility": "not inferred; requires atmosphere, extinction and heliacal-rise model"
+        },
+        "solar_longitude_phase": "east_of_sun",
+        "exceptions": [
+          "Mercury affiliation uses morning/evening longitude phase, not an observed heliacal rise.",
+          "Participating triplicity lord is reported separately, not counted as primary triplicity dignity."
+        ]
+      }
+    },
+    "receptions": [
+      {
+        "host": "Moon",
+        "guest": "Sun",
+        "dignities": [
+          "domicile",
+          "face"
+        ],
+        "whole_sign_configuration": true,
+        "policy": "dignity-occupancy",
+        "mutual": true
+      },
+      {
+        "host": "Mercury",
+        "guest": "Sun",
+        "dignities": [
+          "bound"
+        ],
+        "whole_sign_configuration": false,
+        "policy": "dignity-occupancy",
+        "mutual": true
+      },
+      {
+        "host": "Mars",
+        "guest": "Sun",
+        "dignities": [
+          "triplicity"
+        ],
+        "whole_sign_configuration": true,
+        "policy": "dignity-occupancy",
+        "mutual": false
+      },
+      {
+        "host": "Jupiter",
+        "guest": "Sun",
+        "dignities": [
+          "exaltation"
+        ],
+        "whole_sign_configuration": true,
+        "policy": "dignity-occupancy",
+        "mutual": false
+      },
+      {
+        "host": "Sun",
+        "guest": "Moon",
+        "dignities": [
+          "exaltation",
+          "triplicity"
+        ],
+        "whole_sign_configuration": true,
+        "policy": "dignity-occupancy",
+        "mutual": true
+      },
+      {
+        "host": "Venus",
+        "guest": "Moon",
+        "dignities": [
+          "face"
+        ],
+        "whole_sign_configuration": true,
+        "policy": "dignity-occupancy",
+        "mutual": false
+      },
+      {
+        "host": "Mars",
+        "guest": "Moon",
+        "dignities": [
+          "domicile",
+          "bound"
+        ],
+        "whole_sign_configuration": false,
+        "policy": "dignity-occupancy",
+        "mutual": true
+      },
+      {
+        "host": "Sun",
+        "guest": "Mercury",
+        "dignities": [
+          "domicile",
+          "triplicity"
+        ],
+        "whole_sign_configuration": false,
+        "policy": "dignity-occupancy",
+        "mutual": true
+      },
+      {
+        "host": "Saturn",
+        "guest": "Mercury",
+        "dignities": [
+          "face"
+        ],
+        "whole_sign_configuration": false,
+        "policy": "dignity-occupancy",
+        "mutual": false
+      },
+      {
+        "host": "Sun",
+        "guest": "Venus",
+        "dignities": [
+          "face"
+        ],
+        "whole_sign_configuration": false,
+        "policy": "dignity-occupancy",
+        "mutual": false
+      },
+      {
+        "host": "Mercury",
+        "guest": "Venus",
+        "dignities": [
+          "domicile"
+        ],
+        "whole_sign_configuration": true,
+        "policy": "dignity-occupancy",
+        "mutual": false
+      },
+      {
+        "host": "Saturn",
+        "guest": "Venus",
+        "dignities": [
+          "triplicity",
+          "bound"
+        ],
+        "whole_sign_configuration": false,
+        "policy": "dignity-occupancy",
+        "mutual": true
+      },
+      {
+        "host": "Moon",
+        "guest": "Mars",
+        "dignities": [
+          "exaltation"
+        ],
+        "whole_sign_configuration": false,
+        "policy": "dignity-occupancy",
+        "mutual": true
+      },
+      {
+        "host": "Mercury",
+        "guest": "Mars",
+        "dignities": [
+          "face"
+        ],
+        "whole_sign_configuration": true,
+        "policy": "dignity-occupancy",
+        "mutual": false
+      },
+      {
+        "host": "Venus",
+        "guest": "Mars",
+        "dignities": [
+          "domicile",
+          "triplicity",
+          "bound"
+        ],
+        "whole_sign_configuration": false,
+        "policy": "dignity-occupancy",
+        "mutual": false
+      },
+      {
+        "host": "Moon",
+        "guest": "Jupiter",
+        "dignities": [
+          "domicile",
+          "face"
+        ],
+        "whole_sign_configuration": true,
+        "policy": "dignity-occupancy",
+        "mutual": false
+      },
+      {
+        "host": "Mercury",
+        "guest": "Jupiter",
+        "dignities": [
+          "bound"
+        ],
+        "whole_sign_configuration": false,
+        "policy": "dignity-occupancy",
+        "mutual": false
+      },
+      {
+        "host": "Mars",
+        "guest": "Jupiter",
+        "dignities": [
+          "triplicity"
+        ],
+        "whole_sign_configuration": true,
+        "policy": "dignity-occupancy",
+        "mutual": false
+      },
+      {
+        "host": "Sun",
+        "guest": "Saturn",
+        "dignities": [
+          "face"
+        ],
+        "whole_sign_configuration": true,
+        "policy": "dignity-occupancy",
+        "mutual": false
+      },
+      {
+        "host": "Venus",
+        "guest": "Saturn",
+        "dignities": [
+          "triplicity"
+        ],
+        "whole_sign_configuration": false,
+        "policy": "dignity-occupancy",
+        "mutual": true
+      },
+      {
+        "host": "Mars",
+        "guest": "Saturn",
+        "dignities": [
+          "exaltation"
+        ],
+        "whole_sign_configuration": true,
+        "policy": "dignity-occupancy",
+        "mutual": false
+      }
+    ],
+    "lots": {
+      "Fortune": {
+        "longitude": 136.800094120749,
+        "sign": "Leo",
+        "degree_in_sign": 16.80009412074901,
+        "house": 9,
+        "sign_ruler": "Sun"
+      },
+      "Spirit": {
+        "longitude": 319.04581666033175,
+        "sign": "Aquarius",
+        "degree_in_sign": 19.045816660331752,
+        "house": 3,
+        "sign_ruler": "Saturn"
+      }
+    },
+    "lot_formulas": {
+      "Fortune": 136.800094120749,
+      "Spirit": 319.04581666033175,
+      "system": "fixed-day-fortune",
+      "exception": "Fixed-day option changes Fortune only; Spirit retains its separately identified sect formula."
+    },
+    "provenance": {
+      "technique_id": 1,
+      "version": 1,
+      "checked_on": "2026-11-02",
+      "rules": [
+        {
+          "id": "sect.horizon",
+          "tradition": "Hellenistic",
+          "method": "Sun above/below horizon; Sun/Jupiter/Saturn diurnal, Moon/Venus/Mars nocturnal. Mercury uses morning/evening phase.",
+          "source": "https://theastrologypodcast.com/transcripts/tap-ep-274-transcript-sect-in-astrology-day-and-night-charts/",
+          "author": "Chris Brennan and guests",
+          "edition": "Episode 274 transcript",
+          "locator": "Day/night teams and sect light",
+          "exceptions": [
+            "Geometric center horizon threshold is explicit implementation convention; refraction, terrain and a solar-disk convention can change borderline sect."
+          ]
+        },
+        {
+          "id": "sect.mercury",
+          "tradition": "Robert Hand",
+          "method": "Morning Mercury diurnal; evening Mercury nocturnal.",
+          "source": "https://theastrologypodcast.com/transcripts/ep-37-robert-hand-on-sect-day-vs-night-charts/",
+          "author": "Robert Hand / Chris Brennan",
+          "edition": "Episode 37 transcript",
+          "locator": "Mercury's two criteria",
+          "exceptions": [
+            "Hand also discusses an application-based alternative; not implemented. Longitude phase is computed, not actual visibility."
+          ]
+        },
+        {
+          "id": "dignities.tables",
+          "tradition": "Named historical tables",
+          "method": "Domicile, exaltation, triplicity, bounds and ten-degree faces are table lookups; debilities are detriment/fall.",
+          "source": "https://www.skyscript.co.uk/essential_dignities.html",
+          "author": "William Lilly; Skyscript presentation",
+          "edition": "CA 1647, p.104",
+          "locator": "Main dignity diagram and separate Egyptian terms diagram",
+          "exceptions": [
+            "Egyptian and Lilly-Ptolemaic bounds remain distinct. Lilly's table is not identical to all Ptolemy transmissions. Exaltation degree is reported as data; dignity applies throughout its sign."
+          ]
+        },
+        {
+          "id": "triplicities.dorothean",
+          "tradition": "Dorothean",
+          "method": "Day/night priority rulers plus participating ruler; Lilly uses two rulers, with Mars ruling water in both sects.",
+          "source": "https://www.skyscript.co.uk/triplicities.html",
+          "author": "Deborah Houlding",
+          "edition": "Online article",
+          "locator": "Ancient Assignment of Triplicity Rulers; nocturnal Scorpio example",
+          "examples": [
+            "Nocturnal Scorpio: Mars, Venus, Moon in priority order."
+          ],
+          "exceptions": [
+            "Participating rulership is exposed separately; no universal dignity score."
+          ]
+        },
+        {
+          "id": "reception.dignities",
+          "tradition": "Medieval/traditional reconstruction",
+          "method": "The dignity owner receives the visiting planet; mutual reception is reciprocal. Optional aspect-required rule uses sign configuration and major dignity or two minor dignities.",
+          "source": "https://www.skyscript.co.uk/dig6.html",
+          "author": "Deborah Houlding",
+          "edition": "Understanding Dignity, part 6",
+          "locator": "Sun at 25 Libra example, paragraphs 12\u00e2\u20ac\u201c19",
+          "examples": [
+            "Sun at 25 Libra at night: Venus domicile, Saturn exaltation, Mercury triplicity, Mars term, Jupiter face in Lilly tables."
+          ],
+          "exceptions": [
+            "Occupancy, sign-level aspect-required reception and Hellenistic domicile dispositorship are separate policies. No claim to full Bonatti perfection rules."
+          ]
+        },
+        {
+          "id": "solar.proximity",
+          "tradition": "Lilly and earlier beams convention",
+          "method": "CA p.113: same-sign combustion below 8.5 degrees; beams below 17; cazimi within 17 arcminutes. Earlier beams convention: 15 degrees, without medieval combustion/cazimi categories.",
+          "source": "https://www.skyscript.co.uk/glossary/combust/",
+          "author": "Skyscript glossary citing William Lilly",
+          "edition": "CA 1647 pp.113\u00e2\u20ac\u201c114; comparison with p.300",
+          "locator": "Combust/Combustion",
+          "examples": [
+            "Lilly: Sun 15\u00c2\u00b030 Taurus and Venus 15\u00c2\u00b025 Taurus is cazimi."
+          ],
+          "exceptions": [
+            "Lilly p.300 instead uses 12-degree beams and 16-minute cazimi; this conflicting passage is recorded but not merged into CA113. No naked-eye visibility guarantee."
+          ]
+        },
+        {
+          "id": "lots.sect-reversing",
+          "tradition": "Hellenistic reconstruction",
+          "method": "Day Fortune ASC+Moon\u00e2\u02c6\u2019Sun, Spirit ASC+Sun\u00e2\u02c6\u2019Moon; reverse each at night.",
+          "source": "https://ncgrastrology.org/wp-content/uploads/publications/geocosmic-journal/NCGR_Geocosmic_Journal_2022_Autumn.pdf",
+          "author": "NCGR Geocosmic Journal contributors",
+          "edition": "Autumn 2022",
+          "locator": "The Hellenistic Lots: Fortune & Spirit, displayed formulas",
+          "exceptions": [
+            "Fixed-day Fortune is a separate convention; Spirit remains sect-reversing. Lots are symbolic points, not physical bodies."
+          ]
+        },
+        {
+          "id": "lots.fixed-fortune",
+          "tradition": "Lilly",
+          "method": "Fortune uses ASC+Moon\u00e2\u02c6\u2019Sun for day and night.",
+          "source": "https://www.skyscript.co.uk/CA/CA_DH.pdf",
+          "author": "William Lilly",
+          "edition": "Christian Astrology 1647",
+          "locator": "p.143, Of the Part of Fortune, and how to take it, either by Day or Night",
+          "exceptions": [
+            "Spirit is not attributed to Lilly here; its formula remains separately sourced."
+          ]
+        }
+      ],
+      "research_leads": [
+        {
+          "author": "Demetra George",
+          "title": "Ancient Astrology in Theory and Practice, Volume One: Assessing Planetary Condition",
+          "source": "https://demetra-george.com/hellenistic-astrology-certificate-program/",
+          "status": "Author bibliography and scope verified; copyrighted chapters not ingested or claimed extracted."
+        },
+        {
+          "author": "Chris Brennan",
+          "title": "Hellenistic Astrology: The Study of Fate and Fortune",
+          "source": "https://theastrologypodcast.com/transcripts/ep-188-demetra-george-on-ancient-astrology-in-theory-and-practice/",
+          "status": "Author interview/procedural podcast resources consulted; book not ingested."
+        },
+        {
+          "author": "Claudius Ptolemy",
+          "title": "Tetrabiblos, I.20\u00e2\u20ac\u201c21 (Robbins numbering), I.23\u00e2\u20ac\u201c24 (Ashmand)",
+          "source": "https://www.sacred-texts.com/astro/ptb/ptb26.htm",
+          "status": "Original-author translated terms discussion checked; divergent transmissions preserved by naming selected table."
+        }
+      ],
+      "rights": "Only factual rule parameters, concise original summaries and locators retained. No copyrighted chapters ingested.",
+      "verification": "Procedural examples and supported-date numerical references are distinct from evidence of predictive accuracy."
+    },
+    "limitations": [
+      "Traditional symbolic conditions are not validated predictive probabilities.",
+      "No strength total, medical interpretation, observed visibility or complete medieval horary perfection is inferred.",
+      "Station threshold 0.01 degree/day is an explicit numerical display flag, not a historical strength score.",
+      "Published rules are tested on supported 1850\u20132149 charts; no ancient-date ephemeris validation claimed."
+    ]
+  }
+}

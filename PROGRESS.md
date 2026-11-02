@@ -67,3 +67,12 @@
 - Examples: data/house-comparison-1990.{md,json}; data/progressed-1990-2026.{md,json}. July 1990 example at Nov 2, 2026: progressed Moon 29.253959 Leo; Virgo ingress Nov 22, 2026 ~04:42 UTC. Naibod/Placidus progressed ASC 18.585770 Sagittarius, MC 1.031850 Libra.
 - Remaining #1 scope: Hellenistic sect/time-lords/lots and traditional bounds/triplicities/reception remain incomplete; interpretive tradition presets currently have limited scope. Expand direct progression readings, validate more historical time conventions, then other documented timing methods and electional applications. No Technique #2 work started.
 - Commit: secondary pass (resolve with `git log --grep="verified secondary progressions"`).
+
+## 2026-11-02 — Hellenistic/traditional planetary conditions
+- Implemented astronomical sect from topocentric solar center altitude (unrefracted horizon); classical sect affiliations, explicitly phase-based Mercury convention, domicile/exaltation/triplicity/bounds/faces, detriment/fall, reception policies, motion/proximity and Fortune/Spirit.
+- Distinct Egyptian vs Lilly-Ptolemaic tables transcribed from identified diagrams. Dorothean vs Lilly triplicity and Hellenistic 15-degree beams vs Lilly CA113 conditions are not merged. Ptolemaic manuscript differences and Lilly CA300 conflicting thresholds retained as source exceptions.
+- Doctrine records registered by source/tradition, with examples, locators and exceptions; no book ingestion, invented strength total or observed-visibility claim. Demetra George/Brennan book scope checked; accessible practitioner/original-author resources used for actual rules.
+- All 37 tests pass, preserving earlier 32. Independent Swiss solar altitude references cover 12 modern/historical UT1 cases across hemispheres; source examples verify Sun 25 Libra reception and Lilly cazimi; boundary/table/Lot checks included. No ancient-date numerical claim.
+- Examples: data/hellenistic-1990.json and data/traditional-1990.json. July 1990 day chart: Fortune 136.800094 degrees, Spirit 319.045817 degrees.
+- Next: annual whole-sign profections with explicit civil-birthday convention and leap-day policy; traditional context integration.
+- Commit: doctrine pass (resolve with `git log --grep="traditional planetary doctrines"`).

@@ -83,7 +83,31 @@ def main():
     prog.add_argument('--window-days',type=int,default=365)
     prog.add_argument('--orbs')
     prog.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
+    doctrine=sub.add_parser('doctrines')
+    doctrine.add_argument('local')
+    doctrine.add_argument('zone')
+    doctrine.add_argument('latitude',type=float)
+    doctrine.add_argument('longitude',type=float)
+    doctrine.add_argument('--tradition',choices=['Hellenistic','medieval/traditional'],default='Hellenistic')
+    doctrine.add_argument('--houses',choices=SYSTEMS,default='whole-sign')
+    doctrine.add_argument('--bounds',choices=['egyptian','lilly-ptolemaic'])
+    doctrine.add_argument('--fold',type=int,choices=[0,1])
+    doctrine.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
     args = parser.parse_args()
+    if args.command=='doctrines':
+        from dataclasses import replace
+        from .natal import SkyfieldEphemeris,Settings,chart
+        from .doctrines import analyze,DoctrineSettings,register_knowledge
+        e=SkyfieldEphemeris(args.kernel)
+        registry=load_registry(args.database)
+        try:
+            register_knowledge(registry)
+            n=chart(e,args.local,args.zone,args.latitude,args.longitude,Settings(tradition=args.tradition,houses=args.houses),args.fold)
+            config=DoctrineSettings() if args.tradition=='Hellenistic' else DoctrineSettings('lilly-ptolemaic','lilly','lilly-ca113','fixed-day-fortune','dignity-occupancy')
+            if args.bounds:config=replace(config,bounds=args.bounds)
+            print(json.dumps({'natal':n,'conditions':analyze(e,n,config)},indent=2))
+        finally:registry.close();e.kernel.close()
+        return
     if args.command=='progressions':
         from datetime import datetime
         from .natal import SkyfieldEphemeris,Settings
