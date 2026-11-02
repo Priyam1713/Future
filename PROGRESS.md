@@ -1,5 +1,10 @@
 # Future progress
 
+## 2026-11-03 — #4 procedural source verification in progress
+- Resumed c0239a1; read permanent policy and Numerology audit. Inspected Decoz author pages for core name numbers, pronunciation-dependent Y and personal-cycle formulas.
+- Recorded versioned findings in numerology_pass1_findings.json. Require explicit Y classification; do not silently infer pronunciation/transliteration. Retained component-reduction worked-example leads with independent executable verification pending.
+- Pass1 remains incomplete: timing master/boundary details, additional worked examples and lawful Cheiro/Campbell procedural access still need verification. No Numerology engine, ready claim or Technique5 work added. Existing release acceptance remains83 tests; registry regression rerun below covers this research-only addition.
+
 ## 2026-11-03 — #4 Numerology resource/variation audit
 - Started only after Chinese closure d230a9d was committed/pushed. All six variations/three ranked sources preserved; no Numerology engine or executable rule added.
 - Cheiro and Decoz publisher listings verified; Campbell catalog-search metadata located, procedural/full-page access unresolved. Decoz author-site Life Path/Expression examples supply bounded first-slice leads without copyrighted full-text ingestion.

@@ -1,0 +1,33 @@
+{
+  "technique_id": 4,
+  "version": 1,
+  "status": "source verification in progress; not an engine release",
+  "date": "2026-11-03",
+  "sources_inspected": [
+    {"url":"https://www.worldnumerology.com/do-your-own-reading/","author":"Hans Decoz","locator":"Core name-number and Personal Year calculation sections","finding":"Soul Urge uses vowels, Personality consonants; name parts follow the separately reduced Expression method. Personal Year uses birth month/day and current calendar year."},
+    {"url":"https://www.worldnumerology.com/numerology-soul-urge/","author":"Hans Decoz","locator":"Calculation instructions and Y discussion","finding":"Y classification depends on pronunciation; spelling alone is insufficient. Planned deterministic interface must require explicit per-occurrence Y classification rather than guess."},
+    {"url":"https://www.worldnumerology.com/free-forecasts/daily-number-forecast/","author":"Hans Decoz / World Numerology","locator":"How to Calculate Your Personal Day Number","finding":"Personal Month derives from Personal Year plus calendar month; Personal Day additionally uses calendar day. Intermediate reduction/master handling still requires full passage/example checks before implementation."}
+  ],
+  "candidate_profile": {
+    "name":"decoz-component-reduction",
+    "letter_mapping":"Latin A–Z repeating1–9; source-located in existing Decoz Expression record",
+    "life_path":"Reduce month/day/year separately before combining; preserve11/22/33 at specified stages, retaining intermediate totals",
+    "names":"Explicit birth/current name selection; reduce each name part separately",
+    "Y":"Require pronunciation-informed user classification for each Y occurrence; no automatic spelling heuristic",
+    "input_policy":"Reject unsupported alphabets and unreviewed characters; no silent transliteration or diacritic stripping. Token/hyphen policy still pending.",
+    "status":"candidate, not implemented"
+  },
+  "published_example_leads_retained": [
+    {"source_id":"numerology-decoz-life-path-v1","locator":"October15,1998 worked reduction example","expected":"16/7, not merely flat-digit34/7","verification":"Previously inspected author example; independent executable check pending"},
+    {"source_id":"numerology-decoz-expression-v1","locator":"Thomas Cruise Mapother worked example","expected":"Name components22,3,6; combined31/4","verification":"Previously inspected author example; independent executable check pending"}
+  ],
+  "open_before_pass1_completion": [
+    "Inspect complete timing passages and worked examples, including master-number reduction and calendar-year boundary.",
+    "Verify Birthday, Soul Urge and Personality worked examples.",
+    "Locate identifiable lawful Cheiro procedural text for Chaldean mapping and compounds; publisher bibliography is insufficient.",
+    "Check Campbell procedural access without assuming public-domain status.",
+    "Freeze normalization, separator and Y-position semantics before coding."
+  ],
+  "rights":"Only short original findings and factual algorithm/example leads recorded; no webpage/book corpus ingested.",
+  "unsupported":"Chaldean, Lo Shu, gematria and all Numerology runtime calculations remain unimplemented. No predictive validity claim."
+}
