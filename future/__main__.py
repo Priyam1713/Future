@@ -112,7 +112,34 @@ def main():
     sr.add_argument('--fold',type=int,choices=[0,1]);sr.add_argument('--orbs')
     sr.add_argument('--format',choices=['json','markdown'],default='json')
     sr.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
+    elect=sub.add_parser('election')
+    elect.add_argument('category',choices=['retain-received-money','rapid-use-received-money'])
+    elect.add_argument('start');elect.add_argument('end')
+    elect.add_argument('latitude',type=float);elect.add_argument('longitude',type=float)
+    elect.add_argument('--profile',choices=['ramesey-retain-money','ramesey-rapid-use-money'],default='ramesey-retain-money')
+    elect.add_argument('--tradition',default='Ramesey 1653')
+    elect.add_argument('--houses',choices=SYSTEMS,default='regiomontanus')
+    elect.add_argument('--require',help='Comma-separated supported rule IDs; omitted rules are explicitly reported')
+    elect.add_argument('--min-minutes',type=float,default=5)
+    elect.add_argument('--utc-hours',nargs=2,type=int)
+    elect.add_argument('--ascendant-signs',help='Comma-separated zero-based sign indices')
+    elect.add_argument('--angle-step',choices=[5,10],type=int,default=10)
+    elect.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
     args = parser.parse_args()
+    if args.command=='election':
+        from datetime import datetime
+        from .natal import SkyfieldEphemeris
+        from .elections import search,register_knowledge
+        e=SkyfieldEphemeris(args.kernel);registry=load_registry(args.database)
+        try:
+            register_knowledge(registry)
+            result=search(e,args.category,datetime.fromisoformat(args.start),datetime.fromisoformat(args.end),
+                args.latitude,args.longitude,args.profile,args.tradition,args.houses,
+                args.require.split(',') if args.require else None,args.min_minutes,args.utc_hours,
+                [int(s) for s in args.ascendant_signs.split(',')] if args.ascendant_signs else None,args.angle_step)
+            print(json.dumps(result,indent=2))
+        finally:registry.close();e.kernel.close()
+        return
     if args.command=='solar-return':
         from .natal import SkyfieldEphemeris,Settings,chart
         from .solar_returns import solar_return,register_knowledge,markdown

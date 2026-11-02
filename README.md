@@ -99,4 +99,20 @@ Sect uses topocentric apparent solar center altitude without atmospheric refract
 
 Natal `--profections-date <offset-aware datetime>` and forecast `--profections` append explicitly labeled Hellenistic timing context. Forecasts crossing a birthday also expose the changed annual context. Natal quadrant placement is retained alongside the independent whole-sign annual activation. Examples: `data/hellenistic-1990.md`, `data/traditional-1990.json`, and `data/profections-1990-2026.md`, with JSON companions and a year-by-year timeline.
 
+## Solar Returns and source-driven elections
+
+```powershell
+python -m future solar-return "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209 2026
+python -m future solar-return "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209 2026 --return-latitude -33.9 --return-longitude 151.2 --format markdown
+python -m future election retain-received-money "2026-11-01T00:00:00+00:00" "2026-11-03T00:00:00+00:00" 28.6139 77.209
+```
+
+Solar Returns find the apparent geocentric tropical Sun-longitude crossing in a selected UTC calendar year, not a civil anniversary. Supported years: 1850–2148. All six houses are selectable. Return-to-natal aspects and geometric T-square/grand-trine patterns are reported. Mary Fortier Shea's accessible FAQ method is registered as tropical/nonprecessed/Placidus; other houses are not attributed to that method. Specific copyrighted book delineations remain unsupported. See `data/solar-return-1990-2026.md` and its JSON.
+
+Electional profiles and rule parameters are in `knowledge/electional_profiles.json`. The two Ramesey profiles distinguish retaining received money (fixed signs) from rapidly circulating it (preferred movable signs). Select the latter using category `rapid-use-received-money` and `--profile ramesey-rapid-use-money`. They evaluate the specifically implemented sign/motion predicates; they do not claim complete source compliance. `--require` selects supported rule IDs with omissions reported. Constraints include `--utc-hours 18 19`, `--min-minutes 5` and `--ascendant-signs 1,4,7,10` (zero-based signs). Conflicting constraints are exposed, not scored or averaged.
+
+Searches are bounded to seven days and latitudes within ±60°. The solver partitions at planet sign ingresses/stations and ASC/MC/second-cusp sign changes, checks quarter points and guards internal boundaries by one second. Unresolved cells are reported. There is no formal global proof against unseen multiple reversals; minimum-duration constraints can exclude brief intervals. A denser five-minute angle scan and independent Swiss minute-grid fixtures test the sample for missed/extra candidates. Diagnostics report Moon phases/aspects, angular benefics/malefics, dignity/debility, reception and retrogradation separately from hard selection rules. Comparative dignity diagnostics explicitly identify their Lilly profile. Unknown criteria are never counted as satisfied.
+
+See `data/election-retention-2026.md` and its JSON for candidates, representative charts, satisfied/violated rules, unresolved criteria and source conflicts. These symbolic profiles are not calibrated financial advice or success forecasts. Dorotheus Book V procedural coverage, complete lunar perfection and wider electional categories remain gaps. Horary stays out of scope. `knowledge/western_completion_audit.json` records a bounded completion audit; Western Astrology remains Developing.
+
 Sources retain author, edition, access and ingestion policy. Rules retain technique, variation, tradition, version, exact locator, operation, parameters, evidence type, verification state and fixture references. Different authorities use distinct IDs; changed rules use new versions. Only verified rules in the exact requested scope are selected. Verification here means procedural/example agreement, not predictive accuracy. The registry is a local trusted research store; ingesting arbitrary external rule JSON as verified is unsupported.

@@ -95,3 +95,13 @@
 - Distinct from civil birthday/profection boundary. UTC return years 1850–2148; no precession correction or unsupported predictive precision claim.
 - Next: narrowly sourced electional category with explicit rule traces and search-resolution guarantees/limitations.
 - Commit: Solar Return pass (resolve with `git log --grep="verified Solar Return"`).
+
+## 2026-11-02 — source-driven electional search and completion audit
+- Implemented narrow Ramesey retention/rapid-circulation profiles from Liber III second-house chapter II pp.135–136, plus explicit Ascendant-lord direct-motion condition. Event categories and source profiles must match; no merged tradition or auspiciousness score.
+- Boundary-based search partitions at planetary ingresses/stations and ASC/MC/second-cusp sign changes, with quarter-point checks, one-second guards, minimum duration and explicit unresolved cells. Supports required-rule selection, UTC-hour and Ascendant constraints; contradictory constraints exposed.
+- Candidate representative charts include rule/source traces and separately labeled Moon application, angular benefic/malefic, comparative Lilly dignity/reception diagnostics. Source-complete fortification, radix/revolution prerequisites, nodes and lunar perfection remain unknown; candidate means selected predicates passed, not a complete favorable election.
+- All 48 tests pass, retaining previous 44. Independent Swiss/Moshier verification agrees at 2,880 minute-grid instants; 5-vs-10-minute angle scans agree on count and boundaries within 0.5 seconds. Tests cover source/profile isolation, constraints/conflicts and source-rule sign/motion examples.
+- Example Delhi Nov 1–3, 2026: three partial-rule candidate windows; full JSON/Markdown in data/election-retention-2026.*. No unresolved cells in this example. No formal global completeness guarantee beyond declared scan/domain assumptions.
+- Dorotheus Book V remains an authorized procedural-text coverage gap; no unverified Dorothean rules implemented. Horary stays Technique #5, out of scope.
+- Added knowledge/western_completion_audit.json covering each original variation and proposed bounded completion gates. #1 remains Developing; priorities are complete lunar perfection/electional core criteria, direct interpretation gaps and assessing a bounded zodiacal-releasing implementation. No Technique #2 work.
+- Commit: electional pass (resolve with `git log --grep="source-driven electional search"`).

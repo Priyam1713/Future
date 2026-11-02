@@ -1,0 +1,25 @@
+{
+ "technique_id":1,"version":1,
+ "profiles":{
+  "ramesey-retain-money":{"tradition":"Ramesey 1653","category":"retain-received-money","source":"https://www.renaissanceastrology.com/electionalramesey2ndhouse.html","locator":"Liber III, second-house elections, chapter II, p.135: received money remaining long","signs":[1,4,7,10],"rules":["asc-sign","asc-ruler-sign","moon-sign","second-ruler-sign","angles-sign","asc-ruler-direct"],"interpretation":"For retaining received money, the cited passage requests fixed signs for the Ascendant, its lord, Moon, second lord and angles."},
+  "ramesey-rapid-use-money":{"tradition":"Ramesey 1653","category":"rapid-use-received-money","source":"https://www.renaissanceastrology.com/electionalramesey2ndhouse.html","locator":"Liber III, second-house elections, chapter II, pp.135–136: speedily disbursing money","signs":[0,3,6,9],"rules":["asc-sign","asc-ruler-sign","moon-sign","second-ruler-sign","angles-sign","asc-ruler-direct"],"interpretation":"For rapid circulation the passage prefers movable signs. Common signs are an admitted alternative, not included in this narrow preferred-sign profile."}
+ },
+ "rule_parameters":{
+  "asc-sign":{"meaning":"Ascendant sign in the selected event's sign modality.","source_type":"event-specific"},
+  "asc-ruler-sign":{"meaning":"Traditional domicile ruler of Ascendant in the selected modality.","source_type":"event-specific"},
+  "moon-sign":{"meaning":"Moon in the selected modality.","source_type":"event-specific"},
+  "second-ruler-sign":{"meaning":"Traditional domicile ruler of second cusp in selected modality.","source_type":"event-specific"},
+  "angles-sign":{"meaning":"All four angles in selected modality (ASC/MC suffice, opposites inherit modality).","source_type":"event-specific"},
+  "asc-ruler-direct":{"meaning":"Ascendant ruler not retrograde.","source":"https://www.renaissanceastrology.com/electionalrameseyintro.html","locator":"Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"}
+ },
+ "diagnostics":[
+  {"id":"moon-angular-caution","source":"https://www.renaissanceastrology.com/electionalrameseyintro.html","locator":"p.124: Moon in Ascendant","method":"Report whether the Moon occupies the first house."},
+  {"id":"benefics-malefics","source":"https://www.renaissanceastrology.com/electionalrameseyintro.html","locator":"pp.124–125: angular malefics, benefics and event significators","method":"Report angular benefics/malefics without assuming natural benefic/malefic status settles event-specific function."},
+  {"id":"moon-application","source":"https://www.renaissanceastrology.com/electionalrameseyintro.html","locator":"pp.124–125: Moon application to fortunes/infortunes","method":"Report instantaneous applying aspects with an explicit operational orb; do not claim next perfection or absence of prohibition."},
+  {"id":"significator-condition","source":"https://www.renaissanceastrology.com/electionalrameseyintro.html","locator":"pp.123–125: fortifying relevant significators","method":"Expose Moon, Ascendant lord and second lord dignities/debilities, retrogradation, solar proximity and reception; no invented fortification score."}
+ ],
+ "source_conflicts":[{"scope":"Borrowing/lending, not the implemented retention/circulation categories","source":"https://www.renaissanceastrology.com/electionalramesey2ndhouse.html","locator":"chapter I p.135 versus chapter II Haly discussion","positions":["Ramesey first rejects lending/borrowing under specified first-degree signs.","He then records Haly's distinction favoring borrower over lender in such cases."],"resolution":"Recorded, not averaged or applied to an unrelated category."}],
+ "research_leads":[{"author":"Dorotheus of Sidon","title":"Carmen Astrologicum, Book V","locator":"Buying/selling and general electional procedures","status":"Procedural scope researched; no authorized Book V chapter text verified for this profile. No Dorothean rules fabricated or silently merged."}],
+ "incomplete_criteria":["Full radix and annual/world-revolution prerequisites not implemented.","Fortification is broader than the implemented sign/motion predicates; no claim of a complete Ramesey election.","Node afflictions, complete Moon perfection/prohibition and every event-specific exception remain unimplemented."],
+ "rights":"Concise original summaries of historical procedures; no modern copyrighted Dorotheus translation ingested."
+}
