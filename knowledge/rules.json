@@ -1,0 +1,12 @@
+[
+  {
+    "id": "western.calendar.gregorian-ut1", "version": 1, "technique_id": 1,
+    "variation": "natal", "tradition": "shared astronomical computation",
+    "source_id": "usno-jd", "locator": "Formula for Conversion, 1990 Almanac attribution; example 1877-08-11",
+    "statement": "Convert a valid Gregorian calendar date and UT1 fractional hours into Julian date using truncation and the pre-March-1900 correction.",
+    "operation": "gregorian_ut1_to_jd",
+    "parameters": {"min_year": 1801, "max_year": 2099, "calendar": "Gregorian", "time_scale": "UT1"},
+    "status": "verified", "evidence_kind": "computational",
+    "fixture_ids": ["usno-1877", "usno-1978-jan", "usno-1978-jul"]
+  }
+]

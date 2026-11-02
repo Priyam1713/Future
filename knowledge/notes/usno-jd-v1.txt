@@ -1,0 +1,7 @@
+Original research notes, 2026-11-02. Source: U.S. Naval Observatory, Converting Between Julian Dates and Gregorian Calendar Dates, Formula for Conversion and Introduction.
+
+The calendar formula accepts Gregorian dates from 1801 through 2099 and UT1 hours. Integer truncation is required. The pre-March-1900 correction must remain present. Do not silently substitute UTC for UT1.
+
+Published examples: 1877-08-11 at 7.5 UT1 hours maps to JD 2406842.8125. 1978-01-01 at 0 UT1 hours maps to JD 2443509.5. 1978-07-21 at 15 UT1 hours maps to JD 2443711.125.
+
+These facts support calendar calculations. They supply no astrological interpretations or evidence of predictive accuracy.

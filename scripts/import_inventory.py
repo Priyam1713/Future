@@ -1,7 +1,6 @@
 """Lossless cell-value import and reproducible structural audit of the source inventory."""
 import hashlib
 import json
-from collections import Counter
 from pathlib import Path
 import openpyxl
 
@@ -44,11 +43,18 @@ def build():
     assert all(e['From ID'] not in excluded and e['To ID'] not in excluded for e in prerequisites)
     for method in methods:
         mid = method['ID']
+        assert method['Implementation order'] == ('SKIP' if mid in excluded else mid)
+        assert [x.strip() for x in method['Main variations'].split(';')] == [
+            v['Variation (separate research item)'] for v in variations if v['Method ID'] == mid]
         ranks = [s['Rank (within method)'] for s in sources if s['Method ID'] == mid]
         assert ranks == list(range(1, len(ranks) + 1))
+        first = next(s for s in sources if s['Method ID'] == mid)
+        assert first['Resource title'] == method['Rank 1 source']
         declared = {int(v.strip()) for v in str(method['Prerequisite IDs'] or '').split(',') if v.strip()}
         actual = {e['From ID'] for e in prerequisites if e['To ID'] == mid}
         assert declared == actual, (mid, declared, actual)
+        overlaps = {int(v.strip()) for v in str(method['Overlap IDs'] or '').split(',') if v.strip()}
+        assert overlaps <= by_id.keys() and mid not in overlaps
     warnings = []
     for method in methods:
         mid = method['ID']
