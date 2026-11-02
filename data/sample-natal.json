@@ -1,0 +1,189 @@
+{
+  "technique_id": 1,
+  "settings": {
+    "tradition": "medieval/traditional",
+    "application": "natal",
+    "zodiac": "tropical",
+    "houses": "whole-sign",
+    "rulership": "traditional"
+  },
+  "birth": {
+    "local": "2000-08-01T12:00",
+    "zone": "Europe/London",
+    "utc": "2000-08-01T11:00:00+00:00",
+    "latitude": 51.5,
+    "longitude": 0.0
+  },
+  "times": {
+    "jd_ut1": 2451757.958335655,
+    "jd_tt": 2451757.959076204,
+    "delta_t_seconds": 63.983408075000035,
+    "dut1_seconds": 0.20059192499996215
+  },
+  "angles": {
+    "ascendant": 197.8609911198096,
+    "midheaven": 113.50247984343736
+  },
+  "house_cusps": [
+    180,
+    210,
+    240,
+    270,
+    300,
+    330,
+    0,
+    30,
+    60,
+    90,
+    120,
+    150
+  ],
+  "planets": {
+    "Sun": {
+      "longitude": 129.49119162059375,
+      "speed_degrees_per_day": 0.9571478069062778,
+      "retrograde": false,
+      "sign": "Leo",
+      "degree_in_sign": 9.491191620593753,
+      "house": 11
+    },
+    "Moon": {
+      "longitude": 148.49127402665215,
+      "speed_degrees_per_day": 14.794103991607699,
+      "retrograde": false,
+      "sign": "Leo",
+      "degree_in_sign": 28.49127402665215,
+      "house": 11
+    },
+    "Mercury": {
+      "longitude": 110.81662431162961,
+      "speed_degrees_per_day": 1.3747444050125068,
+      "retrograde": false,
+      "sign": "Cancer",
+      "degree_in_sign": 20.81662431162961,
+      "house": 10
+    },
+    "Venus": {
+      "longitude": 143.51579253907275,
+      "speed_degrees_per_day": 1.229958528463726,
+      "retrograde": false,
+      "sign": "Leo",
+      "degree_in_sign": 23.51579253907275,
+      "house": 11
+    },
+    "Mars": {
+      "longitude": 120.26056918343664,
+      "speed_degrees_per_day": 0.6476506407238958,
+      "retrograde": false,
+      "sign": "Leo",
+      "degree_in_sign": 0.2605691834366439,
+      "house": 11
+    },
+    "Jupiter": {
+      "longitude": 66.0188200466458,
+      "speed_degrees_per_day": 0.16125216268108034,
+      "retrograde": false,
+      "sign": "Gemini",
+      "degree_in_sign": 6.0188200466458,
+      "house": 9
+    },
+    "Saturn": {
+      "longitude": 59.45135629480085,
+      "speed_degrees_per_day": 0.06978784752504907,
+      "retrograde": false,
+      "sign": "Taurus",
+      "degree_in_sign": 29.451356294800853,
+      "house": 8
+    }
+  },
+  "aspects": [
+    {
+      "bodies": [
+        "Sun",
+        "Jupiter"
+      ],
+      "angle": 60.0,
+      "separation": 63.47237157394795,
+      "orb": 3.472371573947953
+    },
+    {
+      "bodies": [
+        "Moon",
+        "Venus"
+      ],
+      "angle": 0.0,
+      "separation": 4.975481487579401,
+      "orb": 4.975481487579401
+    },
+    {
+      "bodies": [
+        "Moon",
+        "Saturn"
+      ],
+      "angle": 90.0,
+      "separation": 89.03991773185129,
+      "orb": 0.9600822681487102
+    },
+    {
+      "bodies": [
+        "Venus",
+        "Saturn"
+      ],
+      "angle": 90.0,
+      "separation": 84.06443624427186,
+      "orb": 5.93556375572814
+    },
+    {
+      "bodies": [
+        "Mars",
+        "Saturn"
+      ],
+      "angle": 60.0,
+      "separation": 60.809212888635784,
+      "orb": 0.8092128886357841
+    },
+    {
+      "bodies": [
+        "Jupiter",
+        "Saturn"
+      ],
+      "angle": 0.0,
+      "separation": 6.56746375184494,
+      "orb": 6.56746375184494
+    }
+  ],
+  "conventions": {
+    "coordinates": "apparent geocentric true ecliptic/equinox of date; outer planets use system barycenters",
+    "time": "IANA tzdata 2025.2; Skyfield builtin leap seconds and modeled delta T",
+    "orbs": {
+      "0": 8.0,
+      "60": 4.0,
+      "90": 6.0,
+      "120": 6.0,
+      "180": 8.0
+    }
+  },
+  "reproducibility": {
+    "skyfield": "1.54",
+    "kernel_sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+  },
+  "limitations": [
+    "UT1 uses bundled delta-T model; historical time-zone records and birth times may be uncertain.",
+    "Whole-sign and equal houses only; no polar charts or predictive timing yet."
+  ],
+  "interpretations": [
+    {
+      "rule_id": "traditional.domicile.sun",
+      "version": 1,
+      "statement": "Sun in Leo is in domicile.",
+      "evidence_kind": "traditional",
+      "meaning": "Domicile is a traditional symbolic dignity; predictive accuracy is not established.",
+      "calculated_longitude": 129.49119162059375,
+      "source": "https://direct.skyscript.co.uk/glossary/sign-ruler/",
+      "locator": "Sign Rulers: explicit domicile examples",
+      "retrieved_context": [
+        "Original research notes, 2026-11-02. Skyscript Glossary, Sign Rulers, paragraph beginning Under this scheme. The glossary explicitly gives Sun in Leo and Moon in Cancer as examples of domicile. These are traditional symbolic dignities, not measured predictive effects. Only these two directly checked examples are extracted in this pass."
+      ]
+    }
+  ]
+}

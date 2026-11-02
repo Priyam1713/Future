@@ -44,7 +44,30 @@ def main():
     calendar.add_argument('month', type=int)
     calendar.add_argument('day', type=int)
     calendar.add_argument('hour_ut1', type=float)
+    natal = sub.add_parser('natal')
+    natal.add_argument('local')
+    natal.add_argument('zone')
+    natal.add_argument('latitude', type=float)
+    natal.add_argument('longitude', type=float)
+    natal.add_argument('--fold', type=int, choices=[0,1])
+    natal.add_argument('--houses', choices=['whole-sign','equal'], default='whole-sign')
+    natal.add_argument('--tradition', default='modern psychological')
+    natal.add_argument('--kernel', default=str(ROOT/'data/de440s.bsp'))
+    natal.add_argument('--orbs', help='JSON mapping of aspect angle to orb')
     args = parser.parse_args()
+    if args.command == 'natal':
+        from .natal import SkyfieldEphemeris, Settings, chart
+        result = chart(SkyfieldEphemeris(args.kernel), args.local,args.zone,args.latitude,args.longitude,
+                       Settings(tradition=args.tradition,houses=args.houses),args.fold,
+                       {int(k):float(v) for k,v in json.loads(args.orbs).items()} if args.orbs else None)
+        from .interpretations import explain
+        registry = load_registry(args.database)
+        try:
+            result['interpretations'] = explain(result,registry)
+        finally:
+            registry.close()
+        print(json.dumps(result,indent=2))
+        return
     registry = load_registry(args.database)
     try:
         result = registry.search(args.query, ['usno-jd']) if args.command == 'search' else run_calendar(
