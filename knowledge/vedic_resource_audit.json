@@ -1,31 +1,108 @@
 {
-  "technique_id":2,
-  "name":"Vedic Astrology (Jyotish)",
-  "status":"Researching",
-  "date":"2026-11-02",
-  "western_closure_commit":"ec5f69b",
-  "implementation_started":false,
-  "inventory_preserved":true,
-  "ranked_sources":[
-    {"rank":1,"source_id":"vedic-bphs-santhanam-catalog","title":"Brihat Parashara Hora Shastra","attribution":"Traditionally attributed to Parashara","finding":"Delhi University catalog confirms Santhanam/Ranjan 1984 edition. Exact volume, chapter/verse rules and modern translation rights still need inspection. No generic chapter numbering across recensions."},
-    {"rank":2,"source_id":"vedic-raman-judge","title":"How to Judge a Horoscope","author":"B. V. Raman","finding":"Publisher records located for Vol.1 and Vol.2. Vol.1 listing: ISBN 9789392510120, 2022 sixth reprint, 312 pages; Vol.2 description explicitly covers houses VII–XII. Listings are not procedural verification."},
-    {"rank":3,"source_id":"vedic-rao-chara","title":"Predicting Through Jaimini’s Chara Dasha","author":"K. N. Rao","finding":"Title and K.N. Rao attribution confirmed in BVB prescribed reading, p.23. Detailed edition/page mapping unavailable; retailer page counts conflict. Do not expand author initials from inconsistent catalog metadata."}
+  "technique_id": 2,
+  "name": "Vedic Astrology (Jyotish)",
+  "status": "Developing",
+  "date": "2026-11-02",
+  "western_closure_commit": "ec5f69b",
+  "implementation_started": true,
+  "inventory_preserved": true,
+  "ranked_sources": [
+    {
+      "rank": 1,
+      "source_id": "vedic-bphs-santhanam-catalog",
+      "title": "Brihat Parashara Hora Shastra",
+      "attribution": "Traditionally attributed to Parashara",
+      "finding": "Delhi University catalog confirms Santhanam/Ranjan 1984 edition. Exact volume, chapter/verse rules and modern translation rights still need inspection. No generic chapter numbering across recensions."
+    },
+    {
+      "rank": 2,
+      "source_id": "vedic-raman-judge",
+      "title": "How to Judge a Horoscope",
+      "author": "B. V. Raman",
+      "finding": "Publisher records located for Vol.1 and Vol.2. Vol.1 listing: ISBN 9789392510120, 2022 sixth reprint, 312 pages; Vol.2 description explicitly covers houses VII\u2013XII. Listings are not procedural verification."
+    },
+    {
+      "rank": 3,
+      "source_id": "vedic-rao-chara",
+      "title": "Predicting Through Jaimini\u2019s Chara Dasha",
+      "author": "K. N. Rao",
+      "finding": "Title and K.N. Rao attribution confirmed in BVB prescribed reading, p.23. Detailed edition/page mapping unavailable; retailer page counts conflict. Do not expand author initials from inconsistent catalog metadata."
+    }
   ],
-  "variations":[
-    {"name":"Parashari","priority":"core candidate","source_ids":["vedic-bphs-santhanam-catalog","vedic-raman-judge","vedic-pvr-book"],"coverage":"D1 and selected dignity/house/ruler rules first; exact procedures not yet extracted."},
-    {"name":"Jaimini","priority":"P1 refinement","source_ids":["vedic-rao-chara","vedic-bisaria-chara"],"coverage":"Separate seven/eight karaka and Chara-dasha conventions. Do not import sign-aspect rules or period sequences into Parashari silently."},
-    {"name":"Nakshatra","priority":"core candidate","source_ids":["vedic-pvr-book"],"coverage":"Birth Moon mansion and pada, with exact boundary/source tables to verify before implementation."},
-    {"name":"Vimshottari dasha","priority":"core candidate","source_ids":["vedic-pvr-book","vedic-bisaria-chara"],"coverage":"Birth Moon degree dependency identified by practitioner source; order/lengths, starting balance, subdivisions and year convention require direct procedural inspection."},
-    {"name":"divisional vargas","priority":"D9 core candidate; other vargas P1/P2","source_ids":["vedic-bphs-santhanam-catalog","vedic-pvr-book"],"coverage":"Start with source-verified D9 mapping and boundaries. Do not apply one formula to all vargas or assume their house conventions."},
-    {"name":"prashna","priority":"P2 refinement","source_ids":[],"coverage":"Dedicated Vedic question-chart source not verified. Preserve this inventory subtype; do not conflate it with Western Horary Technique #5."},
-    {"name":"KP","priority":"P1/P2 refinement","source_ids":[],"coverage":"Dedicated Krishnamurti procedural source not yet verified. Sub-lords, cusps and ayanamsha must remain a separate named school."}
+  "variations": [
+    {
+      "name": "Parashari",
+      "priority": "core candidate",
+      "source_ids": [
+        "vedic-bphs-santhanam-catalog",
+        "vedic-raman-judge",
+        "vedic-pvr-book"
+      ],
+      "coverage": "D1 and selected dignity/house/ruler rules first; exact procedures not yet extracted."
+    },
+    {
+      "name": "Jaimini",
+      "priority": "P1 refinement",
+      "source_ids": [
+        "vedic-rao-chara",
+        "vedic-bisaria-chara"
+      ],
+      "coverage": "Separate seven/eight karaka and Chara-dasha conventions. Do not import sign-aspect rules or period sequences into Parashari silently."
+    },
+    {
+      "name": "Nakshatra",
+      "priority": "core candidate",
+      "source_ids": [
+        "vedic-pvr-book"
+      ],
+      "coverage": "Birth Moon mansion and pada, with exact boundary/source tables to verify before implementation."
+    },
+    {
+      "name": "Vimshottari dasha",
+      "priority": "core candidate",
+      "source_ids": [
+        "vedic-pvr-book",
+        "vedic-bisaria-chara"
+      ],
+      "coverage": "Birth Moon degree dependency identified by practitioner source; order/lengths, starting balance, subdivisions and year convention require direct procedural inspection."
+    },
+    {
+      "name": "divisional vargas",
+      "priority": "D9 core candidate; other vargas P1/P2",
+      "source_ids": [
+        "vedic-bphs-santhanam-catalog",
+        "vedic-pvr-book"
+      ],
+      "coverage": "Start with source-verified D9 mapping and boundaries. Do not apply one formula to all vargas or assume their house conventions."
+    },
+    {
+      "name": "prashna",
+      "priority": "P2 refinement",
+      "source_ids": [],
+      "coverage": "Dedicated Vedic question-chart source not verified. Preserve this inventory subtype; do not conflate it with Western Horary Technique #5."
+    },
+    {
+      "name": "KP",
+      "priority": "P1/P2 refinement",
+      "source_ids": [],
+      "coverage": "Dedicated Krishnamurti procedural source not yet verified. Sub-lords, cusps and ayanamsha must remain a separate named school."
+    }
   ],
-  "supplemental_source_findings":[
-    {"source_id":"vedic-pvr-book","finding":"P.V.R. Narasimha Rao author page explicitly links Vedic Astrology: An Integrated Approach (2000). Free download link verified; PDF returned HTTP 406 locally / timeout via browser fetch. Full text, page locators and redistribution permission not verified. No third-party scan substituted."},
-    {"source_id":"vedic-bisaria-chara","finding":"Deepak Bisaria, Journal of Astrology, 2013: identifies Moon-degree sensitivity, Rao seven-karaka approach and two illustrated dasha examples. Raw birth inputs/settings in chart images still need inspection before using those dates as independent fixtures."},
-    {"source_id":"vedic-swiss-sidereal-reference","finding":"Official interface documents named sidereal modes and licensing. Reference oracle only; no runtime integration licensed or selected for #2."}
+  "supplemental_source_findings": [
+    {
+      "source_id": "vedic-pvr-book",
+      "finding": "P.V.R. Narasimha Rao author page explicitly links Vedic Astrology: An Integrated Approach (2000). Free download link verified; PDF returned HTTP 406 locally / timeout via browser fetch. Full text, page locators and redistribution permission not verified. No third-party scan substituted."
+    },
+    {
+      "source_id": "vedic-bisaria-chara",
+      "finding": "Deepak Bisaria, Journal of Astrology, 2013: identifies Moon-degree sensitivity, Rao seven-karaka approach and two illustrated dasha examples. Raw birth inputs/settings in chart images still need inspection before using those dates as independent fixtures."
+    },
+    {
+      "source_id": "vedic-swiss-sidereal-reference",
+      "finding": "Official interface documents named sidereal modes and licensing. Reference oracle only; no runtime integration licensed or selected for #2."
+    }
   ],
-  "configuration_decisions_pending":[
+  "configuration_decisions_pending": [
     "Choose an exactly defined Lahiri/Chitrapaksha profile after anchor, precession, nutation and mean/true longitude conventions are independently checked. Lahiri-like labels are not interchangeable definitions.",
     "Reuse Skyfield/time/house geometry without changing frozen Western settings; build a separately named sidereal layer only after verification. Never subtract an unverified constant ayanamsha.",
     "Choose a sourced mean-node Rahu/Ketu model for the first slice; true nodes remain a separate option. Existing Western seven-planet calculations alone do not constitute a nine-graha chart.",
@@ -33,18 +110,20 @@
     "Name Vimshottari year length/time scale and birth-balance calculation; do not reuse Western 360-day releasing units by analogy.",
     "Keep Parashari graha aspects, Jaimini sign aspects, KP sub-lords and their interpretation rules isolated."
   ],
-  "proposed_80_20_sequence":[
+  "proposed_80_20_sequence": [
     "Inspect accessible primary procedural chapters and exact examples for sidereal definition, nakshatras, Vimshottari and D9; resolve rights/access gaps with other legitimate sources if needed.",
     "Implement D1 seven classical planets plus explicitly modeled nodes, sidereal ASC, whole-sign houses, Moon nakshatra/pada and sourced sign rulers/dignities.",
     "Add Vimshottari main/subperiods with named year convention and D9. Expose JSON/CLI and label missing interpretations.",
     "Validate positions/ayanamsha independently and compare published worked chart and dasha examples, including boundaries and differing settings. Freeze support/experimental matrix before Core v1 gate."
   ],
-  "verification_plan":[
+  "verification_plan": [
     "Independent sidereal positions/ayanamsha fixtures from permitted Swiss/Moshier local reference plus an official or published astronomical source; distinguish shared-model agreement from independent algorithms.",
     "Published worked Moon mansion/pada, Vimshottari balance/transition and D9 examples with complete input/settings and page locators.",
     "0/360, sign/nakshatra/pada boundaries, both hemispheres, DST inputs, node opposition and exact half-open dasha boundaries.",
     "Retain all Western tests and interfaces; different symbolic systems agreeing is not statistical predictive evidence."
   ],
-  "rights_policy":"Metadata and short original research summaries only. Author-hosted free availability is not assumed to license wholesale translation ingestion or redistribution; no paid books, pirated scans or proprietary implementation code copied.",
-  "next_action":"Resource/procedure extraction for the proposed first slice; no #2 executable rules or numerical engine implemented in this audit."
+  "rights_policy": "Metadata and short original research summaries only. Author-hosted free availability is not assumed to license wholesale translation ingestion or redistribution; no paid books, pirated scans or proprietary implementation code copied.",
+  "next_action": "Resource/procedure extraction for the proposed first slice; no #2 executable rules or numerical engine implemented in this audit.",
+  "resolved_conventions": "knowledge/vedic_conventions.json",
+  "source_access_update": "PVR non-www author PDF successfully inspected; new versioned procedural source record added without rewriting historical registry records."
 }

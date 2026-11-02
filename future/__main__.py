@@ -134,7 +134,21 @@ def main():
     zr.add_argument('--fold',type=int,choices=[0,1]);zr.add_argument('--houses',choices=SYSTEMS,default='whole-sign')
     zr.add_argument('--format',choices=['json','markdown'],default='json')
     zr.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
+    jy=sub.add_parser('jyotish',help='Named Parashari sidereal D1 and Moon nakshatra')
+    jy.add_argument('local');jy.add_argument('zone');jy.add_argument('latitude',type=float);jy.add_argument('longitude',type=float)
+    jy.add_argument('--fold',type=int,choices=[0,1]);jy.add_argument('--format',choices=['json','markdown'],default='json')
+    jy.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
     args = parser.parse_args()
+    if args.command=='jyotish':
+        from .natal import SkyfieldEphemeris
+        from .vedic import d1,register_knowledge,markdown
+        e=SkyfieldEphemeris(args.kernel);registry=load_registry(args.database)
+        try:
+            register_knowledge(registry)
+            result=d1(e,args.local,args.zone,args.latitude,args.longitude,args.fold)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close();e.kernel.close()
+        return
     if args.command=='releasing':
         from datetime import datetime
         from .natal import SkyfieldEphemeris,Settings,chart
