@@ -1,0 +1,230 @@
+{
+  "technique_id": 5,
+  "profile": "lilly-1647-advice-intent",
+  "version": 1,
+  "status": "source extracted, implementation pending",
+  "category": "advice-intent",
+  "question_semantics": "Is the adviser speaking with honest/favorable intent? Not truth/factual correctness of advice, investment outcome or a general relationship verdict.",
+  "protocol": "advice-begins",
+  "house_system": "regiomontanus",
+  "zodiac": "tropical",
+  "planets": "Seven classical",
+  "nodes": "Explicit mean lunar-node astronomical profile; no true-node substitution",
+  "time": "Existing pinned IANA UTC/UT1/TT and DE440s conventions;1850–2149,abs(latitude)<60 for bounded house/rise handling",
+  "conservative_domain": "Unknown caution/ambiguous cusp/aspect boundaries, unresolved VOC definition, conflicting testimonies =>indeterminate. No missing criterion treated as false.",
+  "judgment": "All p194 positive/negative/cardinal predicates evaluated. Positive-only or negative-only, after applicable caution clearance, can support a named symbolic judgment. Neither/conflict/unknown =>indeterminate.",
+  "source": {
+    "id": "horary-lilly-1647-images-v1",
+    "technique_id": 5,
+    "author": "William Lilly",
+    "edition": "Christian Astrology,1647, Wellcome b30338724 / work s7z7c46y",
+    "url": "https://wellcomecollection.org/works/s7z7c46y",
+    "manifest": "https://iiif.wellcomecollection.org/presentation/v2/b30338724",
+    "ingestion": "public_domain",
+    "rights_note": "Wellcome Public Domain Mark; original page images inspected. Credit Wellcome Collection. Short original procedural summaries and chart facts retained.",
+    "locator": "Printed pp104–113,121–127,166,192–194,200–201,482–485",
+    "checked_on": "2026-11-03"
+  },
+  "rules": [
+    {
+      "id": "horary.moment",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p166",
+      "method": "Question is posed to astrologer, or letter opened and intent understood; not arrival/delivery time.",
+      "exceptions": [
+        "Named understood-question protocol; caller supplies actual moment/location, never current clock automatically."
+      ]
+    },
+    {
+      "id": "horary.advice-moment",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p194",
+      "method": "For advice intent erect the figure when adviser first begins disclosing their mind.",
+      "exceptions": [
+        "Selected category overrides generic question-receipt protocol; advice-begins is mandatory."
+      ]
+    },
+    {
+      "id": "horary.significators",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p123",
+      "method": "ASC and ruler signify querent; select the relevant house of what is asked.",
+      "exceptions": [
+        "Moon is co-significator per124. Advice p194 uses tenth-house occupants rather than treating its ruler as adviser by invention."
+      ]
+    },
+    {
+      "id": "horary.dignity",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p104",
+      "method": "Traditional domiciles/exaltations, Lilly triplicities, Ptolemaic terms and faces.",
+      "exceptions": [
+        "Reuse verified Lilly tables, not Hellenistic/modern substitutions."
+      ]
+    },
+    {
+      "id": "horary.aspect",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p107",
+      "method": "Choose explicitly first-column orb diameters; moiety is half each planet's orb added. Application approaches exact aspect.",
+      "exceptions": [
+        "First-column diameters Sun17,Moon12.5,Mercury7,Venus8,Mars7.5,Jupiter12,Saturn10; alternative column not merged."
+      ]
+    },
+    {
+      "id": "horary.prohibition",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p110",
+      "method": "Applying significators can be impeded by another body or aspect before their contact.",
+      "exceptions": [
+        "p111 gives Sun6/Mars7/Saturn12 Aries example. Intervening geometry alone is a candidate, not universally an adverse judgment."
+      ]
+    },
+    {
+      "id": "horary.refranation",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p111",
+      "method": "Applying planet turns retrograde before completing conjunction.",
+      "exceptions": [
+        "Distinguish station geometry from causally certified cancellation."
+      ]
+    },
+    {
+      "id": "horary.frustration",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p112",
+      "method": "Slower recipient joins another body before faster applicant reaches it.",
+      "exceptions": [
+        "p113 Mercury10/Mars12/Jupiter13 Aries example; compare chronological solved contacts."
+      ]
+    },
+    {
+      "id": "horary.translation",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p126",
+      "method": "Third body separates from first significator (which receives it by domicile/triplicity/terms) then applies to second before another contact.",
+      "exceptions": [
+        "p111 simpler example is preserved separately; reception-qualified p126 route not assumed from any two contacts."
+      ]
+    },
+    {
+      "id": "horary.collection",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p126",
+      "method": "Two principal significators not beholding each other cast aspects to a more weighty third, and both receive that collector in essential dignity.",
+      "exceptions": [
+        "Requires specific receiving direction; no modern averaging or universal probability."
+      ]
+    },
+    {
+      "id": "horary.voc",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p112",
+      "method": "Moon makes no further application during its sign; cautions and Taurus/Cancer/Sagittarius/Pisces exceptions on122.",
+      "exceptions": [
+        "Same-sign exact-contact proxy is explicitly computational; if entry-into-orb and exact-before-ingress disagree, withhold judgment."
+      ]
+    },
+    {
+      "id": "horary.cautions",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p121",
+      "method": "Consider hour/ASC affinity; early/late ASC, late Moon/via combusta, Saturn1/7, combust ASC lord, afflicted seventh lord, conflicting testimonies.",
+      "exceptions": [
+        "pp122–123 exceptions retained; conservative acceptance may withhold even when a historical exception might permit judgment."
+      ]
+    },
+    {
+      "id": "horary.advice-positive",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p194",
+      "method": "Sun,Jupiter,Venus or North Node in tenth, OR Moon applying to ASC lord: favorable intent testimony.",
+      "exceptions": [
+        "Intention only, not whether advice is correct or beneficial in actual outcomes."
+      ]
+    },
+    {
+      "id": "horary.advice-negative",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p194",
+      "method": "Saturn,Mars or South Node in tenth: deceptive-intent testimony.",
+      "exceptions": [
+        "No arbitrary weight; conflicting favorable testimony yields indeterminate."
+      ]
+    },
+    {
+      "id": "horary.advice-cardinal",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p194",
+      "method": "ASC sign, ASC lord sign and Moon sign all movable: additional deceptive-intent testimony attributed by Lilly to Haly.",
+      "exceptions": [
+        "Conflict with favorable testimony is exposed rather than priority invented."
+      ]
+    },
+    {
+      "id": "horary.perfection",
+      "version": 1,
+      "technique_id": 5,
+      "tradition": "Lilly1647",
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed p125",
+      "method": "Conjunction without prohibition/refranation; sextile/trine with dignity/good houses and no intervening malefic aspect; square/opp have extra conditions.",
+      "exceptions": [
+        "General event-outcome doctrines kept diagnostic; advice-intent does not certify event success."
+      ]
+    }
+  ],
+  "unsupported": [
+    "Frawley/Barclay procedures",
+    "General report-truth judgments",
+    "Lost objects",
+    "Relationships",
+    "Event outcomes/timing",
+    "Numerical recomputation of1643 chart with current1850–2149 ephemeris"
+  ]
+}

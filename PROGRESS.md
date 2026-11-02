@@ -1,5 +1,11 @@
 # Future progress
 
+## Horary Pass1 — original-source extraction, 2026-11-03
+- Resumed cf775d6; accessed user-supplied Wellcome s7z7c46y via its open IIIF b30338724 manifest. Visually inspected27 original page images, not OCR alone; per-page URLs/hashes retained in horary_image_provenance.json. Public Domain Mark verified.
+- Extracted versioned Lilly procedures for question moment/significators, dignity/orbs, application/reception, prohibition/refranation/frustration, translation/collection, lunar conditions and cautions. Chose narrowly scoped advice-intent from p194; truth of reports and political-benefit rules pp192–194 are separate.
+- Complete Cambridge question/chart/judgment pp200–201 inspected. Its1643 chart is retained as a historical source fixture, not falsely recomputed outside the supported kernel domain. Planetary-hour examples pp483–485 and p107/p112 mathematical examples provide additional independent checks.
+- Next: implement advice-begins protocol, p194 predicates, conservative caution/conflict handling and numerical contact diagnostics. Frawley/Barclay/other categories remain unsupported. Commit: resolve with git log --grep="extract original Lilly Horary".
+
 ## Technique5 initial resource audit — 2026-11-03
 - Began after Numerology closure3ebf99e pushed. Preserved five Horary variations/three ranked sources. Lilly1647 Wellcome catalog, Frawley author revised-edition listing and Barclay publisher leads checked; page-located judgment rules remain pending.
 - horary_resource_audit.json records question protocols, significators, perfection/reception exceptions and independent examples as next priorities. No Horary implementation added; no automatic borrowing of electional/natal judgments. Techniques1–4 bounded Core v1 Ready; Technique5 Researching.
