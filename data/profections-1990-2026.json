@@ -1,0 +1,355 @@
+{
+  "natal": {
+    "technique_id": 1,
+    "settings": {
+      "tradition": "Hellenistic",
+      "application": "natal",
+      "zodiac": "tropical",
+      "houses": "whole-sign",
+      "rulership": "traditional"
+    },
+    "birth": {
+      "local": "1990-07-15T14:30",
+      "zone": "Asia/Kolkata",
+      "utc": "1990-07-15T09:00:00+00:00",
+      "latitude": 28.6139,
+      "longitude": 77.209
+    },
+    "times": {
+      "jd_ut1": 2448087.874999344,
+      "jd_tt": 2448087.875661852,
+      "delta_t_seconds": 57.240707175000004,
+      "dut1_seconds": -0.05670717500000677
+    },
+    "angles": {
+      "ascendant": 227.92295539054038,
+      "midheaven": 142.82040025539212
+    },
+    "house_cusps": [
+      210,
+      240,
+      270,
+      300,
+      330,
+      0,
+      30,
+      60,
+      90,
+      120,
+      150,
+      180
+    ],
+    "planets": {
+      "Sun": {
+        "longitude": 112.62691414131217,
+        "speed_degrees_per_day": 0.9539152264153472,
+        "retrograde": false,
+        "sign": "Cancer",
+        "degree_in_sign": 22.62691414131217,
+        "house": 9
+      },
+      "Moon": {
+        "longitude": 21.50405287152079,
+        "speed_degrees_per_day": 14.007683654517677,
+        "retrograde": false,
+        "sign": "Aries",
+        "degree_in_sign": 21.50405287152079,
+        "house": 6
+      },
+      "Mercury": {
+        "longitude": 126.53814659587589,
+        "speed_degrees_per_day": 1.8813552571543823,
+        "retrograde": false,
+        "sign": "Leo",
+        "degree_in_sign": 6.538146595875887,
+        "house": 10
+      },
+      "Venus": {
+        "longitude": 84.2613762298219,
+        "speed_degrees_per_day": 1.1991017407666504,
+        "retrograde": false,
+        "sign": "Gemini",
+        "degree_in_sign": 24.261376229821906,
+        "house": 8
+      },
+      "Mars": {
+        "longitude": 31.85836473296035,
+        "speed_degrees_per_day": 0.6700673297729054,
+        "retrograde": false,
+        "sign": "Taurus",
+        "degree_in_sign": 1.85836473296035,
+        "house": 7
+      },
+      "Jupiter": {
+        "longitude": 112.52114190078923,
+        "speed_degrees_per_day": 0.22361663957894962,
+        "retrograde": false,
+        "sign": "Cancer",
+        "degree_in_sign": 22.52114190078923,
+        "house": 9
+      },
+      "Saturn": {
+        "longitude": 291.9728578778487,
+        "speed_degrees_per_day": -0.07407273218404953,
+        "retrograde": true,
+        "sign": "Capricorn",
+        "degree_in_sign": 21.972857877848696,
+        "house": 3
+      }
+    },
+    "aspects": [
+      {
+        "bodies": [
+          "Sun",
+          "Moon"
+        ],
+        "angle": 90.0,
+        "separation": 91.12286126979137,
+        "orb": 1.1228612697913718
+      },
+      {
+        "bodies": [
+          "Sun",
+          "Jupiter"
+        ],
+        "angle": 0.0,
+        "separation": 0.10577224052292422,
+        "orb": 0.10577224052292422
+      },
+      {
+        "bodies": [
+          "Sun",
+          "Saturn"
+        ],
+        "angle": 180.0,
+        "separation": 179.34594373653653,
+        "orb": 0.6540562634634739
+      },
+      {
+        "bodies": [
+          "Moon",
+          "Venus"
+        ],
+        "angle": 60.0,
+        "separation": 62.75732335830111,
+        "orb": 2.7573233583011074
+      },
+      {
+        "bodies": [
+          "Moon",
+          "Jupiter"
+        ],
+        "angle": 90.0,
+        "separation": 91.01708902926845,
+        "orb": 1.0170890292684476
+      },
+      {
+        "bodies": [
+          "Moon",
+          "Saturn"
+        ],
+        "angle": 90.0,
+        "separation": 89.5311949936721,
+        "orb": 0.4688050063278979
+      },
+      {
+        "bodies": [
+          "Mercury",
+          "Mars"
+        ],
+        "angle": 90.0,
+        "separation": 94.67978186291555,
+        "orb": 4.679781862915547
+      },
+      {
+        "bodies": [
+          "Jupiter",
+          "Saturn"
+        ],
+        "angle": 180.0,
+        "separation": 179.45171597705945,
+        "orb": 0.5482840229405497
+      }
+    ],
+    "conventions": {
+      "coordinates": "apparent geocentric true ecliptic/equinox of date; outer planets use system barycenters",
+      "time": "IANA tzdata 2025.2; Skyfield builtin leap seconds and modeled delta T",
+      "orbs": {
+        "0": 8.0,
+        "60": 4.0,
+        "90": 6.0,
+        "120": 6.0,
+        "180": 8.0
+      }
+    },
+    "reproducibility": {
+      "skyfield": "1.54",
+      "kernel_sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    },
+    "limitations": [
+      "UT1 uses bundled delta-T model; historical time-zone records and birth times may be uncertain.",
+      "Quadrant systems reject the polar domain explicitly; assignments use ecliptic longitude sectors, not mundane latitude."
+    ]
+  },
+  "annual_profection": {
+    "technique_id": 1,
+    "application": "annual profections",
+    "tradition": "Hellenistic whole-sign profection",
+    "target_utc": "2026-11-02T00:00:00+00:00",
+    "completed_age": 36,
+    "cycle": 3,
+    "activated_house": 1,
+    "activated_sign": "Scorpio",
+    "lord_of_year": "Mars",
+    "period": {
+      "start_inclusive_utc": "2026-07-15T09:00:00+00:00",
+      "end_exclusive_utc": "2027-07-15T09:00:00+00:00"
+    },
+    "conventions": {
+      "boundary": "birth-time",
+      "leap_day": "march-1",
+      "zone": "Asia/Kolkata",
+      "anniversary_fold": null,
+      "solar_return": "not used",
+      "natal_house_system": "whole-sign",
+      "profection_house_logic": "Whole-sign from natal ascending sign, independent of natal quadrant cusps."
+    },
+    "lord_natal_context": {
+      "longitude": 31.85836473296035,
+      "sign": "Taurus",
+      "selected_natal_house": 7,
+      "whole_sign_natal_house": 7,
+      "conditions": {
+        "longitude": 31.85836473296035,
+        "sign": "Taurus",
+        "rulers": {
+          "domicile": "Venus",
+          "exaltation": "Moon",
+          "triplicity": "Venus",
+          "participating": "Mars",
+          "bound": "Venus",
+          "face": "Mercury",
+          "detriment": "Mars",
+          "fall": null
+        },
+        "own_dignities": [],
+        "debilities": [
+          "detriment"
+        ],
+        "peregrine_in_selected_primary_rulers": true,
+        "sect_affiliation": "night",
+        "of_chart_sect": false,
+        "retrograde": false,
+        "longitude_speed_degrees_per_day": 0.6700673297729054,
+        "near_station": false,
+        "solar": {
+          "state": "outside_beams",
+          "longitude_distance_degrees": 80.76854940835182,
+          "same_sign": false,
+          "system": "hellenistic-beams",
+          "actual_naked_eye_visibility": "not inferred; requires atmosphere, extinction and heliacal-rise model"
+        },
+        "solar_longitude_phase": "west_of_sun",
+        "exceptions": [
+          "Mercury affiliation uses morning/evening longitude phase, not an observed heliacal rise.",
+          "Participating triplicity lord is reported separately, not counted as primary triplicity dignity."
+        ],
+        "sky_geometry": {
+          "altitude_degrees": -16.089993581325785,
+          "azimuth_degrees": 291.52542532897627,
+          "above_geometric_horizon": false,
+          "sun_separation_degrees": 80.77572340255095,
+          "refraction": "none",
+          "visibility": "geometric data only; observed/heliacal visibility unmodeled"
+        }
+      }
+    },
+    "interpretation": {
+      "coverage": "compositional",
+      "theme": "life and embodiment",
+      "statement": "Whole-sign house 1 and Mars are the selected annual timing context; examine the lord's natal conditions and transits separately.",
+      "source": "https://theastrologypodcast.com/transcripts/ep-153-annual-profections-an-ancient-time-lord-technique/",
+      "locator": "Method: one sign per completed year, traditional domicile ruler; examples age 12, 24, 36.",
+      "topic_source": "https://theastrologypodcast.com/wp-content/uploads/2019/09/Significations-Of-The-Houses.pdf",
+      "limitations": "Symbolic focus does not assign event likelihood or validate an outcome."
+    },
+    "provenance": {
+      "technique_id": 1,
+      "version": 1,
+      "checked_on": "2026-11-02",
+      "rules": [
+        {
+          "id": "profection.annual-sign",
+          "tradition": "Brennan Hellenistic reconstruction",
+          "author": "Chris Brennan",
+          "edition": "Astrology Podcast episode 153 transcript",
+          "source": "https://theastrologypodcast.com/transcripts/ep-153-annual-profections-an-ancient-time-lord-technique/",
+          "locator": "Birthday advancement; examples ages 12,24,36 and age 38 third house",
+          "method": "From the ascending sign, advance one sign for each completed year; the traditional domicile ruler is lord of the year.",
+          "parameters": {
+            "cycle_years": 12,
+            "age_zero_house": 1
+          },
+          "examples": [
+            {
+              "age": 0,
+              "house": 1
+            },
+            {
+              "age": 12,
+              "house": 1
+            },
+            {
+              "age": 24,
+              "house": 1
+            },
+            {
+              "age": 36,
+              "house": 1
+            },
+            {
+              "age": 38,
+              "house": 3
+            }
+          ],
+          "exceptions": [
+            "Birth-time anniversary versus midnight, leap-day policy and DST ambiguity are explicit software boundary choices, not attributed to the ancient source. Solar-return boundaries are a distinct unimplemented option."
+          ]
+        },
+        {
+          "id": "profection.lord-context",
+          "tradition": "Brennan Hellenistic reconstruction",
+          "author": "Chris Brennan and guests",
+          "edition": "Astrology Podcast episode 222 transcript",
+          "source": "https://theastrologypodcast.com/transcripts/ep-222-transcript-reading-birth-charts-with-annual-profections/",
+          "locator": "Annual house and ruler; natal placement and time-lord context",
+          "method": "Interpret the activated house together with the natal condition of its ruler; keep transits as a separate layer.",
+          "exceptions": [
+            "No strength total or personal-event probability is implied. Whole-sign annual activation remains distinct from quadrant house placements."
+          ]
+        }
+      ],
+      "house_topics": {
+        "author": "Chris Brennan",
+        "source": "https://theastrologypodcast.com/wp-content/uploads/2019/09/Significations-Of-The-Houses.pdf",
+        "locator": "The Twelve Houses diagram, copyright 2012",
+        "topics": [
+          "life and embodiment",
+          "finances and possessions",
+          "siblings, learning and travel",
+          "parents, home and family",
+          "children and pleasure",
+          "work and subordinates",
+          "relationships and partnership",
+          "inheritance and others' resources",
+          "foreign travel and education",
+          "career and reputation",
+          "friends and alliances",
+          "seclusion, loss and hidden opposition"
+        ]
+      },
+      "scope": "Annual whole-sign profections only, not monthly profections or continuous degree profections.",
+      "rights": "Original concise procedural summaries and factual examples; no book or transcript ingestion."
+    }
+  }
+}

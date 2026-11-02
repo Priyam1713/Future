@@ -83,4 +83,20 @@ Progressions map elapsed TT age into symbolic ephemeris days. `--year-key tropic
 
 Examples: `data/house-comparison-1990.md` and its JSON compare all six systems. `data/progressed-1990-2026.md` and its JSON include the progressed chart and structured aspect report. Independent frozen Swiss fixtures and generators are in `tests/fixtures/house_reference.json`, `tests/fixtures/progression_reference.json` and the corresponding scripts. Before 1972, civil inputs follow Skyfield's proleptic UTC model (TT−UTC 42.184 seconds); do not mistake this for reconstructed historical UT1. Future leap seconds are not forecast. Symbolic procedures and interpretations, with distinct authority scopes, are stored in `knowledge/progression_methods.json` and registered separately from the transit rules.
 
+## Hellenistic / traditional conditions and annual profections
+
+```powershell
+python -m future doctrines "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209
+python -m future doctrines "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209 --tradition medieval/traditional --houses regiomontanus
+python -m future profections "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209 "2026-11-02T00:00:00+00:00"
+```
+
+`doctrines` returns astronomical sect, seven classical planetary conditions, dignity owners, reception edges and Fortune/Spirit. `--bounds egyptian` and `--bounds lilly-ptolemaic` preserve distinct factual tables. Hellenistic defaults use Dorothean triplicities, 15-degree beams, domicile dispositorship and reversed night Lots. Medieval defaults use Lilly's two-ruler triplicities, same-sign CA113 combustion (8.5°), 17° beams and 17′ cazimi, dignity occupancy and fixed-day Fortune. Spirit remains independently sourced. Alternative reception/solar/Lot settings are available through `DoctrineSettings`; incompatible Hellenistic profile combinations are rejected. Source conflicts (including CA300 thresholds and Ptolemy transmissions) are recorded in `knowledge/doctrine_sources.json` rather than silently reconciled. Participating triplicity rulership is reported separately from primary dignity. No score is calculated.
+
+Sect uses topocentric apparent solar center altitude without atmospheric refraction or terrain. Near-horizon cases are flagged. Planetary altitude, solar separation, speed and longitude phase are geometric data; actual naked-eye or heliacal visibility is not inferred. Mercury's sect uses the declared morning/evening longitude-phase convention; an application-based alternative remains unimplemented.
+
+`profections` starts at whole-sign house 1 at birth and advances one sign each completed year. Its sign ruler is the traditional lord of the year. `--boundary birth-time` (default) changes at the local birth-time anniversary; `midnight` instead changes at the beginning of the birthday. These are explicit software timing conventions. `--leap-day march-1` (default) or `february-28` resolves non-leap birthdays. A nonexistent DST anniversary is rejected; repeated anniversaries require `--anniversary-fold 0` or `1`. Solar-return boundaries are not calculated. Targets before birth or without an offset are rejected.
+
+Natal `--profections-date <offset-aware datetime>` and forecast `--profections` append explicitly labeled Hellenistic timing context. Forecasts crossing a birthday also expose the changed annual context. Natal quadrant placement is retained alongside the independent whole-sign annual activation. Examples: `data/hellenistic-1990.md`, `data/traditional-1990.json`, and `data/profections-1990-2026.md`, with JSON companions and a year-by-year timeline.
+
 Sources retain author, edition, access and ingestion policy. Rules retain technique, variation, tradition, version, exact locator, operation, parameters, evidence type, verification state and fixture references. Different authorities use distinct IDs; changed rules use new versions. Only verified rules in the exact requested scope are selected. Verification here means procedural/example agreement, not predictive accuracy. The registry is a local trusted research store; ingesting arbitrary external rule JSON as verified is unsupported.

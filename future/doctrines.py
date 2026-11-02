@@ -102,13 +102,22 @@ def analyze(ephemeris,natal,settings=None):
         raise ValueError('Select an explicit Hellenistic or medieval/traditional configuration')
     if settings is None:
         settings=DoctrineSettings() if tradition=='Hellenistic' else DoctrineSettings('lilly-ptolemaic','lilly','lilly-ca113','fixed-day-fortune','dignity-occupancy')
-    if tradition=='Hellenistic' and (settings.triplicity!='dorothean' or settings.solar!='hellenistic-beams' or settings.reception!='domicile-dispositorship'):
+    if tradition=='Hellenistic' and (settings.triplicity!='dorothean' or settings.solar!='hellenistic-beams' or settings.lots!='sect-reversing' or settings.reception!='domicile-dispositorship'):
         raise ValueError('Incompatible doctrine settings for the implemented Hellenistic profile')
     utc=datetime.fromisoformat(natal['birth']['utc']);t=ephemeris.ts.from_datetime(utc)
     observer=ephemeris.kernel['earth']+wgs84.latlon(natal['birth']['latitude'],natal['birth']['longitude'])
     altitude=float(observer.at(t).observe(ephemeris.kernel['sun']).apparent().altaz()[0].degrees)
     day=altitude>=0
     planets,receptions=condition_report(natal['planets'],natal['angles']['ascendant'],day,settings)
+    sun_direction=observer.at(t).observe(ephemeris.kernel['sun']).apparent()
+    from .natal import BODIES
+    for name,condition in planets.items():
+        direction=observer.at(t).observe(ephemeris.kernel[BODIES[name]]).apparent()
+        alt,az,distance=direction.altaz()
+        condition['sky_geometry']={'altitude_degrees':float(alt.degrees),'azimuth_degrees':float(az.degrees),
+            'above_geometric_horizon':float(alt.degrees)>=0,
+            'sun_separation_degrees':float(direction.separation_from(sun_direction).degrees),
+            'refraction':'none','visibility':'geometric data only; observed/heliacal visibility unmodeled'}
     points=lots(natal['angles']['ascendant'],natal['planets']['Sun']['longitude'],natal['planets']['Moon']['longitude'],day,settings.lots)
     lot_outputs={name:{'longitude':points[name],**placement(points[name]),'house':house_for(points[name],natal['house_cusps']),
                        'sign_ruler':TABLES['domicile'][int(points[name]//30)]} for name in ('Fortune','Spirit')}

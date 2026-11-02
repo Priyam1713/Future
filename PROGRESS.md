@@ -76,3 +76,13 @@
 - Examples: data/hellenistic-1990.json and data/traditional-1990.json. July 1990 day chart: Fortune 136.800094 degrees, Spirit 319.045817 degrees.
 - Next: annual whole-sign profections with explicit civil-birthday convention and leap-day policy; traditional context integration.
 - Commit: doctrine pass (resolve with `git log --grep="traditional planetary doctrines"`).
+
+## 2026-11-02 — annual profections
+- Added deterministic twelve-year whole-sign annual activation, traditional lord of year, exact offset-aware civil-birthday boundaries, explicit birth-time/midnight options and March-1/February-28 leap-day policies. DST gaps reject and ambiguous anniversaries require a declared fold. Solar-return boundaries remain separate/unimplemented.
+- Lord-of-year natal conditions and source-backed house-topic context included. Quadrant natal house placements remain separate from whole-sign annual activation. Optional natal/forecast context works with birthday transitions inside forecast windows.
+- All 42 tests pass, preserving earlier 32. Published age/house examples, year/lord transitions, microsecond birthday boundaries, leap birthdays, DST folds, profile isolation and registry idempotency tested. Existing independent astronomical/reference tests retained.
+- Doctrine geometry now also reports unrefracted planetary altitude/azimuth and true angular solar separation, with explicit visibility-model limitations.
+- July 1990 example at Nov 2, 2026: age 36, house 1, Scorpio, Mars; period Jul 15, 2026 09:00 UTC through Jul 15, 2027 09:00 UTC. Condition and profection Markdown/JSON reports plus adjacent-year timeline saved under data/.
+- Remaining #1: full primary textbook chapter verification, genuine heliacal visibility/station doctrine, application-sensitive horary reception/perfection, other bounds transmissions, additional Lots/time-lords and electional rules. Doctrine outputs are procedural/symbolic, not empirical predictive validation. No Technique #2 work started.
+- Next: assess bounded electional criteria and additional advanced timing methods using these verified computations; retain explicit source/profile coverage gaps.
+- Commit: annual pass (resolve with `git log --grep="annual profections and time-lord"`).

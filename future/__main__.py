@@ -55,6 +55,7 @@ def main():
     natal.add_argument('--tradition', default='modern psychological')
     natal.add_argument('--kernel', default=str(ROOT/'data/de440s.bsp'))
     natal.add_argument('--orbs', help='JSON mapping of aspect angle to orb')
+    natal.add_argument('--profections-date',help='Optional explicit annual symbolic context at offset-aware datetime')
     transit=sub.add_parser('forecast')
     transit.add_argument('local')
     transit.add_argument('zone')
@@ -69,6 +70,7 @@ def main():
     transit.add_argument('--bodies',help='Comma-separated transiting planets')
     transit.add_argument('--orbs',help='JSON mapping of aspect angle to orb')
     transit.add_argument('--format',choices=['json','markdown'],default='json')
+    transit.add_argument('--profections',action='store_true',help='Append separately labeled Hellenistic annual context')
     prog=sub.add_parser('progressions')
     prog.add_argument('local')
     prog.add_argument('zone')
@@ -93,7 +95,29 @@ def main():
     doctrine.add_argument('--bounds',choices=['egyptian','lilly-ptolemaic'])
     doctrine.add_argument('--fold',type=int,choices=[0,1])
     doctrine.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
+    prof=sub.add_parser('profections')
+    prof.add_argument('local');prof.add_argument('zone');prof.add_argument('latitude',type=float);prof.add_argument('longitude',type=float)
+    prof.add_argument('target')
+    prof.add_argument('--houses',choices=SYSTEMS,default='whole-sign')
+    prof.add_argument('--boundary',choices=['birth-time','midnight'],default='birth-time')
+    prof.add_argument('--leap-day',choices=['march-1','february-28'],default='march-1')
+    prof.add_argument('--fold',type=int,choices=[0,1])
+    prof.add_argument('--anniversary-fold',type=int,choices=[0,1])
+    prof.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
     args = parser.parse_args()
+    if args.command=='profections':
+        from datetime import datetime
+        from .natal import SkyfieldEphemeris,Settings,chart
+        from .profections import context,register_knowledge
+        from .doctrines import register_knowledge as register_doctrines
+        e=SkyfieldEphemeris(args.kernel);registry=load_registry(args.database)
+        try:
+            register_doctrines(registry);register_knowledge(registry)
+            n=chart(e,args.local,args.zone,args.latitude,args.longitude,Settings(tradition='Hellenistic',houses=args.houses),args.fold)
+            result=context(e,n,datetime.fromisoformat(args.target),boundary=args.boundary,leap_day=args.leap_day,anniversary_fold=args.anniversary_fold)
+            print(json.dumps({'natal':n,'annual_profection':result},indent=2))
+        finally:registry.close();e.kernel.close()
+        return
     if args.command=='doctrines':
         from dataclasses import replace
         from .natal import SkyfieldEphemeris,Settings,chart
@@ -138,22 +162,35 @@ def main():
             result=forecast(e,n,datetime.fromisoformat(args.start),args.days,
                             {int(k):float(v) for k,v in json.loads(args.orbs).items()} if args.orbs else None,
                             args.bodies.split(',') if args.bodies else None,interpreter(records,n))
+            if args.profections:
+                from .profections import context,register_knowledge
+                register_knowledge(registry)
+                result['annual_profection_context']=context(e,n,datetime.fromisoformat(args.start))
+                transition=datetime.fromisoformat(result['annual_profection_context']['period']['end_exclusive_utc'])
+                result['annual_profection_transitions']=([context(e,n,transition)] if transition<datetime.fromisoformat(result['window']['end_utc']) else [])
             from .forecast_report import present,markdown
             result=present(result)
             print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
-        finally: registry.close()
+        finally: registry.close();e.kernel.close()
         return
     if args.command == 'natal':
         from .natal import SkyfieldEphemeris, Settings, chart
-        result = chart(SkyfieldEphemeris(args.kernel), args.local,args.zone,args.latitude,args.longitude,
+        e=SkyfieldEphemeris(args.kernel)
+        result = chart(e, args.local,args.zone,args.latitude,args.longitude,
                        Settings(tradition=args.tradition,houses=args.houses),args.fold,
                        {int(k):float(v) for k,v in json.loads(args.orbs).items()} if args.orbs else None)
         from .interpretations import explain
         registry = load_registry(args.database)
         try:
             result['interpretations'] = explain(result,registry)
+            if args.profections_date:
+                from datetime import datetime
+                from .profections import context,register_knowledge
+                register_knowledge(registry)
+                result['annual_profection_context']=context(e,result,datetime.fromisoformat(args.profections_date))
         finally:
             registry.close()
+            e.kernel.close()
         print(json.dumps(result,indent=2))
         return
     registry = load_registry(args.database)

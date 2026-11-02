@@ -54,6 +54,12 @@ def markdown(report):
         ', '.join(f"{k}: {v['sign']} {v['degree_in_sign']:.2f}°, house {v['house']}" for k,v in natal['planets'].items())+'.','',
         '## Ongoing configurations','',p['duration_convention'],'']
     configs={c['configuration_id']:c for c in report['configurations']}
+    if 'annual_profection_context' in report:
+        a=report['annual_profection_context']
+        lines += [f"Separate Hellenistic annual context at the start: age {a['completed_age']}, whole-sign house {a['activated_house']}, {a['activated_sign']}, lord {a['lord_of_year']}.",
+                  f"Boundary convention: {a['conventions']['boundary']}; solar return is not used.",'']
+        for change in report.get('annual_profection_transitions',[]):
+            lines.append(f"Annual context changes at {change['period']['start_inclusive_utc']}: house {change['activated_house']}, lord {change['lord_of_year']}.")
     for c in p['major_ongoing_configurations']:
         obj=configs[c['configuration_id']]
         clipped=any(s['start_clipped'] or s['end_clipped'] for s in c['intervals'])
