@@ -49,6 +49,13 @@ class Ephemeris(Protocol):
     def positions(self, utc): ...
 
 class SkyfieldEphemeris:
+    def longitudes(self, name, dates):
+        """Vectorized apparent longitude sampling for transit searches."""
+        if any(not 1850 <= d.year <= 2149 for d in dates):
+            raise ValueError('Supported dates: 1850 through 2149')
+        t = self.ts.from_datetimes(dates)
+        return self.kernel['earth'].at(t).observe(self.kernel[BODIES[name]]).apparent().frame_latlon(ecliptic_frame)[1].degrees
+
     def __init__(self, path):
         self.path = Path(path)
         if not self.path.is_file():

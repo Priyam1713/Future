@@ -54,7 +54,37 @@ def main():
     natal.add_argument('--tradition', default='modern psychological')
     natal.add_argument('--kernel', default=str(ROOT/'data/de440s.bsp'))
     natal.add_argument('--orbs', help='JSON mapping of aspect angle to orb')
+    transit=sub.add_parser('forecast')
+    transit.add_argument('local')
+    transit.add_argument('zone')
+    transit.add_argument('latitude',type=float)
+    transit.add_argument('longitude',type=float)
+    transit.add_argument('start',help='ISO datetime with explicit UTC offset')
+    transit.add_argument('--days',type=int,default=30)
+    transit.add_argument('--fold',type=int,choices=[0,1])
+    transit.add_argument('--houses',choices=['whole-sign','equal'],default='whole-sign')
+    transit.add_argument('--tradition',default='modern psychological')
+    transit.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
+    transit.add_argument('--bodies',help='Comma-separated transiting planets')
+    transit.add_argument('--orbs',help='JSON mapping of aspect angle to orb')
     args = parser.parse_args()
+    if args.command=='forecast':
+        from datetime import datetime
+        from .natal import SkyfieldEphemeris, Settings, chart
+        from .transits import forecast
+        from .western import load_context,interpreter,natal_context
+        e=SkyfieldEphemeris(args.kernel)
+        n=chart(e,args.local,args.zone,args.latitude,args.longitude,Settings(tradition=args.tradition,houses=args.houses),args.fold)
+        registry=load_registry(args.database)
+        try:
+            records=load_context(registry,args.tradition)
+            n['knowledge_context']=natal_context(records,n)
+            result=forecast(e,n,datetime.fromisoformat(args.start),args.days,
+                            {int(k):float(v) for k,v in json.loads(args.orbs).items()} if args.orbs else None,
+                            args.bodies.split(',') if args.bodies else None,interpreter(records,n))
+            print(json.dumps(result,indent=2))
+        finally: registry.close()
+        return
     if args.command == 'natal':
         from .natal import SkyfieldEphemeris, Settings, chart
         result = chart(SkyfieldEphemeris(args.kernel), args.local,args.zone,args.latitude,args.longitude,

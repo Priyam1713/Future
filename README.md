@@ -42,4 +42,18 @@ python -m future natal "2000-08-01T12:00" Europe/London 51.5 0 --tradition medie
 
 JSON includes planetary placements, speeds/retrograde states, Ascendant/MC, house cusps and assignments, major aspects, timescales, configuration and provenance. `--fold 0` or `--fold 1` resolves repeated DST times; nonexistent times are rejected. `--orbs '{"0":8,"90":5,"180":8}'` selects aspect angles/orbs. Offline calculation requires the validated local DE440s kernel. See `knowledge/ephemeris-decision.md` for accuracy, scope, license research and independent validation. Sample output is in `data/sample-natal.json`.
 
+## Forecast natal transits
+
+```powershell
+python -m future forecast "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209 "2026-11-02T00:00:00+00:00" --days 30 --bodies Mercury,Saturn
+```
+
+Start requires an explicit offset. Windows are 1–30 days, start-inclusive/end-exclusive. Defaults scan all tradition-supported planets and five major aspects. `--orbs` selects angles and orbs as for natal. Orbs filter active contacts; exact crossings are listed even for zero-width orbs. Output includes current positions, active applying/separating/stationary contacts, chronological exact contacts to natal planets/ASC/MC, repeated-pass numbering, source-specific symbolic components and precision limits. All contacts are returned without an invented significance score.
+
+`data/sample-natal.json` is the **August 1, 2000, London** demonstration. `data/sample-transits-1990.json` is the **July 15, 1990, Delhi** demonstration forecast for November 2–December 2, 2026, using Mercury/Saturn and 3-degree conjunction/square/opposition orbs. These are distinct fictional example inputs.
+
+The curated `knowledge/western_rules.json` contains source-checked summaries of twelve houses, seven classical planets with sign-level dignities, twelve sign descriptions, major-aspect symbolism and methodological differences. The build script preserves their individual authorities and locators. Computational verification is separate from checking a traditional text. Classical symbolism is not silently substituted into modern interpretations. No copyrighted book text is ingested. Hand's accessible indexed Saturn methodology is retained with an access limitation; full planet-pair delineations from *Planets in Transit* remain pending authorized access.
+
+Transit roots use 3-hour scans, refined sampled stations and bisection to a 0.25-second bracket. This numerical resolution does not imply equivalent absolute accuracy. Swiss/Moshier independent fixtures verify Mercury positions and both retrograde/direct passes; analytical trajectories test boundaries, wraps and close station contacts. Kernel, model and birth-time uncertainty still affect absolute timing, especially at slow motion.
+
 Sources retain author, edition, access and ingestion policy. Rules retain technique, variation, tradition, version, exact locator, operation, parameters, evidence type, verification state and fixture references. Different authorities use distinct IDs; changed rules use new versions. Only verified rules in the exact requested scope are selected. Verification here means procedural/example agreement, not predictive accuracy. The registry is a local trusted research store; ingesting arbitrary external rule JSON as verified is unsupported.

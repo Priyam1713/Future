@@ -28,3 +28,13 @@
 - Limits: 1850–2149, nonpolar locations, modeled delta T, traditional rulership only, no quadrant houses, timing applications or complete interpretation system. Historical IANA offsets may differ from town LMT. Western Astrology remains Developing, not Complete.
 - Next: expand independent published chart fixtures and traditional rules, then quadrant houses and transit/progression calculations.
 - Commit: natal foundation commit (resolve with `git log --grep="integrate offline"`).
+
+## 2026-11-02 — natal transit forecasting
+- Implemented offline 1–30-day forecast CLI: natal planets/ASC/MC targets, current positions, configurable aspects/orbs, applying/exact/separating/stationary states, vectorized scanning, refined stations, exact-contact bisection and chronological repeated-pass events.
+- Extracted source-specific Lilly/Houlding house and planetary/dignity summaries, twelve Houlding sign summaries, Campion and traditional aspect interpretations, application/orb conventions. Catalog records preserve author/edition/locator/rights/exceptions. Computational rules and symbolic source review states remain distinct.
+- Forecast interpretation uses selected-tradition aspect components and available planetary/house context. Detailed planet-pair transit delineations remain incomplete; Hand article access blocked, indexed methodology recorded only. No fabricated Hand interpretations.
+- Independent Swiss/Moshier November 2026 fixture covers Mercury positions and retrograde/direct crossings of 225 degrees; numerical roots agree within 120 seconds. All 20 tests pass, including original tests. Full default 30-day CLI run yields 133 exact contacts and 32 active contacts for the July 1990 example. Catalog: 44 records.
+- Distinct examples: sample-natal.json = August 1, 2000 London; sample-transits-1990.json = July 15, 1990 Delhi, November 2–December 2, 2026 forecast.
+- Limits: source coverage still partial, three-hour sampling cannot guarantee detection of multiple unseen reversals in one cell; numerical root tolerance is not absolute accuracy or predictive validity. No calibrated life-event probabilities.
+- Next: deepen authorized planet-pair transit interpretations and historical validation; then quadrant houses, progressions, expanded traditions and electional. Technique #1 remains Developing.
+- Commit: transit milestone (resolve with `git log --grep="source-grounded natal transit"`).
