@@ -1,5 +1,11 @@
 # Future progress
 
+## 2026-11-03 — #4 Numerology resource/variation audit
+- Started only after Chinese closure d230a9d was committed/pushed. All six variations/three ranked sources preserved; no Numerology engine or executable rule added.
+- Cheiro and Decoz publisher listings verified; Campbell catalog-search metadata located, procedural/full-page access unresolved. Decoz author-site Life Path/Expression examples supply bounded first-slice leads without copyrighted full-text ingestion.
+- numerology_resource_audit.json records separate Pythagorean/Chaldean profiles, master-number/reduction order, name normalization/transliteration and cycle-boundary questions. Lo Shu/gematria coverage is not inferred from provisional book mappings.
+- Current acceptance remains83 tests;15 Chinese/12 Vedic/23 Western CLI cases. Inventory/source-metadata checks and nine registry tests pass after this research-only handoff. Next: verify the highest-value named Numerology procedures/examples before implementation. Commit: resolve with git log --grep="audit Numerology sources and variations".
+
 ## 2026-11-03 — #3 Pass3: sourced BaZi interpretations and Core v1 closure
 - Calculation pass b2aa210 pushed first. Added all100 phase/polarity Ten Gods relations, twelve unweighted modern hidden-stem sets, ten classical Day Master imagery components, four pillar-topic components and explicit compositional readings. Source-specific classical/modern components labeled; seasonal allocations never merged or scored.
 - All83 tests pass, preserving all73 Western/Vedic tests;15 Chinese,12 Vedic and23 Western CLI smoke cases pass. Independent100-cell relation/12-set checks and published teaching examples supplement Pass2 numerical fixtures. Pip check clean; pinned production dependencies unchanged, optional MIT oracle stays reference-only.
@@ -22,7 +28,7 @@
 - Luck-pillar direction/three-day-year/ten-year procedures located but complete independently checked onset convention deferred; no fabricated timings. Numerical algorithm agreement does not establish predictive validity.
 - Next: implement independent DE440s Four Pillars and verify fixtures before readiness. Commit: resolve with git log --grep="verify BaZi sources and conventions".
 
-Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. **#1 Western Astrology — Core v1 Ready**, closed/pushed `ec5f69b`. **#2 Vedic Astrology — Core v1 Ready**, closed/pushed `1f2acc8`. **#3 Chinese Astrology — Core v1 Ready**, bounded BaZi source/local scope; #4 audit starts only after this closure is committed/pushed.
+Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. **#1 Western Astrology — Core v1 Ready**, closed/pushed `ec5f69b`. **#2 Vedic Astrology — Core v1 Ready**, closed/pushed `1f2acc8`. **#3 Chinese Astrology — Core v1 Ready**, closed/pushed `d230a9d`, bounded BaZi scope. **#4 Numerology — Researching**, initial resource/variation audit only.
 
 ## 2026-11-02 — inventory and research pass
 - Repository was empty. Cloned the requested remote successfully through Git; connector access returns 404.

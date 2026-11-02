@@ -1,0 +1,126 @@
+{
+  "technique_id": 4,
+  "name": "Numerology",
+  "status": "Researching",
+  "date": "2026-11-03",
+  "predecessor_closure": "d230a9d",
+  "policy": "80/20 verified practical core; no executable Numerology engine/rules in this audit",
+  "variations": [
+    {
+      "name": "Pythagorean",
+      "inventory_source_mapping": [
+        "Numerology: Key to Your Inner Self",
+        "Your Days Are Numbered"
+      ],
+      "status": "unsupported",
+      "finding": "Source-specific calculation/interpretation conventions require verification before implementation."
+    },
+    {
+      "name": "Chaldean",
+      "inventory_source_mapping": [
+        "The Book of Numbers",
+        "Your Days Are Numbered"
+      ],
+      "status": "unsupported",
+      "finding": "Source-specific calculation/interpretation conventions require verification before implementation."
+    },
+    {
+      "name": "Lo Shu grid",
+      "inventory_source_mapping": [
+        "Your Days Are Numbered",
+        "Numerology: Key to Your Inner Self"
+      ],
+      "status": "unsupported",
+      "finding": "Original mapping remains provisional; ranked titles do not establish procedural coverage."
+    },
+    {
+      "name": "personal-year cycles",
+      "inventory_source_mapping": [
+        "Your Days Are Numbered",
+        "Numerology: Key to Your Inner Self"
+      ],
+      "status": "unsupported",
+      "finding": "Source-specific calculation/interpretation conventions require verification before implementation."
+    },
+    {
+      "name": "name and date systems",
+      "inventory_source_mapping": [
+        "Your Days Are Numbered",
+        "Numerology: Key to Your Inner Self"
+      ],
+      "status": "unsupported",
+      "finding": "Source-specific calculation/interpretation conventions require verification before implementation."
+    },
+    {
+      "name": "gematria-adjacent",
+      "inventory_source_mapping": [
+        "Your Days Are Numbered",
+        "Numerology: Key to Your Inner Self"
+      ],
+      "status": "unsupported",
+      "finding": "Original mapping remains provisional; ranked titles do not establish procedural coverage."
+    }
+  ],
+  "ranked_source_ids": [
+    "numerology-cheiro-publisher-v1",
+    "numerology-decoz-publisher-v1",
+    "numerology-campbell-catalog-v1"
+  ],
+  "supplemental_source_ids": [
+    "numerology-decoz-life-path-v1",
+    "numerology-decoz-expression-v1"
+  ],
+  "findings": [
+    "Publisher listings identify Cheiro and Decoz books; book edition/chapter verification is separate from bibliography.",
+    "Campbell catalog metadata located; full-page/procedural access not verified.",
+    "Decoz author pages provide component-wise reduction and name/date worked-example leads; competing all-digit/whole-name methods must not be silently merged.",
+    "Lo Shu and gematria need separate grids/alphabets and primary procedures; Chinese BaZi components do not establish Numerology coverage."
+  ],
+  "proposed_core": [
+    "Named Pythagorean birth-date and full-name core with complete arithmetic trace.",
+    "Source-specific master-number handling, birthday and personal-year cycles after verification.",
+    "Bounded Chaldean profile only after lawful identifiable procedural access; preserve compound numbers."
+  ],
+  "pending_conventions": [
+    "Exact Pythagorean versus Chaldean letter tables; compound-number retention and interpretation must remain distinct.",
+    "Reduce date components/name parts separately versus aggregate all digits; specify where11,22,33 are preserved.",
+    "Name basis, multiple names/suffixes, hyphens/apostrophes, diacritics/Unicode normalization and empty inputs.",
+    "Vowel/consonant classification, including Y; do not invent transliteration for unsupported alphabets.",
+    "Gregorian date semantics, leap dates and personal-year Jan1 versus birthday boundaries.",
+    "Lo Shu grid orientation, zero handling, repeated-digit counts and source-specific interpretation.",
+    "Gematria alphabet/final-letter/transliteration conventions require their own verified profile."
+  ],
+  "worked_example_leads": [
+    {
+      "source_id": "numerology-decoz-life-path-v1",
+      "locator": "Follow these steps; How NOT to Calculate Life Path Numbers, October15,1998 example",
+      "scope": "Published reduction path includes compound16/7; not yet executed or independently verified."
+    },
+    {
+      "source_id": "numerology-decoz-expression-v1",
+      "locator": "Calculate your Expression; Thomas Cruise Mapother worked example; FAQ master numbers/name selection",
+      "scope": "Published full-name component sums/master preservation; not yet an implemented fixture."
+    }
+  ],
+  "verification_plan": [
+    "Transcribe bounded source examples with exact profiles before coding.",
+    "Use separately implemented arithmetic/manual published checks, not production-generated expectations.",
+    "Test master-number disagreements, normalization, invalid dates, cycle boundaries and tradition isolation."
+  ],
+  "backlog": {
+    "P1": [
+      "Core Pythagorean name/date interpretations and personal cycles",
+      "Identifiable Cheiro Chaldean passages/edition and worked examples"
+    ],
+    "P2": [
+      "Lo Shu primary grid procedures",
+      "Gematria-adjacent alphabets and transliteration schools",
+      "Obscure compound/lineage variants"
+    ]
+  },
+  "limits": [
+    "All six variations and three ranked sources preserved; source leads do not imply completed procedure verification.",
+    "No Numerology mathematics, interpretation or predictive validity claim yet.",
+    "No paid or copyrighted full-text ingestion undertaken."
+  ]
+}
