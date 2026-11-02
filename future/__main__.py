@@ -104,7 +104,28 @@ def main():
     prof.add_argument('--fold',type=int,choices=[0,1])
     prof.add_argument('--anniversary-fold',type=int,choices=[0,1])
     prof.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
+    sr=sub.add_parser('solar-return')
+    sr.add_argument('local');sr.add_argument('zone');sr.add_argument('latitude',type=float);sr.add_argument('longitude',type=float)
+    sr.add_argument('year',type=int);sr.add_argument('--return-latitude',type=float);sr.add_argument('--return-longitude',type=float)
+    sr.add_argument('--houses',choices=SYSTEMS,default='placidus')
+    sr.add_argument('--tradition',default='modern psychological')
+    sr.add_argument('--fold',type=int,choices=[0,1]);sr.add_argument('--orbs')
+    sr.add_argument('--format',choices=['json','markdown'],default='json')
+    sr.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
     args = parser.parse_args()
+    if args.command=='solar-return':
+        from .natal import SkyfieldEphemeris,Settings,chart
+        from .solar_returns import solar_return,register_knowledge,markdown
+        e=SkyfieldEphemeris(args.kernel);registry=load_registry(args.database)
+        try:
+            register_knowledge(registry)
+            n=chart(e,args.local,args.zone,args.latitude,args.longitude,Settings(tradition=args.tradition,houses=args.houses),args.fold)
+            result=solar_return(e,n,args.year,args.latitude if args.return_latitude is None else args.return_latitude,
+                args.longitude if args.return_longitude is None else args.return_longitude,args.houses,
+                {int(k):float(v) for k,v in json.loads(args.orbs).items()} if args.orbs else None)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close();e.kernel.close()
+        return
     if args.command=='profections':
         from datetime import datetime
         from .natal import SkyfieldEphemeris,Settings,chart

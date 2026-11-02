@@ -86,3 +86,12 @@
 - Remaining #1: full primary textbook chapter verification, genuine heliacal visibility/station doctrine, application-sensitive horary reception/perfection, other bounds transmissions, additional Lots/time-lords and electional rules. Doctrine outputs are procedural/symbolic, not empirical predictive validation. No Technique #2 work started.
 - Next: assess bounded electional criteria and additional advanced timing methods using these verified computations; retain explicit source/profile coverage gaps.
 - Commit: annual pass (resolve with `git log --grep="annual profections and time-lord"`).
+
+## 2026-11-02 — Solar Returns
+- Implemented exact apparent geocentric tropical solar-longitude crossing within a selected UTC calendar year, full relocated return chart with all existing houses, return-to-natal planet/angle aspects and geometric aspect configurations.
+- Shea's accessible FAQ methodology registered separately: tropical/nonprecessed/Placidus, explicit location choice. Specific copyrighted book delineations not ingested or invented. Other houses are computed but not labeled Shea methodology.
+- All 44 tests pass, retaining earlier 42. Independent Swiss/Moshier fixtures cover five return charts/years including a leap-day birth and Dec-31 year-boundary births, positions and Placidus cusps; relocation invariance verified. Root-time tolerance 120 seconds; placement tolerance 0.01 degree.
+- July 1990 return in 2026: July 15 01:49:59.625 UTC. Solar residual ~0.000000314 degree. Report and full JSON: data/solar-return-1990-2026.*.
+- Distinct from civil birthday/profection boundary. UTC return years 1850–2148; no precession correction or unsupported predictive precision claim.
+- Next: narrowly sourced electional category with explicit rule traces and search-resolution guarantees/limitations.
+- Commit: Solar Return pass (resolve with `git log --grep="verified Solar Return"`).
