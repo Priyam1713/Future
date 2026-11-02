@@ -1,6 +1,6 @@
 # Future progress
 
-Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. **#1 Western Astrology — Core v1 Ready** (verified source/local CLI scope). #2 resource/variation audit begins only after closure is committed.
+Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. **#1 Western Astrology — Core v1 Ready**, closed/pushed `ec5f69b` (source/local CLI scope). **#2 Vedic Astrology — Researching**, resource audit only; no implementation yet.
 
 ## 2026-11-02 — inventory and research pass
 - Repository was empty. Cloned the requested remote successfully through Git; connector access returns 404.
@@ -139,3 +139,10 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Fixed hardcoded July-1990 heading in generic Solar Return Markdown; added readable composed house/retrograde context. Reproducible July-1990 examples: data/core-v1-natal-1990.json, core-v1-progressions-1990.json, core-v1-return-1990.*; acceptance trace: western-core-v1-smoke.json. Run `python -m scripts.smoke_western_core` to regenerate.
 - Marked **Core v1 Ready** in matrix, completion/variation audit and technique gap tracker. This is the practical verified source/local scope, not exhaustive completion, empirical validation or binary/commercial-distribution certification. Electional certification and absolute L3/L4 chronology remain explicitly experimental; P1/P2 backlog preserves deferred work.
 - Next: after committing closure, begin #2 resource/variation audit only, in exact inventory order. No #2 implementation in this closure. Commit: resolve with `git log --grep="close Western Core v1"`.
+
+## 2026-11-02 — #2 Vedic Astrology resource/variation audit
+- Started only after Western closure `ec5f69b` was committed/pushed. Preserved all seven inventory variations and three ranked sources. No #2 executable engine/rules added.
+- Located BPHS Santhanam/Ranjan catalog evidence, Raman publisher Vol.1/2 listings and K.N. Rao title/author in BVB p.23. Bibliographic scope is not chapter/rule verification. Registered supplemental author-hosted P.V.R. Narasimha Rao textbook link; PDF access is blocked (406/timeout), so no text inspection or ingestion claimed.
+- Structured source/variation audit: knowledge/vedic_resource_audit.json and vedic_sources.json; same source metadata registered in the shared source library. Primary Bisaria article supplies Jaimini/Moon-degree methodology leads, not verified example calculations.
+- Proposed 80/20 first slice: named sidereal D1 with explicit nodes, Moon nakshatra/pada, Vimshottari main/subperiods, D9 and selected sourced interpretation. Ayanamsha/precession/nutation, node choice, dasha year and lineage conventions must be verified before coding. Jaimini, additional vargas, KP and prashna remain prioritized refinement candidates, not silently merged or claimed implemented.
+- Next: inspect legitimate procedural sources and worked examples for that first slice, keeping Swiss reference-only unless licensing decisions change. Existing Western acceptance remains 63 tests / 23 smoke cases; research metadata validated against inventory and registry. Commit: resolve with `git log --grep="audit Vedic sources and variations"`.
