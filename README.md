@@ -1,5 +1,7 @@
 # Future
 
+Development follows the permanent **80/20 directive** in `AGENTS.md`: stabilize a verified practical core, label experimental/unsupported features, record P1/P2 refinement, and then continue in inventory order. Exhaustive historical completion is not the release gate. Western Core v1 scope is frozen in `knowledge/western_core_v1.json`; `knowledge/western_refinement_backlog.json` preserves deferred work.
+
 Knowledge-driven prediction research and specialized computational engines. Traditional procedures and interpretations are separate from evidence of predictive accuracy.
 
 The immutable workbook in `resources/` is the taxonomy authority. `knowledge/inventory.json` preserves all six worksheets; `inventory_audit.json` records structural checks; `gaps.json` tracks the initial ordered gap pass. Curated source research is separate in `sources.json` so provisional rankings are never silently rewritten.

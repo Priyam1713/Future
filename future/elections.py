@@ -214,7 +214,7 @@ def search(ephemeris,category,start,end,latitude,longitude,profile_name='ramesey
             'source':CATALOG['rule_parameters'][rid].get('source',p['source']),
             'locator':CATALOG['rule_parameters'][rid].get('locator',p['locator'])} for rid in interval['violated_required']])
     for interval in unresolved:interval['classification']='indeterminate'
-    return {'technique_id':1,'application':'electional search','category':category,'profile':profile_name,'tradition':tradition,
+    return {'technique_id':1,'application':'electional search','release_status':'experimental','category':category,'profile':profile_name,'tradition':tradition,
         'range':{'start_utc':start.isoformat(),'end_exclusive_utc':end.isoformat()},'location':{'latitude':latitude,'longitude':longitude},
         'houses':houses,'required_rules':required,'disabled_rules':[r for r in p['rules'] if r not in required],
         'constraints':{'minimum_minutes':min_minutes,'utc_hours':utc_hours,'ascendant_signs':ascendant_signs},

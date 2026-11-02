@@ -167,6 +167,8 @@ def main():
         e=SkyfieldEphemeris(args.kernel);registry=load_registry(args.database)
         try:
             register_knowledge(registry)
+            from .core_readings import register_knowledge as register_core
+            register_core(registry)
             n=chart(e,args.local,args.zone,args.latitude,args.longitude,Settings(tradition=args.tradition,houses=args.houses),args.fold)
             result=solar_return(e,n,args.year,args.latitude if args.return_latitude is None else args.return_latitude,
                 args.longitude if args.return_longitude is None else args.return_longitude,args.houses,
@@ -208,7 +210,10 @@ def main():
         e=SkyfieldEphemeris(args.kernel)
         try:
             registry=load_registry(args.database)
-            try:register_knowledge(registry)
+            try:
+                register_knowledge(registry)
+                from .core_readings import register_knowledge as register_core
+                register_core(registry)
             finally:registry.close()
             result=progress(e,args.local,args.zone,args.latitude,args.longitude,datetime.fromisoformat(args.target),
                 Settings(tradition=args.tradition,houses=args.houses),args.fold,args.year_key,args.angles,
@@ -252,6 +257,12 @@ def main():
         registry = load_registry(args.database)
         try:
             result['interpretations'] = explain(result,registry)
+            from .core_readings import placements
+            result['reading'] = placements(result,registry)
+            if args.tradition in ('Hellenistic','medieval/traditional'):
+                from .doctrines import analyze,register_knowledge as register_doctrines
+                register_doctrines(registry)
+                result['traditional_conditions'] = analyze(e,result)
             if args.profections_date:
                 from datetime import datetime
                 from .profections import context,register_knowledge

@@ -1,5 +1,7 @@
 # Future progress
 
+Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. #1 Core v1 candidate; final closure verification pending. #2 not started before the closure commit.
+
 ## 2026-11-02 — inventory and research pass
 - Repository was empty. Cloned the requested remote successfully through Git; connector access returns 404.
 - Imported all six worksheets losslessly as cell values, preserving the original XLSX and SHA-256.
@@ -122,3 +124,11 @@
 - Source gaps explicitly retained: Riley IV.10 prose/table mismatch and Taurus remainder mismatch, Egyptian/intercalary calendar reconstruction, qualitative cross-lot substitutions and full period delineations. Numeric agreement does not establish historical universality or predictive validity.
 - Completion audit retains Developing and adds procedure statuses, remaining gaps and ordered v1 gates. No Technique #2 work. Lunar station sample velocities also normalized to the same degree/day units used during refinement (zero locations unchanged).
 - All 59 tests pass (40.455s), retaining the original 48; CLI JSON/Markdown smoke checks and diff validation pass. Commit: resolve with `git log --grep="bounded source-named zodiacal releasing"`.
+
+## 2026-11-02 — Western Core v1 readiness (80/20 Pass 1)
+- Reviewed the original six inventory dimensions; froze supported configurations in knowledge/western_core_v1.json and P1/P2 refinement in western_refinement_backlog.json. Electional certification remains experimental; ZR L1/L2 core retained, L3/L4 available experimentally with chronology limits. No ancient-calendar expansion.
+- Added 27 concise source-checked components: twelve modern houses, Sun/Moon/Mercury symbolism, eight progressed lunar phases and Shea return-house/inner-retrograde methodology. Connected natal CLI to existing and new catalog readings; traditional natal CLI now also includes calculated condition reports. Modern transit composition gains house topics. No invented direct natal/progression/return pairs.
+- Regression checks enforce source locators, immutable records, computed placement linkage, tradition isolation, progressed phase and conditional return retrograde selection. Fixed modern progression context appearing under traditional selections; legacy interfaces retained.
+- All 63 tests passed, retaining 59. Runtime versions fully pinned; installed license/notice metadata and hashes audited. Source/local CLI scope only; commercial/binary/kernel redistribution and full vulnerability automation deferred explicitly. No Swiss runtime or copyrighted book ingestion.
+- Permanent root AGENTS.md now applies 80/20 gates across the inventory while preserving 54 retained/six excluded decisions, accuracy/provenance/rights and one-technique ordering.
+- Next: final complete tests/CLI smoke checks, mark Core v1 Ready if acceptance passes, commit closure, then start #2 resource/variation audit. Commit: resolve with `git log --grep="freeze Western core scope"`.

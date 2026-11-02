@@ -7,6 +7,7 @@ import math,json
 from .natal import chart,Settings,placement,signed
 from .houses import frame,axes,cusps,house_for
 from .transits import roots,branches,phase
+from .core_readings import progression_context
 
 YEAR_KEYS={'tropical':365.24219,'julian':365.25}
 ANGLE_METHODS=('none','naibod-ra','solar-arc-mc','secondary-rotation')
@@ -119,6 +120,7 @@ def progress(ephemeris,local,zone,latitude,longitude,target,settings=Settings(),
         {'rule_id':'secondary.sun-sign','coverage':'compositional',
          'statement':f"Progressed Sun in {planets['Sun']['sign']} adds symbolic emphasis while natal Sun in {natal['planets']['Sun']['sign']} remains the birth placement.",
          'source':'https://cafeastrology.com/progressedsunsigns.html','locator':'Opening paragraphs'}]
+    if settings.tradition!='modern psychological':interpretations=[]
     return {'technique_id':1,'application':'secondary progressions','target_utc':target.astimezone(timezone.utc).isoformat(),
             'natal_summary':natal,'conventions':{'year_key':year_key,'year_days':clock.year_days,
                 'clock':'Continuous TT elapsed age / year_days; one 86400-second TT day per symbolic year.',
@@ -134,7 +136,9 @@ def progress(ephemeris,local,zone,latitude,longitude,target,settings=Settings(),
                         'sign_changes':sorted(changes,key=lambda e:e['real_utc']),
                         'progressed_moon_contacts':sorted(moon_contacts,key=lambda e:e['real_utc']),
                         'progressed_lunation_boundaries':sorted(lunations,key=lambda e:e['real_utc'])},
-            'knowledge':knowledge,'interpretations':interpretations,'reproducibility':natal['reproducibility'],
+            'knowledge':knowledge,'interpretations':interpretations,
+            'reading':progression_context(natal,planets,phases[int(elongation//45)]),
+            'reproducibility':natal['reproducibility'],
             'limitations':['Progression keys and angle options are symbolic conventions, not empirical validation.',
                 'Civil future-event dates inherit the selected year key, birth-time and ephemeris uncertainty.',
                 'One-day civil sampling with station refinement; very short unseen reversals may be missed.',

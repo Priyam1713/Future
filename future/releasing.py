@@ -57,7 +57,8 @@ def release(birth,fortune_longitude,spirit_longitude,start,end,lot='Spirit',leve
     walk(initial,birth,lifetime,1,[])
     output.sort(key=lambda x:(x['start_inclusive_utc'],x['level']))
     return {'technique_id':1,'application':'zodiacal releasing','tradition':KNOWLEDGE['tradition'],'profile':profile,
-        'lot':lot,'birth_utc':birth.isoformat(),'window':{'start_utc':start.isoformat(),'end_exclusive_utc':end.isoformat()},
+        'lot':lot,'level_status':{str(i):'supported' if i<=2 else 'experimental: no published absolute chronology verified' for i in range(1,levels+1)},
+        'birth_utc':birth.isoformat(),'window':{'start_utc':start.isoformat(),'end_exclusive_utc':end.isoformat()},
         'lots':{'Fortune':fortune_longitude,'Spirit':spirit_longitude,'fortune_reference_sign':SIGNS[fortune]},
         'starting_sign':SIGNS[initial],'spirit_shifted_one_sign':adjusted,'levels':levels,'periods':output,
         'conventions':{'year_days':360,'level_unit_seconds':SECONDS,'time_scale':'Fixed UTC timedelta days; leap seconds not accumulated',

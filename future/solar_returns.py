@@ -7,6 +7,7 @@ from .natal import chart,Settings,signed,DEFAULT_ORBS
 from .transits import roots
 from .progressions import pair_aspects
 from .houses import house_for
+from .core_readings import return_context
 
 def aspect_patterns(aspects):
     edges={frozenset(a['bodies']):a['angle'] for a in aspects}
@@ -53,6 +54,7 @@ def solar_return(ephemeris,natal,year,latitude,longitude,houses='placidus',orbs=
         'exact_utc':instant.isoformat(),'solar_residual_degrees':abs(signed(longitude_at(instant)-target)),
         'natal':natal,'return_chart':returned,'return_to_natal_aspects':cross,
         'return_configurations':aspect_patterns(returned['aspects']),'interpretation':interpretation,
+        'reading':return_context(returned),
         'conventions':{'longitude':'Apparent geocentric tropical ecliptic/equinox of date; no precession correction.',
             'year':'Unique crossing in [January 1 UTC, January 1 next UTC year).',
             'location':'Explicit caller-selected coordinates; return instant is independent of them.',

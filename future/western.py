@@ -6,9 +6,15 @@ from .knowledge import Rule
 def load_context(registry,tradition):
     records=json.loads((Path(__file__).resolve().parents[1]/'knowledge/western_rules.json').read_text(encoding='utf-8'))
     records+=json.loads((Path(__file__).resolve().parents[1]/'knowledge/transit_rules.json').read_text(encoding='utf-8'))
+    from .core_readings import DATA,register_knowledge
+    register_knowledge(registry)
+    records += [r for r in DATA['records'] if r['kind'] in ('house','planet_symbol')]
     selected=[]
     for r in records:
         if r['tradition']!=tradition or r['kind']=='methodology': continue
+        if r['id'].startswith('core.'):
+            selected.append(r)
+            continue
         source_id='western-source:'+r['id']
         registry.add_source(dict(id=source_id,author=r['author'],edition=r['edition'],url=r['url'],
                                  ingestion='metadata_only',rights_note=r['rights']))
@@ -54,7 +60,7 @@ def interpreter(records,natal):
                                    'author':r['author'],'locator':r['locator'],'exceptions':r['exceptions'],
                                    'tradition':r['tradition'],'conditions':r.get('conditions',{}),'documentation_scope':r['documentation_scope']})
             if ((r['kind']=='aspect' and r['key']==str(angle)) or
-                (r['kind']=='planet' and r['key'] in (body,target)) or
+                (r['kind'] in ('planet','planet_symbol') and r['key'] in (body,target)) or
                 (r['kind']=='house' and r['key']==str(house))):
                 matches.append({'rule_id':r['id'],'version':r['version'],'text':r['text'],
                                 'source':r['url'],'author':r['author'],'locator':r['locator'],

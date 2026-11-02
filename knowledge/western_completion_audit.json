@@ -1,8 +1,8 @@
 {
   "technique_id": 1,
   "date": "2026-11-02",
-  "status": "Developing",
-  "basis": "Current executable modules, tests, original inventory variations and explicit source coverage; no Technique 2 work.",
+  "status": "Core v1 candidate",
+  "basis": "80/20 directive supersedes exhaustive completion. Original inventory traditions/applications reviewed; source/local release scope frozen in western_core_v1.json. No Technique #2 work before closure.",
   "variation_audit": [
     {
       "variation": "natal",
@@ -36,17 +36,14 @@
     }
   ],
   "proposed_completion_gates": [
-    "Enumerate supported procedures and configurations for each original variation; never use a tradition label to imply every doctrine is implemented.",
-    "Every advertised calculation/rule family needs source-located examples and independent checks, with explicit unsupported cases.",
-    "At least one electional category must evaluate its documented core requirements and exceptions end to end; a partial-rule candidate list is not sufficient to mark electional complete.",
-    "Direct, compositional and unsupported interpretations must remain distinguishable; missing source access cannot be relabeled completed extraction.",
-    "Establish reproducible supported-date/time/domain guarantees and reference coverage. Ancient-date astronomical validation remains outside DE440s release scope.",
-    "Complete license/notice review and a regression-tested CLI/API release before public distribution."
+    "Pass all prior regressions plus targeted reading tests and CLI smoke checks.",
+    "Freeze supported/experimental/unsupported scope and prioritized P1/P2 refinement.",
+    "Keep electional certification experimental and unverified absolute L3/L4 releasing cases deferred.",
+    "Complete lightweight dependency/rights audit for the source/local release scope."
   ],
   "next_assessments": [
-    "Finish or explicitly narrow the still-incomplete retention category using identified original-source blockers.",
-    "Obtain one published absolute L3/L4 releasing chronology and resolve or exclude the inconsistent IV.10 example.",
-    "Close representative source-grounded interpretation acceptance cases, then run the bounded v1 gate."
+    "Finish Core v1 acceptance/CLI smoke checks and commit closure.",
+    "After closure commit, begin Technique #2 resource and variation audit; do not implement it during Western closure."
   ],
   "out_of_scope": "Horary question-chart interpretation remains Technique 5. No supernatural access or empirical predictive accuracy is claimed.",
   "procedure_status": [
@@ -155,29 +152,27 @@
   "shortest_credible_v1_gate": [
     {
       "order": 1,
-      "gate": "Close one electional category end to end",
-      "evidence": "Resolve identified Ramesey prerequisites/exception semantics or choose a fully accessible narrower original-source category; independently verify accepted and rejected complete examples. Current indeterminate engine does not meet this gate."
+      "gate": "Pass all prior regressions plus targeted reading tests and CLI smoke checks."
     },
     {
       "order": 2,
-      "gate": "Complete bounded interpretation acceptance cases",
-      "evidence": "For each original tradition, source-located natal and timing case covering advertised rule families, with contradictions and every unsupported combination visible. Do not require all books/all historical methods."
+      "gate": "Freeze supported/experimental/unsupported scope and prioritized P1/P2 refinement."
     },
     {
       "order": 3,
-      "gate": "Freeze and validate v1 support matrix",
-      "evidence": "Named configurations, supported dates/time handling, boundary and station cases, full CLI regressions. Retain L3/L4 validation limits or add a published lower-level chronology before expanding claims."
+      "gate": "Keep electional certification experimental and unverified absolute L3/L4 releasing cases deferred."
     },
     {
       "order": 4,
-      "gate": "Release and license review",
-      "evidence": "Review notices/rights, pinned dependencies, offline reproducibility and calculation/rule trace; leave all exclusions explicit. Only then assess Technique #1 v1 readiness with user; no automatic move to #2."
+      "gate": "Complete lightweight dependency/rights audit for the source/local release scope."
     }
   ],
   "validation": {
-    "test_count": 59,
-    "prior_tests_retained": 48,
-    "status": "passed: all 59 tests, retaining original 48; CLI JSON/Markdown checked",
+    "test_count": 63,
+    "prior_tests_retained": 59,
+    "status": "Pass 1: all 63 tests passed; final closure smoke checks pending",
     "election_commit": "fe4b3d9"
-  }
+  },
+  "refinement_backlog": "knowledge/western_refinement_backlog.json",
+  "configuration_matrix": "knowledge/western_core_v1.json"
 }
