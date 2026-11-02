@@ -1,6 +1,6 @@
 # Future progress
 
-Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. **#1 Western Astrology — Core v1 Ready**, closed/pushed `ec5f69b`. **#2 Vedic Astrology — Core v1 Ready**, bounded source/local CLI scope; #3 audit begins after this closure is committed.
+Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. **#1 Western Astrology — Core v1 Ready**, closed/pushed `ec5f69b`. **#2 Vedic Astrology — Core v1 Ready**, bounded source/local CLI scope; closed/pushed `1f2acc8`. **#3 Chinese Astrology — Researching**, resource/variation audit only.
 
 ## 2026-11-02 — inventory and research pass
 - Repository was empty. Cloned the requested remote successfully through Git; connector access returns 404.
@@ -169,3 +169,10 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - 12 Vedic and 23 Western public CLI smoke cases pass; pip check clean. Full July1990 report: data/vedic-core-1990.*; at 2026-11-03 UTC: D1 Libra Lagna, Revati pada4, D9 Taurus Lagna, Moon/Mars under savana profile. Source book/images inspected locally only; temporary files removed, none redistributed. No new runtime dependency or Swiss runtime.
 - Frozen knowledge/vedic_core_v1.json marks **Core v1 Ready**, with supported/experimental/unsupported matrix and P1/P2 backlog for Jaimini, KP, Prashna, other vargas, advanced dashas, direct interpretations and historical/source gaps. Ready is practical source/local scope, not exhaustive coverage or empirical validity.
 - Next: commit/push this closure before #3 Chinese Astrology resource/variation audit. Commit: resolve with `git log --grep="close Vedic Core v1"`.
+
+## 2026-11-03 — #3 Chinese Astrology resource/variation audit
+- Began only after Vedic closure `1f2acc8` was committed/pushed. Preserved all five variations/four ranked sources; no Chinese executable engine or rule added.
+- Checked Yap publisher scope and Ng catalog metadata; Quan Shu link403 and San Ming edition/access unresolved. No invented book passages or Nine Star Ki coverage from Zi Wei titles.
+- Registered HKO primary solar-term/sexagenary tables and1901–2100 conversion references. Exact calendar/day-rollover/clock, luck-pillar and school conventions remain pending in chinese_resource_audit.json.
+- Proposed efficient first slice: named BaZi calendar/four pillars, independently verified solar terms, separately labeled animal year and source-verified ten-god relations. Zi Wei/Nine Star Ki remain distinct systems; rights and worked-example access checked before rule extraction.
+- Vedic release remains73 passing tests,12 Vedic/23 Western CLI cases. Metadata-only handoff validated against inventory/source registry; no runtime dependency change. Next: verify BaZi procedural passages/conventions before coding. Commit: resolve with `git log --grep="audit Chinese sources and variations"`.
