@@ -1,0 +1,30 @@
+{
+  "version":1,
+  "profile":"brennan-2019-360",
+  "tradition":"Hellenistic / Brennan 2019 reconstruction",
+  "sources":[
+    {"id":"zr-valens-riley","author":"Vettius Valens; translated Mark T. Riley; reformatted Jane Griscti","edition":"Anthologies, Riley preliminary translation, Griscti annotated digital edition","url":"https://raw.githubusercontent.com/janegca/latex-valens/main/Valens-Anthologies-Annotated.pdf","ingestion":"metadata_only","rights_note":"Read publicly available translation; store procedural facts and locators, not translated prose.","locators":["IV.4, printed pp.304–307 / PDF pp.328–331 (160–162K,152–153P)","IV.10, printed pp.322–324 / PDF pp.346–348 (170–171K,161–162P)"],"access_note":"Original CSUS link now 404; Skyscript PDF 403. Annotated edition inspected directly; modern notes distinguished from Valens."},
+    {"id":"zr-brennan-handout","author":"Chris Brennan","edition":"Zodiacal Releasing Periods handout, 2019, p.1","url":"https://theastrologypodcast.com/wp-content/uploads/2019/02/zodiacal-releasing-periods.pdf","ingestion":"metadata_only","rights_note":"Mathematical period facts only; handout not reproduced."},
+    {"id":"zr-brennan-schaim-192","author":"Chris Brennan and Leisa Schaim","edition":"The Astrology Podcast episode 192, 2019, transcript","url":"https://theastrologypodcast.com/transcripts/ep-192-transcript-zodiacal-releasing-an-ancient-timing-technique/","ingestion":"metadata_only","rights_note":"Factual procedural extraction and published transition date only; no delineations copied."}
+  ],
+  "rules":[
+    {"id":"sign-periods","source_id":"zr-valens-riley","locator":"IV.4 pp.306–307; IV.10 table 4.3 p.322","method":"Zodiacal order; Aries through Pisces units","parameters":{"sign_units":[15,8,20,25,19,20,8,15,12,27,30,12]},"exceptions":"Capricorn 27, Aquarius 30; not a uniform Saturn period."},
+    {"id":"level-units","source_id":"zr-brennan-handout","locator":"p.1, outer rings and L1–L4 legend","method":"L1 unit 360 days, L2 30 days, L3 2.5 days, L4 5 hours","parameters":{"unit_seconds":[31104000,2592000,216000,18000]},"exceptions":"Fixed elapsed days, not civil anniversaries or lunar months. UTC timedelta convention omits leap-second accumulation."},
+    {"id":"nested-boundaries","source_id":"zr-brennan-schaim-192","locator":"Calculation discussion: Cancer example; first subperiod always parent's sign","method":"Restart child at parent sign; truncate at parent end; half-open boundaries","parameters":{},"exceptions":"Query clipping is separate from parent truncation; L1 has no bond jump."},
+    {"id":"loosing-of-bond","source_id":"zr-valens-riley","locator":"IV.4 p.307, Gemini 20-year example","method":"After first complete 211-unit child circuit jump to opposite parent sign","parameters":{"first_circuit_units":211},"exceptions":"Single jump per parent; repeat-jump excluded by Brennan/Schaim transcript, Cancer/Capricorn/Aquarius discussion. Extension to L3/L4 explicitly documented there."},
+    {"id":"coincident-lots","source_id":"zr-brennan-schaim-192","locator":"Calculation discussion: if Fortune and Spirit fall in same sign; compare Valens IV.4 p.305","method":"Move Spirit start one sign forward; leave Fortune and Fortune angular reference unchanged","parameters":{},"exceptions":"Applied only to Spirit; no Eros engine or universal next-sign rule."},
+    {"id":"fortune-angles","source_id":"zr-brennan-schaim-192","locator":"Peak periods discussion; George W. Bush and Al Gore examples","method":"Whole-sign places 1,4,7,10 from natal Fortune are angular","parameters":{"angular_places":[1,4,7,10]},"exceptions":"Spirit angular periods labeled symbolic peaks; Fortune angularity reported geometrically. Angular does not mean fortunate or empirically predictive."}
+  ],
+  "variations":[
+    {"name":"brennan-2019-360","status":"implemented","scope":"Spirit/Fortune, L1–L4 arithmetic, single bond jump, coincident-lot adjustment, Fortune angularity"},
+    {"name":"valens-riley-iv10-calendar","status":"unsupported","reason":"Egyptian/intercalary calendar reconstruction not implemented; IV.10 prose/table arithmetic discrepancies cannot be silently corrected."},
+    {"name":"365.25-year / tropical-year / repeated-bond-jump","status":"unsupported","reason":"Not this named profile; no mixed convention or implicit substitution."}
+  ],
+  "disputed_or_unresolved":[
+    "Riley/Griscti IV.10 p.322 prose gives 3 1/3 hours after 37.5 days divided by twelve; table gives Mars 3 days 3 hours (75 hours). Implemented profile follows Brennan table units, not this prose error.",
+    "IV.10 pp.323–324 worked remainder assigns Taurus 1 day 21 hours; table Taurus unit is 1 day 16 hours. That worked remainder and its ancient Mesori date are not claimed verified.",
+    "Valens IV.4 includes qualitative cross-lot substitution and age/sex discussion; these historical interpretive exceptions are recorded but not automatically applied in this modern profile.",
+    "Full bonification/maltreatment, completion/culmination and qualitative outcome delineation remain unsupported."
+  ],
+  "validation_scope":"Published Gemini 211-month/bond example, Brennan handout L1–L4 units, and Diana Fortune bond date 1997-07-22 from episode 192. These verify arithmetic/procedure, not real-world predictive validity."
+}

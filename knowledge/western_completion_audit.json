@@ -16,8 +16,8 @@
     },
     {
       "variation": "Hellenistic",
-      "working": "Sect, Dorothean triplicities, Egyptian bounds, Lots and annual whole-sign profections.",
-      "remaining": "Zodiacal releasing, more original-text rule examples and additional doctrinal exceptions."
+      "working": "Sect, Dorothean triplicities, Egyptian bounds, Lots and annual whole-sign profections. Bounded Spirit/Fortune Zodiacal Releasing L1–L4 under brennan-2019-360.",
+      "remaining": "Ancient calendar reconstruction; unresolved Valens IV.10 arithmetic; qualitative substitutions/period delineations; published absolute L3/L4 chronology."
     },
     {
       "variation": "medieval/traditional",
@@ -31,8 +31,8 @@
     },
     {
       "variation": "electional",
-      "working": "Two narrow Ramesey intention profiles, boundary-based search and full rule diagnostics.",
-      "remaining": "Only explicit sign/motion subset is selected; complete fortification, radix/revolution context, Moon perfection/prohibition, nodes and authorized Dorotheus Book V rules are incomplete."
+      "working": "Two source-isolated partial profiles; retention assessment now has exact lunar sequence, ingress/station/contact timestamps, first-house rejection and strict tri-state results.",
+      "remaining": "No eligible complete election certified. Radix/world-revolution, full fortification, nodes/lunation and historical prohibition exceptions incomplete. Investment paragraph not merged with unused-money retention."
     }
   ],
   "proposed_completion_gates": [
@@ -44,9 +44,9 @@
     "Complete license/notice review and a regression-tested CLI/API release before public distribution."
   ],
   "next_assessments": [
-    "Research zodiacal releasing as a bounded Fortune/Spirit time-lord procedure.",
-    "Prioritize complete Moon application/perfection and one fully sourced electional category.",
-    "Resolve representative interpretation gaps instead of pursuing every possible astrological method."
+    "Finish or explicitly narrow the still-incomplete retention category using identified original-source blockers.",
+    "Obtain one published absolute L3/L4 releasing chronology and resolve or exclude the inconsistent IV.10 example.",
+    "Close representative source-grounded interpretation acceptance cases, then run the bounded v1 gate."
   ],
   "out_of_scope": "Horary question-chart interpretation remains Technique 5. No supernatural access or empirical predictive accuracy is claimed.",
   "procedure_status": [
@@ -66,6 +66,118 @@
         "historical prohibition adjudication"
       ],
       "eligible_windows_certified": 0
+    },
+    {
+      "procedure": "Spirit/Fortune releasing arithmetic",
+      "status": "implemented",
+      "profile": "brennan-2019-360",
+      "scope": [
+        "L1–L4 fixed units",
+        "parent truncation and half-open boundaries",
+        "single bond jump per parent",
+        "coincident-lot Spirit adjustment",
+        "Fortune angular relationships"
+      ],
+      "validation": [
+        "Valens IV.4 Gemini sequence and clipped remainder",
+        "Brennan 2019 L1–L4 unit table",
+        "Diana Fortune bond date 1997-07-22",
+        "Independent Swiss/Moshier natal Lots at three northern/southern day/night inputs"
+      ],
+      "limits": "Published date comparison verifies date only. Lower-level table/sequence verification does not imply published absolute L3/L4 chart agreement."
+    },
+    {
+      "procedure": "Releasing qualitative interpretation",
+      "status": "partially implemented",
+      "implemented": [
+        "School-labeled symbolic Spirit peak and bond labels",
+        "Fortune geometry separately reported"
+      ],
+      "unsupported": [
+        "full bonification/maltreatment",
+        "cross-lot substitutions",
+        "completion/culmination delineation",
+        "outcome probabilities"
+      ]
+    },
+    {
+      "procedure": "Valens IV.10 historical calendar reconstruction",
+      "status": "unsupported",
+      "reason": "Egyptian/intercalary dates and prose/table/remainder discrepancies unresolved; reject profile rather than approximate."
+    },
+    {
+      "procedure": "Natal and six house systems",
+      "status": "implemented",
+      "scope": "Existing supported tropical astronomical domain, explicit house/latitude restrictions; independent Swiss references."
+    },
+    {
+      "procedure": "Transit, secondary progression and Solar Return computations",
+      "status": "implemented",
+      "scope": "Existing named conventions and supported date ranges only; finite-scan completeness limitations retained."
+    },
+    {
+      "procedure": "Three-tradition interpretation synthesis",
+      "status": "partially implemented",
+      "reason": "Direct source coverage remains sparse; direct/compositional/unsupported labels retained."
+    },
+    {
+      "procedure": "Primary directions, Eros releasing and additional election categories",
+      "status": "unsupported",
+      "reason": "Not implied by implemented symbolic timing procedures; no Technique #2 work."
     }
-  ]
+  ],
+  "remaining_gaps": {
+    "source": [
+      "Complete source-located retention fortification/prohibition priorities and exceptions",
+      "Authorized procedural Dorotheus Book V access",
+      "Full Lilly, Hand and Arroyo chapter/example coverage"
+    ],
+    "interpretation": [
+      "Sparse direct natal/transit/return/progression delineations",
+      "Full Hellenistic releasing conditions and contradictory authorities remain unmerged"
+    ],
+    "historical_calendar": [
+      "Natal astronomy remains DE440s supported 1850–2149 domain",
+      "Pre-1972 proleptic UTC is explicit, not reconstructed historical civil time",
+      "No Egyptian/Mesori calendar or ancient-date astronomical validation"
+    ],
+    "licensing": [
+      "Public access does not confer modern translation or textbook redistribution rights",
+      "Swiss remains dev/reference only; complete distribution dependency/kernel/source notices review is pending"
+    ],
+    "computational": [
+      "Finite angular/lunar scans are not a global proof against all unseen short reversals",
+      "No complete node/lunation/radix electional adjudication",
+      "No published absolute L3/L4 chronology independently matched",
+      "Birth-time uncertainty and sect/sign boundary sensitivity remain material"
+    ]
+  },
+  "shortest_credible_v1_gate": [
+    {
+      "order": 1,
+      "gate": "Close one electional category end to end",
+      "evidence": "Resolve identified Ramesey prerequisites/exception semantics or choose a fully accessible narrower original-source category; independently verify accepted and rejected complete examples. Current indeterminate engine does not meet this gate."
+    },
+    {
+      "order": 2,
+      "gate": "Complete bounded interpretation acceptance cases",
+      "evidence": "For each original tradition, source-located natal and timing case covering advertised rule families, with contradictions and every unsupported combination visible. Do not require all books/all historical methods."
+    },
+    {
+      "order": 3,
+      "gate": "Freeze and validate v1 support matrix",
+      "evidence": "Named configurations, supported dates/time handling, boundary and station cases, full CLI regressions. Retain L3/L4 validation limits or add a published lower-level chronology before expanding claims."
+    },
+    {
+      "order": 4,
+      "gate": "Release and license review",
+      "evidence": "Review notices/rights, pinned dependencies, offline reproducibility and calculation/rule trace; leave all exclusions explicit. Only then assess Technique #1 v1 readiness with user; no automatic move to #2."
+    }
+  ],
+  "validation": {
+    "test_count": 59,
+    "prior_tests_retained": 48,
+    "status": "passed: all 59 tests, retaining original 48; CLI JSON/Markdown checked",
+    "election_commit": "fe4b3d9"
+  }
 }

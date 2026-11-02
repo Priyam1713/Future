@@ -116,3 +116,17 @@ Searches are bounded to seven days and latitudes within ±60°. The solver parti
 See `data/election-retention-2026.md` and its JSON for candidates, representative charts, satisfied/violated rules, unresolved criteria and source conflicts. These symbolic profiles are not calibrated financial advice or success forecasts. Dorotheus Book V procedural coverage, complete lunar perfection and wider electional categories remain gaps. Horary stays out of scope. `knowledge/western_completion_audit.json` records a bounded completion audit; Western Astrology remains Developing.
 
 Sources retain author, edition, access and ingestion policy. Rules retain technique, variation, tradition, version, exact locator, operation, parameters, evidence type, verification state and fixture references. Different authorities use distinct IDs; changed rules use new versions. Only verified rules in the exact requested scope are selected. Verification here means procedural/example agreement, not predictive accuracy. The registry is a local trusted research store; ingesting arbitrary external rule JSON as verified is unsupported.
+
+## Classified elections and Zodiacal Releasing
+
+Election output preserves `candidates` as legacy partial-rule matches. Use `assessed_windows` for `eligible`, `rejected` or `indeterminate` classifications, timestamped rule traces and exact lunar-house/contact boundaries. `eligible_windows` is currently empty: full radix/revolution, fortification, nodes/lunation and historical prohibition exceptions are incomplete. An intervening lunar aspect is reported numerically; it is not automatically a historical prohibition. `knowledge/electional_requirements_v2.json` separates unused-money retention from investment and lists the precise blockers.
+
+```powershell
+python -m future releasing "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209 "2026-11-02T00:00:00+00:00" "2026-12-02T00:00:00+00:00" --lot Spirit
+python -m future releasing "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209 "2026-11-02T00:00:00+00:00" "2026-12-02T00:00:00+00:00" --lot Fortune --format markdown
+python -m scripts.write_releasing_examples
+```
+
+The named `brennan-2019-360` profile computes L1–L4 using fixed 360-day years, parent-truncated periods and one Loosing of the Bond per parent. Spirit moves forward one sign when the Lots coincide; Fortune's natal sign remains the angular reference. Full JSON contains period/parent IDs, actual and query-clipped boundaries, bond flags, source rules and limitations. Queries cover at most five civil years within 120 symbolic years after birth. Existing natal ephemeris/time-zone restrictions apply; historical Egyptian calendar reconstruction is unsupported.
+
+Examples: `data/releasing-spirit-1990-2026.*`, `data/releasing-fortune-1990-2026.*` and `data/releasing-diana-reference.json`. Published Gemini durations, L1–L4 tables and Diana's July 22, 1997 bond date are checked separately from independent Swiss/Moshier starting Lots. No published absolute L3/L4 chronology is claimed verified. Discrepancies in Valens/Riley IV.10 remain explicit in `knowledge/zodiacal_releasing.json`. Symbolic peaks describe Fortune-based angularity in the named school; they imply neither favorable outcomes nor established predictive validity.

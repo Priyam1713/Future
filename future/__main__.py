@@ -125,7 +125,28 @@ def main():
     elect.add_argument('--ascendant-signs',help='Comma-separated zero-based sign indices')
     elect.add_argument('--angle-step',choices=[5,10],type=int,default=10)
     elect.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
+    zr=sub.add_parser('releasing',help='Source-named Spirit/Fortune Zodiacal Releasing')
+    zr.add_argument('local');zr.add_argument('zone');zr.add_argument('latitude',type=float);zr.add_argument('longitude',type=float)
+    zr.add_argument('start',help='Offset-aware range start');zr.add_argument('end',help='Offset-aware exclusive end')
+    zr.add_argument('--lot',choices=['Spirit','Fortune'],default='Spirit')
+    zr.add_argument('--levels',type=int,choices=[1,2,3,4],default=4)
+    zr.add_argument('--profile',choices=['brennan-2019-360'],default='brennan-2019-360')
+    zr.add_argument('--fold',type=int,choices=[0,1]);zr.add_argument('--houses',choices=SYSTEMS,default='whole-sign')
+    zr.add_argument('--format',choices=['json','markdown'],default='json')
+    zr.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
     args = parser.parse_args()
+    if args.command=='releasing':
+        from datetime import datetime
+        from .natal import SkyfieldEphemeris,Settings,chart
+        from .releasing import from_natal,register_knowledge,markdown
+        e=SkyfieldEphemeris(args.kernel);registry=load_registry(args.database)
+        try:
+            register_knowledge(registry)
+            n=chart(e,args.local,args.zone,args.latitude,args.longitude,Settings(tradition='Hellenistic',houses=args.houses),args.fold)
+            result=from_natal(e,n,datetime.fromisoformat(args.start),datetime.fromisoformat(args.end),args.lot,args.levels,args.profile)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close();e.kernel.close()
+        return
     if args.command=='election':
         from datetime import datetime
         from .natal import SkyfieldEphemeris

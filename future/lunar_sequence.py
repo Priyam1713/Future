@@ -34,7 +34,7 @@ def sequence(e, start, days=4):
                         'phase_after':phase(signed(lon('Moon',t+timedelta(minutes=1))-lon(body,t+timedelta(minutes=1))-branch),speed('Moon',t)-speed(body,t))})
         # A target station is reported, never assumed to cancel a faster Moon's contact.
         tt=e.ts.from_datetimes(times).tt
-        velocities=(e.longitudes_at_tt(body,tt+1/1440)-e.longitudes_at_tt(body,tt-1/1440)+180)%360-180
+        velocities=((e.longitudes_at_tt(body,tt+1/1440)-e.longitudes_at_tt(body,tt-1/1440)+180)%360-180)*720
         for t in roots(times,velocities,0,lambda d,b=body:speed(b,d)):
             events.append({'type':'target_station','utc':t.isoformat(),'target':body})
     events.sort(key=lambda x:(x['utc'],x['type'],x.get('target','')))
