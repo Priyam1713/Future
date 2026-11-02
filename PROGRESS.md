@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique5 initial resource audit — 2026-11-03
+- Began after Numerology closure3ebf99e pushed. Preserved five Horary variations/three ranked sources. Lilly1647 Wellcome catalog, Frawley author revised-edition listing and Barclay publisher leads checked; page-located judgment rules remain pending.
+- horary_resource_audit.json records question protocols, significators, perfection/reception exceptions and independent examples as next priorities. No Horary implementation added; no automatic borrowing of electional/natal judgments. Techniques1–4 bounded Core v1 Ready; Technique5 Researching.
+
 ## Numerology Core v1 closure — 2026-11-03
 - Calculation pass67b55dc pushed. Added concise source-scoped Expression/master and personal-year readings; other core contexts compositional, missing number-specific and Month/Day delineations explicit. No arbitrary scores or imported traditions.
 -87 tests and4 Numerology/23 Western/12 Vedic/15 Chinese CLI cases pass. Frozen matrix/backlog in numerology_core_v1.json; reproducible acceptance JSON/Markdown. No new dependency; Chaldean/Lo Shu/gematria deferred without blocking verified Pythagorean core.
