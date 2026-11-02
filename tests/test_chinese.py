@@ -79,6 +79,8 @@ class ChineseTests(unittest.TestCase):
         self.assertNotEqual(civil['pillars']['day'],standard['pillars']['day'])
         self.assertEqual(civil['solar_month'],standard['solar_month'])
         self.assertEqual(civil,chart(self.e,'2000-02-29T23:30','Australia/Sydney',-33.9,151.2))
+        self.assertEqual(civil['status'],'Core v1 Ready')
+        self.assertTrue({r['source_id'] for r in civil['rule_trace']}<={s['id'] for s in civil['sources']})
         for local,profile in [('1800-01-01T12:00','civil-zi23'),('2101-01-01T12:00','civil-zi23'),('2026-01-01T12:00','solar')]:
             with self.assertRaises(ValueError):chart(self.e,local,'UTC',0,0,profile=profile)
         with self.assertRaises(ValueError):chart(self.e,'2026-01-01T12:00','UTC',float('nan'),0)

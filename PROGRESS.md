@@ -1,5 +1,12 @@
 # Future progress
 
+## 2026-11-03 — #3 Pass3: sourced BaZi interpretations and Core v1 closure
+- Calculation pass b2aa210 pushed first. Added all100 phase/polarity Ten Gods relations, twelve unweighted modern hidden-stem sets, ten classical Day Master imagery components, four pillar-topic components and explicit compositional readings. Source-specific classical/modern components labeled; seasonal allocations never merged or scored.
+- All83 tests pass, preserving all73 Western/Vedic tests;15 Chinese,12 Vedic and23 Western CLI smoke cases pass. Independent100-cell relation/12-set checks and published teaching examples supplement Pass2 numerical fixtures. Pip check clean; pinned production dependencies unchanged, optional MIT oracle stays reference-only.
+- Frozen chinese_core_v1.json marks **Core v1 Ready** for accurate Four Pillars, separately labeled festival animal and bounded source-grounded symbolic interpretation. Source/rule/clock/root traces remain reproducible. Examples: data/bazi-core-1990.md/json and bazi-published-1918.json. Numerical accuracy is distinct from historical fidelity and predictive validity.
+- P1: independently verified luck onset/calendar-age convention, source-complete strength/combination rules, sourced local solar clocks. P2: Zi Wei Dou Shu, Nine Star Ki, difficult historical calendars and deeper direct interpretations. No luck timing or excluded variation claimed implemented. Research book PDFs/images removed locally; no copyrighted corpus redistributed.
+- Next: commit/push closure before beginning Technique#4 Numerology resource audit. Commit: resolve with git log --grep="close BaZi Core v1".
+
 ## 2026-11-03 — #3 Pass2: Four Pillars calculation core
 - Source/convention pass c3aea33 pushed first. Added independent DE440s solar-term root solving, continuous Gregorian day epoch, all four pillars, Day Master, symbolic element/polarity counts, three named clock/Zi profiles and bazi JSON/Markdown CLI. Existing Western/Vedic modules untouched.
 - Six targeted tests pass:26 HKO published term times,45 independent diverse pillar cases, published complete-input and late-Zi examples, exact jie/zhongqi/day/hour boundaries, DST rejection/alternatives, both hemispheres, scope and provenance. All200 HKO CNY dates1901–2100 extracted as numerical facts with per-source hashes; cross-checked against independent lunar-python dates.
@@ -15,7 +22,7 @@
 - Luck-pillar direction/three-day-year/ten-year procedures located but complete independently checked onset convention deferred; no fabricated timings. Numerical algorithm agreement does not establish predictive validity.
 - Next: implement independent DE440s Four Pillars and verify fixtures before readiness. Commit: resolve with git log --grep="verify BaZi sources and conventions".
 
-Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. **#1 Western Astrology — Core v1 Ready**, closed/pushed `ec5f69b`. **#2 Vedic Astrology — Core v1 Ready**, bounded source/local CLI scope; closed/pushed `1f2acc8`. **#3 Chinese Astrology — Researching**, resource/variation audit only.
+Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. **#1 Western Astrology — Core v1 Ready**, closed/pushed `ec5f69b`. **#2 Vedic Astrology — Core v1 Ready**, closed/pushed `1f2acc8`. **#3 Chinese Astrology — Core v1 Ready**, bounded BaZi source/local scope; #4 audit starts only after this closure is committed/pushed.
 
 ## 2026-11-02 — inventory and research pass
 - Repository was empty. Cloned the requested remote successfully through Git; connector access returns 404.

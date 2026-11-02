@@ -1,5 +1,20 @@
 # Future
 
+## Chinese Astrology — bounded BaZi Core v1
+
+```powershell
+python -m future bazi "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209
+python -m future bazi "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209 --format markdown
+python -m future bazi "1988-02-15T23:30" Asia/Shanghai 31.2 121.5 --profile civil-split-zi
+python -m scripts.smoke_chinese_core
+```
+
+Four Pillars use solved apparent solar Li Chun/jie boundaries, a published continuous day epoch and explicit clock profiles. `civil-zi23` advances the day at23:00; `civil-split-zi` advances the day at00:00 but uses the following day's stem for the23:00 hour; `standard-zi23` subtracts IANA DST from civil time. Local solar-time correction is unsupported. Inputs use Gregorian local years1901–2100, pinned IANA zones and explicit DST folds. Hemisphere does not reverse the solar-month sequence.
+
+The separately labeled lunar-year animal uses HKO's published New Year date at local civil midnight. It is a festival-date profile, not a full lunar calendar or conjunction calculation. Source-grounded components include Ten Gods, unweighted modern hidden-stem sets, classical Day Master imagery and pillar topics. Composed readings are labeled; raw element counts do not measure strength or prescribe favorable elements. Luck-pillar onset, Zi Wei Dou Shu and Nine Star Ki remain unsupported/deferred.
+
+Examples: `data/bazi-core-1990.md/json`, published Shanghai-settings chart `data/bazi-published-1918.json`. The frozen scope, source limits, independent checks and P1/P2 backlog are in `knowledge/chinese_core_v1.json`. The optional MIT lunar-python1.4.8 oracle is used only by reference-generation scripts; production uses the existing Skyfield/DE440s stack. No book PDFs/images or third-party implementation code are redistributed.
+
 Vedic core CLI (Technique #2): `python -m future jyotish "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209 --d9 --target "2026-11-03T00:00:00+00:00" --format markdown`. The fixed profile, supported scope and P1/P2 refinements are in `knowledge/vedic_core_v1.json`; exact calculation conventions and source locators are in `knowledge/vedic_conventions.json`. Savana 360-day years are the default; `--year-key solar-365.2425` selects the documented alternative. Neither is silently mixed with Western timing methods.
 
 **Technique #2: Core v1 Ready** for its bounded Parashari D1/nakshatra/Vimshottari MD-AD/D9 source/local scope. Acceptance: 73 tests (all prior 63 retained), 12 Vedic and 23 Western CLI smoke cases. Run `python -m scripts.smoke_vedic_core` for `data/vedic-core-1990.json` and its Markdown report. Source discrepancies, year-length differences and period-date sensitivity are reported explicitly; a microsecond-formatted computed boundary is not real-world precision or predictive confidence. Jaimini, KP, Prashna and other vargas/dashas remain in P1/P2 refinement.

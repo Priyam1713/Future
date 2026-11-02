@@ -11,6 +11,8 @@ from .natal import birth_utc, signed
 
 ROOT=Path(__file__).resolve().parents[1]
 CONVENTIONS=json.loads((ROOT/'knowledge/chinese_conventions.json').read_text(encoding='utf-8'))
+SOURCE_IDS={r['source_id'] for r in CONVENTIONS['rules']}|{s['id'] for s in CONVENTIONS['sources']}
+SOURCES=[s for s in json.loads((ROOT/'knowledge/sources.json').read_text(encoding='utf-8')) if s['id'] in SOURCE_IDS]
 STEMS='Jia Yi Bing Ding Wu Ji Geng Xin Ren Gui'.split()
 GAN='甲乙丙丁戊己庚辛壬癸'
 BRANCHES='Zi Chou Yin Mao Chen Si Wu Wei Shen You Xu Hai'.split()
@@ -72,6 +74,13 @@ def solar_terms(e,year):
 
 def day_index(d):return (d-EPOCH).days%60
 
+def rule_trace(r):
+    """Keep the original preimplementation research record immutable."""
+    return {**{k:v for k,v in r.items() if k!='status'},
+        'implementation_status':'implemented',
+        'verification_scope':'Procedural/source agreement; mathematical fixtures separately tested. Not empirical predictive validity.',
+        'reference_files':['tests/fixtures/chinese_published.json','tests/fixtures/chinese_reference.json']}
+
 def day_hour(clock,profile):
     """Effective naive clock; hour uses next day's stem throughout late Zi."""
     if profile not in PROFILES:raise ValueError('Unsupported clock profile')
@@ -128,7 +137,7 @@ def chart(e,local,zone,latitude,longitude,fold=None,profile='civil-zi23'):
         return {el:sum(x==el for x in items) for el in ELEMENTS}
     nearest=min(abs((datetime.fromisoformat(t['utc'])-utc).total_seconds()) for t in jie)
     boundary_distance=min((clock.hour*3600+clock.minute*60+clock.second+clock.microsecond/1e6-x)%86400 for x in (0,3600,10800,18000,25200,32400,39600,46800,54000,61200,68400,75600,82800))
-    return {'technique_id':3,'status':'Developing','profile':profile,'birth':{'local':local,'zone':zone,
+    return {'technique_id':3,'status':'Core v1 Ready','profile':profile,'birth':{'local':local,'zone':zone,
         'fold':fold,'utc':utc.isoformat(),'latitude':latitude,'longitude':longitude},
         'clock':{'effective':clock.isoformat(),'basis':CONVENTIONS['profiles'][profile]['clock'],
             'civil_utc_offset_seconds':civil.utcoffset().total_seconds(),'dst_seconds':civil.dst().total_seconds(),
@@ -142,9 +151,9 @@ def chart(e,local,zone,latitude,longitude,fold=None,profile='civil-zi23'):
         'boundary_sensitivity':{'nearest_jie_seconds':nearest,'within_120_seconds_of_jie':nearest<=120,
             'clock_seconds_since_last_boundary':boundary_distance,
             'warning':'Check birth-time uncertainty around term, day and two-hour edges; arithmetic precision is not physical time accuracy.'},
-        'rule_trace':[dict(r) for r in CONVENTIONS['rules'] if r['id'] not in ('chinese.ten-gods','chinese.hidden-stems','chinese.pillar-context')],
+        'rule_trace':[rule_trace(r) for r in CONVENTIONS['rules'] if r['id'] not in ('chinese.ten-gods','chinese.hidden-stems','chinese.pillar-context')],
         'conventions':{k:v for k,v in CONVENTIONS.items() if k not in ('sources','rules')},
-        'sources':CONVENTIONS['sources'],
+        'sources':[dict(s) for s in SOURCES],
         'reproducibility':{'kernel_sha256':e.digest,'skyfield':'1.54','tzdata':'2025.2',
             'rules_sha256':hashlib.sha256((ROOT/'knowledge/chinese_conventions.json').read_bytes()).hexdigest()},
         'unsupported':['Local mean/apparent solar-time profiles','Luck-pillar onset and forecasts','Zi Wei Dou Shu','Nine Star Ki',

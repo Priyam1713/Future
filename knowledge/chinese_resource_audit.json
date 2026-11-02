@@ -1,7 +1,7 @@
 {
   "technique_id": 3,
   "name": "Chinese Astrology",
-  "status": "Researching",
+  "status": "Core v1 Ready",
   "date": "2026-11-03",
   "predecessor_closure": "1f2acc8",
   "policy": "80/20 bounded core; source/convention verification before implementation",
@@ -12,8 +12,8 @@
         "San Ming Tong Hui",
         "BaZi: The Destiny Code (Book 1)"
       ],
-      "status": "unsupported",
-      "verification": "Inventory mapping preserved as provisional; no executable rule or worked chart validated."
+      "status": "implemented",
+      "verification": "See frozen release matrix and independent fixtures."
     },
     {
       "name": "Zi Wei Dou Shu",
@@ -22,7 +22,7 @@
         "Flying Star Zi Wei Dou Shu: Purple Star Astrology"
       ],
       "status": "unsupported",
-      "verification": "Inventory mapping preserved as provisional; no executable rule or worked chart validated."
+      "verification": "Preserved inventory variation; deferred P2, not claimed implemented."
     },
     {
       "name": "12-animal zodiac",
@@ -30,8 +30,8 @@
         "Zi Wei Dou Shu Quan Shu (紫微斗數全書)",
         "Flying Star Zi Wei Dou Shu: Purple Star Astrology"
       ],
-      "status": "unsupported",
-      "verification": "Inventory mapping preserved as provisional; no executable rule or worked chart validated."
+      "status": "implemented",
+      "verification": "See frozen release matrix and independent fixtures."
     },
     {
       "name": "Nine Star Ki",
@@ -40,7 +40,7 @@
         "Zi Wei Dou Shu Quan Shu (紫微斗數全書)"
       ],
       "status": "unsupported",
-      "verification": "Inventory mapping preserved as provisional; no executable rule or worked chart validated."
+      "verification": "Preserved inventory variation; deferred P2, not claimed implemented."
     },
     {
       "name": "10 gods / luck pillars",
@@ -48,8 +48,8 @@
         "BaZi: The Destiny Code (Book 1)",
         "Zi Wei Dou Shu Quan Shu (紫微斗數全書)"
       ],
-      "status": "unsupported",
-      "verification": "Inventory mapping preserved as provisional; no executable rule or worked chart validated."
+      "status": "partially implemented",
+      "verification": "Ten Gods/hidden stems verified; luck onset remains unsupported."
     }
   ],
   "ranked_source_ids": [
@@ -63,48 +63,10 @@
     "chinese-hko-ganzhi-v1",
     "chinese-hko-conversion-v1"
   ],
-  "findings": [
-    "Yap publisher confirms introductory Four Pillars scope; no exact ten-god/pillar procedure inspected.",
-    "Ng catalog identifies Zi Wei handbook; it does not establish Nine Star Ki coverage.",
-    "Quan Shu inventory link returns403; identity and passages remain unverified.",
-    "San Ming Tong Hui edition, legitimate access and page-located procedures remain unresolved.",
-    "HKO supplies primary astronomical/calendar definitions and independent validation leads, not astrological interpretations."
-  ],
-  "proposed_core": [
-    "Named BaZi calendar profile, four pillars and independently verified solar-term transitions.",
-    "Separately labeled lunar-year animal versus BaZi solar-year conventions.",
-    "Ten-god relations only after source-located element/polarity tables are verified."
-  ],
-  "pending_conventions": [
-    "Li Chun instant for BaZi year versus lunar New Year for animal-year reporting; do not conflate.",
-    "Solar-term month boundaries and exact apparent/mean solar coordinate definition.",
-    "Day rollover23:00 versus00:00 and early/late Zi-hour convention.",
-    "Civil clock versus local mean/apparent solar time; longitude, timezone and DST correction.",
-    "Independent sexagenary-day epoch and historical calendar domain.",
-    "Ten-god relation and hidden-stem tables by named school.",
-    "Luck-pillar direction and term-distance starting age; source-specific gender/polarity convention must be explicit.",
-    "Zi Wei lunar/leap-month and palace conventions require a distinct engine.",
-    "Nine Star Ki needs its own procedural sources; Zi Wei flying stars do not establish coverage."
-  ],
-  "validation_plan": [
-    "HKO term instants and Gregorian-lunar tables with explicit Hong Kong time and precision.",
-    "Published complete-input pillar examples from an authorized practitioner source.",
-    "Tests around terms, local day/hour rollover, DST folds/gaps and longitude corrections before release."
-  ],
-  "backlog": {
-    "P1": [
-      "Verified ten-god interpretations and named luck-pillar method",
-      "Zi Wei resource/variation audit and independent fixtures"
-    ],
-    "P2": [
-      "Nine Star Ki procedural sources and separate conventions",
-      "Historical calendars and obscure lineage exceptions"
-    ]
-  },
   "limits": [
-    "No Chinese calculation, interpretation or predictive accuracy claim yet.",
-    "Ranked sources and five inventory variations unchanged.",
-    "Public access is not permission to redistribute copyrighted translations or books."
+    "Core v1 is bounded practical BaZi, not exhaustive Chinese Astrology or established predictive validity.",
+    "Ranked sources/five inventory variations unchanged; current rules and source links supplement original leads.",
+    "Public reading access does not authorize redistribution of copyrighted books/translations."
   ],
   "source_verification_pass": {
     "date": "2026-11-03",
@@ -115,5 +77,63 @@
     ],
     "resolved": "Core calendar/clock/epoch and ten-god methods named before implementation; earlier pending entries preserved as audit history.",
     "remaining": "Luck onset, local solar profiles, Zi Wei and Nine Star Ki remain deferred; modern fixed hidden stems are not San Ming seasonal allocations."
-  }
+  },
+  "release_matrix": "knowledge/chinese_core_v1.json",
+  "historical_pending_conventions": [
+    "Li Chun instant for BaZi year versus lunar New Year for animal-year reporting; do not conflate.",
+    "Solar-term month boundaries and exact apparent/mean solar coordinate definition.",
+    "Day rollover23:00 versus00:00 and early/late Zi-hour convention.",
+    "Civil clock versus local mean/apparent solar time; longitude, timezone and DST correction.",
+    "Independent sexagenary-day epoch and historical calendar domain.",
+    "Ten-god relation and hidden-stem tables by named school.",
+    "Luck-pillar direction and term-distance starting age; source-specific gender/polarity convention must be explicit.",
+    "Zi Wei lunar/leap-month and palace conventions require a distinct engine.",
+    "Nine Star Ki needs its own procedural sources; Zi Wei flying stars do not establish coverage."
+  ],
+  "historical_initial_findings": [
+    "Yap publisher confirms introductory Four Pillars scope; no exact ten-god/pillar procedure inspected.",
+    "Ng catalog identifies Zi Wei handbook; it does not establish Nine Star Ki coverage.",
+    "Quan Shu inventory link returns403; identity and passages remain unverified.",
+    "San Ming Tong Hui edition, legitimate access and page-located procedures remain unresolved.",
+    "HKO supplies primary astronomical/calendar definitions and independent validation leads, not astrological interpretations.",
+    "Superseding verified core: c3aea33 source conventions, b2aa210 independent calculation core; readiness and exact supported scope in chinese_core_v1.json."
+  ],
+  "historical_initial_proposed_core": [
+    "Named BaZi calendar profile, four pillars and independently verified solar-term transitions.",
+    "Separately labeled lunar-year animal versus BaZi solar-year conventions.",
+    "Ten-god relations only after source-located element/polarity tables are verified."
+  ],
+  "historical_initial_validation_plan": [
+    "HKO term instants and Gregorian-lunar tables with explicit Hong Kong time and precision.",
+    "Published complete-input pillar examples from an authorized practitioner source.",
+    "Tests around terms, local day/hour rollover, DST folds/gaps and longitude corrections before release."
+  ],
+  "historical_initial_backlog": {
+    "P1": [
+      "Verified ten-god interpretations and named luck-pillar method",
+      "Zi Wei resource/variation audit and independent fixtures"
+    ],
+    "P2": [
+      "Nine Star Ki procedural sources and separate conventions",
+      "Historical calendars and obscure lineage exceptions"
+    ]
+  },
+  "findings": [
+    "San Ming vol2 fixed digital witness now inspected; its historical seasonal allocation variants are preserved as distinct from modern fixed hidden stems.",
+    "Tan author-hosted Ten Gods excerpt and Yap solar/calendar chart components inspected without full-text ingestion.",
+    "Verified BaZi/animal/component core accepted:83 tests and15 Chinese CLI cases. Exact scope and refinement priorities in chinese_core_v1.json.",
+    "Ng and Quan Shu access does not establish Zi Wei/Nine Star Ki procedures; those variations remain unsupported."
+  ],
+  "active_source_ids": [
+    "chinese-sanming-vol2-v1",
+    "chinese-tan-ten-gods-v1",
+    "chinese-yap-solar-v1",
+    "chinese-yap-chart-v1",
+    "chinese-six-tail-profile-v1",
+    "chinese-six-tail-reference-v1",
+    "chinese-hko-almanac2026-v1",
+    "chinese-hko-terms2014-v1",
+    "chinese-hko-cny-v1",
+    "chinese-vasiloiu-chart-v1"
+  ]
 }

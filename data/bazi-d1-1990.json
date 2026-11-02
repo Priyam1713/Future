@@ -1,6 +1,6 @@
 {
   "technique_id": 3,
-  "status": "Developing",
+  "status": "Core v1 Ready",
   "profile": "civil-zi23",
   "birth": {
     "local": "1990-07-15T14:30",
@@ -168,7 +168,12 @@
       "locator": "Li Chun/Solar Calendar discussion",
       "method": "Year changes at exact apparent geocentric solar longitude315 degrees; it is independent of lunar New Year.",
       "exceptions": "Do not use February4 midnight or reverse seasons in southern hemisphere.",
-      "status": "source_checked_pending_engine_fixtures"
+      "implementation_status": "implemented",
+      "verification_scope": "Procedural/source agreement; mathematical fixtures separately tested. Not empirical predictive validity.",
+      "reference_files": [
+        "tests/fixtures/chinese_published.json",
+        "tests/fixtures/chinese_reference.json"
+      ]
     },
     {
       "id": "chinese.solar-month",
@@ -177,7 +182,12 @@
       "locator": "Table1, combined with six-tail opening and San Ming 论遁月时",
       "method": "Twelve monthly jie at315+30*k degrees; Tiger month starts Li Chun; month stem from year stem.",
       "exceptions": "Intermediate zhongqi at15-degree offsets do not start BaZi months.",
-      "status": "source_checked_pending_engine_fixtures"
+      "implementation_status": "implemented",
+      "verification_scope": "Procedural/source agreement; mathematical fixtures separately tested. Not empirical predictive validity.",
+      "reference_files": [
+        "tests/fixtures/chinese_published.json",
+        "tests/fixtures/chinese_reference.json"
+      ]
     },
     {
       "id": "chinese.stems",
@@ -186,7 +196,12 @@
       "locator": "论天干阴阳生死; 论地支属相",
       "method": "Ten ordered stems pair Yin/Yang with Wood,Fire,Earth,Metal,Water;12 branches with animals.",
       "exceptions": "These are symbolic phases, not physical chemical elements.",
-      "status": "source_checked_pending_engine_fixtures"
+      "implementation_status": "implemented",
+      "verification_scope": "Procedural/source agreement; mathematical fixtures separately tested. Not empirical predictive validity.",
+      "reference_files": [
+        "tests/fixtures/chinese_published.json",
+        "tests/fixtures/chinese_reference.json"
+      ]
     },
     {
       "id": "chinese.pillars",
@@ -195,7 +210,12 @@
       "locator": "Tables2–5; San Ming 论遁月时",
       "method": "Year index=(solar year-1984)mod60; month stem=2*(year stem mod5)+2+k; hour stem=2*(hour day stem mod5)+hour branch.",
       "exceptions": "Use named day-boundary profile; sexagenary stem and branch parity must agree.",
-      "status": "source_checked_pending_engine_fixtures"
+      "implementation_status": "implemented",
+      "verification_scope": "Procedural/source agreement; mathematical fixtures separately tested. Not empirical predictive validity.",
+      "reference_files": [
+        "tests/fixtures/chinese_published.json",
+        "tests/fixtures/chinese_reference.json"
+      ]
     },
     {
       "id": "chinese.day-epoch",
@@ -204,7 +224,12 @@
       "locator": "August18 calendar entry Jia-Zi",
       "method": "Continuous Gregorian day count from2026-08-18 Jia-Zi(index0); epoch is a reference date, not a cycle restart.",
       "exceptions": "No Julian/ancient-calendar interpretation or leap-second day arithmetic.",
-      "status": "source_checked_pending_engine_fixtures"
+      "implementation_status": "implemented",
+      "verification_scope": "Procedural/source agreement; mathematical fixtures separately tested. Not empirical predictive validity.",
+      "reference_files": [
+        "tests/fixtures/chinese_published.json",
+        "tests/fixtures/chinese_reference.json"
+      ]
     },
     {
       "id": "chinese.clock",
@@ -213,7 +238,12 @@
       "locator": "流派; opening hour table",
       "method": "Whole-Zi day advances23:00; split-Zi day advances00:00 but late-Zi hour uses following day stem. Both use half-open two-hour branches starting23:00.",
       "exceptions": "Civil wall time is named engineering profile, not universal ancient practice. Local solar time unsupported.",
-      "status": "source_checked_pending_engine_fixtures"
+      "implementation_status": "implemented",
+      "verification_scope": "Procedural/source agreement; mathematical fixtures separately tested. Not empirical predictive validity.",
+      "reference_files": [
+        "tests/fixtures/chinese_published.json",
+        "tests/fixtures/chinese_reference.json"
+      ]
     },
     {
       "id": "chinese.animal-year",
@@ -222,7 +252,12 @@
       "locator": "1st Lunar Month date in each annual primary table",
       "method": "Festival animal year changes at local civil midnight on listed HKO CNY date, separately from BaZi year.",
       "exceptions": "Named local-festival-date profile; not the conjunction instant or full worldwide lunar calendar.",
-      "status": "source_checked_pending_engine_fixtures"
+      "implementation_status": "implemented",
+      "verification_scope": "Procedural/source agreement; mathematical fixtures separately tested. Not empirical predictive validity.",
+      "reference_files": [
+        "tests/fixtures/chinese_published.json",
+        "tests/fixtures/chinese_reference.json"
+      ]
     }
   ],
   "conventions": {
@@ -265,6 +300,32 @@
     }
   },
   "sources": [
+    {
+      "id": "chinese-hko-solar-terms-v1",
+      "technique_id": 3,
+      "inventory_rank": null,
+      "author": "Hong Kong Observatory",
+      "edition": "The 24 Solar Terms",
+      "url": "https://www.hko.gov.hk/en/gts/time/24solarterms.htm",
+      "ingestion": "metadata_only",
+      "rights_note": "Mathematical facts/concise original summaries only; no redistribution license inferred.",
+      "checked_on": "2026-11-03",
+      "status": "calendar_definition_checked_not_astrological_rules",
+      "locator": "Opening explanation and Table1: solar longitude every 15 degrees; Spring Commences315 degrees."
+    },
+    {
+      "id": "chinese-hko-ganzhi-v1",
+      "technique_id": 3,
+      "inventory_rank": null,
+      "author": "Hong Kong Observatory",
+      "edition": "Heavenly Stems and Earthly Branches",
+      "url": "https://www.weather.gov.hk/en/gts/time/stemsandbranches.htm",
+      "ingestion": "metadata_only",
+      "rights_note": "Calendar facts only; original webpage not ingested.",
+      "checked_on": "2026-11-03",
+      "status": "calendar_tables_checked_not_day_rollover_convention",
+      "locator": "Tables2–5: sixty pairs, two-hour branches, year/month and day/hour stem relations. Does not resolve BaZi day rollover or clock corrections."
+    },
     {
       "id": "chinese-sanming-vol2-v1",
       "author": "Wan Minying",
@@ -378,7 +439,7 @@
       "author": "Cătălin Vasiloiu",
       "edition": "Calendar Tong Shu2026 personalized published example, birth1918-12-01 12:30",
       "url": "https://catalinvasiloiu.ro/wp-content/uploads/2025/12/Calendar-Tong-Shu-2026-personalizat-exemplu-1-dec-1918.pdf",
-      "locator": "PDF p12 Ba Zi example panel and Astro-Geographical Data: solar, Asia/Shanghai, longitude120E",
+      "locator": "Ba Zi example panel and Astro-Geographical Data: solar, Asia/Shanghai, longitude120E",
       "rights_note": "Factual chart/input transcription only; author-hosted sample. No prose, images, strength scores or full report redistributed.",
       "technique_id": 3,
       "inventory_rank": null,

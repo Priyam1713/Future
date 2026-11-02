@@ -156,6 +156,9 @@ def main():
         try:
             register_knowledge(registry)
             result=chart(e,args.local,args.zone,args.latitude,args.longitude,args.fold,args.profile)
+            from .chinese_readings import enrich,markdown,register_knowledge as register_readings
+            register_readings(registry)
+            result=enrich(result)
             print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2,ensure_ascii=True))
         finally:registry.close();e.kernel.close()
         return

@@ -1,0 +1,68 @@
+{
+  "technique_id": 3,
+  "name": "Chinese Astrology",
+  "status": "Core v1 Ready",
+  "date": "2026-11-03",
+  "policy": "80/20 verified practical BaZi core; not exhaustive Chinese astrology or predictive validation",
+  "supported": {
+    "calculation": "Four Pillars, Day Master, all10 stems/12 branches/60 pairs; symbolic phase/polarity counts. Gregorian local birth years1901–2100; existing offline DE440s kernel.",
+    "astronomy": "Independent apparent geocentric true-ecliptic/equinox solar roots for all24 terms. Li Chun315 degrees; jie315+30*k starts months. Same physical boundaries both hemispheres.",
+    "profiles": {
+      "civil-zi23": "Civil wall clock including IANA DST; day23:00; whole late-Zi hour next-day stem.",
+      "civil-split-zi": "Civil wall clock including IANA DST; day00:00; late-Zi hour still next-day stem.",
+      "standard-zi23": "Explicit alternative civil minus IANA DST; day23:00. No longitude/equation-of-time correction."
+    },
+    "animal": "HKO published CNY dates1901–2100 applied at local civil midnight, separately labeled from BaZi year; not full lunar-calendar conversion.",
+    "interpretation": "All100 Ten Gods phase/polarity relationships;12 fixed modern hidden-stem sets;10 source-specific classical Day Master imagery components;4 pillar topics; explicit compositional chart-context explanations and symbolic element interactions.",
+    "interfaces": "bazi CLI JSON and Markdown; Python chart/enrich; source/rule/clock/root traces and reproducibility hashes."
+  },
+  "experimental": [
+    "Classical imagery composed under modern clock profiles is pedagogical source-labeled context, not a reconstructed historical practice.",
+    "Births within120 seconds of a jie are flagged for input/model sensitivity; exact arithmetic boundary does not guarantee physical time accuracy."
+  ],
+  "unsupported": [
+    "Local mean/apparent solar-time profiles",
+    "Luck-pillar starting ages, absolute onset and personal timing forecasts",
+    "Full Zi Wei Dou Shu",
+    "Nine Star Ki",
+    "Weighted qi/strength/yongshen verdicts",
+    "Automatic stem/branch combination transformations, special patterns and obscure lineage exceptions",
+    "Historical Julian calendars, ancient dynasty epochs, lunar birth-date input and worldwide lunar calendar reconstruction",
+    "Direct personal event predictions or predictive accuracy scores"
+  ],
+  "verification": {
+    "tests": 83,
+    "preserved_previous_tests": 73,
+    "cli_cases": {
+      "Chinese": 15,
+      "Vedic": 12,
+      "Western": 23
+    },
+    "primary": "26 minute-rounded HKO solar-term times (all24 in2014; Li Chun/Jing Zhe2026); HKO Jia-Zi day epoch;200 annual CNY dates with raw-file hashes.",
+    "independent": "45 lunar-python1.4.8 pillar cases, including DST profiles and both hemispheres; independent astronomical/calendar algorithm, shared pinned IANA time resolution. All200 HKO CNY dates agree; all100 Ten Gods and12 hidden-stem sets match independent lookup facts.",
+    "published": "Vasiloiu published PDFp12 has complete1918-12-01 12:30 solar/Asia-Shanghai/120E settings, irrespective of Romanian sample label. Software-author worked2005 chart and1988 split-Zi example. Yap annotated chart validates component facts only, lacks full birth inputs.",
+    "precision": "Root bracket <=.005 elapsed seconds; HKO minute-rounded comparison tolerance65 seconds. No claim of .005-second absolute astronomy, reconstructed historical UTC or independently validated IANA history.",
+    "licensing": "Existing pinned runtime unchanged; pip check clean. Optional lunar-python1.4.8/MIT reference only; no Swiss runtime or new production dependency. Numerical facts and short original summaries only; author-hosted PDFs/images inspected locally and removed, no full-text rights assumed."
+  },
+  "source_limits": [
+    "San Ming volume2 seasonal hidden-stem allocations differ and are not silently merged into modern fixed sets.",
+    "No claim that the inspected public workshop/excerpt replaces the full ranked Yap book.",
+    "Ng/Quan Shu bibliographic access does not establish Zi Wei/Nine Star Ki procedures.",
+    "Luck-onset procedures located but complete independent onset/conversion validation deferred."
+  ],
+  "backlog": {
+    "P1": [
+      "Select and independently validate a fully named luck-pillar onset/direction/calendar-age convention.",
+      "Verify a source-complete Day Master strength/favorable-element method without inventing scores.",
+      "Add source-specific branch/stem combinations and qualified interpretations.",
+      "Add source-backed local mean/apparent solar clock profiles with independent fixtures."
+    ],
+    "P2": [
+      "Zi Wei Dou Shu engine and separate palace/leap-month schools.",
+      "Nine Star Ki primary procedures and separate profile.",
+      "Obscure lineage differences, full historical/lunar-calendar reconstruction.",
+      "Broader direct interpretation coverage, API/UI and packaging review."
+    ]
+  },
+  "next": "After committing/pushing closure, begin Technique#4 resource/variation audit in exact inventory order."
+}

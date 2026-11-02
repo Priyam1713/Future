@@ -51,5 +51,6 @@ hidden=LunarUtil.ZHI_HIDE_GAN
 Path('tests/fixtures/chinese_reference.json').write_text(json.dumps({
     'oracle':'lunar-python1.4.8/MIT; numeric results only. Shared pinned IANA inputs, independent calendar/astronomy.',
     'source_id':'chinese-six-tail-reference-v1','cases':cases,'hidden_stems':hidden,
+    'ten_gods':LunarUtil.SHI_SHEN,
     'cny_dates':{str(y):Lunar.fromYmd(y,1,1).getSolar().toYmd() for y in range(1901,2101)}},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(f'{len(cases)} independent pillar cases')

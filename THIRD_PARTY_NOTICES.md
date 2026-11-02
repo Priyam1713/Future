@@ -1,5 +1,11 @@
 # Dependency and source notices
 
+## Chinese Core v1, 2026-11-03
+
+Production requirements remain unchanged and pinned; `pip check` passes. Reference generators optionally use `lunar-python==1.4.8` (MIT, copyright2020 6tail, https://github.com/6tail/lunar-python/blob/master/LICENSE). No library implementation is copied into Future or imported by production modules. Generated calendar/relationship fixtures contain numeric or symbolic facts with source/version attribution. This lightweight review is not a vulnerability scan.
+
+HKO New Year dates retain individual primary URLs/raw-file hashes. Practitioner books/workshop samples are reading references only; committed material contains factual algorithms, numeric chart values and concise original summaries. No PDFs, page images, proprietary strength scores or full-text ingestion rights are claimed. Existing kernel/source-local redistribution limitations continue to apply.
+
 Future Core v1 runs from source with separately installed Python packages. No third-party runtime, kernel, textbook or full modern translation is vendored. `knowledge/dependency_audit.json` records installed versions, declared licenses and notice-file hashes; `requirements.txt` pins the complete runtime dependency set used for validation.
 
 Skyfield, jplephem and sgp4 declare MIT; NumPy declares BSD-3-Clause and bundled component licenses; tzdata declares Apache-2.0 (IANA data and its wrapper have separate notices); certifi declares MPL-2.0. Retain upstream license and notice files when distributing dependencies. This record does not replace those files or grant a license to Future.
