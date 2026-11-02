@@ -1,0 +1,42 @@
+{
+ "technique_id":2,"version":1,"status":"resolved for bounded core implementation",
+ "profile":"parashari-core-lahiri1956-mean-node",
+ "astronomy":{
+  "positions":"Reuse Skyfield 1.54 / DE440s apparent geocentric true ecliptic/equinox of date, seven classical planets; existing Western behavior unchanged.",
+  "ayanamsha_name":"lahiri-1956-skyfield",
+  "anchor_jd_tt":2435553.5,"anchor_true_degrees":23.25018277777778,
+  "anchor_definition":"1956-03-21 00:00 TT, revised IAE1985 Lahiri 23 degrees 15 minutes 0.658 seconds; not original ICRC 0.000 seconds or fixed-star true-Citra.",
+  "transport":"Remove Skyfield IAU2000A longitude nutation at anchor. Rotate date mean-ecliptic equinox through ICRS to anchor mean ecliptic using Skyfield Capitaine et al. 2003 precession. Subtract its anchor-frame longitude from mean anchor. Add date longitude nutation for true ayanamsha; subtract true ayanamsha from apparent longitude/Ascendant.",
+  "model_limit":"Explicit Skyfield realization, not bit-identical to Swiss default Vondrak/IAU1980 realization. Exploratory 1850–2149 comparisons differ about 0.14 arcsecond; no empirical fitted correction applied.",
+  "nodes":"IERS2010 chapter 5 equation 5.43 mean lunar ascending-node polynomial in TT centuries; add longitude nutation to express tropical true-equinox node; Ketu exactly opposite. No true/osculating node fallback.",
+  "node_polynomial_arcseconds":[450160.398036,-6962890.5431,7.4722,0.007702,-0.00005939],
+  "speeds":"Differentiate sidereal coordinates, including ayanamsha drift; retrograde is the sidereal longitude derivative sign.",
+  "scope":"Astronomical epochs 1850–2149; core locations abs(latitude)<66 degrees. Pinned IANA civil input, explicit DST fold, rejected gaps; inherited modeled UT1 and pre-1972 proleptic UTC limits."
+ },
+ "symbolic":{
+  "houses":"D1 whole-sign from sidereal Lagna; keep rashi and cusp/bhava alternatives separate.",
+  "nakshatras":"27 equal sectors from 0 sidereal Aries; four equal padas each; exact half-open boundaries with floating representation tolerance disclosed.",
+  "vimshottari_default":"pvr-2000-savana: fixed elapsed 360-day years; secondary option solar-365.2425 uses fixed elapsed 365.2425-day years. Both supported explicitly by PVR discussion; do not call either universal.",
+  "dasha_time":"UTC elapsed timedelta days, no future leap-second accumulation; start included/end excluded. At birth backdate the full first MD by elapsed fraction; subdivide full MD, not remaining balance, into ADs.",
+  "d9":"Nine equal 3 degree 20 minute parts, movable/fixed/dual starts at self/ninth/fifth; zodiac order. Report harmonic longitude as symbolic, not astronomical sky position. Houses counted from D9 Lagna, never D1 Lagna.",
+  "lords":"Seven classical sign lords; node co-rulership/dignity variations explicitly unsupported.",
+  "dignities":"Seven-planet sign ownership/exaltation/debilitation and unambiguous moolatrikona intervals; no scoring. PVR p.34 Mars paragraph says Leo while table says Aries: degree-specific Mars moolatrikona remains unsupported.",
+  "aspects":"Full Parashari whole-sign graha drishti: seventh for classical seven; Mars fourth/eighth, Jupiter fifth/ninth, Saturn third/tenth. No Jaimini rashi drishti, degree-strength interpolation or node-aspect rule inferred."
+ },
+ "sources":[
+  {"id":"vedic-pvr-procedures-v1","author":"P.V.R. Narasimha Rao","edition":"Vedic Astrology: An Integrated Approach, 2000; author-hosted PDF with 2010 update","url":"https://vedicastrologer.org/articles/vedic_astro_textbook.pdf","ingestion":"metadata_only","rights_note":"Author freely shares this edition for reading; store factual algorithms/short original summaries and numeric examples only. No book text/images redistributed.","locator":"Printed pp.5–11,17–18,34–35,55,100–101,209–212; PDF page number = printed page +12 for inspected body passages.","access":"Non-www URL readable; earlier www 406/timeout resolved by author-hosted alternate hostname, not third-party scan."},
+  {"id":"vedic-bphs-d9-v1","author":"Traditionally attributed to Parashara; digital Sanskrit witness via Pramana","edition":"BPHS digital Sanskrit chapter 6, verse 12; edition/recension numbering local to this witness","url":"https://indike.org/pramana/in.astro.hora.yavana.brhatparasara.6","ingestion":"metadata_only","rights_note":"Mathematical procedural facts only; no Sanskrit corpus or machine translation ingested. Check against PVR's practitioner procedure.","locator":"6.12, navamsa movable/fixed/dual construction; English machine translation not treated as independent scholarly authority."},
+  {"id":"vedic-lahiri-definition-v1","author":"Astrodienst AG, Dieter Koch / Alois Treindl","edition":"Swiss Ephemeris general documentation, section 2.8.5 and Appendix E","url":"https://www.astro.com/swisseph/swisseph.htm","ingestion":"metadata_only","rights_note":"Published mathematical definition/reference facts only; no Swiss code copied or runtime dependency added.","locator":"2.8.5 revised 1956 anchor; Appendix E true = mean + nutation and IAE2019 comparison."},
+  {"id":"vedic-iers-node-v1","author":"IERS Conventions (2010)","edition":"Chapter 5, updated 10 August 2012","url":"https://iers-conventions.obspm.fr/content/chapter5/icc5.pdf","ingestion":"metadata_only","rights_note":"Mathematical polynomial facts only; no standards document redistributed.","locator":"5.7.2 equation 5.43, PDF p.23; 5.7.1 permits TT in place of TDB at this accuracy."}
+ ],
+ "rules":[
+  {"id":"vedic.sidereal","source_id":"vedic-pvr-procedures-v1","locator":"1.3.13 printed pp.17–18","method":"Tropical longitude minus named time-dependent ayanamsha","exceptions":"Exact implementation realization separately specified above."},
+  {"id":"vedic.houses","source_id":"vedic-pvr-procedures-v1","locator":"1.3.3 printed p.7; 6.2.1 p.52","method":"Equal signs and whole-sign counting from Lagna","exceptions":"No bhava-cusp algorithm implied."},
+  {"id":"vedic.nakshatra","source_id":"vedic-pvr-procedures-v1","locator":"1.3.6 pp.10–11, Table 2","method":"27 equal sectors; four padas; repeated nine-lord table","exceptions":"Abhijit/28-mansion special systems unsupported."},
+  {"id":"vedic.dignity","source_id":"vedic-pvr-procedures-v1","locator":"3.3 pp.34–35 Table 6","method":"Classical sign dignities and sourced intervals","exceptions":"Mars paragraph/table discrepancy; nodal dignity/co-lords excluded."},
+  {"id":"vedic.drishti","source_id":"vedic-pvr-procedures-v1","locator":"10.2 pp.100–101, Example 34","method":"Classical full whole-sign planetary aspects","exceptions":"Node aspects and Jaimini sign aspects unsupported."},
+  {"id":"vedic.vimshottari","source_id":"vedic-pvr-procedures-v1","locator":"16.2–16.3 pp.210–212, Table 38, Example 50","method":"Moon mansion starting lord; remaining arc fraction; full-parent proportional AD","exceptions":"Fixed named year key; source's civil-date arithmetic inconsistent with fixed elapsed days, retained in fixture note."},
+  {"id":"vedic.d9","source_id":"vedic-bphs-d9-v1","locator":"6.12; corroboration PVR 6.2.9 p.55 Example 16","method":"Nine equal divisions mapped by modality","exceptions":"D9 is symbolic; no automatic physical-event or compatibility verdict."}
+ ],
+ "remaining_source_gaps":["Raman publisher listings accessible but no authorized worked-page preview verified; do not fabricate Raman chart attribution.","BPHS exact dignity/dasha passages in an identifiable translation still incomplete; core procedural authority is explicitly PVR2000 rather than an invented universal BPHS edition."]
+}
