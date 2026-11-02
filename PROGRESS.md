@@ -1,5 +1,12 @@
 # Future progress
 
+## 2026-11-03 — #3 Pass1: source-checked BaZi conventions
+- Resumed2f3ffa6. Checked San Ming vol2 digital witness (fixed revision), Tan's author-hosted Ten Gods excerpt, Yap's solar-calendar teaching and annotated workshop chart; no book corpus/images redistributed. Classical seasonal hidden-stem variants remain separate from named modern fixed sets.
+- Named civil-zi23, civil-split-zi (day00:00 but late-Zi hour uses next day) and explicit standard-zi23 profiles. Exact apparent315-degree Li Chun and30-degree jie months; Gregorian Jia-Zi day epoch2026-08-18 from HKO. Civil/standard clock choices explicit; local solar corrections unsupported.
+- Registered26 HKO term instants, published Vasiloiu Shanghai-settings chart (PDFp12), two software-author worked cases and45 independently generated lunar-python1.4.8 reference cases; oracle optional/MIT, not runtime. Shared IANA inputs do not independently validate timezone history.
+- Luck-pillar direction/three-day-year/ten-year procedures located but complete independently checked onset convention deferred; no fabricated timings. Numerical algorithm agreement does not establish predictive validity.
+- Next: implement independent DE440s Four Pillars and verify fixtures before readiness. Commit: resolve with git log --grep="verify BaZi sources and conventions".
+
 Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; exhaustive historical completion is superseded. **#1 Western Astrology — Core v1 Ready**, closed/pushed `ec5f69b`. **#2 Vedic Astrology — Core v1 Ready**, bounded source/local CLI scope; closed/pushed `1f2acc8`. **#3 Chinese Astrology — Researching**, resource/variation audit only.
 
 ## 2026-11-02 — inventory and research pass
