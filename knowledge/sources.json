@@ -1,0 +1,54 @@
+[
+  {
+    "id": "lilly-1647", "technique_id": 1, "inventory_rank": 1,
+    "title": "Christian Astrology", "author": "William Lilly", "edition": "1647 original; exact inventory scan unverified",
+    "url": "https://wellcomecollection.org/works/w67xnbfy",
+    "checked_on": "2026-11-02", "status": "access_blocked",
+    "evidence_url": "https://www.skyscript.co.uk/ca_downloads.html",
+    "coverage": {"medieval/traditional": "page leads located", "natal": "Book III requires inspection"},
+    "locators": ["Houses pp.47-56", "Essential dignities p.104", "Nativity pp.749-750 (linked paraphrase)"],
+    "ingestion": "metadata_only", "rights_note": "Original historical text and modern annotations/scans require separate rights assessment.",
+    "confidence": "medium", "predictive_evidence": "not established by procedural source"
+  },
+  {
+    "id": "hand-transits", "technique_id": 1, "inventory_rank": 2,
+    "title": "Planets in Transit: Life Cycles for Living", "author": "Robert Hand",
+    "edition": "Publisher listing ISBN 9780924608261, 544 pages; publication year not verified",
+    "url": "https://schifferbooks.com/collections/new-release-2024/products/planets-in-transit-r",
+    "checked_on": "2026-11-02", "status": "publisher_scope_verified",
+    "coverage": {"transits/progressions": "transits confirmed by publisher; progressions unverified"},
+    "locators": ["Publisher description; chapter pages unavailable"],
+    "ingestion": "metadata_only", "rights_note": "Copyrighted book; no full-text ingestion permission established.",
+    "confidence": "high for bibliographic scope, unverified for rules", "predictive_evidence": "not established by publisher description"
+  },
+  {
+    "id": "arroyo-handbook", "technique_id": 1, "inventory_rank": 3,
+    "title": "Chart Interpretation Handbook", "author": "Stephen Arroyo",
+    "edition": "ISBN 9780916360498; exact edition pending",
+    "url": "https://scbdistributors.com/catalogs/SCB.F19.150.pdf",
+    "checked_on": "2026-11-02", "status": "distributor_catalog_lead",
+    "coverage": {"modern psychological": "inventory claim; chapter verification pending", "natal": "inventory claim; chapter verification pending"},
+    "locators": [], "ingestion": "metadata_only", "rights_note": "Copyrighted book; no ingestion permission established.",
+    "confidence": "medium for bibliography; low for variation coverage", "predictive_evidence": "not assessed"
+  },
+  {
+    "id": "usno-jd", "technique_id": 1, "inventory_rank": null,
+    "title": "Converting Between Julian Dates and Gregorian Calendar Dates", "author": "U.S. Naval Observatory",
+    "edition": "Online FAQ checked 2026-11-02; formula attributed to Almanac for Computers 1990",
+    "url": "https://aa.usno.navy.mil/faq/JD_formula.html", "checked_on": "2026-11-02",
+    "status": "procedure_and_examples_verified", "coverage": {"natal": "calendar conversion component only"},
+    "locators": ["Formula for Conversion", "1877 August 11 worked example", "Introduction: two 1978 examples"],
+    "ingestion": "facts_only", "rights_note": "Store mathematical facts and original concise research notes; no page reproduction.",
+    "confidence": "high for calendar arithmetic", "predictive_evidence": "astronomical computation, not astrological validity"
+  },
+  {
+    "id": "swisseph-api", "technique_id": 1, "inventory_rank": null,
+    "title": "Swiss Ephemeris programming interface", "author": "Astrodienst AG",
+    "edition": "Online manual; copyright header 1997-2022; checked 2026-11-02",
+    "url": "https://www.astro.com/swisseph/swephprg.htm", "checked_on": "2026-11-02",
+    "status": "library_candidate_reviewed", "coverage": {"natal": "ephemeris and house calculation API candidate"},
+    "locators": ["Licensing introduction", "Sections 3 and 9"],
+    "ingestion": "metadata_only", "rights_note": "AGPL or paid professional license. No dependency included in this pass; resolve project licensing before distribution.",
+    "confidence": "high for documented API and license; integration untested", "predictive_evidence": "positions do not validate astrological predictions"
+  }
+]
