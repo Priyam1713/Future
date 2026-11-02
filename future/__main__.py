@@ -141,7 +141,24 @@ def main():
     jy.add_argument('--d9',action='store_true',help='Add separately labeled Navamsa')
     jy.add_argument('--target',help='Offset-aware target for Vimshottari current/upcoming periods')
     jy.add_argument('--year-key',choices=['pvr-2000-savana','solar-365.2425'],default='pvr-2000-savana')
+    from .chinese import PROFILES
+    bz=sub.add_parser('bazi')
+    bz.add_argument('local');bz.add_argument('zone');bz.add_argument('latitude',type=float);bz.add_argument('longitude',type=float)
+    bz.add_argument('--fold',type=int,choices=[0,1])
+    bz.add_argument('--profile',choices=PROFILES,default='civil-zi23')
+    bz.add_argument('--format',choices=['json','markdown'],default='json')
+    bz.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
     args = parser.parse_args()
+    if args.command=='bazi':
+        from .natal import SkyfieldEphemeris
+        from .chinese import chart,register_knowledge,markdown
+        e=SkyfieldEphemeris(args.kernel);registry=load_registry(args.database)
+        try:
+            register_knowledge(registry)
+            result=chart(e,args.local,args.zone,args.latitude,args.longitude,args.fold,args.profile)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2,ensure_ascii=True))
+        finally:registry.close();e.kernel.close()
+        return
     if args.command=='jyotish':
         from .natal import SkyfieldEphemeris
         from .vedic import d1,register_knowledge,markdown

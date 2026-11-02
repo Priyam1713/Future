@@ -1,5 +1,13 @@
 # Future progress
 
+## 2026-11-03 — #3 Pass2: Four Pillars calculation core
+- Source/convention pass c3aea33 pushed first. Added independent DE440s solar-term root solving, continuous Gregorian day epoch, all four pillars, Day Master, symbolic element/polarity counts, three named clock/Zi profiles and bazi JSON/Markdown CLI. Existing Western/Vedic modules untouched.
+- Six targeted tests pass:26 HKO published term times,45 independent diverse pillar cases, published complete-input and late-Zi examples, exact jie/zhongqi/day/hour boundaries, DST rejection/alternatives, both hemispheres, scope and provenance. All200 HKO CNY dates1901–2100 extracted as numerical facts with per-source hashes; cross-checked against independent lunar-python dates.
+- Full79-test regression suite passes, preserving all73 prior tests. Reproducible calculation-only example in data/bazi-d1-1990.json/md; CLI Markdown smoke passes.
+- Festival animal uses a separately named local-midnight HKO date profile; no full lunar calendar or worldwide conjunction convention implied. Clock inputs resolve through pinned IANA; no hidden solar-time correction or hemispheric sign reversal. Luck onset remains unsupported.
+- Delhi1990 example: Geng-Wu / Gui-Wei / Xin-Si / Yi-Wei, Xin Yin Metal Day Master. Solar-root bracket <=.005 seconds; primary minute-rounded reference checks use65 seconds, not a predictive confidence claim.
+- Next: source-scoped Ten Gods/hidden stems and compositional readings, full release acceptance and refinement backlog. Commit: resolve with git log --grep="implement verified Four Pillars".
+
 ## 2026-11-03 — #3 Pass1: source-checked BaZi conventions
 - Resumed2f3ffa6. Checked San Ming vol2 digital witness (fixed revision), Tan's author-hosted Ten Gods excerpt, Yap's solar-calendar teaching and annotated workshop chart; no book corpus/images redistributed. Classical seasonal hidden-stem variants remain separate from named modern fixed sets.
 - Named civil-zi23, civil-split-zi (day00:00 but late-Zi hour uses next day) and explicit standard-zi23 profiles. Exact apparent315-degree Li Chun and30-degree jie months; Gregorian Jia-Zi day epoch2026-08-18 from HKO. Civil/standard clock choices explicit; local solar corrections unsupported.

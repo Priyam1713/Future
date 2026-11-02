@@ -9,7 +9,7 @@ from zoneinfo import ZoneInfo, reset_tzpath
 from pathlib import Path
 import json
 from importlib.metadata import version
-from lunar_python import Solar
+from lunar_python import Solar,Lunar
 
 reset_tzpath(())
 assert version('lunar-python')=='1.4.8'
@@ -50,5 +50,6 @@ from lunar_python.util import LunarUtil
 hidden=LunarUtil.ZHI_HIDE_GAN
 Path('tests/fixtures/chinese_reference.json').write_text(json.dumps({
     'oracle':'lunar-python1.4.8/MIT; numeric results only. Shared pinned IANA inputs, independent calendar/astronomy.',
-    'source_id':'chinese-six-tail-reference-v1','cases':cases,'hidden_stems':hidden},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    'source_id':'chinese-six-tail-reference-v1','cases':cases,'hidden_stems':hidden,
+    'cny_dates':{str(y):Lunar.fromYmd(y,1,1).getSolar().toYmd() for y in range(1901,2101)}},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(f'{len(cases)} independent pillar cases')
