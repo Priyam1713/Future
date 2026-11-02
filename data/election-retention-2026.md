@@ -15,6 +15,10 @@ No auspiciousness score, financial forecast or probability of success is calcula
 
 ## Candidate 1: rule trace
 
+Classification: **indeterminate**. No eligible window is established.
+- 2026-11-01T17:58:40.213867+00:00 to 2026-11-01T18:07:28.363281+00:00: **rejected** — Moon occupies first house: general retention-profile prohibition.
+- 2026-11-01T18:07:28.363281+00:00 to 2026-11-01T19:49:37.393555+00:00: **indeterminate** — Complete mandatory coverage unavailable; partial matches cannot be promoted.
+Exact moving-target lunar contacts, intervening contacts, target stations and next lunar ingress are retained in JSON. They do not by themselves establish historical prohibition or exception handling.
 - asc-sign: **satisfied**; required: True. Ascendant sign in the selected event's sign modality. [Source](https://www.renaissanceastrology.com/electionalramesey2ndhouse.html) — Liber III, second-house elections, chapter II, p.135: received money remaining long.
 - asc-ruler-sign: **satisfied**; required: True. Traditional domicile ruler of Ascendant in the selected modality. [Source](https://www.renaissanceastrology.com/electionalramesey2ndhouse.html) — Liber III, second-house elections, chapter II, p.135: received money remaining long.
 - moon-sign: **satisfied**; required: True. Moon in the selected modality. [Source](https://www.renaissanceastrology.com/electionalramesey2ndhouse.html) — Liber III, second-house elections, chapter II, p.135: received money remaining long.
@@ -33,6 +37,9 @@ Diagnostics (not silently treated as passed selection rules):
 
 ## Candidate 2: rule trace
 
+Classification: **indeterminate**. No eligible window is established.
+- 2026-11-02T00:23:02.567382+00:00 to 2026-11-02T02:13:59.600586+00:00: **indeterminate** — Complete mandatory coverage unavailable; partial matches cannot be promoted.
+Exact moving-target lunar contacts, intervening contacts, target stations and next lunar ingress are retained in JSON. They do not by themselves establish historical prohibition or exception handling.
 - asc-sign: **satisfied**; required: True. Ascendant sign in the selected event's sign modality. [Source](https://www.renaissanceastrology.com/electionalramesey2ndhouse.html) — Liber III, second-house elections, chapter II, p.135: received money remaining long.
 - asc-ruler-sign: **satisfied**; required: True. Traditional domicile ruler of Ascendant in the selected modality. [Source](https://www.renaissanceastrology.com/electionalramesey2ndhouse.html) — Liber III, second-house elections, chapter II, p.135: received money remaining long.
 - moon-sign: **satisfied**; required: True. Moon in the selected modality. [Source](https://www.renaissanceastrology.com/electionalramesey2ndhouse.html) — Liber III, second-house elections, chapter II, p.135: received money remaining long.
@@ -51,6 +58,10 @@ Diagnostics (not silently treated as passed selection rules):
 
 ## Candidate 3: rule trace
 
+Classification: **indeterminate**. No eligible window is established.
+- 2026-11-02T17:54:44.227539+00:00 to 2026-11-02T19:10:51.830078+00:00: **rejected** — Moon occupies first house: general retention-profile prohibition.
+- 2026-11-02T19:10:51.830078+00:00 to 2026-11-02T19:45:41.407226+00:00: **indeterminate** — Complete mandatory coverage unavailable; partial matches cannot be promoted.
+Exact moving-target lunar contacts, intervening contacts, target stations and next lunar ingress are retained in JSON. They do not by themselves establish historical prohibition or exception handling.
 - asc-sign: **satisfied**; required: True. Ascendant sign in the selected event's sign modality. [Source](https://www.renaissanceastrology.com/electionalramesey2ndhouse.html) — Liber III, second-house elections, chapter II, p.135: received money remaining long.
 - asc-ruler-sign: **satisfied**; required: True. Traditional domicile ruler of Ascendant in the selected modality. [Source](https://www.renaissanceastrology.com/electionalramesey2ndhouse.html) — Liber III, second-house elections, chapter II, p.135: received money remaining long.
 - moon-sign: **satisfied**; required: True. Moon in the selected modality. [Source](https://www.renaissanceastrology.com/electionalramesey2ndhouse.html) — Liber III, second-house elections, chapter II, p.135: received money remaining long.

@@ -105,3 +105,11 @@
 - Dorotheus Book V remains an authorized procedural-text coverage gap; no unverified Dorothean rules implemented. Horary stays Technique #5, out of scope.
 - Added knowledge/western_completion_audit.json covering each original variation and proposed bounded completion gates. #1 remains Developing; priorities are complete lunar perfection/electional core criteria, direct interpretation gaps and assessing a bounded zodiacal-releasing implementation. No Technique #2 work.
 - Commit: electional pass (resolve with `git log --grep="source-driven electional search"`).
+
+## 2026-11-02 — retention election certification and lunar sequence
+- Versioned Ramesey requirements distinguish unused-money retention (p.135) from investment (p.136). Source-located exceptions, computation coverage and blockers are explicit; no new category or borrowed Horary rules.
+- Added moving-target lunar aspect roots, ingress boundaries, target stations, phase checks and intervening contacts. First-house prohibition assessments partition legacy candidates at lunar-house/contact boundaries. Existing CLI and partial-candidate fields remain available; every assessment is rejected or indeterminate, with timestamps and source traces. Eligible windows remain empty while mandatory coverage is incomplete.
+- All 51 tests pass, retaining 48. Independent Swiss/Moshier TT fixtures verify 29 contacts/ingresses/stations across 2000 leap day, April 2024 Mercury station and November 2026 (120-second cross-ephemeris tolerance; numerical residual <0.0001 degree). Existing independent 2,880-minute search comparison still passes.
+- Delhi example retains three legacy matches, partitioned into five assessments: two rejected for Moon in first house, three indeterminate. Regenerated full JSON and report. No complete election claimed.
+- Exact blockers: radix/world-revolution assessment, full fortification/priorities, nodes/lunation conditions and source-complete prohibition/exception adjudication. Geometry alone cannot resolve these. Hourly lunar and 5/10-minute angular scans retain bounded-completeness limitations; no real-world success probability implied.
+- Commit: resolve with `git log --grep="classify retention elections"`.

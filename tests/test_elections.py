@@ -42,6 +42,15 @@ class ElectionTests(unittest.TestCase):
         with self.assertRaises(ValueError):profile_for('ramesey-retain-money','retain-received-money','Dorotheus')
         r=search(self.e,'retain-received-money',self.a,self.a+timedelta(hours=3),28.6139,77.209,ascendant_signs=[0,3,6,9])
         self.assertTrue(r['conflicts']);self.assertFalse(r['candidates'])
+    def test_no_partial_match_becomes_eligible(self):
+        self.assertEqual(self.report['eligible_windows'],[])
+        self.assertTrue(self.report['assessed_windows'])
+        for w in self.report['assessed_windows']:
+            self.assertIn(w['classification'],('rejected','indeterminate'))
+            self.assertTrue(w['missing_requirements'])
+            self.assertTrue(all(r['source_reference']['url'] and r['locator'] and r['evaluated_utc'] for r in w['rule_trace']))
+            if w['classification']=='rejected':self.assertTrue(all(p['house']==1 for p in w['moon_house_checks']))
+        self.assertTrue(all(w['classification']=='rejected' for w in self.report['rejected_intervals']))
     def test_resolution_reproducibility_and_constraints(self):
         again=search(self.e,'retain-received-money',self.a,self.b,28.6139,77.209,angle_step_minutes=5)
         a=self.report['candidates'];b=again['candidates']

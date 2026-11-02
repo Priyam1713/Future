@@ -9,6 +9,50 @@ from .doctrines import TABLES,analyze,CLASSICAL
 from .transits import roots,phase,branches
 
 CATALOG=json.loads((Path(__file__).resolve().parents[1]/'knowledge/electional_profiles.json').read_text(encoding='utf-8'))
+REQUIREMENTS=json.loads((Path(__file__).resolve().parents[1]/'knowledge/electional_requirements_v2.json').read_text(encoding='utf-8'))
+
+def certify(ephemeris,candidate,latitude,longitude,houses,profile_name):
+    """Preserve legacy partial matches, but assess smaller, explicitly classified cells."""
+    from .lunar_sequence import sequence
+    a=datetime.fromisoformat(candidate['start_inclusive_utc']);b=datetime.fromisoformat(candidate['end_exclusive_utc'])
+    lunar=sequence(ephemeris,a)
+    cuts={a,b}
+    cuts.update(datetime.fromisoformat(x['utc']) for x in lunar['events'] if a<datetime.fromisoformat(x['utc'])<b)
+    times=[a+timedelta(minutes=5*i) for i in range(math.ceil((b-a).total_seconds()/300))]+[b]
+    @lru_cache(maxsize=4096)
+    def relative(date,index):
+        armc,eps=frame(ephemeris.ts.from_datetime(date),longitude)
+        cs=cusps(armc,latitude,eps,houses)
+        return (float(ephemeris.longitudes('Moon',[date])[0])-cs[index])%360
+    for index in (0,1):
+        cuts.update(roots(times,[relative(t,index) for t in times],0,lambda t,i=index:relative(t,i)))
+    windows=[]
+    for left,right in zip(sorted(cuts),sorted(cuts)[1:]):
+        mid=left+(right-left)/2
+        c=chart(ephemeris,mid.replace(tzinfo=None).isoformat(),'UTC',latitude,longitude,Settings(tradition='medieval/traditional',houses=houses))
+        checked=[left+(right-left)*f for f in (.1,.5,.9)]
+        moon_houses=[]
+        for t in checked:
+            armc,eps=frame(ephemeris.ts.from_datetime(t),longitude)
+            moon_houses.append(house_for(float(ephemeris.longitudes('Moon',[t])[0]),cusps(armc,latitude,eps,houses)))
+        supported=profile_name=='ramesey-retain-money'
+        failure=supported and all(h==1 for h in moon_houses)
+        status='rejected' if failure else 'indeterminate'
+        unknown=[r['id'] for r in REQUIREMENTS['rules'] if r['status']!='implemented']
+        trace=[dict(r,source_reference=REQUIREMENTS['sources'][r['source']],
+                    result=('violated' if failure else 'satisfied' if all(h!=1 for h in moon_houses) else 'indeterminate') if r['id']=='moon-not-ascendant' and supported else
+                    'satisfied' if r['id'] in ('retention-fixed','asc-lord-direct') and supported and not candidate['rule_trace'].get('disabled_rules') and all(x['required'] for x in candidate['rule_trace']['rules']) else 'indeterminate',
+                    evaluated_utc=mid.isoformat()) for r in REQUIREMENTS['rules']]
+        lord=candidate['rule_trace']['ascendant_lord'];second=candidate['rule_trace']['second_lord']
+        elongations={n:abs(signed(c['planets'][n]['longitude']-c['planets']['Sun']['longitude'])) for n in set(('Moon','Jupiter',lord,second))}
+        windows.append({'start_inclusive_utc':left.isoformat(),'end_exclusive_utc':right.isoformat(),'classification':status,
+            'reason':'Moon occupies first house: general retention-profile prohibition.' if failure else 'Complete mandatory coverage unavailable; partial matches cannot be promoted.',
+            'rule_trace':trace,'missing_requirements':unknown,'chief_significator_elongations_degrees':elongations,
+            'moon_house_checks':[{'utc':t.isoformat(),'house':h} for t,h in zip(checked,moon_houses)],
+            'window_precision':'Solved Moon-house/contact boundaries; probe agreement is bounded numerical evidence, not a completeness proof.'})
+    candidate.update(classification='rejected' if windows and all(w['classification']=='rejected' for w in windows) else 'indeterminate',
+        assessment_windows=windows,lunar_sequence=lunar,qualification='Legacy selected-rule match; use assessment_windows classifications. No eligible election established.')
+    return windows
 
 def profile_for(name,category,tradition='Ramesey 1653'):
     if name not in CATALOG['profiles']:raise ValueError('Unknown source profile')
@@ -162,11 +206,21 @@ def search(ephemeris,category,start,end,latitude,longitude,profile_name='ramesey
         candidates.append({'start_inclusive_utc':a.isoformat(),'end_exclusive_utc':b.isoformat(),
             'duration_minutes':(b-a).total_seconds()/60,'representative_utc':mid.isoformat(),'chart':c,
             'rule_trace':trace,'diagnostics':diagnostics(ephemeris,c),'qualification':'Satisfies selected implemented predicates only; complete source requirements remain unknown.'})
+    assessments=[]
+    for candidate in candidates:
+        assessments.extend(certify(ephemeris,candidate,latitude,longitude,houses,profile_name))
+    for interval in rejected:
+        interval.update(classification='rejected',rule_trace=[{'id':rid,'status':'violated',
+            'source':CATALOG['rule_parameters'][rid].get('source',p['source']),
+            'locator':CATALOG['rule_parameters'][rid].get('locator',p['locator'])} for rid in interval['violated_required']])
+    for interval in unresolved:interval['classification']='indeterminate'
     return {'technique_id':1,'application':'electional search','category':category,'profile':profile_name,'tradition':tradition,
         'range':{'start_utc':start.isoformat(),'end_exclusive_utc':end.isoformat()},'location':{'latitude':latitude,'longitude':longitude},
         'houses':houses,'required_rules':required,'disabled_rules':[r for r in p['rules'] if r not in required],
         'constraints':{'minimum_minutes':min_minutes,'utc_hours':utc_hours,'ascendant_signs':ascendant_signs},
-        'candidates':candidates,'rejected_intervals':rejected,'unresolved_intervals':unresolved,'conflicts':conflicts,
+        'candidates':candidates,'assessed_windows':assessments,'eligible_windows':[],
+        'classification_policy':REQUIREMENTS['classification'],'requirements_version':2,
+        'rejected_intervals':rejected,'unresolved_intervals':unresolved,'conflicts':conflicts,
         'source_profile':p,'source_conflicts':CATALOG['source_conflicts'],'unknown_criteria':CATALOG['incomplete_criteria'],
         'search_method':{'planet_scan_hours':3,'angle_scan_minutes':angle_step_minutes,'root_bracket_seconds':.25,
             'boundary_guard_seconds':1,'partition_points':len(ordered),
@@ -175,7 +229,7 @@ def search(ephemeris,category,start,end,latitude,longitude,profile_name='ramesey
         'reproducibility':{'kernel_sha256':ephemeris.digest,'skyfield':'1.54'},
         'limitations':['No universal score, probability of success, or guarantee that these incomplete traditional criteria establish a favorable outcome.',
                        'No horary question-chart analysis; Technique #5 remains out of scope.',
-                       'Moon applying-aspect diagnostics are instantaneous, not complete perfection/prohibition analysis.']}
+                       'Exact lunar sequence is computed; source-complete historical prohibition, fortification and radix adjudication remain indeterminate.']}
 
 def register_knowledge(registry):
     from .knowledge import Rule
@@ -185,3 +239,9 @@ def register_knowledge(registry):
             'url':p['source'],'ingestion':'metadata_only','rights_note':CATALOG['rights']})
         registry.add_rule(Rule('election.'+name,1,1,'electional',p['tradition'],sid,p['locator'],p['interpretation'],
             'election_profile',{'category':p['category'],'signs':p['signs'],'required_rules':p['rules']},'proposed','traditional',[]))
+    for key,source in REQUIREMENTS['sources'].items():
+        registry.add_source({'id':'ramesey-v2:'+key,'author':'William Ramesey','edition':'Astrologia Restaurata, 1653',
+            'url':source['url'],'ingestion':'metadata_only','rights_note':REQUIREMENTS['rights']})
+    for r in REQUIREMENTS['rules']:
+        registry.add_rule(Rule('election.retention.'+r['id'],2,1,'electional','Ramesey 1653','ramesey-v2:'+r['source'],
+            r['locator'],r['method'],'election_requirement',r,'proposed','traditional',[]))

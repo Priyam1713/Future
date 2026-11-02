@@ -1,0 +1,22 @@
+{
+  "version":2,
+  "tradition":"Ramesey 1653",
+  "category":"retain-received-money",
+  "sources":{
+    "general":{"url":"https://www.renaissanceastrology.com/electionalrameseyintro.html","locator":"Liber III, section I, chapter I, pp.122–125"},
+    "retention":{"url":"https://www.renaissanceastrology.com/electionalramesey2ndhouse.html","locator":"Liber III, second-house chapter II, p.135, retention paragraph"}
+  },
+  "rules":[
+    {"id":"retention-fixed","source":"retention","locator":"p.135","method":"Existing fixed-sign predicates","status":"implemented","exception":"Retention without employing funds; p.136 employment paragraph is a different intention."},
+    {"id":"asc-lord-direct","source":"general","locator":"p.124","method":"Longitude speed >= 0; stations separately disclosed","status":"implemented","exception":"Zero speed is not retrograde; no invented minimum speed."},
+    {"id":"moon-not-ascendant","source":"general","locator":"p.124","method":"Moon house != 1 in selected house system","status":"implemented","exception":"Other event categories may have different prescriptions; not imported here."},
+    {"id":"chief-significators-beams","source":"general","locator":"p.125","method":"Report elongation of Moon, ASC lord, second lord and Jupiter from Sun against 17 degrees","status":"partial","exception":"Sun as significator and priority among general/particular rulers require review; no automatic rejection from an assumed universal exception policy."},
+    {"id":"lunar-sequence","source":"general","locator":"pp.124–125, lunation/application paragraphs","method":"Solve moving-target contacts, lunar ingress and target stations; list intervening contacts","status":"partial","exception":"Natural benefic/malefic status can reverse by radix signification (pp.123–124). No universal first-contact verdict."},
+    {"id":"fortification","source":"general","locator":"pp.123–125","method":"Report existing dignity, reception and angularity diagnostics","status":"partial","exception":"ASC/fourth/second rulers and dispositors, Fortune and Jupiter; complete priority and impediment procedure not extracted."},
+    {"id":"radix-revolution","source":"general","locator":"p.122","method":"Requires individual radix and world-year revolution assessment","status":"unsupported","exception":"No question-chart substitute: Horary remains out of scope."},
+    {"id":"nodes-lunation","source":"general","locator":"p.124","method":"Node/luminary/house conditions and preceding lunation context","status":"unsupported","exception":"Node convention and contact limits not resolved."},
+    {"id":"perfection-prohibition","source":"general","locator":"pp.124–125","method":"Exact contacts computed; historical impediment adjudication incomplete","status":"partial","exception":"No complete source-located prohibition/exception algorithm available for this category."}
+  ],
+  "classification":"eligible only if every mandatory source requirement is verified throughout the window; definite failure rejects; missing coverage or mixed/unresolved conditions is indeterminate",
+  "rights":"Procedural summaries and locators only; no modern copyrighted delineations ingested."
+}

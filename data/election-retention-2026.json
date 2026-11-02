@@ -860,7 +860,617 @@
         ],
         "scope": "Diagnostics are not all selection filters. Unimplemented criteria are unknown, never counted as satisfied."
       },
-      "qualification": "Satisfies selected implemented predicates only; complete source requirements remain unknown."
+      "qualification": "Legacy selected-rule match; use assessment_windows classifications. No eligible election established.",
+      "classification": "indeterminate",
+      "assessment_windows": [
+        {
+          "start_inclusive_utc": "2026-11-01T17:58:40.213867+00:00",
+          "end_exclusive_utc": "2026-11-01T18:07:28.363281+00:00",
+          "classification": "rejected",
+          "reason": "Moon occupies first house: general retention-profile prohibition.",
+          "rule_trace": [
+            {
+              "id": "retention-fixed",
+              "source": "retention",
+              "locator": "p.135",
+              "method": "Existing fixed-sign predicates",
+              "status": "implemented",
+              "exception": "Retention without employing funds; p.136 employment paragraph is a different intention.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+                "locator": "Liber III, second-house chapter II, p.135, retention paragraph"
+              },
+              "result": "satisfied",
+              "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+            },
+            {
+              "id": "asc-lord-direct",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Longitude speed >= 0; stations separately disclosed",
+              "status": "implemented",
+              "exception": "Zero speed is not retrograde; no invented minimum speed.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "satisfied",
+              "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+            },
+            {
+              "id": "moon-not-ascendant",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Moon house != 1 in selected house system",
+              "status": "implemented",
+              "exception": "Other event categories may have different prescriptions; not imported here.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "violated",
+              "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+            },
+            {
+              "id": "chief-significators-beams",
+              "source": "general",
+              "locator": "p.125",
+              "method": "Report elongation of Moon, ASC lord, second lord and Jupiter from Sun against 17 degrees",
+              "status": "partial",
+              "exception": "Sun as significator and priority among general/particular rulers require review; no automatic rejection from an assumed universal exception policy.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+            },
+            {
+              "id": "lunar-sequence",
+              "source": "general",
+              "locator": "pp.124\u2013125, lunation/application paragraphs",
+              "method": "Solve moving-target contacts, lunar ingress and target stations; list intervening contacts",
+              "status": "partial",
+              "exception": "Natural benefic/malefic status can reverse by radix signification (pp.123\u2013124). No universal first-contact verdict.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+            },
+            {
+              "id": "fortification",
+              "source": "general",
+              "locator": "pp.123\u2013125",
+              "method": "Report existing dignity, reception and angularity diagnostics",
+              "status": "partial",
+              "exception": "ASC/fourth/second rulers and dispositors, Fortune and Jupiter; complete priority and impediment procedure not extracted.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+            },
+            {
+              "id": "radix-revolution",
+              "source": "general",
+              "locator": "p.122",
+              "method": "Requires individual radix and world-year revolution assessment",
+              "status": "unsupported",
+              "exception": "No question-chart substitute: Horary remains out of scope.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+            },
+            {
+              "id": "nodes-lunation",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Node/luminary/house conditions and preceding lunation context",
+              "status": "unsupported",
+              "exception": "Node convention and contact limits not resolved.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+            },
+            {
+              "id": "perfection-prohibition",
+              "source": "general",
+              "locator": "pp.124\u2013125",
+              "method": "Exact contacts computed; historical impediment adjudication incomplete",
+              "status": "partial",
+              "exception": "No complete source-located prohibition/exception algorithm available for this category.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+            }
+          ],
+          "missing_requirements": [
+            "chief-significators-beams",
+            "lunar-sequence",
+            "fortification",
+            "radix-revolution",
+            "nodes-lunation",
+            "perfection-prohibition"
+          ],
+          "chief_significator_elongations_degrees": {
+            "Sun": 0.0,
+            "Mercury": 6.470067300986244,
+            "Jupiter": 74.91521919691348,
+            "Moon": 91.30441098191818
+          },
+          "moon_house_checks": [
+            {
+              "utc": "2026-11-01T17:59:33.028808+00:00",
+              "house": 1
+            },
+            {
+              "utc": "2026-11-01T18:03:04.288574+00:00",
+              "house": 1
+            },
+            {
+              "utc": "2026-11-01T18:06:35.548340+00:00",
+              "house": 1
+            }
+          ],
+          "window_precision": "Solved Moon-house/contact boundaries; probe agreement is bounded numerical evidence, not a completeness proof."
+        },
+        {
+          "start_inclusive_utc": "2026-11-01T18:07:28.363281+00:00",
+          "end_exclusive_utc": "2026-11-01T19:49:37.393555+00:00",
+          "classification": "indeterminate",
+          "reason": "Complete mandatory coverage unavailable; partial matches cannot be promoted.",
+          "rule_trace": [
+            {
+              "id": "retention-fixed",
+              "source": "retention",
+              "locator": "p.135",
+              "method": "Existing fixed-sign predicates",
+              "status": "implemented",
+              "exception": "Retention without employing funds; p.136 employment paragraph is a different intention.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+                "locator": "Liber III, second-house chapter II, p.135, retention paragraph"
+              },
+              "result": "satisfied",
+              "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+            },
+            {
+              "id": "asc-lord-direct",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Longitude speed >= 0; stations separately disclosed",
+              "status": "implemented",
+              "exception": "Zero speed is not retrograde; no invented minimum speed.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "satisfied",
+              "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+            },
+            {
+              "id": "moon-not-ascendant",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Moon house != 1 in selected house system",
+              "status": "implemented",
+              "exception": "Other event categories may have different prescriptions; not imported here.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "satisfied",
+              "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+            },
+            {
+              "id": "chief-significators-beams",
+              "source": "general",
+              "locator": "p.125",
+              "method": "Report elongation of Moon, ASC lord, second lord and Jupiter from Sun against 17 degrees",
+              "status": "partial",
+              "exception": "Sun as significator and priority among general/particular rulers require review; no automatic rejection from an assumed universal exception policy.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+            },
+            {
+              "id": "lunar-sequence",
+              "source": "general",
+              "locator": "pp.124\u2013125, lunation/application paragraphs",
+              "method": "Solve moving-target contacts, lunar ingress and target stations; list intervening contacts",
+              "status": "partial",
+              "exception": "Natural benefic/malefic status can reverse by radix signification (pp.123\u2013124). No universal first-contact verdict.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+            },
+            {
+              "id": "fortification",
+              "source": "general",
+              "locator": "pp.123\u2013125",
+              "method": "Report existing dignity, reception and angularity diagnostics",
+              "status": "partial",
+              "exception": "ASC/fourth/second rulers and dispositors, Fortune and Jupiter; complete priority and impediment procedure not extracted.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+            },
+            {
+              "id": "radix-revolution",
+              "source": "general",
+              "locator": "p.122",
+              "method": "Requires individual radix and world-year revolution assessment",
+              "status": "unsupported",
+              "exception": "No question-chart substitute: Horary remains out of scope.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+            },
+            {
+              "id": "nodes-lunation",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Node/luminary/house conditions and preceding lunation context",
+              "status": "unsupported",
+              "exception": "Node convention and contact limits not resolved.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+            },
+            {
+              "id": "perfection-prohibition",
+              "source": "general",
+              "locator": "pp.124\u2013125",
+              "method": "Exact contacts computed; historical impediment adjudication incomplete",
+              "status": "partial",
+              "exception": "No complete source-located prohibition/exception algorithm available for this category.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+            }
+          ],
+          "missing_requirements": [
+            "chief-significators-beams",
+            "lunar-sequence",
+            "fortification",
+            "radix-revolution",
+            "nodes-lunation",
+            "perfection-prohibition"
+          ],
+          "chief_significator_elongations_degrees": {
+            "Sun": 0.0,
+            "Mercury": 6.385852678829934,
+            "Jupiter": 74.94914857761185,
+            "Moon": 90.8063371614756
+          },
+          "moon_house_checks": [
+            {
+              "utc": "2026-11-01T18:17:41.266308+00:00",
+              "house": 12
+            },
+            {
+              "utc": "2026-11-01T18:58:32.878418+00:00",
+              "house": 12
+            },
+            {
+              "utc": "2026-11-01T19:39:24.490528+00:00",
+              "house": 12
+            }
+          ],
+          "window_precision": "Solved Moon-house/contact boundaries; probe agreement is bounded numerical evidence, not a completeness proof."
+        }
+      ],
+      "lunar_sequence": {
+        "start_utc": "2026-11-01T17:58:40.213867+00:00",
+        "end_exclusive_utc": "2026-11-05T17:58:40.213867+00:00",
+        "next_moon_ingress_utc": "2026-11-03T08:27:44.952636+00:00",
+        "events": [
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-01T20:08:08.536620+00:00",
+            "target": "Saturn",
+            "aspect_degrees": 120,
+            "branch_degrees": 120,
+            "residual_degrees": 1.7435216136618692e-05,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-01T20:28:27.140136+00:00",
+            "target": "Sun",
+            "aspect_degrees": 90,
+            "branch_degrees": -90,
+            "residual_degrees": 1.0244039373219493e-05,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T06:25:47.398926+00:00",
+            "target": "Mercury",
+            "aspect_degrees": 90,
+            "branch_degrees": -90,
+            "residual_degrees": 1.465516328380545e-05,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T13:48:50.797363+00:00",
+            "target": "Mars",
+            "aspect_degrees": 0,
+            "branch_degrees": 0,
+            "residual_degrees": 1.0188378752218341e-05,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T22:50:33.409667+00:00",
+            "target": "Jupiter",
+            "aspect_degrees": 0,
+            "branch_degrees": 0,
+            "residual_degrees": 2.1891829646847327e-06,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-03T00:10:29.381347+00:00",
+            "target": "Venus",
+            "aspect_degrees": 60,
+            "branch_degrees": -60,
+            "residual_degrees": 1.3458691398682276e-05,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "moon_ingress",
+            "utc": "2026-11-03T08:27:44.952636+00:00",
+            "entering_sign": 5
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-04T05:33:47.062011+00:00",
+            "target": "Sun",
+            "aspect_degrees": 60,
+            "branch_degrees": -60,
+            "residual_degrees": 3.0018246377494506e-06,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-04T06:57:30.230957+00:00",
+            "target": "Mercury",
+            "aspect_degrees": 60,
+            "branch_degrees": -60,
+            "residual_degrees": 1.4864216240084716e-05,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "moon_ingress",
+            "utc": "2026-11-05T14:38:17.984863+00:00",
+            "entering_sign": 6
+          }
+        ],
+        "contacts_before_ingress": [
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-01T20:08:08.536620+00:00",
+            "target": "Saturn",
+            "aspect_degrees": 120,
+            "branch_degrees": 120,
+            "residual_degrees": 1.7435216136618692e-05,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating",
+            "intervening_contacts": [],
+            "perfection": "computed before next lunar ingress",
+            "historical_prohibition": "indeterminate: intervening contact alone is not a sourced prohibition rule"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-01T20:28:27.140136+00:00",
+            "target": "Sun",
+            "aspect_degrees": 90,
+            "branch_degrees": -90,
+            "residual_degrees": 1.0244039373219493e-05,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating",
+            "intervening_contacts": [
+              {
+                "utc": "2026-11-01T20:08:08.536620+00:00",
+                "target": "Saturn",
+                "aspect_degrees": 120
+              }
+            ],
+            "perfection": "computed before next lunar ingress",
+            "historical_prohibition": "indeterminate: intervening contact alone is not a sourced prohibition rule"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T06:25:47.398926+00:00",
+            "target": "Mercury",
+            "aspect_degrees": 90,
+            "branch_degrees": -90,
+            "residual_degrees": 1.465516328380545e-05,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating",
+            "intervening_contacts": [
+              {
+                "utc": "2026-11-01T20:08:08.536620+00:00",
+                "target": "Saturn",
+                "aspect_degrees": 120
+              },
+              {
+                "utc": "2026-11-01T20:28:27.140136+00:00",
+                "target": "Sun",
+                "aspect_degrees": 90
+              }
+            ],
+            "perfection": "computed before next lunar ingress",
+            "historical_prohibition": "indeterminate: intervening contact alone is not a sourced prohibition rule"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T13:48:50.797363+00:00",
+            "target": "Mars",
+            "aspect_degrees": 0,
+            "branch_degrees": 0,
+            "residual_degrees": 1.0188378752218341e-05,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating",
+            "intervening_contacts": [
+              {
+                "utc": "2026-11-01T20:08:08.536620+00:00",
+                "target": "Saturn",
+                "aspect_degrees": 120
+              },
+              {
+                "utc": "2026-11-01T20:28:27.140136+00:00",
+                "target": "Sun",
+                "aspect_degrees": 90
+              },
+              {
+                "utc": "2026-11-02T06:25:47.398926+00:00",
+                "target": "Mercury",
+                "aspect_degrees": 90
+              }
+            ],
+            "perfection": "computed before next lunar ingress",
+            "historical_prohibition": "indeterminate: intervening contact alone is not a sourced prohibition rule"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T22:50:33.409667+00:00",
+            "target": "Jupiter",
+            "aspect_degrees": 0,
+            "branch_degrees": 0,
+            "residual_degrees": 2.1891829646847327e-06,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating",
+            "intervening_contacts": [
+              {
+                "utc": "2026-11-01T20:08:08.536620+00:00",
+                "target": "Saturn",
+                "aspect_degrees": 120
+              },
+              {
+                "utc": "2026-11-01T20:28:27.140136+00:00",
+                "target": "Sun",
+                "aspect_degrees": 90
+              },
+              {
+                "utc": "2026-11-02T06:25:47.398926+00:00",
+                "target": "Mercury",
+                "aspect_degrees": 90
+              },
+              {
+                "utc": "2026-11-02T13:48:50.797363+00:00",
+                "target": "Mars",
+                "aspect_degrees": 0
+              }
+            ],
+            "perfection": "computed before next lunar ingress",
+            "historical_prohibition": "indeterminate: intervening contact alone is not a sourced prohibition rule"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-03T00:10:29.381347+00:00",
+            "target": "Venus",
+            "aspect_degrees": 60,
+            "branch_degrees": -60,
+            "residual_degrees": 1.3458691398682276e-05,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating",
+            "intervening_contacts": [
+              {
+                "utc": "2026-11-01T20:08:08.536620+00:00",
+                "target": "Saturn",
+                "aspect_degrees": 120
+              },
+              {
+                "utc": "2026-11-01T20:28:27.140136+00:00",
+                "target": "Sun",
+                "aspect_degrees": 90
+              },
+              {
+                "utc": "2026-11-02T06:25:47.398926+00:00",
+                "target": "Mercury",
+                "aspect_degrees": 90
+              },
+              {
+                "utc": "2026-11-02T13:48:50.797363+00:00",
+                "target": "Mars",
+                "aspect_degrees": 0
+              },
+              {
+                "utc": "2026-11-02T22:50:33.409667+00:00",
+                "target": "Jupiter",
+                "aspect_degrees": 0
+              }
+            ],
+            "perfection": "computed before next lunar ingress",
+            "historical_prohibition": "indeterminate: intervening contact alone is not a sourced prohibition rule"
+          }
+        ],
+        "method": {
+          "scan_hours": 1,
+          "root_bracket_seconds": 0.25,
+          "coordinates": "apparent geocentric tropical ecliptic longitude of date"
+        },
+        "limitations": [
+          "Finite horizon; a contact after ingress is not certified as same-sign perfection.",
+          "Aspect sequence is geometry, not adjudication of reception, translation, collection or prohibition.",
+          "Unseen multiple reversals within a scan hour are outside completeness guarantees."
+        ]
+      }
     },
     {
       "start_inclusive_utc": "2026-11-02T00:23:02.567382+00:00",
@@ -1676,7 +2286,356 @@
         ],
         "scope": "Diagnostics are not all selection filters. Unimplemented criteria are unknown, never counted as satisfied."
       },
-      "qualification": "Satisfies selected implemented predicates only; complete source requirements remain unknown."
+      "qualification": "Legacy selected-rule match; use assessment_windows classifications. No eligible election established.",
+      "classification": "indeterminate",
+      "assessment_windows": [
+        {
+          "start_inclusive_utc": "2026-11-02T00:23:02.567382+00:00",
+          "end_exclusive_utc": "2026-11-02T02:13:59.600586+00:00",
+          "classification": "indeterminate",
+          "reason": "Complete mandatory coverage unavailable; partial matches cannot be promoted.",
+          "rule_trace": [
+            {
+              "id": "retention-fixed",
+              "source": "retention",
+              "locator": "p.135",
+              "method": "Existing fixed-sign predicates",
+              "status": "implemented",
+              "exception": "Retention without employing funds; p.136 employment paragraph is a different intention.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+                "locator": "Liber III, second-house chapter II, p.135, retention paragraph"
+              },
+              "result": "satisfied",
+              "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+            },
+            {
+              "id": "asc-lord-direct",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Longitude speed >= 0; stations separately disclosed",
+              "status": "implemented",
+              "exception": "Zero speed is not retrograde; no invented minimum speed.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "satisfied",
+              "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+            },
+            {
+              "id": "moon-not-ascendant",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Moon house != 1 in selected house system",
+              "status": "implemented",
+              "exception": "Other event categories may have different prescriptions; not imported here.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "satisfied",
+              "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+            },
+            {
+              "id": "chief-significators-beams",
+              "source": "general",
+              "locator": "p.125",
+              "method": "Report elongation of Moon, ASC lord, second lord and Jupiter from Sun against 17 degrees",
+              "status": "partial",
+              "exception": "Sun as significator and priority among general/particular rulers require review; no automatic rejection from an assumed universal exception policy.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+            },
+            {
+              "id": "lunar-sequence",
+              "source": "general",
+              "locator": "pp.124\u2013125, lunation/application paragraphs",
+              "method": "Solve moving-target contacts, lunar ingress and target stations; list intervening contacts",
+              "status": "partial",
+              "exception": "Natural benefic/malefic status can reverse by radix signification (pp.123\u2013124). No universal first-contact verdict.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+            },
+            {
+              "id": "fortification",
+              "source": "general",
+              "locator": "pp.123\u2013125",
+              "method": "Report existing dignity, reception and angularity diagnostics",
+              "status": "partial",
+              "exception": "ASC/fourth/second rulers and dispositors, Fortune and Jupiter; complete priority and impediment procedure not extracted.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+            },
+            {
+              "id": "radix-revolution",
+              "source": "general",
+              "locator": "p.122",
+              "method": "Requires individual radix and world-year revolution assessment",
+              "status": "unsupported",
+              "exception": "No question-chart substitute: Horary remains out of scope.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+            },
+            {
+              "id": "nodes-lunation",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Node/luminary/house conditions and preceding lunation context",
+              "status": "unsupported",
+              "exception": "Node convention and contact limits not resolved.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+            },
+            {
+              "id": "perfection-prohibition",
+              "source": "general",
+              "locator": "pp.124\u2013125",
+              "method": "Exact contacts computed; historical impediment adjudication incomplete",
+              "status": "partial",
+              "exception": "No complete source-located prohibition/exception algorithm available for this category.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+            }
+          ],
+          "missing_requirements": [
+            "chief-significators-beams",
+            "lunar-sequence",
+            "fortification",
+            "radix-revolution",
+            "nodes-lunation",
+            "perfection-prohibition"
+          ],
+          "chief_significator_elongations_degrees": {
+            "Mars": 80.48074385354056,
+            "Jupiter": 75.18165580624361,
+            "Moon": 87.40532706336333
+          },
+          "moon_house_checks": [
+            {
+              "utc": "2026-11-02T00:34:08.270702+00:00",
+              "house": 10
+            },
+            {
+              "utc": "2026-11-02T01:18:31.083984+00:00",
+              "house": 9
+            },
+            {
+              "utc": "2026-11-02T02:02:53.897266+00:00",
+              "house": 9
+            }
+          ],
+          "window_precision": "Solved Moon-house/contact boundaries; probe agreement is bounded numerical evidence, not a completeness proof."
+        }
+      ],
+      "lunar_sequence": {
+        "start_utc": "2026-11-02T00:23:02.567382+00:00",
+        "end_exclusive_utc": "2026-11-06T00:23:02.567382+00:00",
+        "next_moon_ingress_utc": "2026-11-03T08:27:44.806151+00:00",
+        "events": [
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T06:25:47.472167+00:00",
+            "target": "Mercury",
+            "aspect_degrees": 90,
+            "branch_degrees": -90,
+            "residual_degrees": 1.9159214446062833e-06,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T13:48:50.650878+00:00",
+            "target": "Mars",
+            "aspect_degrees": 0,
+            "branch_degrees": 0,
+            "residual_degrees": 1.2232462552219658e-05,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T22:50:33.482909+00:00",
+            "target": "Jupiter",
+            "aspect_degrees": 0,
+            "branch_degrees": 0,
+            "residual_degrees": 1.3644294796222312e-05,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-03T00:10:29.454589+00:00",
+            "target": "Venus",
+            "aspect_degrees": 60,
+            "branch_degrees": -60,
+            "residual_degrees": 1.5483235529245576e-06,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "moon_ingress",
+            "utc": "2026-11-03T08:27:44.806151+00:00",
+            "entering_sign": 5
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-04T05:33:47.135253+00:00",
+            "target": "Sun",
+            "aspect_degrees": 60,
+            "branch_degrees": -60,
+            "residual_degrees": 1.345935882568483e-05,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-04T06:57:30.084472+00:00",
+            "target": "Mercury",
+            "aspect_degrees": 60,
+            "branch_degrees": -60,
+            "residual_degrees": 9.947683167865762e-06,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "moon_ingress",
+            "utc": "2026-11-05T14:38:18.058104+00:00",
+            "entering_sign": 6
+          }
+        ],
+        "contacts_before_ingress": [
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T06:25:47.472167+00:00",
+            "target": "Mercury",
+            "aspect_degrees": 90,
+            "branch_degrees": -90,
+            "residual_degrees": 1.9159214446062833e-06,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating",
+            "intervening_contacts": [],
+            "perfection": "computed before next lunar ingress",
+            "historical_prohibition": "indeterminate: intervening contact alone is not a sourced prohibition rule"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T13:48:50.650878+00:00",
+            "target": "Mars",
+            "aspect_degrees": 0,
+            "branch_degrees": 0,
+            "residual_degrees": 1.2232462552219658e-05,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating",
+            "intervening_contacts": [
+              {
+                "utc": "2026-11-02T06:25:47.472167+00:00",
+                "target": "Mercury",
+                "aspect_degrees": 90
+              }
+            ],
+            "perfection": "computed before next lunar ingress",
+            "historical_prohibition": "indeterminate: intervening contact alone is not a sourced prohibition rule"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T22:50:33.482909+00:00",
+            "target": "Jupiter",
+            "aspect_degrees": 0,
+            "branch_degrees": 0,
+            "residual_degrees": 1.3644294796222312e-05,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating",
+            "intervening_contacts": [
+              {
+                "utc": "2026-11-02T06:25:47.472167+00:00",
+                "target": "Mercury",
+                "aspect_degrees": 90
+              },
+              {
+                "utc": "2026-11-02T13:48:50.650878+00:00",
+                "target": "Mars",
+                "aspect_degrees": 0
+              }
+            ],
+            "perfection": "computed before next lunar ingress",
+            "historical_prohibition": "indeterminate: intervening contact alone is not a sourced prohibition rule"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-03T00:10:29.454589+00:00",
+            "target": "Venus",
+            "aspect_degrees": 60,
+            "branch_degrees": -60,
+            "residual_degrees": 1.5483235529245576e-06,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating",
+            "intervening_contacts": [
+              {
+                "utc": "2026-11-02T06:25:47.472167+00:00",
+                "target": "Mercury",
+                "aspect_degrees": 90
+              },
+              {
+                "utc": "2026-11-02T13:48:50.650878+00:00",
+                "target": "Mars",
+                "aspect_degrees": 0
+              },
+              {
+                "utc": "2026-11-02T22:50:33.482909+00:00",
+                "target": "Jupiter",
+                "aspect_degrees": 0
+              }
+            ],
+            "perfection": "computed before next lunar ingress",
+            "historical_prohibition": "indeterminate: intervening contact alone is not a sourced prohibition rule"
+          }
+        ],
+        "method": {
+          "scan_hours": 1,
+          "root_bracket_seconds": 0.25,
+          "coordinates": "apparent geocentric tropical ecliptic longitude of date"
+        },
+        "limitations": [
+          "Finite horizon; a contact after ingress is not certified as same-sign perfection.",
+          "Aspect sequence is geometry, not adjudication of reception, translation, collection or prohibition.",
+          "Unseen multiple reversals within a scan hour are outside completeness guarantees."
+        ]
+      }
     },
     {
       "start_inclusive_utc": "2026-11-02T17:54:44.227539+00:00",
@@ -2519,9 +3478,1275 @@
         ],
         "scope": "Diagnostics are not all selection filters. Unimplemented criteria are unknown, never counted as satisfied."
       },
-      "qualification": "Satisfies selected implemented predicates only; complete source requirements remain unknown."
+      "qualification": "Legacy selected-rule match; use assessment_windows classifications. No eligible election established.",
+      "classification": "indeterminate",
+      "assessment_windows": [
+        {
+          "start_inclusive_utc": "2026-11-02T17:54:44.227539+00:00",
+          "end_exclusive_utc": "2026-11-02T19:10:51.830078+00:00",
+          "classification": "rejected",
+          "reason": "Moon occupies first house: general retention-profile prohibition.",
+          "rule_trace": [
+            {
+              "id": "retention-fixed",
+              "source": "retention",
+              "locator": "p.135",
+              "method": "Existing fixed-sign predicates",
+              "status": "implemented",
+              "exception": "Retention without employing funds; p.136 employment paragraph is a different intention.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+                "locator": "Liber III, second-house chapter II, p.135, retention paragraph"
+              },
+              "result": "satisfied",
+              "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+            },
+            {
+              "id": "asc-lord-direct",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Longitude speed >= 0; stations separately disclosed",
+              "status": "implemented",
+              "exception": "Zero speed is not retrograde; no invented minimum speed.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "satisfied",
+              "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+            },
+            {
+              "id": "moon-not-ascendant",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Moon house != 1 in selected house system",
+              "status": "implemented",
+              "exception": "Other event categories may have different prescriptions; not imported here.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "violated",
+              "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+            },
+            {
+              "id": "chief-significators-beams",
+              "source": "general",
+              "locator": "p.125",
+              "method": "Report elongation of Moon, ASC lord, second lord and Jupiter from Sun against 17 degrees",
+              "status": "partial",
+              "exception": "Sun as significator and priority among general/particular rulers require review; no automatic rejection from an assumed universal exception policy.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+            },
+            {
+              "id": "lunar-sequence",
+              "source": "general",
+              "locator": "pp.124\u2013125, lunation/application paragraphs",
+              "method": "Solve moving-target contacts, lunar ingress and target stations; list intervening contacts",
+              "status": "partial",
+              "exception": "Natural benefic/malefic status can reverse by radix signification (pp.123\u2013124). No universal first-contact verdict.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+            },
+            {
+              "id": "fortification",
+              "source": "general",
+              "locator": "pp.123\u2013125",
+              "method": "Report existing dignity, reception and angularity diagnostics",
+              "status": "partial",
+              "exception": "ASC/fourth/second rulers and dispositors, Fortune and Jupiter; complete priority and impediment procedure not extracted.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+            },
+            {
+              "id": "radix-revolution",
+              "source": "general",
+              "locator": "p.122",
+              "method": "Requires individual radix and world-year revolution assessment",
+              "status": "unsupported",
+              "exception": "No question-chart substitute: Horary remains out of scope.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+            },
+            {
+              "id": "nodes-lunation",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Node/luminary/house conditions and preceding lunation context",
+              "status": "unsupported",
+              "exception": "Node convention and contact limits not resolved.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+            },
+            {
+              "id": "perfection-prohibition",
+              "source": "general",
+              "locator": "pp.124\u2013125",
+              "method": "Exact contacts computed; historical impediment adjudication incomplete",
+              "status": "partial",
+              "exception": "No complete source-located prohibition/exception algorithm available for this category.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+            }
+          ],
+          "missing_requirements": [
+            "chief-significators-beams",
+            "lunar-sequence",
+            "fortification",
+            "radix-revolution",
+            "nodes-lunation",
+            "perfection-prohibition"
+          ],
+          "chief_significator_elongations_degrees": {
+            "Sun": 0.0,
+            "Mercury": 4.197702031996926,
+            "Jupiter": 75.81558787085604,
+            "Moon": 78.2382548770311
+          },
+          "moon_house_checks": [
+            {
+              "utc": "2026-11-02T18:02:20.987793+00:00",
+              "house": 1
+            },
+            {
+              "utc": "2026-11-02T18:32:48.028809+00:00",
+              "house": 1
+            },
+            {
+              "utc": "2026-11-02T19:03:15.069824+00:00",
+              "house": 1
+            }
+          ],
+          "window_precision": "Solved Moon-house/contact boundaries; probe agreement is bounded numerical evidence, not a completeness proof."
+        },
+        {
+          "start_inclusive_utc": "2026-11-02T19:10:51.830078+00:00",
+          "end_exclusive_utc": "2026-11-02T19:45:41.407226+00:00",
+          "classification": "indeterminate",
+          "reason": "Complete mandatory coverage unavailable; partial matches cannot be promoted.",
+          "rule_trace": [
+            {
+              "id": "retention-fixed",
+              "source": "retention",
+              "locator": "p.135",
+              "method": "Existing fixed-sign predicates",
+              "status": "implemented",
+              "exception": "Retention without employing funds; p.136 employment paragraph is a different intention.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+                "locator": "Liber III, second-house chapter II, p.135, retention paragraph"
+              },
+              "result": "satisfied",
+              "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+            },
+            {
+              "id": "asc-lord-direct",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Longitude speed >= 0; stations separately disclosed",
+              "status": "implemented",
+              "exception": "Zero speed is not retrograde; no invented minimum speed.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "satisfied",
+              "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+            },
+            {
+              "id": "moon-not-ascendant",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Moon house != 1 in selected house system",
+              "status": "implemented",
+              "exception": "Other event categories may have different prescriptions; not imported here.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "satisfied",
+              "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+            },
+            {
+              "id": "chief-significators-beams",
+              "source": "general",
+              "locator": "p.125",
+              "method": "Report elongation of Moon, ASC lord, second lord and Jupiter from Sun against 17 degrees",
+              "status": "partial",
+              "exception": "Sun as significator and priority among general/particular rulers require review; no automatic rejection from an assumed universal exception policy.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+            },
+            {
+              "id": "lunar-sequence",
+              "source": "general",
+              "locator": "pp.124\u2013125, lunation/application paragraphs",
+              "method": "Solve moving-target contacts, lunar ingress and target stations; list intervening contacts",
+              "status": "partial",
+              "exception": "Natural benefic/malefic status can reverse by radix signification (pp.123\u2013124). No universal first-contact verdict.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+            },
+            {
+              "id": "fortification",
+              "source": "general",
+              "locator": "pp.123\u2013125",
+              "method": "Report existing dignity, reception and angularity diagnostics",
+              "status": "partial",
+              "exception": "ASC/fourth/second rulers and dispositors, Fortune and Jupiter; complete priority and impediment procedure not extracted.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+            },
+            {
+              "id": "radix-revolution",
+              "source": "general",
+              "locator": "p.122",
+              "method": "Requires individual radix and world-year revolution assessment",
+              "status": "unsupported",
+              "exception": "No question-chart substitute: Horary remains out of scope.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+            },
+            {
+              "id": "nodes-lunation",
+              "source": "general",
+              "locator": "p.124",
+              "method": "Node/luminary/house conditions and preceding lunation context",
+              "status": "unsupported",
+              "exception": "Node convention and contact limits not resolved.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+            },
+            {
+              "id": "perfection-prohibition",
+              "source": "general",
+              "locator": "pp.124\u2013125",
+              "method": "Exact contacts computed; historical impediment adjudication incomplete",
+              "status": "partial",
+              "exception": "No complete source-located prohibition/exception algorithm available for this category.",
+              "source_reference": {
+                "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+                "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+              },
+              "result": "indeterminate",
+              "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+            }
+          ],
+          "missing_requirements": [
+            "chief-significators-beams",
+            "lunar-sequence",
+            "fortification",
+            "radix-revolution",
+            "nodes-lunation",
+            "perfection-prohibition"
+          ],
+          "chief_significator_elongations_degrees": {
+            "Sun": 0.0,
+            "Mercury": 4.110474617118001,
+            "Jupiter": 75.84963383514446,
+            "Moon": 77.75021717324029
+          },
+          "moon_house_checks": [
+            {
+              "utc": "2026-11-02T19:14:20.787793+00:00",
+              "house": 12
+            },
+            {
+              "utc": "2026-11-02T19:28:16.618652+00:00",
+              "house": 12
+            },
+            {
+              "utc": "2026-11-02T19:42:12.449511+00:00",
+              "house": 12
+            }
+          ],
+          "window_precision": "Solved Moon-house/contact boundaries; probe agreement is bounded numerical evidence, not a completeness proof."
+        }
+      ],
+      "lunar_sequence": {
+        "start_utc": "2026-11-02T17:54:44.227539+00:00",
+        "end_exclusive_utc": "2026-11-06T17:54:44.227539+00:00",
+        "next_moon_ingress_utc": "2026-11-03T08:27:44.952636+00:00",
+        "events": [
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T22:50:33.409667+00:00",
+            "target": "Jupiter",
+            "aspect_degrees": 0,
+            "branch_degrees": 0,
+            "residual_degrees": 2.1891829646847327e-06,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-03T00:10:29.381348+00:00",
+            "target": "Venus",
+            "aspect_degrees": 60,
+            "branch_degrees": -60,
+            "residual_degrees": 1.3458529451781942e-05,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "moon_ingress",
+            "utc": "2026-11-03T08:27:44.952636+00:00",
+            "entering_sign": 5
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-04T05:33:47.062011+00:00",
+            "target": "Sun",
+            "aspect_degrees": 60,
+            "branch_degrees": -60,
+            "residual_degrees": 3.0018246377494506e-06,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-04T06:57:30.230957+00:00",
+            "target": "Mercury",
+            "aspect_degrees": 60,
+            "branch_degrees": -60,
+            "residual_degrees": 1.4864216240084716e-05,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          },
+          {
+            "type": "moon_ingress",
+            "utc": "2026-11-05T14:38:17.984863+00:00",
+            "entering_sign": 6
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-06T07:11:51.559082+00:00",
+            "target": "Saturn",
+            "aspect_degrees": 180,
+            "branch_degrees": 180,
+            "residual_degrees": 6.5313943196088076e-06,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating"
+          }
+        ],
+        "contacts_before_ingress": [
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-02T22:50:33.409667+00:00",
+            "target": "Jupiter",
+            "aspect_degrees": 0,
+            "branch_degrees": 0,
+            "residual_degrees": 2.1891829646847327e-06,
+            "target_retrograde": false,
+            "phase_before": "applying",
+            "phase_after": "separating",
+            "intervening_contacts": [],
+            "perfection": "computed before next lunar ingress",
+            "historical_prohibition": "indeterminate: intervening contact alone is not a sourced prohibition rule"
+          },
+          {
+            "type": "exact_aspect",
+            "utc": "2026-11-03T00:10:29.381348+00:00",
+            "target": "Venus",
+            "aspect_degrees": 60,
+            "branch_degrees": -60,
+            "residual_degrees": 1.3458529451781942e-05,
+            "target_retrograde": true,
+            "phase_before": "applying",
+            "phase_after": "separating",
+            "intervening_contacts": [
+              {
+                "utc": "2026-11-02T22:50:33.409667+00:00",
+                "target": "Jupiter",
+                "aspect_degrees": 0
+              }
+            ],
+            "perfection": "computed before next lunar ingress",
+            "historical_prohibition": "indeterminate: intervening contact alone is not a sourced prohibition rule"
+          }
+        ],
+        "method": {
+          "scan_hours": 1,
+          "root_bracket_seconds": 0.25,
+          "coordinates": "apparent geocentric tropical ecliptic longitude of date"
+        },
+        "limitations": [
+          "Finite horizon; a contact after ingress is not certified as same-sign perfection.",
+          "Aspect sequence is geometry, not adjudication of reception, translation, collection or prohibition.",
+          "Unseen multiple reversals within a scan hour are outside completeness guarantees."
+        ]
+      }
     }
   ],
+  "assessed_windows": [
+    {
+      "start_inclusive_utc": "2026-11-01T17:58:40.213867+00:00",
+      "end_exclusive_utc": "2026-11-01T18:07:28.363281+00:00",
+      "classification": "rejected",
+      "reason": "Moon occupies first house: general retention-profile prohibition.",
+      "rule_trace": [
+        {
+          "id": "retention-fixed",
+          "source": "retention",
+          "locator": "p.135",
+          "method": "Existing fixed-sign predicates",
+          "status": "implemented",
+          "exception": "Retention without employing funds; p.136 employment paragraph is a different intention.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+            "locator": "Liber III, second-house chapter II, p.135, retention paragraph"
+          },
+          "result": "satisfied",
+          "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+        },
+        {
+          "id": "asc-lord-direct",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Longitude speed >= 0; stations separately disclosed",
+          "status": "implemented",
+          "exception": "Zero speed is not retrograde; no invented minimum speed.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "satisfied",
+          "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+        },
+        {
+          "id": "moon-not-ascendant",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Moon house != 1 in selected house system",
+          "status": "implemented",
+          "exception": "Other event categories may have different prescriptions; not imported here.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "violated",
+          "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+        },
+        {
+          "id": "chief-significators-beams",
+          "source": "general",
+          "locator": "p.125",
+          "method": "Report elongation of Moon, ASC lord, second lord and Jupiter from Sun against 17 degrees",
+          "status": "partial",
+          "exception": "Sun as significator and priority among general/particular rulers require review; no automatic rejection from an assumed universal exception policy.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+        },
+        {
+          "id": "lunar-sequence",
+          "source": "general",
+          "locator": "pp.124\u2013125, lunation/application paragraphs",
+          "method": "Solve moving-target contacts, lunar ingress and target stations; list intervening contacts",
+          "status": "partial",
+          "exception": "Natural benefic/malefic status can reverse by radix signification (pp.123\u2013124). No universal first-contact verdict.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+        },
+        {
+          "id": "fortification",
+          "source": "general",
+          "locator": "pp.123\u2013125",
+          "method": "Report existing dignity, reception and angularity diagnostics",
+          "status": "partial",
+          "exception": "ASC/fourth/second rulers and dispositors, Fortune and Jupiter; complete priority and impediment procedure not extracted.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+        },
+        {
+          "id": "radix-revolution",
+          "source": "general",
+          "locator": "p.122",
+          "method": "Requires individual radix and world-year revolution assessment",
+          "status": "unsupported",
+          "exception": "No question-chart substitute: Horary remains out of scope.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+        },
+        {
+          "id": "nodes-lunation",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Node/luminary/house conditions and preceding lunation context",
+          "status": "unsupported",
+          "exception": "Node convention and contact limits not resolved.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+        },
+        {
+          "id": "perfection-prohibition",
+          "source": "general",
+          "locator": "pp.124\u2013125",
+          "method": "Exact contacts computed; historical impediment adjudication incomplete",
+          "status": "partial",
+          "exception": "No complete source-located prohibition/exception algorithm available for this category.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-01T18:03:04.288574+00:00"
+        }
+      ],
+      "missing_requirements": [
+        "chief-significators-beams",
+        "lunar-sequence",
+        "fortification",
+        "radix-revolution",
+        "nodes-lunation",
+        "perfection-prohibition"
+      ],
+      "chief_significator_elongations_degrees": {
+        "Sun": 0.0,
+        "Mercury": 6.470067300986244,
+        "Jupiter": 74.91521919691348,
+        "Moon": 91.30441098191818
+      },
+      "moon_house_checks": [
+        {
+          "utc": "2026-11-01T17:59:33.028808+00:00",
+          "house": 1
+        },
+        {
+          "utc": "2026-11-01T18:03:04.288574+00:00",
+          "house": 1
+        },
+        {
+          "utc": "2026-11-01T18:06:35.548340+00:00",
+          "house": 1
+        }
+      ],
+      "window_precision": "Solved Moon-house/contact boundaries; probe agreement is bounded numerical evidence, not a completeness proof."
+    },
+    {
+      "start_inclusive_utc": "2026-11-01T18:07:28.363281+00:00",
+      "end_exclusive_utc": "2026-11-01T19:49:37.393555+00:00",
+      "classification": "indeterminate",
+      "reason": "Complete mandatory coverage unavailable; partial matches cannot be promoted.",
+      "rule_trace": [
+        {
+          "id": "retention-fixed",
+          "source": "retention",
+          "locator": "p.135",
+          "method": "Existing fixed-sign predicates",
+          "status": "implemented",
+          "exception": "Retention without employing funds; p.136 employment paragraph is a different intention.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+            "locator": "Liber III, second-house chapter II, p.135, retention paragraph"
+          },
+          "result": "satisfied",
+          "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+        },
+        {
+          "id": "asc-lord-direct",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Longitude speed >= 0; stations separately disclosed",
+          "status": "implemented",
+          "exception": "Zero speed is not retrograde; no invented minimum speed.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "satisfied",
+          "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+        },
+        {
+          "id": "moon-not-ascendant",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Moon house != 1 in selected house system",
+          "status": "implemented",
+          "exception": "Other event categories may have different prescriptions; not imported here.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "satisfied",
+          "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+        },
+        {
+          "id": "chief-significators-beams",
+          "source": "general",
+          "locator": "p.125",
+          "method": "Report elongation of Moon, ASC lord, second lord and Jupiter from Sun against 17 degrees",
+          "status": "partial",
+          "exception": "Sun as significator and priority among general/particular rulers require review; no automatic rejection from an assumed universal exception policy.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+        },
+        {
+          "id": "lunar-sequence",
+          "source": "general",
+          "locator": "pp.124\u2013125, lunation/application paragraphs",
+          "method": "Solve moving-target contacts, lunar ingress and target stations; list intervening contacts",
+          "status": "partial",
+          "exception": "Natural benefic/malefic status can reverse by radix signification (pp.123\u2013124). No universal first-contact verdict.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+        },
+        {
+          "id": "fortification",
+          "source": "general",
+          "locator": "pp.123\u2013125",
+          "method": "Report existing dignity, reception and angularity diagnostics",
+          "status": "partial",
+          "exception": "ASC/fourth/second rulers and dispositors, Fortune and Jupiter; complete priority and impediment procedure not extracted.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+        },
+        {
+          "id": "radix-revolution",
+          "source": "general",
+          "locator": "p.122",
+          "method": "Requires individual radix and world-year revolution assessment",
+          "status": "unsupported",
+          "exception": "No question-chart substitute: Horary remains out of scope.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+        },
+        {
+          "id": "nodes-lunation",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Node/luminary/house conditions and preceding lunation context",
+          "status": "unsupported",
+          "exception": "Node convention and contact limits not resolved.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+        },
+        {
+          "id": "perfection-prohibition",
+          "source": "general",
+          "locator": "pp.124\u2013125",
+          "method": "Exact contacts computed; historical impediment adjudication incomplete",
+          "status": "partial",
+          "exception": "No complete source-located prohibition/exception algorithm available for this category.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-01T18:58:32.878418+00:00"
+        }
+      ],
+      "missing_requirements": [
+        "chief-significators-beams",
+        "lunar-sequence",
+        "fortification",
+        "radix-revolution",
+        "nodes-lunation",
+        "perfection-prohibition"
+      ],
+      "chief_significator_elongations_degrees": {
+        "Sun": 0.0,
+        "Mercury": 6.385852678829934,
+        "Jupiter": 74.94914857761185,
+        "Moon": 90.8063371614756
+      },
+      "moon_house_checks": [
+        {
+          "utc": "2026-11-01T18:17:41.266308+00:00",
+          "house": 12
+        },
+        {
+          "utc": "2026-11-01T18:58:32.878418+00:00",
+          "house": 12
+        },
+        {
+          "utc": "2026-11-01T19:39:24.490528+00:00",
+          "house": 12
+        }
+      ],
+      "window_precision": "Solved Moon-house/contact boundaries; probe agreement is bounded numerical evidence, not a completeness proof."
+    },
+    {
+      "start_inclusive_utc": "2026-11-02T00:23:02.567382+00:00",
+      "end_exclusive_utc": "2026-11-02T02:13:59.600586+00:00",
+      "classification": "indeterminate",
+      "reason": "Complete mandatory coverage unavailable; partial matches cannot be promoted.",
+      "rule_trace": [
+        {
+          "id": "retention-fixed",
+          "source": "retention",
+          "locator": "p.135",
+          "method": "Existing fixed-sign predicates",
+          "status": "implemented",
+          "exception": "Retention without employing funds; p.136 employment paragraph is a different intention.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+            "locator": "Liber III, second-house chapter II, p.135, retention paragraph"
+          },
+          "result": "satisfied",
+          "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+        },
+        {
+          "id": "asc-lord-direct",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Longitude speed >= 0; stations separately disclosed",
+          "status": "implemented",
+          "exception": "Zero speed is not retrograde; no invented minimum speed.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "satisfied",
+          "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+        },
+        {
+          "id": "moon-not-ascendant",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Moon house != 1 in selected house system",
+          "status": "implemented",
+          "exception": "Other event categories may have different prescriptions; not imported here.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "satisfied",
+          "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+        },
+        {
+          "id": "chief-significators-beams",
+          "source": "general",
+          "locator": "p.125",
+          "method": "Report elongation of Moon, ASC lord, second lord and Jupiter from Sun against 17 degrees",
+          "status": "partial",
+          "exception": "Sun as significator and priority among general/particular rulers require review; no automatic rejection from an assumed universal exception policy.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+        },
+        {
+          "id": "lunar-sequence",
+          "source": "general",
+          "locator": "pp.124\u2013125, lunation/application paragraphs",
+          "method": "Solve moving-target contacts, lunar ingress and target stations; list intervening contacts",
+          "status": "partial",
+          "exception": "Natural benefic/malefic status can reverse by radix signification (pp.123\u2013124). No universal first-contact verdict.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+        },
+        {
+          "id": "fortification",
+          "source": "general",
+          "locator": "pp.123\u2013125",
+          "method": "Report existing dignity, reception and angularity diagnostics",
+          "status": "partial",
+          "exception": "ASC/fourth/second rulers and dispositors, Fortune and Jupiter; complete priority and impediment procedure not extracted.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+        },
+        {
+          "id": "radix-revolution",
+          "source": "general",
+          "locator": "p.122",
+          "method": "Requires individual radix and world-year revolution assessment",
+          "status": "unsupported",
+          "exception": "No question-chart substitute: Horary remains out of scope.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+        },
+        {
+          "id": "nodes-lunation",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Node/luminary/house conditions and preceding lunation context",
+          "status": "unsupported",
+          "exception": "Node convention and contact limits not resolved.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+        },
+        {
+          "id": "perfection-prohibition",
+          "source": "general",
+          "locator": "pp.124\u2013125",
+          "method": "Exact contacts computed; historical impediment adjudication incomplete",
+          "status": "partial",
+          "exception": "No complete source-located prohibition/exception algorithm available for this category.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T01:18:31.083984+00:00"
+        }
+      ],
+      "missing_requirements": [
+        "chief-significators-beams",
+        "lunar-sequence",
+        "fortification",
+        "radix-revolution",
+        "nodes-lunation",
+        "perfection-prohibition"
+      ],
+      "chief_significator_elongations_degrees": {
+        "Mars": 80.48074385354056,
+        "Jupiter": 75.18165580624361,
+        "Moon": 87.40532706336333
+      },
+      "moon_house_checks": [
+        {
+          "utc": "2026-11-02T00:34:08.270702+00:00",
+          "house": 10
+        },
+        {
+          "utc": "2026-11-02T01:18:31.083984+00:00",
+          "house": 9
+        },
+        {
+          "utc": "2026-11-02T02:02:53.897266+00:00",
+          "house": 9
+        }
+      ],
+      "window_precision": "Solved Moon-house/contact boundaries; probe agreement is bounded numerical evidence, not a completeness proof."
+    },
+    {
+      "start_inclusive_utc": "2026-11-02T17:54:44.227539+00:00",
+      "end_exclusive_utc": "2026-11-02T19:10:51.830078+00:00",
+      "classification": "rejected",
+      "reason": "Moon occupies first house: general retention-profile prohibition.",
+      "rule_trace": [
+        {
+          "id": "retention-fixed",
+          "source": "retention",
+          "locator": "p.135",
+          "method": "Existing fixed-sign predicates",
+          "status": "implemented",
+          "exception": "Retention without employing funds; p.136 employment paragraph is a different intention.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+            "locator": "Liber III, second-house chapter II, p.135, retention paragraph"
+          },
+          "result": "satisfied",
+          "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+        },
+        {
+          "id": "asc-lord-direct",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Longitude speed >= 0; stations separately disclosed",
+          "status": "implemented",
+          "exception": "Zero speed is not retrograde; no invented minimum speed.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "satisfied",
+          "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+        },
+        {
+          "id": "moon-not-ascendant",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Moon house != 1 in selected house system",
+          "status": "implemented",
+          "exception": "Other event categories may have different prescriptions; not imported here.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "violated",
+          "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+        },
+        {
+          "id": "chief-significators-beams",
+          "source": "general",
+          "locator": "p.125",
+          "method": "Report elongation of Moon, ASC lord, second lord and Jupiter from Sun against 17 degrees",
+          "status": "partial",
+          "exception": "Sun as significator and priority among general/particular rulers require review; no automatic rejection from an assumed universal exception policy.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+        },
+        {
+          "id": "lunar-sequence",
+          "source": "general",
+          "locator": "pp.124\u2013125, lunation/application paragraphs",
+          "method": "Solve moving-target contacts, lunar ingress and target stations; list intervening contacts",
+          "status": "partial",
+          "exception": "Natural benefic/malefic status can reverse by radix signification (pp.123\u2013124). No universal first-contact verdict.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+        },
+        {
+          "id": "fortification",
+          "source": "general",
+          "locator": "pp.123\u2013125",
+          "method": "Report existing dignity, reception and angularity diagnostics",
+          "status": "partial",
+          "exception": "ASC/fourth/second rulers and dispositors, Fortune and Jupiter; complete priority and impediment procedure not extracted.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+        },
+        {
+          "id": "radix-revolution",
+          "source": "general",
+          "locator": "p.122",
+          "method": "Requires individual radix and world-year revolution assessment",
+          "status": "unsupported",
+          "exception": "No question-chart substitute: Horary remains out of scope.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+        },
+        {
+          "id": "nodes-lunation",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Node/luminary/house conditions and preceding lunation context",
+          "status": "unsupported",
+          "exception": "Node convention and contact limits not resolved.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+        },
+        {
+          "id": "perfection-prohibition",
+          "source": "general",
+          "locator": "pp.124\u2013125",
+          "method": "Exact contacts computed; historical impediment adjudication incomplete",
+          "status": "partial",
+          "exception": "No complete source-located prohibition/exception algorithm available for this category.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T18:32:48.028809+00:00"
+        }
+      ],
+      "missing_requirements": [
+        "chief-significators-beams",
+        "lunar-sequence",
+        "fortification",
+        "radix-revolution",
+        "nodes-lunation",
+        "perfection-prohibition"
+      ],
+      "chief_significator_elongations_degrees": {
+        "Sun": 0.0,
+        "Mercury": 4.197702031996926,
+        "Jupiter": 75.81558787085604,
+        "Moon": 78.2382548770311
+      },
+      "moon_house_checks": [
+        {
+          "utc": "2026-11-02T18:02:20.987793+00:00",
+          "house": 1
+        },
+        {
+          "utc": "2026-11-02T18:32:48.028809+00:00",
+          "house": 1
+        },
+        {
+          "utc": "2026-11-02T19:03:15.069824+00:00",
+          "house": 1
+        }
+      ],
+      "window_precision": "Solved Moon-house/contact boundaries; probe agreement is bounded numerical evidence, not a completeness proof."
+    },
+    {
+      "start_inclusive_utc": "2026-11-02T19:10:51.830078+00:00",
+      "end_exclusive_utc": "2026-11-02T19:45:41.407226+00:00",
+      "classification": "indeterminate",
+      "reason": "Complete mandatory coverage unavailable; partial matches cannot be promoted.",
+      "rule_trace": [
+        {
+          "id": "retention-fixed",
+          "source": "retention",
+          "locator": "p.135",
+          "method": "Existing fixed-sign predicates",
+          "status": "implemented",
+          "exception": "Retention without employing funds; p.136 employment paragraph is a different intention.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+            "locator": "Liber III, second-house chapter II, p.135, retention paragraph"
+          },
+          "result": "satisfied",
+          "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+        },
+        {
+          "id": "asc-lord-direct",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Longitude speed >= 0; stations separately disclosed",
+          "status": "implemented",
+          "exception": "Zero speed is not retrograde; no invented minimum speed.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "satisfied",
+          "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+        },
+        {
+          "id": "moon-not-ascendant",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Moon house != 1 in selected house system",
+          "status": "implemented",
+          "exception": "Other event categories may have different prescriptions; not imported here.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "satisfied",
+          "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+        },
+        {
+          "id": "chief-significators-beams",
+          "source": "general",
+          "locator": "p.125",
+          "method": "Report elongation of Moon, ASC lord, second lord and Jupiter from Sun against 17 degrees",
+          "status": "partial",
+          "exception": "Sun as significator and priority among general/particular rulers require review; no automatic rejection from an assumed universal exception policy.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+        },
+        {
+          "id": "lunar-sequence",
+          "source": "general",
+          "locator": "pp.124\u2013125, lunation/application paragraphs",
+          "method": "Solve moving-target contacts, lunar ingress and target stations; list intervening contacts",
+          "status": "partial",
+          "exception": "Natural benefic/malefic status can reverse by radix signification (pp.123\u2013124). No universal first-contact verdict.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+        },
+        {
+          "id": "fortification",
+          "source": "general",
+          "locator": "pp.123\u2013125",
+          "method": "Report existing dignity, reception and angularity diagnostics",
+          "status": "partial",
+          "exception": "ASC/fourth/second rulers and dispositors, Fortune and Jupiter; complete priority and impediment procedure not extracted.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+        },
+        {
+          "id": "radix-revolution",
+          "source": "general",
+          "locator": "p.122",
+          "method": "Requires individual radix and world-year revolution assessment",
+          "status": "unsupported",
+          "exception": "No question-chart substitute: Horary remains out of scope.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+        },
+        {
+          "id": "nodes-lunation",
+          "source": "general",
+          "locator": "p.124",
+          "method": "Node/luminary/house conditions and preceding lunation context",
+          "status": "unsupported",
+          "exception": "Node convention and contact limits not resolved.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+        },
+        {
+          "id": "perfection-prohibition",
+          "source": "general",
+          "locator": "pp.124\u2013125",
+          "method": "Exact contacts computed; historical impediment adjudication incomplete",
+          "status": "partial",
+          "exception": "No complete source-located prohibition/exception algorithm available for this category.",
+          "source_reference": {
+            "url": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+            "locator": "Liber III, section I, chapter I, pp.122\u2013125"
+          },
+          "result": "indeterminate",
+          "evaluated_utc": "2026-11-02T19:28:16.618652+00:00"
+        }
+      ],
+      "missing_requirements": [
+        "chief-significators-beams",
+        "lunar-sequence",
+        "fortification",
+        "radix-revolution",
+        "nodes-lunation",
+        "perfection-prohibition"
+      ],
+      "chief_significator_elongations_degrees": {
+        "Sun": 0.0,
+        "Mercury": 4.110474617118001,
+        "Jupiter": 75.84963383514446,
+        "Moon": 77.75021717324029
+      },
+      "moon_house_checks": [
+        {
+          "utc": "2026-11-02T19:14:20.787793+00:00",
+          "house": 12
+        },
+        {
+          "utc": "2026-11-02T19:28:16.618652+00:00",
+          "house": 12
+        },
+        {
+          "utc": "2026-11-02T19:42:12.449511+00:00",
+          "house": 12
+        }
+      ],
+      "window_precision": "Solved Moon-house/contact boundaries; probe agreement is bounded numerical evidence, not a completeness proof."
+    }
+  ],
+  "eligible_windows": [],
+  "classification_policy": "eligible only if every mandatory source requirement is verified throughout the window; definite failure rejects; missing coverage or mixed/unresolved conditions is indeterminate",
+  "requirements_version": 2,
   "rejected_intervals": [
     {
       "start": "2026-11-01T00:00:00+00:00",
@@ -2533,7 +4758,40 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "moon-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T00:18:38.188476+00:00",
@@ -2545,7 +4803,40 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "moon-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T00:26:57.407226+00:00",
@@ -2553,7 +4844,16 @@
       "violated_required": [
         "moon-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "moon-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T00:41:03.500976+00:00",
@@ -2561,7 +4861,16 @@
       "violated_required": [
         "moon-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "moon-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T02:17:56.586914+00:00",
@@ -2570,7 +4879,22 @@
         "moon-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "moon-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T02:46:58.139648+00:00",
@@ -2580,7 +4904,28 @@
         "moon-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "moon-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T02:56:45.249023+00:00",
@@ -2591,7 +4936,34 @@
         "second-ruler-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "moon-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T04:09:16.860351+00:00",
@@ -2602,7 +4974,34 @@
         "second-ruler-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "moon-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T04:18:11.299439+00:00",
@@ -2612,7 +5011,28 @@
         "second-ruler-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T04:57:48.237305+00:00",
@@ -2622,7 +5042,28 @@
         "second-ruler-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T05:03:51.079101+00:00",
@@ -2634,7 +5075,40 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T06:00:37.133789+00:00",
@@ -2646,7 +5120,40 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T06:39:14.077148+00:00",
@@ -2657,7 +5164,34 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T07:03:42.875976+00:00",
@@ -2666,7 +5200,22 @@
         "asc-ruler-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T07:59:55.532226+00:00",
@@ -2676,7 +5225,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T08:08:37.602539+00:00",
@@ -2686,7 +5256,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T08:42:18.793945+00:00",
@@ -2695,7 +5286,22 @@
         "asc-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T09:38:01.127930+00:00",
@@ -2705,7 +5311,28 @@
         "second-ruler-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T10:08:17.827148+00:00",
@@ -2715,7 +5342,28 @@
         "second-ruler-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T11:19:26.967773+00:00",
@@ -2724,7 +5372,22 @@
         "asc-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T11:34:16.860351+00:00",
@@ -2734,7 +5397,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T12:16:40.268555+00:00",
@@ -2743,7 +5427,22 @@
         "asc-ruler-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T13:12:52.924805+00:00",
@@ -2753,7 +5452,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T13:20:29.809570+00:00",
@@ -2763,7 +5483,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T14:15:58.666992+00:00",
@@ -2773,7 +5514,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T15:12:44.575195+00:00",
@@ -2782,7 +5544,22 @@
         "asc-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T15:36:11.557617+00:00",
@@ -2791,7 +5568,22 @@
         "asc-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T16:07:18.940430+00:00",
@@ -2800,7 +5592,22 @@
         "asc-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T17:29:37.661132+00:00",
@@ -2808,7 +5615,16 @@
       "violated_required": [
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T17:53:22.514648+00:00",
@@ -2816,7 +5632,16 @@
       "violated_required": [
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-01T19:49:38.393555+00:00",
@@ -2826,7 +5651,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T19:57:57.612305+00:00",
@@ -2836,7 +5682,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T20:06:39.536132+00:00",
@@ -2847,7 +5714,34 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T22:06:19.907226+00:00",
@@ -2859,7 +5753,40 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-01T22:19:56.704101+00:00",
@@ -2870,7 +5797,34 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T00:14:42.348632+00:00",
@@ -2881,7 +5835,34 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T02:14:00.600586+00:00",
@@ -2889,7 +5870,16 @@
       "violated_required": [
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T02:43:02.299805+00:00",
@@ -2898,7 +5888,22 @@
         "asc-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T02:52:49.409180+00:00",
@@ -2908,7 +5913,28 @@
         "second-ruler-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T04:05:21.020507+00:00",
@@ -2918,7 +5944,28 @@
         "second-ruler-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T04:53:52.250976+00:00",
@@ -2928,7 +5975,28 @@
         "second-ruler-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T04:59:55.239257+00:00",
@@ -2940,7 +6008,40 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T05:56:41.293945+00:00",
@@ -2952,7 +6053,40 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T06:35:18.090820+00:00",
@@ -2963,7 +6097,34 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T06:59:46.889648+00:00",
@@ -2972,7 +6133,22 @@
         "asc-ruler-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T07:55:59.692382+00:00",
@@ -2982,7 +6158,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T08:04:41.616211+00:00",
@@ -2992,7 +6189,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T08:38:22.954101+00:00",
@@ -3001,7 +6219,22 @@
         "asc-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T09:34:05.141601+00:00",
@@ -3011,7 +6244,28 @@
         "second-ruler-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T10:04:21.987305+00:00",
@@ -3021,7 +6275,28 @@
         "second-ruler-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T11:15:30.981445+00:00",
@@ -3030,7 +6305,22 @@
         "asc-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T11:30:21.020507+00:00",
@@ -3040,7 +6330,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T12:12:44.282226+00:00",
@@ -3049,7 +6360,22 @@
         "asc-ruler-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T13:08:56.938476+00:00",
@@ -3059,7 +6385,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T13:16:33.823242+00:00",
@@ -3069,7 +6416,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T14:12:02.680664+00:00",
@@ -3079,7 +6447,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T15:08:48.735351+00:00",
@@ -3088,7 +6477,22 @@
         "asc-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T15:32:15.717773+00:00",
@@ -3097,7 +6501,22 @@
         "asc-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T16:03:22.954101+00:00",
@@ -3106,7 +6525,22 @@
         "asc-sign",
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T17:25:41.674805+00:00",
@@ -3114,7 +6548,16 @@
       "violated_required": [
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T17:49:26.528320+00:00",
@@ -3122,7 +6565,16 @@
       "violated_required": [
         "angles-sign"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        }
+      ]
     },
     {
       "start": "2026-11-02T19:45:42.407226+00:00",
@@ -3132,7 +6584,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T19:54:01.625976+00:00",
@@ -3142,7 +6615,28 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T20:02:43.696289+00:00",
@@ -3153,7 +6647,34 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T22:02:24.067382+00:00",
@@ -3165,7 +6686,40 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "second-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     },
     {
       "start": "2026-11-02T22:16:00.717773+00:00",
@@ -3176,7 +6730,34 @@
         "angles-sign",
         "asc-ruler-direct"
       ],
-      "user_constraints_satisfied": true
+      "user_constraints_satisfied": true,
+      "classification": "rejected",
+      "rule_trace": [
+        {
+          "id": "asc-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "angles-sign",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalramesey2ndhouse.html",
+          "locator": "Liber III, second-house elections, chapter II, p.135: received money remaining long"
+        },
+        {
+          "id": "asc-ruler-direct",
+          "status": "violated",
+          "source": "https://www.renaissanceastrology.com/electionalrameseyintro.html",
+          "locator": "Liber III, introductory chapter I, p.124: Ascendant lord retrogradation"
+        }
+      ]
     }
   ],
   "unresolved_intervals": [],
@@ -3235,6 +6816,6 @@
   "limitations": [
     "No universal score, probability of success, or guarantee that these incomplete traditional criteria establish a favorable outcome.",
     "No horary question-chart analysis; Technique #5 remains out of scope.",
-    "Moon applying-aspect diagnostics are instantaneous, not complete perfection/prohibition analysis."
+    "Exact lunar sequence is computed; source-complete historical prohibition, fortification and radix adjudication remain indeterminate."
   ]
 }

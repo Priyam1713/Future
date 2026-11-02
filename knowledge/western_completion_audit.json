@@ -1,22 +1,71 @@
 {
- "technique_id":1,"date":"2026-11-02","status":"Developing",
- "basis":"Current executable modules, tests, original inventory variations and explicit source coverage; no Technique 2 work.",
- "variation_audit":[
-  {"variation":"natal","working":"Tropical positions, six house systems, sect/dignities/reception/Lots with explicit profiles.","remaining":"More published end-to-end reference charts, historical time reconstruction and direct interpretation coverage."},
-  {"variation":"transits/progressions","working":"Transit windows, exact/repeated contacts, secondary planets and named angle conventions.","remaining":"Sparse direct delineations; sampling completeness remains bounded. Other timing methods are not implied by these names."},
-  {"variation":"Hellenistic","working":"Sect, Dorothean triplicities, Egyptian bounds, Lots and annual whole-sign profections.","remaining":"Zodiacal releasing, more original-text rule examples and additional doctrinal exceptions."},
-  {"variation":"medieval/traditional","working":"Lilly-profile dignities/proximity, receptions, Lots and source-scoped rule traces.","remaining":"Full reception/perfection doctrine, actual visibility, historical table variants and broader source access."},
-  {"variation":"modern psychological","working":"Selected direct transit readings and clearly labeled composed context; Solar Return methodology.","remaining":"Substantial direct natal/return/progression interpretation gaps. No copyrighted book text is assumed licensed."},
-  {"variation":"electional","working":"Two narrow Ramesey intention profiles, boundary-based search and full rule diagnostics.","remaining":"Only explicit sign/motion subset is selected; complete fortification, radix/revolution context, Moon perfection/prohibition, nodes and authorized Dorotheus Book V rules are incomplete."}
- ],
- "proposed_completion_gates":[
-  "Enumerate supported procedures and configurations for each original variation; never use a tradition label to imply every doctrine is implemented.",
-  "Every advertised calculation/rule family needs source-located examples and independent checks, with explicit unsupported cases.",
-  "At least one electional category must evaluate its documented core requirements and exceptions end to end; a partial-rule candidate list is not sufficient to mark electional complete.",
-  "Direct, compositional and unsupported interpretations must remain distinguishable; missing source access cannot be relabeled completed extraction.",
-  "Establish reproducible supported-date/time/domain guarantees and reference coverage. Ancient-date astronomical validation remains outside DE440s release scope.",
-  "Complete license/notice review and a regression-tested CLI/API release before public distribution."
- ],
- "next_assessments":["Research zodiacal releasing as a bounded Fortune/Spirit time-lord procedure.","Prioritize complete Moon application/perfection and one fully sourced electional category.","Resolve representative interpretation gaps instead of pursuing every possible astrological method."],
- "out_of_scope":"Horary question-chart interpretation remains Technique 5. No supernatural access or empirical predictive accuracy is claimed."
+  "technique_id": 1,
+  "date": "2026-11-02",
+  "status": "Developing",
+  "basis": "Current executable modules, tests, original inventory variations and explicit source coverage; no Technique 2 work.",
+  "variation_audit": [
+    {
+      "variation": "natal",
+      "working": "Tropical positions, six house systems, sect/dignities/reception/Lots with explicit profiles.",
+      "remaining": "More published end-to-end reference charts, historical time reconstruction and direct interpretation coverage."
+    },
+    {
+      "variation": "transits/progressions",
+      "working": "Transit windows, exact/repeated contacts, secondary planets and named angle conventions.",
+      "remaining": "Sparse direct delineations; sampling completeness remains bounded. Other timing methods are not implied by these names."
+    },
+    {
+      "variation": "Hellenistic",
+      "working": "Sect, Dorothean triplicities, Egyptian bounds, Lots and annual whole-sign profections.",
+      "remaining": "Zodiacal releasing, more original-text rule examples and additional doctrinal exceptions."
+    },
+    {
+      "variation": "medieval/traditional",
+      "working": "Lilly-profile dignities/proximity, receptions, Lots and source-scoped rule traces.",
+      "remaining": "Full reception/perfection doctrine, actual visibility, historical table variants and broader source access."
+    },
+    {
+      "variation": "modern psychological",
+      "working": "Selected direct transit readings and clearly labeled composed context; Solar Return methodology.",
+      "remaining": "Substantial direct natal/return/progression interpretation gaps. No copyrighted book text is assumed licensed."
+    },
+    {
+      "variation": "electional",
+      "working": "Two narrow Ramesey intention profiles, boundary-based search and full rule diagnostics.",
+      "remaining": "Only explicit sign/motion subset is selected; complete fortification, radix/revolution context, Moon perfection/prohibition, nodes and authorized Dorotheus Book V rules are incomplete."
+    }
+  ],
+  "proposed_completion_gates": [
+    "Enumerate supported procedures and configurations for each original variation; never use a tradition label to imply every doctrine is implemented.",
+    "Every advertised calculation/rule family needs source-located examples and independent checks, with explicit unsupported cases.",
+    "At least one electional category must evaluate its documented core requirements and exceptions end to end; a partial-rule candidate list is not sufficient to mark electional complete.",
+    "Direct, compositional and unsupported interpretations must remain distinguishable; missing source access cannot be relabeled completed extraction.",
+    "Establish reproducible supported-date/time/domain guarantees and reference coverage. Ancient-date astronomical validation remains outside DE440s release scope.",
+    "Complete license/notice review and a regression-tested CLI/API release before public distribution."
+  ],
+  "next_assessments": [
+    "Research zodiacal releasing as a bounded Fortune/Spirit time-lord procedure.",
+    "Prioritize complete Moon application/perfection and one fully sourced electional category.",
+    "Resolve representative interpretation gaps instead of pursuing every possible astrological method."
+  ],
+  "out_of_scope": "Horary question-chart interpretation remains Technique 5. No supernatural access or empirical predictive accuracy is claimed.",
+  "procedure_status": [
+    {
+      "procedure": "Ramesey unused-money retention",
+      "status": "partially implemented",
+      "implemented": [
+        "fixed-sign/direct-motion predicates",
+        "exact lunar sequence",
+        "Moon first-house rejection",
+        "classified diagnostics"
+      ],
+      "unsupported": [
+        "radix/revolution",
+        "full fortification and exceptions",
+        "nodes/lunation",
+        "historical prohibition adjudication"
+      ],
+      "eligible_windows_certified": 0
+    }
+  ]
 }

@@ -14,6 +14,10 @@ for i,c in enumerate(r['candidates'],1):
     lines.append(f"| {i} | {c['start_inclusive_utc']} | {c['end_exclusive_utc']} | {c['duration_minutes']:.2f} | {c['rule_trace']['ascendant_lord']} | {c['rule_trace']['second_lord']} |")
 for i,c in enumerate(r['candidates'],1):
     lines+=['',f'## Candidate {i}: rule trace','']
+    lines += [f"Classification: **{c.get('classification','indeterminate')}**. No eligible window is established."]
+    for w in c.get('assessment_windows',[]):
+        lines += [f"- {w['start_inclusive_utc']} to {w['end_exclusive_utc']}: **{w['classification']}** — {w['reason']}"]
+    lines += ['Exact moving-target lunar contacts, intervening contacts, target stations and next lunar ingress are retained in JSON. They do not by themselves establish historical prohibition or exception handling.']
     for t in c['rule_trace']['rules']:
         lines.append(f"- {t['id']}: **{t['status']}**; required: {t['required']}. {t['meaning']} [Source]({t['source']}) — {t['locator']}.")
     lines+=['','Diagnostics (not silently treated as passed selection rules):','']
