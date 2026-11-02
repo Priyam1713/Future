@@ -155,8 +155,8 @@ def main():
     nu.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
     if args.command=='numerology':
-        from .numerology import calculate,markdown
-        r=calculate(args.birth,args.name,args.basis,args.target,args.y_roles)
+        from .numerology import calculate,markdown,readings
+        r=readings(calculate(args.birth,args.name,args.basis,args.target,args.y_roles))
         print(markdown(r) if args.format=='markdown' else json.dumps(r,indent=2))
         return
     if args.command=='bazi':

@@ -1,7 +1,7 @@
 {
   "technique_id": 4,
   "name": "Numerology",
-  "status": "Researching",
+  "status": "Core v1 Ready",
   "date": "2026-11-03",
   "predecessor_closure": "d230a9d",
   "policy": "80/20 verified practical core; no executable Numerology engine/rules in this audit",
@@ -12,7 +12,7 @@
         "Numerology: Key to Your Inner Self",
         "Your Days Are Numbered"
       ],
-      "status": "unsupported",
+      "status": "implemented",
       "finding": "Source-specific calculation/interpretation conventions require verification before implementation."
     },
     {
@@ -39,7 +39,7 @@
         "Your Days Are Numbered",
         "Numerology: Key to Your Inner Self"
       ],
-      "status": "unsupported",
+      "status": "implemented",
       "finding": "Source-specific calculation/interpretation conventions require verification before implementation."
     },
     {
@@ -48,7 +48,7 @@
         "Your Days Are Numbered",
         "Numerology: Key to Your Inner Self"
       ],
-      "status": "unsupported",
+      "status": "implemented",
       "finding": "Source-specific calculation/interpretation conventions require verification before implementation."
     },
     {
@@ -71,10 +71,7 @@
     "numerology-decoz-expression-v1"
   ],
   "findings": [
-    "Publisher listings identify Cheiro and Decoz books; book edition/chapter verification is separate from bibliography.",
-    "Campbell catalog metadata located; full-page/procedural access not verified.",
-    "Decoz author pages provide component-wise reduction and name/date worked-example leads; competing all-digit/whole-name methods must not be silently merged.",
-    "Lo Shu and gematria need separate grids/alphabets and primary procedures; Chinese BaZi components do not establish Numerology coverage."
+    "Superseding implemented scope in numerology_core_v1.json; historical audit retained."
   ],
   "proposed_core": [
     "Named Pythagorean birth-date and full-name core with complete arithmetic trace.",
@@ -122,5 +119,12 @@
     "All six variations and three ranked sources preserved; source leads do not imply completed procedure verification.",
     "No Numerology mathematics, interpretation or predictive validity claim yet.",
     "No paid or copyrighted full-text ingestion undertaken."
+  ],
+  "release_matrix": "knowledge/numerology_core_v1.json",
+  "historical_findings": [
+    "Publisher listings identify Cheiro and Decoz books; book edition/chapter verification is separate from bibliography.",
+    "Campbell catalog metadata located; full-page/procedural access not verified.",
+    "Decoz author pages provide component-wise reduction and name/date worked-example leads; competing all-digit/whole-name methods must not be silently merged.",
+    "Lo Shu and gematria need separate grids/alphabets and primary procedures; Chinese BaZi components do not establish Numerology coverage."
   ]
 }

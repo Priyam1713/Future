@@ -1,5 +1,10 @@
 # Future progress
 
+## Numerology Core v1 closure — 2026-11-03
+- Calculation pass67b55dc pushed. Added concise source-scoped Expression/master and personal-year readings; other core contexts compositional, missing number-specific and Month/Day delineations explicit. No arbitrary scores or imported traditions.
+-87 tests and4 Numerology/23 Western/12 Vedic/15 Chinese CLI cases pass. Frozen matrix/backlog in numerology_core_v1.json; reproducible acceptance JSON/Markdown. No new dependency; Chaldean/Lo Shu/gematria deferred without blocking verified Pythagorean core.
+- Marked bounded Core v1 Ready; commit/push closure before Technique5 audit. Existing original inventory/rankings unchanged.
+
 ## Numerology calculation pass — 2026-11-03
 - Implemented named Pythagorean date/name core and personal cycles with exact traces, explicit name basis/Y roles, strict character validation and JSON/Markdown CLI. Four new tests cover published acceptance facts, independent mapping/digital-root checks, invalid/leap/separator inputs and calendar transitions.
 - All87 tests pass, preserving83 previous tests. Chaldean/Lo Shu/gematria remain unsupported; no new dependency.

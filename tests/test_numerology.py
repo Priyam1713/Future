@@ -9,6 +9,7 @@ class NumerologyTests(unittest.TestCase):
         self.assertEqual([p['result'] for p in r['life_path']['components']],[1,6,9]);self.assertEqual(r['life_path']['steps'],[16,7])
         self.assertEqual([p['result'] for p in r['expression']['components']],[22,3,6]);self.assertEqual(r['expression']['steps'],[31,4])
         r=self.run_case(n='Thomas John Hancock');self.assertEqual(r['soul_urge']['steps'],[20,2])
+        self.assertEqual(r['personality']['steps'],[14,5])
         r=self.run_case(b='1990-09-12');self.assertEqual([r['cycles'][k]['result'] for k in ('sun','year','month','day')],[3,4,5,8])
     def test_independent_mapping_and_masters(self):
         groups=['AJS','BKT','CLU','DMV','ENW','FOX','GPY','HQZ','IR']

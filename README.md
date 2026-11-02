@@ -1,5 +1,7 @@
 # Future
 
+Numerology core: `python -m future numerology 1998-10-15 "Thomas Cruise Mapother" 2026-10-12 --basis birth --format markdown`. Use `--basis current` for explicitly labeled current-name overlays; `--y-roles vc` classifies two successive Y occurrences as vowel/consonant. ASCII names only; unsupported characters reject rather than silently transliterate. Calendar-year personal cycles are separate from master-preserving core reductions. Scope/backlog: `knowledge/numerology_core_v1.json`; reproducible report: `data/numerology-acceptance.md`.
+
 ## Chinese Astrology — bounded BaZi Core v1
 
 ```powershell

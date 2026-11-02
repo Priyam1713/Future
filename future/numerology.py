@@ -4,6 +4,18 @@ from pathlib import Path
 import json,re
 PROFILE=json.loads((Path(__file__).resolve().parents[1]/'knowledge/numerology_profile_v1.json').read_text(encoding='utf-8'))
 
+def readings(r):
+    data=json.loads((Path(__file__).resolve().parents[1]/'knowledge/numerology_readings_v1.json').read_text(encoding='utf-8'))
+    rows=[]
+    for scope,table,value in [('expression','expression',r['expression']['result']),('personal_year','year',r['cycles']['year']['result'])]:
+        source=data[table]
+        rows.append({'scope':scope,'number':value,'coverage':'direct','text':source['meanings'][str(value)],
+            'source_id':source['source_id'],'url':source['url'],'locator':source['locator']})
+    for scope,text in [('life_path','Birth-date framework; no direct number-specific delineation in this core.'),('soul_urge','Vowel-based motivation context.'),('personality','Consonant-based outward presentation context.'),('birthday','Actual day retained alongside its reduced companion.')]:
+        rows.append({'scope':scope,'coverage':'compositional','text':text,'source_id':'numerology-decoz-guide-v1','url':PROFILE['sources'][2]['url'],'locator':PROFILE['sources'][2]['locator']})
+    r['readings']=rows;r['interpretation_limits']=data['limitations']
+    return r
+
 def reduce(n,masters=True):
     if isinstance(n,bool) or not isinstance(n,int) or n<0:raise ValueError('Nonnegative integer required')
     steps=[n]
