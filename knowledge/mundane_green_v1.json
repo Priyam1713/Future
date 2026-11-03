@@ -1,0 +1,394 @@
+{
+  "technique_id": 6,
+  "profile": "green-1911-tropical-placidus-v1",
+  "version": 1,
+  "status": "conventions frozen; implementation pending",
+  "source": {
+    "id": "mundane-green-1911-images-v1",
+    "technique_id": 6,
+    "author": "H. S. Green",
+    "edition": "Mundane or National Astrology, first edition1911, Alan Leo manual13; Casa Fernando Pessoa copy1-62",
+    "url": "https://bibliotecaparticular.casafernandopessoa.pt/1-62",
+    "document_url": "https://bibliotecaparticular.casafernandopessoa.pt/1-62/2/1-62_master/1-62_PDF/1-62_0000_1-144_t24-C-R0150.pdf",
+    "ingestion": "public_domain",
+    "rights_note": "Holding library displays Public Domain Mark1.0. Original page images visually inspected; only original procedural summaries, factual chart data and hashes retained, no scan corpus redistributed.",
+    "locator": "Printed pp2–4,10,12–16,24,31,38,43,50,56,108–110,114–116; preface/title/contents",
+    "document_sha256": "61352e6883ed8c6076fd0796bc6cbcbba308847aff2f8d496a97ecc205040529",
+    "checked_on": "2026-11-03"
+  },
+  "rules": [
+    {
+      "id": "green1911.ingresses",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed pp2–4",
+      "method": "Calculate charts at the Sun entering tropical Aries,Cancer,Libra,Capricorn, corresponding to longitudes0,90,180,270 degrees.",
+      "exceptions": [
+        "Study all four; Aries begins the astrological year rather than January1. Northern/southern seasonal names differ, not the zodiac sequence."
+      ]
+    },
+    {
+      "id": "green1911.location",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p3",
+      "method": "Green calculates ingress charts for the latitude/longitude of the capital of the country studied.",
+      "exceptions": [
+        "Software requires explicit site coordinates and labels caller-selected site; it never infers a capital or claims an arbitrary site is nationally representative."
+      ]
+    },
+    {
+      "id": "green1911.duration",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed pp3–4",
+      "method": "Optional old Aries-ASC rule: fixed12,common/mutable6,movable/cardinal3 months.",
+      "exceptions": [
+        "Green says modern evidence is insufficient for close application and all four ingress charts must still be examined. Not a guaranteed duration or automatic expiry date; other ingress charts are not suppressed."
+      ]
+    },
+    {
+      "id": "green1911.conjunction",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p10 Planetary Conjunctions",
+      "method": "Calculate a local chart at the exact longitude conjunction of major planets; consider the sign and the rest of the chart.",
+      "exceptions": [
+        "Selected Jupiter–Saturn only in v1; no new fixed orb,duration,geographic sign rulership or direct planet-pair forecast invented."
+      ]
+    },
+    {
+      "id": "green1911.angular",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed pp15,109–110",
+      "method": "Angular cusps confer prominence, which is distinct from dignity and is not necessarily favorable.",
+      "exceptions": [
+        "Near-cusp distance has no numerical cutoff specified in these passages; report all angular distances without inventing a Green orb or numeric strength score."
+      ]
+    },
+    {
+      "id": "green1911.dignity",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed pp108–109",
+      "method": "Own-sign and exaltation are zodiacal strength; detriment/fall are opposite the respective dignity signs and their expression depends on conditions.",
+      "exceptions": [
+        "Source explicitly gives Sun Leo/Aries and Mars Aries,Scorpio/Capricorn. Full classical-seven lookup is separately identified shared table data; no Lilly sect,bounds,beams,reception or scores imported as Green judgment. Modern outer-planet dignity assignments withheld."
+      ]
+    },
+    {
+      "id": "green1911.composition",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed pp14,108–110",
+      "method": "Combine planetary topics with house topics while retaining contradictions; a planet does not affect every matter of its house equally.",
+      "exceptions": [
+        "Specific unsourced pair conclusions remain compositional or unsupported, not direct Green delineation. No event probabilities or decisive favorable/adverse aggregate."
+      ]
+    },
+    {
+      "id": "green1911.house.1",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p12",
+      "method": "The population and the general condition of the country.",
+      "exceptions": [
+        "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+      ]
+    },
+    {
+      "id": "green1911.house.2",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p12",
+      "method": "Public revenues,taxation,banking and national wealth.",
+      "exceptions": [
+        "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+      ]
+    },
+    {
+      "id": "green1911.house.3",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p12",
+      "method": "Domestic transport,communication,news and neighboring countries.",
+      "exceptions": [
+        "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+      ]
+    },
+    {
+      "id": "green1911.house.4",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p13",
+      "method": "Land,agriculture,mining,buildings and political opposition.",
+      "exceptions": [
+        "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+      ]
+    },
+    {
+      "id": "green1911.house.5",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p13",
+      "method": "Entertainment,children,schools,sports and recreational speculation.",
+      "exceptions": [
+        "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+      ]
+    },
+    {
+      "id": "green1911.house.6",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p13",
+      "method": "Public health,employees and national services.",
+      "exceptions": [
+        "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+      ]
+    },
+    {
+      "id": "green1911.house.7",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p13",
+      "method": "Foreign political/commercial relationships and marriage/divorce topics.",
+      "exceptions": [
+        "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+      ]
+    },
+    {
+      "id": "green1911.house.8",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p13",
+      "method": "Mortality,death duties and financial dealings with foreign countries.",
+      "exceptions": [
+        "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+      ]
+    },
+    {
+      "id": "green1911.house.9",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p14",
+      "method": "Long-distance transport,religious institutions,law courts and universities.",
+      "exceptions": [
+        "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+      ]
+    },
+    {
+      "id": "green1911.house.10",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p14",
+      "method": "Head of state,government,public authority and national reputation.",
+      "exceptions": [
+        "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+      ]
+    },
+    {
+      "id": "green1911.house.11",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p14",
+      "method": "Parliament,local councils,legislation and international friends.",
+      "exceptions": [
+        "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+      ]
+    },
+    {
+      "id": "green1911.house.12",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p14",
+      "method": "Prisons,hospitals,charitable institutions and concealed adversaries.",
+      "exceptions": [
+        "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+      ]
+    },
+    {
+      "id": "green1911.planet.Sun",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p16",
+      "method": "Public leadership,government and people exercising authority.",
+      "exceptions": [
+        "Symbolic significations, not a forecast that a named real-world event will occur."
+      ]
+    },
+    {
+      "id": "green1911.planet.Moon",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p24",
+      "method": "The general public,collective concerns,water/travel and agricultural topics.",
+      "exceptions": [
+        "Symbolic significations, not a forecast that a named real-world event will occur."
+      ]
+    },
+    {
+      "id": "green1911.planet.Mercury",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p31",
+      "method": "Education,public debate,writing,news,communications and commercial negotiation; not wealth by itself.",
+      "exceptions": [
+        "Symbolic significations, not a forecast that a named real-world event will occur."
+      ]
+    },
+    {
+      "id": "green1911.planet.Venus",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p38",
+      "method": "Art,public celebrations,social relations and charitable activity.",
+      "exceptions": [
+        "Symbolic significations, not a forecast that a named real-world event will occur."
+      ]
+    },
+    {
+      "id": "green1911.planet.Mars",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p43",
+      "method": "Energetic action,engineering,contention and military affairs; expression is conditional on other factors.",
+      "exceptions": [
+        "Symbolic significations, not a forecast that a named real-world event will occur."
+      ]
+    },
+    {
+      "id": "green1911.planet.Jupiter",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p50",
+      "method": "Religious and legal institutions,banking,public ceremonies and philanthropy.",
+      "exceptions": [
+        "Symbolic significations, not a forecast that a named real-world event will occur."
+      ]
+    },
+    {
+      "id": "green1911.planet.Saturn",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p56",
+      "method": "Administration,state or municipal officers,law enforcement,order and duties to superior institutions.",
+      "exceptions": [
+        "Symbolic significations, not a forecast that a named real-world event will occur."
+      ]
+    },
+    {
+      "id": "green1911.pair.Mercury.9",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p14",
+      "method": "Green specifically associates Mercury in house9 with scientific and literary institutions.",
+      "exceptions": [
+        "Other chart factors can qualify the symbolism; this does not predict an actual institutional event."
+      ]
+    },
+    {
+      "id": "green1911.pair.Jupiter.9",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p14",
+      "method": "Green specifically associates Jupiter in house9 with religious institutions.",
+      "exceptions": [
+        "Other chart factors can qualify the symbolism; this does not predict an actual institutional event."
+      ]
+    },
+    {
+      "id": "green1911.pair.Moon.9",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p14",
+      "method": "Green specifically associates Moon in house9 with shipping.",
+      "exceptions": [
+        "Other chart factors can qualify the symbolism; this does not predict an actual institutional event."
+      ]
+    },
+    {
+      "id": "green1911.pair.Sun.1",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p16",
+      "method": "Green describes public leadership and collective wellbeing favorably, qualified by serious affliction.",
+      "exceptions": [
+        "Full historical affliction judgment is not certified by this bounded reading; no automatic favorable verdict."
+      ]
+    },
+    {
+      "id": "green1911.pair.Moon.1",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p24",
+      "method": "Public concerns become prominent; favorable and difficult expressions depend on aspects.",
+      "exceptions": [
+        "Full historical affliction judgment is not certified by this bounded reading; no automatic favorable verdict."
+      ]
+    },
+    {
+      "id": "green1911.pair.Mercury.1",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p31",
+      "method": "Public discussion,education and trade become prominent; affliction can qualify the reading.",
+      "exceptions": [
+        "Full historical affliction judgment is not certified by this bounded reading; no automatic favorable verdict."
+      ]
+    },
+    {
+      "id": "green1911.pair.Venus.1",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p38",
+      "method": "Green links this placement to social peace,celebrations and pleasure,qualified by affliction.",
+      "exceptions": [
+        "Full historical affliction judgment is not certified by this bounded reading; no automatic favorable verdict."
+      ]
+    },
+    {
+      "id": "green1911.pair.Jupiter.1",
+      "version": 1,
+      "source_id": "mundane-green-1911-images-v1",
+      "locator": "Printed p50",
+      "method": "Green gives favorable collective/trade themes,qualified by the nature of an afflicting planet.",
+      "exceptions": [
+        "Full historical affliction judgment is not certified by this bounded reading; no automatic favorable verdict."
+      ]
+    }
+  ],
+  "planet_set": [
+    "Sun",
+    "Moon",
+    "Mercury",
+    "Venus",
+    "Mars",
+    "Jupiter",
+    "Saturn",
+    "Uranus",
+    "Neptune"
+  ],
+  "conventions": {
+    "solar_coordinates": "Apparent geocentric true ecliptic/equinox of date,DE440s/Skyfield1.54; solve longitude crossing,not maximum declination or civil seasonal date.",
+    "years": "UTC calendar-year search1851–2148; four cardinal events in half-open Jan1→next Jan1. Gregorian only.",
+    "time": "Existing pinned IANA tzdata2025.2 for display; UTC/TT and modeled UT1 retained. Pre1972 proleptic UTC and uncertain future leap seconds are limitations,not historical time reconstruction.",
+    "houses": "Placidus is explicit numerical software realization. Green pp2–4 assumes horoscope construction and does not identify a named system; do not claim a mandatory Green house algorithm or exact reconstruction of every printed cusp. abs(latitude)<60; no polar fallback.",
+    "dignities": "Classical-seven domicile/exaltation lookup reused explicitly from verified shared doctrine_tables.json (Lilly1647 p104 factual table); Green pp108–109 supplies interpretive principle. No other Lilly doctrine imported. Uranus/Neptune dignities unsupported.",
+    "aspects": "Report nearest major-aspect geometries0,60,90,120,180 with numerical deviations/relative-motion phase; no fixed within-orb classification or Green strength score. Cycles use exact conjunctions only.",
+    "location": "Explicit caller site; Green national-capital recommendation shown separately. No capital database/inference.",
+    "optional_duration": "Aries only,disabled by default; symbolic3/6/12 months without forecast expiry or suppressing other charts.",
+    "interpretation": "Historical British collective vocabulary; direct source components versus explicitly compositional planet-house combination; no geopolitical or financial outcome certainty."
+  },
+  "separate_sources": {
+    "Campion": "Contemporary book metadata only; no chart collection or rules ingested.",
+    "Raphael": "Edition/catalog lead only; no procedures borrowed."
+  },
+  "deferred": [
+    "Other cycle pairs/aspects",
+    "Full orb/affliction synthesis",
+    "Outer-planet interpretations",
+    "Eclipse classification/visibility",
+    "National founding charts and specialized financial methods"
+  ]
+}

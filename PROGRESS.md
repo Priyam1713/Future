@@ -1,5 +1,11 @@
 # Future progress
 
+## Mundane Pass1 — Green source/convention freeze, 2026-11-03
+- Confirmed clean main906f2a9 equals fetched remote. Downloaded legitimate1911 Casa Fernando Pessoa scan and visually inspected29 original page images, including printed pp2–4. Hash/page provenance retained; no scan corpus committed. Prior web-reader size barrier resolved by local download.
+- Frozen green-1911-tropical-placidus-v1: four apparent tropical cardinal crossings, explicit caller site/IANA display, nine pre-Pluto planets, declared Placidus software realization (not claimed mandated by Green), separately sourced classical-seven dignity lookup and no invented aspect-orb threshold.34 source-located components cover houses/planets, angular prominence, exact conjunction method and selected direct pairs.
+- Green p4 explicitly qualifies the old Aries ASC3/6/12-month rule and requires all four charts; optional historical context only. p109 distinguishes prominence from favorable strength. Exact Jupiter–Saturn conjunction is the bounded cycle candidate; other schools/secondary books not silently merged.
+- Registered four published2026 USNO minute-level season references and Green p1151899 London rounded chart facts, with GMT/site/house reconstruction limitations explicit. No code or passing numerical comparisons claimed yet. Next: implement and independently verify the named core.
+
 ## Technique6 Mundane Astrology — resource audit, 2026-11-03
 - Began only after Horary Diagnostic Scope closure50278d6 was committed/pushed. Technique6 is Mundane Astrology; exact inventory row,5 variations and3 source rankings preserved. No Mundane engine or executable rules added.
 - Registered Campion publisher2004-scope metadata, Green1911 holding-library record/Public Domain Mark and Raphael1910 catalog lead. Green PDF URL found; web reader size limit prevented page inspection in this audit. Campion text/chart rights and Raphael original edition/identity remain explicit gaps. Added USNO seasons and NASA solar/lunar catalog references for later independent checks.
