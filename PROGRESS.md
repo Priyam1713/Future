@@ -1,5 +1,9 @@
 # Future progress
 
+## Aura implementation/verification — 2026-11-03
+- Source passf1d434b committed/pushed. aura-reference now accepts manual color selections,uncertainty,exclusive component slots,documentary contexts and subjective text unused for inference.21 source-qualified entries/four published examples produce deterministic JSON/Markdown,rule traces and component-only creative compositions;28 registry rules remain traditional,not empirical claims.
+-209 tests/169 CLI cases pass,preserving196/155 inherited;21 original-source key/caption checks pass,pip check clean,no new dependencies. Reports in data/aura-reference.{json,md} and aura-source-example.{json,md}. No personal,clinical,spiritual-status,healing or physical aura inference. Restored inherited registry formatting without changing any prior source record.
+
 ## Aura source verification — 2026-11-03
 - Pending44a8881 pushed;main synchronized. Ranked Brennan/Kunz procedures remain inaccessible/rights-restricted;one bounded fallback search verified Besant/Leadbeater Thought-Forms PG16269,title reprint statement through1925. Original color key and four plates inspected with primary descriptions;21 shade/family entries,three documentary contexts,17 independently transcribed key cases and four published illustrations. No scientific or personal inference validation.
 - Separate profile besant-leadbeater-pg16269-symbolic-v1 preserves original rankings/four variations. Section/figure locators,edition/scan caveats and rights in aura_pass1_findings.json;no calibrated RGB,seven-layer/chakra correspondence or Brennan/Kunz rules invented. Proceed to manual symbolic reference implementation.

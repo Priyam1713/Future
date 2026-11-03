@@ -205,7 +205,18 @@ def main():
     graph=sub.add_parser('graphology-reference')
     graph.add_argument('input',help='Path to manual descriptive or published-example JSON; no writer assessment')
     graph.add_argument('--format',choices=['json','markdown'],default='json')
+    aura=sub.add_parser('aura-reference')
+    aura.add_argument('input',help='Manual symbolic colors or published teaching example JSON; no personal inference')
+    aura.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='aura-reference':
+        from .aura import load_input,reference,markdown
+        registry=load_registry(args.database)
+        try:
+            result=reference(load_input(args.input),registry)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close()
+        return
     if args.command=='graphology-reference':
         from .graphology import load_input,reference,markdown
         registry=load_registry(args.database)

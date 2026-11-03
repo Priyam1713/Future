@@ -1,6 +1,13 @@
 # Future
 
-Technique #14 **Aura Reading — Researching**: resource/variation audit in `knowledge/aura_resource_audit.json`,begun after Graphology closured15991b. Original two ranked sources/four variations preserved. Symbolic or subjective color/layer references remain separate from optical effects;no Technique14 engine or camera-based aura detector implemented.
+Technique #14 **Aura Reading — Developing**: `besant-leadbeater-pg16269-symbolic-v1` provides21 historical color entries,three documentary context terms and four published teaching examples. Manual symbolic compositions include source-qualified motifs,unknown/conflict diagnostics and JSON/Markdown reports. This separate Thought-Forms profile does not implement Brennan/Kunz layers,chakras or physical aura detection. No personal emotion,personality,health,spiritual-status or outcome assessment.
+
+```powershell
+python -X utf8 -m future aura-reference data/aura-reference-input.json --format markdown
+python -X utf8 -m future aura-reference data/aura-source-example-input.json
+python -m scripts.verify_aura
+python -m scripts.smoke_aura_core
+```
 
 Technique #13 **Graphology — Core v1 Ready — Historical/Descriptive Reference Scope**: `crepieux-schooling-1892-reference-v1` offers23 descriptive terms across11 feature dimensions and seven published examples from Handwriting and Expression. All196 tests/155 CLI cases pass;frozen scope/P1/P2 in `knowledge/graphology_core_v1.json`. This is a separately identified1892 translation/adaptation,not ABC de la graphologie. Optional baseline/slant angles and normalized spacing/proportions use supplied teaching vectors or measurements; geometry never selects historical meanings. True pressure and personal-trait,medical,employment or forensic-authorship assessments are unsupported.
 
