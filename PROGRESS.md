@@ -1,5 +1,9 @@
 # Future progress
 
+## Moleosophy source/profile pass — 2026-11-03
+- Inspected Fontaine Golden Wheel Dream-book,and Fortune-Teller,BPL copy goldenwheeldream00font:undated title,copyright1862,contents and complete mole section printed pp114-119. Actual section Fortune-Telling by Moles / Signification of Moles; inventory standalone title remains unverified. Gutenberg page markers differ by one and are not substituted.
+- Frozen fontaine-1862-bpl-reference-v1 with27 selected documentary entries,source-specific sides/locations,qualifications/cross-references and independent pre-matcher fixtures. Public-domain scan inspected/unbundled; no personal geometry,medical or appearance-to-trait rules. Chinese/Indian profiles separate and unsupported. Research cutoff reached; implementation follows.
+
 ## Technique11 Moleosophy — resource audit,2026-11-03
 - Began after Phrenology closurebeb3678 committed/pushed. Original workbook hash verified; exact two ranked sources and four variations preserved. Official Yap series/product leads and identifiable Fontaine Gutenberg60045 section registered as metadata only. Standalone inventory Fontaine title unverified; related Golden Wheel section is separately named,not silently substituted.
 - moleosophy_resource_audit.json records Indian/Chinese/Western/left-right gaps,rights,orientation,original-page verification and P1/P2. No engine,rules or medical/individualized body-mark judgments added; original inventory/exclusions unchanged.158 tests/117 CLI cases remain accepted; source registry loads with added audit metadata.
