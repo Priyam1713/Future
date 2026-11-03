@@ -1,5 +1,9 @@
 # Future
 
+**Phase 2 complete — bounded Core v1 scopes** for techniques8-15;this does not imply exhaustive variations or scientific validation.
+
+Technique #16 **Tarot — Researching**: original three ranked sources and six variations preserved in `knowledge/tarot_resource_audit.json`. Waite1922 historical text is the proposed first source;Thoth/Marseille/Etteilla remain separate. Card/meaning fixtures,original layouts and a versioned seeded-draw contract must be verified before implementation. Historical text rights and modern deck/art rights remain separate. No Tarot engine implemented in this audit.
+
 Technique #15 **Iridology — Core v1 Ready — Historical/Educational Reference Scope**: `lindlahr-1922-legend-reference-v1` provides33 selected original schematic labels across both eyes,qualitative placements and fixed source-plate orientation. Manual selections and two teaching selections from the published plate produce JSON/Markdown with source traces. All222 tests/183 CLI cases pass;frozen scope and P1/P2 in `knowledge/iridology_core_v1.json`. No exact polar/radial geometry,patient images,diagnosis,disease-risk or personal-trait assessment. Jensen,Deck and Rayid remain separate unsupported profiles.
 
 ```powershell

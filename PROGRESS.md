@@ -1,5 +1,9 @@
 # Future progress
 
+## Phase2 complete;Technique16 Tarot resource audit — 2026-11-03
+- Began after Iridology closure7580925 pushed and synchronized. All eight Physical & Human-Based Divination techniques8-15 have accepted bounded Core v1 records;Phase2 complete at those scopes,not exhaustive or scientifically validated.
+- Tarot original three rankings/six variations and inventory hash/exclusions preserved. Waite Wikisource title identifies1922 reprint(first1910);PartIII exposes card-specific upright/reversed meanings and source layouts. Weiser Thoth1981 and Destiny Way of Tarot2009 publisher metadata registered;modern RWS art rights kept separate. tarot_resource_audit.json prioritizes a text-only Waite core with original-page fixtures,documented spread and versioned unbiased seeded draws. No Tarot implementation;four metadata-only records load.222 tests/183 CLI acceptance retained.
+
 ## Iridology Core v1 closure — 2026-11-03
 - Source609e7bb and implementationf84aab2 pushed. Technique15 **Core v1 Ready — Historical/Educational Reference Scope** for lindlahr-1922-legend-reference-v1:33 selected labels,two editorial source-diagram selections,27 documentary checks;222 tests/183 CLI cases pass. Frozen matrix,rights,scientific limits and P1/P2 in iridology_core_v1.json.
 - Core acceptance is documentary,not diagnostic. Jensen/Deck/Rayid,remaining labels,printed-mark/metric geometry and other editions deferred. Push this bounded closure before recording Phase2 complete and beginning Technique16 Tarot resource audit. Original taxonomy/rankings/exclusions unchanged.

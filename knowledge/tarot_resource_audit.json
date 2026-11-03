@@ -1,0 +1,269 @@
+{
+  "version": 1,
+  "technique_id": 16,
+  "name": "Tarot",
+  "status": "Researching",
+  "phase": "3 · Mystical & Spiritual Divination",
+  "date": "2026-11-03",
+  "predecessor_closure": "7580925",
+  "predecessor_push": "Confirmed closure7580925 pushed;HEAD...origin/main0/0 before audit.",
+  "policy": "Resource/variation audit only;no Tarot card-rule corpus,draw engine,spread evaluator or CLI implemented.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    16,
+    "3 · Mystical & Spiritual Divination",
+    "Tarot",
+    "RETAIN — simulate / implement",
+    "Deterministic / symbolic rules",
+    "Rider–Waite–Smith; Tarot de Marseille; Thoth; Etteilla; spreads; reversals",
+    "Seeded card deck, spread positions, correspondence lookup and synthesis",
+    "PRNG; card/art permission; querent question",
+    "Keep deck copyrights/licensing separate from rules",
+    "Traditional / not scientifically validated",
+    "The Pictorial Key to the Tarot",
+    "A. E. Waite",
+    "https://en.wikisource.org/wiki/Pictorial_Key_to_the_Tarot",
+    "The Book of Thoth",
+    "The Way of Tarot",
+    null,
+    "17, 19, 37",
+    16
+  ],
+  "ranked_sources": [
+    [
+      16,
+      "Tarot",
+      1,
+      "A. E. Waite",
+      "The Pictorial Key to the Tarot",
+      "RWS deck/meanings",
+      "https://en.wikisource.org/wiki/Pictorial_Key_to_the_Tarot",
+      "Open historical text",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      16,
+      "Tarot",
+      2,
+      "Aleister Crowley",
+      "The Book of Thoth",
+      "Thoth deck",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      16,
+      "Tarot",
+      3,
+      "Alejandro Jodorowsky and Marianne Costa",
+      "The Way of Tarot",
+      "Marseille meanings",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Rider–Waite–Smith",
+      "inventory_row": [
+        16,
+        "Tarot",
+        "Rider–Waite–Smith",
+        "The Way of Tarot",
+        "The Book of Thoth",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;source procedures not yet extracted or implemented",
+      "finding": "Highest-ROI first profile:Waite1922 public historical transcription with card-specific meanings and procedures. Original inventory variation sources are provisional scope leads;do not silently replace their rows. Register direct Waite provenance separately before rules."
+    },
+    {
+      "name": "Tarot de Marseille",
+      "inventory_row": [
+        16,
+        "Tarot",
+        "Tarot de Marseille",
+        "The Way of Tarot",
+        "The Pictorial Key to the Tarot",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;source procedures not yet extracted or implemented",
+      "finding": "Rank3 publisher TOC establishes relevant Marseille treatment and distinct JusticeVIII/StrengthXI ordering. Named historical/restored deck identities,complete meanings and rights need separate verification."
+    },
+    {
+      "name": "Thoth",
+      "inventory_row": [
+        16,
+        "Tarot",
+        "Thoth",
+        "The Book of Thoth",
+        "The Way of Tarot",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;source procedures not yet extracted or implemented",
+      "finding": "Rank2 official edition verified;Thoth card inventory,courts,names,correspondences and reading conventions must remain a separate profile,not an RWS alias."
+    },
+    {
+      "name": "Etteilla",
+      "inventory_row": [
+        16,
+        "Tarot",
+        "Etteilla",
+        "The Way of Tarot",
+        "The Book of Thoth",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;source procedures not yet extracted or implemented",
+      "finding": "Inventory linkage remains provisional. No complete original Etteilla deck/numbering/meaning procedure inspected;unsupported,not inferred from Waite or Thoth."
+    },
+    {
+      "name": "spreads",
+      "inventory_row": [
+        16,
+        "Tarot",
+        "spreads",
+        "The Way of Tarot",
+        "The Book of Thoth",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;source procedures not yet extracted or implemented",
+      "finding": "A configurable application dimension,not a separate deck. Waite PartIII section7 provides a significator plus ten positions;sections8-9 provide other methods. Verify original diagram,significator removal/facing,position order and exceptions before core. Single/three-card editorial layouts must be labeled adaptations."
+    },
+    {
+      "name": "reversals",
+      "inventory_row": [
+        16,
+        "Tarot",
+        "reversals",
+        "The Way of Tarot",
+        "The Book of Thoth",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;source procedures not yet extracted or implemented",
+      "finding": "An independent configuration dimension with card-specific source meanings,not universal negation. PartIII gives explicit reversals;Four of Wands is an accessible unchanged-meaning counterexample for future fixtures. Orientation randomization rate is an application convention,not a historical probability claim."
+    }
+  ],
+  "sources": [
+    "tarot-waite-1922-wikisource-audit-v1",
+    "tarot-crowley-weiser-catalog-v1",
+    "tarot-jodorowsky-costa-2009-catalog-v1",
+    "tarot-usgames-rws-edition-catalog-v1"
+  ],
+  "proposed_core": {
+    "profile": "Separate named Waite1922 text-only symbolic profile after original-page verification",
+    "inventory": "Verify22 trumps plus56 suit cards,all78 unique stable IDs;four suits and court/rank aliases explicitly edition-specific. Source order and computational shuffle order are separate conventions.",
+    "meanings": "Source-located upright/reversed entries with exceptions and alternative readings;direct versus compositional versus unsupported coverage. No generic LLM meanings or invented combined outcomes.",
+    "spread": "Begin a documented manageable layout after checking original image/positions;Waite Celtic method includes a separate significator plus10 drawn cards. Do not silently call a simplified layout the exact historical procedure.",
+    "rights": "Text-only first core;public-domain underlying source and modern deck art rights kept independent. Do not fetch/repackage current commercial card images.",
+    "output": "Structured symbolic reading,source traces,positions,selected orientations,draw provenance and explicit limits;not factual predictions,diagnosis or hidden-personality detection."
+  },
+  "randomization_audit": {
+    "status": "proposed_application_contract_not_implemented",
+    "provenance": "PRNG/digital shuffle is an explicit application adaptation,not a verified Waite ritual or a predictor of outcomes.",
+    "freeze_before_implementation": [
+      "Canonical ordered deck IDs and profile version",
+      "Seed input type,UTF-8 encoding and normalization or explicit lack of normalization",
+      "Versioned PRNG algorithm,shuffle algorithm and byte/counter semantics;avoid environment-dependent built-in hash",
+      "Without-replacement Fisher-Yates or equivalent unbiased draw with rejection sampling where needed",
+      "Separate domain/stream for card orientations;explicit upright_only versus seeded reversal policy,no implied source-defined50-percent rate",
+      "Significator selection/removal and whether orientation consumes random state",
+      "Record seed,algorithm versions,deck order,positions and resulting orientations for replay"
+    ],
+    "future_tests": [
+      "Known-answer seeds checked independently of implementation",
+      "No duplicate cards,complete78-card permutation and draw-size limits",
+      "Repeatability across supported runtimes",
+      "Orientation toggles must have documented effect on card sequence",
+      "Manual card selections and source fixtures kept separate from random draws"
+    ]
+  },
+  "source_gaps": [
+    "Original Waite scan title and diagram/per-card page verification before extracting rules",
+    "Do not infer meanings from modern retailer descriptions or blend Marseille/Thoth court/order conventions",
+    "Waite historical appearance/sex/age-based significator directions need attributed context;no automated appearance-to-personality assignment",
+    "Etteilla primary source/edition remains unresolved;do not spend disproportionate core effort on it"
+  ],
+  "P1": [
+    "Verified Waite78-card inventory/upright-reversed rules and independent fixtures",
+    "One source-located spread with source exceptions,or explicitly labeled practical adaptation",
+    "Freeze deterministic randomization contract,rights and scope before implementation"
+  ],
+  "P2": [
+    "Separate Marseille,Thoth and Etteilla profiles after direct procedural access",
+    "Additional documented spreads/correspondences and complex combinations",
+    "Optional licensed/public-domain original art only after rights/edition review"
+  ],
+  "limitations": "Symbolic traditions are not empirically verified outcome predictors. No Tarot implementation in this audit. Original60-technique taxonomy,54 retained techniques,rankings and excluded IDs25,27,41,42,47,48 unchanged.",
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Historical/Educational Reference Scope",
+    "tests": 222,
+    "cli_smoke_cases": 183
+  },
+  "phase2": {
+    "status": "Complete — bounded Core v1 scopes",
+    "scope": "Physical & Human-Based Divination techniques8-15;not exhaustive variation or scientific validation",
+    "techniques": [
+      {
+        "technique_id": 8,
+        "name": "Palmistry",
+        "status": "Core v1 Ready",
+        "record": "knowledge/palmistry_core_v1.json"
+      },
+      {
+        "technique_id": 9,
+        "name": "Face Reading / Physiognomy",
+        "status": "Core v1 Ready — Historical/Symbolic Reference Scope",
+        "record": "knowledge/face_reading_core_v1.json"
+      },
+      {
+        "technique_id": 10,
+        "name": "Phrenology",
+        "status": "Core v1 Ready — Historical/Educational Reference Scope",
+        "record": "knowledge/phrenology_core_v1.json"
+      },
+      {
+        "technique_id": 11,
+        "name": "Moleosophy",
+        "status": "Core v1 Ready — Historical/Symbolic Reference Scope",
+        "record": "knowledge/moleosophy_core_v1.json"
+      },
+      {
+        "technique_id": 12,
+        "name": "Podomancy / Foot Reading",
+        "status": "Core v1 Ready — Historical/Symbolic Reference Scope",
+        "record": "knowledge/podomancy_core_v1.json"
+      },
+      {
+        "technique_id": 13,
+        "name": "Graphology",
+        "status": "Core v1 Ready — Historical/Descriptive Reference Scope",
+        "record": "knowledge/graphology_core_v1.json"
+      },
+      {
+        "technique_id": 14,
+        "name": "Aura Reading",
+        "status": "Core v1 Ready — Symbolic/Creative Reference Scope",
+        "record": "knowledge/aura_core_v1.json"
+      },
+      {
+        "technique_id": 15,
+        "name": "Iridology",
+        "status": "Core v1 Ready — Historical/Educational Reference Scope",
+        "record": "knowledge/iridology_core_v1.json"
+      }
+    ]
+  }
+}
