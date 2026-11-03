@@ -1,6 +1,6 @@
 # Future
 
-Technique #14 **Aura Reading — Developing**: `besant-leadbeater-pg16269-symbolic-v1` provides21 historical color entries,three documentary context terms and four published teaching examples. Manual symbolic compositions include source-qualified motifs,unknown/conflict diagnostics and JSON/Markdown reports. This separate Thought-Forms profile does not implement Brennan/Kunz layers,chakras or physical aura detection. No personal emotion,personality,health,spiritual-status or outcome assessment.
+Technique #14 **Aura Reading — Core v1 Ready — Symbolic/Creative Reference Scope**: `besant-leadbeater-pg16269-symbolic-v1` provides21 historical color entries,three documentary context terms and four published teaching examples. Manual symbolic compositions include source-qualified motifs,unknown/conflict diagnostics and JSON/Markdown reports. All209 tests/169 CLI cases pass;frozen scope and P1/P2 in `knowledge/aura_core_v1.json`. This separate Thought-Forms profile does not implement Brennan/Kunz layers,chakras or physical aura detection. No personal emotion,personality,health,spiritual-status or outcome assessment.
 
 ```powershell
 python -X utf8 -m future aura-reference data/aura-reference-input.json --format markdown

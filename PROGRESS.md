@@ -1,5 +1,9 @@
 # Future progress
 
+## Aura Core v1 closure — 2026-11-03
+- Implementationa0d01cf committed;sourcef1d434b pushed. Technique14 **Core v1 Ready — Symbolic/Creative Reference Scope**. Frozen matrix,source limitations,21 documentary checks,209 tests/169 CLI acceptance and P1/P2 in aura_core_v1.json.21 color entries,three context terms,four published examples;no aura detector or personal assessment.
+- Ranked Brennan/Kunz rules,layer/chakra correspondences,more editions/mixtures and optional creative effects deferred. Original inventory/rankings/exclusions unchanged. Push this bounded closure before beginning Technique15 Iridology resource audit;scientific/clinical validity is not claimed.
+
 ## Aura implementation/verification — 2026-11-03
 - Source passf1d434b committed/pushed. aura-reference now accepts manual color selections,uncertainty,exclusive component slots,documentary contexts and subjective text unused for inference.21 source-qualified entries/four published examples produce deterministic JSON/Markdown,rule traces and component-only creative compositions;28 registry rules remain traditional,not empirical claims.
 -209 tests/169 CLI cases pass,preserving196/155 inherited;21 original-source key/caption checks pass,pip check clean,no new dependencies. Reports in data/aura-reference.{json,md} and aura-source-example.{json,md}. No personal,clinical,spiritual-status,healing or physical aura inference. Restored inherited registry formatting without changing any prior source record.

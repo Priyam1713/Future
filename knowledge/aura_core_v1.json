@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "technique_id": 14,
+  "name": "Aura Reading",
+  "status": "Core v1 Ready — Symbolic/Creative Reference Scope",
+  "date": "2026-11-03",
+  "profile": "besant-leadbeater-pg16269-symbolic-v1",
+  "source_pass_commit": "f1d434b",
+  "implementation_commit": "a0d01cf",
+  "source_id": "aura-besant-leadbeater-pg16269-v1",
+  "supported": [
+    "21 manually selected historical color/shade/family entries with source-qualified motifs",
+    "Three documentary contexts:thought_form,mental_body,desire_body;no anatomical or numbered layer assignment",
+    "Four fixed published teaching examples:Figures8,9,12,18 with primary descriptions and original images inspected",
+    "Unknown,null,uncertain,ambiguous and unsupported selections;conflicting exclusive same-slot labels retained without choosing a winner",
+    "Component-only creative arrangements;published examples separately labeled direct;no novel combined meaning inferred",
+    "Optional subjective text preserved as user statement and unused for inference",
+    "Offline deterministic JSON/Markdown CLI,strict schema,versioned registry rules and precise section/figure provenance"
+  ],
+  "experimental": [
+    "Manual color descriptions are subjective selections,not recognized or calibrated observations",
+    "Creative prompts are editorial framing of sourced motifs,not additional historical rules or personal assessments"
+  ],
+  "unsupported": [
+    "Objective aura detection or inference of real personality,emotion,health,hidden energy,spiritual status or future outcomes",
+    "Healing,diagnosis,protection efficacy,spiritual rank,aura strength or predictive probabilities",
+    "Photo/camera/image inputs,RGB matching,brightness scales,machine learning or physical field measurement",
+    "Brennan/Kunz author-specific layer/color/chakra procedures;seven-layer/chakra correspondence",
+    "Novel mixture meanings,automatic recognition of illustrated shapes or historical clairvoyance validation",
+    "Kirlian apparatus,photographic effects and creative visualization"
+  ],
+  "configuration_matrix": {
+    "profile": "besant-leadbeater-pg16269-symbolic-v1",
+    "modes": ["manual", "source_example"],
+    "task": "symbolic_reference",
+    "components": "1-24;exact vocabulary identifier,self-description retained unsupported,null,or2-8 alternatives",
+    "certainty": ["selected", "uncertain", "unknown"],
+    "contexts": ["thought_form", "mental_body", "desire_body"],
+    "context_scope": "Documentary terminology only;color-to-layer assignment unsupported",
+    "slots": "Optional explicitly exclusive components;colors without slots form a symbolic composition",
+    "colors": ["black", "brick_to_scarlet", "dragon_blood", "brown", "brown_grey", "deep_grey", "pale_grey", "grey_green", "brown_green_scarlet", "green", "rose_family", "carmine", "pale_rose", "crimson_brown_grey", "orange", "yellow_family", "yellow_ochre", "gamboge", "primrose", "blue", "violet"],
+    "combination": "Direct only for explicitly selected published example;otherwise documented components,no combined rule",
+    "subjective_description": "Optional plain text up to1000 characters;never selects or changes symbols"
+  },
+  "inventory_variations": [
+    {"name": "Theosophical color layers", "status": "partial", "scope": "One separately registered historical thought-form color vocabulary and documentary body terms;not all layer systems"},
+    {"name": "energy-body chakras", "status": "unsupported", "scope": "Source-specific chakra correspondence not verified"},
+    {"name": "clairvoyant description", "status": "historical_claims_only", "scope": "Source assertions attributed,not reproduced as a detector or personal reading"},
+    {"name": "Kirlian-inspired aesthetics", "status": "unsupported", "scope": "Physical corona phenomena distinguished from metaphysical doctrine;creative effect deferred"}
+  ],
+  "acceptance": {
+    "passed": true,
+    "tests": 209,
+    "inherited_tests": 196,
+    "new_tests": 13,
+    "cli_cases": 169,
+    "inherited_cli_cases": 155,
+    "new_cli_cases": 14,
+    "original_source_checks": 21,
+    "original_key_checks": 17,
+    "published_illustration_checks": 4,
+    "registry_rules": 28,
+    "dependency_check": "python -m pip check:No broken requirements found;no new runtime dependencies",
+    "source_record_compatibility": "Every inherited source record unchanged;one independently versioned source appended",
+    "verification_commands": ["python -m unittest discover -s tests -q", "python -m scripts.verify_aura", "python -m scripts.smoke_aura_core", "All13 inherited smoke modules"],
+    "known_nonblocking_warnings": ["Existing Skyfield/NumPy deprecation", "Existing unclosed de440s.bsp ResourceWarning"],
+    "evidence": ["tests/fixtures/aura_source_examples.json", "data/aura-verification.json", "data/aura-smoke.json"],
+    "not_empirical_validation": "Independent manual transcription from the same primary source checks documentary fidelity,not clairvoyance,physical fields,psychology or predictive validity"
+  },
+  "source_and_rights": {
+    "ranked_sources_preserved": ["Barbara Ann Brennan — Hands of Light", "Dora van Gelder Kunz — The Personal Aura"],
+    "fallback": "One bounded historical search;Thought-Forms PG16269,title/reprint statement through1925,not an asserted1901-only scanned edition",
+    "rights": "Public-domain underlying historical text per PG USA catalog;labels and original paraphrases only,no ebook corpus or original plates redistributed. Other-territory distribution requires rights review. Commercial ranked works remain metadata only.",
+    "locators": "Named sections,frontispiece coordinates and figure numbers;TOC starts and reordered plates are not exact paragraph pagination",
+    "optical_boundary_source": "aura-corona-boyers-tiller-1973-v1"
+  },
+  "examples": ["data/aura-reference-input.json", "data/aura-reference.json", "data/aura-reference.md", "data/aura-source-example-input.json", "data/aura-source-example.json", "data/aura-source-example.md"],
+  "backlog": {
+    "P1": [
+      "Verify legitimate Brennan/Kunz procedural access and ingestion rights before adding separate author profiles",
+      "Independently inspect more source-qualified shades/mixtures and published examples only when useful",
+      "Any source-specific layer terminology needs direct source locators;never infer chakra correspondence"
+    ],
+    "P2": [
+      "Other historical editions and terminology conflicts with edition-specific fixtures",
+      "Optional explicitly synthetic creative visualization,without detection or calibrated physical claims",
+      "Optional Kirlian-inspired artistic effect kept separate from corona measurement and metaphysical claims"
+    ]
+  },
+  "transition": "Technique15 resource audit may begin only after this closure commit is accepted and pushed;no Iridology diagnosis implementation"
+}
