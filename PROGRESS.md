@@ -1,5 +1,9 @@
 # Future progress
 
+## Tarot implementation/verification — 2026-11-04
+- Source/protocolc398180 pushed. Added immutable78-card catalog,156 primary/gap-filled orientation meanings and56 separate additional accounts;213 traditional registry rules. tarot supports seeded/manual one-card,three-card and Waite Celtic readings,source positions,removed significator/facing,explicit court/person versus trump-or-pip/matter selection and optional final-card follow-up without automatic redraw. Source text and compositional interpretation remain distinct.
+-243 tests/205 CLI cases pass,preserving222/183 inherited.30 documentary/layout/protocol checks include six independently generated PowerShell/.NET full-permutation/cut/orientation vectors. UTF-8 seeds,unbiased rejection sampling and independent orientation stream replay correctly;pip check clean,no new dependencies. Reproducible JSON/Markdown examples in data/tarot-{one,three,celtic,manual}. No artwork,diagnosis,certain forecasts or cross-deck rule blending.
+
 ## Tarot source/protocol verification — 2026-11-03
 - Synchronized5382854. waite-1922-text-v1 freezes78 identities/156 orientation meanings from primary PartIII,with56 section4 alternatives kept separate. Original title/reprint pages and Four of Wands/Celtic pp299-305 inspected;1910 first publication distinguished from1922 source,not a full edition collation. Two of Cups has no section2 reversal:explicit section4 p290 Passion traced as gap fill. StrengthVIII/Fortitude and JusticeXI preserved.
 - Celtic ten positions,removed significator,facing-dependent5/6 and optional court/dubious-final follow-up verified. Source/card fixtures precede engine. future-cards-sha256-fy-v1 framing,rejection sampling,shuffle/cuts and separate orientation protocol frozen;independent PowerShell/.NET reference generated six known-answer vectors before Python implementation. Text-only,no modern artwork;other ranked traditions/inventory unchanged.
