@@ -17,7 +17,9 @@
   ],
   "meaning": "Traditional symbolic assessment of adviser intent only; not factual verification or real-world outcome probability.",
   "technique_id": 5,
-  "release_status": "Developing",
+  "release_status": "Core v1 Ready \u2014 Diagnostic Scope",
+  "judgment_status": "Question Judgment \u2014 Experimental",
+  "judgment_certified": false,
   "profile": "lilly-1647-advice-intent",
   "category": "advice-intent",
   "question": "Was this advice given with honest intent?",
@@ -1556,11 +1558,22 @@
     {
       "id": "gate.seventh_full",
       "value": null,
-      "reason": "Full meaning of unfortunate/impeded seventh lord (pp122\u2013123/115), including besiegement/fixed-star exceptions, not yet fully certified.",
+      "reason": "Seventh-cusp affliction and the full meaning of impedited/unfortunate seventh lord remain unresolved (pp122\u2013123). The p115 debility table does not supply an explicit category-specific clearance threshold.",
       "source_id": "horary-lilly-1647-images-v1",
       "locator": "Printed p123",
       "at_utc": "2026-11-03T06:30:00+00:00",
-      "evidence": {},
+      "evidence": {
+        "applicability": "p122 qualifies the seventh-house caution when the question belongs to another house. Advice-intent p194 uses tenth occupants and lunar application; no verified seventh-house exemption applies.",
+        "remaining_procedures": [
+          "Operational definition of seventh-cusp afflicted",
+          "Exhaustive source-defined impedited/unfortunate seventh-lord clearance and contextual exceptions",
+          "Complete-input published advice-intent judgment matching the advice-begins protocol"
+        ],
+        "rule_ref": {
+          "id": "horary.accidentals-gap",
+          "version": 2
+        }
+      },
       "implementation_scope": "source-specific predicate or explicitly partial caution"
     },
     {
@@ -1798,7 +1811,7 @@
       "id": "horary.hours",
       "version": 1,
       "source_id": "horary-lilly-1647-images-v1",
-      "locator": "Printed pp482\u2013485, supplementary planetary-hour tables",
+      "locator": "Printed pp482\u00e2\u20ac\u201c485, supplementary planetary-hour tables",
       "method": "Sunrise begins weekday lord;12 unequal daylight and12 unequal night hours follow Saturn,Jupiter,Mars,Sun,Venus,Mercury,Moon cyclically.",
       "exceptions": [
         "Source table arithmetic tested; current sunrise from explicit standard refraction/upper-limb model. Polar cases outside bounded domain."
@@ -1808,10 +1821,22 @@
       "id": "horary.accidentals-gap",
       "version": 1,
       "source_id": "horary-lilly-1647-images-v1",
-      "locator": "Printed pp115,122\u2013123",
+      "locator": "Printed pp115,122\u00e2\u20ac\u201c123",
       "method": "Seventh-lord unfortunate/impeded caution is broader than retrograde/fall alone. Missing verified accidentals must withhold definitive classification.",
       "exceptions": [
         "No arbitrary strength score; historical fixed-star longitudes cannot be reused unchanged at modern dates."
+      ]
+    },
+    {
+      "id": "horary.accidentals-gap",
+      "version": 2,
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed pp115,122\u2013123,194",
+      "method": "Seventh-cusp affliction and retrograde/impedited/unfortunate seventh-lord cautions are relevant to this non-seventh-house category. Partial checks cannot clear the full caution; p115 provides no explicit category clearance threshold.",
+      "exceptions": [
+        "Retain v1 as historical extraction; this version narrows the blocker rather than asserting every p115 debility/fixed-star row is mandatory.",
+        "Conservative withholding is not a literal claim Lilly never judged charts with cautions.",
+        "No own-chart or other seventh-house exemption imported from a modern practitioner."
       ]
     }
   ],
@@ -1826,7 +1851,7 @@
       "JSON and Markdown CLI; unsupported-question response"
     ],
     "experimental": [
-      "Advice-intent assessment: always indeterminate while gate.seventh_full remains unresolved",
+      "Question Judgment \u2014 Experimental: advice-intent remains indeterminate while gate.seventh_full is unresolved; individual testimonies are not certified verdicts",
       "Same-sign exact-contact proxy for Moon void-of-course, not certification of every historical definition",
       "Conservative5-degree cusp and earlier-half Moon domain restrictions; these are engineering margins, not attributed Lilly thresholds",
       "Ordered prohibition/frustration/refranation candidates are geometry, not categorical impediment judgments"
@@ -1861,7 +1886,7 @@
     "skyfield": "1.54",
     "kernel_sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2",
     "profile_sha256": "696076f4e2c78eaec45c7480cae8cac8442a1df40754818815e10197d1964bc8",
-    "scope_sha256": "9cd9f64607168f4c1a8be2b640a77003f6ed3f126dec35d264a71982809b2a3c"
+    "scope_sha256": "c61bcdfeb2cc293b4c23f93815edaf9fdde5f9cdf1b9cbbc83ad458ce4615488"
   },
   "example_context": "Constructed demonstration question/time/location, not a published historical judgment or an actual adviser allegation."
 }

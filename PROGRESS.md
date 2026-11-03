@@ -1,5 +1,11 @@
 # Future progress
 
+## Horary Core v1 closure — Diagnostic Scope, 2026-11-03
+- Targeted attempt019269c committed/pushed first. User-authorized Option B accepted: **Core v1 Ready — Diagnostic Scope**; **Question Judgment — Experimental**, judgment_certified=false and no certified categories. Existing indeterminate/unsupported classifications preserved; unknown seventh caution remains null.
+-101 tests pass, retaining all98 previous tests; all59 existing CLI smoke cases pass (23 Western,12 Vedic,15 Chinese,4 Numerology,5 Horary). New regressions cover immutable caution v1/v2, rejected validation candidates and exact serialized computational-section/diagnostic-value compatibility with98f5f5d. Three independent astronomical fixtures still match all30 events; pip check clean, no dependency/astronomy changes.
+- Frozen coverage/P1/P2 in horary_engine_v1.json; README, API/CLI status labels, permanent instructions, audit and example/verification reports updated. p115 all-row veto inference corrected; cusp/lord judgment clearance and matching published example stay P1. Synthetic/numerical tests are not historical judgment validation.
+- Techniques1–4 remain Core v1 Ready. Commit/push this bounded Horary closure before beginning Technique6 resource audit; no Technique6 audit or implementation included in this closure.
+
 ## Horary targeted judgment attempt — 2026-11-03
 - Resumed98f5f5d; re-inspected original Lilly pp115/122–123/194. Advice-intent is outside seventh-house matters, so the seventh-cusp/lord caution remains relevant. Basic retrograde/fall/malefic-term checks exist; operational cusp affliction and full impedited/unfortunate clearance remain unverified.
 - Corrected overly broad blocker wording: p115 is a general fortitude table, not an explicit mandate that every accidental/fixed-star row veto p194. No score threshold, modern self-chart exemption or automatic unknown clearance added. Registered immutable horary.accidentals-gap v2 alongside v1; exact gate remains null/indeterminate.

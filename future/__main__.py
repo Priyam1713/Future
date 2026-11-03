@@ -153,7 +153,7 @@ def main():
     nu.add_argument('--basis',required=True,choices=['birth','current'])
     nu.add_argument('--y-roles',default='')
     nu.add_argument('--format',choices=['json','markdown'],default='json')
-    ho=sub.add_parser('horary',help='Source-bounded Lilly advice-intent assessment (Developing)')
+    ho=sub.add_parser('horary',help='Lilly Horary Core v1 diagnostic scope; question judgment experimental')
     ho.add_argument('question');ho.add_argument('category')
     ho.add_argument('local');ho.add_argument('zone');ho.add_argument('latitude',type=float);ho.add_argument('longitude',type=float)
     ho.add_argument('--protocol',required=True,choices=['advice-begins'])

@@ -17,6 +17,8 @@ def run():
         if name=='JSON':
             r=json.loads(p.stdout)
             assert r['classification']=='indeterminate' and 'gate.seventh_full' in r['unknown_rules']
+            assert r['release_status']=='Core v1 Ready — Diagnostic Scope'
+            assert r['judgment_status']=='Question Judgment — Experimental' and r['judgment_certified'] is False
             assert r['technique_id']==5 and r['question_chart']['settings']['houses']=='regiomontanus'
             r['example_context']='Constructed demonstration question/time/location, not a published historical judgment or an actual adviser allegation.'
             Path('data/horary-advice-2026.json').write_text(json.dumps(r,indent=2)+'\n',encoding='utf-8')

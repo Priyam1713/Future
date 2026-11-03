@@ -1,9 +1,20 @@
 {
   "technique_id": 5,
-  "status": "Developing",
+  "status": "Core v1 Ready — Diagnostic Scope",
   "profile": "lilly-1647-advice-intent",
   "source_extraction": "horary_lilly_v1.json is the immutable first extraction; this record describes implementation coverage.",
-  "domain": {"utc_years": [1851, 2148], "latitude": "abs(latitude)<60 degrees", "houses": "Regiomontanus", "zodiac": "tropical", "planets": "seven classical", "node": "explicit IERS mean node"},
+  "domain": {
+    "utc_years": [
+      1851,
+      2148
+    ],
+    "latitude": "abs(latitude)<60 degrees",
+    "houses": "Regiomontanus",
+    "zodiac": "tropical",
+    "planets": "seven classical",
+    "node": "explicit IERS mean node",
+    "motion_window": "Four days; complete UTC window must stay within1851–2148. No historical Julian-calendar reconstruction."
+  },
   "supported": [
     "Caller-supplied advice-begins instant, IANA timezone/fold and location; no automatic current-clock fallback",
     "Classical house lords, dignities, reception edges and solar/motion conditions",
@@ -14,7 +25,7 @@
     "JSON and Markdown CLI; unsupported-question response"
   ],
   "experimental": [
-    "Advice-intent assessment: always indeterminate while gate.seventh_full remains unresolved",
+    "Question Judgment — Experimental: advice-intent remains indeterminate while gate.seventh_full is unresolved; individual testimonies are not certified verdicts",
     "Same-sign exact-contact proxy for Moon void-of-course, not certification of every historical definition",
     "Conservative5-degree cusp and earlier-half Moon domain restrictions; these are engineering margins, not attributed Lilly thresholds",
     "Ordered prohibition/frustration/refranation candidates are geometry, not categorical impediment judgments"
@@ -29,30 +40,65 @@
     "Predictive accuracy, truth verification or outcome probabilities"
   ],
   "acceptance": {
-    "computational_diagnostics": "Independent current-date ephemeris/Regiomontanus/contact fixtures plus source arithmetic examples",
-    "core_v1": "NOT MET: no complete category judgment certified; modern astronomical comparisons do not validate historical judgment fidelity",
-    "published_example": "Original Cambridge pp200–201 inspected, different category and outside current ephemeris; not an advice-intent numerical acceptance fixture",
-    "next_technique": "Not started; await a genuinely complete bounded category"
+    "computational_diagnostics": "Independent current-date ephemeris/Regiomontanus/contact fixtures plus source arithmetic examples; exact baseline computation regression snapshot",
+    "core_v1": "MET for Diagnostic Scope only after regression/smoke acceptance; chart,significators,dignities,receptions,conditions,exact contacts and source-traceable testimonies are supported",
+    "full_judgment": "NOT MET: no category has certified complete traditional judgment or matching published acceptance example",
+    "published_example": "Original Cambridge pp200–201 is documentary, different category/outside ephemeris. Synthetic tests and astronomical fixtures remain separate from published judgments.",
+    "next_technique": "Technique6 resource audit permitted only after this Diagnostic Scope closure is committed; no implementation authorized in this pass"
   },
   "verification": {
-    "tests": 98,
-    "previous_tests_retained": 87,
-    "cli_smoke_cases": {"Western": 23, "Vedic": 12, "Chinese": 15, "Numerology": 4, "Horary": 5},
+    "tests": 101,
+    "previous_tests_retained": 98,
+    "cli_smoke_cases": {
+      "Western": 23,
+      "Vedic": 12,
+      "Chinese": 15,
+      "Numerology": 4,
+      "Horary": 5
+    },
     "independent": "Three Swiss/Moshier fixtures,30 matched contact/ingress/station events, two hemispheres; positions, cusps, mean nodes, sunrise/sunset; see data/horary-validation.json",
-    "source_arithmetic": "Original p107 moiety,p112 reception and pp483–485 unequal planetary-hour examples",
-    "regression": "Symmetric-station paired crossings, half-open boundaries, relative motion, intervening recipient contact, conflict/unknown handling, DST gaps/folds, profile isolation and reproducibility",
+    "source_arithmetic": "Original p107 moiety,p112 reception and pp483â€“485 unequal planetary-hour examples",
+    "regression": "Symmetric-station paired crossings, half-open boundaries, relative motion, intervening recipient contact, conflict/unknown handling, DST gaps/folds, profile isolation and reproducibility; exact computational-section compatibility with98f5f5d and no judgment promotion on release",
     "dependency_audit": "pip check clean; no new runtime packages or Swiss production imports"
   },
   "P1": [
-    "Resolve source scope of unfortunate/impeded seventh lord pp122–123 against full p115 accidentals; certify one bounded category without treating omissions as clearance",
-    "Obtain independent complete-input advice-intent chart/judgment matching selected protocol and supported date range",
+    "Resolve operational seventh-cusp affliction and impedited/unfortunate seventh-lord clearance for advice-intent; p115 does not itself define a mandatory all-row veto or threshold",
+    "Find complete-input published advice-intent chart/judgment in supported domain and matching advice-begins protocol; bounded search documented in horary_judgment_attempt_v1.json",
     "Verify reception-qualified translation/collection and categorical interference only where needed for selected category",
     "Resolve Moon application/void-of-course and general caution exceptions without combining schools"
   ],
-  "P2": ["Additional question categories", "Frawley/Barclay independently sourced profiles", "Expanded historical ephemeris/calendar support", "Terrain/observational visibility and fixed-star models"],
+  "P2": [
+    "Additional question categories",
+    "Frawley/Barclay independently sourced profiles",
+    "Expanded historical ephemeris/calendar support",
+    "Source-specific contextual exceptions, terrain/observational visibility and historical fixed-star models; fixed-star-table reconstruction does not block the diagnostic release"
+  ],
   "licensing": "No new runtime dependencies. Swiss is optional independent reference tooling only and is not imported by production. Original Lilly images Public Domain Mark, retained locally for inspection; numeric facts/procedural summaries and image URLs/hashes only in repository.",
   "rules": [
-    {"id": "horary.hours", "version": 1, "source_id": "horary-lilly-1647-images-v1", "locator": "Printed pp482–485, supplementary planetary-hour tables", "method": "Sunrise begins weekday lord;12 unequal daylight and12 unequal night hours follow Saturn,Jupiter,Mars,Sun,Venus,Mercury,Moon cyclically.", "exceptions": ["Source table arithmetic tested; current sunrise from explicit standard refraction/upper-limb model. Polar cases outside bounded domain."]},
-    {"id": "horary.accidentals-gap", "version": 1, "source_id": "horary-lilly-1647-images-v1", "locator": "Printed pp115,122–123", "method": "Seventh-lord unfortunate/impeded caution is broader than retrograde/fall alone. Missing verified accidentals must withhold definitive classification.", "exceptions": ["No arbitrary strength score; historical fixed-star longitudes cannot be reused unchanged at modern dates."]}
-  ]
+    {
+      "id": "horary.hours",
+      "version": 1,
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed pp482â€“485, supplementary planetary-hour tables",
+      "method": "Sunrise begins weekday lord;12 unequal daylight and12 unequal night hours follow Saturn,Jupiter,Mars,Sun,Venus,Mercury,Moon cyclically.",
+      "exceptions": [
+        "Source table arithmetic tested; current sunrise from explicit standard refraction/upper-limb model. Polar cases outside bounded domain."
+      ]
+    },
+    {
+      "id": "horary.accidentals-gap",
+      "version": 1,
+      "source_id": "horary-lilly-1647-images-v1",
+      "locator": "Printed pp115,122â€“123",
+      "method": "Seventh-lord unfortunate/impeded caution is broader than retrograde/fall alone. Missing verified accidentals must withhold definitive classification.",
+      "exceptions": [
+        "No arbitrary strength score; historical fixed-star longitudes cannot be reused unchanged at modern dates."
+      ]
+    }
+  ],
+  "judgment_status": "Question Judgment — Experimental",
+  "judgment_certified": false,
+  "certified_categories": [],
+  "release_basis": "User-authorized Option B,2026-11-03: verified diagnostic product may close while full traditional question judgment remains experimental. Not an empirical-validity claim.",
+  "judgment_attempt": "horary_judgment_attempt_v1.json; gate remains null, rule horary.accidentals-gap v2 coexists with immutable v1"
 }

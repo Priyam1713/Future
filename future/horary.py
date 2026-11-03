@@ -153,7 +153,9 @@ def assess(e,question,category,local,zone,latitude,longitude,protocol='advice-be
     item(cautions,'gate.hour_affinity',True if hour['lord'] and affinity else None,
         'Identity/triplicity or explicit Sun–Mars hot/dry example; other nature matches not invented.',121,hour=hour,asc_ruler=ruler)
     result=classify(predicates,cautions)
-    result.update({'technique_id':5,'release_status':'Developing','profile':profile,'category':category,'question':question.strip(),
+    result.update({'technique_id':5,'release_status':SCOPE['status'],
+        'judgment_status':SCOPE['judgment_status'],'judgment_certified':False,
+        'profile':profile,'category':category,'question':question.strip(),
         'protocol':{'name':protocol,'definition':'Actual instant adviser first discloses advice; caller supplies moment/location. Not software invocation time.','source_page':194},
         'question_chart':n,'significators':{'querent':ruler,'co_significator':'Moon','house_lords':lords,
             'category_house':10,'adviser':'Tenth occupants and lunar application per p194; no invented exclusive adviser-ruler assignment'},
@@ -175,9 +177,10 @@ def assess(e,question,category,local,zone,latitude,longitude,protocol='advice-be
     return result
 
 def markdown(r):
-    lines=['# Lilly Horary assessment','',f"Question: {r['question']}",f"Category: {r['category']}",f"Classification: **{r['classification']}**",'']
+    lines=['# Lilly Horary diagnostic report','',f"Question: {r['question']}",f"Category: {r['category']}",f"Classification: **{r['classification']}**",'']
     if r['classification']=='unsupported_question':return '\n'.join(lines+[r['reason']])+'\n'
-    lines+=[f"Moment: {r['question_chart']['birth']['utc']}; protocol {r['protocol']['name']}.",
+    lines+=[f"Release: {r['release_status']}. {r['judgment_status']}; certified judgments: no.",'',
+        f"Moment: {r['question_chart']['birth']['utc']}; protocol {r['protocol']['name']}.",
         f"Querent: {r['significators']['querent']}; Moon co-significator. Tenth-house occupants: source-specific adviser-intent testimony.",'',
         '| Rule | Evaluated value | Reason | Source page |','|---|---|---|---|']
     for d in r['rule_diagnostics']:lines.append(f"| {d['id']} | {d['value']} | {d['reason']} | {d['locator']} |")

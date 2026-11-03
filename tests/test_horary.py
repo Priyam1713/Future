@@ -134,7 +134,8 @@ class HoraryTests(unittest.TestCase):
             self.assertLess(abs(signed(r['nodes']['positions']['North Node']['longitude']-c['mean_node_longitude'])),.02)
             for reading in r['interpretations']:
                 self.assertEqual(reading['coverage'],'direct');self.assertIn('Individual testimony',reading['limitation'])
-        self.assertEqual(SCOPE['status'],'Developing');self.assertIn('NOT MET',SCOPE['acceptance']['core_v1'])
+        self.assertEqual(SCOPE['status'],'Core v1 Ready — Diagnostic Scope')
+        self.assertFalse(SCOPE['judgment_certified']);self.assertIn('NOT MET',SCOPE['acceptance']['full_judgment'])
         pages=json.loads(Path('knowledge/horary_image_provenance.json').read_text())
         self.assertEqual(len(pages),len({p['printed_page'] for p in pages}))
         self.assertGreaterEqual(len(pages),32)
@@ -173,3 +174,19 @@ class HoraryTests(unittest.TestCase):
         conditions={r['id']:r for r in ATTEMPT['material_conditions']}
         self.assertEqual(conditions['seventh.cusp.affliction']['implementation'],'unresolved')
         self.assertIn('not established',conditions['table.accidental_debilities']['materiality'])
+
+    def test_diagnostic_release_preserves_baseline_outputs(self):
+        import hashlib
+        f=json.loads(Path('tests/fixtures/horary_diagnostic_compatibility.json').read_text())
+        r=assess(self.e,**f['inputs'])
+        # Compare serialized JSON interfaces: integer aspect-map keys become
+        # strings on the wire and must be normalized before canonical sorting.
+        wire=json.loads(json.dumps(r))
+        for key,expected in f['stable_section_sha256'].items():
+            actual=hashlib.sha256(json.dumps(wire[key],sort_keys=True,separators=(',',':')).encode()).hexdigest()
+            self.assertEqual(actual,expected,key)
+        self.assertEqual([[d['id'],d['value']] for d in r['rule_diagnostics']],f['diagnostic_values'])
+        self.assertEqual(r['classification'],f['classification'])
+        self.assertEqual(r['release_status'],'Core v1 Ready — Diagnostic Scope')
+        self.assertEqual(r['judgment_status'],'Question Judgment — Experimental')
+        self.assertFalse(r['judgment_certified'])

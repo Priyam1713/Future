@@ -1,10 +1,12 @@
 Illustrative question and moment; not a published judgment.
 
-# Lilly Horary assessment
+# Lilly Horary diagnostic report
 
 Question: Was this advice given with honest intent?
 Category: advice-intent
 Classification: **indeterminate**
+
+Release: Core v1 Ready — Diagnostic Scope. Question Judgment — Experimental; certified judgments: no.
 
 Moment: 2026-11-03T06:30:00+00:00; protocol advice-begins.
 Querent: Saturn; Moon co-significator. Tenth-house occupants: source-specific adviser-intent testimony.
@@ -22,7 +24,7 @@ Querent: Saturn; Moon co-significator. Tenth-house occupants: source-specific ad
 | gate.saturn | True | Saturn in first/seventh cautions retained. | Printed p122 |
 | gate.combust | True | ASC lord combustion caution; beams also conservatively withheld. | Printed p123 |
 | gate.seventh_basic | False | Explicit retrograde/fall/detriment/malefic-term seventh-lord cautions. | Printed p123 |
-| gate.seventh_full | None | Full meaning of unfortunate/impeded seventh lord (pp122–123/115), including besiegement/fixed-star exceptions, not yet fully certified. | Printed p123 |
+| gate.seventh_full | None | Seventh-cusp affliction and the full meaning of impedited/unfortunate seventh lord remain unresolved (pp122–123). The p115 debility table does not supply an explicit category-specific clearance threshold. | Printed p123 |
 | gate.hour_affinity | True | Identity/triplicity or explicit Sun–Mars hot/dry example; other nature matches not invented. | Printed p121 |
 
 ## Upcoming contacts and motion changes

@@ -14,3 +14,7 @@ Prioritize approximately 80% of practical functionality with the most efficient 
 - Preserve local/offline reproducibility, immutable versioned rules, rights restrictions and existing interfaces. Avoid new frameworks, premature UI and unrelated infrastructure.
 
 The original inventory is preserved in resources/ and knowledge/inventory.json. Release scope and acceptance records are in knowledge/; history is in PROGRESS.md. Read the current records before resuming; do not treat historical progress entries as current blockers when superseded by this directive.
+
+## Horary bounded release directive — user,2026-11-03
+
+Technique5 may close as **Core v1 Ready — Diagnostic Scope** with **Question Judgment — Experimental** when its verified diagnostic acceptance passes. This is not certified positive/negative judgment. Preserve unknown cautions and source gaps in P1; synthetic/numerical fixtures are not published judgment validation. After committing this bounded closure, continue with Technique6's resource audit in inventory order.

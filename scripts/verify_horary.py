@@ -3,7 +3,7 @@ from pathlib import Path
 from datetime import datetime
 import json
 from future.natal import SkyfieldEphemeris,signed
-from future.horary import assess,planetary_hour
+from future.horary import assess,planetary_hour,SCOPE
 
 def run():
     f=json.loads(Path('tests/fixtures/horary_reference.json').read_text())
@@ -33,7 +33,8 @@ def run():
          'numerical_result':'pass within declared tolerances; convergence is not absolute timing uncertainty',
          'source_examples':'Lilly p107 moiety,p112 reception,pp483–485 unequal hours; Cambridge pp200–201 documentary only',
          'historical_fidelity':'partial: source-specific p194 testimonies calculated, full caution clearance and same-category published validation unresolved',
-         'core_v1_acceptance':'not met; retain Developing and do not start Technique6',
+         'core_v1_acceptance':SCOPE['status'],
+         'judgment_certification':'not met; Question Judgment — Experimental; no certified positive/negative judgments',
          'predictive_validity':'not established or quantified'}
     Path('data/horary-validation.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(out,indent=2))
