@@ -1,5 +1,9 @@
 # Future progress
 
+## Iridology source verification — 2026-11-03
+- Synchronizedd4650dc;ranked Jensen/Deck books remain without reusable original plates. One bounded fallback search verified Wellcome public-domain Lindlahr1922 fifth edition,title/copyright,frontispiece and ChapterIII pp22-25. Selected33 original label entries;17 independent label,2 orientation,2 chapter-placement fixtures and two published schematic selections recorded before matcher implementation.
+- Named lindlahr-1922-legend-reference-v1 keeps Jensen/Deck/Rayid separate. Literal RIGHT IRIS is reader-left in upright plate;no patient/camera orientation inferred. Unequal/nested fields and uncalibrated perimeter marks do not justify metric clock/radial lookup. Historical exceptions/medical claims remain documentary only;rights and exact canvas locators in iridology_pass1_findings.json.
+
 ## Technique15 Iridology resource audit — 2026-11-03
 - Began only after Aura closure4a9cf34 pushed and main synchronized. Original Jensen/Deck rankings,three variations,inventory hash/exclusions preserved. Jensen1964 Google catalog and Deck1982 NLM translation/atlas metadata registered;no original iris-map legends/sector rules ingested. Rayid practitioner indexed page is separate,with direct-access/rights gaps retained.
 - Primary masked1979 evaluation and1999 review abstracts registered as scientific-limit references,not map authorities. iridology_resource_audit.json defines a possible manual historical-map reference only after source/rights/orientation checks;no health,organ,disease or personal-trait inference.209 tests/169 CLI acceptance retained;five metadata-only records load successfully. No Technique15 implementation.
