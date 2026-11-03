@@ -1,5 +1,11 @@
 # Future progress
 
+## Technique9 Face Reading / Physiognomy — resource audit,2026-11-03
+- Began only after Palmistry closuref1932dd committed/pushed. Preserved exact inventory ID,naming,four variations and ranked Yap/Bridges/Lavater sources. Registered official Yap series/store,Elsevier2012 edition/contents and Wellcome Hunter-translation original digitization/PDM metadata. No engine or executable rules added.
+- face_reading_resource_audit.json proposes a source-scoped historical region/term annotation core after page/illustration verification. Full modern procedural access,region/orientation conventions and independent examples remain pending. Five-element/12-palace mappings to Lavater stay explicitly provisional; no cross-school borrowing or face-based personality,criminality/health inference.
+- Audit records rights,feasibility and next requirements/P1/P2; no contemporary books,face photos or original plates ingested. Inherited release134 tests/93 CLI cases; inventory and registry metadata checked separately.
+
+
 ## Palmistry Core v1 closure — 2026-11-03
 - Implementatione3b12fb committed/pushed first. Technique8 **Core v1 Ready** for cheiro-ninth-manual-v1:37 source-located rules,three major lines,six hand types,eight mount sites,validated observations and useful JSON/Markdown readings. Frozen configuration matrix and P1/P2 in palmistry_core_v1.json; clarified exact qualitative terms rather than inventing numeric thresholds.
 - All134 tests/93 CLI cases pass,retaining122/83 inherited. Six independently transcribed illustrated types/details establish selected source fidelity only. No full-person,photo-recognition,personality or predictive-validity claim. Other authors/Indian Samudrika/dermatoglyphics,minor marks,timing and image extraction remain explicitly unsupported.

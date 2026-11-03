@@ -1,0 +1,162 @@
+{
+  "technique_id": 9,
+  "name": "Face Reading / Physiognomy",
+  "status": "Researching",
+  "date": "2026-11-03",
+  "predecessor_closure": "f1932dd",
+  "policy": "Resource/variation audit only,after Palmistry closure committed/pushed. No face engine,image extraction or executable physiognomic judgment rules.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    9,
+    "2 \u00b7 Physical & Human-Based Divination",
+    "Face Reading / Physiognomy",
+    "RETAIN \u2014 simulate / implement",
+    "Vision / symbol rules",
+    "Chinese Mian Xiang; five elements; 12 palaces; Western historical physiognomy",
+    "Face landmarks + tradition-specific feature mappings",
+    "Consented frontal photos or user-described features",
+    "No valid personality/criminality/health inference from face",
+    "Physiognomy is scientifically discredited; symbolic/historical only",
+    "Face Reading Essentials (series)",
+    "Joey Yap",
+    "https://www.joeyyap.com/book/book.asp",
+    "Face Reading in Chinese Medicine",
+    "Essays on Physiognomy",
+    null,
+    "8, 10, 11, 14",
+    9
+  ],
+  "ranked_sources": [
+    [
+      9,
+      "Face Reading / Physiognomy",
+      1,
+      "Joey Yap",
+      "Face Reading Essentials (series)",
+      "Chinese Mian Xiang regions",
+      "https://www.joeyyap.com/book/book.asp",
+      "Publisher / purchase",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      9,
+      "Face Reading / Physiognomy",
+      2,
+      "Lillian Bridges",
+      "Face Reading in Chinese Medicine",
+      "Chinese symbolic face map",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      9,
+      "Face Reading / Physiognomy",
+      3,
+      "Johann Kaspar Lavater",
+      "Essays on Physiognomy",
+      "Historical Western school",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Chinese Mian Xiang",
+      "inventory_row": [
+        9,
+        "Face Reading / Physiognomy",
+        "Chinese Mian Xiang",
+        "Face Reading in Chinese Medicine",
+        "Face Reading Essentials (series)",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; source pages and conventions not verified"
+    },
+    {
+      "name": "five elements",
+      "inventory_row": [
+        9,
+        "Face Reading / Physiognomy",
+        "five elements",
+        "Essays on Physiognomy",
+        "Face Reading in Chinese Medicine",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; source pages and conventions not verified"
+    },
+    {
+      "name": "12 palaces",
+      "inventory_row": [
+        9,
+        "Face Reading / Physiognomy",
+        "12 palaces",
+        "Essays on Physiognomy",
+        "Face Reading in Chinese Medicine",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; source pages and conventions not verified"
+    },
+    {
+      "name": "Western historical physiognomy",
+      "inventory_row": [
+        9,
+        "Face Reading / Physiognomy",
+        "Western historical physiognomy",
+        "Essays on Physiognomy",
+        "Face Reading in Chinese Medicine",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; source pages and conventions not verified"
+    }
+  ],
+  "sources": [
+    "face-yap-publisher-v1",
+    "face-bridges-publisher-v1",
+    "face-lavater-wellcome-v1"
+  ],
+  "feasibility": {
+    "high_roi": "One named source-scoped historical/symbolic facial-region glossary and manual observation annotation workflow; no personal trait or medical assessment from facial features.",
+    "initial_candidate": "Chinese Mian Xiang palaces/region labels from one legitimate accessible Yap/Bridges procedure,if available; otherwise a separately labeled original Lavater historical-text/plate educational scope. Do not silently replace one school with another.",
+    "input": "Prefer user-described region observations or source-schematic examples. No image pipeline or new vision dependencies in the first pass.",
+    "resource_access": "Yap/Bridges publisher metadata/contents available; full procedures and permitted examples not yet verified. Lavater original public-domain digitization available for targeted inspection."
+  },
+  "next_requirements": [
+    "Inspect one small set of original/permitted pages and illustrated examples; record printed and scan locators before rules",
+    "Freeze exact facial orientation,left/right mirroring,region labels and school/translation; no invented metric thresholds",
+    "Separate observed geometry from historical symbolic associations; no personality,criminality,health or protected-trait conclusions about a person",
+    "Retain 12-palace and five-element conventions independently; catalog inclusion does not prove the inventory provisional source mapping",
+    "Define unknown/uncertain observations and conflicting-source behavior; no arbitrary face/personality/auspiciousness scores",
+    "If photographs are later introduced,require consent,orientation and extraction validation,user corrections and minimal retention before supported use"
+  ],
+  "mapping_cautions": [
+    "Inventory provisionally maps five elements/12 palaces to Lavater; no evidence verified that this Western text supplies those Chinese procedures. Preserve mapping as provisional,do not borrow across traditions.",
+    "Bridges clinical publisher description is not clinical evidence; diagnostic chapters are not part of the proposed symbolic core.",
+    "Yap marketing and historical Lavater assertions do not validate real-world inference from appearance."
+  ],
+  "P1": [
+    "Targeted page/illustration verification for one practical historical/symbolic profile",
+    "Source-located region diagrams and independent transcription fixtures",
+    "Manual structured annotation/lookup schema and transparent unsupported labels"
+  ],
+  "P2": [
+    "Further traditions and advanced source comparisons",
+    "Consent-based image-assisted region localization only after independent validation",
+    "Historical translation/edition differences and complex region/time maps"
+  ],
+  "limits": "Audit only; no implemented variation,no book corpus/photo ingestion,no face-based personality,criminality or health inference. Original taxonomy preserved.",
+  "accepted_predecessor": {
+    "status": "Core v1 Ready",
+    "tests": 134,
+    "cli_smoke_cases": 93
+  }
+}
