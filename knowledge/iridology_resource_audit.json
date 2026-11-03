@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "technique_id": 15,
+  "name": "Iridology",
+  "status": "Researching",
+  "date": "2026-11-03",
+  "predecessor_closure": "4a9cf34",
+  "predecessor_push": "Confirmed closure4a9cf34 pushed before this audit;HEAD...origin/main0/0 at transition.",
+  "policy": "Resource/variation audit only;no iris-to-organ,diagnostic,disease detection or personality-assessment engine implemented.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    15,
+    "2 · Physical & Human-Based Divination",
+    "Iridology",
+    "RETAIN — simulate / implement",
+    "Vision / symbol rules",
+    "Jensen iris map; German Deck method; Rayid eye archetypes",
+    "Iris-sector schematic + non-medical symbolic display",
+    "High-quality iris image optional; user-selected zones",
+    "DISCRE­DITED as disease detection; ban health diagnosis",
+    "Discredited diagnostic method; education/history only",
+    "The Science and Practice of Iridology",
+    "Bernard Jensen",
+    null,
+    "The Principles of Iris Diagnosis",
+    null,
+    null,
+    null,
+    15
+  ],
+  "ranked_sources": [
+    [
+      15,
+      "Iridology",
+      1,
+      "Bernard Jensen",
+      "The Science and Practice of Iridology",
+      "Practitioner iris chart",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      15,
+      "Iridology",
+      2,
+      "Josef Deck",
+      "The Principles of Iris Diagnosis",
+      "German iris map",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Jensen iris map",
+      "inventory_row": [
+        15,
+        "Iridology",
+        "Jensen iris map",
+        "The Principles of Iris Diagnosis",
+        "The Science and Practice of Iridology",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;source/rights and original-diagram conventions require verification",
+      "finding": "Rank1 catalog establishes relevant work;original iris-map sectors,legends and permissions not inspected. No organ location invented from generic online charts."
+    },
+    {
+      "name": "German Deck method",
+      "inventory_row": [
+        15,
+        "Iridology",
+        "German Deck method",
+        "The Principles of Iris Diagnosis",
+        "The Science and Practice of Iridology",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;source/rights and original-diagram conventions require verification",
+      "finding": "Rank2 NLM catalog establishes1982 English/German translation and atlas identity. Keep source/edition separate;neither Jensen clock sectors nor treatment claims imported."
+    },
+    {
+      "name": "Rayid eye archetypes",
+      "inventory_row": [
+        15,
+        "Iridology",
+        "Rayid eye archetypes",
+        "The Principles of Iris Diagnosis",
+        "The Science and Practice of Iridology",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;source/rights and original-diagram conventions require verification",
+      "finding": "Official indexed practitioner page distinguishes Jewel/Flower primary and Stream/Shaker secondary names;inventory linkage to Jensen/Deck books remains provisional. No actual-person traits,relationships,health or spiritual status inferred."
+    }
+  ],
+  "sources": [
+    "iridology-jensen-1964-catalog-v1",
+    "iridology-deck-1982-nlm-catalog-v1",
+    "iridology-rayid-practitioner-web-v1",
+    "iridology-simon-1979-evaluation-v1",
+    "iridology-ernst-1999-review-v1"
+  ],
+  "feasibility": {
+    "high_roi_first_scope": "Historical/educational reference to one verified edition's generic iris-map label or schematic sector,selected manually. No actual iris image or personal health input needed.",
+    "deterministic_component": "Source-defined left/right eye,viewer versus subject orientation,clock angle/radial bands and numbered legend lookup only after original diagram verification. Such geometry is documentary,not an anatomical or diagnostic correspondence.",
+    "historical_component": "Compare attributed chart terminology and source differences;describe discredited doctrine without assessing a person.",
+    "access_gate": "Neither ranked original atlas nor chart has been visually inspected or licensed here. Catalogs do not supply map rules. Bounded legitimate excerpt/rights verification required before implementing any lookup.",
+    "empirical_boundary": "Masked primary evaluation did not detect kidney disease above chance;review abstract does not support diagnostic validity. This does not deny that clinical ophthalmology can assess eye disease;no clinical eye tool proposed.",
+    "avoid": "No image upload,biometric processing,disease/susceptibility screening,organ health score,detox/treatment recommendation or personality/spiritual inference from iris appearance."
+  },
+  "next_requirements": [
+    "Inspect one legitimate original map and its title/edition,complete legend,left/right/view conventions,clock/radial orientation and exceptions;register precise page/plate locators",
+    "Verify text/diagram reuse rights separately;do not ingest third-party modern PDF copies merely because search finds them",
+    "Keep Jensen,Deck and Rayid profiles distinct;do not manufacture unified organ sectors or archetype correspondences",
+    "Transcribe independent published-label fixtures before matcher implementation;label fidelity is not diagnostic validation",
+    "Freeze a historical-reference-only manual schema and unsupported/unknown handling;retain209 tests/169 CLI cases",
+    "Do not implement Technique15 during this audit"
+  ],
+  "P1": [
+    "Original ranked map/legend access and reproduction rights",
+    "One bounded historical-reference profile with orientation and independent label fixtures",
+    "Explicit rejection of personal iris-to-health/trait inference"
+  ],
+  "P2": [
+    "Additional editions and cross-source diagram conflicts",
+    "Separately verified documentary Rayid terminology,without actual-person classification"
+  ],
+  "limitations": "No map labels or iris-to-organ procedures extracted. No empirical or diagnostic validation invented. Original60-technique taxonomy,54 retained methods and excluded IDs25,27,41,42,47,48 preserved.",
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Symbolic/Creative Reference Scope",
+    "tests": 209,
+    "cli_smoke_cases": 169
+  }
+}

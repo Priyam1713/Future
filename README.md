@@ -1,5 +1,7 @@
 # Future
 
+Technique #15 **Iridology — Researching**: resource-only audit in `knowledge/iridology_resource_audit.json`,begun after Aura closure4a9cf34 pushed. Original Jensen/Deck rankings and all three variations preserved. Ranked catalog editions,Rayid accessibility/rights gaps and scientific-limit sources registered. Original maps/legends not yet inspected;no diagnostic,disease-detection or personal iris assessment implemented.
+
 Technique #14 **Aura Reading — Core v1 Ready — Symbolic/Creative Reference Scope**: `besant-leadbeater-pg16269-symbolic-v1` provides21 historical color entries,three documentary context terms and four published teaching examples. Manual symbolic compositions include source-qualified motifs,unknown/conflict diagnostics and JSON/Markdown reports. All209 tests/169 CLI cases pass;frozen scope and P1/P2 in `knowledge/aura_core_v1.json`. This separate Thought-Forms profile does not implement Brennan/Kunz layers,chakras or physical aura detection. No personal emotion,personality,health,spiritual-status or outcome assessment.
 
 ```powershell

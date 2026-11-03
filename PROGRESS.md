@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique15 Iridology resource audit — 2026-11-03
+- Began only after Aura closure4a9cf34 pushed and main synchronized. Original Jensen/Deck rankings,three variations,inventory hash/exclusions preserved. Jensen1964 Google catalog and Deck1982 NLM translation/atlas metadata registered;no original iris-map legends/sector rules ingested. Rayid practitioner indexed page is separate,with direct-access/rights gaps retained.
+- Primary masked1979 evaluation and1999 review abstracts registered as scientific-limit references,not map authorities. iridology_resource_audit.json defines a possible manual historical-map reference only after source/rights/orientation checks;no health,organ,disease or personal-trait inference.209 tests/169 CLI acceptance retained;five metadata-only records load successfully. No Technique15 implementation.
+
 ## Aura Core v1 closure — 2026-11-03
 - Implementationa0d01cf committed;sourcef1d434b pushed. Technique14 **Core v1 Ready — Symbolic/Creative Reference Scope**. Frozen matrix,source limitations,21 documentary checks,209 tests/169 CLI acceptance and P1/P2 in aura_core_v1.json.21 color entries,three context terms,four published examples;no aura detector or personal assessment.
 - Ranked Brennan/Kunz rules,layer/chakra correspondences,more editions/mixtures and optional creative effects deferred. Original inventory/rankings/exclusions unchanged. Push this bounded closure before beginning Technique15 Iridology resource audit;scientific/clinical validity is not claimed.
