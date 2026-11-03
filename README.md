@@ -1,5 +1,7 @@
 # Future
 
+Technique #17 **Oracle Cards — Researching**: resource-only audit in `knowledge/oracle_resource_audit.json`,begun after Tarot closurea036474 pushed. Original three rankings/five variations preserved. Deck/edition-specific inventories,source access,rights,spread/orientation gaps and reusable seeded-draw infrastructure recorded. Lenormand36 is distinct from the newer40-card extension;Kipper,Belline,Sibilla and contemporary decks do not inherit Tarot semantics. No Oracle engine implemented.
+
 **Phase 2 complete — bounded Core v1 scopes** for techniques8-15;this does not imply exhaustive variations or scientific validation.
 
 Technique #16 **Tarot — Core v1 Ready — Symbolic Reading Scope**: `waite-1922-text-v1` supports all78 cards/156 source-linked orientation meanings,56 separately retained additional accounts,one/three-card editorial layouts and Waite's ten-position Celtic layout with a removed significator and explicit facing. Manual draws and `future-cards-sha256-fy-v1` seeded draws produce replayable JSON/Markdown and explicitly compositional symbolic readings. All243 tests/205 CLI cases pass;six independently generated .NET seed vectors verify the protocol. Frozen scope/P1/P2 in `knowledge/tarot_core_v1.json`. Text-only;no modern artwork,other-deck rule blending,diagnosis or certain predictions.

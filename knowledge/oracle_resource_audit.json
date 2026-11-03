@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "technique_id": 17,
+  "name": "Oracle Cards",
+  "status": "Researching",
+  "date": "2026-11-04",
+  "predecessor_closure": "a036474",
+  "predecessor_push": "Confirmed closurea036474 pushed;HEAD...origin/main0/0 before audit.",
+  "policy": "Resource/variation audit only;no Technique17 deck dictionary,Oracle engine,draw command or rule extraction implemented.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    17,
+    "3 · Mystical & Spiritual Divination",
+    "Oracle Cards",
+    "RETAIN — simulate / implement",
+    "Deterministic / symbolic rules",
+    "Lenormand 36; Kipper; Belline; Sibilla; contemporary themed oracle decks",
+    "Deck-specific table + draw/spread; no universal semantics",
+    "Deck data and rights; PRNG; chosen theme",
+    "Every deck needs its own symbol dictionary; art rights",
+    "Traditional / not scientifically validated",
+    "The Essential Lenormand",
+    "Rana George",
+    null,
+    "The Art of Kipper Reading",
+    "Wisdom of the Oracle",
+    null,
+    "16, 36",
+    17
+  ],
+  "ranked_sources": [
+    [
+      17,
+      "Oracle Cards",
+      1,
+      "Rana George",
+      "The Essential Lenormand",
+      "Lenormand method",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      17,
+      "Oracle Cards",
+      2,
+      "Alexandre Musruck",
+      "The Art of Kipper Reading",
+      "Kipper 36-card system",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      17,
+      "Oracle Cards",
+      3,
+      "Colette Baron-Reid",
+      "Wisdom of the Oracle",
+      "Contemporary oracle system",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Lenormand 36",
+      "inventory_row": [
+        17,
+        "Oracle Cards",
+        "Lenormand 36",
+        "The Essential Lenormand",
+        "Wisdom of the Oracle",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;deck-specific original procedures/rights require verification",
+      "finding": "Proposed highest-ROI first scope. Verify one named36-card inventory,source meanings and small documented spread. Rank1 second edition includes a distinct40-card extension;do not silently enlarge36. No universal reversal or Tarot suit assumptions."
+    },
+    {
+      "name": "Kipper",
+      "inventory_row": [
+        17,
+        "Oracle Cards",
+        "Kipper",
+        "The Art of Kipper Reading",
+        "Wisdom of the Oracle",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;deck-specific original procedures/rights require verification",
+      "finding": "Rank2 official listing describes36 cards and direction-sensitive methods. Verify main characters,direction,proximity,complete meanings and actual Basic3/Cross5/Box9 positions before support;Tarot Celtic positions do not apply."
+    },
+    {
+      "name": "Belline",
+      "inventory_row": [
+        17,
+        "Oracle Cards",
+        "Belline",
+        "Wisdom of the Oracle",
+        "The Art of Kipper Reading",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;deck-specific original procedures/rights require verification",
+      "finding": "Current named Grimaud N500 catalog has53 cards/booklet. Original numbering,any extra/blue-card rule,astrological groupings and spread procedures remain source gaps. Inventory links to other ranked works are provisional,not extracted Belline procedures."
+    },
+    {
+      "name": "Sibilla",
+      "inventory_row": [
+        17,
+        "Oracle Cards",
+        "Sibilla",
+        "Wisdom of the Oracle",
+        "The Art of Kipper Reading",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;deck-specific original procedures/rights require verification",
+      "finding": "Named Lo Scarabeo edition lead has52 cards;this is not a universal Sibilla inventory. Need original deck identity,full legend,playing-card associations if any,translation and instructions. No Lenormand dictionary substitutions."
+    },
+    {
+      "name": "contemporary themed oracle decks",
+      "inventory_row": [
+        17,
+        "Oracle Cards",
+        "contemporary themed oracle decks",
+        "Wisdom of the Oracle",
+        "The Art of Kipper Reading",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;deck-specific original procedures/rights require verification",
+      "finding": "Rank3 Wisdom of the Oracle is52 cards with many context meanings. Each deck needs its own licensed inventory,dictionary and layout/orientation policy;no common Oracle semantics can be inferred."
+    }
+  ],
+  "sources": [
+    "oracle-george-original-edition-access-audit-v1",
+    "oracle-george-2025-second-edition-index-v1",
+    "oracle-musruck-kipper-publisher-v1",
+    "oracle-baron-reid-wisdom-2015-publisher-v1",
+    "oracle-belline-grimaud-current-catalog-v1",
+    "oracle-sibilla-zingara-publisher-v1"
+  ],
+  "feasibility": {
+    "first_scope": "One named source-grounded Lenormand36 deck,all36 verified meanings and a small documented reading layout;copyright/primary-page access is the first gate,not a generic empty schema.",
+    "alternative": "If ranked procedural access cannot be obtained promptly,a separately registered legitimate historical/public-domain source may be researched without changing inventory rankings;not done in this audit.",
+    "card_inventory": "Canonical IDs and order must be frozen per edition;36-card Lenormand/Kipper,52-card named Wisdom/Sibilla and53-card current Belline leads are distinct. Do not copy Tarot78 or assume common suits/courts.",
+    "source_meanings": "Direct per-card procedures,conditions and combinations must come from inspected source pages;marketing/small preview captions do not supply a complete reusable meaning table.",
+    "spreads": "Verify source position order,direction,adjacency,significators and exceptions. Kipper publisher names layouts but full procedure still unverified. Do not silently reuse Tarot Celtic or call editorial three positions a historical spread.",
+    "orientations": "Deck/edition-defined policy unresolved until procedure is inspected. Tarot upright/reversed meanings and random orientation policy do not automatically apply.",
+    "rights": "All current sources/decks are metadata only;book,guidebook,art,translation and edition rights reviewed separately. Text-only implementation may reduce art dependencies but is not permission to ingest a copyrighted dictionary."
+  },
+  "reusable_infrastructure": {
+    "module": "future/card_random.py",
+    "protocol": "future-cards-sha256-fy-v1",
+    "reusable": "Strict UTF-8 seed framing,independent streams,unbiased integer selection and shuffle_pack operate on supplied distinct IDs;reuse verified byte protocol without changing Tarot behavior.",
+    "must_not_reuse": "Tarot catalog,78-card order,suits,courts,meanings,Celtic layout,three-cut policy or reversal semantics.",
+    "constraints": "Current orientation helper validates count<=78;do not assume all contemporary decks fit. Deck-specific eligibility/count/orientation policy and source-certified canonical order must be established before any wrapper.",
+    "replay": "Record deck/profile/version,exact canonical IDs/hash,draw policy,count,seed,protocol and any source-specific transformations;same seed alone is not a complete Oracle reading.",
+    "tests": "Independent known-answer vectors over each selected deck order;no replacement,draw-count boundaries,manual/source isolation and cross-profile reproducibility"
+  },
+  "P1": [
+    "Legitimate rank1 procedural pages/edition and rights verification",
+    "One complete36-card source dictionary with independently transcribed fixtures",
+    "One verified simple spread and explicit orientation/direction policy",
+    "Freeze deck-specific replay/input contract and supported/unsupported scope before implementation"
+  ],
+  "P2": [
+    "Separate Kipper,Belline,Sibilla and contemporary profiles after complete source access",
+    "Additional combinations,Grand Tableaux,direction/proximity and source exceptions",
+    "Separately licensed or verified public-domain imagery"
+  ],
+  "limitations": "Deck facts and source leads only. Promotional spiritual/predictive claims are not validation. No universal meanings,reversal probabilities or empirical accuracy claims. Original60-technique taxonomy,54 retained methods,rankings and exclusions25,27,41,42,47,48 unchanged.",
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Symbolic Reading Scope",
+    "tests": 243,
+    "cli_smoke_cases": 205
+  }
+}

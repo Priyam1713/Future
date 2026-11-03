@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique17 Oracle Cards resource audit — 2026-11-04
+- Began after Tarot closurea036474 pushed/synchronized. Exact original three rankings/five variations and inventory hash/exclusions preserved. Six metadata-only sources cover George first-edition access gap/separate2025 second edition,Musruck Kipper,Baron-Reid Wisdom,current Grimaud Belline and named Lo Scarabeo Sibilla. Traditional Lenormand36 is not silently replaced by40-card Muree;modern card counts/editions remain distinct.
+- oracle_resource_audit.json prioritizes one fully sourced36-card core after legitimate procedural/rights access,with independent fixtures and a documented spread. Existing card_random shuffle may be reused with deck-specific IDs/replay;Tarot78,suits,Celtic cuts and reversals cannot be assumed. No Oracle implementation;all six audit records load.243 tests/205 CLI acceptance retained.
+
 ## Tarot Core v1 closure — 2026-11-04
 - Sourcec398180 and implementation43ecb2d pushed. Technique16 **Core v1 Ready — Symbolic Reading Scope**:78 cards,156 source-linked orientation entries,56 separate additional accounts;one/three editorial and source-positioned Celtic readings.243 tests/205 CLI cases and30 source/layout/protocol checks pass,including six independent .NET vectors. Frozen conventions,rights,acceptance and P1/P2 in tarot_core_v1.json.
 - Digital shuffle/cut/reversal policies are named application adaptations,not a physical ritual or predictive guarantee. Conditional pairs,more historical procedures/editions,Marseille,Thoth,Etteilla and imagery deferred. Push closure before Technique17 Oracle Cards audit;original inventory/rankings/exclusions preserved.
