@@ -1,6 +1,13 @@
 # Future
 
-Technique #15 **Iridology — Researching**: resource-only audit in `knowledge/iridology_resource_audit.json`,begun after Aura closure4a9cf34 pushed. Original Jensen/Deck rankings and all three variations preserved. Ranked catalog editions,Rayid accessibility/rights gaps and scientific-limit sources registered. Original maps/legends not yet inspected;no diagnostic,disease-detection or personal iris assessment implemented.
+Technique #15 **Iridology — Developing**: `lindlahr-1922-legend-reference-v1` provides33 selected original schematic labels across both eyes,qualitative placements and fixed source-plate orientation. Manual selections and two teaching selections from the published plate produce JSON/Markdown with source traces. No exact polar/radial geometry,patient images,diagnosis,disease-risk or personal-trait assessment. Jensen,Deck and Rayid remain separate unsupported profiles.
+
+```powershell
+python -X utf8 -m future iridology-reference data/iridology-reference-input.json --format markdown
+python -X utf8 -m future iridology-reference data/iridology-source-example-input.json
+python -m scripts.verify_iridology
+python -m scripts.smoke_iridology_core
+```
 
 Technique #14 **Aura Reading — Core v1 Ready — Symbolic/Creative Reference Scope**: `besant-leadbeater-pg16269-symbolic-v1` provides21 historical color entries,three documentary context terms and four published teaching examples. Manual symbolic compositions include source-qualified motifs,unknown/conflict diagnostics and JSON/Markdown reports. All209 tests/169 CLI cases pass;frozen scope and P1/P2 in `knowledge/aura_core_v1.json`. This separate Thought-Forms profile does not implement Brennan/Kunz layers,chakras or physical aura detection. No personal emotion,personality,health,spiritual-status or outcome assessment.
 

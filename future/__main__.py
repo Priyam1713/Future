@@ -208,7 +208,18 @@ def main():
     aura=sub.add_parser('aura-reference')
     aura.add_argument('input',help='Manual symbolic colors or published teaching example JSON; no personal inference')
     aura.add_argument('--format',choices=['json','markdown'],default='json')
+    iris=sub.add_parser('iridology-reference')
+    iris.add_argument('input',help='Historical schematic/legend selection JSON; no patient iris analysis')
+    iris.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='iridology-reference':
+        from .iridology import load_input,reference,markdown
+        registry=load_registry(args.database)
+        try:
+            result=reference(load_input(args.input),registry)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close()
+        return
     if args.command=='aura-reference':
         from .aura import load_input,reference,markdown
         registry=load_registry(args.database)

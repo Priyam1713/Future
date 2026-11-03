@@ -1,5 +1,9 @@
 # Future progress
 
+## Iridology implementation/verification — 2026-11-03
+- Source609e7bb pushed. iridology-reference supports33 literal schematic labels,source eye/relative placements,region lookup,ambiguity/conflict diagnostics and two editorial teaching selections from published plate/text,not historical patient cases. JSON/Markdown traces include36 traditional registry rules and scientific limitations. Clock/radial/perimeter annotations never select labels;metric geometry remains unsupported.
+-222 tests/183 CLI cases pass,preserving209/169 inherited.27 source-transcription checks pass;pip check clean,no new dependencies. data/iridology-reference and iridology-source-example reports reproducible. Inspection hashes and precise provenance retained;no patient images,clinical/trait assessments,treatments or disease inference.
+
 ## Iridology source verification — 2026-11-03
 - Synchronizedd4650dc;ranked Jensen/Deck books remain without reusable original plates. One bounded fallback search verified Wellcome public-domain Lindlahr1922 fifth edition,title/copyright,frontispiece and ChapterIII pp22-25. Selected33 original label entries;17 independent label,2 orientation,2 chapter-placement fixtures and two published schematic selections recorded before matcher implementation.
 - Named lindlahr-1922-legend-reference-v1 keeps Jensen/Deck/Rayid separate. Literal RIGHT IRIS is reader-left in upright plate;no patient/camera orientation inferred. Unequal/nested fields and uncalibrated perimeter marks do not justify metric clock/radial lookup. Historical exceptions/medical claims remain documentary only;rights and exact canvas locators in iridology_pass1_findings.json.
