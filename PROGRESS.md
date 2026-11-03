@@ -1,5 +1,9 @@
 # Future progress
 
+## Podomancy implementation/verification pass — 2026-11-03
+- Source pass454cebe committed/pushed. Added podomancy-reference offline JSON/Markdown CLI:6 attributed documentary foot-form,sole-line and sole-skin entries across2 regions and six textual teaching examples. Strict references preserve ambiguous/unknown/conflicting inputs,plantar/dorsal distinctions and subject-side mirror invariance; unverified viewer layout remains unknown. No appearance classifier or personal measurements/images.
+- All182 tests/141 CLI cases pass,retaining170/129 inherited.12 new regression tests,12 new public CLI cases and6 independent primary-transcription comparisons pass. No runtime dependencies added; pip check clean. Anonymous/pseudonymous authorship,undated edition and unmatched original scan explicit; no Somogyi/Sheehan/Indian or individual toe rules. Separate bounded readiness freeze follows.
+
 ## Podomancy source/profile pass — 2026-11-03
 - Ranked catalog/sample/author materials do not establish a coherent book procedure; communication article and isolated personal press readings not generalized into rules. One bounded alternative search located anonymous pseudo-Aristotle Booksellers text,Gutenberg67858,Physiognomy chV,page markers299-300. Exact date/original matching scan remains unverified; no ancient-Aristotle or Somogyi/Sheehan attribution.
 - Frozen anonymous-booksellers-pg67858-foot-reference-v1:six coherent documentary foot-form/sole-line/sole-skin entries,two regions and independent pre-matcher fixtures. No quantitative thresholds,toe order,left/right polarity,clinical or personal appearance-to-trait inference. Public-domain primary transcription verified; research cutoff reached,implementation follows.

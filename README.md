@@ -1,6 +1,15 @@
 # Future
 
-Technique #12 **Podomancy / Foot Reading — Researching**: source/variation audit in `knowledge/podomancy_resource_audit.json`,begun after Moleosophy closureb7e8a33. Original two source rankings/four variations preserved; no Technique12 engine implemented.
+Technique #12 **Podomancy / Foot Reading — Developing**: `anonymous-booksellers-pg67858-foot-reference-v1` provides six source-attributed foot-form,sole-line and sole-skin references across two regions. The anonymous pseudo-Aristotle text is separate from Somogyi/Sheehan; individual toe rules,Indian methods and personal appearance-to-trait or medical inference are unsupported.
+
+```powershell
+python -m future podomancy-reference data/podomancy-reference-input.json --format markdown
+python -m future podomancy-reference data/podomancy-source-example-input.json
+python -m scripts.verify_podomancy
+python -m scripts.smoke_podomancy_core
+```
+
+JSON/Markdown examples and independent transcription results: `data/podomancy-reference.*`, `data/podomancy-source-example.*`, `data/podomancy-verification.json`. Teaching examples are textual selections,not original numbered foot diagrams. Exact print year and matching page images remain unverified; primary transcription/edition limits are explicit.
 
 Technique #11 **Moleosophy — Core v1 Ready — Historical/Symbolic Reference Scope**: offline historical-reference CLI under `fontaine-1862-bpl-reference-v1`,based on inspected Golden Wheel Dream-book containing work,original pp114-119.All170 tests/129 CLI cases pass; frozen scope/P1/P2 in `knowledge/moleosophy_core_v1.json`.27 selected summaries across19 regions; original inventory title/rankings remain distinct. No individualized appearance-to-trait,medical or future-outcome inference.
 

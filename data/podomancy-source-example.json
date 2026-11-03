@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "technique_id": 12,
+  "profile": "anonymous-booksellers-pg67858-foot-reference-v1",
+  "task": "historical_reference",
+  "mode": "source_example",
+  "orientation": {
+    "frame": "subject",
+    "view": "dorsal",
+    "mirrored": false
+  },
+  "source_example": {
+    "entry_id": "foot_broad_thick_long",
+    "region_id": "whole_foot",
+    "side": "both",
+    "view": "dorsal",
+    "locator": "Physiognomy,Chapter V: Judgments according to Physiognomy,drawn from the different parts of the Body,from the Hands to the Feet; page markers299-300; foot paragraph and following two sole paragraphs; Feet broad,thick with flesh,and long",
+    "kind": "Software textual teaching selection of an original passage; no original diagram or real foot depicted"
+  },
+  "schematic": {
+    "id": "pg67858-textual-foot-index-v1",
+    "kind": "Software textual index of six source descriptions; no original toe/sole diagram claimed"
+  },
+  "results": [
+    {
+      "selection": {
+        "entry_id": "foot_broad_thick_long",
+        "region_id": "whole_foot",
+        "side": "both"
+      },
+      "canonical_subject_side": "both",
+      "status": "resolved_reference",
+      "issues": [],
+      "entry": {
+        "id": "foot_broad_thick_long",
+        "source_label": "Feet broad,thick with flesh,and long",
+        "region_id": "whole_foot",
+        "source_side": "unspecified",
+        "view_requirement": "unspecified",
+        "printed_page_markers": [
+          299,
+          300
+        ],
+        "locator": "Physiognomy,Chapter V: Judgments according to Physiognomy,drawn from the different parts of the Body,from the Hands to the Feet; page markers299-300; foot paragraph and following two sole paragraphs; Feet broad,thick with flesh,and long",
+        "historical_association": "The anonymous author couples this combined description,especially with hard skin,to alleged bodily strength and inferior intellect. These are discredited appearance-based assertions,not valid assessments.",
+        "qualifications": [
+          "The source joins broadness,thickness and length,and emphasizes hard skin; no dimensional thresholds or independent single-feature rules are supplied.",
+          "No source-specific left/right polarity or individual toe mapping is provided."
+        ],
+        "rule_id": "podomancy.pg67858.foot_broad_thick_long",
+        "version": 1,
+        "source_id": "podomancy-anonymous-booksellers-pg67858-v1",
+        "coverage": "direct_documentary_paraphrase",
+        "individual_inference": false,
+        "applied_to_individual": false
+      },
+      "candidate_references": [],
+      "unknown_candidate_ids": [],
+      "reason": "Documentary identifier lookup only; no foot appearance is measured or converted into a person judgment."
+    }
+  ],
+  "source": {
+    "id": "podomancy-anonymous-booksellers-pg67858-v1",
+    "technique_id": 12,
+    "author": "Anonymous; published under the pseudonym Aristotle,not authenticated works of the ancient philosopher",
+    "edition": "Aristotles Works: Containing the Master-piece,Directions for Midwives,and Counsel and Advice to Child-bearing Women,with Various Useful Remedies; London,published for the booksellers; undated edition transcribed as Gutenberg67858,2022",
+    "url": "https://www.gutenberg.org/files/67858/67858-h/67858-h.htm",
+    "catalog_url": "https://www.gutenberg.org/ebooks/67858",
+    "ingestion": "public_domain",
+    "rights_note": "Gutenberg catalog identifies original work as public domain in USA; anonymous historical text,undated edition. Only original research paraphrases and source labels retained,no branded ebook or contemporary book pages redistributed. Modern Somogyi/Sheehan material not ingested as rules.",
+    "locator": "Physiognomy,Chapter V: Judgments according to Physiognomy,drawn from the different parts of the Body,from the Hands to the Feet; page markers299-300; foot paragraph and following two sole paragraphs",
+    "verification": "Read complete relevant primary-text transcription,chapter heading,title/catalog and transcriber notes. Original corresponding page images not inspected; exact print year/scan identity unresolved. No substitution of other Aristotle editions.",
+    "checked_on": "2026-11-03"
+  },
+  "coverage": {
+    "entries": 6,
+    "regions": 2,
+    "toe_rules": 0,
+    "description_type": "direct documentary paraphrases"
+  },
+  "conventions": {
+    "authorship": "Anonymous/pseudonymous; never attribute to ancient Aristotle,Somogyi or Sheehan.",
+    "matching": "Exact documentary IDs/regions only; no feature classifier,personal observations or numerical thresholds.",
+    "side": "Subject-left/right annotations do not select a different historical claim; source specifies no polarity.",
+    "mirroring": "Subject labels are invariant under mirrored flag. Viewer-side labels cannot be converted without a verified source layout and remain unknown.",
+    "view": "Plantar means sole in software terminology; dorsal does not expose sole entries. Whole-foot descriptions have no source-prescribed view.",
+    "toe_identifiers": "No source-specific toe order,names or toe-shape rules verified; all toe IDs remain unsupported."
+  },
+  "source_conflicts": [
+    "Actual source is an undated anonymous Booksellers edition in Gutenberg67858,not the ancient philosopher and not either ranked contemporary book.",
+    "Other Works of Aristotle editions and page markers are not silently equated; original matching scan/year remains a P1 bibliographic gap.",
+    "Original rhetoric asserts bodily/intellectual/fortune differences; documentary reproduction does not validate them.",
+    "Source supplies no calibrated thresholds,left/right polarity or original foot diagram."
+  ],
+  "limitations": [
+    "Historical/symbolic reference only. No personal character,intelligence,health,criminality or life-outcome inference; no reflexology treatment.",
+    "Only six source descriptions in two regions; no verified individual toe names/order or toe-shape method.",
+    "Anonymous undated Booksellers edition in Gutenberg67858; exact print year and matching original page images remain unverified.",
+    "Source descriptions are qualitative phrases,not measurable diagnostic categories or classification thresholds.",
+    "Somogyi,Sheehan,Indian traditions and other editions remain unsupported and separate.",
+    "No personal photographs,measurements,medical observations,reflexology recommendations or individual assessment.",
+    "Historical fidelity does not establish scientific or predictive validity."
+  ],
+  "inference_enabled": false,
+  "individual_assessment": null
+}
