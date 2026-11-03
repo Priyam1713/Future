@@ -1,6 +1,6 @@
 # Future
 
-Technique #13 **Graphology — Developing**: `crepieux-schooling-1892-reference-v1` offers23 descriptive terms across11 feature dimensions and seven published examples from Handwriting and Expression. This is a separately identified1892 translation/adaptation,not ABC de la graphologie. Optional baseline/slant angles and normalized spacing/proportions use supplied teaching vectors or measurements; geometry never selects historical meanings. True pressure and personal-trait,medical,employment or forensic-authorship assessments are unsupported.
+Technique #13 **Graphology — Core v1 Ready — Historical/Descriptive Reference Scope**: `crepieux-schooling-1892-reference-v1` offers23 descriptive terms across11 feature dimensions and seven published examples from Handwriting and Expression. All196 tests/155 CLI cases pass;frozen scope/P1/P2 in `knowledge/graphology_core_v1.json`. This is a separately identified1892 translation/adaptation,not ABC de la graphologie. Optional baseline/slant angles and normalized spacing/proportions use supplied teaching vectors or measurements; geometry never selects historical meanings. True pressure and personal-trait,medical,employment or forensic-authorship assessments are unsupported.
 
 ```powershell
 python -X utf8 -m future graphology-reference data/graphology-reference-input.json --format markdown

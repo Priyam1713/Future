@@ -1,5 +1,9 @@
 # Future progress
 
+## Graphology Core v1 closure — 2026-11-03
+- Implementation699c729 committed/pushed. Technique13 **Core v1 Ready — Historical/Descriptive Reference Scope** for crepieux-schooling-1892-reference-v1. Frozen matrix,source/geometry verification,rights and P1/P2 in graphology_core_v1.json.23 terms,11 dimensions,7 original examples;geometry independent of historical meaning.
+-196 tests/155 CLI cases pass,retaining182/141 inherited;30 original definition/caption checks and7 constructed Euclidean cases,not psychometric validation. True pressure,CV,other source profiles/scripts and complex resultants deferred;no personal-trait,clinical,employment or authorship conclusions. Commit/push closure before Technique14 audit.
+
 ## Graphology implementation/verification pass — 2026-11-03
 - Source pass49c0db9 committed/pushed. Added graphology-reference manual/source-example JSON/Markdown CLI:23 terms across11 feature dimensions,7 published examples,unknown/ambiguous/conflicting scope diagnostics and Latin/LTR applicability.20 selected ordinary-column claims remain documentary;3 particular signs have descriptive-only coverage. No personal-trait or writer-state classification.
 - Independent geometry module reports declared baseline/slant angles and x-height-normalized spacing/proportions,without selecting historical meanings;true pressure unsupported for all current evidence labels. All196 tests/155 CLI cases pass,retaining182/141 inherited;14 new tests,14 CLI cases,30 independent original-page/caption checks and7 separate constructed Euclidean fixtures. pip check clean,no dependencies added. Separate bounded readiness freeze follows.

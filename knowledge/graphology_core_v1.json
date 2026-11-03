@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "technique_id": 13,
+  "name": "Graphology",
+  "status": "Core v1 Ready — Historical/Descriptive Reference Scope",
+  "date": "2026-11-03",
+  "profile": "crepieux-schooling-1892-reference-v1",
+  "source_pass_commit": "49c0db9",
+  "implementation_commit": "699c729",
+  "source_id": "graphology-crepieux-schooling-1892-inspected-v1",
+  "supported": [
+    "23 original-source descriptive terms across11 feature dimensions;20 selected ordinary-column historical labels and3 descriptive-only particular signs",
+    "Seven named original facsimile-caption examples with exact printed/canvas locators",
+    "Manual script/direction,baseline,slant,word/line spacing,size,shape,regularity,connection,stroke appearance and word-proportion categories",
+    "Unknown/uncertain/ambiguous categories,opposing same-scope labels and independent scopes retained without writer-trait inference",
+    "Independent teaching/user-supplied geometry:baseline angle,slant from baseline normal,x-height-normalized gaps and ascender/descender proportions",
+    "Versioned registry provenance,source cautions and offline JSON/Markdown CLI;no new dependencies"
+  ],
+  "experimental": [
+    "Manual observations are unmeasured human annotations,not recognized image features",
+    "Historical table summaries retain only selected ordinary labels;superiority/inferiority/accessory contexts are not selected or synthesized",
+    "Constructed geometry tests establish numerical correctness,not accuracy of any real handwriting measurements"
+  ],
+  "unsupported": [
+    "Personality,intelligence,mental health,criminality,honesty,employment suitability or other personal-trait classification",
+    "Forensic authorship identification,signature verification,medical diagnosis or clinical inference",
+    "Computer vision,OCR,pixel-based category recognition or image input",
+    "True pressure estimation from darkness/coarseness;calibrated physical/dynamic force processing not implemented",
+    "French ABC original rules as a separate profile,Saudek full procedures,Amend/Ruiz and German holistic methods",
+    "Other scripts/directions,complex resultants,compositional personal portraits and complete table interpretation",
+    "Three selected particular-sign interpretations;invented size/spacing thresholds or predictive probabilities"
+  ],
+  "configuration_matrix": {
+    "profile": "crepieux-schooling-1892-reference-v1",
+    "script": "latin",
+    "writing_direction": "ltr",
+    "other_scripts": "accepted as metadata but historical applicability explicitly unsupported",
+    "modes": [
+      "manual",
+      "source_example"
+    ],
+    "features": [
+      "baseline_direction",
+      "baseline_path",
+      "connection",
+      "letter_size",
+      "line_spacing",
+      "regularity",
+      "shape",
+      "slant",
+      "stroke_appearance",
+      "word_proportions",
+      "word_spacing"
+    ],
+    "categories": [
+      "ascending",
+      "descending",
+      "large",
+      "very_small",
+      "angular",
+      "rounded",
+      "regular",
+      "irregular",
+      "clear",
+      "confused",
+      "rectilinear",
+      "serpentine",
+      "vertical",
+      "reversed",
+      "inclined",
+      "crowded",
+      "spaced_out",
+      "simple",
+      "light",
+      "muddy_heavy",
+      "juxtaposed",
+      "diminishing",
+      "enlarging"
+    ],
+    "observations": "1-40 manual observations or geometry-only;scope identifiers separate samples/words,certainty certain/uncertain/unknown,category can be an explicit ambiguous set",
+    "geometry": {
+      "coordinate_system": "cartesian_y_up",
+      "units": [
+        "mm",
+        "arbitrary"
+      ],
+      "baseline": "left-to-right positive x displacement",
+      "upstroke": "base-to-tip above baseline",
+      "angle": "baseline counterclockwise from horizontal;slant clockwise from baseline normal,degrees rounded12 decimals",
+      "dimensions": "x_height baseline to body top;ascender_height baseline to ascender top;descender_depth below baseline;gaps edge-to-edge in common units",
+      "historical_term_selection": "never driven by numerical measurements"
+    },
+    "pressure": "evidence label recorded;all true-pressure calculations unsupported",
+    "examples": [
+      "figure-15",
+      "figure-16",
+      "figure-18",
+      "figure-19",
+      "figure-20",
+      "figure-21",
+      "figure-22"
+    ],
+    "statuses": [
+      "resolved_reference",
+      "unknown_or_uncertain",
+      "ambiguous",
+      "conflict",
+      "unsupported_category",
+      "unsupported_script_direction"
+    ],
+    "coverage": "direct documentary reference or unresolved/unsupported;compositional interpretation unsupported",
+    "inference_enabled": false,
+    "individual_assessment": null
+  },
+  "acceptance": {
+    "passed": true,
+    "tests": 196,
+    "inherited_tests": 182,
+    "new_tests": 14,
+    "total_cli_cases": 155,
+    "inherited_cli_cases": 141,
+    "new_cli_cases": 14,
+    "independent_source_cases": 30,
+    "source_case_breakdown": {
+      "original_definitions": 23,
+      "published_captions": 7
+    },
+    "constructed_geometry_cases": 7,
+    "angle_fixture_tolerance_degrees": 1e-10,
+    "verification_report": "data/graphology-verification.json",
+    "smoke_report": "data/graphology-smoke.json",
+    "dependency_check": "pip check clean,no new runtime dependencies",
+    "validation_scope": "Source fidelity,numerical teaching geometry and interface/regression checks only. No empirical psychometric or predictive validity demonstrated."
+  },
+  "P1": [
+    "Verify original ABC and Saudek procedural pages as separate named profiles with rights and independent examples",
+    "Expand selected particular-sign documentary coverage and source exceptions where useful",
+    "More independent historical caption/definition fixtures without copying personal psychological diagnoses"
+  ],
+  "P2": [
+    "Other translations,German holistic terminology and other scripts after verified procedural access",
+    "Calibrated physical/dynamic measurements only if useful and independently supported;no individual-trait inference",
+    "Complex source combinations as documentary references,not personal portraits"
+  ],
+  "licensing": "Wellcome original digitization explicitly Public Domain Mark,including commercial reuse; original source images inspected but unbundled. Only historical labels and original research paraphrases retained. ABC,Saudek and Amend editions not ingested.",
+  "inventory": "All original rankings,four variations,inventory workbook/hash and six exclusions unchanged. Schooling1892 is separately registered,not presented as English ABC.",
+  "scientific_limit": "Historical fidelity,geometric precision and real-world graphological validity are separate;no valid personal-trait inference claimed.",
+  "next": "Commit/push bounded closure before Technique14 Aura Reading resource audit;no implementation during next audit"
+}
