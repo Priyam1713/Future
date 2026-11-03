@@ -1,0 +1,43 @@
+{
+  "oracle": "pyswisseph 2.10.3.2 / Swiss 2.10.03",
+  "fixture_id": "astrocartography-swiss-v1",
+  "profile": "geocentric-apparent-geometric-v1",
+  "counts": {
+    "epochs": 4,
+    "planet_positions": 40,
+    "horizon_roots": 452,
+    "circumpolar_cases": 54,
+    "map_vertices": 9548,
+    "rendered_probes": 56568,
+    "relocated_charts": 96
+  },
+  "maximum_measured_errors": {
+    "ra_degrees": 0.00014452498643890976,
+    "declination_degrees": 9.182268603069588e-05,
+    "gast_degrees": 0.0010831338421724013,
+    "meridian_degrees": 0.0012276588286397327,
+    "reference_horizon_root_altitude_degrees": 0.0012004384420375512,
+    "mapped_vertex_independent_altitude_degrees": 0.001200438666719361,
+    "rendered_probe_independent_altitude_degrees": 0.008515287618003957,
+    "relocated_cusp_degrees": 0.004633729603028769,
+    "relocated_angle_degrees": 0.0046337296029719255
+  },
+  "acceptance_bounds": {
+    "ra_degrees": 0.001,
+    "declination_degrees": 0.001,
+    "gast_degrees": 0.012,
+    "meridian_degrees": 0.012,
+    "reference_horizon_root_altitude_degrees": 0.012,
+    "mapped_vertex_independent_altitude_degrees": 0.012,
+    "rendered_probe_independent_altitude_degrees": 0.021,
+    "relocated_cusp_degrees": 0.02,
+    "relocated_angle_degrees": 0.012
+  },
+  "passed": true,
+  "limits": [
+    "Four modern epochs, not exhaustive date-range validation.",
+    "Swiss and Skyfield use separately modeled UT1; coordinate/time-model differences are included.",
+    "Map rendering error is separate from exact-vertex astronomical error.",
+    "Numerical agreement does not validate locational symbolism."
+  ]
+}

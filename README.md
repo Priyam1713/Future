@@ -1,6 +1,6 @@
 # Future
 
-Technique #7 **Astrocartography — Researching**: source/variation audit in `knowledge/astrocartography_resource_audit.json`, begun after the committed Mundane closure. No Astrocartography engine is implemented in this audit.
+Technique #7 **Astrocartography — Developing**: implemented angular geometry/relocation core; source conventions in `knowledge/astrocartography_conventions_v1.json`. Original-book procedures remain unsupported; see the audit for access/attribution limits.
 
 Technique #6 **Mundane Astrology — Core v1 Ready** uses the named Green1911 profile below. Its frozen practical scope/P1/P2 backlog is in `knowledge/mundane_core_v1.json`; source/convention records are in `knowledge/mundane_resource_audit.json` and `knowledge/mundane_green_v1.json`. Acceptance:110 tests and71 CLI cases,including all101 prior tests/59 cases. Ready does not mean exhaustive historical coverage or verified future-event prediction.
 
@@ -187,3 +187,23 @@ This illustrative example uses Lilly1647 p194: the chart moment is when the advi
 The supported diagnostic product includes the chart, significators, dignities, receptions, planetary conditions, exact contacts and source-traceable testimonies. JSON labels it **Core v1 Ready — Diagnostic Scope**, with **Question Judgment — Experimental** and `judgment_certified: false`. Advice-intent remains `indeterminate`: seventh-cusp/lord caution clearance and a matching complete-input published validation are incomplete. A favorable testimony cannot override that gap. `unsupported_question` covers other categories; Frawley/Barclay methods are not substituted.
 
 `knowledge/horary_engine_v1.json` freezes configurations and P1/P2 refinement. The targeted source attempt in `horary_judgment_attempt_v1.json` distinguishes explicit pp122–123 cautions from the general p115 table; not every table row is automatically a mandatory category veto. Cambridge1643 is documentary evidence outside current ephemeris support and a different category. Synthetic cases and Swiss fixtures verify boundaries/astronomy, not published question judgments. See `data/horary-advice-2026.*` and `data/horary-validation.json`; run `python -m unittest discover -s tests -q` and all five smoke scripts. Numerical agreement does not establish predictive validity. Technique6's resource audit follows the committed diagnostic closure.
+
+
+## Technique7 Astrocartography
+
+```powershell
+python -m future astrocartography "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209 --query 28.6139 77.209 --uncertainty-minutes 5 --format markdown
+python -m future astrocartography "1990-07-15T14:30" Asia/Kolkata 28.6139 77.209 --format geojson
+python -m scripts.smoke_astrocartography_core
+python -m scripts.verify_astrocartography
+```
+
+`--destinations` takes a JSON array of objects with `name`, `latitude`, `longitude`, `zone`; the smoke script demonstrates London/Sydney. Every relocation uses the same absolute birth instant. `--houses` supports the existing six systems; Placidus is the software default, not an asserted book mandate. Charts are supported inside |latitude|<60; higher-latitude chart requests return explicit unsupported status without suppressing valid global lines.
+
+`geocentric-apparent-geometric-v1` calculates all ten existing ephemeris targets (Mars through Pluto system barycenters), apparent RA/declination at the true equator/equinox of date and GAST. MC/IC mean upper/lower meridian, ASC/DSC mean increasing/decreasing geocentric geometric center altitude at zero. No observer parallax, refraction, limb or elevation model; these are not observed rise/set predictions. Actual planetary latitude is retained, so physical angularity need not match longitude-only chart axes/houses.
+
+GeoJSON contains 40 MultiLineString features with source IDs, exact target names, numerical diagnostics and compositional readings. Adaptive geographic-linear sampling defaults to 0.01 degrees residual tolerance; dateline splits lie on the analytic curve. Grazing junctions/poles are excluded from mapped branches. Selected-point distances are exact shortest spherical distances to semicircle closures using mean radius6371.0088km, with grazing/polar endpoint flags. They sort geometry, not desirability; no influence-radius probability is implied. Uncertainty is explicit +/- minute sensitivity, not a statistical confidence interval.
+
+Samples `data/astrocartography-july1990.*` use July15,1990 14:30 Asia/Kolkata (09:00UTC). The independent1990 fixture uses a deliberately separate06:30UTC instant; the2000 leap-day fixture is another case. `data/astrocartography-verification.json` reports measured errors against Swiss/Moshier over four epochs,452 horizon roots,54 circumpolar cases and96 relocation charts. Optional Swiss fixture regeneration is reference-only; production never imports Swiss.
+
+All40 planet-axis interpretations are explicitly modern compositional symbolism, sourced to separate planet meanings and angular-house topics. No direct Lewis/Davis text, branded certification, location ranking or established predictive validity is claimed. Original Book of Maps title-page attribution and all three ranked books' coordinate conventions remain unverified; inventory metadata is preserved. Parans/local-space and deeper original interpretations remain refinement work.

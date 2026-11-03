@@ -172,7 +172,36 @@ def main():
     mc.add_argument('--profile',default='green-1911-tropical-placidus-v1')
     mc.add_argument('--format',choices=['json','markdown'],default='json')
     mc.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
+    acg=sub.add_parser('astrocartography')
+    acg.add_argument('local')
+    acg.add_argument('zone')
+    acg.add_argument('latitude',type=float)
+    acg.add_argument('longitude',type=float)
+    acg.add_argument('--fold',type=int,choices=[0,1])
+    acg.add_argument('--houses',choices=SYSTEMS,default='placidus')
+    acg.add_argument('--destinations',default='[]',help='JSON list: name,latitude,longitude,zone')
+    acg.add_argument('--query',nargs=2,type=float,metavar=('LAT','LON'))
+    acg.add_argument('--bodies',help='Comma-separated supported planets; default all ten')
+    acg.add_argument('--tolerance',type=float,default=.01)
+    acg.add_argument('--uncertainty-minutes',type=float,default=0)
+    acg.add_argument('--profile',default='geocentric-apparent-geometric-v1')
+    acg.add_argument('--format',choices=['json','markdown','geojson'],default='json')
+    acg.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
     args = parser.parse_args()
+    if args.command=='astrocartography':
+        from .natal import SkyfieldEphemeris
+        from .astrocartography import generate,markdown,register_knowledge
+        e=SkyfieldEphemeris(args.kernel)
+        registry=load_registry(args.database)
+        try:
+            register_knowledge(registry)
+            result=generate(e,args.local,args.zone,args.latitude,args.longitude,fold=args.fold,
+                destinations=json.loads(args.destinations),query=args.query,
+                bodies=args.bodies.split(',') if args.bodies else None,houses=args.houses,
+                tolerance=args.tolerance,uncertainty_minutes=args.uncertainty_minutes,profile=args.profile)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result['geojson'] if args.format=='geojson' else result,indent=2))
+        finally:registry.close();e.kernel.close()
+        return
     if args.command in ('mundane-ingress','mundane-cycle'):
         from datetime import datetime
         from .natal import SkyfieldEphemeris

@@ -1,5 +1,11 @@
 # Future progress
 
+## Astrocartography implementation/verification pass — 2026-11-03
+- Source pass41c8211 committed/pushed. Added isolated ten-target MC/IC/ASC/DSC geometry, adaptive dateline-safe GeoJSON, point diagnostics/spherical distances, +/- minute sensitivity and same-instant six-system relocation comparisons. Polar/grazing branches and unsupported relocation latitudes are explicit; no shared astronomy changes or dependencies.
+- Added12 tests; all122 pass, retaining110 inherited tests. All71 prior CLI cases plus12 Astrocartography cases pass. Independent Swiss fixtures cover40 equatorial positions,452 horizon roots,54 circumpolar cases and96 charts. Max differences:RA0.000145deg,meridian0.001228deg,horizon vertex0.001201deg,relocation angle/cusp0.004634deg; rendering probes0.008516deg separately. pip check clean.
+- All40 line readings are source-linked modern compositions, not direct Lewis/Davis delineations. Book title page/procedural access unresolved; parans/local-space unsupported. Reproducible July1990 14:30 samples, oracle fixtures and verification report supplied. Separate readiness freeze follows.
+
+
 ## Astrocartography source/convention pass — 2026-11-03
 - Froze geocentric-apparent-geometric-v1: actual RA/declination of date,GAST,geometric body-center horizon; explicit polar/dateline,relocation and spherical-distance conventions. USNO/Skyfield procedural references; separate concise modern symbolic components.
 - Original Book of Maps title page remains inaccessible; inventory attribution preserved, bibliographic Guttman discrepancy retained. No book-specific coordinate procedure or delineation claimed. Parans/local-space deferred; original source records immutable. Mathematical core proceeds independently as authorized.
