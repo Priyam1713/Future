@@ -15,3 +15,5 @@ JPL DE440s is downloaded explicitly from NASA/JPL and checked against its frozen
 Swiss Ephemeris is an optional local validation oracle, never a product dependency or runtime import. Its AGPL/professional-license conditions are not bypassed by its technical usefulness. Independent numerical fixtures do not include Swiss implementation code.
 
 Modern source material is limited to links, provenance and short original summaries. Public accessibility does not authorize wholesale ingestion, redistribution or copying copyrighted Hand, Arroyo, Shea, Brennan or translated Valens text. No author or data provider endorsement is claimed.
+
+Astrocartography Core v1 adds no runtime dependencies. USNO/Skyfield calculation references and brief original Cafe Astrology symbolic components retain precise links/locators; copyrighted Lewis/Irving/Davis books are metadata references only. No book text, proprietary chart corpus, map images or certification/trademark rights are bundled or implied. Optional Swiss oracle fixtures remain reference-only under the existing policy.

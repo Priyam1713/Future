@@ -1,5 +1,11 @@
 # Future progress
 
+## Astrocartography Core v1 closure — 2026-11-03
+- Implementation/verification934b3fb committed/pushed first. Marked Technique7 **Core v1 Ready** for the named geometry,relocation and compositional-reading scope; supported/experimental/unsupported matrix and P1/P2 frozen in astrocartography_core_v1.json. All122 tests/83 CLI cases pass,including110 tests/71 cases inherited.
+- Max independent errors and coverage remain in data/astrocartography-verification.json; numerical precision,rendering,source fidelity and predictive validity stay separate. Original-book attribution/procedures,parans/local-space and further polar/historical validation remain explicit refinement gaps. No new runtime dependencies or shared-engine changes.
+- Commit/push closure before beginning Technique8 inventory/resource audit; no next-technique implementation.
+
+
 ## Astrocartography implementation/verification pass — 2026-11-03
 - Source pass41c8211 committed/pushed. Added isolated ten-target MC/IC/ASC/DSC geometry, adaptive dateline-safe GeoJSON, point diagnostics/spherical distances, +/- minute sensitivity and same-instant six-system relocation comparisons. Polar/grazing branches and unsupported relocation latitudes are explicit; no shared astronomy changes or dependencies.
 - Added12 tests; all122 pass, retaining110 inherited tests. All71 prior CLI cases plus12 Astrocartography cases pass. Independent Swiss fixtures cover40 equatorial positions,452 horizon roots,54 circumpolar cases and96 charts. Max differences:RA0.000145deg,meridian0.001228deg,horizon vertex0.001201deg,relocation angle/cusp0.004634deg; rendering probes0.008516deg separately. pip check clean.

@@ -1,5 +1,5 @@
 # Astrocartography
-Developing · geocentric-apparent-geometric-v1
+Core v1 Ready · geocentric-apparent-geometric-v1
 Birth instant: 1990-07-15T09:00:00+00:00; 40 angular lines.
 MC/IC are upper/lower meridians; ASC/DSC use the geocentric geometric center horizon.
 

@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "technique_id": 7,
+  "name": "Astrocartography",
+  "status": "Core v1 Ready",
+  "date": "2026-11-03",
+  "implementation_commit": "934b3fb",
+  "source_pass_commit": "41c8211",
+  "profile": "geocentric-apparent-geometric-v1",
+  "supported": [
+    "Ten existing DE440s targets; actual apparent equatorial coordinates of date, with explicit system-barycenter mapping",
+    "Global MC/IC upper/lower meridian and ASC/DSC geometric horizon branches; circumpolar/grazing/pole diagnostics",
+    "Adaptive GeoJSON MultiLineString curves with exact antimeridian splits and declared interpolation tolerance",
+    "Same-absolute-UTC natal/relocated frames at explicit destinations, existing six house systems inside |latitude|<60",
+    "Selected-point angularity diagnostics and spherical distance to semicircle closure with endpoint classification",
+    "Deterministic birth-time sensitivity +/-0-60minutes, explicit IANA/DST folds",
+    "JSON/Markdown/GeoJSON CLI and all40 modern compositional planet-axis topic combinations with source links"
+  ],
+  "experimental": [
+    "Probe-controlled interpolation is tested, not a formal continuous error bound",
+    "Pre1972 UTC/UT1/timezone and broad1851-2148 endpoints inherit existing model limitations; four modern epochs independently compared"
+  ],
+  "unsupported": [
+    "Original Lewis/Irving/Davis coordinate profiles and direct book delineations",
+    "Book of Maps original-title-page coauthor resolution; inventory attribution unchanged",
+    "Relocation charts at |latitude|>=60; no automatic house-system substitution",
+    "Topocentric, refraction, limb/elevation or alternate mean/astrometric coordinate profiles",
+    "Parans, local-space lines, complex crossings and geodetic variants",
+    "Location desirability ranking, influence probabilities or scientifically verified predictive validity"
+  ],
+  "configuration_matrix": {
+    "dates": "Proleptic Gregorian1851-2148; pinned bundled leap seconds/UT1 modeling, not ancient civil-calendar reconstruction",
+    "targets": "Sun,Moon,Mercury,Venus,Mars,Jupiter,Saturn,Uranus,Neptune,Pluto; exact target names in outputs",
+    "houses": [
+      "whole-sign",
+      "equal",
+      "porphyry",
+      "placidus",
+      "regiomontanus",
+      "campanus"
+    ],
+    "house_default": "placidus; software convention only",
+    "relocation_latitude": "strictly (-60,60) degrees; unsupported frames preserve global map output",
+    "map_latitude": "All finite latitudes in (-90,90), excluding geometric grazing endpoints; exact poles queryable only with degenerate flags",
+    "sampling": "Default0.01deg; configurable0.0001-0.1deg plane-altitude residual probes, geographic-linear segments, max initial arc5deg",
+    "distance": "Spherical shortest semicircle-closure distance, radius6371.0088km; not ellipsoidal or a symbolic orb",
+    "interpretations": "modern psychological, compositional only; separate sourced planet and angular-house topics"
+  },
+  "acceptance": {
+    "tests": 122,
+    "inherited_tests": 110,
+    "cli_smoke_cases": {
+      "Western": 23,
+      "Vedic": 12,
+      "Chinese": 15,
+      "Numerology": 4,
+      "Horary": 5,
+      "Mundane": 12,
+      "Astrocartography": 12
+    },
+    "total_cli_cases": 83,
+    "numerical_report": "data/astrocartography-verification.json",
+    "independent_counts": {
+      "epochs": 4,
+      "planet_positions": 40,
+      "horizon_roots": 452,
+      "circumpolar_cases": 54,
+      "map_vertices": 9548,
+      "rendered_probes": 56568,
+      "relocated_charts": 96
+    },
+    "maximum_measured_errors": {
+      "ra_degrees": 0.00014452498643890976,
+      "declination_degrees": 9.182268603069588e-05,
+      "gast_degrees": 0.0010831338421724013,
+      "meridian_degrees": 0.0012276588286397327,
+      "reference_horizon_root_altitude_degrees": 0.0012004384420375512,
+      "mapped_vertex_independent_altitude_degrees": 0.001200438666719361,
+      "rendered_probe_independent_altitude_degrees": 0.008515287618003957,
+      "relocated_cusp_degrees": 0.004633729603028769,
+      "relocated_angle_degrees": 0.0046337296029719255
+    },
+    "passed": true,
+    "limits": [
+      "Four modern epochs, not exhaustive date-range validation.",
+      "Swiss and Skyfield use separately modeled UT1; coordinate/time-model differences are included.",
+      "Map rendering error is separate from exact-vertex astronomical error.",
+      "Numerical agreement does not validate locational symbolism."
+    ]
+  },
+  "P1": [
+    "Legitimate original-title-page/procedural verification and direct Jim Lewis interpretations",
+    "Additional source-scoped relocation rules and permitted published worked examples",
+    "Further birth-time, pre1972 and near-polar precision validation; expanded date oracle fixtures",
+    "Parans if a named source/convention can be independently verified efficiently"
+  ],
+  "P2": [
+    "Local-space astrology and explicit azimuth/geodesic conventions",
+    "Complex crossings, historical geodetic variants and deeper paran configurations",
+    "Advanced visualization and separately source-reviewed location-ranking experiments"
+  ],
+  "licensing": "No new runtime dependency; Swiss remains optional reference-only, no Swiss production imports. Existing source/local DE440s and packaging limitations unchanged; no contemporary book/page text or images bundled. pip check clean; no branded certification/endorsement rights inferred.",
+  "meaning": "Bounded verified mathematical core with useful compositional symbolism; not exhaustive astrocartography or empirical predictive validation.",
+  "next": "After this closure is committed/pushed, identify Technique8 from the original inventory and begin its audit only."
+}
