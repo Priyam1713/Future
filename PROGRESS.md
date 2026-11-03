@@ -1,5 +1,9 @@
 # Future progress
 
+## Phrenology Core v1 closure — 2026-11-03
+- Implementation3db71b9 committed/pushed. Technique10 **Core v1 Ready — Historical/Educational Reference Scope** for spurzheim-1833-second-american-v1. Supported/experimental/unsupported matrix,48 independent transcription results,P1/P2,rights and source limitations frozen in phrenology_core_v1.json.
+-158 tests/117 CLI cases pass,including146/105 inherited;37 legend entries,three printed views,15 selected passage summaries.22 descriptions remain legend-only and dagger location unknown. No images,skull geometry or individualized trait/medical inference accepted; scientific discredit explicit. Gall/Combe/full chapter and edition comparisons deferred. Commit/push closure before Technique11 audit.
+
 ## Phrenology implementation/verification pass — 2026-11-03
 - Source pass7ab0831 committed/pushed. Added isolated phrenology-reference JSON/Markdown CLI:37 original legend entries,three printed views/62 label occurrences,36 distinct mapped labels,four explicit software browsing groups and versioned registry rules. Dagger anchor remains unverified; unknowns,candidates and conflicts never silently resolve. No personal images,geometry,measurements or inference accepted.
 - All158 tests/117 CLI cases pass,retaining146/105 inherited;12 new reference tests and12 public CLI cases.48 independent original-image transcription cases cover37 legend entries,seven positions and four absences.15 descriptions use selected inspected passages;22 are explicitly legend/category-only. pip check clean,no runtime dependency added. Reports and verification JSON supplied; historical fidelity is not scientific validation. Separate readiness freeze follows.

@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "technique_id": 10,
+  "name": "Phrenology",
+  "status": "Core v1 Ready — Historical/Educational Reference Scope",
+  "date": "2026-11-03",
+  "profile": "spurzheim-1833-second-american-v1",
+  "source_pass_commit": "7ab0831",
+  "implementation_commit": "3db71b9",
+  "supported": [
+    "Exact lookup of35 numbered and two unnumbered original legend entries; no extra36/37",
+    "Three source-specific original printed schematic panels;62 occurrences of36 distinct labels",
+    "Qualitative source positions with explicit absent/unverified anchors",
+    "15 selected passage paraphrases and22 legend/category-only references; precise printed/canvas locators",
+    "Four optional software browsing groups over printed labels; not source anatomical regions",
+    "Exact documented aliases; unknown,ambiguous and conflicting selections retained",
+    "Versioned traditional documentary registry rules; offline JSON/Markdown CLI; no dependencies"
+  ],
+  "experimental": [
+    "Qualitative positions are manual image transcriptions,not calibrated region boundaries",
+    "Software grouping names are navigation conventions,not original source terminology"
+  ],
+  "unsupported": [
+    "Individual intellect,character,criminality,personality,illness,ability or other skull-to-human-trait inference",
+    "Personal head photos,diagnostic images,skull geometry,measurements,biometric detection or clinical interpretation",
+    "Dagger frontispiece anchor; no location fabricated",
+    "Gall,Combe,other editions and cross-tradition number conversion",
+    "Full chapter delineations for22 legend-only entries; modern neuroanatomical localization",
+    "Unverified36th/37th numbered faculties or Conditionality as an accepted extra organ"
+  ],
+  "configuration_matrix": {
+    "profile": "spurzheim-1833-second-american-v1",
+    "task": "historical_reference",
+    "schematics": [
+      "frontis-frontal",
+      "frontis-profile",
+      "frontis-posterior"
+    ],
+    "selections": "1-37 exact string label/name selections,or ambiguous candidate sets; no fuzzy match",
+    "optional_region_ids": [
+      "frontal-central-column",
+      "frontal-brow-band",
+      "profile-ear-surround",
+      "posterior-lower"
+    ],
+    "region_semantics": "Named software browsing sets only; wrong panel or excluded selected label is a conflict",
+    "orientation": "Printed frontal,page-left-facing profile,posterior; anatomical left/right unspecified",
+    "missing": "Legend identity can resolve independently of location; location_status preserves not_shown/unverified",
+    "inference_enabled": false,
+    "individual_assessment": null
+  },
+  "acceptance": {
+    "passed": true,
+    "tests": 158,
+    "inherited_tests": 146,
+    "new_tests": 12,
+    "total_cli_cases": 117,
+    "inherited_cli_cases": 105,
+    "new_cli_cases": 12,
+    "independent_fixture_cases": 48,
+    "fixture_breakdown": {
+      "legend": 37,
+      "panel_positions": 7,
+      "panel_absences": 4
+    },
+    "verification_report": "data/phrenology-verification.json",
+    "cli_report": "data/phrenology-smoke.json",
+    "dependency_check": "pip check: No broken requirements found; no new runtime dependencies",
+    "limitations": "Source fidelity only. These fixtures do not validate phrenology or real-person judgments."
+  },
+  "P1": [
+    "Expand inspected descriptive passages for22 legend-only entries without harmful individualized inference",
+    "Verify Combe original diagrams/edition-specific legends separately; preserve rank2",
+    "Add further independent original-panel position cases and typographic aliases when verified"
+  ],
+  "P2": [
+    "Gall original localization comparison and other edition/translation conflicts",
+    "Optional neutral static schematic after additional source-fidelity checks; no personal assessment"
+  ],
+  "licensing": "Original1833 digitization Public Domain Mark; source images unbundled. Modern edited editions not assumed reusable.",
+  "scientific_limit": "Phrenology is scientifically discredited. Historical map fidelity does not validate skull-to-trait inference. No personal measurements,images or individual assessments.",
+  "prior_audit": "knowledge/phrenology_resource_audit.json remains the historical pre-implementation record,not current supported scope",
+  "next": "After this closure commit/push,audit exact inventory Technique11 only; do not implement it"
+}

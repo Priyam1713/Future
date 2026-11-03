@@ -1,6 +1,6 @@
 # Future
 
-Technique #10 **Phrenology — Developing**: offline historical-reference CLI under `spurzheim-1833-second-american-v1`. The original1833 legend supplies35 numbered faculties plus two unnumbered symbols; three printed views,15 selected passage summaries and22 legend-only descriptions. No individualized skull inference.
+Technique #10 **Phrenology — Core v1 Ready — Historical/Educational Reference Scope**: offline historical-reference CLI under `spurzheim-1833-second-american-v1`. All158 tests/117 CLI cases pass; frozen scope/P1/P2: `knowledge/phrenology_core_v1.json`. The original1833 legend supplies35 numbered faculties plus two unnumbered symbols; three printed views,15 selected passage summaries and22 legend-only descriptions. No individualized skull inference.
 
 ```powershell
 python -m future phrenology-reference data/phrenology-reference-input.json --format markdown
