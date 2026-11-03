@@ -1,5 +1,7 @@
 # Future
 
+Technique #8 **Palmistry — Researching**: original inventory/resources/variation audit in `knowledge/palmistry_resource_audit.json`, begun after Astrocartography closure5d9fac3. No Palmistry engine implemented.
+
 Technique #7 **Astrocartography — Core v1 Ready**: angular geometry/relocation core and source conventions in `knowledge/astrocartography_conventions_v1.json`; frozen scope/P1/P2 in `knowledge/astrocartography_core_v1.json`. All122 tests/83 CLI cases pass. Original-book procedures remain unsupported; the historical resource audit preserves access/attribution limits.
 
 Technique #6 **Mundane Astrology — Core v1 Ready** uses the named Green1911 profile below. Its frozen practical scope/P1/P2 backlog is in `knowledge/mundane_core_v1.json`; source/convention records are in `knowledge/mundane_resource_audit.json` and `knowledge/mundane_green_v1.json`. Acceptance:110 tests and71 CLI cases,including all101 prior tests/59 cases. Ready does not mean exhaustive historical coverage or verified future-event prediction.

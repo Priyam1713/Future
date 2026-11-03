@@ -1,0 +1,185 @@
+{
+  "technique_id": 8,
+  "name": "Palmistry",
+  "status": "Researching",
+  "date": "2026-11-03",
+  "predecessor_closure": "5d9fac3",
+  "policy": "Audit only,after committed/pushed Astrocartography closure; no Palmistry implementation or executable judgment rules",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    8,
+    "2 \u00b7 Physical & Human-Based Divination",
+    "Palmistry",
+    "RETAIN \u2014 simulate / implement",
+    "Vision / symbol rules",
+    "Western chiromancy; Indian Samudrika; major lines; mounts; hand shapes; dermatoglyphics",
+    "Hand feature extraction + school-specific symbolic rule sets",
+    "Hand photos or manual landmarks; optional vision model",
+    "Palm marks not scientifically predictive; privacy/consent",
+    "Traditional / not scientifically validated",
+    "The Laws of Scientific Hand Reading",
+    "William G. Benham",
+    "https://books.google.com/books?id=tsTlrHkJgiUC",
+    "Cheiro\u2019s Language of the Hand",
+    "The Practice of Palmistry",
+    null,
+    "9, 11, 12",
+    8
+  ],
+  "ranked_sources": [
+    [
+      8,
+      "Palmistry",
+      1,
+      "William G. Benham",
+      "The Laws of Scientific Hand Reading",
+      "Detailed Western anatomy/lines",
+      "https://books.google.com/books?id=tsTlrHkJgiUC",
+      "Book scan/catalog",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      8,
+      "Palmistry",
+      2,
+      "Cheiro",
+      "Cheiro\u2019s Language of the Hand",
+      "Classical readings",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      8,
+      "Palmistry",
+      3,
+      "C. de Saint-Germain",
+      "The Practice of Palmistry",
+      "Traditional mounts/lines",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Western chiromancy",
+      "inventory_row": [
+        8,
+        "Palmistry",
+        "Western chiromancy",
+        "The Laws of Scientific Hand Reading",
+        "The Practice of Palmistry",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; procedural extraction and convention verification pending"
+    },
+    {
+      "name": "Indian Samudrika",
+      "inventory_row": [
+        8,
+        "Palmistry",
+        "Indian Samudrika",
+        "The Practice of Palmistry",
+        "Cheiro\u2019s Language of the Hand",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; procedural extraction and convention verification pending"
+    },
+    {
+      "name": "major lines",
+      "inventory_row": [
+        8,
+        "Palmistry",
+        "major lines",
+        "The Practice of Palmistry",
+        "The Laws of Scientific Hand Reading",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; procedural extraction and convention verification pending"
+    },
+    {
+      "name": "mounts",
+      "inventory_row": [
+        8,
+        "Palmistry",
+        "mounts",
+        "The Practice of Palmistry",
+        "Cheiro\u2019s Language of the Hand",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; procedural extraction and convention verification pending"
+    },
+    {
+      "name": "hand shapes",
+      "inventory_row": [
+        8,
+        "Palmistry",
+        "hand shapes",
+        "Cheiro\u2019s Language of the Hand",
+        "The Laws of Scientific Hand Reading",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; procedural extraction and convention verification pending"
+    },
+    {
+      "name": "dermatoglyphics",
+      "inventory_row": [
+        8,
+        "Palmistry",
+        "dermatoglyphics",
+        "The Practice of Palmistry",
+        "Cheiro\u2019s Language of the Hand",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; procedural extraction and convention verification pending"
+    }
+  ],
+  "sources": [
+    "palmistry-benham-catalog-v1",
+    "palmistry-cheiro-loc-commons-v1",
+    "palmistry-saintgermain-catalog-v1"
+  ],
+  "priority_scope": [
+    "First verify one bounded Western school with manual user-entered observations and complete page-located examples",
+    "Major-line identification/observable properties,mount locations and hand shapes where original procedures are accessible",
+    "Versioned symbolic readings with exceptions,missing observations and provenance; no deterministic life-outcome assertion"
+  ],
+  "pending_conventions": [
+    "Left/right hand and dominant/non-dominant hand rules must be source-specific,not merged",
+    "Hand pose,palm orientation,mirroring and scale; source definitions for mounts,lines,shape and markings",
+    "Separate observed landmarks from symbolic interpretation; abstain for ambiguous/missing observations",
+    "Verify chapters and illustrated cases against original page images; scan-page index differs from printed page",
+    "Keep Western chiromancy,Indian Samudrika and dermatoglyphics separate; inventory mappings are provisional,not procedural evidence",
+    "Consent and retention settings for identifiable hand images; no biometric identity,medical,life-expectancy or diagnosis product implied"
+  ],
+  "P1": [
+    "Inspect Benham original pages for major lines/mounts and hand-use rules; verify catalog reprint versus original locators",
+    "Inspect Cheiro1898 and Saint-Germain1897 illustrated procedures and exceptions without merging schools",
+    "Freeze named manual-observation schema and acceptance examples before any engine implementation"
+  ],
+  "P2": [
+    "Consent-based image landmark extraction after independent accuracy testing",
+    "Indian Samudrika original procedural sources; do not infer them from Western catalog coverage",
+    "Dermatoglyphics-specific source/rule audit,separate from medical or biometric claims",
+    "Obscure markings,timing scales and broader school comparisons"
+  ],
+  "limits": "Bibliography,rights and variation audit only; no image analysis,validated readings or real-world predictive accuracy. No book-page procedure verified in this pass.",
+  "accepted_predecessor": {
+    "status": "Core v1 Ready",
+    "tests": 122,
+    "cli_cases": 83
+  }
+}

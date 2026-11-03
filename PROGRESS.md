@@ -1,5 +1,11 @@
 # Future progress
 
+## Technique8 Palmistry — resource audit, 2026-11-03
+- Began only after Astrocartography closure5d9fac3 committed/pushed. Exact inventory identifies Palmistry; preserved all six variations and ranked Benham/Cheiro/Saint-Germain sources. No Palmistry engine or executable rules added.
+- Located Benham indexed contents/reprint distinction,Cheiro1898 LOC/Commons original-scan metadata and Saint-Germain1897 OpenLibrary/original-scan lead. Registered metadata-only sources; original procedural images/volume locators remain unverified. No copyrighted reprint corpus ingested.
+- palmistry_resource_audit.json prioritizes a bounded,source-scoped manual-observation core after procedural verification. Hand-use/orientation/line/mount conventions,illustrated acceptance examples and consent remain pending; Indian Samudrika and dermatoglyphics are separate unsupported variations. Inherited release remains122 tests/83 CLI cases.
+
+
 ## Astrocartography Core v1 closure — 2026-11-03
 - Implementation/verification934b3fb committed/pushed first. Marked Technique7 **Core v1 Ready** for the named geometry,relocation and compositional-reading scope; supported/experimental/unsupported matrix and P1/P2 frozen in astrocartography_core_v1.json. All122 tests/83 CLI cases pass,including110 tests/71 cases inherited.
 - Max independent errors and coverage remain in data/astrocartography-verification.json; numerical precision,rendering,source fidelity and predictive validity stay separate. Original-book attribution/procedures,parans/local-space and further polar/historical validation remain explicit refinement gaps. No new runtime dependencies or shared-engine changes.
