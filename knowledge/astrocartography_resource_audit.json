@@ -1,0 +1,175 @@
+{
+  "technique_id": 7,
+  "name": "Astrocartography",
+  "status": "Researching",
+  "date": "2026-11-03",
+  "predecessor_closure": "69287bb",
+  "policy": "Resource/variation audit only,after committed Mundane closure; no Astrocartography engine or executable rules added",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    7,
+    "1 · Astrology & Celestial Prediction",
+    "Astrocartography",
+    "RETAIN — simulate / implement",
+    "Deterministic / symbolic rules",
+    "A*C*G angular lines; relocation chart; parans; local-space lines",
+    "Map planetary angularity and relocations from birth chart",
+    "Precise birth time/place; geospatial projection; #1 chart",
+    "Minutes of birth time can move lines materially",
+    "Traditional / not scientifically validated",
+    "The Astro*Carto*Graphy Book of Maps",
+    "Jim Lewis and Kenneth Irving",
+    null,
+    "The Psychology of Astro*Carto*Graphy",
+    "Astrolocality Astrology",
+    "1",
+    "1, 40",
+    7
+  ],
+  "variations": [
+    {
+      "name": "A*C*G angular lines",
+      "inventory_source_mapping": [
+        "The Psychology of Astro*Carto*Graphy",
+        "The Astro*Carto*Graphy Book of Maps"
+      ],
+      "inventory_mapping_status": "Indicative (scope match)",
+      "status": "unsupported; procedure and convention verification pending"
+    },
+    {
+      "name": "relocation chart",
+      "inventory_source_mapping": [
+        "Astrolocality Astrology",
+        "The Psychology of Astro*Carto*Graphy"
+      ],
+      "inventory_mapping_status": "Indicative (scope match)",
+      "status": "unsupported; procedure and convention verification pending"
+    },
+    {
+      "name": "parans",
+      "inventory_source_mapping": [
+        "Astrolocality Astrology",
+        "The Psychology of Astro*Carto*Graphy"
+      ],
+      "inventory_mapping_status": "Provisional / chapter check needed",
+      "status": "unsupported; procedure and convention verification pending"
+    },
+    {
+      "name": "local-space lines",
+      "inventory_source_mapping": [
+        "Astrolocality Astrology",
+        "The Psychology of Astro*Carto*Graphy"
+      ],
+      "inventory_mapping_status": "Indicative (scope match)",
+      "status": "unsupported; procedure and convention verification pending"
+    }
+  ],
+  "ranked_sources": [
+    [
+      7,
+      "Astrocartography",
+      1,
+      "Jim Lewis and Kenneth Irving",
+      "The Astro*Carto*Graphy Book of Maps",
+      "Original angular-line mapping",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      7,
+      "Astrocartography",
+      2,
+      "Jim Lewis and Kenneth Irving",
+      "The Psychology of Astro*Carto*Graphy",
+      "Interpretation of mapped lines",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      7,
+      "Astrocartography",
+      3,
+      "Martin Davis",
+      "Astrolocality Astrology",
+      "Relocation and local-space variants",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "ranked_source_ids": [
+    "astrocartography-maps-catalog-v1",
+    "astrocartography-psychology-catalog-v1",
+    "astrocartography-davis-publisher-v1"
+  ],
+  "supplemental_source_ids": [
+    "astrocartography-astrocom-faq-lead-v1"
+  ],
+  "bibliographic_discrepancies": [
+    {
+      "inventory_rank": 1,
+      "inventory_authors": "Jim Lewis and Kenneth Irving",
+      "catalog_authors": "Jim Lewis and Arielle/Ariel Guttman (Continuum bibliography; original title-page pending)",
+      "source_id": "astrocartography-maps-catalog-v1",
+      "handling": "Preserve original inventory authors/rank/title; record discrepancy separately and verify original title page before attributing rules."
+    }
+  ],
+  "source_findings": [
+    {
+      "source_id": "astrocartography-maps-catalog-v1",
+      "locator": "Bibliography entry for Jim Lewis first Book of Maps",
+      "finding": "Continuum bibliography identifies Guttman as coauthor; Google catalog/index corroborates title/1989 ISBN but live author display is abbreviated. Original title-page and procedural access remain pending; inventory names Irving for this rank and is preserved separately."
+    },
+    {
+      "source_id": "astrocartography-psychology-catalog-v1",
+      "locator": "Publication and catalogue data",
+      "finding": "Bibliographic author/contributor and1997 edition lead corroborated. Publisher site wordsandthings.com currently provides only a site-update notice; no book-procedure verification claimed."
+    },
+    {
+      "source_id": "astrocartography-davis-publisher-v1",
+      "locator": "Publisher description and author panel",
+      "finding": "Publisher confirms revised title and locational/Local Space scope. Exact calculation conventions,chapter passages and worked examples still need legitimate inspection."
+    },
+    {
+      "source_id": "astrocartography-astrocom-faq-lead-v1",
+      "locator": "Indexed FAQ questions on relocation versus planetary latitude",
+      "finding": "Candidate convention issue: actual planetary angularity versus longitude-only chart angles. Must verify original procedure and coordinates before any ASC/DSC line implementation."
+    }
+  ],
+  "proposed_first_core": [
+    "Explicit birth instant with pinned IANA handling and source-defined RA/declination angularity profile",
+    "MC/IC and ASC/DSC line geometry plus independent pointwise angularity checks",
+    "Explicit-location relocation charts at same birth instant,keeping natal and relocated frames separate",
+    "Useful source-supported line/planet components without invented ideal-location scores"
+  ],
+  "pending_conventions": [
+    "In-mundo actual-body geometry versus zodiacal longitude projection; planetary latitude must not silently disappear",
+    "Apparent/astrometric equatorial frame,geocentric/topocentric parallax and epoch",
+    "Geometric center horizon versus limb/refraction/elevation conventions",
+    "Upper/lower meridian and rising/setting branches,circumpolar cases and dateline topology",
+    "Projection,sampling/interpolation,error bounds and distance-to-line semantics",
+    "Birth-time uncertainty,pre1972 time assumptions,DST and relocation timezone display",
+    "Paran simultaneous-angle definitions and local-space azimuth/geodesic conventions remain separate variations",
+    "Book/image/software licensing and any branded usage checked separately; no certification/trademark rights inferred from web availability"
+  ],
+  "P1": [
+    "Verify legitimate original procedural pages and complete worked examples for one named angular-line profile",
+    "Prepare independent astronomy/Swiss pointwise geometry fixtures at multiple latitudes and both hemispheres",
+    "Verify line interpretations and relocation distinctions before implementation",
+    "Resolve Book of Maps coauthor discrepancy without altering original taxonomy"
+  ],
+  "P2": [
+    "Parans and additional crossings",
+    "Local-space/geodetic variants",
+    "More historical birth-time/geospatial edge cases",
+    "Deeper source-author interpretation coverage"
+  ],
+  "limits": "Bibliographic and technical leads only; no computed map,no verified spatial rule and no claim a location predicts money,relationships or safety. Avoid equating line distance with predictive probability.",
+  "accepted_predecessor": {
+    "status": "Core v1 Ready",
+    "tests": 110,
+    "cli_smoke_cases": 71
+  }
+}

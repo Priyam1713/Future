@@ -1,5 +1,7 @@
 # Future
 
+Technique #7 **Astrocartography — Researching**: source/variation audit in `knowledge/astrocartography_resource_audit.json`, begun after the committed Mundane closure. No Astrocartography engine is implemented in this audit.
+
 Technique #6 **Mundane Astrology — Core v1 Ready** uses the named Green1911 profile below. Its frozen practical scope/P1/P2 backlog is in `knowledge/mundane_core_v1.json`; source/convention records are in `knowledge/mundane_resource_audit.json` and `knowledge/mundane_green_v1.json`. Acceptance:110 tests and71 CLI cases,including all101 prior tests/59 cases. Ready does not mean exhaustive historical coverage or verified future-event prediction.
 
 ```powershell

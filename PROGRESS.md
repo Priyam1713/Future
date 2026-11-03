@@ -1,5 +1,11 @@
 # Future progress
 
+## Technique7 Astrocartography — resource audit, 2026-11-03
+- Began only after Mundane closure69287bb committed/pushed. Preserved exact inventory row,four variations andthree ranked sources; no Astrocartography engine or executable rule added.
+- Registered Continuum Book of Maps bibliography,1997 Psychology catalogue,Martin Davis publisher scope and an Astrodienst indexed FAQ lead (live browser challenge). Book of Maps coauthor discrepancy recorded separately: Continuum identifies Guttman,inventory names Irving; original inventory unchanged. Contemporary book text/images not ingested.
+- astrocartography_resource_audit.json prioritizes a named actual-angularity/relocation calculation core after source/convention verification. Planetary latitude versus longitude-only angles,coordinate/horizon/parallax conventions,birth-time sensitivity,circumpolar/dateline cases and independent worked examples remain pending. Parans/local-space retained as separate variations; no map/line/interpretive accuracy claimed.
+- Metadata/registry matched against original inventory;18 pipeline/Mundane tests pass after additions. Inherited release remains110 tests/71 CLI cases. Next: source-located conventions and independent angularity fixtures,not immediate unsourced map generation.
+
 ## Mundane Core v1 closure — 2026-11-03
 - Implementation/verification f09716b committed/pushed first. Marked Technique6 **Core v1 Ready** for the named Green four-ingress/selected-conjunction/source-component scope; matrix/acceptance and P1/P2 frozen in mundane_core_v1.json. Not complete eclipse,national-founding,financial or historical forecasting.
 - All110 tests/71 CLI cases pass;101 prior tests/59 cases retained. Independent report covers24 Swiss site/event charts,four published2026 USNO instants and10 cycle/motion events. Root convergence,coordinate-model timing sensitivity,partial historical disagreement and predictive validity remain separate. No runtime dependency or earlier-engine calculation changes.
