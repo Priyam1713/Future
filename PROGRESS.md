@@ -1,5 +1,11 @@
 # Future progress
 
+## Face Reading implementation/verification pass — 2026-11-03
+- Source passe2043f4 committed/pushed. Added isolated face-reference manual/source-example CLI with validated orientation,frontal mirror/side/point transforms,six regional documentary references,two terminology records and three published schematic IDs. Geometry/markings stay descriptive; reference context never depends on them and no individual assessment is generated. Unknowns,conflicts and unsupported regions remain explicit.
+- All146 tests pass (134 inherited +12 meaningful reference tests); all105 CLI cases pass (93 inherited +12 new). Nine independently transcribed source cases cover six regional entries and three labeled illustrations; geometry-invariance,mirroring,profile isolation,inference rejection and reproducibility checked. Samples/input reference/verification JSON supplied; pip check clean,no dependencies or earlier-engine behavior changed.
+- Scope remains historical/symbolic only; no personality/intelligence,medical,criminality or protected-trait inference. Chinese traditions,other translations,source-derived ability rankings and image processing unsupported. Separate readiness freeze follows.
+
+
 ## Face Reading source/profile pass — 2026-11-03
 - Inspected original Lavater/Hunter1789 Volume I title,p18 regional terminology,p20 translation footnote,p23 resting/moving terminology and pp265-266 three labeled schematic constructions. Frozen lavater-hunter-1789-reference-v1:6 region references,2 terminology records,3 source schematics,precise printed/canvas locators and image digests. Independent labels/illustration features transcribed before matcher implementation.
 - Yap product/Bridges contents provide no inspected procedural diagrams; no Chinese methods inferred. Region associations and harmful historical capacity claims remain documentary context only; no geometry-to-trait or individualized judgments. Orientation/mirroring explicitly a software annotation convention. Research cutoff reached; source images unbundled,rankings unchanged.

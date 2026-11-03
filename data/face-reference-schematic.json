@@ -1,0 +1,145 @@
+{
+  "technique_id": 9,
+  "profile": "lavater-hunter-1789-reference-v1",
+  "tradition": "Western historical physiognomy \u2014 Lavater/Hunter Volume I documentary scope",
+  "mode": "source_example",
+  "task": "historical_reference",
+  "release_status": "Developing",
+  "input": {
+    "schema_version": 1,
+    "profile": "lavater-hunter-1789-reference-v1",
+    "task": "historical_reference",
+    "mode": "source_example",
+    "example_id": "lavater-v1-p265-figure-2"
+  },
+  "orientation": {
+    "view": "schematic",
+    "side_frame": "subject",
+    "mirrored": false
+  },
+  "orientation_convention": "Software annotation convention,not a Lavater formula: view left_profile means anatomical left side visible. Subject-side labels remain anatomical; frontal viewer labels swap under nonmirrored display and agree under mirrored display. Unknown mirroring remains ambiguous. Profile viewer labels cannot determine anatomical side.",
+  "regions": [
+    {
+      "index": 0,
+      "region_id": "forehead",
+      "observation": {
+        "region_id": "forehead",
+        "side": "midline",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "convex",
+          "relative_base": "intermediate"
+        }
+      },
+      "canonical_subject_side": "midline",
+      "canonical_subject_point": null,
+      "ambiguities": [],
+      "region_definition": "Forehead down to the eyebrows,as the author explicitly bounds it.",
+      "historical_reference": {
+        "source_label": "forehead",
+        "region_description": "Forehead down to the eyebrows,as the author explicitly bounds it.",
+        "paired": false,
+        "historical_term": "intellectual life",
+        "historical_association": "In Fragment II,Lavater assigned the forehead to his category 'intellectual life'. This is a historical assertion,not evidence about any observed person.",
+        "rule_id": "face.lavater.region.forehead",
+        "version": 1,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58",
+        "coverage": "direct historical reference",
+        "limitations": "Region-only documentary lookup. Geometry,markings,side and proportions do not select a personal interpretation; the author's intelligence/morality/animal-life claims are not operationalized."
+      },
+      "rule_trace": {
+        "rule_id": "face.lavater.region.forehead",
+        "version": 1,
+        "lookup_key": "forehead",
+        "method": "region_reference_only",
+        "geometry_used_for_association": false,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "coverage": "historical_reference_available",
+      "observation_status": "partial",
+      "individual_assessment": null,
+      "association_applied_to_individual": false,
+      "unknown_fields": [
+        "geometry.state"
+      ],
+      "observation_conflicts": []
+    }
+  ],
+  "source_example": {
+    "label": "Volume I,p265,figure2",
+    "region_id": "forehead",
+    "side": "midline",
+    "visibility": "visible",
+    "geometry": {
+      "outline": "convex",
+      "relative_base": "intermediate"
+    },
+    "figure_number": 2,
+    "description": "Schematic2 shows a curved boundary with vertical,horizontal and diagonal construction lines; base widths differ across the three printed diagrams.",
+    "source_id": "face-lavater-hunter-vol1-inspected-v1",
+    "locator": "Volume I,p265,figure2; canvas339; continuation p266/canvas340",
+    "orientation": "Abstract forehead/quadrant schematic,not a frontal face or anatomical left/right claim.",
+    "historical_context": "Lavater used these constructions to argue for ranking intellectual capacity from skull/forehead proportions. That discredited inference is documented here,not calculated or applied to a person.",
+    "reference_only": true
+  },
+  "terminology": [
+    {
+      "id": "face.lavater.term.physiognomy",
+      "version": 1,
+      "term": "physiognomy",
+      "description": "Hunter's translation uses physiognomy for the proposed science and physionomy for outward appearance; this records terminology,not scientific endorsement.",
+      "locator": "Volume I,Fragment III,p20,footnote; canvas60"
+    },
+    {
+      "id": "face.lavater.term.pathognomy",
+      "version": 1,
+      "term": "pathognomy",
+      "description": "Lavater contrasted fixed/resting form with features in motion,calling the latter pathognomy. No emotion,character or internal state is inferred by this engine.",
+      "locator": "Volume I,Fragment IV,p23; canvas63"
+    }
+  ],
+  "observation_conflicts": [],
+  "missing_regions": [
+    "nose",
+    "cheeks",
+    "mouth",
+    "chin",
+    "eyes"
+  ],
+  "tradition_ambiguities": [
+    "Chinese five-element/12-palace mappings are unverified and excluded.",
+    "Hunter spelling/translation is preserved separately from Holcroft and other editions."
+  ],
+  "summary": "1 annotations; 1 region-reference lookups; 0 observation conflicts; zero personal assessments.",
+  "individual_assessment": null,
+  "inference_enabled": false,
+  "source": {
+    "id": "face-lavater-hunter-vol1-inspected-v1",
+    "technique_id": 9,
+    "author": "Johann Caspar Lavater; translated from French by Henry Hunter",
+    "edition": "Essays on Physiognomy,Volume I,London John Murray/Hunter/Holloway,1789; title visually inspected",
+    "url": "https://wellcomecollection.org/works/hdwza8s9",
+    "manifest": "https://iiif.wellcomecollection.org/presentation/v2/b30455789_0001",
+    "locator": "Title canvas7; Fragment II,p18/canvas58; Fragment III,p20/canvas60; Fragment IV,p23/canvas63; pp265-266/canvases339-340,figures1-3",
+    "ingestion": "metadata_only",
+    "rights_note": "Wellcome Public Domain Mark original edition. Only concise original documentary summaries and transcribed labels committed; scans/images are unbundled research references.",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "checked_on": "2026-11-03"
+  },
+  "limits": [
+    "Historical/symbolic reference only. Physiognomic claims about character or ability are discredited.",
+    "No individual intelligence,honesty,morality,criminality,personality,health,ethnicity,protected-trait or life-outcome assessment.",
+    "Historical associations are selected by region only,never by observed geometry,markings,measurements or side.",
+    "Normalized points and side labels are manual annotations; no image processing or anatomical landmark detection.",
+    "Observer accuracy and source fidelity are different questions; schematic transcriptions do not validate real-person judgments.",
+    "Chinese Mian Xiang,five elements and12 palaces remain unsupported and are not merged with Lavater.",
+    "Only the inspected Hunter1789 Volume I pages/figures are covered; no Holcroft/other-volume substitution."
+  ],
+  "reproducibility": {
+    "profile_version": 1,
+    "input_sha256": "7781e8aa778be8ff26ffe3ce1625e62b30878d2353f709fc61e43504b9461719",
+    "source_profile_sha256": "e12aa1840afe342192843886ac44e558d59ed97448414d43178a5ab5e5fc2341"
+  }
+}

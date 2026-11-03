@@ -1,0 +1,668 @@
+{
+  "technique_id": 9,
+  "profile": "lavater-hunter-1789-reference-v1",
+  "tradition": "Western historical physiognomy \u2014 Lavater/Hunter Volume I documentary scope",
+  "mode": "manual",
+  "task": "historical_reference",
+  "release_status": "Developing",
+  "input": {
+    "schema_version": 1,
+    "profile": "lavater-hunter-1789-reference-v1",
+    "task": "historical_reference",
+    "mode": "manual",
+    "orientation": {
+      "view": "frontal",
+      "side_frame": "subject",
+      "mirrored": false
+    },
+    "observations": [
+      {
+        "region_id": "forehead",
+        "side": "midline",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "convex",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.5,
+          0.2
+        ]
+      },
+      {
+        "region_id": "eyes",
+        "side": "left",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "unknown",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.3,
+          0.4
+        ]
+      },
+      {
+        "region_id": "eyes",
+        "side": "right",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "unknown",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.7,
+          0.4
+        ]
+      },
+      {
+        "region_id": "nose",
+        "side": "midline",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "convex",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "region_id": "cheeks",
+        "side": "left",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "convex",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.2,
+          0.6
+        ]
+      },
+      {
+        "region_id": "cheeks",
+        "side": "right",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "convex",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.8,
+          0.6
+        ]
+      },
+      {
+        "region_id": "mouth",
+        "side": "midline",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "straight",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.5,
+          0.7
+        ]
+      },
+      {
+        "region_id": "chin",
+        "side": "midline",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "convex",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.5,
+          0.9
+        ]
+      }
+    ]
+  },
+  "orientation": {
+    "view": "frontal",
+    "side_frame": "subject",
+    "mirrored": false
+  },
+  "orientation_convention": "Software annotation convention,not a Lavater formula: view left_profile means anatomical left side visible. Subject-side labels remain anatomical; frontal viewer labels swap under nonmirrored display and agree under mirrored display. Unknown mirroring remains ambiguous. Profile viewer labels cannot determine anatomical side.",
+  "regions": [
+    {
+      "index": 0,
+      "region_id": "forehead",
+      "observation": {
+        "region_id": "forehead",
+        "side": "midline",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "convex",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.5,
+          0.2
+        ]
+      },
+      "canonical_subject_side": "midline",
+      "canonical_subject_point": [
+        0.5,
+        0.2
+      ],
+      "ambiguities": [],
+      "region_definition": "Forehead down to the eyebrows,as the author explicitly bounds it.",
+      "historical_reference": {
+        "source_label": "forehead",
+        "region_description": "Forehead down to the eyebrows,as the author explicitly bounds it.",
+        "paired": false,
+        "historical_term": "intellectual life",
+        "historical_association": "In Fragment II,Lavater assigned the forehead to his category 'intellectual life'. This is a historical assertion,not evidence about any observed person.",
+        "rule_id": "face.lavater.region.forehead",
+        "version": 1,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58",
+        "coverage": "direct historical reference",
+        "limitations": "Region-only documentary lookup. Geometry,markings,side and proportions do not select a personal interpretation; the author's intelligence/morality/animal-life claims are not operationalized."
+      },
+      "rule_trace": {
+        "rule_id": "face.lavater.region.forehead",
+        "version": 1,
+        "lookup_key": "forehead",
+        "method": "region_reference_only",
+        "geometry_used_for_association": false,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "coverage": "historical_reference_available",
+      "observation_status": "partial",
+      "individual_assessment": null,
+      "association_applied_to_individual": false,
+      "unknown_fields": [
+        "geometry.relative_base"
+      ],
+      "observation_conflicts": []
+    },
+    {
+      "index": 1,
+      "region_id": "eyes",
+      "observation": {
+        "region_id": "eyes",
+        "side": "left",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "unknown",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.3,
+          0.4
+        ]
+      },
+      "canonical_subject_side": "left",
+      "canonical_subject_point": [
+        0.3,
+        0.4
+      ],
+      "ambiguities": [],
+      "region_definition": "Eye region; the original uses singular eye as a general region.",
+      "historical_reference": {
+        "source_label": "eye",
+        "region_description": "Eye region; the original uses singular eye as a general region.",
+        "paired": true,
+        "historical_term": "centre and summary",
+        "historical_association": "In Fragment II,Lavater assigned the eye to his category 'centre and summary'. This is a historical assertion,not evidence about any observed person.",
+        "rule_id": "face.lavater.region.eyes",
+        "version": 1,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58",
+        "coverage": "direct historical reference",
+        "limitations": "Region-only documentary lookup. Geometry,markings,side and proportions do not select a personal interpretation; the author's intelligence/morality/animal-life claims are not operationalized."
+      },
+      "rule_trace": {
+        "rule_id": "face.lavater.region.eyes",
+        "version": 1,
+        "lookup_key": "eyes",
+        "method": "region_reference_only",
+        "geometry_used_for_association": false,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "coverage": "historical_reference_available",
+      "observation_status": "partial",
+      "individual_assessment": null,
+      "association_applied_to_individual": false,
+      "unknown_fields": [
+        "geometry.outline",
+        "geometry.relative_base"
+      ],
+      "observation_conflicts": []
+    },
+    {
+      "index": 2,
+      "region_id": "eyes",
+      "observation": {
+        "region_id": "eyes",
+        "side": "right",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "unknown",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.7,
+          0.4
+        ]
+      },
+      "canonical_subject_side": "right",
+      "canonical_subject_point": [
+        0.7,
+        0.4
+      ],
+      "ambiguities": [],
+      "region_definition": "Eye region; the original uses singular eye as a general region.",
+      "historical_reference": {
+        "source_label": "eye",
+        "region_description": "Eye region; the original uses singular eye as a general region.",
+        "paired": true,
+        "historical_term": "centre and summary",
+        "historical_association": "In Fragment II,Lavater assigned the eye to his category 'centre and summary'. This is a historical assertion,not evidence about any observed person.",
+        "rule_id": "face.lavater.region.eyes",
+        "version": 1,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58",
+        "coverage": "direct historical reference",
+        "limitations": "Region-only documentary lookup. Geometry,markings,side and proportions do not select a personal interpretation; the author's intelligence/morality/animal-life claims are not operationalized."
+      },
+      "rule_trace": {
+        "rule_id": "face.lavater.region.eyes",
+        "version": 1,
+        "lookup_key": "eyes",
+        "method": "region_reference_only",
+        "geometry_used_for_association": false,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "coverage": "historical_reference_available",
+      "observation_status": "partial",
+      "individual_assessment": null,
+      "association_applied_to_individual": false,
+      "unknown_fields": [
+        "geometry.outline",
+        "geometry.relative_base"
+      ],
+      "observation_conflicts": []
+    },
+    {
+      "index": 3,
+      "region_id": "nose",
+      "observation": {
+        "region_id": "nose",
+        "side": "midline",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "convex",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.5,
+          0.5
+        ]
+      },
+      "canonical_subject_side": "midline",
+      "canonical_subject_point": [
+        0.5,
+        0.5
+      ],
+      "ambiguities": [],
+      "region_definition": "Nose; paired with cheeks in the author's grouping.",
+      "historical_reference": {
+        "source_label": "nose",
+        "region_description": "Nose; paired with cheeks in the author's grouping.",
+        "paired": false,
+        "historical_term": "moral life",
+        "historical_association": "In Fragment II,Lavater assigned the nose to his category 'moral life'. This is a historical assertion,not evidence about any observed person.",
+        "rule_id": "face.lavater.region.nose",
+        "version": 1,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58",
+        "coverage": "direct historical reference",
+        "limitations": "Region-only documentary lookup. Geometry,markings,side and proportions do not select a personal interpretation; the author's intelligence/morality/animal-life claims are not operationalized."
+      },
+      "rule_trace": {
+        "rule_id": "face.lavater.region.nose",
+        "version": 1,
+        "lookup_key": "nose",
+        "method": "region_reference_only",
+        "geometry_used_for_association": false,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "coverage": "historical_reference_available",
+      "observation_status": "partial",
+      "individual_assessment": null,
+      "association_applied_to_individual": false,
+      "unknown_fields": [
+        "geometry.relative_base"
+      ],
+      "observation_conflicts": []
+    },
+    {
+      "index": 4,
+      "region_id": "cheeks",
+      "observation": {
+        "region_id": "cheeks",
+        "side": "left",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "convex",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.2,
+          0.6
+        ]
+      },
+      "canonical_subject_side": "left",
+      "canonical_subject_point": [
+        0.2,
+        0.6
+      ],
+      "ambiguities": [],
+      "region_definition": "Cheek region on either side of the nose; paired with nose in the text.",
+      "historical_reference": {
+        "source_label": "cheeks",
+        "region_description": "Cheek region on either side of the nose; paired with nose in the text.",
+        "paired": true,
+        "historical_term": "moral life",
+        "historical_association": "In Fragment II,Lavater assigned the cheeks to his category 'moral life'. This is a historical assertion,not evidence about any observed person.",
+        "rule_id": "face.lavater.region.cheeks",
+        "version": 1,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58",
+        "coverage": "direct historical reference",
+        "limitations": "Region-only documentary lookup. Geometry,markings,side and proportions do not select a personal interpretation; the author's intelligence/morality/animal-life claims are not operationalized."
+      },
+      "rule_trace": {
+        "rule_id": "face.lavater.region.cheeks",
+        "version": 1,
+        "lookup_key": "cheeks",
+        "method": "region_reference_only",
+        "geometry_used_for_association": false,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "coverage": "historical_reference_available",
+      "observation_status": "partial",
+      "individual_assessment": null,
+      "association_applied_to_individual": false,
+      "unknown_fields": [
+        "geometry.relative_base"
+      ],
+      "observation_conflicts": []
+    },
+    {
+      "index": 5,
+      "region_id": "cheeks",
+      "observation": {
+        "region_id": "cheeks",
+        "side": "right",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "convex",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.8,
+          0.6
+        ]
+      },
+      "canonical_subject_side": "right",
+      "canonical_subject_point": [
+        0.8,
+        0.6
+      ],
+      "ambiguities": [],
+      "region_definition": "Cheek region on either side of the nose; paired with nose in the text.",
+      "historical_reference": {
+        "source_label": "cheeks",
+        "region_description": "Cheek region on either side of the nose; paired with nose in the text.",
+        "paired": true,
+        "historical_term": "moral life",
+        "historical_association": "In Fragment II,Lavater assigned the cheeks to his category 'moral life'. This is a historical assertion,not evidence about any observed person.",
+        "rule_id": "face.lavater.region.cheeks",
+        "version": 1,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58",
+        "coverage": "direct historical reference",
+        "limitations": "Region-only documentary lookup. Geometry,markings,side and proportions do not select a personal interpretation; the author's intelligence/morality/animal-life claims are not operationalized."
+      },
+      "rule_trace": {
+        "rule_id": "face.lavater.region.cheeks",
+        "version": 1,
+        "lookup_key": "cheeks",
+        "method": "region_reference_only",
+        "geometry_used_for_association": false,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "coverage": "historical_reference_available",
+      "observation_status": "partial",
+      "individual_assessment": null,
+      "association_applied_to_individual": false,
+      "unknown_fields": [
+        "geometry.relative_base"
+      ],
+      "observation_conflicts": []
+    },
+    {
+      "index": 6,
+      "region_id": "mouth",
+      "observation": {
+        "region_id": "mouth",
+        "side": "midline",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "straight",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.5,
+          0.7
+        ]
+      },
+      "canonical_subject_side": "midline",
+      "canonical_subject_point": [
+        0.5,
+        0.7
+      ],
+      "ambiguities": [],
+      "region_definition": "Mouth; paired with chin in the author's grouping.",
+      "historical_reference": {
+        "source_label": "mouth",
+        "region_description": "Mouth; paired with chin in the author's grouping.",
+        "paired": false,
+        "historical_term": "animal life",
+        "historical_association": "In Fragment II,Lavater assigned the mouth to his category 'animal life'. This is a historical assertion,not evidence about any observed person.",
+        "rule_id": "face.lavater.region.mouth",
+        "version": 1,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58",
+        "coverage": "direct historical reference",
+        "limitations": "Region-only documentary lookup. Geometry,markings,side and proportions do not select a personal interpretation; the author's intelligence/morality/animal-life claims are not operationalized."
+      },
+      "rule_trace": {
+        "rule_id": "face.lavater.region.mouth",
+        "version": 1,
+        "lookup_key": "mouth",
+        "method": "region_reference_only",
+        "geometry_used_for_association": false,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "coverage": "historical_reference_available",
+      "observation_status": "partial",
+      "individual_assessment": null,
+      "association_applied_to_individual": false,
+      "unknown_fields": [
+        "geometry.relative_base"
+      ],
+      "observation_conflicts": []
+    },
+    {
+      "index": 7,
+      "region_id": "chin",
+      "observation": {
+        "region_id": "chin",
+        "side": "midline",
+        "visibility": "visible",
+        "geometry": {
+          "outline": "convex",
+          "state": "at_rest"
+        },
+        "markings": [
+          "unknown"
+        ],
+        "point": [
+          0.5,
+          0.9
+        ]
+      },
+      "canonical_subject_side": "midline",
+      "canonical_subject_point": [
+        0.5,
+        0.9
+      ],
+      "ambiguities": [],
+      "region_definition": "Chin; paired with mouth in the text.",
+      "historical_reference": {
+        "source_label": "chin",
+        "region_description": "Chin; paired with mouth in the text.",
+        "paired": false,
+        "historical_term": "animal life",
+        "historical_association": "In Fragment II,Lavater assigned the chin to his category 'animal life'. This is a historical assertion,not evidence about any observed person.",
+        "rule_id": "face.lavater.region.chin",
+        "version": 1,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58",
+        "coverage": "direct historical reference",
+        "limitations": "Region-only documentary lookup. Geometry,markings,side and proportions do not select a personal interpretation; the author's intelligence/morality/animal-life claims are not operationalized."
+      },
+      "rule_trace": {
+        "rule_id": "face.lavater.region.chin",
+        "version": 1,
+        "lookup_key": "chin",
+        "method": "region_reference_only",
+        "geometry_used_for_association": false,
+        "source_id": "face-lavater-hunter-vol1-inspected-v1",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "coverage": "historical_reference_available",
+      "observation_status": "partial",
+      "individual_assessment": null,
+      "association_applied_to_individual": false,
+      "unknown_fields": [
+        "geometry.relative_base"
+      ],
+      "observation_conflicts": []
+    }
+  ],
+  "source_example": null,
+  "terminology": [
+    {
+      "id": "face.lavater.term.physiognomy",
+      "version": 1,
+      "term": "physiognomy",
+      "description": "Hunter's translation uses physiognomy for the proposed science and physionomy for outward appearance; this records terminology,not scientific endorsement.",
+      "locator": "Volume I,Fragment III,p20,footnote; canvas60"
+    },
+    {
+      "id": "face.lavater.term.pathognomy",
+      "version": 1,
+      "term": "pathognomy",
+      "description": "Lavater contrasted fixed/resting form with features in motion,calling the latter pathognomy. No emotion,character or internal state is inferred by this engine.",
+      "locator": "Volume I,Fragment IV,p23; canvas63"
+    }
+  ],
+  "observation_conflicts": [],
+  "missing_regions": [],
+  "tradition_ambiguities": [
+    "Chinese five-element/12-palace mappings are unverified and excluded.",
+    "Hunter spelling/translation is preserved separately from Holcroft and other editions."
+  ],
+  "summary": "8 annotations; 8 region-reference lookups; 0 observation conflicts; zero personal assessments.",
+  "individual_assessment": null,
+  "inference_enabled": false,
+  "source": {
+    "id": "face-lavater-hunter-vol1-inspected-v1",
+    "technique_id": 9,
+    "author": "Johann Caspar Lavater; translated from French by Henry Hunter",
+    "edition": "Essays on Physiognomy,Volume I,London John Murray/Hunter/Holloway,1789; title visually inspected",
+    "url": "https://wellcomecollection.org/works/hdwza8s9",
+    "manifest": "https://iiif.wellcomecollection.org/presentation/v2/b30455789_0001",
+    "locator": "Title canvas7; Fragment II,p18/canvas58; Fragment III,p20/canvas60; Fragment IV,p23/canvas63; pp265-266/canvases339-340,figures1-3",
+    "ingestion": "metadata_only",
+    "rights_note": "Wellcome Public Domain Mark original edition. Only concise original documentary summaries and transcribed labels committed; scans/images are unbundled research references.",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "checked_on": "2026-11-03"
+  },
+  "limits": [
+    "Historical/symbolic reference only. Physiognomic claims about character or ability are discredited.",
+    "No individual intelligence,honesty,morality,criminality,personality,health,ethnicity,protected-trait or life-outcome assessment.",
+    "Historical associations are selected by region only,never by observed geometry,markings,measurements or side.",
+    "Normalized points and side labels are manual annotations; no image processing or anatomical landmark detection.",
+    "Observer accuracy and source fidelity are different questions; schematic transcriptions do not validate real-person judgments.",
+    "Chinese Mian Xiang,five elements and12 palaces remain unsupported and are not merged with Lavater.",
+    "Only the inspected Hunter1789 Volume I pages/figures are covered; no Holcroft/other-volume substitution."
+  ],
+  "reproducibility": {
+    "profile_version": 1,
+    "input_sha256": "d0a7b2d934bc856f34402a19be816b0e190ca6389da2561d31a45263d3197a29",
+    "source_profile_sha256": "e12aa1840afe342192843886ac44e558d59ed97448414d43178a5ab5e5fc2341"
+  }
+}

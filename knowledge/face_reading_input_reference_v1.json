@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "profile": "lavater-hunter-1789-reference-v1",
+  "task": "historical_reference only; other requests rejected",
+  "modes": [
+    "manual",
+    "source_example"
+  ],
+  "manual": {
+    "orientation": {
+      "view": [
+        "frontal",
+        "left_profile",
+        "right_profile",
+        "unknown",
+        "uncertain"
+      ],
+      "side_frame": [
+        "subject",
+        "viewer"
+      ],
+      "mirrored": [
+        true,
+        false,
+        "unknown",
+        "uncertain"
+      ]
+    },
+    "observations": "1-24 objects; no person identifiers or image paths",
+    "region_ids": {
+      "forehead": {
+        "source_label": "forehead",
+        "paired": false,
+        "description": "Forehead down to the eyebrows,as the author explicitly bounds it.",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "nose": {
+        "source_label": "nose",
+        "paired": false,
+        "description": "Nose; paired with cheeks in the author's grouping.",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "cheeks": {
+        "source_label": "cheeks",
+        "paired": true,
+        "description": "Cheek region on either side of the nose; paired with nose in the text.",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "mouth": {
+        "source_label": "mouth",
+        "paired": false,
+        "description": "Mouth; paired with chin in the author's grouping.",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "chin": {
+        "source_label": "chin",
+        "paired": false,
+        "description": "Chin; paired with mouth in the text.",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      },
+      "eyes": {
+        "source_label": "eye",
+        "paired": true,
+        "description": "Eye region; the original uses singular eye as a general region.",
+        "locator": "Volume I,Fragment II,p18; canvas58"
+      }
+    },
+    "side": [
+      "left",
+      "right",
+      "both",
+      "midline",
+      "unknown",
+      "uncertain"
+    ],
+    "visibility": [
+      "visible",
+      "occluded",
+      "unknown",
+      "uncertain"
+    ],
+    "geometry": {
+      "outline": [
+        "straight",
+        "convex",
+        "concave",
+        "mixed",
+        "unknown",
+        "uncertain"
+      ],
+      "relative_base": [
+        "narrow",
+        "intermediate",
+        "broad",
+        "unknown",
+        "uncertain"
+      ],
+      "state": [
+        "at_rest",
+        "moving",
+        "unknown",
+        "uncertain"
+      ]
+    },
+    "markings": [
+      "none",
+      "line",
+      "spot",
+      "crease",
+      "unknown",
+      "uncertain"
+    ],
+    "point": "Optional[x,y] normalized in[0,1],or unknown/uncertain; no anatomical classification from coordinates"
+  },
+  "source_examples": [
+    "lavater-v1-p265-figure-1",
+    "lavater-v1-p265-figure-2",
+    "lavater-v1-p265-figure-3"
+  ],
+  "conventions": {
+    "scope": "Historical region/terminology lookup; no individualized physiognomic assessment.",
+    "orientation": "Software annotation convention,not a Lavater formula: view left_profile means anatomical left side visible. Subject-side labels remain anatomical; frontal viewer labels swap under nonmirrored display and agree under mirrored display. Unknown mirroring remains ambiguous. Profile viewer labels cannot determine anatomical side.",
+    "coordinates": "Optional normalized annotation points: x,y in[0,1]. Canonical subject-frame x increases toward anatomical right. Frontal nonmirrored viewer x maps to1-x; mirrored x maps tox. Profile projection is not normalized into a frontal face.",
+    "geometry": "User descriptive enums and schematic annotations only; no thresholds,feature detection or geometry-to-trait rules.",
+    "tradition_isolation": "No Chinese Mian Xiang,five-element,12-palace,Bridges or Holcroft mappings are borrowed."
+  },
+  "boundaries": "Geometry never selects historical trait content; region references remain documentary context. Unknown region IDs retained explicitly unsupported. Invalid fields/duplicate JSON keys/nonfinite coordinates rejected."
+}

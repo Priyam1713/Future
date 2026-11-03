@@ -1,6 +1,6 @@
 # Future
 
-Technique #9 **Face Reading / Physiognomy — Researching**: exact inventory/resource/variation audit in `knowledge/face_reading_resource_audit.json`,begun after Palmistry closuref1932dd. No face-analysis engine implemented.
+Technique #9 **Face Reading / Physiognomy — Developing**: historical region/terminology reference under `lavater-hunter-1789-reference-v1`. Source pages/figures are recorded in `knowledge/face_reading_lavater_v1.json`; original inventory remains preserved. No individualized physiognomic inference is implemented.
 
 Technique #8 **Palmistry — Core v1 Ready**: manual Western readings under `cheiro-ninth-manual-v1`. All134 tests/93 CLI cases pass. Source rules are in `knowledge/palmistry_cheiro_v1.json`; frozen supported/experimental/unsupported scope and P1/P2 are in `knowledge/palmistry_core_v1.json`. Original rankings/variations remain preserved.
 
@@ -230,3 +230,25 @@ The named Western profile uses Cheiro's inspected Ninth Edition: six hand types,
 Readings are attributed historic symbolism,not evidence of personality,medical conditions,longevity or future outcomes. Life-line depth/length/breaks are retained without medical/death readings. A fully observed hand can still contain unsupported properties; coverage does not mean all historical doctrines are implemented. No image is loaded or retained. Benham/Saint-Germain,Indian Samudrika,dermatoglyphics,minor markings and timing scales are not substituted.
 
 Six source fixtures were independently transcribed from visually inspected published types/labeled schematic details: Plates II,III,V,XVI and XVIII with the corresponding printed passages. These validate faithful mapping of selected features,not a full historical person's palm reading or predictive validity. The original scan's title says Ninth Edition,copyright1897,with a1900 LOC receipt stamp; the earlier catalog1898 label is preserved separately. Original PDF/pages are research references,not bundled product data.
+
+
+## Technique9 historical face-reading reference
+
+```powershell
+python -m future face-reference data/face-reference-observations.json --format markdown
+python -m future face-reference data/face-reference-example-input.json
+python -m scripts.smoke_face_reading_core
+python -m scripts.verify_face_reading
+```
+
+`face-reference` is a historical/symbolic reference engine. The named profile uses visually inspected Lavater/Hunter1789 Volume I: six regional labels on p18,two terminology records on pp20/23,and three numbered schematic constructions on pp265-266. Original scans and contemporary Yap/Bridges books are not bundled. Chinese Mian Xiang,five-element and12-palace mappings are unsupported; publisher descriptions are not treated as procedural evidence.
+
+Required JSON fields are `schema_version:1`,the exact `profile`, `task:"historical_reference"`,and `mode:"manual"` or `"source_example"`. Manual mode requires orientation and1-24 region observations; example mode selects an exact published schematic ID and rejects manual overrides. The complete input reference is `knowledge/face_reading_input_reference_v1.json`. Unknown/uncertain values remain explicit; invalid fields,duplicate JSON keys and nonfinite/out-of-range points are rejected. Unknown region identifiers remain unsupported rather than receiving another school's association.
+
+Orientation is an explicit software annotation convention. `left_profile` means the anatomical left side is visible; `side_frame` declares subject versus displayed-viewer labels. With a known frontal,nonmirrored display,viewer-left maps to subject-right; mirrored displays preserve side labels. Optional normalized coordinates map x to1-x in the same nonmirrored frontal conversion; subject-frame x increases toward anatomical right. Unknown mirroring and profile projections are not guessed. No pixels are read,so users remain responsible for the declared view and observations.
+
+Geometry and markings are descriptive only. Historical context is looked up by region,not by shape; every row exposes `geometry_used_for_association:false`, `association_applied_to_individual:false` and a null individual assessment. Changing outline,proportion or markings cannot produce an intelligence,honesty,morality,criminality,personality,medical,ethnicity,protected-trait or life-outcome conclusion. Such inference requests are rejected. Conflicting observations remain flagged without reconciliation; archival region text remains available independently of the conflict.
+
+The historical region associations record what Lavater claimed,with attribution and printed/canvas locators; they are not valid statements about the annotated person. His three forehead constructions are documented as an example of discredited capacity-ranking claims,without reproducing a ranking algorithm or applying it to a person. Hunter translation terminology stays separate from Holcroft and Chinese schools.
+
+Samples: `data/face-reference-observations.json` is constructed manual usage data,not a photograph or historical individual; `data/face-reference-manual.json`/`.md` contain eight descriptive annotations covering all six regions. `data/face-reference-schematic.json`/`.md` document the published second schematic. `data/face-reference-verification.json` checks six independently transcribed regional entries and three original numbered figures. These checks establish selected source fidelity and interface behavior,not physiognomic validity or image-recognition accuracy.
