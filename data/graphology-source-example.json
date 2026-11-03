@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "technique_id": 13,
+  "profile": "crepieux-schooling-1892-reference-v1",
+  "task": "historical_reference",
+  "script": "latin",
+  "writing_direction": "ltr",
+  "source_example": {
+    "figure": 18,
+    "feature": "line_spacing",
+    "category": "clear",
+    "locator": "Original caption fig18,printed p61,canvas85",
+    "kind": "Published facsimile caption reference,not biometric matching or a new assessment of its author"
+  },
+  "observations": [
+    {
+      "observation": {
+        "feature": "line_spacing",
+        "category": "clear",
+        "scope": "published_figure"
+      },
+      "scope": "published_figure",
+      "status": "resolved_reference",
+      "reference": {
+        "id": "clear",
+        "features": [
+          "line_spacing"
+        ],
+        "term": "Clear handwriting",
+        "definition": "There is definite separation between lines.",
+        "figure": 18,
+        "definition_page": 58,
+        "locator": "Printed p58,canvas82; definition refers to fig18",
+        "historical_context": "Crepieux-Jamin/Schooling lists clearness as an ordinary historical significance. This is documentary context,not a conclusion about the writer.",
+        "interpretation_coverage": "direct_selected_ordinary_column",
+        "interpretation_locator": "Table of graphologic signs,p73,canvas97",
+        "exceptions": [
+          "Table ordinary/superiority/inferiority/accessory columns are different contexts;only a selected ordinary label is summarized. No writer state is selected.",
+          "Source pp35/51 says signs may have different meanings and absence does not prove an opposite trait;no composite portrait or personal inference implemented."
+        ],
+        "rule_id": "graphology.schooling1892.clear",
+        "version": 1,
+        "source_id": "graphology-crepieux-schooling-1892-inspected-v1",
+        "coverage": "direct_descriptive_reference",
+        "applied_to_writer": false
+      },
+      "candidate_references": [],
+      "coverage": "direct"
+    }
+  ],
+  "conflicts": [],
+  "geometry": null,
+  "geometry_reference_link": "Independent numerical description; measurements never select historical terms or writer traits.",
+  "pressure": {
+    "evidence": "not_supplied",
+    "status": "unsupported",
+    "reason": "No calibrated force procedure implemented; neither image darkness nor coarse strokes establishes true pressure."
+  },
+  "source": {
+    "id": "graphology-crepieux-schooling-1892-inspected-v1",
+    "technique_id": 13,
+    "author": "Jules Crepieux-Jamin; translated and edited by John Holt Schooling",
+    "edition": "Handwriting and Expression; from third French edition of Lecriture et le caractere;London,Kegan Paul,Trench,Trubner & Co.,1892",
+    "url": "https://iiif.wellcomecollection.org/presentation/v2/b28132142",
+    "catalog_url": "https://commons.wikimedia.org/wiki/File:Handwriting_and_expression_(IA_b28132142).pdf",
+    "ingestion": "public_domain",
+    "rights_note": "Wellcome original digitization explicitly Public Domain Mark,including commercial reuse; original source images inspected but unbundled. Only historical labels and original research paraphrases retained. ABC,Saudek and Amend editions not ingested.",
+    "locator": "Original title canvas9;Introduction pxiii canvas17;Principles pp35/51 canvases59/75;definitions pp56-65 canvases80-89;Table pp72-74 canvases96-98",
+    "checked_on": "2026-11-03"
+  },
+  "source_cautions": [
+    {
+      "locator": "Introduction pxiii,canvas17",
+      "description": "Schooling changed introductory material/illustrations and incorporated explanatory text with author agreement;edition-specific profile."
+    },
+    {
+      "locator": "Principle III,p35,canvas59",
+      "description": "One sign can have several historical meanings,not one-to-one trait evidence."
+    },
+    {
+      "locator": "Principle IV,p51,canvas75",
+      "description": "Different signs/combinations may be associated with the same historical characteristic;absence does not establish its opposite."
+    }
+  ],
+  "conventions": {
+    "script": "Latin,left-to-right only for historical applicability;other scripts/directions retained unsupported,no automatic mirroring.",
+    "description": "Manual category labels only;no pixel classifier or invented thresholds.",
+    "geometry": "Independent software geometry:Cartesian x right/y up;baseline vector left-to-right;upstroke base-to-tip;baseline angle degrees from horizontal;slant clockwise from baseline normal;spacing/height ratios dimensionless in mm or common arbitrary units.",
+    "pressure": "True pen pressure never estimated from darkness or appearance;physical/dynamic evidence requires a separately calibrated procedure,not implemented.",
+    "combinations": "Rectilinear is path,not horizontal direction. Clear line separation and crowded word spacing can coexist. Conflicts apply to opposing categories of the same feature/scope.",
+    "edition": "Schoolings adapted1892 translation of Lecriture et le caractere,not ABC de la graphologie. Introduction pxiii describes changes;no equivalence assumed."
+  },
+  "coverage": {
+    "terms": 23,
+    "features": 11,
+    "published_examples": 7,
+    "compositional_interpretation": "unsupported"
+  },
+  "limitations": [
+    "Historical/descriptive reference only; graphology is not a reliable personality or employment assessment.",
+    "No writer intelligence,personality,mental health,criminality,honesty,employment suitability or other personal-trait classification.",
+    "Manual labels are not independently recognized. No image input,OCR,signature authentication or forensic authorship determination.",
+    "Geometry measures supplied vectors/dimensions only; no source size/spacing thresholds or personal interpretations derived.",
+    "True pen pressure cannot be inferred from image darkness; calibrated physical/dynamic pressure processing is not implemented.",
+    "Only the adapted1892 Schooling edition is supported; ABC,Saudek,German holistic,American applied and other scripts remain separate.",
+    "Twenty selected ordinary-column labels are documentary context; complex combinations and writer-state selection are unsupported."
+  ],
+  "inference_enabled": false,
+  "individual_assessment": null
+}

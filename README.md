@@ -1,6 +1,15 @@
 # Future
 
-Technique #13 **Graphology — Researching**: resource/variation audit in `knowledge/graphology_resource_audit.json`,begun after Podomancy closuref5b4e37. Original three source rankings/four variations preserved; no Technique13 engine implemented.
+Technique #13 **Graphology — Developing**: `crepieux-schooling-1892-reference-v1` offers23 descriptive terms across11 feature dimensions and seven published examples from Handwriting and Expression. This is a separately identified1892 translation/adaptation,not ABC de la graphologie. Optional baseline/slant angles and normalized spacing/proportions use supplied teaching vectors or measurements; geometry never selects historical meanings. True pressure and personal-trait,medical,employment or forensic-authorship assessments are unsupported.
+
+```powershell
+python -X utf8 -m future graphology-reference data/graphology-reference-input.json --format markdown
+python -X utf8 -m future graphology-reference data/graphology-source-example-input.json
+python -m scripts.verify_graphology
+python -m scripts.smoke_graphology_core
+```
+
+JSON/Markdown reports and independent verification: `data/graphology-reference.*`, `data/graphology-source-example.*`, `data/graphology-verification.json`. Cartesian x-right/y-up coordinates and common mm/arbitrary units are explicit. Baseline vectors run left-to-right; upstrokes run base-to-tip above baseline. Slant is clockwise from the baseline normal. X-height,ascender height and descender depth have separate declared meanings; no size/spacing or pressure thresholds invented.
 
 Technique #12 **Podomancy / Foot Reading — Core v1 Ready — Historical/Symbolic Reference Scope**: `anonymous-booksellers-pg67858-foot-reference-v1` provides six source-attributed foot-form,sole-line and sole-skin references across two regions. All182 tests/141 CLI cases pass; frozen bounded scope/P1/P2 in `knowledge/podomancy_core_v1.json`. The anonymous pseudo-Aristotle text is separate from Somogyi/Sheehan; individual toe rules,Indian methods and personal appearance-to-trait or medical inference are unsupported.
 

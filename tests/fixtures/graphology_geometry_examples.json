@@ -1,0 +1,13 @@
+{
+  "method": "Constructed Euclidean teaching vectors; fixed expected angles from right angles and 3-4-5 triangles,not production-generated expectations or published graphology examples.",
+  "angle_cases": [
+    {"baseline": [[0,0],[4,0]], "upstroke": [[0,0],[0,4]], "baseline_angle": 0, "slant": 0},
+    {"baseline": [[0,0],[4,0]], "upstroke": [[0,0],[4,4]], "baseline_angle": 0, "slant": 45},
+    {"baseline": [[0,0],[4,0]], "upstroke": [[0,0],[-4,4]], "baseline_angle": 0, "slant": -45},
+    {"baseline": [[0,0],[4,3]], "upstroke": [[0,0],[-3,4]], "baseline_angle": 36.869897645844, "slant": 0},
+    {"baseline": [[0,0],[4,-3]], "upstroke": [[0,0],[3,4]], "baseline_angle": -36.869897645844, "slant": 0},
+    {"baseline": [[0,0],[4,0]], "upstroke": [[0,0],[3,4]], "baseline_angle": 0, "slant": 36.869897645844}
+  ],
+  "ratio_case": {"x_height": 2, "word_gap": 6, "letter_gap": 1, "line_gap": 5, "expected": [3,0.5,2.5]},
+  "limits": "Tests numerical geometry only,not graphological meaning or true physical writing pressure."
+}

@@ -1,5 +1,9 @@
 # Future progress
 
+## Graphology implementation/verification pass — 2026-11-03
+- Source pass49c0db9 committed/pushed. Added graphology-reference manual/source-example JSON/Markdown CLI:23 terms across11 feature dimensions,7 published examples,unknown/ambiguous/conflicting scope diagnostics and Latin/LTR applicability.20 selected ordinary-column claims remain documentary;3 particular signs have descriptive-only coverage. No personal-trait or writer-state classification.
+- Independent geometry module reports declared baseline/slant angles and x-height-normalized spacing/proportions,without selecting historical meanings;true pressure unsupported for all current evidence labels. All196 tests/155 CLI cases pass,retaining182/141 inherited;14 new tests,14 CLI cases,30 independent original-page/caption checks and7 separate constructed Euclidean fixtures. pip check clean,no dependencies added. Separate bounded readiness freeze follows.
+
 ## Graphology source/profile pass — 2026-11-03
 - Inspected Crepieux-Jamin/Schooling Handwriting and Expression1892 original title,adaptation note,principles,definitions pp56-65,table pp72-74 and seven facsimile captions. Separately registered from ranked ABC de la graphologie;no assumed English ABC translation. Wellcome PDM original images inspected/unbundled. Saudek preview stops before procedures;modern Amend/Ruiz not ingested.
 - Frozen crepieux-schooling-1892-reference-v1:23 terms,20 selected ordinary historical labels,3 descriptive-only particular signs,7 original examples and independent pre-matcher fixtures. No writer-state selection or arbitrary size/spacing/pressure thresholds;source caveats preserved. Research cutoff reached.

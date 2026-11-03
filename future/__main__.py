@@ -202,7 +202,18 @@ def main():
     podo=sub.add_parser('podomancy-reference')
     podo.add_argument('input',help='Path to documentary foot-region/entry selection JSON; no personal foot data')
     podo.add_argument('--format',choices=['json','markdown'],default='json')
+    graph=sub.add_parser('graphology-reference')
+    graph.add_argument('input',help='Path to manual descriptive or published-example JSON; no writer assessment')
+    graph.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='graphology-reference':
+        from .graphology import load_input,reference,markdown
+        registry=load_registry(args.database)
+        try:
+            result=reference(load_input(args.input),registry)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close()
+        return
     if args.command=='podomancy-reference':
         from .podomancy import load_input,reference,markdown
         registry=load_registry(args.database)
