@@ -1,5 +1,11 @@
 # Future progress
 
+## Palmistry Core v1 closure — 2026-11-03
+- Implementatione3b12fb committed/pushed first. Technique8 **Core v1 Ready** for cheiro-ninth-manual-v1:37 source-located rules,three major lines,six hand types,eight mount sites,validated observations and useful JSON/Markdown readings. Frozen configuration matrix and P1/P2 in palmistry_core_v1.json; clarified exact qualitative terms rather than inventing numeric thresholds.
+- All134 tests/93 CLI cases pass,retaining122/83 inherited. Six independently transcribed illustrated types/details establish selected source fidelity only. No full-person,photo-recognition,personality or predictive-validity claim. Other authors/Indian Samudrika/dermatoglyphics,minor marks,timing and image extraction remain explicitly unsupported.
+- Source and sample reports preserve unknowns,conflicts,side-use assumptions and excluded harmful historical claims. No dependencies or earlier-engine calculations changed. Commit/push this closure before Technique9 inventory/resource audit.
+
+
 ## Palmistry implementation/verification pass — 2026-11-03
 - Source/profile873ac38 committed/pushed. Added strict manual JSON schema,qualitative observations/ratios,six hand types,eight mount sites and selected Life/Head/Heart readings under cheiro-ninth-manual-v1. Rules retain printed locators/exceptions; unknowns abstain,contradictions withhold affected rules,opposing symbolic themes remain unscored. No image extraction or new dependencies.
 - All134 tests pass (122 inherited +12 meaningful Palmistry tests); all93 CLI cases pass (83 inherited +10 Palmistry). Six independently transcribed published illustrated types/details pass; source fidelity is separate from empirical validity. Sample input produces13 left-hand and17 right-hand components with no observation conflicts. Full diagnostics,JSON/Markdown,input reference and reproducible verification report supplied. pip check clean.

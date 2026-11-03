@@ -10,6 +10,14 @@ ROOT=Path(__file__).resolve().parents[1]
 DATA=json.loads((ROOT/'knowledge/palmistry_cheiro_v1.json').read_text(encoding='utf-8'))
 PROFILE=DATA['profile']
 UNKNOWN=('unknown','uncertain')
+QUALITATIVE_TERMS={
+    'head.length.short':'Barely reaches mid-palm (p89); not the excluded abnormally-short medical category.',
+    'head.length.very_long':'Reaches the outer/little-finger-side edge of the palm (p88),not merely longer than average.',
+    'head.curvature.straight_then_sloping':'Straight first half followed by a slight slope (p88).',
+    'heart.origin.jupiter':'Central Mount of Jupiter,not the finger itself (p98).',
+    'heart.origin.saturn':'Central Mount of Saturn,not the finger itself (p99).',
+    'life.branch_to.jupiter':'An ascending branch toward or into Jupiter (p81); no timing inferred.',
+    'mounts.developed':'Developed/well-developed ordinary mount,not an excessive enlargement (pp64-65).'}
 COMMON=dict(presence=['present','absent'],length=['short','long','very_long'],depth=['deep','shallow'],
     clarity=['clear','unclear'],curvature=['straight','slight_slope','very_sloping','straight_then_sloping'],
     continuity=['unbroken','broken','chained'],branches=['none','upward','downward','both'])
@@ -191,7 +199,7 @@ def read(observations,registry=None):
                       comparison_scope='both hands' if len(hands)==2 else 'single hand; other-hand context missing'),
         unsupported_features=observations.get('unsupported_features',[]),source=DATA['source'],limits=LIMITS,
         observation_guide=dict(line_definitions=DATA['line_definitions'],line_locator='Part II,chII,p72',
-            hand_types=DATA['shapes'],mount_locations=DATA['mounts'],
+            hand_types=DATA['shapes'],mount_locations=DATA['mounts'],qualitative_terms=QUALITATIVE_TERMS,
             interpretation_thresholds='Qualitative source terms; no invented millimeter cutoffs.'),
         reproducibility=dict(profile_version=1,source_scan_sha256=DATA['source']['sha256'],
             observations_sha256=hashlib.sha256(json.dumps(observations,sort_keys=True,ensure_ascii=True,separators=(',',':')).encode()).hexdigest(),

@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "technique_id": 8,
+  "name": "Palmistry",
+  "status": "Core v1 Ready",
+  "date": "2026-11-03",
+  "profile": "cheiro-ninth-manual-v1",
+  "tradition": "Western chiromancy \u2014 Cheiro Ninth Edition",
+  "source_pass_commit": "873ac38",
+  "implementation_commit": "e3b12fb",
+  "supported": [
+    "Manual JSON observations for one/two explicitly identified hands; strict enums,unknown/uncertain values and no inferred features",
+    "Life/Head/Heart presence and morphology recorded; selected source-supported relation,curvature,branch,origin and continuity interpretations",
+    "Six qualitative source-defined hand types and eight fixed mount positions; ordinary developed-mount symbolic components",
+    "Recorded dominance with literal Cheiro right/acquired,left/natural context; no automatic dominant-hand reversal",
+    "Millimeter proportions and descriptive ratios only; no invented shape thresholds",
+    "37 source-located versioned rules,diagnostic trace,source exceptions and non-averaged symbolic tensions",
+    "Contradictory observations suppress affected interpretations; unsupported observations and markings stay explicit",
+    "Offline JSON/Markdown CLI and source-linked observation guide; no image loading or retention"
+  ],
+  "experimental": [
+    "Subjective observer classification accuracy is unmeasured; published tests check symbolic rule selection,not real-hand feature recognition",
+    "Mixed-hand and sloping-Head context is qualified,not a complete whole-hand synthesis",
+    "Author side-use assumptions retained as historical convention,not contemporary evidence"
+  ],
+  "unsupported": [
+    "Benham and Saint-Germain reading profiles; sources retained in original rank order",
+    "Indian Samudrika and dermatoglyphics",
+    "Automatic image/landmark/line extraction,biometric identification",
+    "Elementary type,finger/shape subtypes,mount excess or leaning,minor markings and timing scales",
+    "Medical,longevity,death,crime,mental-illness or protected-trait predictions",
+    "Empirical personality inference,compatibility percentages,success guarantees or outcome probabilities"
+  ],
+  "configuration_matrix": {
+    "profile": "cheiro-ninth-manual-v1",
+    "input": "schema_version1; exact profile; one/two unique left/right hands; omissions unknown",
+    "shapes": [
+      "square",
+      "spatulate",
+      "philosophic",
+      "conic",
+      "psychic",
+      "mixed"
+    ],
+    "mounts": [
+      "venus",
+      "jupiter",
+      "saturn",
+      "sun",
+      "mercury",
+      "mars_active",
+      "mars_passive",
+      "luna"
+    ],
+    "line_observation_fields": "knowledge/palmistry_input_reference_v1.json; only fully matched source conditions interpreted",
+    "source_side_protocol": "pp77-78; left natural/inherited,right acquired/training; left-handed observation does not authorize a flip",
+    "interpretations": "Direct concise source summaries; symbolic tensions are explicitly compositional presentation aids; unmatched combinations unsupported",
+    "depth_length_continuity": "Recorded for all three lines; only selected nonmedical interpretations implemented. Life length/depth/breaks never yield health/longevity readings"
+  },
+  "acceptance": {
+    "passed": true,
+    "tests": 134,
+    "inherited_tests": 122,
+    "new_tests": 12,
+    "total_cli_cases": 93,
+    "cli_smoke_cases": {
+      "Western": 23,
+      "Vedic": 12,
+      "Chinese": 15,
+      "Numerology": 4,
+      "Horary": 5,
+      "Mundane": 12,
+      "Astrocartography": 12,
+      "Palmistry": 10
+    },
+    "independent_illustrated_details": 6,
+    "verification": "data/palmistry-verification.json",
+    "sample_input": "data/palmistry-observations.json",
+    "sample_reports": [
+      "data/palmistry-reading.json",
+      "data/palmistry-reading.md"
+    ],
+    "limits": "Six transcribed published types/schematic details,not complete-person readings or empirical validation; sample input is constructed usage data."
+  },
+  "P1": [
+    "More independently inspected Benham original and Saint-Germain procedures under separate profiles",
+    "Further source-verified line/shape/mount exceptions and hand-context combinations",
+    "Assisted image extraction only after consent,orientation checks,independent landmark accuracy and user correction are established"
+  ],
+  "P2": [
+    "Indian Samudrika original-source review and dermatoglyphics as separate traditions",
+    "Extensive minor marks,timing scales and obscure shape variations",
+    "Advanced vision pipelines only after practical independently validated feasibility"
+  ],
+  "licensing": "No new runtime dependency. Original Cheiro scan/page images remain unbundled research references; Commons public-domain attribution and actual Ninth Edition title/copyright retained. No modern reprint corpus or photo collection ingested; pip check clean. Existing source/local distribution limitations unchanged.",
+  "meaning": "Bounded Western symbolic manual-reading product meets acceptance; not exhaustive palmistry or evidence of personality,medical conditions,longevity or scientifically validated prediction.",
+  "next": "After this closure is committed/pushed,identify Technique9 in the original inventory and audit resources only."
+}

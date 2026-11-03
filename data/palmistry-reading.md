@@ -1,5 +1,5 @@
 # Palmistry reading
-Developing | cheiro-ninth-manual-v1
+Core v1 Ready | cheiro-ninth-manual-v1
 Historical symbolic interpretation, not evidence about personality, health, longevity or future events.
 
 pp77-78: inspect both hands; left natural/inherited context,right acquired/training context. Left-handed clarity noted but no explicit automatic side reversal; dominance recorded only.

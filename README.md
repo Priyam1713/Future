@@ -1,6 +1,6 @@
 # Future
 
-Technique #8 **Palmistry — Developing**: manual-observation reading engine under the source-specific `cheiro-ninth-manual-v1` profile. Source rules are in `knowledge/palmistry_cheiro_v1.json`; original rankings/variations remain in the resource audit.
+Technique #8 **Palmistry — Core v1 Ready**: manual Western readings under `cheiro-ninth-manual-v1`. All134 tests/93 CLI cases pass. Source rules are in `knowledge/palmistry_cheiro_v1.json`; frozen supported/experimental/unsupported scope and P1/P2 are in `knowledge/palmistry_core_v1.json`. Original rankings/variations remain preserved.
 
 Technique #7 **Astrocartography — Core v1 Ready**: angular geometry/relocation core and source conventions in `knowledge/astrocartography_conventions_v1.json`; frozen scope/P1/P2 in `knowledge/astrocartography_core_v1.json`. All122 tests/83 CLI cases pass. Original-book procedures remain unsupported; the historical resource audit preserves access/attribution limits.
 
