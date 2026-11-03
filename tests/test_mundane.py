@@ -150,6 +150,7 @@ class MundaneTests(unittest.TestCase):
         a=ingresses(self.e,2026,'Europe/London',51.5,0)
         b=ingresses(self.e,2026,'Europe/London',51.5,0)
         self.assertEqual(a,b)
+        self.assertEqual(a['release_status'],'Core v1 Ready')
         self.assertTrue(all('epoch' in e['chart'] and 'birth' not in e['chart'] for e in a['events']))
         from future.natal import chart
         n=chart(self.e,'2026-03-20T14:45:00','UTC',51.5,0)

@@ -1,6 +1,6 @@
 # Mundane Astrology — Green1911
 
-Profile: green-1911-tropical-placidus-v1; status: Developing.
+Profile: green-1911-tropical-placidus-v1; status: Core v1 Ready.
 Symbolic source-grounded components; no geopolitical/economic outcome probability.
 
 ## Aries

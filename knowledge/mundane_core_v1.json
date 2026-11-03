@@ -1,0 +1,83 @@
+{
+  "technique_id": 6,
+  "name": "Mundane Astrology",
+  "status": "Core v1 Ready",
+  "profile": "green-1911-tropical-placidus-v1",
+  "date": "2026-11-03",
+  "implementation_commit": "f09716b",
+  "source_conventions_commit": "a6b2b50",
+  "supported": [
+    "Four exact apparent tropical cardinal Sun-longitude crossings in an explicit UTC calendar year",
+    "Explicit caller-selected coordinates and pinned IANA local/UTC display; no capital inference",
+    "Nine pre-Pluto geocentric planets, signs/speeds/retrogrades, ASC/MC/DSC/IC, twelve Placidus cusps and longitude-sector house placements",
+    "Classical-seven domicile/exaltation/detriment/fall facts, with shared factual table source explicitly separated from Green's interpretation",
+    "All nearest-major-angle geometries and relative-motion phase; no invented within-orb threshold or strength score",
+    "Source-traceable Green collective house/planet components, selected direct pairs and explicitly compositional readings",
+    "Exact Jupiter–Saturn conjunctions, repeated contacts, station and sign-ingress diagnostics within a bounded range",
+    "JSON/Markdown CLI and reproducible London/Sydney ingress and2020 conjunction examples"
+  ],
+  "experimental": [
+    "Optional old Aries-ASC3/6/12-month symbolic duration; Green questions close application, all four charts retained, no expiry/guaranteed duration",
+    "Partial historical1899 chart comparison only; Saturn printed-source discrepancy and GMT/site/house reconstruction limits retained",
+    "Conditional direct interpretations are source formulations, not certified full-affliction or whole-chart judgments"
+  ],
+  "unsupported": [
+    "Campion/Raphael executable profiles or inaccessible book interpretations",
+    "Uranus/Neptune dignity assignments and direct planetary delineations in this initial extraction; Pluto in1911 profile",
+    "Automatic country/capital selection or unique national-founding-chart assignment",
+    "Other conjunction pairs, opposition/cycle interpretation systems and numerical influence-duration/orb rules",
+    "Full affliction,sect,reception,bounds/terms/combustion synthesis or aggregate national verdict",
+    "Eclipse classification,contacts,visibility and duration; syzygy is not treated as an eclipse",
+    "Historical-calendar reconstruction and absolute ancient-date verification",
+    "Geopolitical,catastrophe or financial predictive-accuracy/probability claims; Technique49 implementation"
+  ],
+  "configuration_matrix": {
+    "zodiac_coordinates": "Tropical,apparent geocentric true ecliptic/equinox of date",
+    "time": "UTC/TT and existing modeled UT1; IANA tzdata2025.2 for local display",
+    "year_domain": [1851, 2148],
+    "latitude": "abs(latitude)<60 degrees,longitude±180; no house substitution",
+    "houses": "Placidus explicit software choice; Green inspected procedure does not prescribe a named system",
+    "planet_set": ["Sun", "Moon", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"],
+    "cycle": "Jupiter–Saturn longitude conjunction only; offset-aware positive<=366-day window,half-open endpoints",
+    "aspect_orbs": "No orb-based activation; numerical nearest-major geometry only",
+    "duration": "Disabled by default; optional historical context applies only to Aries chart"
+  },
+  "acceptance": {
+    "four_ingresses": "PASS: four2026 published USNO minute values and independent Swiss2000/2024/2026 crossings",
+    "location_charts": "PASS:24 event/site charts,Placidus cusps/angles/planet positions at two hemispheres",
+    "interpretations": "PASS bounded scope:34 source-located components,coverage labels,qualified duration and no fabricated synthesis",
+    "interfaces": "PASS JSON/Markdown,12 new CLI cases; prior interfaces unchanged",
+    "regressions": "PASS110 tests,101 inherited retained;71 CLI cases,59 inherited retained",
+    "provenance": "Original1911 images inspected; Green source/rule IDs and locators,profile/kernel hashes; Swiss reference-only"
+  },
+  "verification": {
+    "tests": 110,
+    "previous_tests_retained": 101,
+    "cli_smoke_cases": {"Western": 23, "Vedic": 12, "Chinese": 15, "Numerology": 4, "Horary": 5, "Mundane": 12},
+    "numerical_report": "data/mundane-validation.json",
+    "max_swiss_ingress_time_difference_seconds": 1.194,
+    "max_swiss_planet_difference_degrees": 0.000278,
+    "max_swiss_cusp_difference_degrees": 0.008661,
+    "max_usno_published_minute_difference_seconds": 30.350,
+    "cycle_motion_events_compared": 10,
+    "max_cycle_time_difference_seconds": 163.906,
+    "cycle_time_explanation": "Slow repeated contacts magnify subarcsecond relative-coordinate differences. Test bound is0.0002deg divided by measured relative speed; conjunction residual/convergence is checked separately. This is not a predictive timing confidence interval.",
+    "historical_example": "Green1899 printed Saturn22°33 Sagittarius differs about1degree; eight other rounded longitudes agree within0.02degree. No fully passed historical chart reconstruction claimed."
+  },
+  "P1": [
+    "Additional direct planet-house/outer-planet and qualified aspect interpretations from verified Green pages",
+    "Selected further planetary-cycle pairs and independently validated refinements",
+    "Permitted,documented national/event charts with competing founding moments/source certainty preserved",
+    "Independent eclipse classification,kept separate from syzygy and local visibility",
+    "Investigate Green printed Saturn/time/cusp discrepancies without fitting source values or treating anecdotes as predictive validation"
+  ],
+  "P2": [
+    "Advanced eclipse visibility,duration and geographic doctrine",
+    "Historical calendars,local solar time and disputed founding events",
+    "Specialized financial astrology and obscure lineage procedures",
+    "Separately verified Raphael/Campion methodological profiles"
+  ],
+  "licensing_dependencies": "No runtime dependency added and no earlier engine changed. Green original Public Domain Mark scan inspected locally,not redistributed; Campion/Raphael access restrictions retained. Swiss remains optional verification tooling,not a production dependency. Existing DE440s source/local distribution policy unchanged; pip check clean.",
+  "meaning": "Core v1 Ready means this bounded practical source/calculation product passes acceptance,not exhaustive mundane astrology or empirically validated forecasting.",
+  "next": "Only after closure is committed/pushed,begin Technique7 resource/variation audit in original inventory order; no implementation in that audit."
+}

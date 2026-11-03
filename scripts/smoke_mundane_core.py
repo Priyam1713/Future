@@ -24,6 +24,7 @@ def run():
         assert (p.returncode!=0)==reject,(name,p.stderr)
         if not reject and 'Markdown' not in name:
             r=json.loads(p.stdout);assert r['technique_id']==6 and r['profile']=='green-1911-tropical-placidus-v1'
+            assert r['release_status']=='Core v1 Ready'
             if name in ('London JSON','Sydney JSON','leap2000'):assert len(r['events'])==4
             if name=='London JSON':london=r
             if name=='Sydney JSON':

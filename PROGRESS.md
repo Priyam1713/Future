@@ -1,5 +1,10 @@
 # Future progress
 
+## Mundane Core v1 closure — 2026-11-03
+- Implementation/verification f09716b committed/pushed first. Marked Technique6 **Core v1 Ready** for the named Green four-ingress/selected-conjunction/source-component scope; matrix/acceptance and P1/P2 frozen in mundane_core_v1.json. Not complete eclipse,national-founding,financial or historical forecasting.
+- All110 tests/71 CLI cases pass;101 prior tests/59 cases retained. Independent report covers24 Swiss site/event charts,four published2026 USNO instants and10 cycle/motion events. Root convergence,coordinate-model timing sensitivity,partial historical disagreement and predictive validity remain separate. No runtime dependency or earlier-engine calculation changes.
+- JSON/Markdown samples regenerated with release label; original source rules/conventions remain immutable. Commit/push this closure before identifying/auditing Technique7; no next-technique implementation included.
+
 ## Mundane calculation pass — 2026-11-03
 - Source/convention passa6b2b50 committed/pushed first. Implemented isolated four-ingress and exact Jupiter–Saturn modules/CLI with JSON/Markdown, explicit site/IANA display, nine planets, Placidus cusps/houses, classical-seven dignity facts and34 page-located Green components. Nearest-major geometry has no invented orbs/scores; duration is optional,qualified and Aries-only.
 - Nine new Mundane tests and12 CLI cases pass. Independent Swiss solcross/positions/houses verify24 charts (all four events,2000/2024/2026,two hemispheres); four published2026 USNO minute-level instants agree within30.350s. Maximum Swiss time difference1.194s,planet0.000278deg,cusp0.008661deg. Ten independent conjunction/station/ingress events include three1980–81 passes.
