@@ -1,5 +1,9 @@
 # Future progress
 
+## Aura source verification — 2026-11-03
+- Pending44a8881 pushed;main synchronized. Ranked Brennan/Kunz procedures remain inaccessible/rights-restricted;one bounded fallback search verified Besant/Leadbeater Thought-Forms PG16269,title reprint statement through1925. Original color key and four plates inspected with primary descriptions;21 shade/family entries,three documentary contexts,17 independently transcribed key cases and four published illustrations. No scientific or personal inference validation.
+- Separate profile besant-leadbeater-pg16269-symbolic-v1 preserves original rankings/four variations. Section/figure locators,edition/scan caveats and rights in aura_pass1_findings.json;no calibrated RGB,seven-layer/chakra correspondence or Brennan/Kunz rules invented. Proceed to manual symbolic reference implementation.
+
 ## Technique14 Aura Reading — resource audit,2026-11-03
 - Began after Graphology closured15991b committed/pushed. Exact original two source rankings/four variations and workbook hash preserved. Brennan publisher1988,Kunz Quest1991 metadata and separate Indian2002/current edition differences registered without procedural ingestion. Copyright/primary-page gaps remain explicit;promotional healing/science claims not accepted as validation.
 - aura_resource_audit.json proposes a source-specific manual symbolic color/layer reference after legitimate legends/rights verification. Subjective reports,optical data and synthetic Kirlian aesthetics remain distinct. AIP publisher-deposited1973 Boyers/Tiller abstract retrieved through Crossref explains Kirlian color effects via corona physics,not supernatural fields. No Technique14 engine,rules,image effects or detector added.196 tests/155 CLI cases remain accepted;registry validates.
