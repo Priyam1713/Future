@@ -1,10 +1,10 @@
 {
   "technique_id": 6,
   "name": "Mundane Astrology",
-  "status": "Researching",
+  "status": "Developing",
   "date": "2026-11-03",
   "predecessor_closure": "50278d6",
-  "policy": "80/20 source/resource audit only; no executable Mundane engine or verified judgment rules added",
+  "policy": "Initial inventory audit preserved; current Green source/calculation pass follows80/20 with no changes to original rankings or variations",
   "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
   "inventory_method_row": [
     6,
@@ -34,7 +34,7 @@
         "The Book of World Horoscopes"
       ],
       "inventory_mapping_status": "Indicative (scope match)",
-      "status": "unsupported; source/convention verification pending"
+      "status": "Developing: verified numerical four-ingress core and source-scoped readings"
     },
     {
       "name": "eclipses",
@@ -52,7 +52,7 @@
         "Mundane or National Astrology"
       ],
       "inventory_mapping_status": "Provisional / chapter check needed",
-      "status": "unsupported; source/convention verification pending"
+      "status": "Developing: selected exact Jupiter–Saturn conjunctions only"
     },
     {
       "name": "national founding charts",
@@ -192,10 +192,13 @@
     "Additional Raphael/Green variations and jurisdiction/calendar edge cases",
     "Financial/collective interpretive expansion, kept separate from Technique49 and uncalibrated market claims"
   ],
-  "limits": "Audit metadata is not procedural implementation. Current astronomy is reusable only after source conventions are resolved. No geopolitical, financial or catastrophe predictive-accuracy claims; no new model/orchestration infrastructure.",
+  "limits": "Current Green implementation and numerical fixtures are available. Initial source findings above are historical audit observations; green source pages have now been inspected. Eclipses,national founding and specialized financial methods remain unsupported.",
   "acceptance_inherited": {
     "tests": 101,
     "cli_smoke_cases": 59,
     "horary_status": "Core v1 Ready — Diagnostic Scope; Question Judgment — Experimental"
-  }
+  },
+  "verified_procedure_source": "mundane-green-1911-images-v1",
+  "current_conventions": "mundane_green_v1.json",
+  "current_verification": "../data/mundane-validation.json"
 }

@@ -1,5 +1,11 @@
 # Future progress
 
+## Mundane calculation pass — 2026-11-03
+- Source/convention passa6b2b50 committed/pushed first. Implemented isolated four-ingress and exact Jupiter–Saturn modules/CLI with JSON/Markdown, explicit site/IANA display, nine planets, Placidus cusps/houses, classical-seven dignity facts and34 page-located Green components. Nearest-major geometry has no invented orbs/scores; duration is optional,qualified and Aries-only.
+- Nine new Mundane tests and12 CLI cases pass. Independent Swiss solcross/positions/houses verify24 charts (all four events,2000/2024/2026,two hemispheres); four published2026 USNO minute-level instants agree within30.350s. Maximum Swiss time difference1.194s,planet0.000278deg,cusp0.008661deg. Ten independent conjunction/station/ingress events include three1980–81 passes.
+- Slow repeated conjunctions differ by up to163.906s from Moshier while relative longitudes differ under0.0002deg; tests use an explicitly angle/relative-speed-derived comparison bound, separate from0.25s numerical root brackets. Green p115 Saturn22°33 Sagittarius visually rechecked; ~1deg disagreement retained,not fitted away. Other eight rounded planetary values agree under0.02deg; no full historical reconstruction/predictive validation claimed.
+- Reproducible examples and numerical comparison report in data/mundane-*. All110 tests pass,retaining101 previous tests;71 CLI cases pass (59 inherited plus12 Mundane). pip check clean; no runtime dependency/earlier-engine changes. Ready for separate scope/closure pass.
+
 ## Mundane Pass1 — Green source/convention freeze, 2026-11-03
 - Confirmed clean main906f2a9 equals fetched remote. Downloaded legitimate1911 Casa Fernando Pessoa scan and visually inspected29 original page images, including printed pp2–4. Hash/page provenance retained; no scan corpus committed. Prior web-reader size barrier resolved by local download.
 - Frozen green-1911-tropical-placidus-v1: four apparent tropical cardinal crossings, explicit caller site/IANA display, nine pre-Pluto planets, declared Placidus software realization (not claimed mandated by Green), separately sourced classical-seven dignity lookup and no invented aspect-orb threshold.34 source-located components cover houses/planets, angular prominence, exact conjunction method and selected direct pairs.

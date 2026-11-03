@@ -1,6 +1,20 @@
 # Future
 
-Technique #6 **Mundane Astrology — Researching**: initial source/variation audit is in `knowledge/mundane_resource_audit.json`, begun after Horary's diagnostic closure. No Mundane calculation or judgment engine is advertised yet.
+Technique #6 **Mundane Astrology** uses the named Green1911 profile below. Scope and source/convention records are in `knowledge/mundane_resource_audit.json` and `knowledge/mundane_green_v1.json`.
+
+```powershell
+python -m future mundane-ingress 2026 Europe/London 51.5 0 --format markdown
+python -m future mundane-ingress 2026 Australia/Sydney -33.8688 151.2093
+python -m future mundane-cycle "2020-12-01T00:00:00+00:00" "2021-01-01T00:00:00+00:00" Europe/London 51.5 0 --format markdown
+python -m scripts.smoke_mundane_core
+python -m scripts.verify_mundane
+```
+
+All four apparent tropical Sun crossings are solved in the selected UTC calendar year1851–2148. Explicit coordinates and IANA display zone are required, with abs(latitude)<60 degrees; no capital inference or polar house substitution. Placidus is an explicit software realization, not a claimed named-system mandate in Green pp2–4. Charts include nine pre-Pluto planets, axes/cusps, classical-seven dignity facts, geometric motion and source-traced direct/compositional readings. Outer-planet dignity/interpretation gaps remain visible. Nearest-major-angle geometry has no invented within-orb threshold or aggregate strength score.
+
+`--historical-duration` enables only the old Aries-ASC3/6/12-month context. Green questions close application and requires examining all four charts; no forecast expiry is inferred. `mundane-cycle` supports exact Jupiter–Saturn conjunctions and their stations/ingresses in an offset-aware window of at most366 days. Slow repeated contacts amplify small ephemeris-coordinate differences into timing differences; root convergence is not absolute time accuracy. No unique national founding chart, eclipse classification or economic/geopolitical outcome is inferred.
+
+Examples: `data/mundane-ingresses-2026-london.*`, `data/mundane-ingresses-2026-sydney.json`, `data/mundane-cycle-2020.*`. Independent USNO/Swiss comparisons and the preserved Saturn discrepancy in Green's1899 printed chart are in `data/mundane-validation.json`; the historical chart is only a partial comparison, not full predictive validation.
 
 Numerology core: `python -m future numerology 1998-10-15 "Thomas Cruise Mapother" 2026-10-12 --basis birth --format markdown`. Use `--basis current` for explicitly labeled current-name overlays; `--y-roles vc` classifies two successive Y occurrences as vowel/consonant. ASCII names only; unsupported characters reject rather than silently transliterate. Calendar-year personal cycles are separate from master-preserving core reductions. Scope/backlog: `knowledge/numerology_core_v1.json`; reproducible report: `data/numerology-acceptance.md`.
 

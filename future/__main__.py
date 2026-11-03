@@ -161,7 +161,31 @@ def main():
     ho.add_argument('--fold',type=int,choices=[0,1])
     ho.add_argument('--format',choices=['json','markdown'],default='json')
     ho.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
+    mi=sub.add_parser('mundane-ingress',help='Four exact cardinal ingresses and Green-based local chart components')
+    mi.add_argument('year',type=int);mi.add_argument('zone');mi.add_argument('latitude',type=float);mi.add_argument('longitude',type=float)
+    mi.add_argument('--profile',default='green-1911-tropical-placidus-v1')
+    mi.add_argument('--historical-duration',action='store_true')
+    mi.add_argument('--format',choices=['json','markdown'],default='json')
+    mi.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
+    mc=sub.add_parser('mundane-cycle',help='Selected exact Jupiter–Saturn conjunctions; no fixed orbs/duration')
+    mc.add_argument('start');mc.add_argument('end');mc.add_argument('zone');mc.add_argument('latitude',type=float);mc.add_argument('longitude',type=float)
+    mc.add_argument('--profile',default='green-1911-tropical-placidus-v1')
+    mc.add_argument('--format',choices=['json','markdown'],default='json')
+    mc.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
     args = parser.parse_args()
+    if args.command in ('mundane-ingress','mundane-cycle'):
+        from datetime import datetime
+        from .natal import SkyfieldEphemeris
+        from .mundane import ingresses,conjunctions,register_knowledge,markdown
+        e=SkyfieldEphemeris(args.kernel);registry=load_registry(args.database)
+        try:
+            register_knowledge(registry)
+            if args.command=='mundane-ingress':
+                result=ingresses(e,args.year,args.zone,args.latitude,args.longitude,args.profile,args.historical_duration)
+            else:result=conjunctions(e,datetime.fromisoformat(args.start),datetime.fromisoformat(args.end),args.zone,args.latitude,args.longitude,args.profile)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close();e.kernel.close()
+        return
     if args.command=='horary':
         from .natal import SkyfieldEphemeris
         from .horary import assess,register_knowledge,markdown

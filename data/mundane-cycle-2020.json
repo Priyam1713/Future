@@ -1,0 +1,1256 @@
+{
+  "technique_id": 6,
+  "application": "selected major-planet conjunctions",
+  "profile": "green-1911-tropical-placidus-v1",
+  "release_status": "Developing",
+  "source": {
+    "id": "mundane-green-1911-images-v1",
+    "technique_id": 6,
+    "author": "H. S. Green",
+    "edition": "Mundane or National Astrology, first edition1911, Alan Leo manual13; Casa Fernando Pessoa copy1-62",
+    "url": "https://bibliotecaparticular.casafernandopessoa.pt/1-62",
+    "document_url": "https://bibliotecaparticular.casafernandopessoa.pt/1-62/2/1-62_master/1-62_PDF/1-62_0000_1-144_t24-C-R0150.pdf",
+    "ingestion": "public_domain",
+    "rights_note": "Holding library displays Public Domain Mark1.0. Original page images visually inspected; only original procedural summaries, factual chart data and hashes retained, no scan corpus redistributed.",
+    "locator": "Printed pp2\u20134,10,12\u201316,24,31,38,43,50,56,108\u2013110,114\u2013116; preface/title/contents",
+    "document_sha256": "61352e6883ed8c6076fd0796bc6cbcbba308847aff2f8d496a97ecc205040529",
+    "checked_on": "2026-11-03"
+  },
+  "conventions": {
+    "solar_coordinates": "Apparent geocentric true ecliptic/equinox of date,DE440s/Skyfield1.54; solve longitude crossing,not maximum declination or civil seasonal date.",
+    "years": "UTC calendar-year search1851\u20132148; four cardinal events in half-open Jan1\u2192next Jan1. Gregorian only.",
+    "time": "Existing pinned IANA tzdata2025.2 for display; UTC/TT and modeled UT1 retained. Pre1972 proleptic UTC and uncertain future leap seconds are limitations,not historical time reconstruction.",
+    "houses": "Placidus is explicit numerical software realization. Green pp2\u20134 assumes horoscope construction and does not identify a named system; do not claim a mandatory Green house algorithm or exact reconstruction of every printed cusp. abs(latitude)<60; no polar fallback.",
+    "dignities": "Classical-seven domicile/exaltation lookup reused explicitly from verified shared doctrine_tables.json (Lilly1647 p104 factual table); Green pp108\u2013109 supplies interpretive principle. No other Lilly doctrine imported. Uranus/Neptune dignities unsupported.",
+    "aspects": "Report nearest major-aspect geometries0,60,90,120,180 with numerical deviations/relative-motion phase; no fixed within-orb classification or Green strength score. Cycles use exact conjunctions only.",
+    "location": "Explicit caller site; Green national-capital recommendation shown separately. No capital database/inference.",
+    "optional_duration": "Aries only,disabled by default; symbolic3/6/12 months without forecast expiry or suppressing other charts.",
+    "interpretation": "Historical British collective vocabulary; direct source components versus explicitly compositional planet-house combination; no geopolitical or financial outcome certainty."
+  },
+  "provenance": {
+    "profile_sha256": "772a56565d7dc33f441323537384353fb56da8fab97fa540cb2dc44186eb5298",
+    "skyfield": "1.54",
+    "tzdata": "2025.2"
+  },
+  "limitations": [
+    "Symbolic historical interpretation; no calibrated geopolitical,economic or personal-event probability.",
+    "Modern apparent-longitude/Placidus realization is explicit; not every historical printed chart convention is reconstructed.",
+    "UT1 uses existing modeled delta T; pre1972 UTC is proleptic and future leap seconds are not forecast.",
+    "Unverified authors,national founding moments,eclipses,financial predictions and full affliction synthesis are unsupported.",
+    "Finite scan refines sampled reversals; multiple unseen reversals inside a3-hour cell are not formally excluded.",
+    "Slow contacts magnify small coordinate-model differences into timing differences; root convergence is not absolute event-time accuracy."
+  ],
+  "start_inclusive_utc": "2020-12-01T00:00:00+00:00",
+  "end_exclusive_utc": "2021-01-01T00:00:00+00:00",
+  "bodies": [
+    "Jupiter",
+    "Saturn"
+  ],
+  "events": [
+    {
+      "utc": "2020-12-21T18:20:37.362672+00:00",
+      "bodies": [
+        "Jupiter",
+        "Saturn"
+      ],
+      "angle": 0,
+      "residual_degrees": 6.459237056333222e-08,
+      "relative_speed_degrees_per_day": 0.11194507104846707,
+      "phase_before": "applying",
+      "phase_after": "separating",
+      "chart": {
+        "technique_id": 6,
+        "settings": {
+          "tradition": "green-1911-tropical-placidus-v1",
+          "application": "mundane event",
+          "zodiac": "tropical",
+          "houses": "placidus",
+          "rulership": "classical factual table; no automatic collective lord"
+        },
+        "times": {
+          "jd_ut1": 2459205.264319263,
+          "jd_tt": 2459205.265122068,
+          "delta_t_seconds": 69.36237115127955,
+          "dut1_seconds": -0.17837115127954917
+        },
+        "angles": {
+          "ascendant": 120.88058536288557,
+          "midheaven": 6.459607835372636,
+          "descendant": 300.88058536288554,
+          "imum_coeli": 186.45960783537262
+        },
+        "house_cusps": [
+          120.88058536288557,
+          137.24484980486088,
+          157.91813970610926,
+          186.45960783537262,
+          225.7032588356823,
+          268.1010056324263,
+          300.88058536288554,
+          317.2448498048609,
+          337.9181397061093,
+          6.459607835372636,
+          45.703258835682306,
+          88.10100563242628
+        ],
+        "planets": {
+          "Sun": {
+            "longitude": 270.3524196760235,
+            "speed_degrees_per_day": 1.0184776083178804,
+            "retrograde": false,
+            "sign": "Capricorn",
+            "degree_in_sign": 0.3524196760234872,
+            "house": 6
+          },
+          "Moon": {
+            "longitude": 357.8804794813136,
+            "speed_degrees_per_day": 12.146160386447491,
+            "retrograde": false,
+            "sign": "Pisces",
+            "degree_in_sign": 27.880479481313614,
+            "house": 9
+          },
+          "Mercury": {
+            "longitude": 271.26978497574083,
+            "speed_degrees_per_day": 1.58676663762094,
+            "retrograde": false,
+            "sign": "Capricorn",
+            "degree_in_sign": 1.2697849757408335,
+            "house": 6
+          },
+          "Venus": {
+            "longitude": 247.6024185574815,
+            "speed_degrees_per_day": 1.2504390905689888,
+            "retrograde": false,
+            "sign": "Sagittarius",
+            "degree_in_sign": 7.6024185574815135,
+            "house": 5
+          },
+          "Mars": {
+            "longitude": 23.212159199300686,
+            "speed_degrees_per_day": 0.3754889480944712,
+            "retrograde": false,
+            "sign": "Aries",
+            "degree_in_sign": 23.212159199300686,
+            "house": 10
+          },
+          "Jupiter": {
+            "longitude": 300.4861069706198,
+            "speed_degrees_per_day": 0.2202128261899361,
+            "retrograde": false,
+            "sign": "Aquarius",
+            "degree_in_sign": 0.4861069706198009,
+            "house": 6
+          },
+          "Saturn": {
+            "longitude": 300.4861069060105,
+            "speed_degrees_per_day": 0.10826775773580266,
+            "retrograde": false,
+            "sign": "Aquarius",
+            "degree_in_sign": 0.486106906010491,
+            "house": 6
+          },
+          "Uranus": {
+            "longitude": 36.95922263040443,
+            "speed_degrees_per_day": -0.01968867563277854,
+            "retrograde": true,
+            "sign": "Taurus",
+            "degree_in_sign": 6.959222630404433,
+            "house": 10
+          },
+          "Neptune": {
+            "longitude": 348.31164920072484,
+            "speed_degrees_per_day": 0.013009656942131187,
+            "retrograde": false,
+            "sign": "Pisces",
+            "degree_in_sign": 18.311649200724844,
+            "house": 9
+          }
+        },
+        "aspects": [],
+        "conventions": {
+          "coordinates": "apparent geocentric true ecliptic/equinox of date; outer planets use system barycenters",
+          "time": "IANA tzdata 2025.2; Skyfield builtin leap seconds and modeled delta T",
+          "orbs": {},
+          "aspects": "No fixed orbs; empty aspects list,nearest-major geometry reported separately",
+          "houses": "Explicit Placidus numerical realization; not a claim Green mandates a named system"
+        },
+        "reproducibility": {
+          "skyfield": "1.54",
+          "kernel_sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+        },
+        "limitations": [
+          "UT1 uses bundled delta-T model; historical time-zone records and birth times may be uncertain.",
+          "Quadrant systems reject the polar domain explicitly; assignments use ecliptic longitude sectors, not mundane latitude."
+        ],
+        "epoch": {
+          "utc": "2020-12-21T18:20:37.362672+00:00",
+          "local": "2020-12-21T18:20:37.362672+00:00",
+          "zone": "Europe/London",
+          "fold": 0,
+          "latitude": 51.5,
+          "longitude": 0.0,
+          "site_role": "Caller-selected; no automatic country/capital inference"
+        },
+        "aspect_geometry": [
+          {
+            "bodies": [
+              "Jupiter",
+              "Saturn"
+            ],
+            "nearest_major_angle": 0,
+            "branch": 0,
+            "deviation_degrees": 6.460930990215275e-08,
+            "relative_motion_phase": "exact",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Sun",
+              "Mercury"
+            ],
+            "nearest_major_angle": 0,
+            "branch": 0,
+            "deviation_degrees": 0.9173652997173463,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Sun",
+              "Moon"
+            ],
+            "nearest_major_angle": 90,
+            "branch": -90,
+            "deviation_degrees": 2.471940194709873,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Moon",
+              "Saturn"
+            ],
+            "nearest_major_angle": 60,
+            "branch": 60,
+            "deviation_degrees": 2.605627424696877,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Moon",
+              "Jupiter"
+            ],
+            "nearest_major_angle": 60,
+            "branch": 60,
+            "deviation_degrees": 2.605627489306187,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Moon",
+              "Mercury"
+            ],
+            "nearest_major_angle": 90,
+            "branch": 90,
+            "deviation_degrees": 3.3893054944272194,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Mercury",
+              "Uranus"
+            ],
+            "nearest_major_angle": 120,
+            "branch": -120,
+            "deviation_degrees": 5.689437654663607,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Jupiter",
+              "Uranus"
+            ],
+            "nearest_major_angle": 90,
+            "branch": -90,
+            "deviation_degrees": 6.473115659784639,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Saturn",
+              "Uranus"
+            ],
+            "nearest_major_angle": 90,
+            "branch": -90,
+            "deviation_degrees": 6.473115724393892,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Sun",
+              "Uranus"
+            ],
+            "nearest_major_angle": 120,
+            "branch": -120,
+            "deviation_degrees": 6.60680295438101,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Venus",
+              "Jupiter"
+            ],
+            "nearest_major_angle": 60,
+            "branch": -60,
+            "deviation_degrees": 7.116311586861713,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Venus",
+              "Saturn"
+            ],
+            "nearest_major_angle": 60,
+            "branch": -60,
+            "deviation_degrees": 7.1163116514710225,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Sun",
+              "Mars"
+            ],
+            "nearest_major_angle": 120,
+            "branch": -120,
+            "deviation_degrees": 7.140260476722801,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Mars",
+              "Saturn"
+            ],
+            "nearest_major_angle": 90,
+            "branch": 90,
+            "deviation_degrees": 7.273947706709805,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Mars",
+              "Jupiter"
+            ],
+            "nearest_major_angle": 90,
+            "branch": 90,
+            "deviation_degrees": 7.273947771319115,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Mercury",
+              "Mars"
+            ],
+            "nearest_major_angle": 120,
+            "branch": -120,
+            "deviation_degrees": 8.05762577644009,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Moon",
+              "Neptune"
+            ],
+            "nearest_major_angle": 0,
+            "branch": 0,
+            "deviation_degrees": 9.56883028058877,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Moon",
+              "Venus"
+            ],
+            "nearest_major_angle": 120,
+            "branch": 120,
+            "deviation_degrees": 9.7219390761679,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Venus",
+              "Neptune"
+            ],
+            "nearest_major_angle": 90,
+            "branch": -90,
+            "deviation_degrees": 10.70923064324333,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Uranus",
+              "Neptune"
+            ],
+            "nearest_major_angle": 60,
+            "branch": 60,
+            "deviation_degrees": 11.352426570320404,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Sun",
+              "Neptune"
+            ],
+            "nearest_major_angle": 90,
+            "branch": -90,
+            "deviation_degrees": 12.040770475298643,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Saturn",
+              "Neptune"
+            ],
+            "nearest_major_angle": 60,
+            "branch": -60,
+            "deviation_degrees": 12.174457705285647,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Jupiter",
+              "Neptune"
+            ],
+            "nearest_major_angle": 60,
+            "branch": -60,
+            "deviation_degrees": 12.174457769894957,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Mercury",
+              "Neptune"
+            ],
+            "nearest_major_angle": 90,
+            "branch": -90,
+            "deviation_degrees": 12.95813577501599,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Mars",
+              "Uranus"
+            ],
+            "nearest_major_angle": 0,
+            "branch": 0,
+            "deviation_degrees": 13.747063431103754,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Venus",
+              "Mars"
+            ],
+            "nearest_major_angle": 120,
+            "branch": -120,
+            "deviation_degrees": 15.609740641819144,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Moon",
+              "Uranus"
+            ],
+            "nearest_major_angle": 60,
+            "branch": -60,
+            "deviation_degrees": 20.92125685090923,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Sun",
+              "Venus"
+            ],
+            "nearest_major_angle": 0,
+            "branch": 0,
+            "deviation_degrees": 22.750001118541974,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Mercury",
+              "Venus"
+            ],
+            "nearest_major_angle": 0,
+            "branch": 0,
+            "deviation_degrees": 23.66736641825932,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Mars",
+              "Neptune"
+            ],
+            "nearest_major_angle": 60,
+            "branch": 60,
+            "deviation_degrees": 25.099490001424158,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Moon",
+              "Mars"
+            ],
+            "nearest_major_angle": 0,
+            "branch": 0,
+            "deviation_degrees": 25.331679717987072,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Mercury",
+              "Saturn"
+            ],
+            "nearest_major_angle": 0,
+            "branch": 0,
+            "deviation_degrees": 29.216321930269658,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Mercury",
+              "Jupiter"
+            ],
+            "nearest_major_angle": 0,
+            "branch": 0,
+            "deviation_degrees": 29.216321994878967,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Venus",
+              "Uranus"
+            ],
+            "nearest_major_angle": 120,
+            "branch": -120,
+            "deviation_degrees": 29.356804072922955,
+            "relative_motion_phase": "applying",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Sun",
+              "Jupiter"
+            ],
+            "nearest_major_angle": 60,
+            "branch": -60,
+            "deviation_degrees": 29.866312705403686,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          },
+          {
+            "bodies": [
+              "Sun",
+              "Saturn"
+            ],
+            "nearest_major_angle": 60,
+            "branch": -60,
+            "deviation_degrees": 29.866312770012996,
+            "relative_motion_phase": "separating",
+            "within_orb": null,
+            "scope": "Nearest geometry only; no verified Green numerical orb threshold"
+          }
+        ],
+        "conditions": {
+          "Sun": {
+            "retrograde": false,
+            "speed_degrees_per_day": 1.0184776083178804,
+            "own_dignities": [],
+            "debilities": [],
+            "dignity_coverage": "shared classical-seven factual table",
+            "dignity_table_source": {
+              "source_id": "horary-lilly-1647-images-v1",
+              "locator": "Lilly1647 p104 factual domicile/exaltation table; Green pp108\u2013109 interpretation"
+            },
+            "angular_house": false,
+            "angular_cusp_distances_degrees": {
+              "ascendant": 149.47183431313795,
+              "midheaven": 96.10718815934916,
+              "descendant": 30.528165686862053,
+              "imum_coeli": 83.8928118406509
+            },
+            "nearest_angular_cusp": "descendant",
+            "prominence_certification": null,
+            "source_rule_ids": [
+              "green1911.dignity",
+              "green1911.angular"
+            ],
+            "limitations": [
+              "House membership is not proximity to a cusp. No unsourced proximity orb/strength score.",
+              "No full affliction,visibility,sect,bounds,combustion or reception doctrine imported into Green profile."
+            ]
+          },
+          "Moon": {
+            "retrograde": false,
+            "speed_degrees_per_day": 12.146160386447491,
+            "own_dignities": [],
+            "debilities": [],
+            "dignity_coverage": "shared classical-seven factual table",
+            "dignity_table_source": {
+              "source_id": "horary-lilly-1647-images-v1",
+              "locator": "Lilly1647 p104 factual domicile/exaltation table; Green pp108\u2013109 interpretation"
+            },
+            "angular_house": false,
+            "angular_cusp_distances_degrees": {
+              "ascendant": 123.00010588157193,
+              "midheaven": 8.579128354059094,
+              "descendant": 56.999894118428074,
+              "imum_coeli": 171.42087164594102
+            },
+            "nearest_angular_cusp": "midheaven",
+            "prominence_certification": null,
+            "source_rule_ids": [
+              "green1911.dignity",
+              "green1911.angular"
+            ],
+            "limitations": [
+              "House membership is not proximity to a cusp. No unsourced proximity orb/strength score.",
+              "No full affliction,visibility,sect,bounds,combustion or reception doctrine imported into Green profile."
+            ]
+          },
+          "Mercury": {
+            "retrograde": false,
+            "speed_degrees_per_day": 1.58676663762094,
+            "own_dignities": [],
+            "debilities": [],
+            "dignity_coverage": "shared classical-seven factual table",
+            "dignity_table_source": {
+              "source_id": "horary-lilly-1647-images-v1",
+              "locator": "Lilly1647 p104 factual domicile/exaltation table; Green pp108\u2013109 interpretation"
+            },
+            "angular_house": false,
+            "angular_cusp_distances_degrees": {
+              "ascendant": 150.38919961285524,
+              "midheaven": 95.18982285963182,
+              "descendant": 29.610800387144707,
+              "imum_coeli": 84.81017714036818
+            },
+            "nearest_angular_cusp": "descendant",
+            "prominence_certification": null,
+            "source_rule_ids": [
+              "green1911.dignity",
+              "green1911.angular"
+            ],
+            "limitations": [
+              "House membership is not proximity to a cusp. No unsourced proximity orb/strength score.",
+              "No full affliction,visibility,sect,bounds,combustion or reception doctrine imported into Green profile."
+            ]
+          },
+          "Venus": {
+            "retrograde": false,
+            "speed_degrees_per_day": 1.2504390905689888,
+            "own_dignities": [],
+            "debilities": [],
+            "dignity_coverage": "shared classical-seven factual table",
+            "dignity_table_source": {
+              "source_id": "horary-lilly-1647-images-v1",
+              "locator": "Lilly1647 p104 factual domicile/exaltation table; Green pp108\u2013109 interpretation"
+            },
+            "angular_house": false,
+            "angular_cusp_distances_degrees": {
+              "ascendant": 126.72183319459594,
+              "midheaven": 118.85718927789111,
+              "descendant": 53.27816680540403,
+              "imum_coeli": 61.14281072210889
+            },
+            "nearest_angular_cusp": "descendant",
+            "prominence_certification": null,
+            "source_rule_ids": [
+              "green1911.dignity",
+              "green1911.angular"
+            ],
+            "limitations": [
+              "House membership is not proximity to a cusp. No unsourced proximity orb/strength score.",
+              "No full affliction,visibility,sect,bounds,combustion or reception doctrine imported into Green profile."
+            ]
+          },
+          "Mars": {
+            "retrograde": false,
+            "speed_degrees_per_day": 0.3754889480944712,
+            "own_dignities": [
+              "domicile"
+            ],
+            "debilities": [],
+            "dignity_coverage": "shared classical-seven factual table",
+            "dignity_table_source": {
+              "source_id": "horary-lilly-1647-images-v1",
+              "locator": "Lilly1647 p104 factual domicile/exaltation table; Green pp108\u2013109 interpretation"
+            },
+            "angular_house": true,
+            "angular_cusp_distances_degrees": {
+              "ascendant": 97.66842616358488,
+              "midheaven": 16.752551363928035,
+              "descendant": 82.33157383641515,
+              "imum_coeli": 163.24744863607194
+            },
+            "nearest_angular_cusp": "midheaven",
+            "prominence_certification": null,
+            "source_rule_ids": [
+              "green1911.dignity",
+              "green1911.angular"
+            ],
+            "limitations": [
+              "House membership is not proximity to a cusp. No unsourced proximity orb/strength score.",
+              "No full affliction,visibility,sect,bounds,combustion or reception doctrine imported into Green profile."
+            ]
+          },
+          "Jupiter": {
+            "retrograde": false,
+            "speed_degrees_per_day": 0.2202128261899361,
+            "own_dignities": [],
+            "debilities": [],
+            "dignity_coverage": "shared classical-seven factual table",
+            "dignity_table_source": {
+              "source_id": "horary-lilly-1647-images-v1",
+              "locator": "Lilly1647 p104 factual domicile/exaltation table; Green pp108\u2013109 interpretation"
+            },
+            "angular_house": false,
+            "angular_cusp_distances_degrees": {
+              "ascendant": 179.6055216077342,
+              "midheaven": 65.97350086475285,
+              "descendant": 0.39447839226573933,
+              "imum_coeli": 114.02649913524715
+            },
+            "nearest_angular_cusp": "descendant",
+            "prominence_certification": null,
+            "source_rule_ids": [
+              "green1911.dignity",
+              "green1911.angular"
+            ],
+            "limitations": [
+              "House membership is not proximity to a cusp. No unsourced proximity orb/strength score.",
+              "No full affliction,visibility,sect,bounds,combustion or reception doctrine imported into Green profile."
+            ]
+          },
+          "Saturn": {
+            "retrograde": false,
+            "speed_degrees_per_day": 0.10826775773580266,
+            "own_dignities": [
+              "domicile"
+            ],
+            "debilities": [],
+            "dignity_coverage": "shared classical-seven factual table",
+            "dignity_table_source": {
+              "source_id": "horary-lilly-1647-images-v1",
+              "locator": "Lilly1647 p104 factual domicile/exaltation table; Green pp108\u2013109 interpretation"
+            },
+            "angular_house": false,
+            "angular_cusp_distances_degrees": {
+              "ascendant": 179.60552154312495,
+              "midheaven": 65.97350092936216,
+              "descendant": 0.39447845687504923,
+              "imum_coeli": 114.0264990706379
+            },
+            "nearest_angular_cusp": "descendant",
+            "prominence_certification": null,
+            "source_rule_ids": [
+              "green1911.dignity",
+              "green1911.angular"
+            ],
+            "limitations": [
+              "House membership is not proximity to a cusp. No unsourced proximity orb/strength score.",
+              "No full affliction,visibility,sect,bounds,combustion or reception doctrine imported into Green profile."
+            ]
+          },
+          "Uranus": {
+            "retrograde": true,
+            "speed_degrees_per_day": -0.01968867563277854,
+            "own_dignities": [],
+            "debilities": [],
+            "dignity_coverage": "unsupported",
+            "dignity_table_source": {
+              "source_id": "horary-lilly-1647-images-v1",
+              "locator": "Lilly1647 p104 factual domicile/exaltation table; Green pp108\u2013109 interpretation"
+            },
+            "angular_house": true,
+            "angular_cusp_distances_degrees": {
+              "ascendant": 83.92136273248113,
+              "midheaven": 30.49961479503179,
+              "descendant": 96.0786372675189,
+              "imum_coeli": 149.50038520496818
+            },
+            "nearest_angular_cusp": "midheaven",
+            "prominence_certification": null,
+            "source_rule_ids": [
+              "green1911.dignity",
+              "green1911.angular"
+            ],
+            "limitations": [
+              "House membership is not proximity to a cusp. No unsourced proximity orb/strength score.",
+              "No full affliction,visibility,sect,bounds,combustion or reception doctrine imported into Green profile."
+            ]
+          },
+          "Neptune": {
+            "retrograde": false,
+            "speed_degrees_per_day": 0.013009656942131187,
+            "own_dignities": [],
+            "debilities": [],
+            "dignity_coverage": "unsupported",
+            "dignity_table_source": {
+              "source_id": "horary-lilly-1647-images-v1",
+              "locator": "Lilly1647 p104 factual domicile/exaltation table; Green pp108\u2013109 interpretation"
+            },
+            "angular_house": false,
+            "angular_cusp_distances_degrees": {
+              "ascendant": 132.56893616216075,
+              "midheaven": 18.147958634647807,
+              "descendant": 47.431063837839304,
+              "imum_coeli": 161.8520413653522
+            },
+            "nearest_angular_cusp": "midheaven",
+            "prominence_certification": null,
+            "source_rule_ids": [
+              "green1911.dignity",
+              "green1911.angular"
+            ],
+            "limitations": [
+              "House membership is not proximity to a cusp. No unsourced proximity orb/strength score.",
+              "No full affliction,visibility,sect,bounds,combustion or reception doctrine imported into Green profile."
+            ]
+          }
+        }
+      },
+      "reading": {
+        "placements": [
+          {
+            "planet": "Sun",
+            "house": 6,
+            "coverage": "compositional",
+            "text": "Consider Sun's documented collective topics in relation to house6: Public health,employees and national services.",
+            "components": [
+              {
+                "rule_id": "green1911.planet.Sun",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p16",
+                "coverage": "direct",
+                "text": "Public leadership,government and people exercising authority.",
+                "exceptions": [
+                  "Symbolic significations, not a forecast that a named real-world event will occur."
+                ]
+              },
+              {
+                "rule_id": "green1911.house.6",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p13",
+                "coverage": "direct",
+                "text": "Public health,employees and national services.",
+                "exceptions": [
+                  "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+                ]
+              }
+            ],
+            "affliction_judgment": "unsupported: do not assert conditional favorable/adverse source conclusions as unconditional outcomes"
+          },
+          {
+            "planet": "Moon",
+            "house": 9,
+            "coverage": "direct",
+            "text": "Green specifically associates Moon in house9 with shipping.",
+            "components": [
+              {
+                "rule_id": "green1911.planet.Moon",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p24",
+                "coverage": "direct",
+                "text": "The general public,collective concerns,water/travel and agricultural topics.",
+                "exceptions": [
+                  "Symbolic significations, not a forecast that a named real-world event will occur."
+                ]
+              },
+              {
+                "rule_id": "green1911.house.9",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p14",
+                "coverage": "direct",
+                "text": "Long-distance transport,religious institutions,law courts and universities.",
+                "exceptions": [
+                  "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+                ]
+              },
+              {
+                "rule_id": "green1911.pair.Moon.9",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p14",
+                "coverage": "direct",
+                "text": "Green specifically associates Moon in house9 with shipping.",
+                "exceptions": [
+                  "Other chart factors can qualify the symbolism; this does not predict an actual institutional event."
+                ]
+              }
+            ],
+            "affliction_judgment": "unsupported: do not assert conditional favorable/adverse source conclusions as unconditional outcomes"
+          },
+          {
+            "planet": "Mercury",
+            "house": 6,
+            "coverage": "compositional",
+            "text": "Consider Mercury's documented collective topics in relation to house6: Public health,employees and national services.",
+            "components": [
+              {
+                "rule_id": "green1911.planet.Mercury",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p31",
+                "coverage": "direct",
+                "text": "Education,public debate,writing,news,communications and commercial negotiation; not wealth by itself.",
+                "exceptions": [
+                  "Symbolic significations, not a forecast that a named real-world event will occur."
+                ]
+              },
+              {
+                "rule_id": "green1911.house.6",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p13",
+                "coverage": "direct",
+                "text": "Public health,employees and national services.",
+                "exceptions": [
+                  "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+                ]
+              }
+            ],
+            "affliction_judgment": "unsupported: do not assert conditional favorable/adverse source conclusions as unconditional outcomes"
+          },
+          {
+            "planet": "Venus",
+            "house": 5,
+            "coverage": "compositional",
+            "text": "Consider Venus's documented collective topics in relation to house5: Entertainment,children,schools,sports and recreational speculation.",
+            "components": [
+              {
+                "rule_id": "green1911.planet.Venus",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p38",
+                "coverage": "direct",
+                "text": "Art,public celebrations,social relations and charitable activity.",
+                "exceptions": [
+                  "Symbolic significations, not a forecast that a named real-world event will occur."
+                ]
+              },
+              {
+                "rule_id": "green1911.house.5",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p13",
+                "coverage": "direct",
+                "text": "Entertainment,children,schools,sports and recreational speculation.",
+                "exceptions": [
+                  "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+                ]
+              }
+            ],
+            "affliction_judgment": "unsupported: do not assert conditional favorable/adverse source conclusions as unconditional outcomes"
+          },
+          {
+            "planet": "Mars",
+            "house": 10,
+            "coverage": "compositional",
+            "text": "Consider Mars's documented collective topics in relation to house10: Head of state,government,public authority and national reputation.",
+            "components": [
+              {
+                "rule_id": "green1911.planet.Mars",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p43",
+                "coverage": "direct",
+                "text": "Energetic action,engineering,contention and military affairs; expression is conditional on other factors.",
+                "exceptions": [
+                  "Symbolic significations, not a forecast that a named real-world event will occur."
+                ]
+              },
+              {
+                "rule_id": "green1911.house.10",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p14",
+                "coverage": "direct",
+                "text": "Head of state,government,public authority and national reputation.",
+                "exceptions": [
+                  "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+                ]
+              }
+            ],
+            "affliction_judgment": "unsupported: do not assert conditional favorable/adverse source conclusions as unconditional outcomes"
+          },
+          {
+            "planet": "Jupiter",
+            "house": 6,
+            "coverage": "compositional",
+            "text": "Consider Jupiter's documented collective topics in relation to house6: Public health,employees and national services.",
+            "components": [
+              {
+                "rule_id": "green1911.planet.Jupiter",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p50",
+                "coverage": "direct",
+                "text": "Religious and legal institutions,banking,public ceremonies and philanthropy.",
+                "exceptions": [
+                  "Symbolic significations, not a forecast that a named real-world event will occur."
+                ]
+              },
+              {
+                "rule_id": "green1911.house.6",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p13",
+                "coverage": "direct",
+                "text": "Public health,employees and national services.",
+                "exceptions": [
+                  "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+                ]
+              }
+            ],
+            "affliction_judgment": "unsupported: do not assert conditional favorable/adverse source conclusions as unconditional outcomes"
+          },
+          {
+            "planet": "Saturn",
+            "house": 6,
+            "coverage": "compositional",
+            "text": "Consider Saturn's documented collective topics in relation to house6: Public health,employees and national services.",
+            "components": [
+              {
+                "rule_id": "green1911.planet.Saturn",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p56",
+                "coverage": "direct",
+                "text": "Administration,state or municipal officers,law enforcement,order and duties to superior institutions.",
+                "exceptions": [
+                  "Symbolic significations, not a forecast that a named real-world event will occur."
+                ]
+              },
+              {
+                "rule_id": "green1911.house.6",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p13",
+                "coverage": "direct",
+                "text": "Public health,employees and national services.",
+                "exceptions": [
+                  "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+                ]
+              }
+            ],
+            "affliction_judgment": "unsupported: do not assert conditional favorable/adverse source conclusions as unconditional outcomes"
+          },
+          {
+            "planet": "Uranus",
+            "house": 10,
+            "coverage": "unsupported",
+            "text": "No verified Green planetary interpretation component for Uranus in this core; house topic supplied separately.",
+            "components": [
+              {
+                "rule_id": "green1911.house.10",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p14",
+                "coverage": "direct",
+                "text": "Head of state,government,public authority and national reputation.",
+                "exceptions": [
+                  "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+                ]
+              }
+            ],
+            "affliction_judgment": "unsupported: do not assert conditional favorable/adverse source conclusions as unconditional outcomes"
+          },
+          {
+            "planet": "Neptune",
+            "house": 9,
+            "coverage": "unsupported",
+            "text": "No verified Green planetary interpretation component for Neptune in this core; house topic supplied separately.",
+            "components": [
+              {
+                "rule_id": "green1911.house.9",
+                "version": 1,
+                "source_id": "mundane-green-1911-images-v1",
+                "locator": "Printed p14",
+                "coverage": "direct",
+                "text": "Long-distance transport,religious institutions,law courts and universities.",
+                "exceptions": [
+                  "Historical British terminology retained in source; institutional analogues require context. Third-house aviation and fifth-house parliamentary associations are disputed in the source and not resolved here."
+                ]
+              }
+            ],
+            "affliction_judgment": "unsupported: do not assert conditional favorable/adverse source conclusions as unconditional outcomes"
+          }
+        ],
+        "coverage_counts": {
+          "direct": 1,
+          "compositional": 6,
+          "unsupported": 2
+        },
+        "composition_rule": {
+          "rule_id": "green1911.composition",
+          "version": 1,
+          "source_id": "mundane-green-1911-images-v1",
+          "locator": "Printed pp14,108\u2013110",
+          "coverage": "direct",
+          "text": "Combine planetary topics with house topics while retaining contradictions; a planet does not affect every matter of its house equally.",
+          "exceptions": [
+            "Specific unsourced pair conclusions remain compositional or unsupported, not direct Green delineation. No event probabilities or decisive favorable/adverse aggregate."
+          ]
+        },
+        "angular_context": {
+          "rule_id": "green1911.angular",
+          "version": 1,
+          "source_id": "mundane-green-1911-images-v1",
+          "locator": "Printed pp15,109\u2013110",
+          "coverage": "direct",
+          "text": "Angular cusps confer prominence, which is distinct from dignity and is not necessarily favorable.",
+          "exceptions": [
+            "Near-cusp distance has no numerical cutoff specified in these passages; report all angular distances without inventing a Green orb or numeric strength score."
+          ]
+        },
+        "conflicting_indications": {
+          "status": "retained as separate components; no aggregate verdict",
+          "reason": "Dignity,prominence and conditional planetary statements are different dimensions. Full affliction/synthesis is unsupported."
+        }
+      },
+      "rule": {
+        "rule_id": "green1911.conjunction",
+        "version": 1,
+        "source_id": "mundane-green-1911-images-v1",
+        "locator": "Printed p10 Planetary Conjunctions",
+        "coverage": "direct",
+        "text": "Calculate a local chart at the exact longitude conjunction of major planets; consider the sign and the rest of the chart.",
+        "exceptions": [
+          "Selected Jupiter\u2013Saturn only in v1; no new fixed orb,duration,geographic sign rulership or direct planet-pair forecast invented."
+        ]
+      },
+      "pair_interpretation": {
+        "coverage": "compositional",
+        "components": [
+          {
+            "rule_id": "green1911.planet.Jupiter",
+            "version": 1,
+            "source_id": "mundane-green-1911-images-v1",
+            "locator": "Printed p50",
+            "coverage": "direct",
+            "text": "Religious and legal institutions,banking,public ceremonies and philanthropy.",
+            "exceptions": [
+              "Symbolic significations, not a forecast that a named real-world event will occur."
+            ]
+          },
+          {
+            "rule_id": "green1911.planet.Saturn",
+            "version": 1,
+            "source_id": "mundane-green-1911-images-v1",
+            "locator": "Printed p56",
+            "coverage": "direct",
+            "text": "Administration,state or municipal officers,law enforcement,order and duties to superior institutions.",
+            "exceptions": [
+              "Symbolic significations, not a forecast that a named real-world event will occur."
+            ]
+          }
+        ],
+        "limitation": "No verified direct Jupiter\u2013Saturn pair delineation,duration or prediction strength in this core"
+      }
+    }
+  ],
+  "motion_changes": [
+    {
+      "utc": "2020-12-17T05:04:03.045045+00:00",
+      "type": "ingress",
+      "body": "Saturn",
+      "target_longitude": 300
+    },
+    {
+      "utc": "2020-12-19T13:07:18.052369+00:00",
+      "type": "ingress",
+      "body": "Jupiter",
+      "target_longitude": 300
+    }
+  ],
+  "kernel_sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2",
+  "numerical_method": {
+    "scan_hours": 3,
+    "root_bracket_seconds": 0.25,
+    "motion": "Moving geocentric longitudes,not fixed natal targets"
+  },
+  "current_geometry": {
+    "signed_longitude_difference": -2.258384642696001,
+    "scope": "Geometric separation,not an active-orb or duration claim"
+  }
+}
