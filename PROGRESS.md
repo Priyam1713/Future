@@ -1,5 +1,11 @@
 # Future progress
 
+## Technique6 Mundane Astrology — resource audit, 2026-11-03
+- Began only after Horary Diagnostic Scope closure50278d6 was committed/pushed. Technique6 is Mundane Astrology; exact inventory row,5 variations and3 source rankings preserved. No Mundane engine or executable rules added.
+- Registered Campion publisher2004-scope metadata, Green1911 holding-library record/Public Domain Mark and Raphael1910 catalog lead. Green PDF URL found; web reader size limit prevented page inspection in this audit. Campion text/chart rights and Raphael original edition/identity remain explicit gaps. Added USNO seasons and NASA solar/lunar catalog references for later independent checks.
+- knowledge/mundane_resource_audit.json proposes explicit-location ingress charts/selected planetary cycles as the efficient first slice. Source pages, worked examples, coordinate/time/house/planet conventions and alternative founding moments must be verified before implementation; eclipses are not inferred from syzygy alone. Financial/collective variation retained, no accuracy or market claims.
+- Metadata validated against original inventory and shared registry;23 pipeline/Horary tests pass after source additions. Accepted baseline remains101 full tests/59 CLI cases; no computational changes after closure. Technique6 Researching; next step is bounded source/convention verification.
+
 ## Horary Core v1 closure — Diagnostic Scope, 2026-11-03
 - Targeted attempt019269c committed/pushed first. User-authorized Option B accepted: **Core v1 Ready — Diagnostic Scope**; **Question Judgment — Experimental**, judgment_certified=false and no certified categories. Existing indeterminate/unsupported classifications preserved; unknown seventh caution remains null.
 -101 tests pass, retaining all98 previous tests; all59 existing CLI smoke cases pass (23 Western,12 Vedic,15 Chinese,4 Numerology,5 Horary). New regressions cover immutable caution v1/v2, rejected validation candidates and exact serialized computational-section/diagnostic-value compatibility with98f5f5d. Three independent astronomical fixtures still match all30 events; pip check clean, no dependency/astronomy changes.

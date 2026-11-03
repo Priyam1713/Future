@@ -1,0 +1,201 @@
+{
+  "technique_id": 6,
+  "name": "Mundane Astrology",
+  "status": "Researching",
+  "date": "2026-11-03",
+  "predecessor_closure": "50278d6",
+  "policy": "80/20 source/resource audit only; no executable Mundane engine or verified judgment rules added",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    6,
+    "1 · Astrology & Celestial Prediction",
+    "Mundane Astrology",
+    "RETAIN — simulate / implement",
+    "Deterministic / symbolic rules",
+    "Ingress charts; eclipses; planetary cycles; national founding charts; financial/collective astrology",
+    "Event and ingress charts linked to geopolitical time series",
+    "Location/date choices; #1 charts; historical events",
+    "Founding charts contentious; avoid claiming geopolitical accuracy",
+    "Traditional / not scientifically validated",
+    "The Book of World Horoscopes",
+    "Nicholas Campion",
+    null,
+    "Mundane or National Astrology",
+    "Mundane Astrology",
+    "1",
+    "1, 49",
+    6
+  ],
+  "variations": [
+    {
+      "name": "Ingress charts",
+      "inventory_source_mapping": [
+        "Mundane or National Astrology",
+        "The Book of World Horoscopes"
+      ],
+      "inventory_mapping_status": "Indicative (scope match)",
+      "status": "unsupported; source/convention verification pending"
+    },
+    {
+      "name": "eclipses",
+      "inventory_source_mapping": [
+        "Mundane Astrology",
+        "Mundane or National Astrology"
+      ],
+      "inventory_mapping_status": "Provisional / chapter check needed",
+      "status": "unsupported; source/convention verification pending"
+    },
+    {
+      "name": "planetary cycles",
+      "inventory_source_mapping": [
+        "Mundane Astrology",
+        "Mundane or National Astrology"
+      ],
+      "inventory_mapping_status": "Provisional / chapter check needed",
+      "status": "unsupported; source/convention verification pending"
+    },
+    {
+      "name": "national founding charts",
+      "inventory_source_mapping": [
+        "Mundane or National Astrology",
+        "The Book of World Horoscopes"
+      ],
+      "inventory_mapping_status": "Indicative (scope match)",
+      "status": "unsupported; source/convention verification pending"
+    },
+    {
+      "name": "financial/collective astrology",
+      "inventory_source_mapping": [
+        "Mundane Astrology",
+        "Mundane or National Astrology"
+      ],
+      "inventory_mapping_status": "Indicative (scope match)",
+      "status": "unsupported; source/convention verification pending"
+    }
+  ],
+  "ranked_sources": [
+    [
+      6,
+      "Mundane Astrology",
+      1,
+      "Nicholas Campion",
+      "The Book of World Horoscopes",
+      "Historical world charts",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      6,
+      "Mundane Astrology",
+      2,
+      "H. S. Green",
+      "Mundane or National Astrology",
+      "National/ingress technique",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      6,
+      "Mundane Astrology",
+      3,
+      "Raphael",
+      "Mundane Astrology",
+      "Historical mundane doctrine",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "ranked_source_ids": [
+    "mundane-campion-publisher-v1",
+    "mundane-green-library-v1",
+    "mundane-raphael-catalog-v1"
+  ],
+  "supplemental_reference_ids": [
+    "mundane-usno-seasons-v1",
+    "mundane-nasa-solar-v1",
+    "mundane-nasa-lunar-v1"
+  ],
+  "source_findings": [
+    {
+      "source_id": "mundane-campion-publisher-v1",
+      "locator": "Publisher product description",
+      "finding": "Publisher confirms2004 version and country/event chart scope; individual chart provenance and competing founding moments not inspected."
+    },
+    {
+      "source_id": "mundane-green-library-v1",
+      "locator": "Holding-library bibliographic record0038583 and item rights notice",
+      "finding": "Institutional catalog and rights notice inspected; PDF link resolves but web reader rejects33,778,404-byte size. No procedural-page or worked-example verification claimed."
+    },
+    {
+      "source_id": "mundane-raphael-catalog-v1",
+      "locator": "Raphael entries, shelf RAN-7-3-RAPH-3/3a",
+      "finding": "Holding catalog confirms title/pseudonym and1910 imprint. Chapter procedures and author identity not verified from original pages."
+    },
+    {
+      "source_id": "mundane-usno-seasons-v1",
+      "locator": "Service introduction and time-zone notes",
+      "finding": "Service description inspected; explicit year/timezone inputs. Numerical fixtures and coordinate/time conventions still pending."
+    },
+    {
+      "source_id": "mundane-nasa-solar-v1",
+      "locator": "Catalog introduction and event table",
+      "finding": "Catalog page inspected. Maximum-eclipse time scale, contacts, visibility and coordinate conventions must be checked before using fixtures. A solved conjunction alone is not an eclipse."
+    },
+    {
+      "source_id": "mundane-nasa-lunar-v1",
+      "locator": "Catalog introduction and event table",
+      "finding": "Catalog page inspected; eclipse classification/timing conventions and independent fixtures pending. Ordinary full Moon does not certify a lunar eclipse."
+    }
+  ],
+  "priority_scope": [
+    {
+      "priority": "core candidate",
+      "procedure": "Explicit-location equinox/solstice ingress chart with independently verified instant and existing house/planet calculations",
+      "next": "Inspect Green original procedure/pages; resolve coordinate/time/house and geographic conventions before rule implementation."
+    },
+    {
+      "priority": "core candidate",
+      "procedure": "Selected major planetary-cycle contacts and source-scoped collective house/planet testimonies",
+      "next": "Verify source planet set, aspect/orb meanings and complete worked example; calculations remain separate from symbolic reading."
+    },
+    {
+      "priority": "bounded optional",
+      "procedure": "User-selected, source-documented national/event chart and comparisons",
+      "next": "Retain multiple founding candidates, event descriptions, timezone/calendar certainty and exact locators. Never infer a unique national birth moment."
+    },
+    {
+      "priority": "refinement until independently verified",
+      "procedure": "Solar/lunar eclipse classification, timing and local visibility",
+      "next": "Use NASA/USNO numerical references with explicit time scales; avoid latitude/node heuristics or equating syzygy with eclipse."
+    }
+  ],
+  "pending_conventions": [
+    "Named source/tradition profile; do not merge Green, Raphael and contemporary Campion methods",
+    "Tropical ingress longitude/equinox definition and UT1/TT/UTC handling",
+    "Location choice for collective chart: caller-selected site versus sourced capital; no automatic national inference",
+    "House system, classical/outer planet set, aspects and orbs from actual source pages",
+    "Ingress duration/renewal rules, lord selection and any source exceptions",
+    "Eclipse greatest phase versus conjunction/opposition/contact instants and visible regions",
+    "Historical calendar, LMT/IANA and contested founding-event times within supported ephemeris dates"
+  ],
+  "P1": [
+    "Inspect source-located Green ingress procedure and complete worked example from legitimate1911 scan",
+    "Gather independent season/cycle fixtures and freeze one high-value calculation profile",
+    "Verify source-specific mundane house/planet interpretations; provenance and missing coverage explicit",
+    "Access permitted Campion chart facts with event-source locators, preserving alternative founding charts"
+  ],
+  "P2": [
+    "Broader eclipse visibility/duration and historical doctrine",
+    "Additional Raphael/Green variations and jurisdiction/calendar edge cases",
+    "Financial/collective interpretive expansion, kept separate from Technique49 and uncalibrated market claims"
+  ],
+  "limits": "Audit metadata is not procedural implementation. Current astronomy is reusable only after source conventions are resolved. No geopolitical, financial or catastrophe predictive-accuracy claims; no new model/orchestration infrastructure.",
+  "acceptance_inherited": {
+    "tests": 101,
+    "cli_smoke_cases": 59,
+    "horary_status": "Core v1 Ready — Diagnostic Scope; Question Judgment — Experimental"
+  }
+}
