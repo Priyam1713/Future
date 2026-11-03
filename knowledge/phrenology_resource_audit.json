@@ -1,0 +1,134 @@
+{
+  "technique_id": 10,
+  "name": "Phrenology",
+  "status": "Researching",
+  "date": "2026-11-03",
+  "predecessor_closure": "8d9830f",
+  "policy": "Historical-source and educational feasibility audit only; no Technique10 implementation,cranial measurements or individualized assessments.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    10,
+    "2 \u00b7 Physical & Human-Based Divination",
+    "Phrenology",
+    "RETAIN \u2014 simulate / implement",
+    "Vision / symbol rules",
+    "Gall localization; Spurzheim 35 faculties; Combe organ charts",
+    "Digital 3D head map / historical rule demonstration",
+    "Head template or user-selected schematic; NO diagnostic scans",
+    "DISCRE\u00adDITED; never infer intellect, traits, or illness",
+    "Discredited pseudoscience; educational/historical simulation only",
+    "Phrenology, or the Doctrine of the Mental Phenomena",
+    "J. G. Spurzheim",
+    null,
+    "The Constitution of Man",
+    null,
+    null,
+    "9",
+    10
+  ],
+  "ranked_sources": [
+    [
+      10,
+      "Phrenology",
+      1,
+      "J. G. Spurzheim",
+      "Phrenology, or the Doctrine of the Mental Phenomena",
+      "Historical primary taxonomy",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      10,
+      "Phrenology",
+      2,
+      "George Combe",
+      "The Constitution of Man",
+      "Historical phrenology applied",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Gall localization",
+      "inventory_row": [
+        10,
+        "Phrenology",
+        "Gall localization",
+        "The Constitution of Man",
+        "Phrenology, or the Doctrine of the Mental Phenomena",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; original plate,numbering and historical conventions not yet verified"
+    },
+    {
+      "name": "Spurzheim 35 faculties",
+      "inventory_row": [
+        10,
+        "Phrenology",
+        "Spurzheim 35 faculties",
+        "The Constitution of Man",
+        "Phrenology, or the Doctrine of the Mental Phenomena",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; original plate,numbering and historical conventions not yet verified"
+    },
+    {
+      "name": "Combe organ charts",
+      "inventory_row": [
+        10,
+        "Phrenology",
+        "Combe organ charts",
+        "The Constitution of Man",
+        "Phrenology, or the Doctrine of the Mental Phenomena",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; original plate,numbering and historical conventions not yet verified"
+    }
+  ],
+  "sources": [
+    "phrenology-spurzheim-1833-catalog-v1",
+    "phrenology-combe-1847-archive-v1",
+    "phrenology-lehigh-exhibit-v1"
+  ],
+  "scientific_scope": "Discredited historical doctrine. Do not infer intellect,character,ability,illness,criminality or protected traits from skull shape. Historical names are not modern brain anatomy or diagnoses.",
+  "feasibility": {
+    "high_roi_core": "A single-edition educational organ-label/terminology lookup keyed to an inspected original schematic; source-attributed historical claims and critical context,not assessment of a head.",
+    "initial_candidate": "Spurzheim1833 Vol1 original numbered plate and corresponding labels,if complete and legible; preserve allegedly35 faculties as an inventory/curator lead until counted in the original.",
+    "input": "User-selected historical schematic/printed label ID or generic teaching template; no diagnostic scans,photos or human skull measurements.",
+    "output": "JSON/Markdown historical reference with original printed/plate locators,versioned label mappings,uncertainty and source differences; no strength/ability scores.",
+    "avoid": "A3D pipeline or shape-to-faculty classifier is unnecessary for the first educational reference release."
+  },
+  "next_requirements": [
+    "Inspect original1833 title,numbered schematic and relevant label list; transcribe a coherent small source case set before rules",
+    "Verify actual faculty count/number order and left/right/profile-view conventions; do not silently equate different editions or schools",
+    "Keep Gall localization,Spurzheim faculties and Combe applications separate; existing inventory mappings are provisional until chapter/plate inspection",
+    "Verify whether the ranked Combe work contains the requested organ chart; otherwise retain the gap and register any additional source separately without changing ranking",
+    "Define a reference-only schema that rejects individualized inference requests and does not accept personal head scans or dimensions",
+    "Validate original schematic labels independently; agreement with a historical diagram is not scientific validation of phrenology"
+  ],
+  "P1": [
+    "Inspect original Spurzheim numbered diagram and table for a bounded educational glossary",
+    "Original Combe plate/source verification and clear edition-specific exceptions",
+    "Source-case fixtures and reference-only input/output acceptance criteria"
+  ],
+  "P2": [
+    "Gall original-document comparison and further historical taxonomies",
+    "Neutral generic schematic visualization only if useful after reference fidelity is stable",
+    "Translation,edition and disputed map-numbering comparisons"
+  ],
+  "limits": "No executable rule,verified organ map or complete35-faculty implementation. Museum descriptions/catalogs are leads; original pages/plates remain uninspected. No personal inference is a proposed product feature.",
+  "accepted_predecessor": {
+    "status": "Core v1 Ready \u2014 Historical/Symbolic Reference Scope",
+    "tests": 146,
+    "cli_smoke_cases": 105
+  }
+}

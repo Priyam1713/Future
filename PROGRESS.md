@@ -1,5 +1,11 @@
 # Future progress
 
+## Technique10 Phrenology — resource audit,2026-11-03
+- Began only after Face Reading closure8d9830f committed/pushed. Exact inventory confirms Phrenology,three variations and two ranked sources:Spurzheim then Combe. Registered1833 NLM/Wellcome original digitization/PDM,1847 Combe scholarly archive/edition distinction and a separately labeled Lehigh curatorial lead. No engine or executable rules added.
+- phrenology_resource_audit.json proposes a single-edition educational schematic-label reference after original plate/list verification.35-faculty count/numbering,orientation,Gall/Combe mapping and source-specific conventions remain unverified. No scan/geometry-to-intellect,character,illness or ability inference proposed; no contemporary image corpus or diagnostic scans ingested.
+- Rights,source gaps,P1/P2 and next acceptance requirements recorded. Inherited release146 tests/105 CLI cases; inventory and source registry validated separately.
+
+
 ## Face Reading Core v1 closure — 2026-11-03
 - Implementation5322444 committed/pushed first. Technique9 **Core v1 Ready — Historical/Symbolic Reference Scope** for lavater-hunter-1789-reference-v1:6 regional entries,2 terminology records,3 source schematics,manual annotations/orientation and JSON/Markdown references. Configuration matrix,P1/P2 and source/observation limits frozen in face_reading_core_v1.json.
 - All146 tests/105 CLI cases pass,retaining134/93 inherited. Nine independently transcribed entries/illustrations verify source fidelity only. Geometry-invariant historical context and explicit rejection of personalized inference are acceptance gates; no trait/diagnosis/scoring or CV functionality claimed. Original source/rank/variation metadata preserved.
