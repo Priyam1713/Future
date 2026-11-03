@@ -1,6 +1,6 @@
 # Future
 
-Technique #8 **Palmistry — Researching**: original inventory/resources/variation audit in `knowledge/palmistry_resource_audit.json`, begun after Astrocartography closure5d9fac3. No Palmistry engine implemented.
+Technique #8 **Palmistry — Developing**: manual-observation reading engine under the source-specific `cheiro-ninth-manual-v1` profile. Source rules are in `knowledge/palmistry_cheiro_v1.json`; original rankings/variations remain in the resource audit.
 
 Technique #7 **Astrocartography — Core v1 Ready**: angular geometry/relocation core and source conventions in `knowledge/astrocartography_conventions_v1.json`; frozen scope/P1/P2 in `knowledge/astrocartography_core_v1.json`. All122 tests/83 CLI cases pass. Original-book procedures remain unsupported; the historical resource audit preserves access/attribution limits.
 
@@ -209,3 +209,22 @@ GeoJSON contains 40 MultiLineString features with source IDs, exact target names
 Samples `data/astrocartography-july1990.*` use July15,1990 14:30 Asia/Kolkata (09:00UTC). The independent1990 fixture uses a deliberately separate06:30UTC instant; the2000 leap-day fixture is another case. `data/astrocartography-verification.json` reports measured errors against Swiss/Moshier over four epochs,452 horizon roots,54 circumpolar cases and96 relocation charts. Optional Swiss fixture regeneration is reference-only; production never imports Swiss.
 
 All40 planet-axis interpretations are explicitly modern compositional symbolism, sourced to separate planet meanings and angular-house topics. No direct Lewis/Davis text, branded certification, location ranking or established predictive validity is claimed. Original Book of Maps title-page attribution and all three ranked books' coordinate conventions remain unverified; inventory metadata is preserved. Parans/local-space and deeper original interpretations remain refinement work.
+
+
+## Technique8 Palmistry: manual Western core
+
+```powershell
+python -m future palmistry data/palmistry-observations.json --format markdown
+python -m future palmistry data/palmistry-observations.json
+python -m scripts.smoke_palmistry_core
+```
+
+Supply one or both hands in validated JSON. The complete worked input is `data/palmistry-observations.json`; reports are `data/palmistry-reading.json` and `.md`. It is an explicitly constructed usage example, not a historical person or independently verified photograph. The input reference at `knowledge/palmistry_input_reference_v1.json` lists allowed fields,source-defined shapes and mount positions. Unsupported keys and duplicate JSON keys are rejected; optional `markings`/`unsupported_features` lists retain unimplemented observations without interpreting them.
+
+`schema_version:1`, `profile:"cheiro-ninth-manual-v1"` and a `hands` list are required. Each hand needs a unique `side:"left"` or `"right"`. Optional `dominance` is left/right/ambidextrous/unknown. Unknown and uncertain are explicit values; omitted fields remain unknown. Major lines use a presence value and qualitative length/depth/clarity/curvature/continuity/branch properties. Heart branch readings require the source's commencement location. Positive millimeter proportions produce descriptive ratios only; they never classify a hand automatically.
+
+The named Western profile uses Cheiro's inspected Ninth Edition: six hand types,eight mount sites,selected Life/Head/Heart rules and explicit exceptions. It preserves the author's pp77-78 left/natural,right/acquired convention without silently reversing for dominance. Single-hand readings disclose missing comparison context. Contradictory observations suppress affected rules; differing symbolic themes coexist without a score or invented synthesis. Full JSON includes every rule's match/unknown/conflict diagnostic,source,printed locator and observed/required conditions.
+
+Readings are attributed historic symbolism,not evidence of personality,medical conditions,longevity or future outcomes. Life-line depth/length/breaks are retained without medical/death readings. A fully observed hand can still contain unsupported properties; coverage does not mean all historical doctrines are implemented. No image is loaded or retained. Benham/Saint-Germain,Indian Samudrika,dermatoglyphics,minor markings and timing scales are not substituted.
+
+Six source fixtures were independently transcribed from visually inspected published types/labeled schematic details: Plates II,III,V,XVI and XVIII with the corresponding printed passages. These validate faithful mapping of selected features,not a full historical person's palm reading or predictive validity. The original scan's title says Ninth Edition,copyright1897,with a1900 LOC receipt stamp; the earlier catalog1898 label is preserved separately. Original PDF/pages are research references,not bundled product data.

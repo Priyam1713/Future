@@ -187,7 +187,18 @@ def main():
     acg.add_argument('--profile',default='geocentric-apparent-geometric-v1')
     acg.add_argument('--format',choices=['json','markdown','geojson'],default='json')
     acg.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
+    palm=sub.add_parser('palmistry')
+    palm.add_argument('observations',help='Path to source-profiled manual-observation JSON')
+    palm.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='palmistry':
+        from .palmistry import load_observations,read,markdown
+        registry=load_registry(args.database)
+        try:
+            result=read(load_observations(args.observations),registry)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close()
+        return
     if args.command=='astrocartography':
         from .natal import SkyfieldEphemeris
         from .astrocartography import generate,markdown,register_knowledge

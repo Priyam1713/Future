@@ -1,7 +1,13 @@
 # Future progress
 
+## Palmistry implementation/verification pass — 2026-11-03
+- Source/profile873ac38 committed/pushed. Added strict manual JSON schema,qualitative observations/ratios,six hand types,eight mount sites and selected Life/Head/Heart readings under cheiro-ninth-manual-v1. Rules retain printed locators/exceptions; unknowns abstain,contradictions withhold affected rules,opposing symbolic themes remain unscored. No image extraction or new dependencies.
+- All134 tests pass (122 inherited +12 meaningful Palmistry tests); all93 CLI cases pass (83 inherited +10 Palmistry). Six independently transcribed published illustrated types/details pass; source fidelity is separate from empirical validity. Sample input produces13 left-hand and17 right-hand components with no observation conflicts. Full diagnostics,JSON/Markdown,input reference and reproducible verification report supplied. pip check clean.
+- Life-line health/longevity,medical/crime/protected-trait claims excluded. Dominance does not reverse Cheiro side meanings; single-hand comparison gaps visible. Source-specific methods from other authors,Samudrika,dermatoglyphics,markings/timing and vision remain unsupported. Separate readiness freeze follows.
+
+
 ## Palmistry source/profile pass — 2026-11-03
-- Verified Cheiro original scan title/copyright,printed hand/line/mount chapters and labeled plates. Named cheiro-ninth-manual-v1 preserves observed Ninth Edition versus catalog1898 discrepancy; immutable new source ID/hash. Bounded Western profile,38 page-located direct symbolic rules and6 independently transcribed illustrated details/types; no full-person or empirical validation claim.
+- Verified Cheiro original scan title/copyright,printed hand/line/mount chapters and labeled plates. Named cheiro-ninth-manual-v1 preserves observed Ninth Edition versus catalog1898 discrepancy; immutable new source ID/hash. Bounded Western profile,37 page-located direct symbolic rules and6 independently transcribed illustrated details/types; no full-person or empirical validation claim.
 - Hand-side convention remains literal right/acquired,left/natural; dominance recorded without inferred reversal. Life-line health/longevity and other harmful historical claims excluded. Benham original download incomplete,not evidence; Saint-Germain catalog-only. Research cutoff reached; no cross-author synthesis,Indian Samudrika or image extraction.
 
 

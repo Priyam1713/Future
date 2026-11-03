@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "profile": "cheiro-ninth-manual-v1",
+  "required_top_level": [
+    "schema_version",
+    "profile",
+    "hands"
+  ],
+  "hands": "one or two objects with unique side:left/right",
+  "dominance": [
+    "left",
+    "right",
+    "ambidextrous",
+    "unknown",
+    "uncertain"
+  ],
+  "shape_type": [
+    "square",
+    "spatulate",
+    "philosophic",
+    "conic",
+    "psychic",
+    "mixed",
+    "unknown",
+    "uncertain"
+  ],
+  "shape_definitions": {
+    "square": {
+      "definition": "Squared wrist/palm and square fingers.",
+      "locator": "Part I,p28",
+      "scan_page": 52
+    },
+    "spatulate": {
+      "definition": "Spatula-like fingertips and a palm broad at the wrist or finger bases.",
+      "locator": "Part I,p32",
+      "scan_page": 58
+    },
+    "philosophic": {
+      "definition": "Long angular hand,bony fingers,developed joints and long nails.",
+      "locator": "Part I,p34",
+      "scan_page": 62
+    },
+    "conic": {
+      "definition": "Medium hand with tapering palm,fingers full at base and slightly pointed tips.",
+      "locator": "Part I,p37",
+      "scan_page": 69
+    },
+    "psychic": {
+      "definition": "Long narrow hand with slender tapering fingers and long almond nails.",
+      "locator": "Part I,p40",
+      "scan_page": 72
+    },
+    "mixed": {
+      "definition": "No single base type,with fingers of different types; not merely square palm with mixed fingers.",
+      "locator": "Part I,p43",
+      "scan_page": 81
+    }
+  },
+  "shape_firmness": [
+    "firm",
+    "soft",
+    "unknown",
+    "uncertain"
+  ],
+  "proportions_mm": "Optional positive finite palm_length,palm_width,middle_finger_length; unknown/uncertain allowed; ratios only,no shape inference",
+  "head_life_gap": [
+    "joined",
+    "medium",
+    "wide",
+    "unknown",
+    "uncertain"
+  ],
+  "line_fields": {
+    "life": {
+      "presence": [
+        "present",
+        "absent",
+        "unknown",
+        "uncertain"
+      ],
+      "length": [
+        "short",
+        "long",
+        "very_long",
+        "unknown",
+        "uncertain"
+      ],
+      "depth": [
+        "deep",
+        "shallow",
+        "unknown",
+        "uncertain"
+      ],
+      "clarity": [
+        "clear",
+        "unclear",
+        "unknown",
+        "uncertain"
+      ],
+      "curvature": [
+        "straight",
+        "slight_slope",
+        "very_sloping",
+        "straight_then_sloping",
+        "unknown",
+        "uncertain"
+      ],
+      "continuity": [
+        "unbroken",
+        "broken",
+        "chained",
+        "unknown",
+        "uncertain"
+      ],
+      "branches": [
+        "none",
+        "upward",
+        "downward",
+        "both",
+        "unknown",
+        "uncertain"
+      ],
+      "origin": [
+        "jupiter_base",
+        "side",
+        "unknown",
+        "uncertain"
+      ],
+      "branch_to": [
+        "none",
+        "jupiter",
+        "unknown",
+        "uncertain"
+      ]
+    },
+    "head": {
+      "presence": [
+        "present",
+        "absent",
+        "unknown",
+        "uncertain"
+      ],
+      "length": [
+        "short",
+        "long",
+        "very_long",
+        "unknown",
+        "uncertain"
+      ],
+      "depth": [
+        "deep",
+        "shallow",
+        "unknown",
+        "uncertain"
+      ],
+      "clarity": [
+        "clear",
+        "unclear",
+        "unknown",
+        "uncertain"
+      ],
+      "curvature": [
+        "straight",
+        "slight_slope",
+        "very_sloping",
+        "straight_then_sloping",
+        "unknown",
+        "uncertain"
+      ],
+      "continuity": [
+        "unbroken",
+        "broken",
+        "chained",
+        "unknown",
+        "uncertain"
+      ],
+      "branches": [
+        "none",
+        "upward",
+        "downward",
+        "both",
+        "unknown",
+        "uncertain"
+      ]
+    },
+    "heart": {
+      "presence": [
+        "present",
+        "absent",
+        "unknown",
+        "uncertain"
+      ],
+      "length": [
+        "short",
+        "long",
+        "very_long",
+        "unknown",
+        "uncertain"
+      ],
+      "depth": [
+        "deep",
+        "shallow",
+        "unknown",
+        "uncertain"
+      ],
+      "clarity": [
+        "clear",
+        "unclear",
+        "unknown",
+        "uncertain"
+      ],
+      "curvature": [
+        "straight",
+        "slight_slope",
+        "very_sloping",
+        "straight_then_sloping",
+        "unknown",
+        "uncertain"
+      ],
+      "continuity": [
+        "unbroken",
+        "broken",
+        "chained",
+        "unknown",
+        "uncertain"
+      ],
+      "branches": [
+        "none",
+        "upward",
+        "downward",
+        "both",
+        "unknown",
+        "uncertain"
+      ],
+      "origin": [
+        "jupiter",
+        "between_jupiter_saturn",
+        "saturn",
+        "unknown",
+        "uncertain"
+      ],
+      "branch_position": [
+        "commencement",
+        "other",
+        "unknown",
+        "uncertain"
+      ],
+      "fork": [
+        "none",
+        "small_jupiter",
+        "jupiter_and_between",
+        "jupiter_and_saturn",
+        "unknown",
+        "uncertain"
+      ]
+    }
+  },
+  "mount_locations": {
+    "venus": {
+      "location": "base of thumb",
+      "locator": "Part I,chXV,p64; Plate XII"
+    },
+    "jupiter": {
+      "location": "below index finger",
+      "locator": "Part I,chXV,p64; Plate XII"
+    },
+    "saturn": {
+      "location": "below middle finger",
+      "locator": "Part I,chXV,p64; Plate XII"
+    },
+    "sun": {
+      "location": "below ring finger",
+      "locator": "Part I,chXV,p64; Plate XII"
+    },
+    "mercury": {
+      "location": "below little finger",
+      "locator": "Part I,chXV,p64; Plate XII"
+    },
+    "mars_active": {
+      "location": "below Jupiter inside Life line,next to Venus",
+      "locator": "Part I,chXV,p65; Plate XII"
+    },
+    "mars_passive": {
+      "location": "outer palm between Mercury and Luna",
+      "locator": "Part I,chXV,p65; Plate XII"
+    },
+    "luna": {
+      "location": "outer lower palm,opposite Venus and below passive Mars",
+      "locator": "Part I,chXV,p65; Plate XII"
+    }
+  },
+  "mount_prominence": [
+    "flat",
+    "developed",
+    "excessive",
+    "unknown",
+    "uncertain"
+  ],
+  "markings": "Per-hand list of strings,retained as unsupported",
+  "unsupported_features": "Top-level list of strings,not interpreted",
+  "unknown_fields": "Rejected; no silent typo correction,translation or unsupported image input",
+  "source_conventions": {
+    "hand_use": "pp77-78: inspect both hands; left natural/inherited context,right acquired/training context. Left-handed clarity noted but no explicit automatic side reversal; dominance recorded only.",
+    "observations": "Manual qualitative observations only. Unknown/uncertain never treated as confirmed. No invented numeric classification thresholds.",
+    "conflicts": "Opposing symbolic indications retained without averaging or a composite personality score; different hands compared as observed differences only.",
+    "exceptions": "p74:no single adverse mark decisive; p87:Head slope depends on hand type; pp43-44:mixed types modified by palm foundation/strong Head line. Unsupported refinements explicitly withheld."
+  }
+}

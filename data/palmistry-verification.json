@@ -1,0 +1,134 @@
+{
+  "profile": "cheiro-ninth-manual-v1",
+  "source_id": "palmistry-cheiro-ninth-scan-v1",
+  "source_scan_sha256": "37f492cd2ec3df8ad840e17782c92f10ccded2ce370fbb4f59679e2e937cf4d0",
+  "verification_scope": "Manually transcribed from visually inspected original plates/text before writing the production matcher. Only labeled detail used; no inferred missing features or empirical validation.",
+  "cases": [
+    {
+      "case_id": "cheiro-plateII",
+      "kind": "published illustrated type",
+      "locator": "Plate II,scan53; p28,scan52",
+      "observation": {
+        "shape": {
+          "type": "square"
+        }
+      },
+      "expected_rules": [
+        "palm.cheiro.shape.square"
+      ],
+      "actual_rules": [
+        "palm.cheiro.shape.square"
+      ],
+      "expected_theme": "order and method",
+      "passed": true
+    },
+    {
+      "case_id": "cheiro-plateIII",
+      "kind": "published illustrated type",
+      "locator": "Plate III,scan59; p32,scan58",
+      "observation": {
+        "shape": {
+          "type": "spatulate"
+        }
+      },
+      "expected_rules": [
+        "palm.cheiro.shape.spatulate"
+      ],
+      "actual_rules": [
+        "palm.cheiro.shape.spatulate"
+      ],
+      "expected_theme": "action and independence",
+      "passed": true
+    },
+    {
+      "case_id": "cheiro-plateV",
+      "kind": "published illustrated type",
+      "locator": "Plate V,scan68; p37,scan69",
+      "observation": {
+        "shape": {
+          "type": "conic"
+        }
+      },
+      "expected_rules": [
+        "palm.cheiro.shape.conic"
+      ],
+      "actual_rules": [
+        "palm.cheiro.shape.conic"
+      ],
+      "expected_theme": "impulse and artistic responsiveness",
+      "passed": true
+    },
+    {
+      "case_id": "cheiro-XVIII-c",
+      "kind": "published schematic detail,not a whole person",
+      "locator": "Plate XVIII c-c,scan157; p81,scan135",
+      "observation": {
+        "lines": {
+          "life": {
+            "presence": "present",
+            "branch_to": "jupiter"
+          }
+        }
+      },
+      "expected_rules": [
+        "palm.cheiro.life.jupiter_branch"
+      ],
+      "actual_rules": [
+        "palm.cheiro.life.jupiter_branch"
+      ],
+      "expected_theme": "ambition and advancement",
+      "passed": true
+    },
+    {
+      "case_id": "cheiro-XVI-d",
+      "kind": "published schematic detail,not a whole person",
+      "locator": "Plate XVI d-d,scan132; p80,scan134 and p88,scan146",
+      "observation": {
+        "lines": {
+          "life": {
+            "presence": "present"
+          },
+          "head": {
+            "presence": "present"
+          }
+        },
+        "head_life_gap": "joined"
+      },
+      "expected_rules": [
+        "palm.cheiro.life.gap.joined"
+      ],
+      "actual_rules": [
+        "palm.cheiro.life.gap.joined"
+      ],
+      "expected_theme": "caution and sensitivity",
+      "passed": true
+    },
+    {
+      "case_id": "cheiro-XVI-j",
+      "kind": "published schematic detail,not a whole person",
+      "locator": "Plate XVI j-j,scan132; p100,scan160",
+      "observation": {
+        "lines": {
+          "heart": {
+            "presence": "present",
+            "fork": "small_jupiter"
+          }
+        }
+      },
+      "expected_rules": [
+        "palm.cheiro.heart.small_fork"
+      ],
+      "actual_rules": [
+        "palm.cheiro.heart.small_fork"
+      ],
+      "expected_theme": "sincerity and warmth",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "limits": [
+    "Published schematic/type illustrations,not whole-person acceptance charts.",
+    "Manual transcription and rule-selection checks do not validate photo extraction.",
+    "Agreement with a historical source does not establish personality or predictive validity."
+  ]
+}
