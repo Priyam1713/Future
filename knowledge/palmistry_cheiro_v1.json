@@ -1,0 +1,905 @@
+{
+  "version": 1,
+  "technique_id": 8,
+  "profile": "cheiro-ninth-manual-v1",
+  "tradition": "Western chiromancy \u2014 Cheiro Ninth Edition",
+  "source": {
+    "id": "palmistry-cheiro-ninth-scan-v1",
+    "author": "Cheiro (Leigh, Count de Hamong)",
+    "edition": "Cheiro's Language of the Hand,Ninth Edition; copyright1897,LOC received July1900; catalog1898 label retained separately",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Cheiro%27s_language_of_the_hand%3B_%28IA_cheiroslanguageo00chei_1%29.pdf",
+    "ingestion": "metadata_only",
+    "rights_note": "Original historic scan identified as US public domain by Commons; only original concise procedural summaries and transcribed symbolic facts committed. No scan or page images redistributed.",
+    "locator": "Title scan7,copyright/stamp scan8; printed pp28,32,34,37,40,43,63-65,72,74-78,80-81,87-90,98-100; Plates II,III,V,VII,XII,XVI,XVIII",
+    "sha256": "37f492cd2ec3df8ad840e17782c92f10ccded2ce370fbb4f59679e2e937cf4d0"
+  },
+  "shapes": {
+    "square": {
+      "definition": "Squared wrist/palm and square fingers.",
+      "locator": "Part I,p28",
+      "scan_page": 52
+    },
+    "spatulate": {
+      "definition": "Spatula-like fingertips and a palm broad at the wrist or finger bases.",
+      "locator": "Part I,p32",
+      "scan_page": 58
+    },
+    "philosophic": {
+      "definition": "Long angular hand,bony fingers,developed joints and long nails.",
+      "locator": "Part I,p34",
+      "scan_page": 62
+    },
+    "conic": {
+      "definition": "Medium hand with tapering palm,fingers full at base and slightly pointed tips.",
+      "locator": "Part I,p37",
+      "scan_page": 69
+    },
+    "psychic": {
+      "definition": "Long narrow hand with slender tapering fingers and long almond nails.",
+      "locator": "Part I,p40",
+      "scan_page": 72
+    },
+    "mixed": {
+      "definition": "No single base type,with fingers of different types; not merely square palm with mixed fingers.",
+      "locator": "Part I,p43",
+      "scan_page": 81
+    }
+  },
+  "mounts": {
+    "venus": {
+      "location": "base of thumb",
+      "locator": "Part I,chXV,p64; Plate XII"
+    },
+    "jupiter": {
+      "location": "below index finger",
+      "locator": "Part I,chXV,p64; Plate XII"
+    },
+    "saturn": {
+      "location": "below middle finger",
+      "locator": "Part I,chXV,p64; Plate XII"
+    },
+    "sun": {
+      "location": "below ring finger",
+      "locator": "Part I,chXV,p64; Plate XII"
+    },
+    "mercury": {
+      "location": "below little finger",
+      "locator": "Part I,chXV,p64; Plate XII"
+    },
+    "mars_active": {
+      "location": "below Jupiter inside Life line,next to Venus",
+      "locator": "Part I,chXV,p65; Plate XII"
+    },
+    "mars_passive": {
+      "location": "outer palm between Mercury and Luna",
+      "locator": "Part I,chXV,p65; Plate XII"
+    },
+    "luna": {
+      "location": "outer lower palm,opposite Venus and below passive Mars",
+      "locator": "Part I,chXV,p65; Plate XII"
+    }
+  },
+  "line_definitions": {
+    "life": "Curves around the thumb-base Mount of Venus.",
+    "head": "Crosses the middle of the palm.",
+    "heart": "Crosses the upper palm beneath finger bases; source origin is at Jupiter/Saturn side."
+  },
+  "conventions": {
+    "hand_use": "pp77-78: inspect both hands; left natural/inherited context,right acquired/training context. Left-handed clarity noted but no explicit automatic side reversal; dominance recorded only.",
+    "observations": "Manual qualitative observations only. Unknown/uncertain never treated as confirmed. No invented numeric classification thresholds.",
+    "conflicts": "Opposing symbolic indications retained without averaging or a composite personality score; different hands compared as observed differences only.",
+    "exceptions": "p74:no single adverse mark decisive; p87:Head slope depends on hand type; pp43-44:mixed types modified by palm foundation/strong Head line. Unsupported refinements explicitly withheld."
+  },
+  "rules": [
+    {
+      "id": "palm.cheiro.shape.square",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Hand shape",
+      "conditions": {
+        "shape.type": "square"
+      },
+      "text": "Order, method, practical study and perseverance.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chIII,p28",
+      "tags": [
+        "practical"
+      ],
+      "exceptions": [
+        "General type only; finger subdivisions and strong-head-line modification of mixed type are not synthesized."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.shape.spatulate",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Hand shape",
+      "conditions": {
+        "shape.type": "spatulate"
+      },
+      "text": "Action, independence and an inclination to exploration or invention.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chIV,p32",
+      "tags": [
+        "active"
+      ],
+      "exceptions": [
+        "General type only; finger subdivisions and strong-head-line modification of mixed type are not synthesized."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.shape.philosophic",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Hand shape",
+      "conditions": {
+        "shape.type": "philosophic"
+      },
+      "text": "Reflective study,analysis and interest in deeper questions.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chV,p34",
+      "tags": [
+        "reflective"
+      ],
+      "exceptions": [
+        "General type only; finger subdivisions and strong-head-line modification of mixed type are not synthesized."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.shape.conic",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Hand shape",
+      "conditions": {
+        "shape.type": "conic"
+      },
+      "text": "Instinct,artistic responsiveness and impulsive enthusiasm.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chVI,p37",
+      "tags": [
+        "imaginative"
+      ],
+      "exceptions": [
+        "General type only; finger subdivisions and strong-head-line modification of mixed type are not synthesized."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.shape.psychic",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Hand shape",
+      "conditions": {
+        "shape.type": "psychic"
+      },
+      "text": "Idealism,aesthetic appreciation and a visionary outlook.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chVII,p40",
+      "tags": [
+        "imaginative"
+      ],
+      "exceptions": [
+        "General type only; finger subdivisions and strong-head-line modification of mixed type are not synthesized."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.shape.mixed",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Hand shape",
+      "conditions": {
+        "shape.type": "mixed"
+      },
+      "text": "Versatility,adaptability and changes of interest.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chVIII,p43",
+      "tags": [
+        "versatile"
+      ],
+      "exceptions": [
+        "General type only; finger subdivisions and strong-head-line modification of mixed type are not synthesized."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.mount.venus",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Mounts",
+      "conditions": {
+        "mounts.venus.prominence": "developed"
+      },
+      "text": "Affection,sympathy,benevolence and appreciation of beauty.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chXV,p64; Plate XII (scan110)",
+      "tags": [
+        "warm"
+      ],
+      "exceptions": [
+        "No inverse meaning inferred for flat mounts; excessive prominence and leaning require separate rules."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.mount.jupiter",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Mounts",
+      "conditions": {
+        "mounts.jupiter.prominence": "developed"
+      },
+      "text": "Ambition,enthusiasm,pride and desire for responsibility or power.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chXV,p64; Plate XII (scan110)",
+      "tags": [
+        "ambitious"
+      ],
+      "exceptions": [
+        "No inverse meaning inferred for flat mounts; excessive prominence and leaning require separate rules."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.mount.saturn",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Mounts",
+      "conditions": {
+        "mounts.saturn.prominence": "developed"
+      },
+      "text": "Solitude,prudence,serious study and earnest work.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chXV,p64; Plate XII (scan110)",
+      "tags": [
+        "reserved"
+      ],
+      "exceptions": [
+        "No inverse meaning inferred for flat mounts; excessive prominence and leaning require separate rules."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.mount.sun",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Mounts",
+      "conditions": {
+        "mounts.sun.prominence": "developed"
+      },
+      "text": "Appreciation of art,literature and imaginative work.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chXV,p64; Plate XII (scan110)",
+      "tags": [
+        "imaginative"
+      ],
+      "exceptions": [
+        "No inverse meaning inferred for flat mounts; excessive prominence and leaning require separate rules."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.mount.mercury",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Mounts",
+      "conditions": {
+        "mounts.mercury.prominence": "developed"
+      },
+      "text": "Change,travel,wit and quick expression.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chXV,p64; Plate XII (scan110)",
+      "tags": [
+        "active"
+      ],
+      "exceptions": [
+        "No inverse meaning inferred for flat mounts; excessive prominence and leaning require separate rules.",
+        "Mercury outcome qualifications depend on rest of hand; no success verdict."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.mount.mars_active",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Mounts",
+      "conditions": {
+        "mounts.mars_active.prominence": "developed"
+      },
+      "text": "Active courage and a martial or assertive spirit.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chXV,p65; Plate XII (scan110)",
+      "tags": [
+        "active"
+      ],
+      "exceptions": [
+        "No inverse meaning inferred for flat mounts; excessive prominence and leaning require separate rules."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.mount.mars_passive",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Mounts",
+      "conditions": {
+        "mounts.mars_passive.prominence": "developed"
+      },
+      "text": "Self-control,passive courage and resistance to adversity.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chXV,p65; Plate XII (scan110)",
+      "tags": [
+        "steady"
+      ],
+      "exceptions": [
+        "No inverse meaning inferred for flat mounts; excessive prominence and leaning require separate rules."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.mount.luna",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Mounts",
+      "conditions": {
+        "mounts.luna.prominence": "developed"
+      },
+      "text": "Imagination,romantic ideals and appreciation of scenery or poetry.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part I,chXV,p65; Plate XII (scan110)",
+      "tags": [
+        "imaginative"
+      ],
+      "exceptions": [
+        "No inverse meaning inferred for flat mounts; excessive prominence and leaning require separate rules."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.life.jupiter_origin",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Life line",
+      "conditions": {
+        "lines.life.presence": "present",
+        "lines.life.origin": "jupiter_base"
+      },
+      "text": "Ambition is the historical theme associated with a Life line beginning at Jupiter rather than the hand edge.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chV,p80",
+      "tags": [
+        "ambitious"
+      ],
+      "exceptions": [],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.life.gap.joined",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Life line",
+      "conditions": {
+        "lines.life.presence": "present",
+        "lines.head.presence": "present",
+        "head_life_gap": "joined"
+      },
+      "text": "A close Head/Life junction is associated with caution and sensitivity in pursuing personal plans.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chV,p80; chVII,pp88,90; joined:Plate XVI d-d",
+      "tags": [
+        "gap_joined",
+        "cautious"
+      ],
+      "exceptions": [],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.life.gap.medium",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Life line",
+      "conditions": {
+        "lines.life.presence": "present",
+        "lines.head.presence": "present",
+        "head_life_gap": "medium"
+      },
+      "text": "A moderate Head/Life gap is associated with initiative and freedom in carrying out plans.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chV,p80; chVII,pp88,90; joined:Plate XVI d-d",
+      "tags": [
+        "gap_medium",
+        "active"
+      ],
+      "exceptions": [],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.life.gap.wide",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Life line",
+      "conditions": {
+        "lines.life.presence": "present",
+        "lines.head.presence": "present",
+        "head_life_gap": "wide"
+      },
+      "text": "A very wide Head/Life gap is associated with haste and excessive self-confidence.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chV,p80; chVII,pp88,90; joined:Plate XVI d-d",
+      "tags": [
+        "gap_wide",
+        "impulsive"
+      ],
+      "exceptions": [],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.life.jupiter_branch",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Life line",
+      "conditions": {
+        "lines.life.presence": "present",
+        "lines.life.branch_to": "jupiter"
+      },
+      "text": "An ascending branch toward Jupiter symbolizes ambition and advancement in position; no event date or success guarantee is inferred.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chV,p81; Plate XVIII c-c (scan157)",
+      "tags": [
+        "ambitious"
+      ],
+      "exceptions": [],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.head.straight",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Head line",
+      "conditions": {
+        "lines.head.presence": "present",
+        "lines.head.curvature": "straight",
+        "lines.head.clarity": "clear",
+        "lines.head.continuity": "unbroken"
+      },
+      "text": "A straight,clear,even Head line is associated with practical common sense.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chVII,pp88-89; upward branches:Part II,chIII,p76",
+      "tags": [
+        "practical"
+      ],
+      "exceptions": [
+        "General reading only; sloping lines have different significance with square versus conic/psychic hand types (p87)."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.head.balanced",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Head line",
+      "conditions": {
+        "lines.head.presence": "present",
+        "lines.head.curvature": "straight_then_sloping"
+      },
+      "text": "A straight first half followed by a slight slope combines practical and imaginative themes.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chVII,pp88-89; upward branches:Part II,chIII,p76",
+      "tags": [
+        "practical",
+        "imaginative"
+      ],
+      "exceptions": [
+        "General reading only; sloping lines have different significance with square versus conic/psychic hand types (p87)."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.head.sloping",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Head line",
+      "conditions": {
+        "lines.head.presence": "present",
+        "lines.head.curvature": "slight_slope"
+      },
+      "text": "A slightly sloping Head line is associated with imaginative work; the source makes its expression dependent on hand type.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chVII,pp88-89; upward branches:Part II,chIII,p76",
+      "tags": [
+        "imaginative"
+      ],
+      "exceptions": [
+        "General reading only; sloping lines have different significance with square versus conic/psychic hand types (p87)."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.head.very_sloping",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Head line",
+      "conditions": {
+        "lines.head.presence": "present",
+        "lines.head.curvature": "very_sloping"
+      },
+      "text": "A strongly sloping Head line is associated with romance,idealism and imaginative interests.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chVII,pp88-89; upward branches:Part II,chIII,p76",
+      "tags": [
+        "imaginative"
+      ],
+      "exceptions": [
+        "General reading only; sloping lines have different significance with square versus conic/psychic hand types (p87)."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.head.long",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Head line",
+      "conditions": {
+        "lines.head.presence": "present",
+        "lines.head.curvature": "straight",
+        "lines.head.length": "very_long"
+      },
+      "text": "An exceptionally long straight Head line reaching the outer edge is associated with intellectual power and self-directed use of it.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chVII,pp88-89; upward branches:Part II,chIII,p76",
+      "tags": [
+        "reflective"
+      ],
+      "exceptions": [
+        "General reading only; sloping lines have different significance with square versus conic/psychic hand types (p87)."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.head.short",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Head line",
+      "conditions": {
+        "lines.head.presence": "present",
+        "lines.head.length": "short"
+      },
+      "text": "A Head line barely reaching mid-palm is associated with a practical,material focus.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chVII,pp88-89; upward branches:Part II,chIII,p76",
+      "tags": [
+        "practical"
+      ],
+      "exceptions": [
+        "General reading only; sloping lines have different significance with square versus conic/psychic hand types (p87)."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.head.chained",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Head line",
+      "conditions": {
+        "lines.head.presence": "present",
+        "lines.head.continuity": "chained"
+      },
+      "text": "A chained Head line is associated with indecision and changing ideas.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chVII,pp88-89; upward branches:Part II,chIII,p76",
+      "tags": [
+        "changeable"
+      ],
+      "exceptions": [
+        "General reading only; sloping lines have different significance with square versus conic/psychic hand types (p87)."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.head.branches",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Head line",
+      "conditions": {
+        "lines.head.presence": "present",
+        "lines.head.branches": "upward"
+      },
+      "text": "Ascending Head-line branches are associated with ambition and talent.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chVII,pp88-89; upward branches:Part II,chIII,p76",
+      "tags": [
+        "ambitious"
+      ],
+      "exceptions": [
+        "General reading only; sloping lines have different significance with square versus conic/psychic hand types (p87)."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.heart.origin.jupiter",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Heart line",
+      "conditions": {
+        "lines.heart.presence": "present",
+        "lines.heart.origin": "jupiter"
+      },
+      "text": "A Heart line rising from central Jupiter is associated with steady,idealistic affection.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chX,p98",
+      "tags": [
+        "affection",
+        "steady"
+      ],
+      "exceptions": [
+        "Source uses rise/origin on thumb side; do not confuse it with the little-finger end. Gender/class stereotypes omitted."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.heart.origin.between_jupiter_saturn",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Heart line",
+      "conditions": {
+        "lines.heart.presence": "present",
+        "lines.heart.origin": "between_jupiter_saturn"
+      },
+      "text": "A Heart line rising between index and middle fingers is associated with a quieter,balanced expression of affection.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chX,p99",
+      "tags": [
+        "affection",
+        "steady"
+      ],
+      "exceptions": [
+        "Source uses rise/origin on thumb side; do not confuse it with the little-finger end. Gender/class stereotypes omitted."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.heart.origin.saturn",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Heart line",
+      "conditions": {
+        "lines.heart.presence": "present",
+        "lines.heart.origin": "saturn"
+      },
+      "text": "A Heart line rising from central Saturn is associated with passionate,more self-focused attachment.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chX,p99",
+      "tags": [
+        "affection",
+        "passionate"
+      ],
+      "exceptions": [
+        "Source uses rise/origin on thumb side; do not confuse it with the little-finger end. Gender/class stereotypes omitted."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.heart.chained",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Heart line",
+      "conditions": {
+        "lines.heart.presence": "present",
+        "lines.heart.continuity": "chained"
+      },
+      "text": "A chained Heart line is associated with changeability in affection.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chIII,p76",
+      "tags": [
+        "affection",
+        "changeable"
+      ],
+      "exceptions": [],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.heart.broken",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Heart line",
+      "conditions": {
+        "lines.heart.presence": "present",
+        "lines.heart.continuity": "broken"
+      },
+      "text": "A broken Heart line is associated with disappointment in affection; location-specific causes and timing are not inferred.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chX,p100",
+      "tags": [
+        "affection",
+        "disappointment"
+      ],
+      "exceptions": [],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.heart.upward",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Heart line",
+      "conditions": {
+        "lines.heart.presence": "present",
+        "lines.heart.branches": "upward",
+        "lines.heart.branch_position": "commencement"
+      },
+      "text": "Branches ascending at the Heart-line commencement are associated with warmth of affection.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chIII,p76",
+      "tags": [
+        "affection",
+        "warm"
+      ],
+      "exceptions": [
+        "Branches refer specifically to the commencement; unlocated branches do not qualify."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.heart.downward",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Heart line",
+      "conditions": {
+        "lines.heart.presence": "present",
+        "lines.heart.branches": "downward",
+        "lines.heart.branch_position": "commencement"
+      },
+      "text": "Descending branches at the Heart-line commencement are associated with reduced warmth of affection.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chIII,p76",
+      "tags": [
+        "affection",
+        "reserved"
+      ],
+      "exceptions": [
+        "Branches refer specifically to the commencement; unlocated branches do not qualify."
+      ],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.heart.small_fork",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Heart line",
+      "conditions": {
+        "lines.heart.presence": "present",
+        "lines.heart.fork": "small_jupiter"
+      },
+      "text": "A small fork on Jupiter is associated with sincerity and enthusiasm in affection.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chX,p100; Plate XVI j-j (scan132)",
+      "tags": [
+        "affection",
+        "warm"
+      ],
+      "exceptions": [],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.heart.balanced_fork",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Heart line",
+      "conditions": {
+        "lines.heart.presence": "present",
+        "lines.heart.fork": "jupiter_and_between"
+      },
+      "text": "A fork resting on Jupiter and between index and middle fingers is associated with a tranquil affectionate disposition.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chX,p100",
+      "tags": [
+        "affection",
+        "steady"
+      ],
+      "exceptions": [],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    },
+    {
+      "id": "palm.cheiro.heart.wide_fork",
+      "version": 1,
+      "technique_id": 8,
+      "profile": "cheiro-ninth-manual-v1",
+      "section": "Heart line",
+      "conditions": {
+        "lines.heart.presence": "present",
+        "lines.heart.fork": "jupiter_and_saturn"
+      },
+      "text": "A fork spanning Jupiter and Saturn is associated with uncertainty in affection.",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chX,p100",
+      "tags": [
+        "affection",
+        "changeable"
+      ],
+      "exceptions": [],
+      "coverage": "direct",
+      "verification": "Original printed page visually inspected; procedure fidelity only,not empirical validity"
+    }
+  ],
+  "excluded_claims": [
+    "health,diagnosis,longevity/death or accident predictions",
+    "crime,mental illness,intelligence measurement or protected-trait inferences",
+    "gender,class,race and national stereotypes",
+    "success guarantees,timing scales and probabilities"
+  ],
+  "research_cutoff": "Coherent Cheiro core and illustrated source cases reached; Benham original download timed out,partial file discarded from evidence; Saint-Germain remains catalog-only. No rules borrowed from those authors."
+}

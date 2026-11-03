@@ -1,5 +1,10 @@
 # Future progress
 
+## Palmistry source/profile pass — 2026-11-03
+- Verified Cheiro original scan title/copyright,printed hand/line/mount chapters and labeled plates. Named cheiro-ninth-manual-v1 preserves observed Ninth Edition versus catalog1898 discrepancy; immutable new source ID/hash. Bounded Western profile,38 page-located direct symbolic rules and6 independently transcribed illustrated details/types; no full-person or empirical validation claim.
+- Hand-side convention remains literal right/acquired,left/natural; dominance recorded without inferred reversal. Life-line health/longevity and other harmful historical claims excluded. Benham original download incomplete,not evidence; Saint-Germain catalog-only. Research cutoff reached; no cross-author synthesis,Indian Samudrika or image extraction.
+
+
 ## Technique8 Palmistry — resource audit, 2026-11-03
 - Began only after Astrocartography closure5d9fac3 committed/pushed. Exact inventory identifies Palmistry; preserved all six variations and ranked Benham/Cheiro/Saint-Germain sources. No Palmistry engine or executable rules added.
 - Located Benham indexed contents/reprint distinction,Cheiro1898 LOC/Commons original-scan metadata and Saint-Germain1897 OpenLibrary/original-scan lead. Registered metadata-only sources; original procedural images/volume locators remain unverified. No copyrighted reprint corpus ingested.
