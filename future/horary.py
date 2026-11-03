@@ -98,8 +98,10 @@ def assess(e,question,category,local,zone,latitude,longitude,protocol='advice-be
     occupants=[b for b,p in ps.items() if p['house']==10]+[b for b,p in nodes.items() if p['house']==10]
     predicates=[];cautions=[]
     def item(target,id,value,reason,page,direction=None,**evidence):
+        engineering=id in ('gate.cusps','gate.moon_degree')
         record={'id':id,'value':value,'reason':reason,'source_id':DATA['source']['id'],'locator':f'Printed p{page}',
-            'at_utc':utc.isoformat(),'evidence':evidence}
+            'at_utc':utc.isoformat(),'evidence':evidence,
+            'implementation_scope':'conservative engineering restriction, source page is contextual rather than the numerical threshold' if engineering else 'source-specific predicate or explicitly partial caution'}
         if direction:record['direction']=direction
         target.append(record)
     item(predicates,'advice.tenth.favorable',any(x in occupants for x in ('Sun','Jupiter','Venus','North Node')),
@@ -177,8 +179,9 @@ def markdown(r):
         f"Querent: {r['significators']['querent']}; Moon co-significator. Tenth-house occupants: source-specific adviser-intent testimony.",'',
         '| Rule | Evaluated value | Reason | Source page |','|---|---|---|---|']
     for d in r['rule_diagnostics']:lines.append(f"| {d['id']} | {d['value']} | {d['reason']} | {d['locator']} |")
-    lines+=['','## Upcoming exact contacts','']
+    lines+=['','## Upcoming contacts and motion changes','']
     for x in r['future_motion']['events']:
-        if x['type']=='exact_aspect':lines.append(f"- {x['utc']}: {' / '.join(x['bodies'])}, {x['angle']} degrees.")
+        detail=f", {x['angle']} degrees" if x['type']=='exact_aspect' else ''
+        lines.append(f"- {x['utc']}: {x['type']}, {' / '.join(x['bodies'])}{detail}.")
     lines+=['',f"Source: [Lilly1647 original page images]({r['source']['url']}).",'',*r['method_limits']]
     return '\n'.join(lines)+'\n'

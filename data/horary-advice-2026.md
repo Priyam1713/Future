@@ -1,3 +1,5 @@
+Illustrative question and moment; not a published judgment.
+
 # Lilly Horary assessment
 
 Question: Was this advice given with honest intent?
@@ -23,13 +25,15 @@ Querent: Saturn; Moon co-significator. Tenth-house occupants: source-specific ad
 | gate.seventh_full | None | Full meaning of unfortunate/impeded seventh lord (pp122–123/115), including besiegement/fixed-star exceptions, not yet fully certified. | Printed p123 |
 | gate.hour_affinity | True | Identity/triplicity or explicit Sun–Mars hot/dry example; other nature matches not invented. | Printed p121 |
 
-## Upcoming exact contacts
+## Upcoming contacts and motion changes
 
-- 2026-11-04T05:33:47.087402+00:00: Sun / Moon, 60 degrees.
-- 2026-11-04T06:57:30.036621+00:00: Moon / Mercury, 60 degrees.
-- 2026-11-04T10:31:21.188965+00:00: Venus / Jupiter, 60 degrees.
-- 2026-11-04T14:24:18.654785+00:00: Sun / Mercury, 0 degrees.
-- 2026-11-06T07:11:51.584472+00:00: Moon / Saturn, 180 degrees.
+- 2026-11-03T08:27:44.978027+00:00: ingress, Moon.
+- 2026-11-04T05:33:47.087402+00:00: exact_aspect, Sun / Moon, 60 degrees.
+- 2026-11-04T06:57:30.036621+00:00: exact_aspect, Moon / Mercury, 60 degrees.
+- 2026-11-04T10:31:21.188965+00:00: exact_aspect, Venus / Jupiter, 60 degrees.
+- 2026-11-04T14:24:18.654785+00:00: exact_aspect, Sun / Mercury, 0 degrees.
+- 2026-11-05T14:38:18.010253+00:00: ingress, Moon.
+- 2026-11-06T07:11:51.584472+00:00: exact_aspect, Moon / Saturn, 180 degrees.
 
 Source: [Lilly1647 original page images](https://wellcomecollection.org/works/s7z7c46y).
 

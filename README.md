@@ -155,3 +155,15 @@ python -m scripts.write_releasing_examples
 The named `brennan-2019-360` profile computes L1–L4 using fixed 360-day years, parent-truncated periods and one Loosing of the Bond per parent. Spirit moves forward one sign when the Lots coincide; Fortune's natal sign remains the angular reference. Full JSON contains period/parent IDs, actual and query-clipped boundaries, bond flags, source rules and limitations. Queries cover at most five civil years within 120 symbolic years after birth. Existing natal ephemeris/time-zone restrictions apply; historical Egyptian calendar reconstruction is unsupported.
 
 Examples: `data/releasing-spirit-1990-2026.*`, `data/releasing-fortune-1990-2026.*` and `data/releasing-diana-reference.json`. Published Gemini durations, L1–L4 tables and Diana's July 22, 1997 bond date are checked separately from independent Swiss/Moshier starting Lots. No published absolute L3/L4 chronology is claimed verified. Discrepancies in Valens/Riley IV.10 remain explicit in `knowledge/zodiacal_releasing.json`. Symbolic peaks describe Fortune-based angularity in the named school; they imply neither favorable outcomes nor established predictive validity.
+
+## Technique5 Horary — Developing
+
+```powershell
+python -m future horary "Was this advice given with honest intent?" advice-intent "2026-11-03T12:00:00" Asia/Kolkata 28.6139 77.209 --protocol advice-begins --format markdown
+python -m scripts.smoke_horary
+python -m scripts.verify_horary
+```
+
+This illustrative example uses Lilly1647 p194: the chart moment is when the adviser first begins disclosing advice. Supply the actual moment/location; the program does not infer them from question text. Named profile `lilly-1647-advice-intent` fixes tropical Regiomontanus, seven classical planets and explicit mean nodes, with IANA folds required for ambiguous clocks. The motion window is four days within1851–2148, abs(latitude)<60 degrees. JSON includes the full chart, significators, dignities/receptions, exact contacts, stations/ingresses, source pages and rule diagnostics; Markdown presents the assessment and timeline.
+
+Advice-intent testimonies are implemented, but **complete question judgment remains experimental and currently returns indeterminate**: general Lilly caution clearance and a matching complete-input published validation are incomplete. A favorable individual testimony cannot override that gap. `unsupported_question` covers unimplemented categories; Frawley/Barclay methods are not substituted. `knowledge/horary_engine_v1.json` freezes coverage and P1/P2 blockers. The Cambridge1643 published chart is source evidence outside current ephemeris support, not a numerically verified modern advice-intent chart. See `data/horary-advice-2026.*` and `data/horary-validation.json`. Numerical agreement does not establish predictive validity. Technique6 has not begun.

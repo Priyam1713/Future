@@ -18,8 +18,9 @@ def run():
             r=json.loads(p.stdout)
             assert r['classification']=='indeterminate' and 'gate.seventh_full' in r['unknown_rules']
             assert r['technique_id']==5 and r['question_chart']['settings']['houses']=='regiomontanus'
-            Path('data/horary-advice-2026.json').write_text(p.stdout,encoding='utf-8')
-        elif name=='Markdown':Path('data/horary-advice-2026.md').write_text(p.stdout,encoding='utf-8')
+            r['example_context']='Constructed demonstration question/time/location, not a published historical judgment or an actual adviser allegation.'
+            Path('data/horary-advice-2026.json').write_text(json.dumps(r,indent=2)+'\n',encoding='utf-8')
+        elif name=='Markdown':Path('data/horary-advice-2026.md').write_text('Illustrative question and moment; not a published judgment.\n\n'+p.stdout,encoding='utf-8')
         elif name=='unsupported':assert json.loads(p.stdout)['classification']=='unsupported_question'
         results.append({'case':name,'passed':True})
     Path('data/horary-smoke.json').write_text(json.dumps(results,indent=2),encoding='utf-8')

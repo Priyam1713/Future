@@ -2,7 +2,7 @@ import json,unittest
 from pathlib import Path
 from datetime import datetime,timedelta,timezone
 from future.natal import SkyfieldEphemeris,signed
-from future.horary import assess,classify,hour_from_events,register_knowledge,DATA
+from future.horary import assess,classify,hour_from_events,register_knowledge,DATA,SCOPE,planetary_hour
 from future.horary_motion import aspect_state,motion,ordered_candidates,contact_roots
 from future.doctrines import dignity,DoctrineSettings
 from future.__main__ import load_registry
@@ -121,3 +121,29 @@ class HoraryTests(unittest.TestCase):
             for r in DATA['rules']:
                 self.assertTrue(r['locator']);self.assertEqual(r['source_id'],DATA['source']['id'])
         finally:registry.close()
+
+    def test_independent_sunrise_mean_node_and_source_scope(self):
+        f=json.loads(Path('tests/fixtures/horary_reference.json').read_text())
+        for c in f['cases']:
+            utc=datetime.fromisoformat(c['utc'])
+            hour=planetary_hour(self.e,utc,c['latitude'],c['longitude'])
+            for key in ('sunrise','sunset','next_sunrise'):
+                delta=(datetime.fromisoformat(hour[key+'_utc'])-utc).total_seconds()
+                self.assertLess(abs(delta-c[key+'_seconds_from_start']),120)
+            r=assess(self.e,'Question','advice-intent',c['utc'][:-6],'UTC',c['latitude'],c['longitude'])
+            self.assertLess(abs(signed(r['nodes']['positions']['North Node']['longitude']-c['mean_node_longitude'])),.02)
+            for reading in r['interpretations']:
+                self.assertEqual(reading['coverage'],'direct');self.assertIn('Individual testimony',reading['limitation'])
+        self.assertEqual(SCOPE['status'],'Developing');self.assertIn('NOT MET',SCOPE['acceptance']['core_v1'])
+        pages=json.loads(Path('knowledge/horary_image_provenance.json').read_text())
+        self.assertEqual(len(pages),len({p['printed_page'] for p in pages}))
+        self.assertGreaterEqual(len(pages),32)
+        for p in pages:self.assertRegex(p['sha256'],r'^[0-9a-f]{64}$')
+
+    def test_explicit_fold_and_repeatability(self):
+        args=[self.e,'Question','advice-intent','2024-11-03T01:30:00','America/New_York',40,-74]
+        a=assess(*args,fold=0);b=assess(*args,fold=1)
+        self.assertEqual((datetime.fromisoformat(b['question_chart']['birth']['utc'])-
+                          datetime.fromisoformat(a['question_chart']['birth']['utc'])).total_seconds(),3600)
+        again=assess(*args,fold=0)
+        self.assertEqual(a,again)

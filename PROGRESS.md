@@ -1,5 +1,11 @@
 # Future progress
 
+## Horary Pass3 — verification and readiness decision, 2026-11-03
+- Calculation pass fbac165 pushed. All98 tests pass (original87 retained);59 CLI smoke cases pass across five techniques. Added independent sunrise/set and mean-node checks, explicit DST-fold repeatability, source-image provenance consistency and readable motion-change timeline. No new runtime dependency; pip check clean.
+- Three independent Swiss/Moshier fixtures match all30 contact/ingress/station events: maximum time difference7.104s; planetary longitude0.000350 degrees, cusp0.001520 degrees, rise/set2.056s. These sampled error measurements are separate from historical fidelity or predictive validity. Reproduce with scripts.verify_horary; reference generator imports no Future code.
+- Frozen supported/experimental/unsupported matrix and P1/P2 backlog in horary_engine_v1.json; updated audit/README and illustrative JSON/Markdown. Original Cambridge chart remains documentary, outside supported ephemeris and a different question category.
+- Core v1 acceptance NOT MET: full unfortunate/impeded seventh-lord caution clearance and a matching complete-input published advice-intent validation remain unresolved; no partial testimony is promoted to supported judgment. Technique5 remains Developing; Technique6 audit has not begun. Next bounded work is to resolve that specific clearance/validation gap, not expand categories or frameworks.
+
 ## Horary Pass2 — executable source-bounded assessment, 2026-11-03
 - Source extraction b32ae01 pushed first. Added isolated horary/horary_motion modules and JSON/Markdown CLI: explicit advice-begins input, Regiomontanus classical chart, Lilly conditions/receptions, p194 testimony, planetary hours, four-day moving contacts/ingresses/stations and timestamped source diagnostics. Existing Western behavior unchanged.
 -96 tests pass, retaining all87 previous tests. New independent Swiss/Moshier fixtures cover three epochs, both hemispheres, seven planetary positions/cusps and every solved classical contact; source p107/p112 and planetary-hour examples also checked. A constructed symmetric-station double crossing exposed a miss; Horary-specific flat-pair refinement fixes it without changing existing Western roots.

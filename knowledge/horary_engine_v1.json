@@ -34,6 +34,15 @@
     "published_example": "Original Cambridge pp200–201 inspected, different category and outside current ephemeris; not an advice-intent numerical acceptance fixture",
     "next_technique": "Not started; await a genuinely complete bounded category"
   },
+  "verification": {
+    "tests": 98,
+    "previous_tests_retained": 87,
+    "cli_smoke_cases": {"Western": 23, "Vedic": 12, "Chinese": 15, "Numerology": 4, "Horary": 5},
+    "independent": "Three Swiss/Moshier fixtures,30 matched contact/ingress/station events, two hemispheres; positions, cusps, mean nodes, sunrise/sunset; see data/horary-validation.json",
+    "source_arithmetic": "Original p107 moiety,p112 reception and pp483–485 unequal planetary-hour examples",
+    "regression": "Symmetric-station paired crossings, half-open boundaries, relative motion, intervening recipient contact, conflict/unknown handling, DST gaps/folds, profile isolation and reproducibility",
+    "dependency_audit": "pip check clean; no new runtime packages or Swiss production imports"
+  },
   "P1": [
     "Resolve source scope of unfortunate/impeded seventh lord pp122–123 against full p115 accidentals; certify one bounded category without treating omissions as clearance",
     "Obtain independent complete-input advice-intent chart/judgment matching selected protocol and supported date range",

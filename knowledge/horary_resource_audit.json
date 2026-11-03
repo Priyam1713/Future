@@ -1,7 +1,7 @@
 {
   "technique_id": 5,
   "name": "Horary Astrology",
-  "status": "Researching",
+  "status": "Developing",
   "predecessor_closure": "3ebf99e",
   "variations": [
     {
@@ -10,7 +10,7 @@
         "Horary Astrology Rediscovered",
         "The Horary Textbook"
       ],
-      "status": "unsupported"
+      "status": "Developing: isolated Lilly1647 advice-intent diagnostics; no complete category certified"
     },
     {
       "name": "contemporary traditional",
@@ -97,12 +97,23 @@
       "finding": "Publisher scope/title lead; chapter rules not inspected."
     }
   ],
-  "pending": [
+  "proposed_core": "One narrowly sourced question category, deterministic significator/contact trace and explicit indeterminate judgments when coverage incomplete.",
+  "limits": "Executable advice-intent diagnostic engine added; current readiness/coverage in horary_engine_v1.json. Source extraction does not certify a complete judgment. Historical1643 Cambridge chart is documentary only. Frawley/Barclay and other categories remain unsupported.",
+  "initial_pending": [
     "Question acceptance and chart-moment/location protocol",
     "Significator assignment by question category",
     "Source-specific reception, perfection, prohibition, translation/collection and exceptions",
     "Published complete-input judgment examples; historical calendars separate"
   ],
-  "proposed_core": "One narrowly sourced question category, deterministic significator/contact trace and explicit indeterminate judgments when coverage incomplete.",
-  "limits": "No Horary engine or verified judgment rules added. Western astronomy can be reused; natal/electional interpretations do not become Horary rules automatically."
+  "pending": [
+    "Full seventh-lord unfortunate/impeded caution clearance pp115/122\u2013123",
+    "Same-category complete-input published judgment within supported ephemeris",
+    "Source-exception handling and certified perfection/translation/collection where required"
+  ],
+  "current_records": [
+    "horary_lilly_v1.json",
+    "horary_image_provenance.json",
+    "horary_engine_v1.json",
+    "../data/horary-validation.json"
+  ]
 }

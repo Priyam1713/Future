@@ -1,0 +1,54 @@
+{
+  "technique_id": 5,
+  "oracle": "Swiss Ephemeris 2.10.03, Moshier apparent tropical geocentric; Regiomontanus; own UTC-to-TT/UT conversion",
+  "fixture": "tests/fixtures/horary_reference.json",
+  "cases": [
+    {
+      "utc": "2026-11-03T06:30:00+00:00",
+      "latitude": 28.6139,
+      "longitude": 77.209,
+      "errors": {
+        "max_planet_longitude_error_degrees": 4.8524851365527866e-05,
+        "max_cusp_error_degrees": 0.00151950651968491,
+        "max_motion_event_error_seconds": 7.103944739152212,
+        "max_rise_set_error_seconds": 1.6312799651641399,
+        "mean_node_error_degrees": 0.0022903228900190697
+      },
+      "motion_events": 7,
+      "classification": "indeterminate"
+    },
+    {
+      "utc": "2024-04-01T00:00:00+00:00",
+      "latitude": -33.8688,
+      "longitude": 151.2093,
+      "errors": {
+        "max_planet_longitude_error_degrees": 0.00034949465356248766,
+        "max_cusp_error_degrees": 0.000543951043709967,
+        "max_motion_event_error_seconds": 3.8927102917223237,
+        "max_rise_set_error_seconds": 2.0552835542730463,
+        "mean_node_error_degrees": 0.0014377651262122981
+      },
+      "motion_events": 11,
+      "classification": "indeterminate"
+    },
+    {
+      "utc": "2000-02-28T00:00:00+00:00",
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "errors": {
+        "max_planet_longitude_error_degrees": 0.00014927194081337802,
+        "max_cusp_error_degrees": 1.7011539284794708e-05,
+        "max_motion_event_error_seconds": 0.6937073162116576,
+        "max_rise_set_error_seconds": 1.6893096686108038,
+        "mean_node_error_degrees": 0.003843958538880088
+      },
+      "motion_events": 12,
+      "classification": "indeterminate"
+    }
+  ],
+  "numerical_result": "pass within declared tolerances; convergence is not absolute timing uncertainty",
+  "source_examples": "Lilly p107 moiety,p112 reception,pp483\u2013485 unequal hours; Cambridge pp200\u2013201 documentary only",
+  "historical_fidelity": "partial: source-specific p194 testimonies calculated, full caution clearance and same-category published validation unresolved",
+  "core_v1_acceptance": "not met; retain Developing and do not start Technique6",
+  "predictive_validity": "not established or quantified"
+}
