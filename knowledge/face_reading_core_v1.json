@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "technique_id": 9,
+  "name": "Face Reading / Physiognomy",
+  "status": "Core v1 Ready \u2014 Historical/Symbolic Reference Scope",
+  "date": "2026-11-03",
+  "profile": "lavater-hunter-1789-reference-v1",
+  "tradition": "Western historical physiognomy \u2014 Lavater/Hunter Volume I documentary scope",
+  "source_pass_commit": "e2043f4",
+  "implementation_commit": "5322444",
+  "supported": [
+    "Validated manual orientation/region/geometry/marking annotations and explicit unknown/uncertain values",
+    "Six source-defined regional documentary lookups with printed/canvas locators and versioned rule IDs",
+    "Two Hunter/Lavater terminology records and three exact published forehead schematic IDs",
+    "Explicit subject/viewer side frames; known-frontal mirror transforms for labels and normalized points",
+    "Profile-side visibility conflicts,occlusion conflicts and overlapping contradictory observations flagged without guessing",
+    "Offline JSON/Markdown CLI,full input reference and source-linked examples",
+    "Historical associations remain region-only text,independent of geometry/markings/side; no individual assessment"
+  ],
+  "experimental": [
+    "User-observation correctness is unmeasured; geometry is recorded,not independently recognized",
+    "Qualitative schematic curvature/base descriptions are manual transcriptions,not calibrated measurements",
+    "Software side/coordinate conventions are explicit annotations,not claimed Lavater measurement procedures"
+  ],
+  "unsupported": [
+    "Any individual intelligence,honesty,morality,criminality,personality,health,ethnicity,protected-trait or life-outcome inference",
+    "Face/personality scores,employment suitability,diagnoses,probabilities or historical capacity-ranking algorithms",
+    "Chinese Mian Xiang,five elements,12 palaces and unavailable Yap/Bridges procedural profiles",
+    "Other Lavater volumes/translations or uninspected figure-specific rules",
+    "Photograph input,automatic landmark extraction,biometric identification and inferred anatomy from annotation coordinates",
+    "Converting profile projections into frontal points or guessing unknown viewer mirroring"
+  ],
+  "configuration_matrix": {
+    "profile": "lavater-hunter-1789-reference-v1",
+    "modes": [
+      "manual",
+      "source_example"
+    ],
+    "task": "historical_reference only",
+    "manual": "1-24 annotations; six supported region IDs,unknown IDs retained unsupported; no image/identity fields",
+    "regions": [
+      "forehead",
+      "nose",
+      "cheeks",
+      "mouth",
+      "chin",
+      "eyes"
+    ],
+    "source_examples": [
+      "lavater-v1-p265-figure-1",
+      "lavater-v1-p265-figure-2",
+      "lavater-v1-p265-figure-3"
+    ],
+    "orientation": "left_profile/right_profile name visible anatomical side; subject/viewer label convention declared; frontal x->1-x only for known nonmirrored viewer frame",
+    "source_scope": "1789 Hunter Volume I,title canvas7,p18 canvas58,p20 canvas60,p23 canvas63,pp265-266 canvases339-340",
+    "inference": "Disabled; every row has association_applied_to_individual:false and null individual_assessment; geometry never chooses historical association",
+    "unknown_conflicts": "Preserved as partial/ambiguous/conflicting observations; archival references available independently"
+  },
+  "acceptance": {
+    "passed": true,
+    "tests": 146,
+    "inherited_tests": 134,
+    "new_tests": 12,
+    "total_cli_cases": 105,
+    "cli_smoke_cases": {
+      "Western": 23,
+      "Vedic": 12,
+      "Chinese": 15,
+      "Numerology": 4,
+      "Horary": 5,
+      "Mundane": 12,
+      "Astrocartography": 12,
+      "Palmistry": 10,
+      "FaceReference": 12
+    },
+    "independent_source_cases": {
+      "region_entries": 6,
+      "labeled_schematics": 3
+    },
+    "verification": "data/face-reference-verification.json",
+    "reports": [
+      "data/face-reference-manual.json",
+      "data/face-reference-manual.md",
+      "data/face-reference-schematic.json",
+      "data/face-reference-schematic.md"
+    ],
+    "limits": "Source-label/illustration fidelity and deterministic software behavior only; not image-recognition accuracy or validity of physiognomic claims."
+  },
+  "P1": [
+    "More legitimate original/permitted regional diagrams and terminology under separate traditions",
+    "Additional historical source examples and critical context,without individualized trait inference",
+    "Improved neutral observation guidance and independently checked annotation conventions"
+  ],
+  "P2": [
+    "Consent-based region localization only after independent extraction accuracy,orientation validation and user correction",
+    "More Hunter volumes and separately scoped Holcroft/Chinese historical source documentation",
+    "Additional archival diagram/edition comparisons"
+  ],
+  "licensing": "No runtime dependencies added; pip check clean. Wellcome PDM original images are linked and digested as unbundled research references. No copyrighted modern book corpus or personal face image ingested. Existing source/local distribution policies retained.",
+  "meaning": "A functioning bounded historical/symbolic reference and annotation product; no empirically validated character reading or future prediction.",
+  "next": "After closure is committed/pushed,identify Technique10 from original inventory and audit historical sources/feasibility only; do not implement individualized skull-shape inference."
+}

@@ -1,6 +1,6 @@
 # Future
 
-Technique #9 **Face Reading / Physiognomy — Developing**: historical region/terminology reference under `lavater-hunter-1789-reference-v1`. Source pages/figures are recorded in `knowledge/face_reading_lavater_v1.json`; original inventory remains preserved. No individualized physiognomic inference is implemented.
+Technique #9 **Face Reading / Physiognomy — Core v1 Ready — Historical/Symbolic Reference Scope** under `lavater-hunter-1789-reference-v1`. All146 tests/105 CLI cases pass. Source pages/figures are recorded in `knowledge/face_reading_lavater_v1.json`; supported/experimental/unsupported scope and P1/P2 are frozen in `knowledge/face_reading_core_v1.json`. No individualized physiognomic inference is implemented.
 
 Technique #8 **Palmistry — Core v1 Ready**: manual Western readings under `cheiro-ninth-manual-v1`. All134 tests/93 CLI cases pass. Source rules are in `knowledge/palmistry_cheiro_v1.json`; frozen supported/experimental/unsupported scope and P1/P2 are in `knowledge/palmistry_core_v1.json`. Original rankings/variations remain preserved.
 

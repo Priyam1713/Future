@@ -1,5 +1,5 @@
 # Historical face-reading reference
-Developing | lavater-hunter-1789-reference-v1
+Core v1 Ready — Historical/Symbolic Reference Scope | lavater-hunter-1789-reference-v1
 8 annotations; 8 region-reference lookups; 0 observation conflicts; zero personal assessments.
 Historical claims below describe Lavater's text. No observation is used to assess a person.
 Source: [Essays on Physiognomy,Volume I,London John Murray/Hunter/Holloway,1789; title visually inspected](https://wellcomecollection.org/works/hdwza8s9)

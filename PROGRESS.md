@@ -1,5 +1,11 @@
 # Future progress
 
+## Face Reading Core v1 closure — 2026-11-03
+- Implementation5322444 committed/pushed first. Technique9 **Core v1 Ready — Historical/Symbolic Reference Scope** for lavater-hunter-1789-reference-v1:6 regional entries,2 terminology records,3 source schematics,manual annotations/orientation and JSON/Markdown references. Configuration matrix,P1/P2 and source/observation limits frozen in face_reading_core_v1.json.
+- All146 tests/105 CLI cases pass,retaining134/93 inherited. Nine independently transcribed entries/illustrations verify source fidelity only. Geometry-invariant historical context and explicit rejection of personalized inference are acceptance gates; no trait/diagnosis/scoring or CV functionality claimed. Original source/rank/variation metadata preserved.
+- Commit/push closure before Technique10 audit. Remaining modern procedural access,other traditions/editions and neutral source diagrams are refinement work; no appearance-to-intelligence/character/medical judgments will be implemented as part of this scope.
+
+
 ## Face Reading implementation/verification pass — 2026-11-03
 - Source passe2043f4 committed/pushed. Added isolated face-reference manual/source-example CLI with validated orientation,frontal mirror/side/point transforms,six regional documentary references,two terminology records and three published schematic IDs. Geometry/markings stay descriptive; reference context never depends on them and no individual assessment is generated. Unknowns,conflicts and unsupported regions remain explicit.
 - All146 tests pass (134 inherited +12 meaningful reference tests); all105 CLI cases pass (93 inherited +12 new). Nine independently transcribed source cases cover six regional entries and three labeled illustrations; geometry-invariance,mirroring,profile isolation,inference rejection and reproducibility checked. Samples/input reference/verification JSON supplied; pip check clean,no dependencies or earlier-engine behavior changed.
