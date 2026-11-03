@@ -193,7 +193,18 @@ def main():
     face=sub.add_parser('face-reference')
     face.add_argument('input',help='Path to manual region annotations or named historical schematic JSON')
     face.add_argument('--format',choices=['json','markdown'],default='json')
+    phren=sub.add_parser('phrenology-reference')
+    phren.add_argument('input',help='Path to historical schematic/label selection JSON; no personal data')
+    phren.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='phrenology-reference':
+        from .phrenology import load_input,reference,markdown
+        registry=load_registry(args.database)
+        try:
+            result=reference(load_input(args.input),registry)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close()
+        return
     if args.command=='face-reference':
         from .face_reading import load_input,reference,markdown
         registry=load_registry(args.database)

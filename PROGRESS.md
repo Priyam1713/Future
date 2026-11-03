@@ -1,5 +1,9 @@
 # Future progress
 
+## Phrenology implementation/verification pass — 2026-11-03
+- Source pass7ab0831 committed/pushed. Added isolated phrenology-reference JSON/Markdown CLI:37 original legend entries,three printed views/62 label occurrences,36 distinct mapped labels,four explicit software browsing groups and versioned registry rules. Dagger anchor remains unverified; unknowns,candidates and conflicts never silently resolve. No personal images,geometry,measurements or inference accepted.
+- All158 tests/117 CLI cases pass,retaining146/105 inherited;12 new reference tests and12 public CLI cases.48 independent original-image transcription cases cover37 legend entries,seven positions and four absences.15 descriptions use selected inspected passages;22 are explicitly legend/category-only. pip check clean,no runtime dependency added. Reports and verification JSON supplied; historical fidelity is not scientific validation. Separate readiness freeze follows.
+
 ## Phrenology source/profile pass — 2026-11-03
 - Inspected Spurzheim1833 Second American VolI title,original frontispiece/legend,contents and selected passages. Frozen spurzheim-1833-second-american-v1:35 numbered entries plus two unnumbered symbols,three printed views,15 passage summaries and22 legend-only descriptions. No fabricated36/37 or anatomical laterality.
 - Versioned source/locators,image digests and independent manual fixtures retained; original scans unbundled. Dagger has no verified frontispiece anchor; Gall/Combe/other editions separate and unsupported. Source fidelity does not validate discredited phrenology. Research cutoff reached; historical lookup implementation next.
