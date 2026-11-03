@@ -1,6 +1,6 @@
 # Future
 
-Technique #12 **Podomancy / Foot Reading — Developing**: `anonymous-booksellers-pg67858-foot-reference-v1` provides six source-attributed foot-form,sole-line and sole-skin references across two regions. The anonymous pseudo-Aristotle text is separate from Somogyi/Sheehan; individual toe rules,Indian methods and personal appearance-to-trait or medical inference are unsupported.
+Technique #12 **Podomancy / Foot Reading — Core v1 Ready — Historical/Symbolic Reference Scope**: `anonymous-booksellers-pg67858-foot-reference-v1` provides six source-attributed foot-form,sole-line and sole-skin references across two regions. All182 tests/141 CLI cases pass; frozen bounded scope/P1/P2 in `knowledge/podomancy_core_v1.json`. The anonymous pseudo-Aristotle text is separate from Somogyi/Sheehan; individual toe rules,Indian methods and personal appearance-to-trait or medical inference are unsupported.
 
 ```powershell
 python -m future podomancy-reference data/podomancy-reference-input.json --format markdown

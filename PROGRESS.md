@@ -1,5 +1,9 @@
 # Future progress
 
+## Podomancy Core v1 closure — 2026-11-03
+- Implementationf5fc32e committed/pushed. Technique12 **Core v1 Ready — Historical/Symbolic Reference Scope**,OptionA for the six-entry anonymous Booksellers foot/sole reference only. Frozen supported/experimental/unsupported matrix,independent-transcription verification,licensing/source limits and P1/P2 in podomancy_core_v1.json. No claim that ranked contemporary methods or individual toe rules are implemented.
+-182 tests/141 CLI cases pass,retaining170/129 inherited. Primary transcription,not original facsimile or empirical validity,verified. Exact year/scan,ranked books and other traditions deferred; no clinical or personal appearance-to-trait inference. Commit/push closure before Technique13 audit.
+
 ## Podomancy implementation/verification pass — 2026-11-03
 - Source pass454cebe committed/pushed. Added podomancy-reference offline JSON/Markdown CLI:6 attributed documentary foot-form,sole-line and sole-skin entries across2 regions and six textual teaching examples. Strict references preserve ambiguous/unknown/conflicting inputs,plantar/dorsal distinctions and subject-side mirror invariance; unverified viewer layout remains unknown. No appearance classifier or personal measurements/images.
 - All182 tests/141 CLI cases pass,retaining170/129 inherited.12 new regression tests,12 new public CLI cases and6 independent primary-transcription comparisons pass. No runtime dependencies added; pip check clean. Anonymous/pseudonymous authorship,undated edition and unmatched original scan explicit; no Somogyi/Sheehan/Indian or individual toe rules. Separate bounded readiness freeze follows.

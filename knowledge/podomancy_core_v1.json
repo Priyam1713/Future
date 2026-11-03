@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "technique_id": 12,
+  "name": "Podomancy / Foot Reading",
+  "status": "Core v1 Ready — Historical/Symbolic Reference Scope",
+  "date": "2026-11-03",
+  "profile": "anonymous-booksellers-pg67858-foot-reference-v1",
+  "source_pass_commit": "454cebe",
+  "implementation_commit": "f5fc32e",
+  "source_id": "podomancy-anonymous-booksellers-pg67858-v1",
+  "supported": [
+    "Six useful source-attributed historical reference descriptions:two whole-foot forms,two sole-line patterns,two sole-skin descriptions",
+    "Two source-defined regions:whole foot and sole; exact documentary IDs,source qualifiers and comparison links",
+    "Subject-left/right/both/unknown labels; explicit plantar/dorsal/unknown view and mirrored/unknown metadata",
+    "Dorsal/sole conflicts,unknown viewer layout,uncertain selections,unknown IDs and candidate ambiguity preserved",
+    "Six reproducible textual teaching examples; source title,authorship,chapter/page markers and immutable traditional registry rules",
+    "Offline JSON/Markdown CLI; no individual assessment or added dependencies"
+  ],
+  "experimental": [
+    "Qualitative source adjectives are not calibrated geometry and are not operational feature thresholds",
+    "Exact print year and matching original page images unresolved; primary transcription/page markers verified,not facsimile fidelity",
+    "Software plantar/dorsal and mirror-label conventions are explicit,not a claimed historical illustrated procedure"
+  ],
+  "unsupported": [
+    "All individual personality,intelligence,health,criminality,longevity or future-outcome judgments from feet",
+    "Medical diagnosis,reflexology treatment,physical measurements,personal photographs and image extraction",
+    "Individual toe names,order,shape classifications and toe-region rules; toe_rules=0",
+    "Somogyi/Sheehan book procedures and Indian foot-sign traditions",
+    "Other sole-mark maps,named foot-line systems and other editions",
+    "Invented quantitative shape/line/skin thresholds,statistical accuracy,universal side polarity or strength scoring",
+    "Viewer-to-subject side conversion without a verified layout"
+  ],
+  "configuration_matrix": {
+    "profile": "anonymous-booksellers-pg67858-foot-reference-v1",
+    "task": "historical_reference",
+    "modes": [
+      "manual",
+      "source_example"
+    ],
+    "entry_ids": [
+      "foot_broad_thick_long",
+      "foot_thin_lean_soft",
+      "sole_many_long_lines",
+      "sole_short_crossed_lines",
+      "sole_thick_skin",
+      "sole_thin_skin"
+    ],
+    "region_ids": [
+      "whole_foot",
+      "sole"
+    ],
+    "toe_ids": [],
+    "manual": "1-24 exact entry/region or ambiguous candidate selections; no physical observations",
+    "side": [
+      "left",
+      "right",
+      "both",
+      "unknown"
+    ],
+    "view": [
+      "plantar",
+      "dorsal",
+      "unknown"
+    ],
+    "frame": [
+      "subject",
+      "viewer"
+    ],
+    "mirrored": "boolean or unknown; subject-side labels never swap; viewer labels unresolved",
+    "certainty": [
+      "certain",
+      "uncertain",
+      "unknown"
+    ],
+    "schematic_id": "pg67858-textual-foot-index-v1",
+    "schematic_kind": "Software textual index of six source descriptions; no original toe/sole diagram claimed",
+    "source_examples": [
+      "foot_broad_thick_long",
+      "foot_thin_lean_soft",
+      "sole_many_long_lines",
+      "sole_short_crossed_lines",
+      "sole_thick_skin",
+      "sole_thin_skin"
+    ],
+    "statuses": [
+      "resolved_reference",
+      "partial_reference",
+      "ambiguous",
+      "conflict",
+      "view_conflict",
+      "unsupported_reference"
+    ],
+    "inference_enabled": false,
+    "individual_assessment": null
+  },
+  "acceptance": {
+    "passed": true,
+    "tests": 182,
+    "inherited_tests": 170,
+    "new_tests": 12,
+    "total_cli_cases": 141,
+    "inherited_cli_cases": 129,
+    "new_cli_cases": 12,
+    "independent_transcription_cases": 6,
+    "verification_report": "data/podomancy-verification.json",
+    "smoke_report": "data/podomancy-smoke.json",
+    "dependency_check": "pip check clean,no new runtime dependencies",
+    "validation_scope": "Primary-text source fidelity,deterministic reference handling and orientation/input isolation; not empirical or predictive validity"
+  },
+  "P1": [
+    "Legitimate complete procedural access and allowed-use review for ranked Somogyi/Sheehan profiles",
+    "Match original scan/print edition and verify typography/page markers for current anonymous source",
+    "Expand source-supported references/fixtures where useful without inventing individual toe rules"
+  ],
+  "P2": [
+    "Independent original Indian foot-sign sources and lineage separation",
+    "Other historical editions,sole-mark diagrams and source-specific named foot lines"
+  ],
+  "licensing": "Gutenberg catalog identifies original work as public domain in USA; anonymous historical text,undated edition. Only original research paraphrases and source labels retained,no branded ebook or contemporary book pages redistributed. Modern Somogyi/Sheehan material not ingested as rules.",
+  "scientific_limit": "Historical/symbolic reference only. No personal character,intelligence,health,criminality or life-outcome inference; no reflexology treatment.",
+  "inventory": "Workbook hash,all IDs,ranked sources,four variations and six exclusions unchanged. Supplemental anonymous source does not replace original rankings.",
+  "readiness_decision": "Option A for six-entry historical foot/sole reference only; not readiness of contemporary ranked methods or comprehensive podomancy.",
+  "next": "Commit/push this accepted bounded closure before Technique13 resource audit; no Technique13 implementation"
+}
