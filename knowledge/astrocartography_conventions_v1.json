@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "technique_id": 7,
+  "profile": "geocentric-apparent-geometric-v1",
+  "status": "Developing",
+  "sources": [
+    {
+      "id": "acg-usno-geometry-v1",
+      "author": "US Naval Observatory",
+      "edition": "Online reference checked 2026-11-03",
+      "url": "https://aa.usno.navy.mil/faq/alt_az",
+      "locator": "Local hour angle; Altitude equations",
+      "ingestion": "metadata_only",
+      "rights_note": "Original concise factual/symbolic summaries only; no article or book text ingested."
+    },
+    {
+      "id": "acg-skyfield-coordinates-v1",
+      "author": "Brandon Rhodes / Skyfield",
+      "edition": "Online reference checked 2026-11-03",
+      "url": "https://rhodesmill.org/skyfield/positions.html",
+      "locator": "Apparent right ascension and declination; Barycentric to Astrometric to Apparent",
+      "ingestion": "metadata_only",
+      "rights_note": "Original concise factual/symbolic summaries only; no article or book text ingested."
+    },
+    {
+      "id": "acg-symbol-sun-v1",
+      "author": "Cafe Astrology editorial",
+      "edition": "Online reference checked 2026-11-03",
+      "url": "https://cafeastrology.com/sun.html",
+      "locator": "Opening planetary symbolism paragraphs",
+      "ingestion": "metadata_only",
+      "rights_note": "Original concise factual/symbolic summaries only; no article or book text ingested."
+    },
+    {
+      "id": "acg-symbol-moon-v1",
+      "author": "Cafe Astrology editorial",
+      "edition": "Online reference checked 2026-11-03",
+      "url": "https://cafeastrology.com/moon.html",
+      "locator": "Opening planetary symbolism paragraphs",
+      "ingestion": "metadata_only",
+      "rights_note": "Original concise factual/symbolic summaries only; no article or book text ingested."
+    },
+    {
+      "id": "acg-symbol-mercury-v1",
+      "author": "Cafe Astrology editorial",
+      "edition": "Online reference checked 2026-11-03",
+      "url": "https://cafeastrology.com/mercury.html",
+      "locator": "Opening planetary symbolism paragraphs",
+      "ingestion": "metadata_only",
+      "rights_note": "Original concise factual/symbolic summaries only; no article or book text ingested."
+    },
+    {
+      "id": "acg-symbol-venus-v1",
+      "author": "Cafe Astrology editorial",
+      "edition": "Online reference checked 2026-11-03",
+      "url": "https://cafeastrology.com/venus.html",
+      "locator": "Opening planetary symbolism paragraphs",
+      "ingestion": "metadata_only",
+      "rights_note": "Original concise factual/symbolic summaries only; no article or book text ingested."
+    },
+    {
+      "id": "acg-symbol-mars-v1",
+      "author": "Cafe Astrology editorial",
+      "edition": "Online reference checked 2026-11-03",
+      "url": "https://cafeastrology.com/mars.html",
+      "locator": "Opening planetary symbolism paragraphs",
+      "ingestion": "metadata_only",
+      "rights_note": "Original concise factual/symbolic summaries only; no article or book text ingested."
+    },
+    {
+      "id": "acg-symbol-jupiter-v1",
+      "author": "Cafe Astrology editorial",
+      "edition": "Online reference checked 2026-11-03",
+      "url": "https://cafeastrology.com/jupiter.html",
+      "locator": "Opening planetary symbolism paragraphs",
+      "ingestion": "metadata_only",
+      "rights_note": "Original concise factual/symbolic summaries only; no article or book text ingested."
+    },
+    {
+      "id": "acg-symbol-saturn-v1",
+      "author": "Cafe Astrology editorial",
+      "edition": "Online reference checked 2026-11-03",
+      "url": "https://cafeastrology.com/saturn.html",
+      "locator": "Opening planetary symbolism paragraphs",
+      "ingestion": "metadata_only",
+      "rights_note": "Original concise factual/symbolic summaries only; no article or book text ingested."
+    },
+    {
+      "id": "acg-symbol-uranus-v1",
+      "author": "Cafe Astrology editorial",
+      "edition": "Online reference checked 2026-11-03",
+      "url": "https://cafeastrology.com/uranus.html",
+      "locator": "Opening planetary symbolism paragraphs",
+      "ingestion": "metadata_only",
+      "rights_note": "Original concise factual/symbolic summaries only; no article or book text ingested."
+    },
+    {
+      "id": "acg-symbol-neptune-v1",
+      "author": "Cafe Astrology editorial",
+      "edition": "Online reference checked 2026-11-03",
+      "url": "https://cafeastrology.com/neptune.html",
+      "locator": "Opening planetary symbolism paragraphs",
+      "ingestion": "metadata_only",
+      "rights_note": "Original concise factual/symbolic summaries only; no article or book text ingested."
+    },
+    {
+      "id": "acg-symbol-pluto-v1",
+      "author": "Cafe Astrology editorial",
+      "edition": "Online reference checked 2026-11-03",
+      "url": "https://cafeastrology.com/pluto.html",
+      "locator": "Opening planetary symbolism paragraphs",
+      "ingestion": "metadata_only",
+      "rights_note": "Original concise factual/symbolic summaries only; no article or book text ingested."
+    },
+    {
+      "id": "acg-axis-topics-v1",
+      "author": "Cafe Astrology editorial",
+      "edition": "Online reference checked 2026-11-03",
+      "url": "https://cafeastrology.com/?da_image=houses-of-the-natal-chart",
+      "locator": "Houses 1,4,7,10; general natal topics, not direct locational readings",
+      "ingestion": "metadata_only",
+      "rights_note": "Original concise factual/symbolic summaries only; no article or book text ingested."
+    }
+  ],
+  "conventions": {
+    "coordinates": "Geocentric apparent body-center RA/declination, true equator/equinox of date; actual planetary latitude retained",
+    "sidereal_time": "GAST; east-positive geographic longitude; H=GAST*15+longitude-RA",
+    "horizon": "Geometric altitude zero; no refraction, observer parallax, limb, elevation or polar motion correction",
+    "time": "Pinned IANA tzdata; explicit DST fold; Skyfield UTC/UT1/TT and IAU2000A; proleptic Gregorian 1851-2148",
+    "meridians": "MC H=0, IC H=180; upper/lower passage need not be visible or overhead",
+    "branches": "ASC increasing geometric altitude with hour angle; DSC decreasing. Grazing endpoints and geographic poles excluded from mapped branches",
+    "map": "GeoJSON longitude/latitude; adaptive geographic linear interpolation, antimeridian split on analytic curve; tolerance is numerical, not symbolic orb",
+    "distance": "Shortest spherical distance to angular semicircle closure on sphere R=6371.0088km; grazing/polar endpoints identified, not claimed rising/setting",
+    "relocation": "Same absolute UTC; tropical longitude-sector houses; default Placidus software choice, six existing systems; |latitude|<60 verified chart scope, no polar fallback",
+    "uncertainty": "Deterministic offsets +/- user minutes (0-60); no statistical confidence interval"
+  },
+  "book_review": {
+    "original_inventory_preserved": true,
+    "title_page_verified": false,
+    "attempt": "Continuum bibliography and Google Books catalog inspected; original title page unavailable through legitimate access. Davis publisher description only; Psychology catalogue only.",
+    "attribution": "Guttman coauthor indicated by bibliography; inventory Irving unchanged. No procedural rule assigned to any of the three books.",
+    "source_specific_coordinates": "unsupported for all three ranked books"
+  },
+  "planet_components": {
+    "Sun": "identity and creative purpose",
+    "Moon": "emotional needs and habits",
+    "Mercury": "thinking and communication",
+    "Venus": "values, pleasure and relationships",
+    "Mars": "initiative, assertion and action",
+    "Jupiter": "growth, learning and excess",
+    "Saturn": "responsibility, boundaries and limitation",
+    "Uranus": "innovation, change and independence",
+    "Neptune": "imagination, ideals and confusion",
+    "Pluto": "transformation, power and control"
+  },
+  "axis_components": {
+    "ASC": "self-presentation and initiative",
+    "IC": "home and emotional foundations",
+    "DSC": "one-to-one relationships",
+    "MC": "public role and responsibility"
+  },
+  "interpretation_policy": "Modern psychological compositional planet + angular-house analogy only. Not direct Lewis/Davis delineations; physical latitude-aware angularity is not longitude-only house placement. No favorable-location rankings or predictive validity established.",
+  "unsupported": [
+    "parans",
+    "local-space lines",
+    "book-specific delineations",
+    "topocentric/refraction profiles",
+    "ancient calendar reconstruction"
+  ]
+}

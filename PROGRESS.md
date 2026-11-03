@@ -1,5 +1,10 @@
 # Future progress
 
+## Astrocartography source/convention pass — 2026-11-03
+- Froze geocentric-apparent-geometric-v1: actual RA/declination of date,GAST,geometric body-center horizon; explicit polar/dateline,relocation and spherical-distance conventions. USNO/Skyfield procedural references; separate concise modern symbolic components.
+- Original Book of Maps title page remains inaccessible; inventory attribution preserved, bibliographic Guttman discrepancy retained. No book-specific coordinate procedure or delineation claimed. Parans/local-space deferred; original source records immutable. Mathematical core proceeds independently as authorized.
+
+
 ## Technique7 Astrocartography — resource audit, 2026-11-03
 - Began only after Mundane closure69287bb committed/pushed. Preserved exact inventory row,four variations andthree ranked sources; no Astrocartography engine or executable rule added.
 - Registered Continuum Book of Maps bibliography,1997 Psychology catalogue,Martin Davis publisher scope and an Astrodienst indexed FAQ lead (live browser challenge). Book of Maps coauthor discrepancy recorded separately: Continuum identifies Guttman,inventory names Irving; original inventory unchanged. Contemporary book text/images not ingested.
