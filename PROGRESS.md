@@ -1,5 +1,10 @@
 # Future progress
 
+## Face Reading source/profile pass — 2026-11-03
+- Inspected original Lavater/Hunter1789 Volume I title,p18 regional terminology,p20 translation footnote,p23 resting/moving terminology and pp265-266 three labeled schematic constructions. Frozen lavater-hunter-1789-reference-v1:6 region references,2 terminology records,3 source schematics,precise printed/canvas locators and image digests. Independent labels/illustration features transcribed before matcher implementation.
+- Yap product/Bridges contents provide no inspected procedural diagrams; no Chinese methods inferred. Region associations and harmful historical capacity claims remain documentary context only; no geometry-to-trait or individualized judgments. Orientation/mirroring explicitly a software annotation convention. Research cutoff reached; source images unbundled,rankings unchanged.
+
+
 ## Technique9 Face Reading / Physiognomy — resource audit,2026-11-03
 - Began only after Palmistry closuref1932dd committed/pushed. Preserved exact inventory ID,naming,four variations and ranked Yap/Bridges/Lavater sources. Registered official Yap series/store,Elsevier2012 edition/contents and Wellcome Hunter-translation original digitization/PDM metadata. No engine or executable rules added.
 - face_reading_resource_audit.json proposes a source-scoped historical region/term annotation core after page/illustration verification. Full modern procedural access,region/orientation conventions and independent examples remain pending. Five-element/12-palace mappings to Lavater stay explicitly provisional; no cross-school borrowing or face-based personality,criminality/health inference.
