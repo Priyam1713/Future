@@ -1,5 +1,9 @@
 # Future progress
 
+## Moleosophy implementation/verification pass — 2026-11-03
+- Source passbd55900 committed/pushed. Added isolated moleosophy-reference JSON/Markdown CLI:27 selected documentary summaries across19 regions,five original-text teaching examples,source-specific side/location predicates,explicit frontal viewer/mirror convention and unknown/conflict handling. No original mole diagram claimed or personal skin data accepted. Neck front/back restriction corrected in versioned v2 rules; source identity unchanged.
+- All170 tests/129 CLI cases pass,retaining158/117 inherited.12 new regression tests,12 public CLI cases and27 independent original-page entry/side/page fixtures pass. No dependencies added; pip check clean. Source qualifications,ear exception,hand/finger exclusion,cross-references and pagination discrepancies remain explicit; no individual trait,medical,longevity or outcome judgments. Separate scope freeze follows.
+
 ## Moleosophy source/profile pass — 2026-11-03
 - Inspected Fontaine Golden Wheel Dream-book,and Fortune-Teller,BPL copy goldenwheeldream00font:undated title,copyright1862,contents and complete mole section printed pp114-119. Actual section Fortune-Telling by Moles / Signification of Moles; inventory standalone title remains unverified. Gutenberg page markers differ by one and are not substituted.
 - Frozen fontaine-1862-bpl-reference-v1 with27 selected documentary entries,source-specific sides/locations,qualifications/cross-references and independent pre-matcher fixtures. Public-domain scan inspected/unbundled; no personal geometry,medical or appearance-to-trait rules. Chinese/Indian profiles separate and unsupported. Research cutoff reached; implementation follows.

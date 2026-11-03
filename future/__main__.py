@@ -196,7 +196,18 @@ def main():
     phren=sub.add_parser('phrenology-reference')
     phren.add_argument('input',help='Path to historical schematic/label selection JSON; no personal data')
     phren.add_argument('--format',choices=['json','markdown'],default='json')
+    moles=sub.add_parser('moleosophy-reference')
+    moles.add_argument('input',help='Path to historical region/entry or source-example JSON; no personal skin data')
+    moles.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='moleosophy-reference':
+        from .moleosophy import load_input,reference,markdown
+        registry=load_registry(args.database)
+        try:
+            result=reference(load_input(args.input),registry)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close()
+        return
     if args.command=='phrenology-reference':
         from .phrenology import load_input,reference,markdown
         registry=load_registry(args.database)

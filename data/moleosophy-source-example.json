@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "technique_id": 11,
+  "profile": "fontaine-1862-bpl-reference-v1",
+  "task": "historical_reference",
+  "mode": "source_example",
+  "schematic": {
+    "id": "fontaine-1862-textual-index-v1",
+    "kind": "software teaching index of source-defined textual regions; no original mole diagram claimed",
+    "locator": "Original printed pp114-119",
+    "orientation": "Source left/right modeled as subject-left/right; source has no viewer or mirror protocol. Known frontal viewer transform is an explicit software convention,not Fontaine doctrine."
+  },
+  "orientation": {
+    "frame": "subject",
+    "view": "unknown",
+    "mirrored": false
+  },
+  "source_example": {
+    "region_id": "eyebrow",
+    "side": "right",
+    "location_id": "general",
+    "entry_id": "eyebrow_right",
+    "locator": "Printed p116,PDF page126"
+  },
+  "results": [
+    {
+      "selection": {
+        "region_id": "eyebrow",
+        "side": "right",
+        "location_id": "general"
+      },
+      "canonical_subject_side": "right",
+      "canonical_region_id": "eyebrow",
+      "alias_locator": null,
+      "status": "resolved",
+      "issues": [],
+      "entry": {
+        "id": "eyebrow_right",
+        "original_label": "Eyebrow. \u2014 right",
+        "region_id": "eyebrow",
+        "source_side": "right",
+        "location_id": "general",
+        "printed_pages": [
+          116
+        ],
+        "pdf_pages": [
+          126
+        ],
+        "locator": "Signification of Moles; printed pp116; PDF pages126",
+        "historical_association": "Fontaine favors the right eyebrow with activity,courage,perseverance,wealth and success in love,war and business. This records a historical side-specific claim.",
+        "qualifications": [
+          "Source also makes family/longevity claims; these are not individual predictions.",
+          "General p114 says the ensuing entries concern middling size and color; qualitative modifiers are documentary context only,not operational inputs."
+        ],
+        "interpretation_type": "direct_documentary_paraphrase",
+        "coverage": "selected_summary_not_complete_prognostic",
+        "rule_id": "moleosophy.fontaine1862.eyebrow_right",
+        "version": 1,
+        "source_id": "moleosophy-fontaine-1862-bpl-inspected-v1",
+        "applied_to_individual": false
+      },
+      "candidate_references": [],
+      "reason": "Exact source constraints; unresolved constraints and conflicts are not automatically cleared."
+    }
+  ],
+  "source": {
+    "id": "moleosophy-fontaine-1862-bpl-inspected-v1",
+    "technique_id": 11,
+    "author": "Felix Fontaine",
+    "edition": "The Golden Wheel Dream-book,and Fortune-Teller; New York,Dick & Fitzgerald,18 Ann Street; undated title/copyright1862; BPL copy goldenwheeldream00font",
+    "url": "https://archive.org/details/goldenwheeldream00font",
+    "scan_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/The_golden_wheel_dream-book_and_fortune-teller_-_being_the_most_complete_work_on_fortune-telling_and_interpreting_dreams_ever_printed%2C_containing_an_alphabetical_list_of_dre_%28IA_goldenwheeldream00font%29.pdf",
+    "catalog_url": "https://openlibrary.org/books/OL24649578M/The_golden_wheel_dream-book_and_fortune-teller",
+    "transcription_url": "https://www.gutenberg.org/files/60045/60045-h/60045-h.htm",
+    "rights_url": "https://commons.wikimedia.org/wiki/File:The_golden_wheel_dream-book_and_fortune-teller_-_being_the_most_complete_work_on_fortune-telling_and_interpreting_dreams_ever_printed,_containing_an_alphabetical_list_of_dre_(IA_goldenwheeldream00font).pdf",
+    "ingestion": "public_domain",
+    "rights_note": "Original1862 work; Commons identifies this BPL scan as Public Domain Mark/PD-old-100-expired and public domain in USA. Original pages inspected; only labels and original documentary paraphrases retained. Scan unbundled. Gutenberg transcription is a reading aid,not silently treated as identical pagination or redistributed as a branded edition.",
+    "locator": "PDF page11 title;page12 contents/copyright;original printed pp114-119,PDF pages124-129",
+    "checked_on": "2026-11-03"
+  },
+  "conventions": {
+    "selection": "Exact software entry ID or region/side/location constraints; unknowns and contradictory selections are retained.",
+    "side": "Subject-left/right by named software convention; no unsupported viewer transform for posterior/unknown orientation.",
+    "tradition": "Only Fontaine/BPL1862 containing work; no Chinese or Indian mixing.",
+    "inference": "Historical reference only; no physical measurements,personal photos,medical observations or individual conclusions."
+  },
+  "general_qualifications": {
+    "locator": "Fortune-Telling by Moles,p114,PDF page124",
+    "description": "Fontaine alleges that size,color,shape and hair change indications; his following entries concern middling size/color. No quantitative thresholds are given. This engine documents the qualification but never collects physical observations or computes strength.",
+    "operational": false
+  },
+  "terminology_conflicts": [
+    "Inventory standalone Fontaine title remains unverified; actual containing work and section title are registered separately.",
+    "Inspected BPL scan: section starts p114; Gutenberg transcription marks it p115 and later pages differ by one. Never silently equate pagination.",
+    "Mouth points to Lips,p118->117; either lip means upper/lower,not proven left/right.",
+    "The wrist-to-finger-end range overlaps separate hand/finger entries; no automatic reconciliation.",
+    "No universal left/right polarity across regions or traditions is justified.",
+    "Software entry IDs and textual teaching index are not original numbered schematic labels."
+  ],
+  "coverage": {
+    "entries": 27,
+    "regions": 19,
+    "description_type": "selected attributed documentary summaries; no individualized interpretations"
+  },
+  "limitations": [
+    "Historical/symbolic reference only. Mole-based character and future-outcome claims are not scientifically validated.",
+    "No individual character,intelligence,criminality,health,longevity,personality or future-outcome conclusions.",
+    "No personal photographs,measurements,medical observations,diagnosis or skin-cancer screening.",
+    "Only27 selected documentary summaries across19 regions; not a complete edition or prognostic system.",
+    "Chinese,Indian and other Western editions are unsupported; no tradition blending.",
+    "Source examples are textual teaching selections,not real-person observations or original numbered mole diagrams.",
+    "A correct historical transcription does not establish empirical validity."
+  ],
+  "inference_enabled": false,
+  "individual_assessment": null
+}

@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "technique_id": 11,
   "profile": "fontaine-1862-bpl-reference-v1",
   "source": {
@@ -541,7 +541,7 @@
       "id": "neck_front",
       "original_label": "Neck. — front",
       "region_id": "neck",
-      "source_side": "midline",
+      "source_side": "unspecified",
       "location_id": "front",
       "printed_pages": [
         118
@@ -558,14 +558,14 @@
       "interpretation_type": "direct_documentary_paraphrase",
       "coverage": "selected_summary_not_complete_prognostic",
       "rule_id": "moleosophy.fontaine1862.neck_front",
-      "version": 1,
+      "version": 2,
       "source_id": "moleosophy-fontaine-1862-bpl-inspected-v1"
     },
     "neck_back": {
       "id": "neck_back",
       "original_label": "Neck. — back",
       "region_id": "neck",
-      "source_side": "midline",
+      "source_side": "unspecified",
       "location_id": "back",
       "printed_pages": [
         118
@@ -582,7 +582,7 @@
       "interpretation_type": "direct_documentary_paraphrase",
       "coverage": "selected_summary_not_complete_prognostic",
       "rule_id": "moleosophy.fontaine1862.neck_back",
-      "version": 1,
+      "version": 2,
       "source_id": "moleosophy-fontaine-1862-bpl-inspected-v1"
     },
     "nose": {
@@ -805,5 +805,6 @@
     }
   ],
   "scan_sha256": "b7c7b2021fc8759205915857275ffc196548380c596289e17db4ceb0c1ba6218",
-  "research_cutoff": "Title/copyright,entire6-page mole section,coherent27-entry selection and independent pre-matcher transcription verified. No further contemporary-book search needed."
+  "research_cutoff": "Title/copyright,entire6-page mole section,coherent27-entry selection and independent pre-matcher transcription verified. No further contemporary-book search needed.",
+  "revision_note": "Revision2 corrects neck front/back side metadata: front/back are location qualifiers,not an original midline restriction. These two documentary rules advance to v2; no change to source identity."
 }

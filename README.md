@@ -1,6 +1,15 @@
 # Future
 
-Technique #11 **Moleosophy — Researching**: source/variation audit in `knowledge/moleosophy_resource_audit.json`,begun after Phrenology closurebeb3678. Original two source rankings/four variations preserved; no Technique11 engine implemented.
+Technique #11 **Moleosophy — Developing**: offline historical-reference CLI under `fontaine-1862-bpl-reference-v1`,based on inspected Golden Wheel Dream-book containing work,original pp114-119.27 selected summaries across19 regions; original inventory title/rankings remain distinct. No individualized appearance-to-trait,medical or future-outcome inference.
+
+```powershell
+python -m future moleosophy-reference data/moleosophy-reference-input.json --format markdown
+python -m future moleosophy-reference data/moleosophy-source-example-input.json
+python -m scripts.verify_moleosophy
+python -m scripts.smoke_moleosophy_core
+```
+
+Reproducible JSON/Markdown reports and independent transcription results are in `data/moleosophy-reference.*`, `data/moleosophy-source-example.*` and `data/moleosophy-verification.json`. Examples select a software textual teaching index; no original numbered mole diagram is claimed.
 
 Technique #10 **Phrenology — Core v1 Ready — Historical/Educational Reference Scope**: offline historical-reference CLI under `spurzheim-1833-second-american-v1`. All158 tests/117 CLI cases pass; frozen scope/P1/P2: `knowledge/phrenology_core_v1.json`. The original1833 legend supplies35 numbered faculties plus two unnumbered symbols; three printed views,15 selected passage summaries and22 legend-only descriptions. No individualized skull inference.
 
