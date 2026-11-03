@@ -1,5 +1,9 @@
 # Future progress
 
+## Podomancy source/profile pass — 2026-11-03
+- Ranked catalog/sample/author materials do not establish a coherent book procedure; communication article and isolated personal press readings not generalized into rules. One bounded alternative search located anonymous pseudo-Aristotle Booksellers text,Gutenberg67858,Physiognomy chV,page markers299-300. Exact date/original matching scan remains unverified; no ancient-Aristotle or Somogyi/Sheehan attribution.
+- Frozen anonymous-booksellers-pg67858-foot-reference-v1:six coherent documentary foot-form/sole-line/sole-skin entries,two regions and independent pre-matcher fixtures. No quantitative thresholds,toe order,left/right polarity,clinical or personal appearance-to-trait inference. Public-domain primary transcription verified; research cutoff reached,implementation follows.
+
 ## Technique12 Podomancy / Foot Reading — resource audit,2026-11-03
 - Began after Moleosophy closureb7e8a33 committed/pushed. Workbook hash and exact inventory rows verified; preserved four variations and ranked Somogyi/Sheehan sources. Official publisher1997 Reading Toes and author Second Edition Lets Read Our Feet metadata registered; contemporary text/diagrams not ingested.
 - podomancy_resource_audit.json records procedural/rights/orientation/independent-example gaps and P1/P2. Author free-resource lead requires newsletter consent; no signup or access bypass. No primary Indian procedure verified; inventory mappings remain provisional. No engine,rules,medical or individualized morphology-to-trait inference added.170 tests/129 CLI cases remain accepted; registry validates with audit metadata.
