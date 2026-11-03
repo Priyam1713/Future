@@ -1,5 +1,11 @@
 # Future progress
 
+## Horary Pass2 — executable source-bounded assessment, 2026-11-03
+- Source extraction b32ae01 pushed first. Added isolated horary/horary_motion modules and JSON/Markdown CLI: explicit advice-begins input, Regiomontanus classical chart, Lilly conditions/receptions, p194 testimony, planetary hours, four-day moving contacts/ingresses/stations and timestamped source diagnostics. Existing Western behavior unchanged.
+-96 tests pass, retaining all87 previous tests. New independent Swiss/Moshier fixtures cover three epochs, both hemispheres, seven planetary positions/cusps and every solved classical contact; source p107/p112 and planetary-hour examples also checked. A constructed symmetric-station double crossing exposed a miss; Horary-specific flat-pair refinement fixes it without changing existing Western roots.
+-32 original page images inspected including supplementary pp115–118/151; provenance hashes retained, no scan corpus distributed. No new runtime dependencies; pip check clean; Swiss remains optional reference-only.
+- Working Delhi example in data/horary-advice-2026.* returns indeterminate despite favorable tenth-house testimony. Complete seventh-lord unfortunate/impeded clearance, full historical exceptions and same-category published validation remain unresolved. Developing, not Core v1 Ready; no Technique6 work. Scope/backlog: knowledge/horary_engine_v1.json.
+
 ## Horary Pass1 — original-source extraction, 2026-11-03
 - Resumed cf775d6; accessed user-supplied Wellcome s7z7c46y via its open IIIF b30338724 manifest. Visually inspected27 original page images, not OCR alone; per-page URLs/hashes retained in horary_image_provenance.json. Public Domain Mark verified.
 - Extracted versioned Lilly procedures for question moment/significators, dignity/orbs, application/reception, prohibition/refranation/frustration, translation/collection, lunar conditions and cautions. Chose narrowly scoped advice-intent from p194; truth of reports and political-benefit rules pp192–194 are separate.

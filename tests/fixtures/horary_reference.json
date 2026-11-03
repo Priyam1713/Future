@@ -1,0 +1,425 @@
+{
+  "oracle": "Swiss Ephemeris 2.10.03, Moshier apparent tropical geocentric; Regiomontanus; own UTC-to-TT/UT conversion",
+  "generator": "scripts/build_horary_reference.py; no Future imports",
+  "longitude_tolerance_degrees": 0.01,
+  "angle_tolerance_degrees": 0.03,
+  "event_tolerance_seconds": 120,
+  "limitations": "Modern independent numerical fixtures, not published historical judgment validation; finite scan may miss unresolved tangencies.",
+  "cases": [
+    {
+      "utc": "2026-11-03T06:30:00+00:00",
+      "latitude": 28.6139,
+      "longitude": 77.209,
+      "positions": {
+        "Sun": {
+          "longitude": 220.84925563361352,
+          "retrograde": false
+        },
+        "Moon": {
+          "longitude": 148.89253232911784,
+          "retrograde": false
+        },
+        "Mercury": {
+          "longitude": 223.91313462703397,
+          "retrograde": true
+        },
+        "Venus": {
+          "longitude": 205.19914198663506,
+          "retrograde": true
+        },
+        "Mars": {
+          "longitude": 139.75692821113122,
+          "retrograde": false
+        },
+        "Jupiter": {
+          "longitude": 144.5932264318076,
+          "retrograde": false
+        },
+        "Saturn": {
+          "longitude": 9.146349168909383,
+          "retrograde": true
+        }
+      },
+      "cusps": [
+        293.0277958334354,
+        329.56249454434345,
+        8.944405099095922,
+        39.6504941086348,
+        63.32451440773934,
+        85.83989812817151,
+        113.02779583343539,
+        149.56249454434345,
+        188.94440509909592,
+        219.65049410863483,
+        243.32451440773931,
+        265.8398981281715
+      ],
+      "ascendant": 293.0277958334354,
+      "midheaven": 219.65049410863483,
+      "events": [
+        {
+          "type": "ingress",
+          "bodies": [
+            "Moon"
+          ],
+          "seconds_from_start": 7064.688315229432
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Sun",
+            "Moon"
+          ],
+          "seconds_from_start": 83026.54163317202,
+          "angle": 60
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Moon",
+            "Mercury"
+          ],
+          "seconds_from_start": 88049.70976038458,
+          "angle": 60
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Venus",
+            "Jupiter"
+          ],
+          "seconds_from_start": 100874.08502026084,
+          "angle": 60
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Sun",
+            "Mercury"
+          ],
+          "seconds_from_start": 114858.57476814272,
+          "angle": 0
+        },
+        {
+          "type": "ingress",
+          "bodies": [
+            "Moon"
+          ],
+          "seconds_from_start": 202097.647666173
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Moon",
+            "Saturn"
+          ],
+          "seconds_from_start": 261710.99235491277,
+          "angle": 180
+        }
+      ]
+    },
+    {
+      "utc": "2024-04-01T00:00:00+00:00",
+      "latitude": -33.8688,
+      "longitude": 151.2093,
+      "positions": {
+        "Sun": {
+          "longitude": 11.752387999146555,
+          "retrograde": false
+        },
+        "Moon": {
+          "longitude": 267.76262318717903,
+          "retrograde": false
+        },
+        "Mercury": {
+          "longitude": 27.167385936109607,
+          "retrograde": false
+        },
+        "Venus": {
+          "longitude": 354.8499947603227,
+          "retrograde": false
+        },
+        "Mars": {
+          "longitude": 337.0107781139274,
+          "retrograde": false
+        },
+        "Jupiter": {
+          "longitude": 47.35332110035198,
+          "retrograde": false
+        },
+        "Saturn": {
+          "longitude": 343.5991641170073,
+          "retrograde": false
+        }
+      },
+      "cusps": [
+        59.154521983747344,
+        86.77633742386213,
+        121.88514546821366,
+        159.48790675527812,
+        190.50641179768476,
+        215.432777123825,
+        239.15452198374734,
+        266.7763374238621,
+        301.88514546821364,
+        339.48790675527806,
+        10.506411797684773,
+        35.432777123824984
+      ],
+      "ascendant": 59.154521983747344,
+      "midheaven": 339.48790675527806,
+      "events": [
+        {
+          "type": "ingress",
+          "bodies": [
+            "Moon"
+          ],
+          "seconds_from_start": 14711.870855824962
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Moon",
+            "Mars"
+          ],
+          "seconds_from_start": 64122.28685842275,
+          "angle": 60
+        },
+        {
+          "type": "station",
+          "bodies": [
+            "Mercury"
+          ],
+          "seconds_from_start": 80073.90003429173
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Sun",
+            "Moon"
+          ],
+          "seconds_from_start": 98081.47425724748,
+          "angle": 90
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Moon",
+            "Saturn"
+          ],
+          "seconds_from_start": 103582.89607690094,
+          "angle": 60
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Moon",
+            "Jupiter"
+          ],
+          "seconds_from_start": 128619.0920435023,
+          "angle": 120
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Moon",
+            "Mercury"
+          ],
+          "seconds_from_start": 187886.06182561637,
+          "angle": 90
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Moon",
+            "Venus"
+          ],
+          "seconds_from_start": 190677.96183003666,
+          "angle": 60
+        },
+        {
+          "type": "ingress",
+          "bodies": [
+            "Moon"
+          ],
+          "seconds_from_start": 205667.32599066017
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Sun",
+            "Moon"
+          ],
+          "seconds_from_start": 297879.8316590619,
+          "angle": 60
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Moon",
+            "Jupiter"
+          ],
+          "seconds_from_start": 315788.91721890686,
+          "angle": 90
+        }
+      ]
+    },
+    {
+      "utc": "2000-02-28T00:00:00+00:00",
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "positions": {
+        "Sun": {
+          "longitude": 338.6991908398446,
+          "retrograde": false
+        },
+        "Moon": {
+          "longitude": 257.8135416592465,
+          "retrograde": false
+        },
+        "Mercury": {
+          "longitude": 343.94840770170015,
+          "retrograde": true
+        },
+        "Venus": {
+          "longitude": 312.1033854145756,
+          "retrograde": false
+        },
+        "Mars": {
+          "longitude": 12.093029556282556,
+          "retrograde": false
+        },
+        "Jupiter": {
+          "longitude": 32.29506822434792,
+          "retrograde": false
+        },
+        "Saturn": {
+          "longitude": 42.24505152629547,
+          "retrograde": false
+        }
+      },
+      "cusps": [
+        226.99410928269515,
+        252.0638672361814,
+        290.7237826401488,
+        335.1781248657847,
+        5.9982140447945085,
+        27.30559163154294,
+        46.99410928269515,
+        72.06386723618141,
+        110.72378264014878,
+        155.1781248657847,
+        185.99821404479448,
+        207.30559163154294
+      ],
+      "ascendant": 226.99410928269515,
+      "midheaven": 155.1781248657847,
+      "events": [
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Venus",
+            "Saturn"
+          ],
+          "seconds_from_start": 10589.687622325437,
+          "angle": 90
+        },
+        {
+          "type": "ingress",
+          "bodies": [
+            "Moon"
+          ],
+          "seconds_from_start": 89106.51646031621
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Moon",
+            "Jupiter"
+          ],
+          "seconds_from_start": 107610.01191212417,
+          "angle": 120
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Mercury",
+            "Saturn"
+          ],
+          "seconds_from_start": 140742.0746885371,
+          "angle": 60
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Sun",
+            "Moon"
+          ],
+          "seconds_from_start": 166853.9561904836,
+          "angle": 60
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Moon",
+            "Mercury"
+          ],
+          "seconds_from_start": 176443.45046506642,
+          "angle": 60
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Moon",
+            "Saturn"
+          ],
+          "seconds_from_start": 179786.3485671449,
+          "angle": 120
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Moon",
+            "Mars"
+          ],
+          "seconds_from_start": 189461.42109407662,
+          "angle": 90
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Sun",
+            "Mercury"
+          ],
+          "seconds_from_start": 227426.66759266137,
+          "angle": 0
+        },
+        {
+          "type": "ingress",
+          "bodies": [
+            "Moon"
+          ],
+          "seconds_from_start": 306855.39802239655
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Moon",
+            "Jupiter"
+          ],
+          "seconds_from_start": 328391.14783777477,
+          "angle": 90
+        },
+        {
+          "type": "exact_aspect",
+          "bodies": [
+            "Sun",
+            "Saturn"
+          ],
+          "seconds_from_start": 332329.123661654,
+          "angle": 60
+        }
+      ]
+    }
+  ]
+}

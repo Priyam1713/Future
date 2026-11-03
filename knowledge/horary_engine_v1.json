@@ -1,0 +1,49 @@
+{
+  "technique_id": 5,
+  "status": "Developing",
+  "profile": "lilly-1647-advice-intent",
+  "source_extraction": "horary_lilly_v1.json is the immutable first extraction; this record describes implementation coverage.",
+  "domain": {"utc_years": [1851, 2148], "latitude": "abs(latitude)<60 degrees", "houses": "Regiomontanus", "zodiac": "tropical", "planets": "seven classical", "node": "explicit IERS mean node"},
+  "supported": [
+    "Caller-supplied advice-begins instant, IANA timezone/fold and location; no automatic current-clock fallback",
+    "Classical house lords, dignities, reception edges and solar/motion conditions",
+    "Lilly p194 tenth occupants, Moon/ASC-lord application and Haly cardinal-sign testimony",
+    "Unequal planetary hours from local sunrise/sunset; explicit affinity subset",
+    "Four-day moving classical-planet exact contacts, sign ingresses and stations",
+    "Timestamped diagnostic trace, source pages, conflict and incompleteness handling",
+    "JSON and Markdown CLI; unsupported-question response"
+  ],
+  "experimental": [
+    "Advice-intent assessment: always indeterminate while gate.seventh_full remains unresolved",
+    "Same-sign exact-contact proxy for Moon void-of-course, not certification of every historical definition",
+    "Conservative5-degree cusp and earlier-half Moon domain restrictions; these are engineering margins, not attributed Lilly thresholds",
+    "Ordered prohibition/frustration/refranation candidates are geometry, not categorical impediment judgments"
+  ],
+  "unsupported": [
+    "Complete source-certified positive/negative question judgments",
+    "Perfection judgments for event outcomes",
+    "Reception-qualified translation and collection certification",
+    "Frawley and Barclay profiles; relationship/lost-object/general event questions",
+    "1643 Cambridge numerical recomputation or ancient/historical calendar reconstruction",
+    "Observed visibility, historical fixed-star coordinates, full besiegement/accidental-debility judgments",
+    "Predictive accuracy, truth verification or outcome probabilities"
+  ],
+  "acceptance": {
+    "computational_diagnostics": "Independent current-date ephemeris/Regiomontanus/contact fixtures plus source arithmetic examples",
+    "core_v1": "NOT MET: no complete category judgment certified; modern astronomical comparisons do not validate historical judgment fidelity",
+    "published_example": "Original Cambridge pp200–201 inspected, different category and outside current ephemeris; not an advice-intent numerical acceptance fixture",
+    "next_technique": "Not started; await a genuinely complete bounded category"
+  },
+  "P1": [
+    "Resolve source scope of unfortunate/impeded seventh lord pp122–123 against full p115 accidentals; certify one bounded category without treating omissions as clearance",
+    "Obtain independent complete-input advice-intent chart/judgment matching selected protocol and supported date range",
+    "Verify reception-qualified translation/collection and categorical interference only where needed for selected category",
+    "Resolve Moon application/void-of-course and general caution exceptions without combining schools"
+  ],
+  "P2": ["Additional question categories", "Frawley/Barclay independently sourced profiles", "Expanded historical ephemeris/calendar support", "Terrain/observational visibility and fixed-star models"],
+  "licensing": "No new runtime dependencies. Swiss is optional independent reference tooling only and is not imported by production. Original Lilly images Public Domain Mark, retained locally for inspection; numeric facts/procedural summaries and image URLs/hashes only in repository.",
+  "rules": [
+    {"id": "horary.hours", "version": 1, "source_id": "horary-lilly-1647-images-v1", "locator": "Printed pp482–485, supplementary planetary-hour tables", "method": "Sunrise begins weekday lord;12 unequal daylight and12 unequal night hours follow Saturn,Jupiter,Mars,Sun,Venus,Mercury,Moon cyclically.", "exceptions": ["Source table arithmetic tested; current sunrise from explicit standard refraction/upper-limb model. Polar cases outside bounded domain."]},
+    {"id": "horary.accidentals-gap", "version": 1, "source_id": "horary-lilly-1647-images-v1", "locator": "Printed pp115,122–123", "method": "Seventh-lord unfortunate/impeded caution is broader than retrograde/fall alone. Missing verified accidentals must withhold definitive classification.", "exceptions": ["No arbitrary strength score; historical fixed-star longitudes cannot be reused unchanged at modern dates."]}
+  ]
+}

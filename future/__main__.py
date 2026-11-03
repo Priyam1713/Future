@@ -153,7 +153,25 @@ def main():
     nu.add_argument('--basis',required=True,choices=['birth','current'])
     nu.add_argument('--y-roles',default='')
     nu.add_argument('--format',choices=['json','markdown'],default='json')
+    ho=sub.add_parser('horary',help='Source-bounded Lilly advice-intent assessment (Developing)')
+    ho.add_argument('question');ho.add_argument('category')
+    ho.add_argument('local');ho.add_argument('zone');ho.add_argument('latitude',type=float);ho.add_argument('longitude',type=float)
+    ho.add_argument('--protocol',required=True,choices=['advice-begins'])
+    ho.add_argument('--profile',default='lilly-1647-advice-intent')
+    ho.add_argument('--fold',type=int,choices=[0,1])
+    ho.add_argument('--format',choices=['json','markdown'],default='json')
+    ho.add_argument('--kernel',default=str(ROOT/'data/de440s.bsp'))
     args = parser.parse_args()
+    if args.command=='horary':
+        from .natal import SkyfieldEphemeris
+        from .horary import assess,register_knowledge,markdown
+        e=SkyfieldEphemeris(args.kernel);registry=load_registry(args.database)
+        try:
+            register_knowledge(registry)
+            result=assess(e,args.question,args.category,args.local,args.zone,args.latitude,args.longitude,args.protocol,args.fold,args.profile)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close();e.kernel.close()
+        return
     if args.command=='numerology':
         from .numerology import calculate,markdown,readings
         r=readings(calculate(args.birth,args.name,args.basis,args.target,args.y_roles))
