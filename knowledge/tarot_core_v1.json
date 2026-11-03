@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "technique_id": 16,
+  "name": "Tarot",
+  "status": "Core v1 Ready — Symbolic Reading Scope",
+  "date": "2026-11-04",
+  "profile": "waite-1922-text-v1",
+  "source_pass_commit": "c398180",
+  "implementation_commit": "43ecb2d",
+  "source_id": "tarot-waite-1922-inspected-v1",
+  "supported": [
+    "Immutable78-card catalog:22 Major Arcana and56 Minor Arcana;stable names,IDs,suits,ranks and canonical order",
+    "156 source-linked upright/reversed entries;StrengthVIII with source alias Fortitude,JusticeXI,Fool0 and Last JudgmentXX",
+    "56 section4 additional accounts retained separately from primary meanings;Two of Cups reversal explicitly sourced from section4 p290 because section2 omits it",
+    "Four of Wands unchanged reversal and other source qualifications/alternative readings retained",
+    "One-card and configurable three-card editorial layouts with manual or deterministic seeded draws",
+    "Verified Waite Celtic ten-position layout plus separate removed significator,explicit facing and correctly mirrored positions5/6;right-side staff remains right",
+    "Manual court selection for person significator;trump/numbered-card selection for matter,with no appearance/sex/age inference",
+    "Optional court/dubious-final follow-up instructions from p304;never automatic redraw",
+    "Frozen SHA256 streams,rejection sampling,Fisher-Yates,explicit digital cuts and separate orientation policy with complete replay metadata",
+    "Per-card direct source wording,editorial keywords,position roles and explicitly compositional reading summaries;no fabricated card-pair rules",
+    "Offline JSON/Markdown CLI,strict input validation,source/rule registry and reproducible examples;no new runtime dependencies"
+  ],
+  "experimental": [
+    "Digital three-round shuffle/cut is a named application interpretation of Waite's shuffle/cut wording,not physical ritual equivalence",
+    "Seeded reversal generation is an explicit application policy,not a documented historical probability or security guarantee",
+    "Editorial keyword/position synthesis is transparent symbolic composition,not source-published combined readings or empirical prediction"
+  ],
+  "unsupported": [
+    "Certain future events,diagnosis,guaranteed outcomes,hidden-fact detection or predictive confidence scores",
+    "Automatic appearance/sex/age-based significator selection or personal-trait assessment",
+    "Automatic evaluation of all conditional card pairs,recurrence rules,question-specific exceptions or conflicting source alternatives",
+    "Exact physical shuffling/cutting ritual,operator intuition or automatic repeat-until-favourable readings",
+    "Full1910-versus1922 textual collation,other historical editions and additional historical layouts",
+    "Separate Marseille,Thoth or Etteilla card/meaning engines;no cross-tradition substitution",
+    "Contemporary copyrighted imagery,booklets,graphics,frontend or interactive visualization"
+  ],
+  "configuration_matrix": {
+    "profile": "waite-1922-text-v1",
+    "task": "symbolic_reading",
+    "modes": ["seeded", "manual"],
+    "spreads": {"one": "1 card;editorial focus", "three": "3 cards;editorial labels,default Past/Present/Future", "waite_celtic": "10 cards plus separate upright removed significator;PartIII section7 pp299-305"},
+    "canonical_order": "Major00..21;Wands,Cups,Swords,Pentacles;Ace..Ten,Page,Knight,Queen,King. Computational order distinct from book presentation.",
+    "seeded_orientation_policies": ["upright_only", "seeded_reversals"],
+    "manual_orientation_policies": ["upright_only", "explicit"],
+    "significator": "Required only for Celtic;card_id,facing left/right,basis matter/person_manual;excluded from drawn pack",
+    "question": "Optional user context only;does not select cards or infer facts",
+    "reversals": "Card-specific source entries;never universal negation. Crosswise visual position2 is distinct from reversed orientation.",
+    "source_variant": "Primary PartIII sections2/3 with explicit Two of Cups section4 reversal gap fill;other section4 accounts preserved,not merged"
+  },
+  "seed_protocol": {
+    "id": "future-cards-sha256-fy-v1",
+    "specification": "knowledge/tarot_seed_protocol_v1.json",
+    "seed": "Strict UTF-8 text1-256 bytes,no Unicode/case/whitespace normalization",
+    "framing": "FutureCards NUL v1 NUL domain NUL uint32be(seed length) seed uint64be(counter starting0)",
+    "stream": "SHA256 blocks consumed as eight uint32be words;separate deck/orientation domains",
+    "sampling": "Reject words>=2^32-(2^32 mod n),then modulo n;descending Fisher-Yates without replacement",
+    "celtic": "Remove significator,three shuffle/nonempty-cut rounds;one/three layouts use one shuffle without cut",
+    "orientations": "Independent randbelow(2):0 upright,1 reversed;upright_only does not change shuffled cards",
+    "replay": "Complete validated request,seed/profile/protocol,canonical order/hash,available order,shuffled pack,cuts,draw and orientations",
+    "assurance": "Reproducibility and unbiased integer-selection mechanism,not cryptographic security or predictive validity"
+  },
+  "inventory_variations": [
+    {"name": "Rider–Waite–Smith", "status": "supported", "scope": "Waite1922 named text-only profile"},
+    {"name": "Tarot de Marseille", "status": "unsupported", "scope": "Separate P2 profile"},
+    {"name": "Thoth", "status": "unsupported", "scope": "Separate P2 profile"},
+    {"name": "Etteilla", "status": "unsupported", "scope": "Separate P2 deck/numbering"},
+    {"name": "spreads", "status": "supported_bounded", "scope": "One/three editorial plus documented Celtic layout;digital draw conventions labeled"},
+    {"name": "reversals", "status": "supported_bounded", "scope": "156 orientation entries and explicit source exceptions;no universal inversion"}
+  ],
+  "acceptance": {
+    "passed": true,
+    "tests": 243,
+    "inherited_tests": 222,
+    "new_tests": 21,
+    "cli_cases": 205,
+    "inherited_cli_cases": 183,
+    "new_cli_cases": 22,
+    "verification_checks": 30,
+    "independent_source_cases": 12,
+    "source_layout_checks": 12,
+    "independent_seed_vectors": 6,
+    "independent_reference": "tests/reference/generate_tarot_vectors.ps1 uses .NET SHA256 and separate PowerShell control flow;generated before production Python,tests compare full permutations,cuts,orientations and first digest blocks",
+    "coverage": "All78 unique identities and156 entries have source locators;selected source fixtures verify exceptions,ambiguity and numbering. No claim of independent predictive validation for any card.",
+    "additional_tests": "Rejection boundaries/equal-residue mechanism,Unicode normalization differences,stream independence,replay,manual uniqueness,significator/facing,invalid inputs,immutable catalog and report reproducibility",
+    "registry_rules": 213,
+    "dependency_audit": "No new runtime dependencies;pip check clean",
+    "commands": ["python -m unittest discover -s tests -q", "python -m unittest tests.test_tarot -q", "python -m scripts.verify_tarot", "python -m scripts.smoke_tarot_core", "All15 inherited CLI smoke modules"],
+    "known_nonblocking_warnings": ["Existing Skyfield/NumPy deprecation", "Existing unclosed de440s.bsp ResourceWarning"],
+    "evidence": ["tests/fixtures/tarot_source_examples.json", "tests/fixtures/tarot_seed_vectors.json", "data/tarot-verification.json", "data/tarot-smoke.json"]
+  },
+  "rights": "Named historical1922 public-domain text only,with precise primary locators. Original scan title/reprint and selected procedural pages inspected;no contemporary artwork or other ranked-source corpus redistributed. Modern decks,booklets,restorations and packaging rights remain separate.",
+  "examples": ["data/tarot-one.md", "data/tarot-three.md", "data/tarot-celtic.md", "data/tarot-manual.md", "data/tarot-celtic.json"],
+  "backlog": {
+    "P1": ["More verified Waite conditional combinations,recurrence rules and procedural exceptions", "Additional documented layouts and qualified contextual interpretation", "Historical edition collation and source-specific correspondences"],
+    "P2": ["Separate Tarot de Marseille profile", "Separate Thoth profile", "Etteilla deck and numbering", "Licensed/verified original public-domain imagery", "Optional interactive visualization"]
+  },
+  "transition": "After closure is committed and pushed,audit Technique17 Oracle Cards in exact inventory order;do not implement it in the audit"
+}

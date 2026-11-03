@@ -1,5 +1,9 @@
 # Future progress
 
+## Tarot Core v1 closure — 2026-11-04
+- Sourcec398180 and implementation43ecb2d pushed. Technique16 **Core v1 Ready — Symbolic Reading Scope**:78 cards,156 source-linked orientation entries,56 separate additional accounts;one/three editorial and source-positioned Celtic readings.243 tests/205 CLI cases and30 source/layout/protocol checks pass,including six independent .NET vectors. Frozen conventions,rights,acceptance and P1/P2 in tarot_core_v1.json.
+- Digital shuffle/cut/reversal policies are named application adaptations,not a physical ritual or predictive guarantee. Conditional pairs,more historical procedures/editions,Marseille,Thoth,Etteilla and imagery deferred. Push closure before Technique17 Oracle Cards audit;original inventory/rankings/exclusions preserved.
+
 ## Tarot implementation/verification — 2026-11-04
 - Source/protocolc398180 pushed. Added immutable78-card catalog,156 primary/gap-filled orientation meanings and56 separate additional accounts;213 traditional registry rules. tarot supports seeded/manual one-card,three-card and Waite Celtic readings,source positions,removed significator/facing,explicit court/person versus trump-or-pip/matter selection and optional final-card follow-up without automatic redraw. Source text and compositional interpretation remain distinct.
 -243 tests/205 CLI cases pass,preserving222/183 inherited.30 documentary/layout/protocol checks include six independently generated PowerShell/.NET full-permutation/cut/orientation vectors. UTF-8 seeds,unbiased rejection sampling and independent orientation stream replay correctly;pip check clean,no new dependencies. Reproducible JSON/Markdown examples in data/tarot-{one,three,celtic,manual}. No artwork,diagnosis,certain forecasts or cross-deck rule blending.

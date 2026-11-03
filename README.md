@@ -2,7 +2,7 @@
 
 **Phase 2 complete — bounded Core v1 scopes** for techniques8-15;this does not imply exhaustive variations or scientific validation.
 
-Technique #16 **Tarot — Developing**: `waite-1922-text-v1` supports all78 cards/156 source-linked orientation meanings,56 separately retained additional accounts,one/three-card editorial layouts and Waite's ten-position Celtic layout with a removed significator and explicit facing. Manual draws and `future-cards-sha256-fy-v1` seeded draws produce replayable JSON/Markdown and explicitly compositional symbolic readings. Six independently generated .NET seed vectors verify the protocol. Text-only;no modern artwork,other-deck rule blending,diagnosis or certain predictions.
+Technique #16 **Tarot — Core v1 Ready — Symbolic Reading Scope**: `waite-1922-text-v1` supports all78 cards/156 source-linked orientation meanings,56 separately retained additional accounts,one/three-card editorial layouts and Waite's ten-position Celtic layout with a removed significator and explicit facing. Manual draws and `future-cards-sha256-fy-v1` seeded draws produce replayable JSON/Markdown and explicitly compositional symbolic readings. All243 tests/205 CLI cases pass;six independently generated .NET seed vectors verify the protocol. Frozen scope/P1/P2 in `knowledge/tarot_core_v1.json`. Text-only;no modern artwork,other-deck rule blending,diagnosis or certain predictions.
 
 ```powershell
 python -X utf8 -m future tarot data/tarot-one-input.json --format markdown
