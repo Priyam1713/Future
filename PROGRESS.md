@@ -1,5 +1,9 @@
 # Future progress
 
+## Phrenology source/profile pass — 2026-11-03
+- Inspected Spurzheim1833 Second American VolI title,original frontispiece/legend,contents and selected passages. Frozen spurzheim-1833-second-american-v1:35 numbered entries plus two unnumbered symbols,three printed views,15 passage summaries and22 legend-only descriptions. No fabricated36/37 or anatomical laterality.
+- Versioned source/locators,image digests and independent manual fixtures retained; original scans unbundled. Dagger has no verified frontispiece anchor; Gall/Combe/other editions separate and unsupported. Source fidelity does not validate discredited phrenology. Research cutoff reached; historical lookup implementation next.
+
 ## Technique10 Phrenology — resource audit,2026-11-03
 - Began only after Face Reading closure8d9830f committed/pushed. Exact inventory confirms Phrenology,three variations and two ranked sources:Spurzheim then Combe. Registered1833 NLM/Wellcome original digitization/PDM,1847 Combe scholarly archive/edition distinction and a separately labeled Lehigh curatorial lead. No engine or executable rules added.
 - phrenology_resource_audit.json proposes a single-edition educational schematic-label reference after original plate/list verification.35-faculty count/numbering,orientation,Gall/Combe mapping and source-specific conventions remain unverified. No scan/geometry-to-intellect,character,illness or ability inference proposed; no contemporary image corpus or diagnostic scans ingested.
