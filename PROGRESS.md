@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique14 Aura Reading — resource audit,2026-11-03
+- Began after Graphology closured15991b committed/pushed. Exact original two source rankings/four variations and workbook hash preserved. Brennan publisher1988,Kunz Quest1991 metadata and separate Indian2002/current edition differences registered without procedural ingestion. Copyright/primary-page gaps remain explicit;promotional healing/science claims not accepted as validation.
+- aura_resource_audit.json proposes a source-specific manual symbolic color/layer reference after legitimate legends/rights verification. Subjective reports,optical data and synthetic Kirlian aesthetics remain distinct. AIP publisher-deposited1973 Boyers/Tiller abstract retrieved through Crossref explains Kirlian color effects via corona physics,not supernatural fields. No Technique14 engine,rules,image effects or detector added.196 tests/155 CLI cases remain accepted;registry validates.
+
 ## Graphology Core v1 closure — 2026-11-03
 - Implementation699c729 committed/pushed. Technique13 **Core v1 Ready — Historical/Descriptive Reference Scope** for crepieux-schooling-1892-reference-v1. Frozen matrix,source/geometry verification,rights and P1/P2 in graphology_core_v1.json.23 terms,11 dimensions,7 original examples;geometry independent of historical meaning.
 -196 tests/155 CLI cases pass,retaining182/141 inherited;30 original definition/caption checks and7 constructed Euclidean cases,not psychometric validation. True pressure,CV,other source profiles/scripts and complex resultants deferred;no personal-trait,clinical,employment or authorship conclusions. Commit/push closure before Technique14 audit.
