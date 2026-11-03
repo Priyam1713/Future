@@ -1,5 +1,9 @@
 # Future progress
 
+## Tarot source/protocol verification — 2026-11-03
+- Synchronized5382854. waite-1922-text-v1 freezes78 identities/156 orientation meanings from primary PartIII,with56 section4 alternatives kept separate. Original title/reprint pages and Four of Wands/Celtic pp299-305 inspected;1910 first publication distinguished from1922 source,not a full edition collation. Two of Cups has no section2 reversal:explicit section4 p290 Passion traced as gap fill. StrengthVIII/Fortitude and JusticeXI preserved.
+- Celtic ten positions,removed significator,facing-dependent5/6 and optional court/dubious-final follow-up verified. Source/card fixtures precede engine. future-cards-sha256-fy-v1 framing,rejection sampling,shuffle/cuts and separate orientation protocol frozen;independent PowerShell/.NET reference generated six known-answer vectors before Python implementation. Text-only,no modern artwork;other ranked traditions/inventory unchanged.
+
 ## Phase2 complete;Technique16 Tarot resource audit — 2026-11-03
 - Began after Iridology closure7580925 pushed and synchronized. All eight Physical & Human-Based Divination techniques8-15 have accepted bounded Core v1 records;Phase2 complete at those scopes,not exhaustive or scientifically validated.
 - Tarot original three rankings/six variations and inventory hash/exclusions preserved. Waite Wikisource title identifies1922 reprint(first1910);PartIII exposes card-specific upright/reversed meanings and source layouts. Weiser Thoth1981 and Destiny Way of Tarot2009 publisher metadata registered;modern RWS art rights kept separate. tarot_resource_audit.json prioritizes a text-only Waite core with original-page fixtures,documented spread and versioned unbiased seeded draws. No Tarot implementation;four metadata-only records load.222 tests/183 CLI acceptance retained.

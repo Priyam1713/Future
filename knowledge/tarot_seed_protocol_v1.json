@@ -1,0 +1,16 @@
+{
+  "id": "future-cards-sha256-fy-v1",
+  "version": 1,
+  "seed": "Nonempty Unicode string,1-256 UTF-8 bytes,strict encoding,no normalization,case/whitespace preserved;no integer/coerced seeds.",
+  "stream": "SHA256(ASCII FutureCards +00+ ASCII v1 +00+ ASCII domain +00+ uint32be(seed_byte_length)+seed_utf8+uint64be(counter));counter starts0,eight uint32be words per digest,consumed in order.",
+  "domains": [
+    "deck",
+    "orientation"
+  ],
+  "randbelow": "For n in1..2^32,limit=2^32-(2^32 mod n);discard uint32 words>=limit;return word mod n. Never a biased direct-modulo fallback.",
+  "shuffle": "Descending Fisher-Yates:i=N-1..1,j=randbelow(i+1),swap;canonical order is major00..21,then Wands,Cups,Swords,Pentacles;Ace..Ten,Page,Knight,Queen,King.",
+  "celtic": "Remove significator before shuffle. Three rounds of full Fisher-Yates then nonempty cut k=1+randbelow(N-1);top segment moves to bottom. One/three-card use one shuffle,no cut.",
+  "orientation": "Independent orientation stream,one randbelow(2) per drawn card:0 upright,1 reversed. Upright-only consumes no orientation words;deck stream unchanged. Significator upright;crosswise visual rotation of position2 is not a reversal.",
+  "assurance": "Reproducible application convention,not a cryptographic security guarantee,physical shuffling model,historical PRNG or predictive probability.",
+  "replay": "Record exact seed,protocol/profile,canonical IDs/hash,filtered deck,round count,cuts,full shuffled pack and drawn orientations."
+}
