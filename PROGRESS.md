@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique13 Graphology — resource audit,2026-11-03
+- Began after Podomancy closuref5b4e37 committed/pushed. Original workbook hash and exact three ranked sources/four variations preserved. BnF1929 French ABC de la graphologie,CiNii Saudek1925 plus supplement,and WorldCat/Google Books Amend-Ruiz1980 catalog/limited contents verified as metadata only. English ABC translation not assumed; later editions separate.
+- graphology_resource_audit.json records rights/procedural/example gaps,P1/P2 and descriptive-only feasibility. No source thresholds,pressure proxy,personality/employment/clinical judgments or forensic authorship authentication implemented.182 tests/141 CLI cases remain accepted; registry validates with audit metadata. No Technique13 engine or rules added.
+
 ## Podomancy Core v1 closure — 2026-11-03
 - Implementationf5fc32e committed/pushed. Technique12 **Core v1 Ready — Historical/Symbolic Reference Scope**,OptionA for the six-entry anonymous Booksellers foot/sole reference only. Frozen supported/experimental/unsupported matrix,independent-transcription verification,licensing/source limits and P1/P2 in podomancy_core_v1.json. No claim that ranked contemporary methods or individual toe rules are implemented.
 -182 tests/141 CLI cases pass,retaining170/129 inherited. Primary transcription,not original facsimile or empirical validity,verified. Exact year/scan,ranked books and other traditions deferred; no clinical or personal appearance-to-trait inference. Commit/push closure before Technique13 audit.

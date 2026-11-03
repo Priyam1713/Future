@@ -1,0 +1,162 @@
+{
+  "technique_id": 13,
+  "name": "Graphology",
+  "status": "Researching",
+  "date": "2026-11-03",
+  "predecessor_closure": "f5b4e37",
+  "policy": "Resource/variation audit only; no Technique13 engine,feature extractor or executable graphological rule.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    13,
+    "2 · Physical & Human-Based Divination",
+    "Graphology",
+    "RETAIN — simulate / implement",
+    "Vision / symbol rules",
+    "French analytic; German holistic; American applied; slant/spacing/pressure",
+    "Handwriting feature recognition + historical rule lookup",
+    "Scanned handwriting with consent; CV optional",
+    "Graphology not reliable for personality/employment screening",
+    "Discredited for personality assessment; creative simulation only",
+    "ABC of Graphology",
+    "Jules Crépieux-Jamin",
+    null,
+    "The Psychology of Handwriting",
+    "Handwriting Analysis: The Complete Basic Book",
+    null,
+    "24",
+    13
+  ],
+  "ranked_sources": [
+    [
+      13,
+      "Graphology",
+      1,
+      "Jules Crépieux-Jamin",
+      "ABC of Graphology",
+      "French analytical approach",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      13,
+      "Graphology",
+      2,
+      "Robert Saudek",
+      "The Psychology of Handwriting",
+      "Movement/measurement approach",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      13,
+      "Graphology",
+      3,
+      "Karen Amend and Mary Stansbury Ruiz",
+      "Handwriting Analysis: The Complete Basic Book",
+      "Modern practitioner tutorial",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "French analytic",
+      "inventory_row": [
+        13,
+        "Graphology",
+        "French analytic",
+        "ABC of Graphology",
+        "Handwriting Analysis: The Complete Basic Book",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; original procedures/definitions/examples not verified",
+      "finding": "French original title verified; sign definitions and combination/exception methods await original-page inspection. No English translation assumed."
+    },
+    {
+      "name": "German holistic",
+      "inventory_row": [
+        13,
+        "Graphology",
+        "German holistic",
+        "Handwriting Analysis: The Complete Basic Book",
+        "The Psychology of Handwriting",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; original procedures/definitions/examples not verified",
+      "finding": "Inventory mapping is provisional; ranked bibliographies do not verify a distinct German holistic procedure. Keep separate from French analytic and American applied."
+    },
+    {
+      "name": "American applied",
+      "inventory_row": [
+        13,
+        "Graphology",
+        "American applied",
+        "Handwriting Analysis: The Complete Basic Book",
+        "The Psychology of Handwriting",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; original procedures/definitions/examples not verified",
+      "finding": "Amend/Ruiz catalog and limited contents relevant; complete procedural parameters/examples and rights not verified."
+    },
+    {
+      "name": "slant/spacing/pressure",
+      "inventory_row": [
+        13,
+        "Graphology",
+        "slant/spacing/pressure",
+        "Handwriting Analysis: The Complete Basic Book",
+        "The Psychology of Handwriting",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; original procedures/definitions/examples not verified",
+      "finding": "Slant/spacing may admit descriptive geometry under named sampling conventions; source thresholds unverified. Static ink darkness is not established physical pen pressure; do not infer personality or health."
+    }
+  ],
+  "sources": [
+    "graphology-crepieux-bnf-catalog-v1",
+    "graphology-saudek-cinii-catalog-v1",
+    "graphology-amend-ruiz-worldcat-catalog-v1"
+  ],
+  "feasibility": {
+    "high_roi": "A source-specific historical terminology/sign reference or neutral handwriting-feature annotation core after legitimate original-page verification. No personality/ability or employment judgment.",
+    "procedures_needed": "Verify actual named sign classes,slant direction convention,baseline/spacing units,pressure meaning,exceptions and contextual combinations. A contents page is not a decision procedure.",
+    "inputs": "Prefer manual generic teaching-sample labels or explicitly descriptive annotations. Original inventory scanned handwriting/optional CV retained as metadata,not implemented.",
+    "numerical_scope": "Any future slant/spacing computation must specify image rotation,baseline,resolution,script and units; pen pressure requires suitable evidence rather than a darkness proxy. No calculations implemented in this audit.",
+    "tradition_isolation": "French analytic,German holistic,American applied and feature dimensions remain separate; no universal sign-to-trait lookup assembled.",
+    "scientific_boundary": "Graphology is not reliable for personality or employment screening under inventory scope. Historical reference is not psychometric validation,clinical diagnosis or forensic authorship authentication. Shared visual vocabulary does not transfer evidentiary validity."
+  },
+  "next_requirements": [
+    "Inspect legitimate original edition pages/illustrations for one coherent profile; verify rights,exact title/edition and source terminology before rules",
+    "Transcribe independent source examples before any matcher or geometry extraction; source fidelity and measurable geometry are separate acceptance questions",
+    "Preserve source-specific sign combinations,exceptions and conflicts; do not turn isolated signs into personal trait predictions",
+    "Define strict nonpersonal historical-reference inputs and explicit unsupported/unknown cases; no diagnosis,criminality,intelligence or hiring suitability outputs",
+    "Do not conflate Graphology with forensic questioned-document examination or infer pressure,stress or health from scanned ink",
+    "Run all182 existing tests/141 CLI cases when implementing a later authorized bounded core"
+  ],
+  "P1": [
+    "Original primary procedural pages and permitted access/rights for ranked historical editions",
+    "One coherent terminology/example set with independent fixtures",
+    "Explicit script/slant/spacing conventions and pressure-evidence limitations"
+  ],
+  "P2": [
+    "Additional original editions/translations and verified German holistic source procedures",
+    "Other scripts and neutral teaching illustrations after source verification"
+  ],
+  "limits": "No rules,computed feature measurements,employment screening,clinical classification or handwriting-to-trait inference added. Unverified third-party commercial-book copies not used. Original rankings,four variations,60-technique taxonomy and excluded IDs25,27,41,42,47,48 unchanged.",
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Historical/Symbolic Reference Scope",
+    "tests": 182,
+    "cli_smoke_cases": 141
+  }
+}
