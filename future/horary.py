@@ -12,6 +12,7 @@ from .horary_motion import motion,aspect_state,ordered_candidates,CLASSICAL
 ROOT=Path(__file__).resolve().parents[1]
 DATA=json.loads((ROOT/'knowledge/horary_lilly_v1.json').read_text(encoding='utf-8'))
 SCOPE=json.loads((ROOT/'knowledge/horary_engine_v1.json').read_text(encoding='utf-8'))
+ATTEMPT=json.loads((ROOT/'knowledge/horary_judgment_attempt_v1.json').read_text(encoding='utf-8'))
 ORDER=('Saturn','Jupiter','Mars','Sun','Venus','Mercury','Moon')
 WEEK=('Moon','Mars','Mercury','Jupiter','Venus','Saturn','Sun')
 
@@ -61,7 +62,7 @@ def classify(predicates,cautions):
 def register_knowledge(registry):
     from .knowledge import Rule
     registry.add_source(DATA['source'])
-    for r in DATA['rules']+SCOPE['rules']:
+    for r in DATA['rules']+SCOPE['rules']+ATTEMPT['rules']:
         registry.add_rule(Rule(r['id'],r['version'],5,'Lilly advice intent',DATA['profile'],
             r['source_id'],r['locator'],r['method'],'horary_procedure',{'exceptions':r['exceptions']},'proposed','traditional',[]))
 
@@ -141,10 +142,11 @@ def assess(e,question,category,local,zone,latitude,longitude,protocol='advice-be
     seventh=condition['planets'][lords[6]]
     seventh_clear=not seventh['retrograde'] and not seventh['debilities'] and seventh['rulers']['bound'] not in ('Mars','Saturn')
     item(cautions,'gate.seventh_basic',seventh_clear,'Explicit retrograde/fall/detriment/malefic-term seventh-lord cautions.',123,lord=lords[6],condition=seventh)
-    # The text also says 'unfortunate/impeded' without limiting that term to
-    # these checks. Fixed stars/besiegement and full accidentals are not yet
-    # independently verified here. No supported verdict may bypass this gap.
-    item(cautions,'gate.seventh_full',None,'Full meaning of unfortunate/impeded seventh lord (pp122–123/115), including besiegement/fixed-star exceptions, not yet fully certified.',123)
+    # p115 is not an explicit category-specific clearance algorithm. Retain
+    # the unresolved seventh cusp/lord caution without inventing vetoes.
+    item(cautions,'gate.seventh_full',None,ATTEMPT['gate']['reason'],123,
+        applicability=ATTEMPT['gate']['applicability'],remaining_procedures=ATTEMPT['gate']['remaining_procedures'],
+        rule_ref={'id':'horary.accidentals-gap','version':2})
     hour=planetary_hour(e,utc,latitude,longitude)
     trip=TABLES['triplicities']['lilly'][('fire','earth','air','water')[int(n['angles']['ascendant']//30)%4]][:2]
     affinity=hour['lord']==ruler or hour['lord'] in trip or {hour['lord'],ruler}=={'Sun','Mars'}
@@ -158,7 +160,7 @@ def assess(e,question,category,local,zone,latitude,longitude,protocol='advice-be
         'conditions':condition,'nodes':{'model':'IERS2010 mean node, true ecliptic comparison convention inherited from verified mean-node component','positions':nodes},
         'current_aspects':aspects,'planetary_hour':hour,'future_motion':future,
         'significator_sequence':ordered_candidates(future['events'],'Moon',ruler) if ruler!='Moon' else {'status':'shared significator'},
-        'rule_diagnostics':predicates+cautions,'source':DATA['source'],'procedures':DATA['rules']+SCOPE['rules'],
+        'rule_diagnostics':predicates+cautions,'source':DATA['source'],'procedures':DATA['rules']+SCOPE['rules']+ATTEMPT['rules'],
         'coverage':{'supported':SCOPE['supported'],'experimental':SCOPE['experimental'],'unsupported':SCOPE['unsupported']},
         'interpretations':[{'coverage':'direct','rule_id':r['id'],'text':r['reason'],
             'source_id':r['source_id'],'locator':r['locator'],

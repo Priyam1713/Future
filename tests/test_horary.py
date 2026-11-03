@@ -147,3 +147,29 @@ class HoraryTests(unittest.TestCase):
                           datetime.fromisoformat(a['question_chart']['birth']['utc'])).total_seconds(),3600)
         again=assess(*args,fold=0)
         self.assertEqual(a,again)
+
+    def test_targeted_caution_recheck_keeps_unknown_and_version_history(self):
+        from future.horary import ATTEMPT
+        self.assertIsNone(ATTEMPT['gate']['value'])
+        self.assertEqual(ATTEMPT['gate']['certified_configurations'],[])
+        r=assess(self.e,'Question','advice-intent','2026-11-03T12:00:00','Asia/Kolkata',28.6139,77.209)
+        gate=next(d for d in r['rule_diagnostics'] if d['id']=='gate.seventh_full')
+        self.assertIsNone(gate['value']);self.assertIn('seventh-cusp',gate['reason'].lower())
+        self.assertEqual(gate['evidence']['rule_ref']['version'],2)
+        self.assertEqual(r['classification'],'indeterminate')
+        registry=load_registry()
+        try:
+            register_knowledge(registry);register_knowledge(registry)
+            versions=[x['version'] for x in registry.db.execute("SELECT version FROM rules WHERE id='horary.accidentals-gap' ORDER BY version")]
+            self.assertEqual(versions,[1,2])
+            self.assertFalse(registry.select_rules(5,'Lilly advice intent',DATA['profile']))
+        finally:registry.close()
+
+    def test_no_synthetic_or_wrong_category_published_acceptance(self):
+        from future.horary import ATTEMPT
+        search=ATTEMPT['validation_search']
+        self.assertEqual(search['qualifying_published_examples'],[])
+        self.assertTrue(all(not c['accepted'] and c['reason'] and c['locator'] for c in search['candidates']))
+        conditions={r['id']:r for r in ATTEMPT['material_conditions']}
+        self.assertEqual(conditions['seventh.cusp.affliction']['implementation'],'unresolved')
+        self.assertIn('not established',conditions['table.accidental_debilities']['materiality'])

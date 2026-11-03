@@ -1,5 +1,11 @@
 # Future progress
 
+## Horary targeted judgment attempt — 2026-11-03
+- Resumed98f5f5d; re-inspected original Lilly pp115/122–123/194. Advice-intent is outside seventh-house matters, so the seventh-cusp/lord caution remains relevant. Basic retrograde/fall/malefic-term checks exist; operational cusp affliction and full impedited/unfortunate clearance remain unverified.
+- Corrected overly broad blocker wording: p115 is a general fortitude table, not an explicit mandate that every accidental/fixed-star row veto p194. No score threshold, modern self-chart exemption or automatic unknown clearance added. Registered immutable horary.accidentals-gap v2 alongside v1; exact gate remains null/indeterminate.
+- Bounded source/example search found no qualifying complete-input advice-intent validation. Cambridge1643 remains wrong-category/out-of-range; modern editorial illustrations lack inputs/protocol and cannot stand in for published validation. Findings and candidate exclusions: horary_judgment_attempt_v1.json. No astronomy rewrite or category expansion.
+-13 Horary tests pass, including2 new source/gate regressions; all98 existing tests retained. Next release decision: Option B Diagnostic Scope, judgment Experimental, subject to full regression/smoke acceptance.
+
 ## Horary Pass3 — verification and readiness decision, 2026-11-03
 - Calculation pass fbac165 pushed. All98 tests pass (original87 retained);59 CLI smoke cases pass across five techniques. Added independent sunrise/set and mean-node checks, explicit DST-fold repeatability, source-image provenance consistency and readable motion-change timeline. No new runtime dependency; pip check clean.
 - Three independent Swiss/Moshier fixtures match all30 contact/ingress/station events: maximum time difference7.104s; planetary longitude0.000350 degrees, cusp0.001520 degrees, rise/set2.056s. These sampled error measurements are separate from historical fidelity or predictive validity. Reproduce with scripts.verify_horary; reference generator imports no Future code.

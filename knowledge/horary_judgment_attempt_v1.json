@@ -1,0 +1,43 @@
+{
+  "technique_id": 5,
+  "version": 1,
+  "profile": "lilly-1647-advice-intent",
+  "checked_on": "2026-11-03",
+  "source_id": "horary-lilly-1647-images-v1",
+  "original_images_rechecked": [115, 122, 123, 194],
+  "image_provenance": "knowledge/horary_image_provenance.json",
+  "result": "incomplete; no certified positive/negative configuration",
+  "gate": {
+    "id": "gate.seventh_full",
+    "value": null,
+    "reason": "Seventh-cusp affliction and the full meaning of impedited/unfortunate seventh lord remain unresolved (pp122–123). The p115 debility table does not supply an explicit category-specific clearance threshold.",
+    "applicability": "p122 qualifies the seventh-house caution when the question belongs to another house. Advice-intent p194 uses tenth occupants and lunar application; no verified seventh-house exemption applies.",
+    "certified_configurations": [],
+    "remaining_procedures": ["Operational definition of seventh-cusp afflicted", "Exhaustive source-defined impedited/unfortunate seventh-lord clearance and contextual exceptions", "Complete-input published advice-intent judgment matching the advice-begins protocol"]
+  },
+  "material_conditions": [
+    {"id": "seventh.cusp.affliction", "locator": "p122 last full caution paragraph", "source_status": "direct general caution applicable outside seventh-house matters", "implementation": "unresolved", "materiality": "Directly relevant; cusp affliction is not equivalent to a planet being within the engineering5-degree margin of any cusp."},
+    {"id": "seventh.lord.retrograde", "locator": "p122 same paragraph", "source_status": "explicit", "implementation": "already computed in gate.seventh_basic", "materiality": "Directly relevant caution; numerical speed/retrograde is independently checked."},
+    {"id": "seventh.lord.fall_or_malefic_terms", "locator": "p123 third paragraph", "source_status": "explicit", "implementation": "already computed in gate.seventh_basic", "materiality": "Directly relevant. Existing additional detriment check is conservative rather than a quotation of this paragraph."},
+    {"id": "seventh.lord.impedited_unfortunate", "locator": "pp122–123", "source_status": "explicit warning; no exhaustive Boolean definition on these pages", "implementation": "unresolved", "materiality": "Basic dignity/retrograde checks cannot certify the absence of all impediments."},
+    {"id": "table.accidental_debilities", "locator": "p115 right column", "source_status": "general fortitude/debility table, not an advice-intent algorithm", "implementation": "partial diagnostic data only", "materiality": "Lists house placements, slow/retrograde motion, orientation, lunar light, combustion/beams, partile malefic/node contacts, besiegement and Algol. Applicability as a complete mandatory checklist for p194 is not established; do not automatically treat every row as a veto or assign a new total-score threshold."},
+    {"id": "table.fixed_stars", "locator": "p115 bottom rows", "source_status": "historical positions in a general table", "implementation": "unsupported", "materiality": "No modern reuse of1647 star coordinates. These pages do not establish that every fixed-star row must be cleared for this category; historical convention research is P2, not a new diagnostic-release blocker."},
+    {"id": "advice.direct_testimonies", "locator": "p194 advice heading and final paragraph", "source_status": "explicit category procedure", "implementation": "computed as individual testimonies", "materiality": "Tenth occupants, Moon applying to ASC lord and Haly movable-sign testimony retained. No priority between conflicting testimonies invented."}
+  ],
+  "interpretive_correction": "Earlier wording overemphasized fixed stars as an automatic certification requirement. The precise unresolved gate is the general seventh-cusp/lord caution; p115 alone neither supplies a clearance threshold nor proves that all its rows are mandatory vetoes. Conservative withholding is an implementation policy, not a claim Lilly refused every chart carrying a caution.",
+  "validation_search": {
+    "scope": "Two focused web-search batches: Lilly advice-intent/honest-advice p194 and complete chart/counsel examples. Stopped after targeted primary-source recheck and candidate review; not an exhaustive absence claim.",
+    "requirements": ["Actual advice-intent question and documented judgment", "Complete date/time/timezone/location in supported1851–2148 motion domain", "Documented advice-begins protocol", "Compatible named Lilly procedures"],
+    "qualifying_published_examples": [],
+    "candidates": [
+      {"url": "https://wellcomecollection.org/works/s7z7c46y", "locator": "Lilly p194", "kind": "published original procedure", "accepted": false, "reason": "Procedure has no dated worked advice-intent chart on this page."},
+      {"url": "https://wellcomecollection.org/works/s7z7c46y", "locator": "Lilly pp200–201", "kind": "published historical Cambridge chart/judgment", "accepted": false, "reason": "1643 outside current kernel and report-truth category differs from advice-intent."},
+      {"url": "https://ihorary.com/blog/trust-deception-horary-astrology", "locator": "Example paragraphs under traditional symbolism and walkthrough", "kind": "modern editorial illustrations", "accepted": false, "reason": "No complete dated/location inputs or verified advice-begins moment; different seventh-house/modern-planet method. Not a historical acceptance fixture."},
+      {"url": "https://theastrologypodcast.com/transcripts/tap-ep-296-transcript-the-considerations-before-judgment-with-sue-ward/", "locator": "Seventh-house discussion; transcript lines840–908 at inspection", "kind": "practitioner discussion, not a category fixture", "accepted": false, "reason": "Discusses contextual cautions; supplies no complete-input advice-intent validation. Sue Ward's own-chart exception is not silently adopted as an original Lilly rule."}
+    ],
+    "existing_synthetic_and_numerical_fixtures": "Remain constructed boundary tests and independent astronomical references, never promoted to published judgment examples."
+  },
+  "rules": [
+    {"id": "horary.accidentals-gap", "version": 2, "source_id": "horary-lilly-1647-images-v1", "locator": "Printed pp115,122–123,194", "method": "Seventh-cusp affliction and retrograde/impedited/unfortunate seventh-lord cautions are relevant to this non-seventh-house category. Partial checks cannot clear the full caution; p115 provides no explicit category clearance threshold.", "exceptions": ["Retain v1 as historical extraction; this version narrows the blocker rather than asserting every p115 debility/fixed-star row is mandatory.", "Conservative withholding is not a literal claim Lilly never judged charts with cautions.", "No own-chart or other seventh-house exemption imported from a modern practitioner."]}
+  ]
+}
