@@ -1,5 +1,7 @@
 # Future
 
+Technique #12 **Podomancy / Foot Reading — Researching**: source/variation audit in `knowledge/podomancy_resource_audit.json`,begun after Moleosophy closureb7e8a33. Original two source rankings/four variations preserved; no Technique12 engine implemented.
+
 Technique #11 **Moleosophy — Core v1 Ready — Historical/Symbolic Reference Scope**: offline historical-reference CLI under `fontaine-1862-bpl-reference-v1`,based on inspected Golden Wheel Dream-book containing work,original pp114-119.All170 tests/129 CLI cases pass; frozen scope/P1/P2 in `knowledge/moleosophy_core_v1.json`.27 selected summaries across19 regions; original inventory title/rankings remain distinct. No individualized appearance-to-trait,medical or future-outcome inference.
 
 ```powershell

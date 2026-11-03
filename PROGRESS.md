@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique12 Podomancy / Foot Reading — resource audit,2026-11-03
+- Began after Moleosophy closureb7e8a33 committed/pushed. Workbook hash and exact inventory rows verified; preserved four variations and ranked Somogyi/Sheehan sources. Official publisher1997 Reading Toes and author Second Edition Lets Read Our Feet metadata registered; contemporary text/diagrams not ingested.
+- podomancy_resource_audit.json records procedural/rights/orientation/independent-example gaps and P1/P2. Author free-resource lead requires newsletter consent; no signup or access bypass. No primary Indian procedure verified; inventory mappings remain provisional. No engine,rules,medical or individualized morphology-to-trait inference added.170 tests/129 CLI cases remain accepted; registry validates with audit metadata.
+
 ## Moleosophy Core v1 closure — 2026-11-03
 - Implementation4387995 committed/pushed. Technique11 **Core v1 Ready — Historical/Symbolic Reference Scope** under fontaine-1862-bpl-reference-v1. Frozen supported/experimental/unsupported matrix,independent original-page results,rights/source limitations and P1/P2 in moleosophy_core_v1.json.27 selected summaries/19 regions/five textual teaching examples; not an original illustrated mole map.
 -170 tests/129 CLI cases pass,retaining158/117 inherited;27 independent source cases. No personal images,physical measurements,medical or individualized appearance-to-trait/outcome judgments. General source modifiers documented,not scored. Chinese/Indian/other editions and remaining historical passages deferred; standalone inventory Fontaine title unverified. Commit/push closure before Technique12 audit.

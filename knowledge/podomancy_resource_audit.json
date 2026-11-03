@@ -1,0 +1,150 @@
+{
+  "technique_id": 12,
+  "name": "Podomancy / Foot Reading",
+  "status": "Researching",
+  "date": "2026-11-03",
+  "predecessor_closure": "b7e8a33",
+  "policy": "Resource/variation audit only; no Technique12 engine,executable procedure or personal foot assessment.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    12,
+    "2 · Physical & Human-Based Divination",
+    "Podomancy / Foot Reading",
+    "RETAIN — simulate / implement",
+    "Vision / symbol rules",
+    "Toe shape and order; foot lines; sole marks; Indian foot signs",
+    "Foot/toe landmarks + symbolic mapping",
+    "Foot images or user-entered morphology",
+    "Foot-based character/health claims unsupported",
+    "Traditional / not scientifically validated",
+    "Reading Toes",
+    "Imre Somogyi",
+    "https://www.penguin.co.uk/books/346962/reading-toes-by-imre-somogyi/9780852073100",
+    "Let’s Read Our Feet!",
+    null,
+    null,
+    "8",
+    12
+  ],
+  "ranked_sources": [
+    [
+      12,
+      "Podomancy / Foot Reading",
+      1,
+      "Imre Somogyi",
+      "Reading Toes",
+      "Toe-reading system",
+      "https://www.penguin.co.uk/books/346962/reading-toes-by-imre-somogyi/9780852073100",
+      "Publisher / purchase",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      12,
+      "Podomancy / Foot Reading",
+      2,
+      "Jane Sheehan",
+      "Let’s Read Our Feet!",
+      "Toe/sole reading method",
+      "https://footreading.com/product/lets-read-our-feet/",
+      "Author site / purchase",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Toe shape and order",
+      "inventory_row": [
+        12,
+        "Podomancy / Foot Reading",
+        "Toe shape and order",
+        "Let’s Read Our Feet!",
+        "Reading Toes",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; original source procedure/orientation/examples not yet verified",
+      "finding": "Both ranked titles are plausible toe-reading leads; exact shape/order categories and mappings require original pages."
+    },
+    {
+      "name": "foot lines",
+      "inventory_row": [
+        12,
+        "Podomancy / Foot Reading",
+        "foot lines",
+        "Let’s Read Our Feet!",
+        "Reading Toes",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; original source procedure/orientation/examples not yet verified",
+      "finding": "Inventory provisional mapping remains unverified; no publisher/author description establishes a complete line-reading procedure."
+    },
+    {
+      "name": "sole marks",
+      "inventory_row": [
+        12,
+        "Podomancy / Foot Reading",
+        "sole marks",
+        "Let’s Read Our Feet!",
+        "Reading Toes",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; original source procedure/orientation/examples not yet verified",
+      "finding": "Inventory indicative scope is not independent verification of sole-symbol mappings."
+    },
+    {
+      "name": "Indian foot signs",
+      "inventory_row": [
+        12,
+        "Podomancy / Foot Reading",
+        "Indian foot signs",
+        "Let’s Read Our Feet!",
+        "Reading Toes",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported; original source procedure/orientation/examples not yet verified",
+      "finding": "No primary Indian source or lineage-specific procedure established by either inspected ranked catalog."
+    }
+  ],
+  "sources": [
+    "podomancy-somogyi-penguin-catalog-v1",
+    "podomancy-sheehan-author-catalog-v1",
+    "podomancy-sheehan-public-access-v1"
+  ],
+  "feasibility": {
+    "high_roi": "Potential small source-specific educational region/terminology reference once legitimate passages and independent source examples are verified. Morphology labels can be descriptive only; no foot-to-character,intellect,criminality or health judgments.",
+    "calculation": "No deterministic scientific forecast algorithm established by catalogs. Any future matcher must be documentary and explicit about unsupported combinations,not an appearance-based trait classifier.",
+    "inputs": "Prefer generic teaching schematic labels or historical text selections. Original image/user-morphology options preserved in inventory metadata,not implemented. No photo recognition pipeline.",
+    "scope_boundary": "Do not mix Somogyi,Sheehan or Indian traditions. No reflexology,medical diagnosis,psychological/personality assessment or disease-cause inference.",
+    "access": "Rank1 commercial publisher metadata only; rank2 author edition verified. Public free-resource lead is newsletter-gated; no signup or inaccessible-book search performed."
+  },
+  "next_requirements": [
+    "Obtain legitimate accessible original passages for one named profile; verify actual edition,section/page and allowed use before extraction",
+    "Transcribe coherent toe/region labels and original worked references independently before matcher implementation",
+    "Verify source-specific subject/viewer left/right,plantar/dorsal views,mirroring,order and terminology; do not infer rules from promotional copy",
+    "Keep foot-line,sole-mark and Indian mappings provisional until original procedures are established",
+    "Define strict historical-reference schema and unknown/conflict behavior; reject personal trait/medical inference and clinical/photo inputs",
+    "Independent tests must check source fidelity and orientation,not claim empirical prediction or medical validation"
+  ],
+  "P1": [
+    "Legitimate procedural access/rights and bounded source-page extraction for one ranked profile",
+    "Edition-specific original diagram/label examples and orientation conventions",
+    "Determine whether foot lines and sole marks have directly supported source coverage"
+  ],
+  "P2": [
+    "Independent primary Indian foot-sign source and historical translation verification",
+    "Other editions/lineages and nonpersonal teaching diagrams if useful"
+  ],
+  "limitations": "Foot-based character and health claims are unsupported. No skin/foot disease diagnosis,treatment recommendation,personality score or outcome probability. Marketing claims are not verification. Exact inventory IDs,source rankings,variations and excluded IDs25,27,41,42,47,48 remain unchanged.",
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Historical/Symbolic Reference Scope",
+    "tests": 170,
+    "cli_smoke_cases": 129
+  }
+}
