@@ -1,5 +1,9 @@
 # Future progress
 
+## Moleosophy Core v1 closure — 2026-11-03
+- Implementation4387995 committed/pushed. Technique11 **Core v1 Ready — Historical/Symbolic Reference Scope** under fontaine-1862-bpl-reference-v1. Frozen supported/experimental/unsupported matrix,independent original-page results,rights/source limitations and P1/P2 in moleosophy_core_v1.json.27 selected summaries/19 regions/five textual teaching examples; not an original illustrated mole map.
+-170 tests/129 CLI cases pass,retaining158/117 inherited;27 independent source cases. No personal images,physical measurements,medical or individualized appearance-to-trait/outcome judgments. General source modifiers documented,not scored. Chinese/Indian/other editions and remaining historical passages deferred; standalone inventory Fontaine title unverified. Commit/push closure before Technique12 audit.
+
 ## Moleosophy implementation/verification pass — 2026-11-03
 - Source passbd55900 committed/pushed. Added isolated moleosophy-reference JSON/Markdown CLI:27 selected documentary summaries across19 regions,five original-text teaching examples,source-specific side/location predicates,explicit frontal viewer/mirror convention and unknown/conflict handling. No original mole diagram claimed or personal skin data accepted. Neck front/back restriction corrected in versioned v2 rules; source identity unchanged.
 - All170 tests/129 CLI cases pass,retaining158/117 inherited.12 new regression tests,12 public CLI cases and27 independent original-page entry/side/page fixtures pass. No dependencies added; pip check clean. Source qualifications,ear exception,hand/finger exclusion,cross-references and pagination discrepancies remain explicit; no individual trait,medical,longevity or outcome judgments. Separate scope freeze follows.

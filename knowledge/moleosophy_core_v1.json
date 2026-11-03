@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "technique_id": 11,
+  "name": "Moleosophy",
+  "status": "Core v1 Ready — Historical/Symbolic Reference Scope",
+  "date": "2026-11-03",
+  "profile": "fontaine-1862-bpl-reference-v1",
+  "source_pass_commit": "bd55900",
+  "implementation_commit": "4387995",
+  "source_id": "moleosophy-fontaine-1862-bpl-inspected-v1",
+  "source_scope": "Fontaine,The Golden Wheel Dream-book,and Fortune-Teller,BPL goldenwheeldream00font; copyright1862; original pp114-119/PDF124-129; title PDF11 and contents/copyright PDF12",
+  "supported": [
+    "27 selected source-attributed historical summaries across19 regions,with exact original printed/PDF locators",
+    "Generic historical region or software entry-ID lookup; no personal skin input",
+    "Source-specific left/right,location restrictions,qualifications and explicit cross-references",
+    "Subject frame and known-frontal viewer mirroring as explicit software label conventions; unsupported transforms remain unresolved",
+    "Unknown regions/entries,ambiguous locations/sides,conflicting asserted references and profile isolation",
+    "Five reproducible selections from original source passages using a named textual teaching index; not an original numbered mole diagram",
+    "Versioned documentary registry rules,offline JSON/Markdown CLI and reproducible examples"
+  ],
+  "experimental": [
+    "Qualitative region identifiers are documentary categories,not calibrated anatomical boundaries",
+    "Viewer-to-subject transforms are software conventions,not a Fontaine mirror protocol",
+    "Selected summaries abbreviate historical family,sex-specific,death and other claims; no complete prognostic system implemented"
+  ],
+  "unsupported": [
+    "All individualized appearance-to-character,intelligence,criminality,personality,health,longevity or future-outcome inference",
+    "Personal photographs,measurements,clinical observations,mole diagnosis and skin-cancer screening",
+    "Chinese and Indian procedures,uninspected editions and invented universal left/right polarity",
+    "Shape/color/size/hair modifiers as operational scoring or prediction rules; source gives no quantitative thresholds",
+    "Unselected source regions and complicated regional diagrams",
+    "Viewer left/right transformation in posterior/unknown views or when frontal mirroring is unknown",
+    "The inventory standalone Fontaine title as a verified separate publication; Gutenberg and original scan pagination as interchangeable"
+  ],
+  "configuration_matrix": {
+    "profile": "fontaine-1862-bpl-reference-v1",
+    "dataset_revision": 2,
+    "task": "historical_reference",
+    "modes": [
+      "manual",
+      "source_example"
+    ],
+    "schematic_id": "fontaine-1862-textual-index-v1",
+    "schematic_kind": "software teaching index of source-defined textual regions; no original mole diagram claimed",
+    "manual": "1-32 selections: exact entry_id or region_id,optional side/location_id; strict schema rejects unrelated fields",
+    "entry_ids": [
+      "arm",
+      "arm_pits",
+      "back_below_shoulder",
+      "cheek",
+      "chin",
+      "ear_general",
+      "ear_lower_tip",
+      "elbow",
+      "eye_outer_corner",
+      "eyebrow_right",
+      "eyebrow_left",
+      "forehead_centre",
+      "forehead_right",
+      "forehead_left",
+      "temple_right",
+      "temple_left",
+      "hand_except_fingers",
+      "hip",
+      "knee_left",
+      "knee_right",
+      "lips",
+      "neck_front",
+      "neck_back",
+      "nose",
+      "shoulder_left",
+      "shoulder_right",
+      "wrist"
+    ],
+    "region_ids": [
+      "arm",
+      "arm_pits",
+      "back",
+      "cheek",
+      "chin",
+      "ear",
+      "elbow",
+      "eye",
+      "eyebrow",
+      "forehead",
+      "hand",
+      "hip",
+      "knee",
+      "lips",
+      "neck",
+      "nose",
+      "shoulder",
+      "temple",
+      "wrist"
+    ],
+    "side_values": [
+      "left",
+      "right",
+      "midline",
+      "unknown"
+    ],
+    "orientation": {
+      "frame": [
+        "subject",
+        "viewer"
+      ],
+      "view": [
+        "frontal",
+        "posterior",
+        "unknown"
+      ],
+      "mirrored": "boolean or unknown; only known frontal viewer side transformation"
+    },
+    "source_examples": [
+      "original-right-eyebrow",
+      "original-left-knee",
+      "original-below-shoulder-blade",
+      "original-hand-exclusion",
+      "original-ear-exception"
+    ],
+    "statuses": [
+      "resolved",
+      "ambiguous",
+      "orientation_unresolved",
+      "unsupported_reference",
+      "unknown_entry",
+      "conflict"
+    ],
+    "aliases": {
+      "mouth": "lips"
+    },
+    "inference_enabled": false,
+    "individual_assessment": null
+  },
+  "acceptance": {
+    "passed": true,
+    "tests": 170,
+    "inherited_tests": 158,
+    "new_tests": 12,
+    "total_cli_cases": 129,
+    "inherited_cli_cases": 117,
+    "new_cli_cases": 12,
+    "independent_transcription_cases": 27,
+    "source_fixture": "tests/fixtures/moleosophy_fontaine_examples.json",
+    "verification_report": "data/moleosophy-verification.json",
+    "smoke_report": "data/moleosophy-smoke.json",
+    "dependency_check": "pip check clean; no new runtime dependencies",
+    "validation_scope": "Historical source fidelity,deterministic lookup and input isolation only; no scientific or predictive validity demonstrated"
+  },
+  "P1": [
+    "Expand selected original-source summaries and independent side/location examples where useful",
+    "Verify remaining historical overlaps/cross-references without silently harmonizing them",
+    "Resolve inventory standalone Fontaine bibliographic title; preserve actual containing work identity",
+    "Contemporary Chinese source author/edition/access/rights verification; keep inventory rank1 unchanged"
+  ],
+  "P2": [
+    "Independently verify Indian sources and lineage-specific distinctions",
+    "Other editions/translations and complex neutral region diagrams when useful"
+  ],
+  "licensing": "Original1862 work; Commons identifies this BPL scan as Public Domain Mark/PD-old-100-expired and public domain in USA. Original pages inspected; only labels and original documentary paraphrases retained. Scan unbundled. Gutenberg transcription is a reading aid,not silently treated as identical pagination or redistributed as a branded edition.",
+  "scientific_limit": "Traditional symbolism is not scientifically validated. Historical reproduction is not evidence for personal trait,medical or future-outcome assessment.",
+  "inventory": "Original workbook hash,IDs,rankings,variations and six excluded IDs remain unchanged. Pre-implementation resource audit retained as history.",
+  "next": "After committing/pushing this bounded closure,audit exact inventory Technique12 only; no implementation during audit"
+}

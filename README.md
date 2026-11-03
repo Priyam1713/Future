@@ -1,6 +1,6 @@
 # Future
 
-Technique #11 **Moleosophy — Developing**: offline historical-reference CLI under `fontaine-1862-bpl-reference-v1`,based on inspected Golden Wheel Dream-book containing work,original pp114-119.27 selected summaries across19 regions; original inventory title/rankings remain distinct. No individualized appearance-to-trait,medical or future-outcome inference.
+Technique #11 **Moleosophy — Core v1 Ready — Historical/Symbolic Reference Scope**: offline historical-reference CLI under `fontaine-1862-bpl-reference-v1`,based on inspected Golden Wheel Dream-book containing work,original pp114-119.All170 tests/129 CLI cases pass; frozen scope/P1/P2 in `knowledge/moleosophy_core_v1.json`.27 selected summaries across19 regions; original inventory title/rankings remain distinct. No individualized appearance-to-trait,medical or future-outcome inference.
 
 ```powershell
 python -m future moleosophy-reference data/moleosophy-reference-input.json --format markdown
