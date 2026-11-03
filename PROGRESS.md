@@ -1,5 +1,9 @@
 # Future progress
 
+## Graphology source/profile pass — 2026-11-03
+- Inspected Crepieux-Jamin/Schooling Handwriting and Expression1892 original title,adaptation note,principles,definitions pp56-65,table pp72-74 and seven facsimile captions. Separately registered from ranked ABC de la graphologie;no assumed English ABC translation. Wellcome PDM original images inspected/unbundled. Saudek preview stops before procedures;modern Amend/Ruiz not ingested.
+- Frozen crepieux-schooling-1892-reference-v1:23 terms,20 selected ordinary historical labels,3 descriptive-only particular signs,7 original examples and independent pre-matcher fixtures. No writer-state selection or arbitrary size/spacing/pressure thresholds;source caveats preserved. Research cutoff reached.
+
 ## Technique13 Graphology — resource audit,2026-11-03
 - Began after Podomancy closuref5b4e37 committed/pushed. Original workbook hash and exact three ranked sources/four variations preserved. BnF1929 French ABC de la graphologie,CiNii Saudek1925 plus supplement,and WorldCat/Google Books Amend-Ruiz1980 catalog/limited contents verified as metadata only. English ABC translation not assumed; later editions separate.
 - graphology_resource_audit.json records rights/procedural/example gaps,P1/P2 and descriptive-only feasibility. No source thresholds,pressure proxy,personality/employment/clinical judgments or forensic authorship authentication implemented.182 tests/141 CLI cases remain accepted; registry validates with audit metadata. No Technique13 engine or rules added.
