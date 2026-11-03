@@ -1,5 +1,9 @@
 # Future progress
 
+## Iridology Core v1 closure — 2026-11-03
+- Source609e7bb and implementationf84aab2 pushed. Technique15 **Core v1 Ready — Historical/Educational Reference Scope** for lindlahr-1922-legend-reference-v1:33 selected labels,two editorial source-diagram selections,27 documentary checks;222 tests/183 CLI cases pass. Frozen matrix,rights,scientific limits and P1/P2 in iridology_core_v1.json.
+- Core acceptance is documentary,not diagnostic. Jensen/Deck/Rayid,remaining labels,printed-mark/metric geometry and other editions deferred. Push this bounded closure before recording Phase2 complete and beginning Technique16 Tarot resource audit. Original taxonomy/rankings/exclusions unchanged.
+
 ## Iridology implementation/verification — 2026-11-03
 - Source609e7bb pushed. iridology-reference supports33 literal schematic labels,source eye/relative placements,region lookup,ambiguity/conflict diagnostics and two editorial teaching selections from published plate/text,not historical patient cases. JSON/Markdown traces include36 traditional registry rules and scientific limitations. Clock/radial/perimeter annotations never select labels;metric geometry remains unsupported.
 -222 tests/183 CLI cases pass,preserving209/169 inherited.27 source-transcription checks pass;pip check clean,no new dependencies. data/iridology-reference and iridology-source-example reports reproducible. Inspection hashes and precise provenance retained;no patient images,clinical/trait assessments,treatments or disease inference.

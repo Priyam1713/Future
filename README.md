@@ -1,6 +1,6 @@
 # Future
 
-Technique #15 **Iridology — Developing**: `lindlahr-1922-legend-reference-v1` provides33 selected original schematic labels across both eyes,qualitative placements and fixed source-plate orientation. Manual selections and two teaching selections from the published plate produce JSON/Markdown with source traces. No exact polar/radial geometry,patient images,diagnosis,disease-risk or personal-trait assessment. Jensen,Deck and Rayid remain separate unsupported profiles.
+Technique #15 **Iridology — Core v1 Ready — Historical/Educational Reference Scope**: `lindlahr-1922-legend-reference-v1` provides33 selected original schematic labels across both eyes,qualitative placements and fixed source-plate orientation. Manual selections and two teaching selections from the published plate produce JSON/Markdown with source traces. All222 tests/183 CLI cases pass;frozen scope and P1/P2 in `knowledge/iridology_core_v1.json`. No exact polar/radial geometry,patient images,diagnosis,disease-risk or personal-trait assessment. Jensen,Deck and Rayid remain separate unsupported profiles.
 
 ```powershell
 python -X utf8 -m future iridology-reference data/iridology-reference-input.json --format markdown

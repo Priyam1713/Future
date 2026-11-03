@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "technique_id": 15,
+  "name": "Iridology",
+  "status": "Core v1 Ready — Historical/Educational Reference Scope",
+  "date": "2026-11-03",
+  "profile": "lindlahr-1922-legend-reference-v1",
+  "source_pass_commit": "609e7bb",
+  "implementation_commit": "f84aab2",
+  "source_id": "iridology-lindlahr-1922-inspected-v1",
+  "supported": [
+    "33 selected original schematic label entries across both eyes from a separately registered public-domain historical edition",
+    "Manual label or region identifier lookup,source eye names and qualitative placement;software IDs explicitly distinct from original numbering",
+    "Original upright-plate orientation:right iris reader-left,left iris reader-right",
+    "Two editorial teaching selections from published diagram/chapter,not historical patient cases or clinical acceptance examples",
+    "Missing/uncertain/ambiguous values,conflicting eye/region/label choices,unknown and unsupported entries retained without substitution",
+    "Versioned source/rule traces,exact printed-page/canvas locators,source cautions and scientific-validity limitations",
+    "Offline JSON/Markdown CLI,strict schema,no new runtime dependencies"
+  ],
+  "experimental": [
+    "Optional clock-position,radial-band and perimeter-sector annotations are preserved as unsupported metadata only;never used for label selection",
+    "Relative placements describe the printed schematic,not anatomical correspondence or measured personal iris coordinates"
+  ],
+  "unsupported": [
+    "Patient iris photographs,biometric processing,medical histories or personal image analysis",
+    "Diagnosis,disease detection,susceptibility screening,organ health scores,treatment or dietary recommendations",
+    "Personality,intelligence,criminality,spiritual-status or other personal-trait inference from iris appearance",
+    "Exact clock/polar lookup,numeric radial boundaries,calibrated sector extents,equal-width sectors or perimeter-number lookup",
+    "Patient/camera/mirror transformations and automatic recognition of iris labels or marks",
+    "Complete original legend,untranscribed labels,Fig5 split-circle reconstruction and disease-sign procedures",
+    "Jensen,Deck and Rayid procedures or cross-tradition correspondence"
+  ],
+  "configuration_matrix": {
+    "profile": "lindlahr-1922-legend-reference-v1",
+    "task": "historical_reference",
+    "diagram": "frontispiece",
+    "view": "source_plate_upright",
+    "modes": ["manual", "source_example"],
+    "eye": ["right", "left", "unknown"],
+    "certainty": ["selected", "uncertain", "unknown"],
+    "selections": "1-24;label_id or qualified region_id;label can be null or2-8 explicit alternatives",
+    "shared_labels": ["stomach", "small_intestines", "skin_area", "lymphatic_system", "lung_upper", "lung_lower", "pleura", "chest", "thyroid", "trachea", "esophagus", "scapula", "upper_back", "kidney", "foot"],
+    "right_only_selected": ["liver"],
+    "left_only_selected": ["spleen", "heart"],
+    "geometry": "Unsupported. No coordinate annotation can select,change or validate a label.",
+    "identifiers": "Software lookup keys,not invented historical numbered sectors",
+    "unknown_eye": "Retain candidate references without choosing source eye"
+  },
+  "inventory_variations": [
+    {"name": "Jensen iris map", "status": "unsupported", "reason": "Rank1 preserved;reusable original diagram,legend and rights not obtained"},
+    {"name": "German Deck method", "status": "unsupported", "reason": "Rank2 preserved;1982 atlas not ingested,modern revised chart not substituted"},
+    {"name": "Rayid eye archetypes", "status": "unsupported", "reason": "Separate practitioner model;no source-verified reference engine or actual-person archetype assessment"}
+  ],
+  "acceptance": {
+    "passed": true,
+    "tests": 222,
+    "inherited_tests": 209,
+    "new_tests": 13,
+    "cli_cases": 183,
+    "inherited_cli_cases": 169,
+    "new_cli_cases": 14,
+    "original_source_checks": 27,
+    "checks_breakdown": {"label_transcriptions": 17, "orientation": 2, "chapter_placement": 2, "teaching_selection_labels": 6},
+    "registry_rules": 36,
+    "dependency_audit": "No new dependencies;python -m pip check reports no broken requirements",
+    "commands": ["python -m unittest discover -s tests -q", "python -m scripts.verify_iridology", "python -m scripts.smoke_iridology_core", "All14 inherited CLI smoke modules"],
+    "evidence": ["tests/fixtures/iridology_source_examples.json", "data/iridology-verification.json", "data/iridology-smoke.json"],
+    "known_nonblocking_warnings": ["Existing Skyfield/NumPy deprecation", "Existing unclosed de440s.bsp ResourceWarning"],
+    "scope": "Independent manual transcription from the same original source checks documentary fidelity,not clinical or anatomical validity;no independent metric geometry claimed"
+  },
+  "source_and_rights": {
+    "edition": "Fifth edition1922 verified on original title canvas7;copyright1919 canvas8 distinct",
+    "diagram": "CHART to IRIDIAGNOSIS,After Lahn and Liljequist,unnumbered frontispiece canvas6",
+    "chapter": "ChapterIII pp22-25 canvases28-31;relative central-field explanation p23;Fig5 p24 kept separate",
+    "rights": "Wellcome Public Domain Mark,any-purpose reuse under copyright law;credit retained. Only historical labels/research paraphrases stored,no original plate bundled. Ranked modern books remain metadata only.",
+    "scientific_limit_sources": ["iridology-simon-1979-evaluation-v1", "iridology-ernst-1999-review-v1"],
+    "claim_boundary": "Iridology is discredited as disease detection. No inferred personal condition or health assessment. Historical exceptions are attributed,not operational diagnostic rules."
+  },
+  "examples": ["data/iridology-reference-input.json", "data/iridology-reference.json", "data/iridology-reference.md", "data/iridology-source-example-input.json", "data/iridology-source-example.json", "data/iridology-source-example.md"],
+  "backlog": {
+    "P1": [
+      "Legitimate original Jensen/Deck plate/legend access and rights before separate documentary profiles",
+      "Additional useful original labels and independent transcription cases without clinical inference",
+      "Any quantitative geometry requires explicit original boundaries and separate independent verification;do not infer them from irregular fields"
+    ],
+    "P2": [
+      "Edition-specific differences,printed perimeter numbering and Fig5 documentary reconstruction",
+      "Separately verified Rayid historical terminology only;no actual-person trait classifier",
+      "Optional neutral historical schematic after label fidelity and rights checks"
+    ]
+  },
+  "transition": "After this closure is pushed,record Phase2 bounded-core completion and audit Technique16 Tarot only;do not implement Tarot in its audit"
+}
