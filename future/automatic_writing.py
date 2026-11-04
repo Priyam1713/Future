@@ -41,12 +41,12 @@ def interval(start, end):
     """Only declared complete datetime endpoints with compatible awareness yield duration."""
     a, b = _moment(start), _moment(end)
     if a is None or b is None or (a.tzinfo is None) != (b.tzinfo is None):
-        return dict(seconds=None, status='unavailable_missing_or_incompatible_endpoints')
+        return dict(seconds=None, microseconds=None, status='unavailable_missing_or_incompatible_endpoints')
     delta = b-a
     if delta.total_seconds() < 0:
         raise ValueError('Comparable declared timestamps must not run backwards')
     microseconds = (delta.days*86400+delta.seconds)*1000000+delta.microseconds
-    return dict(seconds=microseconds/1000000, status='declared_endpoints_only')
+    return dict(seconds=microseconds/1000000, microseconds=microseconds, status='declared_endpoints_only')
 
 
 def metrics(text):
@@ -198,7 +198,7 @@ def read(value, registry=None):
         metric_conventions=dict(characters='Python Unicode code points; no normalization or grapheme counting',
             words='Maximal nonempty runs separated by Python str.isspace Unicode whitespace; punctuation/emoji remain in tokens',
             lines='Empty text0; otherwise1 plus CRLF/CR/LF delimiters; CRLF is one delimiter, final empty line counted',
-            duration='Begin-to-stop declared compatible datetime endpoints only; includes pauses; no inferred active typing time',
+            duration='Begin-to-stop declared compatible datetime endpoints only; includes pauses; exact integer microseconds authoritative, seconds is a floating display; no inferred active typing time',
             segment_intervals='Sum only when every segment declares an integer interval; not inferred or equated to wall duration'),
         evidence_layers=dict(direct='Seven attributed Breton French-excerpt procedure facts only', user_authored='Raw events, segments, revisions, comments, constraints and associations',
             editorial='State machine, controls, hashes, metrics, review and revision model; constraints may differ from historical procedure',
@@ -228,11 +228,12 @@ def markdown(result):
     for title, data in [('Session declarations', result['session']), ('Event timeline', result['timeline']),
                         ('Original writing segments', result['original_segments'])]:
         lines += ['', '## '+title, '', block(json.dumps(data, ensure_ascii=False, indent=2), 'json')]
-    lines += ['', '## Original first draft', '', block(result['first_draft']['text']), '',
+    lines += ['', '## Original first draft', '', 'JSON string preserves exact whitespace and line endings:', '',
+              block(json.dumps(result['first_draft']['text'], ensure_ascii=False), 'json'), '',
               'Original content SHA256: '+result['first_draft']['content_sha256'], '', '## Separate revision history']
     for row in result['revisions']:
         lines += ['', '### '+html.escape(row['record']['id'])+' (parent '+html.escape(row['record']['parent'])+')', '',
-                  block(row['record']['text']), '', block(json.dumps(row, ensure_ascii=False, indent=2), 'json')]
+                  block(json.dumps(row['record']['text'], ensure_ascii=False), 'json'), '', block(json.dumps(row, ensure_ascii=False, indent=2), 'json')]
     for title, data in [('Objective metrics', result['metrics']), ('Metric conventions', result['metric_conventions']),
                         ('Evidence layers', result['evidence_layers']), ('Editorial review questions', result['editorial_questions']),
                         ('Limits', result['limitations']), ('Exact replay metadata', result['replay'])]:

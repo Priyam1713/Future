@@ -676,13 +676,16 @@ non-whitespace runs under Python's Unicode whitespace convention; punctuation an
 emoji stay in tokens. Empty text has zero lines; otherwise line count is one plus
 CRLF/CR/LF delimiters (CRLF counts once; trailing empty line counts). Duration uses
 declared begin/stop datetimes only, including pauses. Missing endpoints, dates or
-mixed timezone awareness yield unavailable. A separately declared interval sum is
+mixed timezone awareness yield unavailable. Integer microseconds retain exact
+duration; the seconds field is a floating display. A separately declared interval sum is
 available only when every segment supplies it; no typing speed or active duration
 is inferred. Events/authorship are declarations, not mental-state measurements.
 
 JSON and Markdown contain the guided source subset, full event timeline, raw
 segments, reconstructed original draft, revision history, objective metrics,
 user reflection, evidence layers and portable canonical hashes/exact replay.
+Markdown uses JSON string blocks for draft text so trailing spaces and original
+line endings remain explicit and recoverable without trimming.
 There is no generation, LLM, network call, diagnosis or supernatural-authorship test.
 Moses's spiritualist accounts, the Breton/Soupault literary exemplar, ideomotor
 methods and stream-of-consciousness remain distinct unsupported executable profiles.

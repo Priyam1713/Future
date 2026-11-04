@@ -104,6 +104,7 @@ class AutomaticWritingTests(unittest.TestCase):
 
     def test_14_duration_offset_vector(self):
         row=REF['duration'];self.assertEqual(a.interval(row['start'],row['stop'])['seconds'],10)
+        self.assertEqual(a.interval('2026-11-04T10:00:00Z','2026-11-04T10:00:10.000001Z')['microseconds'],10000001)
         e=log(['begin','stop']);e[0]['timestamp']=row['start'];e[1]['timestamp']=row['stop']
         self.assertEqual(a.read(base(e,'stopped'))['metrics']['duration']['seconds'],10)
 
@@ -164,7 +165,9 @@ class AutomaticWritingTests(unittest.TestCase):
 
     def test_26_fences_and_literal_unicode(self):
         e=log(['begin','append']);text='```\r\n猫 Café🐍\n';e[1]['segment']['text']=text
-        md=a.markdown(a.read(base(e,'writing')));self.assertIn('````\n'+text+'\n````',md)
+        md=a.markdown(a.read(base(e,'writing')))
+        encoded=md.split('## Original first draft')[1].split('````json\n')[1].split('\n````')[0]
+        self.assertEqual(json.loads(encoded),text)
 
     def test_27_profile_frozen_and_hash_portable(self):
         with self.assertRaises(TypeError):a.DATA['version']=2

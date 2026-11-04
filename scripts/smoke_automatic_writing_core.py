@@ -36,7 +36,7 @@ def run():
             else:
                 replay=json.loads(text.split('## Exact replay metadata')[1].split('```json\n')[1].split('\n```')[0])
                 assert read(replay['request'])==read(value)
-            if output:Path('data',output).write_text(text,encoding='utf-8')
+            if output:Path('data',output).write_bytes(text.encode('utf-8'))
             cases.append(dict(case=name,passed=True,rejected=reject))
         for name,value in rows.items():
             Path('data',f'automatic-writing-{name}-input.json').write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
