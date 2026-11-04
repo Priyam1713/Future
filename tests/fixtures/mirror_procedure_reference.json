@@ -1,0 +1,72 @@
+{
+  "profile": "moody1992-mirror-subset-journal-v1",
+  "method": "Independent pre-engine inspection of original pages108-110;pages108/109 also visually checked. Synthetic application cases,not predictive validation.",
+  "source_id": "mirror-moody1992-procedure-facts-v1",
+  "setup": {
+    "mirror_height_inches": 48,
+    "mirror_width_inches": 42,
+    "mirror_bottom_inches": 32,
+    "chair_headrest_inches": 34,
+    "chair_distance_feet_approx": 3,
+    "lamp_watts": 25,
+    "mirror_angle_degrees": null
+  },
+  "source_order": [
+    "arrangement",
+    "view",
+    "lighting",
+    "preparation",
+    "no_pressure",
+    "gaze",
+    "completion",
+    "review",
+    "qualification"
+  ],
+  "workflow_order": [
+    "arrange",
+    "context",
+    "gaze",
+    "finish",
+    "journal",
+    "reflect"
+  ],
+  "cases": [
+    {
+      "rule": "view",
+      "page": 108,
+      "contains": "own reflection"
+    },
+    {
+      "rule": "lighting",
+      "page": 108,
+      "contains": "25-watt"
+    },
+    {
+      "rule": "no_pressure",
+      "page": 109,
+      "contains": "no guarantee"
+    },
+    {
+      "rule": "gaze",
+      "page": 109,
+      "contains": "relaxed"
+    },
+    {
+      "rule": "completion",
+      "page": 109,
+      "contains": "leave when they wished"
+    },
+    {
+      "rule": "review",
+      "page": 109,
+      "contains": "extended discussion"
+    },
+    {
+      "rule": "qualification",
+      "page": 110,
+      "contains": "scientific study"
+    }
+  ],
+  "edition_boundary": "1992 article setup values,not inferred1993 book figures;no numeric mirror angle",
+  "adaptation_boundary": "Source-backed subset with explicit omitted induction/encounter expectation andeditorial journal/stop qualifications"
+}

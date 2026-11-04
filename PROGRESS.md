@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique22 source/procedure freeze — 2026-11-04
+- Synchronized7cd0ad5. Retrieved Moody1992 primary article via Windows certificate store;inspectedp108-110 andvisually checkedp108/109. Frozen moody1992-mirror-subset-journal-v1,source byte hash,9 rules andindependent setup/procedure fixtures. Article facts include25W lamp andchair-based exclusion of self-reflection;no invented numeric mirror angle or1993 book equivalence.
+- Bounded relaxed mirror-gazing subset withexplicit omissions:all-day preparation/induction,required blackout/watch removal andencounter expectation are not implemented. Historical setup remains reference;written journal,blink/stop qualifications andopen reflection are editorial. Original source allows no experience andvoluntary completion anddisclaims a scientific study. Research cutoff reached. Technique21 remains unchanged;reuse only narrow pure utilities,not its procedure/profile.
+
 ## Technique22 Mirror Scrying resource/variation audit — 2026-11-04
 - Began only after Scrying closure4350dc7 pushed/synchronized0/0. Exact original method,two rankings(Moody Reunions;Dee/Casaubon Relation) andfour variation rows preserved. Five source records cover1993 book metadata,1659 Cornell catalog,author excerpt lead,Moody1992 article and2021 primary obsidian-provenance research. No Mirror engine/profile/CLI orvisual field implemented.
 - Moody psychomanteum,Dee edited accounts,surviving obsidian object andordinary contemplation stay separate. Complete Moody room/session procedure anddated Dee passages remain unverified access leads. Cornell permits search/display butrequires permission for later distribution;no scan/OCR corpus copied. Material provenance andsubjective encounter reports do not validate supernatural contact.
