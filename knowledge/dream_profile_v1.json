@@ -1,0 +1,368 @@
+{
+  "version": 1,
+  "technique_id": 23,
+  "profile": "artemidorus-attalus-context-v1",
+  "source": {
+    "id": "dream-artemidorus-attalus-context-facts-v1",
+    "technique_id": 23,
+    "author": "Artemidorus;Naphtali Lewis1976(1.1),Robert J.White1975(other selected sections)",
+    "edition": "Attalus selected Oneirocritica excerpts,digital factual snapshot checked2026-11-04;not complete five-book translation",
+    "url": "https://www.attalus.org/translate/artemidorus.html",
+    "locator": "Translation notice;1.1,1.2,1.8,1.9,2.13,4.27,4.47,5.51",
+    "snapshot_sha256": "66f52323cbd6783c53f45b2c3db9ae5157a01b5798f7f7b714ebb1f61873c072",
+    "snapshot_bytes": 26275,
+    "ingestion": "facts_only",
+    "rights_note": "Ancient work andmodern White/Lewis translations/site rendering have separate rights. Only original short factual research paraphrases,category/motif facts andlocators retained;no translated passage,whole corpus orsite assets copied. No blanket translation reproduction permission claimed.",
+    "checked_on": "2026-11-04"
+  },
+  "greek_source": {
+    "id": "dream-artemidorus-pack1963-terms-v1",
+    "technique_id": 23,
+    "author": "Artemidorus;R.A.Pack,editor;Bibliotheca Augustana",
+    "edition": "Artemidori Daldiani Onirocriticon libriV;Pack,Teubner1963;Book1 digital Greek witness",
+    "url": "https://www.tha.de/~harsch/graeca/Chronologia/S_post02/Artemidor/art_oni1.html",
+    "locator": "Book1 sections1-2;edition index art_oni0.html",
+    "ingestion": "facts_only",
+    "rights_note": "Technical word/relationship facts only;no critical text/apparatus orGreek corpus redistributed. Digital edition inspected for terms,not a full critical collation;no byte snapshot claimed.",
+    "checked_on": "2026-11-04"
+  },
+  "categories": {
+    "enypnion": {
+      "id": "enypnion",
+      "greek": "ἐνύπνιον",
+      "parent": null,
+      "definition": "Present-state experience during sleep in the author's framework;not a forecast.",
+      "provenance": {
+        "source_id": "dream-artemidorus-attalus-context-facts-v1",
+        "locator": "Oneirocritica 1.1",
+        "translator": "Naphtali Lewis1976",
+        "rule_id": "dream.artemidorus.1_1",
+        "version": 1
+      },
+      "greek_source_id": "dream-artemidorus-pack1963-terms-v1",
+      "applicability": "Conditional historical comparison oruser-selected lens;no predictive certification"
+    },
+    "oneiros": {
+      "id": "oneiros",
+      "greek": "ὄνειρος",
+      "parent": null,
+      "definition": "The author's future-signifying class;the application cannot verify predictive significance.",
+      "provenance": {
+        "source_id": "dream-artemidorus-attalus-context-facts-v1",
+        "locator": "Oneirocritica 1.1",
+        "translator": "Naphtali Lewis1976",
+        "rule_id": "dream.artemidorus.1_1",
+        "version": 1
+      },
+      "greek_source_id": "dream-artemidorus-pack1963-terms-v1",
+      "applicability": "Conditional historical comparison oruser-selected lens;no predictive certification"
+    },
+    "theorematic": {
+      "id": "theorematic",
+      "greek": "θεωρηματικοί",
+      "parent": "oneiros",
+      "definition": "Within oneiros,the represented form directly corresponds to an event in the historical account.",
+      "provenance": {
+        "source_id": "dream-artemidorus-attalus-context-facts-v1",
+        "locator": "Oneirocritica 1.2",
+        "translator": "Robert J.White1975",
+        "rule_id": "dream.artemidorus.1_2",
+        "version": 1
+      },
+      "greek_source_id": "dream-artemidorus-pack1963-terms-v1",
+      "applicability": "Conditional historical comparison oruser-selected lens;no predictive certification"
+    },
+    "allegorical": {
+      "id": "allegorical",
+      "greek": "ἀλληγορικοί",
+      "parent": "oneiros",
+      "definition": "Within oneiros,one thing is represented through another in the author's theory.",
+      "provenance": {
+        "source_id": "dream-artemidorus-attalus-context-facts-v1",
+        "locator": "Oneirocritica 1.2",
+        "translator": "Robert J.White1975",
+        "rule_id": "dream.artemidorus.1_2",
+        "version": 1
+      },
+      "greek_source_id": "dream-artemidorus-pack1963-terms-v1",
+      "applicability": "Conditional historical comparison oruser-selected lens;no predictive certification"
+    }
+  },
+  "motifs": {
+    "eating": {
+      "id": "eating",
+      "provenance": {
+        "source_id": "dream-artemidorus-attalus-context-facts-v1",
+        "locator": "Oneirocritica 1.1",
+        "translator": "Naphtali Lewis1976",
+        "rule_id": "dream.artemidorus.1_1",
+        "version": 1
+      },
+      "condition_kind": "boolean",
+      "cases": [
+        {
+          "id": "present_state",
+          "requires": {
+            "hungry": true
+          },
+          "historical_account": "The hungry person's eating dream is treated as an echo of present need.",
+          "category": "enypnion"
+        }
+      ],
+      "definition": "The hungry person's eating dream is treated as an echo of present need.",
+      "coverage": "bounded_historical_reference",
+      "forecast": false
+    },
+    "drinking": {
+      "id": "drinking",
+      "provenance": {
+        "source_id": "dream-artemidorus-attalus-context-facts-v1",
+        "locator": "Oneirocritica 1.1",
+        "translator": "Naphtali Lewis1976",
+        "rule_id": "dream.artemidorus.1_1",
+        "version": 1
+      },
+      "condition_kind": "boolean",
+      "cases": [
+        {
+          "id": "present_state",
+          "requires": {
+            "thirsty": true
+          },
+          "historical_account": "The thirsty person's drinking dream is treated as an echo of present need.",
+          "category": "enypnion"
+        }
+      ],
+      "definition": "The thirsty person's drinking dream is treated as an echo of present need.",
+      "coverage": "bounded_historical_reference",
+      "forecast": false
+    },
+    "feared_object": {
+      "id": "feared_object",
+      "provenance": {
+        "source_id": "dream-artemidorus-attalus-context-facts-v1",
+        "locator": "Oneirocritica 1.1",
+        "translator": "Naphtali Lewis1976",
+        "rule_id": "dream.artemidorus.1_1",
+        "version": 1
+      },
+      "condition_kind": "boolean",
+      "cases": [
+        {
+          "id": "present_state",
+          "requires": {
+            "current_fear": true
+          },
+          "historical_account": "Seeing what one already fears is linked to present concern.",
+          "category": "enypnion"
+        }
+      ],
+      "definition": "Seeing what one already fears is linked to present concern.",
+      "coverage": "bounded_historical_reference",
+      "forecast": false
+    },
+    "desired_person": {
+      "id": "desired_person",
+      "provenance": {
+        "source_id": "dream-artemidorus-attalus-context-facts-v1",
+        "locator": "Oneirocritica 1.1",
+        "translator": "Naphtali Lewis1976",
+        "rule_id": "dream.artemidorus.1_1",
+        "version": 1
+      },
+      "condition_kind": "boolean",
+      "cases": [
+        {
+          "id": "present_state",
+          "requires": {
+            "current_desire": true
+          },
+          "historical_account": "The lover's being with the desired person illustrates present desire;not every person-image has this meaning.",
+          "category": "enypnion"
+        }
+      ],
+      "definition": "The lover's being with the desired person illustrates present desire;not every person-image has this meaning.",
+      "coverage": "bounded_historical_reference",
+      "forecast": false
+    },
+    "shipwreck": {
+      "id": "shipwreck",
+      "provenance": {
+        "source_id": "dream-artemidorus-attalus-context-facts-v1",
+        "locator": "Oneirocritica 1.2",
+        "translator": "Robert J.White1975",
+        "rule_id": "dream.artemidorus.1_2",
+        "version": 1
+      },
+      "condition_kind": "boolean",
+      "cases": [
+        {
+          "id": "direct_correspondence",
+          "requires": {
+            "at_sea": true,
+            "exact_correspondence_reported": true
+          },
+          "historical_account": "The author narrates a sea traveller's matching shipwreck as a direct example;user reports cannot verify its predictive status.",
+          "category": "theorematic"
+        }
+      ],
+      "definition": "Illustrative direct-form account,not a forecast of shipwreck.",
+      "coverage": "bounded_historical_reference",
+      "forecast": false
+    },
+    "serpent": {
+      "id": "serpent",
+      "provenance": {
+        "source_id": "dream-artemidorus-attalus-context-facts-v1",
+        "locator": "Oneirocritica 2.13",
+        "translator": "Robert J.White1975",
+        "rule_id": "dream.artemidorus.2_13",
+        "version": 1
+      },
+      "condition_kind": "polysemy",
+      "cases": [
+        {
+          "id": "kingship",
+          "requires": {},
+          "historical_account": "Strength supplies a kingship association."
+        },
+        {
+          "id": "time",
+          "requires": {},
+          "historical_account": "Length andrenewed skin supply a time association."
+        },
+        {
+          "id": "wealth",
+          "requires": {},
+          "historical_account": "Guarding treasure supplies a wealth association."
+        },
+        {
+          "id": "sacred",
+          "requires": {},
+          "historical_account": "Associations withnamed deities supply a sacred sense."
+        }
+      ],
+      "definition": "Multiple author associations remain alternatives;no automatic choice fromthe word serpent.",
+      "coverage": "bounded_historical_reference",
+      "forecast": false
+    },
+    "lost_nose": {
+      "id": "lost_nose",
+      "provenance": {
+        "source_id": "dream-artemidorus-attalus-context-facts-v1",
+        "locator": "Oneirocritica 4.27",
+        "translator": "Robert J.White1975",
+        "rule_id": "dream.artemidorus.4_27",
+        "version": 1
+      },
+      "condition_kind": "circumstances",
+      "cases": [
+        {
+          "id": "trade",
+          "requires": {
+            "circumstances": "perfume_trade"
+          },
+          "historical_account": "In the perfume-trade episode,the author relates business loss."
+        },
+        {
+          "id": "reputation",
+          "requires": {
+            "circumstances": "civic_standing"
+          },
+          "historical_account": "In a later civic episode,the author relates forgery,disgrace andflight."
+        },
+        {
+          "id": "body",
+          "requires": {
+            "circumstances": "illness"
+          },
+          "historical_account": "In the illness episode,the author relates death. This is a historical account,not a medical forecast."
+        }
+      ],
+      "definition": "The same recurring motif is assigned trade,reputation orbody meanings in different circumstances.",
+      "coverage": "bounded_historical_reference",
+      "forecast": false
+    },
+    "broken_staff": {
+      "id": "broken_staff",
+      "provenance": {
+        "source_id": "dream-artemidorus-attalus-context-facts-v1",
+        "locator": "Oneirocritica 5.51",
+        "translator": "Robert J.White1975",
+        "rule_id": "dream.artemidorus.5_51",
+        "version": 1
+      },
+      "condition_kind": "staff_cases",
+      "cases": [
+        {
+          "id": "initial_account",
+          "requires": {
+            "staff_cases": "initial_account"
+          },
+          "historical_account": "The first account links broken support to bodily strength andsubsequent paralysis."
+        },
+        {
+          "id": "repeat_during_paralysis",
+          "requires": {
+            "staff_cases": "repeat_during_paralysis"
+          },
+          "historical_account": "In the repeated account during distress over paralysis,the author instead relates recovery andno further need ofsupport."
+        }
+      ],
+      "definition": "Opposite historical outcomes show why a bare object is not a universal omen;case selection is optional andnot a health assessment.",
+      "coverage": "bounded_historical_reference",
+      "forecast": false
+    },
+    "myth_variants": {
+      "id": "myth_variants",
+      "provenance": {
+        "source_id": "dream-artemidorus-attalus-context-facts-v1",
+        "locator": "Oneirocritica 4.47",
+        "translator": "Robert J.White1975",
+        "rule_id": "dream.artemidorus.4_47",
+        "version": 1
+      },
+      "condition_kind": "myth_versions",
+      "cases": [
+        {
+          "id": "retain_versions",
+          "requires": {
+            "myth_versions": 2
+          },
+          "historical_account": "The author recommends relating alternative versions ofa myth rather than silently choosing one."
+        }
+      ],
+      "definition": "Competing traditions stay visible;the app does not verify legendary history orfuture fulfilment.",
+      "coverage": "bounded_historical_reference",
+      "forecast": false
+    }
+  },
+  "context_rules": [
+    {
+      "source_id": "dream-artemidorus-attalus-context-facts-v1",
+      "locator": "Oneirocritica 1.8",
+      "translator": "Robert J.White1975",
+      "rule_id": "dream.artemidorus.1_8",
+      "version": 1,
+      "statement": "Common andindividual/cultural customs can change a reading;the author's generalizations are historical claims."
+    },
+    {
+      "source_id": "dream-artemidorus-attalus-context-facts-v1",
+      "locator": "Oneirocritica 1.9",
+      "translator": "Robert J.White1975",
+      "rule_id": "dream.artemidorus.1_9",
+      "version": 1,
+      "statement": "Circumstances andsmall narrative details matter;the app makes all such context optional andnever invents it."
+    }
+  ],
+  "terminology": "Stable Greek/transliterated category IDs avoid the differing English dream/vision labels inmodern translations. GreekBook1.1/1.2 terms inspected;not a full original-language collation.",
+  "annotations": "Manual known-motif tags withoptional exact half-open Unicode code-point spans;no automatic word matching,case normalization orword-boundary inference. Overlapping different tags remain distinct;duplicate annotations rejected. Tags never select an interpretation;lookups are separate explicit requests.",
+  "rights": "Ancient work andmodern White/Lewis translations/site rendering have separate rights. Only original short factual research paraphrases,category/motif facts andlocators retained;no translated passage,whole corpus orsite assets copied. No blanket translation reproduction permission claimed.",
+  "limits": [
+    "Historical omen accounts are not empirically validated forecasts",
+    "No diagnosis,hidden-memory inference,latent-wish analysis oruniversal symbol dictionary",
+    "All personal/cultural/situational facts are optional,user declared andnot inferred fromnarrative words",
+    "Freud,Jung,Faraday andother cultural dictionaries remain separate unsupported profiles",
+    "Automatic literal tagging deferred;manual exact-span annotations only;no external calls,LLM orclock"
+  ]
+}

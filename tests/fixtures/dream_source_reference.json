@@ -1,0 +1,133 @@
+{
+  "profile": "artemidorus-attalus-context-v1",
+  "method": "Original selected translated passages andGreekBook1.1/1.2 checked before engine;synthetic application cases,not empirical omen examples",
+  "category_ids": [
+    "enypnion",
+    "oneiros",
+    "theorematic",
+    "allegorical"
+  ],
+  "parents": [
+    null,
+    null,
+    "oneiros",
+    "oneiros"
+  ],
+  "greek_terms": [
+    "ἐνύπνιον",
+    "ὄνειρος",
+    "θεωρηματικοί",
+    "ἀλληγορικοί"
+  ],
+  "motif_sections": {
+    "eating": "1.1",
+    "drinking": "1.1",
+    "feared_object": "1.1",
+    "desired_person": "1.1",
+    "shipwreck": "1.2",
+    "serpent": "2.13",
+    "lost_nose": "4.27",
+    "broken_staff": "5.51",
+    "myth_variants": "4.47"
+  },
+  "cases": [
+    {
+      "motif": "eating",
+      "context": {
+        "hungry": true
+      },
+      "selected": [
+        "present_state"
+      ],
+      "status": "conditional_reference"
+    },
+    {
+      "motif": "eating",
+      "context": {},
+      "selected": [],
+      "status": "missing_context"
+    },
+    {
+      "motif": "drinking",
+      "context": {
+        "thirsty": false
+      },
+      "selected": [],
+      "status": "conditions_not_met"
+    },
+    {
+      "motif": "lost_nose",
+      "context": {
+        "circumstances": [
+          "perfume_trade"
+        ]
+      },
+      "selected": [
+        "trade"
+      ],
+      "status": "conditional_reference"
+    },
+    {
+      "motif": "lost_nose",
+      "context": {
+        "circumstances": [
+          "perfume_trade",
+          "illness"
+        ]
+      },
+      "selected": [
+        "trade",
+        "body"
+      ],
+      "status": "conflicting_references"
+    },
+    {
+      "motif": "broken_staff",
+      "context": {
+        "staff_cases": [
+          "initial_account",
+          "repeat_during_paralysis"
+        ]
+      },
+      "selected": [
+        "initial_account",
+        "repeat_during_paralysis"
+      ],
+      "status": "conflicting_references"
+    },
+    {
+      "motif": "serpent",
+      "context": {},
+      "selected": [
+        "kingship",
+        "time",
+        "wealth",
+        "sacred"
+      ],
+      "status": "polysemous_reference"
+    },
+    {
+      "motif": "myth_variants",
+      "context": {
+        "myth_versions": [
+          "versionA",
+          "versionB"
+        ]
+      },
+      "selected": [
+        "retain_versions"
+      ],
+      "status": "conditional_reference"
+    },
+    {
+      "motif": "shipwreck",
+      "context": {
+        "at_sea": true
+      },
+      "selected": [],
+      "status": "missing_context"
+    }
+  ],
+  "translation_exception": "1.1=Lewis1976;all other selected motif sections=White1975",
+  "scope": "9 bounded references,not an exhaustive ancient dictionary"
+}
