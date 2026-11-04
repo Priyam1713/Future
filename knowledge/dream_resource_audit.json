@@ -2,11 +2,11 @@
   "version": 1,
   "technique_id": 23,
   "name": "Dream Interpretation",
-  "status": "Researching",
+  "status": "Core v1 Ready — Historical/Reflective Dream Interpretation Scope",
   "date": "2026-11-04",
   "predecessor_closure": "9734b1a",
   "predecessor_push": "Confirmed9734b1a pushed to origin/main and0/0 synchronization before Technique23 inventory/resources.",
-  "policy": "Resource/variation audit only;no Dream engine,taxonomy classifier,lexicon,NLP tagger orCLI implemented.",
+  "policy": "Original audit retained;current bounded support is in dream_core_v1.json.",
   "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
   "inventory_method_row": [
     23,
@@ -87,8 +87,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Candidate historical first scope:verified limited taxonomy andcontext rules from1.1/1.2/1.8/1.9 plus voluntary structured journal. Freeze Greek/translation terms andexact locators before classification. Conditional motifs depend onreported context;no automatic factual omen outcome. Complete five-book dictionary unverified andnot required for a clearly bounded taxonomy release."
+      "status": "supported bounded historical/contextual reference only",
+      "finding": "Candidate historical first scope:verified limited taxonomy andcontext rules from1.1/1.2/1.8/1.9 plus voluntary structured journal. Freeze Greek/translation terms andexact locators before classification. Conditional motifs depend onreported context;no automatic factual omen outcome. Complete five-book dictionary unverified andnot required for a clearly bounded taxonomy release.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "Freudian",
@@ -102,8 +103,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Separate Brill1913 historical school. SelectedChII contrasts personal/context-sensitive analysis withmechanical decoding;do not automatically infer latent wishes,sexual meanings,repressed memories ordiagnoses. Any historical examples need exact edition/source locators andclear theoretical attribution."
+      "status": "unsupported;separate source profile deferred",
+      "finding": "Separate Brill1913 historical school. SelectedChII contrasts personal/context-sensitive analysis withmechanical decoding;do not automatically infer latent wishes,sexual meanings,repressed memories ordiagnoses. Any historical examples need exact edition/source locators andclear theoretical attribution.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "Jungian",
@@ -117,8 +119,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Separate named multi-author/edition profile only after original method passages are inspected. Archetypal/amplification claims andpersonal associations must not be blended withArtemidorus omens orFreudian theory. No universal water/emotion orother stock dictionary verified."
+      "status": "unsupported;separate source profile deferred",
+      "finding": "Separate named multi-author/edition profile only after original method passages are inspected. Archetypal/amplification claims andpersonal associations must not be blended withArtemidorus omens orFreudian theory. No universal water/emotion orother stock dictionary verified.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "modern journaling",
@@ -132,8 +135,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Voluntary raw dream narrative,remembered sequence,optional time/context,user associations anduncertainty can reuse narrow proven journal utilities. Faraday diary chapter is a lead,not a verified template. Local/offline explicit input andno mandatory sensitive demographics;no automatic remote sharing orclinical inference."
+      "status": "supported voluntary editorial journal schema;not Faraday method certification",
+      "finding": "Voluntary raw dream narrative,remembered sequence,optional time/context,user associations anduncertainty can reuse narrow proven journal utilities. Faraday diary chapter is a lead,not a verified template. Local/offline explicit input andno mandatory sensitive demographics;no automatic remote sharing orclinical inference.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "cultural symbol dictionaries",
@@ -147,8 +151,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Each culture/edition requires its own complete source-bound inventory,context exceptions,rights andfixtures. Original variation retained butno aggregate universal lexicon. Missing context andconflicting traditions remain unresolved;do not infer future events orstereotyped personal attributes."
+      "status": "unsupported;separate source profile deferred",
+      "finding": "Each culture/edition requires its own complete source-bound inventory,context exceptions,rights andfixtures. Original variation retained butno aggregate universal lexicon. Missing context andconflicting traditions remain unresolved;do not infer future events orstereotyped personal attributes.",
+      "audit_status": "unsupported;resource audit only"
     }
   ],
   "sources": [
@@ -273,10 +278,30 @@
     "Optional user-consented pattern summaries overjournals,withoutclinical claims",
     "Additional licensed visual/source material"
   ],
-  "limitations": "No executable Technique23 support. Original60 IDs,54 retained,six exclusions25/27/41/42/47/48,four ranked sources andfive variations preserved.",
+  "limitations": "Bounded Artemidorus historical/contextual reference andvoluntary journal scope only;no predictive orclinical certification. Original taxonomy/rankings/variation rows unchanged.",
   "accepted_predecessor": {
     "status": "Core v1 Ready — Guided Mirror/Journaling Scope",
     "tests": 387,
     "cli_cases": 363
+  },
+  "audit_status_at_creation": "Researching",
+  "policy_at_audit": "Resource/variation audit only;no Dream engine,taxonomy classifier,lexicon,NLP tagger orCLI implemented.",
+  "limitations_at_audit": "No executable Technique23 support. Original60 IDs,54 retained,six exclusions25/27/41/42/47/48,four ranked sources andfive variations preserved.",
+  "current_release": "knowledge/dream_core_v1.json",
+  "current_backlog": {
+    "P1": [
+      "More verified Artemidorus contextual motifs",
+      "Separate Freud Brill1913 historical reference profile",
+      "Legitimate Faraday procedural access",
+      "Jung chapter/author-specific method verification",
+      "Automatic exact-span English matcher only after vocabulary/boundary/negation/override fixtures"
+    ],
+    "P2": [
+      "Separate cultural dictionaries",
+      "Broader original-language/translation comparison",
+      "User-consented cross-journal pattern summaries",
+      "Advanced narrative tagging oroptional local LLM assistance",
+      "Licensed imagery oroptional UI"
+    ]
   }
 }

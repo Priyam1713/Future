@@ -1,0 +1,337 @@
+{
+  "version": 1,
+  "technique_id": 23,
+  "name": "Dream Interpretation",
+  "date": "2026-11-04",
+  "status": "Core v1 Ready — Historical/Reflective Dream Interpretation Scope",
+  "profile": "artemidorus-attalus-context-v1",
+  "source_pass_commit": "2ffe55c",
+  "implementation_commit": "d1f2c14",
+  "source": {
+    "id": "dream-artemidorus-attalus-context-facts-v1",
+    "technique_id": 23,
+    "author": "Artemidorus;Naphtali Lewis1976(1.1),Robert J.White1975(other selected sections)",
+    "edition": "Attalus selected Oneirocritica excerpts,digital factual snapshot checked2026-11-04;not complete five-book translation",
+    "url": "https://www.attalus.org/translate/artemidorus.html",
+    "locator": "Translation notice;1.1,1.2,1.8,1.9,2.13,4.27,4.47,5.51",
+    "snapshot_sha256": "66f52323cbd6783c53f45b2c3db9ae5157a01b5798f7f7b714ebb1f61873c072",
+    "snapshot_bytes": 26275,
+    "ingestion": "facts_only",
+    "rights_note": "Ancient work andmodern White/Lewis translations/site rendering have separate rights. Only original short factual research paraphrases,category/motif facts andlocators retained;no translated passage,whole corpus orsite assets copied. No blanket translation reproduction permission claimed.",
+    "checked_on": "2026-11-04"
+  },
+  "greek_source": {
+    "id": "dream-artemidorus-pack1963-terms-v1",
+    "technique_id": 23,
+    "author": "Artemidorus;R.A.Pack,editor;Bibliotheca Augustana",
+    "edition": "Artemidori Daldiani Onirocriticon libriV;Pack,Teubner1963;Book1 digital Greek witness",
+    "url": "https://www.tha.de/~harsch/graeca/Chronologia/S_post02/Artemidor/art_oni1.html",
+    "locator": "Book1 sections1-2;edition index art_oni0.html",
+    "ingestion": "facts_only",
+    "rights_note": "Technical word/relationship facts only;no critical text/apparatus orGreek corpus redistributed. Digital edition inspected for terms,not a full critical collation;no byte snapshot claimed.",
+    "checked_on": "2026-11-04"
+  },
+  "coverage": {
+    "categories": 4,
+    "contextual_motifs": 9,
+    "context_qualifications": 2,
+    "registry_rules": 15,
+    "source_sections": [
+      "1.1",
+      "1.2",
+      "1.8",
+      "1.9",
+      "2.13",
+      "4.27",
+      "4.47",
+      "5.51"
+    ],
+    "taxonomy": {
+      "enypnion": {
+        "id": "enypnion",
+        "greek": "ἐνύπνιον",
+        "parent": null,
+        "definition": "Present-state experience during sleep in the author's framework;not a forecast.",
+        "provenance": {
+          "source_id": "dream-artemidorus-attalus-context-facts-v1",
+          "locator": "Oneirocritica 1.1",
+          "translator": "Naphtali Lewis1976",
+          "rule_id": "dream.artemidorus.1_1",
+          "version": 1
+        },
+        "greek_source_id": "dream-artemidorus-pack1963-terms-v1",
+        "applicability": "Conditional historical comparison oruser-selected lens;no predictive certification"
+      },
+      "oneiros": {
+        "id": "oneiros",
+        "greek": "ὄνειρος",
+        "parent": null,
+        "definition": "The author's future-signifying class;the application cannot verify predictive significance.",
+        "provenance": {
+          "source_id": "dream-artemidorus-attalus-context-facts-v1",
+          "locator": "Oneirocritica 1.1",
+          "translator": "Naphtali Lewis1976",
+          "rule_id": "dream.artemidorus.1_1",
+          "version": 1
+        },
+        "greek_source_id": "dream-artemidorus-pack1963-terms-v1",
+        "applicability": "Conditional historical comparison oruser-selected lens;no predictive certification"
+      },
+      "theorematic": {
+        "id": "theorematic",
+        "greek": "θεωρηματικοί",
+        "parent": "oneiros",
+        "definition": "Within oneiros,the represented form directly corresponds to an event in the historical account.",
+        "provenance": {
+          "source_id": "dream-artemidorus-attalus-context-facts-v1",
+          "locator": "Oneirocritica 1.2",
+          "translator": "Robert J.White1975",
+          "rule_id": "dream.artemidorus.1_2",
+          "version": 1
+        },
+        "greek_source_id": "dream-artemidorus-pack1963-terms-v1",
+        "applicability": "Conditional historical comparison oruser-selected lens;no predictive certification"
+      },
+      "allegorical": {
+        "id": "allegorical",
+        "greek": "ἀλληγορικοί",
+        "parent": "oneiros",
+        "definition": "Within oneiros,one thing is represented through another in the author's theory.",
+        "provenance": {
+          "source_id": "dream-artemidorus-attalus-context-facts-v1",
+          "locator": "Oneirocritica 1.2",
+          "translator": "Robert J.White1975",
+          "rule_id": "dream.artemidorus.1_2",
+          "version": 1
+        },
+        "greek_source_id": "dream-artemidorus-pack1963-terms-v1",
+        "applicability": "Conditional historical comparison oruser-selected lens;no predictive certification"
+      }
+    },
+    "motif_ids": [
+      "eating",
+      "drinking",
+      "feared_object",
+      "desired_person",
+      "shipwreck",
+      "serpent",
+      "lost_nose",
+      "broken_staff",
+      "myth_variants"
+    ],
+    "translation_exception": "Lewis1976 for1.1;White1975 forother selected passages",
+    "greek_scope": "Book1.1/1.2 term/relationship check,not full original-language orcritical-edition collation",
+    "complete_five_book_dictionary": false
+  },
+  "supported": [
+    "Immutable named Artemidorus factual reference profile with4 historical categories and9 bounded motif/context references",
+    "Explicit contextual comparison ofpresent-state examples,direct-correspondence anecdote,polysemous serpent,recurring nose-loss,opposite staff accounts andcompeting myths",
+    "Missing,not-met andconflicting conditions retained;no context inferred fromnarrative words",
+    "Voluntary raw narrative,64 ordered scenes,user labels/feelings/associations,optional time/context/recall/reflection;missing/null/blank/fragmented records valid",
+    "Manual known-motif tags andoptional exact Unicode code-point spans,include/exclude decisions,distinct overlaps andduplicate rejection;no automatic interpretation fromannotations",
+    "Historical/user/editorial/unsupported layers,preference opt-out,reproducible JSON/Markdown andcomplete portable-hash replay"
+  ],
+  "experimental": [
+    "Category applicability is a conditional historical comparison oruser-selected lens,not verified predictive significance",
+    "Source omen/illness/death/recovery accounts andcultural generalizations are attributed historical claims,not modern clinical orfactual conclusions",
+    "Manual context selectors compare historical cases;they do not assess an actual person's health orcircumstances"
+  ],
+  "unsupported": [
+    "Exhaustive ancient dictionary,universal symbolism orautomatic omen fulfilment",
+    "Factual prediction,diagnosis,latent-wish/repressed-memory inference,hidden facts orconfidence scores",
+    "Automatic literal/fuzzy/negation/metaphor/translated-text matcher orheavy NLP/LLM",
+    "Freud,Jung,Faraday orother cultural profiles combined withArtemidorus",
+    "Remote processing,automatic sharing,cloud storage,frontend ornew runtime dependency"
+  ],
+  "configuration_matrix": {
+    "profile": "artemidorus-attalus-context-v1",
+    "task": "historical_reflection",
+    "mode": "manual",
+    "category_ids": [
+      "enypnion",
+      "oneiros",
+      "theorematic",
+      "allegorical"
+    ],
+    "lookup_ids": [
+      "eating",
+      "drinking",
+      "feared_object",
+      "desired_person",
+      "shipwreck",
+      "serpent",
+      "lost_nose",
+      "broken_staff",
+      "myth_variants"
+    ],
+    "unknown_lookups": "Explicit unsupported result,no fallback",
+    "journal_fields": [
+      "narrative",
+      "timestamp",
+      "recall",
+      "scenes",
+      "people",
+      "objects",
+      "places",
+      "events",
+      "feelings",
+      "associations",
+      "context",
+      "personal_reflection"
+    ],
+    "limits": {
+      "narrative_characters": 20000,
+      "scene_count": 64,
+      "scene_text_characters": 10000,
+      "user_list_items": 32,
+      "user_list_string_characters": 2000,
+      "annotations": 128,
+      "lookups": 32
+    },
+    "optional_context": {
+      "booleans": [
+        "hungry",
+        "thirsty",
+        "current_fear",
+        "current_desire",
+        "at_sea",
+        "exact_correspondence_reported"
+      ],
+      "circumstances": [
+        "perfume_trade",
+        "civic_standing",
+        "illness"
+      ],
+      "staff_cases": [
+        "initial_account",
+        "repeat_during_paralysis"
+      ],
+      "raw_fields": [
+        "myth_versions",
+        "cultural_context",
+        "situational_context",
+        "notes"
+      ]
+    },
+    "preferences": [
+      "historical_references",
+      "editorial_questions"
+    ]
+  },
+  "annotation_contract": {
+    "policy": "manual-codepoint-spans-v1",
+    "vocabulary": [
+      "eating",
+      "drinking",
+      "feared_object",
+      "desired_person",
+      "shipwreck",
+      "serpent",
+      "lost_nose",
+      "broken_staff",
+      "myth_variants"
+    ],
+    "source": "Manual known-motif tags withoptional exact half-open Unicode code-point spans;no automatic word matching,case normalization orword-boundary inference. Overlapping different tags remain distinct;duplicate annotations rejected. Tags never select an interpretation;lookups are separate explicit requests.",
+    "spans": "0-based half-open Python Unicode code-point offsets intoexact original narrative/scene text;not UTF8 bytes orUTF16 code units",
+    "matching": "None;no normalization/case/word-boundary/negation claims",
+    "overlaps": "Retained distinctly;duplicate same motif/target/span rejected even ifdecisions conflict",
+    "interpretation_trigger": false
+  },
+  "interpretation_layers": {
+    "direct": "Source-versioned categories,contextual facts andauthor-attributed accounts withtranslator/section locators",
+    "user_attributed": "Exact narrative,scene labels,optional contexts,taxonomy lenses,annotations andpersonal associations",
+    "editorial": "Transparent case-status comparisons,neutral summaries andoptional open questions",
+    "unsupported": "Objective predictions,diagnoses,hidden memories oruniversal meanings"
+  },
+  "replay": {
+    "profile_sha256": "85149f9759a16cd724d089d48ecc7d75b1027c6e0dcdade555c2c157b0cb4847",
+    "serialization": "Canonical UTF8 JSON sorted keys,compact comma/colon separators,unescaped Unicode,no terminal LF;LF/CRLF portable",
+    "input": "Exact validated request withomissions/nulls/blank text preserved",
+    "ordering": "Input order preserved;explicit scene sequences strictly increase without sorting",
+    "timestamps": "User supplied only;no automatic clock/timezone",
+    "external_calls": false,
+    "automatic_matching": false,
+    "rng_protocol": null
+  },
+  "reuse": "Only narrow pure text/timestamp/strict-JSON/hash utilities fromTechnique21;Technique21/22 engines,profiles,schemas andoutputs unchanged;previous saved reports andfull inherited suite pass.",
+  "verification": {
+    "tests": 415,
+    "inherited_tests": 387,
+    "new_tests": 28,
+    "cli_cases": 393,
+    "inherited_cli_cases": 363,
+    "new_cli_cases": 30,
+    "inherited_cli_modules": 22,
+    "independent_reference_checks": 26,
+    "registry_rules": 15,
+    "tarot_checks": 30,
+    "oracle_checks": 49,
+    "iching_checks": 8759,
+    "rune_checks": 84,
+    "pendulum_checks": 207,
+    "scrying_checks": 23,
+    "mirror_checks": 22,
+    "dependency_audit": "passed",
+    "pip_check": "passed",
+    "diff_check": "passed",
+    "evidence": [
+      "data/dream-regression.json",
+      "data/dream-inherited-smoke.json",
+      "data/dream-smoke.json",
+      "data/dream-verification.json",
+      "tests/fixtures/dream_source_reference.json",
+      "knowledge/dream_pass1_findings.json"
+    ],
+    "assurance": "Selected original source/Greek-term fidelity anddeterministic contextual comparison;synthetic fixtures,not predictive orclinical validation.",
+    "known_warnings": [
+      "Inherited Skyfield/NumPy dtype deprecation",
+      "Inherited unclosed data/de440s.bsp ResourceWarning"
+    ]
+  },
+  "acceptance": {
+    "coherent_historical_taxonomy": true,
+    "useful_contextual_rules": true,
+    "faithful_voluntary_journal": true,
+    "missing_ambiguous_context_conservative": true,
+    "associations_independent": true,
+    "more_than_journal_summary": true,
+    "reports_replay_portable": true,
+    "complete_tests_and_cli_pass": true
+  },
+  "rights": "Ancient work andmodern White/Lewis translations/site rendering have separate rights. Only original short factual research paraphrases,category/motif facts andlocators retained;no translated passage,whole corpus orsite assets copied. No blanket translation reproduction permission claimed.",
+  "limits": [
+    "Historical omen accounts are not empirically validated forecasts",
+    "No diagnosis,hidden-memory inference,latent-wish analysis oruniversal symbol dictionary",
+    "All personal/cultural/situational facts are optional,user declared andnot inferred fromnarrative words",
+    "Freud,Jung,Faraday andother cultural dictionaries remain separate unsupported profiles",
+    "Automatic literal tagging deferred;manual exact-span annotations only;no external calls,LLM orclock"
+  ],
+  "examples": [
+    "data/dream-complete.md",
+    "data/dream-multiple.md",
+    "data/dream-taxonomy.md",
+    "data/dream-context.md",
+    "data/dream-missing.md",
+    "data/dream-associations.md",
+    "data/dream-fragmented.md",
+    "data/dream-conflicting.md",
+    "data/dream-annotated.md"
+  ],
+  "backlog": {
+    "P1": [
+      "More verified Artemidorus contextual motifs",
+      "Separate Freud Brill1913 historical reference profile",
+      "Legitimate Faraday procedural access",
+      "Jung chapter/author-specific method verification",
+      "Automatic exact-span English matcher only after vocabulary/boundary/negation/override fixtures"
+    ],
+    "P2": [
+      "Separate cultural dictionaries",
+      "Broader original-language/translation comparison",
+      "User-consented cross-journal pattern summaries",
+      "Advanced narrative tagging oroptional local LLM assistance",
+      "Licensed imagery oroptional UI"
+    ]
+  },
+  "transition": "Commit andpush closure before Technique24 Automatic Writing resource audit;no Technique24 implementation during audit"
+}

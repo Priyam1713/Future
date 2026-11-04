@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique23 Dream Core v1 closure — 2026-11-04
+- Source2ffe55c/engined1f2c14 andexamples4a7d98d,2a773fe pushed. **Core v1 Ready — Historical/Reflective Dream Interpretation Scope**:artemidorus-attalus-context-v1,4 historical categories/9 motifs/2 context qualifications,explicit conditional comparisons andcompeting accounts,voluntary raw journal/scenes andmanual exact-span annotations. No automatic inference fromwords,tags ormissing personal circumstances.
+-415 tests pass(387 inherited+28 new);393 CLI cases pass(363 inherited across22 modules+30 Dream).26 independent-reference checks;all7 inherited symbolic verifiers,registry,dependency,pip anddiff checks pass. Prior engines/profiles unchanged. Translation/Greek-term boundaries,rights,portable hashes,replay,matrix andbacklog frozen in dream_core_v1.json;source fidelity is not empirical omen orclinical validation.
+- P1:additional Artemidorus motifs,separate Freud profile,Faraday/Jung method access andverified automatic matching. P2:cultural dictionaries,translation comparison,consented journal patterns,advanced/local tagging andlicensed visuals. Current9 references are bounded,not a five-book universal dictionary. Next:push closure before Technique24 Automatic Writing audit only.
+
 ## Technique23 Dream implementation — 2026-11-04
 - Source2ffe55c pushed. Working4-category/9-motif Artemidorus engine evaluates explicit contextual lookups,missing conditions,polysemy andcompeting accounts;not a journal-only wrapper. Voluntary narrative/scenes/entities/feelings/context/associations remain verbatim. Manual Unicode code-point spans andinclude/exclude tags never trigger interpretations;automatic matching deferred. Prior journal engines/profiles unchanged;only pure utilities reused.
 -415 tests pass(387 inherited+28 new);30 Dream CLI cases and26 independent-reference checks pass. All7 inherited symbolic verifiers,registry,dependency,pip anddiff checks pass. Source-byte digest andexact original inventory verified. Full inherited CLI sweep finishing before bounded closure;no clinical/predictive/hidden-memory orcross-school inference.
