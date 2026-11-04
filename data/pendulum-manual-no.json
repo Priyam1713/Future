@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "technique_id": 20,
+  "profile": "lonegren-web-symbolic-response-v1",
+  "task": "symbolic_response",
+  "mode": "manual",
+  "question": "What perspectives could help me reflect?",
+  "procedure": {
+    "source_id": "pendulum-lonegren-web-procedure-v1",
+    "rules": [
+      {
+        "id": "pendulum.lonegren.search",
+        "locator": "The Search Position",
+        "statement": "The source starts with to-and-fro motion as a search state."
+      },
+      {
+        "id": "pendulum.lonegren.calibration",
+        "locator": "Yes and No",
+        "statement": "Individual signals are permitted; suggested circular signals are a fallback,not universal."
+      },
+      {
+        "id": "pendulum.lonegren.partial",
+        "locator": "Yes but and No but",
+        "statement": "Incomplete responses call for clarification rather than a complete answer."
+      },
+      {
+        "id": "pendulum.lonegren.rethink",
+        "locator": "Yes but and No but",
+        "statement": "A separate misleading-question signal prompts reconsideration."
+      },
+      {
+        "id": "pendulum.lonegren.question",
+        "locator": "Asking questions through dowsing - The Eight Step Method,step5",
+        "statement": "Questions should admit a clear binary response;ambiguous wording matters."
+      },
+      {
+        "id": "pendulum.lonegren.checking",
+        "locator": "Dowsing blind;Checking and building confidence",
+        "statement": "The source suggests known-answer checking;this does not establish predictive validity."
+      }
+    ],
+    "source_scope": "Author-associated website;not print Kit charts or Lethbridge rates"
+  },
+  "configuration": {
+    "mapping": {
+      "clockwise": "yes",
+      "counterclockwise": "no"
+    },
+    "complete": true,
+    "missing_responses": [],
+    "coverage": "user_declared_symbolic_mapping",
+    "truth_validated": false
+  },
+  "observations": [
+    {
+      "signal": "counterclockwise",
+      "signal_definition": "Reported circular motion counterclockwise from observer viewpoint",
+      "quality": "full",
+      "coverage": "user_reported_observation",
+      "calibrated_response": "no",
+      "symbolic_response": "no",
+      "resolved": true,
+      "reasons": []
+    }
+  ],
+  "generated_response": null,
+  "generated_signal": null,
+  "outcome": {
+    "symbolic_response": "no",
+    "resolved": true,
+    "resolution_scope": "Symbolic category only;not factual assurance",
+    "conflicting": false,
+    "reasons": []
+  },
+  "reflection": {
+    "coverage": "modern_editorial",
+    "text": "Use the negative symbol to examine objections or alternatives;it supplies no factual verdict."
+  },
+  "replay": {
+    "request": {
+      "schema_version": 1,
+      "profile": "lonegren-web-symbolic-response-v1",
+      "task": "symbolic_response",
+      "mode": "manual",
+      "calibration": [
+        {
+          "signal": "clockwise",
+          "response": "yes"
+        },
+        {
+          "signal": "counterclockwise",
+          "response": "no"
+        }
+      ],
+      "observations": [
+        {
+          "signal": "counterclockwise"
+        }
+      ],
+      "question": "What perspectives could help me reflect?"
+    },
+    "profile": "lonegren-web-symbolic-response-v1",
+    "profile_sha256": "54e6e4ea860a73511c6a377d6e25e9f19fc3aecb7c8bba7b43eb97a23674686b",
+    "source_id": "pendulum-lonegren-web-procedure-v1",
+    "protocol": null,
+    "seed": null,
+    "simulation": null,
+    "calibration": {
+      "mapping": {
+        "clockwise": "yes",
+        "counterclockwise": "no"
+      },
+      "complete": true,
+      "missing_responses": [],
+      "coverage": "user_declared_symbolic_mapping",
+      "truth_validated": false
+    },
+    "aggregation": "Unanimous full resolved responses only;any partial,missing,neutral,unknown or disagreement makes session unresolved. No voting or confidence estimate.",
+    "generated_response": null,
+    "generated_signal": null,
+    "physical_motion_generated": false,
+    "question_in_rng": false
+  },
+  "sources": [
+    {
+      "id": "pendulum-lonegren-web-procedure-v1",
+      "technique_id": 20,
+      "author": "Sig Lonegren / Mid-Atlantic Geomancy",
+      "edition": "The Pendulum;undated author-associated website,accessed2026-11-04;separate from print Kit",
+      "url": "https://www.geomancy.org/index.php/dowsing/the-pendulum",
+      "locator": "The Search Position;Yes and No;Yes but and No but;Asking questions through dowsing;Dowsing blind",
+      "finding": "Website uses initial to-and-fro search motion,individual yes/no signals or suggested clockwise/anticlockwise fallback,partial signals and misleading-question response. Wording matters;blind known-answer practice suggested. Source-defined conventions and metaphysical claims require distinct labels;neither universal direction mapping nor guaranteed factual calibration follows.",
+      "ingestion": "facts_only",
+      "rights_note": "Original short factual paraphrases only;no website prose,photo,downloaded diagram or full exercise corpus copied. Print procedure equivalence unverified.",
+      "checked_on": "2026-11-04"
+    }
+  ],
+  "limitations": [
+    "Search state depends on declared calibration/context;vertical alone is not a universal yes or search signal",
+    "Calibration maps symbols;it does not validate factual answers",
+    "Digital results are categories,not generated movement or physical ideomotor simulation",
+    "No factual assurance,hidden events,health/financial advice,personality/emotional inference or confidence scores"
+  ],
+  "factual_prediction": false,
+  "truth_confidence": null,
+  "physical_motion_observed_by_engine": false
+}
