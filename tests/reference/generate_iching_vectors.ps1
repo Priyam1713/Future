@@ -42,7 +42,7 @@ function Cast-Vector([string]$seedText,[string]$method) {
     return [ordered]@{seed=$seedText;method=$method;first_block=$stream.FirstBlock;lines=$lines;raw=$raw}
 }
 $vectors=@()
-foreach($seedText in @('Future-IChing-v1','0',"Caf$([char]0x00e9)","Cafe$([char]0x0301)",' seed ',('x'*256),([string][char]0x00e9)*128)) {
+foreach($seedText in @('Future-IChing-v1','0',"Caf$([char]0x00e9)","Cafe$([char]0x0301)",' seed ',('x'*256),(([string][char]0x00e9)*128))) {
     foreach($method in @('three-coin','yarrow-marginal')) {$vectors+=@(Cast-Vector $seedText $method)}
 }
 $result=[ordered]@{protocol='future-iching-sha256-v1';method='Independent PowerShell/.NET framing,SHA256,word/rejection and casts;no production imports';vectors=$vectors}
