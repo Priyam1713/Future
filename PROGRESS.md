@@ -1,5 +1,11 @@
 # Future progress
 
+## Phase3 complete — bounded Core v1 scopes — 2026-11-04
+- Technique26 closure41b0ade pushed/synchronized before aggregate review. **Phase 3 Complete — Bounded Core v1 Scopes**: all10 retained IDs16–24/26 have accepted named release records,passing acceptance flags and available independent evidence.25 Mediumship/27 Channeling remain excluded;60 methods/54 retained/six exclusions unchanged.
+- Current475 full tests/445 CLI cases pass;253 Phase3 targeted tests and all10 symbolic verifiers(9274 reference/protocol checks) pass.103 prior journal files unchanged,including78-file baseline. knowledge/phase3_core_v1.json freezes individual scopes/record hashes and data/phase3-validation.json acceptance;not exhaustive,clinical or supernatural certification.
+- P1/P2 andunsupported matrices remain per technique. Next:push this phase transition and confirm synchronization,then audit28 Tasseography(Tea Leaves),first retained Phase4 technique,without implementation.
+- Reconciled stale Tarot Not Started gap index with its accepted Waite1922 release;no engine,profile,ranking or scope changed.
+
 ## Technique26 Akashic Core v1 closure — 2026-11-04
 - Source4269653/engine62eff15 and example/evidence passes pushed. **Core v1 Ready — Historical/Symbolic Reference and Reflection Scope**: howe-public-reference-reflection-v1,10 source-located concepts,public opening/closing structure,explicit purpose/form guidance,optional editorial reframing and voluntary stages/notes. No copied prayer,generated retrieved record,inferred intent or unified doctrine;book/page and source-rights boundaries explicit.
 -475 tests pass(445 inherited+30 new);445 CLI cases pass(417 inherited across24 modules+28 new).47 independent reference checks;all9 inherited verifiers,registry,dependency,pip anddiff checks pass. 103 prior journal files unchanged,including78-file baseline. Matrix,source/profile hashes,raw replay andbacklog frozen in akashic_core_v1.json;not empirical supernatural validation.

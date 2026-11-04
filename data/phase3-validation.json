@@ -1,0 +1,231 @@
+{
+  "passed": true,
+  "phase": 3,
+  "retained_ids": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    26
+  ],
+  "accepted_records": 10,
+  "all_acceptance_booleans_true": true,
+  "all_referenced_evidence_present": true,
+  "full_tests": 475,
+  "cli_cases": 445,
+  "phase_targeted_tests": 253,
+  "targeted_command": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "tests.test_tarot",
+      "tests.test_oracle",
+      "tests.test_iching",
+      "tests.test_runes",
+      "tests.test_pendulum",
+      "tests.test_scrying",
+      "tests.test_mirror",
+      "tests.test_dream",
+      "tests.test_automatic_writing",
+      "tests.test_akashic",
+      "-q"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "----------------------------------------------------------------------\nRan 253 tests in 0.212s\n\nOK\n"
+  },
+  "symbolic_verifiers": 10,
+  "independent_checks": 9274,
+  "exclusions_preserved": [
+    25,
+    27,
+    41,
+    42,
+    47,
+    48
+  ],
+  "methods": 60,
+  "retained": 54,
+  "prior78_files_unchanged": true,
+  "prior_journal_files_unchanged": 103,
+  "release_records": [
+    {
+      "technique_id": 16,
+      "name": "Tarot",
+      "status": "Core v1 Ready — Symbolic Reading Scope",
+      "profile": "waite-1922-text-v1",
+      "release_record": "knowledge/tarot_core_v1.json",
+      "release_sha256": "216ad3ad61a3becce4deeb2e5930c20d4988a4e44aa5ea2140ec3bc04c2ff716",
+      "acceptance": {
+        "passed": true
+      },
+      "evidence_files_present": 4
+    },
+    {
+      "technique_id": 17,
+      "name": "Oracle Cards",
+      "status": "Core v1 Ready — Lenormand Symbolic Reading Scope",
+      "profile": "lenormand-evening-world-1903-text-v1",
+      "release_record": "knowledge/oracle_core_v1.json",
+      "release_sha256": "159b2b431258f7c0e70589ace46ca0b84d63f66cc9acab66b794d0750b94d79e",
+      "acceptance": {
+        "passed": true
+      },
+      "evidence_files_present": 6
+    },
+    {
+      "technique_id": 18,
+      "name": "I Ching",
+      "status": "Core v1 Ready — Hexagram Symbolic Reading Scope",
+      "profile": "legge-1882-scan-text-v1",
+      "release_record": "knowledge/iching_core_v1.json",
+      "release_sha256": "471684fa8221e5080bea952d266187796e0448aefdfc2e5d31f77735f5ef9e57",
+      "acceptance": {
+        "passed": true
+      },
+      "evidence_files_present": 7
+    },
+    {
+      "technique_id": 19,
+      "name": "Rune Casting",
+      "status": "Core v1 Ready — Historical/Symbolic Rune Reading Scope",
+      "profile": "elder24-page-facts-snapshot-v1",
+      "release_record": "knowledge/runes_core_v1.json",
+      "release_sha256": "0e69419d689e588d3247b918cecfc41c975952afd46c0d5141b58605b53fc8e5",
+      "acceptance": {
+        "inventory_verified": true,
+        "all24_reference_entries": true,
+        "source_layers_distinct": true,
+        "manual_seeded_one_three_pass": true,
+        "independent_seed_replay": true,
+        "complete_reports": true,
+        "inherited_regression_and_cli_pass": true
+      },
+      "evidence_files_present": 6
+    },
+    {
+      "technique_id": 20,
+      "name": "Pendulum Divination",
+      "status": "Core v1 Ready — Symbolic Response Scope",
+      "profile": "lonegren-web-symbolic-response-v1",
+      "release_record": "knowledge/pendulum_core_v1.json",
+      "release_sha256": "56149165975ae4000ff6e1a9c13a1da0398718be0ac8bbf86f2204fbfa54c549",
+      "acceptance": {
+        "source_procedure_verified": true,
+        "manual_mapping_pass": true,
+        "unknown_conflicts_conservative": true,
+        "seeded_independently_verified": true,
+        "reproducible_reports": true,
+        "no_fake_motion_or_truth": true,
+        "full_tests_and_cli_pass": true
+      },
+      "evidence_files_present": 7
+    },
+    {
+      "technique_id": 21,
+      "name": "Crystal Ball Scrying",
+      "status": "Core v1 Ready — Guided Symbolic/Journaling Scope",
+      "profile": "atkinson-pg43954-guided-journal-v1",
+      "release_record": "knowledge/scrying_core_v1.json",
+      "release_sha256": "3dd24712403c3082d6df0f2acd565786c4ae636468df3bdc0e32567531ad52d2",
+      "acceptance": {
+        "coherent_source_procedure_verified": true,
+        "session_validation_pass": true,
+        "raw_user_records_faithful": true,
+        "empty_uncertain_sessions_pass": true,
+        "source_user_editorial_separate": true,
+        "replay_and_reports_pass": true,
+        "full_tests_and_cli_pass": true
+      },
+      "evidence_files_present": 5
+    },
+    {
+      "technique_id": 22,
+      "name": "Mirror Scrying",
+      "status": "Core v1 Ready — Guided Mirror/Journaling Scope",
+      "profile": "moody1992-mirror-subset-journal-v1",
+      "release_record": "knowledge/mirror_core_v1.json",
+      "release_sha256": "eedbaeefb14c971d6af0722d517d238859249133fb5ebf3e840e853c3c8a4f1f",
+      "acceptance": {
+        "distinct_mirror_source_verified": true,
+        "source_boundaries_explicit": true,
+        "guide_and_configuration_pass": true,
+        "faithful_journal_and_uncertainty": true,
+        "no_automatic_contact_orclinical_claim": true,
+        "technique21_unchanged": true,
+        "reports_replay_hashes_pass": true,
+        "complete_tests_and_cli_pass": true
+      },
+      "evidence_files_present": 6
+    },
+    {
+      "technique_id": 23,
+      "name": "Dream Interpretation",
+      "status": "Core v1 Ready — Historical/Reflective Dream Interpretation Scope",
+      "profile": "artemidorus-attalus-context-v1",
+      "release_record": "knowledge/dream_core_v1.json",
+      "release_sha256": "58b41e36f87c6733bccea437ab00af916def50aa5acb2d5293ce8f197e15b7de",
+      "acceptance": {
+        "coherent_historical_taxonomy": true,
+        "useful_contextual_rules": true,
+        "faithful_voluntary_journal": true,
+        "missing_ambiguous_context_conservative": true,
+        "associations_independent": true,
+        "more_than_journal_summary": true,
+        "reports_replay_portable": true,
+        "complete_tests_and_cli_pass": true
+      },
+      "evidence_files_present": 6
+    },
+    {
+      "technique_id": 24,
+      "name": "Automatic Writing",
+      "status": "Core v1 Ready — Guided Creative Writing/Revision Scope",
+      "profile": "breton-bsb2016-writing-subset-v1",
+      "release_record": "knowledge/automatic_writing_core_v1.json",
+      "release_sha256": "8a34d0c766a19a2711ff6861d1fe6b388666b68a08a17e63688cb6a9fb3f0f97",
+      "acceptance": {
+        "bounded_procedure_verified": true,
+        "event_validation": true,
+        "verbatim_originals": true,
+        "interruptions_restarts": true,
+        "revision_isolation": true,
+        "independent_metrics": true,
+        "useful_structural_report": true,
+        "qualified_historical_scope": true,
+        "no_supernatural_or_clinical_claims": true,
+        "all_tests_and_cli_pass": true
+      },
+      "evidence_files_present": 7
+    },
+    {
+      "technique_id": 26,
+      "name": "Akashic Records",
+      "status": "Core v1 Ready — Historical/Symbolic Reference and Reflection Scope",
+      "profile": "howe-public-reference-reflection-v1",
+      "release_record": "knowledge/akashic_core_v1.json",
+      "release_sha256": "aa3b82cd851d92fd6ae282bf005dffbe629bd4ffa3d36a980cd9dc4aee5ef040",
+      "acceptance": {
+        "substantive_verified_profile": true,
+        "useful_concept_lookup": true,
+        "purpose_and_reframe": true,
+        "distinct_guided_reflection": true,
+        "evidence_layers_separate": true,
+        "missing_unsupported_conservative": true,
+        "reproducible_reports": true,
+        "all_tests_and_cli_pass": true
+      },
+      "evidence_files_present": 7
+    }
+  ],
+  "assurance": "Accepted bounded source/local scopes only,not exhaustive tradition coverage,clinical certification or proof of supernatural prediction/access.",
+  "metadata_corrections": [
+    "Reconciled stale Tarot Not Started gap index against accepted tarot_core_v1.json;no engine/profile/source scope changed."
+  ]
+}
