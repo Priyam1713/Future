@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "technique_id": 28,
+  "profile": "kent-pg6964-ordinary-cup-v2",
+  "task": "symbolic_cup_reading",
+  "mode": "manual",
+  "vessel": "cup",
+  "source": {
+    "id": "tasseography-kent-pg6964-cup-facts-v2",
+    "technique_id": 28,
+    "author": "Cicely Kent",
+    "edition": "PG6964 illustrated HTML posted2013-03-21,released2004;English digital witness,not verified print pagination",
+    "url": "https://www.gutenberg.org/files/6964/6964-h/6964-h.htm",
+    "locator": "ChII Practice and Method;ChIII General Theories;selected Dictionary entries;Example Cups FigureVIII",
+    "ingestion": "facts_only",
+    "rights_note": "PG metadata lists public domain in USA;non-US law,PG license/trademark and individual images remain separate. Original short factual paraphrases only;no whole book,modern dictionary,scan or source illustration redistributed.",
+    "checked_on": "2026-11-04",
+    "snapshot_sha256": "f6b4b81e04e81ba0efcd91228b76c143ac3b7262484d96f3b3d669d379839c56",
+    "snapshot_bytes": 258333,
+    "figure_viii": {
+      "url": "https://www.gutenberg.org/files/6964/6964-h/images/figure08.png",
+      "sha256": "54d22135898cb2eb912414b369c017ba2c3097b0e201ff843cce25c023dc9cde",
+      "inspection": "Viewed original320x380 diagram:handle above cup,outer rim and inner bottom circle visible. Shape names/positions from original principal-symbol list;no automatic or independent image recognition claimed."
+    }
+  },
+  "layout": {
+    "handle_orientation": "top",
+    "geometry": false,
+    "position_inferred": false,
+    "ordering": "Input order retained",
+    "vessel_method": "Ordinary Kent cup only",
+    "context": {}
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "user_record": {
+        "id": "o1",
+        "symbol_id": "anchor",
+        "region": "rim"
+      },
+      "status": "applicable",
+      "reference": {
+        "id": "anchor",
+        "name": "Anchor",
+        "aliases": [],
+        "definition": "Loyal friends,constancy,wishes and a sailor-specific association.",
+        "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+        "locator": "Dictionary A:Anchor",
+        "alternatives": [],
+        "cases": [
+          {
+            "id": "general",
+            "statement": "Kent associates anchor with loyal friends,constancy in love and realised wishes.",
+            "requires": {},
+            "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+            "locator": "Dictionary A:Anchor"
+          },
+          {
+            "id": "sailor",
+            "statement": "Kent calls anchor a safety emblem for a sailor.",
+            "requires": {
+              "context.sailor": true
+            },
+            "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+            "locator": "Dictionary A:Anchor"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "reference": {
+            "id": "general",
+            "statement": "Kent associates anchor with loyal friends,constancy in love and realised wishes.",
+            "requires": {},
+            "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+            "locator": "Dictionary A:Anchor"
+          },
+          "status": "applicable",
+          "intrinsic_status": "applicable",
+          "condition_results": {},
+          "missing": [],
+          "rule_id": "tasseography.kent.anchor.general",
+          "forecast": false
+        },
+        {
+          "reference": {
+            "id": "sailor",
+            "statement": "Kent calls anchor a safety emblem for a sailor.",
+            "requires": {
+              "context.sailor": true
+            },
+            "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+            "locator": "Dictionary A:Anchor"
+          },
+          "status": "insufficient_information",
+          "intrinsic_status": "insufficient_information",
+          "condition_results": {
+            "context.sailor": "insufficient_information"
+          },
+          "missing": [
+            "context.sailor"
+          ],
+          "rule_id": "tasseography.kent.anchor.sailor",
+          "forecast": false
+        }
+      ],
+      "zones": {
+        "status": "applicable",
+        "qualifications": [
+          {
+            "region": "rim",
+            "association": "comparatively_soon",
+            "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+            "locator": "ChII:handle,near-rim,sides,bottom and intuitive timing qualification"
+          }
+        ],
+        "conflicts": [],
+        "missing": [],
+        "calendar_date": null,
+        "handle_reference": "ChII:handle represents consultant,home or current abode when away;directly underneath denotes present/immediate circumstances.",
+        "convention": "bottom_circle/bottom_centre are named subregions of source bottom,retaining FigureVIII circle/centre labels. No numeric boundaries,absolute dates or priority over under-handle present/immediate qualification."
+      },
+      "missing": [
+        "context.sailor"
+      ],
+      "conflicts": [],
+      "alternative_references": [],
+      "alternatives_scope": "Source organ alternatives are retained without selecting wedding/death/ambition from unspecified surrounding signs",
+      "observed_quantity": null,
+      "qualifiers": {
+        "locator": "ChIII:size/position and clarity",
+        "size": "Relative size and position affect importance;no numeric strength score.",
+        "clarity": "Clear separate symbols are more important than indistinct ones;unclear shape is not a personality assessment."
+      }
+    }
+  ],
+  "editorial_synthesis": [
+    {
+      "observation_id": "o1",
+      "evidence": "editorial_composition_of_source_and_user_declarations",
+      "source_accounts": [
+        "Kent associates anchor with loyal friends,constancy in love and realised wishes."
+      ],
+      "time_qualifications": [
+        "comparatively_soon"
+      ],
+      "unresolved": [
+        "context.sailor"
+      ],
+      "note": "Historically attributed accounts under declared conditions;not an actual event prediction."
+    }
+  ],
+  "summary": {
+    "observations": 1,
+    "counts": {
+      "applicable": 1,
+      "not_applicable": 0,
+      "insufficient_information": 0,
+      "conflicting_evidence": 0,
+      "unsupported": 0
+    },
+    "text": "Each source account is evaluated against explicit manual conditions. Depth and handle timing remain separate;missing or competing evidence is not repaired."
+  },
+  "documentary_comparison": null,
+  "documentary_method_limits": {
+    "saucer": {
+      "locator": "ChII:saucer paragraphs",
+      "note": "Centre consultant;surrounding circle home/near events;more distant circle later;outer rim remote future. Not executable cup zones and not interchangeable."
+    },
+    "nelros": "Separate marked-cup method;unsupported here"
+  },
+  "user_notes": null,
+  "provenance_matrix": {
+    "direct": "Selected Kent source statements,zones,conditions and documentary accounts",
+    "user_attributed": "Manual identities,positions,relations,uncertainty,observations,associations and optional context",
+    "editorial": "Structured predicates,adjacency bookkeeping,comparisons and synthesis;not general symbol grammar",
+    "unsupported": "Objective future outcomes,clinical/personality conclusions,photo/shape recognition or physical leaf simulation"
+  },
+  "conventions": [
+    "Manual named positions only;no shape/coordinate/prose inference. Adjacency means user-declared association,not computed distance. A supplied neighbor list is complete for that observation;omitted list is unknown. One-sided positive declarations suffice unless contradicted by another supplied complete list.",
+    "Symbol/multiplicity/size/motion/context selectors are user declarations;no identity,health or profession inferred. No numeric threshold defines several;user chooses the source quantifier.",
+    "Distinct observations are never silently aggregated into multiplicity. Conflicting identity,heading/motion,region or adjacency evidence is retained without rule priority.",
+    "Surrounding-dots predicate requires declared surrounding arrangement plus an associated symbol;generic adjacency alone does not suffice."
+  ],
+  "limitations": [
+    "Saucer executable profile",
+    "Nelros decorated method",
+    "Turkish tea and coffee methods",
+    "Modern copyrighted dictionary",
+    "Seeded arrangements,geometry,photo recognition,fluid simulation",
+    "Objective future,clinical or personality conclusions",
+    "Qualitative timing only;no dates,probabilities or deadlines computed.",
+    "Source fidelity is not independent predictive validation."
+  ],
+  "replay": {
+    "request": {
+      "schema_version": 1,
+      "profile": "kent-pg6964-ordinary-cup-v2",
+      "task": "symbolic_cup_reading",
+      "mode": "manual",
+      "vessel": "cup",
+      "observations": [
+        {
+          "id": "o1",
+          "symbol_id": "anchor",
+          "region": "rim"
+        }
+      ],
+      "handle_orientation": "top"
+    },
+    "input_sha256": "fff99badfcca9c3473657bcd95a6f9d64cc2797d5f1da3a7bedddd118bd4741e",
+    "profile_sha256": "cc078f560bceca9d59296a29e99070e9f82059829eb2ee7501b926c90b658541",
+    "source_sha256": "f6b4b81e04e81ba0efcd91228b76c143ac3b7262484d96f3b3d669d379839c56",
+    "serialization": "Canonical UTF8 sorted-key compact JSON,unescaped Unicode,no terminal LF;raw content line endings retained",
+    "external_calls": false,
+    "rng": false,
+    "generated_placements": false
+  }
+}
