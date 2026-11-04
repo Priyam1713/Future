@@ -2,11 +2,11 @@
   "version": 1,
   "technique_id": 21,
   "name": "Crystal Ball Scrying",
-  "status": "Researching",
+  "status": "Core v1 Ready — Guided Symbolic/Journaling Scope",
   "date": "2026-11-04",
   "predecessor_closure": "8768467",
   "predecessor_push": "Confirmed8768467 pushed to origin/main and0/0 synchronization before opening Technique21 inventory/resources.",
-  "policy": "Resource/variation audit only;no Scrying engine,journal CLI,symbol dictionary,generated imagery or frontend implemented.",
+  "policy": "Original audit retained;current bounded scope is in scrying_core_v1.json.",
   "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
   "inventory_method_row": [
     21,
@@ -65,8 +65,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Atkinson LessonII gives reflective focus,lighting and non-strained gaze;LessonVI adds historical examples and refers back toII. Candidate guided reference records selected surface/conditions and user reports,including nothing seen. No requirement for expensive crystal or invented cloud-to-vision progression;claims of astral or future access stay unsupported."
+      "status": "supported bounded Atkinson reference/editorial journal scope",
+      "finding": "Atkinson LessonII gives reflective focus,lighting and non-strained gaze;LessonVI adds historical examples and refers back toII. Candidate guided reference records selected surface/conditions and user reports,including nothing seen. No requirement for expensive crystal or invented cloud-to-vision progression;claims of astral or future access stay unsupported.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "dark reflective scrying",
@@ -80,8 +81,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Atkinson explicitly lists dark-backed glass,ink and blackened water vessels as reported alternatives;these are source statements,not measured optical equivalence. Thomas ChIV p32 is an additional method lead not fully inspected. Surface,ambient light,reflections and whether imagery was observed or imagined need explicit provenance;no sensor inference."
+      "status": "supported bounded Atkinson reference/editorial journal scope",
+      "finding": "Atkinson explicitly lists dark-backed glass,ink and blackened water vessels as reported alternatives;these are source statements,not measured optical equivalence. Thomas ChIV p32 is an additional method lead not fully inspected. Surface,ambient light,reflections and whether imagery was observed or imagined need explicit provenance;no sensor inference.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "vision journaling",
@@ -95,8 +97,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Practical candidate is timestamped/contextual user-supplied notes with raw imagery separate from later associations and corroboration. Exact journal schema and workflow would be editorial unless an inspected source defines them. Thomas ChXII p158 is an experiment-recording lead,not a verified journal template yet. Empty/uncertain reports must remain valid."
+      "status": "supported bounded Atkinson reference/editorial journal scope",
+      "finding": "Practical candidate is timestamped/contextual user-supplied notes with raw imagery separate from later associations and corroboration. Exact journal schema and workflow would be editorial unless an inspected source defines them. Thomas ChXII p158 is an experiment-recording lead,not a verified journal template yet. Empty/uncertain reports must remain valid.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "interpretive symbol tables",
@@ -110,8 +113,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "No complete source-specific scrying symbol lexicon verified. Atkinson aura-color/emotion statements are a different occult claim set,not universal meanings for user-reported crystal imagery. Prioritize original reflective questions and explicit personal associations;named traditional tables require separate source/edition/rights fixtures. No invented source-backed table or personality diagnosis."
+      "status": "unsupported;no complete verified dictionary",
+      "finding": "No complete source-specific scrying symbol lexicon verified. Atkinson aura-color/emotion statements are a different occult claim set,not universal meanings for user-reported crystal imagery. Prioritize original reflective questions and explicit personal associations;named traditional tables require separate source/edition/rights fixtures. No invented source-backed table or personality diagnosis.",
+      "audit_status": "unsupported;resource audit only"
     }
   ],
   "sources": [
@@ -208,10 +212,29 @@
     "Additional historical traditions and rights-cleared symbolic tables",
     "Optional sensor/optical observation,with no clairvoyance claim"
   ],
-  "limitations": "No executable Technique21 support. All60 inventory IDs,54 retained,six exclusions25/27/41/42/47/48,two source rankings andfour original variation rows unchanged.",
+  "limitations": "Guided historical-reference andeditorial journal scope;no symbol dictionary,clairvoyance or predictive certification. Original inventory rows/rankings unchanged.",
   "accepted_predecessor": {
     "status": "Core v1 Ready — Symbolic Response Scope",
     "tests": 339,
     "cli_cases": 307
+  },
+  "audit_status_at_creation": "Researching",
+  "policy_at_audit": "Resource/variation audit only;no Scrying engine,journal CLI,symbol dictionary,generated imagery or frontend implemented.",
+  "limitations_at_audit": "No executable Technique21 support. All60 inventory IDs,54 retained,six exclusions25/27/41/42/47/48,two source rankings andfour original variation rows unchanged.",
+  "current_release": "knowledge/scrying_core_v1.json",
+  "current_backlog": {
+    "P1": [
+      "Thomas original ChIV/ChXII procedure/experimentation chapters",
+      "Additional historical session conventions",
+      "Legitimate source-specific symbol references if independently complete",
+      "More source-verified surfaces/conditions",
+      "Print-edition comparison andsource collation"
+    ],
+    "P2": [
+      "Additional historical traditions",
+      "Optional independently seeded creative scenes/visual fields",
+      "Separately licensed historical imagery",
+      "User-observed optical/sensor functionality if justified"
+    ]
   }
 }

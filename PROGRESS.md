@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique21 Scrying Core v1 closure — 2026-11-04
+- Source396adc0/enginef0e9d4f andexamples897505c,f0415d2 pushed. **Core v1 Ready — Guided Symbolic/Journaling Scope**:atkinson-pg43954-guided-journal-v1,8 source reference records/8 surface choices and6-stage editorial workflow. Source guidance,declared conditions,raw user experience/associations andeditorial reflection remain distinct;empty/uncertain/discontinued sessions supported without forced imagery.
+-363 tests pass(339 inherited+24 new);335 CLI cases pass(307 inherited across20 modules+28 Scrying).23 pre-engine reference checks;Tarot30/Oracle49/I Ching8759/Rune84/Pendulum207,registry,dependency,pip anddiff checks pass. Portable profile/source hashes,exact input replay,edition/rights boundary andmatrix frozen in scrying_core_v1.json. No new RNG protocol or creative scenes;optional seed vectors not applicable.
+- P1:Thomas ChIV/XII,additional conventions/symbol references/surfaces andedition collation. P2:additional traditions,optional creative scenes/visuals,licensed imagery andoptical/sensor work. No universal dictionary,detected perception or clairvoyant/predictive validation. Next:push closure before Technique22 Mirror Scrying audit only.
+
 ## Technique21 Scrying implementation — 2026-11-04
 - Source396adc0 pushed after transient GitHub failures. Working guided/journaling engine supports8 historical reflective choices,optional familiar visualization,declared environment/intention/timestamps and128-entry journals. Raw text,experience categories,uncertainty andpersonal associations remain separate from source guidance andeditorial reflection. Missing/null/empty journals valid;no symbol dictionary,seeded scenes,detected perception or prediction.
 -363 tests pass(339 inherited+24 new);28 Scrying CLI cases and23 independent-reference checks pass. Tarot30/Oracle49/I Ching8759/Rune84/Pendulum207,registry,dependency,pip anddiff checks pass;shared random protocols unchanged. Source-byte digest andsaved report replay verified. Full inherited CLI sweep finishing before bounded closure.

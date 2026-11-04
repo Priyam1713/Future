@@ -1,0 +1,297 @@
+{
+  "version": 1,
+  "technique_id": 21,
+  "name": "Crystal Ball Scrying",
+  "date": "2026-11-04",
+  "status": "Core v1 Ready — Guided Symbolic/Journaling Scope",
+  "profile": "atkinson-pg43954-guided-journal-v1",
+  "source_pass_commit": "396adc0",
+  "implementation_commit": "f0e9d4f",
+  "source": {
+    "id": "scrying-atkinson-pg2024-procedure-v1",
+    "technique_id": 21,
+    "author": "William Walker Atkinson;LessonVI quotes W.T.Stead",
+    "edition": "Practical Psychomancy and Crystal Gazing;PG43954 digital text updated2024-10-23;displayed Yoga Publication Society ISBN0-911662-41-3/copyright1908;exact print reissue unverified",
+    "url": "https://www.gutenberg.org/cache/epub/43954/pg43954-images.html",
+    "locator": "LessonII,Crystal Gazing,reflective substitutes through familiar-object visualization/reported mist;LessonVI,Stead quotation and final cross-reference toII",
+    "snapshot_sha256": "4f65e336426e4de45e01d51b0ddd9c48dd164794cb4c009aa8b64acef42af952",
+    "snapshot_bytes": 158192,
+    "ingestion": "facts_only",
+    "rights_note": "PG states public domain in USA with non-US law/PG license notices. Only short original factual notes and editorial workflow retained;no ebook corpus,facsimile,artwork or modern editorial additions copied. PG displayed reprint not equated with LOC Lyal1908 edition.",
+    "checked_on": "2026-11-04"
+  },
+  "source_edition_boundary": "PG43954 digital edition updated2024-10-23;displayed ISBN-era Yoga reprint not authenticated as LOC Lyal1908 facsimile. Selected passages verified;no print-edition equivalence claimed.",
+  "source_coverage": {
+    "procedural_records": 8,
+    "reflective_surface_choices": 8,
+    "editorial_workflow_stages": 6,
+    "source_derived_components": "Preparation,lighting,gaze,optional visualization and source-quoted focus/brief duration",
+    "historical_claim": "Mist/picture accounts remain attributed beliefs,not expected or verified perception",
+    "symbol_dictionary": false,
+    "thomas_chapters": "Unverified separate P1 leads"
+  },
+  "supported": [
+    "One immutable named digital-source profile with8 source-located reference records and8 reflective choices",
+    "Six-stage guided session around preparation,intention,relaxed gaze,raw journaling,personal associations andneutral reflection",
+    "User-declared surface/lighting/background/intention/date-time/status;unknown andunspecified conditions explicit",
+    "Manual journals up to128 entries;raw Unicode/whitespace descriptions,user associations andpersonal reflections preserved",
+    "Five user-attributed experience types,missing type unclassified;missing/null/empty/no-imagery/uncertain/discontinued sessions valid",
+    "Optional familiar-object visualization explicitly separate from perceived imagery",
+    "Deterministic JSON/Markdown reports,source/rule locators,portable profile hash andcomplete replay without a clock"
+  ],
+  "experimental": [
+    "Overall six-stage journal sequence andopen-ended reflection are editorial application conventions,not a verbatim historical ritual",
+    "Subjective experience categories/uncertainty are user declarations,not engine perception or empirical validation"
+  ],
+  "unsupported": [
+    "Complete historical scrying symbol dictionary or general reuse of Atkinson aura-color/emotion claims",
+    "Inferred objects,entities,spirits,hidden memories,emotions,diagnoses or factual predictions",
+    "Objective optical/clairvoyance detection,actual environment/gaze measurement or confidence scores",
+    "Required prolonged stare,sensory deprivation or altered state",
+    "Seeded creative scenes/generated imagery,visual fields,camera/sensor pipeline or frontend",
+    "Thomas procedural chapters or Mirror/psychomanteum/Dee ritual implementation"
+  ],
+  "configuration_matrix": {
+    "profile": "atkinson-pg43954-guided-journal-v1",
+    "task": "guided_journal",
+    "mode": "manual",
+    "surfaces": {
+      "crystal": {
+        "description": "Crystal globe",
+        "rule_ids": [
+          "scrying.atkinson.surface"
+        ]
+      },
+      "glass": {
+        "description": "Plain glass ball",
+        "rule_ids": [
+          "scrying.atkinson.surface"
+        ]
+      },
+      "dark_backed_glass": {
+        "description": "Watch glass over dark cloth",
+        "rule_ids": [
+          "scrying.atkinson.surface"
+        ]
+      },
+      "polished_metal": {
+        "description": "Polished reflective metal",
+        "rule_ids": [
+          "scrying.atkinson.surface"
+        ]
+      },
+      "ink": {
+        "description": "Ink in a dish",
+        "rule_ids": [
+          "scrying.atkinson.surface"
+        ]
+      },
+      "water_black_vessel": {
+        "description": "Water in a blackened vessel",
+        "rule_ids": [
+          "scrying.atkinson.surface"
+        ]
+      },
+      "water_glass": {
+        "description": "Clear water in a glass bottle",
+        "rule_ids": [
+          "scrying.atkinson.surface"
+        ]
+      },
+      "precious_stone": {
+        "description": "Reflective precious stone",
+        "rule_ids": [
+          "scrying.atkinson.surface"
+        ]
+      },
+      "unknown": {
+        "description": "Surface unknown",
+        "rule_ids": []
+      },
+      "unspecified": {
+        "description": "Surface unspecified",
+        "rule_ids": []
+      }
+    },
+    "practices": [
+      "gazing",
+      "familiar_visualization"
+    ],
+    "workflow": [
+      {
+        "id": "prepare",
+        "coverage": "source_guidance_with_editorial_recording",
+        "rule_ids": [
+          "scrying.atkinson.surface",
+          "scrying.atkinson.lighting",
+          "scrying.atkinson.setting"
+        ],
+        "text": "Choose the declared surface;review the historical lighting and dark-support suggestions. Record actual conditions separately."
+      },
+      {
+        "id": "intention",
+        "coverage": "editorial_workflow_with_source_focus",
+        "rule_ids": [
+          "scrying.atkinson.focus"
+        ],
+        "text": "Optionally state an intention in your own words. It is context,not a target the application can verify."
+      },
+      {
+        "id": "gaze",
+        "coverage": "source_guidance",
+        "rule_ids": [
+          "scrying.atkinson.gaze",
+          "scrying.atkinson.duration"
+        ],
+        "text": "Gaze calmly and blink normally;avoid strain. The historical brief example is optional. Stop at any point;no imagery is required."
+      },
+      {
+        "id": "record",
+        "coverage": "editorial_journaling",
+        "rule_ids": [],
+        "text": "Record only your own experience,including uncertainty or nothing noticed. Distinguish reflection,subjective imagery and deliberate imagination."
+      },
+      {
+        "id": "associate",
+        "coverage": "editorial_journaling",
+        "rule_ids": [],
+        "text": "Keep personal associations separate from the raw record;no universal symbolic meaning is assigned."
+      },
+      {
+        "id": "reflect",
+        "coverage": "editorial_reflection",
+        "rule_ids": [],
+        "text": "Review your notes and intention without turning them into claims about hidden facts or future events."
+      }
+    ],
+    "session_fields": [
+      "surface",
+      "lighting",
+      "background",
+      "intention",
+      "timestamp",
+      "practice",
+      "visualization_subject",
+      "status"
+    ],
+    "journal_fields": [
+      "experience_type",
+      "description",
+      "sequence",
+      "timestamp",
+      "uncertainty",
+      "associations",
+      "personal_reflection"
+    ],
+    "experience_types": [
+      "observed_reflection",
+      "subjective_imagery",
+      "imagined_imagery",
+      "uncertain",
+      "no_imagery"
+    ],
+    "journal_policy": "Optional missing/null/empty journal;raw descriptions,associations and reflections preserved verbatim. Input-list order is primary;optional sequence numbers strictly increase without sorting. Missing type remains unclassified,not inferred. Timestamps are user declarations with no current-time default.",
+    "limits": {
+      "journal_entries": 128,
+      "description_or_reflection_characters": 10000,
+      "association_count": 32,
+      "association_characters": 2000
+    },
+    "creative_prompts": {
+      "supported": false,
+      "provenance": "application_authored_only;never a user observation",
+      "backlog": "P2"
+    }
+  },
+  "interpretation_layers": {
+    "direct": "Verified source guidance andattributed historical descriptions withsection locators",
+    "user_attributed": "Original journal,declared experience category,uncertainty,associations andpersonal reflection",
+    "editorial": "Neutral counts/summary andopen-ended questions;no content-based symbolism",
+    "unsupported": "Universal meanings,prediction,supernatural verification andpsychological inference"
+  },
+  "replay": {
+    "profile_sha256": "6354914ecd560919efc3796ea95794784455c3b7f7dbd5db5b5509e52f854bbd",
+    "serialization": "Canonical UTF8 JSON,sorted keys,compact comma/colon separators,unescaped Unicode,no terminal LF;portable LF/CRLF",
+    "request": "Exact validated input retained,including missing/null/empty distinctions",
+    "ordering": "Input list preserved;explicit positive sequence numbers strictly increase without sorting",
+    "timestamps": "User ISO date/dateTtime declarations only;no automatic time or timezone",
+    "rng_protocol": null,
+    "seed_vectors": "Not applicable;optional seeded prompts deferred",
+    "subjective_perception_reproducible": false
+  },
+  "verification": {
+    "tests": 363,
+    "inherited_tests": 339,
+    "new_tests": 24,
+    "cli_cases": 335,
+    "inherited_cli_cases": 307,
+    "new_cli_cases": 28,
+    "inherited_cli_modules": 20,
+    "independent_reference_checks": 23,
+    "independent_procedure_fixture": "tests/fixtures/scrying_procedure_reference.json created before engine",
+    "registry_rules": 8,
+    "tarot_checks": 30,
+    "oracle_checks": 49,
+    "iching_checks": 8759,
+    "rune_checks": 84,
+    "pendulum_checks": 207,
+    "dependency_audit": "passed",
+    "pip_check": "passed",
+    "diff_check": "passed",
+    "evidence": [
+      "data/scrying-regression.json",
+      "data/scrying-inherited-smoke.json",
+      "data/scrying-smoke.json",
+      "data/scrying-verification.json",
+      "knowledge/scrying_pass1_findings.json"
+    ],
+    "assurance": "Selected historical procedure fidelity and deterministic report/journal behavior;synthetic sessions,not clairvoyant or predictive validation",
+    "known_warnings": [
+      "Inherited Skyfield/NumPy dtype deprecation",
+      "Inherited unclosed data/de440s.bsp ResourceWarning"
+    ]
+  },
+  "acceptance": {
+    "coherent_source_procedure_verified": true,
+    "session_validation_pass": true,
+    "raw_user_records_faithful": true,
+    "empty_uncertain_sessions_pass": true,
+    "source_user_editorial_separate": true,
+    "replay_and_reports_pass": true,
+    "full_tests_and_cli_pass": true
+  },
+  "rights": "PG states public domain in USA with non-US law/PG license notices. Only short original factual notes and editorial workflow retained;no ebook corpus,facsimile,artwork or modern editorial additions copied. PG displayed reprint not equated with LOC Lyal1908 edition.",
+  "limits": [
+    "The application cannot observe the environment,gaze or visual experience",
+    "Historical astral/telepathic accounts are author beliefs,not scientific validation",
+    "No universal scrying dictionary,aura-color diagnosis,entity detection,hidden memories or factual prediction",
+    "No required prolonged stare,sensory deprivation or altered state;stopping and no imagery remain valid",
+    "No creative imagery or seeded scene system in this core"
+  ],
+  "examples": [
+    "data/scrying-guided.md",
+    "data/scrying-dark.md",
+    "data/scrying-associations.md",
+    "data/scrying-no-imagery.md",
+    "data/scrying-uncertain.md",
+    "data/scrying-multiple.md",
+    "data/scrying-visualization.md",
+    "data/scrying-empty.md"
+  ],
+  "backlog": {
+    "P1": [
+      "Thomas original ChIV/ChXII procedure/experimentation chapters",
+      "Additional historical session conventions",
+      "Legitimate source-specific symbol references if independently complete",
+      "More source-verified surfaces/conditions",
+      "Print-edition comparison andsource collation"
+    ],
+    "P2": [
+      "Additional historical traditions",
+      "Optional independently seeded creative scenes/visual fields",
+      "Separately licensed historical imagery",
+      "User-observed optical/sensor functionality if justified"
+    ]
+  },
+  "transition": "Commit andpush this closure before Technique22 Mirror Scrying resource audit;no Technique22 implementation during audit"
+}
