@@ -223,7 +223,23 @@ def main():
     runes=sub.add_parser('runes')
     runes.add_argument('input',help='Named Elder24 manual/seeded symbolic rune reading JSON')
     runes.add_argument('--format',choices=['json','markdown'],default='json')
+    pendulum=sub.add_parser('pendulum')
+    pendulum.add_argument('input',help='Manual calibrated observation or seeded symbolic Pendulum JSON')
+    pendulum.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='pendulum':
+        import sys
+        from .pendulum import load_input,read,markdown,rejection
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError) as exc:
+                print(rejection(exc,args.format))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close()
+        return
     if args.command=='runes':
         import sys
         from .runes import load_input,read,markdown

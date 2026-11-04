@@ -405,3 +405,50 @@ Three-rune positions are editorial reflection roles. Source fidelity is not pred
 
 Run `python -m scripts.verify_runes`, `python -m scripts.smoke_runes_core` and
 `python -m unittest tests.test_runes -q` for the bounded acceptance checks.
+# Pendulum Divination Core v1
+
+Run `python -m future pendulum data/pendulum-input.json --format markdown` (or
+`--format json`). The named `lonegren-web-symbolic-response-v1` profile uses factual
+procedural notes from the author-associated *The Pendulum* website. It is separate
+from the print Kit, its 19 uninspected charts, Lethbridge's rate tables and experimental
+research protocols. The website was inspected during the source audit; fresh access
+returned errors/403, recorded in `knowledge/pendulum_pass1_findings.json`. No fresh
+source snapshot is claimed. Only original short factual notes are bundled.
+
+All inputs require schema_version `1`, exact `profile`, task `symbolic_response`,
+and mode `manual` or `seeded`. Optional `question` is plain UTF-8 context (1..1000
+characters); its meaning is never used to determine a response.
+
+Manual mode requires explicit `calibration: [{"signal":"clockwise","response":"yes"},
+{"signal":"counterclockwise","response":"no"}]` and `observations: [{"signal":"clockwise"}]`.
+Clockwise has no default meaning. Circular and linear mappings may be reversed or
+reassigned explicitly. Full yes and no signals must both be declared for a resolved
+session. Search/rethink/unresolved mappings remain unresolved. Irregular movement
+cannot supply a full yes/no calibration. Duplicate or contradictory mapping entries
+are rejected without producing a reading (CLI exit 2 with JSON/Markdown rejection).
+
+Observation categories include clockwise, counterclockwise, vertical (to-and-fro),
+horizontal (side-to-side), searching, still, irregular, partial, conflicting and unknown.
+Unknown plain-text categories are retained as unrecognized. Optional `quality` is
+`full`, `partial`, `conflicting` or `unknown`. One to 64 user-reported observations
+are supported. Every observation must resolve fully to the same symbolic category;
+there is no majority vote, signal-strength inference or confidence score. This
+conservative aggregation is editorial application policy. No motion is inferred.
+
+Seeded mode requires protocol `future-pendulum-sha256-v1`, distribution
+`editorial-2-2-1-v1` and a strict UTF-8 `seed` of 1..256 bytes, without normalization.
+It excludes manual calibration/observations. A separate `FuturePendulum` framing
+inherits unchanged SHA-256 word generation and integer rejection sampling from
+`card_random.Stream`. One unbiased index 0..4 selects yes at 0/1, no at 2/3, unresolved
+at 4. The exact 2/5, 2/5, 1/5 allocation is editorial digital sampling, with no claim
+about historical frequencies or truth. No physical signal or sensor data is generated.
+Reports include the source profile hash, input, exact distribution, index, stream trace
+and replay. Six independent .NET vectors verify 192 draws and initial digest blocks.
+
+See checked [yes](data/pendulum-manual-yes.md), [no](data/pendulum-manual-no.md),
+[ambiguous](data/pendulum-ambiguous.md), [contradictory calibration](data/pendulum-contradictory.md),
+[seeded](data/pendulum-seeded.md) and [identical replay](data/pendulum-replay.md) reports.
+Direct procedural context and modern reflection remain separate. No factual prediction,
+hidden-event detection, emotional diagnosis or physical ideomotor simulation is supported.
+Charts, maps, letter wheels and sensors are deferred. Run `python -m scripts.verify_pendulum`,
+`python -m scripts.smoke_pendulum_core` and `python -m unittest tests.test_pendulum -q`.

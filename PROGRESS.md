@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique20 Pendulum implementation — 2026-11-04
+- Source800a762 pushed. Working manual signal/calibration engine and separate seeded categorical simulator;strict mode isolation,source-specific rules,incomplete/partial/neutral/unknown/conflicting results,conservative repeated observations and reproducible JSON/Markdown. Contradictory calibration rejects with no reading. No chart,sensor,physical motion or truth inference.
+-339 tests pass(312 inherited+27 new);28 Pendulum CLI cases and207 reference checks pass,including6 independent .NET32-draw vectors. Tarot30/Oracle49/I Ching8759/Rune84,registry,dependency audit,pip and diff checks pass. Shared randomization files unchanged. Inherited CLI sweep finishing before bounded closure;source access limitation remains recorded.
+
 ## Technique20 procedural/source freeze — 2026-11-04
 - Synchronized8cfdd14. Frozen lonegren-web-symbolic-response-v1 from the author-associated page inspected in the preceding audit;fresh access now fails/HTTP403,explicitly recorded without claiming a new source snapshot. Six source-located factual rules distinguish individual calibration,search,partial/rethink and question wording;print Kit charts and Lethbridge rates remain separate.
 - Explicit manual mapping/no implicit directions;incomplete calibration,partial,neutral,unknown or conflicting observations stay unresolved. Repeated-observation unanimity is conservative editorial policy. Seeded future-pendulum-sha256-v1 uses independent domain and unchanged SHA256/rejection primitives,editorial2/2/1 yes/no/unresolved weights,not truth probabilities. Nine independent synthetic source cases and6 .NET32-draw vectors frozen before engine implementation. Research cutoff reached;no chart work required for core.
