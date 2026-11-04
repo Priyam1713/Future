@@ -1,0 +1,247 @@
+{
+  "passed": true,
+  "registry": true,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tarot"
+      ],
+      "returncode": 0,
+      "stdout": "30 Tarot source/layout/independent protocol checks passed\n",
+      "stderr": "",
+      "seconds": 0.438
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_oracle"
+      ],
+      "returncode": 0,
+      "stdout": "49 Oracle verification checks passed\n",
+      "stderr": "",
+      "seconds": 0.203
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_iching"
+      ],
+      "returncode": 0,
+      "stdout": "8759 I Ching verification checks passed\n",
+      "stderr": "",
+      "seconds": 0.578
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_runes"
+      ],
+      "returncode": 0,
+      "stdout": "84 rune reference checks passed\n",
+      "stderr": "",
+      "seconds": 0.328
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pendulum"
+      ],
+      "returncode": 0,
+      "stdout": "207 Pendulum reference checks passed\n",
+      "stderr": "",
+      "seconds": 0.313
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_scrying"
+      ],
+      "returncode": 0,
+      "stdout": "23 Scrying reference checks passed\n",
+      "stderr": "",
+      "seconds": 0.515
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_mirror"
+      ],
+      "returncode": 0,
+      "stdout": "22 Mirror reference checks passed\n",
+      "stderr": "",
+      "seconds": 0.375
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_dream"
+      ],
+      "returncode": 0,
+      "stdout": "26 Dream reference checks passed\n",
+      "stderr": "",
+      "seconds": 0.532
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_automatic_writing"
+      ],
+      "returncode": 0,
+      "stdout": "27 Automatic Writing reference checks passed\n",
+      "stderr": "",
+      "seconds": 0.421
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_akashic"
+      ],
+      "returncode": 0,
+      "stdout": "47 Akashic independent reference checks passed\n",
+      "stderr": "",
+      "seconds": 0.407
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.audit_dependencies"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.828
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "stdout": "No broken requirements found.\n",
+      "stderr": "",
+      "seconds": 0.89
+    }
+  ],
+  "prior78_files_unchanged": true,
+  "prior_journal_files_unchanged": 103,
+  "prior_file_sha256": {
+    "data/scrying-associations-input.json": "4dda26f6af6dbc580b079985d25c975a654a4bc5bdc102aef6486591b183c76c",
+    "data/scrying-associations.json": "77c3a9f849236e78b3fb8bc05930d4db2b01f726fbeae00fe95cc0a5fd8710d5",
+    "data/scrying-associations.md": "e66508cf287a5bfcb0d7f6420de2feca62c9e20394eb025e9a97820c2b146583",
+    "data/scrying-dark-input.json": "b7c2536cabc642bff3365b12957c534d82848c0847e28d972bc7d3d459bf9a07",
+    "data/scrying-dark.json": "bf07a1f245c2ad968120e4323757d5e351bf6c83449065ddb47a83ebe5dbc6f5",
+    "data/scrying-dark.md": "5bfbf2a8e90dd89d15f9c0d5a283f1e1ac18f4fa1fc6b89907f382e701e36547",
+    "data/scrying-empty-input.json": "e55017798d43d00fbbea884ca99f5759e47bdaa7d7278477e6d5863a036bb690",
+    "data/scrying-empty.json": "ec76c8095f10e4d95e2297dc6d14f53f12e8eab54b572fc28003e689c16fcd09",
+    "data/scrying-empty.md": "d80ebaaab938c1ef09e9ce93691ed0532c7cd4c574a8c2f37a7652feb95a3936",
+    "data/scrying-guided-input.json": "f38c685c9f50e2b12b40dd8f59853696eec7bb04ad1a577683ba1e095c1fc08a",
+    "data/scrying-guided.json": "35f087e42ff826401e476bafe8bcdb4b08f5585b8231b6353a4d73fa85c4d0b6",
+    "data/scrying-guided.md": "d83539e978e1330507fe3b51119bff1ed69b25efe7e3869c7bd6eddf9f98103e",
+    "data/scrying-input.json": "5975d40c8a07664052001505c90136f9b5cb3e94c3773af4c8534347a6835ec6",
+    "data/scrying-multiple-input.json": "5975d40c8a07664052001505c90136f9b5cb3e94c3773af4c8534347a6835ec6",
+    "data/scrying-multiple.json": "c293ed5e42e7edb993e94bee26065910b1ad47b84f0004a8ab7096ad44d0ac1b",
+    "data/scrying-multiple.md": "dfdd4f3acb47fb434b8dc69568157ee79ff390dec3322e1709633e2e124cf116",
+    "data/scrying-no-imagery-input.json": "eafc66b3fa07761cb43688c6c09f6374db803d5bd98684cebaae2ff7039637cb",
+    "data/scrying-no-imagery.json": "6e8f4b4e8e92a2a6d32af0dc82ca714a087a83cef0df3f535f2961111cd8e464",
+    "data/scrying-no-imagery.md": "e2a0f97b4aef41aae09fe57a506fd7516b0ed47a1da8835fd77379eb3e96c765",
+    "data/scrying-uncertain-input.json": "8a4a3474d76fe0351b851c0191755b6bd44f5f42c82a0c07a35b33d3e2eaaf57",
+    "data/scrying-uncertain.json": "c8c41b39bc7939c5bbae3120fe5772d6296e3f1a947492d03dbd171f69ffc61d",
+    "data/scrying-uncertain.md": "7496af33db8de488de6a2380beac9e6188324a6dd38adcb99f6d82c0f95303a5",
+    "data/scrying-visualization-input.json": "0d96699bdfe36e2db53ab849ea98c2e2491ca9150cbc6c0a2455820579241ed9",
+    "data/scrying-visualization.json": "bb2e6899fffffb44360ea9feb30969c3ffb16f76a2b061f15dd9895c2cb3bd84",
+    "data/scrying-visualization.md": "4b60082910bae934a7c230d6deca823f63a5ec1ebf09e41e86d7932b5c55ec89",
+    "data/mirror-associations-input.json": "b7105cf92a97af8e9f7be78ba6b6654d15be1c56f5a7184cd736f0976428f89e",
+    "data/mirror-associations.json": "e9f87995d8c8cd6c4ac01cffbc599a5ca286f37e267eeea0aea8c7d98ade52cc",
+    "data/mirror-associations.md": "d1f3f8fc006801c8cefe8b0ce7a27d4511491290c99398d68fcfaf88daca10d8",
+    "data/mirror-discontinued-input.json": "a958d4fc484a2c3fc906780fc34dfa1c7ce0672c1f56d43c655989f2e0f0f0e3",
+    "data/mirror-discontinued.json": "faa44c7c394c20ccd3f5b97e9ca4932888a644b05b84dee1bd942e0e2099429e",
+    "data/mirror-discontinued.md": "2e2356c377ccebc8f050ec8497973fbbcea21310aa814ffda3291f757bff4c17",
+    "data/mirror-guided-input.json": "1bf82b1e23e4561257e6ebed892689f9787dd51d84849308ed98a8a634900231",
+    "data/mirror-guided.json": "6b50eb39deccacdf85505a458e22fdc1d12fdc85d5faa31b53bb526364ba2856",
+    "data/mirror-guided.md": "6ed7347420a7412e291366e6d30d6cf397f69d09c77de16584077225a02699ae",
+    "data/mirror-input.json": "ac2c197b49dbc75567fb9450d6eb01b7cb971bc69ee39d4f53fc3dfdbc6bb40e",
+    "data/mirror-invalid-input.json": "e1514264bbea2bcf602a69673ceb7627c428b3b25272ee4f29d7fa61022920dc",
+    "data/mirror-invalid.json": "53edb1a987624909a672e4bbb8cd755bf45ef15c47bef40b384365d12351dc95",
+    "data/mirror-invalid.md": "1b599f673720c4af22b7009d6be62285899e00bf1799ecd3355c9a0ca0c0a5ce",
+    "data/mirror-multiple-input.json": "ac2c197b49dbc75567fb9450d6eb01b7cb971bc69ee39d4f53fc3dfdbc6bb40e",
+    "data/mirror-multiple.json": "246d50acab1d6ef388d2ab32984728e30ecc685fbe6608737e631c9dde37edd5",
+    "data/mirror-multiple.md": "a2306abcb9da6b17cf380cec230204129d3f065d88d58837968498eca60a5894",
+    "data/mirror-no-imagery-input.json": "1ebd37e6eb119f306f31b1b7db37718e0b46f3a03c818acd335f8fdbc0c9ff72",
+    "data/mirror-no-imagery.json": "028cba340ba37fea2cc76633edee456a59401a832bdab2503d749f461019e0ff",
+    "data/mirror-no-imagery.md": "8007ad02a53d602a5589546d354e06c68f381d0b108da583a0b52bcee388d803",
+    "data/mirror-skipped-input.json": "9927dae09325cb404a7f7a566ba616d697fe23e265915d38b5097b10e24be2dc",
+    "data/mirror-skipped.json": "19f0b4c71216b4ec591484ec73abd9160256839255639cfff5a4173af0fe929b",
+    "data/mirror-skipped.md": "dee26e0025a4a72b9b080757af66a079ce58523204cf42a324856d978c3c2728",
+    "data/mirror-uncertain-input.json": "2944fb590601f3499accd85f16f233ede4a3644f839d45743c56084d19d200fa",
+    "data/mirror-uncertain.json": "f061333bc32a99705be82cddc5d1ab0cde5e698f9ec9b934d8359233ea3649b4",
+    "data/mirror-uncertain.md": "86c1b4fb0866db5edcea0d4a460eb04c245f5c2ca5d0be2dbda41210b9fa1b1c",
+    "data/dream-annotated-input.json": "5b104f1898a25e96b1e2bd7371555c6de3199af1072d1532567c7f05cd06ec56",
+    "data/dream-annotated.json": "02a74919e6e86020a07307e95154d9910a84bcb0d7a68bbd7c65bf565b13ba80",
+    "data/dream-annotated.md": "e487495e5afe64152187fefec2a8840fb4f0a178434cde26777da0628f281a31",
+    "data/dream-associations-input.json": "0f25fbf0c283b8fe92f4583658c9930381b13351caf208407de79be094ed1a6e",
+    "data/dream-associations.json": "c7a8dcbc8efa750395cfe5584a6e074b0f62223fbb5326a6d904a59d8681fc2b",
+    "data/dream-associations.md": "d5fb2db02e8773c49f8b0efd2fdf1d9550476f2ecb5beea0ecff8b472cb84d95",
+    "data/dream-complete-input.json": "b31011304c21809eeddf6b13f4a4f87ceff33707c38cc248da755c121b26c06e",
+    "data/dream-complete.json": "33c53351bbeb583a58ae5cce697e0ae2fab6b8dc21a758827b8d5ca1e14f7436",
+    "data/dream-complete.md": "cb18c13b16200d2f01d431ee40178e0ee9bd93473e915ec829262ebcd9d24fb6",
+    "data/dream-conflicting-input.json": "e7c868983370b10a494096a3eb7a4c3185d1923508160793f0b1e75eb4a923ab",
+    "data/dream-conflicting.json": "a9167d1a5bf5045ea65c492522e93c0f03b9c26745f3f325df542462d146ec3d",
+    "data/dream-conflicting.md": "ad4547f52e9b99dadb5aa9b9ab893e259a620090a1b6c2fadeda7ee5d293a4e7",
+    "data/dream-context-input.json": "57ac75996ce813105fd44690efd2d83271a29458e4a8dc77810ab71a2656f99a",
+    "data/dream-context.json": "a5065366075f7758091c719ac59a6eeb8877a628b3737f71a10da7f44b1e4e85",
+    "data/dream-context.md": "1a341fed88ab5adc477a6d8d2b2e83f4c68dbbb880c32093e591394a5d5b1a7b",
+    "data/dream-fragmented-input.json": "3eaa5e9ccc99faee50dc2339e55e3128cc4f839a2b6088e29000291f2255cf6b",
+    "data/dream-fragmented.json": "f524814ca29d69b6cb0471ffd17112c2146da27c679ef8357d98398ed02933e9",
+    "data/dream-fragmented.md": "7cdd9e47264047427437b164e0120f4509380dca50c7ab20b66f7765857251b3",
+    "data/dream-input.json": "b31011304c21809eeddf6b13f4a4f87ceff33707c38cc248da755c121b26c06e",
+    "data/dream-missing-input.json": "202cd1b7eb099062a65848d1970507823353b5f0df5e07eaacef8220421364c1",
+    "data/dream-missing.json": "8ad2bb9537585cc0ad3db001328a13b4df9f4e2eaee154aff15e3ac8b7c74773",
+    "data/dream-missing.md": "55c1aeb19db8ca5cca6e52ce9453448e4d59b74138dabedc565a9ddd04f7eabc",
+    "data/dream-multiple-input.json": "5ac55f8a798a267627a352e316fb0d17b520c57a2464102bd8940d4b5db72ef1",
+    "data/dream-multiple.json": "ae14b4a48eedf081ba48750fbbcf2d3e7eaea10ba480486f4ce1dae612b9f3db",
+    "data/dream-multiple.md": "f9e69778a4986e4484f21c6637b969178b083fdd236a08f926bac9280327a8fa",
+    "data/dream-taxonomy-input.json": "bd03d7f171d227a48c859c450b736f81f94987182d3a98dd2bff4cdee55d0527",
+    "data/dream-taxonomy.json": "86c8da44f0087e5f5ce152cc855ce78e79fbbd3bef36a7f1376dea6d5db8d6ba",
+    "data/dream-taxonomy.md": "a8d5a7f8d14a0e468789549d395d0cf5fab9eafb80557c1ddaa393bff0b31470",
+    "data/automatic-writing-complete-input.json": "052f09da0bda8265fc55c131c3d31ae366542db018ba4d15528c933ee055f39c",
+    "data/automatic-writing-complete.json": "c1917123bebef73a3c9d2a957f4192507efe03a41e6a1c8e970946f83e8ceef6",
+    "data/automatic-writing-complete.md": "2d6a948d065a797892b91c275257ad6619872ef47d98466c5635547e29a2707c",
+    "data/automatic-writing-empty-input.json": "540299b679610802037662dfe1423794e0db4b6f58f6d05b900282df94d148cb",
+    "data/automatic-writing-empty.json": "fafc7ed8b74bdd294e73a518cf85ec071b6c51774d04fb114f54ea9246bea7c7",
+    "data/automatic-writing-empty.md": "577be5d44ab7f8284eed264a131f3f9cfa8032e807a5e25ec6de972988b619f9",
+    "data/automatic-writing-input.json": "052f09da0bda8265fc55c131c3d31ae366542db018ba4d15528c933ee055f39c",
+    "data/automatic-writing-interrupted-input.json": "e1bfdef34e96a3d5caaf0abb5fdabababc6f0f9dc6b0e2cfd47c701b51d2a3c4",
+    "data/automatic-writing-interrupted.json": "a0507ad6f6f4324b7909bebce27b87d518163469e3c309fd0c491ab02fa7b145",
+    "data/automatic-writing-interrupted.md": "f6cd8531e491cd6c1f0c0e23b76f0d6fca17cb6721a5b372c94f3bdec46bce0c",
+    "data/automatic-writing-invalid-input.json": "9a418fe07bdfbd615a1b92f70279d4e0500e66471c9550fd1d5a284a959785e2",
+    "data/automatic-writing-invalid.json": "076cd7905a2903be7d0a2499a7b0ae3cccbc574f9747f4137fb50413dda969a2",
+    "data/automatic-writing-invalid.md": "e204b288ea214185d5984289ffaeb786765f67d78b201a5aec3f186b169415bf",
+    "data/automatic-writing-partial-timing-input.json": "1d5981d4fa8088ad1b540b190168a3962bb4763d3ca2d70b28030197b5a763d7",
+    "data/automatic-writing-partial-timing.json": "27a52e903ceca2dbedeb5f57435f5cd5bbeb27f117d21fde47f0641ab0ae66d2",
+    "data/automatic-writing-partial-timing.md": "93c8256459c66e24a67e9b5d7a614792930cd9421d95ac253e3f44f1644e8962",
+    "data/automatic-writing-procedure-input.json": "0ffc0d28ee1294364aa4b241b5198975998cd33f24b8e5744194ff0217b97a21",
+    "data/automatic-writing-procedure.json": "148707638d9e01cd17b31b1597dd85d5cb7d3b4633e7987460d49019deb8f28b",
+    "data/automatic-writing-procedure.md": "853955f6f34991a39c868fc16a5ad5c019dc3c1854045d0a5d6d79f28c2c89b2",
+    "data/automatic-writing-revisions-input.json": "cd40ca8c6a751c08b22adc93aa4ad14285e23a105914c3f2c553fe441255934b",
+    "data/automatic-writing-revisions.json": "a1dd71db43ccf33113be8c1d860bbb4e749a19fd6aacc08605549d8b2d1a474f",
+    "data/automatic-writing-revisions.md": "b4ef2153d7cf494e97ef55dba8cdbcc7566ef28e8294e61a0066d43ba633a743",
+    "data/automatic-writing-unicode-input.json": "62f9f3a01a2fcec58c049b8e980eb20e22199015860eca090fb9172dcbeba966",
+    "data/automatic-writing-unicode.json": "6c66e2f0f5af7ed07f52b40a017ff999e1981c624cc97f0f93f62bdab161213d",
+    "data/automatic-writing-unicode.md": "ffb22d4245e028ba39abf6fec3ac4de3ae723fe44dfc9f082cc693afff94c519"
+  },
+  "prior_engines_and_inventory_unchanged": true
+}
