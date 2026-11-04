@@ -1,0 +1,443 @@
+{
+  "version": 1,
+  "technique_id": 29,
+  "name": "Coffee Ground Reading",
+  "phase": 4,
+  "date": "2026-11-05",
+  "status": "Core v1 Ready — Historical/Symbolic Coffee Reading Scope",
+  "profile": "coffee-ayvazoglu-seyhun2011-subset-v1",
+  "profile_catalog": "knowledge/coffee_profile_v1.json",
+  "profile_sha256": "b29252c508d3d2a2eb05e28fd103a2ab522834d79b0bc0858edd4bcaa01a08e5",
+  "source_pass_commits": [
+    "5af0065"
+  ],
+  "implementation_commit": "77d20bb",
+  "source": {
+    "id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+    "technique_id": 29,
+    "rank": 2,
+    "author": "Beşir Ayvazoğlu;Melis Şeyhun,translator;Republic of Turkey Ministry of Culture and Tourism",
+    "edition": "Turkish Coffee Culture: A Cup of Coffee Commits One to Forty Years of Friendship;first edition,Ankara2011;160p;Ministry Publications3315,Handbook15;ISBN978-975-17-3567-6",
+    "url": "https://teda.ktb.gov.tr/Eklenti/6594,turkishcoffeeculturepdf.pdf",
+    "locator": "PDF/titlep1,imprintp2,contentsp3;ChXIV Fortune in a Cup,printedpp101-110,especially103-104;literary account108",
+    "finding": "Original imprint andpp103-104 visually inspected. Describes clockwise self/counterclockwise other-person intent,inversion with saucer/cooling,and cup half facing subject as own abode versus others. Selected motifs include adhered grounds/property,three-dot line/travel,peak stain on bird/news,horse or fish/fortune,two-humped camel/wealth and white moon patch on saucer or cup bottom/favorable change. Three time units remain alternatives. This is a cultural author account,not certified prediction or a full regional grammar.",
+    "ingestion": "facts_only",
+    "rights_note": "Imprint copyright Ministry;modern English translation and individually credited photographs/archives have distinct rights. Public government hosting does not establish public-domain or downstream reproduction permission. Original factual notes only;no PDF,charts,translated paragraphs,poems or images redistributed.",
+    "checked_on": "2026-11-05",
+    "snapshot_sha256": "496a6d9ba8b5a0498c516d4a46a84a715ff3c49f4910f10eccce5c4c22243aa0",
+    "snapshot_bytes": 4155460
+  },
+  "edition": {
+    "title": "Turkish Coffee Culture: A Cup of Coffee Commits One to Forty Years of Friendship",
+    "author": "Beşir Ayvazoğlu",
+    "translator": "Melis Şeyhun",
+    "first_edition": 2011,
+    "place": "Ankara",
+    "pages": 160,
+    "isbn": "978-975-17-3567-6",
+    "publications": 3315,
+    "handbook": 15,
+    "locator": "title p1;imprint p2"
+  },
+  "ranked_inventory_sources_unchanged": true,
+  "variation_rows_unchanged": true,
+  "symbol_ids": [
+    "adhered_grounds",
+    "line",
+    "bird",
+    "horse",
+    "fish",
+    "camel",
+    "moon_patch"
+  ],
+  "symbol_count": 7,
+  "source_case_count": 8,
+  "conditional_cases": {
+    "adhered_grounds": [
+      {
+        "id": "property",
+        "statement": "The author reports a property association.",
+        "requires": {
+          "vessel": "cup",
+          "adhered_after_inversion": true
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ],
+    "line": [
+      {
+        "id": "three_period_travel",
+        "statement": "The author reports travel after three periods,with days,months or years left alternative.",
+        "requires": {
+          "vessel": "cup",
+          "shape": "flat",
+          "dots": 3,
+          "dot_arrangement": "at_line_end"
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ],
+    "bird": [
+      {
+        "id": "peak_stain_news",
+        "statement": "The author associates a stain on the peak of a bird-like figure with favorable news.",
+        "requires": {
+          "vessel": "cup",
+          "stain": true,
+          "stain_position": "peak_of_bird_figure"
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ],
+    "horse": [
+      {
+        "id": "fortune",
+        "statement": "The author associates a horse figure with good fortune.",
+        "requires": {
+          "vessel": "cup"
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ],
+    "fish": [
+      {
+        "id": "fortune",
+        "statement": "The author associates a fish figure with good fortune.",
+        "requires": {
+          "vessel": "cup"
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ],
+    "camel": [
+      {
+        "id": "two_hump_wealth",
+        "statement": "The author associates a double-humped camel with wealth.",
+        "requires": {
+          "vessel": "cup",
+          "humps": 2
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ],
+    "moon_patch": [
+      {
+        "id": "cup_bottom_favorable",
+        "statement": "The author associates a white moon-shaped patch at the cup bottom with favorable happenings.",
+        "requires": {
+          "vessel": "cup",
+          "location": "bottom",
+          "color": "white",
+          "shape": "moon_shaped"
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      },
+      {
+        "id": "saucer_favorable",
+        "statement": "The author associates a white moon-shaped patch on the saucer with favorable happenings.",
+        "requires": {
+          "vessel": "saucer",
+          "color": "white",
+          "shape": "moon_shaped"
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ]
+  },
+  "cup_saucer": "Cup supports the seven selected identities. Saucer supports only the white moon-shaped patch;other selected saucer motifs are unsupported. Explicit per-observation vessel permits mixed cup/saucer reports.",
+  "orientation": {
+    "locator": "ChXIV,printed pp103-104,paragraph crossing page break",
+    "subject_facing": "subject_abode",
+    "opposite": "others_abode",
+    "unknown": null,
+    "ambiguous": null
+  },
+  "rotation": {
+    "clockwise": "self",
+    "counterclockwise": "another",
+    "locator": "ChXIV,printed p103,last paragraph"
+  },
+  "timing": {
+    "rule": "line.three_period_travel",
+    "periods": 3,
+    "units": [
+      "days",
+      "months",
+      "years"
+    ],
+    "selected_unit": null,
+    "calendar_date": null,
+    "locator": "ChXIV,printed p104,first paragraph"
+  },
+  "procedures": [
+    {
+      "id": "grounds",
+      "locator": "ChXIV,printed pp101,103-104",
+      "account": "Coffee residue supplies the interpreted figures;the account distinguishes grounds from froth."
+    },
+    {
+      "id": "rotation",
+      "locator": "ChXIV,printed p103,last paragraph",
+      "account": "In this reported practitioner convention,clockwise stirring expresses self-reading intent;counterclockwise expresses intent for another person."
+    },
+    {
+      "id": "cooling",
+      "locator": "ChXIV,printed p103,last paragraph",
+      "account": "The described custom places the reversed saucer on the cup and lets it cool;finger tapping/crossing is optional."
+    },
+    {
+      "id": "upright",
+      "locator": "ChXIV,printed p104,second paragraph",
+      "account": "After favorable prospects and completion,the described belief calls for keeping the cup upright;no physical causality asserted."
+    },
+    {
+      "id": "stuck",
+      "locator": "ChXIV,printed p108,final paragraph",
+      "account": "The author describes stuck residue as an exception calling for no reading,with wish attainment as a belief;the preceding fictional scene is separate."
+    }
+  ],
+  "separate_preparation_source": {
+    "id": "coffee-ministry-public-culture-process-v1",
+    "technique_id": 29,
+    "rank": 2,
+    "author": "Republic of Türkiye Ministry of Culture and Tourism,Living Heritage Directorate",
+    "edition": "Turkish Coffee Culture and Tradition,official English webpage checked2026-11-05;not identical to2011 translated booklet",
+    "url": "https://yakegm.ktb.gov.tr/TR-345121/turkish-coffee-culture-and-tradition.html-0",
+    "locator": "Preparation paragraph;paragraph beginning As a widespread tradition",
+    "finding": "Describes fine grinding,slow brewing with foam,and rotating the finished cup,making a wish,inverting onto saucer and leaving it to cool before images are interpreted as entertainment. No numerical rotation count,cooling duration,handle axis,calendar bands or symbol dictionary supplied. Preparation facts do not validate residue divination.",
+    "ingestion": "facts_only",
+    "rights_note": "Official site copyright2026;factual paraphrases only. No page corpus,photographs or broad reproduction permission claimed.",
+    "checked_on": "2026-11-05"
+  },
+  "evaluation_policy": "Only explicit manual fields evaluated. Unknown/null/ambiguous required evidence is insufficient;known competing matches/nonmatches conflict. A definite failed condition prevents application. Identity alternatives conflict;declared uncertainty prevents positive application. Not-applicable is not a negative forecast. Source meanings are attributed historical accounts.",
+  "evidence_matrix": {
+    "direct": "Source-located cultural/historical accounts,not validated facts about the future",
+    "user_attributed": "Manual vessel,pattern,attributes,half,rotation,intention,uncertainty,raw text,association and preparation declarations",
+    "editorial": "Bounded matching,source comparisons and neutral synthesis",
+    "unsupported": "Factual future/clinical/personality/spirit or hidden-person claims"
+  },
+  "request_replay_contract": {
+    "schema_version": 1,
+    "required": [
+      "schema_version",
+      "profile",
+      "task",
+      "mode",
+      "vessel"
+    ],
+    "task": "symbolic_coffee_reading",
+    "mode": "manual",
+    "vessels": [
+      "cup",
+      "saucer"
+    ],
+    "optional": [
+      "rotation",
+      "intention",
+      "preparation",
+      "context",
+      "observations",
+      "notes",
+      "source_example"
+    ],
+    "observation_fields": [
+      "id",
+      "symbol_id",
+      "alternatives",
+      "uncertainty",
+      "vessel",
+      "half",
+      "attributes",
+      "observation",
+      "association"
+    ],
+    "attribute_types": {
+      "adhered_after_inversion": "bool",
+      "stain": "bool",
+      "humps": "humps",
+      "dots": "dots",
+      "shape": [
+        "flat",
+        "curved",
+        "moon_shaped",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "dot_arrangement": [
+        "at_line_end",
+        "scattered",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "stain_position": [
+        "peak_of_bird_figure",
+        "beak",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "color": [
+        "white",
+        "dark",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "location": [
+        "bottom",
+        "side",
+        "rim",
+        "saucer_surface",
+        "other",
+        "unknown",
+        "ambiguous"
+      ]
+    },
+    "preparation_fields": [
+      "grounds_remaining",
+      "inverted_onto_saucer",
+      "cooled",
+      "stuck",
+      "upright_after_reading"
+    ],
+    "bounds": {
+      "observations": 64,
+      "id_ascii_characters": 80,
+      "identity_alternatives": 4,
+      "field_alternatives": 4,
+      "raw_text_characters": 10000,
+      "dots": [
+        0,
+        64
+      ],
+      "humps": [
+        0,
+        8
+      ]
+    },
+    "default_policy": "Absent observations produce an empty report. Request vessel is the explicit default;all missing conditional/orientation fields remain unknown. Optional text preserves absent/null and exact raw Unicode/whitespace through the replay request. No clock,seed,network,LLM,image or generated placement.",
+    "documentary_selector": "p104_narrative compares selected narrative accounts;not a worked historical cup or empirical validation",
+    "hash_serialization": "SHA256 canonical UTF8 sorted-key compact JSON,unescaped Unicode,no terminal LF;raw field line endings unchanged. PDF source uses original byte SHA256.",
+    "output": "Deterministic JSON or Markdown with exact replay request,request/profile/source hashes,conditions,unresolved evidence,orientation,timing,rights and evidence layers",
+    "invalid": "Unknown fields,wrong profile/task/mode/vessel,duplicate IDs,invalid enums/types/bounds,duplicate JSON keys or nonfinite JSON values rejected;CLI exit2 with structured JSON or Markdown rejection"
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Named2011 Ministry subset",
+      "Manual cup observations",
+      "Narrow white moon saucer case",
+      "Explicit subject-facing half mapping",
+      "Separate rotation/intention comparison",
+      "Condition alternatives,missing/conflict handling",
+      "Local JSON/Markdown replay and exact raw notes",
+      "Documentary p104 narrative comparison"
+    ],
+    "experimental": [],
+    "unsupported": [
+      "Full Bal book method",
+      "Balkan/regional dictionaries",
+      "Uninspected Garnier/Ragıp Rıfkı tables",
+      "Froth/clinical/enemy claims",
+      "Automatic shapes/photos",
+      "Physical residue simulation",
+      "Factual predictions,hidden biography,clinical/personality conclusions or spirit identification",
+      "Seeds and generated layouts"
+    ]
+  },
+  "acceptance_criteria": {
+    "independently_checked_profile": true,
+    "coffee_specific_rules": true,
+    "useful_conditions": true,
+    "cup_saucer_distinction": true,
+    "unknown_conflicts_explicit": true,
+    "no_kent_transfer": true,
+    "complete_reports_replay": true,
+    "all_inherited_and_new_checks_pass": true
+  },
+  "verification": {
+    "source_fixture": "tests/fixtures/coffee_reference_v1.json",
+    "fixture_frozen_before_engine": true,
+    "independent_checks": 65,
+    "new_tests": 33,
+    "total_tests": 540,
+    "inherited_cli_cases": 479,
+    "new_cli_cases": 54,
+    "total_cli_cases": 533,
+    "inherited_symbolic_verifiers": 11,
+    "registry": true,
+    "dependency_audit": true,
+    "pip_check": true,
+    "prior_journal_files_unchanged": 174,
+    "including_required_prior134": true,
+    "prior_engines_inventory_phase3_unchanged": true,
+    "evidence": "data/coffee-acceptance-checks.json",
+    "assurance": "Source fidelity and synthetic manual condition checks;not empirical prediction validation or image recognition."
+  },
+  "rights": "Imprint copyright Ministry;modern English translation and individually credited photographs/archives have distinct rights. Public government hosting does not establish public-domain or downstream reproduction permission. Original factual notes only;no PDF,charts,translated paragraphs,poems or images redistributed.",
+  "examples": [
+    "data/coffee-basic.md",
+    "data/coffee-bird.md",
+    "data/coffee-camel.md",
+    "data/coffee-conflicting.md",
+    "data/coffee-direction.md",
+    "data/coffee-documentary.md",
+    "data/coffee-empty.md",
+    "data/coffee-halves.md",
+    "data/coffee-invalid.md",
+    "data/coffee-line.md",
+    "data/coffee-missing.md",
+    "data/coffee-moon-cup.md",
+    "data/coffee-moon-saucer.md",
+    "data/coffee-multiple.md",
+    "data/coffee-timing.md",
+    "data/coffee-unknown.md"
+  ],
+  "backlog": {
+    "P1": [
+      "Legitimate full Bal method/chapter/examples and rights access",
+      "More Ministry motifs and independent original source-context checks",
+      "Further source-specific cup/saucer exception handling;current stuck/upright accounts documentary only",
+      "Regional/Balkan original procedure and chart access",
+      "Separate original Garnier/Ragıp Rıfkı table/translation verification"
+    ],
+    "P2": [
+      "Separate Balkan/regional profiles and dictionaries",
+      "Optional independently specified synthetic symbolic layouts",
+      "Original vector vessel visualization",
+      "User photo annotation;recognition only after independent evaluation",
+      "Physical residue simulation only with demonstrated value"
+    ]
+  },
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ],
+    "ranked_sources": 2,
+    "variations": 4
+  },
+  "transition": "Commit/push/synchronize this bounded closure before Technique30 Pyromancy resource audit only;do not implement Pyromancy during audit.",
+  "example_commits": [
+    "62efead",
+    "cdf9f77",
+    "7d84028",
+    "c23061a"
+  ],
+  "acceptance_evidence_commit": "ef544eb"
+}

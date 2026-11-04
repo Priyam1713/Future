@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique29 Coffee Ground Reading Core v1 closure — 2026-11-05
+- Source5af0065,engine77d20bb and report/evidence passes pushed. **Core v1 Ready — Historical/Symbolic Coffee Reading Scope**: coffee-ayvazoglu-seyhun2011-subset-v1;seven identities/eight source cases,subject-facing half,separate stirring intent,narrow white moon saucer support and explicit unknown/conflict conditions. Three timing units retained;no Kent semantics,physical observation or predictive certification.
+-540 tests(507+33),533 CLI cases(479+54),65 new independent source checks andall11 inherited symbolic verifiers pass. Registry,dependency,pip anddiff checks pass;174 saved journals/reports unchanged,including134-file baseline andall Tasseography reports. Source/profile/request hashes,rights,replay,matrix andacceptance frozen in coffee_core_v1.json.
+- P1:Bal original access/rights,more source motifs/contexts,cup-saucer exceptions andregional procedures. P2:separate Balkan profiles,optional independent synthetic layouts,original visuals/photo annotation andvalidated recognition only ifuseful. Push/synchronize closure before30 Pyromancy audit only.
+
 ## Technique29 manual coffee engine — 2026-11-05
 - Source freeze5af0065 pushed before implementation. Added coffee-reading with seven coffee-specific motif identities/eight source cases,subject-facing halves,separate rotation intent,cup-bottom versus saucer white patches and explicit missing/conflicting evidence. No Kent meanings,shape inference,seeds,LLM or dependency added.
 -33 new tests and65 independent source/condition checks pass;registry idempotence/source checks pass. JSON/Markdown replay,raw Unicode and canonical hashes covered. Full inherited suite/CLI/verifier and174-file preservation checks run before bounded closure.
