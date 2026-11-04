@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "technique_id": 20,
+  "profile": "lonegren-web-symbolic-response-v1",
+  "source": {
+    "id": "pendulum-lonegren-web-procedure-v1",
+    "technique_id": 20,
+    "author": "Sig Lonegren / Mid-Atlantic Geomancy",
+    "edition": "The Pendulum;undated author-associated website,accessed2026-11-04;separate from print Kit",
+    "url": "https://www.geomancy.org/index.php/dowsing/the-pendulum",
+    "locator": "The Search Position;Yes and No;Yes but and No but;Asking questions through dowsing;Dowsing blind",
+    "finding": "Website uses initial to-and-fro search motion,individual yes/no signals or suggested clockwise/anticlockwise fallback,partial signals and misleading-question response. Wording matters;blind known-answer practice suggested. Source-defined conventions and metaphysical claims require distinct labels;neither universal direction mapping nor guaranteed factual calibration follows.",
+    "ingestion": "facts_only",
+    "rights_note": "Original short factual paraphrases only;no website prose,photo,downloaded diagram or full exercise corpus copied. Print procedure equivalence unverified.",
+    "checked_on": "2026-11-04"
+  },
+  "rules": [
+    {
+      "id": "pendulum.lonegren.search",
+      "locator": "The Search Position",
+      "statement": "The source starts with to-and-fro motion as a search state."
+    },
+    {
+      "id": "pendulum.lonegren.calibration",
+      "locator": "Yes and No",
+      "statement": "Individual signals are permitted; suggested circular signals are a fallback,not universal."
+    },
+    {
+      "id": "pendulum.lonegren.partial",
+      "locator": "Yes but and No but",
+      "statement": "Incomplete responses call for clarification rather than a complete answer."
+    },
+    {
+      "id": "pendulum.lonegren.rethink",
+      "locator": "Yes but and No but",
+      "statement": "A separate misleading-question signal prompts reconsideration."
+    },
+    {
+      "id": "pendulum.lonegren.question",
+      "locator": "Asking questions through dowsing - The Eight Step Method,step5",
+      "statement": "Questions should admit a clear binary response;ambiguous wording matters."
+    },
+    {
+      "id": "pendulum.lonegren.checking",
+      "locator": "Dowsing blind;Checking and building confidence",
+      "statement": "The source suggests known-answer checking;this does not establish predictive validity."
+    }
+  ],
+  "signals": {
+    "clockwise": "Reported circular motion clockwise from observer viewpoint",
+    "counterclockwise": "Reported circular motion counterclockwise from observer viewpoint",
+    "vertical": "Reported to-and-fro motion toward/away from body;calibration or search context required",
+    "horizontal": "Reported side-to-side motion across body",
+    "searching": "User explicitly classifies motion as search/neutral",
+    "still": "No motion reported",
+    "irregular": "Reported irregular movement;no automatic answer",
+    "partial": "Incomplete movement without a specified full category",
+    "conflicting": "User reports incompatible signals",
+    "unknown": "User cannot classify movement"
+  },
+  "calibration": {
+    "format": "Explicit list of signal/response pairs;no implicit clockwise=yes",
+    "mappable_signals": [
+      "clockwise",
+      "counterclockwise",
+      "vertical",
+      "horizontal",
+      "irregular"
+    ],
+    "responses": [
+      "yes",
+      "no",
+      "search",
+      "rethink",
+      "unresolved"
+    ],
+    "complete": "At least one distinct yes signal and no signal required for any resolved session",
+    "conflicts": "Duplicate or contradictory entries rejected;no silent repair",
+    "reserved": "Searching,still,partial,conflicting,unknown remain unresolved and cannot be remapped",
+    "source_boundary": "Individual mappings are source-permitted;fixed vocabulary,validation and conservative aggregation are application conventions"
+  },
+  "observations": {
+    "quality": [
+      "full",
+      "partial",
+      "conflicting",
+      "unknown"
+    ],
+    "max_count": 64,
+    "unknown_signal": "Retain supplied plain-text category as unrecognized;never infer yes/no",
+    "aggregation": "Unanimous full resolved responses only;any partial,missing,neutral,unknown or disagreement makes session unresolved. No voting or confidence estimate.",
+    "source_boundary": "Repetition and conservative aggregation are editorial application policy,not a source-verified historical ritual"
+  },
+  "simulation": {
+    "protocol": "future-pendulum-sha256-v1",
+    "distribution": "editorial-2-2-1-v1",
+    "categories": [
+      "yes",
+      "no",
+      "unresolved"
+    ],
+    "weights": [
+      2,
+      2,
+      1
+    ],
+    "total_weight": 5,
+    "index_ranges": {
+      "yes": [
+        0,
+        1
+      ],
+      "no": [
+        2,
+        3
+      ],
+      "unresolved": [
+        4
+      ]
+    },
+    "framing": "ASCII FuturePendulum NUL v1 NUL symbolic-response NUL + uint32be UTF8 seed length + strict UTF8 seed + uint64be block counter starting0",
+    "words": "SHA256 digest split into8 uint32be words;existing Stream.word/Stream.below rejection primitive unchanged",
+    "rejection": "Reject word>=2^32-(2^32 mod5);accepted word mod5",
+    "seed": "1..256 UTF8 bytes;no normalization",
+    "samples_per_session": 1,
+    "physical_motion_generated": false,
+    "question_in_rng": false,
+    "weight_authority": "Editorial digital allocation only;not historical frequencies or probability that an answer is true"
+  },
+  "question": "Optional plain UTF8 context;not analyzed for truth and never included in RNG framing",
+  "scope": "Manual reported observations and separately seeded symbolic categories;no print Kit chart/rate implementation,actual motion detection or truth validation",
+  "rights": "Only original factual paraphrases and application conventions. No website prose/photo,Kit charts,Lethbridge rate table,article corpus or artwork copied.",
+  "limits": [
+    "Search state depends on declared calibration/context;vertical alone is not a universal yes or search signal",
+    "Calibration maps symbols;it does not validate factual answers",
+    "Digital results are categories,not generated movement or physical ideomotor simulation",
+    "No factual assurance,hidden events,health/financial advice,personality/emotional inference or confidence scores"
+  ]
+}

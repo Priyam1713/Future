@@ -1,0 +1,142 @@
+{
+  "profile": "lonegren-web-symbolic-response-v1",
+  "method": "Independent factual cases derived from inspected source headings before engine implementation;synthetic sessions,not published predictive examples",
+  "cases": [
+    {
+      "name": "circular yes",
+      "calibration": [
+        [
+          "clockwise",
+          "yes"
+        ],
+        [
+          "counterclockwise",
+          "no"
+        ]
+      ],
+      "signal": "clockwise",
+      "expected": "yes"
+    },
+    {
+      "name": "reversed convention",
+      "calibration": [
+        [
+          "clockwise",
+          "no"
+        ],
+        [
+          "counterclockwise",
+          "yes"
+        ]
+      ],
+      "signal": "clockwise",
+      "expected": "no"
+    },
+    {
+      "name": "linear calibration",
+      "calibration": [
+        [
+          "vertical",
+          "yes"
+        ],
+        [
+          "horizontal",
+          "no"
+        ]
+      ],
+      "signal": "vertical",
+      "expected": "yes"
+    },
+    {
+      "name": "explicit search",
+      "calibration": [
+        [
+          "clockwise",
+          "yes"
+        ],
+        [
+          "counterclockwise",
+          "no"
+        ]
+      ],
+      "signal": "searching",
+      "expected": "unresolved"
+    },
+    {
+      "name": "mapped neutral",
+      "calibration": [
+        [
+          "clockwise",
+          "yes"
+        ],
+        [
+          "counterclockwise",
+          "no"
+        ],
+        [
+          "vertical",
+          "search"
+        ]
+      ],
+      "signal": "vertical",
+      "expected": "unresolved"
+    },
+    {
+      "name": "partial response",
+      "calibration": [
+        [
+          "clockwise",
+          "yes"
+        ],
+        [
+          "counterclockwise",
+          "no"
+        ]
+      ],
+      "signal": "clockwise",
+      "quality": "partial",
+      "expected": "unresolved"
+    },
+    {
+      "name": "still",
+      "calibration": [
+        [
+          "clockwise",
+          "yes"
+        ],
+        [
+          "counterclockwise",
+          "no"
+        ]
+      ],
+      "signal": "still",
+      "expected": "unresolved"
+    },
+    {
+      "name": "unrecognized",
+      "calibration": [
+        [
+          "clockwise",
+          "yes"
+        ],
+        [
+          "counterclockwise",
+          "no"
+        ]
+      ],
+      "signal": "diagonal",
+      "expected": "unresolved"
+    },
+    {
+      "name": "incomplete calibration",
+      "calibration": [
+        [
+          "clockwise",
+          "yes"
+        ]
+      ],
+      "signal": "clockwise",
+      "expected": "unresolved"
+    }
+  ]
+}

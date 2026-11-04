@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique20 procedural/source freeze — 2026-11-04
+- Synchronized8cfdd14. Frozen lonegren-web-symbolic-response-v1 from the author-associated page inspected in the preceding audit;fresh access now fails/HTTP403,explicitly recorded without claiming a new source snapshot. Six source-located factual rules distinguish individual calibration,search,partial/rethink and question wording;print Kit charts and Lethbridge rates remain separate.
+- Explicit manual mapping/no implicit directions;incomplete calibration,partial,neutral,unknown or conflicting observations stay unresolved. Repeated-observation unanimity is conservative editorial policy. Seeded future-pendulum-sha256-v1 uses independent domain and unchanged SHA256/rejection primitives,editorial2/2/1 yes/no/unresolved weights,not truth probabilities. Nine independent synthetic source cases and6 .NET32-draw vectors frozen before engine implementation. Research cutoff reached;no chart work required for core.
+
 ## Technique20 Pendulum Divination resource/variation audit — 2026-11-04
 - Began only after Rune closure9ec36e6 pushed/synchronized0/0. Exact inventory method,two ranked sources(Lonegren Kit;Lethbridge Power) andfour variations preserved. Five source records cover2018 publisher kit metadata,1976 book metadata,author-associated web calibration andtwo primary ideomotor studies. No Pendulum engine/chart/sensor/CLI implemented.
 - Publisher confirms19 charts but complete chart labels/procedures/rights remain unverified. Lonegren web individual/circular mapping is separate from study vertical/horizontal suggestion;neutral,partial,ambiguous and misleading-question responses require explicit conventions. Ideomotor motion evidence is not hidden-fact or future-event validation. Lethbridge rates/dream speculation remains a separate historical practitioner lead.
