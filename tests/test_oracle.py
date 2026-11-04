@@ -139,7 +139,7 @@ class OracleTests(unittest.TestCase):
             self.assertEqual(o.read(json.loads(json.dumps(r))['replay']['request']),r)
             self.assertEqual(r['replay']['canonical_order_sha256'],
                 hashlib.sha256('\n'.join(o.ORDER).encode()).hexdigest())
-            self.assertEqual(r['replay']['catalog_sha256'],hashlib.sha256(o._PATH.read_bytes()).hexdigest())
+            self.assertEqual(r['replay']['catalog_sha256'],o.catalog_digest(o._PATH.read_bytes()))
 
     def test_markdown_replay(self):
         r=o.read(BASE|dict(question='<script> | symbolic context'))
@@ -175,6 +175,12 @@ class OracleTests(unittest.TestCase):
                 with self.assertRaises(ValueError):o.load_input(path)
             path.write_text(json.dumps(BASE),encoding='utf-8-sig')
             self.assertEqual(o.load_input(path),BASE)
+
+    def test_catalog_identity_survives_checkout_newlines(self):
+        lf=o._PATH.read_text(encoding='utf-8').replace('\r\n','\n')
+        self.assertEqual(o.catalog_digest(lf),o.catalog_digest(lf.replace('\n','\r\n')))
+        data=json.loads(lf);data['cards']['lenormand-01']['meaning']['text']='altered'
+        self.assertNotEqual(o.catalog_digest(json.dumps(data)),o.CATALOG_SHA256)
 
 
 if __name__=='__main__':unittest.main()

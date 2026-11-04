@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique17 Oracle Core v1 closure — 2026-11-04
+- Source d990139 and implementation50820ac pushed. **Core v1 Ready — Lenormand Symbolic Reading Scope**:named Evening World1903 text profile,36/36 source-located meanings,seeded/manual upright1/3/5-card editorial lines,transparent adjacent compositions and separately displayed conditional rules. Frozen matrix/rights/P1/P2 in oracle_core_v1.json.
+-263 tests pass(243 inherited+20 new);225 CLI cases pass(205 inherited across16 modules+20 Oracle).49 verification checks include six independent .NET full-deck permutations,all36 identities/locators,six historical motif cases and printed example. Tarot30-check verifier,pip/dependency audit and diff checks pass;no kernel/dependency change. Canonical-JSON catalog digest survives LF/CRLF checkout changes.
+- Source near/far,cloud facing,lucky-card classification,reference-person/direction ambiguity and Grand Tableau judgment remain unsupported/experimental as recorded;no predictions certified. Examples data/oracle-{one,three,five,manual}.{json,md};full replay in both formats. Next:push this closure before Technique18 I Ching audit only.
+
 ## Technique17 Lenormand implementation — 2026-11-04
 - Source freezed990139 pushed. Added named immutable36-card historical catalog reader,source/condition registry,seeded/manual upright1/3/5-card editorial lines and deck-aware oracle CLI. Shared shuffle kernel and Tarot semantics/outputs unchanged.
 -19 Oracle tests,20 public CLI cases and49 verification checks pass,including six independent .NET full-deck vectors and historical inventory/motif/example transcriptions. JSON/Markdown contain exact replay metadata;source conditions,editorial composition and unsupported adjudications remain separate.

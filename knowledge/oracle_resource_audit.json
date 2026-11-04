@@ -2,11 +2,11 @@
   "version": 1,
   "technique_id": 17,
   "name": "Oracle Cards",
-  "status": "Researching",
+  "status": "Core v1 Ready — Lenormand Symbolic Reading Scope",
   "date": "2026-11-04",
   "predecessor_closure": "a036474",
   "predecessor_push": "Confirmed closurea036474 pushed;HEAD...origin/main0/0 before audit.",
-  "policy": "Resource/variation audit only;no Technique17 deck dictionary,Oracle engine,draw command or rule extraction implemented.",
+  "policy": "Original audit findings preserved below as history;current supported scope and acceptance supersede original source blockers in oracle_core_v1.json.",
   "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
   "inventory_method_row": [
     17,
@@ -76,8 +76,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;deck-specific original procedures/rights require verification",
-      "finding": "Proposed highest-ROI first scope. Verify one named36-card inventory,source meanings and small documented spread. Rank1 second edition includes a distinct40-card extension;do not silently enlarge36. No universal reversal or Tarot suit assumptions."
+      "status": "supported_bounded",
+      "finding": "Proposed highest-ROI first scope. Verify one named36-card inventory,source meanings and small documented spread. Rank1 second edition includes a distinct40-card extension;do not silently enlarge36. No universal reversal or Tarot suit assumptions.",
+      "current_scope": "Named Evening World1903 text-only36-card profile;upright editorial1/3/5-card lines,transparent conditional/adjacent composition;advanced source distance judgment deferred"
     },
     {
       "name": "Kipper",
@@ -167,20 +168,31 @@
     "tests": "Independent known-answer vectors over each selected deck order;no replacement,draw-count boundaries,manual/source isolation and cross-profile reproducibility"
   },
   "P1": [
-    "Legitimate rank1 procedural pages/edition and rights verification",
-    "One complete36-card source dictionary with independently transcribed fixtures",
-    "One verified simple spread and explicit orientation/direction policy",
-    "Freeze deck-specific replay/input contract and supported/unsupported scope before implementation"
+    "More documented conditional combinations and contextual reading procedures",
+    "Resolve near/far geometry,source perspective discrepancy and image-facing procedures",
+    "Advanced lines,nine-card box and Grand Tableau with complete source fixtures",
+    "Broader historical text collation and exact-pair source examples"
   ],
   "P2": [
-    "Separate Kipper,Belline,Sibilla and contemporary profiles after complete source access",
-    "Additional combinations,Grand Tableaux,direction/proximity and source exceptions",
-    "Separately licensed or verified public-domain imagery"
+    "Separate licensed/source-grounded Kipper profile",
+    "Separate Belline profile",
+    "Separate Sibilla profile",
+    "Independent contemporary themed deck inventories and rights",
+    "Optional separately cleared imagery"
   ],
   "limitations": "Deck facts and source leads only. Promotional spiritual/predictive claims are not validation. No universal meanings,reversal probabilities or empirical accuracy claims. Original60-technique taxonomy,54 retained methods,rankings and exclusions25,27,41,42,47,48 unchanged.",
   "accepted_predecessor": {
     "status": "Core v1 Ready — Symbolic Reading Scope",
     "tests": 243,
     "cli_smoke_cases": 205
+  },
+  "current_release": {
+    "record": "knowledge/oracle_core_v1.json",
+    "profile": "lenormand-evening-world-1903-text-v1",
+    "status": "Core v1 Ready — Lenormand Symbolic Reading Scope",
+    "source_pass": "d990139",
+    "implementation": "50820ac",
+    "tests": 263,
+    "cli_cases": 225
   }
 }

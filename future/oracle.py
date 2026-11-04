@@ -27,7 +27,13 @@ DATA = _freeze(json.loads(_RAW))
 PROFILE = DATA['profile']
 ORDER = DATA['canonical_order']
 CARDS = DATA['cards']
-CATALOG_SHA256 = hashlib.sha256(_RAW).hexdigest()
+def catalog_digest(serialized):
+    """Portable identity despite Git's platform-specific working-tree newlines."""
+    canonical = json.dumps(json.loads(serialized), sort_keys=True, separators=(',', ':'), ensure_ascii=False)
+    return hashlib.sha256(canonical.encode('utf-8')).hexdigest()
+
+
+CATALOG_SHA256 = catalog_digest(_RAW)
 ORDER_SHA256 = hashlib.sha256('\n'.join(ORDER).encode('utf-8')).hexdigest()
 SPREADS = MappingProxyType({'one': 1, 'three': 3, 'five': 5})
 assert len(ORDER) == len(set(ORDER)) == len(CARDS) == 36
@@ -143,7 +149,7 @@ def read(value, registry=None):
         pack, trace = None, None
     replay = dict(request=request, profile=PROFILE, catalog_sha256=CATALOG_SHA256,
         canonical_order=list(ORDER), canonical_order_sha256=ORDER_SHA256,
-        serialization='UTF-8 IDs joined by LF,no terminal LF for order hash;catalog hash uses exact file bytes',
+        serialization='Order:UTF-8 IDs joined by LF,no terminal LF.Catalog:UTF-8 JSON,sorted keys,comma/colon separators,unescaped Unicode,no terminal LF;working-tree newlines ignored.',
         protocol=PROTOCOL if pack else None, seed=request.get('seed'), shuffled_pack=pack,
         draw_count=count, cards=[dict(card_id=k, orientation='upright') for k in ids],
         shuffle=trace, orientation_policy='upright_only', deck_domain='deck', orientation_stream_used=False,

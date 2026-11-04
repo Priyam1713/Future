@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "technique_id": 17,
+  "name": "Oracle Cards",
+  "date": "2026-11-04",
+  "status": "Core v1 Ready — Lenormand Symbolic Reading Scope",
+  "profile": "lenormand-evening-world-1903-text-v1",
+  "source_pass_commit": "d990139",
+  "implementation_commit": "50820ac",
+  "source_id": "oracle-evening-world-1903-inspected-v1",
+  "deck": {
+    "edition": "The Evening World's Home Magazine,October19,1903,How to Tell Fortunes No.1",
+    "cards": 36,
+    "source_backed_meanings": 36,
+    "orientation": "upright_only",
+    "catalog_sha256": "ce0ca740e97d29c6b3ebd334469b70d35a3298fcecdf74f35d75379b65f684d7",
+    "canonical_order_sha256": "004b829c20acb5bdeda835b252d733cafd4bc077a17dbad92cd7a64247866424",
+    "ids": "lenormand-01..lenormand-36"
+  },
+  "supported": [
+    "Immutable named historical36-card catalog with stable original numbers,names,aliases,source-located original paraphrases and qualified alternatives",
+    "Manual and seeded no-replacement upright draws",
+    "One,three and five-card editorial layouts;left-to-right adjacent pair order",
+    "Source-published conditional accounts displayed separately from editorial ordered composition and unsupported exact-pair meanings",
+    "Offline JSON/Markdown CLI with complete exact request,full shuffled pack,hashes and replay metadata",
+    "Independent historical inventory/motif/example transcriptions and six .NET full-deck vectors"
+  ],
+  "experimental": [
+    "Editorial line composition is symbolic juxtaposition,not source-published combined forecasts",
+    "Star/Clouds:adjacency operationalizes source near-condition experimentally;condition remains unresolved",
+    "Ring/person:page-right orientation adaptation;source example uses mirrored wording;no inferred person-reference or distance"
+  ],
+  "unsupported": [
+    "Factual future predictions,confidence probabilities,diagnosis,investment or moral/personal-trait judgments",
+    "Complete source-published pair dictionary or automatic universal noun/adjective grammar",
+    "Automatic near/far thresholds,lucky/unlucky surrounding classification,image clear/dark cloud facing or significator adjudication",
+    "Certified historical small line spreads or full Grand Tableau judgment;source8+8+8+8+4 only documented and fixture-transcribed",
+    "Reversals,Tarot suits/courts/reversal stream,Celtic cuts and significator handling",
+    "Rana George36/40 modern dictionaries;Kipper,Belline,Sibilla and contemporary deck engines",
+    "Artwork,guidebook corpus,UI,database or new dependencies"
+  ],
+  "configuration_matrix": {
+    "profile": "lenormand-evening-world-1903-text-v1",
+    "task": "symbolic_reading",
+    "modes": [
+      "seeded",
+      "manual"
+    ],
+    "spreads": {
+      "one": "supported_editorial",
+      "three": "supported_editorial",
+      "five": "supported_editorial",
+      "nine": "unsupported",
+      "grand_tableau": "unsupported_judgment"
+    },
+    "orientation": "upright_only",
+    "question": "Optional context only;does not change selected cards",
+    "combination_levels": {
+      "direct": "Source-located card paraphrases and published conditional statements",
+      "compositional": "Editorial ordered adjacent motifs;conditions not certified",
+      "unsupported": "No exact-pair dictionary;unresolved distance/person/facing and direction conflicts"
+    }
+  },
+  "seed_protocol": {
+    "id": "future-cards-sha256-fy-v1",
+    "kernel": "future/card_random.py unchanged",
+    "canonical_order": "Original numbered1..36",
+    "seed": "Strict UTF-8 text1–256 bytes;no normalization",
+    "shuffle": "One descending Fisher-Yates pass with unbiased rejection sampling;deck stream;no cut,no orientation stream",
+    "serialization": "Canonical order:UTF-8 IDs joined LF,no final LF.Catalog:UTF-8 JSON sorted keys,comma/colon separators,unescaped Unicode,no terminal LF.",
+    "replay": "Exact validated request,profile,catalog/order hashes,full permutation,selected cards,count,upright policy,shuffle trace;manual request preserved",
+    "assurance": "Deterministic sampling/replay only,not physical ritual equivalence or predictive validation"
+  },
+  "acceptance": {
+    "passed": true,
+    "inherited_tests": 243,
+    "new_tests": 20,
+    "inherited_cli_cases": 205,
+    "new_cli_cases": 20,
+    "verification_checks": 49,
+    "independent_seed_vectors": 6,
+    "independent_source_motif_cases": 6,
+    "historical_example_cases": 1,
+    "independent_reference": "tests/reference/generate_oracle_vectors.ps1 uses independent .NET SHA256 and PowerShell shuffle control flow;no production Python import",
+    "evidence": [
+      "tests/fixtures/oracle_source_examples.json",
+      "tests/fixtures/oracle_seed_vectors.json",
+      "data/oracle-verification.json",
+      "data/oracle-smoke.json",
+      "data/oracle-inherited-smoke.json",
+      "data/oracle-regression.json"
+    ],
+    "coverage": "All36 identities and meaning entries source-located;independently checked inventory and selected source motifs/example;not independent predictive validation",
+    "dependency_check": "No new dependency;pip check and scripts.audit_dependencies passed",
+    "known_warnings": [
+      "Inherited Skyfield/NumPy dtype deprecation",
+      "Inherited unclosed de440s.bsp ResourceWarning"
+    ],
+    "tests": 263,
+    "cli_cases": 225,
+    "inherited_cli_modules": 16,
+    "regression_seconds": 120.91,
+    "registry_rules": 39,
+    "commands": [
+      "python -m unittest discover -s tests -q",
+      "python -m scripts.verify_oracle",
+      "python -m scripts.smoke_oracle_core",
+      "All16 inherited CLI smoke modules",
+      "python -m scripts.verify_tarot",
+      "python -m scripts.audit_dependencies",
+      "python -m pip check",
+      "git diff --check"
+    ]
+  },
+  "rights": "Underlying anonymous US newspaper text1903 public domain in USA;only original research paraphrases/factual transcriptions included.Scan discovered via Mary K.Greer,credited in source registry;no scan/blog prose/artwork/modern booklet redistributed. Territorial distribution and modern edition/translation/art rights remain separate.",
+  "examples": [
+    "data/oracle-one.md",
+    "data/oracle-three.md",
+    "data/oracle-five.md",
+    "data/oracle-manual.md",
+    "data/oracle-lenormand-input.json"
+  ],
+  "backlog": {
+    "P1": [
+      "More documented conditional combinations and contextual reading procedures",
+      "Resolve near/far geometry,source perspective discrepancy and image-facing procedures",
+      "Advanced lines,nine-card box and Grand Tableau with complete source fixtures",
+      "Broader historical text collation and exact-pair source examples"
+    ],
+    "P2": [
+      "Separate licensed/source-grounded Kipper profile",
+      "Separate Belline profile",
+      "Separate Sibilla profile",
+      "Independent contemporary themed deck inventories and rights",
+      "Optional separately cleared imagery"
+    ]
+  },
+  "transition": "Only after this closure is committed and pushed,audit Technique18 I Ching;no implementation during audit",
+  "portability": "Closure includes canonical-JSON catalog hashing verified across LF/CRLF checkouts,without changing meaning/order identity."
+}
