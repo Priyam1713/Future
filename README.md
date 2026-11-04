@@ -626,3 +626,74 @@ Examples: [complete](data/dream-complete.md), [multiple scenes](data/dream-multi
 [fragmented recall](data/dream-fragmented.md), [competing references](data/dream-conflicting.md)
 and [manual spans](data/dream-annotated.md). Run `python -m scripts.verify_dream`,
 `python -m scripts.smoke_dream_core` and `python -m unittest tests.test_dream -q`.
+
+## Automatic Writing: guided creative sessions and revisions
+
+`python -m future automatic-writing data/automatic-writing-input.json --format markdown`
+
+Profile `breton-bsb2016-writing-subset-v1` presents seven historical facts from
+the French primary excerpt in Bibliothèque Sainte-Barbe's2016 bibliography,p4.
+The quotation's underlying print edition is unidentified; this is an institutional
+excerpt subset, not an authenticated BnF manuscript or complete manifesto edition.
+The English Seaver/Lane1969 transcription and its arbitrary-letter restart passage
+remain qualified references. No fixed historical duration is imposed. Pause/restart,
+review, revision and metric controls are editorial software conventions.
+
+Input requires integer `schema_version:1`, the exact `profile`, `task:"guided_writing"`,
+`mode:"manual"`, a plain `session_id` and declared `state`. Optional `intention`,
+`start_time`, `constraints`, `comments`, `associations` and `editorial_questions`
+remain user supplied. Constraints are recorded, not interpreted as historical compliance.
+No personal identity or belief data is required.
+
+`events` is an ordered list with unique plain `id`, `type`, optional `timestamp`
+and `comment`. Replay starts `prepared`. `begin` starts `writing`; `append` is legal
+while `writing` or `resumed`; `pause`/`interruption` enter `paused`; `resume`/`restart`
+return to `resumed`. `stop` enters `stopped` from any pre-review state, including
+an unused prepared session. `review` enters `under_review` from `stopped`; `revise`
+is legal only during review; `complete` is legal from stopped or under review.
+No events follow completed. Final state must match the declared state.
+`review_policy` is `optional` (default), `required` or `no_review`.
+
+Every append event requires `segment:{id,order,text,authorship:"user"}` with optional
+`timestamp` and integer `elapsed_seconds` (0..604800 or null). Segment orders strictly
+increase without sorting. The original draft concatenates raw segment texts using
+**an empty separator**, with no Unicode, whitespace or punctuation normalization.
+An optional segment timestamp must equal its event timestamp if both are declared.
+Comparable declared timestamps cannot decrease; naive and offset-aware clocks are
+not implicitly equated. Dates and missing values do not imply a time of day.
+
+Every revise event requires `revision:{id,parent,text,authorship:"user"}` and optional
+`comment`. Parent is `first_draft` initially, then the immediately preceding revision
+ID. Text and parent hashes remain independent; revisions never replace original
+segments. Limits:512 events,256 segments,20000 code points per segment,200000 original
+draft code points,32 revisions of up to200000 code points each. IDs are ASCII letters,
+digits, dot, underscore or hyphen, max64, beginning with a letter or digit.
+Append-only validation is within a supplied log; this CLI has no persistent storage
+or cross-file authentication. Keep replay files to preserve a version history.
+
+Character counts use Unicode code points, not visual graphemes. Words are maximal
+non-whitespace runs under Python's Unicode whitespace convention; punctuation and
+emoji stay in tokens. Empty text has zero lines; otherwise line count is one plus
+CRLF/CR/LF delimiters (CRLF counts once; trailing empty line counts). Duration uses
+declared begin/stop datetimes only, including pauses. Missing endpoints, dates or
+mixed timezone awareness yield unavailable. A separately declared interval sum is
+available only when every segment supplies it; no typing speed or active duration
+is inferred. Events/authorship are declarations, not mental-state measurements.
+
+JSON and Markdown contain the guided source subset, full event timeline, raw
+segments, reconstructed original draft, revision history, objective metrics,
+user reflection, evidence layers and portable canonical hashes/exact replay.
+There is no generation, LLM, network call, diagnosis or supernatural-authorship test.
+Moses's spiritualist accounts, the Breton/Soupault literary exemplar, ideomotor
+methods and stream-of-consciousness remain distinct unsupported executable profiles.
+
+Examples: [complete](data/automatic-writing-complete.md),
+[interruption/restart](data/automatic-writing-interrupted.md),
+[multiple revisions](data/automatic-writing-revisions.md),
+[empty](data/automatic-writing-empty.md), [Unicode](data/automatic-writing-unicode.md),
+[partial timing](data/automatic-writing-partial-timing.md),
+[procedure](data/automatic-writing-procedure.md) and
+[invalid ordering](data/automatic-writing-invalid.md).
+Run `python -m scripts.verify_automatic_writing`,
+`python -m scripts.smoke_automatic_writing_core` and
+`python -m unittest tests.test_automatic_writing -q`.

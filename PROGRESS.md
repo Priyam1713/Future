@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique24 writing-session implementation — 2026-11-04
+- Source7fa5409 pushed. Added automatic-writing manual CLI, seven-state declared-event validation, exact raw-segment draft reconstruction, explicit interruption/restart controls and independently linked revisions. Source-guided French subset remains distinct from editorial controls; no generated text or extraordinary-authorship inference.
+-445 tests pass(415 inherited+30 new);24 new CLI cases and27 independent source/workflow/metric reference checks pass. Full inherited CLI sweep and saved-report invariance checks running before closure. No new runtime dependency, editor or database; only narrow pure journal utilities reused.
+
 ## Technique24 source/procedure freeze — 2026-11-04
 - Synchronized b59316d. Visually checked Sainte-Barbe2016 French primary excerptp4:7 preparation/composition/qualification facts, named breton-bsb2016-writing-subset-v1. Underlying print edition unknown; no BnF manuscript authentication. Modern English transcription remains separately qualified, arbitrary-letter restart outside French subset. Original factual notes only; no protected prose/images retained.
 - Original source, workflow, revision and Unicode/metric known-answer fixtures frozen before engine. Editorial event/restart/review/revision controls remain distinct from historical facts; no fixed duration or extraordinary-authorship test. Research cutoff reached; implement bounded manual session engine.
