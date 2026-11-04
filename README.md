@@ -774,6 +774,68 @@ and [clinical scope](data/akashic-clinical.md).
 Run `python -m scripts.verify_akashic`, `python -m scripts.smoke_akashic_core`
 and `python -m unittest tests.test_akashic -q`.
 
+## Coffee grounds: Turkish historical symbolic comparisons
+
+`python -m future coffee-reading data/coffee-input.json --format markdown`
+
+The immutable `coffee-ayvazoglu-seyhun2011-subset-v1` profile uses Beşir
+Ayvazoğlu's *Turkish Coffee Culture*, translated by Melis Şeyhun (2011),
+Chapter XIV, printed pages 103–104. It is a bounded historical reference:
+seven motif identities and eight conditional vessel cases. Bal's full book,
+Balkan profiles and regional charts remain separate source/access gaps.
+
+```json
+{
+  "schema_version": 1,
+  "profile": "coffee-ayvazoglu-seyhun2011-subset-v1",
+  "task": "symbolic_coffee_reading",
+  "mode": "manual",
+  "vessel": "cup",
+  "rotation": "clockwise",
+  "intention": "self",
+  "observations": [
+    {"id": "camel1", "symbol_id": "camel", "half": "subject_facing",
+     "attributes": {"humps": 2}}
+  ]
+}
+```
+
+The subject-facing cup half has the source association `subject_abode`;
+the opposite half has `others_abode`. Rotation expresses a separate reported
+stirring convention, clockwise/self and counterclockwise/another. Neither
+determines orientation from a handle. Unknown orientation remains unresolved.
+
+Motifs: `adhered_grounds` requires declared adhesion after inversion;
+`line` requires flat shape, three dots and `at_line_end` arrangement;
+`bird` requires a stain at `peak_of_bird_figure` (literal translation,
+without a silent correction to beak); `camel` requires two humps;
+`horse` and `fish` have the selected cup associations. `moon_patch` requires
+`moon_shaped` shape and white color, plus bottom location for a cup. The
+saucer moon case has no source-defined finer location requirement. Other
+selected motifs on a saucer are unsupported.
+
+Each observation may override the request vessel. Optional `half`, shape
+attributes, raw `observation`, `association`, identity `alternatives` and
+boolean `uncertainty` retain user declarations. Attribute values can be
+scalars or up to four distinct alternatives; null/unknown evidence stays
+unresolved, contradictory known alternatives are explicit conflicts.
+Fields and bounds are validated; no shapes or preparation are inferred
+from raw text. Optional `preparation` flags, `context` and `notes` remain
+user-attributed. There is no turn count or cooling timer.
+
+Reports separate direct source accounts, user declarations, editorial
+matching and unsupported claims. Three travel periods retain days/months/years
+as alternatives without selecting a unit or computing a deadline. JSON and
+Markdown carry exact replay data, canonical request/profile hashes and the
+original PDF byte hash. Public hosting does not license redistribution of
+the booklet, English translation, photographs or source charts.
+
+Run `python -m scripts.verify_coffee`, `python -m scripts.smoke_coffee_core`
+and `python -m unittest tests.test_coffee`. Examples include
+[conditions](data/coffee-camel.md), [cup halves](data/coffee-halves.md),
+[saucer](data/coffee-moon-saucer.md), [timing](data/coffee-timing.md) and
+[documentary comparisons](data/coffee-documentary.md).
+
 ## Tasseography: Kent ordinary-cup symbolic reading
 
 `python -m future tasseography data/tasseography-input.json --format markdown`

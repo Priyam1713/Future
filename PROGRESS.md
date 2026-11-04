@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique29 manual coffee engine — 2026-11-05
+- Source freeze5af0065 pushed before implementation. Added coffee-reading with seven coffee-specific motif identities/eight source cases,subject-facing halves,separate rotation intent,cup-bottom versus saucer white patches and explicit missing/conflicting evidence. No Kent meanings,shape inference,seeds,LLM or dependency added.
+-33 new tests and65 independent source/condition checks pass;registry idempotence/source checks pass. JSON/Markdown replay,raw Unicode and canonical hashes covered. Full inherited suite/CLI/verifier and174-file preservation checks run before bounded closure.
+
 ## Technique29 source/profile freeze — 2026-11-05
 - Re-fetched identical Ministry2011 PDF SHA496a6d9b;visually rechecked imprint andpp103–104,read ChapterXIV. Seven motif identities/eight vessel-specific cases frozen independently of Kent;literal translated bird peak retained without beak correction. Three/day-month-year alternatives remain unresolved.
 - Named coffee-ayvazoglu-seyhun2011-subset-v1;source-located cup halves,rotation intent,cultural customs and strict manual editorial conventions. Pre-engine independent condition/documentary fixtures frozen;174 prior reports/journals captured. Bal book,regional charts and broader symbolism deferred;no protected PDF/text/images bundled.

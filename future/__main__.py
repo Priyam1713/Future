@@ -244,7 +244,23 @@ def main():
     tasseography=sub.add_parser('tasseography')
     tasseography.add_argument('input',help='Kent ordinary-cup manual placements and source-conditioned symbolic references JSON')
     tasseography.add_argument('--format',choices=['json','markdown'],default='json')
+    coffee=sub.add_parser('coffee-reading')
+    coffee.add_argument('input',help='Manual Turkish coffee observations and conditional source references JSON')
+    coffee.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='coffee-reading':
+        import sys
+        from .coffee import load_input,read,markdown,rejection
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError) as exc:
+                print(rejection(exc,args.format))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close()
+        return
     if args.command=='tasseography':
         import sys
         from .tasseography import load_input,read,markdown,rejection
