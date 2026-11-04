@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique18 I Ching implementation — 2026-11-04
+- Source35b1f85/corrected fixture grouping95bbafc pushed. Added immutable Legge catalog,exact reversible pattern/mask/state mathematics,manual and seeded three-coin/yarrow-marginal casting with separate SHA256 domains,reusing unchanged card word/rejection primitives. No deck semantics or modern commentary imported.
+-25 new unit tests and8759 verification checks pass:64 source patterns/eight trigrams,4096 six-value states,64×64 masks,exact8 coin/16 marginal outcomes,14 independent .NET vectors,450 source-located text entries and selected primary text/transformation fixtures. Source text coverage is64 judgments/384 ordinary lines/2 special paragraphs;full diplomatic collation remainsP1.
+- CLI/report examples expose both figures,ordered changing texts,special cases,64.3 unresolved variant,casting probabilities and exact JSON/Markdown replay. Full regression and inherited CLI acceptance running before closure;dependency audit,pip check and existing Tarot/Oracle verifiers pass.
+
 ## Technique18 source/convention freeze — 2026-11-04
 - Synchronized7725f94. Inspected original Legge1882 Michigan/IA scan,title/PlateI/selected main text and LXIV disputed negative;historical public-domain path verified separately from Sacred Texts hosted restrictions. Extracted64 judgments,384 ordinary lines and2 special paragraphs from primary large-type text;OCR normalizations recorded,selected source fixtures rather than exhaustive diplomatic collation.
 - Independent visual PlateI transcription matches all384 original divided/undivided line descriptions. Froze bottom-up states,King Wen lookup,simultaneous changes,editorial all-moving-text policy and distinct three-coin/yarrow-marginal SHA256 domains before engine work.Young2011 verifies heads3/tails2;Sabazius1997 supports conventional1/5/7/3 marginal weights with residue assumptions;physical stalk simulation deferred.

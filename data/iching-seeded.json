@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "technique_id": 18,
+  "profile": "legge-1882-scan-text-v1",
+  "reading_policy": {
+    "id": "all_moving_lines_v1",
+    "coverage": "editorial_compositional_policy",
+    "procedure": "Show original judgment,all moving line texts bottom-up,and relating judgment.No line overrides another.No moving lines yields same original/relating figure.All6 moving on1/2 additionally shows paragraph7 without suppressing ordinary lines.",
+    "source_special": "Legge1882 pp58/61;first extra paragraph is explicitly explained as hexagram1 becoming2 in commentaryp60.",
+    "variants": "Hexagram64 line3 printed affirmative and commentary suggested negative retained distinctly;no automatic reconciliation."
+  },
+  "task": "symbolic_reading",
+  "mode": "seeded",
+  "method": "three-coin",
+  "question": "What symbolic perspectives could help me reflect on a project?",
+  "calculation": {
+    "line_order": "bottom_to_top",
+    "values": [
+      9,
+      7,
+      6,
+      6,
+      8,
+      9
+    ],
+    "change_mask": 45,
+    "moving_lines": [
+      1,
+      3,
+      4,
+      6
+    ],
+    "trace": [
+      {
+        "position": 1,
+        "value": 9,
+        "state": "old_yang",
+        "initial_yang": true,
+        "moving": true,
+        "resulting_yang": false
+      },
+      {
+        "position": 2,
+        "value": 7,
+        "state": "young_yang",
+        "initial_yang": true,
+        "moving": false,
+        "resulting_yang": true
+      },
+      {
+        "position": 3,
+        "value": 6,
+        "state": "old_yin",
+        "initial_yang": false,
+        "moving": true,
+        "resulting_yang": true
+      },
+      {
+        "position": 4,
+        "value": 6,
+        "state": "old_yin",
+        "initial_yang": false,
+        "moving": true,
+        "resulting_yang": true
+      },
+      {
+        "position": 5,
+        "value": 8,
+        "state": "young_yin",
+        "initial_yang": false,
+        "moving": false,
+        "resulting_yang": false
+      },
+      {
+        "position": 6,
+        "value": 9,
+        "state": "old_yang",
+        "initial_yang": true,
+        "moving": true,
+        "resulting_yang": false
+      }
+    ],
+    "initial": {
+      "id": "hexagram-41",
+      "number": 41,
+      "name": "Sun",
+      "aliases": [
+        "Sun"
+      ],
+      "pattern_bottom_to_top": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "trigrams": [
+        {
+          "role": "lower",
+          "pattern_bottom_to_top": [
+            1,
+            1,
+            0
+          ],
+          "id": "lake",
+          "name": "Tui",
+          "alias": "Dui",
+          "symbol": "Lake"
+        },
+        {
+          "role": "upper",
+          "pattern_bottom_to_top": [
+            0,
+            0,
+            1
+          ],
+          "id": "mountain",
+          "name": "Kan",
+          "alias": "Gen",
+          "symbol": "Mountain"
+        }
+      ],
+      "diagram_top_to_bottom": [
+        "-------",
+        "--- ---",
+        "--- ---",
+        "--- ---",
+        "-------",
+        "-------"
+      ],
+      "judgment": {
+        "text": "In (what is denoted by) Sun, if there be sincerity (in him who employs it), there will be great good fortune: \u2014 freedom from error; firmness and correctness that can be maintained; and advantage in every movement that shall be made. In what shall this (sincerity in the exercise of Sun) be employed? (Even) in sacrifice two baskets of grain, (though there be nothing else), may be presented.",
+        "source_id": "iching-legge-1882-scan-v1",
+        "locator": "Text,hexagram41,judgment;pp146,147",
+        "pdf_pages": [
+          182,
+          183
+        ],
+        "rule_id": "iching.legge1882.41.judgment",
+        "version": 1,
+        "coverage": "direct_historical_text",
+        "transcription": "Primary scan OCR,whitespace/dehyphenation and recorded glyph normalization;selected scan fixtures verified,not a complete diplomatic collation"
+      }
+    },
+    "resulting": {
+      "id": "hexagram-32",
+      "number": 32,
+      "name": "Hang",
+      "aliases": [
+        "Heng"
+      ],
+      "pattern_bottom_to_top": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "trigrams": [
+        {
+          "role": "lower",
+          "pattern_bottom_to_top": [
+            0,
+            1,
+            1
+          ],
+          "id": "wind",
+          "name": "Sun",
+          "alias": "Xun",
+          "symbol": "Wind"
+        },
+        {
+          "role": "upper",
+          "pattern_bottom_to_top": [
+            1,
+            0,
+            0
+          ],
+          "id": "thunder",
+          "name": "Kan",
+          "alias": "Zhen",
+          "symbol": "Thunder"
+        }
+      ],
+      "diagram_top_to_bottom": [
+        "--- ---",
+        "--- ---",
+        "-------",
+        "-------",
+        "-------",
+        "--- ---"
+      ],
+      "judgment": {
+        "text": "Hang indicates successful progress and no error (in what it denotes). But the advantage will come from being firm and correct; and movement in any direction whatever will be advantageous.",
+        "source_id": "iching-legge-1882-scan-v1",
+        "locator": "Text,hexagram32,judgment;pp125",
+        "pdf_pages": [
+          161
+        ],
+        "rule_id": "iching.legge1882.32.judgment",
+        "version": 1,
+        "coverage": "direct_historical_text",
+        "transcription": "Primary scan OCR,whitespace/dehyphenation and recorded glyph normalization;selected scan fixtures verified,not a complete diplomatic collation"
+      }
+    }
+  },
+  "changing_line_texts": [
+    {
+      "position": 1,
+      "text": "The first line, undivided, shows its subject suspending his own affairs, and hurrying away (to help the subject of the fourth line). He will commit no error, but let him consider how far he should contribute of what is his (for the other).",
+      "source_id": "iching-legge-1882-scan-v1",
+      "locator": "Text,hexagram41,line1;pp147",
+      "pdf_pages": [
+        183
+      ],
+      "rule_id": "iching.legge1882.41.line1",
+      "version": 1,
+      "coverage": "direct_historical_text",
+      "transcription": "Primary scan OCR,whitespace/dehyphenation and recorded glyph normalization;selected scan fixtures verified,not a complete diplomatic collation"
+    },
+    {
+      "position": 3,
+      "text": "The third line, divided, shows how of three men walking together, the number is diminished by one; and how one, walking, finds his friend.",
+      "source_id": "iching-legge-1882-scan-v1",
+      "locator": "Text,hexagram41,line3;pp147",
+      "pdf_pages": [
+        183
+      ],
+      "rule_id": "iching.legge1882.41.line3",
+      "version": 1,
+      "coverage": "direct_historical_text",
+      "transcription": "Primary scan OCR,whitespace/dehyphenation and recorded glyph normalization;selected scan fixtures verified,not a complete diplomatic collation"
+    },
+    {
+      "position": 4,
+      "text": "The fourth line, divided, shows its subject diminishing the ailment under which he labours by making (the subject of the first line) hasten (to his help), and make him glad. There will be no error.",
+      "source_id": "iching-legge-1882-scan-v1",
+      "locator": "Text,hexagram41,line4;pp147",
+      "pdf_pages": [
+        183
+      ],
+      "rule_id": "iching.legge1882.41.line4",
+      "version": 1,
+      "coverage": "direct_historical_text",
+      "transcription": "Primary scan OCR,whitespace/dehyphenation and recorded glyph normalization;selected scan fixtures verified,not a complete diplomatic collation"
+    },
+    {
+      "position": 6,
+      "text": "The topmost line, undivided, shows its subject giving increase to others without taking from himself. There will be no error. With firm correctness there will be good fortune. There will be advantage in every movement that shall be made. He will find ministers more than can be counted by their clans.",
+      "source_id": "iching-legge-1882-scan-v1",
+      "locator": "Text,hexagram41,line6;pp148",
+      "pdf_pages": [
+        184
+      ],
+      "rule_id": "iching.legge1882.41.line6",
+      "version": 1,
+      "coverage": "direct_historical_text",
+      "transcription": "Primary scan OCR,whitespace/dehyphenation and recorded glyph normalization;selected scan fixtures verified,not a complete diplomatic collation"
+    }
+  ],
+  "special_all_changing": null,
+  "variants": [],
+  "summary": {
+    "coverage": "compositional",
+    "text": "Begin with 41 Sun: In (what is denoted by) Sun, if there be sincerity (in him who employs it), there will be great good fortune: \u2014 freedom from error; firmness and correctness that can be maintained; and advantage in every movement that shall be made. In what shall this (sincerity in the exercise of Sun) be employed? (Even) in sacrifice two baskets of grain, (though there be nothing else), may be presented. Read the changing positions 1, 3, 4, 6 as qualified perspectives on that situation,then compare 32 Hang: Hang indicates successful progress and no error (in what it denotes). But the advantage will come from being firm and correct; and movement in any direction whatever will be advantageous. The relating figure is a second symbolic context,not an assured future event.No moving line overrides the others."
+  },
+  "probabilities": {
+    "single_line": {
+      "6": {
+        "numerator": 1,
+        "denominator": 8
+      },
+      "7": {
+        "numerator": 3,
+        "denominator": 8
+      },
+      "8": {
+        "numerator": 3,
+        "denominator": 8
+      },
+      "9": {
+        "numerator": 1,
+        "denominator": 8
+      }
+    },
+    "exact_value_sequence": {
+      "numerator": 9,
+      "denominator": 262144
+    },
+    "scope": "Digital casting probabilities only;no outcome or predictive probability",
+    "physical_stalk_simulation": false,
+    "conventional_residue_assumptions": false
+  },
+  "replay": {
+    "request": {
+      "schema_version": 1,
+      "profile": "legge-1882-scan-text-v1",
+      "reading_policy": "all_moving_lines_v1",
+      "task": "symbolic_reading",
+      "mode": "seeded",
+      "method": "three-coin",
+      "line_order": "bottom_to_top",
+      "question": "What symbolic perspectives could help me reflect on a project?",
+      "protocol": "future-iching-sha256-v1",
+      "seed": "Future-IChing-v1"
+    },
+    "protocol": "future-iching-sha256-v1",
+    "profile": "legge-1882-scan-text-v1",
+    "reading_policy": "all_moving_lines_v1",
+    "catalog_sha256": "f1809b393d68e7ffc837e8fcbde408e8a1bac5e4ec99ff898cd1f18ff24dbc21",
+    "convention_sha256": "b51ac132494c15ae32d462bbcf4e81be8be111fcdce016b89dc2ac668f5eee45",
+    "serialization": "SHA256 of UTF8 canonical JSON sorted keys,separators comma/colon,unescaped Unicode,no final LF;portable across checkout newlines",
+    "casting": {
+      "protocol": "future-iching-sha256-v1",
+      "method": "three-coin",
+      "seed": "Future-IChing-v1",
+      "raw": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "raw_convention": "coin bits0=tail2,1=head3",
+      "line_order": "bottom_to_top",
+      "words_used": 18,
+      "rejected_words": 0,
+      "blocks_generated": 3,
+      "seed_encoding": "strict UTF-8",
+      "normalization": "none"
+    },
+    "values": [
+      9,
+      7,
+      6,
+      6,
+      8,
+      9
+    ],
+    "change_mask": 45,
+    "initial_number": 41,
+    "resulting_number": 32
+  },
+  "source": {
+    "id": "iching-legge-1882-scan-v1",
+    "technique_id": 18,
+    "author": "James Legge;series editor F.Max Muller",
+    "edition": "The Sacred Books of China,The Texts of Confucianism,PartII:The Yi King;Sacred Books of the East XVI;Oxford Clarendon Press1882",
+    "url": "https://archive.org/details/1922707.0016.002.umich.edu",
+    "download_url": "https://archive.org/download/1922707.0016.002.umich.edu/1922707.0016.002.umich.edu.pdf",
+    "catalog_url": "https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu",
+    "locator": "Original title PDF9/11;PlateI PDF87;main Text pp57\u2013210(PDF93\u2013246);note58:I pp58\u201360;LXIV variant note p209",
+    "ingestion": "public_domain",
+    "rights_note": "Original1882 scan and underlying Legge translation identified public domain by Commons in USA and life+70 territories. Source acquisition:University of Michigan/IA scan and OCR;no Sacred Texts hosted transcription,modern guidebook,Wiki adaptations or software copied. Sacred Texts noncommercial/attribution notice remains separately respected;that hosted corpus is not ingested. No scan/images redistributed.",
+    "checked_on": "2026-11-04",
+    "pdf_sha256": "ebb0bfd34bccc435df919e1bbce9ad7758c8164188cf27d878b101bc4fafde57",
+    "ocr_sha256": "694757a04ec0fda35121ea8ed7832850510478e0007c50214f26ecd63c16fb24"
+  },
+  "procedural_sources": [
+    "iching-young-2011-casting-v1",
+    "iching-sabazius-1997-probabilities-v1"
+  ],
+  "factual_prediction": false,
+  "limitations": [
+    "Source text,editorial composition and unsupported interpretations remain distinct.",
+    "No universal moving-line priority,no prediction certainty or empirical accuracy claim.",
+    "Historical language about gender,health,law or morals is source text,not factual assessment of a person.",
+    "Transcription uses original-scan OCR with recorded normalization and selected independent scan checks;full diplomatic collation remainsP1.",
+    "Yarrow marginal method samples conventional1/5/7/3 weights;it does not simulate49-stalk physical partitions.",
+    "Wilhelm/Baynes,Mei Hua and Wen Wang Gua interpretations are not substituted."
+  ]
+}
