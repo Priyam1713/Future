@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "technique_id": 18,
+  "name": "I Ching",
+  "status": "Researching",
+  "date": "2026-11-04",
+  "predecessor_closure": "753f30b",
+  "predecessor_push": "Confirmed753f30b pushed to origin/main before this audit began.",
+  "policy": "Resource/variation audit only;no hexagram dictionary,casting kernel,transform engine,interpretation rules or I Ching CLI implemented.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    18,
+    "3 · Mystical & Spiritual Divination",
+    "I Ching",
+    "RETAIN — simulate / implement",
+    "Deterministic / symbolic rules",
+    "Three-coin; yarrow-stalk; King Wen hexagrams; Mei Hua Yi Shu; Wen Wang Gua / Six Lines",
+    "Generate 6-line hexagram with changing lines and rule-set interpretations",
+    "PRNG with correct variant probabilities; calendar for Six Lines",
+    "Coin vs yarrow distributions differ; text translations rights",
+    "Traditional / not scientifically validated",
+    "The I Ching or Book of Changes",
+    "Richard Wilhelm / Cary F. Baynes",
+    null,
+    "The Yî King",
+    "I Ching Numerology",
+    null,
+    "3, 4, 33, 37, 40",
+    18
+  ],
+  "ranked_sources": [
+    [
+      18,
+      "I Ching",
+      1,
+      "Richard Wilhelm / Cary F. Baynes",
+      "The I Ching or Book of Changes",
+      "Hexagrams; moving-line commentary",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      18,
+      "I Ching",
+      2,
+      "James Legge",
+      "The Yî King",
+      "Classical translation",
+      "https://sacred-texts.com/ich/sbe16toc.htm",
+      "Open historical translation",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      18,
+      "I Ching",
+      3,
+      "Da Liu",
+      "I Ching Numerology",
+      "Mei Hua numerology",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      18,
+      "I Ching",
+      4,
+      "Wang Hongxu",
+      "Bu Shi Zheng Zong",
+      "Six-line divination classical text",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Three-coin",
+      "inventory_row": [
+        18,
+        "I Ching",
+        "Three-coin",
+        "Bu Shi Zheng Zong",
+        "I Ching Numerology",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;resource audit only",
+      "finding": "Proposed highest-value generation profile;requires explicit coin faces assigned2/3,three independent fair coins per line,bottom-up six tosses,6/9 moving mapping and exact reproducible seed protocol. Candidate probabilities6/7/8/9=(1,3,3,1)/8 are mathematical consequences of that proposed convention,not yet certified ranked-source procedure."
+    },
+    {
+      "name": "yarrow-stalk",
+      "inventory_row": [
+        18,
+        "I Ching",
+        "yarrow-stalk",
+        "Bu Shi Zheng Zong",
+        "I Ching Numerology",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;resource audit only",
+      "finding": "Separate procedure/probability profile;do not substitute three-coin distribution. Candidate conventional marginal weights6/7/8/9=(1,5,7,3)/16 require authoritative procedural verification and explicit partition/remainder assumptions. A marginal digital sampler is distinct from physical49-stalk18-operation simulation;uniform split sizes may not reproduce traditional assumed weights."
+    },
+    {
+      "name": "King Wen hexagrams",
+      "inventory_row": [
+        18,
+        "I Ching",
+        "King Wen hexagrams",
+        "The Yî King",
+        "The I Ching or Book of Changes",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;resource audit only",
+      "finding": "Prioritize all64 unique six-line patterns,lower/upper trigram order and exact King Wen numbering. Legge contents/first+last text establish a useful source path,not a verified complete64-entry bit table. Bottom-up positions and moving6/9 corroborated in note58:I. Preserve special all-changing1/2 paragraphs and textual alternatives."
+    },
+    {
+      "name": "Mei Hua Yi Shu",
+      "inventory_row": [
+        18,
+        "I Ching",
+        "Mei Hua Yi Shu",
+        "Bu Shi Zheng Zong",
+        "I Ching Numerology",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;resource audit only",
+      "finding": "Keep Da Liu edition and pre-heaven/later-heaven or number/time procedures distinct. Verify trigram number ordering,modulo-zero8/6 convention,calendar/clock inputs,body/use,moving line and transformation in actual chapters/examples. No ordinary coin method substitution."
+    },
+    {
+      "name": "Wen Wang Gua / Six Lines",
+      "inventory_row": [
+        18,
+        "I Ching",
+        "Wen Wang Gua / Six Lines",
+        "Bu Shi Zheng Zong",
+        "I Ching Numerology",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;resource audit only",
+      "finding": "Independent Wang Hongxu source/edition verification needed before rules:palaces,Na Jia/stems/branches,six relations,world/responding lines,six spirits,day/month/void and moving/transformed relations. Freeze Chinese calendar/day boundary/timezone dependencies;existing BaZi infrastructure is only a candidate,not proof of Six Lines convention equivalence."
+    }
+  ],
+  "sources": [
+    "iching-wilhelm-baynes-publisher-audit-v1",
+    "iching-legge-1882-access-audit-v1",
+    "iching-da-liu-1979-catalog-audit-v1",
+    "iching-wang-bushi-ctext-catalog-audit-v1"
+  ],
+  "feasibility": {
+    "first_scope": "Named Legge historical text profile with manual six values and source-verified three-coin casting;exact original/relating hexagram transformation plus source-linked judgment and changing-line text. Yarrow marginal profile only after separately verified weights/procedure.",
+    "structure": "64 six-line binary patterns,384 ordinary line texts plus special1/2 all-changing accounts;do not confuse King Wen sequence with binary encoding or unicode sequence. Complete source table still to verify.",
+    "moving_lines": "Exact numerical transformation is independent of text selection. Freeze what is read with0,1,multiple and6 moving lines;do not invent a universal single priority line or attribute later Zhu Xi conventions to Legge without a source.",
+    "source_text": "First inspect a rights-cleared original Legge scan;retain judgment,line text and commentary as separate layers with page locators and unresolved textual differences. Modern ranked works remain independently scoped.",
+    "reproducibility": "Design a versioned non-card casting protocol with explicit method,seed UTF-8 framing,random streams,integer rejection sampling and line order. Card shuffle protocol cannot silently become coin/yarrow protocol. Preserve manual inputs,raw coin/line outcomes,source/profile digests,changing mask and resulting pattern.",
+    "rights": "Ancient Chinese text,Legge translation,modern translations,digital transcription and imagery each need separate rights assessment. Current audit contains only metadata/original notes;no modern book or hosted corpus ingested."
+  },
+  "before_implementation": [
+    "Inspect original Legge title/copyright and representative first,last,mixed hexagram diagrams;freeze exact edition and rights",
+    "Verify complete64 pattern↔King Wen table against independent primary diagrams;retain transliteration aliases",
+    "Verify all6/7/8/9 type/change mappings,coin valuation and differing yarrow probabilities with explicit assumptions",
+    "Freeze source-specific reading-selection policy including all-changing1/2 exceptions and unresolved text variants",
+    "Freeze input/replay serialization and independent seed vectors before claiming generation support"
+  ],
+  "acceptance_gates": [
+    "64 unique patterns and source-located judgment coverage,384 ordinary line records plus explicit1/2 special handling if supported",
+    "Exhaustively verify all4096 six-value states and all64 patterns×64 change masks with an independent implementation",
+    "Enumerate8 fair-coin outcomes and validate exact weights;separately enumerate any frozen yarrow marginal policy,not empirical sampling alone",
+    "Manual/seeded deterministic replay with invalid-input/method/source isolation tests and useful JSON/Markdown reports",
+    "Published source transformations/transcribed texts independently checked;synthetic fixtures never described as predictive validation",
+    "Preserve263 inherited tests and225 CLI cases;full suite,pip/dependency audit and complete CLI smoke before release"
+  ],
+  "P1": [
+    "Procedural source verification and Legge original-scan/rights path",
+    "Complete64-pattern inventory and source text/line coverage",
+    "Independent cast/transform fixtures and protocol specification",
+    "Separate verified yarrow generation and documented multi-changing-line policies"
+  ],
+  "P2": [
+    "Source-specific Mei Hua numerology",
+    "Source-specific Wen Wang Gua calendar/six-relations engine",
+    "Additional translations/commentary traditions and separately cleared imagery"
+  ],
+  "limitations": "No technique18 calculation or interpretation is currently supported. Source metadata is not rule verification;no predictive certainty or empirical validity claim. Original60 taxonomy,54 retained,exclusions25,27,41,42,47,48,rankings and variations unchanged.",
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Lenormand Symbolic Reading Scope",
+    "tests": 263,
+    "cli_smoke_cases": 225
+  }
+}

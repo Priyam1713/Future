@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique18 I Ching resource/variation audit — 2026-11-04
+- Began only after Oracle closure753f30b committed/pushed. Preserved exact four ranked sources,five variation rows,inventory hash and exclusions. Registered Princeton Wilhelm/Baynes sample,Legge1882 access path,NDL Da Liu1979 catalog and Wang Hongxu ctext catalog(base edition unknown,direct403);no I Ching implementation.
+- Legge first/last texts and64-chapter contents supply bounded core leads,bottom-up numbering,moving6/9,extra1/2 paragraphs and a preserved LXIV line3 text dispute. Host attribution/noncommercial notice is distinct from historical underlying text;verify original scan before corpus ingestion. Modern translations remain restricted metadata.
+- Prioritized manual/three-coin64-pattern transformation with source-linked symbolic text;separate yarrow weights/physical partition assumptions,multi-changing-line selection,Mei Hua and Six Lines/calendar conventions require verification. Audit freezes next gates,not executable conventions. Metadata validated against inventory/source registry;Oracle acceptance remains263 tests/225 CLI cases. Next:verify procedures/edition/fixtures before coding#18.
+
 ## Technique17 Oracle Core v1 closure — 2026-11-04
 - Source d990139 and implementation50820ac pushed. **Core v1 Ready — Lenormand Symbolic Reading Scope**:named Evening World1903 text profile,36/36 source-located meanings,seeded/manual upright1/3/5-card editorial lines,transparent adjacent compositions and separately displayed conditional rules. Frozen matrix/rights/P1/P2 in oracle_core_v1.json.
 -263 tests pass(243 inherited+20 new);225 CLI cases pass(205 inherited across16 modules+20 Oracle).49 verification checks include six independent .NET full-deck permutations,all36 identities/locators,six historical motif cases and printed example. Tarot30-check verifier,pip/dependency audit and diff checks pass;no kernel/dependency change. Canonical-JSON catalog digest survives LF/CRLF checkout changes.
