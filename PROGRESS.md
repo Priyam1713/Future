@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique18 source/convention freeze — 2026-11-04
+- Synchronized7725f94. Inspected original Legge1882 Michigan/IA scan,title/PlateI/selected main text and LXIV disputed negative;historical public-domain path verified separately from Sacred Texts hosted restrictions. Extracted64 judgments,384 ordinary lines and2 special paragraphs from primary large-type text;OCR normalizations recorded,selected source fixtures rather than exhaustive diplomatic collation.
+- Independent visual PlateI transcription matches all384 original divided/undivided line descriptions. Froze bottom-up states,King Wen lookup,simultaneous changes,editorial all-moving-text policy and distinct three-coin/yarrow-marginal SHA256 domains before engine work.Young2011 verifies heads3/tails2;Sabazius1997 supports conventional1/5/7/3 marginal weights with residue assumptions;physical stalk simulation deferred.
+- Original four ranked sources/five variations preserved. No I Ching runtime yet;next independent seed fixtures,engine and exhaustive transformation verification.
+
 ## Technique18 I Ching resource/variation audit — 2026-11-04
 - Began only after Oracle closure753f30b committed/pushed. Preserved exact four ranked sources,five variation rows,inventory hash and exclusions. Registered Princeton Wilhelm/Baynes sample,Legge1882 access path,NDL Da Liu1979 catalog and Wang Hongxu ctext catalog(base edition unknown,direct403);no I Ching implementation.
 - Legge first/last texts and64-chapter contents supply bounded core leads,bottom-up numbering,moving6/9,extra1/2 paragraphs and a preserved LXIV line3 text dispute. Host attribution/noncommercial notice is distinct from historical underlying text;verify original scan before corpus ingestion. Modern translations remain restricted metadata.

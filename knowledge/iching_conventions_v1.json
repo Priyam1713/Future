@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "technique_id": 18,
+  "profile": "legge-1882-scan-text-v1",
+  "line_order": "bottom_to_top",
+  "states": {
+    "6": {
+      "yang": false,
+      "moving": true,
+      "result_yang": true
+    },
+    "7": {
+      "yang": true,
+      "moving": false,
+      "result_yang": true
+    },
+    "8": {
+      "yang": false,
+      "moving": false,
+      "result_yang": false
+    },
+    "9": {
+      "yang": true,
+      "moving": true,
+      "result_yang": false
+    }
+  },
+  "pattern": "Six0/1 integers bottom-to-top;1 yang undivided,0 yin divided;King Wen number is explicit table lookup,never binary sequence",
+  "mask": "Bit0 is source line1;all moving lines flip simultaneously",
+  "casting": {
+    "three_coin": "Heads3,tails2;three independent fair digital bits per line,18 draws bottom-up. Each word randbelow(2),0 tail,1 head.",
+    "yarrow_marginal": "Six independent randbelow(16) draws;index0→6,1..5→7,6..12→8,13..15→9. Conventional marginal weights1/5/7/3;no physical stalk simulation."
+  },
+  "reading_policy": {
+    "id": "all_moving_lines_v1",
+    "coverage": "editorial_compositional_policy",
+    "procedure": "Show original judgment,all moving line texts bottom-up,and relating judgment.No line overrides another.No moving lines yields same original/relating figure.All6 moving on1/2 additionally shows paragraph7 without suppressing ordinary lines.",
+    "source_special": "Legge1882 pp58/61;first extra paragraph is explicitly explained as hexagram1 becoming2 in commentaryp60.",
+    "variants": "Hexagram64 line3 printed affirmative and commentary suggested negative retained distinctly;no automatic reconciliation."
+  },
+  "protocol": {
+    "id": "future-iching-sha256-v1",
+    "seed": "Explicit Unicode text,strict UTF-8 length1..256 bytes,no normalization",
+    "frame": "ASCII FutureIChing NUL v1 NUL method NUL uint32be(seed byte length) UTF8seed uint64be(counter)",
+    "domains": [
+      "three-coin",
+      "yarrow-marginal"
+    ],
+    "blocks": "SHA256,counter0..2^64-1,each digest consumed as eight uint32be words in order",
+    "sampling": "Existing card_random.Stream.word/below primitives reused through new domain/framing subclass;no deck shuffle,cut or orientation semantics",
+    "draw_order": "Line1..6 bottom-up;three-coin coin1..3 inside each line;exact raw bits/faces/word accounting recorded",
+    "hashes": "SHA256 of UTF8 canonical JSON sorted keys,separators comma/colon,unescaped Unicode,no final LF;portable across checkout newlines"
+  },
+  "sources": [
+    "iching-legge-1882-scan-v1",
+    "iching-young-2011-casting-v1",
+    "iching-sabazius-1997-probabilities-v1"
+  ],
+  "rights": "New separate versioned scan source;all original ranked resources unchanged.Modern procedural sources supply facts only,not interpretation text."
+}

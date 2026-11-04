@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "date": "2026-11-04",
+  "profile": "legge-1882-scan-text-v1",
+  "source": {
+    "id": "iching-legge-1882-scan-v1",
+    "technique_id": 18,
+    "author": "James Legge;series editor F.Max Muller",
+    "edition": "The Sacred Books of China,The Texts of Confucianism,PartII:The Yi King;Sacred Books of the East XVI;Oxford Clarendon Press1882",
+    "url": "https://archive.org/details/1922707.0016.002.umich.edu",
+    "download_url": "https://archive.org/download/1922707.0016.002.umich.edu/1922707.0016.002.umich.edu.pdf",
+    "catalog_url": "https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu",
+    "locator": "Original title PDF9/11;PlateI PDF87;main Text pp57–210(PDF93–246);note58:I pp58–60;LXIV variant note p209",
+    "ingestion": "public_domain",
+    "rights_note": "Original1882 scan and underlying Legge translation identified public domain by Commons in USA and life+70 territories. Source acquisition:University of Michigan/IA scan and OCR;no Sacred Texts hosted transcription,modern guidebook,Wiki adaptations or software copied. Sacred Texts noncommercial/attribution notice remains separately respected;that hosted corpus is not ingested. No scan/images redistributed.",
+    "checked_on": "2026-11-04",
+    "pdf_sha256": "ebb0bfd34bccc435df919e1bbce9ad7758c8164188cf27d878b101bc4fafde57",
+    "ocr_sha256": "694757a04ec0fda35121ea8ed7832850510478e0007c50214f26ecd63c16fb24"
+  },
+  "source_coverage": {
+    "hexagrams": 64,
+    "judgments": 64,
+    "ordinary_lines": 384,
+    "special_paragraphs": 2
+  },
+  "independent_mapping": "All64 PlateI diagrams visually transcribed separately into tests/fixtures/iching_structure_reference.json;all384 original divided/undivided descriptions agree.",
+  "source_conflicts": [
+    "LXIV line3 printed affirmative versus missing-negative conjecture in commentaryp209",
+    "1882 ordinary headings say line;hosted transcription substitutes NINE/SIX;not imported",
+    "p58 footnote lists four Hsiang in an order that should not be used to infer7/8 types;explicit standard casting profile is separately sourced"
+  ],
+  "text_limit": "All source-located entries extracted from original scan;selected textual examples independently verified,not exhaustive diplomatic word-for-word collation.",
+  "yarrow_decision": "Support separately named conventional marginal-distribution sampler;physical49-stalk partition procedure deferred toP1.",
+  "frozen_conventions": "knowledge/iching_conventions_v1.json",
+  "original_rankings_preserved": true
+}
