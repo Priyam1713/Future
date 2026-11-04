@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "technique_id": 28,
+  "name": "Tasseography (Tea Leaves)",
+  "date": "2026-11-04",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "41b0ade",
+  "phase3_closure": "c5bac9f",
+  "predecessor_push": "Technique26 closure41b0ade and Phase3 completionc5bac9f pushed;0/0 synchronization confirmed before Technique28 inventory/resource audit.",
+  "phase": "4 · Nature, Objects & Ancient Practices",
+  "policy": "Resource/variation audit only;no Tasseography engine,profile schema,symbol catalog,placement generator,renderer,recognizer or CLI implemented.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    28,
+    "4 · Nature, Objects & Ancient Practices",
+    "Tasseography (Tea Leaves)",
+    "RETAIN — simulate / implement",
+    "Vision / symbol rules",
+    "British tea-leaf reading; cup-section timing; symbolic shape dictionaries; Turkish tea variants",
+    "PRNG/physics-inspired residue patterns + symbol recognition and cup zones",
+    "2D cup renderer; icon patterns; optional user cup photo",
+    "Image synthesis simulates patterns, not future outcomes",
+    "Traditional / not scientifically validated",
+    "Telling Fortunes by Tea Leaves",
+    "Cicely Kent",
+    "https://www.gutenberg.org/ebooks/6964",
+    "The Stranger in the Cup",
+    null,
+    null,
+    "29, 34",
+    28
+  ],
+  "ranked_sources": [
+    [
+      28,
+      "Tasseography (Tea Leaves)",
+      1,
+      "Cicely Kent",
+      "Telling Fortunes by Tea Leaves",
+      "Historical cup zones and symbols",
+      "https://www.gutenberg.org/ebooks/6964",
+      "Open historical text",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      28,
+      "Tasseography (Tea Leaves)",
+      2,
+      "Gregory Lee White and catherine yronwode",
+      "The Stranger in the Cup",
+      "Practitioner tasseography",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "British tea-leaf reading",
+      "inventory_row": [
+        28,
+        "Tasseography (Tea Leaves)",
+        "British tea-leaf reading",
+        "The Stranger in the Cup",
+        "Telling Fortunes by Tea Leaves",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Kent ChII/III provides a bounded historical practice lead;modern practitioner text remains chapter/rights gated. Do not treat provisional inventory mapping as source certification."
+    },
+    {
+      "name": "cup-section timing",
+      "inventory_row": [
+        28,
+        "Tasseography (Tea Leaves)",
+        "cup-section timing",
+        "The Stranger in the Cup",
+        "Telling Fortunes by Tea Leaves",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Kent cup/saucer timing differ and remain qualitative. Near-handle and depth may supply overlapping qualifications;freeze conflict handling without invented source priority or exact calendar timing."
+    },
+    {
+      "name": "symbolic shape dictionaries",
+      "inventory_row": [
+        28,
+        "Tasseography (Tea Leaves)",
+        "symbolic shape dictionaries",
+        "The Stranger in the Cup",
+        "Telling Fortunes by Tea Leaves",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Kent alphabetical dictionary,combination section and worked cups support a useful bounded conditional subset;full dictionary/image interpretation not independently frozen. Modern800-plus symbol claim is metadata only."
+    },
+    {
+      "name": "Turkish tea variants",
+      "inventory_row": [
+        28,
+        "Tasseography (Tea Leaves)",
+        "Turkish tea variants",
+        "The Stranger in the Cup",
+        "Telling Fortunes by Tea Leaves",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "No inspected Turkish-tea-specific procedure or dictionary. Do not substitute Turkish coffee practice or general British rules;source gap remains explicit."
+    }
+  ],
+  "sources": [
+    {
+      "id": "tasseography-kent-pg6964-metadata-v1",
+      "technique_id": 28,
+      "rank": 1,
+      "author": "Cicely Kent",
+      "edition": "Telling Fortunes By Tea Leaves: How to Read Your Fate in a Teacup;PG6964;release2004-11-01,update2013-03-21;original print-imprint/page concordance pending",
+      "url": "https://www.gutenberg.org/ebooks/6964",
+      "locator": "Bibliographic record and copyright field;not autogenerated summary",
+      "finding": "Confirms author,title,digital edition dates and USA-public-domain status. Autogenerated summary not used for source rules. Twenty illustrations named by ebook;original print pagination not authenticated.",
+      "ingestion": "metadata_only",
+      "rights_note": "PG lists public domain in USA;non-US rights,PG license/trademark and individual image provenance remain separate. No book corpus or artwork bundled.",
+      "checked_on": "2026-11-04"
+    },
+    {
+      "id": "tasseography-kent-pg6964-method-facts-v1",
+      "technique_id": 28,
+      "rank": 1,
+      "author": "Cicely Kent",
+      "edition": "PG6964 illustrated HTML digital witness,posted2013-03-21;not a verified printed-page transcription",
+      "url": "https://www.gutenberg.org/files/6964/6964-h/6964-h.htm",
+      "locator": "ChII Practice and Method;ChIII General Theories;ChVII Nelros;Dictionary A:Aircraft,Acorn,Anchor,Apron;Example Cups FigureVIII principal symbols/interpretation",
+      "finding": "Inspected original passages. Cup handle represents consultant/home/current abode;rim is soon,under-handle present/immediate,sides later,bottom distant. Saucer centre represents consultant,successive rings home/near events,later events,then remote future. ChIII qualifies symbol size/clarity,adjacency,letters/numbers and direction;handle is south for journey direction. Time claims are qualified by intuition,not precise calendar guarantees. Aircraft changes with heading/motion;Apron with proximity;Acorn with multiplicity. FigureVIII locates organ/acorn/beetle at the lower circle and tea cosy centrally,with a conditional musician account. Nelros is a separate marked-cup method;its saucer is discouraged. These are author-attributed symbolic claims,not predictions or psychological measurements.",
+      "ingestion": "facts_only",
+      "rights_note": "Original short factual notes only. No complete dictionary,image,caption corpus or PG-branded republication. Original source USA-public-domain status differs from local rights and later editions/modern adaptations.",
+      "checked_on": "2026-11-04",
+      "snapshot_sha256": "f6b4b81e04e81ba0efcd91228b76c143ac3b7262484d96f3b3d669d379839c56"
+    },
+    {
+      "id": "tasseography-stranger2020-publisher-v1",
+      "technique_id": 28,
+      "rank": 2,
+      "author": "Gregory Lee White and catherine yronwode",
+      "edition": "The Stranger in the Cup: How to Read Your Luck and Fate in the Tea Leaves;first edition2020;Lucky Mojo Curio Company",
+      "url": "https://luckymojo.com/thestrangerinthecup.html",
+      "locator": "Publisher description,contents and first-edition imprint:Readingpp39-47,Dictionaryp49,Exemplary Cupspp75-94,Bibliographyp96",
+      "finding": "Official contents identifies time/space and home/awayp41,depthp42,turning headingspp43-45,cup/saucerp46 and timing horizonp47. Publisher advertises800-plus symbols and sample interiors. These are chapter/access leads,not inspected rules or a licensed dictionary. Four-turn chapter heading alone cannot define a protocol or override Kent.",
+      "ingestion": "metadata_only",
+      "rights_note": "Modern copyrighted text,illustrations and examples. Publisher catalog access is not permission to ingest800-symbol corpus or art. Metadata/original notes only;legitimate chapter access and specific rights required.",
+      "checked_on": "2026-11-04"
+    }
+  ],
+  "inventory_mapping_caution": "All original method/ranking/variation rows preserved verbatim. Provisional modern-source suggestions do not establish Kent rules or Turkish methods. Historical timing,marked cups and modern practice stay source-specific.",
+  "source_differences": "Kent ordinary cup,saucer and decorated Nelros conventions are distinct. Modern publisher headings identify possible differences requiring full chapter inspection. No universal tea-leaf symbol dictionary or shared turning/time algorithm assumed.",
+  "feasibility": {
+    "first_scope": "Candidate named Kent historical-symbolic manual-placement engine:bounded source-backed zones and conditional dictionary subset,explicit placement/orientation/adjacency declarations and traditional source-located reference output. Substantive rules plus cup structure,not a relabeled journal. Manual placements satisfy the initial core without physical residue simulation.",
+    "manual_inputs": [
+      "Separate ordinary-cup versus saucer selection;handle/consultant reference and declared home/away context where actually relevant",
+      "Stable symbol IDs and manual positions/depth,heading,relative size/multiplicity and explicitly declared adjacency;missing conditions remain unknown",
+      "Preserve ambiguous shape choices,overlapping zone qualifications and contradictory traditional accounts rather than forcing one meaning",
+      "Optional user observations and source comparisons remain separate from direct source rules"
+    ],
+    "deterministic": "Validation,zone/condition lookup,explicit symbolic composition,source locators,portable hashes and replay can run locally without LLM or new framework. Fixed numeric bands,angular axes and conflict precedence must be identified as editorial conventions and independently tested.",
+    "seeded": "Optional future seeded symbolic arrangements may reuse the independently verified kernel only after a new protocol/distribution and known-answer fixtures. Sampled icons/placements simulate neither real leaves nor future outcomes;manual mode should remain first priority.",
+    "visuals": "A placement table and optional original simple SVG cup map could clarify handle-relative positions. No source-art copying,image recognition or photo upload required;geometric glyphs are symbolic annotations,not recognized leaf shapes.",
+    "limits": "Keep physical residue,observer-selected shapes,source-attributed meanings and editorial composition separate. No valid fortune,clinical diagnosis,personality assessment or empirical future-event evidence inferred. No assigning user characteristics from historical stereotypes.",
+    "reuse": "Pure JSON/hash utilities and optional existing seed kernel only when genuinely compatible. Earlier symbolic/journal engines and their source conventions remain unchanged;no shared universal symbol meanings.",
+    "privacy": "No real cup photo,identity,health/birth context or remote service required. Optional user-authored context stays local;synthetic examples labeled."
+  },
+  "candidate_reference_fixtures": [
+    "ChII ordinary-cup and saucer anchors/time categories checked separately against original text",
+    "ChIII explicit direction/size/adjacency and qualitative timing cases with missing/conflicting declarations",
+    "Selected dictionary direction/proximity/multiplicity conditions,including Aircraft/Apron/Acorn;no universal reversal assumption",
+    "Original FigureVIII placement/interpretation comparison with musician condition preserved;source example is not predictive validation",
+    "Synthetic placement boundaries,Unicode user text,unknown symbols,profile isolation and exact replay;seed vectors only if generation is added"
+  ],
+  "configuration_matrix": {
+    "supported": "Audit metadata/source leads only",
+    "experimental": "Proposed bounded Kent manual symbolic placement/reference core;not implemented",
+    "unsupported": [
+      "Tea-photo recognition",
+      "Realistic fluid/residue simulation",
+      "Objective prediction or clinical/personality inference",
+      "Unverified Turkish tea or modern dictionary rules",
+      "Mixed ordinary cup/saucer/Nelros algorithm"
+    ]
+  },
+  "acceptance_gates": [
+    "Freeze named bounded source/rights/rule subset,exact locators and independent pre-engine fixtures",
+    "Useful source-backed cup structure,manual placements and conditional symbol references;no requirement for exhaustive dictionary or visual recognition",
+    "Explicit source/editorial/user/unsupported layers,qualitative timing,unknown contexts and conflicting interpretations",
+    "Reproducible offline JSON/Markdown and portable hashes;source examples versus synthetic layouts distinguished",
+    "Preserve475 tests/445 CLI cases and all10 symbolic verifiers;full suite/CLI,registry,dependency,pip anddiff checks before readiness"
+  ],
+  "P1": [
+    "Freeze exact named Kent digital/print edition and bounded cup-zone/conditional-symbol rules with independent original fixtures before implementation",
+    "Define explicit handle-relative placement,depth,orientation,adjacency,multiplicity,size and unknown/conflict conventions;numeric coordinates/boundaries are editorial",
+    "Independently transcribe a small original worked cup and verify positions/meanings;inspect source figures before any visual-fidelity claim",
+    "Verify original modern procedure chapterspp39-49 and rights without importing copyrighted dictionary",
+    "Locate original Turkish-tea-specific sources or keep variation unsupported;Nelros and saucer profiles remain separate",
+    "Only if seeded placements are useful,freeze labeled synthetic distribution/protocol and independent vectors before code"
+  ],
+  "P2": [
+    "Broader symbol combinations and independently checked examples",
+    "Separate decorated Nelros/other cultural cup profiles",
+    "Original simple vector cup map or licensed illustrations",
+    "Optional photo annotation/recognition only with independent validation and concrete benefit",
+    "Physical leaf/fluid simulation only if justified;not prerequisite"
+  ],
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Historical/Symbolic Reference and Reflection Scope",
+    "tests": 475,
+    "cli_cases": 445,
+    "phase3_status": "Phase 3 Complete — Bounded Core v1 Scopes"
+  },
+  "limitations": "No executable Technique28 functionality. Partial chapter/symbol/example audit,not complete Kent/modern book certification. Original60 IDs,54 retained and exclusions25,27,41,42,47,48 remain unchanged."
+}

@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique28 Tasseography resource/variation audit — 2026-11-04
+- Began only after26 closure41b0ade and Phase3c5bac9f pushed/synchronized0/0. Preserved exact two ranked sources/four variations. Kent PG6964 ChII/III,selected dictionary conditions,Nelros distinction and FigureVIII text inspected;digital2013 witness not silently equated with unverified print pagination. No engine,catalog,placement generator,renderer,recognizer orCLI added.
+- Ordinary cup/saucer anchors and qualitative timing differ;direction,size,adjacency,multiplicity and contextual exceptions require explicit conventions. Kent claims remain attributed,not predictions/diagnoses. Modern White/yronwode2020 publisher contents identifies chapters/800-plus symbol claim only;full method/rights gated. Turkish-tea-specific access remains unresolved;no coffee substitution.
+- Candidate first scope:bounded Kent source-backed zones plus manual symbolic placements and conditional references,with conflicts/unknowns/source provenance preserved. Numeric geometry and optional seeded layouts are editorial,not physical leaves or future outcomes. P1 exact rule/fixture freeze and original example checks;P2 broader traditions/visuals. Validation:data/tasseography-audit-validation.json.25/27 and all six exclusions unchanged.
+
 ## Phase3 complete — bounded Core v1 scopes — 2026-11-04
 - Technique26 closure41b0ade pushed/synchronized before aggregate review. **Phase 3 Complete — Bounded Core v1 Scopes**: all10 retained IDs16–24/26 have accepted named release records,passing acceptance flags and available independent evidence.25 Mediumship/27 Channeling remain excluded;60 methods/54 retained/six exclusions unchanged.
 - Current475 full tests/445 CLI cases pass;253 Phase3 targeted tests and all10 symbolic verifiers(9274 reference/protocol checks) pass.103 prior journal files unchanged,including78-file baseline. knowledge/phase3_core_v1.json freezes individual scopes/record hashes and data/phase3-validation.json acceptance;not exhaustive,clinical or supernatural certification.

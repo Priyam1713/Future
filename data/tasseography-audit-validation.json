@@ -1,0 +1,176 @@
+{
+  "passed": true,
+  "technique_id": 28,
+  "scope": "Audit only;no Tasseography runtime functionality",
+  "phase3_closure": "c5bac9f",
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ],
+    "ranked_sources": 2,
+    "variations": 4,
+    "exact_rows_preserved": true,
+    "sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31"
+  },
+  "prior_gap_records_unchanged": true,
+  "prior_source_records_unchanged": true,
+  "prior_runtime_inventory_phase3_unchanged": true,
+  "registry": true,
+  "source_records": 3,
+  "targeted_tests": 253,
+  "symbolic_verifiers": 10,
+  "full_predecessor_tests": 475,
+  "full_predecessor_cli_cases": 445,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "tests.test_tarot",
+        "tests.test_oracle",
+        "tests.test_iching",
+        "tests.test_runes",
+        "tests.test_pendulum",
+        "tests.test_scrying",
+        "tests.test_mirror",
+        "tests.test_dream",
+        "tests.test_automatic_writing",
+        "tests.test_akashic",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "----------------------------------------------------------------------\nRan 253 tests in 0.211s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tarot"
+      ],
+      "exit_code": 0,
+      "stdout": "30 Tarot source/layout/independent protocol checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_oracle"
+      ],
+      "exit_code": 0,
+      "stdout": "49 Oracle verification checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_iching"
+      ],
+      "exit_code": 0,
+      "stdout": "8759 I Ching verification checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_runes"
+      ],
+      "exit_code": 0,
+      "stdout": "84 rune reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pendulum"
+      ],
+      "exit_code": 0,
+      "stdout": "207 Pendulum reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_scrying"
+      ],
+      "exit_code": 0,
+      "stdout": "23 Scrying reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_mirror"
+      ],
+      "exit_code": 0,
+      "stdout": "22 Mirror reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_dream"
+      ],
+      "exit_code": 0,
+      "stdout": "26 Dream reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_automatic_writing"
+      ],
+      "exit_code": 0,
+      "stdout": "27 Automatic Writing reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_akashic"
+      ],
+      "exit_code": 0,
+      "stdout": "47 Akashic independent reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.audit_dependencies"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout": "No broken requirements found.\n",
+      "stderr": ""
+    }
+  ],
+  "assurance": "Audit provenance and inherited compatibility only;not a tested Tasseography engine or future-outcome validation."
+}
