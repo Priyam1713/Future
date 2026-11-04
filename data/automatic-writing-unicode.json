@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "technique_id": 24,
+  "profile": "breton-bsb2016-writing-subset-v1",
+  "task": "guided_writing",
+  "mode": "manual",
+  "session": {
+    "id": "sample",
+    "state": "stopped",
+    "review_policy": "optional",
+    "user_record": {
+      "comments": "  Preserved verbatim. ",
+      "associations": [
+        "My own association."
+      ]
+    }
+  },
+  "procedure": {
+    "version": 1,
+    "technique_id": 24,
+    "profile": "breton-bsb2016-writing-subset-v1",
+    "scope": "Institutional French-excerpt subset with editorial session/revision controls",
+    "source": {
+      "id": "automatic-breton-bsb2016-french-subset-v1",
+      "technique_id": 24,
+      "author": "Andr\u00e9 Breton; Biblioth\u00e8que Sainte-Barbe, institutional excerpt",
+      "edition": "Andr\u00e9 Breton1896-1966, Sainte-Barbe bibliography2016, PDFp4; French excerpt attributed to first Manifeste du surr\u00e9alisme1924. Underlying print edition of quotation not identified; not authenticated against BnF manuscript.",
+      "url": "https://www.bsb.univ-paris3.fr/images/docs/10196/andrebreton.pdf",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "ingestion": "facts_only",
+      "rights_note": "French original, institutional PDF/images and Seaver/Lane1969 English translation have distinct rights. Original factual paraphrases only; no passage, scans, cover art or literary corpus redistributed. No blanket reproduction permission established.",
+      "checked_on": "2026-11-04",
+      "snapshot_sha256": "afc5f534cec82b910395c20b27f1ee92fc0f2e25fe18a291470ecec898aaf951"
+    },
+    "rules": [
+      {
+        "id": "automatic.breton.materials",
+        "statement": "Prepare writing materials.",
+        "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+        "source_id": "automatic-breton-bsb2016-french-subset-v1",
+        "evidence": "direct_historical_reference"
+      },
+      {
+        "id": "automatic.breton.receptive",
+        "statement": "Breton asks the writer to adopt a receptive or passive attitude.",
+        "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+        "source_id": "automatic-breton-bsb2016-french-subset-v1",
+        "evidence": "direct_historical_reference"
+      },
+      {
+        "id": "automatic.breton.talent",
+        "statement": "Set aside judgments about personal or others' literary talent.",
+        "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+        "source_id": "automatic-breton-bsb2016-french-subset-v1",
+        "evidence": "direct_historical_reference"
+      },
+      {
+        "id": "automatic.breton.rapid",
+        "statement": "Compose rapidly.",
+        "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+        "source_id": "automatic-breton-bsb2016-french-subset-v1",
+        "evidence": "direct_historical_reference"
+      },
+      {
+        "id": "automatic.breton.unplanned",
+        "statement": "Do not preselect a subject.",
+        "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+        "source_id": "automatic-breton-bsb2016-french-subset-v1",
+        "evidence": "direct_historical_reference"
+      },
+      {
+        "id": "automatic.breton.no_rereading",
+        "statement": "Avoid rereading during initial composition.",
+        "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+        "source_id": "automatic-breton-bsb2016-french-subset-v1",
+        "evidence": "direct_historical_reference"
+      },
+      {
+        "id": "automatic.breton.qualification",
+        "statement": "Breton acknowledges a conscious contribution after the first sentence; the procedure is not proof of unconscious origin.",
+        "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+        "source_id": "automatic-breton-bsb2016-french-subset-v1",
+        "evidence": "direct_historical_reference"
+      }
+    ],
+    "translation_comparison": "French rapid/unplanned/no-rereading and conscious-contribution instructions corroborate essential Seaver/Lane1969 transcription facts. Not a full textual collation or manuscript authentication. French excerpt omits the concentration-setting clause and later continuation/arbitrary-letter restart passage; these are not frozen French-subset rules.",
+    "historical_restart": "Seaver/Lane online transcription describes an arbitrary-letter restart; only a qualified external reference, not required or verified against French original in this profile.",
+    "editorial": [
+      "All session states/events, optional timestamps/constraints, interruption/restart controls, draft assembly, revisions, metrics and review questions are application conventions.",
+      "Stop, pause or omit participation freely; no fixed historical duration, mental-state compliance score or mandatory restart technique.",
+      "Revision is a separately labeled creative extension; does not retroactively change the first draft or claim fidelity to a historical first-and-last-draft ideal."
+    ],
+    "limits": [
+      "No source-specific spiritualist, ideomotor or stream-of-consciousness procedure implemented.",
+      "Moses and Breton/Soupault exemplar remain separate; no generated writing, extraordinary authorship, diagnosis, hidden memories or predictions."
+    ]
+  },
+  "timeline": [
+    {
+      "event": {
+        "id": "e0",
+        "type": "begin"
+      },
+      "before": "prepared",
+      "after": "writing",
+      "provenance": "user_declared_event",
+      "event_sha256": "dcbf82bcf6de4fb46c5b8aa7c88ed205a4421cdb322f3465b41e0b377eb487ce"
+    },
+    {
+      "event": {
+        "id": "e1",
+        "type": "append",
+        "segment": {
+          "id": "s1",
+          "order": 1,
+          "text": " A\ud83d\udc0d\r\n",
+          "authorship": "user"
+        }
+      },
+      "before": "writing",
+      "after": "writing",
+      "provenance": "user_declared_event",
+      "event_sha256": "aa2655cfed1082749b2262bf01339e4d3da2bfcf98791edaf8957b44082bb015"
+    },
+    {
+      "event": {
+        "id": "e2",
+        "type": "append",
+        "segment": {
+          "id": "s2",
+          "order": 2,
+          "text": "Cafe\u0301\t\u732b ",
+          "authorship": "user"
+        }
+      },
+      "before": "writing",
+      "after": "writing",
+      "provenance": "user_declared_event",
+      "event_sha256": "fd89e415965e6ebe5d0d40012431ff650bd21243b7622d6c744791109a8aeb54"
+    },
+    {
+      "event": {
+        "id": "e3",
+        "type": "stop"
+      },
+      "before": "writing",
+      "after": "stopped",
+      "provenance": "user_declared_event",
+      "event_sha256": "fd56d3b5ae8b815d446bece0b82c044d89bfaeb3f87bfd0a2c6f6fd615e413b5"
+    }
+  ],
+  "original_segments": [
+    {
+      "record": {
+        "id": "s1",
+        "order": 1,
+        "text": " A\ud83d\udc0d\r\n",
+        "authorship": "user"
+      },
+      "event_id": "e1",
+      "state": "writing",
+      "content_sha256": "299df1cbf290f9664fb751e9e9eee4b6acffe5ec0406b35f126313dcbed9610b"
+    },
+    {
+      "record": {
+        "id": "s2",
+        "order": 2,
+        "text": "Cafe\u0301\t\u732b ",
+        "authorship": "user"
+      },
+      "event_id": "e2",
+      "state": "writing",
+      "content_sha256": "5022192f04ac58958a8bf06ea0b0df1ec306600c9dd778a06d8d67a8952d25b9"
+    }
+  ],
+  "first_draft": {
+    "id": "first_draft",
+    "text": " A\ud83d\udc0d\r\nCafe\u0301\t\u732b ",
+    "content_sha256": "36742842f4ffbbca8d460ef5308bb3f45fcaff1d72748816c612bb96abe866c9",
+    "concatenation": "Exact ordered segment text concatenation with empty separator; no normalization"
+  },
+  "revisions": [],
+  "metrics": {
+    "characters": 13,
+    "unicode_code_points": 13,
+    "words": 3,
+    "lines": 2,
+    "segments": 2,
+    "pauses": 0,
+    "interruptions": 0,
+    "restarts": 0,
+    "revisions": 0,
+    "duration": {
+      "seconds": null,
+      "status": "unavailable_missing_or_incompatible_endpoints"
+    },
+    "declared_segment_seconds": null
+  },
+  "metric_conventions": {
+    "characters": "Python Unicode code points; no normalization or grapheme counting",
+    "words": "Maximal nonempty runs separated by Python str.isspace Unicode whitespace; punctuation/emoji remain in tokens",
+    "lines": "Empty text0; otherwise1 plus CRLF/CR/LF delimiters; CRLF is one delimiter, final empty line counted",
+    "duration": "Begin-to-stop declared compatible datetime endpoints only; includes pauses; no inferred active typing time",
+    "segment_intervals": "Sum only when every segment declares an integer interval; not inferred or equated to wall duration"
+  },
+  "evidence_layers": {
+    "direct": "Seven attributed Breton French-excerpt procedure facts only",
+    "user_authored": "Raw events, segments, revisions, comments, constraints and associations",
+    "editorial": "State machine, controls, hashes, metrics, review and revision model; constraints may differ from historical procedure",
+    "unsupported": "Spirit contact, trance/unconscious-origin/authorship verification, diagnosis, hidden memories, future prediction"
+  },
+  "editorial_questions": [
+    "Which first-draft passages do you choose to retain?",
+    "What did you change during review, if anything?"
+  ],
+  "limitations": [
+    "No source-specific spiritualist, ideomotor or stream-of-consciousness procedure implemented.",
+    "Moses and Breton/Soupault exemplar remain separate; no generated writing, extraordinary authorship, diagnosis, hidden memories or predictions.",
+    "Events and authorship are declarations, not mental-state or historical-compliance verification.",
+    "Append-only validation applies within each supplied session log; no persistent database, authentication or cross-file tamper protection. Preserve replay files to retain versions."
+  ],
+  "replay": {
+    "request": {
+      "schema_version": 1,
+      "profile": "breton-bsb2016-writing-subset-v1",
+      "task": "guided_writing",
+      "mode": "manual",
+      "session_id": "sample",
+      "state": "stopped",
+      "events": [
+        {
+          "id": "e0",
+          "type": "begin"
+        },
+        {
+          "id": "e1",
+          "type": "append",
+          "segment": {
+            "id": "s1",
+            "order": 1,
+            "text": " A\ud83d\udc0d\r\n",
+            "authorship": "user"
+          }
+        },
+        {
+          "id": "e2",
+          "type": "append",
+          "segment": {
+            "id": "s2",
+            "order": 2,
+            "text": "Cafe\u0301\t\u732b ",
+            "authorship": "user"
+          }
+        },
+        {
+          "id": "e3",
+          "type": "stop"
+        }
+      ],
+      "associations": [
+        "My own association."
+      ],
+      "comments": "  Preserved verbatim. "
+    },
+    "input_sha256": "107bf1bf3f45166253df0ff68a16a89c4cc465f57cc8aba1f1f80decb9550ee8",
+    "profile_sha256": "17c6c89d3c1fd64dccef8da6750c9e302b6597d237cc3480cd147ee172f6ed10",
+    "serialization": "Canonical UTF8 sorted-key compact JSON, unescaped Unicode, no terminal LF; exact text line endings retained",
+    "external_calls": false,
+    "rng": false,
+    "generated_text": false
+  }
+}

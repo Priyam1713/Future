@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "profile": "breton-bsb2016-writing-subset-v1",
+  "task": "guided_writing",
+  "mode": "manual",
+  "session_id": "sample",
+  "state": "stopped",
+  "events": [
+    {
+      "id": "e0",
+      "type": "begin"
+    },
+    {
+      "id": "e1",
+      "type": "append",
+      "segment": {
+        "id": "s1",
+        "order": 1,
+        "text": " A🐍\r\n",
+        "authorship": "user"
+      }
+    },
+    {
+      "id": "e2",
+      "type": "append",
+      "segment": {
+        "id": "s2",
+        "order": 2,
+        "text": "Café\t猫 ",
+        "authorship": "user"
+      }
+    },
+    {
+      "id": "e3",
+      "type": "stop"
+    }
+  ],
+  "associations": [
+    "My own association."
+  ],
+  "comments": "  Preserved verbatim. "
+}
