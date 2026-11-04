@@ -452,3 +452,59 @@ Direct procedural context and modern reflection remain separate. No factual pred
 hidden-event detection, emotional diagnosis or physical ideomotor simulation is supported.
 Charts, maps, letter wheels and sensors are deferred. Run `python -m scripts.verify_pendulum`,
 `python -m scripts.smoke_pendulum_core` and `python -m unittest tests.test_pendulum -q`.
+# Crystal Ball Scrying Core v1
+
+Run `python -m future scrying data/scrying-input.json --format markdown` (or
+`--format json`). The `atkinson-pg43954-guided-journal-v1` profile selects the
+Gutenberg digital text updated 2024-10-23, with its displayed Yoga Publication
+Society imprint/ISBN and 1908 copyright. Its exact print reissue is unverified;
+it is distinct from the Library of Congress Lyal1908 catalog record. Selected
+Lessons II/VI procedural passages were inspected and the digital source bytes
+hashed. Only original factual notes and editorial workflow are distributed.
+
+Inputs require schema_version `1`, exact `profile`, task `guided_journal` and mode
+`manual`. Optional `session` supports `surface`, `lighting`, `background`,
+`intention`, `timestamp`, `practice`, `visualization_subject` and `status`.
+Surface IDs are `crystal`, `glass`, `dark_backed_glass`, `polished_metal`, `ink`,
+`water_black_vessel`, `water_glass`, `precious_stone`, `unknown` and `unspecified`.
+Lighting/background are user-entered text or null; missing values stay unspecified.
+The app records these declarations without detecting conditions or claiming
+compliance with historical recommendations. Status is `planned` (default),
+`completed` or `discontinued`, as declared by the user.
+
+The six-stage workflow covers preparation, intention, relaxed gaze, raw recording,
+personal associations and neutral reflection. Each historical component has a rule
+ID and original section locator. The overall journal sequence is an editorial
+arrangement, not a verbatim historical ritual. Blinking is allowed, strain is
+discouraged, and the session may stop at any point without an imagery requirement.
+Practice defaults to `gazing`; optional `familiar_visualization` may include a
+`visualization_subject` and explicitly distinguishes deliberate imagination.
+
+Optional `journal` may be absent, null, empty, or contain up to128 entry objects.
+Each entry supports `experience_type`, `description`, `sequence`, `timestamp`,
+`uncertainty`, `associations` (up to32 strings) and `personal_reflection`.
+Types are `observed_reflection`, `subjective_imagery`, `imagined_imagery`,
+`uncertain` and `no_imagery`. A missing type stays unclassified. Raw descriptions,
+associations and reflections preserve whitespace, Unicode and wording. Empty and
+missing descriptions are explicit. User uncertainty remains a declaration rather
+than engine verification. Optional root `personal_reflection` records overall notes.
+
+List order is preserved; explicit positive sequence annotations must strictly
+increase and never trigger sorting. Optional timestamps are ISO dates or
+dateTtime with seconds and optional offset; there is no automatic clock/timezone.
+Reports retain original records, exact input, source/profile hashes and deterministic
+replay. JSON records preserve all raw strings; Markdown also displays them in fenced
+blocks with fence lengths adjusted for embedded backticks.
+
+Direct guidance, historical beliefs, user-authored meanings and modern open-ended
+editorial questions stay separate. There is no universal symbol lookup, inferred
+emotion/entity/hidden event, perception detector or prediction. Generated creative
+scenes and seeded prompts are deferred; their category cannot be submitted as a
+user observation. No random protocol, camera, frontend or external LLM is required.
+
+Examples: [guided](data/scrying-guided.md), [dark surface](data/scrying-dark.md),
+[personal associations](data/scrying-associations.md), [no imagery](data/scrying-no-imagery.md),
+[uncertain](data/scrying-uncertain.md), [multiple entries](data/scrying-multiple.md),
+[visualization](data/scrying-visualization.md) and [empty journal](data/scrying-empty.md).
+Run `python -m scripts.verify_scrying`, `python -m scripts.smoke_scrying_core`
+and `python -m unittest tests.test_scrying -q` for bounded acceptance checks.

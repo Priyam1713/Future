@@ -226,7 +226,23 @@ def main():
     pendulum=sub.add_parser('pendulum')
     pendulum.add_argument('input',help='Manual calibrated observation or seeded symbolic Pendulum JSON')
     pendulum.add_argument('--format',choices=['json','markdown'],default='json')
+    scrying=sub.add_parser('scrying')
+    scrying.add_argument('input',help='Historical guided session and user-entered Scrying journal JSON')
+    scrying.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='scrying':
+        import sys
+        from .scrying import load_input,read,markdown,rejection
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError) as exc:
+                print(rejection(exc,args.format))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close()
+        return
     if args.command=='pendulum':
         import sys
         from .pendulum import load_input,read,markdown,rejection

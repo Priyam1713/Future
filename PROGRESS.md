@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique21 Scrying implementation — 2026-11-04
+- Source396adc0 pushed after transient GitHub failures. Working guided/journaling engine supports8 historical reflective choices,optional familiar visualization,declared environment/intention/timestamps and128-entry journals. Raw text,experience categories,uncertainty andpersonal associations remain separate from source guidance andeditorial reflection. Missing/null/empty journals valid;no symbol dictionary,seeded scenes,detected perception or prediction.
+-363 tests pass(339 inherited+24 new);28 Scrying CLI cases and23 independent-reference checks pass. Tarot30/Oracle49/I Ching8759/Rune84/Pendulum207,registry,dependency,pip anddiff checks pass;shared random protocols unchanged. Source-byte digest andsaved report replay verified. Full inherited CLI sweep finishing before bounded closure.
+
 ## Technique21 source/procedure freeze — 2026-11-04
 - Synchronizedce025da. Inspected Atkinson LessonsII/VI in PG43954(updated2024-10-23);frozen digital-source byte hash,8 source-located rules and8 reflective surface options in atkinson-pg43954-guided-journal-v1. Displayed ISBN-era Yoga reprint remains distinct from LOC Lyal1908 record. Original factual notes only;no ebook/art corpus copied.
 - Independent pre-engine fixture records surface choices,procedural facts andorder. Six-step guided/journal workflow is explicitly an editorial arrangement around historical preparation/gaze/focus;user experience andpersonal associations remain separate. No forced imagery,prolonged stare or invented symbol table. Research cutoff reached;Thomas chapters andoptional seeded creative scenes deferred.
