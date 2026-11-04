@@ -508,3 +508,54 @@ Examples: [guided](data/scrying-guided.md), [dark surface](data/scrying-dark.md)
 [visualization](data/scrying-visualization.md) and [empty journal](data/scrying-empty.md).
 Run `python -m scripts.verify_scrying`, `python -m scripts.smoke_scrying_core`
 and `python -m unittest tests.test_scrying -q` for bounded acceptance checks.
+# Mirror Scrying Core v1
+
+Run `python -m future mirror-scrying data/mirror-input.json --format markdown`
+(or `--format json`). The immutable `moody1992-mirror-subset-journal-v1` profile
+uses selected original pages108–110 of Raymond Moody's1992 *Family Reunions*
+article, inspected in the UNT39-page scan with a frozen byte hash. It is distinct
+from the complete1993 book, Atkinson's guidance, Dee/Casaubon and obsidian artifacts.
+Only original factual notes and an explicitly qualified workflow are distributed.
+
+The source-specific reference covers a wall mirror/facing chair, a view excluding
+the sitter's reflection, a lamp behind the chair, relaxed gazing, no pressure for
+an experience, voluntary completion and discussion afterward. Historical hardware
+dimensions and the article's25W lamp are reference facts, not equipment requirements.
+No numeric mirror-tilt angle is verified. This core omits the full induction sequence,
+required blackout/watch removal and expectation of an apparition. Blinking, avoiding
+strain and written journaling are explicit editorial adaptations. No encounter,
+therapeutic benefit or factual answer is expected or verified.
+
+Inputs require schema_version `1`, exact `profile`, task `guided_mirror_journal`
+and mode `manual`. Optional `session` accepts `surface`, `view`, `lighting`,
+`background`, `intention`, `personal_context`, `timestamp` and `status`.
+Surface is `ordinary_mirror`, `unknown` or `unspecified`; other traditions are
+rejected. View is `self_reflection_excluded`, `self_reflection_visible`, `unknown`
+or `unspecified`. A declared difference remains recorded rather than silently
+changed. No actual environmental measurement occurs. Status is `planned`,
+`in_progress`, `completed` or `discontinued`.
+
+The guide stages are `arrange`, `context`, `gaze`, `finish`, `journal` and `reflect`.
+Optional `stages: [{"stage_id":"gaze","status":"skipped"}]` records skipped or
+completed stages. Duplicate/conflicting declarations are rejected. Completed
+stages require an explicitly compatible session status. Guidance and declarations
+remain distinct from observed action;users may skip stages or stop at any point.
+
+The compatible journal contract supports up to128 raw entries, five user-declared
+experience categories, sequence annotations, ISO timestamps, uncertainty, associations
+and personal reflections. Missing/null/empty entries and no imagery remain valid.
+Raw Unicode, whitespace and user memories/presence descriptions are preserved and
+attributed;there is no automatic person/spirit identification or symbol dictionary.
+Reports include source/rule locators, exact input, portable profile/source hashes
+and deterministic replay. No camera, sensors, seeded visions or new dependency.
+
+Technique21's engine/profile remains unchanged. Mirror reuses only its pure UTF8,
+timestamp, object validation, strict JSON and canonical-serialization utilities;
+Mirror configuration, stage logic, source rules and reports are separate.
+
+Examples: [guided](data/mirror-guided.md), [personal associations](data/mirror-associations.md),
+[no imagery](data/mirror-no-imagery.md), [uncertain](data/mirror-uncertain.md),
+[discontinued](data/mirror-discontinued.md), [multiple entries](data/mirror-multiple.md),
+[skipped stage](data/mirror-skipped.md) and [invalid configuration](data/mirror-invalid.md).
+Run `python -m scripts.verify_mirror`, `python -m scripts.smoke_mirror_core`
+and `python -m unittest tests.test_mirror -q` for bounded acceptance checks.

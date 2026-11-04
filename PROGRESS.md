@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique22 Mirror implementation — 2026-11-04
+- Sourceead7bc7 pushed. Distinct Moody1992 subset engine supportsdeclared mirror/view/environment,intention/times,stage skip/completion declarations andfaithful manual journals. Nine Mirror source rules remain isolated fromAtkinson/Dee;no full induction,contact detector orclinical claim. Reuses only Technique21 pure text/timestamp/JSON/hash utilities;Technique21 engine/profile unchanged andall8 saved reports remain identical.
+-387 tests pass(363 inherited+24 new);28 Mirror CLI cases and22 independent-reference checks pass. Tarot30/Oracle49/I Ching8759/Rune84/Pendulum207/Scrying23,registry,dependency,pip anddiff checks pass. Source-byte digest andoriginal inventory verified. Full inherited CLI sweep finishing before bounded closure.
+
 ## Technique22 source/procedure freeze — 2026-11-04
 - Synchronized7cd0ad5. Retrieved Moody1992 primary article via Windows certificate store;inspectedp108-110 andvisually checkedp108/109. Frozen moody1992-mirror-subset-journal-v1,source byte hash,9 rules andindependent setup/procedure fixtures. Article facts include25W lamp andchair-based exclusion of self-reflection;no invented numeric mirror angle or1993 book equivalence.
 - Bounded relaxed mirror-gazing subset withexplicit omissions:all-day preparation/induction,required blackout/watch removal andencounter expectation are not implemented. Historical setup remains reference;written journal,blink/stop qualifications andopen reflection are editorial. Original source allows no experience andvoluntary completion anddisclaims a scientific study. Research cutoff reached. Technique21 remains unchanged;reuse only narrow pure utilities,not its procedure/profile.
