@@ -2,11 +2,11 @@
   "version": 1,
   "technique_id": 24,
   "name": "Automatic Writing",
-  "status": "Researching — Audit Only",
+  "status": "Core v1 Ready — Guided Creative Writing/Revision Scope",
   "date": "2026-11-04",
   "predecessor_closure": "1282b34",
   "predecessor_push": "1282b34 pushed to origin/main and0/0 synchronization confirmed before Technique24 audit.",
-  "policy": "Resource/variation audit only. No Technique24 engine, schema, rules, CLI or generated writing implemented.",
+  "policy": "Original audit retained;current supported scope is in automatic_writing_core_v1.json.",
   "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
   "inventory_method_row": [
     24,
@@ -252,5 +252,24 @@
     "tests": 415,
     "cli_cases": 393
   },
-  "limitations": "No Technique24 runtime support or readiness claim. Research access is partial; no original French manuscript collation or complete book corpus verification.60 techniques,54 retained and exclusions25/27/41/42/47/48 unchanged."
+  "limitations": "Verified French-excerpt guided creative session/revision subset only. Underlying quotation print edition unidentified;full historical corpus/restart and other traditions unsupported. No extraordinary-authorship or clinical validation.",
+  "audit_status_at_creation": "Researching — Audit Only",
+  "current_release": "knowledge/automatic_writing_core_v1.json",
+  "current_backlog": {
+    "P1": [
+      "Stronger exact-print-edition/French manuscript and translation collation; current institutional quotation edition unidentified",
+      "Additional independently documented historical procedures and more detailed interruption conventions",
+      "Moses original page-image concordance and separate historical reference, not spirit verification",
+      "Distinct stream-of-consciousness and ideomotor procedural sources; no provisional mapping treated as proof"
+    ],
+    "P2": [
+      "Separate spiritualist historical profile after source and rights verification",
+      "Optional local creative generation with explicit model authorship and reproducibility limits",
+      "Separate opt-in creative prompts",
+      "Voice transcription or editor only if useful",
+      "Rights-cleared comparative literary examples"
+    ]
+  },
+  "policy_at_audit": "Resource/variation audit only. No Technique24 engine, schema, rules, CLI or generated writing implemented.",
+  "limitations_at_audit": "No Technique24 runtime support or readiness claim. Research access is partial; no original French manuscript collation or complete book corpus verification.60 techniques,54 retained and exclusions25/27/41/42/47/48 unchanged."
 }

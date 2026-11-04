@@ -1,0 +1,366 @@
+{
+  "version": 1,
+  "technique_id": 24,
+  "name": "Automatic Writing",
+  "date": "2026-11-04",
+  "status": "Core v1 Ready — Guided Creative Writing/Revision Scope",
+  "profile": "breton-bsb2016-writing-subset-v1",
+  "profile_sha256": "17c6c89d3c1fd64dccef8da6750c9e302b6597d237cc3480cd147ee172f6ed10",
+  "source_pass_commit": "7fa5409",
+  "implementation_commit": "977ee7e",
+  "example_commits": [
+    "2e08cef",
+    "1568894",
+    "ec65345",
+    "f684ca1"
+  ],
+  "source": {
+    "id": "automatic-breton-bsb2016-french-subset-v1",
+    "technique_id": 24,
+    "author": "André Breton; Bibliothèque Sainte-Barbe, institutional excerpt",
+    "edition": "André Breton1896-1966, Sainte-Barbe bibliography2016, PDFp4; French excerpt attributed to first Manifeste du surréalisme1924. Underlying print edition of quotation not identified; not authenticated against BnF manuscript.",
+    "url": "https://www.bsb.univ-paris3.fr/images/docs/10196/andrebreton.pdf",
+    "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+    "ingestion": "facts_only",
+    "rights_note": "French original, institutional PDF/images and Seaver/Lane1969 English translation have distinct rights. Original factual paraphrases only; no passage, scans, cover art or literary corpus redistributed. No blanket reproduction permission established.",
+    "checked_on": "2026-11-04",
+    "snapshot_sha256": "afc5f534cec82b910395c20b27f1ee92fc0f2e25fe18a291470ecec898aaf951"
+  },
+  "historical_procedure": [
+    {
+      "id": "automatic.breton.materials",
+      "statement": "Prepare writing materials.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    },
+    {
+      "id": "automatic.breton.receptive",
+      "statement": "Breton asks the writer to adopt a receptive or passive attitude.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    },
+    {
+      "id": "automatic.breton.talent",
+      "statement": "Set aside judgments about personal or others' literary talent.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    },
+    {
+      "id": "automatic.breton.rapid",
+      "statement": "Compose rapidly.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    },
+    {
+      "id": "automatic.breton.unplanned",
+      "statement": "Do not preselect a subject.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    },
+    {
+      "id": "automatic.breton.no_rereading",
+      "statement": "Avoid rereading during initial composition.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    },
+    {
+      "id": "automatic.breton.qualification",
+      "statement": "Breton acknowledges a conscious contribution after the first sentence; the procedure is not proof of unconscious origin.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    }
+  ],
+  "source_limit": "French rapid/unplanned/no-rereading and conscious-contribution instructions corroborate essential Seaver/Lane1969 transcription facts. Not a full textual collation or manuscript authentication. French excerpt omits the concentration-setting clause and later continuation/arbitrary-letter restart passage; these are not frozen French-subset rules.",
+  "historical_restart": "Seaver/Lane online transcription describes an arbitrary-letter restart; only a qualified external reference, not required or verified against French original in this profile.",
+  "editorial_conventions": [
+    "All session states/events, optional timestamps/constraints, interruption/restart controls, draft assembly, revisions, metrics and review questions are application conventions.",
+    "Stop, pause or omit participation freely; no fixed historical duration, mental-state compliance score or mandatory restart technique.",
+    "Revision is a separately labeled creative extension; does not retroactively change the first draft or claim fidelity to a historical first-and-last-draft ideal."
+  ],
+  "schema": {
+    "required": [
+      "schema_version:integer1",
+      "profile:breton-bsb2016-writing-subset-v1",
+      "task:guided_writing",
+      "mode:manual",
+      "session_id",
+      "state"
+    ],
+    "optional": [
+      "intention",
+      "start_time",
+      "constraints",
+      "review_policy",
+      "events",
+      "comments",
+      "associations",
+      "editorial_questions"
+    ],
+    "states": [
+      "prepared",
+      "writing",
+      "paused",
+      "resumed",
+      "stopped",
+      "under_review",
+      "completed"
+    ],
+    "transitions": {
+      "begin": {
+        "from_states": [
+          "prepared"
+        ],
+        "to_state": "writing"
+      },
+      "append": {
+        "from_states": [
+          "resumed",
+          "writing"
+        ],
+        "to_state": "unchanged"
+      },
+      "pause": {
+        "from_states": [
+          "resumed",
+          "writing"
+        ],
+        "to_state": "paused"
+      },
+      "interruption": {
+        "from_states": [
+          "resumed",
+          "writing"
+        ],
+        "to_state": "paused"
+      },
+      "resume": {
+        "from_states": [
+          "paused"
+        ],
+        "to_state": "resumed"
+      },
+      "restart": {
+        "from_states": [
+          "paused"
+        ],
+        "to_state": "resumed"
+      },
+      "stop": {
+        "from_states": [
+          "paused",
+          "prepared",
+          "resumed",
+          "writing"
+        ],
+        "to_state": "stopped"
+      },
+      "review": {
+        "from_states": [
+          "stopped"
+        ],
+        "to_state": "under_review"
+      },
+      "revise": {
+        "from_states": [
+          "under_review"
+        ],
+        "to_state": "unchanged"
+      },
+      "complete": {
+        "from_states": [
+          "stopped",
+          "under_review"
+        ],
+        "to_state": "completed"
+      }
+    },
+    "event": "Unique plain id,type,optional timestamp/comment. append requires segment;revise requires revision;all other payload combinations reject.",
+    "segment": "Unique id,strictly increasing integer order,raw text,authorship:user,optional timestamp/elapsed_seconds. Input order preserved;never sorted.",
+    "revision": "Unique id,parent,independent raw text,authorship:user,optional comment. Linear append-only chain: first_draft then immediately preceding revision ID.",
+    "review": "optional(default),required(review before completion),no_review(review prohibited);no events after completion",
+    "timestamps": "ISO date or datetime seconds with optional fraction/offset. Comparable timestamps nondecreasing; naive/aware clocks never implicitly equated. Segment/event timestamps identical if both supplied.",
+    "limits": {
+      "events": 512,
+      "segments": 256,
+      "segment_code_points": 20000,
+      "draft_code_points": 200000,
+      "revisions": 32,
+      "revision_code_points": 200000,
+      "identifier_length": 64,
+      "comment_code_points": 10000,
+      "list_entries": 32,
+      "list_item_code_points": 2000,
+      "segment_elapsed_seconds_max": 604800
+    },
+    "declaration": "Events,authorship,state and timing are user declarations;not compliance or mental-state detection. All personal content optional."
+  },
+  "first_draft": "Exact ordered raw segment text concatenation with empty separator;no hidden spaces,punctuation,Unicode normalization or text replacement. Active/paused drafts may remain unfinished.",
+  "revision_isolation": "Each revision stores independent text,explicit parent and parent/content hash. Original segments and draft never changed by revisions. No cross-file tamper protection or database; retain replay records.",
+  "metrics": {
+    "characters": "Python Unicode code points; no normalization or grapheme counting",
+    "words": "Maximal nonempty runs separated by Python str.isspace Unicode whitespace; punctuation/emoji remain in tokens",
+    "lines": "Empty text0; otherwise1 plus CRLF/CR/LF delimiters; CRLF is one delimiter, final empty line counted",
+    "duration": "Begin-to-stop declared compatible datetime endpoints only; includes pauses; exact integer microseconds authoritative, seconds is a floating display; no inferred active typing time",
+    "segment_intervals": "Sum only when every segment declares an integer interval; not inferred or equated to wall duration"
+  },
+  "metric_fields": [
+    "characters",
+    "unicode_code_points",
+    "words",
+    "lines",
+    "segments",
+    "pauses",
+    "interruptions",
+    "restarts",
+    "revisions",
+    "duration",
+    "declared_segment_seconds"
+  ],
+  "evidence_matrix": {
+    "direct": "Seven attributed verified French-excerpt facts with exact institutional edition/locator limitations",
+    "user_authored": "Original segments,events,revisions,intention,constraints,comments and associations",
+    "editorial": "Session controls,restart/review/revision conventions,metrics,hashes and neutral questions",
+    "unsupported": "Spirit contact,supernatural/unconscious authorship,trance,diagnosis,hidden memories,future prediction or proof of historical compliance"
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Named French-excerpt historical preparation/composition subset",
+      "Manual ordered sessions and legal event validation",
+      "Immutable first draft and separate linear revisions",
+      "Declared timing/descriptive metrics",
+      "Local deterministic JSON/Markdown/exact replay"
+    ],
+    "experimental": [
+      "External English arbitrary-letter restart reference pending French original/authorized-edition collation;not a required or certified executable procedure"
+    ],
+    "unsupported": [
+      "Spiritualist,ideomotor and stream-of-consciousness source-specific executable profiles",
+      "Complete Breton/Soupault or Moses corpus",
+      "Generated writing,LLM,remote API,editor,voice system",
+      "Supernatural or clinical certification"
+    ]
+  },
+  "replay": {
+    "profile_sha256": "17c6c89d3c1fd64dccef8da6750c9e302b6597d237cc3480cd147ee172f6ed10",
+    "input": "Full validated request,including raw Unicode and omissions",
+    "hashes": "SHA256 of canonical UTF8 sorted-key compact JSON,unescaped Unicode,no terminal LF. Raw text line endings are content and remain distinct;JSON formatting line endings are portable.",
+    "content": "Original segment record hashes,draft hash including ordered records,linked revision parent/content hashes and event hashes;not authentication",
+    "engine_sha256": "8a6718dc365fec8b4063e53fa527836326afdc85ec6bfe850d42ca4e0ce3384f",
+    "external_calls": false,
+    "rng": false,
+    "generated_text": false,
+    "engine_hash_convention": "UTF8 source with universal-newline decoding to LF; portable across Git checkout line endings"
+  },
+  "verification": {
+    "tests": 445,
+    "inherited_tests": 415,
+    "new_tests": 30,
+    "cli_cases": 417,
+    "inherited_cli_cases": 393,
+    "new_cli_cases": 24,
+    "inherited_cli_modules": 23,
+    "independent_reference_checks": 27,
+    "reference_counts": {
+      "historical_facts": 7,
+      "independent_metric_vectors": 4,
+      "pre_engine_valid_sequences": 3,
+      "pre_engine_invalid_sequences": 7,
+      "independent_duration": 1,
+      "independent_revision_checks": 2,
+      "source_isolation_and_rights": 3
+    },
+    "inherited_verifiers": {
+      "tarot": 30,
+      "oracle": 49,
+      "iching": 8759,
+      "runes": 84,
+      "pendulum": 207,
+      "scrying": 23,
+      "mirror": 22,
+      "dream": 26
+    },
+    "prior_journal_files_unchanged": 78,
+    "registry": "passed",
+    "dependency_audit": "passed",
+    "pip_check": "passed",
+    "diff_check": "passed",
+    "evidence": [
+      "tests/fixtures/automatic_writing_reference.json",
+      "knowledge/automatic_writing_pass1_findings.json",
+      "data/automatic-writing-verification.json",
+      "data/automatic-writing-regression.json",
+      "data/automatic-writing-smoke.json",
+      "data/automatic-writing-inherited-smoke.json",
+      "data/automatic-writing-acceptance-checks.json"
+    ],
+    "assurance": "Bounded source fidelity and independent synthetic session/metric known answers,not extraordinary-authorship,mental-state or empirical validation.",
+    "warnings": [
+      "Inherited Skyfield/NumPy dtype deprecation",
+      "Inherited unclosed data/de440s.bsp ResourceWarning"
+    ]
+  },
+  "acceptance": {
+    "bounded_procedure_verified": true,
+    "event_validation": true,
+    "verbatim_originals": true,
+    "interruptions_restarts": true,
+    "revision_isolation": true,
+    "independent_metrics": true,
+    "useful_structural_report": true,
+    "qualified_historical_scope": true,
+    "no_supernatural_or_clinical_claims": true,
+    "all_tests_and_cli_pass": true
+  },
+  "reuse": "Only narrow pure text/timestamp/strictJSON/freeze/thaw/hash utilities from Scrying;previous engines/schemas/profiles unchanged;prior Scrying/Mirror/Dream report hashes identical.",
+  "rights": "French original, institutional PDF/images and Seaver/Lane1969 English translation have distinct rights. Original factual paraphrases only; no passage, scans, cover art or literary corpus redistributed. No blanket reproduction permission established.",
+  "examples": [
+    "data/automatic-writing-complete.md",
+    "data/automatic-writing-interrupted.md",
+    "data/automatic-writing-revisions.md",
+    "data/automatic-writing-empty.md",
+    "data/automatic-writing-unicode.md",
+    "data/automatic-writing-partial-timing.md",
+    "data/automatic-writing-procedure.md",
+    "data/automatic-writing-invalid.md"
+  ],
+  "backlog": {
+    "P1": [
+      "Stronger exact-print-edition/French manuscript and translation collation; current institutional quotation edition unidentified",
+      "Additional independently documented historical procedures and more detailed interruption conventions",
+      "Moses original page-image concordance and separate historical reference, not spirit verification",
+      "Distinct stream-of-consciousness and ideomotor procedural sources; no provisional mapping treated as proof"
+    ],
+    "P2": [
+      "Separate spiritualist historical profile after source and rights verification",
+      "Optional local creative generation with explicit model authorship and reproducibility limits",
+      "Separate opt-in creative prompts",
+      "Voice transcription or editor only if useful",
+      "Rights-cleared comparative literary examples"
+    ]
+  },
+  "inventory": {
+    "techniques": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ],
+    "ranked_sources": 3,
+    "variations": 4
+  },
+  "transition": "Commit and push Technique24 closure,keep25 Mediumship excluded,then audit26 Akashic Records only;27 Channeling remains excluded.",
+  "implementation_refinement_commit": "5c4b154",
+  "acceptance_evidence_commit": "551efd9",
+  "report_text_convention": "Markdown drafts/revisions are JSON strings preserving raw whitespace and line endings; report framing has one final LF."
+}

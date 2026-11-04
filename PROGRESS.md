@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique24 Automatic Writing Core v1 closure — 2026-11-04
+- Source7fa5409/engine977ee7e and example passes pushed. **Core v1 Ready — Guided Creative Writing/Revision Scope**: breton-bsb2016-writing-subset-v1,7 French-excerpt historical facts,seven declared states,exact raw draft reconstruction,interruptions/restarts,linear independent revisions and deterministic metrics. Institutional quotation edition remains unidentified;no BnF authentication or complete historical restart procedure claimed.
+-445 tests pass(415 inherited+30 new);417 CLI cases pass(393 inherited across23 modules+24 new).27 independent reference checks;all8 inherited verifiers,registry,dependency,pip anddiff checks pass. 78 saved prior journal files byte-identical. Source/user/editorial/unsupported matrix,rights,hashes,limits andbacklog frozen in automatic_writing_core_v1.json;no new runtime dependency or generated text.
+- P1:stronger edition/French collation,additional procedures,interruption details,Moses page images and distinct literary/ideomotor sources. P2:separate spiritualist reference,opt-in local creative tools,voice/editor andlicensed examples. Next:push closure,record25 Mediumship still excluded,then audit26 Akashic Records only;27 Channeling remains excluded.
+
 ## Technique24 writing-session implementation — 2026-11-04
 - Source7fa5409 pushed. Added automatic-writing manual CLI, seven-state declared-event validation, exact raw-segment draft reconstruction, explicit interruption/restart controls and independently linked revisions. Source-guided French subset remains distinct from editorial controls; no generated text or extraordinary-authorship inference.
 -445 tests pass(415 inherited+30 new);24 new CLI cases and27 independent source/workflow/metric reference checks pass. Full inherited CLI sweep and saved-report invariance checks running before closure. No new runtime dependency, editor or database; only narrow pure journal utilities reused.
