@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "technique_id": 19,
+  "name": "Rune Casting",
+  "date": "2026-11-04",
+  "status": "Core v1 Ready — Historical/Symbolic Rune Reading Scope",
+  "profile": "elder24-page-facts-snapshot-v1",
+  "source_pass_commit": "a1eff58",
+  "implementation_commit": "b2be1b5",
+  "source_profile": {
+    "id": "runes-page-course-snapshot-facts-v1",
+    "technique_id": 19,
+    "author": "R.I.Page",
+    "edition": "Runes,work first published1987(British Museum/University of California Press);inspected57-page Gettysburg teaching excerpt frozen bySHA256. Excerpt omits title/imprint;exact printing/reissue is unverified and not claimed.",
+    "url": "https://public.gettysburg.edu/~cfee/DIS/DIS-Vikings-in-Britain/Vikings-Complete-Course-Readings/Runes-RI%20Page.pdf",
+    "locator": "Figure1,p8(PDF3);sound discussionp9(PDF4);reconstructed names/lexical senses p15(PDF10);historical row variantsp18/Figure2(PDF13)",
+    "ingestion": "facts_only",
+    "rights_note": "Modern copyrighted scholarship;only alphabet/codepoint/linguistic facts,short lexical labels and original research notes retained.No prose passages,translation corpus,diagrams,scans or font files redistributed. This is a versioned factual digital-source profile,not a reproduction license or authenticated print-edition facsimile.",
+    "checked_on": "2026-11-04",
+    "snapshot_sha256": "bf5ab12c9e807a8b611585a5b84345de3522fc5a09914afd2039382a261863cb",
+    "bibliography_url": "https://books.google.com/books?id=AEnwfKILM5oC"
+  },
+  "source_coverage": {
+    "identities": 24,
+    "qualified_lexical_associations": 21,
+    "unresolved_lexical_entries": [
+      6,
+      14,
+      15
+    ],
+    "editorial_reflections": 24,
+    "uncertain_early_sound": [
+      13
+    ],
+    "historical_divination_dictionary": false,
+    "poem_context": "Separately tagged later Old English Futhorc;not original Elder24 divination rules"
+  },
+  "attestation": "Early alphabet and source facts distinct from reconstructed normalized names/order,comparative lexical senses and original modern editorial prompts. No normalized name certified as an attested Elder label.",
+  "supported": [
+    "Immutable24-identity named Elder profile,normalized Unicode and text fallback,source/rule locators,unknowns and historical variants",
+    "Manual and seeded1/3-rune selection without replacement,upright-only;three configurable editorial position labels",
+    "Useful source-layered symbolic reflection,JSON/Markdown and complete deterministic replay"
+  ],
+  "experimental": [
+    "Modern editorial reflection and layout composition have no historical ritual or predictive certification"
+  ],
+  "unsupported": [
+    "Historical blank rune or automatic Younger/Futhorc substitution",
+    "Generic reversed,rotated,mirrored or face-down interpretation",
+    "Universal rune-combination grammar,hidden factual knowledge,diagnosis,personality inference,guaranteed events or outcome probabilities",
+    "Physical stone-throw equivalence,licensed commercial guidebook text/artwork or modern poem translation corpus"
+  ],
+  "configuration_matrix": {
+    "profile": "elder24-page-facts-snapshot-v1",
+    "task": "symbolic_reading",
+    "spreads": {
+      "one": "Editorial Focus",
+      "three": "Editorial ordered Situation/Challenge/Reflection;three configurable distinct labels"
+    },
+    "orientation_policy": "upright_only",
+    "manual": "Exact1/3 unique IDs;seed/protocol forbidden",
+    "seeded": "Exact protocol and UTF8 seed1..256 bytes;manual runes forbidden",
+    "positions": "Exactly3 distinct plain-text editorial labels only on three-rune layout",
+    "question": "Optional plain UTF8 context up to1000 characters"
+  },
+  "randomization": {
+    "protocol": "future-runes-elder24-draw-v1",
+    "kernel": "future-cards-sha256-fy-v1",
+    "configuration": {
+      "id": "future-runes-elder24-draw-v1",
+      "kernel": "future-cards-sha256-fy-v1",
+      "configuration": "Supplied24 distinct IDs,one Fisher-Yates shuffle,no cuts,top1/3 without replacement,upright only,no orientation stream",
+      "canonical_order_hash": "SHA256 of UTF8 IDs joined LF without terminal LF",
+      "catalog_hash": "SHA256 canonical UTF8 JSON sorted keys,comma/colon separators,unescaped Unicode,no terminal LF",
+      "seed": "Strict UTF8 text1..256 bytes,no normalization;existing deck stream/framing unchanged",
+      "physical_casting_equivalence": false
+    },
+    "canonical_order": [
+      "rune-01",
+      "rune-02",
+      "rune-03",
+      "rune-04",
+      "rune-05",
+      "rune-06",
+      "rune-07",
+      "rune-08",
+      "rune-09",
+      "rune-10",
+      "rune-11",
+      "rune-12",
+      "rune-13",
+      "rune-14",
+      "rune-15",
+      "rune-16",
+      "rune-17",
+      "rune-18",
+      "rune-19",
+      "rune-20",
+      "rune-21",
+      "rune-22",
+      "rune-23",
+      "rune-24"
+    ],
+    "canonical_order_sha256": "36e9dfe92dedafb026d952cb47ae2cee4bec1379b547d53430eb41722f01ea79",
+    "catalog_sha256": "db3536b9e0a9c434b2268bd4a46966ff750b41734218238de0b84117f440ad41",
+    "shared_kernel_changed": false,
+    "independent_full_set_vectors": 6,
+    "reference": "tests/reference/generate_runes_vectors.ps1"
+  },
+  "verification": {
+    "tests": 312,
+    "inherited_tests": 288,
+    "new_tests": 24,
+    "cli_cases": 279,
+    "inherited_cli_cases": 255,
+    "new_cli_cases": 24,
+    "inherited_cli_modules": 18,
+    "independent_reference_checks": 84,
+    "registry_rules": 48,
+    "tarot_checks": 30,
+    "oracle_checks": 49,
+    "iching_checks": 8759,
+    "regression_seconds": 128.966,
+    "dependency_audit": "passed",
+    "pip_check": "passed",
+    "diff_check": "passed",
+    "evidence": [
+      "data/runes-regression.json",
+      "data/runes-verification.json",
+      "data/runes-smoke.json",
+      "data/runes-inherited-smoke.json",
+      "tests/fixtures/runes_inventory_reference.json",
+      "tests/fixtures/runes_seed_vectors.json"
+    ],
+    "limits": "Historical source agreement establishes bounded source fidelity;all reading examples are synthetic,not published historical divinations or predictive validation.",
+    "known_warnings": [
+      "Inherited Skyfield/NumPy dtype deprecation",
+      "Inherited unclosed ephemeris file warning"
+    ]
+  },
+  "acceptance": {
+    "inventory_verified": true,
+    "all24_reference_entries": true,
+    "source_layers_distinct": true,
+    "manual_seeded_one_three_pass": true,
+    "independent_seed_replay": true,
+    "complete_reports": true,
+    "inherited_regression_and_cli_pass": true
+  },
+  "rights": "Factual research notes and original editorial prompts only.No Page/Dickins/Pollington/Paxson/Blum corpus,modern site translation,font,chart or artwork bundled.",
+  "limits": [
+    "Alphabet and related language facts are not an ancient24-rune divination manual",
+    "21 qualified lexical labels;3 unresolved entries(rune6 divergent later names,Perthro,Algiz).All24 have source-attributed reference content and editorial prompts.",
+    "Historical order/shape variants remain distinct from chosen computational order and modern display encoding",
+    "Print reissue of the inspected teaching excerpt is unverified;the exact digital source is frozen byhash"
+  ],
+  "examples": [
+    "data/runes-one.md",
+    "data/runes-three.md",
+    "data/runes-manual.md",
+    "data/runes-custom.md",
+    "data/runes-unknown.md"
+  ],
+  "backlog": {
+    "P1": [
+      "Broader separately tagged historical/comparative poem coverage and sound/name reconstruction refinements",
+      "Authenticate exact print reissue underlying frozen digital excerpt",
+      "Independently source-verify modern divination conventions,qualified combinations and additional spreads",
+      "Source-specific reversals only if legitimately verified"
+    ],
+    "P2": [
+      "Separate Younger Futhark16 profile",
+      "Separate Anglo-Saxon Futhorc profile",
+      "Separate modern Blum blank-rune profile",
+      "Physical/free-casting geometry",
+      "Optional licensed imagery/fonts"
+    ]
+  },
+  "transition": "Commit and push this closure before auditing Technique20 Pendulum Divination;no Technique20 implementation during audit"
+}

@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique19 Rune Casting Core v1 closure — 2026-11-04
+- Sourcea1eff58/engineb2be1b5 and examples/evidencea5bf7b5,05982fd pushed. **Core v1 Ready — Historical/Symbolic Rune Reading Scope**:elder24-page-facts-snapshot-v1,24 identities/reference records,21 qualified lexical labels,3 unresolved slots and24 original editorial prompts. Historical/reconstructed/editorial layers,uncertain sound/name evidence and source rights remain explicit.
+-312 tests pass(288 inherited+24 new);279 CLI cases pass(255 inherited across18 modules+24 Rune).84 independent-reference checks include6 .NET full24-set vectors. Tarot30/Oracle49/I Ching8759,dependency audit,pip and diff checks pass. Manual/seeded1/3 upright-only readings,custom3 labels,portable hashes and full replay frozen in runes_core_v1.json.
+- P1:broader poem/name evidence,authenticate exact print reissue,verified modern procedures/combinations/spreads/reversals. P2:separate Younger16,Futhorc,Blumblank,physical geometry and licensed visuals. Digital-source snapshot provenance is exact;print reissue remains unverified. No historical divination dictionary or predictive certification. Next:push closure before Technique20 resource/variation audit only.
+
 ## Technique19 Rune Casting implementation — 2026-11-04
 - Source passa1eff58 pushed. Immutable Elder24 engine supports manual/seeded one/three-rune readings,custom three-position labels,upright-only selection and complete JSON/Markdown replay using unchanged card_random primitives. Historical/reference,comparative and modern editorial layers stay distinct;21 qualified lexical labels and3 unresolved slots are retained.
 -312 tests pass(288 inherited+24 new),24 Rune CLI cases and84 independent-reference checks pass;6 .NET full24-set vectors match. Tarot30/Oracle49/I Ching8759 verifiers,dependency audit,pip check and diff check pass. Existing Skyfield/NumPy and ephemeris-file warnings remain. Full inherited CLI sweep and bounded closure follow before any Technique20 audit.

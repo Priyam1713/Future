@@ -2,11 +2,11 @@
   "version": 1,
   "technique_id": 19,
   "name": "Rune Casting",
-  "status": "Researching",
+  "status": "Core v1 Ready — Historical/Symbolic Rune Reading Scope",
   "date": "2026-11-04",
   "predecessor_closure": "29dce86",
   "predecessor_push": "Confirmed29dce86 pushed to origin/main and0/0 synchronization before audit.",
-  "policy": "Resource/variation audit only;no rune catalog,meaning table,casting/orientation engine,interpretation rules or Rune CLI implemented.",
+  "policy": "Historical audit retained;current supported scope is frozen in runes_core_v1.json.",
   "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
   "inventory_method_row": [
     19,
@@ -76,8 +76,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Elder24 is a proposed first scope after verifying one original-order inventory and stable IDs. Names such as reconstructed Proto-Germanic forms must be marked reconstructed;later Old English/Scandinavian poem stanzas are cognate evidence,not direct attestation of a universal Elder24 divination dictionary. Verify possible ordering/glyph variants,especially final signs,without silently importing Blum order."
+      "status": "supported bounded Core v1",
+      "finding": "Elder24 is a proposed first scope after verifying one original-order inventory and stable IDs. Names such as reconstructed Proto-Germanic forms must be marked reconstructed;later Old English/Scandinavian poem stanzas are cognate evidence,not direct attestation of a universal Elder24 divination dictionary. Verify possible ordering/glyph variants,especially final signs,without silently importing Blum order.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "Younger (16)",
@@ -91,8 +92,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Younger16 is a separate historically documented alphabet. Norwegian/Icelandic poems are distinct witnesses with differing associations;select exact long-branch/short-twig glyph convention and language/edition rather than deleting eight Elder signs or merging meanings."
+      "status": "unsupported;deferred P2",
+      "finding": "Younger16 is a separate historically documented alphabet. Norwegian/Icelandic poems are distinct witnesses with differing associations;select exact long-branch/short-twig glyph convention and language/edition rather than deleting eight Elder signs or merging meanings.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "Anglo-Saxon Futhorc",
@@ -106,8 +108,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Choose an exact Old English poem/manuscript-derived or expanded futhorc inventory;do not advertise one universal rune count. The29-stanza poem lead and larger alphabet extensions require independent identity/count verification. English Feoh/Ur/Thorn/Os names cannot be silently equated with all Elder or Younger meanings."
+      "status": "unsupported;deferred P2",
+      "finding": "Choose an exact Old English poem/manuscript-derived or expanded futhorc inventory;do not advertise one universal rune count. The29-stanza poem lead and larger alphabet extensions require independent identity/count verification. English Feoh/Ur/Thorn/Os names cannot be silently equated with all Elder or Younger meanings.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "modern blank rune",
@@ -121,8 +124,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Keep blank rune as a separately named modern profile/optional extension only. Blum publisher25-piece set is a scope lead,not a complete inventory or evidence that a blank belongs to historical alphabets. Exact blank meaning/order/rights remain unverified;never add it to historical24 by default."
+      "status": "unsupported;deferred P2",
+      "finding": "Keep blank rune as a separately named modern profile/optional extension only. Blum publisher25-piece set is a scope lead,not a complete inventory or evidence that a blank belongs to historical alphabets. Exact blank meaning/order/rights remain unverified;never add it to historical24 by default.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "spreads",
@@ -136,8 +140,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Prioritize named manual/seeded one-rune and three-rune layouts if source procedure or explicitly editorial position roles are frozen. Free-casting geometry,face-down eligibility,duplicates/replacement and direction need exact policies. Poems do not independently certify modern spread/reversal rules;no borrowed Tarot Celtic or Lenormand grammar."
+      "status": "supported bounded Core v1",
+      "finding": "Prioritize named manual/seeded one-rune and three-rune layouts if source procedure or explicitly editorial position roles are frozen. Free-casting geometry,face-down eligibility,duplicates/replacement and direction need exact policies. Poems do not independently certify modern spread/reversal rules;no borrowed Tarot Celtic or Lenormand grammar.",
+      "audit_status": "unsupported;resource audit only"
     }
   ],
   "sources": [
@@ -198,10 +203,29 @@
     "Free-casting geometry and additional spreads",
     "Separately licensed fonts/imagery and optional visualization"
   ],
-  "limitations": "No Technique19 executable support,complete dictionary or historical divination certification claimed. No certain predictions or empirical accuracy claims. Original60-technique taxonomy,54 retained,exclusions25/27/41/42/47/48,rankings and five variations unchanged.",
+  "limitations": "Bounded Elder24 historical/reference and modern symbolic reading scope only;see current release matrix. Taxonomy/rankings/variation rows unchanged.",
   "accepted_predecessor": {
     "status": "Core v1 Ready — Hexagram Symbolic Reading Scope",
     "tests": 288,
     "cli_smoke_cases": 255
+  },
+  "audit_status_at_creation": "Researching",
+  "policy_at_audit": "Resource/variation audit only;no rune catalog,meaning table,casting/orientation engine,interpretation rules or Rune CLI implemented.",
+  "current_release": "knowledge/runes_core_v1.json",
+  "limitations_at_audit": "No Technique19 executable support,complete dictionary or historical divination certification claimed. No certain predictions or empirical accuracy claims. Original60-technique taxonomy,54 retained,exclusions25/27/41/42/47/48,rankings and five variations unchanged.",
+  "current_backlog": {
+    "P1": [
+      "Broader separately tagged historical/comparative poem coverage and sound/name reconstruction refinements",
+      "Authenticate exact print reissue underlying frozen digital excerpt",
+      "Independently source-verify modern divination conventions,qualified combinations and additional spreads",
+      "Source-specific reversals only if legitimately verified"
+    ],
+    "P2": [
+      "Separate Younger Futhark16 profile",
+      "Separate Anglo-Saxon Futhorc profile",
+      "Separate modern Blum blank-rune profile",
+      "Physical/free-casting geometry",
+      "Optional licensed imagery/fonts"
+    ]
   }
 }
