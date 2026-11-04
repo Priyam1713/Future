@@ -773,3 +773,93 @@ Examples: [concepts](data/akashic-concepts.md), [guided reflection](data/akashic
 and [clinical scope](data/akashic-clinical.md).
 Run `python -m scripts.verify_akashic`, `python -m scripts.smoke_akashic_core`
 and `python -m unittest tests.test_akashic -q`.
+
+## Tasseography: Kent ordinary-cup symbolic reading
+
+`python -m future tasseography data/tasseography-input.json --format markdown`
+
+Profile `kent-pg6964-ordinary-cup-v2` implements14 manually selected identities and
+23 source cases from Kent's PG6964 digital witness (posted2013-03-21),plus an
+explicit FigureVIII documentary comparison. Print pagination is not authenticated.
+The original source-only v1 freeze is retained for provenance and is unsupported
+by the engine: v2 distinguishes a postal-letter mark from an alphabetic initial.
+No whole book,modern copyrighted dictionary,scan or source artwork is bundled.
+
+Required fields: integer `schema_version:1`, exact `profile`,
+`task:"symbolic_cup_reading"`, `mode:"manual"`, `vessel:"cup"`.
+Optional `handle_orientation` is `top`, `right`, `bottom`, `left` or `unknown`.
+It is recorded only;no absolute position or sector is calculated. Optional
+`context` contains declared `musician`/`sailor` booleans or null,
+`marital_status` (`married`, `unmarried`, `unknown`) and `abode` (`home`, `away`,
+`unknown`). These personal facts are optional and never inferred from prose.
+
+Up to64 ordered `observations` require unique plain `id` and `symbol_id`.
+IDs: `aircraft`, `apron`, `acorn`, `anchor`, `organ`, `beetle`, `tea_cosy`,
+`coal_scoop`, `bird`, `letter`, `numeral`, `dots`, `cross`, `postal_mark`.
+Other plain IDs return unsupported references. Organ is not Barrel Organ;
+the coal-scoop documentary case is not Coal Scuttle's dictionary meaning.
+Postal marks have no standalone meaning in this subset;they participate in the
+selected bird/telegram account.
+
+Named `region` values are `rim`, `side`, `bottom`, `bottom_circle`,
+`bottom_centre`, `unknown`. Up to3 distinct `region_alternatives` preserve
+ambiguous placement. The bottom subregions retain FigureVIII circle/centre
+labels;no numeric boundary is invented. Optional `handle_relation` is
+`under_handle`, `near_handle`, `opposite` or `unknown`;`proximity` is `near`,
+`far` or `unknown`. Source depth timing is qualitative. Under-handle
+present/immediate and depth timing remain separate when they overlap;no priority
+or calendar date is computed. Saucer/Nelros/coffee methods reject explicitly.
+
+Optional conditions include `heading` (`towards_handle`, `away_from_handle`,
+`other`, `unknown`), `motion` (`flying`, `stationary`, `unknown`), `size`
+(`small`, `large`, `unknown`), `clarity` (`clear`, `indistinct`, `unknown`),
+`multiplicity` (`single`, `several`, `unknown`) and `arrangement`
+(`surrounding`, `other`, `unknown`). Several is an observer-declared source
+quantifier,not an invented numeric threshold;separate observations are not
+silently aggregated. Source clarity/size qualifications produce no confidence or
+personality score. A lone-cross declaration conflicting with another selected
+cross remains unresolved.
+
+`adjacent_to` lists existing observation IDs. A supplied list is a complete
+neighbor declaration;omission means unknown. One-sided positive assertions
+suffice unless contradicted by another supplied list. No distance or relationship
+is inferred from coordinates,region membership or prose. Surrounding dots require
+both declared `arrangement:"surrounding"` and an associated symbol;ordinary
+adjacency alone is insufficient. Bird cases require the postal mark,not an initial.
+Alphabetic `letter` may carry `mark`: one Latin letter,blank or null. Other glyphs
+can remain raw observations. `numeral` may carry integer `numeral`0..1000000000;
+only the documented dots/quantity association is supported,no deadline,currency
+or actual gain inferred.
+
+`uncertainty:true` or up to4 competing identity `alternatives` block definitive
+case selection. Statuses are `applicable`, `not_applicable`,
+`insufficient_information`, `conflicting_evidence`, `unsupported`. Reports retain
+condition results,missing inputs,competing accounts and independent zone
+qualifications. An unconditional case does not fill missing conditions for a
+different case. Unknown source contexts never trigger invented defaults.
+
+Optional `source_example:"figure_viii"` compares explicitly entered placements
+with Kent's original example. Its organ/acorn adjacency,lower-circle positions and
+musician qualification remain separate from general dictionary alternatives.
+The example's central tea-cosy account does not imply a user's marital status.
+The diagram was inspected as an original source;the program does not recognize
+its shapes. FigureVIII coal-scoop account also requires the observed beetle.
+
+Optional raw `observation`/`association` fields allow10000 Unicode code points;
+root `notes` allows10000. IDs allow80 ASCII letters/digits/dot/underscore/hyphen,
+beginning with a letter or digit. Raw whitespace,Unicode,omissions and nulls are
+preserved. JSON/Markdown include historical accounts,conditions,qualitative timing,
+editorial synthesis,four evidence layers,source/profile hashes and exact replay.
+Historical fortune claims are attributed statements,not empirically verified
+events,medical conclusions or personality assessments. Geometry,seeds,photographic
+recognition,fluid simulation,Nelros,Turkish methods and modern dictionary remain
+unsupported and are not release prerequisites.
+
+Examples: [basic](data/tasseography-basic.md), [zones](data/tasseography-zones.md),
+[handle overlap](data/tasseography-handle.md), [direction](data/tasseography-direction.md),
+[multiplicity](data/tasseography-multiplicity.md), [adjacency](data/tasseography-adjacency.md),
+[competing evidence](data/tasseography-conflicting.md), [missing context](data/tasseography-missing.md),
+[Kent FigureVIII comparison](data/tasseography-figure-viii.md),
+[initials/numerals](data/tasseography-marks.md) and [empty](data/tasseography-empty.md).
+Run `python -m scripts.verify_tasseography`, `python -m scripts.smoke_tasseography_core`
+and `python -m unittest tests.test_tasseography -q`.

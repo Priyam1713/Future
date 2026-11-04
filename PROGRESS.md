@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique28 manual cup engine — 2026-11-04
+- Source passes e707e65/ee5d103/12eb6b1 pushed before matcher. Added tasseography with active kent-pg6964-ordinary-cup-v2,14 identities/23 source cases,qualitative zones and explicit conditions. Missing/competing shape,position,motion,context and adjacency evidence remains unresolved;no timing priority,date conversion or universal symbol grammar. FigureVIII documentary comparison is distinct from dictionary cases and automatic recognition.
+-507 full tests pass(475 inherited+32 new);34 new CLI cases and68 independent reference checks pass. Full inherited CLI/verifier and prior103-file plus Akashic report invariance sweep finishing before closure. Manual only;no shared randomization change,geometry,seeds,photo recognition or new dependency. Saucer,Nelros,Turkish/coffee andmodern source remain unsupported executable methods.
+
 ## Technique28 pre-engine source distinction correction — 2026-11-04
 - Retained source-only v1 freeze immutably;new kent-pg6964-ordinary-cup-v2 separates ChIII postal-letter square/oblong mark from alphabetic initials. Bird adjacency requires postal_mark,not letter(initial).14 identities now include this explicitly distinct contextual mark;no unconditional postal meaning invented. Corrected independent v2 fixture frozen before matcher code. Prior source facts/IDs unchanged.
 
