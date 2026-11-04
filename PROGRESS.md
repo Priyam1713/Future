@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique23 Dream implementation — 2026-11-04
+- Source2ffe55c pushed. Working4-category/9-motif Artemidorus engine evaluates explicit contextual lookups,missing conditions,polysemy andcompeting accounts;not a journal-only wrapper. Voluntary narrative/scenes/entities/feelings/context/associations remain verbatim. Manual Unicode code-point spans andinclude/exclude tags never trigger interpretations;automatic matching deferred. Prior journal engines/profiles unchanged;only pure utilities reused.
+-415 tests pass(387 inherited+28 new);30 Dream CLI cases and26 independent-reference checks pass. All7 inherited symbolic verifiers,registry,dependency,pip anddiff checks pass. Source-byte digest andexact original inventory verified. Full inherited CLI sweep finishing before bounded closure;no clinical/predictive/hidden-memory orcross-school inference.
+
 ## Technique23 source/taxonomy freeze — 2026-11-04
 - Synchronized6d40e56. Inspected Attalus1.1/1.2/1.8/1.9 andbounded2.13/4.27/4.47/5.51;checked GreekBook1.1/1.2 terminology inPack1963 digital witness. Frozen artemidorus-attalus-context-v1 with4 categories,9 motif/context references andindependent pre-engine fixtures. enypnion/oneiros andtheorematic/allegorical remain distinct;translation attributionLewis1.1 versusWhite elsewhere explicit.
 - Context contrasts include hunger/thirst/present concerns,polysemous serpent,lost-nose episodes,opposite broken-staff accounts andcompeting myths. Only original factual paraphrases/locators retained,no modern translated corpus. All historical outcomes stay attributed,not forecasts/diagnoses. Research cutoff reached;implement voluntary journal,explicit lookups andmanual exact-span annotations. Automatic matcher andFreud profile deferred P1;prior engines untouched.

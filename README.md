@@ -559,3 +559,70 @@ Examples: [guided](data/mirror-guided.md), [personal associations](data/mirror-a
 [skipped stage](data/mirror-skipped.md) and [invalid configuration](data/mirror-invalid.md).
 Run `python -m scripts.verify_mirror`, `python -m scripts.smoke_mirror_core`
 and `python -m unittest tests.test_mirror -q` for bounded acceptance checks.
+# Dream Interpretation Core v1
+
+Run `python -m future dream data/dream-input.json --format markdown` (or
+`--format json`). The immutable `artemidorus-attalus-context-v1` profile contains
+four historical categories, nine bounded motif references and two contextual
+qualifications. Selected Attalus excerpts were checked against their named
+White1975/Lewis1976 attribution;GreekBook1.1/1.2 terminology was checked in the
+Pack1963 digital witness. These are original factual notes, not a modern English
+translation corpus or an exhaustive five-book dictionary.
+
+Stable IDs distinguish `enypnion` (present-state experience), `oneiros` (the author's
+future-signifying class), and its `theorematic`/`allegorical` branches. Reports
+compare user-selected lenses and explicit contextual cases;they cannot establish
+predictive significance. The modern translations' varying English dream/vision
+labels do not collapse these categories. Freud, Jung and Faraday remain separate
+unsupported profiles in this core.
+
+Inputs require schema_version `1`, exact `profile`, task `historical_reflection`
+and mode `manual`. All personal material is optional. Root fields include
+`narrative`, `timestamp`, `recall`, `scenes`, `people`, `objects`, `places`, `events`,
+`feelings`, `associations` and `personal_reflection`. Narratives preserve raw Unicode,
+whitespace and wording (up to20000 characters);reflections up to10000. Missing,
+null and blank narratives remain distinct. Recall may be `complete`, `fragmented`,
+`uncertain` or `no_recall`. Up to64 scene records accept `description`, timestamp,
+strictly increasing optional sequence, uncertainty, recall and the user-authored
+entity/event/feeling/association lists. No current clock or inferred chronology.
+
+Explicit `lookups` select `eating`, `drinking`, `feared_object`, `desired_person`,
+`shipwreck`, `serpent`, `lost_nose`, `broken_staff` or `myth_variants`. Unknown lookup
+IDs return unsupported rather than a substitute meaning. Conditions are supplied
+in optional `context`: `hungry`, `thirsty`, `current_fear`, `current_desire`, `at_sea`
+and `exact_correspondence_reported` are booleans or null. These are declarations,
+not facts inferred from the narrative. `circumstances` selects any of `perfume_trade`,
+`civic_standing`, `illness`; `staff_cases` selects `initial_account` and/or
+`repeat_during_paralysis` as historical comparison accounts, not a health assessment.
+`myth_versions` retains alternative user-entered stories. `cultural_context`,
+`situational_context` and `notes` are optional raw text.
+
+Each lookup returns source/translator/section, conditions, provided and missing
+context, selected author-attributed accounts, alternatives and explicit limits.
+Opposite staff/nose accounts stay visible when multiple selectors are supplied.
+The serpent reference retains several associations without choosing a universal
+meaning. Historical illness/death/recovery accounts are not medical forecasts.
+`taxonomy_claims` optionally selects category IDs;conflicting lenses are reported
+without silently resolving them.
+
+Manual `annotations` accept a known `motif_id`, optional `target` (`narrative` or
+`scene` with1-based `scene_index`), paired `start`/`end`, and `decision` (`include`
+or `exclude`). Spans are half-open Unicode code-point offsets into original text;
+there is no normalization, case conversion or word-boundary inference. Distinct
+overlaps remain;duplicate/conflicting identical annotations reject. Tags and their
+corrections never trigger source lookups. Automatic literal matching is deferred P1.
+
+Optional `preferences` controls `historical_references` and `editorial_questions`.
+Opting out of historical references conflicts with explicit lookups/category claims.
+Reports separate historical reference, raw user meaning, editorial questions and
+unsupported conclusions, with portable profile/source hashes and exact replay.
+No diagnosis, hidden memories, latent-wish inference, universal symbolism, remote
+service, LLM, database or factual prediction. Existing journal engines remain unchanged;
+only narrow pure text/timestamp/JSON/hash utilities are reused.
+
+Examples: [complete](data/dream-complete.md), [multiple scenes](data/dream-multiple.md),
+[taxonomy](data/dream-taxonomy.md), [context](data/dream-context.md),
+[missing context](data/dream-missing.md), [personal associations](data/dream-associations.md),
+[fragmented recall](data/dream-fragmented.md), [competing references](data/dream-conflicting.md)
+and [manual spans](data/dream-annotated.md). Run `python -m scripts.verify_dream`,
+`python -m scripts.smoke_dream_core` and `python -m unittest tests.test_dream -q`.
