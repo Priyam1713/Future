@@ -328,3 +328,22 @@ Geometry and markings are descriptive only. Historical context is looked up by r
 The historical region associations record what Lavater claimed,with attribution and printed/canvas locators; they are not valid statements about the annotated person. His three forehead constructions are documented as an example of discredited capacity-ranking claims,without reproducing a ranking algorithm or applying it to a person. Hunter translation terminology stays separate from Holcroft and Chinese schools.
 
 Samples: `data/face-reference-observations.json` is constructed manual usage data,not a photograph or historical individual; `data/face-reference-manual.json`/`.md` contain eight descriptive annotations covering all six regions. `data/face-reference-schematic.json`/`.md` document the published second schematic. `data/face-reference-verification.json` checks six independently transcribed regional entries and three original numbered figures. These checks establish selected source fidelity and interface behavior,not physiognomic validity or image-recognition accuracy.
+
+## Oracle Cards — named Lenormand36 profile
+
+```powershell
+python -m future oracle data/oracle-lenormand-input.json --format markdown
+python -m future oracle data/oracle-manual-input.json
+python -m scripts.verify_oracle
+python -m scripts.smoke_oracle_core
+```
+
+`lenormand-evening-world-1903-text-v1` uses the complete36-card text inventory in The Evening World's Home Magazine, October19,1903. All36 entries have original numbers,aliases,source locators,paraphrased motifs and conditional context. It is a distinct historical edition;its Bird,Child,Tower and Moon meanings differ from common modern keywords. No Rana George dictionary,40-card extension,Tarot semantics or artwork is included.
+
+Inputs require `schema_version:1`,the exact `profile`, `task:"symbolic_reading"`, `mode:"seeded"` or `"manual"`, `spread:"one"`, `"three"` or `"five"`,and `orientation_policy:"upright_only"`. Seeded inputs require the existing `future-cards-sha256-fy-v1` protocol and1–256 UTF-8 seed bytes. Manual inputs supply `cards:[{"card_id":"lenormand-01"}]` with the exact spread count and no repeats. Optional `question` is context only. Unknown fields,decks,orientations,duplicate JSON keys and nonfinite values reject.
+
+One/three/five-card lines are editorial adaptations,ordered left to right. Adjacent motifs are combined transparently;the reports distinguish source-published conditions from editorial juxtaposition and unsupported exact pair meanings. The Star/Clouds near-condition and Ring/person direction condition are displayed separately. Adjacency-as-near and page-right are experimental application conventions;no condition is certified because distance,perspective and reference-person questions remain unresolved. The newspaper's worked example calls page-left “right”;this discrepancy is preserved. Its full8+8+8+8+4 procedure is documented but Grand Tableau judgment is deferred.
+
+JSON and Markdown include the exact request,canonical order/hash,catalog hash,full seeded permutation,draw and shuffle trace. The canonical IDs are `lenormand-01` through `lenormand-36`,hashed as UTF-8 joined by LF without a final LF. One shuffle,no cuts,no replacement and no orientation stream are used. Existing Tarot outputs are unchanged. Six independent .NET full-deck fixtures,source transcriptions and CLI examples can be regenerated offline;the reference generator is `tests/reference/generate_oracle_vectors.ps1`.
+
+Examples: `data/oracle-one.md`, `data/oracle-three.md`, `data/oracle-five.md`, `data/oracle-manual.md`. Scope is symbolic reflection,not verified predictions or factual judgments. Unsupported distance,cloud image-facing,medical,moral and financial claims remain explicit. Source/rights and release details are in `knowledge/oracle_core_v1.json`;P1 covers documented combinations and advanced layouts,P2 separate Kipper,Belline,Sibilla and contemporary profiles.

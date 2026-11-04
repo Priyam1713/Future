@@ -1,5 +1,15 @@
 # Future progress
 
+## Technique17 Lenormand implementation — 2026-11-04
+- Source freezed990139 pushed. Added named immutable36-card historical catalog reader,source/condition registry,seeded/manual upright1/3/5-card editorial lines and deck-aware oracle CLI. Shared shuffle kernel and Tarot semantics/outputs unchanged.
+-19 Oracle tests,20 public CLI cases and49 verification checks pass,including six independent .NET full-deck vectors and historical inventory/motif/example transcriptions. JSON/Markdown contain exact replay metadata;source conditions,editorial composition and unsupported adjudications remain separate.
+- First full run261 tests passed;final262-test run and all inherited CLI modules pending for bounded closure. No new dependency;pip check,dependency audit and Tarot30-check verifier pass. No source scan/artwork bundled.
+
+## 2026-11-04 — #17 source freeze
+- Inspected complete Evening World Home Magazine1903-10-19 scan;froze separate36-card historical text profile,all identities/source-located paraphrases and conditional meanings. Ranked sources unchanged;Rana36/40 not merged.
+- Small1/3/5-card lines are editorial adaptations;source near/surrounding conditions and Ring direction preserved with distance/perspective gaps. No art or modern dictionary copied. Source example has mirrored right/left wording;recorded,not fitted.
+- Source pass only;next implement/replay/verify before closure.
+
 ## Technique17 Oracle Cards resource audit — 2026-11-04
 - Began after Tarot closurea036474 pushed/synchronized. Exact original three rankings/five variations and inventory hash/exclusions preserved. Six metadata-only sources cover George first-edition access gap/separate2025 second edition,Musruck Kipper,Baron-Reid Wisdom,current Grimaud Belline and named Lo Scarabeo Sibilla. Traditional Lenormand36 is not silently replaced by40-card Muree;modern card counts/editions remain distinct.
 - oracle_resource_audit.json prioritizes one fully sourced36-card core after legitimate procedural/rights access,with independent fixtures and a documented spread. Existing card_random shuffle may be reused with deck-specific IDs/replay;Tarot78,suits,Celtic cuts and reversals cannot be assumed. No Oracle implementation;all six audit records load.243 tests/205 CLI acceptance retained.
@@ -466,8 +476,3 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Registered HKO primary solar-term/sexagenary tables and1901–2100 conversion references. Exact calendar/day-rollover/clock, luck-pillar and school conventions remain pending in chinese_resource_audit.json.
 - Proposed efficient first slice: named BaZi calendar/four pillars, independently verified solar terms, separately labeled animal year and source-verified ten-god relations. Zi Wei/Nine Star Ki remain distinct systems; rights and worked-example access checked before rule extraction.
 - Vedic release remains73 passing tests,12 Vedic/23 Western CLI cases. Metadata-only handoff validated against inventory/source registry; no runtime dependency change. Next: verify BaZi procedural passages/conventions before coding. Commit: resolve with `git log --grep="audit Chinese sources and variations"`.
-
-## 2026-11-04 — #17 source freeze
-- Inspected complete Evening World Home Magazine1903-10-19 scan;froze separate36-card historical text profile,all identities/source-located paraphrases and conditional meanings. Ranked sources unchanged;Rana36/40 not merged.
-- Small1/3/5-card lines are editorial adaptations;source near/surrounding conditions and Ring direction preserved with distance/perspective gaps. No art or modern dictionary copied. Source example has mirrored right/left wording;recorded,not fitted.
-- Source pass only;next implement/replay/verify before closure.
