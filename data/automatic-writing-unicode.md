@@ -146,9 +146,10 @@ French original, institutional PDF/images and Seaver/Lane1969 English translatio
 
 ## Original first draft
 
-```
- A🐍
-Café	猫 
+JSON string preserves exact whitespace and line endings:
+
+```json
+" A🐍\r\nCafé\t猫 "
 ```
 
 Original content SHA256: 36742842f4ffbbca8d460ef5308bb3f45fcaff1d72748816c612bb96abe866c9
@@ -170,6 +171,7 @@ Original content SHA256: 36742842f4ffbbca8d460ef5308bb3f45fcaff1d72748816c612bb9
   "revisions": 0,
   "duration": {
     "seconds": null,
+    "microseconds": null,
     "status": "unavailable_missing_or_incompatible_endpoints"
   },
   "declared_segment_seconds": null
@@ -183,7 +185,7 @@ Original content SHA256: 36742842f4ffbbca8d460ef5308bb3f45fcaff1d72748816c612bb9
   "characters": "Python Unicode code points; no normalization or grapheme counting",
   "words": "Maximal nonempty runs separated by Python str.isspace Unicode whitespace; punctuation/emoji remain in tokens",
   "lines": "Empty text0; otherwise1 plus CRLF/CR/LF delimiters; CRLF is one delimiter, final empty line counted",
-  "duration": "Begin-to-stop declared compatible datetime endpoints only; includes pauses; no inferred active typing time",
+  "duration": "Begin-to-stop declared compatible datetime endpoints only; includes pauses; exact integer microseconds authoritative, seconds is a floating display; no inferred active typing time",
   "segment_intervals": "Sum only when every segment declares an integer interval; not inferred or equated to wall duration"
 }
 ```

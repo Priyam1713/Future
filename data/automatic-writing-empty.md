@@ -65,8 +65,10 @@ French original, institutional PDF/images and Seaver/Lane1969 English translatio
 
 ## Original first draft
 
-```
+JSON string preserves exact whitespace and line endings:
 
+```json
+""
 ```
 
 Original content SHA256: e5a1615ed0fe0036fb29b974ce6cd4108e6d0bd36f21a1e2058c6e6045f588ec
@@ -88,6 +90,7 @@ Original content SHA256: e5a1615ed0fe0036fb29b974ce6cd4108e6d0bd36f21a1e2058c6e6
   "revisions": 0,
   "duration": {
     "seconds": null,
+    "microseconds": null,
     "status": "unavailable_missing_or_incompatible_endpoints"
   },
   "declared_segment_seconds": null
@@ -101,7 +104,7 @@ Original content SHA256: e5a1615ed0fe0036fb29b974ce6cd4108e6d0bd36f21a1e2058c6e6
   "characters": "Python Unicode code points; no normalization or grapheme counting",
   "words": "Maximal nonempty runs separated by Python str.isspace Unicode whitespace; punctuation/emoji remain in tokens",
   "lines": "Empty text0; otherwise1 plus CRLF/CR/LF delimiters; CRLF is one delimiter, final empty line counted",
-  "duration": "Begin-to-stop declared compatible datetime endpoints only; includes pauses; no inferred active typing time",
+  "duration": "Begin-to-stop declared compatible datetime endpoints only; includes pauses; exact integer microseconds authoritative, seconds is a floating display; no inferred active typing time",
   "segment_intervals": "Sum only when every segment declares an integer interval; not inferred or equated to wall duration"
 }
 ```
