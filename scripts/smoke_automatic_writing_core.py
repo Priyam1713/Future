@@ -29,6 +29,7 @@ def run():
             p=subprocess.run([sys.executable,'-m','future','automatic-writing',str(path),'--format',fmt],capture_output=True)
             assert p.returncode==(2 if reject else 0),(name,p.stderr)
             text=p.stdout.decode('utf-8').replace('\r\n','\n')
+            if fmt=='markdown':text=text.rstrip('\n')+'\n'
             if reject:
                 if fmt=='json':assert json.loads(text)['automatic_writing_report'] is None
                 else:assert 'request rejected' in text
