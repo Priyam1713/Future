@@ -217,7 +217,18 @@ def main():
     oracle=sub.add_parser('oracle')
     oracle.add_argument('input',help='Named deck seeded/manual symbolic Oracle reading JSON')
     oracle.add_argument('--format',choices=['json','markdown'],default='json')
+    iching=sub.add_parser('iching')
+    iching.add_argument('input',help='Manual/seeded source-bounded I Ching reading JSON')
+    iching.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='iching':
+        from .iching import load_input,read,markdown
+        registry=load_registry(args.database)
+        try:
+            result=read(load_input(args.input),registry)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close()
+        return
     if args.command=='oracle':
         from .oracle import load_input,read,markdown
         registry=load_registry(args.database)
