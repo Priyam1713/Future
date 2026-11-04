@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "technique_id": 23,
+  "profile": "artemidorus-attalus-context-v1",
+  "task": "historical_reflection",
+  "mode": "manual",
+  "journal": {
+    "coverage": "user_attributed",
+    "record": {
+      "narrative": "I was eating at a table,then saw a serpent.",
+      "recall": "complete",
+      "context": {
+        "hungry": true
+      }
+    },
+    "narrative_state": "text",
+    "scene_order": "input list;never sorted"
+  },
+  "annotations": [],
+  "annotation_policy": "Manual known-motif tags withoptional exact half-open Unicode code-point spans;no automatic word matching,case normalization orword-boundary inference. Overlapping different tags remain distinct;duplicate annotations rejected. Tags never select an interpretation;lookups are separate explicit requests.",
+  "historical_taxonomy": {
+    "coverage": "historical_taxonomy_comparison",
+    "categories": [
+      {
+        "category": {
+          "id": "enypnion",
+          "greek": "\u1f10\u03bd\u03cd\u03c0\u03bd\u03b9\u03bf\u03bd",
+          "parent": null,
+          "definition": "Present-state experience during sleep in the author's framework;not a forecast.",
+          "provenance": {
+            "source_id": "dream-artemidorus-attalus-context-facts-v1",
+            "locator": "Oneirocritica 1.1",
+            "translator": "Naphtali Lewis1976",
+            "rule_id": "dream.artemidorus.1_1",
+            "version": 1
+          },
+          "greek_source_id": "dream-artemidorus-pack1963-terms-v1",
+          "applicability": "Conditional historical comparison oruser-selected lens;no predictive certification"
+        },
+        "status": "conditional_historical_comparison",
+        "user_claimed": false,
+        "evidence_motifs": [
+          "eating"
+        ],
+        "missing_context": [],
+        "rule_id": "dream.artemidorus.category.enypnion",
+        "predictive_validity_verified": false
+      },
+      {
+        "category": {
+          "id": "oneiros",
+          "greek": "\u1f44\u03bd\u03b5\u03b9\u03c1\u03bf\u03c2",
+          "parent": null,
+          "definition": "The author's future-signifying class;the application cannot verify predictive significance.",
+          "provenance": {
+            "source_id": "dream-artemidorus-attalus-context-facts-v1",
+            "locator": "Oneirocritica 1.1",
+            "translator": "Naphtali Lewis1976",
+            "rule_id": "dream.artemidorus.1_1",
+            "version": 1
+          },
+          "greek_source_id": "dream-artemidorus-pack1963-terms-v1",
+          "applicability": "Conditional historical comparison oruser-selected lens;no predictive certification"
+        },
+        "status": "undetermined",
+        "user_claimed": false,
+        "evidence_motifs": [],
+        "missing_context": [
+          "predictive significance cannot be established by this application"
+        ],
+        "rule_id": "dream.artemidorus.category.oneiros",
+        "predictive_validity_verified": false
+      },
+      {
+        "category": {
+          "id": "theorematic",
+          "greek": "\u03b8\u03b5\u03c9\u03c1\u03b7\u03bc\u03b1\u03c4\u03b9\u03ba\u03bf\u03af",
+          "parent": "oneiros",
+          "definition": "Within oneiros,the represented form directly corresponds to an event in the historical account.",
+          "provenance": {
+            "source_id": "dream-artemidorus-attalus-context-facts-v1",
+            "locator": "Oneirocritica 1.2",
+            "translator": "Robert J.White1975",
+            "rule_id": "dream.artemidorus.1_2",
+            "version": 1
+          },
+          "greek_source_id": "dream-artemidorus-pack1963-terms-v1",
+          "applicability": "Conditional historical comparison oruser-selected lens;no predictive certification"
+        },
+        "status": "undetermined",
+        "user_claimed": false,
+        "evidence_motifs": [],
+        "missing_context": [
+          "user-reported exact correspondence;not independently verified"
+        ],
+        "rule_id": "dream.artemidorus.category.theorematic",
+        "predictive_validity_verified": false
+      },
+      {
+        "category": {
+          "id": "allegorical",
+          "greek": "\u1f00\u03bb\u03bb\u03b7\u03b3\u03bf\u03c1\u03b9\u03ba\u03bf\u03af",
+          "parent": "oneiros",
+          "definition": "Within oneiros,one thing is represented through another in the author's theory.",
+          "provenance": {
+            "source_id": "dream-artemidorus-attalus-context-facts-v1",
+            "locator": "Oneirocritica 1.2",
+            "translator": "Robert J.White1975",
+            "rule_id": "dream.artemidorus.1_2",
+            "version": 1
+          },
+          "greek_source_id": "dream-artemidorus-pack1963-terms-v1",
+          "applicability": "Conditional historical comparison oruser-selected lens;no predictive certification"
+        },
+        "status": "undetermined",
+        "user_claimed": false,
+        "evidence_motifs": [],
+        "missing_context": [],
+        "rule_id": "dream.artemidorus.category.allegorical",
+        "predictive_validity_verified": false
+      }
+    ],
+    "conflicts": [],
+    "certainty": null
+  },
+  "motif_references": [
+    {
+      "motif_id": "eating",
+      "status": "conditional_reference",
+      "reference": {
+        "id": "eating",
+        "provenance": {
+          "source_id": "dream-artemidorus-attalus-context-facts-v1",
+          "locator": "Oneirocritica 1.1",
+          "translator": "Naphtali Lewis1976",
+          "rule_id": "dream.artemidorus.1_1",
+          "version": 1
+        },
+        "condition_kind": "boolean",
+        "cases": [
+          {
+            "id": "present_state",
+            "requires": {
+              "hungry": true
+            },
+            "historical_account": "The hungry person's eating dream is treated as an echo of present need.",
+            "category": "enypnion"
+          }
+        ],
+        "definition": "The hungry person's eating dream is treated as an echo of present need.",
+        "coverage": "bounded_historical_reference",
+        "forecast": false
+      },
+      "selected_cases": [
+        {
+          "id": "present_state",
+          "requires": {
+            "hungry": true
+          },
+          "historical_account": "The hungry person's eating dream is treated as an echo of present need.",
+          "category": "enypnion"
+        }
+      ],
+      "provided_context": {
+        "hungry": true
+      },
+      "missing_context": [],
+      "not_met": [],
+      "rule_id": "dream.artemidorus.motif.eating",
+      "interpretation_scope": "Author-attributed historical reference only;not an event forecast ordiagnosis",
+      "forecast": false
+    },
+    {
+      "motif_id": "serpent",
+      "status": "polysemous_reference",
+      "reference": {
+        "id": "serpent",
+        "provenance": {
+          "source_id": "dream-artemidorus-attalus-context-facts-v1",
+          "locator": "Oneirocritica 2.13",
+          "translator": "Robert J.White1975",
+          "rule_id": "dream.artemidorus.2_13",
+          "version": 1
+        },
+        "condition_kind": "polysemy",
+        "cases": [
+          {
+            "id": "kingship",
+            "requires": {},
+            "historical_account": "Strength supplies a kingship association."
+          },
+          {
+            "id": "time",
+            "requires": {},
+            "historical_account": "Length andrenewed skin supply a time association."
+          },
+          {
+            "id": "wealth",
+            "requires": {},
+            "historical_account": "Guarding treasure supplies a wealth association."
+          },
+          {
+            "id": "sacred",
+            "requires": {},
+            "historical_account": "Associations withnamed deities supply a sacred sense."
+          }
+        ],
+        "definition": "Multiple author associations remain alternatives;no automatic choice fromthe word serpent.",
+        "coverage": "bounded_historical_reference",
+        "forecast": false
+      },
+      "selected_cases": [
+        {
+          "id": "kingship",
+          "requires": {},
+          "historical_account": "Strength supplies a kingship association."
+        },
+        {
+          "id": "time",
+          "requires": {},
+          "historical_account": "Length andrenewed skin supply a time association."
+        },
+        {
+          "id": "wealth",
+          "requires": {},
+          "historical_account": "Guarding treasure supplies a wealth association."
+        },
+        {
+          "id": "sacred",
+          "requires": {},
+          "historical_account": "Associations withnamed deities supply a sacred sense."
+        }
+      ],
+      "provided_context": {},
+      "missing_context": [],
+      "not_met": [],
+      "rule_id": "dream.artemidorus.motif.serpent",
+      "interpretation_scope": "Author-attributed historical reference only;not an event forecast ordiagnosis",
+      "forecast": false
+    }
+  ],
+  "context_guidance": [
+    {
+      "source_id": "dream-artemidorus-attalus-context-facts-v1",
+      "locator": "Oneirocritica 1.8",
+      "translator": "Robert J.White1975",
+      "rule_id": "dream.artemidorus.1_8",
+      "version": 1,
+      "statement": "Common andindividual/cultural customs can change a reading;the author's generalizations are historical claims."
+    },
+    {
+      "source_id": "dream-artemidorus-attalus-context-facts-v1",
+      "locator": "Oneirocritica 1.9",
+      "translator": "Robert J.White1975",
+      "rule_id": "dream.artemidorus.1_9",
+      "version": 1,
+      "statement": "Circumstances andsmall narrative details matter;the app makes all such context optional andnever invents it."
+    }
+  ],
+  "summary": {
+    "coverage": "neutral_editorial_comparison",
+    "scene_count": 0,
+    "reference_counts": {
+      "conditional_reference": 1,
+      "conflicting_references": 0,
+      "polysemous_reference": 1,
+      "missing_context": 0,
+      "conditions_not_met": 0,
+      "unsupported": 0
+    },
+    "text": "2 explicit historical lookups;1 fit declared case conditions,0 lack context. These are source comparisons,not forecasts. User associations remain separate."
+  },
+  "editorial_reflection": {
+    "coverage": "modern_editorial",
+    "questions": [
+      "Which personal associations,if any,differ from the competing serpent accounts? No account is selected as fact.",
+      "What meanings do you personally give your recorded details?",
+      "Which details remain uncertain or incomplete?"
+    ]
+  },
+  "sources": [
+    {
+      "id": "dream-artemidorus-attalus-context-facts-v1",
+      "technique_id": 23,
+      "author": "Artemidorus;Naphtali Lewis1976(1.1),Robert J.White1975(other selected sections)",
+      "edition": "Attalus selected Oneirocritica excerpts,digital factual snapshot checked2026-11-04;not complete five-book translation",
+      "url": "https://www.attalus.org/translate/artemidorus.html",
+      "locator": "Translation notice;1.1,1.2,1.8,1.9,2.13,4.27,4.47,5.51",
+      "snapshot_sha256": "66f52323cbd6783c53f45b2c3db9ae5157a01b5798f7f7b714ebb1f61873c072",
+      "snapshot_bytes": 26275,
+      "ingestion": "facts_only",
+      "rights_note": "Ancient work andmodern White/Lewis translations/site rendering have separate rights. Only original short factual research paraphrases,category/motif facts andlocators retained;no translated passage,whole corpus orsite assets copied. No blanket translation reproduction permission claimed.",
+      "checked_on": "2026-11-04"
+    },
+    {
+      "id": "dream-artemidorus-pack1963-terms-v1",
+      "technique_id": 23,
+      "author": "Artemidorus;R.A.Pack,editor;Bibliotheca Augustana",
+      "edition": "Artemidori Daldiani Onirocriticon libriV;Pack,Teubner1963;Book1 digital Greek witness",
+      "url": "https://www.tha.de/~harsch/graeca/Chronologia/S_post02/Artemidor/art_oni1.html",
+      "locator": "Book1 sections1-2;edition index art_oni0.html",
+      "ingestion": "facts_only",
+      "rights_note": "Technical word/relationship facts only;no critical text/apparatus orGreek corpus redistributed. Digital edition inspected for terms,not a full critical collation;no byte snapshot claimed.",
+      "checked_on": "2026-11-04"
+    }
+  ],
+  "terminology": "Stable Greek/transliterated category IDs avoid the differing English dream/vision labels inmodern translations. GreekBook1.1/1.2 terms inspected;not a full original-language collation.",
+  "limitations": [
+    "Historical omen accounts are not empirically validated forecasts",
+    "No diagnosis,hidden-memory inference,latent-wish analysis oruniversal symbol dictionary",
+    "All personal/cultural/situational facts are optional,user declared andnot inferred fromnarrative words",
+    "Freud,Jung,Faraday andother cultural dictionaries remain separate unsupported profiles",
+    "Automatic literal tagging deferred;manual exact-span annotations only;no external calls,LLM orclock"
+  ],
+  "unsupported": [
+    "Objective omen fulfilment",
+    "Mental-health diagnosis orrepressed-memory inference",
+    "Universal orcross-tradition symbolism"
+  ],
+  "replay": {
+    "request": {
+      "schema_version": 1,
+      "profile": "artemidorus-attalus-context-v1",
+      "task": "historical_reflection",
+      "mode": "manual",
+      "narrative": "I was eating at a table,then saw a serpent.",
+      "recall": "complete",
+      "lookups": [
+        "eating",
+        "serpent"
+      ],
+      "context": {
+        "hungry": true
+      }
+    },
+    "profile": "artemidorus-attalus-context-v1",
+    "profile_sha256": "85149f9759a16cd724d089d48ecc7d75b1027c6e0dcdade555c2c157b0cb4847",
+    "source_snapshot_sha256": "66f52323cbd6783c53f45b2c3db9ae5157a01b5798f7f7b714ebb1f61873c072",
+    "policy": "artemidorus-explicit-context-v1",
+    "annotations": "manual-codepoint-spans-v1",
+    "clock_used": false,
+    "automatic_matching": false,
+    "external_calls": false
+  },
+  "factual_prediction": false,
+  "diagnosis": false,
+  "hidden_memory_inferred": false,
+  "confidence_score": null
+}
