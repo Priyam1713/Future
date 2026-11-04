@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique19 Rune Casting resource/variation audit — 2026-11-04
+- Began only after I Ching closure29dce86 pushed/synchronized. Preserved original three rankings/five variations and inventory hash/exclusions. Registered Paxson2021 publisher,ranked poem-source index,Dickins1915 edition/territorial rights,Blum2008/separate2025 lead,and two institution/museum alphabet references. No Rune implementation.
+- Elder24/Younger16,Futhorc and modern blank stay separate;reconstructed names and later poem evidence are not a universal ancient divination dictionary. Modern spread/reversal/face-down/free-cast procedures still need original source verification. Card shuffle primitives are reusable only after rune-specific set/order/replay conventions;no Tarot/Lenormand meanings imported.
+- Dickins1915 is USA public domain but explicitly still copyrighted in UK per Wikisource notice;ancient texts,English translations,site renderings and artwork have separate rights. No full poem/modern dictionary ingested. runes_resource_audit.json freezes source/rights/fixture gates and P1/P2;first useful scope is one complete source-bounded set with manual/seeded1/3-rune readings. I Ching acceptance remains288 tests/255 CLI cases.
+
 ## Technique18 I Ching Core v1 closure — 2026-11-04
 - Source35b1f85/fixture95bbafc and engine5655f76 pushed;reports/evidence90224f2,860732c,6527ca4 pushed after transient GitHub failures. **Core v1 Ready — Hexagram Symbolic Reading Scope**:Legge1882 profile,64 judgments/384 ordinary lines/2 special passages,manual/seeded coin and conventional yarrow-marginal casting,all-moving-text editorial policy and explicit64.3 variant.
 -288 tests pass(263 inherited+25 new);255 CLI cases pass(225 inherited across17 modules+30 new).8759 verification checks cover64 original patterns,eight trigrams,4096 six-value states,64×64 masks,exact8 coin/16 marginal outcomes,14 independent .NET vectors and selected scan/transformation fixtures. All450 text entries source-located;complete diplomatic collation isP1,not claimed. Tarot/Oracle verifiers,dependency audit,pip and diff checks pass.

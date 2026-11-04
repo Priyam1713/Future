@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "technique_id": 19,
+  "name": "Rune Casting",
+  "status": "Researching",
+  "date": "2026-11-04",
+  "predecessor_closure": "29dce86",
+  "predecessor_push": "Confirmed29dce86 pushed to origin/main and0/0 synchronization before audit.",
+  "policy": "Resource/variation audit only;no rune catalog,meaning table,casting/orientation engine,interpretation rules or Rune CLI implemented.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    19,
+    "3 · Mystical & Spiritual Divination",
+    "Rune Casting",
+    "RETAIN — simulate / implement",
+    "Deterministic / symbolic rules",
+    "Elder Futhark (24); Younger (16); Anglo-Saxon Futhorc; modern blank rune; spreads",
+    "Select rune system, casting or structured draws, map meanings",
+    "Rune glyph font; PRNG; tradition choice",
+    "Modern divinatory meanings differ from historical rune poems",
+    "Traditional / not scientifically validated",
+    "Taking Up the Runes",
+    "Diana L. Paxson",
+    null,
+    "The Old English Rune Poem / Norwegian and Icelandic Rune Poems",
+    "The Book of Runes",
+    null,
+    "16, 34, 37",
+    19
+  ],
+  "ranked_sources": [
+    [
+      19,
+      "Rune Casting",
+      1,
+      "Diana L. Paxson",
+      "Taking Up the Runes",
+      "Modern systematic rune divination",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      19,
+      "Rune Casting",
+      2,
+      "Historical anonymous authors",
+      "The Old English Rune Poem / Norwegian and Icelandic Rune Poems",
+      "Historical primary symbol references",
+      "https://norserunes.com/sources/",
+      "Online source collection",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      19,
+      "Rune Casting",
+      3,
+      "Ralph Blum",
+      "The Book of Runes",
+      "Modern blank-rune variant",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Elder Futhark (24)",
+      "inventory_row": [
+        19,
+        "Rune Casting",
+        "Elder Futhark (24)",
+        "The Book of Runes",
+        "The Old English Rune Poem / Norwegian and Icelandic Rune Poems",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;resource audit only",
+      "finding": "Elder24 is a proposed first scope after verifying one original-order inventory and stable IDs. Names such as reconstructed Proto-Germanic forms must be marked reconstructed;later Old English/Scandinavian poem stanzas are cognate evidence,not direct attestation of a universal Elder24 divination dictionary. Verify possible ordering/glyph variants,especially final signs,without silently importing Blum order."
+    },
+    {
+      "name": "Younger (16)",
+      "inventory_row": [
+        19,
+        "Rune Casting",
+        "Younger (16)",
+        "The Book of Runes",
+        "The Old English Rune Poem / Norwegian and Icelandic Rune Poems",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;resource audit only",
+      "finding": "Younger16 is a separate historically documented alphabet. Norwegian/Icelandic poems are distinct witnesses with differing associations;select exact long-branch/short-twig glyph convention and language/edition rather than deleting eight Elder signs or merging meanings."
+    },
+    {
+      "name": "Anglo-Saxon Futhorc",
+      "inventory_row": [
+        19,
+        "Rune Casting",
+        "Anglo-Saxon Futhorc",
+        "The Book of Runes",
+        "The Old English Rune Poem / Norwegian and Icelandic Rune Poems",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;resource audit only",
+      "finding": "Choose an exact Old English poem/manuscript-derived or expanded futhorc inventory;do not advertise one universal rune count. The29-stanza poem lead and larger alphabet extensions require independent identity/count verification. English Feoh/Ur/Thorn/Os names cannot be silently equated with all Elder or Younger meanings."
+    },
+    {
+      "name": "modern blank rune",
+      "inventory_row": [
+        19,
+        "Rune Casting",
+        "modern blank rune",
+        "The Book of Runes",
+        "The Old English Rune Poem / Norwegian and Icelandic Rune Poems",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;resource audit only",
+      "finding": "Keep blank rune as a separately named modern profile/optional extension only. Blum publisher25-piece set is a scope lead,not a complete inventory or evidence that a blank belongs to historical alphabets. Exact blank meaning/order/rights remain unverified;never add it to historical24 by default."
+    },
+    {
+      "name": "spreads",
+      "inventory_row": [
+        19,
+        "Rune Casting",
+        "spreads",
+        "The Book of Runes",
+        "The Old English Rune Poem / Norwegian and Icelandic Rune Poems",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "unsupported;resource audit only",
+      "finding": "Prioritize named manual/seeded one-rune and three-rune layouts if source procedure or explicitly editorial position roles are frozen. Free-casting geometry,face-down eligibility,duplicates/replacement and direction need exact policies. Poems do not independently certify modern spread/reversal rules;no borrowed Tarot Celtic or Lenormand grammar."
+    }
+  ],
+  "sources": [
+    "runes-paxson-2021-publisher-v1",
+    "runes-poems-original-index-v1",
+    "runes-dickins-1915-rights-audit-v1",
+    "runes-blum-2008-publisher-v1",
+    "runes-copenhagen-runology-v1",
+    "runes-vikingmuseum-alphabets-v1"
+  ],
+  "attestation_boundary": {
+    "inventories": "Institution/museum corroborate Elder24 vs Younger16;complete edition-specific identity/order fixtures still pending. Anglo-Saxon futhorc is independently scoped.",
+    "names": "Separate reconstructed proto-names,attested language-specific names,normalized aliases,transliterations and display glyphs.",
+    "poems": "Historical symbolic stanzas and linguistic names are distinct from contemporary fortunes or reversed meanings. Different poems may conflict;retain source/tradition identifiers.",
+    "casting": "Historical marked-lot and rune-magic leads need original passage/translation verification;do not infer a fully documented24-rune modern casting system from a generic lot-drawing reference.",
+    "blank": "Modern named variant only;no blank automatically inserted into historical alphabets.",
+    "reversals": "Unverified until named modern procedure inspected. Symmetric glyphs,rotation180,mirroring and face-down state are different concepts;do not assign Tarot reversal meanings."
+  },
+  "feasibility": {
+    "first_scope": "One source-bounded Elder24 symbolic profile with all24 meaningful entries only if legitimate source/rights and reconstruction limits are verified;manual and reproducible seeded1/3-rune draws with editorial or documented positions. A directly attested poem-specific profile is an alternative,not an unnamed merge.",
+    "source_access": "Rank1 publisher provides edition/scope metadata,not a complete accessible reusable dictionary. Rank2 poem editions are useful primary references with translation/territory rights gates. Rank3 is a separate contemporary25-piece tradition.",
+    "rights": "Review medieval original text,translation,critical edition,digital transcription,font and rune artwork separately. Dickins1915 USA public-domain notice does not authorize global English-corpus reuse. No modern copyrighted dictionary ingestion.",
+    "no_automatic_expansion": "Do not make Younger,Futhorc,blank,free-cast geometry or many spreads prerequisites for a bounded source-verified first release."
+  },
+  "reusable_infrastructure": {
+    "module": "future/card_random.py",
+    "protocol": "future-cards-sha256-fy-v1",
+    "reusable": "Supplied distinct IDs,unbiased integer selection,Fisher-Yates and UTF-8 seed framing can serve a named no-replacement draw profile without changing card outputs.",
+    "must_freeze": "Rune-system canonical order/hash,source/edition ID,set count,eligible stones,draw count,position order,manual inputs,face/rotation policy and exact replay metadata.",
+    "must_not_reuse": "Tarot or Lenormand meaning catalogs,78/36 assumptions,Celtic cuts,significators,card reversal stream probabilities or combination grammar.",
+    "physical_casting": "Position/direction/overlap geometry of thrown stones is not equivalent to a deck shuffle;defer until independently sourced and specified."
+  },
+  "before_implementation": [
+    "Inspect legitimate source procedures or select a rights-cleared historical profile;freeze exact edition and catalog identity before coding",
+    "Verify complete chosen alphabet numbering/order/names/glyphs against independent historical inventory fixtures;mark reconstructed forms",
+    "Obtain complete source-grounded meanings without manufacturing missing symbols;separate direct stanza facts,compositional reflection and unsupported divination",
+    "Freeze upright/reversed/rotation/face-down eligibility policies and spread positions with source authority or editorial labels",
+    "Generate independent full-set seed vectors and manual/duplicate/count/orientation/source-isolation fixtures"
+  ],
+  "acceptance_gates": [
+    "All chosen-system IDs/order/glyph aliases unique and source-located;no historical blank or cross-system substitutions",
+    "Complete bounded source-backed meaning coverage and transparent direct/compositional/unsupported layers",
+    "Manual/seeded1/3-rune draws,without replacement,exact ordered positions,replay hashes and UTF-8 edge cases verified independently",
+    "Named reversal exceptions only if sourced;unknown/symmetric/face-down cases explicit",
+    "Useful reproducible JSON/Markdown CLI;published source examples or clearly labeled independent synthetic fixtures",
+    "Preserve288 inherited tests and255 CLI cases;run full regression,all CLI smoke,existing randomization verifiers and dependency checks before readiness"
+  ],
+  "P1": [
+    "Named original inventory,source procedures and rights-cleared meaning coverage",
+    "Rune-poem edition/translation rights and reconstructed-name provenance",
+    "Independent draw/orientation/spread fixtures and supported configuration freeze",
+    "More documented modern combinations,poem comparisons and casting procedures"
+  ],
+  "P2": [
+    "Separate Younger16 profile",
+    "Separate Anglo-Saxon futhorc profile(s)",
+    "Separate modern blank-rune/Blum edition profile",
+    "Free-casting geometry and additional spreads",
+    "Separately licensed fonts/imagery and optional visualization"
+  ],
+  "limitations": "No Technique19 executable support,complete dictionary or historical divination certification claimed. No certain predictions or empirical accuracy claims. Original60-technique taxonomy,54 retained,exclusions25/27/41/42/47/48,rankings and five variations unchanged.",
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Hexagram Symbolic Reading Scope",
+    "tests": 288,
+    "cli_smoke_cases": 255
+  }
+}
