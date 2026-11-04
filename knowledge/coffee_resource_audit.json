@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "technique_id": 29,
+  "name": "Coffee Ground Reading",
+  "phase": 4,
+  "date": "2026-11-05",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "b8c0c3e",
+  "predecessor_push": "Tasseography closureb8c0c3e accepted,committed,pushed and0/0 synchronization confirmed before29 inventory/resource audit.",
+  "policy": "Resource/variation audit only;no Coffee engine,rule profile,symbol catalog,placement generator,renderer or CLI implemented.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    29,
+    "4 · Nature, Objects & Ancient Practices",
+    "Coffee Ground Reading",
+    "RETAIN — simulate / implement",
+    "Vision / symbol rules",
+    "Turkish kahve falı; Balkan variants; cup + saucer; regional symbol charts",
+    "Sludge pattern generation, cup-sector and saucer interpretation",
+    "Cup simulation/photo; cultural symbol map",
+    "Keep regional customs distinct; interpretive only",
+    "Traditional / not scientifically validated",
+    "The Secret of Coffee Grinds",
+    "Sema Bal",
+    null,
+    "Turkish Coffee Culture and Tradition",
+    null,
+    null,
+    "28, 35",
+    29
+  ],
+  "ranked_sources": [
+    [
+      29,
+      "Coffee Ground Reading",
+      1,
+      "Sema Bal",
+      "The Secret of Coffee Grinds",
+      "Practitioner coffee divination method",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      29,
+      "Coffee Ground Reading",
+      2,
+      "Republic of Türkiye Ministry of Culture",
+      "Turkish Coffee Culture and Tradition",
+      "Cultural context for Turkish coffee",
+      "https://teda.ktb.gov.tr/Eklenti/6594,turkishcoffeeculturepdf.pdf",
+      "Public cultural booklet",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Turkish kahve falı",
+      "inventory_row": [
+        29,
+        "Coffee Ground Reading",
+        "Turkish kahve falı",
+        "Turkish Coffee Culture and Tradition",
+        "The Secret of Coffee Grinds",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Verified ministry coffee-specific cultural/process and selected motif lead;Bal author introduction separate. No import of Kent tea zones or meanings. Full executable profile not frozen during audit."
+    },
+    {
+      "name": "Balkan variants",
+      "inventory_row": [
+        29,
+        "Coffee Ground Reading",
+        "Balkan variants",
+        "Turkish Coffee Culture and Tradition",
+        "The Secret of Coffee Grinds",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "No original Balkan-specific zone/dictionary passage inspected. Turkish cultural facts do not automatically certify Balkan variants."
+    },
+    {
+      "name": "cup + saucer",
+      "inventory_row": [
+        29,
+        "Coffee Ground Reading",
+        "cup + saucer",
+        "Turkish Coffee Culture and Tradition",
+        "The Secret of Coffee Grinds",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Ministry distinguishes physical inversion onto saucer and readings from cup/saucer. Only explicit source-specific vessel conditions may be frozen;no mirrored Kent saucer rings."
+    },
+    {
+      "name": "regional symbol charts",
+      "inventory_row": [
+        29,
+        "Coffee Ground Reading",
+        "regional symbol charts",
+        "Turkish Coffee Culture and Tradition",
+        "The Secret of Coffee Grinds",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Ministryp104 provides a bounded narrative motif set and cites historical chart traditions;chart originals,regional meanings and complete dictionaries remain source/rights gaps."
+    }
+  ],
+  "sources": [
+    {
+      "id": "coffee-bal2015-publisher-metadata-v1",
+      "technique_id": 29,
+      "rank": 1,
+      "author": "Sema Bal;publisher-supplied description via Apple Books",
+      "edition": "The Secret of Coffee Grinds;English ebook metadata,released2015-07-28;154 pages;Balboa Press;seller AuthorHouse",
+      "url": "https://books.apple.com/us/book/the-secret-of-coffee-grinds/id1031220619",
+      "locator": "Publisher Description;release/language/length/publisher/seller fields",
+      "finding": "Identifies the work as memoir and introduction to Turkish coffee images through personal experiences. Full book procedure,chapter pagination,dictionary and worked cups not inspected. Description does not establish a complete executable protocol.",
+      "ingestion": "metadata_only",
+      "rights_note": "Modern copyrighted book. Publisher/distributor preview metadata is not a text/image redistribution license. No book pages,case histories or dictionary copied.",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "id": "coffee-bal-author-public-method-v1",
+      "technique_id": 29,
+      "rank": 1,
+      "author": "Sema Bal",
+      "edition": "Turkish Coffee Messenger:About,public author page checked2026-11-05",
+      "url": "https://www.semabal.com/about",
+      "locator": "History paragraphs;About author paragraph",
+      "finding": "Author describes emptying a Turkish coffee cup to muddy residue,inverting to dry/drip and turning it back for symbolic reading. Claimed intuition,exact personal dates/names and spirit messages remain practitioner claims,not independently verified capabilities or a licensed symbol map. Public page gives no complete directional/time-zone grammar.",
+      "ingestion": "facts_only",
+      "rights_note": "Public author text/images remain copyrighted. Original concise procedural facts only;no biography,reading stories or photographs redistributed.",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+      "technique_id": 29,
+      "rank": 2,
+      "author": "Beşir Ayvazoğlu;Melis Şeyhun,translator;Republic of Turkey Ministry of Culture and Tourism",
+      "edition": "Turkish Coffee Culture: A Cup of Coffee Commits One to Forty Years of Friendship;first edition,Ankara2011;160p;Ministry Publications3315,Handbook15;ISBN978-975-17-3567-6",
+      "url": "https://teda.ktb.gov.tr/Eklenti/6594,turkishcoffeeculturepdf.pdf",
+      "locator": "PDF/titlep1,imprintp2,contentsp3;ChXIV Fortune in a Cup,printedpp101-110,especially103-104;literary account108",
+      "finding": "Original imprint andpp103-104 visually inspected. Describes clockwise self/counterclockwise other-person intent,inversion with saucer/cooling,and cup half facing subject as own abode versus others. Selected motifs include adhered grounds/property,three-dot line/travel,peak stain on bird/news,horse or fish/fortune,two-humped camel/wealth and white moon patch on saucer or cup bottom/favorable change. Three time units remain alternatives. This is a cultural author account,not certified prediction or a full regional grammar.",
+      "ingestion": "facts_only",
+      "rights_note": "Imprint copyright Ministry;modern English translation and individually credited photographs/archives have distinct rights. Public government hosting does not establish public-domain or downstream reproduction permission. Original factual notes only;no PDF,charts,translated paragraphs,poems or images redistributed.",
+      "checked_on": "2026-11-05",
+      "snapshot_sha256": "496a6d9ba8b5a0498c516d4a46a84a715ff3c49f4910f10eccce5c4c22243aa0",
+      "snapshot_bytes": 4155460
+    },
+    {
+      "id": "coffee-ministry-public-culture-process-v1",
+      "technique_id": 29,
+      "rank": 2,
+      "author": "Republic of Türkiye Ministry of Culture and Tourism,Living Heritage Directorate",
+      "edition": "Turkish Coffee Culture and Tradition,official English webpage checked2026-11-05;not identical to2011 translated booklet",
+      "url": "https://yakegm.ktb.gov.tr/TR-345121/turkish-coffee-culture-and-tradition.html-0",
+      "locator": "Preparation paragraph;paragraph beginning As a widespread tradition",
+      "finding": "Describes fine grinding,slow brewing with foam,and rotating the finished cup,making a wish,inverting onto saucer and leaving it to cool before images are interpreted as entertainment. No numerical rotation count,cooling duration,handle axis,calendar bands or symbol dictionary supplied. Preparation facts do not validate residue divination.",
+      "ingestion": "facts_only",
+      "rights_note": "Official site copyright2026;factual paraphrases only. No page corpus,photographs or broad reproduction permission claimed.",
+      "checked_on": "2026-11-05"
+    }
+  ],
+  "edition_title_caution": "Original ranked title Turkish Coffee Culture and Tradition preserved. Actual supplied PDF title is Turkish Coffee Culture,by Ayvazoğlu,translated Şeyhun2011. Official similarly named webpage is a separate document;do not silently identify its text/edition with the PDF.",
+  "access_notes": "Inventory PDF URL redirected to a short-lived Ministry storage URL;download succeeded through original official URL. Record stable inventory URL and byte hash,not expiring signed query. UNESCO canonical page challenged automated access;not used as proof of divination rules. Bal full book remains access-gated.",
+  "tradition_boundary": "Turkish coffee grounds(telve),Bal personal practitioner accounts,Ministry cultural descriptions,Balkan/regional traditions and Kent tea leaves are separate source systems. Physical residue,observer-selected images,historical meanings and editorial composition remain distinct.",
+  "critical_no_transfer": "Do not inherit Kent rim/side/bottom timing,handle-as-consultant/south,tea-symbol dictionary,adjacency rules,turn counts or saucer rings. Coffee interpretation requires independently verified coffee-specific rules.",
+  "feasibility": {
+    "candidate_label": "Proposed Ayvazoğlu/Şeyhun2011 Ministry coffee-subset profile;label only,not frozen executable support",
+    "first_scope": "A useful coffee-specific manual symbolic reference engine from visually checkedpp103-104:source-described cup-facing half,explicit vessel/shape/condition declarations and a small conditional motif subset. Include public Ministry preparation/inversion/cooling facts as distinct cultural guidance. Bal source remains documentary until original method access. No source-free coffee algorithm.",
+    "source_grounded_features": [
+      "Facing-subject versus other cup half is the source axis;requires explicit declared orientation,not handle distance or automatic image inference",
+      "Bounded conditional motifs can require exact declared features:two humps,bird peak stain,white crescent location,adhered grounds,or line plus three terminal dots",
+      "Record ambiguous identification and alternatives;source three-period example retains days/months/years without choosing or scheduling an outcome",
+      "Separate cup-ground motifs from saucer white-patch context and from froth examples;do not create one universal symbol/vessel dictionary",
+      "Known inversion/cooling/upright customs may be referenced,butsource supplies no universal precise cooling timer or numeric turn count"
+    ],
+    "independent_fixture_plan": [
+      "Original2011 imprint/title/translator andpp103-104 fact/locator notes before code",
+      "Self/other direction and facing-half cases,including unknown orientation and no Kent handle fallback",
+      "Conditional motifs with missing/wrong attribute/vessel cases;three time-unit alternatives retained exactly as attributed",
+      "Documentary source exceptions distinguished from literary scenespp107-108;none presented as validated future outcomes",
+      "Synthetic manual unknown symbols,uncertain shapes,raw Unicode,profile isolation and exact replay;new seed vectors only if generation is implemented"
+    ],
+    "reuse": "Only narrowly compatible pure text/JSON/hash/report patterns and,if justified,explicit manual observation validation. Do not import Tasseography DATA,zone/condition meanings or specialized neighbor predicates. Any shared representation must carry independent beverage/source profiles.",
+    "seeded": "Optional future synthetic icon/residue representation requires a new named distribution/protocol and independent vectors. It is not physical grounds and does not improve forecast accuracy. Manual mode is sufficient for first scope.",
+    "privacy": "All context optional and local;no identity,health,birth data,third-party biography,photo or remote service required. Public author claims about knowing names or spirits do not authorize inference or contact claims.",
+    "limitations": "No actual fortune,medical/personality conclusion,hidden personal-history retrieval,deceased contact or validated supernatural capability. Cultural heritage recognition and author anecdotes are not predictive validation."
+  },
+  "rights_boundary": "Modern memoir,translated cultural booklet,old charts reproduced in it,archive photographs and author imagery have distinct rights. Public availability is not blanket reproduction permission. Original concise factual summaries only;no protected dictionary,source art or memoir corpus ingested.",
+  "configuration_matrix": {
+    "supported": "Audit metadata/source leads only",
+    "experimental": "Proposed verified coffee-specific manual reference subset,not implemented",
+    "unsupported": [
+      "Kent tea-rule transfer",
+      "Unverified Balkan/regional symbol charts",
+      "Full Bal algorithm or copyrighted dictionary",
+      "Photo/shape recognition or realistic fluid simulation",
+      "Objective future,clinical,personality or spirit claims"
+    ]
+  },
+  "acceptance_gates": [
+    "Freeze a coffee-specific named complete bounded rule subset,exact provenance/rights and independent pre-engine fixtures",
+    "Useful manual grounds/symbol/vessel conditions and transparent source accounts,not a relabeled tea reader or generic journal",
+    "Missing orientation/conditions,time-unit ambiguity and source conflicts remain explicit;no invented defaults",
+    "Independent direct/user/editorial/unsupported matrix and deterministic offline JSON/Markdown/replay",
+    "Preserve507 tests/479 CLI cases and all11 symbolic verifiers;full regression/CLI,registry,dependency,pip anddiff checks before readiness"
+  ],
+  "P1": [
+    "Freeze one named2011 Ministry coffee-specific conditional subset and independent original fixtures before engine;exact title/translator/locators retained",
+    "Define manual facing-subject half,vessel,grounds/color/shape attributes and unknowns without Kent timing/handle defaults",
+    "Preserve all three/day-month-year alternatives in the documented three-period travel example;no selected calendar unit or real deadline",
+    "Obtain legitimate Bal book procedure/chapter access and rights before claiming its independent method or examples",
+    "Check source examples and exceptions,including retained-upright/stuck-cup accounts;literary fiction is not empirical fortune validation",
+    "Identify original Balkan/regional charts and relevant image/translation rights;do not translate old-chart graphics without verified text"
+  ],
+  "P2": [
+    "Broader regional profiles and source-specific dictionaries",
+    "Optional independently specified synthetic symbolic placements with new vectors",
+    "Original simple cup/saucer visualization",
+    "User photo annotations and recognition only after independent evaluation",
+    "Physical coffee-residue simulation only if useful"
+  ],
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Historical/Symbolic Cup Reading Scope",
+    "tests": 507,
+    "cli_cases": 479
+  },
+  "limitations": "Audit only;no executable Technique29 support or clinical/predictive certification. Rankings/taxonomy/variation rows preserved;60 methods,54 retained and exclusions25,27,41,42,47,48 unchanged."
+}
