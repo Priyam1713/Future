@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "technique_id": 18,
+  "name": "I Ching",
+  "date": "2026-11-04",
+  "status": "Core v1 Ready — Hexagram Symbolic Reading Scope",
+  "profile": "legge-1882-scan-text-v1",
+  "source_pass_commit": "35b1f85",
+  "source_fixture_correction_commit": "95bbafc",
+  "implementation_commit": "5655f76",
+  "source_id": "iching-legge-1882-scan-v1",
+  "source_coverage": {
+    "hexagrams": 64,
+    "judgments": 64,
+    "ordinary_changing_line_entries": 384,
+    "special_all_changing_paragraphs": 2,
+    "text_layers": "Main original1882 judgment/line text distinct from commentary;only explicit64.3 variant note retained",
+    "transcription_assurance": "All entries source-located to primary scan.OCR/glyph/spacing corrections recorded;selected original text passages independently checked.Full diplomatic word-for-word collation isP1,not claimed."
+  },
+  "supported": [
+    "Immutable64-pattern King Wen catalog,original numbers,stable IDs,normalized Legge names and editorial pinyin aliases",
+    "Exact bottom-up6/7/8/9 states,all simultaneous line changes,initial/relating hexagrams,eight trigrams,change mask and reversible values/pattern/mask representation",
+    "Manual six-value casting without seeded metadata",
+    "Seeded three-coin casting:heads3/tails2;exact1/3/3/1 weights out of8",
+    "Separately named conventional yarrow-marginal sampler:exact1/5/7/3 weights out of16;residue assumptions explicit",
+    "Initial judgment,all moving-line source texts,relating judgment,additional special1/2 all-changing passages and unresolved64.3 textual alternative",
+    "JSON/Markdown CLI,stable diagrams,source/rule locators,question context,exact digital-cast probabilities and complete deterministic replay",
+    "Portable canonical-JSON catalog/convention hashes;no new dependency,database,artwork or frontend"
+  ],
+  "experimental": [
+    "all_moving_lines_v1 is an editorial transparent composition policy,not a historical universal moving-line-priority rule",
+    "Yarrow conventional marginal weights are a digital model with stated residue assumptions,not physical partition equivalence",
+    "Scan-OCR transcription is normalized and source-located;selected passages verified,full diplomatic collation deferred"
+  ],
+  "unsupported": [
+    "Certain future events,empirical predictive accuracy,outcome confidence probabilities,medical/financial/moral factual judgments",
+    "Physical49-stalk partition simulation or unspecified alternative yarrow distributions",
+    "Automatic single moving-line priority or mixing incompatible interpretation policies",
+    "Wilhelm/Baynes copyrighted English text or modern commentary corpus",
+    "Mei Hua Yi Shu calendar/numerology engine",
+    "Wen Wang Gua Na Jia,six-relations,spirits and calendar engine",
+    "Additional translations,textual reconstructions,artwork/animation/UI"
+  ],
+  "configuration_matrix": {
+    "source_profile": "legge-1882-scan-text-v1",
+    "task": "symbolic_reading",
+    "line_order": "bottom_to_top",
+    "states": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "modes": {
+      "manual": {
+        "method": "manual",
+        "lines": "exactly6 integers",
+        "seed": "forbidden"
+      },
+      "seeded": {
+        "methods": [
+          "three-coin",
+          "yarrow-marginal"
+        ],
+        "protocol": "future-iching-sha256-v1",
+        "lines": "forbidden"
+      }
+    },
+    "reading_policy": "all_moving_lines_v1",
+    "changing_lines": "0..6 supported;no silent override;all changes always computed",
+    "specials": "If all6 moving and initial1/2,append historical paragraph7 while showing all6 ordinary texts",
+    "diagrams": "Displayed top-to-bottom;values/patterns/casting stored bottom-to-top",
+    "probabilities": "Exact casting state probabilities only;manual readings have no stochastic probabilities"
+  },
+  "mathematics": {
+    "state6": "old yin0→yang1",
+    "state7": "young yang1→yang1",
+    "state8": "young yin0→yin0",
+    "state9": "old yang1→yin0",
+    "king_wen": "Explicit64-entry table;independent PlateI transcription agrees with384 original divided/undivided descriptions",
+    "trigrams": "Lower lines1–3;upper4–6;stable symbol IDs disambiguate normalized Kan names",
+    "mask": "Bit0=line1,bit5=line6;flip every selected position simultaneously"
+  },
+  "seed_protocol": {
+    "id": "future-iching-sha256-v1",
+    "specification": "knowledge/iching_conventions_v1.json",
+    "primitives": "Unchanged future.card_random.Stream.word/below via CastingStream with separate prefix/domains;seed_bytes validation reused",
+    "framing": "ASCII FutureIChing NUL v1 NUL method NUL uint32be(seed byte length) UTF8seed uint64be(counter)",
+    "seed": "Strict UTF-8 explicit text1..256 bytes;no normalization",
+    "domains": [
+      "three-coin",
+      "yarrow-marginal"
+    ],
+    "stream": "SHA256 counter0..2^64-1,eight uint32be words per block,rejection sampling",
+    "three_coin": "18 randbelow(2) draws,three per line;0 tail2,1 head3;bottom-up line1..6",
+    "yarrow_marginal": "Six randbelow(16) draws;0→6,1..5→7,6..12→8,13..15→9",
+    "replay": "Exact request,method/protocol/profile,source/convention hashes,raw bits/indices,values,word/rejection counts,mask and both numbers",
+    "catalog_sha256": "f1809b393d68e7ffc837e8fcbde408e8a1bac5e4ec99ff898cd1f18ff24dbc21",
+    "convention_sha256": "b51ac132494c15ae32d462bbcf4e81be8be111fcdce016b89dc2ac668f5eee45",
+    "hash_serialization": "UTF-8 JSON sorted keys,compact comma/colon separators,unescaped Unicode,no terminal LF;independent of working-tree newlines",
+    "assurance": "Deterministic reproducibility and exact discrete probability model,not a security or physical-ritual guarantee"
+  },
+  "source_conflicts": [
+    "Hexagram64 line3 printed crossing-advantage statement retained alongside commentaryp209 missing-negative conjecture",
+    "Original1882 ordinary headings say line;do not silently replace with hosted NINE/SIX headings",
+    "p58 footnote four-Hsiang order does not override explicitly sourced standard casting states"
+  ],
+  "acceptance": {
+    "passed": true,
+    "tests": 288,
+    "inherited_tests": 263,
+    "new_tests": 25,
+    "cli_cases": 255,
+    "inherited_cli_cases": 225,
+    "new_cli_cases": 30,
+    "verification_checks": 8759,
+    "independent_pattern_checks": 64,
+    "trigram_checks": 8,
+    "exhaustive_cast_states": 4096,
+    "exhaustive_pattern_masks": 4096,
+    "coin_outcomes": 8,
+    "yarrow_marginal_indices": 16,
+    "independent_seed_vectors": 14,
+    "source_located_text_entries": 450,
+    "independent_scan_text_cases": 6,
+    "published_transformation_examples": 1,
+    "registry_rules": 450,
+    "independent_reference": "Visually transcribed original PlateI table;independent membership/string-flip arithmetic for exhaustive expectations;PowerShell/.NET protocol implementation created before production casting code",
+    "dependency_check": "pip check and scripts.audit_dependencies pass;no runtime dependency change",
+    "inherited_seed_checks": "Tarot30-check and Oracle49-check verifiers pass;shared kernel unchanged",
+    "known_warnings": [
+      "Inherited Skyfield/NumPy dtype deprecation",
+      "Inherited unclosed de440s.bsp ResourceWarning"
+    ],
+    "evidence": [
+      "tests/fixtures/iching_structure_reference.json",
+      "tests/fixtures/iching_seed_vectors.json",
+      "tests/fixtures/iching_source_examples.json",
+      "data/iching-verification.json",
+      "data/iching-regression.json",
+      "data/iching-smoke.json",
+      "data/iching-inherited-smoke.json"
+    ],
+    "inherited_cli_modules": 17,
+    "regression_seconds": 67.773,
+    "commands": [
+      "python -m unittest discover -s tests -q",
+      "python -m scripts.verify_iching",
+      "python -m scripts.smoke_iching_core",
+      "All17 inherited CLI smoke modules",
+      "python -m scripts.verify_tarot",
+      "python -m scripts.verify_oracle",
+      "python -m scripts.audit_dependencies",
+      "python -m pip check",
+      "git diff --check"
+    ]
+  },
+  "rights": "Original1882 Michigan/IA Legge scan and underlying text identified public domain by Commons.No scan or artwork bundled;no Sacred Texts restricted transcription imported. Modern Young/Sabazius sources supply only procedural facts/mathematical parameters and original notes.Ranked Wilhelm/Baynes,Da Liu and Wang editions remain separately scoped;no modern translation corpus copied.",
+  "examples": [
+    "data/iching-no-moving.md",
+    "data/iching-one-moving.md",
+    "data/iching-multiple-moving.md",
+    "data/iching-all-moving-1.md",
+    "data/iching-all-moving-2.md",
+    "data/iching-seeded.md",
+    "data/iching-yarrow.md",
+    "data/iching-manual-known.md",
+    "data/iching-variant-64.md"
+  ],
+  "backlog": {
+    "P1": [
+      "Complete traditional physical49-stalk procedure with explicit partition assumptions",
+      "Additional source-verified moving-line selection conventions",
+      "Diplomatic collation of all Legge words/diacritics and additional independent scan fixtures",
+      "More historical transformation examples,advanced variants and separately rights-cleared translation comparisons"
+    ],
+    "P2": [
+      "Separate Mei Hua Yi Shu trigram-number/calendar/body-use profile",
+      "Separate Wen Wang Gua/Six Lines calendar,Na Jia,relations and spirits profile",
+      "Additional translation/commentary traditions",
+      "Separately cleared historical imagery and optional visualization"
+    ]
+  },
+  "transition": "Commit and push this closure before Technique19 Rune Casting resource audit;do not implement19 during audit",
+  "evidence_commits": [
+    "90224f2",
+    "860732c",
+    "6527ca4"
+  ]
+}

@@ -2,11 +2,11 @@
   "version": 1,
   "technique_id": 18,
   "name": "I Ching",
-  "status": "Researching",
+  "status": "Core v1 Ready — Hexagram Symbolic Reading Scope",
   "date": "2026-11-04",
   "predecessor_closure": "753f30b",
   "predecessor_push": "Confirmed753f30b pushed to origin/main before this audit began.",
-  "policy": "Resource/variation audit only;no hexagram dictionary,casting kernel,transform engine,interpretation rules or I Ching CLI implemented.",
+  "policy": "Original resource-audit findings retained as history;current bounded core and acceptance in iching_core_v1.json supersede original source blockers.",
   "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
   "inventory_method_row": [
     18,
@@ -87,8 +87,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Proposed highest-value generation profile;requires explicit coin faces assigned2/3,three independent fair coins per line,bottom-up six tosses,6/9 moving mapping and exact reproducible seed protocol. Candidate probabilities6/7/8/9=(1,3,3,1)/8 are mathematical consequences of that proposed convention,not yet certified ranked-source procedure."
+      "status": "supported_bounded",
+      "finding": "Proposed highest-value generation profile;requires explicit coin faces assigned2/3,three independent fair coins per line,bottom-up six tosses,6/9 moving mapping and exact reproducible seed protocol. Candidate probabilities6/7/8/9=(1,3,3,1)/8 are mathematical consequences of that proposed convention,not yet certified ranked-source procedure.",
+      "current_scope": "Explicit heads3/tails2 digital casting,all6-value transformations and source text"
     },
     {
       "name": "yarrow-stalk",
@@ -102,8 +103,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Separate procedure/probability profile;do not substitute three-coin distribution. Candidate conventional marginal weights6/7/8/9=(1,5,7,3)/16 require authoritative procedural verification and explicit partition/remainder assumptions. A marginal digital sampler is distinct from physical49-stalk18-operation simulation;uniform split sizes may not reproduce traditional assumed weights."
+      "status": "supported_bounded",
+      "finding": "Separate procedure/probability profile;do not substitute three-coin distribution. Candidate conventional marginal weights6/7/8/9=(1,5,7,3)/16 require authoritative procedural verification and explicit partition/remainder assumptions. A marginal digital sampler is distinct from physical49-stalk18-operation simulation;uniform split sizes may not reproduce traditional assumed weights.",
+      "current_scope": "Conventional1/5/7/3 marginal sampler only;physical49-stalk manipulation unsupported"
     },
     {
       "name": "King Wen hexagrams",
@@ -117,8 +119,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Prioritize all64 unique six-line patterns,lower/upper trigram order and exact King Wen numbering. Legge contents/first+last text establish a useful source path,not a verified complete64-entry bit table. Bottom-up positions and moving6/9 corroborated in note58:I. Preserve special all-changing1/2 paragraphs and textual alternatives."
+      "status": "supported_bounded",
+      "finding": "Prioritize all64 unique six-line patterns,lower/upper trigram order and exact King Wen numbering. Legge contents/first+last text establish a useful source path,not a verified complete64-entry bit table. Bottom-up positions and moving6/9 corroborated in note58:I. Preserve special all-changing1/2 paragraphs and textual alternatives.",
+      "current_scope": "Complete64-pattern mapping,64 judgments,384 ordinary lines,two special passages;scan-OCR normalization/selected fixtures"
     },
     {
       "name": "Mei Hua Yi Shu",
@@ -181,20 +184,29 @@
     "Preserve263 inherited tests and225 CLI cases;full suite,pip/dependency audit and complete CLI smoke before release"
   ],
   "P1": [
-    "Procedural source verification and Legge original-scan/rights path",
-    "Complete64-pattern inventory and source text/line coverage",
-    "Independent cast/transform fixtures and protocol specification",
-    "Separate verified yarrow generation and documented multi-changing-line policies"
+    "Complete traditional physical49-stalk procedure with explicit partition assumptions",
+    "Additional source-verified moving-line selection conventions",
+    "Diplomatic collation of all Legge words/diacritics and additional independent scan fixtures",
+    "More historical transformation examples,advanced variants and separately rights-cleared translation comparisons"
   ],
   "P2": [
-    "Source-specific Mei Hua numerology",
-    "Source-specific Wen Wang Gua calendar/six-relations engine",
-    "Additional translations/commentary traditions and separately cleared imagery"
+    "Separate Mei Hua Yi Shu trigram-number/calendar/body-use profile",
+    "Separate Wen Wang Gua/Six Lines calendar,Na Jia,relations and spirits profile",
+    "Additional translation/commentary traditions",
+    "Separately cleared historical imagery and optional visualization"
   ],
   "limitations": "No technique18 calculation or interpretation is currently supported. Source metadata is not rule verification;no predictive certainty or empirical validity claim. Original60 taxonomy,54 retained,exclusions25,27,41,42,47,48,rankings and variations unchanged.",
   "accepted_predecessor": {
     "status": "Core v1 Ready — Lenormand Symbolic Reading Scope",
     "tests": 263,
     "cli_smoke_cases": 225
+  },
+  "current_release": {
+    "record": "knowledge/iching_core_v1.json",
+    "profile": "legge-1882-scan-text-v1",
+    "status": "Core v1 Ready — Hexagram Symbolic Reading Scope",
+    "implementation": "5655f76",
+    "tests": 288,
+    "cli_cases": 255
   }
 }

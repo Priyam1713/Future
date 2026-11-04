@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique18 I Ching Core v1 closure — 2026-11-04
+- Source35b1f85/fixture95bbafc and engine5655f76 pushed;reports/evidence90224f2,860732c,6527ca4 pushed after transient GitHub failures. **Core v1 Ready — Hexagram Symbolic Reading Scope**:Legge1882 profile,64 judgments/384 ordinary lines/2 special passages,manual/seeded coin and conventional yarrow-marginal casting,all-moving-text editorial policy and explicit64.3 variant.
+-288 tests pass(263 inherited+25 new);255 CLI cases pass(225 inherited across17 modules+30 new).8759 verification checks cover64 original patterns,eight trigrams,4096 six-value states,64×64 masks,exact8 coin/16 marginal outcomes,14 independent .NET vectors and selected scan/transformation fixtures. All450 text entries source-located;complete diplomatic collation isP1,not claimed. Tarot/Oracle verifiers,dependency audit,pip and diff checks pass.
+- Frozen matrix,protocol,rights,source conflicts and backlog in iching_core_v1.json. P1:physical yarrow,additional line-selection policies,collation/examples;P2:separate Mei Hua/Six Lines profiles. No predictive certification or modern copyrighted corpus. Next:push closure before Technique19 Rune Casting resource audit only.
+
 ## Technique18 I Ching implementation — 2026-11-04
 - Source35b1f85/corrected fixture grouping95bbafc pushed. Added immutable Legge catalog,exact reversible pattern/mask/state mathematics,manual and seeded three-coin/yarrow-marginal casting with separate SHA256 domains,reusing unchanged card word/rejection primitives. No deck semantics or modern commentary imported.
 -25 new unit tests and8759 verification checks pass:64 source patterns/eight trigrams,4096 six-value states,64×64 masks,exact8 coin/16 marginal outcomes,14 independent .NET vectors,450 source-located text entries and selected primary text/transformation fixtures. Source text coverage is64 judgments/384 ordinary lines/2 special paragraphs;full diplomatic collation remainsP1.
