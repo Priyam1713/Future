@@ -1,0 +1,322 @@
+{
+  "schema_version": 1,
+  "technique_id": 28,
+  "profile": "kent-pg6964-ordinary-cup-v2",
+  "task": "symbolic_cup_reading",
+  "mode": "manual",
+  "vessel": "cup",
+  "source": {
+    "id": "tasseography-kent-pg6964-cup-facts-v2",
+    "technique_id": 28,
+    "author": "Cicely Kent",
+    "edition": "PG6964 illustrated HTML posted2013-03-21,released2004;English digital witness,not verified print pagination",
+    "url": "https://www.gutenberg.org/files/6964/6964-h/6964-h.htm",
+    "locator": "ChII Practice and Method;ChIII General Theories;selected Dictionary entries;Example Cups FigureVIII",
+    "ingestion": "facts_only",
+    "rights_note": "PG metadata lists public domain in USA;non-US law,PG license/trademark and individual images remain separate. Original short factual paraphrases only;no whole book,modern dictionary,scan or source illustration redistributed.",
+    "checked_on": "2026-11-04",
+    "snapshot_sha256": "f6b4b81e04e81ba0efcd91228b76c143ac3b7262484d96f3b3d669d379839c56",
+    "snapshot_bytes": 258333,
+    "figure_viii": {
+      "url": "https://www.gutenberg.org/files/6964/6964-h/images/figure08.png",
+      "sha256": "54d22135898cb2eb912414b369c017ba2c3097b0e201ff843cce25c023dc9cde",
+      "inspection": "Viewed original320x380 diagram:handle above cup,outer rim and inner bottom circle visible. Shape names/positions from original principal-symbol list;no automatic or independent image recognition claimed."
+    }
+  },
+  "layout": {
+    "handle_orientation": "unknown",
+    "geometry": false,
+    "position_inferred": false,
+    "ordering": "Input order retained",
+    "vessel_method": "Ordinary Kent cup only",
+    "context": {}
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "user_record": {
+        "id": "o1",
+        "symbol_id": "bird",
+        "motion": "flying",
+        "heading": "towards_handle",
+        "multiplicity": "single",
+        "adjacent_to": [
+          "o2"
+        ]
+      },
+      "status": "applicable",
+      "reference": {
+        "id": "bird",
+        "name": "Bird flying",
+        "aliases": [],
+        "definition": "Only selected flying-bird cases;other bird species/arrangements not silently substituted.",
+        "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+        "locator": "ChIII:letter/bird and handle direction",
+        "alternatives": [],
+        "cases": [
+          {
+            "id": "flying",
+            "statement": "Kent associates a single flying bird with rapid news.",
+            "requires": {
+              "motion": "flying",
+              "multiplicity": "single"
+            },
+            "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+            "locator": "ChIII:letter/bird and handle direction"
+          },
+          {
+            "id": "received",
+            "statement": "Kent treats a letter-like mark near a bird flying toward the handle as a received telegram.",
+            "requires": {
+              "motion": "flying",
+              "heading": "towards_handle",
+              "adjacent_symbol": "postal_mark"
+            },
+            "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+            "locator": "ChIII:letter/bird and handle direction"
+          },
+          {
+            "id": "sent",
+            "statement": "Kent treats a letter-like mark near a bird flying away from the handle as a sent telegram.",
+            "requires": {
+              "motion": "flying",
+              "heading": "away_from_handle",
+              "adjacent_symbol": "postal_mark"
+            },
+            "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+            "locator": "ChIII:letter/bird and handle direction"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "reference": {
+            "id": "flying",
+            "statement": "Kent associates a single flying bird with rapid news.",
+            "requires": {
+              "motion": "flying",
+              "multiplicity": "single"
+            },
+            "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+            "locator": "ChIII:letter/bird and handle direction"
+          },
+          "status": "applicable",
+          "intrinsic_status": "applicable",
+          "condition_results": {
+            "motion": "applicable",
+            "multiplicity": "applicable"
+          },
+          "missing": [],
+          "rule_id": "tasseography.kent.bird.flying",
+          "forecast": false
+        },
+        {
+          "reference": {
+            "id": "received",
+            "statement": "Kent treats a letter-like mark near a bird flying toward the handle as a received telegram.",
+            "requires": {
+              "motion": "flying",
+              "heading": "towards_handle",
+              "adjacent_symbol": "postal_mark"
+            },
+            "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+            "locator": "ChIII:letter/bird and handle direction"
+          },
+          "status": "applicable",
+          "intrinsic_status": "applicable",
+          "condition_results": {
+            "motion": "applicable",
+            "heading": "applicable",
+            "adjacent_symbol": "applicable"
+          },
+          "missing": [],
+          "rule_id": "tasseography.kent.bird.received",
+          "forecast": false
+        },
+        {
+          "reference": {
+            "id": "sent",
+            "statement": "Kent treats a letter-like mark near a bird flying away from the handle as a sent telegram.",
+            "requires": {
+              "motion": "flying",
+              "heading": "away_from_handle",
+              "adjacent_symbol": "postal_mark"
+            },
+            "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+            "locator": "ChIII:letter/bird and handle direction"
+          },
+          "status": "not_applicable",
+          "intrinsic_status": "not_applicable",
+          "condition_results": {
+            "motion": "applicable",
+            "heading": "not_applicable",
+            "adjacent_symbol": "applicable"
+          },
+          "missing": [],
+          "rule_id": "tasseography.kent.bird.sent",
+          "forecast": false
+        }
+      ],
+      "zones": {
+        "status": "insufficient_information",
+        "qualifications": [],
+        "conflicts": [],
+        "missing": [
+          "Declared qualitative region or under-handle relation"
+        ],
+        "calendar_date": null,
+        "handle_reference": "ChII:handle represents consultant,home or current abode when away;directly underneath denotes present/immediate circumstances.",
+        "convention": "bottom_circle/bottom_centre are named subregions of source bottom,retaining FigureVIII circle/centre labels. No numeric boundaries,absolute dates or priority over under-handle present/immediate qualification."
+      },
+      "missing": [],
+      "conflicts": [],
+      "alternative_references": [],
+      "alternatives_scope": "Source organ alternatives are retained without selecting wedding/death/ambition from unspecified surrounding signs",
+      "observed_quantity": null,
+      "qualifiers": {
+        "locator": "ChIII:size/position and clarity",
+        "size": "Relative size and position affect importance;no numeric strength score.",
+        "clarity": "Clear separate symbols are more important than indistinct ones;unclear shape is not a personality assessment."
+      }
+    },
+    {
+      "id": "o2",
+      "user_record": {
+        "id": "o2",
+        "symbol_id": "postal_mark"
+      },
+      "status": "unsupported",
+      "reference": {
+        "id": "postal_mark",
+        "name": "Postal letter mark",
+        "aliases": [],
+        "definition": "ChIII square/oblong postal-letter sign,distinct from an alphabetic initial.",
+        "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+        "locator": "ChIII:initial M with small square/oblong leaf;postal mark near flying bird",
+        "alternatives": [],
+        "cases": []
+      },
+      "cases": [],
+      "zones": {
+        "status": "insufficient_information",
+        "qualifications": [],
+        "conflicts": [],
+        "missing": [
+          "Declared qualitative region or under-handle relation"
+        ],
+        "calendar_date": null,
+        "handle_reference": "ChII:handle represents consultant,home or current abode when away;directly underneath denotes present/immediate circumstances.",
+        "convention": "bottom_circle/bottom_centre are named subregions of source bottom,retaining FigureVIII circle/centre labels. No numeric boundaries,absolute dates or priority over under-handle present/immediate qualification."
+      },
+      "missing": [],
+      "conflicts": [],
+      "alternative_references": [],
+      "alternatives_scope": "Source organ alternatives are retained without selecting wedding/death/ambition from unspecified surrounding signs",
+      "observed_quantity": null,
+      "qualifiers": {
+        "locator": "ChIII:size/position and clarity",
+        "size": "Relative size and position affect importance;no numeric strength score.",
+        "clarity": "Clear separate symbols are more important than indistinct ones;unclear shape is not a personality assessment."
+      }
+    }
+  ],
+  "editorial_synthesis": [
+    {
+      "observation_id": "o1",
+      "evidence": "editorial_composition_of_source_and_user_declarations",
+      "source_accounts": [
+        "Kent associates a single flying bird with rapid news.",
+        "Kent treats a letter-like mark near a bird flying toward the handle as a received telegram."
+      ],
+      "time_qualifications": [],
+      "unresolved": [
+        "Declared qualitative region or under-handle relation"
+      ],
+      "note": "Historically attributed accounts under declared conditions;not an actual event prediction."
+    },
+    {
+      "observation_id": "o2",
+      "evidence": "editorial_composition_of_source_and_user_declarations",
+      "source_accounts": [],
+      "time_qualifications": [],
+      "unresolved": [
+        "Declared qualitative region or under-handle relation"
+      ],
+      "note": "Historically attributed accounts under declared conditions;not an actual event prediction."
+    }
+  ],
+  "summary": {
+    "observations": 2,
+    "counts": {
+      "applicable": 1,
+      "not_applicable": 0,
+      "insufficient_information": 0,
+      "conflicting_evidence": 0,
+      "unsupported": 1
+    },
+    "text": "Each source account is evaluated against explicit manual conditions. Depth and handle timing remain separate;missing or competing evidence is not repaired."
+  },
+  "documentary_comparison": null,
+  "documentary_method_limits": {
+    "saucer": {
+      "locator": "ChII:saucer paragraphs",
+      "note": "Centre consultant;surrounding circle home/near events;more distant circle later;outer rim remote future. Not executable cup zones and not interchangeable."
+    },
+    "nelros": "Separate marked-cup method;unsupported here"
+  },
+  "user_notes": null,
+  "provenance_matrix": {
+    "direct": "Selected Kent source statements,zones,conditions and documentary accounts",
+    "user_attributed": "Manual identities,positions,relations,uncertainty,observations,associations and optional context",
+    "editorial": "Structured predicates,adjacency bookkeeping,comparisons and synthesis;not general symbol grammar",
+    "unsupported": "Objective future outcomes,clinical/personality conclusions,photo/shape recognition or physical leaf simulation"
+  },
+  "conventions": [
+    "Manual named positions only;no shape/coordinate/prose inference. Adjacency means user-declared association,not computed distance. A supplied neighbor list is complete for that observation;omitted list is unknown. One-sided positive declarations suffice unless contradicted by another supplied complete list.",
+    "Symbol/multiplicity/size/motion/context selectors are user declarations;no identity,health or profession inferred. No numeric threshold defines several;user chooses the source quantifier.",
+    "Distinct observations are never silently aggregated into multiplicity. Conflicting identity,heading/motion,region or adjacency evidence is retained without rule priority.",
+    "Surrounding-dots predicate requires declared surrounding arrangement plus an associated symbol;generic adjacency alone does not suffice."
+  ],
+  "limitations": [
+    "Saucer executable profile",
+    "Nelros decorated method",
+    "Turkish tea and coffee methods",
+    "Modern copyrighted dictionary",
+    "Seeded arrangements,geometry,photo recognition,fluid simulation",
+    "Objective future,clinical or personality conclusions",
+    "Qualitative timing only;no dates,probabilities or deadlines computed.",
+    "Source fidelity is not independent predictive validation."
+  ],
+  "replay": {
+    "request": {
+      "schema_version": 1,
+      "profile": "kent-pg6964-ordinary-cup-v2",
+      "task": "symbolic_cup_reading",
+      "mode": "manual",
+      "vessel": "cup",
+      "observations": [
+        {
+          "id": "o1",
+          "symbol_id": "bird",
+          "motion": "flying",
+          "heading": "towards_handle",
+          "multiplicity": "single",
+          "adjacent_to": [
+            "o2"
+          ]
+        },
+        {
+          "id": "o2",
+          "symbol_id": "postal_mark"
+        }
+      ]
+    },
+    "input_sha256": "6bef545ecbeb991c1a6f6511d292c0be871fdd05d367eaee40d0daaa410dde2f",
+    "profile_sha256": "cc078f560bceca9d59296a29e99070e9f82059829eb2ee7501b926c90b658541",
+    "source_sha256": "f6b4b81e04e81ba0efcd91228b76c143ac3b7262484d96f3b3d669d379839c56",
+    "serialization": "Canonical UTF8 sorted-key compact JSON,unescaped Unicode,no terminal LF;raw content line endings retained",
+    "external_calls": false,
+    "rng": false,
+    "generated_placements": false
+  }
+}
