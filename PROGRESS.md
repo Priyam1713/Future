@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique20 Pendulum Divination resource/variation audit — 2026-11-04
+- Began only after Rune closure9ec36e6 pushed/synchronized0/0. Exact inventory method,two ranked sources(Lonegren Kit;Lethbridge Power) andfour variations preserved. Five source records cover2018 publisher kit metadata,1976 book metadata,author-associated web calibration andtwo primary ideomotor studies. No Pendulum engine/chart/sensor/CLI implemented.
+- Publisher confirms19 charts but complete chart labels/procedures/rights remain unverified. Lonegren web individual/circular mapping is separate from study vertical/horizontal suggestion;neutral,partial,ambiguous and misleading-question responses require explicit conventions. Ideomotor motion evidence is not hidden-fact or future-event validation. Lethbridge rates/dream speculation remains a separate historical practitioner lead.
+- Candidate first scope:one named manual symbolic response protocol and explicitly digital seeded model;exact mappings/distributions,replay and independent fixtures must be frozen first. Charts/maps/letter wheels and sensors remain bounded/deferred. Modern book/chart/site/article rights recorded;no corpus/art copied. Metadata/taxonomy/registry validation and90 targeted tests pass;Rune84/Tarot30/Oracle49/I Ching8759 checks pass. Prior full acceptance312 tests/279 CLI cases preserved.
+
 ## Technique19 Rune Casting Core v1 closure — 2026-11-04
 - Sourcea1eff58/engineb2be1b5 and examples/evidencea5bf7b5,05982fd pushed. **Core v1 Ready — Historical/Symbolic Rune Reading Scope**:elder24-page-facts-snapshot-v1,24 identities/reference records,21 qualified lexical labels,3 unresolved slots and24 original editorial prompts. Historical/reconstructed/editorial layers,uncertain sound/name evidence and source rights remain explicit.
 -312 tests pass(288 inherited+24 new);279 CLI cases pass(255 inherited across18 modules+24 Rune).84 independent-reference checks include6 .NET full24-set vectors. Tarot30/Oracle49/I Ching8759,dependency audit,pip and diff checks pass. Manual/seeded1/3 upright-only readings,custom3 labels,portable hashes and full replay frozen in runes_core_v1.json.
