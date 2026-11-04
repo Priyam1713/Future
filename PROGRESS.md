@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique24 Automatic Writing resource/variation audit — 2026-11-04
+- Began only after Dream closure1282b34 pushed and synchronized0/0. Exact three ranked sources and four variations preserved. BnF1924 manuscript access lead403; named Seaver/Lane1969 procedural transcription inspected, authorized-edition/French collation pending. Atlas editions and Mandell2020 remain distinct; no literary corpus copied.
+- Moses1898 Memorial reprint title/Introductionpp1-5 inspected via IA OCR, image concordance pending. His initially slow watched handwriting and later revision differ from Breton rapid first-draft practice. Spiritualist claims, voluntary authored writing, literary variations and generated text stay separate; no spirit/clinical/predictive certification.
+- Candidate first scope: source-guided ordered writing segments, declared pause/restart/stop/review, preserved first draft and separately linked revisions, explicit timing/metrics and authorship provenance. Software conventions remain editorial. Audit only: no Technique24 engine/schema/CLI implemented. P1 exact procedure/rights and independent fixtures; P2 separate profiles/optional creative tools. Validation evidence: data/automatic-writing-audit-validation.json.
+
 ## Technique23 Dream Core v1 closure — 2026-11-04
 - Source2ffe55c/engined1f2c14 andexamples4a7d98d,2a773fe pushed. **Core v1 Ready — Historical/Reflective Dream Interpretation Scope**:artemidorus-attalus-context-v1,4 historical categories/9 motifs/2 context qualifications,explicit conditional comparisons andcompeting accounts,voluntary raw journal/scenes andmanual exact-span annotations. No automatic inference fromwords,tags ormissing personal circumstances.
 -415 tests pass(387 inherited+28 new);393 CLI cases pass(363 inherited across22 modules+30 Dream).26 independent-reference checks;all7 inherited symbolic verifiers,registry,dependency,pip anddiff checks pass. Prior engines/profiles unchanged. Translation/Greek-term boundaries,rights,portable hashes,replay,matrix andbacklog frozen in dream_core_v1.json;source fidelity is not empirical omen orclinical validation.

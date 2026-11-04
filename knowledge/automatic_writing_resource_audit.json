@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "technique_id": 24,
+  "name": "Automatic Writing",
+  "status": "Researching — Audit Only",
+  "date": "2026-11-04",
+  "predecessor_closure": "1282b34",
+  "predecessor_push": "1282b34 pushed to origin/main and0/0 synchronization confirmed before Technique24 audit.",
+  "policy": "Resource/variation audit only. No Technique24 engine, schema, rules, CLI or generated writing implemented.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    24,
+    "3 · Mystical & Spiritual Divination",
+    "Automatic Writing",
+    "RETAIN — simulate / implement",
+    "Guided symbolic / human input",
+    "Surrealist free writing; spiritualist trance writing; ideomotor journaling; stream-of-consciousness",
+    "Constrained LLM free-association + timestamped user writing; styles kept separate",
+    "Text editor, random prompt, optional voice typing",
+    "LLM-generated text is not spirit communication",
+    "Traditional / not scientifically validated",
+    "Manifesto of Surrealism",
+    "André Breton",
+    null,
+    "The Magnetic Fields",
+    "Spirit Teachings",
+    null,
+    "13, 23, 26",
+    24
+  ],
+  "ranked_sources": [
+    [
+      24,
+      "Automatic Writing",
+      1,
+      "André Breton",
+      "Manifesto of Surrealism",
+      "Surrealist automatic-writing procedure",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      24,
+      "Automatic Writing",
+      2,
+      "André Breton and Philippe Soupault",
+      "The Magnetic Fields",
+      "Historical automatic-writing exemplar",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      24,
+      "Automatic Writing",
+      3,
+      "W. Stainton Moses",
+      "Spirit Teachings",
+      "Historical spiritualist claimed source",
+      "https://commons.wikimedia.org/wiki/File:Spirit_teachings_(IA_spiritteachings00moseiala).pdf",
+      "Open historical scan",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Surrealist free writing",
+      "inventory_row": [
+        24,
+        "Automatic Writing",
+        "Surrealist free writing",
+        "The Magnetic Fields",
+        "Manifesto of Surrealism",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Candidate first historical profile; translated procedure lead, exact-edition freeze pending",
+      "finding": "Breton procedure differs from a prompted topic exercise. Magnetic Fields is an exemplar, not interchangeable procedural authority."
+    },
+    {
+      "name": "spiritualist trance writing",
+      "inventory_row": [
+        24,
+        "Automatic Writing",
+        "spiritualist trance writing",
+        "Spirit Teachings",
+        "The Magnetic Fields",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Historical reference only; executable practice unsupported",
+      "finding": "Moses reports claimed communication; preserve his hand-writing versus psychography distinction and do not infer trance from a text."
+    },
+    {
+      "name": "ideomotor journaling",
+      "inventory_row": [
+        24,
+        "Automatic Writing",
+        "ideomotor journaling",
+        "Spirit Teachings",
+        "The Magnetic Fields",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Provisional mapping; method not verified",
+      "finding": "No ideomotor measurement, causal attribution or certified modern journaling protocol established by the selected passages."
+    },
+    {
+      "name": "stream-of-consciousness",
+      "inventory_row": [
+        24,
+        "Automatic Writing",
+        "stream-of-consciousness",
+        "Spirit Teachings",
+        "The Magnetic Fields",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Separate creative variation; source-specific protocol unverified",
+      "finding": "Do not equate all associative literary prose with Breton automatism or Moses spiritualism. Inventory suggestions remain provisional."
+    }
+  ],
+  "sources": [
+    {
+      "id": "automatic-breton-bnf1924-access-v1",
+      "technique_id": 24,
+      "author": "André Breton; Bibliothèque nationale de France",
+      "edition": "Manifeste du surréalisme; 1924 autograph manuscript; separate BnF printed fourth-edition record FRBNF31870680, Sagittaire1924,192p",
+      "url": "https://www.bnf.fr/fr/1924-annee-surrealiste",
+      "locator": "BnF manuscript-access section; https://gallica.bnf.fr/ark:/12148/btv1b525214035; printed metadata https://catalogue.bnf.fr/ark:/12148/cb31870680g",
+      "finding": "Institution confirms manuscript access. Gallica returned403 in this audit; manuscript pages not inspected. Printed fourth edition is not silently equated with manuscript pagination.",
+      "ingestion": "metadata_only",
+      "rights_note": "Access and catalog metadata do not grant reproduction rights. French original, manuscript images and later translations have separate rights; no corpus or images retained.",
+      "checked_on": "2026-11-04",
+      "rank": 1
+    },
+    {
+      "id": "automatic-breton-seaver-lane1969-procedure-lead-v1",
+      "technique_id": 24,
+      "author": "André Breton; Richard Seaver and Helen R. Lane, translators",
+      "edition": "Manifestoes of Surrealism, Ann Arbor Paperbacks, University of Michigan Press1969, as attributed by online transcription;1924 manifesto distinct from included1929 preface",
+      "url": "https://theanarchistlibrary.org/library/andre-breton-manifesto-of-surrealism",
+      "locator": "1924 manifesto: Secrets of the Magical Surrealist Art / Written Surrealist composition or first and last draft; online heading, no print-page concordance verified",
+      "finding": "Primary translated passage read: prepare materials and a receptive setting; write rapidly without a preselected subject or rereading; continue by choice. It describes an arbitrary-letter restart after interruption. This is a procedural lead pending authorized-edition/original-language collation, not a frozen executable rule set. No fixed session duration or required random topic follows.",
+      "ingestion": "facts_only",
+      "rights_note": "Transcription names1969 translators but supplies no verified redistribution permission. Original factual paraphrases only; no translated passage, prompt bank or corpus copied.",
+      "checked_on": "2026-11-04",
+      "rank": 1
+    },
+    {
+      "id": "automatic-magnetic-atlas-editions-v1",
+      "technique_id": 24,
+      "author": "André Breton and Philippe Soupault; Atlas Press",
+      "edition": "The Magnetic Fields: Atlas chronological list1985, second edition1988, third1990; signed1985 issue names Soupault and Gascoyne",
+      "url": "https://atlaspress.co.uk/chronological-list/",
+      "locator": "Chronological list1985/1988/1990 entries4a-4d",
+      "finding": "Publisher edition/access lead; these entries are marked out of print with no copies. No complete text or procedure inspected from these editions.",
+      "ingestion": "metadata_only",
+      "rights_note": "Publisher bibliography is not a license for text, translation or illustrations. No book text ingested.",
+      "checked_on": "2026-11-04",
+      "rank": 2
+    },
+    {
+      "id": "automatic-magnetic-mandell2020-publisher-v1",
+      "technique_id": 24,
+      "author": "André Breton and Philippe Soupault; Charlotte Mandell, translator",
+      "edition": "The Magnetic Fields; NYRB Poets2020-10-13; ISBN9781681374604;112 pages; English-only edition",
+      "url": "https://www.penguinrandomhouse.com/books/624396/the-magnetic-fields-by-andre-breton-and-philippe-soupault-translated-from-the-french-charlotte-mandell/",
+      "locator": "Official publisher description and product details",
+      "finding": "Publisher describes a1919 collaborative experiment with daily rapid writing over a week and no touching up. This is publisher context, not inspection of an original procedural chapter or a universal week-long requirement. Modern Mandell translation remains distinct from Atlas editions and original French work.",
+      "ingestion": "metadata_only",
+      "rights_note": "Modern translation protected; metadata and original bibliographic notes only. No poetry, generated imitation corpus or translation text retained.",
+      "checked_on": "2026-11-04",
+      "rank": 2
+    },
+    {
+      "id": "automatic-moses1898-introduction-ocr-v1",
+      "technique_id": 24,
+      "author": "William Stainton Moses; London Spiritualist Alliance",
+      "edition": "Spirit Teachings;1898 reprint of Memorial Edition, London Spiritualist Alliance; IA spiritteachings00moseiala;336-page scan",
+      "url": "https://commons.wikimedia.org/wiki/File:Spirit_teachings_(IA_spiritteachings00moseiala).pdf",
+      "locator": "Title/preface and Introduction printedpp1-5 via https://archive.org/download/spiritteachings00moseiala/spiritteachings00moseiala_djvu.txt; OCR inspected, page-image concordance pending",
+      "finding": "Moses distinguishes hand-held pen/pencil or planchette passive writing from claimed direct psychography. He reports a pocket-book, initially slow watched writing, later questions above answers, and subsequent revision. These attributed spiritualist accounts differ from rapid Surrealist composition; they do not establish spirit identity, external authorship or a general trance-induction protocol.",
+      "ingestion": "facts_only",
+      "rights_note": "Commons marks US public domain; source-country and individual scan/reuse terms remain separate. Audit stores original facts only, not the scan/OCR corpus.1898 edition is not presumed identical to1883 or later editorial editions.",
+      "checked_on": "2026-11-04",
+      "rank": 3,
+      "inspected_ocr_sha256": "aee0f3616258979a3a2eaf161a4670b016a79fea7d4dae0c2cb5d2fe04d12db0",
+      "inspected_ocr_bytes": 765621
+    }
+  ],
+  "inventory_mapping_caution": "All original rows and rankings preserved verbatim. Variation-source suggestions are not proof that Spirit Teachings defines stream-of-consciousness or ideomotor journaling. No substitution of ranked sources.",
+  "tradition_boundary": "Voluntary human authorship, historically claimed passive/spirit writing, Surrealist procedure and literary stream-of-consciousness remain distinct. Generated prompts/text are software/model-authored and cannot certify spirits, unconscious origins, identity, predictions, diagnoses or hidden memories.",
+  "feasibility": {
+    "first_scope": "A separately named, voluntary source-guided writing-session workflow after exact Breton procedure/rights freeze. Preserve ordered raw segments and an explicit first draft, declared interruptions/restarts, optional end review and separately stored revisions. This adds procedural and revision structure beyond a relabeled Scrying journal.",
+    "session_features": [
+      "Named procedure/version and voluntary prepared/writing/paused/stopped/review declarations; declaration is not proof of mental state or historical compliance",
+      "Ordered immutable raw segments with optional user-supplied timestamps; explicit pause/resume and restart events; no background key logging or inferred timing",
+      "Preserve original draft and separately linked revisions; never silently replace raw writing with edited or generated prose",
+      "Descriptive Unicode character/word counts, declared elapsed intervals and exact selected spans only after their conventions and known-answer fixtures are frozen",
+      "Separate user-attributed review/associations from source procedure and editorial questions; empty/unfinished sessions remain valid"
+    ],
+    "source_vs_software": "Event states, replay hashes, timer options, metrics and review UI are proposed editorial software conventions, not claimed historical instructions. Chosen topic/random prompts would be a separately named creative adaptation, since the inspected Breton lead omits a preselected subject. No fixed historical duration invented.",
+    "deterministic": "Validation, ordering, declared-time arithmetic, metrics, provenance and JSON/Markdown replay can run locally without RNG or LLM. Do not score spontaneity, unconsciousness, trance, authorship or spirit authenticity from prose.",
+    "generated_text": "No generated text needed for first scope. Any future local generator must have separate opt-in mode, model/version/seed and input provenance; human and generated segments never merge silently. Generated output is creative composition, never spirit communication; a seed alone does not guarantee model replay.",
+    "reuse": "Only compatible pure text/timestamp/JSON/freeze/hash utilities from existing journals after a separate session schema is defined. Keep Dream/Mirror/Scrying engines, schemas, profiles and saved reports unchanged; do not import their historical interpretations.",
+    "privacy": "All personal content optional; local/offline default, no mandatory identity, health or belief data, no automatic sharing, cloud service, database, frontend or new framework."
+  },
+  "configuration_matrix": {
+    "supported": "Audit metadata and provenance only; no executable Automatic Writing support",
+    "experimental": "Proposed Breton-guided session/revision workflow; not implemented or certified",
+    "unsupported": [
+      "Spirit contact/identity/authorship certification",
+      "Trance or ideomotor detection",
+      "Predictive, clinical or hidden-memory inference",
+      "Unified cross-tradition writing engine",
+      "Automatic corpus ingestion or LLM spirit simulation"
+    ]
+  },
+  "before_implementation": [
+    "Collate bounded Breton procedure against legitimate exact-edition/original French access, record translation differences and rights; keep arbitrary-letter restart optional until independently checked",
+    "Create original source-derived fixtures before coding; include source differences, raw Unicode, empty sessions, interruptions, revisions and unknown timing",
+    "Freeze source/editorial/user/generated provenance matrix and session/metric/sequence contracts; choose a narrow complete first profile",
+    "Verify Moses page images and exact later-edition differences before any separate spiritualist historical profile; no inference of a modern ideomotor protocol"
+  ],
+  "acceptance_gates": [
+    "Named source-versioned bounded procedure with locators and rights, original independent source fixtures",
+    "Meaningful session segmentation, interruption/restart handling and original-versus-revision provenance; faithful voluntary raw text and uncertain/missing times",
+    "Deterministic JSON/Markdown and portable replay with source/editorial/user/generated separation; unsupported claims explicit",
+    "Preserve current415 tests and393 CLI cases; run full regression/CLI suite, all8 symbolic verifiers, registry, dependency audit, pip and diff checks before any release"
+  ],
+  "P1": [
+    "Authorized exact Breton procedure/translation and rights freeze",
+    "Independent source/session/revision fixtures before engine",
+    "Meaningful local session workflow and explicit deterministic metric conventions",
+    "Moses OCR/page-image concordance and separate historical profile decision",
+    "Resolve ideomotor/stream-of-consciousness source gaps without changing inventory"
+  ],
+  "P2": [
+    "Separate additional traditions after primary method access",
+    "Optional reproducible local creative prompts/generation with explicit authorship",
+    "Voice input/editor UI only if useful and separately authorized",
+    "Rights-cleared examples and comparative editions"
+  ],
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Historical/Reflective Dream Interpretation Scope",
+    "tests": 415,
+    "cli_cases": 393
+  },
+  "limitations": "No Technique24 runtime support or readiness claim. Research access is partial; no original French manuscript collation or complete book corpus verification.60 techniques,54 retained and exclusions25/27/41/42/47/48 unchanged."
+}
