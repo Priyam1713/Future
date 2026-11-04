@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "technique_id": 21,
+  "profile": "atkinson-pg43954-guided-journal-v1",
+  "source": {
+    "id": "scrying-atkinson-pg2024-procedure-v1",
+    "technique_id": 21,
+    "author": "William Walker Atkinson;LessonVI quotes W.T.Stead",
+    "edition": "Practical Psychomancy and Crystal Gazing;PG43954 digital text updated2024-10-23;displayed Yoga Publication Society ISBN0-911662-41-3/copyright1908;exact print reissue unverified",
+    "url": "https://www.gutenberg.org/cache/epub/43954/pg43954-images.html",
+    "locator": "LessonII,Crystal Gazing,reflective substitutes through familiar-object visualization/reported mist;LessonVI,Stead quotation and final cross-reference toII",
+    "snapshot_sha256": "4f65e336426e4de45e01d51b0ddd9c48dd164794cb4c009aa8b64acef42af952",
+    "snapshot_bytes": 158192,
+    "ingestion": "facts_only",
+    "rights_note": "PG states public domain in USA with non-US law/PG license notices. Only short original factual notes and editorial workflow retained;no ebook corpus,facsimile,artwork or modern editorial additions copied. PG displayed reprint not equated with LOC Lyal1908 edition.",
+    "checked_on": "2026-11-04"
+  },
+  "rules": [
+    {
+      "id": "scrying.atkinson.surface",
+      "version": 1,
+      "source_id": "scrying-atkinson-pg2024-procedure-v1",
+      "locator": "LessonII,Crystal Gazing:paragraphs beginning Various teachers and Others have advocated",
+      "statement": "The source lists crystal,glass,dark-backed watch glass,polished metal,ink,water in blackened cups,and precious stones;LessonVI also mentions clear water in a bottle.",
+      "coverage": "procedural_reference"
+    },
+    {
+      "id": "scrying.atkinson.lighting",
+      "version": 1,
+      "source_id": "scrying-atkinson-pg2024-procedure-v1",
+      "locator": "LessonII,Crystal Gazing:paragraph beginning There are but very few directions",
+      "statement": "The source places the gazer with their back toward the light.",
+      "coverage": "procedural_reference"
+    },
+    {
+      "id": "scrying.atkinson.setting",
+      "version": 1,
+      "source_id": "scrying-atkinson-pg2024-procedure-v1",
+      "locator": "LessonII,Crystal Gazing:paragraph beginning The simple general direction",
+      "statement": "A quiet room and a table with dark cloth are suggested.",
+      "coverage": "procedural_reference"
+    },
+    {
+      "id": "scrying.atkinson.gaze",
+      "version": 1,
+      "source_id": "scrying-atkinson-pg2024-procedure-v1",
+      "locator": "LessonII,Crystal Gazing:same general-direction paragraph",
+      "statement": "The gaze is calm;blinking is permitted and eye strain or fatigue is discouraged.",
+      "coverage": "procedural_reference"
+    },
+    {
+      "id": "scrying.atkinson.visualize",
+      "version": 1,
+      "source_id": "scrying-atkinson-pg2024-procedure-v1",
+      "locator": "LessonII,Crystal Gazing:paragraph beginning An English authority recommends",
+      "statement": "Optional familiar-object visualization is described as an exercise,not an independently verified perception.",
+      "coverage": "optional_visualization"
+    },
+    {
+      "id": "scrying.atkinson.reported_imagery",
+      "version": 1,
+      "source_id": "scrying-atkinson-pg2024-procedure-v1",
+      "locator": "LessonII,Crystal Gazing:paragraph beginning The first signs",
+      "statement": "The author describes mist and developing pictures as claimed experiences;the application does not require or validate them.",
+      "coverage": "historical_claim"
+    },
+    {
+      "id": "scrying.atkinson.duration",
+      "version": 1,
+      "source_id": "scrying-atkinson-pg2024-procedure-v1",
+      "locator": "LessonVI,Crystal Gazing:Stead quotation beginning You simply look",
+      "statement": "The quoted example describes a brief two-to-three-minute look without fatigue;this is not a required timer or promise.",
+      "coverage": "quoted_procedure"
+    },
+    {
+      "id": "scrying.atkinson.focus",
+      "version": 1,
+      "source_id": "scrying-atkinson-pg2024-procedure-v1",
+      "locator": "LessonVI,Crystal Gazing:same Stead quotation",
+      "statement": "The quotation describes fixing thought on a chosen subject.",
+      "coverage": "quoted_procedure"
+    }
+  ],
+  "surfaces": {
+    "crystal": {
+      "description": "Crystal globe",
+      "rule_ids": [
+        "scrying.atkinson.surface"
+      ]
+    },
+    "glass": {
+      "description": "Plain glass ball",
+      "rule_ids": [
+        "scrying.atkinson.surface"
+      ]
+    },
+    "dark_backed_glass": {
+      "description": "Watch glass over dark cloth",
+      "rule_ids": [
+        "scrying.atkinson.surface"
+      ]
+    },
+    "polished_metal": {
+      "description": "Polished reflective metal",
+      "rule_ids": [
+        "scrying.atkinson.surface"
+      ]
+    },
+    "ink": {
+      "description": "Ink in a dish",
+      "rule_ids": [
+        "scrying.atkinson.surface"
+      ]
+    },
+    "water_black_vessel": {
+      "description": "Water in a blackened vessel",
+      "rule_ids": [
+        "scrying.atkinson.surface"
+      ]
+    },
+    "water_glass": {
+      "description": "Clear water in a glass bottle",
+      "rule_ids": [
+        "scrying.atkinson.surface"
+      ]
+    },
+    "precious_stone": {
+      "description": "Reflective precious stone",
+      "rule_ids": [
+        "scrying.atkinson.surface"
+      ]
+    },
+    "unknown": {
+      "description": "Surface unknown",
+      "rule_ids": []
+    },
+    "unspecified": {
+      "description": "Surface unspecified",
+      "rule_ids": []
+    }
+  },
+  "source_passage_order": [
+    "scrying.atkinson.surface",
+    "scrying.atkinson.lighting",
+    "scrying.atkinson.setting",
+    "scrying.atkinson.gaze",
+    "scrying.atkinson.visualize",
+    "scrying.atkinson.reported_imagery",
+    "scrying.atkinson.duration",
+    "scrying.atkinson.focus"
+  ],
+  "workflow": [
+    {
+      "id": "prepare",
+      "coverage": "source_guidance_with_editorial_recording",
+      "rule_ids": [
+        "scrying.atkinson.surface",
+        "scrying.atkinson.lighting",
+        "scrying.atkinson.setting"
+      ],
+      "text": "Choose the declared surface;review the historical lighting and dark-support suggestions. Record actual conditions separately."
+    },
+    {
+      "id": "intention",
+      "coverage": "editorial_workflow_with_source_focus",
+      "rule_ids": [
+        "scrying.atkinson.focus"
+      ],
+      "text": "Optionally state an intention in your own words. It is context,not a target the application can verify."
+    },
+    {
+      "id": "gaze",
+      "coverage": "source_guidance",
+      "rule_ids": [
+        "scrying.atkinson.gaze",
+        "scrying.atkinson.duration"
+      ],
+      "text": "Gaze calmly and blink normally;avoid strain. The historical brief example is optional. Stop at any point;no imagery is required."
+    },
+    {
+      "id": "record",
+      "coverage": "editorial_journaling",
+      "rule_ids": [],
+      "text": "Record only your own experience,including uncertainty or nothing noticed. Distinguish reflection,subjective imagery and deliberate imagination."
+    },
+    {
+      "id": "associate",
+      "coverage": "editorial_journaling",
+      "rule_ids": [],
+      "text": "Keep personal associations separate from the raw record;no universal symbolic meaning is assigned."
+    },
+    {
+      "id": "reflect",
+      "coverage": "editorial_reflection",
+      "rule_ids": [],
+      "text": "Review your notes and intention without turning them into claims about hidden facts or future events."
+    }
+  ],
+  "practices": [
+    "gazing",
+    "familiar_visualization"
+  ],
+  "experience_types": [
+    "observed_reflection",
+    "subjective_imagery",
+    "imagined_imagery",
+    "uncertain",
+    "no_imagery"
+  ],
+  "generated_creative_prompt": {
+    "supported": false,
+    "provenance": "application_authored_only;never a user observation",
+    "backlog": "P2"
+  },
+  "journal_policy": "Optional missing/null/empty journal;raw descriptions,associations and reflections preserved verbatim. Input-list order is primary;optional sequence numbers strictly increase without sorting. Missing type remains unclassified,not inferred. Timestamps are user declarations with no current-time default.",
+  "interpretation_layers": [
+    "direct_source_guidance",
+    "user_attributed",
+    "modern_editorial",
+    "unsupported"
+  ],
+  "limits": [
+    "The application cannot observe the environment,gaze or visual experience",
+    "Historical astral/telepathic accounts are author beliefs,not scientific validation",
+    "No universal scrying dictionary,aura-color diagnosis,entity detection,hidden memories or factual prediction",
+    "No required prolonged stare,sensory deprivation or altered state;stopping and no imagery remain valid",
+    "No creative imagery or seeded scene system in this core"
+  ],
+  "rights": "PG states public domain in USA with non-US law/PG license notices. Only short original factual notes and editorial workflow retained;no ebook corpus,facsimile,artwork or modern editorial additions copied. PG displayed reprint not equated with LOC Lyal1908 edition."
+}

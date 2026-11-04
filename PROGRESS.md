@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique21 source/procedure freeze — 2026-11-04
+- Synchronizedce025da. Inspected Atkinson LessonsII/VI in PG43954(updated2024-10-23);frozen digital-source byte hash,8 source-located rules and8 reflective surface options in atkinson-pg43954-guided-journal-v1. Displayed ISBN-era Yoga reprint remains distinct from LOC Lyal1908 record. Original factual notes only;no ebook/art corpus copied.
+- Independent pre-engine fixture records surface choices,procedural facts andorder. Six-step guided/journal workflow is explicitly an editorial arrangement around historical preparation/gaze/focus;user experience andpersonal associations remain separate. No forced imagery,prolonged stare or invented symbol table. Research cutoff reached;Thomas chapters andoptional seeded creative scenes deferred.
+
 ## Technique21 Crystal Ball Scrying resource/variation audit — 2026-11-04
 - Began only after Pendulum closure8768467 pushed/synchronized0/0. Exact original method,two ranked sources(Atkinson;Thomas) andfour variation rows preserved. Registered PG43954 procedural text/edition caveat,LOC1908 scan lead,Thomas1905 scan/title/contents andHuntington bibliographic corroboration. No Scrying engine,journal CLI,symbol table or visual field implemented.
 - Atkinson LessonII/VI supplies reflective substitutes,lighting andcalm non-strained gaze;astral/telepathic claims remain author beliefs. PG displayed later imprint/ISBN is not silently equated with LOC1908 facsimile. Thomas ChIVp32/ChXIIp158 are procedure/experiment leads;full chapters not inspected after extraction timeouts. No complete source symbol lexicon verified;Atkinson aura-color/emotion assertions are not generic scrying meanings.
