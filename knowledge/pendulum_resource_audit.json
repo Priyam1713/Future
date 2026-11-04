@@ -2,11 +2,11 @@
   "version": 1,
   "technique_id": 20,
   "name": "Pendulum Divination",
-  "status": "Researching",
+  "status": "Core v1 Ready — Symbolic Response Scope",
   "date": "2026-11-04",
   "predecessor_closure": "9ec36e6",
   "predecessor_push": "Confirmed9ec36e6 pushed to origin/main and0/0 synchronization before opening Technique20 inventory/resource audit.",
-  "policy": "Resource/variation audit only;no pendulum engine,chart,answer classifier,animation,sensor ingestion or CLI implemented.",
+  "policy": "Original audit retained;current bounded support is in pendulum_core_v1.json.",
   "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
   "inventory_method_row": [
     20,
@@ -65,8 +65,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Candidate bounded first scope:manual recorded response and explicitly seeded symbolic choice,with named signal mapping,search/no-response/ambiguous states. Keep individual web calibration distinct from study vertical/horizontal suggestion. Calibration assigns symbols;it does not establish truth or remove expectation bias."
+      "status": "supported bounded symbolic response core;no motion detection",
+      "finding": "Candidate bounded first scope:manual recorded response and explicitly seeded symbolic choice,with named signal mapping,search/no-response/ambiguous states. Keep individual web calibration distinct from study vertical/horizontal suggestion. Calibration assigns symbols;it does not establish truth or remove expectation bias.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "question charts",
@@ -80,8 +81,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Rank1 confirms19 charts but exact labels,angles,sector boundaries and interpretation not inspected. A separately named original/editorial chart could be considered after deterministic boundary fixtures;never advertise reproduction of the Kit chart corpus without verification/rights."
+      "status": "unsupported;deferred",
+      "finding": "Rank1 confirms19 charts but exact labels,angles,sector boundaries and interpretation not inspected. A separately named original/editorial chart could be considered after deterministic boundary fixtures;never advertise reproduction of the Kit chart corpus without verification/rights.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "dowsing maps",
@@ -95,8 +97,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Publisher mentions locating/triangulation;no complete map procedure verified. Coordinate system,units,map projection,intersection degeneracy,uncertainty and input provenance would need independent fixtures. No locating water,utilities,mines,missing people or hidden facts certified."
+      "status": "unsupported;deferred",
+      "finding": "Publisher mentions locating/triangulation;no complete map procedure verified. Coordinate system,units,map projection,intersection degeneracy,uncertainty and input provenance would need independent fixtures. No locating water,utilities,mines,missing people or hidden facts certified.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "letter wheels",
@@ -110,8 +113,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Exact alphabet/order,space/delete/stop sectors and termination procedure unverified. Must freeze one original source-specific or explicitly editorial wheel before code. No inferred spirits/messages or automatic infinite text generation;P1/P2 until source/rights and stopping rules are settled."
+      "status": "unsupported;deferred",
+      "finding": "Exact alphabet/order,space/delete/stop sectors and termination procedure unverified. Must freeze one original source-specific or explicitly editorial wheel before code. No inferred spirits/messages or automatic infinite text generation;P1/P2 until source/rights and stopping rules are settled.",
+      "audit_status": "unsupported;resource audit only"
     }
   ],
   "sources": [
@@ -217,10 +221,29 @@
     "Mouse/camera/sensor observation and physical mechanics visualization",
     "Additional chart families or licensed scans/artwork"
   ],
-  "limitations": "No executable Technique20 support or predictive/physical-dowsing certification. Original60-method taxonomy,54 retained,six exclusions25/27/41/42/47/48,two ranked sources andfour variations preserved.",
+  "limitations": "Symbolic response scope only;no physical/hidden-fact/predictive certification. Taxonomy/ranked sources/variation rows unchanged.",
   "accepted_predecessor": {
     "status": "Core v1 Ready — Historical/Symbolic Rune Reading Scope",
     "tests": 312,
     "cli_cases": 279
+  },
+  "audit_status_at_creation": "Researching",
+  "policy_at_audit": "Resource/variation audit only;no pendulum engine,chart,answer classifier,animation,sensor ingestion or CLI implemented.",
+  "limitations_at_audit": "No executable Technique20 support or predictive/physical-dowsing certification. Original60-method taxonomy,54 retained,six exclusions25/27/41/42/47/48,two ranked sources andfour variations preserved.",
+  "current_release": "knowledge/pendulum_core_v1.json",
+  "current_backlog": {
+    "P1": [
+      "Complete Lonegren Kit chart/procedure inspection and exact edition/rights freeze",
+      "Separately verified Lethbridge rates",
+      "Source-grounded question charts and independent boundary geometry",
+      "Additional manual calibration methods/procedural qualifications;recheck current website access"
+    ],
+    "P2": [
+      "Dowsing map geometry",
+      "Letter wheels with finite stopping rules",
+      "Camera/mouse/sensor-based observed motion",
+      "Optional physical visualization",
+      "Additional source-specific charts"
+    ]
   }
 }

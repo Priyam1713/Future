@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique20 Pendulum Core v1 closure — 2026-11-04
+- Source800a762/engineb04a1e2 and reportscb8ea40,09cd665 pushed. **Core v1 Ready — Symbolic Response Scope**:lonegren-web-symbolic-response-v1,explicit manual calibration and1..64 observations,conservative uncertainty,contradictory mapping rejection,and separate deterministic yes/no/unresolved digital simulation. No chart,physical motion detection or factual truth inference.
+-339 tests pass(312 inherited+27 new);307 CLI cases pass(279 inherited across19 modules+28 Pendulum).207 reference checks include9 pre-engine procedural cases,6 independent .NET vectors/192 draws,exact5 distribution slots andforced rejection. Tarot30/Oracle49/I Ching8759/Rune84,dependency,pip,registry anddiff checks pass. Matrix,profile hash,rights,source/access limitation and replay frozen in pendulum_core_v1.json.
+- P1:Kit chart/procedure inspection,Lethbridge rates,separate chart geometry andadditional calibration qualifications. P2:maps,finite letter wheels,sensors,physical visualization,additional chart systems. Source website facts were inspected during the audit;fresh access nowfails403,no new snapshot claimed. Next:push this closure before Technique21 Crystal Ball Scrying audit only.
+
 ## Technique20 Pendulum implementation — 2026-11-04
 - Source800a762 pushed. Working manual signal/calibration engine and separate seeded categorical simulator;strict mode isolation,source-specific rules,incomplete/partial/neutral/unknown/conflicting results,conservative repeated observations and reproducible JSON/Markdown. Contradictory calibration rejects with no reading. No chart,sensor,physical motion or truth inference.
 -339 tests pass(312 inherited+27 new);28 Pendulum CLI cases and207 reference checks pass,including6 independent .NET32-draw vectors. Tarot30/Oracle49/I Ching8759/Rune84,registry,dependency audit,pip and diff checks pass. Shared randomization files unchanged. Inherited CLI sweep finishing before bounded closure;source access limitation remains recorded.

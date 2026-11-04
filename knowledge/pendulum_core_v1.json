@@ -1,0 +1,293 @@
+{
+  "version": 1,
+  "technique_id": 20,
+  "name": "Pendulum Divination",
+  "date": "2026-11-04",
+  "status": "Core v1 Ready — Symbolic Response Scope",
+  "profile": "lonegren-web-symbolic-response-v1",
+  "source_pass_commit": "800a762",
+  "implementation_commit": "b04a1e2",
+  "source": {
+    "id": "pendulum-lonegren-web-procedure-v1",
+    "technique_id": 20,
+    "author": "Sig Lonegren / Mid-Atlantic Geomancy",
+    "edition": "The Pendulum;undated author-associated website,accessed2026-11-04;separate from print Kit",
+    "url": "https://www.geomancy.org/index.php/dowsing/the-pendulum",
+    "locator": "The Search Position;Yes and No;Yes but and No but;Asking questions through dowsing;Dowsing blind",
+    "finding": "Website uses initial to-and-fro search motion,individual yes/no signals or suggested clockwise/anticlockwise fallback,partial signals and misleading-question response. Wording matters;blind known-answer practice suggested. Source-defined conventions and metaphysical claims require distinct labels;neither universal direction mapping nor guaranteed factual calibration follows.",
+    "ingestion": "facts_only",
+    "rights_note": "Original short factual paraphrases only;no website prose,photo,downloaded diagram or full exercise corpus copied. Print procedure equivalence unverified.",
+    "checked_on": "2026-11-04"
+  },
+  "source_access_record": "knowledge/pendulum_pass1_findings.json",
+  "source_scope": "Author-associated website procedure inspected during preceding audit in this chat;fresh access failed/HTTP403. Frozen factual notes/rule locators,not a fresh source snapshot. Print Kit19 charts and Lethbridge rates remain unverified and separate.",
+  "source_rules": [
+    {
+      "id": "pendulum.lonegren.search",
+      "locator": "The Search Position",
+      "statement": "The source starts with to-and-fro motion as a search state."
+    },
+    {
+      "id": "pendulum.lonegren.calibration",
+      "locator": "Yes and No",
+      "statement": "Individual signals are permitted; suggested circular signals are a fallback,not universal."
+    },
+    {
+      "id": "pendulum.lonegren.partial",
+      "locator": "Yes but and No but",
+      "statement": "Incomplete responses call for clarification rather than a complete answer."
+    },
+    {
+      "id": "pendulum.lonegren.rethink",
+      "locator": "Yes but and No but",
+      "statement": "A separate misleading-question signal prompts reconsideration."
+    },
+    {
+      "id": "pendulum.lonegren.question",
+      "locator": "Asking questions through dowsing - The Eight Step Method,step5",
+      "statement": "Questions should admit a clear binary response;ambiguous wording matters."
+    },
+    {
+      "id": "pendulum.lonegren.checking",
+      "locator": "Dowsing blind;Checking and building confidence",
+      "statement": "The source suggests known-answer checking;this does not establish predictive validity."
+    }
+  ],
+  "supported": [
+    "Manual explicit user-defined calibration and1..64 recorded observations;no automatic direction mapping",
+    "Clockwise/counterclockwise/vertical/horizontal calibration;separate search/rethink/unresolved responses",
+    "Still,searching,partial,conflicting,unknown,irregular and unrecognized observations retained conservatively",
+    "Full unanimous responses resolve symbolically;incomplete mappings,partial/neutral/unknown/mixed observations remain unresolved",
+    "Strict contradictory/duplicate mapping rejection with no reading;JSON/Markdown rejection report and CLI exit2",
+    "Separate seeded one-category editorial simulation,strict UTF8 seed,independent framing and exact rejection sampling",
+    "Complete JSON/Markdown input/configuration/provenance/profile hash/random trace and replay"
+  ],
+  "experimental": [
+    "Reflections and repeated-observation aggregation are explicitly editorial policies,not historical ritual or empirical truth certification",
+    "editorial-2-2-1-v1 is a digital allocation only,not historical pendulum probabilities or likelihood of factual correctness"
+  ],
+  "unsupported": [
+    "Truth assurance about health,finances,relationships,safety,hidden events or future outcomes;personality/emotional inference or confidence scores",
+    "Universal clockwise=yes/anticlockwise=no assumptions or silent calibration repair",
+    "Print Kit19 chart corpus,Lethbridge rate/length system,question charts,map dowsing and letter wheels",
+    "Generated sensor data,physical ideomotor oscillation simulation,camera/mouse motion detection,frontend or animation"
+  ],
+  "configuration_matrix": {
+    "profile": "lonegren-web-symbolic-response-v1",
+    "task": "symbolic_response",
+    "manual": {
+      "calibration": {
+        "format": "Explicit list of signal/response pairs;no implicit clockwise=yes",
+        "mappable_signals": [
+          "clockwise",
+          "counterclockwise",
+          "vertical",
+          "horizontal",
+          "irregular"
+        ],
+        "responses": [
+          "yes",
+          "no",
+          "search",
+          "rethink",
+          "unresolved"
+        ],
+        "complete": "At least one distinct yes signal and no signal required for any resolved session",
+        "conflicts": "Duplicate or contradictory entries rejected;no silent repair",
+        "reserved": "Searching,still,partial,conflicting,unknown remain unresolved and cannot be remapped",
+        "source_boundary": "Individual mappings are source-permitted;fixed vocabulary,validation and conservative aggregation are application conventions"
+      },
+      "signals": {
+        "clockwise": "Reported circular motion clockwise from observer viewpoint",
+        "counterclockwise": "Reported circular motion counterclockwise from observer viewpoint",
+        "vertical": "Reported to-and-fro motion toward/away from body;calibration or search context required",
+        "horizontal": "Reported side-to-side motion across body",
+        "searching": "User explicitly classifies motion as search/neutral",
+        "still": "No motion reported",
+        "irregular": "Reported irregular movement;no automatic answer",
+        "partial": "Incomplete movement without a specified full category",
+        "conflicting": "User reports incompatible signals",
+        "unknown": "User cannot classify movement"
+      },
+      "observations": {
+        "quality": [
+          "full",
+          "partial",
+          "conflicting",
+          "unknown"
+        ],
+        "max_count": 64,
+        "unknown_signal": "Retain supplied plain-text category as unrecognized;never infer yes/no",
+        "aggregation": "Unanimous full resolved responses only;any partial,missing,neutral,unknown or disagreement makes session unresolved. No voting or confidence estimate.",
+        "source_boundary": "Repetition and conservative aggregation are editorial application policy,not a source-verified historical ritual"
+      },
+      "additional_bound": "Irregular signals may map to search/rethink/unresolved;cannot establish full yes/no",
+      "simulation_metadata": "forbidden"
+    },
+    "seeded": {
+      "protocol": "future-pendulum-sha256-v1",
+      "distribution": "editorial-2-2-1-v1",
+      "manual_observations_and_calibration": "forbidden",
+      "configuration": {
+        "protocol": "future-pendulum-sha256-v1",
+        "distribution": "editorial-2-2-1-v1",
+        "categories": [
+          "yes",
+          "no",
+          "unresolved"
+        ],
+        "weights": [
+          2,
+          2,
+          1
+        ],
+        "total_weight": 5,
+        "index_ranges": {
+          "yes": [
+            0,
+            1
+          ],
+          "no": [
+            2,
+            3
+          ],
+          "unresolved": [
+            4
+          ]
+        },
+        "framing": "ASCII FuturePendulum NUL v1 NUL symbolic-response NUL + uint32be UTF8 seed length + strict UTF8 seed + uint64be block counter starting0",
+        "words": "SHA256 digest split into8 uint32be words;existing Stream.word/Stream.below rejection primitive unchanged",
+        "rejection": "Reject word>=2^32-(2^32 mod5);accepted word mod5",
+        "seed": "1..256 UTF8 bytes;no normalization",
+        "samples_per_session": 1,
+        "physical_motion_generated": false,
+        "question_in_rng": false,
+        "weight_authority": "Editorial digital allocation only;not historical frequencies or probability that an answer is true"
+      }
+    },
+    "question": "Optional plain UTF8 context;not analyzed for truth and never included in RNG framing"
+  },
+  "evidence_layers": {
+    "direct": "Source-located procedural factual notes from website,not print-chart or scientific validity claims",
+    "compositional": "Modern reflection and conservative aggregation explicitly labeled",
+    "unsupported": "Predictive/factual inference or simulated physical readings"
+  },
+  "protocol": {
+    "protocol": "future-pendulum-sha256-v1",
+    "distribution": "editorial-2-2-1-v1",
+    "categories": [
+      "yes",
+      "no",
+      "unresolved"
+    ],
+    "weights": [
+      2,
+      2,
+      1
+    ],
+    "total_weight": 5,
+    "index_ranges": {
+      "yes": [
+        0,
+        1
+      ],
+      "no": [
+        2,
+        3
+      ],
+      "unresolved": [
+        4
+      ]
+    },
+    "framing": "ASCII FuturePendulum NUL v1 NUL symbolic-response NUL + uint32be UTF8 seed length + strict UTF8 seed + uint64be block counter starting0",
+    "words": "SHA256 digest split into8 uint32be words;existing Stream.word/Stream.below rejection primitive unchanged",
+    "rejection": "Reject word>=2^32-(2^32 mod5);accepted word mod5",
+    "seed": "1..256 UTF8 bytes;no normalization",
+    "samples_per_session": 1,
+    "physical_motion_generated": false,
+    "question_in_rng": false,
+    "weight_authority": "Editorial digital allocation only;not historical frequencies or probability that an answer is true"
+  },
+  "profile_sha256": "54e6e4ea860a73511c6a377d6e25e9f19fc3aecb7c8bba7b43eb97a23674686b",
+  "hash_serialization": "SHA256 canonical UTF8 JSON,sorted keys,compact comma/colon separators,unescaped Unicode,no terminal LF;portable across LF/CRLF checkouts",
+  "shared_integer_primitives": "Inherited unchanged Stream.word and Stream.below;independent FuturePendulum domain prefix",
+  "verification": {
+    "tests": 339,
+    "inherited_tests": 312,
+    "new_tests": 27,
+    "cli_cases": 307,
+    "inherited_cli_cases": 279,
+    "new_cli_cases": 28,
+    "inherited_cli_modules": 19,
+    "independent_checks": 207,
+    "independent_seed_vectors": 6,
+    "independent_draws": 192,
+    "independent_source_cases": 9,
+    "distribution_slots": 5,
+    "forced_rejection_boundary": true,
+    "registry_rules": 6,
+    "tarot_checks": 30,
+    "oracle_checks": 49,
+    "iching_checks": 8759,
+    "rune_checks": 84,
+    "dependency_audit": "passed",
+    "pip_check": "passed",
+    "diff_check": "passed",
+    "evidence": [
+      "data/pendulum-regression.json",
+      "data/pendulum-inherited-smoke.json",
+      "data/pendulum-smoke.json",
+      "data/pendulum-verification.json",
+      "tests/fixtures/pendulum_source_cases.json",
+      "tests/fixtures/pendulum_seed_vectors.json",
+      "tests/reference/generate_pendulum_vectors.ps1"
+    ],
+    "assurance": "Source-specific procedural fidelity and digital reproducibility;synthetic examples,not physical motion or predictive validity.",
+    "known_warnings": [
+      "Inherited Skyfield/NumPy dtype deprecation",
+      "Inherited unclosed data/de440s.bsp ResourceWarning"
+    ]
+  },
+  "acceptance": {
+    "source_procedure_verified": true,
+    "manual_mapping_pass": true,
+    "unknown_conflicts_conservative": true,
+    "seeded_independently_verified": true,
+    "reproducible_reports": true,
+    "no_fake_motion_or_truth": true,
+    "full_tests_and_cli_pass": true
+  },
+  "rights": "Only original factual paraphrases and application conventions. No website prose/photo,Kit charts,Lethbridge rate table,article corpus or artwork copied.",
+  "limits": [
+    "Search state depends on declared calibration/context;vertical alone is not a universal yes or search signal",
+    "Calibration maps symbols;it does not validate factual answers",
+    "Digital results are categories,not generated movement or physical ideomotor simulation",
+    "No factual assurance,hidden events,health/financial advice,personality/emotional inference or confidence scores"
+  ],
+  "examples": [
+    "data/pendulum-manual-yes.md",
+    "data/pendulum-manual-no.md",
+    "data/pendulum-ambiguous.md",
+    "data/pendulum-contradictory.md",
+    "data/pendulum-partial.md",
+    "data/pendulum-repeated-conflict.md",
+    "data/pendulum-seeded.md",
+    "data/pendulum-replay.md"
+  ],
+  "backlog": {
+    "P1": [
+      "Complete Lonegren Kit chart/procedure inspection and exact edition/rights freeze",
+      "Separately verified Lethbridge rates",
+      "Source-grounded question charts and independent boundary geometry",
+      "Additional manual calibration methods/procedural qualifications;recheck current website access"
+    ],
+    "P2": [
+      "Dowsing map geometry",
+      "Letter wheels with finite stopping rules",
+      "Camera/mouse/sensor-based observed motion",
+      "Optional physical visualization",
+      "Additional source-specific charts"
+    ]
+  },
+  "transition": "Commit and push this closure before auditing Technique21 Crystal Ball Scrying;no Technique21 implementation during audit"
+}
