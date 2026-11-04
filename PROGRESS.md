@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique26 Akashic Records resource/variation audit — 2026-11-04
+- Began only after Automatic Writing closure dc0d9d7 pushed and synchronized0/0. Transition crosses25 Mediumship unchanged/excluded;27 Channeling remains excluded. Exact three ranked sources/four variation rows preserved;no Technique26 engine/schema/rules/CLI implemented.
+- Howe public prayer structure/expectations inspected;current revised edition2026 ISBN9781649634474 differs from uncollated earlier editions. No protected prayer text copied or legal-name collection required. Steiner identified Zimmer1959 cover/preface inspected,archive permission not downstream reuse. Cayce numbered public examples and explicit sample reproduction restriction checked;member corpus not accessed.
+- Candidate offline named reference/reflection subset with source-ID concept notes,question/user-fact/imagination/unknown separation and exact provenance/replay. Traditions stay independent;no metaphysical access,hidden histories,past lives,deceased contact or clinical/predictive claims. P1 exact bounded source/rights/independent fixtures;P2 separate traditions/optional explicitly fictional creative tools. Validation:data/akashic-audit-validation.json.
+
 ## Technique24 Automatic Writing Core v1 closure — 2026-11-04
 - Source7fa5409/engine977ee7e and example passes pushed. **Core v1 Ready — Guided Creative Writing/Revision Scope**: breton-bsb2016-writing-subset-v1,7 French-excerpt historical facts,seven declared states,exact raw draft reconstruction,interruptions/restarts,linear independent revisions and deterministic metrics. Institutional quotation edition remains unidentified;no BnF authentication or complete historical restart procedure claimed.
 -445 tests pass(415 inherited+30 new);417 CLI cases pass(393 inherited across23 modules+24 new).27 independent reference checks;all8 inherited verifiers,registry,dependency,pip anddiff checks pass. 78 saved prior journal files byte-identical. Source/user/editorial/unsupported matrix,rights,hashes,limits andbacklog frozen in automatic_writing_core_v1.json;no new runtime dependency or generated text.

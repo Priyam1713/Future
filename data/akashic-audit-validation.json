@@ -1,0 +1,144 @@
+{
+  "passed": true,
+  "technique_id": 26,
+  "scope": "Audit only;no executable Akashic functionality",
+  "predecessor_closure": "dc0d9d7",
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ],
+    "ranked_sources": 3,
+    "variations": 4,
+    "exact_rows_preserved": true,
+    "sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31"
+  },
+  "excluded_gap_records_unchanged": true,
+  "source_records": 8,
+  "prior_source_records_unchanged": true,
+  "registry": true,
+  "prior_runtime_inventory_unchanged": true,
+  "targeted_tests": 223,
+  "inherited_verifiers": 9,
+  "full_predecessor_tests": 445,
+  "full_predecessor_cli_cases": 417,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "tests.test_automatic_writing",
+        "tests.test_dream",
+        "tests.test_mirror",
+        "tests.test_scrying",
+        "tests.test_pendulum",
+        "tests.test_runes",
+        "tests.test_tarot",
+        "tests.test_oracle",
+        "tests.test_iching",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "----------------------------------------------------------------------\nRan 223 tests in 0.205s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tarot"
+      ],
+      "exit_code": 0,
+      "stdout": "30 Tarot source/layout/independent protocol checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_oracle"
+      ],
+      "exit_code": 0,
+      "stdout": "49 Oracle verification checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_iching"
+      ],
+      "exit_code": 0,
+      "stdout": "8759 I Ching verification checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_runes"
+      ],
+      "exit_code": 0,
+      "stdout": "84 rune reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pendulum"
+      ],
+      "exit_code": 0,
+      "stdout": "207 Pendulum reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_scrying"
+      ],
+      "exit_code": 0,
+      "stdout": "23 Scrying reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_mirror"
+      ],
+      "exit_code": 0,
+      "stdout": "22 Mirror reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_dream"
+      ],
+      "exit_code": 0,
+      "stdout": "26 Dream reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_automatic_writing"
+      ],
+      "exit_code": 0,
+      "stdout": "27 Automatic Writing reference checks passed\n",
+      "stderr": ""
+    }
+  ],
+  "assurance": "Audit metadata/source provenance and inherited compatibility;not Akashic runtime acceptance or supernatural validation."
+}
