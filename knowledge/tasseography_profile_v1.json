@@ -1,0 +1,483 @@
+{
+  "version": 1,
+  "technique_id": 28,
+  "profile": "kent-pg6964-ordinary-cup-v1",
+  "vessel": "cup",
+  "source": {
+    "id": "tasseography-kent-pg6964-cup-facts-v2",
+    "technique_id": 28,
+    "author": "Cicely Kent",
+    "edition": "PG6964 illustrated HTML posted2013-03-21,released2004;English digital witness,not verified print pagination",
+    "url": "https://www.gutenberg.org/files/6964/6964-h/6964-h.htm",
+    "locator": "ChII Practice and Method;ChIII General Theories;selected Dictionary entries;Example Cups FigureVIII",
+    "ingestion": "facts_only",
+    "rights_note": "PG metadata lists public domain in USA;non-US law,PG license/trademark and individual images remain separate. Original short factual paraphrases only;no whole book,modern dictionary,scan or source illustration redistributed.",
+    "checked_on": "2026-11-04",
+    "snapshot_sha256": "f6b4b81e04e81ba0efcd91228b76c143ac3b7262484d96f3b3d669d379839c56",
+    "snapshot_bytes": 258333,
+    "figure_viii": {
+      "url": "https://www.gutenberg.org/files/6964/6964-h/images/figure08.png",
+      "sha256": "54d22135898cb2eb912414b369c017ba2c3097b0e201ff843cce25c023dc9cde",
+      "inspection": "Viewed original320x380 diagram:handle above cup,outer rim and inner bottom circle visible. Shape names/positions from original principal-symbol list;no automatic or independent image recognition claimed."
+    }
+  },
+  "symbols": {
+    "aircraft": {
+      "id": "aircraft",
+      "name": "Aircraft",
+      "aliases": [],
+      "definition": "Directional/motion-dependent account;no unconditional outcome.",
+      "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+      "locator": "Dictionary A:Aircraft",
+      "alternatives": [],
+      "cases": [
+        {
+          "id": "approaching",
+          "statement": "Kent associates approaching flight with rapid news or an unexpected journey.",
+          "requires": {
+            "motion": "flying",
+            "heading": "towards_handle"
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary A:Aircraft"
+        },
+        {
+          "id": "stationary",
+          "statement": "Kent associates a stationary aircraft with limited success unless habits change.",
+          "requires": {
+            "motion": "stationary"
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary A:Aircraft"
+        }
+      ]
+    },
+    "apron": {
+      "id": "apron",
+      "name": "Apron",
+      "aliases": [],
+      "definition": "Meaning depends on proximity to the consultant.",
+      "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+      "locator": "Dictionary A:Apron",
+      "alternatives": [],
+      "cases": [
+        {
+          "id": "near",
+          "statement": "Kent associates nearby apron with a new friend.",
+          "requires": {
+            "proximity": "near"
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary A:Apron"
+        },
+        {
+          "id": "far",
+          "statement": "Kent associates distant apron with new work or acquaintances.",
+          "requires": {
+            "proximity": "far"
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary A:Apron"
+        }
+      ]
+    },
+    "acorn": {
+      "id": "acorn",
+      "name": "Acorn",
+      "aliases": [],
+      "definition": "Industry,gain,strength and a potentially fruitful short journey;several add a qualification.",
+      "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+      "locator": "Dictionary A:Acorn",
+      "alternatives": [],
+      "cases": [
+        {
+          "id": "general",
+          "statement": "Kent associates acorn with health/strength,results of effort and possible gain from a short journey.",
+          "requires": {},
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary A:Acorn"
+        },
+        {
+          "id": "several",
+          "statement": "Kent adds good fortune and ease for several acorns.",
+          "requires": {
+            "multiplicity": "several"
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary A:Acorn"
+        }
+      ]
+    },
+    "anchor": {
+      "id": "anchor",
+      "name": "Anchor",
+      "aliases": [],
+      "definition": "Loyal friends,constancy,wishes and a sailor-specific association.",
+      "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+      "locator": "Dictionary A:Anchor",
+      "alternatives": [],
+      "cases": [
+        {
+          "id": "general",
+          "statement": "Kent associates anchor with loyal friends,constancy in love and realised wishes.",
+          "requires": {},
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary A:Anchor"
+        },
+        {
+          "id": "sailor",
+          "statement": "Kent calls anchor a safety emblem for a sailor.",
+          "requires": {
+            "context.sailor": true
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary A:Anchor"
+        }
+      ]
+    },
+    "organ": {
+      "id": "organ",
+      "name": "Organ",
+      "aliases": [],
+      "definition": "Requires surrounding signs;musician-specific achievement account.",
+      "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+      "locator": "Dictionary O:Organ",
+      "alternatives": [
+        "Wedding",
+        "Death",
+        "Realised ambition"
+      ],
+      "cases": [
+        {
+          "id": "musician",
+          "statement": "Kent gives an achievement account for a musician.",
+          "requires": {
+            "context.musician": true
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary O:Organ"
+        }
+      ]
+    },
+    "beetle": {
+      "id": "beetle",
+      "name": "Beetle",
+      "aliases": [],
+      "definition": "Domestic unrest/disagreement;several add an account about supposed friends.",
+      "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+      "locator": "Dictionary B:Beetle",
+      "alternatives": [],
+      "cases": [
+        {
+          "id": "general",
+          "statement": "Kent associates beetle with unrest,household trouble or disagreement.",
+          "requires": {},
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary B:Beetle"
+        },
+        {
+          "id": "several",
+          "statement": "Kent associates several beetles with risk of slander by supposed friends.",
+          "requires": {
+            "multiplicity": "several"
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary B:Beetle"
+        }
+      ]
+    },
+    "tea_cosy": {
+      "id": "tea_cosy",
+      "name": "Tea Cosy",
+      "aliases": [],
+      "definition": "Marital-status alternatives are author conventions,not inferred user circumstances.",
+      "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+      "locator": "Dictionary T:Tea Cosy",
+      "alternatives": [],
+      "cases": [
+        {
+          "id": "unmarried",
+          "statement": "Kent gives a possible remaining-single account.",
+          "requires": {
+            "context.marital_status": "unmarried"
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary T:Tea Cosy"
+        },
+        {
+          "id": "married",
+          "statement": "Kent associates this with affection and small domestic comforts for a married consultant.",
+          "requires": {
+            "context.marital_status": "married"
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary T:Tea Cosy"
+        }
+      ]
+    },
+    "coal_scoop": {
+      "id": "coal_scoop",
+      "name": "Coal scoop",
+      "aliases": [],
+      "definition": "Only a FigureVIII documentary account is supported;do not substitute Coal Scuttle.",
+      "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+      "locator": "Example Cups FigureVIII:interpretation/principal symbols",
+      "alternatives": [],
+      "cases": [
+        {
+          "id": "figure_viii_domestic",
+          "statement": "FigureVIII groups coal scoop and beetle with domestic worries/cares.",
+          "requires": {},
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Example Cups FigureVIII:interpretation/principal symbols",
+          "scope": "figure_viii"
+        }
+      ]
+    },
+    "bird": {
+      "id": "bird",
+      "name": "Bird flying",
+      "aliases": [],
+      "definition": "Only selected flying-bird cases;other bird species/arrangements not silently substituted.",
+      "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+      "locator": "ChIII:letter/bird and handle direction",
+      "alternatives": [],
+      "cases": [
+        {
+          "id": "flying",
+          "statement": "Kent associates a single flying bird with rapid news.",
+          "requires": {
+            "motion": "flying",
+            "multiplicity": "single"
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "ChIII:letter/bird and handle direction"
+        },
+        {
+          "id": "received",
+          "statement": "Kent treats a letter-like mark near a bird flying toward the handle as a received telegram.",
+          "requires": {
+            "motion": "flying",
+            "heading": "towards_handle",
+            "adjacent_symbol": "letter"
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "ChIII:letter/bird and handle direction"
+        },
+        {
+          "id": "sent",
+          "statement": "Kent treats a letter-like mark near a bird flying away from the handle as a sent telegram.",
+          "requires": {
+            "motion": "flying",
+            "heading": "away_from_handle",
+            "adjacent_symbol": "letter"
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "ChIII:letter/bird and handle direction"
+        }
+      ]
+    },
+    "letter": {
+      "id": "letter",
+      "name": "Alphabetic initial",
+      "aliases": [],
+      "definition": "Source letter-size convention;no person or place identified from an initial.",
+      "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+      "locator": "ChIII:large/small initials and exceptions",
+      "alternatives": [],
+      "cases": [
+        {
+          "id": "large",
+          "statement": "Kent generally associates larger initials with places.",
+          "requires": {
+            "size": "large",
+            "mark_present": true
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "ChIII:large/small initials and exceptions"
+        },
+        {
+          "id": "small",
+          "statement": "Kent generally associates small initials with people;first,surname or pet-name possibilities remain open.",
+          "requires": {
+            "size": "small",
+            "mark_present": true
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "ChIII:large/small initials and exceptions"
+        }
+      ]
+    },
+    "numeral": {
+      "id": "numeral",
+      "name": "Numeral",
+      "aliases": [],
+      "definition": "Only explicit money-quantity pairing is implemented;no date conversion.",
+      "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+      "locator": "ChIII:numbers beside dots",
+      "alternatives": [],
+      "cases": [
+        {
+          "id": "money_quantity",
+          "statement": "Kent treats a numeral beside dots as an amount in a money-related account;actual amount/currency/outcome is not verified.",
+          "requires": {
+            "numeral_present": true,
+            "adjacent_symbol": "dots"
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "ChIII:numbers beside dots"
+        }
+      ]
+    },
+    "dots": {
+      "id": "dots",
+      "name": "Dots",
+      "aliases": [],
+      "definition": "Only explicit associated-symbol money account;no inference from unlocated dots.",
+      "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+      "locator": "ChIII:dots around a symbol",
+      "alternatives": [],
+      "cases": [
+        {
+          "id": "money_context",
+          "statement": "Kent associates dots surrounding a symbol with money in a source-dependent form.",
+          "requires": {
+            "adjacent_any": true
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "ChIII:dots around a symbol"
+        }
+      ]
+    },
+    "cross": {
+      "id": "cross",
+      "name": "Cross",
+      "aliases": [],
+      "definition": "Obstacles/misfortune account with a specific small-bottom qualification.",
+      "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+      "locator": "Dictionary C:Cross;ChIII:small cross at bottom",
+      "alternatives": [],
+      "cases": [
+        {
+          "id": "general",
+          "statement": "Kent associates cross with hindrance,sorrow or misfortune.",
+          "requires": {},
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "Dictionary C:Cross;ChIII:small cross at bottom"
+        },
+        {
+          "id": "small_bottom",
+          "statement": "Kent gives a trifling delay/vexation account for a lone small cross at the bottom.",
+          "requires": {
+            "size": "small",
+            "multiplicity": "single",
+            "bottom_region": true
+          },
+          "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+          "locator": "ChIII:small single cross at bottom"
+        }
+      ]
+    }
+  },
+  "regions": {
+    "rim": "comparatively_soon",
+    "side": "more_distant",
+    "bottom": "far_distant",
+    "bottom_circle": "far_distant",
+    "bottom_centre": "far_distant",
+    "unknown": null
+  },
+  "zone_locator": "ChII:handle,near-rim,sides,bottom and intuitive timing qualification",
+  "zone_convention": "bottom_circle/bottom_centre are named subregions of source bottom,retaining FigureVIII circle/centre labels. No numeric boundaries,absolute dates or priority over under-handle present/immediate qualification.",
+  "handle_reference": "ChII:handle represents consultant,home or current abode when away;directly underneath denotes present/immediate circumstances.",
+  "general_qualifiers": {
+    "locator": "ChIII:size/position and clarity",
+    "size": "Relative size and position affect importance;no numeric strength score.",
+    "clarity": "Clear separate symbols are more important than indistinct ones;unclear shape is not a personality assessment."
+  },
+  "documentary_saucer": {
+    "locator": "ChII:saucer paragraphs",
+    "note": "Centre consultant;surrounding circle home/near events;more distant circle later;outer rim remote future. Not executable cup zones and not interchangeable."
+  },
+  "source_example": {
+    "id": "figure_viii",
+    "locator": "Example Cups FigureVIII:interpretation/principal symbols",
+    "placements": [
+      {
+        "symbol_id": "coal_scoop",
+        "size": "small",
+        "region": "unknown"
+      },
+      {
+        "symbol_id": "organ",
+        "region": "bottom_circle"
+      },
+      {
+        "symbol_id": "acorn",
+        "region": "bottom_circle",
+        "beside": "organ"
+      },
+      {
+        "symbol_id": "beetle",
+        "region": "bottom_circle"
+      },
+      {
+        "symbol_id": "tea_cosy",
+        "region": "bottom_centre"
+      }
+    ],
+    "accounts": [
+      "Organ/acorn on lower circle:delayed hope/ultimate success account",
+      "Musician condition:professional success account",
+      "Coal scoop/beetle:household worries",
+      "Tea cosy centrally:compensating affection/comfort"
+    ],
+    "limits": "Documentary comparison only when explicitly requested;not a generally applicable universal organ/acorn grammar. Dictionary marital/organ alternatives remain separate."
+  },
+  "documentary_cases": [
+    {
+      "id": "pair",
+      "requires": {
+        "adjacent_pair": [
+          "organ",
+          "acorn"
+        ],
+        "both_region": "bottom_circle"
+      },
+      "statement": "FigureVIII compares the adjacent lower-circle organ/acorn with delayed hope and eventual success."
+    },
+    {
+      "id": "musician",
+      "requires": {
+        "adjacent_pair": [
+          "organ",
+          "acorn"
+        ],
+        "both_region": "bottom_circle",
+        "musician": true
+      },
+      "statement": "The FigureVIII musician-specific professional-success account applies only as a historical comparison to the declared musician context."
+    },
+    {
+      "id": "cosy",
+      "requires": {
+        "symbol": "tea_cosy",
+        "region": "bottom_centre"
+      },
+      "statement": "FigureVIII central tea cosy is described as compensating small comforts and affection,independently of unprovided marital context."
+    }
+  ],
+  "editorial_conventions": [
+    "Manual named positions only;no shape/coordinate/prose inference. Adjacency means user-declared association,not computed distance. A supplied neighbor list is complete for that observation;omitted list is unknown. One-sided positive declarations suffice unless contradicted by another supplied complete list.",
+    "Symbol/multiplicity/size/motion/context selectors are user declarations;no identity,health or profession inferred. No numeric threshold defines several;user chooses the source quantifier.",
+    "Distinct observations are never silently aggregated into multiplicity. Conflicting identity,heading/motion,region or adjacency evidence is retained without rule priority."
+  ],
+  "unsupported": [
+    "Saucer executable profile",
+    "Nelros decorated method",
+    "Turkish tea and coffee methods",
+    "Modern copyrighted dictionary",
+    "Seeded arrangements,geometry,photo recognition,fluid simulation",
+    "Objective future,clinical or personality conclusions"
+  ]
+}

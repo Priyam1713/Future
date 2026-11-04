@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique28 Kent source/rule freeze — 2026-11-04
+- Synchronized4096e01. Rechecked PG6964 ChII/III,13 selected identities/conditional accounts and FigureVIII text plus original320x380 diagram. Froze kent-pg6964-ordinary-cup-v1,qualitative rim/side/bottom and independent under-handle timing,source-context/multiplicity/adjacency/size/direction cases. Digital2013 witness is not authenticated print pagination;original facts only,no book/art corpus.
+- Independent known-answer zone/symbol/condition/FigureVIII fixtures created before engine. Organ versus Barrel Organ,coal scoop versus Coal Scuttle,and tea-cosy dictionary versus FigureVIII narrative stay distinct. Only manually declared positions/context;no invented timing priority,several threshold or exact dates. Saucer documentary only;Nelros,Turkish,modern dictionary,seeds andgeometry deferred. Research cutoff reached;implement manual bounded core.
+
 ## Technique28 Tasseography resource/variation audit — 2026-11-04
 - Began only after26 closure41b0ade and Phase3c5bac9f pushed/synchronized0/0. Preserved exact two ranked sources/four variations. Kent PG6964 ChII/III,selected dictionary conditions,Nelros distinction and FigureVIII text inspected;digital2013 witness not silently equated with unverified print pagination. No engine,catalog,placement generator,renderer,recognizer orCLI added.
 - Ordinary cup/saucer anchors and qualitative timing differ;direction,size,adjacency,multiplicity and contextual exceptions require explicit conventions. Kent claims remain attributed,not predictions/diagnoses. Modern White/yronwode2020 publisher contents identifies chapters/800-plus symbol claim only;full method/rights gated. Turkish-tea-specific access remains unresolved;no coffee substitution.
