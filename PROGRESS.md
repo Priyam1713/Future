@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique24 source/procedure freeze — 2026-11-04
+- Synchronized b59316d. Visually checked Sainte-Barbe2016 French primary excerptp4:7 preparation/composition/qualification facts, named breton-bsb2016-writing-subset-v1. Underlying print edition unknown; no BnF manuscript authentication. Modern English transcription remains separately qualified, arbitrary-letter restart outside French subset. Original factual notes only; no protected prose/images retained.
+- Original source, workflow, revision and Unicode/metric known-answer fixtures frozen before engine. Editorial event/restart/review/revision controls remain distinct from historical facts; no fixed duration or extraordinary-authorship test. Research cutoff reached; implement bounded manual session engine.
+
 ## Technique24 Automatic Writing resource/variation audit — 2026-11-04
 - Began only after Dream closure1282b34 pushed and synchronized0/0. Exact three ranked sources and four variations preserved. BnF1924 manuscript access lead403; named Seaver/Lane1969 procedural transcription inspected, authorized-edition/French collation pending. Atlas editions and Mandell2020 remain distinct; no literary corpus copied.
 - Moses1898 Memorial reprint title/Introductionpp1-5 inspected via IA OCR, image concordance pending. His initially slow watched handwriting and later revision differ from Breton rapid first-draft practice. Spiritualist claims, voluntary authored writing, literary variations and generated text stay separate; no spirit/clinical/predictive certification.

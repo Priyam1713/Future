@@ -1,0 +1,166 @@
+{
+  "provenance": "Original pre-engine source facts from visually inspected French institutional PDFp4; synthetic workflow/metric known answers manually specified, not historical writing evidence.",
+  "source_id": "automatic-breton-bsb2016-french-subset-v1",
+  "edition_locator": "Sainte-Barbe2016 PDFp4; underlying quotation print edition unknown",
+  "rules": [
+    {
+      "id": "materials",
+      "meaning": "Prepare writing materials."
+    },
+    {
+      "id": "receptive",
+      "meaning": "Breton asks the writer to adopt a receptive or passive attitude."
+    },
+    {
+      "id": "talent",
+      "meaning": "Set aside judgments about personal or others' literary talent."
+    },
+    {
+      "id": "rapid",
+      "meaning": "Compose rapidly."
+    },
+    {
+      "id": "unplanned",
+      "meaning": "Do not preselect a subject."
+    },
+    {
+      "id": "no_rereading",
+      "meaning": "Avoid rereading during initial composition."
+    },
+    {
+      "id": "qualification",
+      "meaning": "Breton acknowledges a conscious contribution after the first sentence; the procedure is not proof of unconscious origin."
+    }
+  ],
+  "not_frozen": [
+    "fixed_duration",
+    "French_arbitrary_letter_restart",
+    "spirit_contact",
+    "Moses_protocol",
+    "complete_manifesto"
+  ],
+  "metrics": [
+    {
+      "segments": [
+        "one",
+        "two"
+      ],
+      "draft": "onetwo",
+      "code_points": 6,
+      "words": 1,
+      "lines": 1
+    },
+    {
+      "segments": [
+        " A🐍\r\n",
+        "Café\t猫 "
+      ],
+      "draft": " A🐍\r\nCafé\t猫 ",
+      "code_points": 13,
+      "words": 3,
+      "lines": 2
+    },
+    {
+      "segments": [
+        ""
+      ],
+      "draft": "",
+      "code_points": 0,
+      "words": 0,
+      "lines": 0
+    },
+    {
+      "segments": [
+        "a\rb\nc\r\n"
+      ],
+      "draft": "a\rb\nc\r\n",
+      "code_points": 7,
+      "words": 3,
+      "lines": 4
+    }
+  ],
+  "transitions": [
+    {
+      "events": [
+        "begin",
+        "append",
+        "stop",
+        "complete"
+      ],
+      "state": "completed"
+    },
+    {
+      "events": [
+        "begin",
+        "pause",
+        "resume",
+        "interruption",
+        "restart",
+        "append",
+        "stop",
+        "review",
+        "revise",
+        "revise",
+        "complete"
+      ],
+      "state": "completed"
+    },
+    {
+      "events": [],
+      "state": "prepared"
+    }
+  ],
+  "invalid": [
+    [
+      "append"
+    ],
+    [
+      "begin",
+      "begin"
+    ],
+    [
+      "begin",
+      "pause",
+      "append"
+    ],
+    [
+      "begin",
+      "restart"
+    ],
+    [
+      "begin",
+      "stop",
+      "resume"
+    ],
+    [
+      "begin",
+      "review"
+    ],
+    [
+      "begin",
+      "stop",
+      "complete",
+      "append"
+    ]
+  ],
+  "duration": {
+    "start": "2026-11-04T10:00:00Z",
+    "stop": "2026-11-04T15:30:10+05:30",
+    "seconds": 10
+  },
+  "revisions": {
+    "first_draft": "onetwo",
+    "rows": [
+      {
+        "id": "r1",
+        "parent": "first_draft",
+        "text": "One two."
+      },
+      {
+        "id": "r2",
+        "parent": "r1",
+        "text": "One, two."
+      }
+    ]
+  }
+}

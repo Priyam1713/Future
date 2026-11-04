@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "technique_id": 24,
+  "profile": "breton-bsb2016-writing-subset-v1",
+  "scope": "Institutional French-excerpt subset with editorial session/revision controls",
+  "source": {
+    "id": "automatic-breton-bsb2016-french-subset-v1",
+    "technique_id": 24,
+    "author": "André Breton; Bibliothèque Sainte-Barbe, institutional excerpt",
+    "edition": "André Breton1896-1966, Sainte-Barbe bibliography2016, PDFp4; French excerpt attributed to first Manifeste du surréalisme1924. Underlying print edition of quotation not identified; not authenticated against BnF manuscript.",
+    "url": "https://www.bsb.univ-paris3.fr/images/docs/10196/andrebreton.pdf",
+    "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+    "ingestion": "facts_only",
+    "rights_note": "French original, institutional PDF/images and Seaver/Lane1969 English translation have distinct rights. Original factual paraphrases only; no passage, scans, cover art or literary corpus redistributed. No blanket reproduction permission established.",
+    "checked_on": "2026-11-04",
+    "snapshot_sha256": "afc5f534cec82b910395c20b27f1ee92fc0f2e25fe18a291470ecec898aaf951"
+  },
+  "rules": [
+    {
+      "id": "automatic.breton.materials",
+      "statement": "Prepare writing materials.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    },
+    {
+      "id": "automatic.breton.receptive",
+      "statement": "Breton asks the writer to adopt a receptive or passive attitude.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    },
+    {
+      "id": "automatic.breton.talent",
+      "statement": "Set aside judgments about personal or others' literary talent.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    },
+    {
+      "id": "automatic.breton.rapid",
+      "statement": "Compose rapidly.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    },
+    {
+      "id": "automatic.breton.unplanned",
+      "statement": "Do not preselect a subject.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    },
+    {
+      "id": "automatic.breton.no_rereading",
+      "statement": "Avoid rereading during initial composition.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    },
+    {
+      "id": "automatic.breton.qualification",
+      "statement": "Breton acknowledges a conscious contribution after the first sentence; the procedure is not proof of unconscious origin.",
+      "locator": "PDF/printedp4 French primary excerpt; bibliographyp6 lists Gallimard1985 without identifying it as quotation source",
+      "source_id": "automatic-breton-bsb2016-french-subset-v1",
+      "evidence": "direct_historical_reference"
+    }
+  ],
+  "translation_comparison": "French rapid/unplanned/no-rereading and conscious-contribution instructions corroborate essential Seaver/Lane1969 transcription facts. Not a full textual collation or manuscript authentication. French excerpt omits the concentration-setting clause and later continuation/arbitrary-letter restart passage; these are not frozen French-subset rules.",
+  "historical_restart": "Seaver/Lane online transcription describes an arbitrary-letter restart; only a qualified external reference, not required or verified against French original in this profile.",
+  "editorial": [
+    "All session states/events, optional timestamps/constraints, interruption/restart controls, draft assembly, revisions, metrics and review questions are application conventions.",
+    "Stop, pause or omit participation freely; no fixed historical duration, mental-state compliance score or mandatory restart technique.",
+    "Revision is a separately labeled creative extension; does not retroactively change the first draft or claim fidelity to a historical first-and-last-draft ideal."
+  ],
+  "limits": [
+    "No source-specific spiritualist, ideomotor or stream-of-consciousness procedure implemented.",
+    "Moses and Breton/Soupault exemplar remain separate; no generated writing, extraordinary authorship, diagnosis, hidden memories or predictions."
+  ]
+}
