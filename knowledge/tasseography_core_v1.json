@@ -1,0 +1,356 @@
+{
+  "version": 1,
+  "technique_id": 28,
+  "name": "Tasseography (Tea Leaves)",
+  "phase": 4,
+  "date": "2026-11-04",
+  "status": "Core v1 Ready — Historical/Symbolic Cup Reading Scope",
+  "profile": "kent-pg6964-ordinary-cup-v2",
+  "profile_sha256": "cc078f560bceca9d59296a29e99070e9f82059829eb2ee7501b926c90b658541",
+  "profile_catalog": "knowledge/tasseography_profile_v2.json",
+  "source_pass_commits": [
+    "e707e65",
+    "ee5d103",
+    "12eb6b1"
+  ],
+  "implementation_commit": "6d046a5",
+  "example_commits": [
+    "28e78d2",
+    "83dcfba",
+    "60af010"
+  ],
+  "acceptance_evidence_commit": "e43a0c4",
+  "source": {
+    "id": "tasseography-kent-pg6964-cup-facts-v2",
+    "technique_id": 28,
+    "author": "Cicely Kent",
+    "edition": "PG6964 illustrated HTML posted2013-03-21,released2004;English digital witness,not verified print pagination",
+    "url": "https://www.gutenberg.org/files/6964/6964-h/6964-h.htm",
+    "locator": "ChII Practice and Method;ChIII General Theories;selected Dictionary entries;Example Cups FigureVIII",
+    "ingestion": "facts_only",
+    "rights_note": "PG metadata lists public domain in USA;non-US law,PG license/trademark and individual images remain separate. Original short factual paraphrases only;no whole book,modern dictionary,scan or source illustration redistributed.",
+    "checked_on": "2026-11-04",
+    "snapshot_sha256": "f6b4b81e04e81ba0efcd91228b76c143ac3b7262484d96f3b3d669d379839c56",
+    "snapshot_bytes": 258333,
+    "figure_viii": {
+      "url": "https://www.gutenberg.org/files/6964/6964-h/images/figure08.png",
+      "sha256": "54d22135898cb2eb912414b369c017ba2c3097b0e201ff843cce25c023dc9cde",
+      "inspection": "Viewed original320x380 diagram:handle above cup,outer rim and inner bottom circle visible. Shape names/positions from original principal-symbol list;no automatic or independent image recognition claimed."
+    }
+  },
+  "supported_vessels": [
+    "ordinary_cup"
+  ],
+  "unsupported_vessels": [
+    "saucer",
+    "nelros",
+    "coffee"
+  ],
+  "symbol_count": 14,
+  "symbol_ids": [
+    "aircraft",
+    "apron",
+    "acorn",
+    "anchor",
+    "organ",
+    "beetle",
+    "tea_cosy",
+    "coal_scoop",
+    "bird",
+    "letter",
+    "numeral",
+    "dots",
+    "cross",
+    "postal_mark"
+  ],
+  "source_case_count": 23,
+  "documentary_case_count": 3,
+  "catalog_scope": "14 identities,23 selected source cases. Postal mark is contextual only;coal scoop has only an explicitly requested FigureVIII account. No exhaustive dictionary or unconditional meaning for every identity.",
+  "zones": {
+    "regions": {
+      "rim": "comparatively_soon",
+      "side": "more_distant",
+      "bottom": "far_distant",
+      "bottom_circle": "far_distant",
+      "bottom_centre": "far_distant",
+      "unknown": null
+    },
+    "locator": "ChII:handle,near-rim,sides,bottom and intuitive timing qualification",
+    "handle_reference": "ChII:handle represents consultant,home or current abode when away;directly underneath denotes present/immediate circumstances.",
+    "convention": "bottom_circle/bottom_centre are named subregions of source bottom,retaining FigureVIII circle/centre labels. No numeric boundaries,absolute dates or priority over under-handle present/immediate qualification.",
+    "timing": "Qualitative source associations only;independent under-handle/depth qualifiers coexist without precedence. No calendar date,deadline or numeric confidence.",
+    "saucer_documentary": {
+      "locator": "ChII:saucer paragraphs",
+      "note": "Centre consultant;surrounding circle home/near events;more distant circle later;outer rim remote future. Not executable cup zones and not interchangeable."
+    }
+  },
+  "conditions": {
+    "fields": [
+      "heading",
+      "motion",
+      "proximity",
+      "multiplicity",
+      "size",
+      "region",
+      "context.musician",
+      "context.sailor",
+      "context.marital_status",
+      "mark",
+      "numeral",
+      "adjacency",
+      "surrounding arrangement"
+    ],
+    "known_answers": "tests/fixtures/tasseography_reference_v2.json and tasseography_context_reference.json,created before matcher",
+    "evaluation": "Each case records intrinsic/effective status and individual conditions. Known negative is not applicable;missing facts insufficient;competing declarations retained without repair. No text-based inference.",
+    "statuses": [
+      "applicable",
+      "not_applicable",
+      "insufficient_information",
+      "conflicting_evidence",
+      "unsupported"
+    ],
+    "adjacency": "Provided neighbor list is complete;omission unknown. One-sided positive links suffice unless contradicted by another complete list. No geometric distance inferred.",
+    "dots": "Source surrounding-dots predicate requires declared surrounding arrangement plus an associated observation. Plain adjacency alone is insufficient.",
+    "multiplicity": "User declares source single/several quantifier. No numeric threshold or silent observation aggregation. Lone-cross contradiction is reported.",
+    "identity": "Postal square/oblong mark distinct from alphabetic initial;Organ distinct from Barrel Organ;coal scoop not Coal Scuttle. Uncertain/alternative identities block definitive cases."
+  },
+  "manual_schema": {
+    "required": [
+      "schema_version:integer1",
+      "profile:kent-pg6964-ordinary-cup-v2",
+      "task:symbolic_cup_reading",
+      "mode:manual",
+      "vessel:cup"
+    ],
+    "optional": [
+      "handle_orientation",
+      "context",
+      "observations",
+      "source_example",
+      "notes"
+    ],
+    "observation_fields": [
+      "id",
+      "symbol_id",
+      "alternatives",
+      "region",
+      "region_alternatives",
+      "handle_relation",
+      "proximity",
+      "heading",
+      "motion",
+      "size",
+      "clarity",
+      "multiplicity",
+      "arrangement",
+      "adjacent_to",
+      "mark",
+      "numeral",
+      "uncertainty",
+      "observation",
+      "association"
+    ],
+    "limits": {
+      "observations": 64,
+      "identity_alternatives": 4,
+      "region_alternatives": 3,
+      "adjacency_references": 64,
+      "identifier_length": 80,
+      "raw_text_code_points": 10000,
+      "numeral_max": 1000000000
+    },
+    "mark": "One Latin initial,blank or null;other glyphs may remain raw observations. No name identification.",
+    "ordering": "Input order retained;IDs unique;adjacency references existing different observations.",
+    "raw": "Unicode,whitespace,omissions,nulls and user associations preserved verbatim;all personal context optional."
+  },
+  "documentary_example": {
+    "id": "figure_viii",
+    "reference": {
+      "id": "figure_viii",
+      "locator": "Example Cups FigureVIII:interpretation/principal symbols",
+      "placements": [
+        {
+          "symbol_id": "coal_scoop",
+          "size": "small",
+          "region": "unknown"
+        },
+        {
+          "symbol_id": "organ",
+          "region": "bottom_circle"
+        },
+        {
+          "symbol_id": "acorn",
+          "region": "bottom_circle",
+          "beside": "organ"
+        },
+        {
+          "symbol_id": "beetle",
+          "region": "bottom_circle"
+        },
+        {
+          "symbol_id": "tea_cosy",
+          "region": "bottom_centre"
+        }
+      ],
+      "accounts": [
+        "Organ/acorn on lower circle:delayed hope/ultimate success account",
+        "Musician condition:professional success account",
+        "Coal scoop/beetle:household worries",
+        "Tea cosy centrally:compensating affection/comfort"
+      ],
+      "limits": "Documentary comparison only when explicitly requested;not a generally applicable universal organ/acorn grammar. Dictionary marital/organ alternatives remain separate."
+    },
+    "scope": "Explicitly requested original-source comparison only,not a generic organ/acorn grammar or an automatically recognised cup.",
+    "requirements": "Source caption positions and explicit organ/acorn adjacency/lower-circle declarations;musician-specific account requires declared musician. Coal-scoop account needs observed beetle. Tea-cosy example and marital dictionary cases remain separate."
+  },
+  "interpretation_matrix": {
+    "direct": "Source-located historical statements,zones,conditions and original-example accounts",
+    "user_attributed": "Observer-selected identities,positions,context,uncertainty,relations and raw associations",
+    "editorial": "Structured condition bookkeeping,neighbor semantics,source comparisons and transparent synthesis",
+    "unsupported": "Objective future events,clinical conclusions,personality assessment,actual image recognition or physical leaf simulation"
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Kent ordinary-cup manual named placements",
+      "14-identity bounded conditional reference subset",
+      "Qualitative zones with separate overlapping qualifiers",
+      "Original FigureVIII documentary comparison",
+      "JSON/Markdown,portable hashes and exact replay"
+    ],
+    "experimental": [],
+    "unsupported": [
+      "Superseded source-only v1 profile",
+      "Executable saucer,Nelros,Turkish and coffee methods",
+      "Modern copyrighted dictionary",
+      "Seeded placements,editorial geometry,photo recognition,3D/fluid simulation",
+      "Universal symbol grammar or empirically certified fortune outcomes"
+    ]
+  },
+  "geometry": null,
+  "seed_protocol": null,
+  "generated_placements": false,
+  "replay": {
+    "profile_sha256": "cc078f560bceca9d59296a29e99070e9f82059829eb2ee7501b926c90b658541",
+    "source_sha256": "f6b4b81e04e81ba0efcd91228b76c143ac3b7262484d96f3b3d669d379839c56",
+    "serialization": "Canonical UTF8 sorted-key compact JSON,unescaped Unicode,no terminal LF;raw content line endings preserved independently from JSON formatting line endings",
+    "request": "Full validated manual request;no RNG,clock,LLM or external calls",
+    "engine_sha256": "8d4669077879c88c2f2f82e3583be43264d0926a8ad32f718e72dcc1712dda9a",
+    "engine_hash_convention": "UTF8 source after universal-newline decoding to LF"
+  },
+  "verification": {
+    "tests": 507,
+    "inherited_tests": 475,
+    "new_tests": 32,
+    "cli_cases": 479,
+    "inherited_cli_cases": 445,
+    "new_cli_cases": 34,
+    "inherited_cli_modules": 25,
+    "independent_reference_checks": 68,
+    "reference_counts": {
+      "identities": 14,
+      "source_locators": 14,
+      "independent_cup_zones": 5,
+      "overlapping_qualifications": 1,
+      "pre_engine_conditional_cases": 13,
+      "pre_engine_adjacency_cases": 2,
+      "surrounding_not_plain_adjacency": 3,
+      "original_figure_placements": 5,
+      "documentary_cases": 3,
+      "original_example_missing_conditions": 2,
+      "method_isolation": 3,
+      "edition_rights_no_seed": 3
+    },
+    "registry_rules": 23,
+    "prior103_files_unchanged": true,
+    "prior_journal_files_unchanged": 134,
+    "inherited_verifiers": {
+      "tarot": 30,
+      "oracle": 49,
+      "iching": 8759,
+      "runes": 84,
+      "pendulum": 207,
+      "scrying": 23,
+      "mirror": 22,
+      "dream": 26,
+      "automatic_writing": 27,
+      "akashic": 47
+    },
+    "registry": "passed",
+    "dependency_audit": "passed",
+    "pip_check": "passed",
+    "diff_check": "passed",
+    "evidence": [
+      "tests/fixtures/tasseography_reference_v2.json",
+      "tests/fixtures/tasseography_context_reference.json",
+      "knowledge/tasseography_pass1_findings.json",
+      "data/tasseography-regression.json",
+      "data/tasseography-smoke.json",
+      "data/tasseography-inherited-smoke.json",
+      "data/tasseography-verification.json",
+      "data/tasseography-acceptance-checks.json"
+    ],
+    "assurance": "Historical source fidelity and independent synthetic manual-condition fixtures,not outcome validation or source-image recognition.",
+    "warnings": [
+      "Inherited Skyfield/NumPy dtype deprecation",
+      "Inherited unclosed data/de440s.bsp ResourceWarning"
+    ]
+  },
+  "acceptance": {
+    "named_historical_source": true,
+    "useful_conditional_catalog": true,
+    "manual_placements": true,
+    "qualitative_zones": true,
+    "source_conditions": true,
+    "conservative_missing_conflicts": true,
+    "meaningful_symbolic_report": true,
+    "reproducible_replay": true,
+    "all_tests_and_cli_pass": true
+  },
+  "rights": "PG metadata lists public domain in USA;non-US law,PG license/trademark and individual images remain separate. Original short factual paraphrases only;no whole book,modern dictionary,scan or source illustration redistributed.",
+  "examples": [
+    "data/tasseography-basic.md",
+    "data/tasseography-zones.md",
+    "data/tasseography-handle.md",
+    "data/tasseography-direction.md",
+    "data/tasseography-multiplicity.md",
+    "data/tasseography-adjacency.md",
+    "data/tasseography-conflicting.md",
+    "data/tasseography-missing.md",
+    "data/tasseography-figure-viii.md",
+    "data/tasseography-marks.md",
+    "data/tasseography-empty.md",
+    "data/tasseography-invalid.md",
+    "data/tasseography-saucer-unsupported.md"
+  ],
+  "backlog": {
+    "P1": [
+      "More Kent dictionary entries,verified combinations and contextual exceptions",
+      "Broader independent original worked-cup comparisons",
+      "Separate executable saucer and Nelros procedures",
+      "Inspect original White/yronwode chapters and rights",
+      "Optional fully specified synthetic seeded arrangements with independent vectors"
+    ],
+    "P2": [
+      "Additional regional tea traditions and independently sourced Turkish-tea methods",
+      "Larger source-grounded dictionaries",
+      "Original vector cup map or user photo annotations",
+      "Independently validated recognition only if useful",
+      "Physically inspired residue generation only with demonstrated benefit"
+    ]
+  },
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ],
+    "ranked_sources": 2,
+    "variations": 4
+  },
+  "transition": "Commit and push closure,confirm synchronization,then audit29 Coffee Ground Reading only. Do not transfer Kent tea-leaf rules to coffee traditions."
+}
