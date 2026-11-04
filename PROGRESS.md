@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique29 source/profile freeze — 2026-11-05
+- Re-fetched identical Ministry2011 PDF SHA496a6d9b;visually rechecked imprint andpp103–104,read ChapterXIV. Seven motif identities/eight vessel-specific cases frozen independently of Kent;literal translated bird peak retained without beak correction. Three/day-month-year alternatives remain unresolved.
+- Named coffee-ayvazoglu-seyhun2011-subset-v1;source-located cup halves,rotation intent,cultural customs and strict manual editorial conventions. Pre-engine independent condition/documentary fixtures frozen;174 prior reports/journals captured. Bal book,regional charts and broader symbolism deferred;no protected PDF/text/images bundled.
+
 ## Technique29 Coffee Ground Reading resource/variation audit — 2026-11-05
 - Began only after28 closureb8c0c3e pushed/synchronized0/0. Exact two ranked sources/four variations preserved. Verified supplied Ministry PDF:actual title Turkish Coffee Culture,Ayvazoğlu/Şeyhun2011,ISBN978-975-17-3567-6,160p;imprint andpp103-104 visually inspected. Official similarly named webpage and Bal public method/memoir metadata remain distinct. No Coffee engine/profile/catalog/generator/renderer/CLI added.
 - Useful first candidate:coffee-specific facing-subject half,manual vessel/attribute declarations and bounded conditional motifs in Ministrypp103-104. Three-period travel retains day/month/year alternatives;no Kent timing,handle axis,tea dictionary or saucer rings transferred. Bal full book/chapters,regional/Balkan charts and complete dictionaries remain access/rights gates. No spirit/clinical/factual-outcome claims.

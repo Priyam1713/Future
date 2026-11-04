@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "profile": "coffee-ayvazoglu-seyhun2011-subset-v1",
+  "source_sha256": "496a6d9ba8b5a0498c516d4a46a84a715ff3c49f4910f10eccce5c4c22243aa0",
+  "edition": [
+    "Beşir Ayvazoğlu",
+    "Melis Şeyhun",
+    2011,
+    "978-975-17-3567-6"
+  ],
+  "locator": "ChXIV,printed p104,first paragraph",
+  "symbols": [
+    "adhered_grounds",
+    "line",
+    "bird",
+    "horse",
+    "fish",
+    "camel",
+    "moon_patch"
+  ],
+  "orientation": [
+    [
+      "subject_facing",
+      "subject_abode"
+    ],
+    [
+      "opposite",
+      "others_abode"
+    ],
+    [
+      "unknown",
+      null
+    ],
+    [
+      "ambiguous",
+      null
+    ]
+  ],
+  "rotation": [
+    [
+      "clockwise",
+      "self"
+    ],
+    [
+      "counterclockwise",
+      "another"
+    ]
+  ],
+  "time_units": [
+    "days",
+    "months",
+    "years"
+  ],
+  "cases": [
+    {
+      "symbol": "adhered_grounds",
+      "attributes": {
+        "adhered_after_inversion": true
+      },
+      "expected": [
+        "property"
+      ]
+    },
+    {
+      "symbol": "adhered_grounds",
+      "attributes": {
+        "adhered_after_inversion": false
+      },
+      "expected": []
+    },
+    {
+      "symbol": "line",
+      "attributes": {
+        "shape": "flat",
+        "dots": 3,
+        "dot_arrangement": "at_line_end"
+      },
+      "expected": [
+        "three_period_travel"
+      ]
+    },
+    {
+      "symbol": "line",
+      "attributes": {
+        "shape": "flat",
+        "dots": 3,
+        "dot_arrangement": "scattered"
+      },
+      "expected": []
+    },
+    {
+      "symbol": "line",
+      "attributes": {
+        "shape": "curved",
+        "dots": 3,
+        "dot_arrangement": "at_line_end"
+      },
+      "expected": []
+    },
+    {
+      "symbol": "bird",
+      "attributes": {
+        "stain": true,
+        "stain_position": "peak_of_bird_figure"
+      },
+      "expected": [
+        "peak_stain_news"
+      ]
+    },
+    {
+      "symbol": "bird",
+      "attributes": {
+        "stain": false,
+        "stain_position": "peak_of_bird_figure"
+      },
+      "expected": []
+    },
+    {
+      "symbol": "bird",
+      "attributes": {
+        "stain": true,
+        "stain_position": "beak"
+      },
+      "expected": []
+    },
+    {
+      "symbol": "horse",
+      "attributes": {},
+      "expected": [
+        "fortune"
+      ]
+    },
+    {
+      "symbol": "fish",
+      "attributes": {},
+      "expected": [
+        "fortune"
+      ]
+    },
+    {
+      "symbol": "camel",
+      "attributes": {
+        "humps": 2
+      },
+      "expected": [
+        "two_hump_wealth"
+      ]
+    },
+    {
+      "symbol": "camel",
+      "attributes": {
+        "humps": 1
+      },
+      "expected": []
+    },
+    {
+      "symbol": "moon_patch",
+      "attributes": {
+        "color": "white",
+        "shape": "moon_shaped",
+        "location": "bottom"
+      },
+      "expected": [
+        "cup_bottom_favorable"
+      ]
+    },
+    {
+      "symbol": "moon_patch",
+      "attributes": {
+        "color": "white",
+        "shape": "moon_shaped",
+        "location": "side"
+      },
+      "expected": []
+    },
+    {
+      "symbol": "moon_patch",
+      "vessel": "saucer",
+      "attributes": {
+        "color": "white",
+        "shape": "moon_shaped"
+      },
+      "expected": [
+        "saucer_favorable"
+      ]
+    },
+    {
+      "symbol": "moon_patch",
+      "vessel": "saucer",
+      "attributes": {
+        "color": "dark",
+        "shape": "moon_shaped"
+      },
+      "expected": []
+    }
+  ],
+  "documentary_comparison": {
+    "locator": "ChXIV,printed p104,first paragraph",
+    "assurance": "Original narrative examples,not a worked empirical cup or validated outcomes",
+    "observations": [
+      {
+        "id": "travel",
+        "symbol_id": "line",
+        "attributes": {
+          "shape": "flat",
+          "dots": 3,
+          "dot_arrangement": "at_line_end"
+        }
+      },
+      {
+        "id": "wealth",
+        "symbol_id": "camel",
+        "attributes": {
+          "humps": 2
+        }
+      },
+      {
+        "id": "saucer",
+        "symbol_id": "moon_patch",
+        "vessel": "saucer",
+        "attributes": {
+          "shape": "moon_shaped",
+          "color": "white"
+        }
+      }
+    ],
+    "expected": [
+      "three_period_travel",
+      "two_hump_wealth",
+      "saucer_favorable"
+    ]
+  },
+  "missing": [
+    [
+      "camel",
+      {},
+      "insufficient_evidence"
+    ],
+    [
+      "bird",
+      {
+        "stain": true
+      },
+      "insufficient_evidence"
+    ],
+    [
+      "line",
+      {
+        "dots": 3
+      },
+      "insufficient_evidence"
+    ],
+    [
+      "moon_patch",
+      {
+        "color": "white",
+        "shape": "moon_shaped"
+      },
+      "insufficient_evidence"
+    ]
+  ],
+  "conflicting": [
+    [
+      "camel",
+      {
+        "humps": [
+          1,
+          2
+        ]
+      }
+    ],
+    [
+      "bird",
+      {
+        "stain": [
+          true,
+          false
+        ],
+        "stain_position": "peak_of_bird_figure"
+      }
+    ],
+    [
+      "line",
+      {
+        "shape": "flat",
+        "dots": [
+          2,
+          3
+        ],
+        "dot_arrangement": "at_line_end"
+      }
+    ],
+    [
+      "moon_patch",
+      {
+        "shape": "moon_shaped",
+        "color": [
+          "white",
+          "dark"
+        ],
+        "location": "bottom"
+      }
+    ]
+  ]
+}

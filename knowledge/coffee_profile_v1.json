@@ -1,0 +1,216 @@
+{
+  "version": 1,
+  "technique_id": 29,
+  "profile": "coffee-ayvazoglu-seyhun2011-subset-v1",
+  "source": {
+    "id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+    "technique_id": 29,
+    "rank": 2,
+    "author": "Beşir Ayvazoğlu;Melis Şeyhun,translator;Republic of Turkey Ministry of Culture and Tourism",
+    "edition": "Turkish Coffee Culture: A Cup of Coffee Commits One to Forty Years of Friendship;first edition,Ankara2011;160p;Ministry Publications3315,Handbook15;ISBN978-975-17-3567-6",
+    "url": "https://teda.ktb.gov.tr/Eklenti/6594,turkishcoffeeculturepdf.pdf",
+    "locator": "PDF/titlep1,imprintp2,contentsp3;ChXIV Fortune in a Cup,printedpp101-110,especially103-104;literary account108",
+    "finding": "Original imprint andpp103-104 visually inspected. Describes clockwise self/counterclockwise other-person intent,inversion with saucer/cooling,and cup half facing subject as own abode versus others. Selected motifs include adhered grounds/property,three-dot line/travel,peak stain on bird/news,horse or fish/fortune,two-humped camel/wealth and white moon patch on saucer or cup bottom/favorable change. Three time units remain alternatives. This is a cultural author account,not certified prediction or a full regional grammar.",
+    "ingestion": "facts_only",
+    "rights_note": "Imprint copyright Ministry;modern English translation and individually credited photographs/archives have distinct rights. Public government hosting does not establish public-domain or downstream reproduction permission. Original factual notes only;no PDF,charts,translated paragraphs,poems or images redistributed.",
+    "checked_on": "2026-11-05",
+    "snapshot_sha256": "496a6d9ba8b5a0498c516d4a46a84a715ff3c49f4910f10eccce5c4c22243aa0",
+    "snapshot_bytes": 4155460
+  },
+  "source_edition": {
+    "title": "Turkish Coffee Culture: A Cup of Coffee Commits One to Forty Years of Friendship",
+    "author": "Beşir Ayvazoğlu",
+    "translator": "Melis Şeyhun",
+    "first_edition": 2011,
+    "place": "Ankara",
+    "pages": 160,
+    "isbn": "978-975-17-3567-6",
+    "publications": 3315,
+    "handbook": 15,
+    "locator": "title p1;imprint p2"
+  },
+  "symbols": {
+    "adhered_grounds": [
+      {
+        "id": "property",
+        "statement": "The author reports a property association.",
+        "requires": {
+          "vessel": "cup",
+          "adhered_after_inversion": true
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ],
+    "line": [
+      {
+        "id": "three_period_travel",
+        "statement": "The author reports travel after three periods,with days,months or years left alternative.",
+        "requires": {
+          "vessel": "cup",
+          "shape": "flat",
+          "dots": 3,
+          "dot_arrangement": "at_line_end"
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ],
+    "bird": [
+      {
+        "id": "peak_stain_news",
+        "statement": "The author associates a stain on the peak of a bird-like figure with favorable news.",
+        "requires": {
+          "vessel": "cup",
+          "stain": true,
+          "stain_position": "peak_of_bird_figure"
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ],
+    "horse": [
+      {
+        "id": "fortune",
+        "statement": "The author associates a horse figure with good fortune.",
+        "requires": {
+          "vessel": "cup"
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ],
+    "fish": [
+      {
+        "id": "fortune",
+        "statement": "The author associates a fish figure with good fortune.",
+        "requires": {
+          "vessel": "cup"
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ],
+    "camel": [
+      {
+        "id": "two_hump_wealth",
+        "statement": "The author associates a double-humped camel with wealth.",
+        "requires": {
+          "vessel": "cup",
+          "humps": 2
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ],
+    "moon_patch": [
+      {
+        "id": "cup_bottom_favorable",
+        "statement": "The author associates a white moon-shaped patch at the cup bottom with favorable happenings.",
+        "requires": {
+          "vessel": "cup",
+          "location": "bottom",
+          "color": "white",
+          "shape": "moon_shaped"
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      },
+      {
+        "id": "saucer_favorable",
+        "statement": "The author associates a white moon-shaped patch on the saucer with favorable happenings.",
+        "requires": {
+          "vessel": "saucer",
+          "color": "white",
+          "shape": "moon_shaped"
+        },
+        "source_id": "coffee-ministry-ayvazoglu-seyhun2011-v1",
+        "locator": "ChXIV,printed p104,first paragraph"
+      }
+    ]
+  },
+  "procedures": [
+    {
+      "id": "grounds",
+      "locator": "ChXIV,printed pp101,103-104",
+      "account": "Coffee residue supplies the interpreted figures;the account distinguishes grounds from froth."
+    },
+    {
+      "id": "rotation",
+      "locator": "ChXIV,printed p103,last paragraph",
+      "account": "In this reported practitioner convention,clockwise stirring expresses self-reading intent;counterclockwise expresses intent for another person."
+    },
+    {
+      "id": "cooling",
+      "locator": "ChXIV,printed p103,last paragraph",
+      "account": "The described custom places the reversed saucer on the cup and lets it cool;finger tapping/crossing is optional."
+    },
+    {
+      "id": "upright",
+      "locator": "ChXIV,printed p104,second paragraph",
+      "account": "After favorable prospects and completion,the described belief calls for keeping the cup upright;no physical causality asserted."
+    },
+    {
+      "id": "stuck",
+      "locator": "ChXIV,printed p108,final paragraph",
+      "account": "The author describes stuck residue as an exception calling for no reading,with wish attainment as a belief;the preceding fictional scene is separate."
+    }
+  ],
+  "preparation_source": {
+    "id": "coffee-ministry-public-culture-process-v1",
+    "technique_id": 29,
+    "rank": 2,
+    "author": "Republic of Türkiye Ministry of Culture and Tourism,Living Heritage Directorate",
+    "edition": "Turkish Coffee Culture and Tradition,official English webpage checked2026-11-05;not identical to2011 translated booklet",
+    "url": "https://yakegm.ktb.gov.tr/TR-345121/turkish-coffee-culture-and-tradition.html-0",
+    "locator": "Preparation paragraph;paragraph beginning As a widespread tradition",
+    "finding": "Describes fine grinding,slow brewing with foam,and rotating the finished cup,making a wish,inverting onto saucer and leaving it to cool before images are interpreted as entertainment. No numerical rotation count,cooling duration,handle axis,calendar bands or symbol dictionary supplied. Preparation facts do not validate residue divination.",
+    "ingestion": "facts_only",
+    "rights_note": "Official site copyright2026;factual paraphrases only. No page corpus,photographs or broad reproduction permission claimed.",
+    "checked_on": "2026-11-05"
+  },
+  "preparation_note": "The separate official page describes fine grinding,slow brewing,remaining grounds,rotation,wish,inversion onto a saucer and cooling. No turn count or cooling duration is specified.",
+  "orientation": {
+    "locator": "ChXIV,printed pp103-104,paragraph crossing page break",
+    "subject_facing": "subject_abode",
+    "opposite": "others_abode",
+    "unknown": null,
+    "ambiguous": null
+  },
+  "rotation": {
+    "clockwise": "self",
+    "counterclockwise": "another",
+    "locator": "ChXIV,printed p103,last paragraph"
+  },
+  "timing": {
+    "rule": "line.three_period_travel",
+    "periods": 3,
+    "units": [
+      "days",
+      "months",
+      "years"
+    ],
+    "selected_unit": null,
+    "calendar_date": null,
+    "locator": "ChXIV,printed p104,first paragraph"
+  },
+  "editorial_conventions": [
+    "Manual identities and attributes are user declarations,never observations by this software. Input order and raw text retained.",
+    "Request vessel is an explicit default for its observations;an observation may explicitly override it for mixed cup/saucer readings.",
+    "Cup-only scope for non-moon motifs follows the narrative about figures inside the cup;unmentioned saucer motifs are unsupported,not negative predictions.",
+    "Literal English peak is retained;no automatic correction to beak or equivalence inferred from raw notes.",
+    "A scalar or bounded list declares attribute evidence;contradictory known alternatives yield conflict,unknown or ambiguous evidence remains insufficient.",
+    "Rotation and half orientation are separate;no handle axis,rim/depth timing,angle thresholds,adjacency or Kent defaults.",
+    "Optional preparation declarations neither prove physical preparation nor gate symbolic comparisons. The stuck-cup exception is documentary only,not an automatic suppression of a voluntary hypothetical comparison."
+  ],
+  "unsupported": [
+    "Full Bal book method",
+    "Balkan/regional dictionaries",
+    "Uninspected Garnier/Ragıp Rıfkı tables",
+    "Froth/clinical/enemy claims",
+    "Automatic shapes/photos",
+    "Physical residue simulation",
+    "Factual predictions,hidden biography,clinical/personality conclusions or spirit identification",
+    "Seeds and generated layouts"
+  ]
+}
