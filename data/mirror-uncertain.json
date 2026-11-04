@@ -1,0 +1,369 @@
+{
+  "schema_version": 1,
+  "technique_id": 22,
+  "profile": "moody1992-mirror-subset-journal-v1",
+  "task": "guided_mirror_journal",
+  "mode": "manual",
+  "session": {
+    "coverage": "user_declared_conditions",
+    "values": {
+      "surface": "ordinary_mirror",
+      "view": "self_reflection_excluded",
+      "lighting": "User-declared lamp behind chair",
+      "background": "Dark fabric",
+      "intention": "Reflect on my own notes",
+      "status": "planned"
+    },
+    "effective_surface": "ordinary_mirror",
+    "effective_view": "self_reflection_excluded",
+    "view_relation_to_source": "declared match",
+    "environment_observed_by_engine": false,
+    "source_setup_required": false
+  },
+  "guidance": [
+    {
+      "id": "arrange",
+      "coverage": "source_reference_with_editorial_adaptation",
+      "rule_ids": [
+        "mirror.moody1992.arrangement",
+        "mirror.moody1992.view",
+        "mirror.moody1992.lighting"
+      ],
+      "text": "Review the mirror/chair arrangement andlighting reference. Declare your actual surface,view andconditions separately;this application does not require the historical booth or hardware.",
+      "order": 1,
+      "user_stage_status": "not_recorded",
+      "performed_by_engine": false,
+      "source_components": [
+        {
+          "id": "mirror.moody1992.arrangement",
+          "version": 1,
+          "source_id": "mirror-moody1992-procedure-facts-v1",
+          "locator": "Printedp108(PDF26),The Oracle of the Dead at Choccolocco;room/mirror/chair paragraph",
+          "statement": "The source used an ordinary wall mirror andfacing easy chair.",
+          "coverage": "procedure"
+        },
+        {
+          "id": "mirror.moody1992.view",
+          "version": 1,
+          "source_id": "mirror-moody1992-procedure-facts-v1",
+          "locator": "Printedp108(PDF26),The Oracle of the Dead at Choccolocco;same paragraph,chair inclination/self-reflection sentences",
+          "statement": "The chair arrangement excluded the sitters own reflection;no numerical mirror-tilt angle is specified.",
+          "coverage": "procedure"
+        },
+        {
+          "id": "mirror.moody1992.lighting",
+          "version": 1,
+          "source_id": "mirror-moody1992-procedure-facts-v1",
+          "locator": "Printedp108(PDF26),The Oracle of the Dead at Choccolocco;same paragraph,lamp/curtain sentences",
+          "statement": "A25-watt lamp behind the chair andblack-velvet surroundings formed the reported booth.",
+          "coverage": "historical_setup_reference"
+        }
+      ]
+    },
+    {
+      "id": "context",
+      "coverage": "optional_editorial_context_with_source_reference",
+      "rule_ids": [
+        "mirror.moody1992.preparation",
+        "mirror.moody1992.no_pressure"
+      ],
+      "text": "Optionally record an intention or personal context. There is no pressure to experience imagery andno need to choose oridentify a deceased person.",
+      "order": 2,
+      "user_stage_status": "not_recorded",
+      "performed_by_engine": false,
+      "source_components": [
+        {
+          "id": "mirror.moody1992.preparation",
+          "version": 1,
+          "source_id": "mirror-moody1992-procedure-facts-v1",
+          "locator": "Printedp108(PDF26),The Oracle of the Dead at Choccolocco;last paragraph;continuedp109 first paragraphs",
+          "statement": "Volunteers chose a person andmementos;extended discussion formed part of preparation.",
+          "coverage": "historical_context_not_required"
+        },
+        {
+          "id": "mirror.moody1992.no_pressure",
+          "version": 1,
+          "source_id": "mirror-moody1992-procedure-facts-v1",
+          "locator": "Printedp109(PDF27),The Oracle of the Dead at Choccolocco;first paragraph,qualification beforelunch",
+          "statement": "The source explicitly allowed no experience andgave no guarantee of an apparition.",
+          "coverage": "procedure"
+        }
+      ]
+    },
+    {
+      "id": "gaze",
+      "coverage": "qualified_source_subset",
+      "rule_ids": [
+        "mirror.moody1992.gaze"
+      ],
+      "text": "If you choose,gaze into the mirror while relaxed. This subset excludes waiting for an apparition;blink normally,avoid strain andskip orstop whenever you wish.",
+      "order": 3,
+      "user_stage_status": "not_recorded",
+      "performed_by_engine": false,
+      "source_components": [
+        {
+          "id": "mirror.moody1992.gaze",
+          "version": 1,
+          "source_id": "mirror-moody1992-procedure-facts-v1",
+          "locator": "Printedp109(PDF27),The Oracle of the Dead at Choccolocco;paragraph beginning Around dusk",
+          "statement": "Participants gazed into the mirror andrelaxed;the original encounter expectation is excluded from this application.",
+          "coverage": "qualified_subset"
+        }
+      ]
+    },
+    {
+      "id": "finish",
+      "coverage": "source_completion_with_editorial_stop_policy",
+      "rule_ids": [
+        "mirror.moody1992.completion"
+      ],
+      "text": "Finish when you choose;no historical duration or watch restriction is imposed. You may discontinue without imagery.",
+      "order": 4,
+      "user_stage_status": "not_recorded",
+      "performed_by_engine": false,
+      "source_components": [
+        {
+          "id": "mirror.moody1992.completion",
+          "version": 1,
+          "source_id": "mirror-moody1992-procedure-facts-v1",
+          "locator": "Printedp109(PDF27),The Oracle of the Dead at Choccolocco;same paragraph andfollowing attendant paragraph",
+          "statement": "Participants could leave when they wished;an attendant was nearby.",
+          "coverage": "procedure"
+        }
+      ]
+    },
+    {
+      "id": "journal",
+      "coverage": "editorial_journal_adaptation",
+      "rule_ids": [
+        "mirror.moody1992.review"
+      ],
+      "text": "Record your own experience,or no imagery. Writing is an editorial adaptation of the documented discussion,not a claim that this app provides facilitated processing.",
+      "order": 5,
+      "user_stage_status": "not_recorded",
+      "performed_by_engine": false,
+      "source_components": [
+        {
+          "id": "mirror.moody1992.review",
+          "version": 1,
+          "source_id": "mirror-moody1992-procedure-facts-v1",
+          "locator": "Printedp109(PDF27),The Oracle of the Dead at Choccolocco;paragraph beginning An attendant",
+          "statement": "After emergence,the source described extended discussion of the experience.",
+          "coverage": "procedure"
+        }
+      ]
+    },
+    {
+      "id": "reflect",
+      "coverage": "editorial_reflection",
+      "rule_ids": [],
+      "text": "Keep personal associations separate from raw notes;review them without assigning contact,diagnosis or universal meaning.",
+      "order": 6,
+      "user_stage_status": "not_recorded",
+      "performed_by_engine": false,
+      "source_components": []
+    }
+  ],
+  "guidance_scope": "Source-backed subset guidance;stage completion is user declared,not observed",
+  "adaptation": "A source-bounded relaxed mirror-gazing/journaling subset,not complete Moody psychomanteum induction. Source setup/context remain references;all-day walk/lunch,recliner/bone-conduction induction,required blackout/watch removal andexpectation of an apparition are not implemented. Blinking/avoid-strain/discontinue policy andwritten journal are explicit editorial qualifications.",
+  "historical_setup": {
+    "mirror_height_inches": 48,
+    "mirror_width_inches": 42,
+    "mirror_bottom_inches": 32,
+    "chair_headrest_inches": 34,
+    "chair_distance_feet_approx": 3,
+    "lamp_watts": 25,
+    "mirror_angle_degrees": null,
+    "locator": "Printedp108/PDF26;reference only,not validated hardware requirements"
+  },
+  "direct": {
+    "coverage": "source_reference",
+    "rules": [
+      {
+        "id": "mirror.moody1992.arrangement",
+        "version": 1,
+        "source_id": "mirror-moody1992-procedure-facts-v1",
+        "locator": "Printedp108(PDF26),The Oracle of the Dead at Choccolocco;room/mirror/chair paragraph",
+        "statement": "The source used an ordinary wall mirror andfacing easy chair.",
+        "coverage": "procedure"
+      },
+      {
+        "id": "mirror.moody1992.view",
+        "version": 1,
+        "source_id": "mirror-moody1992-procedure-facts-v1",
+        "locator": "Printedp108(PDF26),The Oracle of the Dead at Choccolocco;same paragraph,chair inclination/self-reflection sentences",
+        "statement": "The chair arrangement excluded the sitters own reflection;no numerical mirror-tilt angle is specified.",
+        "coverage": "procedure"
+      },
+      {
+        "id": "mirror.moody1992.lighting",
+        "version": 1,
+        "source_id": "mirror-moody1992-procedure-facts-v1",
+        "locator": "Printedp108(PDF26),The Oracle of the Dead at Choccolocco;same paragraph,lamp/curtain sentences",
+        "statement": "A25-watt lamp behind the chair andblack-velvet surroundings formed the reported booth.",
+        "coverage": "historical_setup_reference"
+      },
+      {
+        "id": "mirror.moody1992.preparation",
+        "version": 1,
+        "source_id": "mirror-moody1992-procedure-facts-v1",
+        "locator": "Printedp108(PDF26),The Oracle of the Dead at Choccolocco;last paragraph;continuedp109 first paragraphs",
+        "statement": "Volunteers chose a person andmementos;extended discussion formed part of preparation.",
+        "coverage": "historical_context_not_required"
+      },
+      {
+        "id": "mirror.moody1992.no_pressure",
+        "version": 1,
+        "source_id": "mirror-moody1992-procedure-facts-v1",
+        "locator": "Printedp109(PDF27),The Oracle of the Dead at Choccolocco;first paragraph,qualification beforelunch",
+        "statement": "The source explicitly allowed no experience andgave no guarantee of an apparition.",
+        "coverage": "procedure"
+      },
+      {
+        "id": "mirror.moody1992.gaze",
+        "version": 1,
+        "source_id": "mirror-moody1992-procedure-facts-v1",
+        "locator": "Printedp109(PDF27),The Oracle of the Dead at Choccolocco;paragraph beginning Around dusk",
+        "statement": "Participants gazed into the mirror andrelaxed;the original encounter expectation is excluded from this application.",
+        "coverage": "qualified_subset"
+      },
+      {
+        "id": "mirror.moody1992.completion",
+        "version": 1,
+        "source_id": "mirror-moody1992-procedure-facts-v1",
+        "locator": "Printedp109(PDF27),The Oracle of the Dead at Choccolocco;same paragraph andfollowing attendant paragraph",
+        "statement": "Participants could leave when they wished;an attendant was nearby.",
+        "coverage": "procedure"
+      },
+      {
+        "id": "mirror.moody1992.review",
+        "version": 1,
+        "source_id": "mirror-moody1992-procedure-facts-v1",
+        "locator": "Printedp109(PDF27),The Oracle of the Dead at Choccolocco;paragraph beginning An attendant",
+        "statement": "After emergence,the source described extended discussion of the experience.",
+        "coverage": "procedure"
+      },
+      {
+        "id": "mirror.moody1992.qualification",
+        "version": 1,
+        "source_id": "mirror-moody1992-procedure-facts-v1",
+        "locator": "Printedp110(PDF28),The Oracle of the Dead at Choccolocco;paragraph beginning None of those assumptions",
+        "statement": "The author expressly distinguishes the project from a scientific study.",
+        "coverage": "source_qualification"
+      }
+    ],
+    "edition_boundary": "1992 article subset;not full1993 Reunions,Atkinson orDee/Casaubon procedure"
+  },
+  "journal": [
+    {
+      "input_order": 1,
+      "user_record": {
+        "experience_type": "uncertain",
+        "description": "Unclear shape\nI cannot classify it.",
+        "uncertainty": true
+      },
+      "experience_type": "uncertain",
+      "attribution": "user_reported;not engine-observed",
+      "description_state": "text",
+      "uncertainty": {
+        "user_declared": true,
+        "classification_unresolved": true,
+        "conflicts": [],
+        "physical_reality_verified": false
+      },
+      "associations": {
+        "coverage": "user_attributed",
+        "values": [],
+        "universal_meaning": false
+      }
+    }
+  ],
+  "journal_state": "provided",
+  "personal_reflection": null,
+  "summary": {
+    "coverage": "neutral_editorial_summary",
+    "counts": {
+      "observed_reflection": 0,
+      "subjective_imagery": 0,
+      "imagined_imagery": 0,
+      "uncertain": 1,
+      "no_imagery": 0,
+      "unclassified": 0
+    },
+    "text": "You supplied 1 journal entries. Declared categories: uncertain=1. Stage declarations and descriptions remain user reports;no person,presence or hidden meaning is identified."
+  },
+  "editorial_reflection": {
+    "coverage": "modern_editorial",
+    "questions": [
+      "What details do you choose to retain from your own notes?",
+      "Which associations are personal to you?",
+      "How,if at all,do these notes relate to your intention?"
+    ],
+    "symbol_dictionary_used": false
+  },
+  "unsupported": [
+    "Objective deceased-person/spirit contact oridentity",
+    "Clinical/grief-treatment efficacy,diagnosis orprediction",
+    "Universal symbolism orhidden knowledge"
+  ],
+  "sources": [
+    {
+      "id": "mirror-moody1992-procedure-facts-v1",
+      "technique_id": 22,
+      "author": "Raymond A.Moody,Jr.",
+      "edition": "Family Reunions:Visionary Encounters with the Departed in a Modern-Day Psychomanteum;Journal of Near-Death Studies11(2),Winter1992,83-121;UNT39-page scan;DOI10.17514/JNDS-1992-11-2-p83-121",
+      "url": "https://digital.library.unt.edu/ark:/67531/metadc799174/m2/1/high_res_d/vol11-no2-83.pdf",
+      "locator": "The Oracle of the Dead at Choccolocco,printedpp108-110(PDF26-28)",
+      "snapshot_sha256": "416119209f39cd208a046113705dc7994881b0ca468a44e92517570c57cfabb9",
+      "snapshot_bytes": 2145428,
+      "ingestion": "facts_only",
+      "rights_note": "Copyright1992 Human Sciences Press. Institutional access used for inspection;only original factual notes andeditorial subset retained.No article,scan,figure,case corpus orprotected prose redistributed. This article is not the complete1993 Reunions book orDee/Casaubon ritual.",
+      "checked_on": "2026-11-04"
+    }
+  ],
+  "limitations": [
+    "No environment,gaze orperson/spirit detected by the application",
+    "Reported memories,presences andassociations remain user-attributed;no contact oridentity verified",
+    "No clinical/grief-treatment efficacy,diagnosis,prediction orsymbol dictionary",
+    "No blackout,prolonged gaze,altered-state induction orhardware requirement",
+    "Dee/Casaubon,obsidian andother black-mirror traditions are separate unsupported profiles"
+  ],
+  "replay": {
+    "request": {
+      "schema_version": 1,
+      "profile": "moody1992-mirror-subset-journal-v1",
+      "task": "guided_mirror_journal",
+      "mode": "manual",
+      "session": {
+        "surface": "ordinary_mirror",
+        "view": "self_reflection_excluded",
+        "lighting": "User-declared lamp behind chair",
+        "background": "Dark fabric",
+        "intention": "Reflect on my own notes",
+        "status": "planned"
+      },
+      "journal": [
+        {
+          "experience_type": "uncertain",
+          "description": "Unclear shape\nI cannot classify it.",
+          "uncertainty": true
+        }
+      ]
+    },
+    "profile": "moody1992-mirror-subset-journal-v1",
+    "profile_sha256": "ed8f7aa7274daf21ee7ca9d5109d007bfb946cfa0b28c2a77831814e919744d0",
+    "source_id": "mirror-moody1992-procedure-facts-v1",
+    "source_snapshot_sha256": "416119209f39cd208a046113705dc7994881b0ca468a44e92517570c57cfabb9",
+    "workflow": "moody1992-subset-editorial-journal-v1",
+    "ordering": "Input list preserved;sequence annotations never sort",
+    "clock_used": false,
+    "seed_protocol": null,
+    "full_source_protocol_reproduced": false,
+    "contact_inferred": false
+  },
+  "contact_verified": false,
+  "perception_detected": false,
+  "therapeutic_efficacy_claimed": false,
+  "factual_prediction": false,
+  "confidence_score": null
+}
