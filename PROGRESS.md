@@ -466,3 +466,8 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Registered HKO primary solar-term/sexagenary tables and1901–2100 conversion references. Exact calendar/day-rollover/clock, luck-pillar and school conventions remain pending in chinese_resource_audit.json.
 - Proposed efficient first slice: named BaZi calendar/four pillars, independently verified solar terms, separately labeled animal year and source-verified ten-god relations. Zi Wei/Nine Star Ki remain distinct systems; rights and worked-example access checked before rule extraction.
 - Vedic release remains73 passing tests,12 Vedic/23 Western CLI cases. Metadata-only handoff validated against inventory/source registry; no runtime dependency change. Next: verify BaZi procedural passages/conventions before coding. Commit: resolve with `git log --grep="audit Chinese sources and variations"`.
+
+## 2026-11-04 — #17 source freeze
+- Inspected complete Evening World Home Magazine1903-10-19 scan;froze separate36-card historical text profile,all identities/source-located paraphrases and conditional meanings. Ranked sources unchanged;Rana36/40 not merged.
+- Small1/3/5-card lines are editorial adaptations;source near/surrounding conditions and Ring direction preserved with distance/perspective gaps. No art or modern dictionary copied. Source example has mirrored right/left wording;recorded,not fitted.
+- Source pass only;next implement/replay/verify before closure.
