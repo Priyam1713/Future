@@ -220,7 +220,20 @@ def main():
     iching=sub.add_parser('iching')
     iching.add_argument('input',help='Manual/seeded source-bounded I Ching reading JSON')
     iching.add_argument('--format',choices=['json','markdown'],default='json')
+    runes=sub.add_parser('runes')
+    runes.add_argument('input',help='Named Elder24 manual/seeded symbolic rune reading JSON')
+    runes.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='runes':
+        import sys
+        from .runes import load_input,read,markdown
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            result=read(load_input(args.input),registry)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close()
+        return
     if args.command=='iching':
         from .iching import load_input,read,markdown
         registry=load_registry(args.database)

@@ -368,3 +368,40 @@ The SHA256 protocol frames `FutureIChing NUL v1 NUL method NUL uint32be(seed byt
 `all_moving_lines_v1` is an editorial reading policy:show initial judgment,all moving-line texts in bottom-up order,and the relating judgment. No line silently overrides another. With zero changes,the figures coincide;with all six changes in1/2,the additional source paragraph is appended while retaining six ordinary lines. Hexagram64 line3 retains the printed affirmative crossing passage and separately reports the commentary's missing-negative conjecture. Summaries are transparent composition,not historical priority rules or certain predictions.
 
 Examples cover no/one/multiple/all changes,both special cases,seeded coins,yarrow marginal,11→26 manual transformation,and the64.3 variant: `data/iching-*.md`. `knowledge/iching_conventions_v1.json` freezes procedure;`knowledge/iching_core_v1.json` records acceptance and limits. Exhaustive verification checks all4096 six-value states and64×64 masks against independent reference logic,all64 source patterns,eight trigrams,and exact coin/yarrow outcome enumeration. Physical yarrow,other selection traditions and text collation remain P1;Mei Hua and Wen Wang Gua remain separate P2 engines.
+# Rune Casting Core v1
+
+Run `python -m future runes data/runes-input.json --format markdown` (or `--format json`).
+The immutable `elder24-page-facts-snapshot-v1` profile supplies all 24 identities,
+normalized Unicode glyphs with text fallbacks, source locators and original reflection prompts.
+It distinguishes alphabet evidence, comparative reconstructed name associations and modern
+editorial composition. Twenty-one lexical associations are qualified reconstructions;
+Kenaz, Perthro and Algiz retain unresolved literal meanings. Eihwaz's early sound remains
+uncertain. Later Old English poem contexts retain their separate Futhorc tradition.
+
+The source is an inspected, SHA-identified digital teaching extract of R. I. Page's
+*Runes*: Figure 1 / printed p8, name list / p15 and variants / p18. The exact print
+reissue is unverified; the profile identifies the digital snapshot rather than inventing
+print metadata. Reconstructed names are not attested Elder labels or ancient divination
+rules. No Page prose/diagrams, modern English poem translations, commercial guidebook
+corpus, font or artwork is distributed.
+
+Input uses schema_version `1`, exact `profile`, task `symbolic_reading`, mode `seeded`
+or `manual`, spread `one` or `three`, and orientation_policy `upright_only`.
+Seeded mode requires protocol `future-runes-elder24-draw-v1` and a 1..256-byte UTF-8
+`seed`; manual mode requires `runes: [{"rune_id":"rune-01"}]` with the spread's
+exact count, without seed/protocol. Three-rune layouts optionally accept three distinct
+`positions` labels; `question` supplies optional plain-text context. See the checked
+[one-rune](data/runes-one-input.json), [three-rune](data/runes-three-input.json),
+[manual](data/runes-manual-input.json), [uncertain meanings](data/runes-unknown-input.json)
+and [custom positions](data/runes-custom-input.json) examples.
+
+The rune wrapper reuses unchanged `future-cards-sha256-fy-v1`: canonical 24 IDs,
+one unbiased Fisher–Yates shuffle, no cuts/replacement/orientation stream, first 1 or 3
+entries. Reports include full permutation, request, trace, catalog/order hashes and exact
+replay metadata. Six independent PowerShell/.NET full-set vectors verify the draw.
+Digital selection does not reproduce physical stone throwing. Blank runes, other alphabets,
+reversal interpretation, universal combinations and factual predictions are unsupported.
+Three-rune positions are editorial reflection roles. Source fidelity is not predictive validation.
+
+Run `python -m scripts.verify_runes`, `python -m scripts.smoke_runes_core` and
+`python -m unittest tests.test_runes -q` for the bounded acceptance checks.

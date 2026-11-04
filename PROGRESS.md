@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique19 Rune Casting implementation — 2026-11-04
+- Source passa1eff58 pushed. Immutable Elder24 engine supports manual/seeded one/three-rune readings,custom three-position labels,upright-only selection and complete JSON/Markdown replay using unchanged card_random primitives. Historical/reference,comparative and modern editorial layers stay distinct;21 qualified lexical labels and3 unresolved slots are retained.
+-312 tests pass(288 inherited+24 new),24 Rune CLI cases and84 independent-reference checks pass;6 .NET full24-set vectors match. Tarot30/Oracle49/I Ching8759 verifiers,dependency audit,pip check and diff check pass. Existing Skyfield/NumPy and ephemeris-file warnings remain. Full inherited CLI sweep and bounded closure follow before any Technique20 audit.
+
 ## Technique19 source/profile freeze — 2026-11-04
 - Synchronizedc3a5463. Inspected Page Figure1(p8),24-name comparative list(p15) and historical variants(p18) in Gettysburg57-page teaching extract,frozen byURL/SHA;work identified as Runes1987 but exact print reissue unverified,so profile is snapshot-specific. Independent24-order/transliteration/codepoint fixtures recorded before runtime.
 - Named elder24-page-facts-snapshot-v1 preserves reconstructed names,ï/p theno/d reference order,Kylver differences and normalized Unicode glyphs. All24 identities/reference records and editorial prompts;21 qualified lexical labels,3 unresolved slots(6,14,15),uncertain rune13 sound. Later Old English contexts tagged separately;no ancient divination dictionary claimed.
