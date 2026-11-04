@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique26 reference/reflection implementation — 2026-11-04
+- Source4269653 pushed. Added akashic-reference with10 source-located Howe public concepts,explicit purpose/form handling,optional editorial reframing and voluntary ordered stages/notes. Unknown concepts and prediction/clinical/comparison requests retain explicit unsupported coverage;no inferred intent,prayer text or supernatural answers. Prior engines unchanged;only narrow pure journal utilities reused.
+-475 tests pass(445 inherited+30 new);28 new CLI cases and47 independent source/procedure/purpose/workflow checks pass. Full inherited CLI sweep and prior78-file plus Automatic Writing invariance checks running before closure. Public pages are distinct from complete book editions;Steiner/Cayce executable documentary profiles deferred P1.
+
 ## Technique26 Howe public-source freeze — 2026-11-04
 - Synchronized3a63e41. Rechecked author public prayer structure/expectations/book description;froze howe-public-reference-reflection-v1 with10 source-located concepts and explicit2 silent-stanza/3 closing-declaration structural counts. Public-page procedure remains distinct from2026 revised book and uncollated earlier editions. No prayer text,page corpus or invented substitute retained.
 - Independent source/purpose/form/stage/raw-text fixtures created before engine. Concepts describe Howe claims,not verified archives or abilities;source roles,conscious practice,question limits andclinical boundary stay qualified. Source/user/editorial/unsupported layers frozen;Steiner/Cayce executable documentary comparisons deferred P1. Research cutoff reached;implement reference lookup and voluntary question/reflection core.

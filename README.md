@@ -700,3 +700,76 @@ Examples: [complete](data/automatic-writing-complete.md),
 Run `python -m scripts.verify_automatic_writing`,
 `python -m scripts.smoke_automatic_writing_core` and
 `python -m unittest tests.test_automatic_writing -q`.
+
+## Akashic literature reference and reflection
+
+`python -m future akashic-reference data/akashic-input.json --format markdown`
+
+Profile `howe-public-reference-reflection-v1` supplies ten independently checked
+Linda Howe public-page concept references: `records`, `pathway`, `opening`,
+`closing`, `roles`, `conscious`, `question_framing`, `scope_limits`, `describe`
+and `clinical_boundary`. Each includes source identity, exact webpage section,
+practitioner attribution, conditions, limitations and unsupported claims. Unknown
+IDs return explicit unsupported results without a substitute meaning.
+
+The public procedure reference records two silent stanza repetitions and three
+closing declarations. It links to the author's original prayer; no prayer text or
+invented replacement is included. These webpages are distinct from the complete
+2026 revised book and uncollated earlier editions. Author claims are documentary
+evidence of her account, not evidence that a metaphysical archive exists.
+
+Input requires integer `schema_version:1`, `task:"reference_reflection"` and
+`mode:"manual"`. `profile` may select the exact profile or be omitted for that
+default. Optional `concept_ids` selects references. Optional `question` contains
+raw `text`, explicit `purpose` and explicit `form`; text never determines purpose.
+Purposes are `personal_reflection`, `historical_research`, `creative_imagination`,
+`factual_prediction`, `medical_clinical`, `unspecified` or `unknown`. Forms are
+`open`, `yes_no`, `time_based` or `unspecified`. Declared purpose/form selects
+relevant references through a transparent editorial mapping. Prediction and
+clinical purposes return unsupported scope; the answer field remains null.
+
+`reframe` is `none` (default), `open_reflection` or `source_research`. The selected
+editorial alternative never replaces the original question or changes its purpose.
+Optional `background`, `focus`, `intention` and `unknowns` remain user supplied.
+`editorial_questions:false` suppresses optional reflective prompts.
+
+Optional `session` contains a plain `id`, declared `state`, `timestamp` and ordered
+`stages`. States are `prepared`, `in_progress`, `completed` or `discontinued`.
+Stage IDs follow this order without duplicates or sorting: `source_review`,
+`preparation`, `question`, `notes`, `concept_review`, `finish`, `reflection`.
+Each declares `status` (`pending`, `completed`, `skipped`), optional `timestamp`
+and `comment`. Stages may be omitted; omissions remain explicitly unrecorded.
+Prepared sessions cannot contain completed stages. Completed sessions require an
+explicit completed/skipped `finish` and no pending recorded stages. Discontinued
+sessions may be empty. Comparable stage datetimes cannot decrease; naive and
+offset-aware clocks are never implicitly equated.
+
+All application stage tracking is editorial. Preparation/finish link source facts
+without executing or certifying spiritual opening/closing. Participation, prayer,
+legal names, religious commitment and extraordinary experiences are optional;
+no personal identity, birth, medical or third-party information is required.
+
+Up to64 `notes` preserve optional raw `text`, unique `id`, user-selected `kind`
+(`reflection`, `association`, `imagined_scene`, `unanswered`), optional `timestamp`,
+boolean `uncertainty` and up to16 source `concept_ids`. Imagined scenes are always
+user-attributed, never retrieved historical records. Questions and note text allow
+up to20000 Unicode code points; context fields10000; unknown entries2000, up to32.
+Concept/comparison lists allow32 unique plain IDs, max80 ASCII letters/digits/dot/
+underscore/hyphen, beginning with a letter or digit. All raw Unicode, whitespace,
+nulls and omissions survive replay. No normalization or intent/emotion inference.
+
+`comparisons` may record requested documentary profiles, but returns explicit
+unsupported comparison coverage: separate Steiner/Cayce/Theosophical executable
+profiles are deferred. Their traditions are not blended into Howe's procedure.
+JSON and Markdown separate source, user, editorial and unsupported evidence,
+include source/profile/content hashes and exact request replay. Markdown uses
+JSON blocks so raw spaces and line endings remain recoverable. No LLM, generated
+narrative, random component, remote service, new dependency or database is used.
+
+Examples: [concepts](data/akashic-concepts.md), [guided reflection](data/akashic-guided.md),
+[reframing](data/akashic-reframed.md), [user imagination](data/akashic-creative.md),
+[unknown concepts](data/akashic-unknown.md), [prediction scope](data/akashic-prediction.md),
+[empty/discontinued](data/akashic-empty.md), [deferred comparison](data/akashic-comparison.md)
+and [clinical scope](data/akashic-clinical.md).
+Run `python -m scripts.verify_akashic`, `python -m scripts.smoke_akashic_core`
+and `python -m unittest tests.test_akashic -q`.
