@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique22 Mirror Core v1 closure — 2026-11-04
+- Sourceead7bc7/engineae0558e andexamples1133093,d1c421d pushed. **Core v1 Ready — Guided Mirror/Journaling Scope**:moody1992-mirror-subset-journal-v1,9 original-passage references,distinct6-stage qualified guide,declared mirror/view/conditions,skippable stages andfaithful journals. Exact1992 setup facts remain reference only;full induction andencounter expectation omitted explicitly.
+-387 tests pass(363 inherited+24 new);363 CLI cases pass(335 inherited across21 modules+28 Mirror).22 independent-reference checks;all6 inherited symbolic verifiers,registry,dependency,pip anddiff checks pass. Technique21 engine/profile unchanged;all8 saved reports identical. Matrix,rights,source/profile hashes,reuse limits andcomplete replay frozen in mirror_core_v1.json.
+- P1:complete1993 book procedure/rights,additional preparation/debriefing andoriginal mirror procedures,broader fixtures,narrow reuse when justified. P2:separate Dee/artifact/black-mirror profiles,creative visuals,licensed imagery andoptical work. No objective contact,identity,clinical efficacy orprediction. Next:push closure before Technique23 Dream Interpretation audit only.
+
 ## Technique22 Mirror implementation — 2026-11-04
 - Sourceead7bc7 pushed. Distinct Moody1992 subset engine supportsdeclared mirror/view/environment,intention/times,stage skip/completion declarations andfaithful manual journals. Nine Mirror source rules remain isolated fromAtkinson/Dee;no full induction,contact detector orclinical claim. Reuses only Technique21 pure text/timestamp/JSON/hash utilities;Technique21 engine/profile unchanged andall8 saved reports remain identical.
 -387 tests pass(363 inherited+24 new);28 Mirror CLI cases and22 independent-reference checks pass. Tarot30/Oracle49/I Ching8759/Rune84/Pendulum207/Scrying23,registry,dependency,pip anddiff checks pass. Source-byte digest andoriginal inventory verified. Full inherited CLI sweep finishing before bounded closure.

@@ -2,11 +2,11 @@
   "version": 1,
   "technique_id": 22,
   "name": "Mirror Scrying",
-  "status": "Researching",
+  "status": "Core v1 Ready — Guided Mirror/Journaling Scope",
   "date": "2026-11-04",
   "predecessor_closure": "4350dc7",
   "predecessor_push": "Confirmed4350dc7 pushed to origin/main and0/0 synchronization before opening Technique22 inventory/resources.",
-  "policy": "Resource/variation audit only;no Mirror engine,profile procedure,journal CLI,black-mirror frontend,psychomanteum or Dee ritual implemented.",
+  "policy": "Original audit retained;current bounded support is frozen in mirror_core_v1.json.",
   "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
   "inventory_method_row": [
     22,
@@ -65,8 +65,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Keep reflective black surface distinct from dim-room ordinary glass mirror andthe specific obsidian artifact. Technique21 verifies Atkinson dark-backed glass only;it does not certify a generic Mirror ritual. Freeze one source-defined preparation/light/angle/gaze/stop procedure before support. Material choice is user declared,not detected."
+      "status": "unsupported;separate P2 profile",
+      "finding": "Keep reflective black surface distinct from dim-room ordinary glass mirror andthe specific obsidian artifact. Technique21 verifies Atkinson dark-backed glass only;it does not certify a generic Mirror ritual. Freeze one source-defined preparation/light/angle/gaze/stop procedure before support. Material choice is user declared,not detected.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "psychomanteum",
@@ -80,8 +81,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Moody Reunions p81 and1992 original article are leads for modern environment/preparation/debriefing. Full procedure remains uninspected;do not substitute Atkinson steps or ancient oracle claims. Record any reported encounter as subjective/user attributed;no certified contact,grief-treatment efficacy or hidden information."
+      "status": "supported bounded Moody1992 subset;fullinduction unsupported",
+      "finding": "Moody Reunions p81 and1992 original article are leads for modern environment/preparation/debriefing. Full procedure remains uninspected;do not substitute Atkinson steps or ancient oracle claims. Record any reported encounter as subjective/user attributed;no certified contact,grief-treatment efficacy or hidden information.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "Dee-style obsidian",
@@ -95,8 +97,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "Preserve original variation label butseparate historical edited diary,individual instruments andmuseum object. Primary geochemical evidence establishes material source;documentation of acquisition/association andexact séance procedures remain qualified. Inspect dated original accounts with editorial layers before any procedure implementation;no auto angel/letter-table engine."
+      "status": "unsupported;separate P2 profile",
+      "finding": "Preserve original variation label butseparate historical edited diary,individual instruments andmuseum object. Primary geochemical evidence establishes material source;documentation of acquisition/association andexact séance procedures remain qualified. Inspect dated original accounts with editorial layers before any procedure implementation;no auto angel/letter-table engine.",
+      "audit_status": "unsupported;resource audit only"
     },
     {
       "name": "contemplative gazing",
@@ -110,8 +113,9 @@
         "Locate chapters; extract algorithms, symbol tables, exception cases",
         "Knowledge gathering"
       ],
-      "status": "unsupported;resource audit only",
-      "finding": "A bounded original editorial reflective journal may be practical after source/matrix freeze. Ordinary reflection/imagery andpersonal associations stay distinct from Moody encounters andDee accounts. Do not require unusual experiences,prolonged staring or sensory deprivation. No complete universal symbol lexicon verified."
+      "status": "supported editorial reflection around named subset only",
+      "finding": "A bounded original editorial reflective journal may be practical after source/matrix freeze. Ordinary reflection/imagery andpersonal associations stay distinct from Moody encounters andDee accounts. Do not require unusual experiences,prolonged staring or sensory deprivation. No complete universal symbol lexicon verified.",
+      "audit_status": "unsupported;resource audit only"
     }
   ],
   "sources": [
@@ -229,10 +233,29 @@
     "Optional finite creative prompts orlicensed historical imagery",
     "Physical/optical/sensor observation if independently justified"
   ],
-  "limitations": "No executable Technique22 support. Original60 IDs,54 retained,six exclusions25/27/41/42/47/48,two ranked sources andfour variations preserved.",
+  "limitations": "Qualified Moody1992 mirror/journal subset only;no fullinduction,contact orclinical certification. Inventory/rankings unchanged.",
   "accepted_predecessor": {
     "status": "Core v1 Ready — Guided Symbolic/Journaling Scope",
     "tests": 363,
     "cli_cases": 335
+  },
+  "audit_status_at_creation": "Researching",
+  "policy_at_audit": "Resource/variation audit only;no Mirror engine,profile procedure,journal CLI,black-mirror frontend,psychomanteum or Dee ritual implemented.",
+  "limitations_at_audit": "No executable Technique22 support. Original60 IDs,54 retained,six exclusions25/27/41/42/47/48,two ranked sources andfour variations preserved.",
+  "current_release": "knowledge/mirror_core_v1.json",
+  "current_backlog": {
+    "P1": [
+      "Complete Moody1993 book procedure/edition/rights verification",
+      "Additional original preparation/debriefing qualifications",
+      "Other independently verified mirror procedures andbroader fixtures",
+      "Further small-scale journal utility reuse only when justified"
+    ],
+    "P2": [
+      "Separate Dee historical-source profile",
+      "Distinct Dee artifact documentation",
+      "Additional black-mirror traditions",
+      "Optional creative visualization",
+      "Licensed imagery orphysical/optical observation"
+    ]
   }
 }
