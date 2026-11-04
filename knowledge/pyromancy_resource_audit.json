@@ -1,0 +1,350 @@
+{
+  "version": 1,
+  "technique_id": 30,
+  "name": "Pyromancy",
+  "phase": 4,
+  "date": "2026-11-05",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "a2af7a7",
+  "predecessor_push": "Coffee closure a2af7a7 pushed successfully and HEAD...origin/main0/0 confirmed with clean worktree before30 audit.",
+  "policy": "Audit only;no Pyromancy engine,executable profile,rule catalog,observation generator,renderer or CLI added.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    30,
+    "4 · Nature, Objects & Ancient Practices",
+    "Pyromancy",
+    "RETAIN — simulate / implement",
+    "Guided symbolic / human input",
+    "Flame shapes; candle flame; smoke/embers; lamp divination; flame color",
+    "Animated stochastic flame + tagged observations",
+    "Screen renderer or user video; no fire required",
+    "Physical flame effects require real heat; no forecast evidence",
+    "Traditional / not scientifically validated",
+    "The Book of Candle Magic",
+    "Madame Pamita",
+    null,
+    "Greek Magical Papyri in Translation",
+    null,
+    null,
+    "21, 31, 32",
+    30
+  ],
+  "ranked_sources": [
+    [
+      30,
+      "Pyromancy",
+      1,
+      "Madame Pamita",
+      "The Book of Candle Magic",
+      "Contemporary candle/flame observation",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      30,
+      "Pyromancy",
+      2,
+      "Hans Dieter Betz (editor)",
+      "Greek Magical Papyri in Translation",
+      "Ancient lamp-divination procedures",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Flame shapes",
+      "inventory_row": [
+        30,
+        "Pyromancy",
+        "Flame shapes",
+        "The Book of Candle Magic",
+        "Greek Magical Papyri in Translation",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Flame shapes remain manual feature descriptions:height,steadiness,change and uncertainty. No universal silhouette-to-outcome map inspected. Public tall/low2026 source candidates are narrower than full book."
+    },
+    {
+      "name": "candle flame",
+      "inventory_row": [
+        30,
+        "Pyromancy",
+        "candle flame",
+        "The Book of Candle Magic",
+        "Greek Magical Papyri in Translation",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Candle flame has substantive public Pamita-associated conditional leads:physical-confound status,change after correction,persistence,and named traditional accounts. Modern public2026 witness must be named separately from the2020 ranked book."
+    },
+    {
+      "name": "smoke/embers",
+      "inventory_row": [
+        30,
+        "Pyromancy",
+        "smoke/embers",
+        "Greek Magical Papyri in Translation",
+        "The Book of Candle Magic",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Public upper-soot source offers narrow jar-deposit cases. Live smoke and embers have different substrates;no ember dictionary or automatic smoke interpretation verified."
+    },
+    {
+      "name": "lamp divination",
+      "inventory_row": [
+        30,
+        "Pyromancy",
+        "lamp divination",
+        "Greek Magical Papyri in Translation",
+        "The Book of Candle Magic",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "PGMIV.52–87 historical context is independently documented by the original researcher. Invocation/release and ritual context are not modern candle signs;Betz original translation and manuscript cross-check remain P1."
+    },
+    {
+      "name": "flame color",
+      "inventory_row": [
+        30,
+        "Pyromancy",
+        "flame color",
+        "The Book of Candle Magic",
+        "Greek Magical Papyri in Translation",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "No ranked-source flame-color omen table inspected. Physical color context verified separately;wax/pigment,flame and synthetic pixel color must not be conflated."
+    }
+  ],
+  "sources": [
+    {
+      "id": "pyromancy-pamita2020-publisher-metadata-v1",
+      "technique_id": 30,
+      "rank": 1,
+      "author": "Madame Pamita;Judika Illes,foreword;Llewellyn publisher metadata",
+      "edition": "The Book of Candle Magic:Candle Spell Secrets to Change Your Life;October2020;ISBN9780738764733 publisher listing;full imprint/printing not inspected",
+      "url": "https://www.llewellyn.com/product.php?ean=9780738764733",
+      "locator": "Publisher indexed product title,author/foreword,date and ISBN-addressed listing",
+      "finding": "Rank1 modern candle-magic book identified. Publisher live page returned403 and direct download timed out;indexed publisher metadata inspected. No full chapter,print pagination or book-wide dictionary verified. Public author-site2026 guidance below is a separate witness,not a licensed extraction from this edition.",
+      "ingestion": "metadata_only",
+      "rights_note": "Modern authored text/translation,webpage and images retain separate rights. Original concise factual notes only;no book chapter,ritual corpus,invocations,source art or photographs redistributed.",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "id": "pyromancy-betz1992-publisher-metadata-v1",
+      "technique_id": 30,
+      "rank": 2,
+      "author": "Hans Dieter Betz,editor;University of Chicago Press",
+      "edition": "The Greek Magical Papyri in Translation,Including the Demotic Spells,Volume1;Second Edition;copyright1992;406pages,42figures. Publisher HTML lists paperbackISBN9780226044477 releaseJanuary1997;ebookISBN9780226826950 releaseOctober2022",
+      "url": "https://press.uchicago.edu/ucp/books/book/chicago/G/bo3684249.html",
+      "locator": "Title/Second Edition;copyright extent;contents;HTML GBS ISBN and pubDateJson format fields",
+      "finding": "Rank2 identifies a Greco-Roman Egyptian multilingual ritual collection,not a unified contemporary flame-omen dictionary. Copyright/edition year and later format dates kept distinct. Publisher has rights/permissions link;no authorized complete translation chapter inspected or ingested. Third-party full-book search hits do not establish permission.",
+      "ingestion": "metadata_only",
+      "rights_note": "Modern authored text/translation,webpage and images retain separate rights. Original concise factual notes only;no book chapter,ritual corpus,invocations,source art or photographs redistributed.",
+      "checked_on": "2026-11-05",
+      "snapshot_sha256": "b47187e88ce1f47880311b4091eaafd38f424dbb3bdfa1ea8ff8d13b9760f4a4",
+      "snapshot_bytes": 42010
+    },
+    {
+      "id": "pyromancy-pamita-public-tall2026-v1",
+      "technique_id": 30,
+      "rank": 1,
+      "author": "Parlour of Wonders,practice associated with Madame Pamita",
+      "edition": "What Does a Tall Spell Candle Flame Mean?;public practitioner webpage dated2026-07-14;separate from2020 book",
+      "url": "https://parlourofwonders.com/blogs/candle-magic/what-does-a-tall-spell-candle-flame-mean",
+      "locator": "Opening;First,Check for a Practical Explanation;What Is the Magical Meaning;What Should You Do;Read the Whole Candle",
+      "finding": "Distinguishes wick/carbon,dressing,ignited material and drafts from a persistent tall-flame symbolic account of excessive intensity after physical correction. High is not automatically positive. Oversized/smoky/unsafe flame calls for stopping,cooling before tending;no unsafe burn is needed for software. Spirit-presence and relationship claims remain unsupported capabilities.",
+      "ingestion": "facts_only",
+      "rights_note": "Modern authored text/translation,webpage and images retain separate rights. Original concise factual notes only;no book chapter,ritual corpus,invocations,source art or photographs redistributed.",
+      "checked_on": "2026-11-05",
+      "snapshot_sha256": "1ad577f84645e1288b41409d5226e9cc26f66d58bb128d847ad46f64ec5331e4",
+      "snapshot_bytes": 731342
+    },
+    {
+      "id": "pyromancy-pamita-public-low2026-v1",
+      "technique_id": 30,
+      "rank": 1,
+      "author": "Parlour of Wonders,practice associated with Madame Pamita",
+      "edition": "Why Is My Spell Candle Flame So Small?;public practitioner webpage dated2026-07-14;separate from2020 book",
+      "url": "https://parlourofwonders.com/blogs/candle-magic/why-is-my-spell-candle-flame-so-small",
+      "locator": "Opening;First,Check for a Practical Explanation;What Does a Small Candle Flame Mean Spiritually;Read the Whole Candle",
+      "finding": "Distinguishes short/undersized/drowning/clogged wick and construction from the attributed weak-momentum or divided-intention metaphor when a sound candle remains weak. Improvement after correction differs from persistence. No objective assessment of a user’s will,mental state,other-person feelings or spirits follows.",
+      "ingestion": "facts_only",
+      "rights_note": "Modern authored text/translation,webpage and images retain separate rights. Original concise factual notes only;no book chapter,ritual corpus,invocations,source art or photographs redistributed.",
+      "checked_on": "2026-11-05",
+      "snapshot_sha256": "5ca36d2dbf6979b5bca72177cdb9bd12ed09648bf69eea581fcca3f1e9c49e88",
+      "snapshot_bytes": 729944
+    },
+    {
+      "id": "pyromancy-pamita-public-soot2026-v1",
+      "technique_id": 30,
+      "rank": 1,
+      "author": "Parlour of Wonders,practice associated with Madame Pamita",
+      "edition": "What Does Black Soot at the Top of a Candle Jar Mean?;public practitioner webpage dated2026-07-14;separate from2020 book",
+      "url": "https://parlourofwonders.com/blogs/candle-magic/what-does-black-soot-at-the-top-of-a-candle-jar-mean",
+      "locator": "Opening;First,Check for a Practical Explanation;How to Read the Density and Depth;Should You Wipe the Soot Off;Top Soot Versus Bottom Soot",
+      "finding": "After practical causes are addressed,upper soot with clear glass below has an attributed initial-obstacle/overcoming account. Dense whole-jar soot is a different account;density and extent matter but no numeric timeline is established. Hot glass is not wiped;overheating or obscured flame calls for stopping. Soot is a deposit,not identical to live smoke or embers.",
+      "ingestion": "facts_only",
+      "rights_note": "Modern authored text/translation,webpage and images retain separate rights. Original concise factual notes only;no book chapter,ritual corpus,invocations,source art or photographs redistributed.",
+      "checked_on": "2026-11-05",
+      "snapshot_sha256": "6b605f229395fd230e4e01467e1141e00a09902e0f10dfb6d4a860cd7f67bc7c",
+      "snapshot_bytes": 732690
+    },
+    {
+      "id": "pyromancy-love2019-pgmiv-context-v1",
+      "technique_id": 30,
+      "rank": 2,
+      "author": "Edward Love;Coptic Magical Papyri research project,University of Würzburg",
+      "edition": "Old Coptic Magic II:The Bilingual Divination of PGM IV;2019-07-19;researcher commentary and selected translation,not Betz edition",
+      "url": "https://www.coptic-magic.phil.uni-wuerzburg.de/index.php/2019/07/19/the-bilingual-divination-of-pgm-iv/",
+      "locator": "PGMIV.52–87;P.Bibliothèque nationale supplément grec574,manuscript pages4–5;discussion of lamp,theophany,release and uncertainty",
+      "finding": "A bilingual Greek/Egyptian ritual account uses a lamp within an invocation/theophany procedure and includes release. Author explicitly distinguishes it from prolonged lamp-gazing and marks interpretive uncertainties. Hazardous/coercive historical animal/bodily-material practices remain documentary only;no reenactment steps or spirit/outcome verification. Manuscript-page locator is not Betz print pagination.",
+      "ingestion": "facts_only",
+      "rights_note": "Modern authored text/translation,webpage and images retain separate rights. Original concise factual notes only;no book chapter,ritual corpus,invocations,source art or photographs redistributed.",
+      "checked_on": "2026-11-05",
+      "snapshot_sha256": "8d8655ceff1ee0c986aca16368214ef39a509b4d2aa3912f2672bba46015843f",
+      "snapshot_bytes": 162484
+    },
+    {
+      "id": "pyromancy-acs-flame-physical-context-v1",
+      "technique_id": 30,
+      "rank": null,
+      "author": "American Chemical Society",
+      "edition": "The Secret Science of Flames;public educational webpage checked2026-11-05",
+      "url": "https://www.acs.org/education/whatischemistry/adventures-in-chemistry/secret-science-stuff/flames.html",
+      "locator": "Why does a flame have different colors;How do candles with different colored flames work",
+      "finding": "Flame color has chemical/thermal explanations;added chemicals can alter emitted colors. Candle wax color,flame color and on-screen color must be different fields. No spirit/color omen correspondence or inverse temperature/composition diagnosis follows from a user description.",
+      "ingestion": "facts_only",
+      "rights_note": "Modern authored text/translation,webpage and images retain separate rights. Original concise factual notes only;no book chapter,ritual corpus,invocations,source art or photographs redistributed.",
+      "checked_on": "2026-11-05"
+    }
+  ],
+  "edition_access": "Rank1 publisher indexed metadata verified but live publisher403/direct timeout;full printed book not obtained. Author-associated2026 public articles are separate sources. Rank2 publisher second edition/copyright1992 verified;1997 paperback and2022 ebook dates are format releases. No third-party full translation copied or treated as licensed.",
+  "tradition_boundaries": [
+    "Pamita contemporary candle work",
+    "Ancient Greco-Egyptian lamp/invocation procedures",
+    "Smoke versus deposited soot versus embers",
+    "Wax color versus flame emission versus screen pixels",
+    "Physical combustion effects versus source-attributed symbols versus editorial composition"
+  ],
+  "historical_documentary_fixture_leads": [
+    {
+      "source_id": "pyromancy-love2019-pgmiv-context-v1",
+      "locator": "PGMIV.52–87;manuscriptpp4–5",
+      "facts": [
+        "Bilingual instructions and invocations",
+        "Lamp participates in claimed manifestation ritual",
+        "Release is part of the described ritual",
+        "Long lamp-gazing is not assumed by this recipe",
+        "Scholarly interpretation includes explicit uncertainty"
+      ],
+      "limit": "Not independently transcribed Betz edition or manuscript fixture;no predictive or spirit validation. Original witness/translation comparison needed before executable historical profile."
+    }
+  ],
+  "feasibility": {
+    "candidate_label": "Proposed Pamita-associated public2026 candle observation subset;label only,not frozen support",
+    "first_scope": "Local voluntary manual symbolic comparisons for persistent high/low flame and narrow upper-soot/clear-lower-glass accounts,with source-declared physical-confound status and change after correction. Historical lamp context remains documentary;no fire is required for hypothetical/manual software inputs.",
+    "source_backed_conditions": [
+      "User-declared high versus low height,initial versus persistent behavior,change after correction",
+      "Known/possible/unknown physical confounds:wicks,carbon,dressing,debris,drafts or candle construction",
+      "Soot requires explicit glass-jar substrate,upper position,extent/density and whether glass below clears",
+      "Unknown/conflicting evidence does not acquire a symbolic interpretation by default"
+    ],
+    "proposed_observation_schema": {
+      "status": "Design recommendation only;not runtime-validated or frozen",
+      "required": [
+        "named_profile",
+        "manual_mode",
+        "observation_id",
+        "phenomenon"
+      ],
+      "optional": [
+        "origin:reported_real/synthetic/hypothetical/unknown",
+        "substrate:candle_flame/lamp_flame/smoke/soot/ember",
+        "sequence",
+        "height",
+        "stability",
+        "color",
+        "wax_color",
+        "container",
+        "soot_location",
+        "soot_extent",
+        "soot_density",
+        "lower_glass_clear",
+        "wick_condition",
+        "draft",
+        "dressing_or_debris",
+        "physical_causes_status",
+        "correction_reported",
+        "change_after_correction",
+        "unsafe_or_stopped",
+        "uncertainty",
+        "alternative_identifications",
+        "raw_observation",
+        "voluntary_association"
+      ],
+      "validation_gates": "Strict enums/types,bounded unique IDs/sequence,optional unknown/null conditions,exact Unicode/whitespace,no raw-text inference. Contradictory feature declarations explicit. Validate independently before freezing executable schema."
+    },
+    "interpretation": "Direct source-attributed claims,user-selected patterns and confound declarations,editorial matching/comparison,and unsupported factual outcomes remain four evidence layers. No personality/clinical diagnosis,third-party feelings or spirit identification from flame behavior.",
+    "reuse": "Narrow pure JSON/raw text/hash and immutable registry utilities only. Do not transfer Kent/coffee motifs,positions,timing or ancient lamp rite correspondences into candle conditions.",
+    "digital": "No renderer needed. Synthetic/hypothetical descriptions must remain labelled;screen flame is neither combustion nor an empirical fortune. Optional seeded creative layouts deferred;new protocol/vectors required if ever added."
+  },
+  "physical_and_stopping": "Software must work without lighting fire. Public Pamita pages prioritize physical confounds and stopping unsafe/oversized/smoky or overheating burns;cooled inspection differs from live handling. Record stopping as user declaration,not a ritual failure. Do not turn historical animal/blood/coercive material or invocations into operating steps. No camera/video proves absence of hazards or a physical cause.",
+  "rights": "Books,modern translations,author-site texts,scholarly commentary,manuscript photographs and art have separate rights. Facts-only short paraphrases and locators;no copyrighted dictionaries,source corpus,ritual chants,scans or images ingested. Ancient text age does not license a modern translation.",
+  "configuration_matrix": {
+    "supported": "Audit metadata/source findings only",
+    "experimental": "Candidate manual public2026 condition subset,not implemented",
+    "unsupported": [
+      "Unified ancient/modern flame grammar",
+      "Unverified flame-color and ember omen maps",
+      "Unsafe ritual reenactment",
+      "Physical simulation/measurement or photo recognition",
+      "Factual future,clinical/personality/spirit claims",
+      "Certified spell success"
+    ]
+  },
+  "acceptance_gates": [
+    "Freeze one explicitly named public2026 source subset with exact edition/witness distinction and byte hashes",
+    "Independent pre-engine source/condition fixtures:physical-confound unknown/present/cleared,height/persistence,soot position and lower clearing,contradictions and unsupported substrates",
+    "Historical lamp facts remain documentary until original witness and licensed translation locators are independently checked",
+    "Strict manual schema and deterministic complete JSON/Markdown/replay reports;software use requires no real flame",
+    "Separate direct/user/editorial/unsupported evidence,no invented color/timing or predictive confidence",
+    "Preserve540 tests/533 CLI cases,12 symbolic verifiers,all prior reports and inventory;full tests/CLI/registry/dependency/pip/diff checks before any core closure"
+  ],
+  "P1": [
+    "Freeze public2026 conditional subset and independent expected fixtures before engine",
+    "Legitimate Pamita book Chapter/Candle Reading access,original pagination,edition/imprint and rights check;do not infer chapter content from retailer or summaries",
+    "Independently inspect Betz selected lamp passages with exact PGM/PDM line identifiers,original witness and translation rights",
+    "Resolve public pages versus book or competing traditions without silently merging",
+    "Verify additional flame/smoke/soot motifs and source stopping/context exceptions",
+    "Validate strict manual observation schema and physical-confound policy"
+  ],
+  "P2": [
+    "Separate ancient-lamp reference profile after rights/source checks",
+    "Distinct smoke/ember and flame-color profiles only with verified original tables",
+    "Optional original stylized visualization and separately specified seeded creative protocol",
+    "Photo/video annotation before any independently evaluated recognition",
+    "Combustion/optical simulation only with demonstrated utility and independent physical validation"
+  ],
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Historical/Symbolic Coffee Reading Scope",
+    "tests": 540,
+    "cli_cases": 533,
+    "symbolic_verifiers": 12
+  },
+  "limitations": "Audit only;no executable Pyromancy support or scientific/predictive certification.60 methods,54 retained and exclusions25,27,41,42,47,48 preserved. No audit or implementation of31 begun."
+}

@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique30 Pyromancy resource/variation audit — 2026-11-05
+- Began only after coffee closurea2af7a7 pushed/synchronized0/0. Exact two ranked sources/five variation rows preserved. Pamita2020 publisher metadata andseparate public2026 flame/soot condition pages inspected;Betz secondeditioncopyright1992/format dates verified. No Pyromancy engine,profile,catalog,generator,renderer orCLI implemented.
+- First candidate:manual high/low flame persistence andupper jar-soot conditions,with physical confounds andchanges after correction explicit. Lamp rites remain separate documentary context(PGMIV52–87,Würzburg researcher account);no universal flame/color/smoke/ember dictionary orspirit/clinical/future claims. Realfire unnecessary;source stopping/safety distinctions preserved.
+- P1:source witness/rights freeze,independent fixtures,book/Betz chapter access andstrict manual schema;P2:separate traditions/validated creative visuals only ifuseful. Copyrighted books,translations,images andritual corpus notbundled. Validation:data/pyromancy-audit-validation.json.60/54/six exclusions unchanged.
+
 ## Technique29 Coffee Ground Reading Core v1 closure — 2026-11-05
 - Source5af0065,engine77d20bb and report/evidence passes pushed. **Core v1 Ready — Historical/Symbolic Coffee Reading Scope**: coffee-ayvazoglu-seyhun2011-subset-v1;seven identities/eight source cases,subject-facing half,separate stirring intent,narrow white moon saucer support and explicit unknown/conflict conditions. Three timing units retained;no Kent semantics,physical observation or predictive certification.
 -540 tests(507+33),533 CLI cases(479+54),65 new independent source checks andall11 inherited symbolic verifiers pass. Registry,dependency,pip anddiff checks pass;174 saved journals/reports unchanged,including134-file baseline andall Tasseography reports. Source/profile/request hashes,rights,replay,matrix andacceptance frozen in coffee_core_v1.json.
