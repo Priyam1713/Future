@@ -1,0 +1,255 @@
+{
+  "provenance": "Original factual transcriptions and hand-specified conditional/zone known answers from PG6964,created before engine. Source narrative is not outcome validation. Corrected pre-engine v2 fixture separates postal-letter mark from alphabetic initial after reinspection of ChIII.",
+  "source_id": "tasseography-kent-pg6964-cup-facts-v2",
+  "symbols": [
+    "aircraft",
+    "apron",
+    "acorn",
+    "anchor",
+    "organ",
+    "beetle",
+    "tea_cosy",
+    "coal_scoop",
+    "bird",
+    "letter",
+    "numeral",
+    "dots",
+    "cross",
+    "postal_mark"
+  ],
+  "locators": {
+    "aircraft": "Dictionary A:Aircraft",
+    "apron": "Dictionary A:Apron",
+    "acorn": "Dictionary A:Acorn",
+    "anchor": "Dictionary A:Anchor",
+    "organ": "Dictionary O:Organ",
+    "beetle": "Dictionary B:Beetle",
+    "tea_cosy": "Dictionary T:Tea Cosy",
+    "coal_scoop": "Example Cups FigureVIII:interpretation/principal symbols",
+    "bird": "ChIII:letter/bird and handle direction",
+    "letter": "ChIII:large/small initials and exceptions",
+    "numeral": "ChIII:numbers beside dots",
+    "dots": "ChIII:dots around a symbol",
+    "cross": "Dictionary C:Cross;ChIII:small cross at bottom",
+    "postal_mark": "ChIII:initial M with small square/oblong leaf;postal mark near flying bird"
+  },
+  "cup_zones": [
+    [
+      "rim",
+      "comparatively_soon"
+    ],
+    [
+      "side",
+      "more_distant"
+    ],
+    [
+      "bottom",
+      "far_distant"
+    ],
+    [
+      "bottom_circle",
+      "far_distant"
+    ],
+    [
+      "bottom_centre",
+      "far_distant"
+    ]
+  ],
+  "handle_timing": "present_immediate",
+  "saucer_anchor": "centre",
+  "saucer_executable": false,
+  "conditional_cases": [
+    {
+      "symbol": "aircraft",
+      "fields": {
+        "motion": "flying",
+        "heading": "towards_handle"
+      },
+      "context": {},
+      "applicable": [
+        "approaching"
+      ]
+    },
+    {
+      "symbol": "aircraft",
+      "fields": {
+        "motion": "stationary"
+      },
+      "context": {},
+      "applicable": [
+        "stationary"
+      ]
+    },
+    {
+      "symbol": "aircraft",
+      "fields": {},
+      "context": {},
+      "applicable": []
+    },
+    {
+      "symbol": "apron",
+      "fields": {
+        "proximity": "near"
+      },
+      "context": {},
+      "applicable": [
+        "near"
+      ]
+    },
+    {
+      "symbol": "apron",
+      "fields": {
+        "proximity": "far"
+      },
+      "context": {},
+      "applicable": [
+        "far"
+      ]
+    },
+    {
+      "symbol": "acorn",
+      "fields": {
+        "multiplicity": "several"
+      },
+      "context": {},
+      "applicable": [
+        "general",
+        "several"
+      ]
+    },
+    {
+      "symbol": "acorn",
+      "fields": {
+        "multiplicity": "single"
+      },
+      "context": {},
+      "applicable": [
+        "general"
+      ]
+    },
+    {
+      "symbol": "organ",
+      "fields": {},
+      "context": {
+        "musician": true
+      },
+      "applicable": [
+        "musician"
+      ]
+    },
+    {
+      "symbol": "organ",
+      "fields": {},
+      "context": {},
+      "applicable": []
+    },
+    {
+      "symbol": "tea_cosy",
+      "fields": {},
+      "context": {
+        "marital_status": "married"
+      },
+      "applicable": [
+        "married"
+      ]
+    },
+    {
+      "symbol": "tea_cosy",
+      "fields": {},
+      "context": {
+        "marital_status": "unmarried"
+      },
+      "applicable": [
+        "unmarried"
+      ]
+    },
+    {
+      "symbol": "tea_cosy",
+      "fields": {},
+      "context": {},
+      "applicable": []
+    },
+    {
+      "symbol": "cross",
+      "fields": {
+        "size": "small",
+        "multiplicity": "single",
+        "region": "bottom"
+      },
+      "context": {},
+      "applicable": [
+        "general",
+        "small_bottom"
+      ]
+    }
+  ],
+  "adjacency_cases": [
+    {
+      "symbols": [
+        "bird",
+        "postal_mark"
+      ],
+      "fields": {
+        "motion": "flying",
+        "heading": "towards_handle",
+        "multiplicity": "single"
+      },
+      "expected": [
+        "flying",
+        "received"
+      ]
+    },
+    {
+      "symbols": [
+        "numeral",
+        "dots"
+      ],
+      "fields": {
+        "numeral": 90
+      },
+      "expected": [
+        "money_quantity"
+      ]
+    }
+  ],
+  "figure_viii": {
+    "placements": [
+      {
+        "symbol_id": "coal_scoop",
+        "size": "small",
+        "region": "unknown"
+      },
+      {
+        "symbol_id": "organ",
+        "region": "bottom_circle"
+      },
+      {
+        "symbol_id": "acorn",
+        "region": "bottom_circle",
+        "beside": "organ"
+      },
+      {
+        "symbol_id": "beetle",
+        "region": "bottom_circle"
+      },
+      {
+        "symbol_id": "tea_cosy",
+        "region": "bottom_centre"
+      }
+    ],
+    "diagram": {
+      "width": 320,
+      "height": 380,
+      "handle": "top",
+      "inner_circle_visible": true
+    },
+    "musician_condition_required": true
+  },
+  "identity_distinctions": [
+    "Organ is not Barrel Organ",
+    "Coal scoop FigureVIII account is not Coal Scuttle dictionary entry",
+    "Tea cosy dictionary marital alternatives differ from the specific FigureVIII narrative",
+    "Postal square/oblong letter mark near bird is not an alphabetic initial"
+  ],
+  "raw_text": "  A🐍 Café\r\n猫\t "
+}

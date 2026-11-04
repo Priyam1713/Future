@@ -1,5 +1,8 @@
 # Future progress
 
+## Technique28 pre-engine source distinction correction — 2026-11-04
+- Retained source-only v1 freeze immutably;new kent-pg6964-ordinary-cup-v2 separates ChIII postal-letter square/oblong mark from alphabetic initials. Bird adjacency requires postal_mark,not letter(initial).14 identities now include this explicitly distinct contextual mark;no unconditional postal meaning invented. Corrected independent v2 fixture frozen before matcher code. Prior source facts/IDs unchanged.
+
 ## Technique28 Kent source/rule freeze — 2026-11-04
 - Synchronized4096e01. Rechecked PG6964 ChII/III,13 selected identities/conditional accounts and FigureVIII text plus original320x380 diagram. Froze kent-pg6964-ordinary-cup-v1,qualitative rim/side/bottom and independent under-handle timing,source-context/multiplicity/adjacency/size/direction cases. Digital2013 witness is not authenticated print pagination;original facts only,no book/art corpus.
 - Independent known-answer zone/symbol/condition/FigureVIII fixtures created before engine. Organ versus Barrel Organ,coal scoop versus Coal Scuttle,and tea-cosy dictionary versus FigureVIII narrative stay distinct. Only manually declared positions/context;no invented timing priority,several threshold or exact dates. Saucer documentary only;Nelros,Turkish,modern dictionary,seeds andgeometry deferred. Research cutoff reached;implement manual bounded core.
