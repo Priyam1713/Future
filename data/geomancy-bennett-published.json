@@ -1,0 +1,916 @@
+{
+  "schema_version": 1,
+  "technique_id": 33,
+  "profile": "turner1655-common-shield-v1",
+  "figure_convention": "turner1655-p3-top-down-v1",
+  "source": {
+    "id": "geomancy-turner1655-wellcome-facts-v1",
+    "technique_id": 33,
+    "rank": null,
+    "author": "Historical treatise attributed to Henry Cornelius Agrippa; Robert Turner, translator; authorship remains qualified",
+    "edition": "Of Geomancy, in Henry Cornelius Agrippa His Fourth Book of Occult Philosophy; London: J.C. for John Harrison, 1655; original Wellcome Library copy IA b20458563, 240 PDF pages",
+    "url": "https://archive.org/details/b20458563",
+    "download_url": "https://ia800905.us.archive.org/6/items/b20458563/b20458563.pdf",
+    "snapshot_sha256": "6254e6c7d529b05b5ed3dd6b6d89d2eb07d9aa51202306132dff2fb39be695a1",
+    "snapshot_bytes": 27614949,
+    "locator": "Title PDF11; printed pp.3,5\u20138 = PDF29,31\u201334",
+    "ingestion": "facts_only",
+    "rights_note": "Wellcome/Commons identify this original-copy witness with Public Domain Mark. Historical text is distinct from modern transcription, art, metadata and reprint rights. Original concise facts and numeric patterns only; no PDF/OCR/illustrations redistributed.",
+    "checked_on": "2026-11-05"
+  },
+  "source_limits": "Complete sixteen-pattern and fifteen-position construction scope from selected Turner table/common procedure. Bennett worked diagram is an independent numerical comparison, not predictive validation.",
+  "source_collation": {
+    "figure_table": "All sixteen four-row identities visually compared with Princeton hcafig1; no selected pattern difference observed.",
+    "procedure": "Original pp5\u20137 agree with selected transcription construction and parity; rendering does not reverse logical order.",
+    "text_differences": [
+      "Princeton normalizes long-s and typography. The report uses the editorial English label Judge; this release does not claim diplomatic transcription of the historical typography.",
+      "Original p8 really repeats first House for fourth Daughter in alternate projection. No silent correction; alternate projection excluded."
+    ],
+    "historical_diagrams": "Original p6\u20137 diagrams inspected as collation context; dash/star alignment is not adopted as an independently certified complete chart fixture. Bennett published dot-chart is the 15-position reference; further original diagram collation remains P1.",
+    "excluded": "Triplicities, signs, planets, house meanings and alternative astrological procedure not executable."
+  },
+  "task": "shield",
+  "mode": "manual",
+  "origin": "hypothetical",
+  "representation": {
+    "rows": "top_to_bottom",
+    "dot_counts": {
+      "1": "one dot / odd",
+      "2": "two dots / even"
+    },
+    "binary": "No external integer/bit representation. Internal figures and reports use displayed dot counts only."
+  },
+  "input_mothers": [
+    "2121",
+    "1221",
+    "1121",
+    "2122"
+  ],
+  "original_mark_counts": null,
+  "mark_parity_trace": [],
+  "positions": [
+    {
+      "position": 1,
+      "role": "mother",
+      "pattern": "2121",
+      "rows": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "figure": {
+        "id": "acquisitio",
+        "name": "Acquisitio",
+        "pattern": "2121",
+        "aliases": [
+          "Acquisitio"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [],
+      "operation": "manual_mother",
+      "line_trace": [],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 2,
+      "role": "mother",
+      "pattern": "1221",
+      "rows": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "figure": {
+        "id": "carcer",
+        "name": "Carcer",
+        "pattern": "1221",
+        "aliases": [
+          "Carcer"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [],
+      "operation": "manual_mother",
+      "line_trace": [],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 3,
+      "role": "mother",
+      "pattern": "1121",
+      "rows": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "figure": {
+        "id": "puer",
+        "name": "Puer",
+        "pattern": "1121",
+        "aliases": [
+          "Puer"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [],
+      "operation": "manual_mother",
+      "line_trace": [],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 4,
+      "role": "mother",
+      "pattern": "2122",
+      "rows": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "figure": {
+        "id": "rubeus",
+        "name": "Rubeus",
+        "pattern": "2122",
+        "aliases": [
+          "Rubeus"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [],
+      "operation": "manual_mother",
+      "line_trace": [],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 5,
+      "role": "daughter",
+      "pattern": "2112",
+      "rows": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "figure": {
+        "id": "conjunctio",
+        "name": "Conjunctio",
+        "pattern": "2112",
+        "aliases": [
+          "Conjunctio"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "operation": "row_transposition",
+      "line_trace": [
+        {
+          "parent": 1,
+          "parent_row": 1,
+          "dot_count": 2
+        },
+        {
+          "parent": 2,
+          "parent_row": 1,
+          "dot_count": 1
+        },
+        {
+          "parent": 3,
+          "parent_row": 1,
+          "dot_count": 1
+        },
+        {
+          "parent": 4,
+          "parent_row": 1,
+          "dot_count": 2
+        }
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 6,
+      "role": "daughter",
+      "pattern": "1211",
+      "rows": [
+        1,
+        2,
+        1,
+        1
+      ],
+      "figure": {
+        "id": "puella",
+        "name": "Puella",
+        "pattern": "1211",
+        "aliases": [
+          "Puella"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "operation": "row_transposition",
+      "line_trace": [
+        {
+          "parent": 1,
+          "parent_row": 2,
+          "dot_count": 1
+        },
+        {
+          "parent": 2,
+          "parent_row": 2,
+          "dot_count": 2
+        },
+        {
+          "parent": 3,
+          "parent_row": 2,
+          "dot_count": 1
+        },
+        {
+          "parent": 4,
+          "parent_row": 2,
+          "dot_count": 1
+        }
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 7,
+      "role": "daughter",
+      "pattern": "2222",
+      "rows": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "figure": {
+        "id": "populus",
+        "name": "Populus",
+        "pattern": "2222",
+        "aliases": [
+          "People"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "operation": "row_transposition",
+      "line_trace": [
+        {
+          "parent": 1,
+          "parent_row": 3,
+          "dot_count": 2
+        },
+        {
+          "parent": 2,
+          "parent_row": 3,
+          "dot_count": 2
+        },
+        {
+          "parent": 3,
+          "parent_row": 3,
+          "dot_count": 2
+        },
+        {
+          "parent": 4,
+          "parent_row": 3,
+          "dot_count": 2
+        }
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 8,
+      "role": "daughter",
+      "pattern": "1112",
+      "rows": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "figure": {
+        "id": "cauda_draconis",
+        "name": "Cauda Draconis",
+        "pattern": "1112",
+        "aliases": [
+          "Dragons taile",
+          "Cauda"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "operation": "row_transposition",
+      "line_trace": [
+        {
+          "parent": 1,
+          "parent_row": 4,
+          "dot_count": 1
+        },
+        {
+          "parent": 2,
+          "parent_row": 4,
+          "dot_count": 1
+        },
+        {
+          "parent": 3,
+          "parent_row": 4,
+          "dot_count": 1
+        },
+        {
+          "parent": 4,
+          "parent_row": 4,
+          "dot_count": 2
+        }
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 9,
+      "role": "niece",
+      "pattern": "1122",
+      "rows": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "figure": {
+        "id": "fortuna_minor",
+        "name": "Fortuna Minor",
+        "pattern": "1122",
+        "aliases": [
+          "lesser Fortune",
+          "Fortuna minor"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [
+        1,
+        2
+      ],
+      "operation": "parity_addition",
+      "line_trace": [
+        {
+          "row": 1,
+          "inputs": [
+            2,
+            1
+          ],
+          "sum": 3,
+          "result": 1
+        },
+        {
+          "row": 2,
+          "inputs": [
+            1,
+            2
+          ],
+          "sum": 3,
+          "result": 1
+        },
+        {
+          "row": 3,
+          "inputs": [
+            2,
+            2
+          ],
+          "sum": 4,
+          "result": 2
+        },
+        {
+          "row": 4,
+          "inputs": [
+            1,
+            1
+          ],
+          "sum": 2,
+          "result": 2
+        }
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 10,
+      "role": "niece",
+      "pattern": "1221",
+      "rows": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "figure": {
+        "id": "carcer",
+        "name": "Carcer",
+        "pattern": "1221",
+        "aliases": [
+          "Carcer"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [
+        3,
+        4
+      ],
+      "operation": "parity_addition",
+      "line_trace": [
+        {
+          "row": 1,
+          "inputs": [
+            1,
+            2
+          ],
+          "sum": 3,
+          "result": 1
+        },
+        {
+          "row": 2,
+          "inputs": [
+            1,
+            1
+          ],
+          "sum": 2,
+          "result": 2
+        },
+        {
+          "row": 3,
+          "inputs": [
+            2,
+            2
+          ],
+          "sum": 4,
+          "result": 2
+        },
+        {
+          "row": 4,
+          "inputs": [
+            1,
+            2
+          ],
+          "sum": 3,
+          "result": 1
+        }
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 11,
+      "role": "niece",
+      "pattern": "1121",
+      "rows": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "figure": {
+        "id": "puer",
+        "name": "Puer",
+        "pattern": "1121",
+        "aliases": [
+          "Puer"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [
+        5,
+        6
+      ],
+      "operation": "parity_addition",
+      "line_trace": [
+        {
+          "row": 1,
+          "inputs": [
+            2,
+            1
+          ],
+          "sum": 3,
+          "result": 1
+        },
+        {
+          "row": 2,
+          "inputs": [
+            1,
+            2
+          ],
+          "sum": 3,
+          "result": 1
+        },
+        {
+          "row": 3,
+          "inputs": [
+            1,
+            1
+          ],
+          "sum": 2,
+          "result": 2
+        },
+        {
+          "row": 4,
+          "inputs": [
+            2,
+            1
+          ],
+          "sum": 3,
+          "result": 1
+        }
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 12,
+      "role": "niece",
+      "pattern": "1112",
+      "rows": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "figure": {
+        "id": "cauda_draconis",
+        "name": "Cauda Draconis",
+        "pattern": "1112",
+        "aliases": [
+          "Dragons taile",
+          "Cauda"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [
+        7,
+        8
+      ],
+      "operation": "parity_addition",
+      "line_trace": [
+        {
+          "row": 1,
+          "inputs": [
+            2,
+            1
+          ],
+          "sum": 3,
+          "result": 1
+        },
+        {
+          "row": 2,
+          "inputs": [
+            2,
+            1
+          ],
+          "sum": 3,
+          "result": 1
+        },
+        {
+          "row": 3,
+          "inputs": [
+            2,
+            1
+          ],
+          "sum": 3,
+          "result": 1
+        },
+        {
+          "row": 4,
+          "inputs": [
+            2,
+            2
+          ],
+          "sum": 4,
+          "result": 2
+        }
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 13,
+      "role": "witness",
+      "pattern": "2121",
+      "rows": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "figure": {
+        "id": "acquisitio",
+        "name": "Acquisitio",
+        "pattern": "2121",
+        "aliases": [
+          "Acquisitio"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [
+        9,
+        10
+      ],
+      "operation": "parity_addition",
+      "line_trace": [
+        {
+          "row": 1,
+          "inputs": [
+            1,
+            1
+          ],
+          "sum": 2,
+          "result": 2
+        },
+        {
+          "row": 2,
+          "inputs": [
+            1,
+            2
+          ],
+          "sum": 3,
+          "result": 1
+        },
+        {
+          "row": 3,
+          "inputs": [
+            2,
+            2
+          ],
+          "sum": 4,
+          "result": 2
+        },
+        {
+          "row": 4,
+          "inputs": [
+            2,
+            1
+          ],
+          "sum": 3,
+          "result": 1
+        }
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 14,
+      "role": "witness",
+      "pattern": "2211",
+      "rows": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "figure": {
+        "id": "fortuna_major",
+        "name": "Fortuna Major",
+        "pattern": "2211",
+        "aliases": [
+          "greater Fortune",
+          "Fortuna major"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [
+        11,
+        12
+      ],
+      "operation": "parity_addition",
+      "line_trace": [
+        {
+          "row": 1,
+          "inputs": [
+            1,
+            1
+          ],
+          "sum": 2,
+          "result": 2
+        },
+        {
+          "row": 2,
+          "inputs": [
+            1,
+            1
+          ],
+          "sum": 2,
+          "result": 2
+        },
+        {
+          "row": 3,
+          "inputs": [
+            2,
+            1
+          ],
+          "sum": 3,
+          "result": 1
+        },
+        {
+          "row": 4,
+          "inputs": [
+            1,
+            2
+          ],
+          "sum": 3,
+          "result": 1
+        }
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    },
+    {
+      "position": 15,
+      "role": "judge",
+      "pattern": "2112",
+      "rows": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "figure": {
+        "id": "conjunctio",
+        "name": "Conjunctio",
+        "pattern": "2112",
+        "aliases": [
+          "Conjunctio"
+        ],
+        "source_id": "geomancy-turner1655-wellcome-facts-v1",
+        "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+      },
+      "parents": [
+        13,
+        14
+      ],
+      "operation": "parity_addition",
+      "line_trace": [
+        {
+          "row": 1,
+          "inputs": [
+            2,
+            2
+          ],
+          "sum": 4,
+          "result": 2
+        },
+        {
+          "row": 2,
+          "inputs": [
+            1,
+            2
+          ],
+          "sum": 3,
+          "result": 1
+        },
+        {
+          "row": 3,
+          "inputs": [
+            2,
+            1
+          ],
+          "sum": 3,
+          "result": 1
+        },
+        {
+          "row": 4,
+          "inputs": [
+            1,
+            1
+          ],
+          "sum": 2,
+          "result": 2
+        }
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed pp.5\u20137 (PDF31\u201333)"
+    }
+  ],
+  "layout": {
+    "orientation": "right_to_left",
+    "logical_order": "M1..M4,D1..D4,N1..N4,W1,W2,Judge; positions 1..15. Display can reverse each tier only; it cannot change logical data or arithmetic.",
+    "tiers_left_to_right": [
+      [
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      [
+        12,
+        11,
+        10,
+        9
+      ],
+      [
+        14,
+        13
+      ],
+      [
+        15
+      ]
+    ],
+    "convention": "Editorial shield display; logical positions are never renumbered. Top tier groups Mothers and Daughters; each tier reverses only for display."
+  },
+  "judge": {
+    "id": "conjunctio",
+    "name": "Conjunctio",
+    "pattern": "2112",
+    "aliases": [
+      "Conjunctio"
+    ],
+    "source_id": "geomancy-turner1655-wellcome-facts-v1",
+    "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+  },
+  "invariants": {
+    "position_count": 15,
+    "judge_even_total_points": true
+  },
+  "figure_catalog": null,
+  "alias_policy": "Exact canonical ID, Latin label or listed alias; case-insensitive casefold only, no trimming, fuzzy match or universal traditional renaming. Raw request retained. Patterns are four top-to-bottom 1/2 digits.",
+  "optional_sixteenth": "unsupported; deferred Bennett super-judge convention",
+  "provenance_matrix": {
+    "direct": "Edition-located figure names, patterns and construction rules",
+    "compositional": "Explicit transposition, parent lineage and parity arithmetic; no inferred prediction",
+    "user_attributed": "Unmodified request, counts, question, comments and associations",
+    "unsupported": "House/horary judgment, universal tradition or predictive validity"
+  },
+  "user_text": {},
+  "limitations": [
+    "House projection including sequential and alternative astrological assignments",
+    "Horary judgment, yes/no certification, predictions, diagnoses and supernatural accuracy",
+    "Arabic-specific or generic universal geomancy profile",
+    "Planetary/elemental rulerships, triplicities, dignities, aspects, perfection and via puncti",
+    "Greer/Skinner procedure certification without inspected pages",
+    "Super-judge/reconciler and seeded generation"
+  ],
+  "qualification": "Historical mathematical construction only. A correct Judge is not a certified yes/no answer or prediction.",
+  "replay": {
+    "request": {
+      "schema_version": 1,
+      "profile": "turner1655-common-shield-v1",
+      "task": "shield",
+      "mode": "manual",
+      "input_mode": "patterns",
+      "mothers": [
+        "2121",
+        "1221",
+        "1121",
+        "2122"
+      ],
+      "origin": "hypothetical"
+    },
+    "input_sha256": "cfbf7b9c83d50fbb3c48958313fb7feea8ef10ec23ae8595c7027ed5464adeaa",
+    "profile_sha256": "c06b1473e2a276de3933df3556d7ad13fd7b65ad6891b105238471c77e03d0bf",
+    "source_sha256": "6254e6c7d529b05b5ed3dd6b6d89d2eb07d9aa51202306132dff2fb39be695a1",
+    "serialization": "SHA256 of canonical UTF8 sorted-key compact JSON, unescaped Unicode, no terminal LF; raw field whitespace retained",
+    "external_calls": false,
+    "rng": false
+  }
+}
