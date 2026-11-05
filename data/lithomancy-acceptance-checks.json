@@ -1,0 +1,655 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "index": 0,
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 136.828,
+      "stdout": "",
+      "stderr": "....................................................................................................................................................................................................................................................................................C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\skyfield\\searchlib.py:224: DeprecationWarning: Setting the dtype on a NumPy array has been deprecated in NumPy 2.5.\nInstead of changing the dtype on an array x, create a new array with x.view(new_dtype)\n  y.dtype = int8\n...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................\n----------------------------------------------------------------------\nRan 735 tests in 135.896s\n\nOK\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\n"
+    },
+    {
+      "index": 1,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aeromancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 83.078,
+      "stdout": "72 Aeromancy CLI cases passed;21 JSON/21 Markdown saved replays verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 2,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_akashic_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 35.672,
+      "stdout": "28 Akashic CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 3,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_astrocartography_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 12.969,
+      "stdout": "12 Astrocartography CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 4,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aura_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 18.14,
+      "stdout": "14 Aura CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 5,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_automatic_writing_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 27.641,
+      "stdout": "24 Automatic Writing CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 6,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_chinese_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 35.094,
+      "stdout": "15 Chinese CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 7,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_coffee_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 58.984,
+      "stdout": "54 Coffee CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 8,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_dream_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 33.171,
+      "stdout": "30 Dream CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 9,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_face_reading_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 12.953,
+      "stdout": "12 Face Reference CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 10,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_geomancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 58.781,
+      "stdout": "55 Geomancy CLI cases passed; 13 JSON/13 Markdown saved replays verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 11,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_graphology_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 15.204,
+      "stdout": "14 Graphology CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 12,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_horary"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.063,
+      "stdout": "5 Horary CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 13,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_hydromancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 72.531,
+      "stdout": "63 Hydromancy CLI cases passed;18 JSON/18 Markdown saved replays verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 14,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iching_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 34.5,
+      "stdout": "30 I Ching CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 15,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iridology_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 16.453,
+      "stdout": "14 Iridology CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 16,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_lithomancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 75.719,
+      "stdout": "64 Lithomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 17,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mirror_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 33.407,
+      "stdout": "28 Mirror CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 18,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_moleosophy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 15.703,
+      "stdout": "12 Moleosophy CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 19,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mundane_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 15.203,
+      "stdout": "12 Mundane CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 20,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_numerology_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.015,
+      "stdout": "4 Numerology CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 21,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_oracle_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 23.516,
+      "stdout": "20 Oracle CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 22,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_palmistry_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 11.328,
+      "stdout": "10 Palmistry CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 23,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pendulum_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 31.547,
+      "stdout": "28 Pendulum CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 24,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_phrenology_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 12.641,
+      "stdout": "12 Phrenology CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 25,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_podomancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 14.015,
+      "stdout": "12 Podomancy CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 26,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pyromancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 69.156,
+      "stdout": "60 Pyromancy CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 27,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_runes_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 29.844,
+      "stdout": "24 Rune CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 28,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_scrying_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 33.11,
+      "stdout": "28 Scrying CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 29,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tarot_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 27.625,
+      "stdout": "22 Tarot CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 30,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tasseography_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 35.766,
+      "stdout": "34 Tasseography CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 31,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_vedic_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 14.031,
+      "stdout": "12 Vedic CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 32,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_western_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 30.109,
+      "stdout": "23 CLI smoke cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 33,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tarot"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.266,
+      "stdout": "30 Tarot source/layout/independent protocol checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 34,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_oracle"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.875,
+      "stdout": "49 Oracle verification checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 35,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_iching"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.922,
+      "stdout": "8759 I Ching verification checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 36,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_runes"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.156,
+      "stdout": "84 rune reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 37,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pendulum"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.406,
+      "stdout": "207 Pendulum reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 38,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_scrying"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.563,
+      "stdout": "23 Scrying reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 39,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_mirror"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.859,
+      "stdout": "22 Mirror reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 40,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_dream"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.297,
+      "stdout": "26 Dream reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 41,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_automatic_writing"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.391,
+      "stdout": "27 Automatic Writing reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 42,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_akashic"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.89,
+      "stdout": "47 Akashic independent reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 43,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tasseography"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5,
+      "stdout": "68 Tasseography independent reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 44,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_coffee"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.906,
+      "stdout": "65 Coffee independent source/condition checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 45,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pyromancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.079,
+      "stdout": "59 Pyromancy independent source/condition checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 46,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_hydromancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.078,
+      "stdout": "44 Hydromancy independent reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 47,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_aeromancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.312,
+      "stdout": "53 Aeromancy independent reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 48,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_geomancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.938,
+      "stdout": "65536 independent Geomancy charts, 256 addition pairs, 4096 associative triples, 16 identities and 6 fixtures passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 49,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_lithomancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.531,
+      "stdout": "12 Lithomancy source roles; 1225 independent distance pairs;25 grid rankings;4 authored cases;10 transforms;9 viewpoint checks;2 unknown cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 50,
+      "command": [
+        "python",
+        "-m",
+        "scripts.audit_dependencies"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.844,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 51,
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.719,
+      "stdout": "No broken requirements found.\n",
+      "stderr": ""
+    },
+    {
+      "index": 52,
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.75,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'data/pyromancy-active-hazard-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-active-hazard.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-active-hazard.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-color-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-color.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-color.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-empty-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-empty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-empty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-invalid.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-lamp-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-lamp.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-lamp.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-light-haze-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-light-haze.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-light-haze.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-unsafe-stopped.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-unsafe-stopped.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-adjacency.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-adjacency.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-basic.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-basic.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-conflicting.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-conflicting.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-direction.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-direction.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-empty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-empty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-figure-viii.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-figure-viii.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-handle.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-handle.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-marks.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-marks.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-missing.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-missing.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-multiplicity.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-multiplicity.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-saucer-unsupported.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-zones.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-zones.md', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "baseline_commit": "59823b5",
+  "protected_files": 1175,
+  "changed_protected_files": [],
+  "required_prior_files": 1105,
+  "changed_required_files": [],
+  "registry_idempotent": true,
+  "source_registry_records": 371,
+  "legacy_metadata_skipped": [
+    "chinese-inventory-2-v1"
+  ]
+}
