@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 37 Cleromancy / Lots resource audit — 2026-11-06
+- Began only after Bibliomancy closuref77cf30 was accepted, pushed, clean and synchronized0/0. Three original ranked sources/four variations preserved. Audit only: no37 engine, profile, outcome catalog, CLI or RNG; no38 audit.
+- Author/publisher indexed pages distinguish ranked Homer/Bones56-oracle and216-key systems, CHS historical witnesses, and Mascaro December2026 preorder metadata. Supplementary Opsopaus24-letter blind-draw oracle is strongest smaller manual candidate; not relabeled as the ranked book. Its five-bone example contains impossible face5, and numeric column wording needs verification.
+- Independent arithmetic separates3d6 ordered216/unordered56,5-astragaloi ordered1024/unordered56/sums24, and5d6 ordered7776/unordered252/sums26. No physical fairness assumed. Shared216-key fixture checked; no verse mapping invented. Complete source/rights/access gates, fixture and optional seeded protocol plan, matrix and P1/P2: `knowledge/cleromancy_resource_audit.json`. Fresh direct requests timed out; indexed evidence and prior same-day CHS snapshot explicitly separated.
+
 ## Technique 36 Bibliomancy Core v1 closure — 2026-11-06
 - **Core v1 Ready — Edition-Pinned Manual Passage Selection Scope**: `mascaro2022-manual-coarse-webclassic-ruth-v1`; complete WEB Classic2020 Ruth (85 native verses,141 sentence units), explicit editorial logical pages, exact text/citation/context, ordered repeats and offline replay. Supplemental216-key Homeric reference has no verse mappings. Sourcea015373, corpus/indexd41aa77, engine4f59893, evidence546ec28 and reports7bd070d pushed.
 - 836 tests (781+55),991 CLI cases (911+80),19 verifiers pass. Independent85-verse raw parsing,141 selections/ending-verse checks,423 context cases,216 indices and100 literal dice sums pass. All1,337 protected files, including required1,256, remain byte-identical; prior source records retained. Registry/dependency/pip/diff checks pass;16 valid and10 rejected JSON/Markdown pairs saved/replayed.
