@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 35 Osteomancy / Bone Casting audit — 2026-11-06
+- Began only after Lithomancy closure 03ded50 was pushed, clean and synchronized 0/0. Three original source ranks and three variation rows preserved. Audit only; no charge catalog, charm profile, engine, CLI or casting protocol.
+- Keightley 1978/1985 edition leads remain page-access gated. yronwode's 2012 publisher contents identify distinct systems. Columbia AFE provides thirteen labelled charge excerpts citing the 1999 anthology; its educational permission is not a blanket licence. Source charges, uncertainty and missing outcomes remain separate.
+- First feasible scope: documentary Shang reference and typed comparison, with independent concise case facts before code. Ngwaketse/Tswana accounts, Tsonga museum objects and Mtebule's 1939 archive remain distinct. Audit, rights, acceptance and P1/P2: `knowledge/osteomancy_resource_audit.json`. No Technique 36 audit.
+
 ## Technique 34 Lithomancy Core v1 closure — 2026-11-06
 - **Core v1 Ready — Source-Specific Symbolic Stone Reading Scope**: `howard-cottage-web-general-set-v1`; twelve example associations, full/subset manual casts, explicit personal/reader anchors and nearest-first source reading with exact tied distance groups. Unknowns and conflicts retained. Source 721b666, catalog 5eba9e8, engine 720a6c1, independent evidence 686557d, six report batches and acceptance 21f0879 pushed.
 - 735 tests (689+46), 847 CLI cases (783+64), all sixteen inherited symbolic verifiers plus Lithomancy pass. Independent checks cover twelve roles, 1,225 distance pairs, 25 grid rankings, four authored cases, ten transforms, nine viewpoints and two unknown cases. All 1,175 protected baseline files and required 1,105 prior files unchanged. Sixteen valid/five rejected JSON/Markdown report pairs replay; registry, dependency, pip and diff checks pass.

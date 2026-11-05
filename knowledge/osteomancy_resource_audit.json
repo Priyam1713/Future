@@ -1,0 +1,292 @@
+{
+  "version": 1,
+  "technique_id": 35,
+  "name": "Osteomancy / Bone Casting",
+  "phase": 4,
+  "date": "2026-11-06",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "03ded50",
+  "predecessor_push": "Lithomancy closure accepted, pushed and clean HEAD...origin/main0/0 confirmed before any Technique35 source audit.",
+  "policy": "Audit only: no Osteomancy engine, executable charge catalog, charm profile, crack generator, casting protocol or CLI. No Technique36 audit.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    35,
+    "4 · Nature, Objects & Ancient Practices",
+    "Osteomancy / Bone Casting",
+    "RETAIN — simulate / implement",
+    "Vision / symbol rules",
+    "Shang oracle bones; Southern African bone throws; contemporary bone charm sets",
+    "Simulated bone/charm toss + positions; separately model oracle-crack inscriptions",
+    "Virtual bone models + PRNG; curated regional schema",
+    "Human sacrifice/animal harm never required; avoid flattening living traditions",
+    "Traditional / not scientifically validated",
+    "Sources of Shang History: The Oracle-Bone Inscriptions of Bronze Age China",
+    "David N. Keightley",
+    null,
+    "Throwing the Bones",
+    "Oracle Bones",
+    null,
+    "29, 34, 37, 39",
+    35
+  ],
+  "ranked_sources": [
+    [
+      35,
+      "Osteomancy / Bone Casting",
+      1,
+      "David N. Keightley",
+      "Sources of Shang History: The Oracle-Bone Inscriptions of Bronze Age China",
+      "Chinese pyromantic oracle bones",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      35,
+      "Osteomancy / Bone Casting",
+      2,
+      "catherine yronwode",
+      "Throwing the Bones",
+      "Modern bone casting guide",
+      "https://luckymojo.com/throwingthebones.html",
+      "Practitioner web/book",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      35,
+      "Osteomancy / Bone Casting",
+      3,
+      "Columbia University Asia for Educators",
+      "Oracle Bones",
+      "Historical translated examples",
+      "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm",
+      "Public educational source",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Shang oracle bones",
+      "inventory_row": [
+        35,
+        "Osteomancy / Bone Casting",
+        "Shang oracle bones",
+        "Oracle Bones",
+        "Throwing the Bones",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Feasible first documentary scope: thirteen AFE translated-charge references with source-located structures, polarity/conditional comparisons and explicit missing evidence; Keightley original pages remain gated."
+    },
+    {
+      "name": "Southern African bone throws",
+      "inventory_row": [
+        35,
+        "Osteomancy / Bone Casting",
+        "Southern African bone throws",
+        "Oracle Bones",
+        "Throwing the Bones",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Ngwaketse/Tswana and Tsonga institutional/archival leads are distinct. No complete region-wide inventory, initiation method, state algebra or interpretation system verified."
+    },
+    {
+      "name": "contemporary bone charm sets",
+      "inventory_row": [
+        35,
+        "Osteomancy / Bone Casting",
+        "contemporary bone charm sets",
+        "Oracle Bones",
+        "Throwing the Bones",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "yronwode2012 contents identify mixed-object symbolism, surfaces, guide/examples and exceptions; actual chapters required before a source-specific manual charm engine."
+    }
+  ],
+  "source_records": "knowledge/osteomancy_sources.json",
+  "witnesses": {
+    "keightley1985": {
+      "url": "https://ge.nii.ac.jp/ncid/BA55027870",
+      "refresh_error": "SSLError",
+      "evidence": "Institutional web/search witness inspected where available; current byte refresh unavailable or expected content absent. No fresh byte hash claimed.",
+      "checked_on": "2026-11-06"
+    },
+    "keightley1978": {
+      "url": "https://cir.nii.ac.jp/crid/1970304959881546929",
+      "refresh_error": "ValueError",
+      "evidence": "Institutional web/search witness inspected where available; current byte refresh unavailable or expected content absent. No fresh byte hash claimed.",
+      "checked_on": "2026-11-06"
+    },
+    "publisher_access_attempt": {
+      "url": "https://www.ucpress.edu/book/9780520054554/sources-of-shang-history",
+      "refresh_error": "ValueError",
+      "evidence": "Institutional web/search witness inspected where available; current byte refresh unavailable or expected content absent. No fresh byte hash claimed.",
+      "checked_on": "2026-11-06"
+    },
+    "yronwode": {
+      "url": "https://luckymojo.com/throwingthebones.html",
+      "sha256": "210f781f0db1d313684fa6abc65383cb767356e6f45da0362d462dc2dc089229",
+      "bytes": 44744,
+      "checked_on": "2026-11-06"
+    },
+    "afe": {
+      "url": "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm",
+      "sha256": "0cb52127e4880d76757c65047ee9e958e358cd53e8509d5a2ebea19f4315d6dc",
+      "bytes": 13191,
+      "checked_on": "2026-11-06"
+    },
+    "columbia_object": {
+      "url": "https://online-exhibitions.library.columbia.edu/exhibits/show/jewels/themes/east_asian/14",
+      "sha256": "883347185c2faf0880b4da47c631ae2b78973ac684c12db9b776e2d94bdf4a67",
+      "bytes": 13305,
+      "checked_on": "2026-11-06"
+    },
+    "phansi": {
+      "url": "https://artsandculture.google.com/story/jwXR4TVSwdHqeA?hl=en",
+      "sha256": "812773fed42521d01a4e94e49bd6b483c33523bdc1173f2a68f3ba36e3ef5b77",
+      "bytes": 1182499,
+      "checked_on": "2026-11-06"
+    },
+    "princeton_tsonga": {
+      "url": "https://artmuseum.princeton.edu/art/collections/objects/144606",
+      "refresh_error": "HTTPError",
+      "evidence": "Institutional web/search witness inspected where available; current byte refresh unavailable or expected content absent. No fresh byte hash claimed.",
+      "checked_on": "2026-11-06"
+    },
+    "mtebule1939": {
+      "url": "https://repository.up.ac.za/items/a5f3b14b-b3b5-48b9-a61b-7ec48c8fe8d0/full",
+      "sha256": "35aa5e1be52556ae4e62d16ae4171b4b6b41096f51311663069b5b9858da6deb",
+      "bytes": 426153,
+      "checked_on": "2026-11-06"
+    }
+  },
+  "source_access": {
+    "keightley": "Institutional indexed edition metadata only. Publisher/preview access did not supply inspected epigraphic/procedural pages; freeze exact edition before using its rules.",
+    "yronwode": "Publisher catalogue and contents inspected; no complete per-object table or spatial procedure.",
+    "columbia": "Full relevant HTML excerpt/rights text inspected; explicit1999 anthology provenance. Do not attribute those translations automatically to Keightley or link them to an unrelated museum specimen.",
+    "african": "Museum collections and specific1939 Tsonga archive identified; no universal living-tradition system verified."
+  },
+  "shang_investigation": {
+    "context": "Historical documentary pyromancy on bone/shell, distinct from tossing modern objects. No procurement, burning, crack-making or physical experiment required.",
+    "records": "A source-specific reference may record preface/date/diviner, charge, expressed alternatives, prognostication and verification only when actually present. Missing in an excerpt is not proof of absence on the original artifact.",
+    "excerpt_ids": [
+      "8",
+      "9A",
+      "9B",
+      "10",
+      "19A",
+      "19B",
+      "20A",
+      "20B",
+      "22A",
+      "22B",
+      "23",
+      "24A",
+      "24B"
+    ],
+    "comparison_leads": "9A/B,20A/B and22A/B are useful contrasted statements;19A/B are differently conditioned settlement cases on successive source-labelled days, not a same-day simple negation.24A/B concern different propositions despite shared numbering.",
+    "uncertainty": "Keep20A action uncertainty, supplied diviner names/romanization, partial dates and editorial parentheses distinct. Source sexagenary day labels do not establish an absolute Gregorian date.",
+    "limits": "No Chinese glyph transcription/translation, fragment joins, artifact authentication, physical crack classification, numerical probability or actual outcome prediction verified. No recorded outcome invented from the charge.",
+    "provenance": "AFE anthology pp8,11–12 are its cited locators; individual artifact inventory numbers and original corpus cross-references remain a source-freeze refinement. Curatorial artifact date/material is independent evidence, not an excerpt-to-object link."
+  },
+  "contemporary_investigation": {
+    "inventory": "No executable contemporary set frozen. Obtain yronwode actual pp71–89 with source-defined object roles, face/orientation, surface and exceptions.",
+    "geometry": "Lithomancy integer centers, exact distance and raw-user placement/hash helpers may be reused only as separately declared editorial geometry. Howard nearest-anchor semantics do not transfer to bones.",
+    "symbolism": "Per-object and positional meanings must belong to a named authored method. No universal role table, nearest-first rule or combined fortune inferred from chapter headings or commercial photographs.",
+    "casting": "Manual typed placement before any optional synthetic distribution. A toss metaphor does not define face/position probabilities. Do not import Rune or Geomancy sampling/algebra."
+  },
+  "southern_african_investigation": {
+    "separation": "Specific Ngwaketse/Tswana museum account, Tsonga collection and Tsonga1939 archive are individually attributed; none stands for all Southern African practice.",
+    "living_context": "Personal selection, community context, training/initiation and interpretive authority remain source-dependent. Documentary metadata is not a claim to be a practitioner or permission to expose private knowledge.",
+    "state_space": "Phansi64 combinations and yronwode catalogue Hakata16 results describe insufficiently inspected configurations. Preserve both as leads; do not force a common binary model or silently correct either.",
+    "access": "No community contact/message sent. Public source facts can be audited now; any later restricted materials require their actual access terms. No hypothetical approval requirement added to this audit.",
+    "language": "Mtebule original language/transcript and licence are uninspected. No unsupported translation or current universal validity claimed."
+  },
+  "candidate_first_scope": {
+    "choice": "Bounded documentary Shang translated-charge reference and typed inscription-structure comparison using rights-compliant original factual summaries of the thirteen AFE labels.",
+    "justification": "Directly inspectable complete bounded text and contrasting references offer more verified functionality than an uninspected contemporary spatial system. This is a documentary output, not a charm toss simulator.",
+    "source_freeze": "Recheck exact HTML/source edition/rights and author independent concise factual case notes before any executable catalog. Preserve every label, uncertainty and supplied date/diviner separately.",
+    "meaningful_output": "Select known historical case IDs, show available source structure, compare explicitly sourced charge polarity/conditions and absent/unavailable layers, retain user annotations and produce exact offline JSON/Markdown replay.",
+    "alternative": "Contemporary authored manual charm comparison only after actual object/position/example pages support a complete bounded system; maintain separate profile/output from Shang records."
+  },
+  "independent_fixture_opportunities": [
+    "Freeze all thirteen AFE source labels and independent concise expected facts before production code, without copying the complete translation corpus.",
+    "Verify9/20/22 contrasts,19 conditional/day distinction and24 non-complementarity; labels alone are not an algorithm.",
+    "Check source-present versus excerpt-missing date/diviner/action/prognostication/outcome fields; never fill missing values by inference.",
+    "Verify exact source romanization and day-index labels without absolute calendar conversion or claims to translate original graphs.",
+    "Keep original artifact identifiers unknown unless independently linked; do not attach a museum bone image to a translation by topic similarity.",
+    "If a contemporary set becomes feasible, author independent per-object/spatial/face fixtures from that one source; existing Lithomancy geometry alone is not symbolic verification."
+  ],
+  "proposed_contract": {
+    "documentary": "Named immutable witness; selected known case IDs; explicit user/source/editorial fields; source locators and rights; optional raw Unicode annotations; unknown fields explicit. No source-free charge generation or personalized prophecy.",
+    "contemporary": "Separate named object-role profile, manual declared positions/orientations and explicit unknowns only after source freeze. Bound geometry separately from meanings; no physical animal material needed.",
+    "reuse": "Pure strict JSON, raw Unicode, immutable registry, canonical hashes and replay/report helpers. Reuse exact geometry only for independently sourced contemporary conditions, never Shang epigraphy.",
+    "offline": "No LLM, image recognition, external API, random toss, physical crack simulation or new dependency required for documentary core."
+  },
+  "configuration_matrix": {
+    "supported": "Audit metadata and bounded documentary findings only",
+    "experimental": "Proposed source-specific AFE documentary comparison, not implemented",
+    "unsupported": [
+      "Universal bone/charm oracle or Southern African simulator",
+      "Unverified yronwode object meanings/spatial rules",
+      "Automated Chinese graph/fragment/crack interpretation",
+      "Invented outcomes from historical charges",
+      "Physical burning, crack-making or animal-material procurement",
+      "Medical/causal/predictive diagnosis or spiritual accuracy certification",
+      "Unspecified seeded state-space or toss physics"
+    ]
+  },
+  "acceptance_gates": [
+    "One complete bounded source-specific documentary or contemporary profile, chosen explicitly rather than merging traditions.",
+    "Legitimate source/edition/locators/rights frozen with independent expected case or object facts before implementation.",
+    "Documentary option must provide substantive structured references and source-supported comparisons; distinguish charge, expressed condition and unavailable prognostication/verification.",
+    "Contemporary option needs complete source-defined roles, spatial/face conventions and independently checked examples; generic geometry alone insufficient.",
+    "Source uncertainty, original-vs-excerpt missing evidence, cultural provenance and translation/image rights remain explicit.",
+    "Offline strict JSON/Markdown, raw text preservation, portable source/profile/request hashes, deterministic full replay and supported/experimental/unsupported matrix.",
+    "Preserve735 inherited tests,847 CLI cases,17 symbolic verifiers, all prior source/profile/RNG outputs and protected report bytes; full regression/CLI/registry/dependency/pip/diff checks before readiness."
+  ],
+  "P1": [
+    "Freeze complete AFE thirteen-label factual reference subset, uncertainty and contrast fixtures before code; avoid copied translation corpus.",
+    "Inspect legitimate Keightley exact-edition pages and original inscription/corpus references where high-value.",
+    "Inspect yronwode authored mixed-object inventory, orientation/surface, examples and exceptions before any contemporary engine.",
+    "Improve artifact-to-source provenance and distinguish excerpt omissions from original inscription structure.",
+    "Inspect Tsonga-language archival content/item-specific license and obtain reliable translation/context before any community-specific method claim."
+  ],
+  "P2": [
+    "Additional independent Shang reference witnesses, image/rubbing permissions and scholarly variant comparisons.",
+    "Separately verified contemporary charm sets and manual spatial profiles.",
+    "Community-specific documented Southern African profiles only with appropriate source/access/context boundaries.",
+    "Optional original digital diagrams or annotated images; no automatic decipherment certification.",
+    "Separately versioned synthetic states only if useful and independently specified; no physical experiment required."
+  ],
+  "rights": "Ancient objects, original inscriptions, modern translations, educational permissions, collection metadata, photos/rubbings and living-tradition authority are distinct. Facts-only concise original notes; no modern book, full translation corpus or source artwork redistributed.",
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Source-Specific Symbolic Stone Reading Scope",
+    "tests": 735,
+    "cli_cases": 847,
+    "symbolic_verifiers": 17,
+    "protected_prior_files": 1175,
+    "required_prior_files": 1105
+  },
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "limitations": "Audit complete; no executable35 catalog, profile, engine, CLI, seeded protocol or readiness claim. No36 audit."
+}
