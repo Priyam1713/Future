@@ -265,7 +265,26 @@ def main():
     osteo=sub.add_parser('osteomancy')
     osteo.add_argument('input',help='Documentary AFE Shang charge references, source groups and structured comparisons JSON')
     osteo.add_argument('--format',choices=['json','markdown'],default='json')
+    biblio=sub.add_parser('bibliomancy')
+    biblio.add_argument('input',help='Edition-pinned manual sentence paths or historical Homeric indexing-only reference JSON')
+    biblio.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='bibliomancy':
+        import sys
+        from .scrying import load_input
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            try:
+                from .bibliomancy import read,markdown
+                result=read(load_input(args.input),registry)
+            except (ValueError,OSError) as exc:
+                from html import escape
+                print(json.dumps(dict(status='rejected',error=str(exc),bibliomancy_report=None),indent=2) if args.format=='json' else '# Bibliomancy request rejected\n\n'+escape(str(exc))+'\n')
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+        finally:registry.close()
+        return
     if args.command=='osteomancy':
         import sys
         from .osteomancy import load_input,read,markdown,rejection

@@ -774,6 +774,22 @@ and [clinical scope](data/akashic-clinical.md).
 Run `python -m scripts.verify_akashic`, `python -m scripts.smoke_akashic_core`
 and `python -m unittest tests.test_akashic -q`.
 
+## Bibliomancy: edition-pinned manual sentence selection
+
+`python -m future bibliomancy data/bibliomancy-input.json --format markdown`
+
+Profile `mascaro2022-manual-coarse-webclassic-ruth-v1` is a **digital manual coarse-selection adaptation** of J. R. Mascaro's sentence-selection procedure. It contains the complete Book of Ruth from World English Bible Classic 2020: 85 native verses and 141 independently reviewed sentence units. Four original public-domain HTML witnesses are retained byte-for-byte. WEB's faithful-copy trademark condition is separate from the public-domain text; editorial whitespace/indexing does not change source wording or punctuation.
+
+Requests must provide the exact profile, corpus/index IDs, integer versions and canonical hashes shown in `data/bibliomancy-input.json`. A selection is `{"path":[1,1,2,1]}`: one-based shelf, book, **editorial logical page**, sentence. This first profile has one shelf and one book. Page1 contains the source heading and no selectable sentence; pages2–5 correspond to Ruth chapters1–4. They are not printed pages. A sentence can cross verse lines, and multiple sentences can cite the same verse. An optional `sentence_id` asserts the exact identity at a path.
+
+Supply one to32 ordered `selections`; repeats remain separate. `context` is0–2 neighboring sentence units on each side, clipped to the same chapter page, default1. Optional `question`, `reflection`, `notes` and per-selection `reflection` preserve raw Unicode/whitespace separately from exact source text. Invalid/empty paths, booleans, floats, unknown editions, hash mismatches and changed corpus/index/raw witnesses are rejected without rerolling. The runtime verifies pinned source/index/profile identities on every report and requires no network or RNG. User-entered choices carry no generated-draw probability claim.
+
+`mode:"homeric_index_reference"` instead takes three ordered `faces` in1..6, using the same profile but without corpus selectors. It reports an editorial one-based ordinal and historical witness context. All216 indices are verified; **zero tuple-to-verse mappings are supplied**, so the passage remains unavailable. This supplemental numerical reference is distinct from a complete Homeric oracle or general Cleromancy engine.
+
+Fine-word synthesis, seeded draws, other corpora/editions, rendered-line selection and automatic predictions are unsupported. Mascaro's seventeen-book digit example and fine-word-count dice/digital discrepancy remain documented rather than silently repaired. Fresh publisher requests returned403; the procedural reference is explicitly publisher-indexed text, with no invented successful snapshot hash.
+
+Corpus/index/source freezes: `knowledge/bibliomancy_corpus_freeze_v1.json`, `knowledge/bibliomancy_index_v1.json`, `knowledge/bibliomancy_source_freeze_v1.json`. Independent verification: `python -m scripts.verify_bibliomancy`; CLI/replay checks: `python -m scripts.smoke_bibliomancy_core`.
+
 ## Osteomancy: historical Shang inscription references and comparisons
 
 `python -m future osteomancy data/osteomancy-input.json --format markdown`

@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 36 manual passage-selection engine — 2026-11-06
+- Source a015373 and corpus/index/profile d41aa77 pushed before runtime. Added exact one-based manual paths, pinned identity and raw-witness integrity, exact text/native citation, bounded context, ordered repeats, raw Unicode reflection and JSON/Markdown replay. Separate Homeric mode reports editorial ordinal only; verse mapping unavailable.
+- 55 new tests and independent141 selections/85 raw-witness verses/423 context checks/216 indices pass. Source dice discrepancies retained; no fine, seeded or prediction engine. Full inherited acceptance follows before closure.
+
+
 ## Technique 36 corpus and index freeze — 2026-11-06
 - Source passa015373 pushed first. Complete WEB Classic2020 Ruth:85 verses/four chapters,141 reviewed sentence units, raw four HTML witnesses retained byte-exactly. Native verse citations separate from one editorial heading-only page and four chapter logical pages.
 - Punctuation, nested quotation closers, cross-verse question/genealogy and context bounds frozen; headings/footnotes excluded, no invented print pagination or generic tokenizer. Independent hand-authored141 ending-verse expectations and twelve exact text/path cases precede runtime. Immutable single-book manual adaptation profile and canonical corpus/index/source hashes frozen.
