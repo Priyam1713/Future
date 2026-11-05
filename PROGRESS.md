@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 35 Osteomancy Core v1 closure — 2026-11-06
+- **Core v1 Ready — Historical Shang Inscription Reference/Comparison Scope**: `columbia-afe1999-shang-charges-v1`; all thirteen source labels, typed missingness/uncertainty, ordered reference/topic/group selection and substantive pair comparison. Both20A/B actions remain uncertain;19A/B differ in conditions/days;24A/B are not assumed opposites. Source9d8578a, catalogafffba4, engine7924c39 and independent evidenced34b9ba pushed.
+- 781 tests (735+46),911 CLI cases (847+64),18 verifiers pass. Independent fixtures check169 ordered pairs,26 omitted outcomes and52 unverified-original fields. All1,256 protected files, including all required1,175, remain byte-identical; old source records retained; registry/dependency/pip/diff checks pass. Sixteen valid and four rejected JSON/Markdown pairs saved and replayed.
+- Frozen matrix, provenance, rights and P1/P2: `knowledge/osteomancy_core_v1.json`. No original-object assignment, physical crack ritual, contemporary charm or Southern African engine. Push/synchronize this closure before Technique36 Bibliomancy audit only.
+
 ## Technique 35 documentary reference/comparison engine — 2026-11-06
 - Source 9d8578a and immutable catalog afffba4 pushed before runtime. Added exact ordered references, editorial topic filtering, five named comparison groups, typed component availability and canonical pair comparison with raw-user annotations and full JSON/Markdown replay.
 - 46 new tests pass. Independent source verifier checks thirteen records, five relationships, all 169 ordered pairs, 26 omitted-outcome components and 52 unverified-original components. Full inherited acceptance follows before closure; no contemporary casting, artifact assignment or prognostication generated.

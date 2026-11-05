@@ -1,0 +1,393 @@
+{
+  "version": 1,
+  "technique_id": 35,
+  "name": "Osteomancy / Bone Casting",
+  "phase": 4,
+  "date": "2026-11-06",
+  "status": "Core v1 Ready — Historical Shang Inscription Reference/Comparison Scope",
+  "profile": "columbia-afe1999-shang-charges-v1",
+  "profile_sha256": "5bb0f6bde2a4e8e80ce43ef2a99d585e6a1f16231552e4a862d29e0e9097c92a",
+  "profile_catalog": "knowledge/osteomancy_profile_v1.json",
+  "source_commit": "9d8578a",
+  "catalog_commit": "afffba4",
+  "implementation_commit": "7924c39",
+  "independent_evidence_commit": "d34b9ba",
+  "report_commit": "4ca4b2f",
+  "acceptance_commit": "d9c88e8",
+  "source": {
+    "id": "osteomancy-columbia-afe1999-charge-facts-v1",
+    "technique_id": 35,
+    "rank": 3,
+    "author": "Columbia University Asia for Educators; anthology compilers Wm. Theodore de Bary and Irene Bloom; individual translator not separately identified on page",
+    "edition": "Oracle Bone Inscriptions of the Late Shang Dynasty; educational HTML citing Sources of Chinese Tradition,2nd edition,volume1,New York:Columbia University Press,1999,pp8,11–12; checked2026-11-06",
+    "url": "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm",
+    "snapshot_sha256": "0cb52127e4880d76757c65047ee9e958e358cd53e8509d5a2ebea19f4315d6dc",
+    "snapshot_bytes": 13191,
+    "locator": "Source attribution/permissions paragraph; Excerpts with Document-Based Questions, labels8–24B",
+    "ingestion": "facts_only",
+    "rights_note": "Modern translation and educational text credit copyright1999 Columbia University Press, reproduced by permission, all rights reserved. That permission is not a blanket Future license. Original concise factual annotations and locators only; no complete translation collection, book, photograph, rubbing or scan redistributed.",
+    "checked_on": "2026-11-06"
+  },
+  "source_freeze": "knowledge/osteomancy_source_freeze_v1.json",
+  "fixture": "tests/fixtures/osteomancy_reference_v1.json",
+  "fixture_canonical_sha256": "3bb116b82d71cc9895dd3fbafbe373428d46264c85041e7bd55c04c72288eb99",
+  "ranked_sources_unchanged": [
+    [
+      35,
+      "Osteomancy / Bone Casting",
+      1,
+      "David N. Keightley",
+      "Sources of Shang History: The Oracle-Bone Inscriptions of Bronze Age China",
+      "Chinese pyromantic oracle bones",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      35,
+      "Osteomancy / Bone Casting",
+      2,
+      "catherine yronwode",
+      "Throwing the Bones",
+      "Modern bone casting guide",
+      "https://luckymojo.com/throwingthebones.html",
+      "Practitioner web/book",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      35,
+      "Osteomancy / Bone Casting",
+      3,
+      "Columbia University Asia for Educators",
+      "Oracle Bones",
+      "Historical translated examples",
+      "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm",
+      "Public educational source",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations_unchanged": "Shang oracle bones; Southern African bone throws; contemporary bone charm sets",
+  "case_ids": [
+    "8",
+    "9A",
+    "9B",
+    "10",
+    "19A",
+    "19B",
+    "20A",
+    "20B",
+    "22A",
+    "22B",
+    "23",
+    "24A",
+    "24B"
+  ],
+  "comparison_components": [
+    "preface",
+    "day",
+    "lunar_month",
+    "diviner",
+    "charge",
+    "condition",
+    "action",
+    "participants",
+    "agent",
+    "target",
+    "prognostication",
+    "verification"
+  ],
+  "record_schema": [
+    "Stable label and source ID/locator",
+    "Original concise factual charge summary",
+    "Typed preface/day/lunar-month/diviner",
+    "Charge/condition/action/participants/agent/target",
+    "Separate prognostication and verification statuses",
+    "Editorial qualifications and source uncertainty",
+    "Separate original artifact/Chinese/crack/absolute-date unknowns",
+    "Source-grounded editorial topic/predicate/polarity indexing"
+  ],
+  "evidence_states": {
+    "present_in_inspected_excerpt": "Value is expressly supplied in this educational excerpt.",
+    "omitted_from_inspected_excerpt": "Not supplied here; original inscription may contain it.",
+    "explicitly_uncertain_in_source": "Translation/editorial uncertainty retained; no resolved value invented.",
+    "not_independently_verified": "Original artifact/text or external chronology not inspected.",
+    "not_applicable": "Not a component of this bounded documentary schema."
+  },
+  "missingness": "An omission in the inspected educational excerpt is not proof of absence on an original artifact. All original-inscription component statuses remain not_independently_verified. Both missing fields compare as incomparable_missing_evidence; uncertain action compares as incomparable_uncertainty.",
+  "relationships": [
+    {
+      "pair": [
+        "9A",
+        "9B"
+      ],
+      "group": "ancestor-harm",
+      "classification": "explicitly_contrasted_charge",
+      "opposition": "asserted_vs_denied_named_cause",
+      "scope": "Grandfather Ding as attributed royal-harm cause; no actual causal outcome established.",
+      "source_id": "osteomancy-columbia-afe1999-charge-facts-v1",
+      "locator": "Source labels9A,9B",
+      "layer": "Independently authored source-specific relationship annotation, not a general logical classifier"
+    },
+    {
+      "pair": [
+        "19A",
+        "19B"
+      ],
+      "group": "settlement",
+      "classification": "differently_conditioned_charge",
+      "opposition": "not_a_simple_logical_negation",
+      "scope": "Building versus non-building conditions; different supplied day labels/indices49,50; no absolute date or elapsed interval inferred.",
+      "source_id": "osteomancy-columbia-afe1999-charge-facts-v1",
+      "locator": "Source labels19A,19B",
+      "layer": "Independently authored source-specific relationship annotation, not a general logical classifier"
+    },
+    {
+      "pair": [
+        "20A",
+        "20B"
+      ],
+      "group": "royal-approval",
+      "classification": "contrasted_charge_with_uncertain_action",
+      "opposition": "approval_polarity_only",
+      "scope": "Approval/non-approval contrast; activity unresolved in both excerpts, so no fully specified action complement asserted.",
+      "source_id": "osteomancy-columbia-afe1999-charge-facts-v1",
+      "locator": "Source labels20A,20B",
+      "layer": "Independently authored source-specific relationship annotation, not a general logical classifier"
+    },
+    {
+      "pair": [
+        "22A",
+        "22B"
+      ],
+      "group": "harvest",
+      "classification": "explicitly_contrasted_charge",
+      "opposition": "asserted_vs_denied_named_cause",
+      "scope": "Di as attributed harvest-harm cause; charge is not an observed harvest outcome.",
+      "source_id": "osteomancy-columbia-afe1999-charge-facts-v1",
+      "locator": "Source labels22A,22B",
+      "layer": "Independently authored source-specific relationship annotation, not a general logical classifier"
+    },
+    {
+      "pair": [
+        "24A",
+        "24B"
+      ],
+      "group": "warfare",
+      "classification": "distinct_propositions",
+      "opposition": "not_verified_as_opposites",
+      "scope": "Mobilization response versus denial of divine instigation; shared numeric label is not a negation rule.",
+      "source_id": "osteomancy-columbia-afe1999-charge-facts-v1",
+      "locator": "Source labels24A,24B",
+      "layer": "Independently authored source-specific relationship annotation, not a general logical classifier"
+    }
+  ],
+  "groups": {
+    "ancestor-harm": [
+      "9A",
+      "9B"
+    ],
+    "settlement": [
+      "19A",
+      "19B"
+    ],
+    "royal-approval": [
+      "20A",
+      "20B"
+    ],
+    "harvest": [
+      "22A",
+      "22B"
+    ],
+    "warfare": [
+      "24A",
+      "24B"
+    ]
+  },
+  "topics": [
+    "royal_affliction",
+    "ancestral_agency",
+    "settlement",
+    "divine_approval",
+    "royal_approval",
+    "harvest",
+    "divine_agency",
+    "warfare"
+  ],
+  "comparison_policy": "Only the five named source-specific contrasts and same-record identity are classified. Other pair relationships remain unresolved; field comparison never turns missingness into equality or negation. Uncertain values are incomparable as resolved propositions.",
+  "index_policy": "Topic, predicate and polarity tags are editorial source-grounded indexing, not a general entailment engine. User order retained; comparison facts use canonical source order.",
+  "historical_qualifications": [
+    "Both20A and20B contain uncertain translated activity; neither is normalized to a confident activity.",
+    "19A and19B preserve different conditions and source day indices49/50;19B does not inherit19A lunar month. No elapsed absolute interval or Gregorian conversion.",
+    "Only source-explicit date/diviner/kinship/editorial information attaches to each record. No A/B suffix inference or cross-record inheritance.",
+    "All thirteen inspected excerpts omit prognostication and verification. A charge is not an event outcome.",
+    "24A/B are distinct propositions;23/24B and other unlisted pairs remain unresolved.",
+    "Modern translation/anthology/educational selection are distinct from original inscriptions; no invented Chinese, artifact inventory or crack characteristics.",
+    "Anthology compilers are identified; individual translator and case-specific printed page attribution are not independently established. These excerpts are not attributed to Keightley."
+  ],
+  "evidence_layers": {
+    "direct": "Independently verified source-attributed factual notes with locators",
+    "editorial": "Explicit typed structures, topic/predicate/polarity indexing and five bounded relationship rules",
+    "user": "Raw notes, research question and selected-case note/association annotations; never historical evidence",
+    "unsupported": "Generated archaeological evidence, new factual predictions, spirit contact, original decipherment and supernatural accuracy"
+  },
+  "input_contract": {
+    "schema_version": 1,
+    "profile": "columbia-afe1999-shang-charges-v1",
+    "mode": "documentary",
+    "tasks": [
+      "reference",
+      "compare",
+      "group",
+      "topic"
+    ],
+    "case_ids": "Exact known strings;1–13 unique for reference,2–13 for compare; preserve caller selection order",
+    "selectors": "One task-specific selector only; named groups and topics frozen",
+    "optional": "research_id ASCII80; notes/research_question raw Unicode10000 or null; at most13 selected-case annotations with note/association raw Unicode10000 or null",
+    "validation": "Strict JSON; reject duplicate keys, nonfinite values, unknown IDs/fields, wrong types, duplicate selections, mixed selectors and unsupported physical/modern tasks"
+  },
+  "replay": {
+    "cli": "python -m future osteomancy data/osteomancy-input.json --format markdown",
+    "offline": true,
+    "dependencies_added": 0,
+    "network": false,
+    "llm": false,
+    "rng": false,
+    "hashing": "Canonical JSON source-profile/request/fixture hashes portable across CRLF/LF; exact source HTML SHA retained",
+    "selection": "Original selection order and raw annotations preserved; pair factual order canonical; all pairwise comparisons emitted for multiple selection",
+    "reports": "Structured JSON and Markdown contain request, profile/source hashes, all selected facts, component summaries, relationships, rights and unsupported bounds",
+    "rejection": "Structured JSON/Markdown and exit2 for invalid or unsupported input"
+  },
+  "configuration_matrix": {
+    "supported": [
+      "All thirteen frozen AFE source references",
+      "Ordered multiple lookup, eight editorial topic filters and five groups",
+      "Bounded deterministic pairwise structural comparisons with unresolved/uncertain/missing cells",
+      "Raw user annotations, source/rights provenance and exact offline JSON/Markdown replay"
+    ],
+    "experimental": [],
+    "unsupported": [
+      "Contemporary charm casting and all Southern African executable methods",
+      "Physical burning/crack production or animal-material procurement",
+      "Original Chinese decipherment, unseen crack classification or object authentication",
+      "Invented original artifact IDs, original-text components or recorded outcomes",
+      "Absolute Gregorian dates from partial day labels",
+      "Predictive judgment, spirit contact or supernatural accuracy",
+      "Seeded generation, LLM inference or image recognition"
+    ]
+  },
+  "acceptance": {
+    "passed": true,
+    "regression": {
+      "passed": true,
+      "tests": 781,
+      "inherited_tests": 735,
+      "new_tests": 46,
+      "cli_cases": 911,
+      "inherited_cli_cases": 847,
+      "new_cli_cases": 64,
+      "symbolic_verifiers": 18,
+      "protected_files": 1256,
+      "required_prior_files": 1175,
+      "changed": [],
+      "checks": "data/osteomancy-acceptance-checks.json"
+    },
+    "independent": {
+      "passed": true,
+      "profile": "columbia-afe1999-shang-charges-v1",
+      "profile_sha256": "5bb0f6bde2a4e8e80ce43ef2a99d585e6a1f16231552e4a862d29e0e9097c92a",
+      "source_sha256": "0cb52127e4880d76757c65047ee9e958e358cd53e8509d5a2ebea19f4315d6dc",
+      "fixture_canonical_sha256": "3bb116b82d71cc9895dd3fbafbe373428d46264c85041e7bd55c04c72288eb99",
+      "source_records": 13,
+      "named_relationships": 5,
+      "ordered_pair_checks": 169,
+      "omitted_outcome_component_checks": 26,
+      "original_evidence_checks": 52,
+      "day_labels_checked": 4,
+      "explicit_diviners_checked": 4,
+      "uncertain_action_cases": [
+        "20A",
+        "20B"
+      ],
+      "reference": "Independently authored pre-engine factual fixtures and five-rule comparison table; no expected value obtained by invoking production matcher.",
+      "invariants": [
+        "All13 labels and typed facts preserved",
+        "169 ordered pairs and reversal stability",
+        "No A/B suffix classification",
+        "No source day/diviner inheritance",
+        "Uncertain action in both20A/B",
+        "No original artifact assignment or fabricated outcome",
+        "Missing fields are incomparable, not shared factual negatives"
+      ],
+      "empirical_validation": false
+    },
+    "checks": "data/osteomancy-acceptance-checks.json",
+    "cli": "data/osteomancy-smoke.json",
+    "preservation": "data/osteomancy-preservation-baseline.json",
+    "inherited_source_records_preserved": true,
+    "registry_idempotent": true,
+    "dependencies_audited": true,
+    "pip_check": true,
+    "diff_check": true,
+    "empirical_validation": false,
+    "scope": "Practical bounded documentary software acceptance, not exhaustive coverage, archaeological authentication or predictive validation"
+  },
+  "examples": {
+    "valid": [
+      "data/osteomancy-basic",
+      "data/osteomancy-ancestor-contrast",
+      "data/osteomancy-settlement",
+      "data/osteomancy-approval-uncertainty",
+      "data/osteomancy-harvest",
+      "data/osteomancy-warfare-distinct",
+      "data/osteomancy-missing-prognostication",
+      "data/osteomancy-unavailable-verification",
+      "data/osteomancy-days",
+      "data/osteomancy-unicode",
+      "data/osteomancy-named-group",
+      "data/osteomancy-topic",
+      "data/osteomancy-multiple",
+      "data/osteomancy-unresolved",
+      "data/osteomancy-reversed",
+      "data/osteomancy-catalog"
+    ],
+    "rejected": [
+      "data/osteomancy-unknown-case",
+      "data/osteomancy-bone-toss",
+      "data/osteomancy-crack-classification",
+      "data/osteomancy-invalid"
+    ],
+    "formats": [
+      "-input.json",
+      ".json",
+      ".md"
+    ],
+    "valid_saved_replay_pairs": 16,
+    "rejected_saved_pairs": 4
+  },
+  "P1": [
+    "Inspect legitimate Keightley original-edition historical-procedure pages.",
+    "Better independent inscription cross-references and original-fragment/source provenance.",
+    "Inspect legitimate yronwode object-role/procedure/example chapters before any named contemporary manual charm profile.",
+    "Tsonga archival translation, item-specific licensing and historical-context work."
+  ],
+  "P2": [
+    "Additional Shang witnesses and source-specific translation comparisons.",
+    "Authenticated museum-object references and licensed images/original explanatory diagrams.",
+    "Separately documented Southern African practice profiles, preserving community and source boundaries.",
+    "Contemporary bone/charm spatial engines only with independently verified meaning/procedure.",
+    "Independent inscription/crack recognition research; optional synthetic states only after separate protocol specification."
+  ],
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "next": "Commit/push this closure and verify clean synchronized main before Technique36 Bibliomancy resource audit only. No36 implementation or37 audit."
+}
