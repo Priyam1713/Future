@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique30 Pyromancy Core v1 closure — 2026-11-05
+- Source317cc81,engine6883fb6 andreport/evidence passes pushed. **Core v1 Ready — Historical/Symbolic Candle Observation Scope**:pamita-public2026-candle-observation-v1;six candle/jar-soot cases,source-specific physical checks/correction/follow-up,unknown/conflicts andsession safety hold. Not a universal fire dictionary orranked2020 book extraction.
+-579 tests(540+39),593 CLI cases(533+60),59 new independent source checks andall12 existing symbolic verifiers(includingCoffee) pass. Registry,dependency,pip anddiff checks pass;223 saved journal/report files unchanged,including required174 andallCoffee reports. Matrix,rights,source/profile/request hashes,replay andacceptance frozen in pyromancy_core_v1.json.
+- P1:full Pamita book access,more candle/soot rules,independent Betz/manuscript/lamp context andverified color sources. P2:separate lamp/modern traditions,optional safe original visuals/synthetic states andindependently evaluated camera recognition. No real fire required;hazardous rituals,spirit/clinical/factual-future claims unsupported. Push/synchronize closure before31 Hydromancy audit only.
+
 ## Technique30 manual candle/soot engine — 2026-11-05
 - Source freeze317cc81 pushed before engine. Added pyromancy manual CLI:six public2026 candle/jar-soot cases,explicit physical explanations/correction andfollow-up,missing/conflicts,source-layered JSON/Markdown andexact replay. Hazard declarations hold symbolic accounts;stopped activities need no relighting. No physical cause,personality orspirit inference.
 -39 new tests,59 independent pre-engine source/condition checks andregistry idempotence pass. Full inherited suite/CLI andall12 existing verifiers(includingCoffee),plus223-file byte preservation,run before closure. No renderer,LLM,random protocol ornew dependency.
