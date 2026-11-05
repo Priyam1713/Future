@@ -1,0 +1,440 @@
+# Lithomancy source-specific stone reading
+
+Source-specific symbolic comparison only; exact geometry does not establish divinatory accuracy.
+
+Profile: howard-cottage-web-general-set-v1
+
+## Relative proximity
+
+| Stone ID | Squared distance | Direction |
+| --- | --- | --- |
+| onyx | 2 | ['right', 'above'] |
+| tiger | 25 | ['right', 'above'] |
+
+## Source and rights
+
+```json
+{
+  "id": "lithomancy-howard-cottage-general-facts-v1",
+  "technique_id": 34,
+  "rank": null,
+  "author": "Jessica Howard / The Cottage Mystic; About page identifies Jess and her published Art of Lithomancy",
+  "edition": "Lithomancy, undated public author web guide; inspected2026-11-05; distinct from uninspected2022 book",
+  "url": "https://www.thecottagemystic.com/Lithomancy.html",
+  "snapshot_sha256": "95b5e425df9c766103b87b6d5c2ad2b5828be130906277c324e10f45f8e7ae7b",
+  "snapshot_bytes": 113668,
+  "locator": "Building Your Kit, twelve item lines; Your Personal Stone, paragraphs1–2; Performing Your Reading, priority and distant-stone qualification",
+  "ingestion": "facts_only",
+  "rights_note": "Modern copyrighted author text and photographs; public access is not redistribution permission. Original concise factual notes/locators only; no web-page corpus, complete copied correspondence table or artwork bundled.",
+  "checked_on": "2026-11-05"
+}
+```
+
+## Author witness
+
+```json
+{
+  "url": "https://www.thecottagemystic.com/about.html",
+  "snapshot_sha256": "999ee26ce7acb4aff3e6462d9fef3fa091aed0dac11ae23b668d7c723f16414f",
+  "snapshot_bytes": 110760
+}
+```
+
+## Example-set coverage
+
+```json
+{
+  "declared": "subset",
+  "kind": "Author example general set; not universal or mandatory. Frozen profile restricts references to these twelve roles; explicit subsets are permitted by the source’s adjustable-kit guidance.",
+  "present_roles": [
+    "onyx",
+    "tigers_eye"
+  ],
+  "missing_roles": [
+    "lodestone",
+    "green_aventurine",
+    "moonstone",
+    "blue_lace_agate",
+    "amethyst",
+    "sea_glass",
+    "five_pence_coin",
+    "shell",
+    "pebble",
+    "arrow_pebble"
+  ],
+  "total_catalog_roles": 12,
+  "generated_missing_objects": false
+}
+```
+
+## Source guidance and exceptions
+
+```json
+{
+  "set_kind": "Author example general set; not universal or mandatory. Frozen profile restricts references to these twelve roles; explicit subsets are permitted by the source’s adjustable-kit guidance.",
+  "size": "8–13 is a flexible starting suggestion; no thirteenth role inferred.",
+  "personal": "Personal stone is optional; source example uses Lodestone as self-marker. Personal anchor must be selected explicitly; choosing another present object as personal is user-attributed designation, not a changed source association.",
+  "reader": "Without personal stone, source prioritizes objects closest to the reader. Reader position must be explicitly supplied, not assumed at origin.",
+  "nearest": "Objects closest to selected anchor receive reading priority; source supplies no unique tie-break, distance cutoff, metric, zone or fixed count of winners.",
+  "exceptions": "Distant objects may still be relevant; no farthest object is automatically excluded.",
+  "groups": "Source mentions reading groups together but gives no numeric clustering algorithm or universal combined meanings.",
+  "sea_example": "Work-change sea-set differs in symbols and personal object. Its above/external, below/internal and directional associations remain documentary, not general-set rules.",
+  "other_authors": "Wimmer sixteen-role circle and Saint Germain access-gated book methods remain separate; three inventory ranks and four variations unchanged."
+}
+```
+
+## Coordinate convention
+
+```json
+{
+  "name": "integer-centers-x-right-y-up-v1",
+  "contract": {
+    "name": "integer-center-grid-v1",
+    "frames": [
+      "integer-centers-x-right-y-up-v1",
+      "integer-centers-x-right-y-down-v1"
+    ],
+    "origin": "User-declared common arbitrary zero, never implicitly the reader or personal stone.",
+    "scale": "Same arbitrary grid unit on both axes; no physical size, radius or occult cutoff.",
+    "representation": "Each object is an exact center point {x,y} or unknown/null; integers only, each -1000000..1000000 inclusive.",
+    "metric": "Squared Euclidean distance; exact Python integers; maximum squared distance8000000000000.",
+    "ties": "All equal distances retained as one group, IDs sorted only for serialization, no interpretive precedence.",
+    "coincidence": "Equal centers are reported; physical overlap/footprints not inferred.",
+    "eligibility": "All present objects except selected personal-anchor instance. Reader mode includes all objects. No role inferred from mineral, text, origin or position.",
+    "unknown": "Missing/unknown anchor prevents ranking. Unknown eligible positions prevent a certified global nearest; known-distance groups remain explicitly partial. Uncertainty/contradictory user relations qualify priority.",
+    "incomplete": "coverage must explicitly be full_example (all12unique roles) or subset (1–12unique roles). No missing object generated.",
+    "directions": "Signs of coordinate differences provide descriptive left/right/above/below in selected frame only. No symbolic direction or arrow orientation meaning.",
+    "groups": "Only explicitly user-declared groups; no automatic clustering or combined fortune. Pairwise distances are descriptive geometry.",
+    "seeded": "Unsupported; no new RNG or simulation."
+  }
+}
+```
+
+## Original placements and source roles
+
+```json
+[
+  {
+    "declaration": {
+      "id": "onyx",
+      "role_id": "onyx",
+      "position": {
+        "x": 1,
+        "y": 1
+      }
+    },
+    "source_role": {
+      "role_id": "onyx",
+      "item": "Onyx",
+      "physical_identity": "crystal",
+      "association": "Protection and caution.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item2 (Onyx Crystal)"
+    },
+    "position_known": true
+  },
+  {
+    "declaration": {
+      "id": "tiger",
+      "role_id": "tigers_eye",
+      "position": {
+        "x": 3,
+        "y": 4
+      }
+    },
+    "source_role": {
+      "role_id": "tigers_eye",
+      "item": "Tiger’s Eye",
+      "physical_identity": "crystal",
+      "association": "Opportunity with courage.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item3 (Tigers Eye Crystal)"
+    },
+    "position_known": true
+  }
+]
+```
+
+## Selected anchor
+
+```json
+{
+  "declaration": {
+    "kind": "reader",
+    "position": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "position": {
+    "x": 0,
+    "y": 0
+  },
+  "excluded_instance_id": null,
+  "source_locator": "Your Personal Stone, paragraphs1–2; Performing Your Reading, closest-stone priority paragraph",
+  "selection": "Explicit user designation only; source example self-marker is Lodestone, not an automatic anchor."
+}
+```
+
+## Exact spatial comparison
+
+```json
+{
+  "distances": [
+    {
+      "id": "onyx",
+      "position": {
+        "x": 1,
+        "y": 1
+      },
+      "distance_squared": 2,
+      "delta": {
+        "x": 1,
+        "y": 1
+      },
+      "direction": [
+        "right",
+        "above"
+      ]
+    },
+    {
+      "id": "tiger",
+      "position": {
+        "x": 3,
+        "y": 4
+      },
+      "distance_squared": 25,
+      "delta": {
+        "x": 3,
+        "y": 4
+      },
+      "direction": [
+        "right",
+        "above"
+      ]
+    }
+  ],
+  "ordered_distance_groups": [
+    {
+      "distance_squared": 2,
+      "ids": [
+        "onyx"
+      ]
+    },
+    {
+      "distance_squared": 25,
+      "ids": [
+        "tiger"
+      ]
+    }
+  ],
+  "nearest_known": [
+    "onyx"
+  ],
+  "farthest_known": [
+    "tiger"
+  ],
+  "unknown_positions": [],
+  "anchor_position_known": true,
+  "tie_policy": "All equal distances share priority; ID ordering serializes ties only."
+}
+```
+
+## Pairwise distances
+
+```json
+[
+  {
+    "ids": [
+      "onyx",
+      "tiger"
+    ],
+    "distance_squared": 13
+  }
+]
+```
+
+## Coincident centers
+
+```json
+[]
+```
+
+## Source-linked reading priority
+
+```json
+{
+  "status": "applicable",
+  "scope": "all_eligible",
+  "nearest_known": [
+    {
+      "id": "onyx",
+      "role_id": "onyx",
+      "source_association": {
+        "role_id": "onyx",
+        "item": "Onyx",
+        "physical_identity": "crystal",
+        "association": "Protection and caution.",
+        "source_id": "lithomancy-howard-cottage-general-facts-v1",
+        "locator": "Building Your Kit, example general set, item2 (Onyx Crystal)"
+      }
+    }
+  ],
+  "ordered_groups": [
+    {
+      "distance_squared": 2,
+      "ids": [
+        "onyx"
+      ],
+      "source_meanings": [
+        {
+          "id": "onyx",
+          "role_id": "onyx",
+          "source_association": {
+            "role_id": "onyx",
+            "item": "Onyx",
+            "physical_identity": "crystal",
+            "association": "Protection and caution.",
+            "source_id": "lithomancy-howard-cottage-general-facts-v1",
+            "locator": "Building Your Kit, example general set, item2 (Onyx Crystal)"
+          }
+        }
+      ]
+    },
+    {
+      "distance_squared": 25,
+      "ids": [
+        "tiger"
+      ],
+      "source_meanings": [
+        {
+          "id": "tiger",
+          "role_id": "tigers_eye",
+          "source_association": {
+            "role_id": "tigers_eye",
+            "item": "Tiger’s Eye",
+            "physical_identity": "crystal",
+            "association": "Opportunity with courage.",
+            "source_id": "lithomancy-howard-cottage-general-facts-v1",
+            "locator": "Building Your Kit, example general set, item3 (Tigers Eye Crystal)"
+          }
+        }
+      ]
+    }
+  ],
+  "source_id": "lithomancy-howard-cottage-general-facts-v1",
+  "locator": "Your Personal Stone, paragraphs1–2; Performing Your Reading, closest-stone priority paragraph",
+  "qualification": "Read nearest known objects first under the source guidance, retaining all ties and unknown qualifications. Numeric ordering is editorial geometry, not a validated future outcome. Distant objects are not automatically discarded."
+}
+```
+
+## User-declared groups
+
+```json
+[]
+```
+
+## User-declared relation checks
+
+```json
+[]
+```
+
+## Raw user text
+
+```json
+{}
+```
+
+## Unknown and conflicting evidence
+
+```json
+[]
+```
+
+## Editorial synthesis
+
+```json
+{
+  "priority_ids": [
+    "onyx"
+  ],
+  "unresolved": [],
+  "combined_fortune": null,
+  "statement": "Source associations are retrieved for the exact proximity groups. Group membership, distance and direction add no new symbolic meaning."
+}
+```
+
+## Evidence layers
+
+```json
+{
+  "direct": "Howard web example identities, concise associations and nearest-first guidance",
+  "compositional": "Exact squared distances, descriptive directions, ties and user-selected group comparisons under editorial conventions",
+  "user_attributed": "Raw placements, selected anchor, question, personal associations, qualitative relations and uncertainty",
+  "unsupported": "Objective prediction, diagnosis, hidden knowledge, spirit/personality inference or universal lithomancy certification"
+}
+```
+
+## Unsupported coverage
+
+```json
+[
+  "Universal thirteen-stone system",
+  "Wimmer sixteen-role circle and Saint Germain book procedures",
+  "Howard2022 book equivalence or separate worked sea-set rules",
+  "Actual future/hidden knowledge, diagnosis or divinatory accuracy certification",
+  "Symbolic above/below/left/right zones, arrow bearing meaning, automatic cluster thresholds or combined fortune",
+  "Stone footprints, physical overlap or circle-boundary meanings",
+  "Seeded generation, image recognition and physics"
+]
+```
+
+## Exact replay metadata
+
+```json
+{
+  "request": {
+    "schema_version": 1,
+    "profile": "howard-cottage-web-general-set-v1",
+    "task": "manual_spatial_reading",
+    "mode": "manual",
+    "reading_id": "example",
+    "frame": "integer-centers-x-right-y-up-v1",
+    "coverage": "subset",
+    "origin": "hypothetical",
+    "stones": [
+      {
+        "id": "onyx",
+        "role_id": "onyx",
+        "position": {
+          "x": 1,
+          "y": 1
+        }
+      },
+      {
+        "id": "tiger",
+        "role_id": "tigers_eye",
+        "position": {
+          "x": 3,
+          "y": 4
+        }
+      }
+    ],
+    "anchor": {
+      "kind": "reader",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "input_sha256": "46b9a5280595264d15332a87399d071c3667da4a477821c1a00af8135a7831b0",
+  "profile_sha256": "65abbdb874815defe202ba3d801256625f4c35e21eb1d40749274551ad91db5b",
+  "source_sha256": "95b5e425df9c766103b87b6d5c2ad2b5828be130906277c324e10f45f8e7ae7b",
+  "serialization": "SHA256 canonical UTF8 sorted-key compact JSON, unescaped Unicode, no terminal LF; raw field whitespace preserved",
+  "external_calls": false,
+  "rng": false,
+  "generated_placements": false
+}
+```
