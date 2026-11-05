@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 32 Aeromancy Core v1 closure — 2026-11-05
+- Source a12abed, engine 0fd3ab9, six report batches and evidence 7edaa8a pushed. **Core v1 Ready — Historical Atmospheric Lore/Observation Scope**: `inwards1898-atmospheric-lore-subset-v1`; 13 cases, typed compound conditions, independent wind origin/smoke travel/cloud axis, regional qualifications and five competing mackerel accounts. Texas interval describes current light-wind duration; no generated forecast or date.
+- 651 tests (613+38), 728 CLI cases (656+72), 53 new independent checks and all 14 inherited symbolic verifiers pass. All 336 prior journal/report files and protected engine/profile bytes remain unchanged. Saved 21 JSON/21 Markdown replays; registry, dependencies, pip and diff checks pass. Acceptance, matrix, provenance and replay contracts: `knowledge/aeromancy_core_v1.json`.
+- P1: more Inwards pages/attributions/combinations, Tyson chapter access and separate historical profiles. P2: broader regional catalogs, separate observational studies and independently evaluated optional visual tools. Push/synchronize this closure before Technique 33 Geomancy audit only.
+
 ## Technique32 manual atmospheric-lore engine — 2026-11-05
 - Sourcea12abed pushed before matcher. Added aeromancy CLI with13 historical source cases,typed compound features,independent windfrom/smoketo/cloudaxis andseparate observational retrieval/regional qualification/empirical validity. Five competing mackerel accounts retain horizons without consensus orforecast. Texas interval is current light-wind duration.
 -38 new tests,53 independent source/condition checks andregistry idempotence pass. Full inherited regression/CLI,14 existing verifiers and336-file prior report/profile preservation sweep run before closure. Exact Unicode,replay andportable hashes;no weatherAPI,renderer,RNG ornew dependency.

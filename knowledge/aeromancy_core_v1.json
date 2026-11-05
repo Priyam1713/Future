@@ -1,0 +1,602 @@
+{
+  "version": 1,
+  "technique_id": 32,
+  "name": "Aeromancy",
+  "phase": 4,
+  "date": "2026-11-05",
+  "status": "Core v1 Ready — Historical Atmospheric Lore/Observation Scope",
+  "profile": "inwards1898-atmospheric-lore-subset-v1",
+  "profile_sha256": "8aad70d9fe0471e98a7d5c3049bbab4d97ac938ee923be6648bf5bedd61f71c2",
+  "profile_catalog": "knowledge/aeromancy_profile_v1.json",
+  "source_pass_commits": [
+    "a12abed"
+  ],
+  "implementation_commit": "0fd3ab9",
+  "source": {
+    "id": "aeromancy-inwards1898-atmospheric-facts-v1",
+    "technique_id": 32,
+    "rank": 1,
+    "author": "Richard Inwards,compiler;individual sayings retain their own named/regional attributions",
+    "edition": "Weather Lore:A Collection of Proverbs,Sayings,andRules concerning the Weather;Third Edition,Revised andAugmented;London,Elliot Stock,62 Paternoster Row,1898;catalog extentxii+233printed pages;256PDF pages",
+    "url": "https://commons.wikimedia.org/wiki/File:Weather_lore;_a_collection_of_proverbs,_sayings,_and_rules_concerning_the_weather_(IA_weatherlorecolle00inwa).pdf",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Weather_lore%3B_a_collection_of_proverbs%2C_sayings%2C_and_rules_concerning_the_weather_%28IA_weatherlorecolle00inwa%29.pdf",
+    "locator": "TitlePDF9;Introductionv–vi(PDF11–12);Windp95(PDF113);Cloudsp99/111(PDF117/129)",
+    "snapshot_sha256": "7d5d68b70eac27846bd1b76c07b16e84a22db8a57c9e2bd1e3550e1b61e2943a",
+    "snapshot_sha1": "401548baf953a7bb5ed6383c789f67a540a80fd2",
+    "snapshot_bytes": 11847608,
+    "ingestion": "facts_only",
+    "finding": "Exact Commons witness rechecked;title andprintedv,vi,95,99,111 visually inspected. Texas five/six-day interval is the duration ofdry/light-south-wind conditions,following prior strong wind,superseding the ambiguous audit paraphrase. Facts-only bounded historical conditions;no empirical forecast certification.",
+    "rights_note": "Inventory Commons file marks pre1931 US public-domain status andnotes source-country status separately. Wellcome separately marks its different1898 copy Public Domain Mark. These witnesses andtheir digitization metadata are distinct;no blanket global license ormodern reprint rights assumed. Facts-only original short notes;no scan,cloud photograph,frontispiece orwhole-text corpus redistributed.",
+    "checked_on": "2026-11-05"
+  },
+  "direction_reference": {
+    "id": "aeromancy-noaa-wind-direction-context-v1",
+    "technique_id": 32,
+    "author": "NOAA/NWS",
+    "edition": "About NWS Forecast Parameters,Weather Types andHazards;web reference checked2026-11-05",
+    "url": "https://tidesandcurrents.noaa.gov/ofs/nws_forecastinfo.html",
+    "locator": "Wind Direction row",
+    "ingestion": "facts_only",
+    "rights_note": "Original concise factual convention only;no agency media copied.",
+    "finding": "Meteorological wind direction names the direction fromwhich wind blows. Application input uses explicit from convention;no smoke/cloud direction transformation is provided."
+  },
+  "ranked_sources_and_variations_unchanged": true,
+  "source_case_count": 13,
+  "cases": [
+    {
+      "id": "aeromancy.inwards1898.smoke_east",
+      "case": "smoke_east",
+      "phenomenon": "smoke",
+      "requires": {
+        "smoke_drift_towards": "east"
+      },
+      "statement": "The collected Scottish account associates eastward smoke with good weather coming next.",
+      "attribution": "Scotland",
+      "source_region": "scotland",
+      "horizon": "Next,unquantified",
+      "locator": "Wind,printedp95,PDFp113",
+      "source_id": "aeromancy-inwards1898-atmospheric-facts-v1",
+      "comparison_group": null
+    },
+    {
+      "id": "aeromancy.inwards1898.smoke_west",
+      "case": "smoke_west",
+      "phenomenon": "smoke",
+      "requires": {
+        "smoke_drift_towards": "west"
+      },
+      "statement": "The collected Scottish account describes good weather as past when smoke goes west.",
+      "attribution": "Scotland",
+      "source_region": "scotland",
+      "horizon": "Past,unquantified",
+      "locator": "Wind,printedp95,PDFp113",
+      "source_id": "aeromancy-inwards1898-atmospheric-facts-v1",
+      "comparison_group": null
+    },
+    {
+      "id": "aeromancy.inwards1898.wing_south",
+      "case": "wing_south",
+      "phenomenon": "wind",
+      "requires": {
+        "named_wind_direction": "south",
+        "wind_direction_convention": "from",
+        "wind_continuity": "considerable_time"
+      },
+      "statement": "Wing1649 associates continued south wind with rain.",
+      "attribution": "Wing,1649",
+      "source_region": null,
+      "horizon": "Considerable time;unquantified",
+      "locator": "Wind,printedp95,PDFp113",
+      "source_id": "aeromancy-inwards1898-atmospheric-facts-v1",
+      "comparison_group": null
+    },
+    {
+      "id": "aeromancy.inwards1898.texas_sequence",
+      "case": "texas_sequence",
+      "phenomenon": "wind",
+      "requires": {
+        "named_wind_direction": "south",
+        "wind_direction_convention": "from",
+        "dry_weather": true,
+        "wind_strength": "light",
+        "light_wind_duration_days": [
+          5,
+          6
+        ],
+        "prior_wind_direction": "south",
+        "prior_wind_strength": "strong"
+      },
+      "statement": "The Texas entry associates this qualified prior-strong/current-light dry south-wind sequence with fine weather.",
+      "attribution": "Texas",
+      "source_region": "texas",
+      "horizon": "Current dry/light-wind period lasts five orsix days;no generated date",
+      "locator": "Wind,printedp95,PDFp113",
+      "source_id": "aeromancy-inwards1898-atmospheric-facts-v1",
+      "comparison_group": null
+    },
+    {
+      "id": "aeromancy.inwards1898.hake_ew",
+      "case": "hake_ew",
+      "phenomenon": "cloud",
+      "requires": {
+        "cloud_appearance": "hake_shaped",
+        "cloud_axis": "east_west"
+      },
+      "statement": "The Bedfordshire account associates the east-west hake-shaped cloud axis with rain.",
+      "attribution": "Bedfordshire",
+      "source_region": "bedfordshire",
+      "horizon": "Not specified",
+      "locator": "Clouds,printedp111,PDFp129",
+      "source_id": "aeromancy-inwards1898-atmospheric-facts-v1",
+      "comparison_group": null
+    },
+    {
+      "id": "aeromancy.inwards1898.hake_ns",
+      "case": "hake_ns",
+      "phenomenon": "cloud",
+      "requires": {
+        "cloud_appearance": "hake_shaped",
+        "cloud_axis": "north_south"
+      },
+      "statement": "The Bedfordshire account associates the north-south hake-shaped cloud axis with more fine weather.",
+      "attribution": "Bedfordshire",
+      "source_region": "bedfordshire",
+      "horizon": "Not specified",
+      "locator": "Clouds,printedp111,PDFp129",
+      "source_id": "aeromancy-inwards1898-atmospheric-facts-v1",
+      "comparison_group": null
+    },
+    {
+      "id": "aeromancy.inwards1898.fleecy_compound",
+      "case": "fleecy_compound",
+      "phenomenon": "cloud",
+      "requires": {
+        "cloud_appearance": "fleecy",
+        "cloud_light": true,
+        "cloud_motion": "rapid",
+        "relative_cloud_layer": "below",
+        "upper_cloud_type": "cirro_stratus",
+        "upper_cloud_dark": true,
+        "upper_cloud_compact": true
+      },
+      "statement": "The Scottish entry associates this complete lower-light-fleecy/rapid/upper-dark-compact pattern with rain near at hand.",
+      "attribution": "Scotland",
+      "source_region": "scotland",
+      "horizon": "Near at hand,unquantified",
+      "locator": "Clouds,printedp111,PDFp129",
+      "source_id": "aeromancy-inwards1898-atmospheric-facts-v1",
+      "comparison_group": null
+    },
+    {
+      "id": "aeromancy.inwards1898.mackerel_mares",
+      "case": "mackerel_mares",
+      "phenomenon": "cloud",
+      "requires": {
+        "mackerel_sky": true,
+        "mares_tails": true
+      },
+      "statement": "The collected sailing couplet links mackerel sky together with mares-tails to a reduced-sail caution,marginally classified as wind;documentary folklore only.",
+      "attribution": "Unspecified inentry",
+      "source_region": null,
+      "horizon": "Not specified",
+      "locator": "Clouds,printedp111,PDFp129",
+      "source_id": "aeromancy-inwards1898-atmospheric-facts-v1",
+      "comparison_group": null
+    },
+    {
+      "id": "aeromancy.inwards1898.mackerel_day_then_rain",
+      "case": "mackerel_day_then_rain",
+      "phenomenon": "cloud",
+      "requires": {
+        "mackerel_sky": true
+      },
+      "statement": "One collected account describes fair weather that day and rain one or two days later.",
+      "attribution": "Unspecified inentry",
+      "source_region": null,
+      "horizon": "that day; a day or two after",
+      "locator": "Clouds,printedp111,PDFp129",
+      "source_id": "aeromancy-inwards1898-atmospheric-facts-v1",
+      "comparison_group": "mackerel_accounts"
+    },
+    {
+      "id": "aeromancy.inwards1898.mackerel_change",
+      "case": "mackerel_change",
+      "phenomenon": "cloud",
+      "requires": {
+        "mackerel_sky": true
+      },
+      "statement": "Another collected saying describes neither wet nor dry conditions lasting long.",
+      "attribution": "Unspecified inentry",
+      "source_region": null,
+      "horizon": "never long wet and never long dry",
+      "locator": "Clouds,printedp111,PDFp129",
+      "source_id": "aeromancy-inwards1898-atmospheric-facts-v1",
+      "comparison_group": "mackerel_accounts"
+    },
+    {
+      "id": "aeromancy.inwards1898.mackerel_more_wet",
+      "case": "mackerel_more_wet",
+      "phenomenon": "cloud",
+      "requires": {
+        "mackerel_sky": true
+      },
+      "statement": "Another collected saying favors more wet than dry.",
+      "attribution": "Unspecified inentry",
+      "source_region": null,
+      "horizon": "Not specified",
+      "locator": "Clouds,printedp111,PDFp129",
+      "source_id": "aeromancy-inwards1898-atmospheric-facts-v1",
+      "comparison_group": "mackerel_accounts"
+    },
+    {
+      "id": "aeromancy.inwards1898.mackerel_balanced",
+      "case": "mackerel_balanced",
+      "phenomenon": "cloud",
+      "requires": {
+        "mackerel_sky": true
+      },
+      "statement": "A separate saying describes mackerel sky as as much for wet as for dry.",
+      "attribution": "Unspecified inentry",
+      "source_region": null,
+      "horizon": "Not specified",
+      "locator": "Clouds,printedp111,PDFp129",
+      "source_id": "aeromancy-inwards1898-atmospheric-facts-v1",
+      "comparison_group": "mackerel_accounts"
+    },
+    {
+      "id": "aeromancy.inwards1898.mackerel_not24dry",
+      "case": "mackerel_not24dry",
+      "phenomenon": "cloud",
+      "requires": {
+        "mackerel_sky": true
+      },
+      "statement": "Another collected saying describes mackerel sky as not twenty-four hours dry.",
+      "attribution": "Unspecified inentry",
+      "source_region": null,
+      "horizon": "not twenty-four hours dry",
+      "locator": "Clouds,printedp111,PDFp129",
+      "source_id": "aeromancy-inwards1898-atmospheric-facts-v1",
+      "comparison_group": "mackerel_accounts"
+    }
+  ],
+  "source_context": {
+    "locator": "Introductionprintedv–vi;Cloudsprintedp99",
+    "British_Isles_frame": true,
+    "contradictions_acknowledged": true,
+    "limited_observation_acknowledged": true,
+    "historical_cloud_terms": true,
+    "cloud_heights_approximate": true
+  },
+  "edition_boundary": "Compiler Inwards collects attributed sayings;not one unified theory. Exact1898 third edition,not1893 second edition,Wellcome alternate scan,modern Cambridge reprint orHawke1950 additions. Tyson atmospheric chapters remain uninspected.",
+  "direction_conventions": {
+    "named_wind_direction": "From-direction,requiring explicit wind_direction_convention=from forwind rules;NOAA convention is an editorial representation aid,not validation of Inwards.",
+    "smoke_drift_towards": "Where smoke travels,to-direction;never derived fromwind",
+    "cloud_axis": "Undirected geometric east-west ornorth-south orientation;not motion orheading",
+    "conversion": false
+  },
+  "regional_policy": "Observational match,retrieved account,source-region qualification andunestablished empirical validity are separate. Unknown region remains unknown;mismatch prevents regional application butdoes not erase a retrieved historical account. Unspecified source region is not worldwide validity.",
+  "compound_policy": "All typed material conditions required;explicit false is nonmatching,absence/unknown/null insufficient,mixed matching/nonmatching alternatives conflict. No inter-observation inference orraw-text classification.",
+  "texas_source_correction": "Source p95 says five/six days ofcurrent dry weather withlight south wind,following previously strong wind fromthat direction;not a delay afterthe strong wind. No calendar interval calculated.",
+  "competing_accounts": "Five mackerel-sky accounts remain in source order withseparate original horizon language. No majority vote,precedence,averaging,confidence,winner orsingle forecast. Temporal qualifications can coexist without declaring all differences logically contradictory.",
+  "evidence_layers": {
+    "direct": "Original1898 source-located compiled historical accounts withindividual/regional attribution",
+    "user_attributed": "Voluntary manual phenomena,features,region,time,origin,uncertainty andraw notes",
+    "editorial": "Typed matching,separate regional assessment andneutral comparison",
+    "unsupported": "Actual weather,forecasts,predictive confidence,empirical accuracy,universal omens,spirit/personality/future-life claims oroperational safety guidance"
+  },
+  "input_replay_contract": {
+    "schema_version": 1,
+    "required": [
+      "schema_version",
+      "profile",
+      "task",
+      "mode"
+    ],
+    "task": "atmospheric_lore_comparison",
+    "mode": "manual",
+    "optional": [
+      "origin",
+      "region",
+      "timestamp",
+      "observations",
+      "notes",
+      "include_reference_catalog"
+    ],
+    "regions": [
+      "scotland",
+      "bedfordshire",
+      "texas",
+      "other",
+      "unknown",
+      "ambiguous"
+    ],
+    "origins": [
+      "reported_real",
+      "hypothetical",
+      "synthetic",
+      "unknown"
+    ],
+    "feature_types": {
+      "named_wind_direction": [
+        "north",
+        "north_east",
+        "east",
+        "south_east",
+        "south",
+        "south_west",
+        "west",
+        "north_west",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "wind_direction_convention": [
+        "from",
+        "unknown",
+        "ambiguous"
+      ],
+      "wind_strength": [
+        "light",
+        "moderate",
+        "strong",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "wind_continuity": [
+        "considerable_time",
+        "brief",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "prior_wind_direction": [
+        "north",
+        "north_east",
+        "east",
+        "south_east",
+        "south",
+        "south_west",
+        "west",
+        "north_west",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "prior_wind_strength": [
+        "light",
+        "moderate",
+        "strong",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "dry_weather": "bool",
+      "light_wind_duration_days": "days",
+      "smoke_drift_towards": [
+        "north",
+        "north_east",
+        "east",
+        "south_east",
+        "south",
+        "south_west",
+        "west",
+        "north_west",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "cloud_appearance": [
+        "hake_shaped",
+        "fleecy",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "cloud_axis": [
+        "east_west",
+        "north_south",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "cloud_motion": [
+        "rapid",
+        "slow",
+        "stationary",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "cloud_light": "bool",
+      "relative_cloud_layer": [
+        "below",
+        "above",
+        "same_level",
+        "unknown",
+        "ambiguous"
+      ],
+      "upper_cloud_type": [
+        "cirro_stratus",
+        "other",
+        "unknown",
+        "ambiguous"
+      ],
+      "upper_cloud_dark": "bool",
+      "upper_cloud_compact": "bool",
+      "mackerel_sky": "bool",
+      "mares_tails": "bool"
+    },
+    "observation_fields": [
+      "id",
+      "sequence",
+      "phenomenon",
+      "origin",
+      "region",
+      "timestamp",
+      "features",
+      "alternatives",
+      "uncertainty",
+      "description",
+      "association"
+    ],
+    "phenomena": [
+      "smoke",
+      "wind",
+      "cloud",
+      "other",
+      "unknown"
+    ],
+    "bounds": {
+      "observations": 64,
+      "id_ascii_characters": 80,
+      "feature_or_identity_alternatives": 4,
+      "raw_text_characters": 10000,
+      "sequence_max": 1000000,
+      "days_max": 1000000
+    },
+    "ordering": "Input order retained;explicit sequence,ifpresent,must strictly increase. Row region/origin explicitly overrides request declarations. No current timestamp orlocation default.",
+    "states": [
+      "applicable",
+      "not_applicable",
+      "insufficient_evidence",
+      "conflicting_evidence",
+      "unsupported"
+    ],
+    "reference_only": "include_reference_catalog=true may be requested withno observations;it does not claim an atmospheric match.",
+    "serialization": "SHA256 canonical UTF8 sorted-key compact JSON,unescaped Unicode,no terminal LF;raw field line endings retained. Source hash uses exact CommonsPDF bytes.",
+    "replay": "Complete request,source/profile/request hashes andserialization embedded inJSON/Markdown. No live external calls,randomness orobservations generated.",
+    "invalid": "Unknown fields,wrong profile/task/mode,invalid enums/types/bounds,duplicate IDs/JSONkeys,nonfinite JSON andinvalid timestamps rejected withCLI exit2 andstructured JSON/Markdown rejection."
+  },
+  "configuration_matrix": {
+    "supported": [
+      "13 source-specific smoke/wind/cloud cases",
+      "Manual typed single/compound observations",
+      "Separate region/direction/empirical qualifications",
+      "Five competing source accounts andrelative horizons",
+      "Unknown/conflicting evidence",
+      "Deterministic offline JSON/Markdown andfull replay",
+      "Reference-only catalog"
+    ],
+    "experimental": [],
+    "unsupported": [
+      "Actual present weather orfuture forecast",
+      "Universal cloud/animal/spirit omens",
+      "Empirical outcome validity orprediction confidence",
+      "Tyson atmospheric methods",
+      "Wind/smoke/cloud direction conversion",
+      "Image recognition,weather APIs,sensors,renderer,LLM orrandom generation"
+    ]
+  },
+  "acceptance": {
+    "edition_specific_source_verified": true,
+    "useful_conditional_engine": true,
+    "compound_conditions_complete": true,
+    "direction_semantics_independent": true,
+    "regional_attributions_preserved": true,
+    "contradictory_accounts_separate": true,
+    "no_certified_forecast": true,
+    "reports_replay_complete": true,
+    "all_inherited_and_new_checks_pass": true
+  },
+  "verification": {
+    "passed": true,
+    "total_tests": 651,
+    "inherited_tests": 613,
+    "new_tests": 38,
+    "total_cli_cases": 728,
+    "inherited_cli_cases": 656,
+    "new_cli_cases": 72,
+    "inherited_symbolic_verifiers": 14,
+    "new_reference_checks": 53,
+    "prior_journal_report_files": 336,
+    "includes_required278": true,
+    "saved_json_replays": 21,
+    "saved_markdown_replays": 21,
+    "full_test_output": {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "..............................................................................................................................................................................................................................................C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\skyfield\\searchlib.py:224: DeprecationWarning: Setting the dtype on a NumPy array has been deprecated in NumPy 2.5.\nInstead of changing the dtype on an array x, create a new array with x.view(new_dtype)\n  y.dtype = int8\n.............................................................................................................................................................................................................................................................................................................................................................................................................................\n----------------------------------------------------------------------\nRan 651 tests in 134.983s\n\nOK\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\n",
+      "seconds": 136.0
+    },
+    "evidence": "data/aeromancy-acceptance-checks.json",
+    "warnings": [
+      "Inherited Skyfield/NumPy dtype deprecation",
+      "Inherited unclosed data/de440s.bsp ResourceWarning"
+    ]
+  },
+  "rights": "Inventory Commons file marks pre1931 US public-domain status andnotes source-country status separately. Wellcome separately marks its different1898 copy Public Domain Mark. These witnesses andtheir digitization metadata are distinct;no blanket global license ormodern reprint rights assumed. Facts-only original short notes;no scan,cloud photograph,frontispiece orwhole-text corpus redistributed.",
+  "examples": [
+    "data/aeromancy-conflicting.md",
+    "data/aeromancy-empty.md",
+    "data/aeromancy-fleecy-full.md",
+    "data/aeromancy-fleecy-partial.md",
+    "data/aeromancy-hake-ew.md",
+    "data/aeromancy-hake-ns.md",
+    "data/aeromancy-hake-unknown.md",
+    "data/aeromancy-hypothetical.md",
+    "data/aeromancy-invalid.md",
+    "data/aeromancy-mackerel-alone.md",
+    "data/aeromancy-mackerel-competing.md",
+    "data/aeromancy-mackerel-mares.md",
+    "data/aeromancy-reference-only.md",
+    "data/aeromancy-region-mismatch.md",
+    "data/aeromancy-region-unknown.md",
+    "data/aeromancy-smoke-east.md",
+    "data/aeromancy-smoke-unknown.md",
+    "data/aeromancy-smoke-west.md",
+    "data/aeromancy-texas-missing.md",
+    "data/aeromancy-texas.md",
+    "data/aeromancy-wind-not-smoke.md",
+    "data/aeromancy-wing-south.md"
+  ],
+  "backlog": {
+    "P1": [
+      "More Inwards atmospheric examples andvisually inspected pages",
+      "More individual/regional attribution checks",
+      "Further cloud/wind combinations",
+      "Legitimate Tyson atmospheric chapter/rights access",
+      "Additional separate historical weather-lore profiles"
+    ],
+    "P2": [
+      "Broader regional catalogs",
+      "Voluntary historical-saying versus observed-weather studies kept separate fromforecast validation",
+      "Original labelled creative atmospheric visuals",
+      "Independently versioned synthetic states",
+      "Manual photo annotation before independently evaluated recognition",
+      "Physical atmospheric modelling only ifuseful andindependently validated"
+    ]
+  },
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ],
+    "ranked_sources": 2,
+    "variations": 5
+  },
+  "transition": "Commit/push/synchronize closure before33 Western divinatory Geomancy audit only;no33 implementation.",
+  "example_commits": [
+    "e969229",
+    "8dc1dbe",
+    "6266bdc",
+    "10b6c74",
+    "fb09650",
+    "891b1ae"
+  ],
+  "acceptance_evidence_commit": "7edaa8a"
+}
