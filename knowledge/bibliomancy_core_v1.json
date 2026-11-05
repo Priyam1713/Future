@@ -1,0 +1,437 @@
+{
+  "version": 1,
+  "technique_id": 36,
+  "name": "Bibliomancy",
+  "phase": 4,
+  "date": "2026-11-06",
+  "status": "Core v1 Ready — Edition-Pinned Manual Passage Selection Scope",
+  "profile": "mascaro2022-manual-coarse-webclassic-ruth-v1",
+  "profile_sha256": "8fb64b52b632362cfc9633d6c4a01cceebeed51a14beef84b384105dca12cf34",
+  "source_commit": "a015373",
+  "corpus_index_profile_commit": "d41aa77",
+  "implementation_commit": "4f59893",
+  "independent_evidence_commit": "546ec28",
+  "report_commit": "7bd070d",
+  "acceptance_commit": "fe840c4",
+  "ranked_sources_unchanged": [
+    [
+      36,
+      "Bibliomancy",
+      1,
+      "Harvard Center for Hellenic Studies",
+      "Homeromanteia in Context",
+      "Ancient Homeric literary lot system",
+      "https://research-bulletin.chs.harvard.edu/2014/03/28/using-homer-for-divination-homeromanteia-in-context/",
+      "Open research article",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      36,
+      "Bibliomancy",
+      2,
+      "J. R. Mascaro",
+      "A Sorcerer in the Library: An Introduction to Integer Bibliomancy",
+      "Practical page/line numeric procedure",
+      "https://www.llewellyn.com/journal/print.php?id=3066",
+      "Open practitioner article",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows_unchanged": [
+    [
+      36,
+      "Bibliomancy",
+      "Bible lots",
+      "Homeromanteia in Context",
+      "A Sorcerer in the Library: An Introduction to Integer Bibliomancy",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      36,
+      "Bibliomancy",
+      "Homeromanteion",
+      "A Sorcerer in the Library: An Introduction to Integer Bibliomancy",
+      "Homeromanteia in Context",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      36,
+      "Bibliomancy",
+      "page/line randomization",
+      "A Sorcerer in the Library: An Introduction to Integer Bibliomancy",
+      "Homeromanteia in Context",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      36,
+      "Bibliomancy",
+      "poem/book oracle",
+      "A Sorcerer in the Library: An Introduction to Integer Bibliomancy",
+      "Homeromanteia in Context",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_freeze": "knowledge/bibliomancy_source_freeze_v1.json",
+  "source_registry": "knowledge/bibliomancy_sources.json",
+  "procedure_source": {
+    "id": "bibliomancy-mascaro2022-audit-v1",
+    "technique_id": 36,
+    "rank": 2,
+    "author": "J. R. Mascaro / Llewellyn Worldwide",
+    "edition": "A Sorcerer in the Library: An Introduction to Integer Bibliomancy; December12,2022",
+    "url": "https://www.llewellyn.com/journal/print.php?id=3066",
+    "locator": "Paragraphs beginning Integer bibliomancy differs; The first step; If you are enacting; The next step; You will now; Upon selecting; Next; In the fine method",
+    "ingestion": "facts_only",
+    "rights_note": "Copyrighted modern practitioner article. Conditional free-website article republication policy is not a general software/corpus licence. Independently worded procedural facts only; no complete article or proprietary book text bundled.",
+    "checked_on": "2026-11-06",
+    "snapshot_sha256": null,
+    "access": "Publisher-origin search-index rendering inspected; direct requests403. Fresh exact HTML source freeze still required before executable extraction."
+  },
+  "historical_source": {
+    "id": "bibliomancy-chs-martinhernandez2013-audit-v1",
+    "technique_id": 36,
+    "rank": 1,
+    "author": "Raquel Martín Hernández / Harvard Center for Hellenic Studies",
+    "edition": "Using Homer for Divination: Homeromanteia in Context; citation gives CHS Research Bulletin2,no1(2013); URL dated2014-03-28",
+    "url": "https://research-bulletin.chs.harvard.edu/2014/03/28/using-homer-for-divination-homeromanteia-in-context/",
+    "locator": "Aim§2; Homeromanteia§§13–24; notes17,24–30",
+    "ingestion": "facts_only",
+    "rights_note": "Modern scholarly text and cited translations distinct from ancient Greek. General CHS online-publications policy indicates CC BY-NC-ND3.0 unless otherwise stated; applicability to this journal item and third-party quotes not individually resolved. Original concise facts/locators only; no article/table/images bundled.",
+    "checked_on": "2026-11-06",
+    "snapshot_sha256": "4ed979ddeb35b787a091d1a4a98521309b3b3eb78d5b212175fc8cb98fb70d29",
+    "snapshot_bytes": 104820,
+    "access": "Direct HTML inspected; no full source text redistributed"
+  },
+  "corpus_source": {
+    "id": "bibliomancy-webclassic-ruth-corpus-v1",
+    "technique_id": 36,
+    "rank": null,
+    "author": "World English Bible translation contributors / eBible.org; ancient Book of Ruth author not independently identified",
+    "edition": "World English Bible Classic,2020 stable American-English text; complete Book of Ruth, four chapter HTML witnesses downloaded2026-11-06",
+    "url": "https://ebible.org/details.php?id=eng-web",
+    "ingestion": "public_domain_text",
+    "rights_note": "Publisher explicitly dedicates WEB translation to public domain. World English Bible trademark identifies faithful copies; editorial indexing is labeled separately, source wording/punctuation unchanged. Only complete Ruth subset supported, not whole canon.",
+    "rights_url": "https://ebible.org/eng-web/copyright.htm",
+    "checked_on": "2026-11-06",
+    "rights_snapshot_sha256": "2e62eca4b32541181eff0917becbbc14213fba3ba417246e315bae9e4a6aaa35",
+    "edition_snapshot_sha256": "65dbdf4333b99709c5ab65c5e4077f8d65338fc7638754298018fe35b66e2cf5"
+  },
+  "actual_corpus": {
+    "id": "webclassic2020-ruth-v1",
+    "version": 1,
+    "path": "knowledge/bibliomancy_corpus_v1.json",
+    "sha256": "94361b1342cba7a6ac9e0eb2e2c9ab3d21c289eb1bc3213e2cec79eb859b4055",
+    "title": "Complete Book of Ruth — World English Bible Classic2020 stable American-English text",
+    "scope": "Four chapters;85 native verses;141 selectable sentence units; one book/shelf digital adaptation, not the complete Bible or all Bible-lot traditions",
+    "word_count": 2420,
+    "raw_witnesses": [
+      {
+        "name": "RUT01.html",
+        "url": "https://ebible.org/eng-web/RUT01.htm",
+        "status": 200,
+        "sha256": "aa66d1d71110c2fc4b42022860e375349535f4366f0ef2341fe258c8eed51667",
+        "bytes": 7569,
+        "encoding": "UTF-8",
+        "path": "resources/corpora/webclassic-ruth-v1/RUT01.html"
+      },
+      {
+        "name": "RUT02.html",
+        "url": "https://ebible.org/eng-web/RUT02.htm",
+        "status": 200,
+        "sha256": "6bbb0a83bd577c751ccacadb0aa1a9b79b92b4d1df34435df0eadeb433661d7c",
+        "bytes": 6988,
+        "encoding": "UTF-8",
+        "path": "resources/corpora/webclassic-ruth-v1/RUT02.html"
+      },
+      {
+        "name": "RUT03.html",
+        "url": "https://ebible.org/eng-web/RUT03.htm",
+        "status": 200,
+        "sha256": "ba3a5f715a2d9c7958b3b9b8ea8379f2c7965cbea9dc9b5099b88ec76023d26d",
+        "bytes": 5007,
+        "encoding": "UTF-8",
+        "path": "resources/corpora/webclassic-ruth-v1/RUT03.html"
+      },
+      {
+        "name": "RUT04.html",
+        "url": "https://ebible.org/eng-web/RUT04.htm",
+        "status": 200,
+        "sha256": "026eef6466808747c81ad60308acbe57fe1e6dde56aea9074917aa7e4a4db624",
+        "bytes": 6239,
+        "encoding": "UTF-8",
+        "path": "resources/corpora/webclassic-ruth-v1/RUT04.html"
+      }
+    ],
+    "raw_manifest_sha256": "03a7ac3f4ca4fa8b8a7edce0969aa30c5c1644cb2eae6eafedad0322e63aabd9",
+    "rights": "Publisher explicitly dedicates WEB translation to public domain. World English Bible trademark identifies faithful copies; editorial indexing is labeled separately, source wording/punctuation unchanged. Only complete Ruth subset supported, not whole canon.",
+    "normalization": "Decode HTML entities; exclude verse labels, footnote marks/content, navigation, title headings and footer from selectable narrative. Collapse Unicode whitespace to one ASCII space; join consecutive verses with one ASCII space. No Unicode normalization, spelling or punctuation change. Retain exact raw HTML independently.",
+    "git_bytes": "Raw downloaded HTML witnesses use path-scoped binary attributes; no CRLF/LF conversion. Canonical JSON hashes are portable across display/storage newlines."
+  },
+  "index": {
+    "id": "webclassic2020-ruth-sentences-v1",
+    "version": 1,
+    "path": "knowledge/bibliomancy_index_v1.json",
+    "sha256": "d4649b4478756780752170255ddfeea43aeb7998fa47b75da8b4c8b869951352",
+    "sentence_counts": [
+      41,
+      37,
+      33,
+      30
+    ],
+    "logical_pages": 5,
+    "heading_only_pages": 1,
+    "ordering": "One shelf and one complete book; title-only logical page first, then chapters1–4. Source order within each chapter. One-based caller indices differ from stable IDs and native chapter/verse labels.",
+    "boundaries": "141 manually reviewed punctuation-based sentence units. Speaker introductions remain attached. Closing quotation marks, including spaced nested closers, remain with the preceding terminal punctuation. A standalone unit need not contain a matching opening/closing quote; bounded neighboring context retains surrounding dialogue. Not a universal tokenizer.",
+    "paragraphs": "Paragraph breaks and verse lines are structural whitespace, not automatic sentence boundaries; headings/footnotes are ineligible. Repeated identical text, if present, keeps distinct IDs/paths; no text deduplication.",
+    "cross_page": "Content logical pages correspond to complete source chapters. All four end at sentence boundaries; no split sentence or cross-chapter unit. Future corpora crossing page boundaries require separately frozen ownership/ineligibility. Context never crosses chapter logical page.",
+    "abbreviation": "Manual review found no abbreviation requiring an internal-full-stop exception in this Ruth subset. No general abbreviation/tokenizer support claimed.",
+    "empty_page": "Title-only logical page1 contains genuine source heading, zero selectable sentences and explicit rejection. This is an editorial digital grouping, not a historical blank printed page.",
+    "offset_unit": "Zero-based half-open Unicode codepoint offsets in normalized chapter stream; UI wrapping and source HTML line endings do not change the index."
+  },
+  "segmentation_evidence": "All141 sentence-ending verse identities hand-reviewed before production; twelve hand-authored exact source/path fixtures; all85 verses independently extracted using a separate regex/entity parser. No runtime tokenizer or expected values derived from production selection.",
+  "meaningful_boundaries": [
+    "Ruth1:12–13 question spans verse boundary and remains one sentence unit.",
+    "Ruth4:18–22 genealogy spans five verses and remains one selectable sentence unit.",
+    "Multiple sentences within a verse keep distinct stable IDs and exact text.",
+    "Spaced nested quotation closers at2:21 and3:17 attach to preceding sentence; following source verse is not polluted.",
+    "Source4:17 places period outside the quotation; exact punctuation is retained.",
+    "A sentence isolated from multi-sentence speech may lack its opening/closing quote; surrounding context remains source text. No punctuation inserted to rebalance quotes.",
+    "Source heading alone forms ineligible editorial logical page1, not a historical printed/blank page. All chapter logical pages end on full sentence boundaries."
+  ],
+  "manual_schema": {
+    "schema_version": 1,
+    "profile": "mascaro2022-manual-coarse-webclassic-ruth-v1",
+    "mode": "manual_coarse",
+    "required_identity": [
+      "corpus_id",
+      "corpus_version",
+      "corpus_sha256",
+      "index_id",
+      "index_version",
+      "index_sha256"
+    ],
+    "selections": "1–32 ordered objects with four one-based integer path values [shelf,book,logical_page,sentence]; optional exact sentence_id assertion and raw reflection",
+    "context": "0–2 neighbors each side, default1, clipped within same chapter page",
+    "optional_text": "question,reflection,notes; raw UTF8 up to10000 characters each or null; per-selection reflection same bound",
+    "validation": "Reject zero,negative,booleans,floats,out-of-range,missing identity,wrong hashes/edition,unknown fields/sentence,empty page and unsupported modes; strict JSON rejects duplicate keys/nonfinite values. No automatic rerolls."
+  },
+  "runtime_integrity": "Hard-coded profile SHA anchor; re-read profile/corpus/index and all four raw witnesses on each report; verify canonical corpus/index hashes and source-byte hashes before any path extraction. Reordering or new edition fails closed rather than resolving through old profile.",
+  "selection_output": [
+    "Exact normalized source sentence text; no generated wording",
+    "Stable sentence ID, source-native verse IDs/citation and source deep link",
+    "Original manual path and stable hierarchy IDs",
+    "Editorial logical page separately from native chapter and printed_page=null",
+    "Bounded source context before/after with native citations",
+    "Raw user question/reflection/notes distinct from original wording",
+    "Ordered repeats and neutral identity comparison; combined_meaning=null"
+  ],
+  "homeric_reference": {
+    "mode": "homeric_index_reference",
+    "faces": "Exactly three ordered strict integers1..6",
+    "editorial_ordinal": "36*(a-1)+6*(b-1)+c; one-based1..216, not ancient decimal numeral encoding",
+    "verified_keys": 216,
+    "verified_verse_mappings": 0,
+    "passage": null,
+    "mapping_status": "mapping unavailable",
+    "source": {
+      "author": "Raquel Martín Hernández",
+      "citation": "CHS Research Bulletin2,no1(2013)",
+      "website_date": "2014-03-28",
+      "witnesses": [
+        {
+          "locator": "§§13–17;notes17,19,22,24–26",
+          "fact": "Three witnesses: P.Lond.121 (=PGM VII),P.Oxy.56.3831,P.Bon.3 (=Suppl.Mag.II.77). Source dates P.Bon. to2nd–3rd centuries,P.Oxy. to3rd–4th and PGM VII near late4th; note25 records differing scholarly dates. Not three interchangeable complete editions."
+        },
+        {
+          "locator": "§15;note24",
+          "fact": "P.Oxy. text stops after source keyαγς(1,3,6); numbers continue throughαεα(1,5,1) without corresponding verses. Those are three die-face digits, not decimal ordinal136 or151. Missing verse text is not an adverse answer."
+        },
+        {
+          "locator": "§§16–18,23–24",
+          "fact": "PGM VII nearly complete; other copies help damaged beginning. Author argues common verse order in overlap and no evidence for alternate full versions; this is not authority to invent missing entries or ignore later corrections. Article does not provide all216 mappings."
+        }
+      ],
+      "order": "Three sequential six-face throws, preserving order",
+      "ordinal": "36*(a-1)+6*(b-1)+c, editorial one-based storage ordinal, not an ancient decimal numeral",
+      "mapping_status": "mapping unavailable",
+      "verified_verse_mappings": 0
+    },
+    "scope": "Supplemental historical numerical indexing only; no generated cast, complete oracle table or general Cleromancy engine. Bibliomancy36 and Cleromancy37 retain separate scopes."
+  },
+  "source_discrepancies": {
+    "seventeen_books": "00..07,10..17 includes invalid00 and omits08/09; conditioning away00 leaves15 reachable books, not17.",
+    "fine_word_count": "Two0–9 faces sum0..18 triangular over100 ordered pairs; digital1..20 has a different domain/distribution. Neither implemented."
+  },
+  "probability_boundary": "No software-generated draw and no probability claim for user-supplied selections. Future hierarchical uniform child selection differs from flattened passage-uniform sampling.",
+  "evidence_layers": {
+    "direct": "Verified procedure attribution, authentic public-domain text and edition/native citations",
+    "editorial": "Digital adaptation, whitespace representation, logical pages, curated sentence boundaries, trace/context and neutral identity comparison",
+    "user_attributed": "Raw question, personal meaning, reflection and notes; never source edits",
+    "unsupported": "Objective event prediction, verified divine selection, psychological diagnosis, guaranteed supernatural insight or unverified Homeric verses"
+  },
+  "replay": {
+    "cli": "python -m future bibliomancy data/bibliomancy-input.json --format markdown",
+    "formats": [
+      "JSON",
+      "Markdown"
+    ],
+    "input": "Full exact request, including order/repeats/raw text, included in replay",
+    "identities": [
+      "Profile SHA256",
+      "Corpus canonical SHA256",
+      "Index canonical SHA256",
+      "Raw witness manifest SHA256",
+      "Each source HTML byte SHA256",
+      "Canonical request SHA256"
+    ],
+    "offline": true,
+    "network": false,
+    "llm": false,
+    "rng": false,
+    "new_dependencies": 0,
+    "clock_locale_or_font_dependence": false
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Complete edition-pinned Ruth manual coarse sentence selection",
+      "Source-native citations and bounded chapter context",
+      "Ordered multiple/repeated selections with raw user reflections",
+      "Pinned source/corpus/index integrity and exact offline JSON/Markdown replay",
+      "Historical216-key ordered indexing reference, with verse mapping explicitly unavailable"
+    ],
+    "experimental": [],
+    "unsupported": [
+      "Fine-word synthesis",
+      "Seeded or other generated random selection",
+      "Unverified Homeric tuple-to-verse mappings or reconstructed text",
+      "Physical/printed pagination inferred from HTML, screen lines substituted for sentences",
+      "Other editions/corpora/canons/traditions under this profile",
+      "Objective predictions, divine selection verification, psychological diagnoses or supernatural guarantees"
+    ]
+  },
+  "acceptance": {
+    "passed": true,
+    "regression": {
+      "passed": true,
+      "tests": 836,
+      "inherited_tests": 781,
+      "new_tests": 55,
+      "cli_cases": 991,
+      "inherited_cli_cases": 911,
+      "new_cli_cases": 80,
+      "symbolic_verifiers": 19,
+      "protected_files": 1337,
+      "required_prior_files": 1256,
+      "changed": [],
+      "checks": "data/bibliomancy-acceptance-checks.json"
+    },
+    "independent": {
+      "passed": true,
+      "profile": "mascaro2022-manual-coarse-webclassic-ruth-v1",
+      "profile_sha256": "8fb64b52b632362cfc9633d6c4a01cceebeed51a14beef84b384105dca12cf34",
+      "corpus_sha256": "94361b1342cba7a6ac9e0eb2e2c9ab3d21c289eb1bc3213e2cec79eb859b4055",
+      "index_sha256": "d4649b4478756780752170255ddfeea43aeb7998fa47b75da8b4c8b869951352",
+      "raw_witnesses": 4,
+      "source_verses": 85,
+      "selected_sentences": 141,
+      "exact_manual_source_fixtures": 12,
+      "all_sentence_ending_verse_checks": 141,
+      "context_checks": 423,
+      "homeric_ordered_keys": 216,
+      "verified_homeric_verse_mappings": 0,
+      "literal_d10_ordered_pairs": 100,
+      "seventeen_book_unreachable": [
+        8,
+        9
+      ],
+      "source": "Independent regex/entity parsing of raw witnesses; hand-authored pre-engine boundary/path/text fixtures. Expectations never obtained from runtime corpus parsing/selection.",
+      "empirical_validation": false
+    },
+    "checks": "data/bibliomancy-acceptance-checks.json",
+    "smoke": "data/bibliomancy-smoke.json",
+    "preservation": "data/bibliomancy-preservation-baseline.json",
+    "prior_source_metadata_unchanged": true,
+    "registry_idempotent": true,
+    "dependency_audit": true,
+    "pip_check": true,
+    "diff_check": true,
+    "empirical_validation": false,
+    "qualification": "Practical bounded software/reference acceptance, not exhaustive tradition coverage, validated random sampling or supernatural accuracy"
+  },
+  "examples": {
+    "valid": [
+      "data/bibliomancy-basic",
+      "data/bibliomancy-another-page",
+      "data/bibliomancy-first-last",
+      "data/bibliomancy-multiple",
+      "data/bibliomancy-repeated",
+      "data/bibliomancy-question",
+      "data/bibliomancy-reflection",
+      "data/bibliomancy-unicode",
+      "data/bibliomancy-boundary",
+      "data/bibliomancy-native-logical",
+      "data/bibliomancy-nested-quotes",
+      "data/bibliomancy-context-zero",
+      "data/bibliomancy-context-two",
+      "data/bibliomancy-sentence-id",
+      "data/bibliomancy-homeric-index",
+      "data/bibliomancy-homeric-last"
+    ],
+    "rejected": [
+      "data/bibliomancy-fine",
+      "data/bibliomancy-seeded",
+      "data/bibliomancy-zero",
+      "data/bibliomancy-out-of-range",
+      "data/bibliomancy-boolean",
+      "data/bibliomancy-unknown-corpus",
+      "data/bibliomancy-wrong-hash",
+      "data/bibliomancy-empty-page",
+      "data/bibliomancy-unsupported-edition",
+      "data/bibliomancy-unknown-sentence"
+    ],
+    "formats": [
+      "-input.json",
+      ".json",
+      ".md"
+    ],
+    "valid_saved_replay_pairs": 16,
+    "rejected_saved_pairs": 10
+  },
+  "P1": [
+    "Full fresh Mascaro publisher HTML witness/edition collation; direct403 versus publisher-indexed procedural evidence remains explicit.",
+    "Collate source arithmetic discrepancies and alternative procedures without silently repairing traditional rules.",
+    "Additional complete real text corpora with separately reviewed native citations, segmentation and edition-specific indices.",
+    "Full Homeric mapping from legitimate scholarly witnesses; preserve lacunae, variants and corrections.",
+    "Fine-word selection only after exact word/sentence indexing and source discrepancy resolution.",
+    "Separately versioned unbiased seeded selection with independent byte vectors, rejection transcripts, hierarchy probabilities and domain separation."
+  ],
+  "P2": [
+    "Additional Bible-lot and regional book-oracle traditions, retaining cultural/source distinctions.",
+    "Multiple translations and canons under separate immutable profiles.",
+    "Broader ancient Greek textual apparatus and witness-specific rights.",
+    "Licensed poetry and literary corpora with complete bounded units.",
+    "Reproducible physical dice variants after procedure/distribution verification.",
+    "Optional textual visualization and explicitly user-directed creative reflection."
+  ],
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "transition": "Commit/push accepted closure and verify clean synchronized main before Technique37 Cleromancy / Lots resource audit only. No37 engine/profile/RNG/outcome table or38 audit."
+}
