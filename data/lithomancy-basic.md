@@ -1,0 +1,1545 @@
+# Lithomancy source-specific stone reading
+
+Source-specific symbolic comparison only; exact geometry does not establish divinatory accuracy.
+
+Profile: howard-cottage-web-general-set-v1
+
+## Relative proximity
+
+| Stone ID | Squared distance | Direction |
+| --- | --- | --- |
+| s1 | 2 | ['right', 'above'] |
+| s2 | 20 | ['right', 'above'] |
+| s3 | 90 | ['right', 'above'] |
+| s4 | 272 | ['right', 'above'] |
+| s5 | 650 | ['right', 'above'] |
+| s6 | 1332 | ['right', 'above'] |
+| s7 | 2450 | ['right', 'above'] |
+| s8 | 4160 | ['right', 'above'] |
+| s9 | 6642 | ['right', 'above'] |
+| s10 | 10100 | ['right', 'above'] |
+| s11 | 14762 | ['right', 'above'] |
+
+## Source and rights
+
+```json
+{
+  "id": "lithomancy-howard-cottage-general-facts-v1",
+  "technique_id": 34,
+  "rank": null,
+  "author": "Jessica Howard / The Cottage Mystic; About page identifies Jess and her published Art of Lithomancy",
+  "edition": "Lithomancy, undated public author web guide; inspected2026-11-05; distinct from uninspected2022 book",
+  "url": "https://www.thecottagemystic.com/Lithomancy.html",
+  "snapshot_sha256": "95b5e425df9c766103b87b6d5c2ad2b5828be130906277c324e10f45f8e7ae7b",
+  "snapshot_bytes": 113668,
+  "locator": "Building Your Kit, twelve item lines; Your Personal Stone, paragraphs1–2; Performing Your Reading, priority and distant-stone qualification",
+  "ingestion": "facts_only",
+  "rights_note": "Modern copyrighted author text and photographs; public access is not redistribution permission. Original concise factual notes/locators only; no web-page corpus, complete copied correspondence table or artwork bundled.",
+  "checked_on": "2026-11-05"
+}
+```
+
+## Author witness
+
+```json
+{
+  "url": "https://www.thecottagemystic.com/about.html",
+  "snapshot_sha256": "999ee26ce7acb4aff3e6462d9fef3fa091aed0dac11ae23b668d7c723f16414f",
+  "snapshot_bytes": 110760
+}
+```
+
+## Example-set coverage
+
+```json
+{
+  "declared": "full_example",
+  "kind": "Author example general set; not universal or mandatory. Frozen profile restricts references to these twelve roles; explicit subsets are permitted by the source’s adjustable-kit guidance.",
+  "present_roles": [
+    "lodestone",
+    "onyx",
+    "tigers_eye",
+    "green_aventurine",
+    "moonstone",
+    "blue_lace_agate",
+    "amethyst",
+    "sea_glass",
+    "five_pence_coin",
+    "shell",
+    "pebble",
+    "arrow_pebble"
+  ],
+  "missing_roles": [],
+  "total_catalog_roles": 12,
+  "generated_missing_objects": false
+}
+```
+
+## Source guidance and exceptions
+
+```json
+{
+  "set_kind": "Author example general set; not universal or mandatory. Frozen profile restricts references to these twelve roles; explicit subsets are permitted by the source’s adjustable-kit guidance.",
+  "size": "8–13 is a flexible starting suggestion; no thirteenth role inferred.",
+  "personal": "Personal stone is optional; source example uses Lodestone as self-marker. Personal anchor must be selected explicitly; choosing another present object as personal is user-attributed designation, not a changed source association.",
+  "reader": "Without personal stone, source prioritizes objects closest to the reader. Reader position must be explicitly supplied, not assumed at origin.",
+  "nearest": "Objects closest to selected anchor receive reading priority; source supplies no unique tie-break, distance cutoff, metric, zone or fixed count of winners.",
+  "exceptions": "Distant objects may still be relevant; no farthest object is automatically excluded.",
+  "groups": "Source mentions reading groups together but gives no numeric clustering algorithm or universal combined meanings.",
+  "sea_example": "Work-change sea-set differs in symbols and personal object. Its above/external, below/internal and directional associations remain documentary, not general-set rules.",
+  "other_authors": "Wimmer sixteen-role circle and Saint Germain access-gated book methods remain separate; three inventory ranks and four variations unchanged."
+}
+```
+
+## Coordinate convention
+
+```json
+{
+  "name": "integer-centers-x-right-y-up-v1",
+  "contract": {
+    "name": "integer-center-grid-v1",
+    "frames": [
+      "integer-centers-x-right-y-up-v1",
+      "integer-centers-x-right-y-down-v1"
+    ],
+    "origin": "User-declared common arbitrary zero, never implicitly the reader or personal stone.",
+    "scale": "Same arbitrary grid unit on both axes; no physical size, radius or occult cutoff.",
+    "representation": "Each object is an exact center point {x,y} or unknown/null; integers only, each -1000000..1000000 inclusive.",
+    "metric": "Squared Euclidean distance; exact Python integers; maximum squared distance8000000000000.",
+    "ties": "All equal distances retained as one group, IDs sorted only for serialization, no interpretive precedence.",
+    "coincidence": "Equal centers are reported; physical overlap/footprints not inferred.",
+    "eligibility": "All present objects except selected personal-anchor instance. Reader mode includes all objects. No role inferred from mineral, text, origin or position.",
+    "unknown": "Missing/unknown anchor prevents ranking. Unknown eligible positions prevent a certified global nearest; known-distance groups remain explicitly partial. Uncertainty/contradictory user relations qualify priority.",
+    "incomplete": "coverage must explicitly be full_example (all12unique roles) or subset (1–12unique roles). No missing object generated.",
+    "directions": "Signs of coordinate differences provide descriptive left/right/above/below in selected frame only. No symbolic direction or arrow orientation meaning.",
+    "groups": "Only explicitly user-declared groups; no automatic clustering or combined fortune. Pairwise distances are descriptive geometry.",
+    "seeded": "Unsupported; no new RNG or simulation."
+  }
+}
+```
+
+## Original placements and source roles
+
+```json
+[
+  {
+    "declaration": {
+      "id": "s0",
+      "role_id": "lodestone",
+      "position": {
+        "x": 0,
+        "y": -7
+      }
+    },
+    "source_role": {
+      "role_id": "lodestone",
+      "item": "Lodestone",
+      "physical_identity": "magnetic stone",
+      "association": "Self-marker in this example.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item1 (Lodestone)"
+    },
+    "position_known": true
+  },
+  {
+    "declaration": {
+      "id": "s1",
+      "role_id": "onyx",
+      "position": {
+        "x": 1,
+        "y": -6
+      }
+    },
+    "source_role": {
+      "role_id": "onyx",
+      "item": "Onyx",
+      "physical_identity": "crystal",
+      "association": "Protection and caution.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item2 (Onyx Crystal)"
+    },
+    "position_known": true
+  },
+  {
+    "declaration": {
+      "id": "s2",
+      "role_id": "tigers_eye",
+      "position": {
+        "x": 2,
+        "y": -3
+      }
+    },
+    "source_role": {
+      "role_id": "tigers_eye",
+      "item": "Tiger’s Eye",
+      "physical_identity": "crystal",
+      "association": "Opportunity with courage.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item3 (Tigers Eye Crystal)"
+    },
+    "position_known": true
+  },
+  {
+    "declaration": {
+      "id": "s3",
+      "role_id": "green_aventurine",
+      "position": {
+        "x": 3,
+        "y": 2
+      }
+    },
+    "source_role": {
+      "role_id": "green_aventurine",
+      "item": "Green Aventurine",
+      "physical_identity": "crystal",
+      "association": "Wellbeing and constructive ties.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item4 (Green Aventurine Crystal)"
+    },
+    "position_known": true
+  },
+  {
+    "declaration": {
+      "id": "s4",
+      "role_id": "moonstone",
+      "position": {
+        "x": 4,
+        "y": 9
+      }
+    },
+    "source_role": {
+      "role_id": "moonstone",
+      "item": "Moonstone",
+      "physical_identity": "crystal",
+      "association": "Feminine association and self-regard.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item5 (Moonstone Crystal)"
+    },
+    "position_known": true
+  },
+  {
+    "declaration": {
+      "id": "s5",
+      "role_id": "blue_lace_agate",
+      "position": {
+        "x": 5,
+        "y": 18
+      }
+    },
+    "source_role": {
+      "role_id": "blue_lace_agate",
+      "item": "Blue Lace Agate",
+      "physical_identity": "crystal",
+      "association": "Communication and creative expression.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item6 (Blue Lace Agate Crystal)"
+    },
+    "position_known": true
+  },
+  {
+    "declaration": {
+      "id": "s6",
+      "role_id": "amethyst",
+      "position": {
+        "x": 6,
+        "y": 29
+      }
+    },
+    "source_role": {
+      "role_id": "amethyst",
+      "item": "Amethyst",
+      "physical_identity": "crystal",
+      "association": "Intuitive wider perspective; an overlooked factor.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item7 (Amethyst Crystal)"
+    },
+    "position_known": true
+  },
+  {
+    "declaration": {
+      "id": "s7",
+      "role_id": "sea_glass",
+      "position": {
+        "x": 7,
+        "y": 42
+      }
+    },
+    "source_role": {
+      "role_id": "sea_glass",
+      "item": "Sea Glass",
+      "physical_identity": "glass",
+      "association": "Pleasant unexpected news or travel.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item8 (Sea Glass)"
+    },
+    "position_known": true
+  },
+  {
+    "declaration": {
+      "id": "s8",
+      "role_id": "five_pence_coin",
+      "position": {
+        "x": 8,
+        "y": 57
+      }
+    },
+    "source_role": {
+      "role_id": "five_pence_coin",
+      "item": "5p Coin",
+      "physical_identity": "coin",
+      "association": "Prosperity, money and work.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item9 (5p Coin)"
+    },
+    "position_known": true
+  },
+  {
+    "declaration": {
+      "id": "s9",
+      "role_id": "shell",
+      "position": {
+        "x": 9,
+        "y": 74
+      }
+    },
+    "source_role": {
+      "role_id": "shell",
+      "item": "Shell",
+      "physical_identity": "shell",
+      "association": "Emotional release and coping with loss.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item10 (Shell)"
+    },
+    "position_known": true
+  },
+  {
+    "declaration": {
+      "id": "s10",
+      "role_id": "pebble",
+      "position": {
+        "x": 10,
+        "y": 93
+      }
+    },
+    "source_role": {
+      "role_id": "pebble",
+      "item": "Pebble",
+      "physical_identity": "stone",
+      "association": "Giving, priorities and foundations.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item11 (Pebble)"
+    },
+    "position_known": true
+  },
+  {
+    "declaration": {
+      "id": "s11",
+      "role_id": "arrow_pebble",
+      "position": {
+        "x": 11,
+        "y": 114
+      }
+    },
+    "source_role": {
+      "role_id": "arrow_pebble",
+      "item": "Arrow-marked Pebble",
+      "physical_identity": "marked stone",
+      "association": "Masculine vitality; alternatively another person.",
+      "source_id": "lithomancy-howard-cottage-general-facts-v1",
+      "locator": "Building Your Kit, example general set, item12 (Pebble with Arrow Drawn On)"
+    },
+    "position_known": true
+  }
+]
+```
+
+## Selected anchor
+
+```json
+{
+  "declaration": {
+    "kind": "personal_stone",
+    "stone_id": "s0"
+  },
+  "position": {
+    "x": 0,
+    "y": -7
+  },
+  "excluded_instance_id": "s0",
+  "source_locator": "Your Personal Stone, paragraphs1–2; Performing Your Reading, closest-stone priority paragraph",
+  "selection": "Explicit user designation only; source example self-marker is Lodestone, not an automatic anchor."
+}
+```
+
+## Exact spatial comparison
+
+```json
+{
+  "distances": [
+    {
+      "id": "s1",
+      "position": {
+        "x": 1,
+        "y": -6
+      },
+      "distance_squared": 2,
+      "delta": {
+        "x": 1,
+        "y": 1
+      },
+      "direction": [
+        "right",
+        "above"
+      ]
+    },
+    {
+      "id": "s2",
+      "position": {
+        "x": 2,
+        "y": -3
+      },
+      "distance_squared": 20,
+      "delta": {
+        "x": 2,
+        "y": 4
+      },
+      "direction": [
+        "right",
+        "above"
+      ]
+    },
+    {
+      "id": "s3",
+      "position": {
+        "x": 3,
+        "y": 2
+      },
+      "distance_squared": 90,
+      "delta": {
+        "x": 3,
+        "y": 9
+      },
+      "direction": [
+        "right",
+        "above"
+      ]
+    },
+    {
+      "id": "s4",
+      "position": {
+        "x": 4,
+        "y": 9
+      },
+      "distance_squared": 272,
+      "delta": {
+        "x": 4,
+        "y": 16
+      },
+      "direction": [
+        "right",
+        "above"
+      ]
+    },
+    {
+      "id": "s5",
+      "position": {
+        "x": 5,
+        "y": 18
+      },
+      "distance_squared": 650,
+      "delta": {
+        "x": 5,
+        "y": 25
+      },
+      "direction": [
+        "right",
+        "above"
+      ]
+    },
+    {
+      "id": "s6",
+      "position": {
+        "x": 6,
+        "y": 29
+      },
+      "distance_squared": 1332,
+      "delta": {
+        "x": 6,
+        "y": 36
+      },
+      "direction": [
+        "right",
+        "above"
+      ]
+    },
+    {
+      "id": "s7",
+      "position": {
+        "x": 7,
+        "y": 42
+      },
+      "distance_squared": 2450,
+      "delta": {
+        "x": 7,
+        "y": 49
+      },
+      "direction": [
+        "right",
+        "above"
+      ]
+    },
+    {
+      "id": "s8",
+      "position": {
+        "x": 8,
+        "y": 57
+      },
+      "distance_squared": 4160,
+      "delta": {
+        "x": 8,
+        "y": 64
+      },
+      "direction": [
+        "right",
+        "above"
+      ]
+    },
+    {
+      "id": "s9",
+      "position": {
+        "x": 9,
+        "y": 74
+      },
+      "distance_squared": 6642,
+      "delta": {
+        "x": 9,
+        "y": 81
+      },
+      "direction": [
+        "right",
+        "above"
+      ]
+    },
+    {
+      "id": "s10",
+      "position": {
+        "x": 10,
+        "y": 93
+      },
+      "distance_squared": 10100,
+      "delta": {
+        "x": 10,
+        "y": 100
+      },
+      "direction": [
+        "right",
+        "above"
+      ]
+    },
+    {
+      "id": "s11",
+      "position": {
+        "x": 11,
+        "y": 114
+      },
+      "distance_squared": 14762,
+      "delta": {
+        "x": 11,
+        "y": 121
+      },
+      "direction": [
+        "right",
+        "above"
+      ]
+    }
+  ],
+  "ordered_distance_groups": [
+    {
+      "distance_squared": 2,
+      "ids": [
+        "s1"
+      ]
+    },
+    {
+      "distance_squared": 20,
+      "ids": [
+        "s2"
+      ]
+    },
+    {
+      "distance_squared": 90,
+      "ids": [
+        "s3"
+      ]
+    },
+    {
+      "distance_squared": 272,
+      "ids": [
+        "s4"
+      ]
+    },
+    {
+      "distance_squared": 650,
+      "ids": [
+        "s5"
+      ]
+    },
+    {
+      "distance_squared": 1332,
+      "ids": [
+        "s6"
+      ]
+    },
+    {
+      "distance_squared": 2450,
+      "ids": [
+        "s7"
+      ]
+    },
+    {
+      "distance_squared": 4160,
+      "ids": [
+        "s8"
+      ]
+    },
+    {
+      "distance_squared": 6642,
+      "ids": [
+        "s9"
+      ]
+    },
+    {
+      "distance_squared": 10100,
+      "ids": [
+        "s10"
+      ]
+    },
+    {
+      "distance_squared": 14762,
+      "ids": [
+        "s11"
+      ]
+    }
+  ],
+  "nearest_known": [
+    "s1"
+  ],
+  "farthest_known": [
+    "s11"
+  ],
+  "unknown_positions": [],
+  "anchor_position_known": true,
+  "tie_policy": "All equal distances share priority; ID ordering serializes ties only."
+}
+```
+
+## Pairwise distances
+
+```json
+[
+  {
+    "ids": [
+      "s0",
+      "s1"
+    ],
+    "distance_squared": 2
+  },
+  {
+    "ids": [
+      "s0",
+      "s2"
+    ],
+    "distance_squared": 20
+  },
+  {
+    "ids": [
+      "s0",
+      "s3"
+    ],
+    "distance_squared": 90
+  },
+  {
+    "ids": [
+      "s0",
+      "s4"
+    ],
+    "distance_squared": 272
+  },
+  {
+    "ids": [
+      "s0",
+      "s5"
+    ],
+    "distance_squared": 650
+  },
+  {
+    "ids": [
+      "s0",
+      "s6"
+    ],
+    "distance_squared": 1332
+  },
+  {
+    "ids": [
+      "s0",
+      "s7"
+    ],
+    "distance_squared": 2450
+  },
+  {
+    "ids": [
+      "s0",
+      "s8"
+    ],
+    "distance_squared": 4160
+  },
+  {
+    "ids": [
+      "s0",
+      "s9"
+    ],
+    "distance_squared": 6642
+  },
+  {
+    "ids": [
+      "s0",
+      "s10"
+    ],
+    "distance_squared": 10100
+  },
+  {
+    "ids": [
+      "s0",
+      "s11"
+    ],
+    "distance_squared": 14762
+  },
+  {
+    "ids": [
+      "s1",
+      "s2"
+    ],
+    "distance_squared": 10
+  },
+  {
+    "ids": [
+      "s1",
+      "s3"
+    ],
+    "distance_squared": 68
+  },
+  {
+    "ids": [
+      "s1",
+      "s4"
+    ],
+    "distance_squared": 234
+  },
+  {
+    "ids": [
+      "s1",
+      "s5"
+    ],
+    "distance_squared": 592
+  },
+  {
+    "ids": [
+      "s1",
+      "s6"
+    ],
+    "distance_squared": 1250
+  },
+  {
+    "ids": [
+      "s1",
+      "s7"
+    ],
+    "distance_squared": 2340
+  },
+  {
+    "ids": [
+      "s1",
+      "s8"
+    ],
+    "distance_squared": 4018
+  },
+  {
+    "ids": [
+      "s1",
+      "s9"
+    ],
+    "distance_squared": 6464
+  },
+  {
+    "ids": [
+      "s1",
+      "s10"
+    ],
+    "distance_squared": 9882
+  },
+  {
+    "ids": [
+      "s1",
+      "s11"
+    ],
+    "distance_squared": 14500
+  },
+  {
+    "ids": [
+      "s2",
+      "s3"
+    ],
+    "distance_squared": 26
+  },
+  {
+    "ids": [
+      "s2",
+      "s4"
+    ],
+    "distance_squared": 148
+  },
+  {
+    "ids": [
+      "s2",
+      "s5"
+    ],
+    "distance_squared": 450
+  },
+  {
+    "ids": [
+      "s2",
+      "s6"
+    ],
+    "distance_squared": 1040
+  },
+  {
+    "ids": [
+      "s2",
+      "s7"
+    ],
+    "distance_squared": 2050
+  },
+  {
+    "ids": [
+      "s2",
+      "s8"
+    ],
+    "distance_squared": 3636
+  },
+  {
+    "ids": [
+      "s2",
+      "s9"
+    ],
+    "distance_squared": 5978
+  },
+  {
+    "ids": [
+      "s2",
+      "s10"
+    ],
+    "distance_squared": 9280
+  },
+  {
+    "ids": [
+      "s2",
+      "s11"
+    ],
+    "distance_squared": 13770
+  },
+  {
+    "ids": [
+      "s3",
+      "s4"
+    ],
+    "distance_squared": 50
+  },
+  {
+    "ids": [
+      "s3",
+      "s5"
+    ],
+    "distance_squared": 260
+  },
+  {
+    "ids": [
+      "s3",
+      "s6"
+    ],
+    "distance_squared": 738
+  },
+  {
+    "ids": [
+      "s3",
+      "s7"
+    ],
+    "distance_squared": 1616
+  },
+  {
+    "ids": [
+      "s3",
+      "s8"
+    ],
+    "distance_squared": 3050
+  },
+  {
+    "ids": [
+      "s3",
+      "s9"
+    ],
+    "distance_squared": 5220
+  },
+  {
+    "ids": [
+      "s3",
+      "s10"
+    ],
+    "distance_squared": 8330
+  },
+  {
+    "ids": [
+      "s3",
+      "s11"
+    ],
+    "distance_squared": 12608
+  },
+  {
+    "ids": [
+      "s4",
+      "s5"
+    ],
+    "distance_squared": 82
+  },
+  {
+    "ids": [
+      "s4",
+      "s6"
+    ],
+    "distance_squared": 404
+  },
+  {
+    "ids": [
+      "s4",
+      "s7"
+    ],
+    "distance_squared": 1098
+  },
+  {
+    "ids": [
+      "s4",
+      "s8"
+    ],
+    "distance_squared": 2320
+  },
+  {
+    "ids": [
+      "s4",
+      "s9"
+    ],
+    "distance_squared": 4250
+  },
+  {
+    "ids": [
+      "s4",
+      "s10"
+    ],
+    "distance_squared": 7092
+  },
+  {
+    "ids": [
+      "s4",
+      "s11"
+    ],
+    "distance_squared": 11074
+  },
+  {
+    "ids": [
+      "s5",
+      "s6"
+    ],
+    "distance_squared": 122
+  },
+  {
+    "ids": [
+      "s5",
+      "s7"
+    ],
+    "distance_squared": 580
+  },
+  {
+    "ids": [
+      "s5",
+      "s8"
+    ],
+    "distance_squared": 1530
+  },
+  {
+    "ids": [
+      "s5",
+      "s9"
+    ],
+    "distance_squared": 3152
+  },
+  {
+    "ids": [
+      "s5",
+      "s10"
+    ],
+    "distance_squared": 5650
+  },
+  {
+    "ids": [
+      "s5",
+      "s11"
+    ],
+    "distance_squared": 9252
+  },
+  {
+    "ids": [
+      "s6",
+      "s7"
+    ],
+    "distance_squared": 170
+  },
+  {
+    "ids": [
+      "s6",
+      "s8"
+    ],
+    "distance_squared": 788
+  },
+  {
+    "ids": [
+      "s6",
+      "s9"
+    ],
+    "distance_squared": 2034
+  },
+  {
+    "ids": [
+      "s6",
+      "s10"
+    ],
+    "distance_squared": 4112
+  },
+  {
+    "ids": [
+      "s6",
+      "s11"
+    ],
+    "distance_squared": 7250
+  },
+  {
+    "ids": [
+      "s7",
+      "s8"
+    ],
+    "distance_squared": 226
+  },
+  {
+    "ids": [
+      "s7",
+      "s9"
+    ],
+    "distance_squared": 1028
+  },
+  {
+    "ids": [
+      "s7",
+      "s10"
+    ],
+    "distance_squared": 2610
+  },
+  {
+    "ids": [
+      "s7",
+      "s11"
+    ],
+    "distance_squared": 5200
+  },
+  {
+    "ids": [
+      "s8",
+      "s9"
+    ],
+    "distance_squared": 290
+  },
+  {
+    "ids": [
+      "s8",
+      "s10"
+    ],
+    "distance_squared": 1300
+  },
+  {
+    "ids": [
+      "s8",
+      "s11"
+    ],
+    "distance_squared": 3258
+  },
+  {
+    "ids": [
+      "s9",
+      "s10"
+    ],
+    "distance_squared": 362
+  },
+  {
+    "ids": [
+      "s9",
+      "s11"
+    ],
+    "distance_squared": 1604
+  },
+  {
+    "ids": [
+      "s10",
+      "s11"
+    ],
+    "distance_squared": 442
+  }
+]
+```
+
+## Coincident centers
+
+```json
+[]
+```
+
+## Source-linked reading priority
+
+```json
+{
+  "status": "applicable",
+  "scope": "all_eligible",
+  "nearest_known": [
+    {
+      "id": "s1",
+      "role_id": "onyx",
+      "source_association": {
+        "role_id": "onyx",
+        "item": "Onyx",
+        "physical_identity": "crystal",
+        "association": "Protection and caution.",
+        "source_id": "lithomancy-howard-cottage-general-facts-v1",
+        "locator": "Building Your Kit, example general set, item2 (Onyx Crystal)"
+      }
+    }
+  ],
+  "ordered_groups": [
+    {
+      "distance_squared": 2,
+      "ids": [
+        "s1"
+      ],
+      "source_meanings": [
+        {
+          "id": "s1",
+          "role_id": "onyx",
+          "source_association": {
+            "role_id": "onyx",
+            "item": "Onyx",
+            "physical_identity": "crystal",
+            "association": "Protection and caution.",
+            "source_id": "lithomancy-howard-cottage-general-facts-v1",
+            "locator": "Building Your Kit, example general set, item2 (Onyx Crystal)"
+          }
+        }
+      ]
+    },
+    {
+      "distance_squared": 20,
+      "ids": [
+        "s2"
+      ],
+      "source_meanings": [
+        {
+          "id": "s2",
+          "role_id": "tigers_eye",
+          "source_association": {
+            "role_id": "tigers_eye",
+            "item": "Tiger’s Eye",
+            "physical_identity": "crystal",
+            "association": "Opportunity with courage.",
+            "source_id": "lithomancy-howard-cottage-general-facts-v1",
+            "locator": "Building Your Kit, example general set, item3 (Tigers Eye Crystal)"
+          }
+        }
+      ]
+    },
+    {
+      "distance_squared": 90,
+      "ids": [
+        "s3"
+      ],
+      "source_meanings": [
+        {
+          "id": "s3",
+          "role_id": "green_aventurine",
+          "source_association": {
+            "role_id": "green_aventurine",
+            "item": "Green Aventurine",
+            "physical_identity": "crystal",
+            "association": "Wellbeing and constructive ties.",
+            "source_id": "lithomancy-howard-cottage-general-facts-v1",
+            "locator": "Building Your Kit, example general set, item4 (Green Aventurine Crystal)"
+          }
+        }
+      ]
+    },
+    {
+      "distance_squared": 272,
+      "ids": [
+        "s4"
+      ],
+      "source_meanings": [
+        {
+          "id": "s4",
+          "role_id": "moonstone",
+          "source_association": {
+            "role_id": "moonstone",
+            "item": "Moonstone",
+            "physical_identity": "crystal",
+            "association": "Feminine association and self-regard.",
+            "source_id": "lithomancy-howard-cottage-general-facts-v1",
+            "locator": "Building Your Kit, example general set, item5 (Moonstone Crystal)"
+          }
+        }
+      ]
+    },
+    {
+      "distance_squared": 650,
+      "ids": [
+        "s5"
+      ],
+      "source_meanings": [
+        {
+          "id": "s5",
+          "role_id": "blue_lace_agate",
+          "source_association": {
+            "role_id": "blue_lace_agate",
+            "item": "Blue Lace Agate",
+            "physical_identity": "crystal",
+            "association": "Communication and creative expression.",
+            "source_id": "lithomancy-howard-cottage-general-facts-v1",
+            "locator": "Building Your Kit, example general set, item6 (Blue Lace Agate Crystal)"
+          }
+        }
+      ]
+    },
+    {
+      "distance_squared": 1332,
+      "ids": [
+        "s6"
+      ],
+      "source_meanings": [
+        {
+          "id": "s6",
+          "role_id": "amethyst",
+          "source_association": {
+            "role_id": "amethyst",
+            "item": "Amethyst",
+            "physical_identity": "crystal",
+            "association": "Intuitive wider perspective; an overlooked factor.",
+            "source_id": "lithomancy-howard-cottage-general-facts-v1",
+            "locator": "Building Your Kit, example general set, item7 (Amethyst Crystal)"
+          }
+        }
+      ]
+    },
+    {
+      "distance_squared": 2450,
+      "ids": [
+        "s7"
+      ],
+      "source_meanings": [
+        {
+          "id": "s7",
+          "role_id": "sea_glass",
+          "source_association": {
+            "role_id": "sea_glass",
+            "item": "Sea Glass",
+            "physical_identity": "glass",
+            "association": "Pleasant unexpected news or travel.",
+            "source_id": "lithomancy-howard-cottage-general-facts-v1",
+            "locator": "Building Your Kit, example general set, item8 (Sea Glass)"
+          }
+        }
+      ]
+    },
+    {
+      "distance_squared": 4160,
+      "ids": [
+        "s8"
+      ],
+      "source_meanings": [
+        {
+          "id": "s8",
+          "role_id": "five_pence_coin",
+          "source_association": {
+            "role_id": "five_pence_coin",
+            "item": "5p Coin",
+            "physical_identity": "coin",
+            "association": "Prosperity, money and work.",
+            "source_id": "lithomancy-howard-cottage-general-facts-v1",
+            "locator": "Building Your Kit, example general set, item9 (5p Coin)"
+          }
+        }
+      ]
+    },
+    {
+      "distance_squared": 6642,
+      "ids": [
+        "s9"
+      ],
+      "source_meanings": [
+        {
+          "id": "s9",
+          "role_id": "shell",
+          "source_association": {
+            "role_id": "shell",
+            "item": "Shell",
+            "physical_identity": "shell",
+            "association": "Emotional release and coping with loss.",
+            "source_id": "lithomancy-howard-cottage-general-facts-v1",
+            "locator": "Building Your Kit, example general set, item10 (Shell)"
+          }
+        }
+      ]
+    },
+    {
+      "distance_squared": 10100,
+      "ids": [
+        "s10"
+      ],
+      "source_meanings": [
+        {
+          "id": "s10",
+          "role_id": "pebble",
+          "source_association": {
+            "role_id": "pebble",
+            "item": "Pebble",
+            "physical_identity": "stone",
+            "association": "Giving, priorities and foundations.",
+            "source_id": "lithomancy-howard-cottage-general-facts-v1",
+            "locator": "Building Your Kit, example general set, item11 (Pebble)"
+          }
+        }
+      ]
+    },
+    {
+      "distance_squared": 14762,
+      "ids": [
+        "s11"
+      ],
+      "source_meanings": [
+        {
+          "id": "s11",
+          "role_id": "arrow_pebble",
+          "source_association": {
+            "role_id": "arrow_pebble",
+            "item": "Arrow-marked Pebble",
+            "physical_identity": "marked stone",
+            "association": "Masculine vitality; alternatively another person.",
+            "source_id": "lithomancy-howard-cottage-general-facts-v1",
+            "locator": "Building Your Kit, example general set, item12 (Pebble with Arrow Drawn On)"
+          }
+        }
+      ]
+    }
+  ],
+  "source_id": "lithomancy-howard-cottage-general-facts-v1",
+  "locator": "Your Personal Stone, paragraphs1–2; Performing Your Reading, closest-stone priority paragraph",
+  "qualification": "Read nearest known objects first under the source guidance, retaining all ties and unknown qualifications. Numeric ordering is editorial geometry, not a validated future outcome. Distant objects are not automatically discarded."
+}
+```
+
+## User-declared groups
+
+```json
+[]
+```
+
+## User-declared relation checks
+
+```json
+[]
+```
+
+## Raw user text
+
+```json
+{}
+```
+
+## Unknown and conflicting evidence
+
+```json
+[]
+```
+
+## Editorial synthesis
+
+```json
+{
+  "priority_ids": [
+    "s1"
+  ],
+  "unresolved": [],
+  "combined_fortune": null,
+  "statement": "Source associations are retrieved for the exact proximity groups. Group membership, distance and direction add no new symbolic meaning."
+}
+```
+
+## Evidence layers
+
+```json
+{
+  "direct": "Howard web example identities, concise associations and nearest-first guidance",
+  "compositional": "Exact squared distances, descriptive directions, ties and user-selected group comparisons under editorial conventions",
+  "user_attributed": "Raw placements, selected anchor, question, personal associations, qualitative relations and uncertainty",
+  "unsupported": "Objective prediction, diagnosis, hidden knowledge, spirit/personality inference or universal lithomancy certification"
+}
+```
+
+## Unsupported coverage
+
+```json
+[
+  "Universal thirteen-stone system",
+  "Wimmer sixteen-role circle and Saint Germain book procedures",
+  "Howard2022 book equivalence or separate worked sea-set rules",
+  "Actual future/hidden knowledge, diagnosis or divinatory accuracy certification",
+  "Symbolic above/below/left/right zones, arrow bearing meaning, automatic cluster thresholds or combined fortune",
+  "Stone footprints, physical overlap or circle-boundary meanings",
+  "Seeded generation, image recognition and physics"
+]
+```
+
+## Exact replay metadata
+
+```json
+{
+  "request": {
+    "schema_version": 1,
+    "profile": "howard-cottage-web-general-set-v1",
+    "task": "manual_spatial_reading",
+    "mode": "manual",
+    "reading_id": "example",
+    "frame": "integer-centers-x-right-y-up-v1",
+    "coverage": "full_example",
+    "origin": "hypothetical",
+    "stones": [
+      {
+        "id": "s0",
+        "role_id": "lodestone",
+        "position": {
+          "x": 0,
+          "y": -7
+        }
+      },
+      {
+        "id": "s1",
+        "role_id": "onyx",
+        "position": {
+          "x": 1,
+          "y": -6
+        }
+      },
+      {
+        "id": "s2",
+        "role_id": "tigers_eye",
+        "position": {
+          "x": 2,
+          "y": -3
+        }
+      },
+      {
+        "id": "s3",
+        "role_id": "green_aventurine",
+        "position": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "id": "s4",
+        "role_id": "moonstone",
+        "position": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "id": "s5",
+        "role_id": "blue_lace_agate",
+        "position": {
+          "x": 5,
+          "y": 18
+        }
+      },
+      {
+        "id": "s6",
+        "role_id": "amethyst",
+        "position": {
+          "x": 6,
+          "y": 29
+        }
+      },
+      {
+        "id": "s7",
+        "role_id": "sea_glass",
+        "position": {
+          "x": 7,
+          "y": 42
+        }
+      },
+      {
+        "id": "s8",
+        "role_id": "five_pence_coin",
+        "position": {
+          "x": 8,
+          "y": 57
+        }
+      },
+      {
+        "id": "s9",
+        "role_id": "shell",
+        "position": {
+          "x": 9,
+          "y": 74
+        }
+      },
+      {
+        "id": "s10",
+        "role_id": "pebble",
+        "position": {
+          "x": 10,
+          "y": 93
+        }
+      },
+      {
+        "id": "s11",
+        "role_id": "arrow_pebble",
+        "position": {
+          "x": 11,
+          "y": 114
+        }
+      }
+    ],
+    "anchor": {
+      "kind": "personal_stone",
+      "stone_id": "s0"
+    }
+  },
+  "input_sha256": "01266092843e9d4996bf5cb3b093a012ad6db09e20ff6b99eda376d519e3c62c",
+  "profile_sha256": "65abbdb874815defe202ba3d801256625f4c35e21eb1d40749274551ad91db5b",
+  "source_sha256": "95b5e425df9c766103b87b6d5c2ad2b5828be130906277c324e10f45f8e7ae7b",
+  "serialization": "SHA256 canonical UTF8 sorted-key compact JSON, unescaped Unicode, no terminal LF; raw field whitespace preserved",
+  "external_calls": false,
+  "rng": false,
+  "generated_placements": false
+}
+```
