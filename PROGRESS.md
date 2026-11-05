@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 34 Howard source and geometry freeze — 2026-11-05
+- Rechecked public guide and About attribution; complete twelve-object example associations frozen before runtime, with optional personal/reader anchors, nearest priority, adjustable set and distant-object exception. Book, sea-set and other authors remain separate.
+- Exact HTML hashes, four independent coordinate/ranking fixtures and named integer point-grid contract frozen; metric, frame, ties and subset rules are editorial conventions. No universal13-role system, direction symbolism, automatic clusters, boundaries or RNG.
+
 ## Technique 34 Lithomancy resource audit — 2026-11-05
 - Began after Geomancy closure 1dcd214 was pushed, clean and synchronized0/0. Original three ranked sources and four variation rows preserved. Audit only; no executable set/profile, matcher, CLI or casting protocol.
 - Saint Germain2018 catalogue is a contents/imprint lead, not full procedural access. Wimmer author web table specifies16 roles; selected22-page preview has gaps and visual-access limits. Howard publisher2022 dates differ by12 days; author web general set has12 items and flexible8–13 guidance. No universal13-stone system inferred.
