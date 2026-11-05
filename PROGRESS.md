@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 34 manual spatial reading engine — 2026-11-05
+- Source721b666 and catalog5eba9e8 pushed before runtime. Added Howard12 manual full/subset casts, explicit personal/reader anchors, exact squared distances, nearest-first source associations, all ties, unknowns, user groups/relations and JSON/Markdown replay. No extra source meanings, clusters, footprints, Wimmer rules or RNG.
+- 46 new tests pass; independent expanded-dot-product verifier checks12 roles,1,225 pairs,25 grid rankings,4 pre-engine cases,10 transforms and9 viewpoint checks. Full inherited acceptance follows before closure.
+
 ## Technique 34 Howard source and geometry freeze — 2026-11-05
 - Rechecked public guide and About attribution; complete twelve-object example associations frozen before runtime, with optional personal/reader anchors, nearest priority, adjustable set and distant-object exception. Book, sea-set and other authors remain separate.
 - Exact HTML hashes, four independent coordinate/ranking fixtures and named integer point-grid contract frozen; metric, frame, ties and subset rules are editorial conventions. No universal13-role system, direction symbolism, automatic clusters, boundaries or RNG.

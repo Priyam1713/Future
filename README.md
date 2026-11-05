@@ -774,6 +774,60 @@ and [clinical scope](data/akashic-clinical.md).
 Run `python -m scripts.verify_akashic`, `python -m scripts.smoke_akashic_core`
 and `python -m unittest tests.test_akashic -q`.
 
+## Lithomancy: Howard general-set manual spatial reading
+
+`python -m future lithomancy data/lithomancy-input.json --format markdown`
+
+The `howard-cottage-web-general-set-v1` profile covers all twelve objects in
+Jessica Howard's public example general set, with source-located associations and
+nearest-to-personal-stone or nearest-to-reader priority. The web guide is a separate
+witness from her book. Its adjustable set and distant-object exception remain explicit.
+
+```json
+{
+  "schema_version": 1,
+  "profile": "howard-cottage-web-general-set-v1",
+  "task": "manual_spatial_reading",
+  "mode": "manual",
+  "reading_id": "example",
+  "frame": "integer-centers-x-right-y-up-v1",
+  "coverage": "subset",
+  "origin": "hypothetical",
+  "stones": [
+    {"id": "self", "role_id": "lodestone", "position": {"x": 0, "y": 0}},
+    {"id": "caution", "role_id": "onyx", "position": {"x": 3, "y": 4}}
+  ],
+  "anchor": {"kind": "personal_stone", "stone_id": "self"}
+}
+```
+
+Declare `coverage: "full_example"` for all twelve unique roles, or explicitly use
+`subset` for 1–12 roles. A reader anchor uses `{"kind":"reader","position":{"x":0,"y":0}}`.
+An omitted/null anchor or omitted/null position remains unknown. Personal-anchor
+selection is explicit; the source's Lodestone example is not an automatic default.
+Objects have unique instance IDs and unique source-role IDs. Source associations
+and optional raw user associations remain separate.
+
+The named integer grid, center-point model and squared Euclidean metric are
+editorial conventions. Both axes share an arbitrary unit, bounded to ±1,000,000.
+The alternate `integer-centers-x-right-y-down-v1` frame changes descriptive vertical
+direction; it adds no symbolic meaning. All equal distances retain priority together;
+coincident centers imply no physical overlap. Unknown eligible positions make the
+nearest-known result partial. Far objects are retained in the reading.
+
+Reports show exact proximity groups, source associations, pairwise distances, ties,
+unknown/conflicting evidence and full replay with hashes. Optional `groups` contain
+user-selected ID/member lists and associations; no combined fortune is generated.
+Optional `relations` declare from/to IDs and left/right/above/below/coincident/near/far/unknown;
+direction claims are checked against coordinates, while near/far remain unquantified.
+Question/intention/commentary and stone associations preserve raw Unicode/whitespace.
+
+No universal thirteen-stone system, sea-set direction symbolism, Wimmer circle
+rules, automatic clusters, seeded casting, image recognition or physics is supported.
+Exact geometry does not establish divinatory accuracy. Independent checks:
+`python -m scripts.verify_lithomancy`; CLI/replay checks:
+`python -m scripts.smoke_lithomancy_core`.
+
 ## Western Geomancy: historical mathematical shield construction
 
 `python -m future geomancy data/geomancy-input.json --format markdown`
