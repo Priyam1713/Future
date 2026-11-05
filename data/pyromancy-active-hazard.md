@@ -1,0 +1,454 @@
+# Pyromancy historical symbolic candle report
+
+Profile: pamita-public2026-candle-observation-v1
+
+Prioritize stopping the reported unsafe activity safely. Do not handle hot equipment or maintain a hazardous burn for a reading.
+
+## Safety and stopping
+
+```json
+{
+  "priority": "safety_hold",
+  "symbolic_hold": true,
+  "declarations": [
+    {
+      "location": "session",
+      "declared": {
+        "active_hazard": true
+      }
+    }
+  ],
+  "hazards": [
+    {
+      "location": "session",
+      "field": "active_hazard",
+      "declared": true
+    }
+  ],
+  "stopped_reported": false,
+  "message": "Prioritize stopping the reported unsafe activity safely. Do not handle hot equipment or maintain a hazardous burn for a reading.",
+  "physically_verified": false,
+  "policy": {
+    "locator": "Tall:How Tall Should a Spell Candle Flame Be?;What Should You Do When the Flame Is Too Tall?;Soot:Should You Wipe the Soot Off?",
+    "policy": "Any declared unsafe burning,overheating or active hazard in the session or an observation holds all symbolic display. Keep a stopped activity stopped;otherwise prioritize stopping safely. Do not manipulate hot equipment or maintain an unsafe burn for a reading. No real fire required.",
+    "unknown": "Unknown safety is not a safety clearance;historical/hypothetical comparison does not authorize physical activity."
+  }
+}
+```
+
+## Exact public sources and rights
+
+```json
+[
+  {
+    "id": "pyromancy-pamita-public-tall2026-core-v1",
+    "technique_id": 30,
+    "rank": 1,
+    "author": "Parlour of Wonders,practice associated with Madame Pamita",
+    "edition": "What Does a Tall Spell Candle Flame Mean?;public practitioner webpage dated2026-07-14;separate from2020 book",
+    "url": "https://parlourofwonders.com/blogs/candle-magic/what-does-a-tall-spell-candle-flame-mean",
+    "locator": "Opening;First,Check for a Practical Explanation;What Is the Magical Meaning;What Should You Do;Read the Whole Candle",
+    "finding": "Distinguishes wick/carbon,dressing,ignited material and drafts from a persistent tall-flame symbolic account of excessive intensity after physical correction. High is not automatically positive. Oversized/smoky/unsafe flame calls for stopping,cooling before tending;no unsafe burn is needed for software. Spirit-presence and relationship claims remain unsupported capabilities.",
+    "ingestion": "facts_only",
+    "rights_note": "Modern authored text/translation,webpage and images retain separate rights. Original concise factual notes only;no book chapter,ritual corpus,invocations,source art or photographs redistributed.",
+    "checked_on": "2026-11-05",
+    "snapshot_sha256": "609db5c6efcdbbab0c1ced9158c5f29ba497cf9a9e2c441298b06c28ff7f960c",
+    "snapshot_bytes": 731342,
+    "published_on": "2026-07-14",
+    "witness": "Reinspected public HTML;not verified2020 book transcription"
+  },
+  {
+    "id": "pyromancy-pamita-public-low2026-core-v1",
+    "technique_id": 30,
+    "rank": 1,
+    "author": "Parlour of Wonders,practice associated with Madame Pamita",
+    "edition": "Why Is My Spell Candle Flame So Small?;public practitioner webpage dated2026-07-14;separate from2020 book",
+    "url": "https://parlourofwonders.com/blogs/candle-magic/why-is-my-spell-candle-flame-so-small",
+    "locator": "Opening;First,Check for a Practical Explanation;What Does a Small Candle Flame Mean Spiritually;Read the Whole Candle",
+    "finding": "Distinguishes short/undersized/drowning/clogged wick and construction from the attributed weak-momentum or divided-intention metaphor when a sound candle remains weak. Improvement after correction differs from persistence. No objective assessment of a user’s will,mental state,other-person feelings or spirits follows.",
+    "ingestion": "facts_only",
+    "rights_note": "Modern authored text/translation,webpage and images retain separate rights. Original concise factual notes only;no book chapter,ritual corpus,invocations,source art or photographs redistributed.",
+    "checked_on": "2026-11-05",
+    "snapshot_sha256": "9f31c4fd5b43f43bdec181a2776d0582997465b7832ba819cbd69c5843a49d84",
+    "snapshot_bytes": 729944,
+    "published_on": "2026-07-14",
+    "witness": "Reinspected public HTML;not verified2020 book transcription"
+  },
+  {
+    "id": "pyromancy-pamita-public-soot2026-core-v1",
+    "technique_id": 30,
+    "rank": 1,
+    "author": "Parlour of Wonders,practice associated with Madame Pamita",
+    "edition": "What Does Black Soot at the Top of a Candle Jar Mean?;public practitioner webpage dated2026-07-14;separate from2020 book",
+    "url": "https://parlourofwonders.com/blogs/candle-magic/what-does-black-soot-at-the-top-of-a-candle-jar-mean",
+    "locator": "Opening;First,Check for a Practical Explanation;How to Read the Density and Depth;Should You Wipe the Soot Off;Top Soot Versus Bottom Soot",
+    "finding": "After practical causes are addressed,upper soot with clear glass below has an attributed initial-obstacle/overcoming account. Dense whole-jar soot is a different account;density and extent matter but no numeric timeline is established. Hot glass is not wiped;overheating or obscured flame calls for stopping. Soot is a deposit,not identical to live smoke or embers.",
+    "ingestion": "facts_only",
+    "rights_note": "Modern authored text/translation,webpage and images retain separate rights. Original concise factual notes only;no book chapter,ritual corpus,invocations,source art or photographs redistributed.",
+    "checked_on": "2026-11-05",
+    "snapshot_sha256": "8df30b9740a5905b70e2a49fa588abff357cf0d907d0b3bc9b38b0ff5ee69f20",
+    "snapshot_bytes": 732690,
+    "published_on": "2026-07-14",
+    "witness": "Reinspected public HTML;not verified2020 book transcription"
+  }
+]
+```
+
+## Observation provenance
+
+```json
+{
+  "default_origin": "reported_real",
+  "physically_verified": false,
+  "input_order_retained": true
+}
+```
+
+## Ordered manual observations and conditions
+
+```json
+[
+  {
+    "id": "o1",
+    "phenomenon": "flame",
+    "origin": "reported_real",
+    "status": "not_applicable",
+    "declared": {
+      "id": "o1",
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "high",
+        "persistence": "persistent"
+      },
+      "physical": {
+        "explanation": "addressed",
+        "correction": "reported_completed",
+        "after_correction": "persisted"
+      }
+    },
+    "physical_assessment": {
+      "status": "applicable",
+      "declared": {
+        "explanation": "addressed",
+        "correction": "reported_completed",
+        "after_correction": "persisted"
+      },
+      "current_concerns": [],
+      "missing": [],
+      "conflicts": [],
+      "cause_verified": false,
+      "note": "All checks,causes,corrections and follow-up remain user declarations. No cause noticed is never proof of physical absence or a spiritual cause."
+    },
+    "cases": [
+      {
+        "id": "tall_persistent",
+        "rule_id": "pyromancy.pamita2026.tall_persistent",
+        "status": "not_applicable",
+        "condition_status": "applicable",
+        "source_id": "pyromancy-pamita-public-tall2026-core-v1",
+        "locator": "What Is the Magical Meaning of a Tall Candle Flame?;First,Check for a Practical Explanation;Read the Whole Candle,Not Only Its Height",
+        "conditions": [
+          {
+            "field": "phenomenon",
+            "expected": "flame",
+            "declared": "flame",
+            "status": "applicable"
+          },
+          {
+            "field": "substrate",
+            "expected": "candle_flame",
+            "declared": "candle_flame",
+            "status": "applicable"
+          },
+          {
+            "field": "height",
+            "expected": "high",
+            "declared": "high",
+            "status": "applicable"
+          },
+          {
+            "field": "persistence",
+            "expected": "persistent",
+            "declared": "persistent",
+            "status": "applicable"
+          },
+          {
+            "field": "physical_qualified",
+            "expected": true,
+            "declared": "applicable",
+            "status": "applicable"
+          },
+          {
+            "field": "correction",
+            "expected": "reported_completed",
+            "declared": "reported_completed",
+            "status": "applicable"
+          },
+          {
+            "field": "after_correction",
+            "expected": "persisted",
+            "declared": "persisted",
+            "status": "applicable"
+          }
+        ],
+        "displayed_account": null,
+        "safety_hold": true
+      },
+      {
+        "id": "low_persistent",
+        "rule_id": "pyromancy.pamita2026.low_persistent",
+        "status": "not_applicable",
+        "condition_status": "not_applicable",
+        "source_id": "pyromancy-pamita-public-low2026-core-v1",
+        "locator": "Opening;What Does a Small Candle Flame Mean Spiritually?;Read the Whole Candle,Not Only the Flame Height",
+        "conditions": [
+          {
+            "field": "phenomenon",
+            "expected": "flame",
+            "declared": "flame",
+            "status": "applicable"
+          },
+          {
+            "field": "substrate",
+            "expected": "candle_flame",
+            "declared": "candle_flame",
+            "status": "applicable"
+          },
+          {
+            "field": "height",
+            "expected": "low",
+            "declared": "high",
+            "status": "not_applicable"
+          },
+          {
+            "field": "persistence",
+            "expected": "persistent",
+            "declared": "persistent",
+            "status": "applicable"
+          },
+          {
+            "field": "physical_qualified",
+            "expected": true,
+            "declared": "applicable",
+            "status": "applicable"
+          },
+          {
+            "field": "followup_qualified",
+            "expected": true,
+            "declared": {
+              "explanation": "addressed",
+              "correction": "reported_completed",
+              "after_correction": "persisted"
+            },
+            "status": "applicable"
+          }
+        ],
+        "displayed_account": null,
+        "safety_hold": true
+      }
+    ],
+    "unresolved": [],
+    "conflicts": [],
+    "unsupported_symbolic_fields": [],
+    "color_correspondences": null,
+    "note": "Unsupported categories and colors retain declarations without invented meanings. Nonapplication is not a negative forecast."
+  }
+]
+```
+
+## Editorial symbolic comparison
+
+```json
+[
+  {
+    "observation_id": "o1",
+    "evidence": "editorial",
+    "accounts": [],
+    "unresolved": [],
+    "physical_missing": [],
+    "conflicts": [],
+    "reflection": null,
+    "note": "Attributed practitioner metaphor only;no conclusion about a person,spirit or future event."
+  }
+]
+```
+
+## Coverage summary
+
+```json
+{
+  "observations": 1,
+  "counts": {
+    "applicable": 0,
+    "not_applicable": 1,
+    "insufficient_evidence": 0,
+    "conflicting_evidence": 0,
+    "unsupported": 0
+  }
+}
+```
+
+## Physical qualifications
+
+```json
+{
+  "explanation_states": [
+    "known",
+    "possible",
+    "not_noticed",
+    "checked_no_issue",
+    "addressed",
+    "unknown"
+  ],
+  "qualification": "Known or possible unresolved explanation prevents application;not_noticed and unknown are insufficient. checked_no_issue requires an explicit completed correction or not_needed_after_check declaration. addressed requires reported_completed. Current adverse wick/draft/dressing/construction evidence contradicts a qualified summary.",
+  "followup": "Tall requires completed correction and persisted follow-up. Low permits explicitly checked/no-issue/no-correction-needed OR completed correction with persisted follow-up. Improvement/changed means the selected abnormal height resolved in this schema;it is distinct from persistence.",
+  "no_proof": "All checks,causes,corrections and follow-up remain user declarations. No cause noticed is never proof of physical absence or a spiritual cause."
+}
+```
+
+## Ancient lamp documentary context
+
+```json
+{
+  "source_id": "pyromancy-love2019-pgmiv-context-v1",
+  "locator": "PGMIV.52–87;manuscriptpp4–5",
+  "account": "Researcher describes a bilingual invocation/theophany account involving a lamp and release,with interpretive uncertainty. It is not a modern flame-sign dictionary.",
+  "executable": false,
+  "ritual_steps": false,
+  "betz_original_checked": false,
+  "requested": false
+}
+```
+
+## Separate documentary sources
+
+```json
+[
+  {
+    "id": "pyromancy-love2019-pgmiv-context-v1",
+    "technique_id": 30,
+    "rank": 2,
+    "author": "Edward Love;Coptic Magical Papyri research project,University of Würzburg",
+    "edition": "Old Coptic Magic II:The Bilingual Divination of PGM IV;2019-07-19;researcher commentary and selected translation,not Betz edition",
+    "url": "https://www.coptic-magic.phil.uni-wuerzburg.de/index.php/2019/07/19/the-bilingual-divination-of-pgm-iv/",
+    "locator": "PGMIV.52–87;P.Bibliothèque nationale supplément grec574,manuscript pages4–5;discussion of lamp,theophany,release and uncertainty",
+    "finding": "A bilingual Greek/Egyptian ritual account uses a lamp within an invocation/theophany procedure and includes release. Author explicitly distinguishes it from prolonged lamp-gazing and marks interpretive uncertainties. Hazardous/coercive historical animal/bodily-material practices remain documentary only;no reenactment steps or spirit/outcome verification. Manuscript-page locator is not Betz print pagination.",
+    "ingestion": "facts_only",
+    "rights_note": "Modern authored text/translation,webpage and images retain separate rights. Original concise factual notes only;no book chapter,ritual corpus,invocations,source art or photographs redistributed.",
+    "checked_on": "2026-11-05",
+    "snapshot_sha256": "8d8655ceff1ee0c986aca16368214ef39a509b4d2aa3912f2672bba46015843f",
+    "snapshot_bytes": 162484
+  },
+  {
+    "id": "pyromancy-acs-flame-physical-context-v1",
+    "technique_id": 30,
+    "rank": null,
+    "author": "American Chemical Society",
+    "edition": "The Secret Science of Flames;public educational webpage checked2026-11-05",
+    "url": "https://www.acs.org/education/whatischemistry/adventures-in-chemistry/secret-science-stuff/flames.html",
+    "locator": "Why does a flame have different colors;How do candles with different colored flames work",
+    "finding": "Flame color has chemical/thermal explanations;added chemicals can alter emitted colors. Candle wax color,flame color and on-screen color must be different fields. No spirit/color omen correspondence or inverse temperature/composition diagnosis follows from a user description.",
+    "ingestion": "facts_only",
+    "rights_note": "Modern authored text/translation,webpage and images retain separate rights. Original concise factual notes only;no book chapter,ritual corpus,invocations,source art or photographs redistributed.",
+    "checked_on": "2026-11-05"
+  }
+]
+```
+
+## User notes
+
+```json
+null
+```
+
+## User context
+
+```json
+null
+```
+
+## Evidence layers
+
+```json
+{
+  "direct": "Dated public practitioner accounts and practical qualifications;separate documentary lamp/physical context",
+  "user_attributed": "Ordered manual observations,origins,features,checks,corrections,safety and voluntary text",
+  "editorial": "Conservative condition comparisons,physical-confound bookkeeping,safety hold and neutral reflection",
+  "unsupported": "Objective prediction,clinical/personality/willpower conclusions,spirits,third-party emotions,hidden intentions or validated paranormal influence"
+}
+```
+
+## Application conventions
+
+```json
+[
+  "Finite manual categories and optional fields are application conventions,not a universal pyromancy system. Raw Unicode/whitespace and input order retained.",
+  "Scalar values or up to four distinct alternative declarations are allowed. Unknown/ambiguous/null evidence is unresolved;known competing matches/nonmatches conflict.",
+  "Physical details describe the current assessed observation;correction and follow-up describe the reported sequence,not actions performed or verified by this software.",
+  "Top-only/full-jar and clear-lower-glass evidence must agree;opposed declarations conflict. Density refines only the source cases that require it;unknown density does not invent a refinement.",
+  "No numeric flame-height threshold,combustion diagnosis,color omen,deadline,spirit identity or prediction confidence. Wax,flame and soot colors stay distinct.",
+  "Upper grey-haze refinement is a deliberately narrower editorial scope within the source upper-soot article,not a general rule for any grey material.",
+  "Unsupported smoke,ember,lamp and color categories can be journaled without executable source meanings. Ancient lamp context is documentary only.",
+  "Safety holds suppress displayed symbolic accounts and reflection prompts while retaining condition comparisons and locators. Holding is an editorial policy,not a practitioner prediction."
+]
+```
+
+## Limits
+
+```json
+[
+  "Objective predictions or spell-success certification",
+  "Clinical/personality/willpower judgments",
+  "Third-party feelings,hidden intentions or spirit identification",
+  "Ancient lamp rites or hazardous ritual execution",
+  "Unverified flame-color,live-smoke or ember symbolism",
+  "Universal fire dictionary",
+  "Renderer,camera,combustion simulation,LLM,seeds or generated layouts",
+  "Full ranked2020 Pamita book or Betz translation coverage"
+]
+```
+
+## Exact replay metadata
+
+```json
+{
+  "request": {
+    "schema_version": 1,
+    "profile": "pamita-public2026-candle-observation-v1",
+    "task": "symbolic_candle_observation",
+    "mode": "manual",
+    "origin": "reported_real",
+    "observations": [
+      {
+        "id": "o1",
+        "phenomenon": "flame",
+        "attributes": {
+          "substrate": "candle_flame",
+          "height": "high",
+          "persistence": "persistent"
+        },
+        "physical": {
+          "explanation": "addressed",
+          "correction": "reported_completed",
+          "after_correction": "persisted"
+        }
+      }
+    ],
+    "safety": {
+      "active_hazard": true
+    }
+  },
+  "input_sha256": "8b09f4c7aadf1d6fc76458050f5c836cc948e2c453b3762e7c8902b8bf16069d",
+  "profile_sha256": "a6fc5c7f0252c4b049d14cb74474132044645cc5ecf3d6f7c222dee9f2b5dd7f",
+  "source_sha256": {
+    "pyromancy-pamita-public-tall2026-core-v1": "609db5c6efcdbbab0c1ced9158c5f29ba497cf9a9e2c441298b06c28ff7f960c",
+    "pyromancy-pamita-public-low2026-core-v1": "9f31c4fd5b43f43bdec181a2776d0582997465b7832ba819cbd69c5843a49d84",
+    "pyromancy-pamita-public-soot2026-core-v1": "8df30b9740a5905b70e2a49fa588abff357cf0d907d0b3bc9b38b0ff5ee69f20"
+  },
+  "serialization": "Canonical UTF8 sorted-key compact JSON,unescaped Unicode,no terminal LF;raw content line endings retained",
+  "external_calls": false,
+  "rng": false,
+  "generated_observations": false
+}
+```
