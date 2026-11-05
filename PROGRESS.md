@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique31 Hydromancy Core v1 closure — 2026-11-05
+- Sourcec3be264,engine4bc5d9f andreport/evidence passes pushed. **Core v1 Ready — Guided Water Observation/Reference Scope**:andrews-spees2005-water-reference-v1;eight water-specific context/procedure/impression cases,explicit five-state evaluator andphysical/subjective/imagined separation. Andrews excerpt attribution distinct fromrankedTyson;Coptic901–1100 comparison remains fragmentary documentary context.
+-613 tests(579+34),656 CLI cases(593+63),44 new independent reference checks andall13 inherited symbolic verifiers pass.278 saved journals/reports andprior profile/engine bytes unchanged(includingrequired223).18 JSON/18 Markdown saved reports replay;registry,dependency,pip anddiff checks pass. Matrix,source/profile/request hashes,rights/replay andacceptance frozen in hydromancy_core_v1.json.
+- P1:Tyson/Betz original methods/rights,manuscript comparison andmore verified water-specific contexts. P2:separate regional/oil profiles,optional original visuals/photo annotation andindependently validated recognition/simulation only ifuseful. No universal ripple/drop/color omen,physical equipment orparanormal validation. Push/synchronize closure before32 Aeromancy audit only.
+
 ## Technique31 manual water condition engine — 2026-11-05
 - Sourcec3be264 pushed before runtime. Added hydromancy with eight water-specific procedure/impression reference cases,explicit medium/vessel/rain/gaze conditions andfive-state evaluator. Physical mist,glare,ripples,subjective fog anddeliberate imagery stay distinct;no source-free omen mapping. Optional Coptic documentary comparison preserves gaps anddate901–1100.
 -34 new tests,44 independent reference checks andregistry idempotence pass. Full inherited regression/CLI,13 existing verifiers and278-file prior report/profile preservation sweep run before closure. JSON/Markdown exact replay,Unicode andportable hashes supported;no renderer,RNG ornew dependency.
