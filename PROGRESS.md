@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 37 single marked-lot engine — 2026-11-06
+- Source a52f01a and verified catalog2cf0b82 pushed before reading engine. Added one declared manual lot, explicit observation origin, exact source account/normalization trace, catalog/lookup tasks, raw Unicode context and deterministic JSON/Markdown replay. No inferred mark or application, probability, numeric or multi-draw mode.
+- 59 new tests pass; independent24 source accounts/98 alias keys and9016 numerical research tuples verify against pre-engine fixtures. Source impossible face5 and numeric-label conflict retained. Full inherited acceptance follows before closure.
+
+
 ## Technique 37 immutable catalog — 2026-11-06
 - Source/reference a52f01a pushed first. Frozen `opsopaus-greek-alphabet-manual-lot-v1`:24 source-order records with meaningful attributed accounts, lexical qualifications and98 explicit alias keys. Source HTML remains unavailable; canonical source-record/profile/catalog hashes are separate from raw snapshot claims.
 - NFC plus explicit ASCII-name and Greek-glyph handling; no NFKC/confusable folding. Source display Khi retained alongside same-author Chi; final sigma is a labeled editorial orthographic alias. Standalone catalog verification precedes the reading engine.

@@ -774,6 +774,22 @@ and [clinical scope](data/akashic-clinical.md).
 Run `python -m scripts.verify_akashic`, `python -m scripts.smoke_akashic_core`
 and `python -m unittest tests.test_akashic -q`.
 
+## Cleromancy: Greek Alphabet Oracle single declared lot
+
+`python -m future cleromancy data/cleromancy-input.json --format markdown`
+
+Profile `opsopaus-greek-alphabet-manual-lot-v1` provides all24 source-order Greek marked lots from John Opsopaus's public *A Greek Alphabet Oracle*. Each mark has an original concise source-attributed account, lexical qualifications and exact row locator. This supplementary webpage is distinct from the ranked *The Oracles of Homer and the Bones* and the2017 *Oracles of Apollo*. Full author-origin indexed text was inspected; fresh canonical/www requests failed TLS certificate verification, so the raw HTML hash is explicitly unavailable. Original inscription attribution remains author-attributed pending epigraphic collation. No full modern translation/commentary is bundled.
+
+Copy the exact profile/catalog ID/version/hash from `data/cleromancy-input.json`. Use `mode:"manual"` and `task:"reading"` with one `mark`, such as `gao-alpha`, `Alpha`, `Α` or `α`. `task:"lookup"` returns the same source record; `task:"catalog"` omits `mark` and lists the full ordered catalog. The runtime verifies pinned profile/catalog hashes before lookup. Changed meanings, ordering, editions or aliases require a new profile.
+
+Alias policy is versioned: ASCII edge whitespace trim, NFC only, ASCII-name/ID case normalization and explicit Greek glyph aliases. There is no NFKC or visual-confusable folding: Latin `A` and Cyrillic lookalikes do not mean Greek Alpha. Source display `Khi` is preserved; same-author `Chi` is accepted. Ordinary/final sigma `σ`/`ς` both resolve to Sigma, with final sigma labeled an editorial orthographic alias rather than a separate lot.
+
+`observation_origin` is `reported_real`, `hypothetical` or `unknown` (default). This is user-reported provenance, never a verified physical or generated draw. Optional `question`, `association`, `reflection`, `notes` and `uncertainty` preserve raw UTF8/whitespace separately from the source account. No selection probability or automatic application is generated. Questions do not change the declared mark or its meaning.
+
+Numeric and multiple-draw modes remain unsupported. The source's impossible five-astragaloi face5 example, reversed numeric-column wording, missing five-d6 sums25/13 and distinct tuple/multiset/sum spaces are retained explicitly. No full56-outcome Astragalomanteion, Homeric passage mapping, seeded selector, diagnosis or factual prediction is supplied.
+
+Source/fixtures precede executable lookup: `knowledge/cleromancy_source_freeze_v1.json`, `tests/fixtures/cleromancy_reference_v1.json`. Standalone catalog check: `python -m scripts.verify_cleromancy --catalog-only`; full independent check: `python -m scripts.verify_cleromancy`; CLI/replay check: `python -m scripts.smoke_cleromancy_core`.
+
 ## Bibliomancy: edition-pinned manual sentence selection
 
 `python -m future bibliomancy data/bibliomancy-input.json --format markdown`

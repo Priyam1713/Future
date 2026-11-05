@@ -268,7 +268,26 @@ def main():
     biblio=sub.add_parser('bibliomancy')
     biblio.add_argument('input',help='Edition-pinned manual sentence paths or historical Homeric indexing-only reference JSON')
     biblio.add_argument('--format',choices=['json','markdown'],default='json')
+    clero=sub.add_parser('cleromancy')
+    clero.add_argument('input',help='Named Greek Alphabet Oracle single declared marked-lot or source catalog JSON')
+    clero.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='cleromancy':
+        import sys
+        from .scrying import load_input
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            try:
+                from .cleromancy import read,markdown
+                result=read(load_input(args.input),registry)
+            except (ValueError,OSError) as exc:
+                from html import escape
+                print(json.dumps(dict(status='rejected',error=str(exc),cleromancy_report=None),indent=2) if args.format=='json' else '# Cleromancy request rejected\n\n'+escape(str(exc))+'\n')
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+        finally:registry.close()
+        return
     if args.command=='bibliomancy':
         import sys
         from .scrying import load_input
