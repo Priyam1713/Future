@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique30 manual candle/soot engine — 2026-11-05
+- Source freeze317cc81 pushed before engine. Added pyromancy manual CLI:six public2026 candle/jar-soot cases,explicit physical explanations/correction andfollow-up,missing/conflicts,source-layered JSON/Markdown andexact replay. Hazard declarations hold symbolic accounts;stopped activities need no relighting. No physical cause,personality orspirit inference.
+-39 new tests,59 independent pre-engine source/condition checks andregistry idempotence pass. Full inherited suite/CLI andall12 existing verifiers(includingCoffee),plus223-file byte preservation,run before closure. No renderer,LLM,random protocol ornew dependency.
+
 ## Technique30 public source/profile freeze — 2026-11-05
 - Reinspected three Pamita-associated public articles dated2026-07-14;new immutable core witness IDs/hashes preserve earlier audit sources. Named pamita-public2026-candle-observation-v1:six conditional flame/jar-soot cases,physical explanations/correction sequence andsource stopping qualifications. Distinct from ranked2020 book andBetz translation.
 - Pre-engine source/condition fixtures frozen;current/historical observation distinctions,unknown/conflict andeditorial safety hold specified. Ancient lamp context documentary only;no ritual steps,renderer,randomness orphysical-cause proof. Prior174 journals plus49 coffee input/report files captured before regression.

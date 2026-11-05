@@ -774,6 +774,83 @@ and [clinical scope](data/akashic-clinical.md).
 Run `python -m scripts.verify_akashic`, `python -m scripts.smoke_akashic_core`
 and `python -m unittest tests.test_akashic -q`.
 
+## Pyromancy: public-source candle and jar-soot observations
+
+`python -m future pyromancy data/pyromancy-input.json --format markdown`
+
+The immutable `pamita-public2026-candle-observation-v1` profile uses three
+Parlour of Wonders practitioner articles dated July 14, 2026. They are separate
+public witnesses from Pamita's ranked 2020 book. Six selected source cases
+cover persistent high/low candle flames and narrow glass-jar soot patterns.
+The software works with hypothetical or previously recorded observations.
+
+```json
+{
+  "schema_version": 1,
+  "profile": "pamita-public2026-candle-observation-v1",
+  "task": "symbolic_candle_observation",
+  "mode": "manual",
+  "origin": "hypothetical",
+  "observations": [{
+    "id": "flame1",
+    "phenomenon": "flame",
+    "attributes": {
+      "substrate": "candle_flame",
+      "height": "high",
+      "persistence": "persistent"
+    },
+    "physical": {
+      "explanation": "addressed",
+      "correction": "reported_completed",
+      "after_correction": "persisted"
+    }
+  }]
+}
+```
+
+Physical explanations use `known`, `possible`, `not_noticed`,
+`checked_no_issue`, `addressed` or unknown evidence. Known/possible unresolved
+causes prevent the conditional symbolic account. No cause noticed remains
+insufficient evidence. Current wick, draft, dressing or construction concerns
+cannot be cleared by a contradictory favorable summary. All checks and
+corrections remain user declarations; the software verifies no physical cause.
+
+The tall-flame case requires reported correction and persistence afterward.
+The low-flame case also permits an explicit checked/no-issue declaration with
+`not_needed_after_check`. In this schema, `improved`/`changed` means the
+selected abnormal height resolved; it conflicts with a current `persistent`
+declaration. Missing or competing evidence remains explicit.
+
+Soot requires a declared `glass_jar` substrate. Upper black deposits with clear
+lower glass have a selected source account; dense upper deposits and light
+grey haze have narrower qualifications. Dense full-jar black deposits remain
+distinct. Unknown density never supplies a density-specific account. Live
+smoke, embers, ancient lamp rites and flame-color meanings are unsupported.
+`flame_color`, `wax_color` and `soot_color` are separate declarations.
+
+Optional safety flags are `unsafe_burning`, `overheating`, `active_hazard` and
+`stopped`, at session or observation level. Any hazard declaration holds all
+displayed symbolic accounts and reflection prompts, prioritizing stopping
+safely or keeping a stopped activity stopped. Reports give no hot-equipment
+handling instructions. Unknown safety is not clearance for physical activity.
+
+Observations preserve input order, unique IDs, optional increasing sequence,
+origin, uncertainty, feature alternatives and exact raw Unicode/whitespace.
+The four evidence layers distinguish source accounts, user declarations,
+editorial comparisons and unsupported factual claims. JSON/Markdown carry
+complete replay requests and portable request/profile/source hashes. No RNG,
+renderer, LLM, image recognition or runtime dependency was added.
+
+Run `python -m scripts.verify_pyromancy`,
+`python -m scripts.smoke_pyromancy_core` and
+`python -m unittest tests.test_pyromancy`. Examples include
+[persistent flame](data/pyromancy-tall-persistent.md),
+[physical explanation](data/pyromancy-tall-physical.md),
+[upper soot](data/pyromancy-upper-soot.md),
+[full jar](data/pyromancy-full-soot.md),
+[safety hold](data/pyromancy-unsafe-stopped.md) and
+[documentary lamp context](data/pyromancy-lamp.md).
+
 ## Coffee grounds: Turkish historical symbolic comparisons
 
 `python -m future coffee-reading data/coffee-input.json --format markdown`
