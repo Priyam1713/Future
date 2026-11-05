@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 36 corpus and index freeze — 2026-11-06
+- Source passa015373 pushed first. Complete WEB Classic2020 Ruth:85 verses/four chapters,141 reviewed sentence units, raw four HTML witnesses retained byte-exactly. Native verse citations separate from one editorial heading-only page and four chapter logical pages.
+- Punctuation, nested quotation closers, cross-verse question/genealogy and context bounds frozen; headings/footnotes excluded, no invented print pagination or generic tokenizer. Independent hand-authored141 ending-verse expectations and twelve exact text/path cases precede runtime. Immutable single-book manual adaptation profile and canonical corpus/index/source hashes frozen.
+
 ## Technique 36 source verification — 2026-11-06
 - Rechecked CHS authored scholarly article and2013 citation/2014 URL date; three witnesses, ordered216-key space and textual gaps remain separate from unavailable verse mapping. Publisher-indexed Mascaro2022 procedure rechecked; direct original/alternate requests403, no invented snapshot hash.
 - Independent pre-engine216 tuple ordinals, literal seventeen-book omissions/invalid00,100 ordered0–9 sum counts and digital1..20 discrepancy frozen. No physical dice/fine/seeded procedure implemented. Complete public-domain WEB Classic Ruth selected for its native verse citations and manageable, meaningful cross-verse dialogue; corpus and manually reviewed sentence index freeze follows.

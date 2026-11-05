@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "date": "2026-11-06",
+  "profile": "mascaro2022-manual-coarse-webclassic-ruth-v1",
+  "profile_sha256": "8fb64b52b632362cfc9633d6c4a01cceebeed51a14beef84b384105dca12cf34",
+  "corpus_sha256": "94361b1342cba7a6ac9e0eb2e2c9ab3d21c289eb1bc3213e2cec79eb859b4055",
+  "index_sha256": "d4649b4478756780752170255ddfeea43aeb7998fa47b75da8b4c8b869951352",
+  "raw_manifest_sha256": "03a7ac3f4ca4fa8b8a7edce0969aa30c5c1644cb2eae6eafedad0322e63aabd9",
+  "fixture_sha256": "658b4daf5e1dae74ac4326adc1feb64ab0c928bbfb1e1ae58794e17f963c4218",
+  "raw_witnesses": [
+    {
+      "name": "RUT01.html",
+      "url": "https://ebible.org/eng-web/RUT01.htm",
+      "status": 200,
+      "sha256": "aa66d1d71110c2fc4b42022860e375349535f4366f0ef2341fe258c8eed51667",
+      "bytes": 7569,
+      "encoding": "UTF-8",
+      "path": "resources/corpora/webclassic-ruth-v1/RUT01.html"
+    },
+    {
+      "name": "RUT02.html",
+      "url": "https://ebible.org/eng-web/RUT02.htm",
+      "status": 200,
+      "sha256": "6bbb0a83bd577c751ccacadb0aa1a9b79b92b4d1df34435df0eadeb433661d7c",
+      "bytes": 6988,
+      "encoding": "UTF-8",
+      "path": "resources/corpora/webclassic-ruth-v1/RUT02.html"
+    },
+    {
+      "name": "RUT03.html",
+      "url": "https://ebible.org/eng-web/RUT03.htm",
+      "status": 200,
+      "sha256": "ba3a5f715a2d9c7958b3b9b8ea8379f2c7965cbea9dc9b5099b88ec76023d26d",
+      "bytes": 5007,
+      "encoding": "UTF-8",
+      "path": "resources/corpora/webclassic-ruth-v1/RUT03.html"
+    },
+    {
+      "name": "RUT04.html",
+      "url": "https://ebible.org/eng-web/RUT04.htm",
+      "status": 200,
+      "sha256": "026eef6466808747c81ad60308acbe57fe1e6dde56aea9074917aa7e4a4db624",
+      "bytes": 6239,
+      "encoding": "UTF-8",
+      "path": "resources/corpora/webclassic-ruth-v1/RUT04.html"
+    }
+  ],
+  "complete_book": "Ruth",
+  "verses": 85,
+  "chapters": 4,
+  "selectable_sentences": 141,
+  "word_count": 2420,
+  "logical_pages": 5,
+  "empty_heading_pages": 1,
+  "manual_review": "All141 punctuation boundaries reviewed; spaced nested closers corrected at2:21 and3:17; cross-verse1:12–13 and4:18–22 retained. No source spelling/punctuation normalized.",
+  "index_policy": {
+    "ordering": "One shelf and one complete book; title-only logical page first, then chapters1–4. Source order within each chapter. One-based caller indices differ from stable IDs and native chapter/verse labels.",
+    "boundaries": "141 manually reviewed punctuation-based sentence units. Speaker introductions remain attached. Closing quotation marks, including spaced nested closers, remain with the preceding terminal punctuation. A standalone unit need not contain a matching opening/closing quote; bounded neighboring context retains surrounding dialogue. Not a universal tokenizer.",
+    "paragraphs": "Paragraph breaks and verse lines are structural whitespace, not automatic sentence boundaries; headings/footnotes are ineligible. Repeated identical text, if present, keeps distinct IDs/paths; no text deduplication.",
+    "cross_page": "Content logical pages correspond to complete source chapters. All four end at sentence boundaries; no split sentence or cross-chapter unit. Future corpora crossing page boundaries require separately frozen ownership/ineligibility. Context never crosses chapter logical page.",
+    "abbreviation": "Manual review found no abbreviation requiring an internal-full-stop exception in this Ruth subset. No general abbreviation/tokenizer support claimed.",
+    "empty_page": "Title-only logical page1 contains genuine source heading, zero selectable sentences and explicit rejection. This is an editorial digital grouping, not a historical blank printed page.",
+    "offset_unit": "Zero-based half-open Unicode codepoint offsets in normalized chapter stream; UI wrapping and source HTML line endings do not change the index."
+  },
+  "rights": "Publisher explicitly dedicates WEB translation to public domain. World English Bible trademark identifies faithful copies; editorial indexing is labeled separately, source wording/punctuation unchanged. Only complete Ruth subset supported, not whole canon."
+}
