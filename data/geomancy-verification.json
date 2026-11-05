@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "profile": "turner1655-common-shield-v1",
+  "profile_sha256": "c06b1473e2a276de3933df3556d7ad13fd7b65ad6891b105238471c77e03d0bf",
+  "source_sha256": "6254e6c7d529b05b5ed3dd6b6d89d2eb07d9aa51202306132dff2fb39be695a1",
+  "figure_identities": 16,
+  "alias_checks": 52,
+  "truth_table_rows": 4,
+  "independent_charts": 6,
+  "published_charts": 1,
+  "exhaustive_mother_combinations": 65536,
+  "addition_pairs": 256,
+  "associativity_triples": 4096,
+  "reference": "scripts/geomancy_reference.py; independent top-bit-first 1=single/0=double bit matrix and XOR; no future imports",
+  "fixture_sha256": "06750d262fdae7975e96f4dbe6439f09e9199daedd0c24a54ca46c2d2d16b965",
+  "invariants": [
+    "all fifteen positions match reference",
+    "all figure identities valid",
+    "transposition reconstruction",
+    "all parent dependencies",
+    "Judge even total-point parity",
+    "determinism",
+    "closure",
+    "commutativity",
+    "associativity",
+    "self-addition"
+  ],
+  "empirical_validation": false
+}
