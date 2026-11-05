@@ -1,0 +1,3 @@
+# Cleromancy request rejected
+
+Unknown or ambiguous mark; use a canonical gao-ID, verified Latin name or exact Greek glyph; no confusable fallback
