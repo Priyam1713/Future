@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique31 source/profile freeze — 2026-11-05
+- Reinspected publisherSpees2005 Water Scrying:explicitAndrews attribution,three rainwater contexts,observer positioning,relaxation/gaze andlimited subjective fogginess/imagery account. Observer undisturbed is not a still-water requirement. Eight source cases frozen in andrews-spees2005-water-reference-v1 before runtime,with independent expected condition fixtures.
+- Rechecked CopticT1085 fragment,date901–1100,witness/editorial uncertainty andNOAA physical oil/water context;separate fromTyson/Betz andexecutable procedure. New immutable core source witnesses preserve audit records.278 prior journals/reports captured;no fluid/optical inference oruniversal omen dictionary.
+
 ## Technique31 Hydromancy resource/variation audit — 2026-11-05
 - Began only after Pyromancy closure7b5b249 pushed/synchronized0/0. Exact two ranked sources/four variation rows preserved. Tyson publisher1997/320p/ISBN9781567187465 has no preview;Betz secondedition/format dates rechecked. No Hydromancy engine,profile,catalog,fluid/ripple generator,renderer orCLI implemented.
 - First candidate:manual water-bowl/rain-pool source context andvoluntary impressions from publisherSpees2005 Water Scrying section,explicitly anAndrews excerpt,notTyson. KyprianosT1085 is a distinct fragmentaryCoptic901–1100 water-inquiry witness,notBetz’s ancient corpus. NOAA physical oil/water effects separate fromsymbolic accounts;no ripple/drop/color omen dictionary invented.

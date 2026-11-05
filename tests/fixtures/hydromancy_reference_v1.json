@@ -1,0 +1,265 @@
+{
+  "profile": "andrews-spees2005-water-reference-v1",
+  "article_date": "2005-07-01",
+  "article_author": "Jennifer Spees",
+  "excerpt_author": "Ted Andrews",
+  "not_excerpt_author": "Donald Tyson",
+  "cases": [
+    [
+      "dark",
+      {
+        "medium": "water",
+        "container": "dark_bowl",
+        "rainwater": true
+      },
+      "dark_bowl",
+      "source_supported"
+    ],
+    [
+      "cauldron",
+      {
+        "medium": "water",
+        "container": "cauldron",
+        "rainwater": true
+      },
+      "cauldron",
+      "source_supported"
+    ],
+    [
+      "pool",
+      {
+        "medium": "water",
+        "container": "natural_pool",
+        "rainwater": true
+      },
+      "rain_pool",
+      "source_supported"
+    ],
+    [
+      "oil",
+      {
+        "medium": "oil_on_water",
+        "container": "dark_bowl",
+        "rainwater": true
+      },
+      "dark_bowl",
+      "context_mismatch"
+    ],
+    [
+      "unknown_medium",
+      {
+        "medium": "unknown",
+        "container": "dark_bowl",
+        "rainwater": true
+      },
+      "dark_bowl",
+      "insufficient_information"
+    ],
+    [
+      "no_rain",
+      {
+        "medium": "water",
+        "container": "dark_bowl",
+        "rainwater": false
+      },
+      "dark_bowl",
+      "context_mismatch"
+    ],
+    [
+      "unknown_rain",
+      {
+        "medium": "water",
+        "container": "dark_bowl"
+      },
+      "dark_bowl",
+      "insufficient_information"
+    ],
+    [
+      "soft",
+      {
+        "medium": "water",
+        "container": "dark_bowl",
+        "rainwater": true,
+        "gaze": "soft"
+      },
+      "gaze",
+      "source_supported"
+    ],
+    [
+      "half",
+      {
+        "medium": "water",
+        "container": "dark_bowl",
+        "rainwater": true,
+        "gaze": "half_focused"
+      },
+      "gaze",
+      "source_supported"
+    ],
+    [
+      "intense",
+      {
+        "medium": "water",
+        "container": "dark_bowl",
+        "rainwater": true,
+        "gaze": "intense"
+      },
+      "gaze",
+      "context_mismatch"
+    ],
+    [
+      "unknown_gaze",
+      {
+        "medium": "water",
+        "container": "dark_bowl",
+        "rainwater": true
+      },
+      "gaze",
+      "insufficient_information"
+    ],
+    [
+      "quiet",
+      {
+        "medium": "water",
+        "container": "dark_bowl",
+        "rainwater": true,
+        "observer_undisturbed": true,
+        "surface_visible": true
+      },
+      "position",
+      "source_supported"
+    ],
+    [
+      "disturbed",
+      {
+        "medium": "water",
+        "container": "dark_bowl",
+        "rainwater": true,
+        "observer_undisturbed": false,
+        "surface_visible": true
+      },
+      "position",
+      "context_mismatch"
+    ],
+    [
+      "relaxed",
+      {
+        "medium": "water",
+        "container": "dark_bowl",
+        "rainwater": true,
+        "relaxed": true
+      },
+      "relaxation",
+      "source_supported"
+    ],
+    [
+      "conflicting_medium",
+      {
+        "medium": [
+          "water",
+          "oil_on_water"
+        ],
+        "container": "dark_bowl",
+        "rainwater": true
+      },
+      "dark_bowl",
+      "conflicting_evidence"
+    ]
+  ],
+  "observations": [
+    [
+      "perceived_fogginess",
+      "subjective",
+      "source_supported"
+    ],
+    [
+      "physical_mist",
+      "physical",
+      "unsupported"
+    ],
+    [
+      "reflection",
+      "physical",
+      "unsupported"
+    ],
+    [
+      "glare",
+      "physical",
+      "unsupported"
+    ],
+    [
+      "physical_ripples",
+      "physical",
+      "unsupported"
+    ],
+    [
+      "oil_layer",
+      "physical",
+      "unsupported"
+    ],
+    [
+      "oil_drops",
+      "physical",
+      "unsupported"
+    ],
+    [
+      "imagined_image",
+      "imagined",
+      "unsupported"
+    ],
+    [
+      "no_imagery",
+      "unknown",
+      "unsupported"
+    ],
+    [
+      "unknown",
+      "unknown",
+      "unsupported"
+    ],
+    [
+      "subjective_image",
+      "subjective",
+      "source_supported"
+    ],
+    [
+      "perceived_fogginess",
+      "unknown",
+      "insufficient_information"
+    ],
+    [
+      "perceived_fogginess",
+      "physical",
+      "conflicting_evidence"
+    ]
+  ],
+  "documentary": {
+    "source_id": "hydromancy-kyprianos-t1085-water-context-core-v1",
+    "title": "KYP T1085:Bowl divination procedure",
+    "witness": "M106;Strasbourg K550;P.Stras.Copt.9;PCM I34",
+    "catalog_date": [
+      901,
+      1100
+    ],
+    "language": "Egyptian (Coptic)",
+    "dialect": "Fayumic (non-standard)",
+    "locator": "Metadata;translation p1,ll7–10,17–26;p2,ll6–17;Editor/apparatus",
+    "editorial_layers": "Text/translation from Tibet2014;MPS2019–2020;EL/team photograph checks2021;KD autopsy2021/revision2023",
+    "medium_identification": "uncertain",
+    "fragmentary": true,
+    "betz_alignment_verified": false,
+    "executable": false,
+    "account": "The fragmentary formulary mentions a water cup before the speaker andan invoked inquiry through a scryer. Lacunae anduncertain identification prevent reconstruction of a complete rite."
+  },
+  "source_hashes": {
+    "hydromancy-spees-andrews2005-public-water-core-v1": "9c33165a8013d5f29a92d9d15f2025bcaba9ff14035b24bfc96b9e43b90394be",
+    "hydromancy-kyprianos-t1085-water-context-core-v1": "393a072d1f85809ebf673a1414902d8de74320c59746ca9b346eac1ccf46b54c",
+    "hydromancy-noaa2020-oil-water-physical-core-v1": "5529a9b6ac2028374abcc29fcc3260bda06f061b6385aeff51955be8510ef332"
+  },
+  "source_facts": {
+    "observer_undisturbed_not_surface_stillness": true,
+    "no_universal_omens": true,
+    "water_oil_distinct": true,
+    "imagery_optional": true
+  }
+}
