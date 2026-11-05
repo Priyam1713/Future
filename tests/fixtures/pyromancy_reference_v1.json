@@ -1,0 +1,457 @@
+{
+  "version": 1,
+  "profile": "pamita-public2026-candle-observation-v1",
+  "publication_date": "2026-07-14",
+  "separate_from_ranked_book": true,
+  "source_witnesses": [
+    {
+      "id": "pyromancy-pamita-public-tall2026-core-v1",
+      "sha256": "609db5c6efcdbbab0c1ced9158c5f29ba497cf9a9e2c441298b06c28ff7f960c",
+      "bytes": 731342,
+      "published_on": "2026-07-14"
+    },
+    {
+      "id": "pyromancy-pamita-public-low2026-core-v1",
+      "sha256": "9f31c4fd5b43f43bdec181a2776d0582997465b7832ba819cbd69c5843a49d84",
+      "bytes": 729944,
+      "published_on": "2026-07-14"
+    },
+    {
+      "id": "pyromancy-pamita-public-soot2026-core-v1",
+      "sha256": "8df30b9740a5905b70e2a49fa588abff357cf0d907d0b3bc9b38b0ff5ee69f20",
+      "bytes": 732690,
+      "published_on": "2026-07-14"
+    }
+  ],
+  "cases": [
+    {
+      "name": "high_after_correction",
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "high",
+        "persistence": "persistent"
+      },
+      "physical": {
+        "explanation": "addressed",
+        "correction": "reported_completed",
+        "after_correction": "persisted"
+      },
+      "expected": [
+        "tall_persistent"
+      ]
+    },
+    {
+      "name": "high_known_cause",
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "high",
+        "persistence": "persistent"
+      },
+      "physical": {
+        "explanation": "known",
+        "correction": "none",
+        "wick": "long"
+      },
+      "expected": []
+    },
+    {
+      "name": "high_possible_cause",
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "high",
+        "persistence": "persistent"
+      },
+      "physical": {
+        "explanation": "possible",
+        "correction": "none",
+        "draft": true
+      },
+      "expected": []
+    },
+    {
+      "name": "high_no_cause_noticed",
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "high",
+        "persistence": "persistent"
+      },
+      "physical": {
+        "explanation": "not_noticed"
+      },
+      "expected": []
+    },
+    {
+      "name": "high_changed",
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "high",
+        "persistence": "transient"
+      },
+      "physical": {
+        "explanation": "addressed",
+        "correction": "reported_completed",
+        "after_correction": "changed"
+      },
+      "expected": []
+    },
+    {
+      "name": "low_sound_no_correction_needed",
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "low",
+        "persistence": "persistent"
+      },
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      },
+      "expected": [
+        "low_persistent"
+      ]
+    },
+    {
+      "name": "low_after_correction",
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "low",
+        "persistence": "persistent"
+      },
+      "physical": {
+        "explanation": "addressed",
+        "correction": "reported_completed",
+        "after_correction": "persisted"
+      },
+      "expected": [
+        "low_persistent"
+      ]
+    },
+    {
+      "name": "low_improved",
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "low",
+        "persistence": "transient"
+      },
+      "physical": {
+        "explanation": "addressed",
+        "correction": "reported_completed",
+        "after_correction": "improved"
+      },
+      "expected": []
+    },
+    {
+      "name": "low_drowned",
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "low",
+        "persistence": "persistent"
+      },
+      "physical": {
+        "explanation": "known",
+        "correction": "none",
+        "wick": "drowned"
+      },
+      "expected": []
+    },
+    {
+      "name": "upper_black",
+      "phenomenon": "soot",
+      "attributes": {
+        "substrate": "glass_jar",
+        "soot_location": "upper",
+        "soot_extent": "upper_only",
+        "soot_color": "black",
+        "lower_glass_clear": true
+      },
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      },
+      "expected": [
+        "upper_clearing"
+      ]
+    },
+    {
+      "name": "upper_dense",
+      "phenomenon": "soot",
+      "attributes": {
+        "substrate": "glass_jar",
+        "soot_location": "upper",
+        "soot_extent": "upper_only",
+        "soot_color": "black",
+        "lower_glass_clear": true,
+        "soot_density": "dense"
+      },
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      },
+      "expected": [
+        "upper_clearing",
+        "upper_dense"
+      ]
+    },
+    {
+      "name": "upper_light",
+      "phenomenon": "soot",
+      "attributes": {
+        "substrate": "glass_jar",
+        "soot_location": "upper",
+        "soot_extent": "upper_only",
+        "soot_color": "grey",
+        "lower_glass_clear": true,
+        "soot_density": "light",
+        "light_through_deposit": true
+      },
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      },
+      "expected": [
+        "upper_light_haze"
+      ]
+    },
+    {
+      "name": "full_jar",
+      "phenomenon": "soot",
+      "attributes": {
+        "substrate": "glass_jar",
+        "soot_location": "top_to_bottom",
+        "soot_extent": "full_jar",
+        "soot_color": "black",
+        "soot_density": "dense",
+        "lower_glass_clear": false
+      },
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      },
+      "expected": [
+        "full_jar_dense"
+      ]
+    },
+    {
+      "name": "full_unknown_density",
+      "phenomenon": "soot",
+      "attributes": {
+        "substrate": "glass_jar",
+        "soot_location": "top_to_bottom",
+        "soot_extent": "full_jar",
+        "soot_color": "black",
+        "soot_density": "unknown",
+        "lower_glass_clear": false
+      },
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      },
+      "expected": []
+    },
+    {
+      "name": "upper_not_clear",
+      "phenomenon": "soot",
+      "attributes": {
+        "substrate": "glass_jar",
+        "soot_location": "upper",
+        "soot_extent": "upper_only",
+        "soot_color": "black",
+        "lower_glass_clear": false
+      },
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      },
+      "expected": []
+    },
+    {
+      "name": "soot_no_jar",
+      "phenomenon": "soot",
+      "attributes": {
+        "substrate": "unknown",
+        "soot_location": "upper",
+        "soot_extent": "upper_only",
+        "soot_color": "black",
+        "lower_glass_clear": true
+      },
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      },
+      "expected": []
+    },
+    {
+      "name": "smoke_no_soot",
+      "phenomenon": "smoke",
+      "attributes": {},
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      },
+      "expected": []
+    },
+    {
+      "name": "ember_no_rules",
+      "phenomenon": "ember",
+      "attributes": {},
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      },
+      "expected": []
+    },
+    {
+      "name": "lamp_no_rules",
+      "phenomenon": "lamp",
+      "attributes": {},
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      },
+      "expected": []
+    },
+    {
+      "name": "color_no_rules",
+      "phenomenon": "flame_color",
+      "attributes": {},
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      },
+      "expected": []
+    }
+  ],
+  "missing": [
+    {
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "high",
+        "persistence": "persistent"
+      },
+      "physical": {},
+      "case": "tall_persistent"
+    },
+    {
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "low",
+        "persistence": "persistent"
+      },
+      "physical": {
+        "explanation": "not_noticed"
+      },
+      "case": "low_persistent"
+    },
+    {
+      "phenomenon": "soot",
+      "attributes": {
+        "substrate": "glass_jar"
+      },
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      },
+      "case": "upper_clearing"
+    }
+  ],
+  "conflicts": [
+    {
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": [
+          "high",
+          "low"
+        ],
+        "persistence": "persistent"
+      },
+      "physical": {
+        "explanation": "addressed",
+        "correction": "reported_completed",
+        "after_correction": "persisted"
+      }
+    },
+    {
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "low",
+        "persistence": "persistent"
+      },
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check",
+        "wick": "drowned"
+      }
+    },
+    {
+      "phenomenon": "flame",
+      "attributes": {
+        "substrate": "candle_flame",
+        "height": "low",
+        "persistence": "persistent"
+      },
+      "physical": {
+        "explanation": "addressed",
+        "correction": "reported_completed",
+        "after_correction": "improved"
+      }
+    },
+    {
+      "phenomenon": "soot",
+      "attributes": {
+        "substrate": "glass_jar",
+        "soot_location": "top_to_bottom",
+        "soot_extent": "full_jar",
+        "soot_color": "black",
+        "soot_density": "dense",
+        "lower_glass_clear": true
+      },
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      }
+    }
+  ],
+  "safety": [
+    {
+      "unsafe_burning": true
+    },
+    {
+      "overheating": true
+    },
+    {
+      "active_hazard": true
+    },
+    {
+      "unsafe_burning": [
+        false,
+        true
+      ]
+    }
+  ],
+  "source_locators": {
+    "tall_persistent": "What Is the Magical Meaning of a Tall Candle Flame?;First,Check for a Practical Explanation;Read the Whole Candle,Not Only Its Height",
+    "low_persistent": "Opening;What Does a Small Candle Flame Mean Spiritually?;Read the Whole Candle,Not Only the Flame Height",
+    "upper_clearing": "Opening;What Does Black Soot at the Top Mean Spiritually?;Top Soot Versus Bottom Soot",
+    "upper_dense": "How to Read the Density and Depth:Dense Black Band at the Rim",
+    "upper_light_haze": "How to Read the Density and Depth:Light Grey Haze",
+    "full_jar_dense": "How to Read the Density and Depth:Black From Top to Bottom;Does Black Soot at the Top Mean the Spell Failed?"
+  },
+  "historical_lamp": {
+    "source_id": "pyromancy-love2019-pgmiv-context-v1",
+    "locator": "PGMIV.52–87;manuscriptpp4–5",
+    "executable": false,
+    "ritual_steps": false
+  }
+}

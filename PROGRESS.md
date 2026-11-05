@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique30 public source/profile freeze — 2026-11-05
+- Reinspected three Pamita-associated public articles dated2026-07-14;new immutable core witness IDs/hashes preserve earlier audit sources. Named pamita-public2026-candle-observation-v1:six conditional flame/jar-soot cases,physical explanations/correction sequence andsource stopping qualifications. Distinct from ranked2020 book andBetz translation.
+- Pre-engine source/condition fixtures frozen;current/historical observation distinctions,unknown/conflict andeditorial safety hold specified. Ancient lamp context documentary only;no ritual steps,renderer,randomness orphysical-cause proof. Prior174 journals plus49 coffee input/report files captured before regression.
+
 ## Technique30 Pyromancy resource/variation audit — 2026-11-05
 - Began only after coffee closurea2af7a7 pushed/synchronized0/0. Exact two ranked sources/five variation rows preserved. Pamita2020 publisher metadata andseparate public2026 flame/soot condition pages inspected;Betz secondeditioncopyright1992/format dates verified. No Pyromancy engine,profile,catalog,generator,renderer orCLI implemented.
 - First candidate:manual high/low flame persistence andupper jar-soot conditions,with physical confounds andchanges after correction explicit. Lamp rites remain separate documentary context(PGMIV52–87,Würzburg researcher account);no universal flame/color/smoke/ember dictionary orspirit/clinical/future claims. Realfire unnecessary;source stopping/safety distinctions preserved.
