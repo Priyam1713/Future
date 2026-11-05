@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 34 Lithomancy resource audit — 2026-11-05
+- Began after Geomancy closure 1dcd214 was pushed, clean and synchronized0/0. Original three ranked sources and four variation rows preserved. Audit only; no executable set/profile, matcher, CLI or casting protocol.
+- Saint Germain2018 catalogue is a contents/imprint lead, not full procedural access. Wimmer author web table specifies16 roles; selected22-page preview has gaps and visual-access limits. Howard publisher2022 dates differ by12 days; author web general set has12 items and flexible8–13 guidance. No universal13-stone system inferred.
+- First bounded candidate: separate Howard web general-set manual proximity comparison after independent source/association/frame/tie fixtures. Wimmer circle/clock/boundaries and Saint Germain chapters remain gated; source images and combinations not reproduced. Audit, rights, acceptance and P1/P2: lithomancy_resource_audit.json. No Technique35 audit.
+
 ## Technique 33 Geomancy Core v1 closure — 2026-11-05
 - **Core v1 Ready — Historical/Mathematical Shield Construction Scope**: turner1655-common-shield-v1; sixteen verified identities, complete fifteen-position shield, patterns/counts/IDs, explicit display convention and exact JSON/Markdown replay. Source 10f2e74, catalog 28fd457, implementation dad4477, numerical evidence af6e1af and five report passes pushed.
 - All 65,536 Mother combinations, 256 pairs, 4,096 associativity triples and six independent fixtures (including published Bennett chart) pass. Full acceptance: 689 tests (651+38), 783 CLI cases (728+55), all 15 inherited verifiers plus Geomancy. All 1,105 protected prior files and required 336 reports unchanged; registry/dependency/pip/diff checks pass. Thirteen valid and four rejected JSON/Markdown report pairs saved.

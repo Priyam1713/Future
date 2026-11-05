@@ -1,0 +1,335 @@
+{
+  "version": 1,
+  "technique_id": 34,
+  "name": "Lithomancy",
+  "phase": 4,
+  "date": "2026-11-05",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "1dcd214",
+  "predecessor_push": "Geomancy closure accepted, pushed and clean HEAD...origin/main0/0 confirmed before any Lithomancy resource audit.",
+  "policy": "Audit only; no Lithomancy engine, executable stone catalog/profile, casting protocol, fixtures, renderer or CLI. No Technique35 audit.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    34,
+    "4 · Nature, Objects & Ancient Practices",
+    "Lithomancy",
+    "RETAIN — simulate / implement",
+    "Deterministic / symbolic rules",
+    "Traditional stone casting; 13-stone method; symbolic gem sets; positional readings",
+    "Random placement of labelled stones + distance/cluster interpretation",
+    "Virtual stones and canvas; optional real stone photo",
+    "Different books prescribe incompatible sets/meanings",
+    "Traditional / not scientifically validated",
+    "Lithomancy",
+    "Jon Saint Germain",
+    "https://www.luckymojo.com/lithomancy.html",
+    "Lithomancy, the Psychic Art of Reading Stones",
+    "The Art of Lithomancy",
+    null,
+    "19, 28, 35",
+    34
+  ],
+  "ranked_sources": [
+    [
+      34,
+      "Lithomancy",
+      1,
+      "Jon Saint Germain",
+      "Lithomancy",
+      "Specific practical stone-casting system",
+      "https://www.luckymojo.com/lithomancy.html",
+      "Author/public guide",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      34,
+      "Lithomancy",
+      2,
+      "Gary L. Wimmer",
+      "Lithomancy, the Psychic Art of Reading Stones",
+      "Practitioner reading algorithm",
+      "https://www.garywimmer.com/writer/litho_book.htm",
+      "Author site / book",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      34,
+      "Lithomancy",
+      3,
+      "Jessica Howard",
+      "The Art of Lithomancy",
+      "Contemporary variant",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Traditional stone casting",
+      "inventory_row": [
+        34,
+        "Lithomancy",
+        "Traditional stone casting",
+        "Lithomancy, the Psychic Art of Reading Stones",
+        "Lithomancy",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Saint Germain chapter leads and author web casting descriptions inspected; book-specific complete procedures gated."
+    },
+    {
+      "name": "13-stone method",
+      "inventory_row": [
+        34,
+        "Lithomancy",
+        "13-stone method",
+        "Lithomancy, the Psychic Art of Reading Stones",
+        "Lithomancy",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Thirteen-stone variation preserved but unverified as a complete ranked-source system. Wimmer is sixteen; Howard’s twelve-item example and flexible8–13 suggestion cannot be relabelled thirteen."
+    },
+    {
+      "name": "symbolic gem sets",
+      "inventory_row": [
+        34,
+        "Lithomancy",
+        "symbolic gem sets",
+        "The Art of Lithomancy",
+        "Lithomancy, the Psychic Art of Reading Stones",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Source-specific sets required: Howard general/web example, her separate sea set and Wimmer planet/personal roles remain distinct."
+    },
+    {
+      "name": "positional readings",
+      "inventory_row": [
+        34,
+        "Lithomancy",
+        "positional readings",
+        "Lithomancy, the Psychic Art of Reading Stones",
+        "The Art of Lithomancy",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Howard proximity-priority is a useful bounded candidate; Wimmer circle/timing/cluster meanings require inspected omitted chapters and explicit geometry conventions."
+    }
+  ],
+  "source_records": "knowledge/lithomancy_sources.json",
+  "witnesses": {
+    "saint": {
+      "url": "https://www.luckymojo.com/lithomancy.html",
+      "bytes": 37779,
+      "sha256": "0571c0230f594d9323187cf3fa91ebfdaa8c537af5ce53c071d84da5206495e7",
+      "checked_on": "2026-11-05"
+    },
+    "wimmer": {
+      "url": "https://www.garywimmer.com/writer/litho_book.htm",
+      "refresh_error": "HTTPError",
+      "evidence": "Web-tool textual witness inspected; no local byte hash claimed",
+      "checked_on": "2026-11-05"
+    },
+    "stones": {
+      "url": "https://www.garywimmer.com/psychic/16_Stones.html",
+      "refresh_error": "HTTPError",
+      "evidence": "Web-tool textual witness inspected; no local byte hash claimed",
+      "checked_on": "2026-11-05"
+    },
+    "howard": {
+      "url": "https://www.collectiveinkbooks.com/moon-books/our-books/pagan-portals-art-lithomancy",
+      "refresh_error": "HTTPError",
+      "evidence": "Web-tool textual witness inspected; no local byte hash claimed",
+      "checked_on": "2026-11-05"
+    },
+    "distributor": {
+      "url": "https://www.simonandschuster.com/books/Pagan-Portals-The-Art-of-Lithomancy/Jessica-Howard/9781789049145",
+      "refresh_error": "HTTPError",
+      "evidence": "Web-tool textual witness inspected; no local byte hash claimed",
+      "checked_on": "2026-11-05"
+    },
+    "guide": {
+      "url": "https://www.thecottagemystic.com/Lithomancy.html",
+      "bytes": 113668,
+      "sha256": "95b5e425df9c766103b87b6d5c2ad2b5828be130906277c324e10f45f8e7ae7b",
+      "checked_on": "2026-11-05"
+    },
+    "about": {
+      "url": "https://www.thecottagemystic.com/about.html",
+      "bytes": 110760,
+      "sha256": "999ee26ce7acb4aff3e6462d9fef3fa091aed0dac11ae23b668d7c723f16414f",
+      "checked_on": "2026-11-05"
+    }
+  },
+  "source_access": {
+    "saint_germain": "Publisher contents/imprint only; obtain authorized pp20–38 for first spatial system and p63 if gemstone subset chosen.",
+    "wimmer": "Author web roles complete and legitimate selected-preview text available. Original printing and omitted pp88–125 spatial/timing/boundary procedures not inspected. Preview images need reliable visual access.",
+    "howard": "Publisher metadata verified; exact book pages gated. Public author web guide is an independently named witness, not a substitute silently attributed to the book.",
+    "rights": "Modern text, correspondence lists, photos and diagrams retain author/publisher rights. Public author preview is access permission, not a redistribution license. Original concise facts and locators only; no chapter corpus or images bundled."
+  },
+  "source_set_investigation": {
+    "wimmer": {
+      "count": 16,
+      "planet_roles": [
+        "Sun",
+        "Moon",
+        "Mercury",
+        "Venus",
+        "Mars",
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptune",
+        "Pluto"
+      ],
+      "personal_roles": [
+        "Life",
+        "Luck",
+        "Love",
+        "Magic",
+        "Place",
+        "Commitment"
+      ],
+      "identity": "Author-assigned roles; stone mineral/appearance not a universal required mapping. Astrological Sun/Moon terminology is source nomenclature."
+    },
+    "howard_web": {
+      "example_count": 12,
+      "items": [
+        "Lodestone",
+        "Onyx",
+        "Tigers Eye",
+        "Green Aventurine",
+        "Moonstone",
+        "Blue Lace Agate",
+        "Amethyst",
+        "Sea Glass",
+        "5p Coin",
+        "Shell",
+        "Pebble",
+        "Arrow-marked Pebble"
+      ],
+      "limits": "Audit identities only; complete original concise associations and row locators must be independently frozen before executable catalog. The separate work-change sea-set has different objects/personal stone; never mix its meanings into the general set."
+    },
+    "thirteen": "Original variation retained; no source-verified complete thirteen-role profile frozen. Secondary generic lists are not substitutes for ranked source inspection."
+  },
+  "spatial_investigation": {
+    "casting": "Manual labelled placements first; real/hypothetical/synthetic provenance explicit. Drop/toss instructions do not specify a probability distribution.",
+    "surface": "Wimmer material circle differs from Howard general mat; do not transfer circle boundaries to all sources.",
+    "coordinates": "Application convention must declare origin, axes, scale, user viewpoint and point-centre versus stone footprint. Sources inspected do not supply a universal Cartesian coordinate system.",
+    "distance": "Howard nearest priority can support a named relative-distance comparison. Numeric metric, ties, tolerance and observer position are editorial choices to freeze explicitly, not claimed historical cutoffs.",
+    "clusters": "User-selected groups can be documented. Do not invent a radius, automatic cluster threshold or merged semantic outcome from qualitative proximity.",
+    "orientation": "Arrow-marked item orientation needs separately verified rule; arrow mark alone does not establish where it points or its effect.",
+    "boundary": "Wimmer contents list under/on/outside circle pp114–116 but text not inspected. Equality/touching/partial overlap and under-cord meaning remain unsupported until source and representation frozen.",
+    "timing": "Wimmer describes a three-month reading context; clock/time conversion and the missing chapters are not verified. No dates or real event forecast inferred.",
+    "combinations": "Maintain each source’s own identities, conditional relations and exceptions; user association distinct from direct source summaries and editorial geometry."
+  },
+  "published_example_leads": [
+    {
+      "source": "Howard web guide, work-change example",
+      "locator": "Performing Your Reading; image and following narrative",
+      "finding": "Different sea-set and personal stone; qualitative above/below/left relations described. Image-coordinate extraction and independent visual check pending. Do not generalize this layout’s internal/external symbolism."
+    },
+    {
+      "source": "https://garywimmer.com/writer/selected-pages.pdf",
+      "locator": "PDF1 rights; PDF3–5 contents; PDF14 printed83; PDF15–16 printed86–87 Pictures1–2; PDF17–18 printed133–134",
+      "finding": "Pictures1–2 modified for illustration; arrows/loops are selected reader connections, not unique universal clustering. No canonical metric coordinates or passed numerical fixture claimed."
+    }
+  ],
+  "highest_roi_candidate": {
+    "first": "Independently versioned Howard web twelve-item general-set reference plus manual spatial comparison with optional explicitly selected personal-stone proximity. Preserve ranking; choose accessible source for implementation scope, not rank reassignment.",
+    "gate": "Recheck complete identities/associations and locator/rights before catalog. Freeze qualitative closest rule, explicit editorial distance/tie/frame conventions, user-origin data and pre-engine independent spatial fixtures.",
+    "second": "Separate Wimmer sixteen-role manual profile once omitted circle/boundary/timing rules are accessed; no conversion into thirteen roles.",
+    "alternative": "Saint Germain small two/three-stone system only after actual chapter access, not inferred from catalogue marketing.",
+    "no_certification": "Manual geometric correctness establishes representation/conditions only, not divinatory accuracy or diagnosis."
+  },
+  "proposed_manual_contract": {
+    "fields": [
+      "Named profile/version",
+      "Explicit full set or explicitly supported subset",
+      "Unique stone instance and source-role IDs",
+      "Reported-real/hypothetical/synthetic/unknown origin",
+      "Manual x/y placements in named frame or separately selected qualitative relations",
+      "Optional personal stone/reader anchor",
+      "Optional boundary geometry and footprint convention if profile supports it",
+      "Raw question/comments/association and uncertainty"
+    ],
+    "validation": "Require finite bounded coordinates; reject booleans, missing/duplicate identities, mixed-source roles and contradictory frame declarations. Unknown location remains unknown. Overlap, coincidence, ties and incomplete sets need explicit policies.",
+    "outputs": "Set inventory, raw positions, source identities/meanings, exact spatial condition traces, tie/unknown evidence, direct/compositional/user/unsupported layers and portable hashes/full replay inJSON/Markdown.",
+    "reuse": "Generic strict JSON, raw Unicode, immutable registry/hash/report and pure coordinate helpers only. No tea/coffee symbol interpretation, cup zones, handle orientation, spill timing, RNG output or Geomancy figure rules imported.",
+    "synthetic": "Optional later domain-separated protocol must freeze labelled position distribution, replacement/overlap/boundary policy, integer-to-coordinate mapping and independent known-answer vectors. Sampling a uniform radius is not uniform area; no source ritual distribution may be implied. No physics, UI or protocol implemented."
+  },
+  "configuration_matrix": {
+    "supported": "Audit metadata and bounded source findings only",
+    "experimental": "Proposed source-specific manual set/spatial comparison; not implemented",
+    "unsupported": [
+      "Universal thirteen-stone meaning table",
+      "Mixed-author sets or spatial rules",
+      "Uninspected boundary/clock/cluster thresholds",
+      "Exact coordinate recovery from unverified source images",
+      "Health/legal/financial or supernatural predictive conclusions",
+      "Physics rendering, image recognition or seeded casting certification"
+    ]
+  },
+  "independent_fixture_plan": [
+    "Freeze exact source witness, complete chosen set/association inventory and material conditions before code.",
+    "Author small labelled coordinate fixtures independently: nearest/farthest, ties, coincidence, anchors, axis reversal and scale/translation effects.",
+    "Distinguish source rules from application Euclidean/threshold conventions; no automatic subjective cluster interpretation.",
+    "Use visually verified published examples only for facts actually legible; record approximate image annotations as such, not exact source coordinates.",
+    "Test unknown/missing stones, mixed-source IDs, boundaries only if independently sourced, raw Unicode, strict input rejection and deterministic replay.",
+    "Future seeded protocol requires independent vectors/distribution specification; manual release does not require synthetic casting."
+  ],
+  "acceptance_gates": [
+    "One complete source-verified named stone set with independent pre-engine reference associations and precise source locators/rights.",
+    "Useful manual spatial condition evaluation and source-linked comparison, not merely unqualified predictive text or a generic stone journal.",
+    "Explicit frame/anchor/distance/tie/unknown/overlap policies; no invented source thresholds or interpretation combinations.",
+    "Separate incompatible sets and preserve original three rankings/four variations; no universal thirteen-stone claim.",
+    "Offline strict JSON/Markdown, raw text/origin preservation, immutable hashes and full replay.",
+    "Preserve689 inherited tests,783 CLI cases,16 symbolic verifiers and all prior engines/profiles/RNG/report bytes; complete regression, CLI, registry, dependency, pip and diff checks before readiness."
+  ],
+  "P1": [
+    "Freeze Howard public-web general set and complete concise association/condition facts independently before implementation.",
+    "Legitimate Saint Germain casting/direction/surface chapter access.",
+    "Resolve Wimmer exact printing and inspect omitted circle/cluster/clock/boundary chapters.",
+    "Reliable author-preview and Howard example-image visual collation; independent approximate-annotation policy.",
+    "Manual source-specific distance/anchor/tie conventions and independent fixtures.",
+    "Verify any complete thirteen-stone tradition without relabelling Wimmer or Howard sets."
+  ],
+  "P2": [
+    "Additional separately versioned stone/gem/coin traditions and comparative matrices.",
+    "Complete source-specific combination/cluster and orientation readings.",
+    "Optional separately audited seeded placement with explicit synthetic distribution.",
+    "Original labelled diagrams/manual annotation before any visual recognition.",
+    "Physics or rendering only when useful; empirical studies separate from symbolic/spatial validity."
+  ],
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Historical/Mathematical Shield Construction Scope",
+    "tests": 689,
+    "cli_cases": 783,
+    "symbolic_verifiers": 16,
+    "required_prior_reports_preserved": 336,
+    "protected_prior_files": 1105
+  },
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "limitations": "Audit complete; no executable34 profile, stone catalog, spatial matcher or seeded protocol. Some source-access, image and numerical conventions remain explicitly gated. No35 audit."
+}
