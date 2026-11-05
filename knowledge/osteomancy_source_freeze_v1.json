@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "status": "Source facts and expected comparisons frozen before engine",
+  "date": "2026-11-06",
+  "source": {
+    "id": "osteomancy-columbia-afe1999-charge-facts-v1",
+    "technique_id": 35,
+    "rank": 3,
+    "author": "Columbia University Asia for Educators; anthology compilers Wm. Theodore de Bary and Irene Bloom; individual translator not separately identified on page",
+    "edition": "Oracle Bone Inscriptions of the Late Shang Dynasty; educational HTML citing Sources of Chinese Tradition,2nd edition,volume1,New York:Columbia University Press,1999,pp8,11–12; checked2026-11-06",
+    "url": "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm",
+    "snapshot_sha256": "0cb52127e4880d76757c65047ee9e958e358cd53e8509d5a2ebea19f4315d6dc",
+    "snapshot_bytes": 13191,
+    "locator": "Source attribution/permissions paragraph; Excerpts with Document-Based Questions, labels8–24B",
+    "ingestion": "facts_only",
+    "rights_note": "Modern translation and educational text credit copyright1999 Columbia University Press, reproduced by permission, all rights reserved. That permission is not a blanket Future license. Original concise factual annotations and locators only; no complete translation collection, book, photograph, rubbing or scan redistributed.",
+    "checked_on": "2026-11-06"
+  },
+  "case_ids": [
+    "8",
+    "9A",
+    "9B",
+    "10",
+    "19A",
+    "19B",
+    "20A",
+    "20B",
+    "22A",
+    "22B",
+    "23",
+    "24A",
+    "24B"
+  ],
+  "fixture": "tests/fixtures/osteomancy_reference_v1.json",
+  "fixture_canonical_sha256": "3bb116b82d71cc9895dd3fbafbe373428d46264c85041e7bd55c04c72288eb99",
+  "evidence_states": {
+    "present_in_inspected_excerpt": "Value is expressly supplied in this educational excerpt.",
+    "omitted_from_inspected_excerpt": "Not supplied here; original inscription may contain it.",
+    "explicitly_uncertain_in_source": "Translation/editorial uncertainty retained; no resolved value invented.",
+    "not_independently_verified": "Original artifact/text or external chronology not inspected.",
+    "not_applicable": "Not a component of this bounded documentary schema."
+  },
+  "scope": "Complete bounded13-label AFE factual reference and five typed comparisons; no book equivalence, original artifact assignment, modern casting or prognostication. Both20A and20B preserve action uncertainty; no A/B suffix rule."
+}

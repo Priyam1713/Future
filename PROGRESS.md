@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 35 AFE source and comparison freeze — 2026-11-06
+- Rechecked Columbia educational HTML and1999 de Bary/Bloom anthology attribution/rights. Thirteen concise factual records and five independent relationship expectations frozen before engine; explicit date/diviner/parenthesis fields and excerpt-vs-original missingness retained. Both20A/B have uncertain action;19A/B conditions/days differ;24A/B are distinct propositions.
+- Exact HTML SHA and portable canonical fixture hash frozen. No copied translation corpus, original Chinese/artifact/crack details, physical casting, fabricated prognostication or verification. Source and independent fixtures committed before executable catalog.
+
 ## Technique 35 Osteomancy / Bone Casting audit — 2026-11-06
 - Began only after Lithomancy closure 03ded50 was pushed, clean and synchronized 0/0. Three original source ranks and three variation rows preserved. Audit only; no charge catalog, charm profile, engine, CLI or casting protocol.
 - Keightley 1978/1985 edition leads remain page-access gated. yronwode's 2012 publisher contents identify distinct systems. Columbia AFE provides thirteen labelled charge excerpts citing the 1999 anthology; its educational permission is not a blanket licence. Source charges, uncertainty and missing outcomes remain separate.
