@@ -1,0 +1,2004 @@
+# Osteomancy: Shang inscription reference and comparison
+
+Historical translated-charge reference only. A charge is not evidence that its proposition occurred; excerpt omission is not original-inscription absence.
+
+Profile: columbia-afe1999-shang-charges-v1
+
+## Selected source records
+
+| Label | Factual annotation | Source |
+| --- | --- | --- |
+| 8 | Ancestor attributed royal harm. | [AFE label 8](https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm#:~:text=8.) |
+| 19A | Building condition; non-obstruction and approval. | [AFE label 19A](https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm#:~:text=19A.) |
+| 19B | Non-building condition; approval proposed. | [AFE label 19B](https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm#:~:text=19B.) |
+| 20A | Royal approval; activity unresolved. | [AFE label 20A](https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm#:~:text=20A.) |
+
+## Source attribution and rights
+
+```json
+{
+  "id": "osteomancy-columbia-afe1999-charge-facts-v1",
+  "technique_id": 35,
+  "rank": 3,
+  "author": "Columbia University Asia for Educators; anthology compilers Wm. Theodore de Bary and Irene Bloom; individual translator not separately identified on page",
+  "edition": "Oracle Bone Inscriptions of the Late Shang Dynasty; educational HTML citing Sources of Chinese Tradition,2nd edition,volume1,New York:Columbia University Press,1999,pp8,11–12; checked2026-11-06",
+  "url": "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm",
+  "snapshot_sha256": "0cb52127e4880d76757c65047ee9e958e358cd53e8509d5a2ebea19f4315d6dc",
+  "snapshot_bytes": 13191,
+  "locator": "Source attribution/permissions paragraph; Excerpts with Document-Based Questions, labels8–24B",
+  "ingestion": "facts_only",
+  "rights_note": "Modern translation and educational text credit copyright1999 Columbia University Press, reproduced by permission, all rights reserved. That permission is not a blanket Future license. Original concise factual annotations and locators only; no complete translation collection, book, photograph, rubbing or scan redistributed.",
+  "checked_on": "2026-11-06"
+}
+```
+
+## Historical source context
+
+```json
+"Selected modern translations of historical Shang charges, not original-script decipherment; anthology selection and educational excerpt are distinct layers. Keightley is not the cited anthology. Source-supplied chronology is attributed, not independently normalized."
+```
+
+## Typed source records
+
+```json
+[
+  {
+    "case_id": "8",
+    "label": "8",
+    "source_id": "osteomancy-columbia-afe1999-charge-facts-v1",
+    "locator": "Excerpts with Document-Based Questions, label8; anthology pp8,11–12 (collective source citation; per-case print page not independently inspected)",
+    "source_url": "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm",
+    "editorial_topics": [
+      "royal_affliction",
+      "ancestral_agency"
+    ],
+    "charge_formulation": {
+      "predicate": "royal_harm",
+      "polarity": "affirmed",
+      "layer": "editorial structural tags grounded in the source, not general entailment"
+    },
+    "components": {
+      "preface": {
+        "status": "present_in_inspected_excerpt",
+        "value": "crack-making/divination",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "day": {
+        "status": "present_in_inspected_excerpt",
+        "value": {
+          "label": "yiwei",
+          "source_day_index": 32
+        },
+        "original_inscription_status": "not_independently_verified"
+      },
+      "lunar_month": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "diviner": {
+        "status": "present_in_inspected_excerpt",
+        "value": "Gu",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "charge": {
+        "status": "present_in_inspected_excerpt",
+        "value": "Ancestor attributed royal harm.",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "condition": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "action": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "participants": {
+        "status": "present_in_inspected_excerpt",
+        "value": [
+          "Father Yi",
+          "king"
+        ],
+        "original_inscription_status": "not_independently_verified"
+      },
+      "agent": {
+        "status": "present_in_inspected_excerpt",
+        "value": "Father Yi",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "target": {
+        "status": "present_in_inspected_excerpt",
+        "value": "king",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "prognostication": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "verification": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      }
+    },
+    "translation_qualifications": [
+      "Translation identifies Father Yi with Xiao Yi and supplies kinship to Wu Ding."
+    ],
+    "source_editorial_context": {
+      "aliases": [
+        "Xiao Yi"
+      ],
+      "kinship": "Father of Wu Ding",
+      "ordinal": 20
+    },
+    "original_evidence": {
+      "artifact_inventory": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "original_chinese": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "crack_characteristics": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "absolute_date": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      }
+    },
+    "missing_evidence_policy": "Excerpt omissions do not establish absence on the original artifact. No supplied charge demonstrates an outcome.",
+    "source_deep_link": "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm#:~:text=8."
+  },
+  {
+    "case_id": "19A",
+    "label": "19A",
+    "source_id": "osteomancy-columbia-afe1999-charge-facts-v1",
+    "locator": "Excerpts with Document-Based Questions, label19A; anthology pp8,11–12 (collective source citation; per-case print page not independently inspected)",
+    "source_url": "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm",
+    "editorial_topics": [
+      "settlement",
+      "divine_approval"
+    ],
+    "charge_formulation": {
+      "predicate": "settlement_approval",
+      "polarity": "mixed_clause",
+      "layer": "editorial structural tags grounded in the source, not general entailment"
+    },
+    "components": {
+      "preface": {
+        "status": "present_in_inspected_excerpt",
+        "value": "crack-making/divination",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "day": {
+        "status": "present_in_inspected_excerpt",
+        "value": {
+          "label": "renzi",
+          "source_day_index": 49
+        },
+        "original_inscription_status": "not_independently_verified"
+      },
+      "lunar_month": {
+        "status": "present_in_inspected_excerpt",
+        "value": {
+          "source_label": "Third moon",
+          "number": 3
+        },
+        "original_inscription_status": "not_independently_verified"
+      },
+      "diviner": {
+        "status": "present_in_inspected_excerpt",
+        "value": "Zheng",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "charge": {
+        "status": "present_in_inspected_excerpt",
+        "value": "Building condition; non-obstruction and approval.",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "condition": {
+        "status": "present_in_inspected_excerpt",
+        "value": "build settlement",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "action": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "participants": {
+        "status": "present_in_inspected_excerpt",
+        "value": [
+          "Di"
+        ],
+        "original_inscription_status": "not_independently_verified"
+      },
+      "agent": {
+        "status": "present_in_inspected_excerpt",
+        "value": "Di",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "target": {
+        "status": "present_in_inspected_excerpt",
+        "value": "settlement",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "prognostication": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "verification": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      }
+    },
+    "translation_qualifications": [
+      "Approval bridge (but) is parenthesized."
+    ],
+    "source_editorial_context": null,
+    "original_evidence": {
+      "artifact_inventory": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "original_chinese": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "crack_characteristics": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "absolute_date": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      }
+    },
+    "missing_evidence_policy": "Excerpt omissions do not establish absence on the original artifact. No supplied charge demonstrates an outcome.",
+    "source_deep_link": "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm#:~:text=19A."
+  },
+  {
+    "case_id": "19B",
+    "label": "19B",
+    "source_id": "osteomancy-columbia-afe1999-charge-facts-v1",
+    "locator": "Excerpts with Document-Based Questions, label19B; anthology pp8,11–12 (collective source citation; per-case print page not independently inspected)",
+    "source_url": "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm",
+    "editorial_topics": [
+      "settlement",
+      "divine_approval"
+    ],
+    "charge_formulation": {
+      "predicate": "settlement_approval",
+      "polarity": "conditional_affirmation",
+      "layer": "editorial structural tags grounded in the source, not general entailment"
+    },
+    "components": {
+      "preface": {
+        "status": "present_in_inspected_excerpt",
+        "value": "crack-making/divination",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "day": {
+        "status": "present_in_inspected_excerpt",
+        "value": {
+          "label": "guichou",
+          "source_day_index": 50
+        },
+        "original_inscription_status": "not_independently_verified"
+      },
+      "lunar_month": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "diviner": {
+        "status": "present_in_inspected_excerpt",
+        "value": "Zheng",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "charge": {
+        "status": "present_in_inspected_excerpt",
+        "value": "Non-building condition; approval proposed.",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "condition": {
+        "status": "present_in_inspected_excerpt",
+        "value": "do not build settlement",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "action": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "participants": {
+        "status": "present_in_inspected_excerpt",
+        "value": [
+          "Di"
+        ],
+        "original_inscription_status": "not_independently_verified"
+      },
+      "agent": {
+        "status": "present_in_inspected_excerpt",
+        "value": "Di",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "target": {
+        "status": "present_in_inspected_excerpt",
+        "value": "settlement",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "prognostication": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "verification": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      }
+    },
+    "translation_qualifications": [],
+    "source_editorial_context": null,
+    "original_evidence": {
+      "artifact_inventory": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "original_chinese": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "crack_characteristics": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "absolute_date": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      }
+    },
+    "missing_evidence_policy": "Excerpt omissions do not establish absence on the original artifact. No supplied charge demonstrates an outcome.",
+    "source_deep_link": "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm#:~:text=19B."
+  },
+  {
+    "case_id": "20A",
+    "label": "20A",
+    "source_id": "osteomancy-columbia-afe1999-charge-facts-v1",
+    "locator": "Excerpts with Document-Based Questions, label20A; anthology pp8,11–12 (collective source citation; per-case print page not independently inspected)",
+    "source_url": "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm",
+    "editorial_topics": [
+      "royal_approval",
+      "divine_approval"
+    ],
+    "charge_formulation": {
+      "predicate": "royal_approval",
+      "polarity": "affirmed",
+      "layer": "editorial structural tags grounded in the source, not general entailment"
+    },
+    "components": {
+      "preface": {
+        "status": "present_in_inspected_excerpt",
+        "value": "crack-making/divination",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "day": {
+        "status": "present_in_inspected_excerpt",
+        "value": {
+          "label": "xinchou",
+          "source_day_index": 38
+        },
+        "original_inscription_status": "not_independently_verified"
+      },
+      "lunar_month": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "diviner": {
+        "status": "present_in_inspected_excerpt",
+        "value": "Que",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "charge": {
+        "status": "present_in_inspected_excerpt",
+        "value": "Royal approval; activity unresolved.",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "condition": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "action": {
+        "status": "explicitly_uncertain_in_source",
+        "value": "(doing something?)",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "participants": {
+        "status": "present_in_inspected_excerpt",
+        "value": [
+          "Di",
+          "king"
+        ],
+        "original_inscription_status": "not_independently_verified"
+      },
+      "agent": {
+        "status": "present_in_inspected_excerpt",
+        "value": "Di",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "target": {
+        "status": "present_in_inspected_excerpt",
+        "value": "king",
+        "original_inscription_status": "not_independently_verified"
+      },
+      "prognostication": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "verification": {
+        "status": "omitted_from_inspected_excerpt",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      }
+    },
+    "translation_qualifications": [
+      "Action explicitly uncertain: (doing something?)."
+    ],
+    "source_editorial_context": null,
+    "original_evidence": {
+      "artifact_inventory": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "original_chinese": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "crack_characteristics": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      },
+      "absolute_date": {
+        "status": "not_independently_verified",
+        "value": null,
+        "original_inscription_status": "not_independently_verified"
+      }
+    },
+    "missing_evidence_policy": "Excerpt omissions do not establish absence on the original artifact. No supplied charge demonstrates an outcome.",
+    "source_deep_link": "https://afe.easia.columbia.edu/main_pop/ps/ps_china-oracle-bone.htm#:~:text=20A."
+  }
+]
+```
+
+## Structured comparisons
+
+```json
+[
+  {
+    "requested_order": [
+      "8",
+      "19A"
+    ],
+    "canonical_case_ids": [
+      "8",
+      "19A"
+    ],
+    "relationship": {
+      "pair": [
+        "8",
+        "19A"
+      ],
+      "classification": "relationship_unresolved",
+      "opposition": "not_independently_verified",
+      "scope": "No independently frozen relationship for this pair; shared tags or A/B labels do not establish opposition."
+    },
+    "component_comparison": {
+      "preface": {
+        "status": "shared_source_value",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "crack-making/divination",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "crack-making/divination",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "day": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "label": "yiwei",
+            "source_day_index": 32
+          },
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "label": "renzi",
+            "source_day_index": 49
+          },
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "lunar_month": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "source_label": "Third moon",
+            "number": 3
+          },
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "diviner": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Gu",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Zheng",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "charge": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Ancestor attributed royal harm.",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Building condition; non-obstruction and approval.",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "condition": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "build settlement",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "action": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "participants": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": [
+            "Father Yi",
+            "king"
+          ],
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": [
+            "Di"
+          ],
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "agent": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Father Yi",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Di",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "target": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "king",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "settlement",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "prognostication": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "verification": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      }
+    },
+    "editorial_index_comparison": {
+      "shared_topics": [],
+      "predicates": [
+        "royal_harm",
+        "settlement_approval"
+      ],
+      "polarities": [
+        "affirmed",
+        "mixed_clause"
+      ],
+      "policy": "Topic, predicate and polarity tags are editorial source-grounded indexing, not a general entailment engine. User order retained; comparison facts use canonical source order."
+    },
+    "uncertainty_by_case": {
+      "8": [
+        "Translation identifies Father Yi with Xiao Yi and supplies kinship to Wu Ding."
+      ],
+      "19A": [
+        "Approval bridge (but) is parenthesized."
+      ]
+    },
+    "original_artifact_relationship": "not_independently_verified; labels are excerpt identifiers, not artifact IDs",
+    "qualification": "Source-attributed charges and editorial comparisons; no prognostication or actual outcome inferred."
+  },
+  {
+    "requested_order": [
+      "8",
+      "19B"
+    ],
+    "canonical_case_ids": [
+      "8",
+      "19B"
+    ],
+    "relationship": {
+      "pair": [
+        "8",
+        "19B"
+      ],
+      "classification": "relationship_unresolved",
+      "opposition": "not_independently_verified",
+      "scope": "No independently frozen relationship for this pair; shared tags or A/B labels do not establish opposition."
+    },
+    "component_comparison": {
+      "preface": {
+        "status": "shared_source_value",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "crack-making/divination",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "crack-making/divination",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "day": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "label": "yiwei",
+            "source_day_index": 32
+          },
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "label": "guichou",
+            "source_day_index": 50
+          },
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "lunar_month": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "diviner": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Gu",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Zheng",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "charge": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Ancestor attributed royal harm.",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Non-building condition; approval proposed.",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "condition": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "do not build settlement",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "action": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "participants": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": [
+            "Father Yi",
+            "king"
+          ],
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": [
+            "Di"
+          ],
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "agent": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Father Yi",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Di",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "target": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "king",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "settlement",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "prognostication": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "verification": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      }
+    },
+    "editorial_index_comparison": {
+      "shared_topics": [],
+      "predicates": [
+        "royal_harm",
+        "settlement_approval"
+      ],
+      "polarities": [
+        "affirmed",
+        "conditional_affirmation"
+      ],
+      "policy": "Topic, predicate and polarity tags are editorial source-grounded indexing, not a general entailment engine. User order retained; comparison facts use canonical source order."
+    },
+    "uncertainty_by_case": {
+      "8": [
+        "Translation identifies Father Yi with Xiao Yi and supplies kinship to Wu Ding."
+      ],
+      "19B": []
+    },
+    "original_artifact_relationship": "not_independently_verified; labels are excerpt identifiers, not artifact IDs",
+    "qualification": "Source-attributed charges and editorial comparisons; no prognostication or actual outcome inferred."
+  },
+  {
+    "requested_order": [
+      "8",
+      "20A"
+    ],
+    "canonical_case_ids": [
+      "8",
+      "20A"
+    ],
+    "relationship": {
+      "pair": [
+        "8",
+        "20A"
+      ],
+      "classification": "relationship_unresolved",
+      "opposition": "not_independently_verified",
+      "scope": "No independently frozen relationship for this pair; shared tags or A/B labels do not establish opposition."
+    },
+    "component_comparison": {
+      "preface": {
+        "status": "shared_source_value",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "crack-making/divination",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "crack-making/divination",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "day": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "label": "yiwei",
+            "source_day_index": 32
+          },
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "label": "xinchou",
+            "source_day_index": 38
+          },
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "lunar_month": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "diviner": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Gu",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Que",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "charge": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Ancestor attributed royal harm.",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Royal approval; activity unresolved.",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "condition": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "action": {
+        "status": "incomparable_uncertainty",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "explicitly_uncertain_in_source",
+          "value": "(doing something?)",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "participants": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": [
+            "Father Yi",
+            "king"
+          ],
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": [
+            "Di",
+            "king"
+          ],
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "agent": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Father Yi",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Di",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "target": {
+        "status": "shared_source_value",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "king",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "king",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "prognostication": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "verification": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      }
+    },
+    "editorial_index_comparison": {
+      "shared_topics": [],
+      "predicates": [
+        "royal_harm",
+        "royal_approval"
+      ],
+      "polarities": [
+        "affirmed",
+        "affirmed"
+      ],
+      "policy": "Topic, predicate and polarity tags are editorial source-grounded indexing, not a general entailment engine. User order retained; comparison facts use canonical source order."
+    },
+    "uncertainty_by_case": {
+      "8": [
+        "Translation identifies Father Yi with Xiao Yi and supplies kinship to Wu Ding."
+      ],
+      "20A": [
+        "Action explicitly uncertain: (doing something?)."
+      ]
+    },
+    "original_artifact_relationship": "not_independently_verified; labels are excerpt identifiers, not artifact IDs",
+    "qualification": "Source-attributed charges and editorial comparisons; no prognostication or actual outcome inferred."
+  },
+  {
+    "requested_order": [
+      "19A",
+      "19B"
+    ],
+    "canonical_case_ids": [
+      "19A",
+      "19B"
+    ],
+    "relationship": {
+      "pair": [
+        "19A",
+        "19B"
+      ],
+      "group": "settlement",
+      "classification": "differently_conditioned_charge",
+      "opposition": "not_a_simple_logical_negation",
+      "scope": "Building versus non-building conditions; different supplied day labels/indices49,50; no absolute date or elapsed interval inferred.",
+      "source_id": "osteomancy-columbia-afe1999-charge-facts-v1",
+      "locator": "Source labels19A,19B",
+      "layer": "Independently authored source-specific relationship annotation, not a general logical classifier"
+    },
+    "component_comparison": {
+      "preface": {
+        "status": "shared_source_value",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "crack-making/divination",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "crack-making/divination",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "day": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "label": "renzi",
+            "source_day_index": 49
+          },
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "label": "guichou",
+            "source_day_index": 50
+          },
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "lunar_month": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "source_label": "Third moon",
+            "number": 3
+          },
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "diviner": {
+        "status": "shared_source_value",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Zheng",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Zheng",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "charge": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Building condition; non-obstruction and approval.",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Non-building condition; approval proposed.",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "condition": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "build settlement",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "do not build settlement",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "action": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "participants": {
+        "status": "shared_source_value",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": [
+            "Di"
+          ],
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": [
+            "Di"
+          ],
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "agent": {
+        "status": "shared_source_value",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Di",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Di",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "target": {
+        "status": "shared_source_value",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "settlement",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "settlement",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "prognostication": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "verification": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      }
+    },
+    "editorial_index_comparison": {
+      "shared_topics": [
+        "settlement",
+        "divine_approval"
+      ],
+      "predicates": [
+        "settlement_approval",
+        "settlement_approval"
+      ],
+      "polarities": [
+        "mixed_clause",
+        "conditional_affirmation"
+      ],
+      "policy": "Topic, predicate and polarity tags are editorial source-grounded indexing, not a general entailment engine. User order retained; comparison facts use canonical source order."
+    },
+    "uncertainty_by_case": {
+      "19A": [
+        "Approval bridge (but) is parenthesized."
+      ],
+      "19B": []
+    },
+    "original_artifact_relationship": "not_independently_verified; labels are excerpt identifiers, not artifact IDs",
+    "qualification": "Source-attributed charges and editorial comparisons; no prognostication or actual outcome inferred."
+  },
+  {
+    "requested_order": [
+      "19A",
+      "20A"
+    ],
+    "canonical_case_ids": [
+      "19A",
+      "20A"
+    ],
+    "relationship": {
+      "pair": [
+        "19A",
+        "20A"
+      ],
+      "classification": "relationship_unresolved",
+      "opposition": "not_independently_verified",
+      "scope": "No independently frozen relationship for this pair; shared tags or A/B labels do not establish opposition."
+    },
+    "component_comparison": {
+      "preface": {
+        "status": "shared_source_value",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "crack-making/divination",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "crack-making/divination",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "day": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "label": "renzi",
+            "source_day_index": 49
+          },
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "label": "xinchou",
+            "source_day_index": 38
+          },
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "lunar_month": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "source_label": "Third moon",
+            "number": 3
+          },
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "diviner": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Zheng",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Que",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "charge": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Building condition; non-obstruction and approval.",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Royal approval; activity unresolved.",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "condition": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "build settlement",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "action": {
+        "status": "incomparable_uncertainty",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "explicitly_uncertain_in_source",
+          "value": "(doing something?)",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "participants": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": [
+            "Di"
+          ],
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": [
+            "Di",
+            "king"
+          ],
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "agent": {
+        "status": "shared_source_value",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Di",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Di",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "target": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "settlement",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "king",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "prognostication": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "verification": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      }
+    },
+    "editorial_index_comparison": {
+      "shared_topics": [
+        "divine_approval"
+      ],
+      "predicates": [
+        "settlement_approval",
+        "royal_approval"
+      ],
+      "polarities": [
+        "mixed_clause",
+        "affirmed"
+      ],
+      "policy": "Topic, predicate and polarity tags are editorial source-grounded indexing, not a general entailment engine. User order retained; comparison facts use canonical source order."
+    },
+    "uncertainty_by_case": {
+      "19A": [
+        "Approval bridge (but) is parenthesized."
+      ],
+      "20A": [
+        "Action explicitly uncertain: (doing something?)."
+      ]
+    },
+    "original_artifact_relationship": "not_independently_verified; labels are excerpt identifiers, not artifact IDs",
+    "qualification": "Source-attributed charges and editorial comparisons; no prognostication or actual outcome inferred."
+  },
+  {
+    "requested_order": [
+      "19B",
+      "20A"
+    ],
+    "canonical_case_ids": [
+      "19B",
+      "20A"
+    ],
+    "relationship": {
+      "pair": [
+        "19B",
+        "20A"
+      ],
+      "classification": "relationship_unresolved",
+      "opposition": "not_independently_verified",
+      "scope": "No independently frozen relationship for this pair; shared tags or A/B labels do not establish opposition."
+    },
+    "component_comparison": {
+      "preface": {
+        "status": "shared_source_value",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "crack-making/divination",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "crack-making/divination",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "day": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "label": "guichou",
+            "source_day_index": 50
+          },
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": {
+            "label": "xinchou",
+            "source_day_index": 38
+          },
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "lunar_month": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "diviner": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Zheng",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Que",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "charge": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Non-building condition; approval proposed.",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Royal approval; activity unresolved.",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "condition": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "do not build settlement",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "action": {
+        "status": "incomparable_uncertainty",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "explicitly_uncertain_in_source",
+          "value": "(doing something?)",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "participants": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": [
+            "Di"
+          ],
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": [
+            "Di",
+            "king"
+          ],
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "agent": {
+        "status": "shared_source_value",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Di",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "Di",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "target": {
+        "status": "different_source_values",
+        "left": {
+          "status": "present_in_inspected_excerpt",
+          "value": "settlement",
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "present_in_inspected_excerpt",
+          "value": "king",
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "prognostication": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      },
+      "verification": {
+        "status": "incomparable_missing_evidence",
+        "left": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        },
+        "right": {
+          "status": "omitted_from_inspected_excerpt",
+          "value": null,
+          "original_inscription_status": "not_independently_verified"
+        }
+      }
+    },
+    "editorial_index_comparison": {
+      "shared_topics": [
+        "divine_approval"
+      ],
+      "predicates": [
+        "settlement_approval",
+        "royal_approval"
+      ],
+      "polarities": [
+        "conditional_affirmation",
+        "affirmed"
+      ],
+      "policy": "Topic, predicate and polarity tags are editorial source-grounded indexing, not a general entailment engine. User order retained; comparison facts use canonical source order."
+    },
+    "uncertainty_by_case": {
+      "19B": [],
+      "20A": [
+        "Action explicitly uncertain: (doing something?)."
+      ]
+    },
+    "original_artifact_relationship": "not_independently_verified; labels are excerpt identifiers, not artifact IDs",
+    "qualification": "Source-attributed charges and editorial comparisons; no prognostication or actual outcome inferred."
+  }
+]
+```
+
+## Component availability
+
+```json
+{
+  "preface": {
+    "present_in_inspected_excerpt": 4,
+    "omitted_from_inspected_excerpt": 0,
+    "explicitly_uncertain_in_source": 0,
+    "not_independently_verified": 0,
+    "not_applicable": 0
+  },
+  "day": {
+    "present_in_inspected_excerpt": 4,
+    "omitted_from_inspected_excerpt": 0,
+    "explicitly_uncertain_in_source": 0,
+    "not_independently_verified": 0,
+    "not_applicable": 0
+  },
+  "lunar_month": {
+    "present_in_inspected_excerpt": 1,
+    "omitted_from_inspected_excerpt": 3,
+    "explicitly_uncertain_in_source": 0,
+    "not_independently_verified": 0,
+    "not_applicable": 0
+  },
+  "diviner": {
+    "present_in_inspected_excerpt": 4,
+    "omitted_from_inspected_excerpt": 0,
+    "explicitly_uncertain_in_source": 0,
+    "not_independently_verified": 0,
+    "not_applicable": 0
+  },
+  "charge": {
+    "present_in_inspected_excerpt": 4,
+    "omitted_from_inspected_excerpt": 0,
+    "explicitly_uncertain_in_source": 0,
+    "not_independently_verified": 0,
+    "not_applicable": 0
+  },
+  "condition": {
+    "present_in_inspected_excerpt": 2,
+    "omitted_from_inspected_excerpt": 2,
+    "explicitly_uncertain_in_source": 0,
+    "not_independently_verified": 0,
+    "not_applicable": 0
+  },
+  "action": {
+    "present_in_inspected_excerpt": 0,
+    "omitted_from_inspected_excerpt": 3,
+    "explicitly_uncertain_in_source": 1,
+    "not_independently_verified": 0,
+    "not_applicable": 0
+  },
+  "participants": {
+    "present_in_inspected_excerpt": 4,
+    "omitted_from_inspected_excerpt": 0,
+    "explicitly_uncertain_in_source": 0,
+    "not_independently_verified": 0,
+    "not_applicable": 0
+  },
+  "agent": {
+    "present_in_inspected_excerpt": 4,
+    "omitted_from_inspected_excerpt": 0,
+    "explicitly_uncertain_in_source": 0,
+    "not_independently_verified": 0,
+    "not_applicable": 0
+  },
+  "target": {
+    "present_in_inspected_excerpt": 4,
+    "omitted_from_inspected_excerpt": 0,
+    "explicitly_uncertain_in_source": 0,
+    "not_independently_verified": 0,
+    "not_applicable": 0
+  },
+  "prognostication": {
+    "present_in_inspected_excerpt": 0,
+    "omitted_from_inspected_excerpt": 4,
+    "explicitly_uncertain_in_source": 0,
+    "not_independently_verified": 0,
+    "not_applicable": 0
+  },
+  "verification": {
+    "present_in_inspected_excerpt": 0,
+    "omitted_from_inspected_excerpt": 4,
+    "explicitly_uncertain_in_source": 0,
+    "not_independently_verified": 0,
+    "not_applicable": 0
+  }
+}
+```
+
+## Evidence-state definitions
+
+```json
+{
+  "present_in_inspected_excerpt": "Value is expressly supplied in this educational excerpt.",
+  "omitted_from_inspected_excerpt": "Not supplied here; original inscription may contain it.",
+  "explicitly_uncertain_in_source": "Translation/editorial uncertainty retained; no resolved value invented.",
+  "not_independently_verified": "Original artifact/text or external chronology not inspected.",
+  "not_applicable": "Not a component of this bounded documentary schema."
+}
+```
+
+## Comparison limits
+
+```json
+"Only the five named source-specific contrasts and same-record identity are classified. Other pair relationships remain unresolved; field comparison never turns missingness into equality or negation. Uncertain values are incomparable as resolved propositions."
+```
+
+## Verified groups
+
+```json
+{
+  "ancestor-harm": [
+    "9A",
+    "9B"
+  ],
+  "settlement": [
+    "19A",
+    "19B"
+  ],
+  "royal-approval": [
+    "20A",
+    "20B"
+  ],
+  "harvest": [
+    "22A",
+    "22B"
+  ],
+  "warfare": [
+    "24A",
+    "24B"
+  ]
+}
+```
+
+## Editorial topic index
+
+```json
+[
+  "royal_affliction",
+  "ancestral_agency",
+  "settlement",
+  "divine_approval",
+  "royal_approval",
+  "harvest",
+  "divine_agency",
+  "warfare"
+]
+```
+
+## Raw user annotations
+
+```json
+[]
+```
+
+## Raw research notes
+
+```json
+{}
+```
+
+## Partial-date boundary
+
+```json
+{
+  "absolute_date": null,
+  "calendar_conversion": false,
+  "policy": "Partial source day/moon labels retained. No date inheritance or Gregorian conversion; indices49/50 alone do not establish an absolute elapsed interval."
+}
+```
+
+## Evidence layers
+
+```json
+{
+  "direct": "Independently checked source-record facts and exact attribution/locators; short original factual annotations, not copied translations",
+  "editorial": "Typed structural/topic indexing and only independently frozen pair relationships",
+  "user_attributed": "Raw user research questions, notes and associations; never replacements for historical evidence",
+  "unsupported": "Generated archaeological evidence, original-text decipherment, modern casting, spirit contact, future prediction or supernatural accuracy"
+}
+```
+
+## Unsupported coverage
+
+```json
+[
+  "Contemporary charm casting and all Southern African executable methods",
+  "Physical burning/crack production or animal-material procurement",
+  "Original Chinese decipherment, unseen crack classification or object authentication",
+  "Invented original artifact IDs, original-text components or recorded outcomes",
+  "Absolute Gregorian dates from partial day labels",
+  "Predictive judgment, spirit contact or supernatural accuracy",
+  "Seeded generation, LLM inference or image recognition"
+]
+```
+
+## Exact replay metadata
+
+```json
+{
+  "request": {
+    "schema_version": 1,
+    "profile": "columbia-afe1999-shang-charges-v1",
+    "mode": "documentary",
+    "task": "compare",
+    "case_ids": [
+      "8",
+      "19A",
+      "19B",
+      "20A"
+    ]
+  },
+  "input_sha256": "03f16b5527e0a6a806d8077d31b9dcd39286c4d2cd028e813d288e8f3bcd9412",
+  "profile_sha256": "5bb0f6bde2a4e8e80ce43ef2a99d585e6a1f16231552e4a862d29e0e9097c92a",
+  "source_sha256": "0cb52127e4880d76757c65047ee9e958e358cd53e8509d5a2ebea19f4315d6dc",
+  "serialization": "SHA256 canonical UTF8 sorted-key compact JSON, unescaped Unicode, no terminal LF; raw user whitespace preserved",
+  "external_calls": false,
+  "rng": false,
+  "generated_historical_records": false
+}
+```
