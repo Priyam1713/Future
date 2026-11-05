@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique31 manual water condition engine — 2026-11-05
+- Sourcec3be264 pushed before runtime. Added hydromancy with eight water-specific procedure/impression reference cases,explicit medium/vessel/rain/gaze conditions andfive-state evaluator. Physical mist,glare,ripples,subjective fog anddeliberate imagery stay distinct;no source-free omen mapping. Optional Coptic documentary comparison preserves gaps anddate901–1100.
+-34 new tests,44 independent reference checks andregistry idempotence pass. Full inherited regression/CLI,13 existing verifiers and278-file prior report/profile preservation sweep run before closure. JSON/Markdown exact replay,Unicode andportable hashes supported;no renderer,RNG ornew dependency.
+
 ## Technique31 source/profile freeze — 2026-11-05
 - Reinspected publisherSpees2005 Water Scrying:explicitAndrews attribution,three rainwater contexts,observer positioning,relaxation/gaze andlimited subjective fogginess/imagery account. Observer undisturbed is not a still-water requirement. Eight source cases frozen in andrews-spees2005-water-reference-v1 before runtime,with independent expected condition fixtures.
 - Rechecked CopticT1085 fragment,date901–1100,witness/editorial uncertainty andNOAA physical oil/water context;separate fromTyson/Betz andexecutable procedure. New immutable core source witnesses preserve audit records.278 prior journals/reports captured;no fluid/optical inference oruniversal omen dictionary.

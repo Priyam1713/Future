@@ -774,6 +774,80 @@ and [clinical scope](data/akashic-clinical.md).
 Run `python -m scripts.verify_akashic`, `python -m scripts.smoke_akashic_core`
 and `python -m unittest tests.test_akashic -q`.
 
+## Hydromancy: water-specific observation and reference conditions
+
+`python -m future hydromancy data/hydromancy-input.json --format markdown`
+
+`andrews-spees2005-water-reference-v1` uses the **Ted Andrews** Water Scrying
+excerpt within Jennifer Spees's July 1, 2005 publisher article. The excerpt
+is distinct from the article's discussion of Donald Tyson. Tyson and Betz
+retain their inventory rankings; their full methods remain access/rights gaps.
+
+```json
+{
+  "schema_version": 1,
+  "profile": "andrews-spees2005-water-reference-v1",
+  "task": "water_observation_reference",
+  "mode": "manual",
+  "origin": "hypothetical",
+  "session": {
+    "medium": "water", "container": "dark_bowl", "rainwater": true,
+    "gaze": "soft", "observer_undisturbed": true, "surface_visible": true
+  },
+  "observations": [{
+    "id": "o1", "sequence": 1,
+    "category": "perceived_fogginess", "basis": "subjective",
+    "description": "My own voluntary observation"
+  }]
+}
+```
+
+Eight source cases compare three rainwater contexts (dark bowl, cauldron,
+natural pool), observer positioning, relaxation, soft/half-focused gaze,
+explicit subjective fogginess and subjective imagery. Results use
+`source_supported`, `context_mismatch`, `insufficient_information`,
+`conflicting_evidence` or `unsupported`. Source conformity concerns declarations;
+it establishes no ritual success, physical cause or extraordinary ability.
+
+Water-only context, rain provenance and vessel are explicit. Oil-on-water
+and oil-only contexts remain distinct. Unknown medium never defaults to water.
+The source's undisturbed-observer instruction does not require still water:
+surface motion is separately recorded. Intense gaze mismatches its recommendation.
+
+Observations require unique IDs and increasing explicit sequence numbers.
+Categories separate physical ripples, reflections, glare, physical mist,
+subjective fogginess/images, deliberate imagination, no imagery and oil layers
+or drops. Optional `basis`, origin, uncertainty, category alternatives, raw
+description and association remain user declarations. Per-observation `context`
+overrides only supplied session fields. No prose or image inference occurs.
+Scalar context fields can carry bounded evidence alternatives or null/unknown.
+Color and drop counts can be recorded without receiving invented omen meanings.
+
+Optional session intention/question, lighting, timestamp, discomfort and status
+are preserved without a clock default. Discontinued/discomfort/stopped declarations
+hold displayed subjective symbolism and reflection prompts. No unusual imagery,
+physical water, collection of rainwater or special equipment is required.
+
+`documentary_comparison: true` requests a separate comparison with Kyprianos
+T1085 (fragmentary Coptic witness catalogued 901–1100). Its uncertain medium
+identification, editorial layers and gaps remain explicit. It is neither an
+executable ritual nor a verified Betz corpus alignment. NOAA oil/water context
+is educational physical material, separate from practitioner symbolism.
+
+Reports preserve direct-source, user-attributed, editorial and unsupported
+evidence layers, exact source locators/rights and full deterministic replay.
+Canonical request/profile hashes and original source-byte hashes are included.
+No renderer, fluid model, recognition, LLM, RNG or new dependency was added.
+
+Run `python -m scripts.verify_hydromancy`,
+`python -m scripts.smoke_hydromancy_core` and
+`python -m unittest tests.test_hydromancy`. Examples:
+[water bowl](data/hydromancy-water-bowl.md),
+[perceived fog](data/hydromancy-fog.md),
+[physical mist](data/hydromancy-mist.md),
+[oil/water](data/hydromancy-oil-water.md) and
+[historical comparison](data/hydromancy-coptic.md).
+
 ## Pyromancy: public-source candle and jar-soot observations
 
 `python -m future pyromancy data/pyromancy-input.json --format markdown`
