@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "total_tests": 579,
+  "inherited_tests": 540,
+  "new_tests": 39,
+  "total_cli_cases": 593,
+  "inherited_cli_cases": 533,
+  "new_cli_cases": 60,
+  "smoke_modules": 28,
+  "inherited_symbolic_verifiers": 12,
+  "new_reference_checks": 59,
+  "prior_journal_files": 223,
+  "includes_required174": true,
+  "full_test_output": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "........................................................................................................................................................................................................C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\skyfield\\searchlib.py:224: DeprecationWarning: Setting the dtype on a NumPy array has been deprecated in NumPy 2.5.\nInstead of changing the dtype on an array x, create a new array with x.view(new_dtype)\n  y.dtype = int8\n...........................................................................................................................................................................................................................................................................................................................................................................................\n----------------------------------------------------------------------\nRan 579 tests in 72.795s\n\nOK\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\n",
+    "seconds": 73.844
+  },
+  "evidence": "data/pyromancy-acceptance-checks.json",
+  "warnings": [
+    "Inherited Skyfield/NumPy dtype deprecation",
+    "Inherited unclosed data/de440s.bsp ResourceWarning"
+  ]
+}
