@@ -1,0 +1,401 @@
+{
+  "version": 1,
+  "technique_id": 38,
+  "name": "Augury",
+  "phase": 4,
+  "date": "2026-11-06",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "33c0b17",
+  "predecessor_push": "Cleromancy accepted, committed,pushed; clean main and origin/main...HEAD0/0 explicitly observed before any38 source audit.",
+  "policy": "Audit metadata only: no38 engine,profile,executable omen catalog,CLI,sky renderer,bird detector,event generator or camera requirement. No39 audit.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    38,
+    "4 · Nature, Objects & Ancient Practices",
+    "Augury",
+    "RETAIN — simulate / implement",
+    "Deterministic / symbolic rules",
+    "Roman auspices; Greek bird omens; flight direction; species/call; weather birds",
+    "Bird-event simulation + cultural omen rule tables",
+    "Virtual sky/bird observations; optional real video",
+    "Roman and Greek sign directions differ; not validated",
+    "Traditional / not scientifically validated",
+    "De Divinatione",
+    "Cicero",
+    "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/home.html",
+    "Bird Magic",
+    null,
+    null,
+    "32",
+    38
+  ],
+  "ranked_sources": [
+    [
+      38,
+      "Augury",
+      1,
+      "Cicero",
+      "De Divinatione",
+      "Roman primary discussion of augury",
+      "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/home.html",
+      "Open classical translation",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      38,
+      "Augury",
+      2,
+      "Sandra Kynes",
+      "Bird Magic",
+      "Contemporary bird symbolism",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      38,
+      "Augury",
+      "Roman auspices",
+      "De Divinatione",
+      "Bird Magic",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      38,
+      "Augury",
+      "Greek bird omens",
+      "Bird Magic",
+      "De Divinatione",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      38,
+      "Augury",
+      "flight direction",
+      "Bird Magic",
+      "De Divinatione",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      38,
+      "Augury",
+      "species/call",
+      "Bird Magic",
+      "De Divinatione",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      38,
+      "Augury",
+      "weather birds",
+      "Bird Magic",
+      "De Divinatione",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_registry": "knowledge/augury_sources.json",
+  "source_access": [
+    {
+      "name": "cicero-home",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/home.html",
+      "resolved_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/home.html",
+      "status": 200,
+      "snapshot_sha256": "250d74fd88ca2e29741213f8e9a41a7a0c9d752d4d996814255360598103fc08",
+      "snapshot_bytes": 12583
+    },
+    {
+      "name": "cicero1",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html",
+      "resolved_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html",
+      "status": 200,
+      "snapshot_sha256": "8ee1dac4c378c4a42d22764b7d6bef6e3b70ba462d03ae973a67a2ecb73da79d",
+      "snapshot_bytes": 252127
+    },
+    {
+      "name": "cicero2",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html",
+      "resolved_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html",
+      "status": 200,
+      "snapshot_sha256": "078da984025b002692a644df41a42f858e3a4880bb1c6d9e22c43434a08eb880",
+      "snapshot_bytes": 262663
+    },
+    {
+      "name": "latin1",
+      "url": "https://www.thelatinlibrary.com/cicero/divinatione1.shtml",
+      "status": "unavailable",
+      "snapshot_sha256": null,
+      "error": "HTTPError"
+    },
+    {
+      "name": "iliad12",
+      "url": "https://www.theoi.com/Text/HomerIliad12.html",
+      "resolved_url": "https://www.theoi.com/Text/HomerIliad12.html",
+      "status": 200,
+      "snapshot_sha256": "94bff956bf5a73421b6420fe30dac99033d65ba335e7a97b8c08f1bde0cbbc97",
+      "snapshot_bytes": 56103
+    },
+    {
+      "name": "iliad24",
+      "url": "https://www.theoi.com/Text/HomerIliad24.html",
+      "resolved_url": "https://www.theoi.com/Text/HomerIliad24.html",
+      "status": 200,
+      "snapshot_sha256": "c8e4773ddaab0022eb6fc6082b4a6475cf6deb1911f067e0515fe676ba89767b",
+      "snapshot_bytes": 79826
+    },
+    {
+      "name": "kynes",
+      "url": "https://llewellyn.com/product.php?ean=9780738748641",
+      "status": "unavailable",
+      "snapshot_sha256": null,
+      "error": "HTTPError"
+    }
+  ],
+  "edition": {
+    "latin_original": "Cicero De Divinatione; Latin Library primary-language witness inspected through web rendering, underlying printed Latin edition unverified. Not claimed identical to Loeb Latin.",
+    "english": "William Armistead Falconer,Loeb Classical Library,Cicero volXX,1923,as identified by LacusCurtius edition page",
+    "numbering": "Freeze book.chapter.section plus native section/chapter anchors. ChapterR7 continues section12 before section13; do not inventI.7.13 for the initial call clause.",
+    "voices": "Quintus defenseBookI; Marcus criticismBookII; translator/site notes separate from author dialogue",
+    "rights": "LacusCurtius explicitly identifies1923 book text as public domain. Homepage/site annotations/layout, modern revisions and images have separate rights; audit uses facts/locators only."
+  },
+  "findings": [
+    {
+      "id": "roman-public-authority",
+      "locator": "I.2.3;I.15.28;II.36.76–78",
+      "layer": "Historical dialogue/context",
+      "fact": "Roman public business and magistrate/augural authority are part of the reported institution. Ordinary bird watching or a user-entered sighting is not thereby an authorized public auspice. Marcus later questions contemporary practice and avoidance of unwanted signs."
+    },
+    {
+      "id": "dialogue-voices",
+      "locator": "I.6.11 onward;II.26.56–57;II.38–39",
+      "layer": "Speaker attribution",
+      "fact": "Quintus argues for divination inBookI; Marcus counters inBookII. Preserve source claims and objections together; do not label every quoted tradition as Cicero endorsement or verified predictive success."
+    },
+    {
+      "id": "crow-raven-calls",
+      "locator": "I.7.12,chapterR7 continuing section12; Latin LibraryI,VII",
+      "layer": "Main translated text, independently checked Latin clause",
+      "fact": "Reported calls associate crow/cornix with left and raven/corvus with right. Latin has cornicem a laeva and corvum ab dextera with canere. The clause discusses sign causation; its polarity is not independently asserted as favorable merely by borrowing a flight passage."
+    },
+    {
+      "id": "crow-raven-flight",
+      "locator": "I.39.85",
+      "layer": "Quintus main-text rhetorical example",
+      "fact": "Explicitly describes an augur treating raven flight to right or crow flight to left as favorable. Keep flight versus call evidence separate and keep this attribution distinct from an actual event outcome."
+    },
+    {
+      "id": "alites-oscines",
+      "locator": "I.53.120;note133",
+      "layer": "Main-text terminology versus translator note",
+      "fact": "Alites give signs through flight; oscines through cries. Note133 supplies eagle/hawk/osprey and raven/crow/owl examples with Festus lead. These are not a modern taxonomy or permission to erase explicitly reported corvid flight inI.39.85."
+    },
+    {
+      "id": "direction-conflict",
+      "locator": "II.39.82–83 and note226; compareI.7.12",
+      "layer": "Critical main text and conflicting editorial note",
+      "fact": "Marcus contrasts national direction conventions, notes favorable signs can be called sinistra even when physically right, and criticizes inconsistency. Note226 says Roman observer south/Greek north, but gives a right-side crow-call example conflicting with main text crow-left. Do not silently correct, universalize or infer observer heading from that note."
+    },
+    {
+      "id": "natural-cock-criticism",
+      "locator": "II.26.56–57",
+      "layer": "Marcus critical argument",
+      "fact": "Questions a victory interpretation of crowing cocks and proposes ordinary/chance causes, including an attributed Democritus digestion account. This is argument/history, not an independently validated biological mechanism."
+    },
+    {
+      "id": "weather-not-auspices",
+      "locator": "I.8.13–14 andI.9.15",
+      "layer": "Quintus analogy using quoted poetry",
+      "fact": "Bird-related weather signs appear in an analogy expressly introduced outside divination. Historical heron/nightingale/crow labels and behaviors need their own textual qualifications. No Aeromancy rule transfer, real weather forecast or supernatural certification."
+    },
+    {
+      "id": "greek-polydamas",
+      "locator": "Iliad12.195–229",
+      "layer": "Independent Greek literary narrative, Murray1924 translation",
+      "fact": "Eagle passes left of Trojan host carrying a live snake; snake strikes it, eagle drops snake and departs crying. Polydamas interprets failure to bring prey home as warning against attack/anticipated costly retreat. Species+left alone omits the decisive sequence and interpreter."
+    },
+    {
+      "id": "greek-hector",
+      "locator": "Iliad12.230–250",
+      "layer": "Contrasting character interpretation",
+      "fact": "Hector rejects Polydamas bird-reading advice in favor of his account of Zeus/patriotic duty. His speech mentions right toward dawn/sun and left toward darkness; retain as narrative wording, not a universal Greek observer-facing rule."
+    },
+    {
+      "id": "greek-priam",
+      "locator": "Iliad24.281–321,especially[314]",
+      "layer": "Independent Greek literary narrative",
+      "fact": "Hecabe and Priam seek a right-side messenger before the ransom journey; Zeus sends an eagle appearing right and the onlookers are cheered. Keep request, journey, character response and narrative report; it is not a universal right-eagle prediction or empirical outcome trial."
+    },
+    {
+      "id": "ancient-bird-identity",
+      "locator": "Cicero corvus/cornix;Iliad24 black/dusky eagle wording",
+      "layer": "Translation/species boundary",
+      "fact": "Retain ancient/source bird labels separately from modern scientific species IDs. No Latin binomial or current habitat range is inferred from crow/raven/black-eagle wording."
+    }
+  ],
+  "variation_findings": [
+    {
+      "name": "Roman auspices",
+      "status": "Best first bounded source-reference candidate",
+      "sources": [
+        "Cicero/FalconerI.2.3,I.7.12,I.39.85,I.53.120;II.38–39"
+      ],
+      "scope": "Specific quoted bird/side/phenomenon accounts and criticisms; no certification of full civic/ritual augural judgment."
+    },
+    {
+      "name": "Greek bird omens",
+      "status": "Independent literary case opportunities, separate profile",
+      "sources": [
+        "Murray Iliad12.195–250",
+        "Murray Iliad24.281–321"
+      ],
+      "scope": "Narrative sequence, interpreter and setting required; Greek characters disagree; no universal left/right rule."
+    },
+    {
+      "name": "flight direction",
+      "status": "Exact source relation/reference-frame freeze required",
+      "sources": [
+        "I.39.85",
+        "II.39.82,note226",
+        "Iliad12/24"
+      ],
+      "scope": "Distinguish appearance on a side, movement toward/from side and compass heading. No conversion without known observer frame; note226 unresolved."
+    },
+    {
+      "name": "species/call",
+      "status": "Bounded source-label pairs available; modern taxonomy unsupported",
+      "sources": [
+        "I.7.12 Latin/English",
+        "I.53.120/note133",
+        "II.26.56–57"
+      ],
+      "scope": "Crow/raven/flight/call distinctions retained; call alone never supplies an invented omen."
+    },
+    {
+      "name": "weather birds",
+      "status": "Documentary analogy only; separate from political/religious auspices",
+      "sources": [
+        "I.8.13–14;I.9.15",
+        "Kynes scope metadata only"
+      ],
+      "scope": "Own source/version and behavioral conditions required. No borrowing Aeromancy rules or inferring a practical weather forecast."
+    }
+  ],
+  "kynes": {
+    "inventory": "Original unqualified title/rank preserved; identified2016 edition is metadata match, not proof inventory specified an edition.",
+    "edition2016": "Bird Magic: Wisdom of the Ancient Goddess for Pagans & Wiccans;Sandra Kynes;Llewellyn;August2016;ISBN9780738748641;312 pages",
+    "preview": "Publisher-indexed Look Inside iframe indicator found; direct403 and embedded preview target/chapter pages not inspected. No chapter-specific rule or species meaning verified.",
+    "scope": "Marketing describes more than60 species plus crafts/meditations/magical material. That is not a complete deterministic bird-omen algorithm.",
+    "edition2027": "Author publisher catalog separately lists Bird Magic: A Mystical Encyclopedia of Our Feathered Friends,ISBN9780738785257,March2027. Future/new edition metadata not merged with2016 or treated as accessible current rule text.",
+    "rights": "Modern copyrighted book/illustrations; no full text ingestion or symbol dictionary from marketing; contemporary profile remains gated."
+  },
+  "first_candidate": {
+    "name": "Cicero/Falconer1923 manual bird-sign source-condition reference",
+    "priority": "Freeze a complete bounded Roman subset of explicitly attributed source conditions and contrasting criticism before implementation; source-located documentary matcher is feasible and substantive without simulating birds or importing a generic bird dictionary.",
+    "scope": "At minimum preserveI.7.12 call-side accounts,I.39.85 explicitly favorable flight accounts,I.53.120 classification context andII.38–39 skeptical/conflicting context as separate records. The exact supported matrix must name which fields are direct, compositional or unresolved.",
+    "matching": "Exact source bird label,phenomenon and relative relation; unknown,opposite or unmatched cases remain unresolved rather than unfavorable. No mixing call/flight propositions or adopting note226 as universal orientation law.",
+    "output": "Manual observation trace; matched source condition/locator/speaker; source-attributed account; missing evidence and conflicting notes; raw user question/uncertainty; exact offline JSON/Markdown replay. No actual divine/public decision or event prediction.",
+    "core_gate": "Before code inspect/freeze complete proposed subset and independent known answers. Do not close with a generic journal or source-free species list. If directional/context evidence remains inadequate, narrow to a supported documentary comparison scope rather than inventing a universal augural system."
+  },
+  "proposed_manual_schema": {
+    "profile": "Named immutable Roman source/translation version; Greek and contemporary profiles separate",
+    "observation": {
+      "bird_label": "Source crow/raven/etc or explicitunknown; modern taxon separate nullable field, not inferred",
+      "phenomenon": "flight,call or unknown",
+      "relative_side": "left,right or unknown",
+      "side_relation": "on_side,to_side,from_side or source_relation_unresolved; do not silently equate",
+      "reference_frame": "relative_to_declared_observer or unknown",
+      "observer_facing": "Declared cardinal heading or unknown; no automatic direction conversion in initial core",
+      "setting": "Raw source-specific public/private/ritual/ordinary context orunknown",
+      "origin": "reported_real,hypothetical,unknown; user-reported only",
+      "uncertainty": "Explicit species/phenomenon/side/context uncertainty and raw notes"
+    },
+    "source_case": "Optional exact documentary case selector after case catalog freeze; not inferred from a question",
+    "question": "Optional raw user question/reflection separate from source account",
+    "limits": "Tentative audit schema only; no implemented profile/API or current-weather input."
+  },
+  "independent_fixture_plan": [
+    "Before code author complete bounded case facts from exact source sections with speaker/text/note/rights fields and independently expected matches; source SHA and portable profile/request hashes frozen.",
+    "SeparateI.7.12 crow-left/raven-right CALL references fromI.39.85 favorable FLIGHT references; never borrow polarity across passage/phenomenon. Opposite/unrecognized observations unresolved.",
+    "Check native chapterR7/section12 locator, Latin cornicem/corvum and left/right words, and English species identity without invented scientific taxonomy.",
+    "Assert note226 crow-right conflicts with main crow-left and remains separately attributed; unknown observer facing never filled from generic Roman/Greek assumptions.",
+    "Keep alites/oscines main text distinct from species examples supplied by note133; a classification example cannot override an explicit source case.",
+    "Greek fixtures must include eagle/snake/drop sequence plus Polydamas/Hector disagreement, and Priam requested right-eagle narrative separately. Species+side without needed context stays unresolved.",
+    "Missing species/side/phenomenon,uncertain identification,unknown relation,conflicting frame,raw Unicode/whitespace,invalid types and deterministic replay; no observations generated.",
+    "Weather-bird examples source-specific and separate from auspices, contemporary symbolism and operational meteorology. Synthetic fixtures test software only, not predictive validity."
+  ],
+  "configuration_matrix": {
+    "supported": "Audit metadata and source-located documentary findings only",
+    "experimental": "Proposed bounded Cicero/Falconer manual condition reference; not implemented or certified",
+    "unsupported": [
+      "Executable Augury38",
+      "Universal Roman/Greek bird-direction dictionary",
+      "Kynes species meanings from uninspected chapters",
+      "Automatic compass conversion or side inference from missing orientation",
+      "Full civic/ritual auspice authority or decision certification",
+      "Weather prediction,visual recognition,generated events or supernatural accuracy"
+    ]
+  },
+  "acceptance_gates": [
+    "Commit/push source facts/independent fixtures before executable rule catalog.",
+    "Meaningful complete bounded source-supported manual condition lookup with explicit missing/conflict states, native locators and stable replay.",
+    "Distinct source traditions,dialogue speakers,main text,translator/site notes,user interpretations and unsupported predictions.",
+    "Frozen supported/experimental/unsupported matrix; incomplete Kynes/Greek/meteorological extensions do not block a complete bounded Roman reference.",
+    "Full inherited895 tests,1071 CLI cases and20 verifiers preserved plus new independent checks; required1337 prior protected files and all current release artifacts unchanged.",
+    "Source registry,idempotence,dependency/pip/diff checks and valid/rejected JSON/Markdown CLI/replay pass before any bounded Core v1 readiness."
+  ],
+  "P1": [
+    "Freeze a complete bounded Cicero/Falconer source-case subset, speaker attribution, exact main-text versus note evidence and independent expectations before any engine.",
+    "Collate Latin and1923 translation for call/flight, corvus/cornix and relative side phrases; underlying Latin Library print edition remains unknown.",
+    "Keep note226 crow-side discrepancy and general sinistra semantics explicit; independently check orientation claims before any cardinal conversion.",
+    "Inspect legitimate2016 Kynes preview/chapter pages and source-specific species procedures/rights; keep announced2027 edition separate.",
+    "Develop Greek source cases separately, preserving Polydamas/Hector disagreement and Priam prayer context; verify exact line locators, original Greek and species terminology.",
+    "Freeze unknown/missing/contradictory observation states and manual reference-frame contract; no unfavorable default for an unmatched side/species."
+  ],
+  "P2": [
+    "Additional Roman augural technical texts and political/ritual authority context under separate source versions.",
+    "Further Greek witnesses, dialect/species identifications and edition-specific translations.",
+    "Separately sourced contemporary Bird Magic profiles only after actual procedural pages.",
+    "Weather-bird folk accounts and empirical meteorological studies kept separate from auspices and operational forecasting.",
+    "Optional original diagrams or manual observation visualization; no camera/video model or generated bird-event simulation required.",
+    "Broader historical interpretation and empirical research, distinct from deterministic/source acceptance."
+  ],
+  "rights": "Original ancient words,1923/1924 translation editions,modern translations,web commentary,book previews and source images have independent rights. This audit redistributes only original concise facts/locators and provenance metadata.",
+  "accepted_predecessor": {
+    "passed": true,
+    "tests": 895,
+    "inherited_tests": 836,
+    "new_tests": 59,
+    "cli_cases": 1071,
+    "inherited_cli_cases": 991,
+    "new_cli_cases": 80,
+    "symbolic_verifiers": 20,
+    "protected_files": 1441,
+    "required_prior_files": 1337,
+    "changed": [],
+    "checks": "data/cleromancy-acceptance-checks.json"
+  },
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "limitations": "Audit complete only; no Augury runtime/catalog/profile/CLI or readiness claim. No live weather,habitat,camera or real observation needed. No39 audit."
+}

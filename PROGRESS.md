@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 38 Augury resource audit — 2026-11-06
+- Began only after Cleromancy closure33c0b17 was accepted,pushed,clean and synchronized0/0. Two original ranked sources/five variations preserved. Audit only;no38 engine,profile,omen catalog,CLI,detector or39 audit.
+- Inspected1923 Falconer/Cicero edition and both books:Quintus defense versus Marcus criticism;call-side and explicitly favorable flight accounts remain separate. Main crow-left conflicts with note226 crow-right;orientation/Latin species and translator-note layers retained. Independent Murray1924 Iliad12/24 cases preserve narrative/interpreter disagreements rather than universal Greek direction rules.
+- Kynes2016 ISBN9780738748641 identified;publisher preview iframe advertised but actual chapter pages uninspected after403. Announced2027 edition kept separate. Recommended first slice:source-frozen bounded Roman manual condition reference with unknown/conflict handling;no weather forecast or Aeromancy rule transfer. Source/rights hashes,fixture plan,manual schema,matrix and P1/P2: `knowledge/augury_resource_audit.json`.
+
 ## Technique 37 Cleromancy Core v1 closure — 2026-11-06
 - **Core v1 Ready — Historical Greek Alphabet Marked-Lot Scope**: `opsopaus-greek-alphabet-manual-lot-v1`; all24 individually sourced accounts,98 explicit alias keys, single declared manual lot, raw origin/reflection/uncertainty, catalog/lookup and exact replay. Indexed evidence and unavailable direct HTML hash kept explicit; original epigraphy not independently authenticated. Sourcea52f01a, catalog2cf0b82, engined2f3f10 and evidencefb96cdd pushed.
 - 895 tests (836+59),1071 CLI cases (991+80),20 verifiers pass. Independent24 accounts/98 aliases/9016 numerical research tuples, all source discrepancies and exact replay pass. All1441 protected files, including required1337, remain byte-identical; original source records and RNG protocols preserved. Registry/dependency/pip/diff checks pass;16 valid/16 rejected JSON/Markdown pairs saved.
