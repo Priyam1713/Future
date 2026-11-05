@@ -6,7 +6,9 @@ def verify():
     from future import lithomancy as l
     fpath=Path('tests/fixtures/lithomancy_reference_v1.json')
     f=json.loads(fpath.read_text(encoding='utf-8'));s=json.loads(Path('knowledge/lithomancy_source_freeze_v1.json').read_text(encoding='utf-8'))
-    assert hashlib.sha256(fpath.read_bytes()).hexdigest()==s['fixture_sha256']
+    raw=fpath.read_bytes();lf=raw.replace(b'\r\n',b'\n')
+    # Fixture framing may be checked out as LF or CRLF; JSON values stay exact.
+    assert s['fixture_sha256'] in {hashlib.sha256(b).hexdigest() for b in (raw,lf,lf.replace(b'\n',b'\r\n'))}
     assert f['authored_before_engine'] and l.DATA['source']==l.freeze(f['source'])
     assert len(l.ROLES)==12 and set(l.ROLES)=={r['role_id'] for r in f['roles']}
     for r in f['roles']:assert l.thaw(l.ROLES[r['role_id']])==r
@@ -43,7 +45,9 @@ def verify():
     direction_checks=0
     for x,y in itertools.product((-1,0,1),repeat=2):
         up=l.directions(p((x,y)),p((0,0)),l.FRAMES[0]);down=l.directions(p((x,-y)),p((0,0)),l.FRAMES[1]);assert up==down;direction_checks+=1
-    out=dict(passed=True,profile=l.PROFILE,profile_sha256=l.PROFILE_HASH,source_sha256=f['source']['snapshot_sha256'],fixture_sha256=s['fixture_sha256'],
+    canonical=hashlib.sha256(json.dumps(f,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode('utf-8')).hexdigest()
+    out=dict(passed=True,profile=l.PROFILE,profile_sha256=l.PROFILE_HASH,source_sha256=f['source']['snapshot_sha256'],fixture_sha256=s['fixture_sha256'],fixture_canonical_sha256=canonical,
+        fixture_framing='Original byte hash retained; LF/CRLF checkout framing accepted. Canonical fixture value hash portable; no source HTML byte normalization.',
         verified_roles=12,source_policy_checks=9,authored_geometry_cases=4,bounded_grid_anchor_rankings=len(anchors),bounded_grid_distance_pairs=pairs,
         transform_cases=transformed,viewpoint_checks=direction_checks,unknown_cases=2,
         reference='Independent expanded dot-product arithmetic and ranking in scripts/lithomancy_reference.py; no production imports or shared helpers.',
