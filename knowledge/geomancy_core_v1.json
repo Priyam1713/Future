@@ -1,0 +1,551 @@
+{
+  "version": 1,
+  "technique_id": 33,
+  "name": "Geomancy (Western Divinatory)",
+  "phase": 4,
+  "date": "2026-11-05",
+  "status": "Core v1 Ready — Historical/Mathematical Shield Construction Scope",
+  "profile": "turner1655-common-shield-v1",
+  "profile_sha256": "c06b1473e2a276de3933df3556d7ad13fd7b65ad6891b105238471c77e03d0bf",
+  "figure_convention": "turner1655-p3-top-down-v1",
+  "profile_catalog": "knowledge/geomancy_profile_v1.json",
+  "source_commits": [
+    "10f2e74"
+  ],
+  "catalog_commit": "28fd457",
+  "implementation_commit": "dad4477",
+  "independent_evidence_commit": "af6e1af",
+  "report_commits": [
+    "52ddc23",
+    "0170b85",
+    "231af87",
+    "f18f3e9",
+    "faf6192"
+  ],
+  "source": {
+    "id": "geomancy-turner1655-wellcome-facts-v1",
+    "technique_id": 33,
+    "rank": null,
+    "author": "Historical treatise attributed to Henry Cornelius Agrippa; Robert Turner, translator; authorship remains qualified",
+    "edition": "Of Geomancy, in Henry Cornelius Agrippa His Fourth Book of Occult Philosophy; London: J.C. for John Harrison, 1655; original Wellcome Library copy IA b20458563, 240 PDF pages",
+    "url": "https://archive.org/details/b20458563",
+    "download_url": "https://ia800905.us.archive.org/6/items/b20458563/b20458563.pdf",
+    "snapshot_sha256": "6254e6c7d529b05b5ed3dd6b6d89d2eb07d9aa51202306132dff2fb39be695a1",
+    "snapshot_bytes": 27614949,
+    "locator": "Title PDF11; printed pp.3,5–8 = PDF29,31–34",
+    "ingestion": "facts_only",
+    "rights_note": "Wellcome/Commons identify this original-copy witness with Public Domain Mark. Historical text is distinct from modern transcription, art, metadata and reprint rights. Original concise facts and numeric patterns only; no PDF/OCR/illustrations redistributed.",
+    "checked_on": "2026-11-05"
+  },
+  "source_collation": {
+    "figure_table": "All sixteen four-row identities visually compared with Princeton hcafig1; no selected pattern difference observed.",
+    "procedure": "Original pp5–7 agree with selected transcription construction and parity; rendering does not reverse logical order.",
+    "text_differences": [
+      "Princeton normalizes long-s and typography. The report uses the editorial English label Judge; this release does not claim diplomatic transcription of the historical typography.",
+      "Original p8 really repeats first House for fourth Daughter in alternate projection. No silent correction; alternate projection excluded."
+    ],
+    "historical_diagrams": "Original p6–7 diagrams inspected as collation context; dash/star alignment is not adopted as an independently certified complete chart fixture. Bennett published dot-chart is the 15-position reference; further original diagram collation remains P1.",
+    "excluded": "Triplicities, signs, planets, house meanings and alternative astrological procedure not executable."
+  },
+  "source_freeze": "knowledge/geomancy_source_freeze_v1.json",
+  "ranked_sources_unchanged": [
+    [
+      33,
+      "Geomancy (Western Divinatory)",
+      1,
+      "John Michael Greer",
+      "The Art and Practice of Geomancy",
+      "Full operational shield/house construction",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      33,
+      "Geomancy (Western Divinatory)",
+      2,
+      "Stephen Skinner",
+      "Terrestrial Astrology: Divination by Geomancy",
+      "Historical and technical reconstruction",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations_unchanged": [
+    [
+      33,
+      "Geomancy (Western Divinatory)",
+      "Arabic ilm al-raml",
+      "Terrestrial Astrology: Divination by Geomancy",
+      "The Art and Practice of Geomancy",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      33,
+      "Geomancy (Western Divinatory)",
+      "European shield chart",
+      "The Art and Practice of Geomancy",
+      "Terrestrial Astrology: Divination by Geomancy",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      33,
+      "Geomancy (Western Divinatory)",
+      "house chart",
+      "The Art and Practice of Geomancy",
+      "Terrestrial Astrology: Divination by Geomancy",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      33,
+      "Geomancy (Western Divinatory)",
+      "16 figures",
+      "Terrestrial Astrology: Divination by Geomancy",
+      "The Art and Practice of Geomancy",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      33,
+      "Geomancy (Western Divinatory)",
+      "horary geomancy",
+      "Terrestrial Astrology: Divination by Geomancy",
+      "The Art and Practice of Geomancy",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "complete_figure_catalog": [
+    {
+      "id": "fortuna_major",
+      "name": "Fortuna Major",
+      "pattern": "2211",
+      "aliases": [
+        "greater Fortune",
+        "Fortuna major"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "fortuna_minor",
+      "name": "Fortuna Minor",
+      "pattern": "1122",
+      "aliases": [
+        "lesser Fortune",
+        "Fortuna minor"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "via",
+      "name": "Via",
+      "pattern": "1111",
+      "aliases": [
+        "Way"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "populus",
+      "name": "Populus",
+      "pattern": "2222",
+      "aliases": [
+        "People"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "acquisitio",
+      "name": "Acquisitio",
+      "pattern": "2121",
+      "aliases": [
+        "Acquisitio"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "laetitia",
+      "name": "Laetitia",
+      "pattern": "1222",
+      "aliases": [
+        "Laetitia"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "puella",
+      "name": "Puella",
+      "pattern": "1211",
+      "aliases": [
+        "Puella"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "amissio",
+      "name": "Amissio",
+      "pattern": "1212",
+      "aliases": [
+        "Amissio"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "conjunctio",
+      "name": "Conjunctio",
+      "pattern": "2112",
+      "aliases": [
+        "Conjunctio"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "albus",
+      "name": "Albus",
+      "pattern": "2212",
+      "aliases": [
+        "Albus"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "puer",
+      "name": "Puer",
+      "pattern": "1121",
+      "aliases": [
+        "Puer"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "rubeus",
+      "name": "Rubeus",
+      "pattern": "2122",
+      "aliases": [
+        "Rubeus"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "carcer",
+      "name": "Carcer",
+      "pattern": "1221",
+      "aliases": [
+        "Carcer"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "tristitia",
+      "name": "Tristitia",
+      "pattern": "2221",
+      "aliases": [
+        "Tristitia"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "caput_draconis",
+      "name": "Caput Draconis",
+      "pattern": "2111",
+      "aliases": [
+        "Dragons head",
+        "Caput"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    },
+    {
+      "id": "cauda_draconis",
+      "name": "Cauda Draconis",
+      "pattern": "1112",
+      "aliases": [
+        "Dragons taile",
+        "Cauda"
+      ],
+      "source_id": "geomancy-turner1655-wellcome-facts-v1",
+      "locator": "Of Geomancy, printed p.3 (PDF29), figure table"
+    }
+  ],
+  "alias_policy": "Exact canonical ID, Latin label or listed alias; case-insensitive casefold only, no trimming, fuzzy match or universal traditional renaming. Raw request retained. Patterns are four top-to-bottom 1/2 digits.",
+  "construction": {
+    "positions": 15,
+    "possible_figure_identities": 16,
+    "row_order": "top_to_bottom",
+    "representation": "Four displayed dot counts 1=single/odd and 2=double/even; string or four integer array accepted for each input pattern.",
+    "binary": "No external integer/bit representation. Internal figures and reports use displayed dot counts only.",
+    "addition": [
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        2
+      ]
+    ],
+    "mothers": "Four independently entered ordered figures; repeated patterns allowed.",
+    "daughters": "Daughter j takes row j of Mothers 1 through 4 in that exact order.",
+    "parents": {
+      "9": [
+        1,
+        2
+      ],
+      "10": [
+        3,
+        4
+      ],
+      "11": [
+        5,
+        6
+      ],
+      "12": [
+        7,
+        8
+      ],
+      "13": [
+        9,
+        10
+      ],
+      "14": [
+        11,
+        12
+      ],
+      "15": [
+        13,
+        14
+      ]
+    },
+    "logical_order": "M1..M4,D1..D4,N1..N4,W1,W2,Judge; positions 1..15. Display can reverse each tier only; it cannot change logical data or arithmetic.",
+    "display_default": "right_to_left",
+    "display_variants": [
+      "right_to_left",
+      "left_to_right"
+    ],
+    "display_effect": "Reverse each tier for display only; never reverse logical Mothers or renumber source parents.",
+    "historical_vs_editorial": "Turner common arithmetic and p3 identities; shield display is explicitly editorial and Bennett-style right-to-left by default. Original p7 house sentence says left-to-right; no house projection is performed.",
+    "optional_sixteenth": "unsupported; deferred Bennett super-judge convention"
+  },
+  "input_contract": {
+    "schema_version": 1,
+    "profile": "turner1655-common-shield-v1",
+    "mode": "manual",
+    "tasks": [
+      "shield",
+      "figure_catalog"
+    ],
+    "shield_modes": {
+      "patterns": "Exactly four four-row 1/2 patterns in mothers",
+      "mark_counts": "Exactly sixteen integers in mark_counts, 1–1000000, Mother-major then top-to-bottom; raw counts and derived parities retained",
+      "figure_ids": "Exactly four exact named-table identifiers/names/listed aliases in figure_ids"
+    },
+    "catalog": "All sixteen identities or lookup list of 1–16 exact aliases/IDs/patterns; no shield inputs allowed.",
+    "optional_fields": [
+      "figure_convention",
+      "layout",
+      "origin",
+      "question",
+      "commentary",
+      "association"
+    ],
+    "origin": [
+      "reported_real",
+      "hypothetical",
+      "synthetic",
+      "unknown"
+    ],
+    "text_limit_characters": 10000,
+    "validation": "Strict object fields/schema/types; booleans/floats/nonpositive counts, mixed modes, bad rows, unknown names/conventions, duplicate JSON keys/nonfinite values rejected with exit2 JSON/Markdown. Raw Unicode and whitespace preserved.",
+    "seeded": "Unsupported; no RNG calls, domains or inherited protocols changed."
+  },
+  "reports": {
+    "positions": "Source/profile identities, names/patterns/rows, parent indices, transposition and line parity traces; mark-count conversion trace where applicable.",
+    "format": [
+      "json",
+      "markdown"
+    ],
+    "replay": "Complete validated raw request; source exact-file SHA256, canonical profile/request SHA256. Canonical UTF8 sorted-key compact JSON, unescaped Unicode, no trailing LF; field whitespace retained. No network, implicit location/time, generated observations or RNG.",
+    "examples": [
+      "data/geomancy-all-double.md",
+      "data/geomancy-all-single.md",
+      "data/geomancy-asymmetric.md",
+      "data/geomancy-basic.md",
+      "data/geomancy-bennett-published.md",
+      "data/geomancy-catalog.md",
+      "data/geomancy-display-ltr.md",
+      "data/geomancy-figure-ids.md",
+      "data/geomancy-horary.md",
+      "data/geomancy-house.md",
+      "data/geomancy-invalid.md",
+      "data/geomancy-lookup.md",
+      "data/geomancy-marks.md",
+      "data/geomancy-mixed.md",
+      "data/geomancy-repeated.md",
+      "data/geomancy-unicode.md",
+      "data/geomancy-unknown-convention.md"
+    ],
+    "valid_example_pairs": 13,
+    "rejected_example_pairs": 4
+  },
+  "evidence_layers": {
+    "direct": "Source-located historical figure identities and construction procedure",
+    "compositional": "Traceable numerical construction, no inferred forecast or good/bad score",
+    "user_attributed": "Raw voluntary question/comments/associations, explicit counts/patterns and declared origin",
+    "unsupported": "Factual prediction, diagnosis, supernatural accuracy and positive/negative horary certification"
+  },
+  "verification": {
+    "passed": true,
+    "tests": 689,
+    "inherited_tests": 651,
+    "new_tests": 38,
+    "cli_cases": 783,
+    "inherited_cli_cases": 728,
+    "new_cli_cases": 55,
+    "symbolic_verifiers": 16,
+    "checks": "data/geomancy-acceptance-checks.json",
+    "protected_files": 1105,
+    "changed": [],
+    "independent": {
+      "passed": true,
+      "profile": "turner1655-common-shield-v1",
+      "profile_sha256": "c06b1473e2a276de3933df3556d7ad13fd7b65ad6891b105238471c77e03d0bf",
+      "source_sha256": "6254e6c7d529b05b5ed3dd6b6d89d2eb07d9aa51202306132dff2fb39be695a1",
+      "figure_identities": 16,
+      "alias_checks": 52,
+      "truth_table_rows": 4,
+      "independent_charts": 6,
+      "published_charts": 1,
+      "exhaustive_mother_combinations": 65536,
+      "addition_pairs": 256,
+      "associativity_triples": 4096,
+      "reference": "scripts/geomancy_reference.py; independent top-bit-first 1=single/0=double bit matrix and XOR; no future imports",
+      "fixture_sha256": "06750d262fdae7975e96f4dbe6439f09e9199daedd0c24a54ca46c2d2d16b965",
+      "invariants": [
+        "all fifteen positions match reference",
+        "all figure identities valid",
+        "transposition reconstruction",
+        "all parent dependencies",
+        "Judge even total-point parity",
+        "determinism",
+        "closure",
+        "commutativity",
+        "associativity",
+        "self-addition"
+      ],
+      "empirical_validation": false
+    },
+    "acceptance": "data/geomancy-acceptance-checks.json",
+    "required_prior_reports_preserved": 336,
+    "all_protected_files_unchanged": true,
+    "source_registry_idempotent": true,
+    "source_registry_records": 364,
+    "legacy_metadata_skipped": [
+      "chinese-inventory-2-v1"
+    ],
+    "tests_run": "Full unittest suite; all 31 CLI smoke modules; all 15 inherited symbolic verifiers plus Geomancy; source registry; dependency audit; pip check; whole-pass diff check",
+    "scope": "Independent source/known-answer and exhaustive mathematical checks; no empirical divination validation"
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Complete sixteen-figure Turner1655 p3 identity table and aliases",
+      "Manual four-Mother fifteen-position common shield",
+      "Explicit sixteen-count parity reduction and named-figure inputs",
+      "Full dependency and line-level derivation trace",
+      "Named figure catalog lookup",
+      "Independent display direction",
+      "Offline deterministic JSON/Markdown and exact replay"
+    ],
+    "experimental": [],
+    "unsupported": [
+      "House projection including sequential and alternative astrological assignments",
+      "Horary judgment, yes/no certification, predictions, diagnoses and supernatural accuracy",
+      "Arabic-specific or generic universal geomancy profile",
+      "Planetary/elemental rulerships, triplicities, dignities, aspects, perfection and via puncti",
+      "Greer/Skinner procedure certification without inspected pages",
+      "Super-judge/reconciler and seeded generation"
+    ]
+  },
+  "acceptance": {
+    "original_scan_inspected": true,
+    "sixteen_source_backed_patterns": true,
+    "independent_pre_engine_fixtures": true,
+    "all_fifteen_positions_complete": true,
+    "all_65536_charts_pass": true,
+    "all_256_pairs_pass": true,
+    "published_bennett_chart_reproduced": true,
+    "ordering_explicit": true,
+    "full_replay": true,
+    "no_unverified_judgment_advertised": true,
+    "all_inherited_and_new_checks_pass": true
+  },
+  "rights": "Wellcome/Commons identify this original-copy witness with Public Domain Mark. Historical text is distinct from modern transcription, art, metadata and reprint rights. Original concise facts and numeric patterns only; no PDF/OCR/illustrations redistributed.",
+  "P1": [
+    "Legitimate Greer procedure and worked examples",
+    "Skinner edition/ISBN resolution and original chapters",
+    "Further Turner historical diagram collation without assuming typographical perfection",
+    "Additional independent published shield examples",
+    "Named house projections with complete source-specific fixtures",
+    "Optional separate verified super-judge",
+    "Narrow source-backed figure glosses and interpretations",
+    "Independent versioned seeded generation only if useful"
+  ],
+  "P2": [
+    "Arabic-language ilm al-raml profile with its own source conventions",
+    "Historical variant comparison matrices",
+    "Complete sourced house/aspect/dignity/perfection rules",
+    "Horary judgment frameworks with independent fixtures",
+    "Larger rights-cleared interpretive corpora",
+    "Original diagram rendering",
+    "Empirical research kept separate from symbolic mathematics"
+  ],
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "transition": "Push and synchronize this accepted closure before Technique34 Lithomancy audit only; no implementation34 or audit35.",
+  "acceptance_evidence_commit": "3bb98c8",
+  "historical_diagram_collation": "data/geomancy-historical-diagram-collation.json; unresolved transcription, excluded from passed known-answer fixtures"
+}

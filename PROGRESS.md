@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 33 Geomancy Core v1 closure — 2026-11-05
+- **Core v1 Ready — Historical/Mathematical Shield Construction Scope**: turner1655-common-shield-v1; sixteen verified identities, complete fifteen-position shield, patterns/counts/IDs, explicit display convention and exact JSON/Markdown replay. Source 10f2e74, catalog 28fd457, implementation dad4477, numerical evidence af6e1af and five report passes pushed.
+- All 65,536 Mother combinations, 256 pairs, 4,096 associativity triples and six independent fixtures (including published Bennett chart) pass. Full acceptance: 689 tests (651+38), 783 CLI cases (728+55), all 15 inherited verifiers plus Geomancy. All 1,105 protected prior files and required 336 reports unchanged; registry/dependency/pip/diff checks pass. Thirteen valid and four rejected JSON/Markdown report pairs saved.
+- Frozen matrix, evidence, rights and P1/P2: geomancy_core_v1.json. Manual only; houses, Arabic-specific profiles, horary judgments, seeded generation and super-judge remain unsupported. Push/synchronize closure before Technique 34 Lithomancy audit only.
+
 ## Technique 33 manual shield engine — 2026-11-05
 - Source 10f2e74 and immutable catalog 28fd457 pushed before production code. Added manual patterns/counts/figure references, catalog lookup, complete fifteen-position dependencies and parity traces, independent display direction and exact JSON/Markdown replay.
 - 38 new tests pass. Independent reference verifies 65,536 charts, 256 pairs, 4,096 associative triples, sixteen identities and six chart fixtures, including Bennett's published diagram. Full inherited acceptance follows before closure. Seeded generation, sixteenth figure, houses and horary judgment remain unsupported.
