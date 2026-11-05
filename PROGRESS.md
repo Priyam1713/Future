@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 37 immutable catalog — 2026-11-06
+- Source/reference a52f01a pushed first. Frozen `opsopaus-greek-alphabet-manual-lot-v1`:24 source-order records with meaningful attributed accounts, lexical qualifications and98 explicit alias keys. Source HTML remains unavailable; canonical source-record/profile/catalog hashes are separate from raw snapshot claims.
+- NFC plus explicit ASCII-name and Greek-glyph handling; no NFKC/confusable folding. Source display Khi retained alongside same-author Chi; final sigma is a labeled editorial orthographic alias. Standalone catalog verification precedes the reading engine.
+
 ## Technique 37 source and independent reference freeze — 2026-11-06
 - Rechecked all24 Opsopaus Alphabet Oracle rows and same-author glyph/Chi identity guide through author-origin indexed text. Fresh direct canonical/www/resource/identity requests failed TLS verification; raw HTML hash remains null. Original concise account/lexical qualifications only; no translated corpus. Olympos attribution and Heinevetter Limyra correction remain author-attributed, not independent epigraphic verification.
 - Twenty-four glyph/order/name/meaning known answers and explicit alias expectations precede executable lookup. Polynomial/binomial numerical references preserve impossible astragalos face5, numeric-label discrepancy and separate tuple/multiset/sum spaces. Single declared manual lot only; no probability, physical draw, seeded or multi-draw procedure.
