@@ -774,6 +774,53 @@ and [clinical scope](data/akashic-clinical.md).
 Run `python -m scripts.verify_akashic`, `python -m scripts.smoke_akashic_core`
 and `python -m unittest tests.test_akashic -q`.
 
+## Western Geomancy: historical mathematical shield construction
+
+`python -m future geomancy data/geomancy-input.json --format markdown`
+
+The manual `turner1655-common-shield-v1` profile implements the sixteen identities
+in Turner's 1655 printed figure table and the complete fifteen-position common
+shield. Four Mothers produce four Daughters by row transposition, four Nieces,
+two Witnesses and a Judge by line-by-line parity addition. Reports name every
+figure and show its parent dependencies, source locators and row-level trace.
+A correct Judge does not establish a reliable yes/no answer or prediction.
+
+```json
+{
+  "schema_version": 1,
+  "profile": "turner1655-common-shield-v1",
+  "task": "shield",
+  "mode": "manual",
+  "input_mode": "patterns",
+  "mothers": ["2121", "1221", "1121", "2122"]
+}
+```
+
+Rows run top-to-bottom: `1` means one dot/odd, `2` means two dots/even.
+Repeated Mothers are allowed. Instead of patterns, `input_mode: "mark_counts"`
+accepts `mark_counts` with sixteen positive integers, grouped by Mother then row;
+original counts remain in the report. `input_mode: "figure_ids"` accepts four
+`figure_ids` using exact IDs, names or listed aliases, case-insensitively.
+Counts must be 1–1,000,000; booleans, floats and mixed modes are rejected.
+
+The optional `figure_convention` is `turner1655-p3-top-down-v1`. This convention
+assigns Puella `1211` and Puer `1121`; other traditional tables remain separate.
+`layout` accepts `right_to_left` (default) or `left_to_right`, changing display
+only. Optional question/commentary/association text preserves Unicode and whitespace.
+For all sixteen figures, use `task: "figure_catalog"` without shield input fields;
+an optional `lookup` array selects 1–16 exact names, IDs, aliases or patterns.
+
+JSON and Markdown include full deterministic replay and source/profile/request
+hashes. Source evidence is the original Wellcome 1655 scan, collated with Princeton;
+Bennett's published chart is an independent numerical fixture. Greer and Skinner
+remain ranked references with procedural access gates. House charts, Arabic-specific
+profiles, horary judgment, dignities, seeded generation and a sixteenth super-judge
+are unsupported in this release. No new dependency or random protocol is introduced.
+
+`python -m scripts.verify_geomancy` checks all 65,536 Mother combinations against
+an independent bit-matrix reference, all 256 figure pairs and 4,096 associativity
+triples. `python -m scripts.smoke_geomancy_core` checks the CLI and saved replays.
+
 ## Aeromancy: regional historical atmospheric-lore comparisons
 
 `python -m future aeromancy data/aeromancy-input.json --format markdown`

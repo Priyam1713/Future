@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 33 manual shield engine — 2026-11-05
+- Source 10f2e74 and immutable catalog 28fd457 pushed before production code. Added manual patterns/counts/figure references, catalog lookup, complete fifteen-position dependencies and parity traces, independent display direction and exact JSON/Markdown replay.
+- 38 new tests pass. Independent reference verifies 65,536 charts, 256 pairs, 4,096 associative triples, sixteen identities and six chart fixtures, including Bennett's published diagram. Full inherited acceptance follows before closure. Seeded generation, sixteenth figure, houses and horary judgment remain unsupported.
+
 ## Technique 33 historical source freeze — 2026-11-05
 - Located original 1655 Wellcome copy b20458563; title and printed pp.3,5–8 visually checked against Princeton. All sixteen patterns independently transcribed before engine; Puella 1211/Puer 1121 explicitly belong to the selected Turner table. Original p8 duplicate house wording retained as an excluded ambiguity.
 - Bennett published chart rechecked line by line, plus five independent mathematical fixtures frozen. Hashes, rights and collation: geomancy_source_freeze_v1.json. Greer/Skinner procedural access remains gated; manual fifteen-position shield scope, no house/horary/seeded/super-judge support.
