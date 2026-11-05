@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique31 Hydromancy resource/variation audit — 2026-11-05
+- Began only after Pyromancy closure7b5b249 pushed/synchronized0/0. Exact two ranked sources/four variation rows preserved. Tyson publisher1997/320p/ISBN9781567187465 has no preview;Betz secondedition/format dates rechecked. No Hydromancy engine,profile,catalog,fluid/ripple generator,renderer orCLI implemented.
+- First candidate:manual water-bowl/rain-pool source context andvoluntary impressions from publisherSpees2005 Water Scrying section,explicitly anAndrews excerpt,notTyson. KyprianosT1085 is a distinct fragmentaryCoptic901–1100 water-inquiry witness,notBetz’s ancient corpus. NOAA physical oil/water effects separate fromsymbolic accounts;no ripple/drop/color omen dictionary invented.
+- P1:precise profile/rights andpre-engine fixtures,ranked book/manuscript access,source-specific unknown/conflict andphysical/imaginative boundaries. P2:separate traditions/optional independently validated visuals. Water/equipment optional;no crystal/mirror/flame rule transfer. Validation:data/hydromancy-audit-validation.json.60/54/six exclusions unchanged.
+
 ## Technique30 Pyromancy Core v1 closure — 2026-11-05
 - Source317cc81,engine6883fb6 andreport/evidence passes pushed. **Core v1 Ready — Historical/Symbolic Candle Observation Scope**:pamita-public2026-candle-observation-v1;six candle/jar-soot cases,source-specific physical checks/correction/follow-up,unknown/conflicts andsession safety hold. Not a universal fire dictionary orranked2020 book extraction.
 -579 tests(540+39),593 CLI cases(533+60),59 new independent source checks andall12 existing symbolic verifiers(includingCoffee) pass. Registry,dependency,pip anddiff checks pass;223 saved journal/report files unchanged,including required174 andallCoffee reports. Matrix,rights,source/profile/request hashes,replay andacceptance frozen in pyromancy_core_v1.json.

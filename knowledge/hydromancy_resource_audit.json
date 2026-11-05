@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "technique_id": 31,
+  "name": "Hydromancy",
+  "phase": 4,
+  "date": "2026-11-05",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "7b5b249",
+  "predecessor_push": "Pyromancy closure7b5b249 accepted,pushed andHEAD...origin/main0/0 confirmed with clean worktree before31 resource audit.",
+  "policy": "Audit only;no Hydromancy engine,executable profile,rule catalog,fluid shader,ripple generator,renderer orCLI added.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    31,
+    "4 · Nature, Objects & Ancient Practices",
+    "Hydromancy",
+    "RETAIN — simulate / implement",
+    "Guided symbolic / human input",
+    "Water-bowl scrying; ripples; oil/water drops; reflective water",
+    "Fluid shader / ripple simulation + visual pattern labels",
+    "Display and PRNG; optional water photo",
+    "Symbolic scrying only; no special hardware needed",
+    "Traditional / not scientifically validated",
+    "Scrying for Beginners",
+    "Donald Tyson",
+    null,
+    "Greek Magical Papyri in Translation",
+    null,
+    null,
+    "21, 22, 30, 32",
+    31
+  ],
+  "ranked_sources": [
+    [
+      31,
+      "Hydromancy",
+      1,
+      "Donald Tyson",
+      "Scrying for Beginners",
+      "Water-gazing practices",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      31,
+      "Hydromancy",
+      2,
+      "Hans Dieter Betz (editor)",
+      "Greek Magical Papyri in Translation",
+      "Historical lecanomancy / water rites",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Water-bowl scrying",
+      "inventory_row": [
+        31,
+        "Hydromancy",
+        "Water-bowl scrying",
+        "Greek Magical Papyri in Translation",
+        "Scrying for Beginners",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Ranked Tyson/Betz remain method leads with chapter access gaps. Supplemental publisher Andrews excerpt is directly water-specific andmay support a bounded manual source-reference/journal profile;its attribution must be explicit."
+    },
+    {
+      "name": "ripples",
+      "inventory_row": [
+        31,
+        "Hydromancy",
+        "ripples",
+        "Greek Magical Papyri in Translation",
+        "Scrying for Beginners",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "No original ripple-shape,count ordirection-to-outcome table inspected. Ripples may be declared as physical observations with movement/source uncertainty;no symbolic meanings orforecast inferred."
+    },
+    {
+      "name": "oil/water drops",
+      "inventory_row": [
+        31,
+        "Hydromancy",
+        "oil/water drops",
+        "Greek Magical Papyri in Translation",
+        "Scrying for Beginners",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Oil-on-water pattern observation,water-only reflection andhistorical vessel-inquiry traditions are separate. NOAA supplies physical phase/spreading context only;no drop-count/shape omen map verified. Original Betz/PDM comparison remains P1."
+    },
+    {
+      "name": "reflective water",
+      "inventory_row": [
+        31,
+        "Hydromancy",
+        "reflective water",
+        "Greek Magical Papyri in Translation",
+        "Scrying for Beginners",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Public water excerpt documents soft-gaze/positioning context andclaimed impressions;actual reflections,glare,physical mist andimaginative images need distinct voluntary labels. No equivalence with Atkinson crystal,mirror orPamita flame rules assumed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "hydromancy-tyson1997-publisher-metadata-v1",
+      "technique_id": 31,
+      "rank": 1,
+      "author": "Donald Tyson;Llewellyn publisher listing",
+      "edition": "Scrying for Beginners;publisher listing February1997,trade paperback,320pages,ISBN9781567187465;For Beginners Series1;original imprint/printing not inspected",
+      "url": "https://www.llewellyn.com/product.php?ean=9781567187465",
+      "locator": "Product title/author/date;Product Details;Look Inside",
+      "finding": "Rank1 metadata verified from canonical publisher HTML. Page explicitly offers no Look Inside. Water/oil method chapter,pagination,exceptions andworked examples remain inaccessible. Marketing extrasensory claims are not validated capabilities. The water excerpt in the separate Spees article is Andrews,not Tyson.",
+      "ingestion": "metadata_only",
+      "rights_note": "Book text,modern translations,publisher article,editorial database andimages have separate rights. Original concise factual notes/locators only;no chapters,invocations,ritual corpus,scans orillustrations redistributed. Public hosting is not blanket reproduction permission.",
+      "checked_on": "2026-11-05",
+      "snapshot_sha256": "9e00dd3301dd28d6ce6ad0af8ca3a4dcc0f76cdb8598c27535f4d9be9e4a517d",
+      "snapshot_bytes": 183607
+    },
+    {
+      "id": "hydromancy-betz1992-publisher-metadata-v1",
+      "technique_id": 31,
+      "rank": 2,
+      "author": "Hans Dieter Betz,editor;University of Chicago Press",
+      "edition": "The Greek Magical Papyri in Translation,Including the Demotic Spells,Volume1;Second Edition,copyright1992;406pages,42figures;paperbackISBN9780226044477 releaseJanuary1997,ebookISBN9780226826950 releaseOctober2022",
+      "url": "https://press.uchicago.edu/ucp/books/book/chicago/G/bo3684249.html",
+      "locator": "Title/edition/copyright extent/contents;HTML ISBN andpubDateJson format fields",
+      "finding": "Rank2 metadata andformat dates rechecked. The ancient collection includes distinct ritual traditions;no authorized complete water/oil procedure ormodern translation chapter inspected. PGM/PDM passage andmanuscript comparisons remain P1. Later Kyprianos Coptic text below is not silently assigned to Betz’s corpus.",
+      "ingestion": "metadata_only",
+      "rights_note": "Book text,modern translations,publisher article,editorial database andimages have separate rights. Original concise factual notes/locators only;no chapters,invocations,ritual corpus,scans orillustrations redistributed. Public hosting is not blanket reproduction permission.",
+      "checked_on": "2026-11-05",
+      "snapshot_sha256": "b47187e88ce1f47880311b4091eaafd38f424dbb3bdfa1ea8ff8d13b9760f4a4",
+      "snapshot_bytes": 42010
+    },
+    {
+      "id": "hydromancy-spees-andrews2005-public-water-v1",
+      "technique_id": 31,
+      "rank": null,
+      "author": "Jennifer Spees,article;Ted Andrews,explicitly attributed Water Scrying excerpt;Llewellyn Worldwide",
+      "edition": "Scrying:Catch a Glimpse of Your Future;publisher article dated2005-07-01,Water Scrying section excerpted from Crystal Balls & Crystal Bowls;original Andrews book edition/pagination not inspected",
+      "url": "https://www.llewellyn.com/journal/article/877",
+      "locator": "Byline/date;introductory Tyson discussion;Water Scrying heading andexplicit Andrews attribution;water-bowl/puddle,gaze andfogginess paragraphs",
+      "finding": "Separates Tyson book discussion from Andrews water excerpt. Selected water-specific facts:rain pool orrainwater in dark bowl/cauldron,undisturbed positioning,relaxation andsoft half-focused gaze rather than intense staring. Perceived fogginess is given an attributed opening/awakening account;later colors/images/faces are claimed experiences,not a shape dictionary. Faerie/spirit access andpromised improvement remain practitioner claims. No ripple-count,drop-count orcolor-outcome mapping supplied.",
+      "ingestion": "facts_only",
+      "rights_note": "Book text,modern translations,publisher article,editorial database andimages have separate rights. Original concise factual notes/locators only;no chapters,invocations,ritual corpus,scans orillustrations redistributed. Public hosting is not blanket reproduction permission.",
+      "checked_on": "2026-11-05",
+      "snapshot_sha256": "54f887cb78c53369448f16e55f7d6949f22188bd87fd4c691c451fe77b8a539b",
+      "snapshot_bytes": 156951
+    },
+    {
+      "id": "hydromancy-kyprianos-t1085-water-context-v1",
+      "technique_id": 31,
+      "rank": null,
+      "author": "Kyprianos Database;principal editors Korshi Dosoo,Markéta Preininger,Roxanne Bélanger Sarrazin;entry reports text/translation from Tibet2014,subsequent MPS/EL/KD editorial checks",
+      "edition": "KYP T1085:Bowl divination procedure;M106,StrasbourgK550/P.Stras.Copt.9/PCM I34;catalog date901–1100;Coptic,Fayumic(non-standard);entry includes revisions through2023",
+      "url": "https://www.coptic-magic.phil.uni-wuerzburg.de/index.php/text/kyp-t-1085/",
+      "locator": "Metadata Date/Type of text/Language/Text position;translation p1,ll7–10 and17–26;p2,ll6–17;apparatus;Editor field",
+      "finding": "Fragmentary later Coptic formulary describes a cup of water before the speaker andan invoked vision through a scryer. Medium identification is marked uncertain;editorial lacunae andquestion marks are preserved. This is documentary evidence for a distinct bowl-inquiry tradition,not a complete reproducible rite,a Betz original passage,orverified treasure/spirit information. No invocation text orrepetition protocol copied.",
+      "ingestion": "facts_only",
+      "rights_note": "Book text,modern translations,publisher article,editorial database andimages have separate rights. Original concise factual notes/locators only;no chapters,invocations,ritual corpus,scans orillustrations redistributed. Public hosting is not blanket reproduction permission.",
+      "checked_on": "2026-11-05",
+      "snapshot_sha256": "393a072d1f85809ebf673a1414902d8de74320c59746ca9b346eac1ccf46b54c",
+      "snapshot_bytes": 135433
+    },
+    {
+      "id": "hydromancy-noaa2020-oil-water-physical-v1",
+      "technique_id": 31,
+      "rank": null,
+      "author": "NOAA Office of Response andRestoration",
+      "edition": "How Does Oil Act in Water?;educational webpage,last updated2020-06-12",
+      "url": "https://response.restoration.noaa.gov/exercises_oilfloats",
+      "locator": "Vegetable-oil observation steps3–4;phase/layer discussion;wind/current context;last updated field",
+      "finding": "Described vegetable-oil example spreads andforms blobs over water,with separate oil/water phases;the page notes differing oil spreading rates andenvironmental transport effects. This is physical educational context,not an omen system,a guarantee for every liquid orsoftware fluid validation. No experiment,water orchemical use required for a manual/hypothetical software record.",
+      "ingestion": "facts_only",
+      "rights_note": "Book text,modern translations,publisher article,editorial database andimages have separate rights. Original concise factual notes/locators only;no chapters,invocations,ritual corpus,scans orillustrations redistributed. Public hosting is not blanket reproduction permission.",
+      "checked_on": "2026-11-05",
+      "snapshot_sha256": "2c8e533da5a989e89432b0e990bd75d7fe8d5c5bf037d2f1d1585e497d85bcf7",
+      "snapshot_bytes": 53084
+    }
+  ],
+  "critical_attribution": "The Spees2005 publisher article first discusses Donald Tyson,but its Water Scrying section explicitly excerpts Ted Andrews,Crystal Balls & Crystal Bowls. Do not attribute those water procedures orfogginess accounts to Tyson orsilently alter the original source ranking.",
+  "edition_access": "Tyson publisher lists February1997/320pages/ISBN9781567187465 andno preview. Betz secondeditioncopyright1992 remains distinct from later1997 paperback/2022 ebook dates. Complete ranked book chapters uninspected. Publisher article andKyprianos entry are separate witnesses with hashes;Kyprianos text is catalogued901–1100,not a Greco-Roman PGM passage.",
+  "access_notes": "Web reader sometimes returned403 for canonical Llewellyn URLs;trusted curl eventually retrieved valid canonical publisher HTML for book/article. An indexed legacy publisher subdomain failed DNS/certificate checks andwas not bypassed. Heidelberg Quack2010 repository/PDF lead returned an access challenge HTML rather than PDF;no original PDF passage orpagination certified. USGS surface-tension page challenged direct reading;NOAA used as inspected physical context instead.",
+  "tradition_boundaries": [
+    "Ranked Tyson1997 method versus supplemental Andrews excerpt withinSpees2005 article",
+    "Betz ancient Greek/Demotic collection versus later Coptic Kyprianos T1085",
+    "Water-only bowl orrain pool versus oil-on-water drops/layers",
+    "Physical surface movement/reflections versus perceived/imaginative images",
+    "Hydromancy versus crystal,mirror andcandle profiles"
+  ],
+  "historical_documentary_examples": [
+    {
+      "source_id": "hydromancy-kyprianos-t1085-water-context-v1",
+      "locator": "Metadata;translation p1,ll7–10,17–26;p2,ll6–17",
+      "facts": [
+        "Water cup positioned before speaker",
+        "Invocation andscryer/vision context rather than a ripple dictionary",
+        "Fragmentary text anduncertain medium identification",
+        "Catalog date901–1100 andlater editorial layers"
+      ],
+      "limit": "Modern editorial translation/documentary facts only;no original-manuscript autopsy orindependent Betz alignment,operational invocations,prediction orspirit validation claimed."
+    }
+  ],
+  "feasibility": {
+    "candidate_label": "Proposed Spees/Andrews2005 public water-bowl/rain-pool reference subset;label only,not frozen support",
+    "first_scope": "Manual source-specific water-bowl/rain-pool context andvoluntary impression records,with transparent comparisons to the inspected public Andrews excerpt:declared water medium,container/rain provenance,positioning andsoft versus intense gaze. A narrowly attributed perceived-fogginess account may be compared only as documentary symbolism,never proof of physical fog,awakening,spirits orfuture events. Distinct historical bowl context can be referenced without executing rites.",
+    "substantive_features": [
+      "Water-only versus oil/water andrain-pool versus dark bowl/cauldron declarations;unknown substrate/provenance remains unknown",
+      "Source-located soft-gaze context,not reused crystal/mirror instructions orrequired altered-state practice",
+      "Ordered observations distinguish visible reflections,glare,ripples,oil patterns,perceived mist andimagined images;no hidden inference from prose orphotos",
+      "Source-attributed water impressions andoptional personal associations stay separate from factual physical causes andeditorial reflection",
+      "Unverified ripple/oil/drop/color meanings explicitly unsupported;retain observations without inventing a dictionary"
+    ],
+    "proposed_observation_schema": {
+      "status": "Design recommendation only;not executable orruntime-validated",
+      "required": [
+        "named_profile",
+        "manual_mode",
+        "observation_id",
+        "phenomenon"
+      ],
+      "optional": [
+        "origin:reported_real/hypothetical/synthetic/unknown",
+        "medium:water/oil_on_water/oil/other/unknown",
+        "vessel:dark_bowl/cauldron/natural_pool/other/unknown",
+        "rainwater_reported",
+        "surface_motion",
+        "reflection_or_glare",
+        "external_light_reported",
+        "oil_layer_or_drops",
+        "perception_category",
+        "physical_versus_imagined_or_uncertain",
+        "gaze_style_reported",
+        "sequence",
+        "uncertainty",
+        "alternatives",
+        "raw_observation",
+        "personal_association",
+        "stopped_or_discomfort_reported"
+      ],
+      "validation_gates": "Freeze strict enums,unique bounded IDs/sequence,optional unknown/null fields,exact Unicode/whitespace andconflicts only after independent pre-engine fixtures. No sensor,weather,fluid ormental-state inference."
+    },
+    "reuse": "Narrow pure raw-text/strict-JSON/hash/immutable registry/report utilities only. Do not inherit Atkinson gazing conditions,Kent/coffee zones ormeanings,Pamita flame/soot confound rules orancient lamp operations. Each water source requires its own verified profile.",
+    "physical_and_imagery": "Light/reflection,water movement andoil spreading can produce visible patterns. Source claims of faerie access orawakening are distinct from physically measured effects. User-origin labels are declarations,not proof of an external event orcause. Real water,oil,optical equipment andweather collection are optional for software use.",
+    "generation": "No fluid shader,ripple simulation,seeds orvisual renderer needed. Optional future synthetic visual state must be labelled editorial anduse a separate verified protocol;not a physical experiment orfuture-event sample."
+  },
+  "independent_fixture_plan": [
+    "Separate literal publisher attribution,date andedition metadata expectations before engine",
+    "Dark rainwater bowl versus natural rain pool,oil/water andunknown context cases",
+    "Soft versus intense/unknown gaze anddeclared versus inferred preparation",
+    "Perceived fogginess versus physical mist,glare,reflection,imagination oruncertain origin without source-free interpretation",
+    "Ripple/drop/color observations have no invented omen meanings",
+    "Kyprianos manuscript/date/lacunae/medium uncertainty stay distinct fromBetz PGM/PDM locators",
+    "Exact raw Unicode,missing/conflicting fields,JSON/Markdown replay andsource/profile hashes;all inherited reports unchanged"
+  ],
+  "rights": "Ranked books,modern translations,publisher-licensed Andrews excerpt,article text,Kyprianos apparatus,manuscript imagery andphysical-science media retain distinct rights. Public excerpt access does not license a book ortranslation corpus. Original short notes only;no complete excerpt,spell,invocation,source scan orimage ingested.",
+  "configuration_matrix": {
+    "supported": "Audit metadata/source findings only",
+    "experimental": "Proposed source-specific manual water reference subset,not implemented",
+    "unsupported": [
+      "Universal ripple/drop/color omen rules",
+      "Full ranked Tyson/Betz coverage",
+      "Crystal/mirror/flame method transfer",
+      "Factual future,clinical/personality orspirit claims",
+      "Historical ritual execution",
+      "Fluid/optical measurement,simulation orphoto recognition certification"
+    ]
+  },
+  "acceptance_gates": [
+    "Freeze one substantive explicitly attributed water-specific source profile andrights/edition limits",
+    "Independent pre-engine source/context/impression fixtures;no reference expectations derived from matcher",
+    "Useful manual water-bowl/reference conditions andordered voluntary reports,not a renamed generic scrying engine",
+    "Keep water/oil,movement/reflection andimaginative experience separate;unknown/conflicting evidence unresolved",
+    "No invented ripple/drop/color dictionary,physical cause orparanormal accuracy",
+    "Offline JSON/Markdown complete replay andportable hashes;water/equipment optional",
+    "Preserve579 tests/593 CLI cases,13 existing symbolic verifiers andall saved reports;complete regression,CLI,registry,dependency,pip anddiff checks before readiness"
+  ],
+  "P1": [
+    "Freeze source-specific public Andrews/Spees water subset andindependent fixtures before engine;explicit supplemental attribution",
+    "Legitimate Tyson1997 water/oil chapters,imprint,pagination,worked examples andrights access",
+    "Inspect original Betz water/oil PGM/PDM passages,manuscript witnesses andtranslation rights",
+    "Verify historical lecanomancy procedures without merging later Coptic,ancient oil-vessel andmodern rain-pool traditions",
+    "Additional independent source checks forperceived fog versus physical/imaginative observations",
+    "Find original source-backed ripple/drop/color conditions orleave them unsupported"
+  ],
+  "P2": [
+    "Separate regional/historical water andoil profiles",
+    "Broader independently sourced symbolic accounts",
+    "Optional original reflective-water visuals andlabelled synthetic states",
+    "User photo annotation before any independently validated recognition",
+    "Fluid/ripple/optical simulation only with independent validation anddemonstrated usefulness"
+  ],
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Historical/Symbolic Candle Observation Scope",
+    "tests": 579,
+    "cli_cases": 593,
+    "symbolic_verifiers": 13
+  },
+  "limitations": "Audit only;no executable Hydromancy support orpredictive/scientific certification.60 methods,54 retained andexclusions25,27,41,42,47,48 unchanged. No32 audit orimplementation begun."
+}
