@@ -20,7 +20,7 @@ def examples():
         'upper-soot':q([row('upper_dense')]),
         'full-soot':q([row('full_jar')]),
         'unknown-soot':q([missing]),
-        'smoke':q([row('smoke_no_soot')]),
+        'live-smoke':q([row('smoke_no_soot')]),
         'conflicting':q([conflict]),
         'hypothetical':q([row('high_after_correction')|dict(observation='  Café Café\r\n猫 🕯\t ',association='```json\n voluntary  ')],notes='Hypothetical comparison;no candle or flame was required.'),
         'unsafe-stopped':q([row('upper_dense')],safety=dict(unsafe_burning=True,stopped=True)),
@@ -65,6 +65,11 @@ def run():
         Path('data/pyromancy-invalid-input.json').write_text(json.dumps(invalid,indent=2)+'\n',encoding='utf-8')
     Path('data/pyromancy-input.json').write_text(json.dumps(rows['tall-persistent'],indent=2)+'\n',encoding='utf-8')
     Path('data/pyromancy-smoke.json').write_text(json.dumps(cases,indent=2)+'\n',encoding='utf-8')
+    for name,q in rows.items():
+        assert json.loads(Path('data',f'pyromancy-{name}.json').read_text(encoding='utf-8'))==read(q)
+        text=Path('data',f'pyromancy-{name}.md').read_text(encoding='utf-8')
+        match=re.search(r'(`{3,})json\n(.*?)\n\1',text.split('## Exact replay metadata')[1],re.S)
+        assert read(json.loads(match[2])['request'])==read(q)
     print(len(cases),'Pyromancy CLI cases passed')
 
 

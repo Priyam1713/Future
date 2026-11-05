@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "profile": "pamita-public2026-candle-observation-v1",
+  "task": "symbolic_candle_observation",
+  "mode": "manual",
+  "origin": "hypothetical",
+  "observations": [
+    {
+      "id": "o1",
+      "phenomenon": "soot",
+      "attributes": {
+        "substrate": "glass_jar",
+        "soot_location": "upper",
+        "soot_extent": "upper_only",
+        "soot_color": "black",
+        "lower_glass_clear": true,
+        "soot_density": "dense"
+      },
+      "physical": {
+        "explanation": "checked_no_issue",
+        "correction": "not_needed_after_check"
+      }
+    }
+  ],
+  "safety": {
+    "unsafe_burning": true,
+    "stopped": true
+  }
+}
