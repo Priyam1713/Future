@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique32 source/profile freeze — 2026-11-05
+- Exact1898 CommonsPDF SHA7d5d68b7 rechecked;title andprintedv,vi,95,99,111 visually inspected. Thirteen source cases frozen in inwards1898-atmospheric-lore-subset-v1 before matcher,with independently authored expectations. Texas wording corrected:five/six days is current dry/light-south-wind duration,notdelay after earlier strongwind. Audit witness retained immutably.
+- Windfrom,smoketo andcloudaxis explicitly independent;NOAA direction convention separate fromhistorical lore. Regional qualification,retrieval andempirical validity remain distinct;five mackerel accounts preserve different horizons without consensus.336 earlier journals/reports captured;Tyson chapters,modern taxonomy andactual weather forecasting unsupported.
+
 ## Technique32 Aeromancy resource/variation audit — 2026-11-05
 - Began only afterHydromancy closuree02b2ea pushed/synchronized0/0. Exacttwo ranked sources/five variation rows preserved. InventoryCommons original1898 thirdeditionPDF matched publishedSHA1;title,printedvi,95,99,111 rendered/visually checked. Compiler warns ofcontradictions/regional limits;Tyson metadata reused transparently,cloud/smoke chapters stillaccess-gated. No Aeromancy engine,profile,catalog,renderer,weatherAPI orCLI implemented.
 - First candidate:manual source-condition comparison forScottish smoke travel,Bedfordshire hake-cloud axis,qualified cloud combinations andcontrasting mackerel-sky accounts. Wind name,smoke travel andcloud axis are distinct. Preserve regions,attributions andrelative horizons;no actual forecast,universal animal/spirit shapes ornew weather data inference.

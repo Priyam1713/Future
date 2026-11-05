@@ -1,0 +1,222 @@
+{
+  "profile": "inwards1898-atmospheric-lore-subset-v1",
+  "sha256": "7d5d68b70eac27846bd1b76c07b16e84a22db8a57c9e2bd1e3550e1b61e2943a",
+  "edition": [
+    "Third Edition",
+    "1898",
+    "Elliot Stock"
+  ],
+  "cases": [
+    [
+      "smoke",
+      {
+        "smoke_drift_towards": "east"
+      },
+      [
+        "smoke_east"
+      ]
+    ],
+    [
+      "smoke",
+      {
+        "smoke_drift_towards": "west"
+      },
+      [
+        "smoke_west"
+      ]
+    ],
+    [
+      "smoke",
+      {
+        "named_wind_direction": "east"
+      },
+      []
+    ],
+    [
+      "cloud",
+      {
+        "cloud_appearance": "hake_shaped",
+        "cloud_axis": "east_west"
+      },
+      [
+        "hake_ew"
+      ]
+    ],
+    [
+      "cloud",
+      {
+        "cloud_appearance": "hake_shaped",
+        "cloud_axis": "north_south"
+      },
+      [
+        "hake_ns"
+      ]
+    ],
+    [
+      "cloud",
+      {
+        "cloud_appearance": "hake_shaped",
+        "cloud_motion": "rapid"
+      },
+      []
+    ],
+    [
+      "cloud",
+      {
+        "cloud_appearance": "fleecy",
+        "cloud_light": true,
+        "cloud_motion": "rapid",
+        "relative_cloud_layer": "below",
+        "upper_cloud_type": "cirro_stratus",
+        "upper_cloud_dark": true,
+        "upper_cloud_compact": true
+      },
+      [
+        "fleecy_compound"
+      ]
+    ],
+    [
+      "cloud",
+      {
+        "cloud_appearance": "fleecy",
+        "cloud_motion": "rapid"
+      },
+      []
+    ],
+    [
+      "cloud",
+      {
+        "mackerel_sky": true,
+        "mares_tails": true
+      },
+      [
+        "mackerel_mares",
+        "mackerel_day_then_rain",
+        "mackerel_change",
+        "mackerel_more_wet",
+        "mackerel_balanced",
+        "mackerel_not24dry"
+      ]
+    ],
+    [
+      "cloud",
+      {
+        "mackerel_sky": true,
+        "mares_tails": false
+      },
+      [
+        "mackerel_day_then_rain",
+        "mackerel_change",
+        "mackerel_more_wet",
+        "mackerel_balanced",
+        "mackerel_not24dry"
+      ]
+    ],
+    [
+      "wind",
+      {
+        "named_wind_direction": "south",
+        "wind_direction_convention": "from",
+        "wind_continuity": "considerable_time"
+      },
+      [
+        "wing_south"
+      ]
+    ],
+    [
+      "wind",
+      {
+        "named_wind_direction": "south",
+        "wind_direction_convention": "from",
+        "dry_weather": true,
+        "wind_strength": "light",
+        "light_wind_duration_days": 5,
+        "prior_wind_direction": "south",
+        "prior_wind_strength": "strong"
+      },
+      [
+        "texas_sequence"
+      ]
+    ],
+    [
+      "wind",
+      {
+        "named_wind_direction": "south",
+        "wind_direction_convention": "from",
+        "dry_weather": true,
+        "wind_strength": "light",
+        "light_wind_duration_days": 6,
+        "prior_wind_direction": "south",
+        "prior_wind_strength": "strong"
+      },
+      [
+        "texas_sequence"
+      ]
+    ],
+    [
+      "wind",
+      {
+        "named_wind_direction": "south",
+        "wind_direction_convention": "from",
+        "dry_weather": true,
+        "wind_strength": "light",
+        "light_wind_duration_days": 4,
+        "prior_wind_direction": "south",
+        "prior_wind_strength": "strong"
+      },
+      []
+    ],
+    [
+      "wind",
+      {
+        "named_wind_direction": "south",
+        "wind_strength": "light",
+        "light_wind_duration_days": 5
+      },
+      []
+    ]
+  ],
+  "attributions": {
+    "smoke_east": "Scotland",
+    "smoke_west": "Scotland",
+    "wing_south": "Wing,1649",
+    "texas_sequence": "Texas",
+    "hake_ew": "Bedfordshire",
+    "hake_ns": "Bedfordshire",
+    "fleecy_compound": "Scotland"
+  },
+  "regions": [
+    [
+      "scotland",
+      "scotland",
+      "applicable"
+    ],
+    [
+      "scotland",
+      "texas",
+      "not_applicable"
+    ],
+    [
+      "scotland",
+      "unknown",
+      "insufficient_evidence"
+    ],
+    [
+      null,
+      "unknown",
+      "source_unspecified"
+    ]
+  ],
+  "horizons": {
+    "mackerel_day_then_rain": "that day; a day or two after",
+    "mackerel_change": "never long wet and never long dry",
+    "mackerel_not24dry": "not twenty-four hours dry"
+  },
+  "locators": {
+    "smoke_east": "Wind,printedp95,PDFp113",
+    "texas_sequence": "Wind,printedp95,PDFp113",
+    "hake_ew": "Clouds,printedp111,PDFp129",
+    "fleecy_compound": "Clouds,printedp111,PDFp129"
+  },
+  "texas_current_light_duration_not_delay": true
+}
