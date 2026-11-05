@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 35 documentary reference/comparison engine — 2026-11-06
+- Source 9d8578a and immutable catalog afffba4 pushed before runtime. Added exact ordered references, editorial topic filtering, five named comparison groups, typed component availability and canonical pair comparison with raw-user annotations and full JSON/Markdown replay.
+- 46 new tests pass. Independent source verifier checks thirteen records, five relationships, all 169 ordered pairs, 26 omitted-outcome components and 52 unverified-original components. Full inherited acceptance follows before closure; no contemporary casting, artifact assignment or prognostication generated.
+
 ## Technique 35 AFE source and comparison freeze — 2026-11-06
 - Rechecked Columbia educational HTML and1999 de Bary/Bloom anthology attribution/rights. Thirteen concise factual records and five independent relationship expectations frozen before engine; explicit date/diviner/parenthesis fields and excerpt-vs-original missingness retained. Both20A/B have uncertain action;19A/B conditions/days differ;24A/B are distinct propositions.
 - Exact HTML SHA and portable canonical fixture hash frozen. No copied translation corpus, original Chinese/artifact/crack details, physical casting, fabricated prognostication or verification. Source and independent fixtures committed before executable catalog.

@@ -262,7 +262,23 @@ def main():
     litho=sub.add_parser('lithomancy')
     litho.add_argument('input',help='Manual Howard general-set placements, explicit anchor and integer coordinate frame JSON')
     litho.add_argument('--format',choices=['json','markdown'],default='json')
+    osteo=sub.add_parser('osteomancy')
+    osteo.add_argument('input',help='Documentary AFE Shang charge references, source groups and structured comparisons JSON')
+    osteo.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='osteomancy':
+        import sys
+        from .osteomancy import load_input,read,markdown,rejection
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError) as exc:
+                print(rejection(exc,args.format))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close()
+        return
     if args.command=='lithomancy':
         import sys
         from .lithomancy import load_input,read,markdown,rejection

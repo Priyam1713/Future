@@ -774,6 +774,53 @@ and [clinical scope](data/akashic-clinical.md).
 Run `python -m scripts.verify_akashic`, `python -m scripts.smoke_akashic_core`
 and `python -m unittest tests.test_akashic -q`.
 
+## Osteomancy: historical Shang inscription references and comparisons
+
+`python -m future osteomancy data/osteomancy-input.json --format markdown`
+
+`columbia-afe1999-shang-charges-v1` covers thirteen labelled AFE excerpts citing
+the 1999 second-edition anthology *Sources of Chinese Tradition*, volume 1,
+compiled by Wm. Theodore de Bary and Irene Bloom. It retains short original factual
+annotations and source references. These specific translations are not attributed
+to Keightley's book, and the complete translated excerpt collection is not bundled.
+
+```json
+{
+  "schema_version": 1,
+  "profile": "columbia-afe1999-shang-charges-v1",
+  "mode": "documentary",
+  "task": "compare",
+  "case_ids": ["19A", "19B"]
+}
+```
+
+Tasks are `reference` (1–13 ordered distinct exact labels), `compare` (2–13 labels,
+all selected pairs), `group` (one named verified group) and `topic` (one frozen
+editorial topic). Group/topic requests use only their corresponding selector.
+Groups are `ancestor-harm`, `settlement`, `royal-approval`, `harvest` and `warfare`.
+Topic names and groups are included in reports. Unknown IDs, mixed selectors,
+duplicate selections and unsupported tasks are rejected with CLI exit 2.
+
+Dates, diviners, charge/condition, translation uncertainty, prognostication and
+recorded verification remain distinct components. Missing excerpt fields do not
+establish absence on the original artifact; a charge does not demonstrate that
+an event occurred. Both 20A and 20B preserve an unresolved action. The settlement
+pair has different conditions and day labels; 24A/24B concern distinct propositions.
+No relationship is inferred from A/B suffixes. Uncatalogued pair relationships remain
+unresolved even when editorial topic tags overlap. Canonical comparison facts are
+stable when selection order reverses; original request order remains in replay.
+
+Optional `notes`, `research_question`, `research_id` and `annotations` preserve
+user text separately. An annotation names a selected `case_id` and supplies a
+`note` and/or `association`; source fields cannot be overridden. JSON and Markdown
+include source/profile/request hashes and complete deterministic offline replay.
+No modern charm toss, Southern African executable method, original-script/crack
+classification, physical reenactment, artifact authentication, outcome prediction
+or absolute date conversion is supported.
+
+Independent checks: `python -m scripts.verify_osteomancy`. CLI and saved replays:
+`python -m scripts.smoke_osteomancy_core`.
+
 ## Lithomancy: Howard general-set manual spatial reading
 
 `python -m future lithomancy data/lithomancy-input.json --format markdown`
