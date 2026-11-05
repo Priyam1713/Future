@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 37 Cleromancy Core v1 closure — 2026-11-06
+- **Core v1 Ready — Historical Greek Alphabet Marked-Lot Scope**: `opsopaus-greek-alphabet-manual-lot-v1`; all24 individually sourced accounts,98 explicit alias keys, single declared manual lot, raw origin/reflection/uncertainty, catalog/lookup and exact replay. Indexed evidence and unavailable direct HTML hash kept explicit; original epigraphy not independently authenticated. Sourcea52f01a, catalog2cf0b82, engined2f3f10 and evidencefb96cdd pushed.
+- 895 tests (836+59),1071 CLI cases (991+80),20 verifiers pass. Independent24 accounts/98 aliases/9016 numerical research tuples, all source discrepancies and exact replay pass. All1441 protected files, including required1337, remain byte-identical; original source records and RNG protocols preserved. Registry/dependency/pip/diff checks pass;16 valid/16 rejected JSON/Markdown pairs saved.
+- Frozen matrix, rights/source limits and P1/P2: `knowledge/cleromancy_core_v1.json`. No numeric casting, multi-draw, seeded, full56/216-outcome oracle or factual prediction. Push/synchronize closure before38 Augury resource audit only.
+
 ## Technique 37 single marked-lot engine — 2026-11-06
 - Source a52f01a and verified catalog2cf0b82 pushed before reading engine. Added one declared manual lot, explicit observation origin, exact source account/normalization trace, catalog/lookup tasks, raw Unicode context and deterministic JSON/Markdown replay. No inferred mark or application, probability, numeric or multi-draw mode.
 - 59 new tests pass; independent24 source accounts/98 alias keys and9016 numerical research tuples verify against pre-engine fixtures. Source impossible face5 and numeric-label conflict retained. Full inherited acceptance follows before closure.

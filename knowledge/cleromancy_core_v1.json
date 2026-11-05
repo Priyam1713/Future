@@ -1,0 +1,764 @@
+{
+  "version": 1,
+  "technique_id": 37,
+  "name": "Cleromancy / Lots",
+  "phase": 4,
+  "date": "2026-11-06",
+  "status": "Core v1 Ready — Historical Greek Alphabet Marked-Lot Scope",
+  "profile": "opsopaus-greek-alphabet-manual-lot-v1",
+  "profile_sha256": "c88e527692c1e5bd4a127bffbab087294e9de4e57d2ed50a70732698fb6ec33d",
+  "source_commit": "a52f01a",
+  "catalog_commit": "2cf0b82",
+  "implementation_commit": "d2f3f10",
+  "independent_evidence_commit": "fb96cdd",
+  "report_commit": "c59a989",
+  "acceptance_commit": "f1629ce",
+  "ranked_sources_unchanged": [
+    [
+      37,
+      "Cleromancy / Lots",
+      1,
+      "John Opsopaus",
+      "The Oracles of Homer and the Bones",
+      "Homeric dice/knucklebone oracle",
+      "https://opsopaus.com/homer-bones.html",
+      "Open specialist site",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      37,
+      "Cleromancy / Lots",
+      2,
+      "Harvard Center for Hellenic Studies",
+      "Homeromanteia in Context",
+      "Ancient 3-dice literary oracle",
+      "https://research-bulletin.chs.harvard.edu/2014/03/28/using-homer-for-divination-homeromanteia-in-context/",
+      "Open research article",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      37,
+      "Cleromancy / Lots",
+      3,
+      "J. R. Mascaro",
+      "Dice, Runes, Bones, and Stones",
+      "Practical cleromancy and token casting",
+      "https://www.llewellyn.com/author.php?author_id=6791",
+      "Practitioner book / purchase",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows_unchanged": [
+    [
+      37,
+      "Cleromancy / Lots",
+      "Dice oracle",
+      "Dice, Runes, Bones, and Stones",
+      "Homeromanteia in Context",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      37,
+      "Cleromancy / Lots",
+      "astragalomancy",
+      "Dice, Runes, Bones, and Stones",
+      "Homeromanteia in Context",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      37,
+      "Cleromancy / Lots",
+      "casting marked lots",
+      "Dice, Runes, Bones, and Stones",
+      "Homeromanteia in Context",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      37,
+      "Cleromancy / Lots",
+      "Homeric three-dice oracle",
+      "Dice, Runes, Bones, and Stones",
+      "Homeromanteia in Context",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source": {
+    "id": "cleromancy-opsopaus-alphabet-facts-v1",
+    "technique_id": 37,
+    "rank": null,
+    "author": "John Opsopaus",
+    "edition": "A Greek Alphabet Oracle, public author web version; page date/version not supplied in inspected indexed rendering; checked2026-11-06",
+    "url": "https://opsopaus.com/OM/BA/GAO.html",
+    "locator": "Introduction, first method; The Olympian Oracle with Interpretations,24 individually identified letter rows; References; Keywords and Images",
+    "ingestion": "facts_only",
+    "rights_note": "Ancient inscription attribution, modern translation, lexical alternatives and author commentary have distinct rights/evidence. Public access or author-site credited non-profit permission is not unrestricted software/commercial republication permission. Original concise factual descriptions and locators only; no full English translation/commentary, book, photograph, Greek-text image or scan bundled.",
+    "checked_on": "2026-11-06",
+    "snapshot_sha256": null,
+    "access": "Complete author-origin search-index rendering inspected for each of24 rows. Fresh direct canonical/www requests failed TLS certificate verification; resources/pronunciation likewise unavailable. No complete direct HTML snapshot or raw-byte hash asserted.",
+    "indexed_evidence": "Author page indexed text: Introduction, References,24 rows and Keywords; author pronunciation page independently supports uppercase/lowercase identity and Chi spelling.",
+    "historical_status": "Olympos/Lycia inscription attribution is Opsopaus-attributed; original epigraphic witness not independently collated. References identify Heinevetter1912,p35 and note its Limyra attribution as incorrect; relevant original pages and later Nollé2007 corrections uninspected."
+  },
+  "identity_source": {
+    "id": "cleromancy-opsopaus-greek-identities-v1",
+    "technique_id": 37,
+    "rank": null,
+    "author": "John Opsopaus",
+    "edition": "Ancient Greek Pronunciation, author public web guide, undated; indexed rendering checked2026-11-06",
+    "url": "https://opsopaus.com/OM/BA/pronunciation.html",
+    "locator": "Letters:24 uppercase/lowercase glyph/name pairs; Χχ named Chi",
+    "ingestion": "facts_only",
+    "rights_note": "Identity facts only. No pronunciation guide text, audio or images bundled; not a public-domain declaration for modern text.",
+    "snapshot_sha256": null,
+    "access": "Author-origin indexed text inspected; fresh direct TLS certificate verification failed.",
+    "checked_on": "2026-11-06"
+  },
+  "source_freeze": "knowledge/cleromancy_source_freeze_v1.json",
+  "source_access": {
+    "kind": "Author-origin indexed complete page/identity rendering",
+    "fresh_attempts": [
+      {
+        "name": "alphabet",
+        "url": "https://opsopaus.com/OM/BA/GAO.html",
+        "status": "unavailable",
+        "snapshot_sha256": null,
+        "error": "SSLError"
+      },
+      {
+        "name": "alphabet-www",
+        "url": "https://www.opsopaus.com/OM/BA/GAO.html",
+        "status": "unavailable",
+        "snapshot_sha256": null,
+        "error": "SSLError"
+      },
+      {
+        "name": "resources",
+        "url": "https://opsopaus.com/resources.html",
+        "status": "unavailable",
+        "snapshot_sha256": null,
+        "error": "SSLError"
+      },
+      {
+        "name": "pronunciation",
+        "url": "https://opsopaus.com/OM/BA/pronunciation.html",
+        "status": "unavailable",
+        "snapshot_sha256": null,
+        "error": "SSLError"
+      }
+    ],
+    "source_html_sha256": null,
+    "source_record_sha256": "dae81e67b642f319e28bb0986e60f4c2037b7d4bfb729ac506a5ef03f7bac6af",
+    "qualification": "Canonical source-record hash identifies our provenance metadata; it is not an unavailable raw HTML snapshot hash. Fresh canonical/www requests failed TLS certificate verification. No certificate bypass or full source text redistribution."
+  },
+  "catalog": {
+    "id": "opsopaus-alphabet24-facts-v1",
+    "version": 1,
+    "path": "knowledge/cleromancy_catalog_v1.json",
+    "sha256": "f5ddfd0ed108d1a08a22e57eb55bc32b85de33c0237f8f8e165e0abd7845870e",
+    "mark_count": 24,
+    "alias_keys": 98,
+    "source_order": [
+      "gao-alpha",
+      "gao-beta",
+      "gao-gamma",
+      "gao-delta",
+      "gao-epsilon",
+      "gao-zeta",
+      "gao-eta",
+      "gao-theta",
+      "gao-iota",
+      "gao-kappa",
+      "gao-lambda",
+      "gao-mu",
+      "gao-nu",
+      "gao-xi",
+      "gao-omicron",
+      "gao-pi",
+      "gao-rho",
+      "gao-sigma",
+      "gao-tau",
+      "gao-upsilon",
+      "gao-phi",
+      "gao-chi",
+      "gao-psi",
+      "gao-omega"
+    ],
+    "marks": [
+      {
+        "id": "gao-alpha",
+        "order": 1,
+        "glyph": "Α",
+        "name": "Alpha",
+        "source_display": "Alpha",
+        "source_account": "Account links Apollo with successful completion across activities.",
+        "account_tag": "apollo_success"
+      },
+      {
+        "id": "gao-beta",
+        "order": 2,
+        "glyph": "Β",
+        "name": "Beta",
+        "source_display": "Beta",
+        "source_account": "Account presents Pythian Apollo as an assistant through Fortune.",
+        "account_tag": "pythian_assistance"
+      },
+      {
+        "id": "gao-gamma",
+        "order": 3,
+        "glyph": "Γ",
+        "name": "Gamma",
+        "source_display": "Gamma",
+        "source_account": "Account associates Gaia with mature returns from labor.",
+        "account_tag": "gaia_labor_returns"
+      },
+      {
+        "id": "gao-delta",
+        "order": 4,
+        "glyph": "Δ",
+        "name": "Delta",
+        "source_display": "Delta",
+        "source_account": "Account contrasts ill-timed power with weakness in relation to customs.",
+        "account_tag": "ill_timed_power"
+      },
+      {
+        "id": "gao-epsilon",
+        "order": 5,
+        "glyph": "Ε",
+        "name": "Epsilon",
+        "source_display": "Epsilon",
+        "source_account": "Account describes desire for offspring from fitting marriages.",
+        "account_tag": "desire_offspring"
+      },
+      {
+        "id": "gao-zeta",
+        "order": 6,
+        "glyph": "Ζ",
+        "name": "Zeta",
+        "source_display": "Zeta",
+        "source_account": "Account urges withdrawal from a severe storm to avoid impairment.",
+        "account_tag": "withdraw_from_storm"
+      },
+      {
+        "id": "gao-eta",
+        "order": 7,
+        "glyph": "Η",
+        "name": "Eta",
+        "source_display": "Eta",
+        "source_account": "Account depicts all-seeing Helios as observing the addressee.",
+        "account_tag": "helios_observes"
+      },
+      {
+        "id": "gao-theta",
+        "order": 8,
+        "glyph": "Θ",
+        "name": "Theta",
+        "source_display": "Theta",
+        "source_account": "Account identifies supportive deities along a path.",
+        "account_tag": "gods_on_path"
+      },
+      {
+        "id": "gao-iota",
+        "order": 9,
+        "glyph": "Ι",
+        "name": "Iota",
+        "source_display": "Iota",
+        "source_account": "Account places sweat above other things in value or endurance.",
+        "account_tag": "sweat_value"
+      },
+      {
+        "id": "gao-kappa",
+        "order": 10,
+        "glyph": "Κ",
+        "name": "Kappa",
+        "source_display": "Kappa",
+        "source_account": "Account pairs difficult resistance to waves with endurance.",
+        "account_tag": "waves_endurance"
+      },
+      {
+        "id": "gao-lambda",
+        "order": 11,
+        "glyph": "Λ",
+        "name": "Lambda",
+        "source_display": "Lambda",
+        "source_account": "Account treats passage on the left as a favorable indication.",
+        "account_tag": "left_favorable"
+      },
+      {
+        "id": "gao-mu",
+        "order": 12,
+        "glyph": "Μ",
+        "name": "Mu",
+        "source_display": "Mu",
+        "source_account": "Account joins required toil with an admirable change.",
+        "account_tag": "labor_change"
+      },
+      {
+        "id": "gao-nu",
+        "order": 13,
+        "glyph": "Ν",
+        "name": "Nu",
+        "source_display": "Nu",
+        "source_account": "Account connects a conflict-bearing gift with fulfillment of the oracle.",
+        "account_tag": "strife_gift"
+      },
+      {
+        "id": "gao-xi",
+        "order": 14,
+        "glyph": "Ξ",
+        "name": "Xi",
+        "source_display": "Xi",
+        "source_account": "Account describes a dried shoot as yielding no fruit.",
+        "account_tag": "withered_no_fruit"
+      },
+      {
+        "id": "gao-omicron",
+        "order": 15,
+        "glyph": "Ο",
+        "name": "Omicron",
+        "source_display": "Omicron",
+        "source_account": "Account denies a harvest from crops that were never sown.",
+        "account_tag": "unsown_no_harvest"
+      },
+      {
+        "id": "gao-pi",
+        "order": 16,
+        "glyph": "Π",
+        "name": "Pi",
+        "source_display": "Pi",
+        "source_account": "Account associates completing many contests with obtaining a crown.",
+        "account_tag": "contests_crown"
+      },
+      {
+        "id": "gao-rho",
+        "order": 17,
+        "glyph": "Ρ",
+        "name": "Rho",
+        "source_display": "Rho",
+        "source_account": "Account links a brief wait with easier continuation.",
+        "account_tag": "brief_wait"
+      },
+      {
+        "id": "gao-sigma",
+        "order": 18,
+        "glyph": "Σ",
+        "name": "Sigma",
+        "source_display": "Sigma",
+        "source_account": "Account presents Phoibos Apollo as clearly directing the addressee to remain.",
+        "account_tag": "apollo_stay"
+      },
+      {
+        "id": "gao-tau",
+        "order": 19,
+        "glyph": "Τ",
+        "name": "Tau",
+        "source_display": "Tau",
+        "source_account": "Account describes separation from companions currently present.",
+        "account_tag": "companions_parting"
+      },
+      {
+        "id": "gao-upsilon",
+        "order": 20,
+        "glyph": "Υ",
+        "name": "Upsilon",
+        "source_display": "Upsilon",
+        "source_account": "Account relates an affair to an honorable undertaking.",
+        "account_tag": "noble_undertaking"
+      },
+      {
+        "id": "gao-phi",
+        "order": 21,
+        "glyph": "Φ",
+        "name": "Phi",
+        "source_display": "Phi",
+        "source_account": "Account connects careless action with subsequent blame directed at the gods.",
+        "account_tag": "careless_blame"
+      },
+      {
+        "id": "gao-chi",
+        "order": 22,
+        "glyph": "Χ",
+        "name": "Khi",
+        "source_display": "Khi",
+        "source_account": "Account links attainment with fulfillment of a golden oracle.",
+        "account_tag": "golden_fulfillment"
+      },
+      {
+        "id": "gao-psi",
+        "order": 23,
+        "glyph": "Ψ",
+        "name": "Psi",
+        "source_display": "Psi",
+        "source_account": "Account attributes a fitting judgment to the gods.",
+        "account_tag": "fitting_judgment"
+      },
+      {
+        "id": "gao-omega",
+        "order": 24,
+        "glyph": "Ω",
+        "name": "Omega",
+        "source_display": "Omega",
+        "source_account": "Account describes a harsh harvest period without useful yield.",
+        "account_tag": "harsh_harvest"
+      }
+    ],
+    "normalization": "ASCII trim then NFC only; no NFKC/confusable folding. ASCII Latin names/gao-IDs lowercase. Exact verified Greek uppercase/lowercase pairs; final sigmaς is an explicitly named editorial orthographic alias for Sigma, not a25th lot. Chi spelling supported by same-author pronunciation guide; oracle source display Khi retained."
+  },
+  "historical_boundary": "Source-attributed Olympos/Lycia account only; no original inscription authentication, uninspected Heinevetter-page equivalence, or2017/book witness substitution.",
+  "source_layers": {
+    "historical": "Olympos attribution and claimed Limyra correction remain author-attributed pending original epigraphic collation",
+    "translation": "Modern English rendering inspected but not copied as a corpus",
+    "lexical": "Individually located alternative senses, summarized with qualifications",
+    "modern_commentary": "Author applications distinguished; not automatically applied to user",
+    "editorial": "Our original concise source summaries and alias/lookup conventions",
+    "user": "Raw declared mark, observation provenance, question and reflection"
+  },
+  "rights": "Facts-only original summaries, no complete modern translation/commentary or source artwork. Public-page attribution is not verified ancient inscription authenticity; public access is not unrestricted translation permission.",
+  "interpretation": "Every mark has an individually inspected source account and lexical qualification, expressed in original concise factual wording. No full modern translation/commentary copied. The traditional statement is attributed, never asserted to occur for the user.",
+  "identity_conventions": [
+    "Exactly24 canonical source identities; source order is not a numeric oracle key.",
+    "Canonical gao-IDs and verified Latin names use ASCII case normalization after ASCII edge trimming.",
+    "Greek uppercase/lowercase identities are explicit; NFC only, no NFKC/transliteration/confusable fallback.",
+    "Latin single-letter and Cyrillic lookalikes rejected; accented/compatibility variants require a new explicit alias rather than guessing.",
+    "Source display Khi preserved; same-author pronunciation guide supports Chi.",
+    "Final sigmaς is an explicitly editorial orthographic alias for Sigma, not a source25th lot.",
+    "Unknown mark, ambiguous phrase and normalized alias collisions rejected; each alias maps to exactly one known record."
+  ],
+  "method": {
+    "locator": "Introduction,first method",
+    "description": "One of24 letter-marked stones/potsherds selected without looking from jug/box/bag; shake-out variant described historically. Software only records one user-declared mark; no physical performance or multiple-draw/replacement convention.",
+    "manual_probability": null
+  },
+  "manual_contract": {
+    "schema_version": 1,
+    "profile": "opsopaus-greek-alphabet-manual-lot-v1",
+    "mode": "manual",
+    "tasks": [
+      "reading",
+      "lookup",
+      "catalog"
+    ],
+    "required_catalog_identity": [
+      "catalog_id",
+      "catalog_version",
+      "catalog_sha256"
+    ],
+    "mark": "One bounded UTF8 canonical ID, verified glyph or named alias for reading/lookup; absent for catalog",
+    "observation_origin": "reported_real,hypothetical,unknown; defaultunknown, user-reported only",
+    "optional_text": "question,association,reflection,notes,uncertainty; raw UTF8 up to10000 characters or null",
+    "validation": "Reject invalid types, missing/unknown/ambiguous marks, profile/edition/hash mismatch, prediction requests, multiple draws and numeric/seeded methods. Strict JSON rejects duplicate keys and nonfinite values; no rerolls."
+  },
+  "outputs": [
+    "Exact selected Greek glyph/name/canonical ID/source order",
+    "Original concise source account and lexical/historical qualifications",
+    "Source row locator and author URL/access/rights",
+    "Raw declared mark and deterministic normalization trace",
+    "Explicit user-reported origin, no physical verification or probability",
+    "Raw user text separate from source account; user_application=null",
+    "Variation/evidence matrix and unresolved numerical source discrepancies",
+    "Pinned profile/catalog/source-record/request hashes with exact JSON/Markdown replay"
+  ],
+  "numeric_discrepancies": {
+    "impossible_face": {
+      "faces": [
+        6,
+        5,
+        3,
+        6,
+        6
+      ],
+      "source_sum": 26,
+      "source_result": "Delta",
+      "illegal_faces": [
+        5
+      ],
+      "accepted_vector": false
+    },
+    "columns": "Intro labels numeric positions dice-before/astragaloi-after; navigation caption reverses wording. No numeric convention selected or silently repaired.",
+    "unmapped_dice_sums": [
+      25,
+      13
+    ],
+    "source_recast": "Described only for numeric variant; never automatic in manual mode",
+    "distinct_spaces": "3d6 ordered216/multisets56;5 astragaloi ordered1024/multisets56/sums24;5d6 ordered7776/multisets252/sums26. Not equivalent traditions.",
+    "physical": "Four physical faces do not establish equiprobability. No manual-draw probability or seeded protocol."
+  },
+  "mathematical_scope": "Independent research only: polynomial/binomial reference versus exhaustive tuple/multiset enumeration and multinomial multiplicities.9016 ordered tuples checked across216+1024+7776. Numeric methods are not exposed by the core.56 multiset coincidences do not identify distinct traditions.",
+  "evidence_matrix": {
+    "direct": "Author-origin indexed source identities, single-lot method and attributed meanings; original epigraphy not independently authenticated",
+    "compositional": "Deterministic normalization, exact catalog lookup and transparent trace",
+    "user_attributed": "Declared mark, observation origin, questions, uncertainty and personal associations/reflections",
+    "unsupported": "Factual prediction, diagnosis, spirit contact, ritual success, physical fairness or guaranteed supernatural accuracy"
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Single declared manual marked-lot source account",
+      "Strict canonical ID/name/glyph lookup with explicit aliases",
+      "Complete source-order24-record catalog",
+      "Raw user origin/question/association/reflection/notes/uncertainty",
+      "Deterministic offline JSON/Markdown replay and pinned catalog/profile integrity"
+    ],
+    "experimental": [],
+    "unsupported": [
+      "Five-astragaloi or five-d6 numeric lookup",
+      "Full56-outcome Astragalomanteion",
+      "Homeric key-to-passage oracle or duplicate Bibliomancy indexing mode",
+      "Seeded/generated or physical casting simulation",
+      "Multiple draws, spread, replacement policy or combined meanings",
+      "Other Greek alphabets, archaic Digamma/Qoppa, rune or numerological substitutions",
+      "Objective predictions, diagnosis, spirit contact or supernatural accuracy"
+    ]
+  },
+  "replay": {
+    "cli": "python -m future cleromancy data/cleromancy-input.json --format markdown",
+    "offline": true,
+    "network": false,
+    "llm": false,
+    "rng": false,
+    "new_dependencies": 0,
+    "profile_hash_anchor": "Hard-coded canonical profile hash; on each query re-read and verify profile/catalog, meaning/order/alias integrity",
+    "serialization": "Canonical UTF8 sorted-key compact JSON, unescaped Unicode, no terminal LF; full raw request retained",
+    "source_html_hash": "unavailable; explicit null",
+    "source_record_hash": "dae81e67b642f319e28bb0986e60f4c2037b7d4bfb729ac506a5ef03f7bac6af",
+    "repeat": "Same declared mark gives same source record regardless of question; separate invocation requests remain separate, no multi-draw algorithm."
+  },
+  "acceptance": {
+    "passed": true,
+    "regression": {
+      "passed": true,
+      "tests": 895,
+      "inherited_tests": 836,
+      "new_tests": 59,
+      "cli_cases": 1071,
+      "inherited_cli_cases": 991,
+      "new_cli_cases": 80,
+      "symbolic_verifiers": 20,
+      "protected_files": 1441,
+      "required_prior_files": 1337,
+      "changed": [],
+      "checks": "data/cleromancy-acceptance-checks.json"
+    },
+    "independent": {
+      "passed": true,
+      "profile": "opsopaus-greek-alphabet-manual-lot-v1",
+      "profile_sha256": "c88e527692c1e5bd4a127bffbab087294e9de4e57d2ed50a70732698fb6ec33d",
+      "catalog_sha256": "f5ddfd0ed108d1a08a22e57eb55bc32b85de33c0237f8f8e165e0abd7845870e",
+      "source_record_sha256": "dae81e67b642f319e28bb0986e60f4c2037b7d4bfb729ac506a5ef03f7bac6af",
+      "source_html_sha256": null,
+      "marks": 24,
+      "source_accounts": 24,
+      "alias_keys": 98,
+      "extra_normalization_cases": 6,
+      "rejected_aliases": 18,
+      "spaces": {
+        "three_d6": {
+          "ordered": 216,
+          "unordered": 56,
+          "sums": 16,
+          "distinct_sum_values": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "multiplicities": [
+            1,
+            3,
+            6
+          ]
+        },
+        "five_astragaloi": {
+          "ordered": 1024,
+          "unordered": 56,
+          "sums": 24,
+          "distinct_sum_values": [
+            5,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            30
+          ],
+          "multiplicities": [
+            1,
+            5,
+            10,
+            20,
+            30,
+            60
+          ]
+        },
+        "five_d6": {
+          "ordered": 7776,
+          "unordered": 252,
+          "sums": 26,
+          "distinct_sum_values": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "multiplicities": [
+            1,
+            5,
+            10,
+            20,
+            30,
+            60,
+            120
+          ]
+        }
+      },
+      "ordered_research_tuples": 9016,
+      "impossible_face_example_preserved": true,
+      "numeric_mode_supported": false,
+      "reference": "Pre-engine all24 source known answers; polynomial-convolution/binomial expectations checked by separate exhaustive tuple/multiset enumeration and multinomial multiplicities. No production sampler or meaning generator.",
+      "empirical_validation": false
+    },
+    "source_fixture": "tests/fixtures/cleromancy_reference_v1.json",
+    "source_fixture_canonical_sha256": "0887513b33a7b325892b9d79992299bef4261dd55fd80fa001a3bbf9395e16ec",
+    "checks": "data/cleromancy-acceptance-checks.json",
+    "smoke": "data/cleromancy-smoke.json",
+    "preservation": "data/cleromancy-preservation-baseline.json",
+    "prior_source_metadata_unchanged": true,
+    "registry_idempotent": true,
+    "dependencies_audited": true,
+    "pip_check": true,
+    "diff_check": true,
+    "empirical_validation": false,
+    "qualification": "Practical bounded manual/source software acceptance; not exhaustive traditions, independent original inscription authentication or demonstrated prediction."
+  },
+  "examples": {
+    "valid": [
+      "data/cleromancy-alpha",
+      "data/cleromancy-omega",
+      "data/cleromancy-interior",
+      "data/cleromancy-delta",
+      "data/cleromancy-epsilon",
+      "data/cleromancy-khi",
+      "data/cleromancy-chi",
+      "data/cleromancy-sigma",
+      "data/cleromancy-final-sigma",
+      "data/cleromancy-unicode",
+      "data/cleromancy-question-a",
+      "data/cleromancy-question-b",
+      "data/cleromancy-hypothetical",
+      "data/cleromancy-reported-real",
+      "data/cleromancy-lookup",
+      "data/cleromancy-catalog"
+    ],
+    "rejected": [
+      "data/cleromancy-five-astragaloi",
+      "data/cleromancy-five-d6",
+      "data/cleromancy-source-face-five",
+      "data/cleromancy-homeric-passage",
+      "data/cleromancy-unknown-mark",
+      "data/cleromancy-ambiguous-mark",
+      "data/cleromancy-invalid-unicode",
+      "data/cleromancy-confusable",
+      "data/cleromancy-wrong-profile",
+      "data/cleromancy-wrong-hash",
+      "data/cleromancy-multiple-draw",
+      "data/cleromancy-prediction",
+      "data/cleromancy-seeded",
+      "data/cleromancy-missing-mark",
+      "data/cleromancy-invalid-type",
+      "data/cleromancy-wrong-version"
+    ],
+    "formats": [
+      "-input.json",
+      ".json",
+      ".md"
+    ],
+    "valid_saved_replay_pairs": 16,
+    "rejected_saved_pairs": 16
+  },
+  "P1": [
+    "Original Olympos inscription and Heinevetter1912 edition collation, including author-attributed Limyra correction.",
+    "Fresh complete authenticated direct author HTML snapshot and modern scholarly Greek/translation comparison; source date/version and raw HTML remain unavailable.",
+    "Verified numeric-column labels, excluded-sum semantics and worked-example corrections under a separately named numeric profile; preserve original impossible face5.",
+    "Complete56-outcome Astragalomanteion table from legitimate exact-edition source and independent examples.",
+    "Full Homeric216 key-to-verse/lacuna mappings with independent provenance and rights.",
+    "Mascaro original method chapters after legitimate publication/access; marketing is not procedural evidence.",
+    "Separately versioned seeded digital24-mark selection only with independent protocol/vectors, unbiased rejection and explicit digital-versus-physical probabilities."
+  ],
+  "P2": [
+    "Additional dated ancient lot/astragalomancy witnesses and source-specific regional profiles.",
+    "Multiple manually selected lots only with explicit draw order/replacement/population semantics.",
+    "Independent physical-bone probability research; no equiprobable-face inference.",
+    "Source-specific interpretation expansions, retaining translation/commentary/user layers.",
+    "Original diagrams or optional simple visualization.",
+    "Empirical studies separate from source authenticity, mathematical verification and software acceptance."
+  ],
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "transition": "Commit/push accepted closure and verify clean synchronized main before Technique38 Augury resource audit only. No38 engine/CLI/profile/detector or39 audit."
+}
