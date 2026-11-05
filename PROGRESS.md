@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 36 Bibliomancy resource audit — 2026-11-06
+- Began only after Osteomancy closure04148c3 was accepted, pushed, clean and synchronized0/0. Two original ranked sources and four variations preserved. Audit only; no engine, executable corpus/profile, CLI, RNG or37 audit.
+- CHS author Raquel Martín Hernández distinguishes three Homeric witnesses and ordered1..6 triples (216 keys), with incomplete text and no full outcome table in the article. Preserved cited2013 versus URL2014 date. Mascaro2022 coarse method selects sentences; fine word-count dice/digital ranges disagree and seventeen-book digit example can omit8/9. No silent algorithm correction.
+- First candidate: manually supplied coarse selections with exact rights-cleared edition/index/hash and cited passage/context. WEB Classic rights checked, corpus not imported. Publisher indexed article inspected; fresh direct snapshot403 remains P1. Frozen source access/rights, fixture plan, distribution conventions, matrix and P1/P2: `knowledge/bibliomancy_resource_audit.json`. Next: source/corpus and independent fixture freeze before implementation, only on a subsequent technique pass.
+
 ## Technique 35 Osteomancy Core v1 closure — 2026-11-06
 - **Core v1 Ready — Historical Shang Inscription Reference/Comparison Scope**: `columbia-afe1999-shang-charges-v1`; all thirteen source labels, typed missingness/uncertainty, ordered reference/topic/group selection and substantive pair comparison. Both20A/B actions remain uncertain;19A/B differ in conditions/days;24A/B are not assumed opposites. Source9d8578a, catalogafffba4, engine7924c39 and independent evidenced34b9ba pushed.
 - 781 tests (735+46),911 CLI cases (847+64),18 verifiers pass. Independent fixtures check169 ordered pairs,26 omitted outcomes and52 unverified-original fields. All1,256 protected files, including all required1,175, remain byte-identical; old source records retained; registry/dependency/pip/diff checks pass. Sixteen valid and four rejected JSON/Markdown pairs saved and replayed.

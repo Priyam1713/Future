@@ -1,0 +1,378 @@
+{
+  "version": 1,
+  "technique_id": 36,
+  "name": "Bibliomancy",
+  "phase": 4,
+  "date": "2026-11-06",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "04148c3",
+  "predecessor_push": "Osteomancy accepted, committed, pushed; clean main and origin/main...HEAD0/0 explicitly observed before this audit.",
+  "policy": "Research metadata only. No36 engine, executable profile/catalog/corpus, CLI, random selector or executable rule fixtures. No37 resource audit or implementation.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    36,
+    "4 · Nature, Objects & Ancient Practices",
+    "Bibliomancy",
+    "RETAIN — simulate / implement",
+    "Deterministic / symbolic rules",
+    "Bible lots; Homeromanteion; page/line randomization; poem/book oracle",
+    "Random passage selection plus context and citation",
+    "Licensed/public-domain text corpus; PRNG",
+    "Cannot ingest proprietary books without permission",
+    "Traditional / not scientifically validated",
+    "Homeromanteia in Context",
+    "Harvard Center for Hellenic Studies",
+    "https://research-bulletin.chs.harvard.edu/2014/03/28/using-homer-for-divination-homeromanteia-in-context/",
+    "A Sorcerer in the Library: An Introduction to Integer Bibliomancy",
+    null,
+    null,
+    "17, 37",
+    36
+  ],
+  "ranked_sources": [
+    [
+      36,
+      "Bibliomancy",
+      1,
+      "Harvard Center for Hellenic Studies",
+      "Homeromanteia in Context",
+      "Ancient Homeric literary lot system",
+      "https://research-bulletin.chs.harvard.edu/2014/03/28/using-homer-for-divination-homeromanteia-in-context/",
+      "Open research article",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      36,
+      "Bibliomancy",
+      2,
+      "J. R. Mascaro",
+      "A Sorcerer in the Library: An Introduction to Integer Bibliomancy",
+      "Practical page/line numeric procedure",
+      "https://www.llewellyn.com/journal/print.php?id=3066",
+      "Open practitioner article",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      36,
+      "Bibliomancy",
+      "Bible lots",
+      "Homeromanteia in Context",
+      "A Sorcerer in the Library: An Introduction to Integer Bibliomancy",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      36,
+      "Bibliomancy",
+      "Homeromanteion",
+      "A Sorcerer in the Library: An Introduction to Integer Bibliomancy",
+      "Homeromanteia in Context",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      36,
+      "Bibliomancy",
+      "page/line randomization",
+      "A Sorcerer in the Library: An Introduction to Integer Bibliomancy",
+      "Homeromanteia in Context",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      36,
+      "Bibliomancy",
+      "poem/book oracle",
+      "A Sorcerer in the Library: An Introduction to Integer Bibliomancy",
+      "Homeromanteia in Context",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_records": "knowledge/bibliomancy_sources.json",
+  "access": [
+    {
+      "name": "chs",
+      "url": "https://research-bulletin.chs.harvard.edu/2014/03/28/using-homer-for-divination-homeromanteia-in-context/",
+      "resolved_url": "https://research-bulletin.chs.harvard.edu/2014/03/28/using-homer-for-divination-homeromanteia-in-context/",
+      "status": 200,
+      "sha256": "4ed979ddeb35b787a091d1a4a98521309b3b3eb78d5b212175fc8cb98fb70d29",
+      "bytes": 104820
+    },
+    {
+      "name": "mascaro",
+      "url": "https://www.llewellyn.com/journal/print.php?id=3066",
+      "error": "403 Client Error: Forbidden for url: https://www.llewellyn.com/journal/print.php?id=3066"
+    },
+    {
+      "name": "mascaro-alternate",
+      "url": "https://llewellyn.com/journal/print.php?id=3066",
+      "error": "403 Client Error: Forbidden for url: https://llewellyn.com/journal/print.php?id=3066"
+    },
+    {
+      "name": "llewellyn-rights",
+      "url": "https://www.llewellyn.com/journal/article_use.php",
+      "error": "403 Client Error: Forbidden for url: https://www.llewellyn.com/journal/article_use.php"
+    },
+    {
+      "name": "chs-rights",
+      "url": "https://chs.harvard.edu/introduction-to-online-publications-2/",
+      "resolved_url": "https://chs.harvard.edu/introduction-to-online-publications-2/",
+      "status": 200,
+      "sha256": "c210443eb3fbf940f8dfa1ffbfc6c5cf979244553c38e624a246bb927b2ed5b8",
+      "bytes": 65539
+    },
+    {
+      "name": "web-rights",
+      "url": "https://ebible.org/eng-web/copyright.htm",
+      "resolved_url": "https://ebible.org/eng-web/copyright.htm",
+      "status": 200,
+      "sha256": "2e62eca4b32541181eff0917becbbc14213fba3ba417246e315bae9e4a6aaa35",
+      "bytes": 3442
+    }
+  ],
+  "scholarly_attribution": {
+    "author": "Raquel Martín Hernández",
+    "institutional_rank": "Original ranked source remains Harvard Center for Hellenic Studies",
+    "citation": "CHS Research Bulletin2,no1(2013)",
+    "url_date": "2014-03-28",
+    "date_policy": "Preserve citation-year and URL-date separately, without silently correcting either.",
+    "scope": "Primary scholarly research account of historical witnesses; not a complete modern executable oracle table"
+  },
+  "historical_findings": [
+    {
+      "locator": "§§13–17;notes17,19,22,24–26",
+      "fact": "Three witnesses: P.Lond.121 (=PGM VII),P.Oxy.56.3831,P.Bon.3 (=Suppl.Mag.II.77). Source dates P.Bon. to2nd–3rd centuries,P.Oxy. to3rd–4th and PGM VII near late4th; note25 records differing scholarly dates. Not three interchangeable complete editions."
+    },
+    {
+      "locator": "§15;note24",
+      "fact": "P.Oxy. text stops after source keyαγς(1,3,6); numbers continue throughαεα(1,5,1) without corresponding verses. Those are three die-face digits, not decimal ordinal136 or151. Missing verse text is not an adverse answer."
+    },
+    {
+      "locator": "§§16–18,23–24",
+      "fact": "PGM VII nearly complete; other copies help damaged beginning. Author argues common verse order in overlap and no evidence for alternate full versions; this is not authority to invent missing entries or ignore later corrections. Article does not provide all216 mappings."
+    },
+    {
+      "locator": "§18;notes28–30",
+      "fact": "One six-sided die thrown three times; ordered faces1..6; keys111 through666 in lexicographic order. Preserve temporal order, not sorted triple or sum. Numbers2 and5 rule out ordinary four-position knucklebone substitution."
+    },
+    {
+      "locator": "§18;§22",
+      "fact": "Historical instructions include day/hour table and Apollo prayer, plus question focus. Descriptive context only; no implemented ritual schedule, invocation requirement or supernatural certification. No fixed question list."
+    },
+    {
+      "locator": "§§20–25,31",
+      "fact": "A selected Homeric verse is contextualized as an answer historically. That interpretation is distinct from book/line identity, calculated selection and present-day factual prediction."
+    },
+    {
+      "locator": "§6;note9",
+      "fact": "Socrates dream narrative cites Iliad9.363; useful literary-context cross-reference, not a documented die-roll-to-table fixture."
+    }
+  ],
+  "numerical_audit": {
+    "homeric_domain": "216 ordered triples in{1,...,6}^3; 111 and666 are face labels, not integer range111..666",
+    "proposed_editorial_ordinal": "If frozen later: one-based i=36*(a-1)+6*(b-1)+c. An editorial storage map derived from source order, not an ancient decimal numbering claim.",
+    "audit_examples": [
+      {
+        "key": [
+          1,
+          1,
+          1
+        ],
+        "ordinal": 1
+      },
+      {
+        "key": [
+          1,
+          3,
+          6
+        ],
+        "ordinal": 18
+      },
+      {
+        "key": [
+          1,
+          5,
+          1
+        ],
+        "ordinal": 25
+      },
+      {
+        "key": [
+          6,
+          6,
+          6
+        ],
+        "ordinal": 216
+      }
+    ],
+    "distribution": "Uniform1/216 per triple only conditional on three independent fair six-face draws; audit supplies no RNG, entropy model or empirical fairness claim. Sorting gives56 distinct multisets with unequal weights and loses source order; sums give16 values3..18. Neither is the Homeric keyed table.",
+    "complete_outcome_table": "Not frozen: require independently collated exact216 keys with source locus/text/uncertain/lacuna status and explicit source edition. No verse mappings inferred from Wikipedia or another app."
+  },
+  "mascaro_findings": [
+    {
+      "locator": "Opening simple bibliomancy / integer distinction",
+      "fact": "Simple practice chooses a book/page and first noticed sentence; integer method chooses discrete levels. A personal metaphysical account is source attribution, not empirical evidence."
+    },
+    {
+      "locator": "The first step; The next step",
+      "fact": "Reachable shelves numbered top to bottom starting1; books left to right starting1. Coarse method returns a sentence; fine method assembles individual words."
+    },
+    {
+      "locator": "Upon selecting; Next; In the fine method",
+      "fact": "Select book,page,sentence and optionally word. Digital alternative requests bounded integer1..N. Invalid page causes reroll; shelf invalid face rerolls. Sentence/word/zero-page, blank page, multi-column order, headings, end-page sentence continuation and exact tokenization are not fully specified."
+    },
+    {
+      "locator": "If you are enacting a fine divination",
+      "fact": "Source offers sum of two0–9 dice for desired word count or digital integer1..20. Dice sum actually ranges0..18 with triangular multiplicities; digital proposal ranges1..20. This is a source discrepancy, not equivalent distributions."
+    },
+    {
+      "locator": "You will now use your ten-sided die",
+      "fact": "Seventeen-book example restricts ones to0..7 and maps tens to0/1. Literal candidate set00..07,10..17 omits08,09 and includes invalid00. Order of rolling digit places also varies in the paragraph. Do not silently implement this as uniform selection1..17."
+    },
+    {
+      "locator": "Upon selecting",
+      "fact": "Page digit-place proposals and reroll invalids are described, but no named digital PRNG/seed/rejection protocol, page label mapping or exact edition. Unbiased whole-number rejection could be a separately named software convention after independent specification."
+    },
+    {
+      "locator": "In the fine method",
+      "fact": "Fine method repeats the whole shelf-to-word path per requested word, then allows readability edits. Preserve original chosen tokens and user edits separately; not automatic source wording."
+    },
+    {
+      "locator": "Final preferred random-generator paragraph",
+      "fact": "Author prefers digital bounded integers. No full numeric worked chain or exact selected-book edition is supplied. Independent synthetic numerical fixtures will need clear labels and must not be advertised as published worked examples."
+    }
+  ],
+  "variation_findings": [
+    {
+      "name": "Bible lots",
+      "status": "Documentary / corpus candidate only",
+      "sources": [
+        "CHS§2 historical notices",
+        "eBible WEB rights"
+      ],
+      "limits": "Different Christian traditions and translations/canons remain separate; WEB rights do not document a historical lots procedure. No random Bible verse interpreter or imported corpus."
+    },
+    {
+      "name": "Homeromanteion",
+      "status": "Verified ordered-index outline; full table gated",
+      "sources": [
+        "CHS§§13–24"
+      ],
+      "limits": "216 possible keys is not216 verified outcomes; preserve witness lacunae and textual apparatus. Keep literary passage lookup36 separate from general dice mechanics37."
+    },
+    {
+      "name": "page/line randomization",
+      "status": "Manual coarse sentence selection candidate",
+      "sources": [
+        "Mascaro2022"
+      ],
+      "limits": "Actual inspected procedure uses sentences and optionally words, not an exact line-count algorithm. No source basis for substituting rendered lines or for uniform choice over all text units."
+    },
+    {
+      "name": "poem/book oracle",
+      "status": "Bounded text-selection candidate",
+      "sources": [
+        "Mascaro2022;CHS literary-context discussion"
+      ],
+      "limits": "No universal poem/message meaning table. Require exact edition and passage boundaries, raw user interpretation and rights for each corpus."
+    }
+  ],
+  "rights": {
+    "ancient": "Ancient Homeric originals are distinct from modern translations, apparatus, editorial reconstruction, digital transcriptions and scans; verify each layer independently.",
+    "chs": "General online-publications policy says CC BY-NC-ND3.0 unless otherwise stated. Item/third-party scope remains to be checked before reuse; only factual notes distributed here.",
+    "llewellyn": "Retains copyright. Free website full-article posting permission has conditions and excludes general publication/sale; Future uses concise procedural facts and citations only.",
+    "corpus_candidate": "eBible WEB Classic2020 stable full ecumenical set has explicit public-domain dedication and faithful-copy trademark condition. Exact downloadable file, canon/subset, version and segmentation not yet frozen. No corpus downloaded for this audit.",
+    "indexing": "Independently generated index metadata is not permission to redistribute the underlying proprietary text. No book purchase or proprietary text ingestion needed."
+  },
+  "first_candidate": {
+    "name": "Manual coarse integer-bibliomancy trace over one edition-pinned bounded text",
+    "priority": "Use Mascaro digital/manual coarse path as procedural reference; record manually supplied shelf/book/page/sentence selections and extract exact cited text from a frozen rights-cleared corpus. Source-free notes alone are insufficient core functionality.",
+    "profile": "Pending source/corpus/independent fixture freeze; no executable name reserved as supported",
+    "staged_contract": [
+      "Immutable ordered shelf/book catalog and exact edition identity; single-book mode explicitly a bounded adaptation.",
+      "Raw source bytes hash plus canonical corpus/index hash; fixed encoding, Unicode/normalization/newline policy and immutable unit IDs.",
+      "Logical page/printed page labels and sentence boundary maps are explicit; do not manufacture print pagination for unpaginated HTML.",
+      "Manual one-based selections checked at every level; invalid/empty units return explicit diagnostic, no automatic reroll or silently skipped pages. This is a proposed software policy, not a source quotation.",
+      "Replay includes exact selected path, corpus/profile/request hashes, precise cited passage and surrounding context, user question/notes and raw interpretation separately.",
+      "No autogenerated predictions. External/manual draws have no software probability certification. Seeded mode deferred until independent protocol/distribution proof."
+    ],
+    "distribution": "Hierarchical uniform shelf/book/page/sentence draws do not give uniform sentences over unequal groups; probability is product of reciprocals of each conditional group size. Fine repeats are with possible re-selection unless a separate protocol says otherwise. Do not conflate with uniform flattened passage sampling."
+  },
+  "independent_fixture_plan": [
+    "Before implementation freeze concise source procedures and an independently hand-indexed complete bounded corpus map. Include source-byte and canonical hashes.",
+    "Manual coarse first/last valid shelves/books/pages/sentences; exact citation/text/context; repeated selection; reversed corpus order; invalid0,negative,N+1 and booleans; empty page/book and duplicate IDs.",
+    "Unicode, whitespace, quoted punctuation, abbreviation and page-crossing sentence cases with predetermined outcomes; display line-wrap changes must not change stable units.",
+    "Exact JSON/Markdown replay from frozen corpus/profile/request; unknown corpus/hash/version rejected. New edition must have a new profile/hash.",
+    "Separate Homeric indexing-only exhaustive216 tuple bijection/reversal/distinct-order tests; freeze independently sourced tuple-to-verse/lacuna expectations before actual Homeric lookup. Never use production matcher to generate expected outputs.",
+    "For a future seeded mode: fixed byte vectors and rejection transcript, bounds1..N at each stage, bias analysis and hierarchy probabilities; do not equate incompatible source dice/digital paths."
+  ],
+  "configuration_matrix": {
+    "supported": "Audit metadata and documentary source findings only",
+    "experimental": "Proposed manual coarse trace; not implemented or certified",
+    "unsupported": [
+      "Executable Bibliomancy36",
+      "Full Homeric oracle table",
+      "Seeded random-page/line or dice generation",
+      "Fine word synthesis",
+      "Cross-edition exact pagination claims",
+      "Automatic spiritual/predictive interpretation"
+    ]
+  },
+  "acceptance_gates": [
+    "Commit source and independent fixtures before executable catalog/engine.",
+    "Complete bounded rights-cleared corpus and meaningful cited passage selection, validation and deterministic replay; freeze supported/experimental/unsupported matrix.",
+    "Keep direct text/procedural source facts, editorial indexing/selection, raw user meaning and unsupported predictions separate.",
+    "Full inherited781 tests,911 CLI cases and18 verifiers retained; protect all prior source/profile/report/protocol bytes.",
+    "Independent nonproduction reference checks and valid/rejected JSON/Markdown CLI reports; registry/dependency/pip/diff checks pass before any Core v1 readiness.",
+    "Resolve or exclude unsupported methods rather than blocking stable manual coarse core on full Homeric/fine/seeded functionality."
+  ],
+  "P1": [
+    "Obtain fresh exact publisher HTML snapshot for Mascaro and freeze concise independent procedure facts before code; retain403/search-index access distinction.",
+    "Freeze one complete bounded public-domain or explicitly licensed edition/corpus with exact raw/normalized hashes, scope, logical pages, sentence boundaries and all index maps.",
+    "Author independent hand-indexed expected selections across first/last/empty/Unicode/boundary cases before any executable profile.",
+    "Specify manual coarse-selection, invalid/empty-page policy and raw-user context separately from source rules. Do not silently replace sentences with lines.",
+    "Collate an accessible scholarly Homeromanteion edition/table and independent tuple-to-Homer-locus fixtures; preserve lacunae, duplicate loci, corrections and witness distinctions.",
+    "Resolve source dice/digital discrepancies and distributions before any seeded or fine-word method."
+  ],
+  "P2": [
+    "Additional Bible-lot traditions and canon/translation profiles; no generic Christian approval claim.",
+    "Complete Homeric witness comparison, apparatus and rights-cleared Greek/translation parallel references.",
+    "Fine-word selection, punctuation edits and repeated full-path traces after procedure clarification.",
+    "Separately versioned seeded selectors with independent exact vectors and exhaustive/bounded distribution checks.",
+    "Additional poetry/book corpora and optional explanatory diagrams; no automatic prophecy or LLM interpretation."
+  ],
+  "accepted_predecessor": {
+    "passed": true,
+    "tests": 781,
+    "inherited_tests": 735,
+    "new_tests": 46,
+    "cli_cases": 911,
+    "inherited_cli_cases": 847,
+    "new_cli_cases": 64,
+    "symbolic_verifiers": 18,
+    "protected_files": 1256,
+    "required_prior_files": 1175,
+    "changed": [],
+    "checks": "data/osteomancy-acceptance-checks.json"
+  },
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "limitations": "Audit complete, no36 implementation/readiness claim. No37 audit. Historical supernatural explanations remain source attribution, not validated predictions."
+}
