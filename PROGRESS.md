@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 34 Lithomancy Core v1 closure — 2026-11-06
+- **Core v1 Ready — Source-Specific Symbolic Stone Reading Scope**: `howard-cottage-web-general-set-v1`; twelve example associations, full/subset manual casts, explicit personal/reader anchors and nearest-first source reading with exact tied distance groups. Unknowns and conflicts retained. Source 721b666, catalog 5eba9e8, engine 720a6c1, independent evidence 686557d, six report batches and acceptance 21f0879 pushed.
+- 735 tests (689+46), 847 CLI cases (783+64), all sixteen inherited symbolic verifiers plus Lithomancy pass. Independent checks cover twelve roles, 1,225 distance pairs, 25 grid rankings, four authored cases, ten transforms, nine viewpoints and two unknown cases. All 1,175 protected baseline files and required 1,105 prior files unchanged. Sixteen valid/five rejected JSON/Markdown report pairs replay; registry, dependency, pip and diff checks pass.
+- Source/geometry/replay matrix and P1/P2: `knowledge/lithomancy_core_v1.json`. Other authors' procedures, thirteen-stone systems, Howard book/sea-set collation and broader interpretations remain gated. Optional rendering, synthetic placement and photo tools deferred. Push/synchronize closure before Technique 35 Osteomancy audit only.
+
 ## Technique 34 manual spatial reading engine — 2026-11-05
 - Source721b666 and catalog5eba9e8 pushed before runtime. Added Howard12 manual full/subset casts, explicit personal/reader anchors, exact squared distances, nearest-first source associations, all ties, unknowns, user groups/relations and JSON/Markdown replay. No extra source meanings, clusters, footprints, Wimmer rules or RNG.
 - 46 new tests pass; independent expanded-dot-product verifier checks12 roles,1,225 pairs,25 grid rankings,4 pre-engine cases,10 transforms and9 viewpoint checks. Full inherited acceptance follows before closure.
