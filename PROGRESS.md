@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 36 source verification — 2026-11-06
+- Rechecked CHS authored scholarly article and2013 citation/2014 URL date; three witnesses, ordered216-key space and textual gaps remain separate from unavailable verse mapping. Publisher-indexed Mascaro2022 procedure rechecked; direct original/alternate requests403, no invented snapshot hash.
+- Independent pre-engine216 tuple ordinals, literal seventeen-book omissions/invalid00,100 ordered0–9 sum counts and digital1..20 discrepancy frozen. No physical dice/fine/seeded procedure implemented. Complete public-domain WEB Classic Ruth selected for its native verse citations and manageable, meaningful cross-verse dialogue; corpus and manually reviewed sentence index freeze follows.
+
 ## Technique 36 Bibliomancy resource audit — 2026-11-06
 - Began only after Osteomancy closure04148c3 was accepted, pushed, clean and synchronized0/0. Two original ranked sources and four variations preserved. Audit only; no engine, executable corpus/profile, CLI, RNG or37 audit.
 - CHS author Raquel Martín Hernández distinguishes three Homeric witnesses and ordered1..6 triples (216 keys), with incomplete text and no full outcome table in the article. Preserved cited2013 versus URL2014 date. Mascaro2022 coarse method selects sentences; fine word-count dice/digital ranges disagree and seventeen-book digit example can omit8/9. No silent algorithm correction.
