@@ -1,0 +1,353 @@
+{
+  "version": 1,
+  "technique_id": 32,
+  "name": "Aeromancy",
+  "phase": 4,
+  "date": "2026-11-05",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "e02b2ea",
+  "predecessor_push": "Hydromancy closuree02b2ea accepted,pushed andHEAD...origin/main0/0 confirmed with clean worktree before32 audit.",
+  "policy": "Resource/variation audit only;no Aeromancy engine,executable profile,rule catalog,cloud/wind generator,renderer,weather API orCLI added.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    32,
+    "4 · Nature, Objects & Ancient Practices",
+    "Aeromancy",
+    "RETAIN — simulate / implement",
+    "Guided symbolic / human input",
+    "Cloud omens; wind direction; smoke drift; weather lore; atmospheric shapes",
+    "Procedural wind/cloud renderer; optionally real weather API",
+    "Weather data optional; visual simulation available",
+    "Actual meteorological forecasting is separate from omens",
+    "Traditional / not scientifically validated",
+    "Weather Lore",
+    "Richard Inwards",
+    "https://commons.wikimedia.org/wiki/File:Weather_lore;_a_collection_of_proverbs,_sayings,_and_rules_concerning_the_weather_(IA_weatherlorecolle00inwa).pdf",
+    "Scrying for Beginners",
+    null,
+    null,
+    "30, 31, 38",
+    32
+  ],
+  "ranked_sources": [
+    [
+      32,
+      "Aeromancy",
+      1,
+      "Richard Inwards",
+      "Weather Lore",
+      "Historically compiled atmospheric signs",
+      "https://commons.wikimedia.org/wiki/File:Weather_lore;_a_collection_of_proverbs,_sayings,_and_rules_concerning_the_weather_(IA_weatherlorecolle00inwa).pdf",
+      "Open historical scan",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      32,
+      "Aeromancy",
+      2,
+      "Donald Tyson",
+      "Scrying for Beginners",
+      "Cloud/smoke scrying guidance",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Cloud omens",
+      "inventory_row": [
+        32,
+        "Aeromancy",
+        "Cloud omens",
+        "Scrying for Beginners",
+        "Weather Lore",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Inwards has inspectable conditional cloud accounts,including combined patterns andregional clauses. Tyson cloud-scrying chapters uninspected. Observational weather sayings remain attributed folklore;no forecast certification."
+    },
+    {
+      "name": "wind direction",
+      "inventory_row": [
+        32,
+        "Aeromancy",
+        "wind direction",
+        "Scrying for Beginners",
+        "Weather Lore",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Inwards Windpp95–99 provides named directional andregional accounts. Named wind,cloud axis andsmoke travel direction are separate quantities;no silent conversion orlocation inference."
+    },
+    {
+      "name": "smoke drift",
+      "inventory_row": [
+        32,
+        "Aeromancy",
+        "smoke drift",
+        "Scrying for Beginners",
+        "Weather Lore",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Printedp95 explicitly attributes eastward/westward smoke-drift couplet to Scotland. Direction is where smoke goes,not automatically the named wind direction. Prior recorded/hypothetical inputs suffice;no smoke generation required."
+    },
+    {
+      "name": "weather lore",
+      "inventory_row": [
+        32,
+        "Aeromancy",
+        "weather lore",
+        "Weather Lore",
+        "Scrying for Beginners",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "The compiler introduction acknowledges limited observation,contradictions andBritish-Isles framing. Preserve alternative sayings andattributions rather than merge them into one accuracy-rated forecast."
+    },
+    {
+      "name": "atmospheric shapes",
+      "inventory_row": [
+        32,
+        "Aeromancy",
+        "atmospheric shapes",
+        "Weather Lore",
+        "Scrying for Beginners",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Printedp111 includes a Bedfordshire fish/hake-shaped cloud withaxis-dependent accounts. This source-specific manual identity does not authorize universal animal,person orspirit shapes. Historical cloud taxonomy is not automatically current meteorological classification."
+    }
+  ],
+  "sources": [
+    {
+      "id": "aeromancy-inwards1898-commons-audit-v1",
+      "technique_id": 32,
+      "rank": 1,
+      "author": "Richard Inwards,compiler;individual sayings retain their own named/regional attributions",
+      "edition": "Weather Lore:A Collection of Proverbs,Sayings,andRules concerning the Weather;Third Edition,Revised andAugmented;London,Elliot Stock,62 Paternoster Row,1898;catalog extentxii+233printed pages;256PDF pages",
+      "url": "https://commons.wikimedia.org/wiki/File:Weather_lore;_a_collection_of_proverbs,_sayings,_and_rules_concerning_the_weather_(IA_weatherlorecolle00inwa).pdf",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Weather_lore%3B_a_collection_of_proverbs%2C_sayings%2C_and_rules_concerning_the_weather_%28IA_weatherlorecolle00inwa%29.pdf",
+      "locator": "PDFp9 title;Introduction printedv–vi(PDF11–12);Wind printed95(PDF113);Clouds introduction printed99(PDF117);Clouds printed111(PDF129)",
+      "snapshot_sha256": "7d5d68b70eac27846bd1b76c07b16e84a22db8a57c9e2bd1e3550e1b61e2943a",
+      "snapshot_sha1": "401548baf953a7bb5ed6383c789f67a540a80fd2",
+      "snapshot_bytes": 11847608,
+      "ingestion": "facts_only",
+      "finding": "Original title/imprint andprintedppvi,95,99,111 rendered andvisually checked against InternetArchive OCR. Source explicitly recognizes contradictory sayings,regional climate limits andapproximate cloud heights. Selected manual smoke,cloud orientation andweather-lore conditions are feasible as attributed historical references,not forecasts.",
+      "rights_note": "Inventory Commons file marks pre1931 US public-domain status andnotes source-country status separately. Wellcome separately marks its different1898 copy Public Domain Mark. These witnesses andtheir digitization metadata are distinct;no blanket global license ormodern reprint rights assumed. Facts-only original short notes;no scan,cloud photograph,frontispiece orwhole-text corpus redistributed.",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "id": "aeromancy-tyson1997-publisher-metadata-v1",
+      "technique_id": 32,
+      "rank": 2,
+      "author": "Donald Tyson;Llewellyn publisher listing",
+      "edition": "Scrying for Beginners;publisher listing February1997,trade paperback,320pages,ISBN9781567187465;For Beginners Series1;original imprint/printing not inspected",
+      "url": "https://www.llewellyn.com/product.php?ean=9781567187465",
+      "locator": "Publisher Product Details/Look Inside;previously inspected canonical HTML witness",
+      "finding": "Previously verified publisher metadata:February1997,trade paperback320pages,ISBN9781567187465,no Look Inside preview. Aeromancy cloud/wind/smoke chapters,original pagination,procedures andsymbol meanings remain uninspected. Current refresh timed out;reuse of metadata does not establish chapter coverage.",
+      "ingestion": "metadata_only",
+      "rights_note": "Book text,modern translations,publisher article,editorial database andimages have separate rights. Original concise factual notes/locators only;no chapters,invocations,ritual corpus,scans orillustrations redistributed. Public hosting is not blanket reproduction permission.",
+      "checked_on": "2026-11-05",
+      "snapshot_sha256": "9e00dd3301dd28d6ce6ad0af8ca3a4dcc0f76cdb8598c27535f4d9be9e4a517d",
+      "snapshot_bytes": 183607,
+      "witness_reused_from": "hydromancy-tyson1997-publisher-metadata-v1;commit8f70036"
+    },
+    {
+      "id": "aeromancy-wellcome1898-edition-rights-v1",
+      "technique_id": 32,
+      "rank": null,
+      "author": "Wellcome Collection,cataloguing Richard Inwards",
+      "edition": "Catalog for Weather lore,London:E.Stock1898,3rd edition,xii+233pages;separate digitized copy with256images",
+      "url": "https://wellcomecollection.org/works/gsn9jhvj",
+      "locator": "Date;Publication/Creation;Edition;extent;Licence and re-use",
+      "finding": "Independent institutional metadata corroborates London1898 third edition andmarks its own copy Public Domain Mark. Do not silently substitute its different IA b24870638 file/hash for the inventory weatherlorecolle00inwa witness.",
+      "ingestion": "metadata_only",
+      "rights_note": "Catalog metadata andits own Public Domain Mark recorded;source images not copied. Commons inventory witness andWellcome digitization remain distinct.",
+      "checked_on": "2026-11-05"
+    }
+  ],
+  "edition_boundary": "Inventory scan is the London ElliotStock1898 third edition,revised andaugmented,verified fromoriginal title. The1893 second edition andmodern Cambridge2014/2015 reprint are different witnesses;Smithsonian describes aNewYorkHarper1898 copy,andHawke1950 fourth edition has later editorial content. No silent edition mixing.",
+  "scan_validation": {
+    "commons_bytes": 11847608,
+    "commons_sha1_matches_metadata": true,
+    "commons_sha256": "7d5d68b70eac27846bd1b76c07b16e84a22db8a57c9e2bd1e3550e1b61e2943a",
+    "pages": 256,
+    "visually_inspected_pdf_pages": [
+      9,
+      12,
+      113,
+      117,
+      129
+    ],
+    "printed_locators": [
+      "title/imprint",
+      "vi",
+      "95",
+      "99",
+      "111"
+    ],
+    "ocr": "IA weatherlorecolle00inwa_djvu.txt/xml used only to locate source pages;OCR punctuation/words checked visually. Not bundled oraccepted as independent predictive validation.",
+    "alternate_IA_pdf": {
+      "url": "https://archive.org/download/weatherlorecolle00inwa/weatherlorecolle00inwa.pdf",
+      "snapshot_sha256": "367f332c35e52c5ca3e7d15bc61914ae80d550a9991a74a5aab9e596db6c234c",
+      "note": "Current IA-derived PDF has different bytes/encoding. Exact Commons inventory file was separately downloaded andmatched its published SHA1;that is the audited original witness."
+    }
+  },
+  "verified_source_context": [
+    "Introduction printedv–vi:compiler discusses limited observation,British-Isles framing,foreign/regional adaptation andcontradictory sayings. Printedvi visually checked;v read in original-item OCR,needs separate visual check before any exact extraction.",
+    "Clouds introduction printed99:force/direction ofwind qualify cloud observation;cloud-name/history anddiagram heights are explicitly contextual andapproximate. No measured cloud height ormodern taxonomy inferred fromdescription."
+  ],
+  "conditional_source_leads": [
+    {
+      "locator": "Wind,p95,Scottish smoke couplet",
+      "condition": "Declared smoke travel towards west versus east",
+      "account": "Westward smoke is associated with goodweather being past;eastward with goodweather coming next.",
+      "attribution": "Scotland",
+      "limit": "Travel direction,not automatically wind source direction;no horizon/date conversion oractual forecast."
+    },
+    {
+      "locator": "Wind,p95,continued/light south wind entries",
+      "condition": "Continued southerly wind versus light southerly wind five/six days after previously strong southerly wind",
+      "account": "Wing1649 associates continued south wind withrain;the separately attributed Texas case associates the qualified light-wind sequence withfine weather.",
+      "attribution": "Wing1649;Texas",
+      "limit": "Different regional/contextual accounts;do not erase temporal qualifiers orpretend these are universally contradictory orvalidated."
+    },
+    {
+      "locator": "Clouds,p111,fish/hake-shaped cloud entry",
+      "condition": "User-selected hake-shaped cloud with east-west versus north-south axis",
+      "account": "Rain versus more fine weather,respectively,in the collected account.",
+      "attribution": "Bedfordshire",
+      "limit": "Shape axis,not cloud motion/heading. No automatic identification oruniversal animal symbolism."
+    },
+    {
+      "locator": "Clouds,p111,fleecy-cloud entry",
+      "condition": "Light fleecy clouds moving rapidly below compact dark cirro-stratus",
+      "account": "Collected account associates the combination withrain near at hand.",
+      "attribution": "Scotland",
+      "limit": "Shape/texture,motion andvertical relation are all material;no numeric speed/height threshold orforecast deadline invented."
+    },
+    {
+      "locator": "Clouds,p111,mackerel-sky/mares-tails couplet",
+      "condition": "Mackerel-sky appearance together withmares-tails",
+      "account": "Collected nautical saying counsels reduced sail,withmarginal wind indication.",
+      "attribution": "Unspecified inentry",
+      "limit": "Do not reduce the combination to any single cloud orissue navigational advice fromsoftware."
+    },
+    {
+      "locator": "Clouds,p111,adjacent mackerel-sky sayings",
+      "condition": "Mackerel sky in several separately collected accounts",
+      "account": "Accounts include fair thatday/rain one or two days later,more wet than dry,balanced wet/dry language,andnot24hours dry.",
+      "attribution": "Unspecified for these adjacent entries",
+      "limit": "Preserve distinct worded horizons anddisagreement;no majority vote,confidence score,selected time orcalendar forecast."
+    }
+  ],
+  "tradition_boundaries": [
+    "Inwards historical compiled observational lore versus Tyson practitioner cloud/smoke scrying",
+    "British-Isles/regional clauses versus unspecified location",
+    "Named wind versus smoke travel versus cloud axis/motion",
+    "Historical cloud nomenclature versus modern cloud classification",
+    "Attributed weather sayings versus meteorological forecast products andsymbolic personal associations"
+  ],
+  "feasibility": {
+    "candidate_label": "Proposed Inwards1898 manual atmospheric-lore reference subset;label only,not frozen support",
+    "first_scope": "A useful offline manual source-condition comparator for regional smoke drift,hake-cloud axis,qualified cloud combinations andcontrasting mackerel-sky accounts. Show matching source-located lore andall unresolved/regional/horizon qualifications. Do not output a forecast orsupernatural conclusion.",
+    "proposed_observation_schema": {
+      "status": "Design recommendation only;not executable orruntime-validated",
+      "required": [
+        "named_profile",
+        "manual_mode",
+        "observation_id",
+        "phenomenon"
+      ],
+      "optional": [
+        "origin:reported_real/hypothetical/synthetic/unknown",
+        "observation_timestamp",
+        "declared_region_or_source_region",
+        "named_wind_direction",
+        "wind_strength_category",
+        "reported_prior_wind_sequence",
+        "duration_as_reported",
+        "smoke_drift_towards",
+        "cloud_appearance_in_named_source_terms",
+        "cloud_axis",
+        "cloud_motion",
+        "relative_cloud_layer",
+        "compound_pattern_components",
+        "uncertainty",
+        "alternative_identifications",
+        "raw_description",
+        "personal_association"
+      ],
+      "validation_gates": "Strict enums/unique bounded IDs,unknown/null evidence,explicit region/horizon conventions andcontradictions before executable freeze. No current weather,location,heading,shape orcausal inference fromprose."
+    },
+    "interpretation": "Direct=attributed historical source accounts;user=manual observations/provenance;editorial=matching,comparisons andneutral synthesis;unsupported=actual local forecast,certainty,spirit/personality/future-life claims. A matching proverb is not weather evidence ormeteorological validation.",
+    "reuse": "Only narrow strict-JSON/raw-text/hash/immutable registry/report patterns. Do not copy water/gaze,flame/soot,tea/coffee orother divination source conditions.",
+    "offline": "No weather API,satellite data,location lookup,random generator orcloud renderer needed. Real sky observation optional;recorded/hypothetical states supported conceptually. Future synthetic sky labels stay separate fromactual observations."
+  },
+  "independent_fixture_plan": [
+    "Freeze exact1898 title/edition/printed-page andindividual attribution notes before engine",
+    "Scottish smoke travel east/west/unknown andnamed-wind isolation",
+    "Bedfordshire hake cloud east-west/north-south/unknown orientation;no movement-axis substitution",
+    "Fleecy+rapid+below-dark-cloud compound case andeach missing/opposed condition",
+    "Mackerel+mares-tail combination versus eithercomponent alone",
+    "Several mackerel sayings retain distinct accounts/time language,not one merged forecast",
+    "South-wind regional andprior-sequence differences remain visible",
+    "Unknown region,unverified identity,conflicting observations,raw Unicode anddeterministic replay",
+    "No present/future weather inferred;synthetic source checks are not meteorological backtesting"
+  ],
+  "rights": "1898 text,individual attributed historical sayings,cloud photographs,scan metadata,modern reprints andTyson’s copyrighted book remain distinct. Commons inventory notice specifically recordsUS public-domain status;other jurisdiction/source-art rights not assumed. Wellcome PDM applies toits separate copy. Retain original factual notes andlocators only;no PDF,OCRcorpus,frontispiece ormodernbook content bundled.",
+  "configuration_matrix": {
+    "supported": "Audit metadata/source findings only",
+    "experimental": "Proposed manual Inwards source-condition subset,not implemented",
+    "unsupported": [
+      "Universal cloud/animal/spirit meanings",
+      "Actual meteorological forecasts fromsymbolic lore",
+      "Source-free direction,region orcloud inference",
+      "Complete Tyson method",
+      "Weather APIs,recognition orphysical simulation certification"
+    ]
+  },
+  "acceptance_gates": [
+    "Freeze one edition-specific bounded Inwards profile withregional/individual attributions,rights andindependent pre-engine fixtures",
+    "Substantive manual compound/source-context matching,not a generic sky journal",
+    "Separate wind/smoke/cloud direction semantics;unknown andconflicting inputs remain explicit",
+    "Preserve competing source accounts andrelative horizon wording without dates,probabilities oractual weather predictions",
+    "Useful offline JSON/Markdown report withsource locators,evidence layers andexact replay/hashes",
+    "Preserve613 tests/656 CLI cases,14 existing symbolic verifiers andall earlier report/profile bytes;full regression/CLI/registry/dependency/pip/diff checks before readiness"
+  ],
+  "P1": [
+    "Freeze first Inwards1898 manual subset andindependent exact-context fixtures before engine",
+    "Further visual source checks forintroductionv andselected wind/cloud entries,individual attribution andpage mapping",
+    "Explicit direction,region,compound-pattern andcompeting-horizon conventions",
+    "Legitimate Tyson cloud/smoke/wind chapter andrights access",
+    "Inspect further atmospheric observations andconflicting sayings without edition mixing",
+    "Keep empirical weather validation separate andunclaimed"
+  ],
+  "P2": [
+    "Additional regional/historical profiles andbroader source catalogs",
+    "Optional voluntary source-lore versus independently obtained weather comparisons without forecast certification",
+    "Original labelled creative cloud/wind visuals",
+    "Separately specified synthetic states/protocols only ifuseful",
+    "User annotations before independently evaluated visual recognition",
+    "Physical atmospheric modelling only with independent validation andclear utility"
+  ],
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Guided Water Observation/Reference Scope",
+    "tests": 613,
+    "cli_cases": 656,
+    "symbolic_verifiers": 14
+  },
+  "limitations": "Audit only;no executable32 engine/profile/catalog/renderer/CLI ormeteorological validation.60 methods,54 retained andexcluded25,27,41,42,47,48 preserved. No33 audit orimplementation begun."
+}

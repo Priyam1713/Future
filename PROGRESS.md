@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique32 Aeromancy resource/variation audit — 2026-11-05
+- Began only afterHydromancy closuree02b2ea pushed/synchronized0/0. Exacttwo ranked sources/five variation rows preserved. InventoryCommons original1898 thirdeditionPDF matched publishedSHA1;title,printedvi,95,99,111 rendered/visually checked. Compiler warns ofcontradictions/regional limits;Tyson metadata reused transparently,cloud/smoke chapters stillaccess-gated. No Aeromancy engine,profile,catalog,renderer,weatherAPI orCLI implemented.
+- First candidate:manual source-condition comparison forScottish smoke travel,Bedfordshire hake-cloud axis,qualified cloud combinations andcontrasting mackerel-sky accounts. Wind name,smoke travel andcloud axis are distinct. Preserve regions,attributions andrelative horizons;no actual forecast,universal animal/spirit shapes ornew weather data inference.
+- P1:bounded edition/rights/fixture freeze,regional/direction/compound-condition conventions andfurther original pages/Tyson access. P2:separate regional catalogs/optional independently validated creative visuals. Historical text,scan/art/metadata andmodern editions distinct;no PDF/OCRcorpus bundled. Validation:data/aeromancy-audit-validation.json.60/54/six exclusions unchanged.
+
 ## Technique31 Hydromancy Core v1 closure — 2026-11-05
 - Sourcec3be264,engine4bc5d9f andreport/evidence passes pushed. **Core v1 Ready — Guided Water Observation/Reference Scope**:andrews-spees2005-water-reference-v1;eight water-specific context/procedure/impression cases,explicit five-state evaluator andphysical/subjective/imagined separation. Andrews excerpt attribution distinct fromrankedTyson;Coptic901–1100 comparison remains fragmentary documentary context.
 -613 tests(579+34),656 CLI cases(593+63),44 new independent reference checks andall13 inherited symbolic verifiers pass.278 saved journals/reports andprior profile/engine bytes unchanged(includingrequired223).18 JSON/18 Markdown saved reports replay;registry,dependency,pip anddiff checks pass. Matrix,source/profile/request hashes,rights/replay andacceptance frozen in hydromancy_core_v1.json.
