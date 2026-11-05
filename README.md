@@ -774,6 +774,83 @@ and [clinical scope](data/akashic-clinical.md).
 Run `python -m scripts.verify_akashic`, `python -m scripts.smoke_akashic_core`
 and `python -m unittest tests.test_akashic -q`.
 
+## Aeromancy: regional historical atmospheric-lore comparisons
+
+`python -m future aeromancy data/aeromancy-input.json --format markdown`
+
+`inwards1898-atmospheric-lore-subset-v1` uses the exact inventory Commons scan
+of Richard Inwards's *Weather Lore*, third edition, revised and augmented,
+London: Elliot Stock, 1898. Thirteen cases retain individual/regional
+attributions. Inwards is the compiler; the collection includes differing
+sayings rather than one unified theory. Tyson's atmospheric chapters remain
+access-gated and supply no executable rules here.
+
+```json
+{
+  "schema_version": 1,
+  "profile": "inwards1898-atmospheric-lore-subset-v1",
+  "task": "atmospheric_lore_comparison",
+  "mode": "manual",
+  "origin": "hypothetical",
+  "region": "scotland",
+  "observations": [{
+    "id": "o1", "phenomenon": "smoke",
+    "features": {"smoke_drift_towards": "east"}
+  }]
+}
+```
+
+Cases cover Scottish smoke travel, Wing's continued south wind, the qualified
+Texas south-wind sequence, Bedfordshire hake-cloud axes, the complete Scottish
+fleecy-cloud pattern, mackerel sky with mares-tails, and five separate
+mackerel-sky accounts. Printed source pages and historical horizons accompany
+every case. No actual weather or forecast is established.
+
+Direction fields are independent: `named_wind_direction` and
+`prior_wind_direction` use an explicitly declared
+`wind_direction_convention: "from"`; `smoke_drift_towards` is the direction
+smoke travels; `cloud_axis` is an undirected east-west or north-south axis.
+The engine never converts among them. Cloud motion does not determine axis.
+
+The Texas entry requires dry weather, current light south wind lasting five
+or six days, and prior strong wind from the same direction. The interval is
+the current light-wind duration, **not a delay after the prior strong wind**.
+Use `light_wind_duration_days`, `prior_wind_direction` and
+`prior_wind_strength`. Wing's `wind_continuity: "considerable_time"` remains
+qualitative without a generated numerical threshold.
+
+Fleecy-cloud matching requires `cloud_appearance: "fleecy"`, `cloud_light: true`,
+`cloud_motion: "rapid"`, `relative_cloud_layer: "below"`,
+`upper_cloud_type: "cirro_stratus"`, `upper_cloud_dark: true` and
+`upper_cloud_compact: true`. The mackerel combination requires both
+`mackerel_sky: true` and `mares_tails: true`. False explicitly denies a feature;
+absence/null/unknown does not. Bounded feature alternatives retain conflicts.
+
+Reports distinguish observational matching, regional applicability and
+unestablished empirical validity. An observational match can retrieve a
+historical account while its regional qualification is unknown or mismatched.
+Unknown region never becomes Scotland, Bedfordshire, Texas or Britain.
+Unspecified source origin is not worldwide applicability. Competing mackerel
+sayings remain separate without averaging, priority, confidence or a winner.
+
+Inputs preserve ordered unique IDs, optional increasing sequence, declared
+origin/region/timestamp, raw descriptions, uncertainty and personal associations.
+No text, image, location or present-weather inference occurs. Optional
+`include_reference_catalog: true` produces a source-reference report without
+observations. JSON/Markdown include exact replay and canonical request/profile
+hashes plus the original PDF byte hash. No API, RNG, renderer, LLM or new
+dependency was added. Historical sailing/storm statements are documentary
+folklore and supply no operational navigation or safety guidance.
+
+Run `python -m scripts.verify_aeromancy`,
+`python -m scripts.smoke_aeromancy_core` and
+`python -m unittest tests.test_aeromancy`. Examples:
+[smoke](data/aeromancy-smoke-east.md), [cloud axis](data/aeromancy-hake-ew.md),
+[compound clouds](data/aeromancy-fleecy-full.md),
+[competing sayings](data/aeromancy-mackerel-competing.md),
+[Texas sequence](data/aeromancy-texas.md) and
+[regional mismatch](data/aeromancy-region-mismatch.md).
+
 ## Hydromancy: water-specific observation and reference conditions
 
 `python -m future hydromancy data/hydromancy-input.json --format markdown`

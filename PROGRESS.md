@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique32 manual atmospheric-lore engine — 2026-11-05
+- Sourcea12abed pushed before matcher. Added aeromancy CLI with13 historical source cases,typed compound features,independent windfrom/smoketo/cloudaxis andseparate observational retrieval/regional qualification/empirical validity. Five competing mackerel accounts retain horizons without consensus orforecast. Texas interval is current light-wind duration.
+-38 new tests,53 independent source/condition checks andregistry idempotence pass. Full inherited regression/CLI,14 existing verifiers and336-file prior report/profile preservation sweep run before closure. Exact Unicode,replay andportable hashes;no weatherAPI,renderer,RNG ornew dependency.
+
 ## Technique32 source/profile freeze — 2026-11-05
 - Exact1898 CommonsPDF SHA7d5d68b7 rechecked;title andprintedv,vi,95,99,111 visually inspected. Thirteen source cases frozen in inwards1898-atmospheric-lore-subset-v1 before matcher,with independently authored expectations. Texas wording corrected:five/six days is current dry/light-south-wind duration,notdelay after earlier strongwind. Audit witness retained immutably.
 - Windfrom,smoketo andcloudaxis explicitly independent;NOAA direction convention separate fromhistorical lore. Regional qualification,retrieval andempirical validity remain distinct;five mackerel accounts preserve different horizons without consensus.336 earlier journals/reports captured;Tyson chapters,modern taxonomy andactual weather forecasting unsupported.

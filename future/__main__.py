@@ -253,7 +253,23 @@ def main():
     hydro=sub.add_parser('hydromancy')
     hydro.add_argument('input',help='Manual water-specific source conditions andvoluntary observations JSON')
     hydro.add_argument('--format',choices=['json','markdown'],default='json')
+    aero=sub.add_parser('aeromancy')
+    aero.add_argument('input',help='Manual atmospheric observations andregional historical source conditions JSON')
+    aero.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='aeromancy':
+        import sys
+        from .aeromancy import load_input,read,markdown,rejection
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError) as exc:
+                print(rejection(exc,args.format))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+        finally:registry.close()
+        return
     if args.command=='hydromancy':
         import sys
         from .hydromancy import load_input,read,markdown,rejection
