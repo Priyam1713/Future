@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 33 Western Divinatory Geomancy audit — 2026-11-05
+- Began only after Aeromancy closure e0bf5d1 was pushed with clean worktree and 0/0 synchronization. Original two source ranks and five variation rows preserved. Audit only; no engine, profile, CLI or seeded protocol added.
+- Greer 2009 publisher metadata verified; embedded preview fails DNS. Skinner author metadata reveals 1980/later-edition ISBN conflict. Modern procedural pages remain access gated. Turner 1655 transcription/table and Bennett worked shield inspected; parity, transposition and chart dependencies identified, with explicit original-scan/figure-map/independent-fixture gates.
+- Puer/Puella and house/triplicity differences remain separate. First implementation target: complete manual sixteen-figure/shield arithmetic with independent charts; optional sixteenth, seeded protocol, houses and judgment require explicit source/convention gates. Details, rights, acceptance and P1/P2: `knowledge/geomancy_resource_audit.json`. No Technique 34 audit.
+
 ## Technique 32 Aeromancy Core v1 closure — 2026-11-05
 - Source a12abed, engine 0fd3ab9, six report batches and evidence 7edaa8a pushed. **Core v1 Ready — Historical Atmospheric Lore/Observation Scope**: `inwards1898-atmospheric-lore-subset-v1`; 13 cases, typed compound conditions, independent wind origin/smoke travel/cloud axis, regional qualifications and five competing mackerel accounts. Texas interval describes current light-wind duration; no generated forecast or date.
 - 651 tests (613+38), 728 CLI cases (656+72), 53 new independent checks and all 14 inherited symbolic verifiers pass. All 336 prior journal/report files and protected engine/profile bytes remain unchanged. Saved 21 JSON/21 Markdown replays; registry, dependencies, pip and diff checks pass. Acceptance, matrix, provenance and replay contracts: `knowledge/aeromancy_core_v1.json`.

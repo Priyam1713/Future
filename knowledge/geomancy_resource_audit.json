@@ -1,0 +1,311 @@
+{
+  "version": 1,
+  "technique_id": 33,
+  "name": "Geomancy (Western Divinatory)",
+  "phase": 4,
+  "date": "2026-11-05",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "e0bf5d1",
+  "predecessor_push": "Aeromancy closure pushed; clean worktree and HEAD...origin/main 0/0 verified before any Technique 33 research.",
+  "policy": "Audit only: no engine, CLI, executable figure catalog/profile, fixture suite or seeded protocol implemented. No Technique 34 audit.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    33,
+    "4 · Nature, Objects & Ancient Practices",
+    "Geomancy (Western Divinatory)",
+    "RETAIN — simulate / implement",
+    "Deterministic / symbolic rules",
+    "Arabic ilm al-raml; European shield chart; house chart; 16 figures; horary geomancy",
+    "Generate 16 binary figures and shield/house charts; judge via figure relations",
+    "Four rows of random odd/even marks; no real sand needed",
+    "Distinguish divinatory geomancy from Feng Shui",
+    "Traditional / not scientifically validated",
+    "The Art and Practice of Geomancy",
+    "John Michael Greer",
+    null,
+    "Terrestrial Astrology: Divination by Geomancy",
+    null,
+    null,
+    "5, 18, 37",
+    33
+  ],
+  "ranked_sources": [
+    [
+      33,
+      "Geomancy (Western Divinatory)",
+      1,
+      "John Michael Greer",
+      "The Art and Practice of Geomancy",
+      "Full operational shield/house construction",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      33,
+      "Geomancy (Western Divinatory)",
+      2,
+      "Stephen Skinner",
+      "Terrestrial Astrology: Divination by Geomancy",
+      "Historical and technical reconstruction",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variations": [
+    {
+      "name": "Arabic ilm al-raml",
+      "inventory_row": [
+        33,
+        "Geomancy (Western Divinatory)",
+        "Arabic ilm al-raml",
+        "Terrestrial Astrology: Divination by Geomancy",
+        "The Art and Practice of Geomancy",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Arabic manuscript language, local names and casting conventions require their own source profile; European Latin names do not certify Arabic coverage."
+    },
+    {
+      "name": "European shield chart",
+      "inventory_row": [
+        33,
+        "Geomancy (Western Divinatory)",
+        "European shield chart",
+        "The Art and Practice of Geomancy",
+        "Terrestrial Astrology: Divination by Geomancy",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Highest return: fully sourced four-Mother shield arithmetic and all sixteen figure identities. Fix display orientation and parent indices before implementation."
+    },
+    {
+      "name": "house chart",
+      "inventory_row": [
+        33,
+        "Geomancy (Western Divinatory)",
+        "house chart",
+        "The Art and Practice of Geomancy",
+        "Terrestrial Astrology: Divination by Geomancy",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "House projection must be named independently; sequential and astrological arrangements cannot share an implicit default. Ambiguous historical wording remains gated."
+    },
+    {
+      "name": "16 figures",
+      "inventory_row": [
+        33,
+        "Geomancy (Western Divinatory)",
+        "16 figures",
+        "Terrestrial Astrology: Divination by Geomancy",
+        "The Art and Practice of Geomancy",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Sixteen-name witness found in Turner table; complete line-pattern transcription and Puer/Puella tradition comparison required before executable catalog."
+    },
+    {
+      "name": "horary geomancy",
+      "inventory_row": [
+        33,
+        "Geomancy (Western Divinatory)",
+        "horary geomancy",
+        "Terrestrial Astrology: Divination by Geomancy",
+        "The Art and Practice of Geomancy",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      "status": "Researching — no executable support",
+      "finding": "Figure arithmetic is separate from question assignment, perfection, aspects, dignities and predictive judgment. These need independent source-specific verification."
+    }
+  ],
+  "source_records": "knowledge/geomancy_sources.json",
+  "witnesses": {
+    "greer": {
+      "url": "https://redwheelweiser.com/book/the-art-and-practice-of-geomancy-9781578634316/",
+      "sha256": "d6fa65f1c033770f0f5e105cbc702cc06281859a90430be3a5034acbc0087941",
+      "bytes": 283253,
+      "checked_on": "2026-11-05"
+    },
+    "skinner": {
+      "url": "https://www.sskinner.com/full-list-of-stephen-skinner-books.htm",
+      "sha256": "1d4dd8ef3301a601807bed3ce44be3527cfa0e7ac153165f6df75272621e01bd",
+      "bytes": 10446,
+      "checked_on": "2026-11-05"
+    },
+    "skinner_listing": {
+      "url": "https://www.sskinner.com/books2.htm",
+      "sha256": "330524f35720ed9b8190397db98b220290e8746c164fd11c47af5a13591d4195",
+      "bytes": 307243,
+      "checked_on": "2026-11-05"
+    },
+    "turner": {
+      "url": "https://swh.princeton.edu/~ezb/geomancy/agrippa.html",
+      "sha256": "46a2cfe1ffd3896f7cba100e869ff3a7fa0ad936069840c9b9d07c0384bff73a",
+      "bytes": 62534,
+      "checked_on": "2026-11-05"
+    },
+    "bennett": {
+      "url": "https://swh.princeton.edu/~ezb/geomancy/geostep.html",
+      "sha256": "953bf9e1aaec9ce2a784f9b849498016bf993fca8fe1e8ea51bb3b589946e323",
+      "bytes": 11698,
+      "checked_on": "2026-11-05"
+    },
+    "bennett_variants": {
+      "url": "https://swh.princeton.edu/~ezb/geomancy/figures.html",
+      "sha256": "776b4bfb2e520a779a2ebd8d3b0d8050f8960caa9a3a187eb58114af18c5459f",
+      "bytes": 13643,
+      "checked_on": "2026-11-05"
+    },
+    "tableau": {
+      "url": "https://swh.princeton.edu/~ezb/geomancy/tableau.gif",
+      "sha256": "7a782aa60def7f9ddfc728c78b73b67a5ba449ec9c313c1100b89a682e233ed9",
+      "bytes": 1685,
+      "checked_on": "2026-11-05"
+    },
+    "figure_table": {
+      "url": "https://swh.princeton.edu/~ezb/geomancy/hcafig1.gif",
+      "sha256": "f005fa1052305c50d95f4d4385b6c33873f70210ef6c236611ea8ebfce2ce4b5",
+      "bytes": 9957,
+      "checked_on": "2026-11-05"
+    },
+    "turner_chart": {
+      "url": "https://swh.princeton.edu/~ezb/geomancy/hcafig4.gif",
+      "sha256": "d14560ff9c64811e82a36862bf064d3e5658949986da1d2514db143010c1f8f4",
+      "bytes": 4152,
+      "checked_on": "2026-11-05"
+    }
+  },
+  "source_access": {
+    "rank1": "Metadata verified; publisher preview failed DNS; procedural chapters gated.",
+    "rank2": "Author metadata verified with edition/ISBN conflict; original pages gated.",
+    "supplemental": "Turner 1655 text transcription and table/chart images inspected; obtain original scan, collate table, chart and printed locators before implementation.",
+    "attribution": "Treatise attribution qualified; do not infer authorship from compilation title or transfer disputes about other parts of Fourth Book automatically."
+  },
+  "numerical_investigation": {
+    "status": "Audit findings and proposed contracts only",
+    "representation": "Propose four top-to-bottom dot counts, each 1 or 2. Odd maps to 1, even to 2. Bit representation, if used, must declare 1=single and 0=double; integer bit order cannot be implicit.",
+    "algebra": "Per-line parity addition: 1+1 -> 2; 1+2 -> 1; 2+1 -> 1; 2+2 -> 2. XOR applies to parity bits, not directly to displayed dot counts.",
+    "source_locator": "Turner paragraphs Of these foure Matres, And these 8 Figures, After the same manner",
+    "construction": "Mothers 1–4; Daughter j takes row j of each Mother in Mother order. Positions 9–12 combine (1,2),(3,4),(5,6),(7,8). Witnesses combine (9,10),(11,12); Judge combines (13,14).",
+    "optional_sixteenth": "Bennett documents super-judge = position 1 plus position 15; not attested here as mandatory Turner procedure or verified Greer reconciler.",
+    "display": "Bennett Mothers run right-to-left; preserve logical position separately from screen direction. Turner common house paragraph says left-to-right. Never silently substitute one placement.",
+    "invariants": "Editorial mathematical checks proposed: sixteen possible patterns, 16^4=65536 Mother tuples, transposition involution, commutativity/associativity, self-addition gives all doubles, Judge total-point parity even. These are construction checks, not divinatory validation.",
+    "figure_identity_gate": "Turner table hcafig1 visually inspected. Names: Fortuna major, Fortuna minor, Via, Populus, Acquisitio, Laetitia, Puella, Amissio, Conjunctio, Albus, Puer, Rubeus, Carcer, Tristitia, dragon head, dragon tail. Normalize spellings only with aliases/provenance. Full sixteen-pattern catalog withheld until independent source pass."
+  },
+  "independent_chart_lead": {
+    "url": "https://swh.princeton.edu/~ezb/geomancy/tableau.gif",
+    "sha256": "7a782aa60def7f9ddfc728c78b73b67a5ba449ec9c313c1100b89a682e233ed9",
+    "reading": "Rightmost Mother first; four rows top-to-bottom; 1/2 are displayed dot counts",
+    "mothers": [
+      "2121",
+      "1221",
+      "1121",
+      "2122"
+    ],
+    "daughters": [
+      "2112",
+      "1211",
+      "2222",
+      "1112"
+    ],
+    "nieces": [
+      "1122",
+      "1221",
+      "1121",
+      "1112"
+    ],
+    "witnesses": [
+      "2121",
+      "2211"
+    ],
+    "judge": "2112",
+    "status": "Manually read from displayed diagram; recheck every cell and primary historical chart before freezing independent expected fixtures. Not generated by planned engine; no such engine exists.",
+    "coverage_gap": "Find at least one collated primary historical worked chart and one asymmetric independent modern example; distinguish numerical fixtures from published predictive outcomes."
+  },
+  "tradition_boundaries": {
+    "western": "Not Feng Shui; no Chinese directions/house rules imported.",
+    "arabic": "No generic unified Arabic implementation certified by European witness.",
+    "renaissance": "Turner common construction and alternate astrological projection separate. Apparent duplicated first-house assignment unresolved; do not silently emend.",
+    "modern": "Greer and Skinner procedures await actual pages. Bennett Martin-of-Spain attributes are not interchangeable with Turner or modern tables.",
+    "dignities": "Turner offers competing triplicity/zodiac distributions. No single merged element/planet/dignity table frozen.",
+    "judgment": "Horary question allocation, aspects/perfection, via puncti, index/remainder and prognostic text require separate verified rules. Chart mathematics cannot certify predictions."
+  },
+  "proposed_core": {
+    "priority": "Manual complete sixteen-figure identities and four-Mother shield derivation with source-linked dependency trace; narrow factual name/alias or lexical gloss only where verified.",
+    "manual_inputs": "Exactly four ordered four-line Mothers or sixteen explicitly ordered positive mark counts; distinguish entered counts from entered parity. Reject booleans, mixed modes, missing rows and unknown figure IDs.",
+    "seeded": "Optional after manual core: sixteen independent parity choices WITH replacement. Do not use four cards without replacement or shuffle a 16-figure deck: repeated Mothers must remain possible.",
+    "reuse": "Existing future/card_random.py has frozen SHA256 stream, explicit UTF8 seed and rejection sampling but only deck/orientation domains. Reuse design/helpers only under a separately versioned geomancy domain/protocol with known-answer vectors; do not alter inherited prefixes, domains or seed outputs. No protocol implemented in audit.",
+    "report": "Offline JSON/Markdown: source/profile version/hash, explicit convention, raw question/input/origin, logical positions, figures, parents and parity trace, optional-sixteenth flag, unsupported judgment boundaries and complete replay.",
+    "interpretation": "Direct sourced names/rules; compositional arithmetic labelled editorial; personal association stays user-attributed; unknown/unverified judgments explicit."
+  },
+  "configuration_matrix": {
+    "supported": "Source metadata and bounded audit findings only",
+    "experimental": "Proposed manual shield core; no executable support",
+    "unsupported": [
+      "Complete Greer or Skinner certification",
+      "Unified Arabic/European/Renaissance/modern tradition",
+      "Unverified house projection or dignities",
+      "Empirical predictive/positive-negative judgment",
+      "Feng Shui reuse",
+      "Seeded generation before separate protocol verification"
+    ]
+  },
+  "acceptance_gates": [
+    "Freeze exact edition/witness rights, original scan or legitimate ranked-book pages, stable locators and hashes before engine.",
+    "Independently transcribe all sixteen named patterns, aliases and tradition-specific Puer/Puella mapping before matcher/chart code.",
+    "Author full known-answer shields from inspected sources before implementation; include asymmetric Mothers and repeats, zero/one-parity extremes and each parent dependency.",
+    "Verify all 65536 Mother combinations with a separately formulated reference and Judge parity invariant; names and source examples independently checked.",
+    "Explicit top-bottom and right-left conventions, figure addition, Daughters, Nieces, Witnesses, Judge and separately gated optional sixteenth; no inference from ambiguous house text.",
+    "Manual-only release may proceed when source gates pass; seeded mode requires separate version/domain and independent vectors; experimental judgments cannot block bounded mathematics release.",
+    "Strict validation, Unicode/raw preservation, offline deterministic JSON/Markdown full replay; immutable source/profile/request hashes and matrix.",
+    "Preserve baseline 651 tests, 728 CLI cases, all 15 symbolic verifiers, all prior engines/profiles/RNG and saved report bytes; full regression/CLI/registry/dependency/pip/diff checks before readiness."
+  ],
+  "P1": [
+    "Acquire legitimate Greer procedural pages and exact source-linked examples.",
+    "Resolve Skinner edition/ISBN; inspect authorized original chapters.",
+    "Collate Turner original 1655 scan and chart/figure table; resolve individual transcription ambiguities without silent emendation.",
+    "Freeze complete sixteen-pattern mapping and independent full-chart fixtures before implementation.",
+    "Implement verified manual shield mathematics first, with optional named sixteenth only after source freeze.",
+    "Separate house projections, narrow source glosses and judgment access gates; add separately versioned seeded mode only if useful."
+  ],
+  "P2": [
+    "Independent Arabic-language profiles and historical translations with rights review.",
+    "Additional Renaissance/modern configurations and complete comparison matrices.",
+    "Sourced house/perfection/aspect/dignity and via-puncti rules with independent examples.",
+    "Empirical studies remain separate from arithmetic correctness; no predictive certification inferred.",
+    "Optional original diagram rendering without new UI/framework requirements."
+  ],
+  "rights": "Ranked modern books, translations, historical text, institutional transcription and diagram artwork have separate rights. Original concise factual notes and numerical chart observations only; no books, OCR corpus or images distributed.",
+  "accepted_predecessor": {
+    "status": "Core v1 Ready — Historical Atmospheric Lore/Observation Scope",
+    "tests": 651,
+    "cli_cases": 728,
+    "symbolic_verifiers": 15,
+    "prior_preserved_reports": 336
+  },
+  "inventory": {
+    "methods": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "limitations": "Audit complete; computational source-freeze gates remain open. No Technique 33 implementation or readiness claim. No Technique 34 audit."
+}
