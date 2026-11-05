@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 33 historical source freeze — 2026-11-05
+- Located original 1655 Wellcome copy b20458563; title and printed pp.3,5–8 visually checked against Princeton. All sixteen patterns independently transcribed before engine; Puella 1211/Puer 1121 explicitly belong to the selected Turner table. Original p8 duplicate house wording retained as an excluded ambiguity.
+- Bennett published chart rechecked line by line, plus five independent mathematical fixtures frozen. Hashes, rights and collation: geomancy_source_freeze_v1.json. Greer/Skinner procedural access remains gated; manual fifteen-position shield scope, no house/horary/seeded/super-judge support.
+
 ## Technique 33 Western Divinatory Geomancy audit — 2026-11-05
 - Began only after Aeromancy closure e0bf5d1 was pushed with clean worktree and 0/0 synchronization. Original two source ranks and five variation rows preserved. Audit only; no engine, profile, CLI or seeded protocol added.
 - Greer 2009 publisher metadata verified; embedded preview fails DNS. Skinner author metadata reveals 1980/later-edition ISBN conflict. Modern procedural pages remain access gated. Turner 1655 transcription/table and Bennett worked shield inspected; parity, transposition and chart dependencies identified, with explicit original-scan/figure-map/independent-fixture gates.
