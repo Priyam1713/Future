@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 37 source and independent reference freeze — 2026-11-06
+- Rechecked all24 Opsopaus Alphabet Oracle rows and same-author glyph/Chi identity guide through author-origin indexed text. Fresh direct canonical/www/resource/identity requests failed TLS verification; raw HTML hash remains null. Original concise account/lexical qualifications only; no translated corpus. Olympos attribution and Heinevetter Limyra correction remain author-attributed, not independent epigraphic verification.
+- Twenty-four glyph/order/name/meaning known answers and explicit alias expectations precede executable lookup. Polynomial/binomial numerical references preserve impossible astragalos face5, numeric-label discrepancy and separate tuple/multiset/sum spaces. Single declared manual lot only; no probability, physical draw, seeded or multi-draw procedure.
+
 ## Technique 37 Cleromancy / Lots resource audit — 2026-11-06
 - Began only after Bibliomancy closuref77cf30 was accepted, pushed, clean and synchronized0/0. Three original ranked sources/four variations preserved. Audit only: no37 engine, profile, outcome catalog, CLI or RNG; no38 audit.
 - Author/publisher indexed pages distinguish ranked Homer/Bones56-oracle and216-key systems, CHS historical witnesses, and Mascaro December2026 preorder metadata. Supplementary Opsopaus24-letter blind-draw oracle is strongest smaller manual candidate; not relabeled as the ranked book. Its five-bone example contains impossible face5, and numeric column wording needs verification.
