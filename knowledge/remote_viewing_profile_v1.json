@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "profile": "rv-air1995-five-choice-blind-trial-v1",
+  "technique_id": 43,
+  "source_manifest_sha256": "d694be498417816f7d6ca0b8489b2a70a601bc2cafb32d81a9bf7f9a1832841f",
+  "source_freeze_sha256": "5ae99c3c561a14c7a8c1f0444887f6ba7a700fcdc05c79bbe8ee0c37d6e768bb",
+  "attribution": {
+    "historical": "CRV stage-reference labels and AIR five-choice rank procedure only",
+    "mathematical": "5!=120; exact uniform rank distribution; top-rank1/5 and mean3",
+    "editorial": "All schemas, packet separation, state machine, hashes, clocks, PNG subset, trial ledger and exclusion rules",
+    "synthetic": "Deterministic seeds and procedural fixtures; not empirical or paranormal validation"
+  },
+  "candidate_count": 5,
+  "aliases": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5"
+  ],
+  "stages": [
+    "I",
+    "II",
+    "III",
+    "IV",
+    "V",
+    "VI"
+  ],
+  "canonical": "Sorted-key compact JSON;ensure_ascii=false;allow_nan=false;UTF8;no terminal newline. Digests SHA256. Raw text values unchanged;no Unicode or whitespace normalization.",
+  "commitment_domain": "future.remote-viewing.assignment.v1",
+  "event_domain": "future.remote-viewing.event.v1",
+  "lock_domain": "future.remote-viewing.lock.v1",
+  "report_domain": "future.remote-viewing.report.v1",
+  "plan_fields": [
+    "schema_version",
+    "profile",
+    "profile_sha256",
+    "experiment_id",
+    "trial_ids",
+    "trial_id",
+    "origin",
+    "mode",
+    "tasker",
+    "viewer",
+    "monitor",
+    "judges",
+    "knowledge",
+    "separation",
+    "assignment_policy",
+    "presentation_order",
+    "primary_endpoint",
+    "tie_policy",
+    "stopping_rule",
+    "exclusion_rule",
+    "reuse_policy",
+    "created_at",
+    "pool"
+  ],
+  "pool_fields": [
+    "id",
+    "version",
+    "candidates"
+  ],
+  "candidate_fields": [
+    "id",
+    "path",
+    "sha256",
+    "provenance",
+    "rights"
+  ],
+  "rights_fields": [
+    "holder",
+    "basis",
+    "permission",
+    "attribution"
+  ],
+  "knowledge_fields": [
+    "viewer",
+    "monitor",
+    "judges",
+    "tasker"
+  ],
+  "plan_constants": {
+    "primary_endpoint": "actual_target_rank",
+    "tie_policy": "reject",
+    "stopping_rule": "fixed_trial_ids",
+    "exclusion_rule": "retain_all_attempts",
+    "reuse_policy": [
+      "reject",
+      "declare_dependence"
+    ]
+  },
+  "assignment": {
+    "os_uniform": "Private secrets.token_bytes one-byte draws;reject250..255;accepted byte modulo5;record all draws privately. Nonce secrets.token_hex32. OS-origin is not independently attestable from files.",
+    "simulated_seed": "Only origin simulated. SHA256 UTF8(seed)+ASCII(counter),first byte;reject250..255. Nonce SHA256(UTF8(seed)+ASCII nonce). Public seeds never qualify as concealed human randomization.",
+    "manual": "Explicit target ID, no uniform or chance-qualified designation;private OS nonce. Human means user-declared record origin, not verified human participation."
+  },
+  "asset_policy": "PNG only:signature,CRC,exact IHDR/one IDAT/IEND;8bit RGB,noninterlaced,filter0,correct bounded decoded byte length,no trailing bytes/no ancillary chunks. All5dimensions equal. Reject unsupported metadata-bearing files;no automatic sanitizer or semantic leak guarantee. Transfer only fresh alias.png files and packet.json;never copy source dirs/sidecars.",
+  "limits": [
+    "File-owner can rewrite all history;relative hashes detect changes only against a retained independent anchor.",
+    "Clock timestamps,roles,participant separation and rights are declarations. No independently witnessed status certified.",
+    "Strict packets prevent explicit private-field export,not semantic leakage,collusion or prior knowledge.",
+    "No p-values;no empirically verified independence or ESP ability."
+  ],
+  "states": [
+    "planned",
+    "committed",
+    "viewer_recording",
+    "viewer_locked",
+    "judge_recording",
+    "judge_locked",
+    "revealed",
+    "reported",
+    "aborted",
+    "invalid",
+    "leaked",
+    "excluded",
+    "conflicted"
+  ],
+  "actions": {
+    "commit": {
+      "from": [
+        "planned"
+      ],
+      "to": "committed",
+      "actor": "tasker",
+      "payload": []
+    },
+    "start": {
+      "from": [
+        "committed"
+      ],
+      "to": "viewer_recording",
+      "actor": "viewer",
+      "payload": []
+    },
+    "entry": {
+      "from": [
+        "viewer_recording"
+      ],
+      "to": "viewer_recording",
+      "actor": "viewer_or_monitor",
+      "payload": [
+        "text",
+        "stage",
+        "attachments"
+      ]
+    },
+    "feedback": {
+      "from": [
+        "viewer_recording",
+        "revealed"
+      ],
+      "to": "same",
+      "actor": "tasker",
+      "payload": [
+        "text",
+        "code"
+      ],
+      "note": "Prelock feedback accepted documentary only in training_feedback;blind_evaluation rejects and records attempt."
+    },
+    "lock_viewer": {
+      "from": [
+        "viewer_recording"
+      ],
+      "to": "viewer_locked",
+      "actor": "viewer",
+      "payload": [
+        "digest"
+      ],
+      "note": "Digest over exact ordered entry/feedback event records,including times,actor,text and attachment refs/hashes."
+    },
+    "start_judge": {
+      "from": [
+        "viewer_locked"
+      ],
+      "to": "judge_recording",
+      "actor": "tasker",
+      "payload": []
+    },
+    "rank": {
+      "from": [
+        "judge_recording"
+      ],
+      "to": "judge_recording",
+      "actor": "planned_judge",
+      "payload": [
+        "ranks",
+        "report"
+      ],
+      "note": "Exactly one complete strict ranking per predeclared judge;raw report preserved."
+    },
+    "lock_judge": {
+      "from": [
+        "judge_recording"
+      ],
+      "to": "judge_locked",
+      "actor": "tasker",
+      "payload": [
+        "digest"
+      ],
+      "note": "Every predeclared judge ranks before lock;no post-reveal judge selection."
+    },
+    "reveal": {
+      "from": [
+        "judge_locked"
+      ],
+      "to": "revealed",
+      "actor": "tasker",
+      "payload": [
+        "preimage"
+      ],
+      "note": "Exact committed preimage required;full pool/assets and previous locks revalidated."
+    },
+    "report": {
+      "from": [
+        "revealed"
+      ],
+      "to": "reported",
+      "actor": "tasker",
+      "payload": []
+    },
+    "terminate": {
+      "from": [
+        "planned",
+        "committed",
+        "viewer_recording",
+        "viewer_locked",
+        "judge_recording",
+        "judge_locked",
+        "revealed"
+      ],
+      "to": "payload.status",
+      "actor": "tasker",
+      "payload": [
+        "status",
+        "reason"
+      ],
+      "note": "aborted/invalid/leaked/excluded/conflicted terminal;history retained."
+    }
+  },
+  "state_policy": "Accepted event times strictly increase after plan.created_at. Original strings and rejected attempts retained. Invalid action produces hashed rejected event with attempted payload and reason;state remains unchanged. Replay recomputes failure reason. A rejected command does not imply target was disclosed;any actual exposure must terminate leaked. Terminal state cannot restart.",
+  "commitment_fields": [
+    "domain",
+    "profile",
+    "profile_sha256",
+    "trial_id",
+    "plan_sha256",
+    "pool_sha256",
+    "target_id",
+    "asset_sha256",
+    "selection",
+    "nonce"
+  ],
+  "private_trial_fields": [
+    "schema_version",
+    "visibility",
+    "plan",
+    "plan_sha256",
+    "pool_sha256",
+    "selection",
+    "nonce",
+    "commitment",
+    "events"
+  ],
+  "viewer_packet_fields": [
+    "schema_version",
+    "visibility",
+    "profile",
+    "profile_sha256",
+    "cue",
+    "origin",
+    "instructions",
+    "stages",
+    "template",
+    "commitment"
+  ],
+  "judge_packet_fields": [
+    "schema_version",
+    "visibility",
+    "profile",
+    "profile_sha256",
+    "cue",
+    "origin",
+    "instructions",
+    "judge_id",
+    "transcript",
+    "transcript_lock",
+    "candidates"
+  ],
+  "packet_policy": "Viewer packet contains only fixed neutral instructions and permitted fields;judge packet only locked transcript and all5alias-named PNG bytes/hashes. Neither contains request replay or tasker fields. Explicit optional export writes only allowed files to a previously nonexistent directory.",
+  "requests": {
+    "create": [
+      "plan",
+      "seed",
+      "target_id"
+    ],
+    "apply": [
+      "trial",
+      "action",
+      "actor",
+      "at",
+      "payload"
+    ],
+    "viewer_packet": [
+      "trial"
+    ],
+    "judge_packet": [
+      "trial",
+      "judge_id"
+    ],
+    "report": [
+      "trial"
+    ],
+    "summary": [
+      "trials"
+    ],
+    "validate_packet": [
+      "packet"
+    ]
+  },
+  "report_policy": "Private full report includes original trial for deterministic post-reveal replay,complete attempts,locks,rights and plan. Pre-reveal public report exposes only cue,origin,state,commitment and fixed limitations;no original request or private hashes. Summary is private;requires complete fixed trial_ids ledger;records allstatuses,ranks per judge,no selected best judge. Reuse rejected or explicitly dependent;no inferential p-values. Multi-judge count is one trial.",
+  "matrix": {
+    "supported": [
+      "Five-candidate metadata-free PNG trials;full offline lifecycle",
+      "Separate strict viewer/judge exports",
+      "One or several predeclared judges,each locked separately in common judge lock",
+      "Human-declared manual/OS assignment and simulated fixed seed",
+      "Descriptive complete-ledger summary,strict hashes/clocks/rights/state checks"
+    ],
+    "experimental": [
+      "Historical training-feedback documentation,always ineligible for blind scoring",
+      "Declared dependence;descriptive ranks only"
+    ],
+    "unsupported": [
+      "ESP,hidden-information acquisition,prediction,mental-state certification",
+      "Automatic semantic leak detection or guaranteed participant blinding",
+      "Externally witnessed or tamper-proof storage",
+      "JPEG/EXIF/ancillary PNG,automatic sanitization",
+      "Inferential p-values,posthoc matching/selection",
+      "ERV/ARV/natural/dream runtime protocols"
+    ]
+  }
+}

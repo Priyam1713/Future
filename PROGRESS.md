@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 43 source and protocol freeze — 2026-11-06
+- Reinspected original1986scan and AIR1995five-choice ranking;6stage references and N=NearSite preserved,training feedback separate. Source rights/access gaps unchanged;no source corpus redistributed.
+- Froze rv-air1995-five-choice-blind-trial-v1,exact state/packet/commitment/rights/PNG policy and trust limits before code. Rebuilt1923-file baseline;1919eligible files byte-protected,4explicit interface/history exceptions. Independent fixture pass follows.
+
 ## Technique 43 Remote Viewing resource audit — 2026-11-06
 - Began only after40closure88a2ff3 pushed,clean and synchronized0/0;excluded41/42 skipped. Original3ranks/4variation rows preserved. Audit only,no43runtime/profile/CLI/fixtures andno44audit.
 - Inspected1986manual cover/proprietary notice,all6stage openings and training-versus-blind feedback;later Smith commentary,IRVA variants and McMoneagle2000/2023 access gaps remain separate. AIR final1995 blind5-choice ranking supports procedural research,not ESP validation.
