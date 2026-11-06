@@ -1,0 +1,817 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "index": 0,
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 69.11,
+      "stdout": "",
+      "stderr": "..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\skyfield\\searchlib.py:224: DeprecationWarning: Setting the dtype on a NumPy array has been deprecated in NumPy 2.5.\nInstead of changing the dtype on an array x, create a new array with x.view(new_dtype)\n  y.dtype = int8\n.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\n----------------------------------------------------------------------\nRan 1107 tests in 68.403s\n\nOK\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\n"
+    },
+    {
+      "index": 1,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aeromancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 86.14,
+      "stdout": "72 Aeromancy CLI cases passed;21 JSON/21 Markdown saved replays verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 2,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_akashic_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 35.36,
+      "stdout": "28 Akashic CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 3,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_astrocartography_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 14.66,
+      "stdout": "12 Astrocartography CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 4,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aura_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 17.02,
+      "stdout": "14 Aura CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 5,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_automatic_writing_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 30.59,
+      "stdout": "24 Automatic Writing CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 6,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_bibliomancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 96.44,
+      "stdout": "80 Bibliomancy CLI cases passed;16 JSON/16 Markdown saved replays;10 saved rejection pairs verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 7,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_chinese_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 36.8,
+      "stdout": "15 Chinese CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 8,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_cleromancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 93.39,
+      "stdout": "80 Cleromancy CLI cases passed;16 valid JSON/Markdown saved replays and16 saved rejection pairs verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 9,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_coffee_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 65.25,
+      "stdout": "54 Coffee CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 10,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_dream_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 35.51,
+      "stdout": "30 Dream CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 11,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_face_reading_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 12.59,
+      "stdout": "12 Face Reference CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 12,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_geomancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 62.55,
+      "stdout": "55 Geomancy CLI cases passed; 13 JSON/13 Markdown saved replays verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 13,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_graphology_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 16.42,
+      "stdout": "14 Graphology CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 14,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_horary"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 7.2,
+      "stdout": "5 Horary CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 15,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_hydromancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 69.38,
+      "stdout": "63 Hydromancy CLI cases passed;18 JSON/18 Markdown saved replays verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 16,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iching_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 32.7,
+      "stdout": "30 I Ching CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 17,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iridology_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 16.81,
+      "stdout": "14 Iridology CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 18,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_lithomancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 70.2,
+      "stdout": "64 Lithomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 19,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mirror_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 30.8,
+      "stdout": "28 Mirror CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 20,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_moleosophy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 14.28,
+      "stdout": "12 Moleosophy CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 21,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mundane_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 12.73,
+      "stdout": "12 Mundane CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 22,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_numerology_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.97,
+      "stdout": "4 Numerology CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 23,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_oracle_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 22.84,
+      "stdout": "20 Oracle CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 24,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_osteomancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 72.45,
+      "stdout": "64 Osteomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 25,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_palmistry_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 11.0,
+      "stdout": "10 Palmistry CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 26,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pendulum_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 32.38,
+      "stdout": "28 Pendulum CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 27,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_phrenology_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 13.28,
+      "stdout": "12 Phrenology CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 28,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_podomancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 13.53,
+      "stdout": "12 Podomancy CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 29,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pyromancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 66.44,
+      "stdout": "60 Pyromancy CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 30,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_runes_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 26.7,
+      "stdout": "24 Rune CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 31,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_scrying_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 31.11,
+      "stdout": "28 Scrying CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 32,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tarot_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 24.95,
+      "stdout": "22 Tarot CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 33,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tasseography_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 36.11,
+      "stdout": "34 Tasseography CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 34,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_vedic_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 14.39,
+      "stdout": "12 Vedic CLI cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 35,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_western_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 25.59,
+      "stdout": "23 CLI smoke cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 36,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tarot"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.19,
+      "stdout": "30 Tarot source/layout/independent protocol checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 37,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_oracle"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.22,
+      "stdout": "49 Oracle verification checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 38,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_iching"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.75,
+      "stdout": "8759 I Ching verification checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 39,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_runes"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.44,
+      "stdout": "84 rune reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 40,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pendulum"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.19,
+      "stdout": "207 Pendulum reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 41,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_scrying"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5,
+      "stdout": "23 Scrying reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 42,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_mirror"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.42,
+      "stdout": "22 Mirror reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 43,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_dream"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.22,
+      "stdout": "26 Dream reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 44,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_automatic_writing"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.7,
+      "stdout": "27 Automatic Writing reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 45,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_akashic"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.33,
+      "stdout": "47 Akashic independent reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 46,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tasseography"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.58,
+      "stdout": "68 Tasseography independent reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 47,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_coffee"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.72,
+      "stdout": "65 Coffee independent source/condition checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 48,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pyromancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.67,
+      "stdout": "59 Pyromancy independent source/condition checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 49,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_hydromancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.31,
+      "stdout": "44 Hydromancy independent reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 50,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_aeromancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.58,
+      "stdout": "53 Aeromancy independent reference checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 51,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_geomancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.53,
+      "stdout": "65536 independent Geomancy charts, 256 addition pairs, 4096 associative triples, 16 identities and 6 fixtures passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 52,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_lithomancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.44,
+      "stdout": "12 Lithomancy source roles; 1225 independent distance pairs;25 grid rankings;4 authored cases;10 transforms;9 viewpoint checks;2 unknown cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 53,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_osteomancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.44,
+      "stdout": "13 Osteomancy source records;5 named relationships;169 ordered pair checks;26 omitted-outcome checks;52 original-evidence checks passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 54,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_bibliomancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.72,
+      "stdout": "141 Bibliomancy selections;85 independently parsed verses;423 context cases;216 historical indices;100 literal dice sums passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 55,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_cleromancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.78,
+      "stdout": "24 Cleromancy source accounts;98 alias keys;9016 numerical research tuples;source discrepancies and exact replay passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 56,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_augury"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.02,
+      "stdout": "14 Augury source records;864 finite observations;4320 condition checks;4 known answers;5 uncertain-field and1 structured conflict cases passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 57,
+      "command": [
+        "python",
+        "-m",
+        "scripts.audit_dependencies"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.03,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 58,
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.38,
+      "stdout": "No broken requirements found.\n",
+      "stderr": ""
+    },
+    {
+      "index": 59,
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.74,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'data/augury-duplicate-id.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-duplicate-id.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-invalid-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-invalid-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-unknown-reference.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-unknown-reference.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-wrong-version.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-wrong-version.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-360-degrees.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-360-degrees.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-alternates.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-alternates.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-bad-uncertainty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-bad-uncertainty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-boolean.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-boolean.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-catalog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-catalog.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-contradictory.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-contradictory.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-duplicate-json.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-duplicate-json.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-foreign-catalog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-foreign-catalog.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-invalid-role.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-invalid-role.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-missing-bearing.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-missing-bearing.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-multiple-turn.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-multiple-turn.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-negative.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-negative.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-nonfinite.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-nonfinite.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-precision.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-precision.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-prediction.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-prediction.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-reference.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-reference.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-string.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-string.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-two-heading.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-wrong-hash.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-wrong-hash.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-wrong-profile.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-wrong-profile.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-wrong-version.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-wrong-version.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-duplicate-id.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-duplicate-id.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-foreign-catalog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-foreign-catalog.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-feature.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-feature.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-link.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-link.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-organ.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-organ.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-prediction.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-prediction.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-unknown-reference.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-unknown-reference.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-hash.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-hash.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-profile.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-profile.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-version.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-version.md', LF will be replaced by CRLF the next time Git touches it\n"
+    },
+    {
+      "index": 60,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_augury_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 81.59,
+      "stdout": "80 Augury CLI cases passed;20 valid JSON/Markdown saved replays and10 saved rejection pairs verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 61,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_haruspicy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 84.83,
+      "stdout": "84 Haruspicy CLI cases passed;20 valid JSON/Markdown saved replays and12 saved rejection pairs verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 62,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_haruspicy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.38,
+      "stdout": "9 Haruspicy source records;8100 finite observations;32400 condition checks;14 known answers passed\n",
+      "stderr": ""
+    },
+    {
+      "index": 63,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_feng_shui_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 96.52,
+      "stdout": "104 Feng Shui CLI cases passed;24 accepted JSON/Markdown replay pairs and16 rejection pairs verified\n",
+      "stderr": ""
+    },
+    {
+      "index": 64,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_feng_shui"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.44,
+      "stdout": "24 source rows;3600 ID/name/Chinese headings;3600 uncertainty ranges;144 boundary/neighbor/central checks;9 extra ranges;3 anchors passed\n",
+      "stderr": ""
+    }
+  ],
+  "baseline_commit": "3a3979d",
+  "pre_engine_manifest_files": 1785,
+  "protected_files": 1780,
+  "changed_protected_files": [],
+  "prior_protected_files": 1665,
+  "earlier_protected_files": 1556,
+  "required_prior_files": 1441,
+  "intentional_interface_edits": [
+    "PROGRESS.md",
+    "knowledge/gaps.json",
+    "future/__main__.py",
+    "README.md"
+  ],
+  "intentional_source_append": "knowledge/feng_shui_sources.json: exact original14 records preserved as ordered prefix",
+  "original14_source_records_unchanged": true,
+  "registry_idempotent": true,
+  "source_registry_records": 436,
+  "legacy_metadata_skipped": [
+    "chinese-inventory-2-v1"
+  ],
+  "catalog_integrity": {
+    "verified": true,
+    "profile_sha256": "ebdebdce355ed61aa2a1f14e6993f928e0baf0302ae21e79947461fc4e85323b",
+    "catalog_sha256": "8a945680e63ba327f4f2ccb82ca2958e63747c56a57d4f3ab717ebee07a2a143",
+    "source_manifest_sha256": "f11980480273579c5b03439685f7e7e463a6a450100edfbe6a0c091672ecdfc4",
+    "rows": 24
+  },
+  "numeric_evidence": "data/feng-shui-verification.json"
+}
