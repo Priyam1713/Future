@@ -294,7 +294,25 @@ def main():
     ip.add_argument('input',help='Source-specific heuristic or exact binary forecast evaluation request JSON')
     ip.add_argument('--asset-root',default=str(ROOT))
     ip.add_argument('--format',choices=['json','markdown'],default='json')
+    dr=sub.add_parser('deja-reve')
+    dr.add_argument('input',help='Private structured annotation,source reference or finite prior-dream provenance request JSON')
+    dr.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='deja-reve':
+        import sys
+        from .scrying import load_input
+        from .deja_reve import read,markdown
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError,TypeError,KeyError):
+                result=dict(status='rejected',error='Deja Reve request rejected',result=None)
+                print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+        finally:registry.close()
+        return
     if args.command=='intuitive-prediction':
         import sys
         from .scrying import load_input

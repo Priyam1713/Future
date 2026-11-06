@@ -1022,3 +1022,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #46 independent fixture freeze
 - Froze all16planned families,648structured category expectations,11timezone/interval constants,source documentary labels/counts and original synthetic record/amendment hashes before production. Later evidence,missing original timing and external-event order have separate expectations.
+
+## 2026-11-07 — #46 deterministic engine
+- Implemented strict human annotation,source-case reference,immutable originals/amendments,finite exact-ID candidate manifests and complete manual comparison ledger with independent experience/report/event timing. No narrative inference,diagnosis,prediction or public export.
+- 41new tests and all16independent fixture families pass locally,including648category rows and11fixed chronology cases;full inherited acceptance remains pending.
