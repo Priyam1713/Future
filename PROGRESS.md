@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 45 independent fixture freeze — 2026-11-07
+-15families,all9cue pairs/4discriminating,source-worked a/b,b/c,early-stop trace,42rational loss cases,5/16Brier and121/400baseline improvement independently authored before production. Plan/original hashes frozen.
+- Added explicit event dependency-group field to pre-engine schema;two immutable algorithm IDs and source/editorial boundaries retained. Synthetic evidence original and rights-cleared.
+
 ## Technique 45 source and profile freeze — 2026-11-07
 - Reverified1996TTB/2002recognition,2009expertise and scoring witnesses;separate versioned algorithms,editorial abstention and positive binary loss explicit. Full book/1993chapter gaps unchanged. Exact schema,chronology,version selection,calibration and held-out baseline frozen before production.
 - Captured2249tracked baseline;2245protected,4explicit interface/history exceptions. No46audit.

@@ -1,0 +1,694 @@
+{
+  "version": 1,
+  "technique_id": 45,
+  "authorship": "Independent pre-engine fixtures;no production imports or outputs used.",
+  "profile_sha256": "9e744dcb6fcd6f8e4ce854c76cafadeae0d9d4e2fa24e77786646c6cf04bc113",
+  "families": [
+    "recognition-choice",
+    "source-worked-ttb",
+    "search-stop",
+    "missing-cues",
+    "ties-abstention",
+    "invalid-direction",
+    "probability-boundaries",
+    "exact-brier",
+    "unresolved-denominator",
+    "forecast-versions",
+    "calibration-small-N",
+    "baseline-heldout",
+    "confidence-performance",
+    "nonstationary-domain",
+    "replay-rights-separation"
+  ],
+  "decision": {
+    "decision_id": "d1",
+    "profile": "goldstein-gigerenzer2002-recognition-subset-v1",
+    "alternatives": [
+      "A",
+      "B"
+    ],
+    "criterion": "Toy magnitude",
+    "criterion_direction": "higher",
+    "domain": "toy",
+    "observed_at": "2026-11-10T00:00:00Z",
+    "recognition": [
+      "recognized",
+      "unrecognized"
+    ],
+    "ecological_direction": "positive",
+    "direction_provenance": "Declared toy association",
+    "training_period": "Synthetic earlier period",
+    "cues": [],
+    "tie_policy": "abstain",
+    "context": {
+      "regularity": "unknown",
+      "cue_validity": "unknown",
+      "feedback_quality": "unknown",
+      "feedback_latency": "unknown",
+      "practice_history": "Synthetic fixture only",
+      "environment_changed": false
+    },
+    "confidence": "very confident",
+    "notes": "Raw é  narrative\n"
+  },
+  "plan": {
+    "study_id": "s1",
+    "created_at": "2026-11-09T00:00:00Z",
+    "domain": "toy",
+    "horizon": "one-day",
+    "event_definition": "Toy binary event definition v1",
+    "events": [
+      {
+        "event_id": "e1",
+        "dependency_group": "g1",
+        "question": "Toy outcome 1?",
+        "cutoff": "2026-11-10T23:00:00Z",
+        "window_start": "2026-11-11T00:00:00Z",
+        "window_end": "2026-11-12T00:00:00Z"
+      },
+      {
+        "event_id": "e2",
+        "dependency_group": "g2",
+        "question": "Toy outcome 2?",
+        "cutoff": "2026-11-10T23:00:00Z",
+        "window_start": "2026-11-11T00:00:00Z",
+        "window_end": "2026-11-12T00:00:00Z"
+      },
+      {
+        "event_id": "e3",
+        "dependency_group": "g3",
+        "question": "Toy outcome 3?",
+        "cutoff": "2026-11-10T23:00:00Z",
+        "window_start": "2026-11-11T00:00:00Z",
+        "window_end": "2026-11-12T00:00:00Z"
+      },
+      {
+        "event_id": "e4",
+        "dependency_group": "g4",
+        "question": "Toy outcome 4?",
+        "cutoff": "2026-11-10T23:00:00Z",
+        "window_start": "2026-11-11T00:00:00Z",
+        "window_end": "2026-11-12T00:00:00Z"
+      }
+    ],
+    "slots": [
+      {
+        "forecast_id": "f1",
+        "forecaster": "person1",
+        "event_id": "e1"
+      },
+      {
+        "forecast_id": "f2",
+        "forecaster": "person1",
+        "event_id": "e2"
+      },
+      {
+        "forecast_id": "f3",
+        "forecaster": "person1",
+        "event_id": "e3"
+      },
+      {
+        "forecast_id": "f4",
+        "forecaster": "person1",
+        "event_id": "e4"
+      }
+    ],
+    "baseline": null,
+    "privacy_consent": true
+  },
+  "forecasts": [
+    {
+      "forecast_id": "f1",
+      "at": "2026-11-10T00:00:00Z",
+      "probability": "0.8",
+      "outcome_known": false,
+      "confidence": "high",
+      "decision_id": null,
+      "notes": "Original synthetic forecast 1",
+      "parent_sha256": null,
+      "reason": "Original submission"
+    },
+    {
+      "forecast_id": "f2",
+      "at": "2026-11-10T00:00:00Z",
+      "probability": "0.2",
+      "outcome_known": false,
+      "confidence": "high",
+      "decision_id": null,
+      "notes": "Original synthetic forecast 2",
+      "parent_sha256": null,
+      "reason": "Original submission"
+    },
+    {
+      "forecast_id": "f3",
+      "at": "2026-11-10T00:00:00Z",
+      "probability": "0.6",
+      "outcome_known": false,
+      "confidence": "high",
+      "decision_id": null,
+      "notes": "Original synthetic forecast 3",
+      "parent_sha256": null,
+      "reason": "Original submission"
+    },
+    {
+      "forecast_id": "f4",
+      "at": "2026-11-10T00:00:00Z",
+      "probability": "0.1",
+      "outcome_known": false,
+      "confidence": "high",
+      "decision_id": null,
+      "notes": "Original synthetic forecast 4",
+      "parent_sha256": null,
+      "reason": "Original submission"
+    }
+  ],
+  "resolutions": [
+    {
+      "event_id": "e1",
+      "at": "2026-11-12T00:00:00Z",
+      "status": "resolved",
+      "outcome": 1,
+      "occurrence_at": "2026-11-11T00:00:00Z",
+      "publication_at": "2026-11-11T01:00:00Z",
+      "discovery_at": "2026-11-11T02:00:00Z",
+      "evidence": {
+        "path": "data/intuitive-prediction-assets/evidence.txt",
+        "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+        "holder": "Future synthetic fixture authors",
+        "permission": "Original synthetic text;redistribution permitted",
+        "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+      }
+    },
+    {
+      "event_id": "e2",
+      "at": "2026-11-12T00:00:00Z",
+      "status": "resolved",
+      "outcome": 0,
+      "occurrence_at": "2026-11-11T00:00:00Z",
+      "publication_at": "2026-11-11T01:00:00Z",
+      "discovery_at": "2026-11-11T02:00:00Z",
+      "evidence": {
+        "path": "data/intuitive-prediction-assets/evidence.txt",
+        "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+        "holder": "Future synthetic fixture authors",
+        "permission": "Original synthetic text;redistribution permitted",
+        "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+      }
+    },
+    {
+      "event_id": "e3",
+      "at": "2026-11-12T00:00:00Z",
+      "status": "resolved",
+      "outcome": 0,
+      "occurrence_at": "2026-11-11T00:00:00Z",
+      "publication_at": "2026-11-11T01:00:00Z",
+      "discovery_at": "2026-11-11T02:00:00Z",
+      "evidence": {
+        "path": "data/intuitive-prediction-assets/evidence.txt",
+        "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+        "holder": "Future synthetic fixture authors",
+        "permission": "Original synthetic text;redistribution permitted",
+        "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+      }
+    },
+    {
+      "event_id": "e4",
+      "at": "2026-11-12T00:00:00Z",
+      "status": "resolved",
+      "outcome": 1,
+      "occurrence_at": "2026-11-11T00:00:00Z",
+      "publication_at": "2026-11-11T01:00:00Z",
+      "discovery_at": "2026-11-11T02:00:00Z",
+      "evidence": {
+        "path": "data/intuitive-prediction-assets/evidence.txt",
+        "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+        "holder": "Future synthetic fixture authors",
+        "permission": "Original synthetic text;redistribution permitted",
+        "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+      }
+    }
+  ],
+  "evidence": {
+    "path": "data/intuitive-prediction-assets/evidence.txt",
+    "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+    "holder": "Future synthetic fixture authors",
+    "permission": "Original synthetic text;redistribution permitted",
+    "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+  },
+  "cue_pairs": [
+    [
+      "positive",
+      "positive",
+      null
+    ],
+    [
+      "positive",
+      "negative",
+      "A"
+    ],
+    [
+      "positive",
+      "unknown",
+      "A"
+    ],
+    [
+      "negative",
+      "positive",
+      "B"
+    ],
+    [
+      "negative",
+      "negative",
+      null
+    ],
+    [
+      "negative",
+      "unknown",
+      null
+    ],
+    [
+      "unknown",
+      "positive",
+      "B"
+    ],
+    [
+      "unknown",
+      "negative",
+      null
+    ],
+    [
+      "unknown",
+      "unknown",
+      null
+    ]
+  ],
+  "source_worked": [
+    {
+      "id": "a-b",
+      "locator": "1996p653Figure1andSteps",
+      "alternatives": [
+        "a",
+        "b"
+      ],
+      "cues": [
+        {
+          "cue_id": "c1",
+          "values": [
+            "positive",
+            "negative"
+          ],
+          "validity": "0.8",
+          "rank": 1,
+          "provenance": "Frozen toy cue order,not empirical accuracy",
+          "orientation": "positive",
+          "training_period": "Synthetic prior period"
+        }
+      ],
+      "selected": "a",
+      "inspected": [
+        "c1"
+      ]
+    },
+    {
+      "id": "b-c",
+      "locator": "1996p653Figure1andSteps",
+      "alternatives": [
+        "b",
+        "c"
+      ],
+      "cues": [
+        {
+          "cue_id": "c1",
+          "values": [
+            "negative",
+            "unknown"
+          ],
+          "validity": "0.8",
+          "rank": 1,
+          "provenance": "Frozen toy cue order,not empirical accuracy",
+          "orientation": "positive",
+          "training_period": "Synthetic prior period"
+        },
+        {
+          "cue_id": "c2",
+          "values": [
+            "positive",
+            "negative"
+          ],
+          "validity": "0.7",
+          "rank": 2,
+          "provenance": "Frozen toy cue order,not empirical accuracy",
+          "orientation": "positive",
+          "training_period": "Synthetic prior period"
+        }
+      ],
+      "selected": "b",
+      "inspected": [
+        "c1",
+        "c2"
+      ]
+    }
+  ],
+  "search_stop": {
+    "cues": [
+      {
+        "cue_id": "c1",
+        "values": [
+          "positive",
+          "positive"
+        ],
+        "validity": "0.9",
+        "rank": 1,
+        "provenance": "Frozen toy cue order,not empirical accuracy",
+        "orientation": "positive",
+        "training_period": "Synthetic prior period"
+      },
+      {
+        "cue_id": "c2",
+        "values": [
+          "negative",
+          "positive"
+        ],
+        "validity": "0.8",
+        "rank": 2,
+        "provenance": "Frozen toy cue order,not empirical accuracy",
+        "orientation": "positive",
+        "training_period": "Synthetic prior period"
+      },
+      {
+        "cue_id": "c3",
+        "values": [
+          "positive",
+          "negative"
+        ],
+        "validity": "0.7",
+        "rank": 3,
+        "provenance": "Frozen toy cue order,not empirical accuracy",
+        "orientation": "positive",
+        "training_period": "Synthetic prior period"
+      }
+    ],
+    "selected": "B",
+    "inspected": [
+      "c1",
+      "c2"
+    ],
+    "not_inspected": [
+      "c3"
+    ]
+  },
+  "brier": {
+    "probabilities": [
+      "0.8",
+      "0.2",
+      "0.6",
+      "0.1"
+    ],
+    "outcomes": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "losses": [
+      "1/25",
+      "1/25",
+      "9/25",
+      "81/100"
+    ],
+    "sum": "5/4",
+    "mean": "5/16",
+    "two_category_mean": "5/8"
+  },
+  "rational_grid": [
+    {
+      "probability": "0.0",
+      "outcome": 0,
+      "loss": "0"
+    },
+    {
+      "probability": "0.0",
+      "outcome": 1,
+      "loss": "1"
+    },
+    {
+      "probability": "0.05",
+      "outcome": 0,
+      "loss": "1/400"
+    },
+    {
+      "probability": "0.05",
+      "outcome": 1,
+      "loss": "361/400"
+    },
+    {
+      "probability": "0.1",
+      "outcome": 0,
+      "loss": "1/100"
+    },
+    {
+      "probability": "0.1",
+      "outcome": 1,
+      "loss": "81/100"
+    },
+    {
+      "probability": "0.15",
+      "outcome": 0,
+      "loss": "9/400"
+    },
+    {
+      "probability": "0.15",
+      "outcome": 1,
+      "loss": "289/400"
+    },
+    {
+      "probability": "0.2",
+      "outcome": 0,
+      "loss": "1/25"
+    },
+    {
+      "probability": "0.2",
+      "outcome": 1,
+      "loss": "16/25"
+    },
+    {
+      "probability": "0.25",
+      "outcome": 0,
+      "loss": "1/16"
+    },
+    {
+      "probability": "0.25",
+      "outcome": 1,
+      "loss": "9/16"
+    },
+    {
+      "probability": "0.3",
+      "outcome": 0,
+      "loss": "9/100"
+    },
+    {
+      "probability": "0.3",
+      "outcome": 1,
+      "loss": "49/100"
+    },
+    {
+      "probability": "0.35",
+      "outcome": 0,
+      "loss": "49/400"
+    },
+    {
+      "probability": "0.35",
+      "outcome": 1,
+      "loss": "169/400"
+    },
+    {
+      "probability": "0.4",
+      "outcome": 0,
+      "loss": "4/25"
+    },
+    {
+      "probability": "0.4",
+      "outcome": 1,
+      "loss": "9/25"
+    },
+    {
+      "probability": "0.45",
+      "outcome": 0,
+      "loss": "81/400"
+    },
+    {
+      "probability": "0.45",
+      "outcome": 1,
+      "loss": "121/400"
+    },
+    {
+      "probability": "0.5",
+      "outcome": 0,
+      "loss": "1/4"
+    },
+    {
+      "probability": "0.5",
+      "outcome": 1,
+      "loss": "1/4"
+    },
+    {
+      "probability": "0.55",
+      "outcome": 0,
+      "loss": "121/400"
+    },
+    {
+      "probability": "0.55",
+      "outcome": 1,
+      "loss": "81/400"
+    },
+    {
+      "probability": "0.6",
+      "outcome": 0,
+      "loss": "9/25"
+    },
+    {
+      "probability": "0.6",
+      "outcome": 1,
+      "loss": "4/25"
+    },
+    {
+      "probability": "0.65",
+      "outcome": 0,
+      "loss": "169/400"
+    },
+    {
+      "probability": "0.65",
+      "outcome": 1,
+      "loss": "49/400"
+    },
+    {
+      "probability": "0.7",
+      "outcome": 0,
+      "loss": "49/100"
+    },
+    {
+      "probability": "0.7",
+      "outcome": 1,
+      "loss": "9/100"
+    },
+    {
+      "probability": "0.75",
+      "outcome": 0,
+      "loss": "9/16"
+    },
+    {
+      "probability": "0.75",
+      "outcome": 1,
+      "loss": "1/16"
+    },
+    {
+      "probability": "0.8",
+      "outcome": 0,
+      "loss": "16/25"
+    },
+    {
+      "probability": "0.8",
+      "outcome": 1,
+      "loss": "1/25"
+    },
+    {
+      "probability": "0.85",
+      "outcome": 0,
+      "loss": "289/400"
+    },
+    {
+      "probability": "0.85",
+      "outcome": 1,
+      "loss": "9/400"
+    },
+    {
+      "probability": "0.9",
+      "outcome": 0,
+      "loss": "81/100"
+    },
+    {
+      "probability": "0.9",
+      "outcome": 1,
+      "loss": "1/100"
+    },
+    {
+      "probability": "0.95",
+      "outcome": 0,
+      "loss": "361/400"
+    },
+    {
+      "probability": "0.95",
+      "outcome": 1,
+      "loss": "1/400"
+    },
+    {
+      "probability": "1.0",
+      "outcome": 0,
+      "loss": "1"
+    },
+    {
+      "probability": "1.0",
+      "outcome": 1,
+      "loss": "0"
+    }
+  ],
+  "calibration": {
+    "probabilities": [
+      "0.8",
+      "0.8"
+    ],
+    "outcomes": [
+      1,
+      0
+    ],
+    "bin": 8,
+    "n": 2,
+    "mean": "4/5",
+    "frequency": "1/2",
+    "larger_n": 20,
+    "larger_events": 10
+  },
+  "baseline": {
+    "probability": "0.25",
+    "test_outcomes": [
+      0,
+      1
+    ],
+    "candidate": [
+      "0.1",
+      "0.9"
+    ],
+    "baseline_mean": "5/16",
+    "candidate_mean": "1/100",
+    "improvement": "121/400"
+  },
+  "version_policy": {
+    "cutoff": "inclusive",
+    "occurrence": "strictly_after_forecast",
+    "selection": "last eligible by at,append sequence",
+    "late_amendment": "retained/excluded;eligible original retained",
+    "unknown_time": "unscored"
+  },
+  "chronology_cases": [
+    {
+      "offset_seconds": -1,
+      "eligible": true
+    },
+    {
+      "offset_seconds": 0,
+      "eligible": false
+    },
+    {
+      "offset_seconds": 1,
+      "eligible": false
+    }
+  ],
+  "expected_plan_sha256": "4ad1637a0932934381a93829e5b78a354f2dd059d80387833b3f987b937fc147",
+  "expected_original_sha256": [
+    "b3eaece81c203407e55aa8dc78719f928ea0c01c2371966d1113b0abae09f08e",
+    "b43f202218fb9f2e21ce224ec97f9992144156dfa0eafc7d01c321c336e4133f",
+    "2be0b7b058f0a5f824bf75dbb0a0bb7f7ff4d5041d298a9e6bd82a7eb05413f2",
+    "d5129ad9ac918aee572ff9efcf4b50b66911c42e199a1e07edd35ec3f67526ab"
+  ],
+  "rights": "All text and toy data originally authored;source worked cases factual rule summaries only;no source corpus or research matrix."
+}
