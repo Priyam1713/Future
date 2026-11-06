@@ -1,0 +1,200 @@
+{
+  "passed": true,
+  "complete": true,
+  "tests": 1462,
+  "inherited_tests": 1397,
+  "new_tests": 65,
+  "cli_cases": 2029,
+  "inherited_cli_cases": 1867,
+  "new_cli_cases": 162,
+  "independent_verifiers": 28,
+  "protected_files": 2661,
+  "changed_protected_files": [],
+  "allowed_existing_edits": [
+    "PROGRESS.md",
+    "README.md",
+    "future/__main__.py",
+    "knowledge/gaps.json"
+  ],
+  "registry": {
+    "references_checked_twice": 479,
+    "unique": 324,
+    "skipped": [
+      "chinese-inventory-2-v1"
+    ]
+  },
+  "strict_json_files": 1934,
+  "historical_invalid_json_rejections": [
+    "data/feng-shui-duplicate-json-input.json",
+    "data/feng-shui-nonfinite-input.json"
+  ],
+  "taxonomy": {
+    "total": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "other59gap_entries_unchanged": true,
+  "verification": {
+    "passed": true,
+    "numerical_checks_passed": true,
+    "profile_sha256": "ed2490bf3ddc5861b3a406e2ba8aa93b3f2b2fe33e0b7917371e5c26875e7fdb",
+    "fixture_sha256": "dc8efef9f0888a7e144f48f234fb4895c6b069d301142d3daead1f1a3fc5fd9f",
+    "independent_oracle_commit": "1d5ed6a",
+    "cells_checked": 4200,
+    "sentinel_predictions": 672,
+    "families": [
+      {
+        "id": "constant",
+        "passed": true,
+        "checks": 28
+      },
+      {
+        "id": "seasonal-naive",
+        "passed": true,
+        "checks": 6
+      },
+      {
+        "id": "trend",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "horizon-indexing",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "training-test-isolation",
+        "passed": true,
+        "checks": 672
+      },
+      {
+        "id": "future-covariates",
+        "passed": true,
+        "checks": 1
+      },
+      {
+        "id": "missing-observations",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "irregular-timestamps",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "zero-denominators",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "mase-scale",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "fold-boundaries",
+        "passed": true,
+        "checks": 4200
+      },
+      {
+        "id": "exact-replay",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "deterministic-metrics",
+        "passed": true,
+        "checks": 7
+      },
+      {
+        "id": "interval-ordering",
+        "passed": true,
+        "checks": 4
+      },
+      {
+        "id": "quantile-monotonicity",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "dataset-rights-hashes",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "multiple-series",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "baseline-comparisons",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "structural-break",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "resource-benchmarks",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "unsupported-configurations",
+        "passed": true,
+        "checks": 5
+      }
+    ],
+    "selected_reference": "drift",
+    "source_vintage_certified": false,
+    "method": "Pre-engine rational prediction commitments,independent geometric SES oracle,manual constants and untouched input prefixes;no expected output derived from production."
+  },
+  "cli_replay": {
+    "passed": true,
+    "count": 162,
+    "accepted_pairs": 30,
+    "rejected_pairs": 49,
+    "exact_replay": true
+  },
+  "checkout_replay": {
+    "passed": true,
+    "checks": [
+      {
+        "autocrlf": "true",
+        "file": "future/ai_predictive_modeling.py",
+        "sha256": "b20c30fdfde79e37413bbaae9544ee6ef69cd2765a7ef1ec68a53d0ad765b014",
+        "passed": true
+      },
+      {
+        "autocrlf": "true",
+        "file": "scripts/ai_predictive_modeling_oracle.py",
+        "sha256": "2d484658d3acca115702a2687780af843af32b0e55a12d5b52332a2324ffeca9",
+        "passed": true
+      },
+      {
+        "autocrlf": "false",
+        "file": "future/ai_predictive_modeling.py",
+        "sha256": "b20c30fdfde79e37413bbaae9544ee6ef69cd2765a7ef1ec68a53d0ad765b014",
+        "passed": true
+      },
+      {
+        "autocrlf": "false",
+        "file": "scripts/ai_predictive_modeling_oracle.py",
+        "sha256": "2d484658d3acca115702a2687780af843af32b0e55a12d5b52332a2324ffeca9",
+        "passed": true
+      }
+    ],
+    "scope": "Only two new49source files have explicit EOL attributes;no earlier files,profile,oracle fixture,calculation or report hashes changed."
+  }
+}

@@ -1,0 +1,1980 @@
+{
+  "passed": true,
+  "complete": true,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "returncode": 0,
+      "seconds": 82.89,
+      "stdout": "",
+      "stderr": "......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\skyfield\\searchlib.py:224: DeprecationWarning: Setting the dtype on a NumPy array has been deprecated in NumPy 2.5.\r\nInstead of changing the dtype on an array x, create a new array with x.view(new_dtype)\r\n  y.dtype = int8\r\n................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\r\n----------------------------------------------------------------------\r\nRan 1462 tests in 82.192s\r\n\r\nOK\r\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\r\n",
+      "code_sha256": {
+        "future/ai_predictive_modeling.py": "b20c30fdfde79e37413bbaae9544ee6ef69cd2765a7ef1ec68a53d0ad765b014",
+        "future/__main__.py": "71a415f99d1cf8c2c33b85629539f782a1fd2d94a6e0aef0ec1e336d8efc60a7",
+        "tests/test_ai_predictive_modeling.py": "a66dd6035e5e1b6ab426c34f9e95c4630012eabfd94011029dba7e1dab2b6ca4"
+      }
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aeromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 98.125,
+      "stdout": "72 Aeromancy CLI cases passed;21 JSON/21 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_akashic_core"
+      ],
+      "returncode": 0,
+      "seconds": 38.11,
+      "stdout": "28 Akashic CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_astrocartography_core"
+      ],
+      "returncode": 0,
+      "seconds": 17.844,
+      "stdout": "12 Astrocartography CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aura_core"
+      ],
+      "returncode": 0,
+      "seconds": 20.61,
+      "stdout": "14 Aura CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_automatic_writing_core"
+      ],
+      "returncode": 0,
+      "seconds": 29.859,
+      "stdout": "24 Automatic Writing CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_bibliomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 104.609,
+      "stdout": "80 Bibliomancy CLI cases passed;16 JSON/16 Markdown saved replays;10 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_chinese_core"
+      ],
+      "returncode": 0,
+      "seconds": 39.062,
+      "stdout": "15 Chinese CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_cleromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 105.328,
+      "stdout": "80 Cleromancy CLI cases passed;16 valid JSON/Markdown saved replays and16 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_coffee_core"
+      ],
+      "returncode": 0,
+      "seconds": 70.609,
+      "stdout": "54 Coffee CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_dream_core"
+      ],
+      "returncode": 0,
+      "seconds": 38.188,
+      "stdout": "30 Dream CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_face_reading_core"
+      ],
+      "returncode": 0,
+      "seconds": 16.453,
+      "stdout": "12 Face Reference CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_geomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 64.703,
+      "stdout": "55 Geomancy CLI cases passed; 13 JSON/13 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_graphology_core"
+      ],
+      "returncode": 0,
+      "seconds": 18.344,
+      "stdout": "14 Graphology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_horary"
+      ],
+      "returncode": 0,
+      "seconds": 6.485,
+      "stdout": "5 Horary CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_hydromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 73.86,
+      "stdout": "63 Hydromancy CLI cases passed;18 JSON/18 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iching_core"
+      ],
+      "returncode": 0,
+      "seconds": 34.531,
+      "stdout": "30 I Ching CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iridology_core"
+      ],
+      "returncode": 0,
+      "seconds": 15.359,
+      "stdout": "14 Iridology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_lithomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 82.672,
+      "stdout": "64 Lithomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mirror_core"
+      ],
+      "returncode": 0,
+      "seconds": 34.797,
+      "stdout": "28 Mirror CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_moleosophy_core"
+      ],
+      "returncode": 0,
+      "seconds": 15.64,
+      "stdout": "12 Moleosophy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mundane_core"
+      ],
+      "returncode": 0,
+      "seconds": 15.047,
+      "stdout": "12 Mundane CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_numerology_core"
+      ],
+      "returncode": 0,
+      "seconds": 4.422,
+      "stdout": "4 Numerology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_oracle_core"
+      ],
+      "returncode": 0,
+      "seconds": 28.531,
+      "stdout": "20 Oracle CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_osteomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 78.578,
+      "stdout": "64 Osteomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_palmistry_core"
+      ],
+      "returncode": 0,
+      "seconds": 13.172,
+      "stdout": "10 Palmistry CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pendulum_core"
+      ],
+      "returncode": 0,
+      "seconds": 33.969,
+      "stdout": "28 Pendulum CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_phrenology_core"
+      ],
+      "returncode": 0,
+      "seconds": 13.313,
+      "stdout": "12 Phrenology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_podomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 13.766,
+      "stdout": "12 Podomancy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pyromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 71.875,
+      "stdout": "60 Pyromancy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_runes_core"
+      ],
+      "returncode": 0,
+      "seconds": 28.953,
+      "stdout": "24 Rune CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_scrying_core"
+      ],
+      "returncode": 0,
+      "seconds": 33.594,
+      "stdout": "28 Scrying CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tarot_core"
+      ],
+      "returncode": 0,
+      "seconds": 26.219,
+      "stdout": "22 Tarot CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tasseography_core"
+      ],
+      "returncode": 0,
+      "seconds": 39.719,
+      "stdout": "34 Tasseography CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_vedic_core"
+      ],
+      "returncode": 0,
+      "seconds": 14.468,
+      "stdout": "12 Vedic CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_western_core"
+      ],
+      "returncode": 0,
+      "seconds": 28.407,
+      "stdout": "23 CLI smoke cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tarot"
+      ],
+      "returncode": 0,
+      "seconds": 0.312,
+      "stdout": "30 Tarot source/layout/independent protocol checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_oracle"
+      ],
+      "returncode": 0,
+      "seconds": 1.016,
+      "stdout": "49 Oracle verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_iching"
+      ],
+      "returncode": 0,
+      "seconds": 1.218,
+      "stdout": "8759 I Ching verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_runes"
+      ],
+      "returncode": 0,
+      "seconds": 1.157,
+      "stdout": "84 rune reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pendulum"
+      ],
+      "returncode": 0,
+      "seconds": 1.234,
+      "stdout": "207 Pendulum reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_scrying"
+      ],
+      "returncode": 0,
+      "seconds": 1.125,
+      "stdout": "23 Scrying reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_mirror"
+      ],
+      "returncode": 0,
+      "seconds": 0.938,
+      "stdout": "22 Mirror reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_dream"
+      ],
+      "returncode": 0,
+      "seconds": 0.843,
+      "stdout": "26 Dream reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_automatic_writing"
+      ],
+      "returncode": 0,
+      "seconds": 0.547,
+      "stdout": "27 Automatic Writing reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_akashic"
+      ],
+      "returncode": 0,
+      "seconds": 0.797,
+      "stdout": "47 Akashic independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tasseography"
+      ],
+      "returncode": 0,
+      "seconds": 0.703,
+      "stdout": "68 Tasseography independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_coffee"
+      ],
+      "returncode": 0,
+      "seconds": 0.656,
+      "stdout": "65 Coffee independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pyromancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.75,
+      "stdout": "59 Pyromancy independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_hydromancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.329,
+      "stdout": "44 Hydromancy independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_aeromancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.906,
+      "stdout": "53 Aeromancy independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_geomancy"
+      ],
+      "returncode": 0,
+      "seconds": 3.547,
+      "stdout": "65536 independent Geomancy charts, 256 addition pairs, 4096 associative triples, 16 identities and 6 fixtures passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_lithomancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.437,
+      "stdout": "12 Lithomancy source roles; 1225 independent distance pairs;25 grid rankings;4 authored cases;10 transforms;9 viewpoint checks;2 unknown cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_osteomancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.031,
+      "stdout": "13 Osteomancy source records;5 named relationships;169 ordered pair checks;26 omitted-outcome checks;52 original-evidence checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_bibliomancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.703,
+      "stdout": "141 Bibliomancy selections;85 independently parsed verses;423 context cases;216 historical indices;100 literal dice sums passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_cleromancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.656,
+      "stdout": "24 Cleromancy source accounts;98 alias keys;9016 numerical research tuples;source discrepancies and exact replay passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_augury"
+      ],
+      "returncode": 0,
+      "seconds": 1.156,
+      "stdout": "14 Augury source records;864 finite observations;4320 condition checks;4 known answers;5 uncertain-field and1 structured conflict cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_augury_core"
+      ],
+      "returncode": 0,
+      "seconds": 94.11,
+      "stdout": "80 Augury CLI cases passed;20 valid JSON/Markdown saved replays and10 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_haruspicy_core"
+      ],
+      "returncode": 0,
+      "seconds": 98.906,
+      "stdout": "84 Haruspicy CLI cases passed;20 valid JSON/Markdown saved replays and12 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_haruspicy"
+      ],
+      "returncode": 0,
+      "seconds": 3.218,
+      "stdout": "9 Haruspicy source records;8100 finite observations;32400 condition checks;14 known answers passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_feng_shui_core"
+      ],
+      "returncode": 0,
+      "seconds": 122.454,
+      "stdout": "104 Feng Shui CLI cases passed;24 accepted JSON/Markdown replay pairs and16 rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_feng_shui"
+      ],
+      "returncode": 0,
+      "seconds": 0.437,
+      "stdout": "24 source rows;3600 ID/name/Chinese headings;3600 uncertainty ranges;144 boundary/neighbor/central checks;9 extra ranges;3 anchors passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_remote_viewing"
+      ],
+      "returncode": 0,
+      "seconds": 2.594,
+      "stdout": "72000 independent target/ranking/display checks;600-case uniform null;16 procedural fixture families passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_remote_viewing_core"
+      ],
+      "returncode": 0,
+      "seconds": 149.297,
+      "stdout": "125 Remote Viewing CLI cases passed;23 accepted/21 rejected JSON/Markdown pairs;3 exact blind directory exports\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_prophetic_dreams"
+      ],
+      "returncode": 0,
+      "seconds": 3.515,
+      "stdout": "600 independent interval/chronology checks;2timezone cases;8hand-enumerated pairs;18procedural families passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_prophetic_dreams_core"
+      ],
+      "returncode": 0,
+      "seconds": 160.844,
+      "stdout": "136 Prophetic Dreams CLI cases passed;29accepted/15rejected JSON/Markdown replay pairs;complete lifecycle andexport\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_intuitive_prediction"
+      ],
+      "returncode": 0,
+      "seconds": 1.235,
+      "stdout": "15independent families;9cue pairs;729three-cue traces;42actual-ledger rational scores;chronology and baseline known answers passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_intuitive_prediction_core"
+      ],
+      "returncode": 0,
+      "seconds": 144.484,
+      "stdout": "121CLI cases;35accepted/18rejected JSON/Markdown pairs;complete linked lifecycle passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_deja_reve_core"
+      ],
+      "returncode": 0,
+      "seconds": 150.343,
+      "stdout": "146 Deja Reve CLI cases passed;34accepted/37rejected JSON/Markdown pairs replayed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_deja_reve"
+      ],
+      "returncode": 0,
+      "seconds": 0.5,
+      "stdout": "{\r\n  \"passed\": true,\r\n  \"fixture_sha256\": \"742061f3a6f89f8ef0720214e5d1feee870818aaac36494b4a8ec744c15e9c8d\",\r\n  \"profile_sha256\": \"fdfe3074e23b10deb96928d85b3440d2a3122acdcffc5270af3596a854c3698a\",\r\n  \"fixture_commit\": \"2ee614e\",\r\n  \"families\": [\r\n    {\r\n      \"id\": \"source-category-episodic\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-category-familiarity\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-category-dreamy\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-unclassifiable\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"mixed-uncertain\",\r\n      \"passed\": true,\r\n      \"checks\": 648\r\n    },\r\n    {\r\n      \"id\": \"original-prior-record\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"no-prior-record\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"conflicting-chronology\",\r\n      \"passed\": true,\r\n      \"checks\": 13\r\n    },\r\n    {\r\n      \"id\": \"original-versus-amendment\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"generic-familiarity-negative-control\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"specific-versus-vague\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"manual-nonmatch\",\r\n      \"passed\": true,\r\n      \"checks\": 1\r\n    },\r\n    {\r\n      \"id\": \"multiple-candidates\",\r\n      \"passed\": true,\r\n      \"checks\": 10\r\n    },\r\n    {\r\n      \"id\": \"missing-original-time\",\r\n      \"passed\": true,\r\n      \"checks\": 3\r\n    },\r\n    {\r\n      \"id\": \"no-diagnosis-prediction\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"source-edition-rights-replay\",\r\n      \"passed\": true,\r\n      \"checks\": 7\r\n    }\r\n  ],\r\n  \"category_cases\": 648,\r\n  \"chronology_constants\": 11,\r\n  \"source_case_checks\": 4,\r\n  \"source_counts_verified\": true,\r\n  \"empirical_or_clinical_validation\": false,\r\n  \"method\": \"Pre-engine known-answer tables and constants;independent canonical SHA256;no expected values generated by production.\"\r\n}\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_ai_predictive_modeling_core"
+      ],
+      "returncode": 0,
+      "seconds": 142.64,
+      "stdout": "162 AI Predictive Modeling CLI cases passed;30accepted/49rejected JSON/Markdown pairs;full NOAA ledger replayed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_ai_predictive_modeling"
+      ],
+      "returncode": 0,
+      "seconds": 2.86,
+      "stdout": "21 forecasting families;4200 independent cells;672 sentinel predictions;source metrics and complete candidate ledger passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.audit_dependencies"
+      ],
+      "returncode": 0,
+      "seconds": 0.938,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "seconds": 1.531,
+      "stdout": "No broken requirements found.\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "seconds": 0.719,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'data/prophetic-dreams-aborted.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-aborted.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-after-reveal-rating.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-after-reveal-rating.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-changed-criteria.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-changed-criteria.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-conflicting-time.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-incomplete-universe.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-incomplete-universe.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-invalid-schema.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-invalid-schema.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-judge-packet.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-judge-packet.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-known-omissions.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-known-omissions.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-known-outcome.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-known-outcome.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-later-association.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-later-association.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-lecture-nonmatch.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-lecture-nonmatch.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-martinique.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-martinique.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-missing-timezone.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-missing-timezone.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-no-consent.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-no-consent.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-no-rights.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-no-rights.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-one-byte-mutation.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-one-byte-mutation.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-packet-leak.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-packet-leak.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-premature-reveal.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-premature-reveal.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-publication-endpoint.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-publication-endpoint.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-rating-mutation.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-rating-mutation.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-two-judges.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-two-judges.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unblinded.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unblinded.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unsupported-prophecy.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unsupported-prophecy.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-wargo-envelope.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-wargo-envelope.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-window-expansion.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-window-expansion.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-withdrawn.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-withdrawn.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-wrong-parent.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-wrong-parent.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-wrong-universe.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-wrong-universe.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-zero-information.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-zero-information.md', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "tests": 1462,
+  "inherited_tests": 1397,
+  "new_tests": 65,
+  "cli_cases": 2029,
+  "inherited_cli_cases": 1867,
+  "new_cli_cases": 162,
+  "independent_verifiers": 28,
+  "protected_files": 2661,
+  "changed_protected_files": [],
+  "allowed_existing_edits": [
+    "PROGRESS.md",
+    "README.md",
+    "future/__main__.py",
+    "knowledge/gaps.json"
+  ],
+  "registry": {
+    "references_checked_twice": 479,
+    "unique": 324,
+    "skipped": [
+      "chinese-inventory-2-v1"
+    ]
+  },
+  "strict_json_files": 1934,
+  "historical_invalid_json_rejections": [
+    "data/feng-shui-duplicate-json-input.json",
+    "data/feng-shui-nonfinite-input.json"
+  ],
+  "taxonomy": {
+    "total": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "other59gap_entries_unchanged": true,
+  "verification": {
+    "passed": true,
+    "numerical_checks_passed": true,
+    "profile_sha256": "ed2490bf3ddc5861b3a406e2ba8aa93b3f2b2fe33e0b7917371e5c26875e7fdb",
+    "fixture_sha256": "dc8efef9f0888a7e144f48f234fb4895c6b069d301142d3daead1f1a3fc5fd9f",
+    "independent_oracle_commit": "1d5ed6a",
+    "cells_checked": 4200,
+    "sentinel_predictions": 672,
+    "families": [
+      {
+        "id": "constant",
+        "passed": true,
+        "checks": 28
+      },
+      {
+        "id": "seasonal-naive",
+        "passed": true,
+        "checks": 6
+      },
+      {
+        "id": "trend",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "horizon-indexing",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "training-test-isolation",
+        "passed": true,
+        "checks": 672
+      },
+      {
+        "id": "future-covariates",
+        "passed": true,
+        "checks": 1
+      },
+      {
+        "id": "missing-observations",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "irregular-timestamps",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "zero-denominators",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "mase-scale",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "fold-boundaries",
+        "passed": true,
+        "checks": 4200
+      },
+      {
+        "id": "exact-replay",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "deterministic-metrics",
+        "passed": true,
+        "checks": 7
+      },
+      {
+        "id": "interval-ordering",
+        "passed": true,
+        "checks": 4
+      },
+      {
+        "id": "quantile-monotonicity",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "dataset-rights-hashes",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "multiple-series",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "baseline-comparisons",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "structural-break",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "resource-benchmarks",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "unsupported-configurations",
+        "passed": true,
+        "checks": 5
+      }
+    ],
+    "selected_reference": "drift",
+    "source_vintage_certified": false,
+    "method": "Pre-engine rational prediction commitments,independent geometric SES oracle,manual constants and untouched input prefixes;no expected output derived from production."
+  },
+  "cli_replay": {
+    "passed": true,
+    "count": 162,
+    "accepted_pairs": 30,
+    "rejected_pairs": 49,
+    "exact_replay": true,
+    "cases": [
+      {
+        "name": "reference",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "reference",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "seasonal",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "seasonal",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "drift",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "drift",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "mean",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "mean",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "naive",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "naive",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "ses0.2",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "ses0.2",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "ses0.5",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "ses0.5",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "ses0.8",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "ses0.8",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "constant",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "constant",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "missing-outcome",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "missing-outcome",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "structural-break",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "structural-break",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "prefix-original",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "prefix-original",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "future-sentinel",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "future-sentinel",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "rolling",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "rolling",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "missing-evaluation-target",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "missing-evaluation-target",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "failed-candidates",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "failed-candidates",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "ineligible-origin",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "ineligible-origin",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "zero-reference-tie",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "zero-reference-tie",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "multiple-series",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "multiple-series",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "metric-known",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "metric-known",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "n0",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "n0",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "zero-scale",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "zero-scale",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "zero-wape",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "zero-wape",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "partial-metrics",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "partial-metrics",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "source-distribution-score",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "source-distribution-score",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "lower-endpoint",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "lower-endpoint",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "upper-endpoint",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "upper-endpoint",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "unicode-whitespace",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "unicode-whitespace",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "report-replay",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "report-replay",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "noaa-benchmark",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "noaa-benchmark",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "profile",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "profile",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "version",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "version",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "schema",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "schema",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "model",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "model",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "alpha",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "alpha",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "season",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "season",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "h0",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "h0",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "hbool",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "hbool",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "hduplicate",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "hduplicate",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "horder",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "horder",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "hfloat",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "hfloat",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "hmax",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "hmax",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "origin",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "origin",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "missing-origin",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "missing-origin",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "dataset-hash",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "dataset-hash",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "duplicate-period",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "duplicate-period",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "irregular",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "irregular",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "non-monthly",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "non-monthly",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "no-rights",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "no-rights",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "empty-source",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "empty-source",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "bad-source-hash",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "bad-source-hash",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "duplicate-series",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "duplicate-series",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "future-covariates",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "future-covariates",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "missing-training",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "missing-training",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "availability",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "availability",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-float",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-float",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-bool",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-bool",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-nan",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-nan",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-infinity",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-infinity",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-exponent",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-exponent",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-leading-zero",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-leading-zero",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-plus",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-plus",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-space",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-space",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-empty",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-empty",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-too-big",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-too-big",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-too-precise",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "numeric-too-precise",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "extra-field",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "extra-field",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "short-drift",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "short-drift",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "short-seasonal",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "short-seasonal",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "season-model-mismatch",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "season-model-mismatch",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "resource-hash",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "resource-hash",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "crossing-quantiles",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "crossing-quantiles",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "invalid-quantile-level",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "invalid-quantile-level",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "reversed-interval",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "reversed-interval",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "invalid-interval-alpha",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "invalid-interval-alpha",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "validation-label-leak",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "validation-label-leak",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "duplicate-candidate",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "duplicate-candidate",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "no-local-weights",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "no-local-weights",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "quantum-unsupported",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "quantum-unsupported",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "strict-json",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "strict-json",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "strict-json",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "strict-json",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      }
+    ]
+  }
+}

@@ -1079,3 +1079,8 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #49 CLI/report replay corpus
 - Saved30accepted/49rejected JSON/Markdown pairs;162CLI cases pass including strict duplicate/nonfinite JSON rejection and full4200cell NOAA replay. Cases cover arbitrary monthly data,m4seasonal indexing,all SES variants,missing/failed candidates,multiseries,source rights/hash failures,manual scores,Unicode and unsupported model/weight requests.
 - README records exact arithmetic,selection/prefix rules,source-vintage limits,measured resources and correct drift underperformance. Full inherited acceptance remains running.
+
+## 2026-11-07 — #49 full acceptance
+- Final1462tests (1397inherited+65new),2029CLI cases (1867inherited+162new) and28independent verifiers (27inherited+1new) pass. All21families,4200cell predictions,672sentinels and30accepted/49rejected JSON/Markdown pairs verified.
+- Complete2661protected-file bytes unchanged;registry idempotence,rights/source hashes,strict JSON including two inherited malformed rejection fixtures,dependency audit,pip check anddiff check pass. Evidence:data/ai-predictive-modeling-acceptance-checks.json andregression.json.
+- Exact-file EOL attributes preserve existing engineLF/oracleCRLF byte commitments under both Git autocrlf settings;four checkout export hash checks pass. No Python/data/profile/forecast/report hashes changed. Compact review:data/ai-predictive-modeling-noaa-summary.md.
