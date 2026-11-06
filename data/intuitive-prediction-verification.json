@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "profile_sha256": "9e744dcb6fcd6f8e4ce854c76cafadeae0d9d4e2fa24e77786646c6cf04bc113",
+  "fixture_sha256": "280a3b7619df57728d9bb47cc809741fc007a805d80cfa11614282ee494b2bc4",
+  "fixture_commit": "d212583",
+  "families": [
+    {
+      "id": "recognition-choice",
+      "passed": true,
+      "checks": 8
+    },
+    {
+      "id": "source-worked-ttb",
+      "passed": true,
+      "checks": 2
+    },
+    {
+      "id": "search-stop",
+      "passed": true,
+      "checks": 729
+    },
+    {
+      "id": "missing-cues",
+      "passed": true,
+      "checks": 9
+    },
+    {
+      "id": "ties-abstention",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "invalid-direction",
+      "passed": true,
+      "checks": 4
+    },
+    {
+      "id": "probability-boundaries",
+      "passed": true,
+      "checks": 51
+    },
+    {
+      "id": "exact-brier",
+      "passed": true,
+      "checks": 6
+    },
+    {
+      "id": "unresolved-denominator",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "forecast-versions",
+      "passed": true,
+      "checks": 6
+    },
+    {
+      "id": "calibration-small-N",
+      "passed": true,
+      "checks": 4
+    },
+    {
+      "id": "baseline-heldout",
+      "passed": true,
+      "checks": 5
+    },
+    {
+      "id": "confidence-performance",
+      "passed": true,
+      "checks": 2
+    },
+    {
+      "id": "nonstationary-domain",
+      "passed": true,
+      "checks": 2
+    },
+    {
+      "id": "replay-rights-separation",
+      "passed": true,
+      "checks": 4
+    }
+  ],
+  "ordered_cue_pairs": 9,
+  "discriminating_pairs": 4,
+  "exhaustive_three_cue_cases": 729,
+  "frozen_rational_ledger_scores": 42,
+  "chronology_cases": 3,
+  "source_worked_examples": 2,
+  "original_hashes": 4,
+  "baseline_known_answer": "121/400",
+  "empirical_human_validation": false,
+  "method": "Frozen pre-engine tables/rational constants;independent SHA/Fraction arithmetic;production only supplies actual results,never expected values."
+}

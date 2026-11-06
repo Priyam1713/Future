@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 45 independent verification — 2026-11-07
+- All15families pass:9cue pairs/4discriminating,729exhaustive three-cue traces,42actual-ledger rational score cases,3chronology boundaries,source worked cases,original hashes,calibration N2/N20 and121/400held-out improvement.
+- Expected values come from pre-engine frozen tables/rational constants and independent arithmetic;no measured human skill claim. Full regression and report replay follow.
+
 ## Technique 45 heuristic and forecast engine — 2026-11-07
 - Implemented separate2002recognition/1996TTB traces,strict decimal probabilities,hash-chained forecast versions,resolution evidence,exact Brier/calibration and frozen training-baseline comparison. No choice-to-probability conversion or expertise certification.
 -79new tests pass,including source examples,all9cue pairs,versions,denominators,rights and baseline leakage. Independent verification and full inherited acceptance follow;not yet Ready.
