@@ -1,0 +1,861 @@
+{
+  "version": 1,
+  "technique_id": 39,
+  "name": "Haruspicy / Extispicy",
+  "date": "2026-11-06",
+  "status": "Core v1 Ready — Historical Roman Entrail-Sign Reference/Condition Scope",
+  "profile": "cicero-falconer1923-roman-entrail-references-v1",
+  "profile_sha256": "44b5d1c3c779c1308ac6d929d593ac8d87cbc98cd51cace967dc423088ac2dd6",
+  "catalog_sha256": "60c326e83fde3a8b774b781b53ae050635c1f88f48e2fad54e30ac690d322ad7",
+  "catalog": "cicero-falconer1923-entrail-cases-v1",
+  "catalog_version": 1,
+  "source_manifest_sha256": "b81c4c8b07edf8fc1cfd0bcc8402e0b825a3eb5b7acc84a727c328ed11ff51d7",
+  "source_fixture_sha256": "aaa8b052f5e8c40d27a40c1a2aafe730ebfc4ac5561e6aacdc27644309c8209a",
+  "source_commit": "9a1a643",
+  "catalog_commit": "841b51e",
+  "implementation_commit": "158aba6",
+  "independent_evidence_commit": "c70b2eb",
+  "report_commit": "ce00f27",
+  "acceptance_commit": "5ee7ce5",
+  "ranked_sources_unchanged": [
+    [
+      39,
+      "Haruspicy / Extispicy",
+      1,
+      "Ulla Susanne Koch",
+      "Babylonian Liver Omens",
+      "Cuneiform omen series scholarship",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      39,
+      "Haruspicy / Extispicy",
+      2,
+      "Ulla Susanne Koch",
+      "Secrets of Extispicy",
+      "Mesopotamian extispicy research",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      39,
+      "Haruspicy / Extispicy",
+      3,
+      "Visit Piacenza / local heritage",
+      "Piacenza Liver",
+      "Etruscan bronze liver layout",
+      "https://visitpiacenza.it/en/art-and-culture/etruscan-liver/",
+      "Public heritage description",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows_unchanged": [
+    [
+      39,
+      "Haruspicy / Extispicy",
+      "Mesopotamian liver omens",
+      "Piacenza Liver",
+      "Secrets of Extispicy",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      39,
+      "Haruspicy / Extispicy",
+      "Etruscan hepatoscopy",
+      "Piacenza Liver",
+      "Secrets of Extispicy",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      39,
+      "Haruspicy / Extispicy",
+      "Roman entrail reading",
+      "Piacenza Liver",
+      "Secrets of Extispicy",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "sources": [
+    {
+      "id": "haruspicy-core-cicero-edition-v1",
+      "technique_id": 39,
+      "rank": null,
+      "author": "Cicero; W. A. Falconer translation; Bill Thayer/LacusCurtius transcription",
+      "edition": "On Divination,Loeb Classical Library,Cicero volumeXX,Harvard University Press,1923,William Armistead Falconer",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/home.html",
+      "locator": "Edition Used,Copyright,Numbering",
+      "ingestion": "facts_only",
+      "rights_note": "Site identifies1923 translation as public domain. Later site/editor notes,layout and photographs separate; only original concise factual notes/locators bundled.",
+      "checked_on": "2026-11-06",
+      "snapshot_sha256": "250d74fd88ca2e29741213f8e9a41a7a0c9d752d4d996814255360598103fc08",
+      "snapshot_bytes": 12583,
+      "access": {
+        "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/home.html",
+        "status": 200,
+        "sha256": "250d74fd88ca2e29741213f8e9a41a7a0c9d752d4d996814255360598103fc08",
+        "bytes": 12583
+      }
+    },
+    {
+      "id": "haruspicy-core-cicero-book1-v1",
+      "technique_id": 39,
+      "rank": null,
+      "author": "Cicero; W. A. Falconer translation; Bill Thayer/LacusCurtius transcription",
+      "edition": "On Divination,Loeb Classical Library,Cicero volumeXX,Harvard University Press,1923,William Armistead Falconer",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html",
+      "locator": "I.39.85;I.52.118–119;I.2.3",
+      "ingestion": "facts_only",
+      "rights_note": "Site identifies1923 translation as public domain. Later site/editor notes,layout and photographs separate; only original concise factual notes/locators bundled.",
+      "checked_on": "2026-11-06",
+      "snapshot_sha256": "8ee1dac4c378c4a42d22764b7d6bef6e3b70ba462d03ae973a67a2ecb73da79d",
+      "snapshot_bytes": 252127,
+      "access": {
+        "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html",
+        "status": 200,
+        "sha256": "8ee1dac4c378c4a42d22764b7d6bef6e3b70ba462d03ae973a67a2ecb73da79d",
+        "bytes": 252127
+      }
+    },
+    {
+      "id": "haruspicy-core-cicero-book2-v1",
+      "technique_id": 39,
+      "rank": null,
+      "author": "Cicero; W. A. Falconer translation; Bill Thayer/LacusCurtius transcription",
+      "edition": "On Divination,Loeb Classical Library,Cicero volumeXX,Harvard University Press,1923,William Armistead Falconer",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html",
+      "locator": "II.12.28–29;II.13.32–14.34;II.15.35–16.37",
+      "ingestion": "facts_only",
+      "rights_note": "Site identifies1923 translation as public domain. Later site/editor notes,layout and photographs separate; only original concise factual notes/locators bundled.",
+      "checked_on": "2026-11-06",
+      "snapshot_sha256": "078da984025b002692a644df41a42f858e3a4880bb1c6d9e22c43434a08eb880",
+      "snapshot_bytes": 262663,
+      "access": {
+        "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html",
+        "status": 200,
+        "sha256": "078da984025b002692a644df41a42f858e3a4880bb1c6d9e22c43434a08eb880",
+        "bytes": 262663
+      }
+    },
+    {
+      "id": "haruspicy-core-cicero-latin1-v1",
+      "technique_id": 39,
+      "rank": null,
+      "author": "Cicero; The Latin Library digital witness",
+      "edition": "De Divinatione Latin digital witness; underlying printed edition unverified",
+      "url": "https://www.thelatinlibrary.com/cicero/divinatione1.shtml",
+      "locator": "I.39.85 pulmo incisus;I.52.119 heart and following-day liver-head",
+      "ingestion": "facts_only",
+      "rights_note": "Ancient Latin distinct from digital editing; no claim of a collated manuscript or Falconer facing Latin. Original factual notes only.",
+      "checked_on": "2026-11-06",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null,
+      "access": {
+        "url": "https://www.thelatinlibrary.com/cicero/divinatione1.shtml",
+        "sha256": null,
+        "error": "HTTPError",
+        "access": "Primary web-tool rendering inspected; no direct raw-byte snapshot."
+      }
+    },
+    {
+      "id": "haruspicy-core-cicero-latin2-v1",
+      "technique_id": 39,
+      "rank": null,
+      "author": "Cicero; The Latin Library digital witness",
+      "edition": "De Divinatione Latin digital witness; underlying printed edition unverified",
+      "url": "https://www.thelatinlibrary.com/cicero/divinatione2.shtml",
+      "locator": "II.13.32 caput iecoris;II.12.28–16.37",
+      "ingestion": "facts_only",
+      "rights_note": "Ancient Latin distinct from digital editing; no claim of a collated manuscript or Falconer facing Latin. Original factual notes only.",
+      "checked_on": "2026-11-06",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null,
+      "access": {
+        "url": "https://www.thelatinlibrary.com/cicero/divinatione2.shtml",
+        "sha256": null,
+        "error": "HTTPError",
+        "access": "Primary web-tool rendering inspected; no direct raw-byte snapshot."
+      }
+    }
+  ],
+  "source_records": [
+    {
+      "id": "lung-cleft",
+      "source_id": "haruspicy-core-cicero-book1-v1",
+      "edition": "On Divination,Loeb Classical Library,Cicero volumeXX,Harvard University Press,1923,William Armistead Falconer",
+      "locator": "I.39.85",
+      "native": {
+        "book": 1,
+        "chapter": 39,
+        "section_start": 85,
+        "section_end": 85,
+        "note": null
+      },
+      "text_layer": "main_text_dialogue",
+      "speaker": "Quintus",
+      "attribution": "Reported soothsayer convention in rhetorical defense",
+      "conditions": {
+        "tradition": "roman",
+        "organ": "lung",
+        "feature": "cleft",
+        "presence": "present",
+        "other_vitals": "sound"
+      },
+      "requires_preceding_case": null,
+      "source_account": "Quintus reports postponement of an undertaking when a lung cleft occurs with otherwise sound vitals.",
+      "source_polarity": "not_stated",
+      "critical_reference_ids": [
+        "customs-criticism",
+        "causal-criticism"
+      ],
+      "latin_terms": [
+        "pulmo incisus"
+      ],
+      "qualification": "Falconer renders incisus as cleft; Latin literally concerns a cut/notched lung. No modern pathological identification; no advice to postpone.",
+      "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#85",
+      "match_scope": "source_condition"
+    },
+    {
+      "id": "liver-head-absent",
+      "source_id": "haruspicy-core-cicero-book2-v1",
+      "edition": "On Divination,Loeb Classical Library,Cicero volumeXX,Harvard University Press,1923,William Armistead Falconer",
+      "locator": "II.13.32",
+      "native": {
+        "book": 2,
+        "chapter": 13,
+        "section_start": 32,
+        "section_end": 32,
+        "note": null
+      },
+      "text_layer": "main_text_dialogue",
+      "speaker": "Marcus",
+      "attribution": "Practitioners’ belief reported within criticism",
+      "conditions": {
+        "tradition": "roman",
+        "organ": "liver",
+        "feature": "liver_head",
+        "presence": "absent"
+      },
+      "requires_preceding_case": null,
+      "source_account": "Marcus reports practitioners treating an absent liver-head as strongly unpropitious.",
+      "source_polarity": "reported_strongly_unfavorable",
+      "critical_reference_ids": [
+        "causal-criticism",
+        "selection-criticism"
+      ],
+      "latin_terms": [
+        "caput iecoris"
+      ],
+      "qualification": "Reported belief,not Marcus endorsement; ancient head label is not a verified modern anatomical mapping; present does not imply favorable.",
+      "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#32",
+      "match_scope": "source_condition"
+    },
+    {
+      "id": "caesar-heart",
+      "source_id": "haruspicy-core-cicero-book1-v1",
+      "edition": "On Divination,Loeb Classical Library,Cicero volumeXX,Harvard University Press,1923,William Armistead Falconer",
+      "locator": "I.52.119",
+      "native": {
+        "book": 1,
+        "chapter": 52,
+        "section_start": 119,
+        "section_end": 119,
+        "note": null
+      },
+      "text_layer": "main_text_dialogue",
+      "speaker": "Quintus",
+      "attribution": "Quintus reports Spurinna’s warning to Caesar",
+      "conditions": {
+        "tradition": "roman",
+        "organ": "heart",
+        "feature": "whole_organ",
+        "presence": "absent",
+        "narrative_context": "caesar-I52-119",
+        "event_phase": "first_day",
+        "animal": "votive_ox",
+        "setting_id": "golden_throne_purple_robe",
+        "warning_attribution": "spurinna"
+      },
+      "requires_preceding_case": null,
+      "source_account": "In Caesar’s throne/robe narrative,Quintus reports a missing heart and Spurinna’s warning concerning thought and life.",
+      "source_polarity": "not_stated",
+      "critical_reference_ids": [
+        "heart-criticism",
+        "selection-criticism"
+      ],
+      "latin_terms": [
+        "cor"
+      ],
+      "qualification": "Falconer votive ox versus Latin bovis opimi (well-fed/fat ox); exact documentary translation label,not inferred ritual category or universal prognosis.",
+      "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#119",
+      "match_scope": "source_condition"
+    },
+    {
+      "id": "caesar-liver-next-day",
+      "source_id": "haruspicy-core-cicero-book1-v1",
+      "edition": "On Divination,Loeb Classical Library,Cicero volumeXX,Harvard University Press,1923,William Armistead Falconer",
+      "locator": "I.52.119",
+      "native": {
+        "book": 1,
+        "chapter": 52,
+        "section_start": 119,
+        "section_end": 119,
+        "note": null
+      },
+      "text_layer": "main_text_dialogue",
+      "speaker": "Quintus",
+      "attribution": "Quintus connects following-day liver-head account to preceding heart narrative",
+      "conditions": {
+        "tradition": "roman",
+        "organ": "liver",
+        "feature": "liver_head",
+        "presence": "absent",
+        "narrative_context": "caesar-I52-119",
+        "event_phase": "following_day"
+      },
+      "requires_preceding_case": "caesar-heart",
+      "source_account": "Quintus links next-day liver-head absence to the preceding heart account and construes both as forewarning Caesar’s death,not prevention.",
+      "source_polarity": "not_stated",
+      "critical_reference_ids": [
+        "heart-criticism",
+        "selection-criticism"
+      ],
+      "latin_terms": [
+        "Postero die",
+        "caput in iecore"
+      ],
+      "qualification": "Requires an explicitly linked earlier matching heart record in the ordered request; standalone absence cannot reconstruct chronology.",
+      "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#119",
+      "match_scope": "source_condition"
+    },
+    {
+      "id": "customs-criticism",
+      "source_id": "haruspicy-core-cicero-book2-v1",
+      "edition": "On Divination,Loeb Classical Library,Cicero volumeXX,Harvard University Press,1923,William Armistead Falconer",
+      "locator": "II.12.28–29",
+      "native": {
+        "book": 2,
+        "chapter": 12,
+        "section_start": 28,
+        "section_end": 29,
+        "note": null
+      },
+      "text_layer": "main_text_dialogue",
+      "speaker": "Marcus",
+      "attribution": "Critical institutional discussion",
+      "conditions": null,
+      "requires_preceding_case": null,
+      "source_account": "Marcus distinguishes institutional utility from truth and disputes universal agreement among national practices.",
+      "source_polarity": "not_stated",
+      "critical_reference_ids": [],
+      "latin_terms": [],
+      "qualification": "Source comparison only;no factual future conclusion.",
+      "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#28",
+      "match_scope": "context_reference"
+    },
+    {
+      "id": "causal-criticism",
+      "source_id": "haruspicy-core-cicero-book2-v1",
+      "edition": "On Divination,Loeb Classical Library,Cicero volumeXX,Harvard University Press,1923,William Armistead Falconer",
+      "locator": "II.13.32–II.14.34",
+      "native": {
+        "book": 2,
+        "chapter": 13,
+        "section_start": 32,
+        "section_end": 34,
+        "note": null,
+        "chapter_end": 14
+      },
+      "text_layer": "main_text_dialogue",
+      "speaker": "Marcus",
+      "attribution": "Critical argument continuing through chapter14",
+      "conditions": null,
+      "requires_preceding_case": null,
+      "source_account": "Marcus questions purported meanings and a causal connection between entrail features and wealth.",
+      "source_polarity": "not_stated",
+      "critical_reference_ids": [],
+      "latin_terms": [],
+      "qualification": "Source comparison only;no factual future conclusion.",
+      "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#32",
+      "match_scope": "context_reference"
+    },
+    {
+      "id": "selection-criticism",
+      "source_id": "haruspicy-core-cicero-book2-v1",
+      "edition": "On Divination,Loeb Classical Library,Cicero volumeXX,Harvard University Press,1923,William Armistead Falconer",
+      "locator": "II.15.35–36",
+      "native": {
+        "book": 2,
+        "chapter": 15,
+        "section_start": 35,
+        "section_end": 36,
+        "note": null
+      },
+      "text_layer": "main_text_dialogue",
+      "speaker": "Marcus",
+      "attribution": "Critical challenge to divine selection/change",
+      "conditions": null,
+      "requires_preceding_case": null,
+      "source_account": "Marcus challenges selective signs and sudden alteration,contrasting different findings.",
+      "source_polarity": "not_stated",
+      "critical_reference_ids": [],
+      "latin_terms": [],
+      "qualification": "Source comparison only;no factual future conclusion.",
+      "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#35",
+      "match_scope": "context_reference"
+    },
+    {
+      "id": "heart-criticism",
+      "source_id": "haruspicy-core-cicero-book2-v1",
+      "edition": "On Divination,Loeb Classical Library,Cicero volumeXX,Harvard University Press,1923,William Armistead Falconer",
+      "locator": "II.16.36–37",
+      "native": {
+        "book": 2,
+        "chapter": 16,
+        "section_start": 36,
+        "section_end": 37,
+        "note": null
+      },
+      "text_layer": "main_text_dialogue",
+      "speaker": "Marcus",
+      "attribution": "Counterargument to Quintus’s heart narrative",
+      "conditions": null,
+      "requires_preceding_case": null,
+      "source_account": "Marcus rejects sudden disappearance and speculates about disease altering appearance; this is ancient speculation,not clinical diagnosis.",
+      "source_polarity": "not_stated",
+      "critical_reference_ids": [],
+      "latin_terms": [],
+      "qualification": "Source comparison only;no factual future conclusion.",
+      "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#36",
+      "match_scope": "context_reference"
+    },
+    {
+      "id": "public-context",
+      "source_id": "haruspicy-core-cicero-book1-v1",
+      "edition": "On Divination,Loeb Classical Library,Cicero volumeXX,Harvard University Press,1923,William Armistead Falconer",
+      "locator": "I.2.3",
+      "native": {
+        "book": 1,
+        "chapter": 2,
+        "section_start": 3,
+        "section_end": 3,
+        "note": null
+      },
+      "text_layer": "main_text_dialogue",
+      "speaker": "Cicero introductory narrator",
+      "attribution": "Historical institutional description",
+      "conditions": null,
+      "requires_preceding_case": null,
+      "source_account": "The introduction describes Rome’s adoption of Etruscan soothsaying in public religious affairs.",
+      "source_polarity": "not_stated",
+      "critical_reference_ids": [],
+      "latin_terms": [],
+      "qualification": "Source comparison only;no factual future conclusion.",
+      "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#3",
+      "match_scope": "context_reference"
+    }
+  ],
+  "translation_notes": {
+    "latin_witness": "The Latin Library independently rendered digital text; underlying printed edition and manuscript genealogy unverified.",
+    "lung": "pulmo incisus is rendered cleft by Falconer; no liver substitution.",
+    "head": "caput iecoris and caput in iecore remain ancient source labels; no modern anatomical identification certified.",
+    "heart": "cor is heart; bovis opimi is not independently evidence for a distinct votive category beyond Falconer wording.",
+    "sequence": "Postero die explicitly marks following day; link and ordered-request convention are modern editorial safeguards,not an ancient input schema.",
+    "layers": "All nine records are main dialogue/introduction. Translator/editor notes are not operative rules. Modern predicate design and status labels are editorial,not ancient algorithms.",
+    "speakers": "Quintus defense and Marcus criticism are not a unified authorial endorsement."
+  },
+  "source_freeze": "knowledge/haruspicy_source_freeze_v1.json",
+  "catalog_path": "knowledge/haruspicy_catalog_v1.json",
+  "profile_path": "knowledge/haruspicy_roman_profile_v1.json",
+  "conditions": {
+    "lung": "lung+cleft+present+other vitals explicitly sound;traditional postponement account only",
+    "liver": "liver+ancient head label+explicit absence;Marcus reports practitioners’ strongly unfavorable belief,does not endorse it",
+    "caesar_first": "heart+whole organ+absence+exact CaesarI52.119 context+first day+Falconer votive ox+golden throne/purple robe+Spurinna attribution",
+    "caesar_sequence": "liver+head+absence+same exact context+following day+explicit prior_observation_id linking an earlier applicable heart case;no standalone reconstruction"
+  },
+  "schema": {
+    "schema_version": 1,
+    "profile": "cicero-falconer1923-roman-entrail-references-v1",
+    "mode": "manual",
+    "tasks": [
+      "compare",
+      "reference",
+      "catalog"
+    ],
+    "catalog_identity": [
+      "catalog_id",
+      "catalog_version=integer1",
+      "catalog_sha256"
+    ],
+    "observations": "compare only:1–8 ordered distinct bounded ASCII IDs",
+    "reference_ids": "reference only:1–9 distinct exact catalog IDs,no observations",
+    "domains": {
+      "tradition": [
+        "roman",
+        "etruscan",
+        "mesopotamian",
+        "other",
+        "unknown"
+      ],
+      "organ": [
+        "lung",
+        "liver",
+        "heart",
+        "other",
+        "unknown"
+      ],
+      "feature": [
+        "cleft",
+        "liver_head",
+        "whole_organ",
+        "other",
+        "unknown"
+      ],
+      "presence": [
+        "present",
+        "absent",
+        "unknown"
+      ],
+      "other_vitals": [
+        "sound",
+        "not_sound",
+        "unknown"
+      ],
+      "narrative_context": [
+        "caesar-I52-119",
+        "none",
+        "other",
+        "unknown"
+      ],
+      "event_phase": [
+        "first_day",
+        "following_day",
+        "other",
+        "unknown"
+      ],
+      "animal": [
+        "votive_ox",
+        "other",
+        "unknown"
+      ],
+      "setting_id": [
+        "golden_throne_purple_robe",
+        "other",
+        "unknown"
+      ],
+      "warning_attribution": [
+        "spurinna",
+        "other",
+        "unknown"
+      ]
+    },
+    "origins": [
+      "hypothetical",
+      "museum_document",
+      "source_description",
+      "unknown"
+    ],
+    "uncertainty": "distinct uncertain_fields from required_fields,each becomes unknown",
+    "contradictions": "typed contradictory_assertions or presence_reports/other_vitals_reports;two distinct known values conflict,including declared value;reports never fill unknowns",
+    "sequence": "named prior ID must exist earlier;missing/unknown insufficient,self/later/nonmatching not_applicable;uncertain/conflicting predecessor propagates",
+    "raw_text": "question/reflection/notes and per-observation source_qualification/uncertainty/raw_observation/user_association preserve Unicode and whitespace up to10000 code points;sequence up to12 raw text entries of2000;no prose inference",
+    "strict_validation": "unknown fields,enums,duplicate JSON keys,nonfinite JSON,booleans as integers,invalid UTF8 and excess limits rejected;no foreign catalog fallback"
+  },
+  "conventions": [
+    "Explicit source terms only;unknown is not absent. Optional declarations never inferred from prose.",
+    "All predicates must match;known mismatches precede missing fields for per-case status.",
+    "Foreign known tradition is unsupported;other organ/feature labels are valid negative controls with no matching source case. Unknown yields insufficient evidence where otherwise compatible.",
+    "Contradictory reports never fill missing declarations;distinct known values mark conflict.",
+    "Per-case relevant contradiction precedes missing evidence and blocks applicability. Overall any structured contradiction is conflicting.",
+    "Each uncertain field is treated as unknown;other unrelated fields remain unchanged.",
+    "CaseD requires named earlier CaseC in request order. Missing ID/record is insufficient;self/later/nonmatching predecessor is not applicable. Uncertain/conflicting predecessor propagates.",
+    "CaseB can match a standalone or Caesar liver observation;CaseD never follows automatically from CaseB.",
+    "User-declared context proves no real-world event. Sequence comparison is documentary compatibility,not a fortune."
+  ],
+  "evaluation_policy": [
+    "overall structured conflict",
+    "known unsupported label/tradition",
+    "any applicable",
+    "any conflicting",
+    "any insufficient",
+    "not_applicable"
+  ],
+  "evidence_matrix": {
+    "direct": "Source-located historical accounts,reported practitioner beliefs and critical dialogue",
+    "user_attributed": "Declared observations,source terms,context,chronology and raw personal text;not independently authenticated",
+    "editorial": "Exact predicate matching,unknown/conflict statuses and explicit ordered-link safeguards",
+    "unsupported": "Factual future,death,financial or clinical conclusions,supernatural validation,modern anatomy identification or animal-ritual authority"
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Exact four Roman historical source-condition comparisons",
+      "Reference/catalog lookup without specimens",
+      "Ordered manual observations and neutral side-by-side comparison",
+      "Linked Caesar two-event documentary comparison",
+      "Explicit unknown,contradiction and foreign-tradition outcomes",
+      "Offline deterministic JSON/Markdown and immutable replay"
+    ],
+    "experimental": [
+      "Mesopotamian source extraction and Etruscan cell reconstruction are audit-only research;no runtime implementation"
+    ],
+    "unsupported": [
+      "Factual future,death,wealth or clinical prediction",
+      "Anatomical recognition or diagnosis",
+      "Sacrifice or specimen procedures",
+      "Mesopotamian/Etruscan/Augury rule transfer",
+      "Generic positive/negative inversion",
+      "Automatic prose extraction or inferred chronology"
+    ]
+  },
+  "acceptance": {
+    "criteria_passed": true,
+    "tests": 1031,
+    "inherited_tests": 958,
+    "new_tests": 73,
+    "cli_cases": 1235,
+    "inherited_cli_cases": 1151,
+    "new_cli_cases": 84,
+    "symbolic_verifiers": 22,
+    "finite_observations": 8100,
+    "individual_condition_checks": 32400,
+    "hand_authored_cases": 14,
+    "source_records": 9,
+    "condition_accounts": 4,
+    "context_references": 5,
+    "pre_engine_manifest_files": 1670,
+    "protected_files": 1665,
+    "earlier_protected_files": 1556,
+    "required_prior_files": 1441,
+    "changed_protected_files": [],
+    "intentional_interface_edits": [
+      "PROGRESS.md",
+      "knowledge/gaps.json",
+      "future/__main__.py",
+      "README.md"
+    ],
+    "source_append_policy": "knowledge/haruspicy_sources.json: preserve exact original12 records in order",
+    "original12_source_records_unchanged": true,
+    "source_registry_records": 421,
+    "registry_idempotent": true,
+    "checks": "data/haruspicy-acceptance-checks.json",
+    "regression": "data/haruspicy-regression.json",
+    "independent": "data/haruspicy-verification.json",
+    "preservation_manifest": "data/haruspicy-preservation-baseline.json",
+    "empirical_validation": false
+  },
+  "replay": {
+    "accepted_reports": [
+      {
+        "input": "data/haruspicy-exact-lung-input.json",
+        "json": "data/haruspicy-exact-lung.json",
+        "markdown": "data/haruspicy-exact-lung.md"
+      },
+      {
+        "input": "data/haruspicy-incomplete-lung-input.json",
+        "json": "data/haruspicy-incomplete-lung.json",
+        "markdown": "data/haruspicy-incomplete-lung.md"
+      },
+      {
+        "input": "data/haruspicy-wrong-organ-input.json",
+        "json": "data/haruspicy-wrong-organ.json",
+        "markdown": "data/haruspicy-wrong-organ.md"
+      },
+      {
+        "input": "data/haruspicy-absent-head-input.json",
+        "json": "data/haruspicy-absent-head.json",
+        "markdown": "data/haruspicy-absent-head.md"
+      },
+      {
+        "input": "data/haruspicy-present-head-input.json",
+        "json": "data/haruspicy-present-head.json",
+        "markdown": "data/haruspicy-present-head.md"
+      },
+      {
+        "input": "data/haruspicy-unknown-head-input.json",
+        "json": "data/haruspicy-unknown-head.json",
+        "markdown": "data/haruspicy-unknown-head.md"
+      },
+      {
+        "input": "data/haruspicy-standalone-heart-input.json",
+        "json": "data/haruspicy-standalone-heart.json",
+        "markdown": "data/haruspicy-standalone-heart.md"
+      },
+      {
+        "input": "data/haruspicy-caesar-first-input.json",
+        "json": "data/haruspicy-caesar-first.json",
+        "markdown": "data/haruspicy-caesar-first.md"
+      },
+      {
+        "input": "data/haruspicy-caesar-sequence-input.json",
+        "json": "data/haruspicy-caesar-sequence.json",
+        "markdown": "data/haruspicy-caesar-sequence.md"
+      },
+      {
+        "input": "data/haruspicy-contradiction-input.json",
+        "json": "data/haruspicy-contradiction.json",
+        "markdown": "data/haruspicy-contradiction.md"
+      },
+      {
+        "input": "data/haruspicy-reversed-sequence-input.json",
+        "json": "data/haruspicy-reversed-sequence.json",
+        "markdown": "data/haruspicy-reversed-sequence.md"
+      },
+      {
+        "input": "data/haruspicy-missing-predecessor-input.json",
+        "json": "data/haruspicy-missing-predecessor.json",
+        "markdown": "data/haruspicy-missing-predecessor.md"
+      },
+      {
+        "input": "data/haruspicy-uncertain-predecessor-input.json",
+        "json": "data/haruspicy-uncertain-predecessor.json",
+        "markdown": "data/haruspicy-uncertain-predecessor.md"
+      },
+      {
+        "input": "data/haruspicy-wrong-predecessor-input.json",
+        "json": "data/haruspicy-wrong-predecessor.json",
+        "markdown": "data/haruspicy-wrong-predecessor.md"
+      },
+      {
+        "input": "data/haruspicy-reference-input.json",
+        "json": "data/haruspicy-reference.json",
+        "markdown": "data/haruspicy-reference.md"
+      },
+      {
+        "input": "data/haruspicy-etruscan-input.json",
+        "json": "data/haruspicy-etruscan.json",
+        "markdown": "data/haruspicy-etruscan.md"
+      },
+      {
+        "input": "data/haruspicy-mesopotamian-input.json",
+        "json": "data/haruspicy-mesopotamian.json",
+        "markdown": "data/haruspicy-mesopotamian.md"
+      },
+      {
+        "input": "data/haruspicy-unicode-input.json",
+        "json": "data/haruspicy-unicode.json",
+        "markdown": "data/haruspicy-unicode.md"
+      },
+      {
+        "input": "data/haruspicy-catalog-input.json",
+        "json": "data/haruspicy-catalog.json",
+        "markdown": "data/haruspicy-catalog.md"
+      },
+      {
+        "input": "data/haruspicy-vitals-conflict-input.json",
+        "json": "data/haruspicy-vitals-conflict.json",
+        "markdown": "data/haruspicy-vitals-conflict.md"
+      }
+    ],
+    "rejected_reports": [
+      {
+        "input": "data/haruspicy-invalid-schema-input.json",
+        "json": "data/haruspicy-invalid-schema.json",
+        "markdown": "data/haruspicy-invalid-schema.md"
+      },
+      {
+        "input": "data/haruspicy-prediction-input.json",
+        "json": "data/haruspicy-prediction.json",
+        "markdown": "data/haruspicy-prediction.md"
+      },
+      {
+        "input": "data/haruspicy-wrong-profile-input.json",
+        "json": "data/haruspicy-wrong-profile.json",
+        "markdown": "data/haruspicy-wrong-profile.md"
+      },
+      {
+        "input": "data/haruspicy-wrong-hash-input.json",
+        "json": "data/haruspicy-wrong-hash.json",
+        "markdown": "data/haruspicy-wrong-hash.md"
+      },
+      {
+        "input": "data/haruspicy-foreign-catalog-input.json",
+        "json": "data/haruspicy-foreign-catalog.json",
+        "markdown": "data/haruspicy-foreign-catalog.md"
+      },
+      {
+        "input": "data/haruspicy-invalid-organ-input.json",
+        "json": "data/haruspicy-invalid-organ.json",
+        "markdown": "data/haruspicy-invalid-organ.md"
+      },
+      {
+        "input": "data/haruspicy-invalid-feature-input.json",
+        "json": "data/haruspicy-invalid-feature.json",
+        "markdown": "data/haruspicy-invalid-feature.md"
+      },
+      {
+        "input": "data/haruspicy-duplicate-id-input.json",
+        "json": "data/haruspicy-duplicate-id.json",
+        "markdown": "data/haruspicy-duplicate-id.md"
+      },
+      {
+        "input": "data/haruspicy-invalid-unicode-input.json",
+        "json": "data/haruspicy-invalid-unicode.json",
+        "markdown": "data/haruspicy-invalid-unicode.md"
+      },
+      {
+        "input": "data/haruspicy-wrong-version-input.json",
+        "json": "data/haruspicy-wrong-version.json",
+        "markdown": "data/haruspicy-wrong-version.md"
+      },
+      {
+        "input": "data/haruspicy-unknown-reference-input.json",
+        "json": "data/haruspicy-unknown-reference.json",
+        "markdown": "data/haruspicy-unknown-reference.md"
+      },
+      {
+        "input": "data/haruspicy-invalid-link-input.json",
+        "json": "data/haruspicy-invalid-link.json",
+        "markdown": "data/haruspicy-invalid-link.md"
+      }
+    ],
+    "protocol": "Canonical sorted-key compact UTF8 JSON,unescaped Unicode,no terminal LF;raw user text retained;JSON andMarkdown exact replay;no clock,RNG,LLM or network"
+  },
+  "rights": "Original concise notes only;no modern Koch text,Colonna diagram,museum photo or anatomy image redistributed.",
+  "limits": [
+    "Historical interpretation/reference scope;not exhaustive,certified ancient practice or empirical validation.",
+    "Latin Library digital witnesses cross-checked;printed Latin edition/manuscript genealogy unresolved.",
+    "Falconer terminology and modern editorial predicates explicitly qualified;no modern anatomical identity inferred.",
+    "Other traditions remain audit-only;no Mesopotamian dictionary,Piacenza geometry,source transfer or animal workflow."
+  ],
+  "P1": [
+    "Original Latin/printed-edition collation",
+    "Koch2000/2005 legitimate full translations and complete protasis/apodosis pairs",
+    "Tablet witness variants,damaged text and exceptions",
+    "Piacenza selected cell transcriptions,edition numbering,both-face orientation and disputed deity expansions",
+    "Archaeological function and modern diagram rights",
+    "Additional Roman accounts under independent source fixtures"
+  ],
+  "P2": [
+    "Independent Mesopotamian conditional profile",
+    "Independent Etruscan zone/name profile",
+    "Rights-cleared original schematics",
+    "Broader historical documentary comparison",
+    "Optional manual archaeological annotation",
+    "Empirical research separate from textual attribution"
+  ],
+  "inventory": {
+    "total_ids": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ],
+    "original_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31"
+  },
+  "transition": "Only after closure committed,pushed and clean0/0:Technique40 Feng Shui resource/variation audit only. No41/42 work.",
+  "source_locator_correction_commit": "ce00f27",
+  "original_report_commit": "816c8ae",
+  "fixture_correction_provenance": "data/haruspicy-fixture-provenance.json"
+}

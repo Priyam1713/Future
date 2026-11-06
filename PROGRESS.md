@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 39 Haruspicy Core v1 closure — 2026-11-06
+- **Core v1 Ready — Historical Roman Entrail-Sign Reference/Condition Scope**: `cicero-falconer1923-roman-entrail-references-v1`;four source-condition cases/five context references. Exact lung/vitals predicate,reported liver-head belief and linked chronological Caesar comparison preserve Quintus/Spurinna/Marcus and Latin/translation boundaries;no clinical or predictive output.
+- 1031 tests(958+73),1235 CLI(1151+84),22 verifiers pass. Independent8100 rows/32400 condition checks and14 known answers;20 valid/12 rejected report pairs replay. Pre-engine1670-file manifest:1665 byte-protected files unchanged,including1556 earlier/1441 required;four deliberate interface/history edits plus append-only source metadata documented. Registry/dependency/pip/diff pass.
+- Source9a1a643,catalog841b51e,engine158aba6,evidencec70b2eb,reports816c8ae;full acceptance and frozen schema/matrix/rights/P1/P2 in `knowledge/haruspicy_core_v1.json`. Commit,push and synchronize before40 audit only.
+
 ## Technique 39 critical citation range correction — 2026-11-06
 - Corrected contextual Marcus range to II.13.32–II.14.34,including explicit ending chapter14. Repinned source/catalog/profile and replay hashes; all four predicates,14 known answers and8100 matrix expectations are unchanged,with provenance evidence saved.
 - New73 tests and independent32400 condition checks pass;20 accepted/12 rejected report pairs regenerated and84 CLI cases pass. Full acceptance coordinator refreshed after the metadata pin change.
