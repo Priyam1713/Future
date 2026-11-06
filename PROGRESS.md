@@ -1026,3 +1026,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #46 deterministic engine
 - Implemented strict human annotation,source-case reference,immutable originals/amendments,finite exact-ID candidate manifests and complete manual comparison ledger with independent experience/report/event timing. No narrative inference,diagnosis,prediction or public export.
 - 41new tests and all16independent fixture families pass locally,including648category rows and11fixed chronology cases;full inherited acceptance remains pending.
+
+## 2026-11-07 — #46 independent verifier
+- All16frozen families pass against648pre-engine category expectations,11chronology constants,four author labels/counts and independent SHA256 commitments. Includes originals/amendments,seven candidate outcome buckets and separate post-hoc denominator. Clinical/empirical validation remains explicitly false.
