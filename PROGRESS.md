@@ -1097,3 +1097,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Aer0.18.2/SDK2.6.2/Algorithms0.4.0metadata inspected;allthree remain uninstalled. WindowsCPUwheel availability is not operational orGPU support. Finance0.4.1tutorial is archived/legacySampler andnot claimed current-compatible.
 - Recommend tinyCPUideal statevector+seededterminal sampling+classicalBernoulli reference,with20independent fixture-family plans. Analyticalvariance/norm checks only;no circuit,sampler,package install,executable profile,hardware orquantum benchmark. No simulatedspeedup/unknownmarketforecasting certification.
 - Audit validation passes;2925pre-audit artifact bytes andother59gap entries unchanged;60IDs/54retained/six exclusions preserved. P1/P2,matrix andacceptance gates recorded. Next:implement/close#50in a subsequent pass;no#51research.
+
+## 2026-11-07 — #50 source and numerical profile freeze
+- Reopened primary mathematics, journal bibliography, IBM matrices/bit order and Aer metadata. Froze montanaro-ibm-small-circuit-cpu-probability-v1 before production;standalone CPU only, five gates,1–4qubits,64gates,100000shots,xorshift32 event-first CDF and1e-12 verification tolerance. No clipping or AE/quantum advantage. Complete pre-engine byte manifest captured. Independent fixtures next.

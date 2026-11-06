@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "date": "2026-11-07",
+  "audit_sha256": "7815ff94bdf56fa9a5383acacfd050e53b552d194605593835f9320b1aab9519",
+  "source_manifest_sha256": "07de668e406ec059fd1e4472da5db6671d13897b67a2a02d8638cc05076772fa",
+  "verification": "Primary PMC journal Theorems2.2/2.5, Aer0.18.2 landing, DNB final8page journal article, IBM RY and bit ordering reopened before freeze. No package installed.",
+  "ranked_sources": [
+    [
+      50,
+      "Quantum Probability Forecasting",
+      1,
+      "Ashley Montanaro",
+      "Quantum Speedup of Monte Carlo Methods",
+      "Quantum estimation theory",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4614442/",
+      "Open peer-reviewed paper",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      50,
+      "Quantum Probability Forecasting",
+      2,
+      "IBM / Qiskit contributors",
+      "Qiskit Aer Documentation",
+      "Local classical quantum simulator",
+      "https://qiskit.github.io/qiskit-aer/",
+      "Open software docs",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      50,
+      "Quantum Probability Forecasting",
+      3,
+      "Stefan Woerner and Daniel J. Egger",
+      "Quantum Risk Analysis",
+      "Quantum finance/uncertainty demonstration",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "source_mathematics": {
+    "born": "a=<psi|P|psi>=sum_good |amplitude|^2",
+    "ry": "[[cos(theta/2),-sin(theta/2)],[sin(theta/2),cos(theta/2)]]",
+    "amplitude_estimation": "Coherent A,A inverse,good projector and reflections required;error <=2*pi*sqrt(a*(1-a))/t+pi^2/t^2;success >=8/pi^2. Median repetitions boost confidence. Not implemented.",
+    "variance": "iid Bernoulli: E[K]=Np, VarK=Np(1-p), Varfrequency=p(1-p)/N",
+    "bibliography": "Montanaro2015journal differs from arXiv/revisions;Woerner/Egger2019journal article differs from2018preprint and original historical inventory Book classification."
+  },
+  "rights": "Facts and original code only. Primary papers CC BY4.0;Aer source Apache2.0. No copied source/PDF/figures;SDK compatibility unverified."
+}

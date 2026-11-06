@@ -1,0 +1,137 @@
+{
+  "id": "montanaro-ibm-small-circuit-cpu-probability-v1",
+  "version": 1,
+  "technique_id": 50,
+  "source_manifest_sha256": "07de668e406ec059fd1e4472da5db6671d13897b67a2a02d8638cc05076772fa",
+  "source_freeze_sha256": "dc7a03a73733b4adb1e6e2827df290a7fb8248ba14e75021bb7f25d53b822e5a",
+  "bounds": {
+    "qubits": [
+      1,
+      4
+    ],
+    "gates": 64,
+    "shots": [
+      1,
+      100000
+    ],
+    "angle_radians_abs_max": 1000000
+  },
+  "gate_allowlist": [
+    "id",
+    "x",
+    "h",
+    "ry",
+    "cx"
+  ],
+  "numeric": {
+    "arithmetic": "Python complex binary64, platform libm trig",
+    "absolute_tolerance": 1e-12,
+    "serialization": "Python shortest roundtrip JSON floats;replay pinned runtime;zero retained,no clipping",
+    "normalization": "Verify norm within1e-12;retain raw Born probabilities;sampling CDF divides explicitly by measured norm;no input state injection"
+  },
+  "indexing": "q0 LSB;bitstrings q(n-1)..q0;ascending state index;identity qi->ci terminal mapping only",
+  "schema": {
+    "root": [
+      "schema_version",
+      "profile",
+      "task",
+      "backend",
+      "circuit",
+      "shots",
+      "rng",
+      "event",
+      "reference",
+      "provenance"
+    ],
+    "profile": [
+      "id",
+      "sha256",
+      "catalog_sha256"
+    ],
+    "circuit": [
+      "qubits",
+      "gates",
+      "measurement"
+    ],
+    "gate": "id/x/h: op,target;ry:op,target,angle;cx:op,target,control",
+    "measurement": "list(range(qubits))",
+    "event": "kind bitstring,value exact n-bit string OR kind qubit_one,value integer qubit index",
+    "provenance": [
+      "source_ref",
+      "rights",
+      "attribution"
+    ],
+    "tasks": [
+      "simulate",
+      "sample",
+      "compare",
+      "reference",
+      "report"
+    ],
+    "reference": "null except reference task: born,ry,bell,montanaro,variance,risk",
+    "backend": "standalone_cpu only",
+    "shots": "null for simulate/reference;positive integer for sample/compare;report chooses compare when shots supplied else simulate",
+    "rng": "null without shots;algorithm,seed,comparator_seed,stream required otherwise",
+    "unknown_fields": "reject recursively"
+  },
+  "prng": {
+    "id": "xorshift32-v1",
+    "seed_range": [
+      1,
+      4294967295
+    ],
+    "algorithm": "For each draw: x ^= (x<<13)&0xffffffff; x ^= x>>17; x ^= (x<<5)&0xffffffff; x &=0xffffffff;u=x/4294967296.0. One draw per shot.",
+    "sampling": "Event indices first ascending,then complement ascending;CDF normalized by verified norm;strict u<cumulative;last positive cell absorbs only roundoff residual.",
+    "streams": "common:comparator_seed equals seed; independent:distinct seeds. All events use event-first CDF so Bernoulli u<p equals circuit event indicator by construction for common stream."
+  },
+  "statistics": "iid analytic population expectation/variance/SE;PRNG emulates iid model,not physical randomness;no confidence interval certified",
+  "resources": "Gate depth critical path per touched qubit;id counts one;no measurement depth;AE oracle calls null/not applicable;actual measurements in separate versioned artifact",
+  "report": "Canonical sorted JSON UTF8 SHA256 semantic input/profile/catalog/report;normalized LF code hash;Markdown exact embedded JSON with safe fence. Raw input bytes CLI corpus separately hashes.",
+  "capabilities": {
+    "supported": [
+      "ideal statevector",
+      "terminal seeded sampling",
+      "direct classical event Bernoulli",
+      "source reference",
+      "deterministic reports"
+    ],
+    "experimental": [
+      "Aer parity",
+      "finite-sample confidence intervals"
+    ],
+    "unsupported": [
+      "QAE",
+      "variational",
+      "quantum-inspired algorithms",
+      "noise",
+      "GPU",
+      "QPU",
+      "cloud",
+      "arbitrary states",
+      "future market prediction",
+      "quantum advantage"
+    ]
+  },
+  "fixture_families": [
+    "basis-states",
+    "hadamard",
+    "rotation-map",
+    "normalization",
+    "endpoint-events",
+    "seeded-replay",
+    "low-shot-variance",
+    "nonmonotone-error",
+    "exact-vs-sampled",
+    "circuit-resources",
+    "invalid-angles",
+    "unsupported-backends",
+    "endianness",
+    "classical-bernoulli",
+    "uncertainty-assumptions",
+    "no-simulated-speedup",
+    "oracle-provenance",
+    "json-markdown-replay",
+    "interference-control",
+    "bell-control"
+  ]
+}
