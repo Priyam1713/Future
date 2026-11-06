@@ -1,0 +1,770 @@
+# Augury: Roman bird-sign source reference
+
+Profile: cicero-falconer1923-roman-bird-signs-v1
+
+Manual source comparison only;no factual prediction or public auspice authority.
+
+## Source editions and rights
+
+```json
+[
+  {
+    "id": "augury-cicero-core-edition-v1",
+    "technique_id": 38,
+    "rank": 1,
+    "author": "Marcus Tullius Cicero; English translator William Armistead Falconer; web transcription Bill Thayer / LacusCurtius",
+    "edition": "De Divinatione / On Divination, Loeb Classical Library,Cicero volXX,Harvard University Press,1923",
+    "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/home.html",
+    "locator": "Edition Used, Copyright; Chapter and Section Numbering; book links",
+    "ingestion": "facts_only",
+    "rights_note": "Site identifies1923 translated text as public domain; homepage itself has no asterisk and is separately Bill Thayer site content. Translation, translator notes and later site annotations/layout are distinct. Original concise factual notes/locators only; no whole site/assets redistributed.",
+    "checked_on": "2026-11-06",
+    "snapshot_sha256": "250d74fd88ca2e29741213f8e9a41a7a0c9d752d4d996814255360598103fc08",
+    "snapshot_bytes": 12583,
+    "access": "Fresh direct HTML downloaded, exact bytes hashed and passages inspected; no whole source website redistributed."
+  },
+  {
+    "id": "augury-cicero-core-book1-v1",
+    "technique_id": 38,
+    "rank": null,
+    "author": "Cicero / W. A. Falconer; LacusCurtius transcription",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html",
+    "locator": "I.2.3;I.6.11–I.7.12;I.8.13–14;I.15.26–28;I.39.84–85;I.53.120 and note133",
+    "ingestion": "facts_only",
+    "rights_note": "One-asterisk book URL identifies public-domain text under site policy. Later site material/images not automatically included. Audit distributes factual notes, not raw full text.",
+    "checked_on": "2026-11-06",
+    "snapshot_sha256": "8ee1dac4c378c4a42d22764b7d6bef6e3b70ba462d03ae973a67a2ecb73da79d",
+    "snapshot_bytes": 252127,
+    "access": "Fresh direct HTML downloaded, exact bytes hashed and passages inspected; no whole source website redistributed."
+  },
+  {
+    "id": "augury-cicero-core-book2-v1",
+    "technique_id": 38,
+    "rank": null,
+    "author": "Cicero / W. A. Falconer; LacusCurtius transcription",
+    "edition": "On Divination,BookII;1923 Loeb translation",
+    "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html",
+    "locator": "II.26.56–57;II.36.76–78;II.38.80–II.39.83;note226",
+    "ingestion": "facts_only",
+    "rights_note": "Public-domain book text as identified by one-asterisk site policy; critical dialogue and translator/site notes must remain attributed separately. No source images or complete page bundled.",
+    "checked_on": "2026-11-06",
+    "snapshot_sha256": "078da984025b002692a644df41a42f858e3a4880bb1c6d9e22c43434a08eb880",
+    "snapshot_bytes": 262663,
+    "access": "Fresh direct HTML downloaded, exact bytes hashed and passages inspected; no whole source website redistributed."
+  },
+  {
+    "id": "augury-cicero-core-latin1-v1",
+    "technique_id": 38,
+    "rank": null,
+    "author": "Cicero / The Latin Library digital witness",
+    "edition": "De Divinatione Liber Prior; exact underlying printed Latin edition not established",
+    "url": "https://www.thelatinlibrary.com/cicero/divinatione1.shtml",
+    "locator": "ChapterVII continuation of section12; BookI Latin cornicem/corvum/side clause",
+    "ingestion": "facts_only",
+    "rights_note": "Ancient Latin differs from digital editing and website layout; no claim this is Falconer Loeb facing Latin. Primary Latin rendering checked for species/side vocabulary only; no whole text distributed.",
+    "checked_on": "2026-11-06",
+    "snapshot_sha256": null,
+    "access": "Primary Latin web rendering inspected; fresh direct request failed. No raw Latin snapshot hash asserted; underlying printed Latin edition unknown."
+  }
+]
+```
+
+## Complete observation evaluation
+
+```json
+[]
+```
+
+## Selected source references
+
+```json
+[
+  {
+    "id": "call-crow-left",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.7.12",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Quintus",
+    "source_account": "Quintus discusses the attributed crow call on the left while defending the use of recorded signs.",
+    "conditions": {
+      "bird_label": "crow",
+      "phenomenon": "call",
+      "relative_side": "left",
+      "relation": "located_on_side",
+      "reference_frame": "observer_relative"
+    },
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [
+      "note226-crow-right"
+    ],
+    "qualifications": "This initial chapterR7 clause continues section12, before section13. Favorable wording is not stated here; no flight polarity transferred. Latin label cornix checked independently; no modern scientific species inferred.",
+    "matching_status": "condition_match",
+    "native_locator": {
+      "book": 1,
+      "chapter": 7,
+      "section_start": 12,
+      "section_end": 12
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#R7"
+  },
+  {
+    "id": "call-raven-right",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.7.12",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Quintus",
+    "source_account": "Quintus discusses the attributed raven call on the right while defending the use of recorded signs.",
+    "conditions": {
+      "bird_label": "raven",
+      "phenomenon": "call",
+      "relative_side": "right",
+      "relation": "located_on_side",
+      "reference_frame": "observer_relative"
+    },
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "This initial chapterR7 clause continues section12, before section13. Favorable wording is not stated here; no flight polarity transferred. Latin label corvus checked independently; no modern scientific species inferred.",
+    "matching_status": "condition_match",
+    "native_locator": {
+      "book": 1,
+      "chapter": 7,
+      "section_start": 12,
+      "section_end": 12
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#R7"
+  },
+  {
+    "id": "flight-crow-left",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.39.85",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Quintus",
+    "source_account": "Quintus cites an augur treating crow flight toward the left as favorable in a rhetorical defense of divination.",
+    "conditions": {
+      "bird_label": "crow",
+      "phenomenon": "flight",
+      "relative_side": "left",
+      "relation": "moving_to_side",
+      "reference_frame": "observer_relative"
+    },
+    "explicit_favorable_language": true,
+    "polarity": "favorable",
+    "known_conflicts": [],
+    "qualifications": "Falconer renders flight to a side. Moving-to is the frozen digital comparison convention; merely located-on or departing-from is not silently equivalent. Historical favorable language is not a prediction for a user.",
+    "matching_status": "condition_match",
+    "native_locator": {
+      "book": 1,
+      "chapter": 39,
+      "section_start": 85,
+      "section_end": 85
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#85"
+  },
+  {
+    "id": "flight-raven-right",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.39.85",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Quintus",
+    "source_account": "Quintus cites an augur treating raven flight toward the right as favorable in a rhetorical defense of divination.",
+    "conditions": {
+      "bird_label": "raven",
+      "phenomenon": "flight",
+      "relative_side": "right",
+      "relation": "moving_to_side",
+      "reference_frame": "observer_relative"
+    },
+    "explicit_favorable_language": true,
+    "polarity": "favorable",
+    "known_conflicts": [],
+    "qualifications": "Falconer renders flight to a side. Moving-to is the frozen digital comparison convention; merely located-on or departing-from is not silently equivalent. Historical favorable language is not a prediction for a user.",
+    "matching_status": "condition_match",
+    "native_locator": {
+      "book": 1,
+      "chapter": 39,
+      "section_start": 85,
+      "section_end": 85
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#85"
+  },
+  {
+    "id": "note226-crow-right",
+    "source_id": "augury-cicero-core-book2-v1",
+    "edition": "On Divination,BookII;1923 Loeb translation",
+    "locator": "II.39.82,translator note226",
+    "text_layer": "translator_note",
+    "speaker": "Falconer note226 as reproduced",
+    "source_account": "The note gives a favorable right-side crow-call example, in conflict with the main-text left-side crow-call account.",
+    "conditions": {
+      "bird_label": "crow",
+      "phenomenon": "call",
+      "relative_side": "right",
+      "relation": "located_on_side",
+      "reference_frame": "observer_relative"
+    },
+    "explicit_favorable_language": true,
+    "polarity": "favorable",
+    "known_conflicts": [
+      "call-crow-left"
+    ],
+    "qualifications": "Editorial-note evidence only. A matching note is flagged conflicting_evidence, never promoted to a consensus main-text omen. No inferred observer heading.",
+    "matching_status": "condition_match",
+    "native_locator": {
+      "book": 2,
+      "chapter": 39,
+      "section_start": 82,
+      "section_end": 82,
+      "note": 226
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#note226"
+  },
+  {
+    "id": "classes-main",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.53.120",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Quintus",
+    "source_account": "Alites give signs by flight and oscines by cries; Quintus connects their movements with divine will.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Historical terminology, not automatic modern species classification or evidence of an actual divine intervention.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 1,
+      "chapter": 53,
+      "section_start": 120,
+      "section_end": 120
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#120"
+  },
+  {
+    "id": "classes-note133",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.53.120,translator note133",
+    "text_layer": "translator_note",
+    "speaker": "Falconer note133 as reproduced",
+    "source_account": "The note supplies eagle,hawk,osprey as flight examples and raven,crow,owl as voice examples, with a Festus reference.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Species examples belong to the note, not a separately verified original Cicero species list. Do not erase explicit corvid flight examples inI.39.85.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 1,
+      "chapter": 53,
+      "section_start": 120,
+      "section_end": 120,
+      "note": 133
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#note133"
+  },
+  {
+    "id": "public-early",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.2.3",
+    "text_layer": "main_text_historical_context",
+    "speaker": "Cicero narrative introduction",
+    "source_account": "The Roman account links augurs and auspices with royal foundation and the conduct of public business.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Historical institutional description confers no public authority on a modern user observation.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 1,
+      "chapter": 2,
+      "section_start": 3,
+      "section_end": 3
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#R2"
+  },
+  {
+    "id": "public-decay",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.15.28",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Quintus",
+    "source_account": "Quintus contrasts magistrates forced auspices with the reported loss or neglect of earlier augural practice.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Ritual/institutional context, not a validated contemporary auspice procedure.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 1,
+      "chapter": 15,
+      "section_start": 28,
+      "section_end": 28
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#28"
+  },
+  {
+    "id": "public-criticism",
+    "source_id": "augury-cicero-core-book2-v1",
+    "edition": "On Divination,BookII;1923 Loeb translation",
+    "locator": "II.36.76–78",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Marcus",
+    "source_account": "Marcus questions contemporary use of bird divination and describes avoiding unwanted signs or their observation.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Criticism and reported practice remain attributed; the engine does not authenticate or perform public auspices.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 2,
+      "chapter": 36,
+      "section_start": 76,
+      "section_end": 78
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#76"
+  },
+  {
+    "id": "direction-criticism",
+    "source_id": "augury-cicero-core-book2-v1",
+    "edition": "On Divination,BookII;1923 Loeb translation",
+    "locator": "II.39.82–83",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Marcus",
+    "source_account": "Marcus contrasts national side conventions and favorable sinistra language, including signs physically on the right, while challenging consistency.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Sinistra as a favorable expression is not a universal physical-left rule. No unified Roman/Greek direction or compass map.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 2,
+      "chapter": 39,
+      "section_start": 82,
+      "section_end": 83
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#82"
+  },
+  {
+    "id": "orientation-note226",
+    "source_id": "augury-cicero-core-book2-v1",
+    "edition": "On Divination,BookII;1923 Loeb translation",
+    "locator": "II.39.82,translator note226",
+    "text_layer": "translator_note",
+    "speaker": "Falconer note226 as reproduced",
+    "source_account": "The note describes Roman observers facing south and Greek observers facing north; its crow-right example conflicts with the main-text crow-left account.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [
+      "call-crow-left",
+      "note226-crow-right"
+    ],
+    "qualifications": "This note is retained as documentary evidence, not an executable observer-orientation rule or permission to fill missing headings.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 2,
+      "chapter": 39,
+      "section_start": 82,
+      "section_end": 82,
+      "note": 226
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#note226"
+  },
+  {
+    "id": "cock-criticism",
+    "source_id": "augury-cicero-core-book2-v1",
+    "edition": "On Divination,BookII;1923 Loeb translation",
+    "locator": "II.26.56–57",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Marcus",
+    "source_account": "Marcus challenges a victory interpretation of crowing cocks and considers ordinary or chance causes, including an attributed Democritus digestion explanation.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Neither victory prophecy nor the ancient physiological account is independently established modern biology.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 2,
+      "chapter": 26,
+      "section_start": 56,
+      "section_end": 57
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#56"
+  },
+  {
+    "id": "weather-analogy",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.8.13–14;I.9.15",
+    "text_layer": "main_text_dialogue_poetic_analogy",
+    "speaker": "Quintus",
+    "source_account": "Quintus introduces natural/weather-sign analogies outside divination, including quoted bird behaviors.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "No operational forecast, bird-species diagnosis or copied Aeromancy rule. Historical/weather analogy is separate from source augural matching.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 1,
+      "chapter": 8,
+      "section_start": 13,
+      "section_end": 15
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#13"
+  }
+]
+```
+
+## Neutral observation comparison
+
+```json
+[]
+```
+
+## Critical and contextual references
+
+```json
+[
+  {
+    "id": "classes-main",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.53.120",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Quintus",
+    "source_account": "Alites give signs by flight and oscines by cries; Quintus connects their movements with divine will.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Historical terminology, not automatic modern species classification or evidence of an actual divine intervention.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 1,
+      "chapter": 53,
+      "section_start": 120,
+      "section_end": 120
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#120"
+  },
+  {
+    "id": "classes-note133",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.53.120,translator note133",
+    "text_layer": "translator_note",
+    "speaker": "Falconer note133 as reproduced",
+    "source_account": "The note supplies eagle,hawk,osprey as flight examples and raven,crow,owl as voice examples, with a Festus reference.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Species examples belong to the note, not a separately verified original Cicero species list. Do not erase explicit corvid flight examples inI.39.85.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 1,
+      "chapter": 53,
+      "section_start": 120,
+      "section_end": 120,
+      "note": 133
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#note133"
+  },
+  {
+    "id": "public-early",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.2.3",
+    "text_layer": "main_text_historical_context",
+    "speaker": "Cicero narrative introduction",
+    "source_account": "The Roman account links augurs and auspices with royal foundation and the conduct of public business.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Historical institutional description confers no public authority on a modern user observation.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 1,
+      "chapter": 2,
+      "section_start": 3,
+      "section_end": 3
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#R2"
+  },
+  {
+    "id": "public-decay",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.15.28",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Quintus",
+    "source_account": "Quintus contrasts magistrates forced auspices with the reported loss or neglect of earlier augural practice.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Ritual/institutional context, not a validated contemporary auspice procedure.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 1,
+      "chapter": 15,
+      "section_start": 28,
+      "section_end": 28
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#28"
+  },
+  {
+    "id": "public-criticism",
+    "source_id": "augury-cicero-core-book2-v1",
+    "edition": "On Divination,BookII;1923 Loeb translation",
+    "locator": "II.36.76–78",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Marcus",
+    "source_account": "Marcus questions contemporary use of bird divination and describes avoiding unwanted signs or their observation.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Criticism and reported practice remain attributed; the engine does not authenticate or perform public auspices.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 2,
+      "chapter": 36,
+      "section_start": 76,
+      "section_end": 78
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#76"
+  },
+  {
+    "id": "direction-criticism",
+    "source_id": "augury-cicero-core-book2-v1",
+    "edition": "On Divination,BookII;1923 Loeb translation",
+    "locator": "II.39.82–83",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Marcus",
+    "source_account": "Marcus contrasts national side conventions and favorable sinistra language, including signs physically on the right, while challenging consistency.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Sinistra as a favorable expression is not a universal physical-left rule. No unified Roman/Greek direction or compass map.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 2,
+      "chapter": 39,
+      "section_start": 82,
+      "section_end": 83
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#82"
+  },
+  {
+    "id": "orientation-note226",
+    "source_id": "augury-cicero-core-book2-v1",
+    "edition": "On Divination,BookII;1923 Loeb translation",
+    "locator": "II.39.82,translator note226",
+    "text_layer": "translator_note",
+    "speaker": "Falconer note226 as reproduced",
+    "source_account": "The note describes Roman observers facing south and Greek observers facing north; its crow-right example conflicts with the main-text crow-left account.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [
+      "call-crow-left",
+      "note226-crow-right"
+    ],
+    "qualifications": "This note is retained as documentary evidence, not an executable observer-orientation rule or permission to fill missing headings.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 2,
+      "chapter": 39,
+      "section_start": 82,
+      "section_end": 82,
+      "note": 226
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#note226"
+  },
+  {
+    "id": "cock-criticism",
+    "source_id": "augury-cicero-core-book2-v1",
+    "edition": "On Divination,BookII;1923 Loeb translation",
+    "locator": "II.26.56–57",
+    "text_layer": "main_text_dialogue",
+    "speaker": "Marcus",
+    "source_account": "Marcus challenges a victory interpretation of crowing cocks and considers ordinary or chance causes, including an attributed Democritus digestion explanation.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "Neither victory prophecy nor the ancient physiological account is independently established modern biology.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 2,
+      "chapter": 26,
+      "section_start": 56,
+      "section_end": 57
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html#56"
+  },
+  {
+    "id": "weather-analogy",
+    "source_id": "augury-cicero-core-book1-v1",
+    "edition": "On Divination,BookI;1923 Loeb translation",
+    "locator": "I.8.13–14;I.9.15",
+    "text_layer": "main_text_dialogue_poetic_analogy",
+    "speaker": "Quintus",
+    "source_account": "Quintus introduces natural/weather-sign analogies outside divination, including quoted bird behaviors.",
+    "conditions": null,
+    "explicit_favorable_language": false,
+    "polarity": "not_stated",
+    "known_conflicts": [],
+    "qualifications": "No operational forecast, bird-species diagnosis or copied Aeromancy rule. Historical/weather analogy is separate from source augural matching.",
+    "matching_status": "context_reference_only",
+    "native_locator": {
+      "book": 1,
+      "chapter": 8,
+      "section_start": 13,
+      "section_end": 15
+    },
+    "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html#13"
+  }
+]
+```
+
+## Latin translation qualification
+
+```json
+{
+  "version": 1,
+  "source_id": "augury-cicero-core-latin1-v1",
+  "locator": "LatinI.39.85 versus FalconerI.39.85",
+  "latin_clause": "a dextra corvus, a sinistra cornix faciat ratum",
+  "qualification": "The inspected Latin clause names sides/birds and ratum, without an explicit flight verb. Falconer English supplies flies/to. This profile deliberately matches the1923 English flight-to wording; it does not claim an independently established original-Latin velocity or universal ancient side convention.",
+  "call_locator": "LatinI.VII continuing12",
+  "call_qualification": "Latin call verb canere explicitly present; section12 continues into chapterVII before13.",
+  "source_access": "Primary Latin web rendering inspected; no successful fresh raw-byte snapshot/printed edition. No silent correction of Latin/English differences."
+}
+```
+
+## Frozen conventions
+
+```json
+{
+  "call_relation": "located_on_side for the translated call-on-side account",
+  "flight_relation": "moving_to_side for Falconer flight-to-side; located-on and moving-from are distinct and not coerced",
+  "frame": "observer_relative is an explicitly declared qualitative digital comparison frame, not an ancient orientation theorem; unknown frame insufficient, cardinal frame unsupported",
+  "polarity": "Only explicit main-text favorable flight accounts are listed as main-text favorable matches; calls retain not_stated. Note favorable text remains conflicting editorial evidence.",
+  "source_conflict": "Crow-call comparison on either supported side exposes note226/main-text disagreement without changing the main-text condition. Applicable source record and conflicting overall evidence can coexist.",
+  "observation_conflict": "Structured side reports disagreeing with one another or the declared side block a positive match. Raw prose is not interpreted for contradictions.",
+  "unknowns": "Known mismatches exclude exact conditions; unknown/uncertain required fields remain insufficient. Unknown species and cardinal conversion unsupported, never unfavorable."
+}
+```
+
+## Evaluation policy
+
+```json
+"Unrecognized bird unsupported. Known mismatches in bird/phenomenon/side/relation exclude a condition. Structured side conflict blocks positive matching; cardinal frame unsupported; unknown/uncertain required fields insufficient. Note226 full match remains conflicting. Overall crow-call main match also exposes source disagreement without altering its main-text match."
+```
+
+## Raw user text
+
+```json
+{}
+```
+
+## Evidence layers
+
+```json
+{
+  "direct": "Source-located dialogue and separately attributed notes;Quintus and Marcus remain distinct",
+  "compositional": "Explicit finite condition matching;applicable is documentary compatibility,not factual judgment",
+  "user_attributed": "Raw reported bird behavior,origin,modern species text,setting,sequence,uncertainty and reflection",
+  "unsupported": "Prediction,diagnosis,scientific species inference,divine accuracy or authorized public auspices"
+}
+```
+
+## Variation support
+
+```json
+{
+  "supported": [
+    "Four source-specific main bird-condition accounts",
+    "One conflicting translator-note condition and nine source/critical/context records",
+    "Manual one-to-eight observations with exact relation/frame/unknown/conflict handling",
+    "Exact reference/catalog lookup, raw user text and neutral side-by-side comparison",
+    "Pinned profile/catalog/source hashes and offline JSON/Markdown replay"
+  ],
+  "experimental": [],
+  "unsupported": [
+    "Universal Roman/Greek polarity map or automatic compass conversion",
+    "Greek narrative or Kynes executable profiles",
+    "Weather/Aeromancy interpretations or operational forecasting",
+    "Scientific species identification, camera recognition or generated observations",
+    "Factual future prediction,diagnosis,supernatural accuracy or authorized public auspices"
+  ]
+}
+```
+
+## Public authority boundary
+
+```json
+"Voluntary contemporary/manual observations may be compared with a historical account. Neither a declared public setting nor a matched reference confers augural office, ritual validity or public decision authority."
+```
+
+## Greek scope
+
+```json
+"Documentary source metadata retained; independent Greek runtime profiles deferredP1, never Roman side-rule transfer."
+```
+
+## Rights
+
+```json
+"Only original concise factual accounts/locators and hashes retained.1923 translated book text has LacusCurtius public-domain indication; site notes/layout/images/later revisions and Kynes books remain distinct."
+```
+
+## Exact replay metadata
+
+```json
+{
+  "request": {
+    "schema_version": 1,
+    "profile": "cicero-falconer1923-roman-bird-signs-v1",
+    "mode": "manual",
+    "task": "catalog",
+    "catalog_id": "cicero-falconer1923-bird-cases-v1",
+    "catalog_version": 1,
+    "catalog_sha256": "108f5326911a30b1891193d82971009d318aa62982a9f8671ce0ca0f2d736416"
+  },
+  "input_sha256": "f20f30edf5e94da4bab175293b8e62b014bc24a8a1777cf99dd667a783060a9f",
+  "profile_sha256": "47b427d3b058085f06dcb9e7265840d7df53a0ea378c4553bd6cfe4dc43d25c1",
+  "catalog_sha256": "108f5326911a30b1891193d82971009d318aa62982a9f8671ce0ca0f2d736416",
+  "source_manifest_sha256": "22b0ccb26821e84ab00819ef910380dc6d75cb00cfb9dcf9e7ef6f1dbf0d13d8",
+  "source_snapshot_sha256": {
+    "augury-cicero-core-edition-v1": "250d74fd88ca2e29741213f8e9a41a7a0c9d752d4d996814255360598103fc08",
+    "augury-cicero-core-book1-v1": "8ee1dac4c378c4a42d22764b7d6bef6e3b70ba462d03ae973a67a2ecb73da79d",
+    "augury-cicero-core-book2-v1": "078da984025b002692a644df41a42f858e3a4880bb1c6d9e22c43434a08eb880",
+    "augury-cicero-core-latin1-v1": null
+  },
+  "serialization": "Canonical UTF8 sorted-key compact JSON,unescaped Unicode,no terminal LF;raw user text preserved",
+  "external_calls": false,
+  "rng": false,
+  "integrity_checked": true
+}
+```
