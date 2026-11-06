@@ -1,0 +1,857 @@
+{
+  "passed": true,
+  "date": "2026-11-06",
+  "checks": [
+    {
+      "index": 0,
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 134.94,
+      "stdout": "",
+      "stderr": "..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\skyfield\\searchlib.py:224: DeprecationWarning: Setting the dtype on a NumPy array has been deprecated in NumPy 2.5.\r\nInstead of changing the dtype on an array x, create a new array with x.view(new_dtype)\r\n  y.dtype = int8\r\n.............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\r\n----------------------------------------------------------------------\r\nRan 1207 tests in 133.937s\r\n\r\nOK\r\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\r\n"
+    },
+    {
+      "index": 1,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aeromancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 90.98,
+      "stdout": "72 Aeromancy CLI cases passed;21 JSON/21 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 2,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_akashic_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 35.95,
+      "stdout": "28 Akashic CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 3,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_astrocartography_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 14.66,
+      "stdout": "12 Astrocartography CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 4,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aura_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 19.38,
+      "stdout": "14 Aura CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 5,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_automatic_writing_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 33.05,
+      "stdout": "24 Automatic Writing CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 6,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_bibliomancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 96.31,
+      "stdout": "80 Bibliomancy CLI cases passed;16 JSON/16 Markdown saved replays;10 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 7,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_chinese_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 38.16,
+      "stdout": "15 Chinese CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 8,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_cleromancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 87.77,
+      "stdout": "80 Cleromancy CLI cases passed;16 valid JSON/Markdown saved replays and16 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 9,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_coffee_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 56.34,
+      "stdout": "54 Coffee CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 10,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_dream_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 31.48,
+      "stdout": "30 Dream CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 11,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_face_reading_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 13.67,
+      "stdout": "12 Face Reference CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 12,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_geomancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 62.45,
+      "stdout": "55 Geomancy CLI cases passed; 13 JSON/13 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 13,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_graphology_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 15.92,
+      "stdout": "14 Graphology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 14,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_horary"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.94,
+      "stdout": "5 Horary CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 15,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_hydromancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 71.08,
+      "stdout": "63 Hydromancy CLI cases passed;18 JSON/18 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 16,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iching_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 36.11,
+      "stdout": "30 I Ching CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 17,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iridology_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 16.33,
+      "stdout": "14 Iridology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 18,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_lithomancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 66.16,
+      "stdout": "64 Lithomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 19,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mirror_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 28.73,
+      "stdout": "28 Mirror CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 20,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_moleosophy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 11.58,
+      "stdout": "12 Moleosophy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 21,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mundane_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 13.42,
+      "stdout": "12 Mundane CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 22,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_numerology_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.19,
+      "stdout": "4 Numerology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 23,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_oracle_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 21.09,
+      "stdout": "20 Oracle CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 24,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_osteomancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 72.34,
+      "stdout": "64 Osteomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 25,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_palmistry_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 10.84,
+      "stdout": "10 Palmistry CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 26,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pendulum_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 33.2,
+      "stdout": "28 Pendulum CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 27,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_phrenology_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 14.91,
+      "stdout": "12 Phrenology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 28,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_podomancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 13.92,
+      "stdout": "12 Podomancy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 29,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pyromancy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 70.34,
+      "stdout": "60 Pyromancy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 30,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_runes_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 27.72,
+      "stdout": "24 Rune CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 31,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_scrying_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 34.28,
+      "stdout": "28 Scrying CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 32,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tarot_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 27.36,
+      "stdout": "22 Tarot CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 33,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tasseography_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 43.45,
+      "stdout": "34 Tasseography CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 34,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_vedic_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 15.33,
+      "stdout": "12 Vedic CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 35,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_western_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 30.11,
+      "stdout": "23 CLI smoke cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 36,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tarot"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.56,
+      "stdout": "30 Tarot source/layout/independent protocol checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 37,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_oracle"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.67,
+      "stdout": "49 Oracle verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 38,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_iching"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.66,
+      "stdout": "8759 I Ching verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 39,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_runes"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.7,
+      "stdout": "84 rune reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 40,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pendulum"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.27,
+      "stdout": "207 Pendulum reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 41,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_scrying"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.47,
+      "stdout": "23 Scrying reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 42,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_mirror"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.36,
+      "stdout": "22 Mirror reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 43,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_dream"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.66,
+      "stdout": "26 Dream reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 44,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_automatic_writing"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.88,
+      "stdout": "27 Automatic Writing reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 45,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_akashic"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.14,
+      "stdout": "47 Akashic independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 46,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tasseography"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.97,
+      "stdout": "68 Tasseography independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 47,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_coffee"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.0,
+      "stdout": "65 Coffee independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 48,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pyromancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.0,
+      "stdout": "59 Pyromancy independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 49,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_hydromancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.42,
+      "stdout": "44 Hydromancy independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 50,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_aeromancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.17,
+      "stdout": "53 Aeromancy independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 51,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_geomancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.52,
+      "stdout": "65536 independent Geomancy charts, 256 addition pairs, 4096 associative triples, 16 identities and 6 fixtures passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 52,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_lithomancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.69,
+      "stdout": "12 Lithomancy source roles; 1225 independent distance pairs;25 grid rankings;4 authored cases;10 transforms;9 viewpoint checks;2 unknown cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 53,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_osteomancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.95,
+      "stdout": "13 Osteomancy source records;5 named relationships;169 ordered pair checks;26 omitted-outcome checks;52 original-evidence checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 54,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_bibliomancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.45,
+      "stdout": "141 Bibliomancy selections;85 independently parsed verses;423 context cases;216 historical indices;100 literal dice sums passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 55,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_cleromancy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.92,
+      "stdout": "24 Cleromancy source accounts;98 alias keys;9016 numerical research tuples;source discrepancies and exact replay passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 56,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_augury"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.56,
+      "stdout": "14 Augury source records;864 finite observations;4320 condition checks;4 known answers;5 uncertain-field and1 structured conflict cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 57,
+      "command": [
+        "python",
+        "-m",
+        "scripts.audit_dependencies"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.08,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 58,
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.03,
+      "stdout": "No broken requirements found.\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 59,
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.17,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'data/tasseography-empty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-invalid.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-saucer-unsupported.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-saucer-unsupported.md', LF will be replaced by CRLF the next time Git touches it\n"
+    },
+    {
+      "index": 60,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_augury_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 92.22,
+      "stdout": "80 Augury CLI cases passed;20 valid JSON/Markdown saved replays and10 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 61,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_haruspicy_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 97.45,
+      "stdout": "84 Haruspicy CLI cases passed;20 valid JSON/Markdown saved replays and12 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 62,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_haruspicy"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.83,
+      "stdout": "9 Haruspicy source records;8100 finite observations;32400 condition checks;14 known answers passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 63,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_feng_shui_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 115.64,
+      "stdout": "104 Feng Shui CLI cases passed;24 accepted JSON/Markdown replay pairs and16 rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 64,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_feng_shui"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.83,
+      "stdout": "24 source rows;3600 ID/name/Chinese headings;3600 uncertainty ranges;144 boundary/neighbor/central checks;9 extra ranges;3 anchors passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 65,
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_remote_viewing"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.98,
+      "stdout": "72000 independent target/ranking/display checks;600-case uniform null;16 procedural fixture families passed\r\n",
+      "stderr": ""
+    },
+    {
+      "index": 66,
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_remote_viewing_core"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 152.52,
+      "stdout": "125 Remote Viewing CLI cases passed;23 accepted/21 rejected JSON/Markdown pairs;3 exact blind directory exports\r\n",
+      "stderr": ""
+    }
+  ],
+  "tests": 1207,
+  "inherited_tests": 1107,
+  "new_tests": 100,
+  "cli_cases": 1464,
+  "inherited_cli_cases": 1339,
+  "new_cli_cases": 125,
+  "independent_verifiers": 24,
+  "inherited_verifiers": 23,
+  "new_verifiers": 1,
+  "baseline_commit": "3cf6a23",
+  "pre_engine_files": 1923,
+  "protected_files": 1919,
+  "changed_protected_files": [],
+  "intentional_interface_history_edits": [
+    "future/__main__.py",
+    "README.md",
+    "knowledge/gaps.json",
+    "PROGRESS.md"
+  ],
+  "previous_audit_protected_count": 1918,
+  "previous_audit_changed_only_authorized_interfaces": [
+    "README.md",
+    "future/__main__.py"
+  ],
+  "registry_source_references_checked_twice": 446,
+  "registry_unique_sources": 291,
+  "legacy_incomplete_metadata_skipped": [
+    "chinese-inventory-2-v1"
+  ],
+  "inventory_preserved": true,
+  "profile": "rv-air1995-five-choice-blind-trial-v1",
+  "profile_sha256": "bb08a51d84d03ad858d65c1530fd763de8bbee686488ce512e54154877d2a60b",
+  "fixture_sha256": "09d1f287a430ee668c89e692e2974c2a2d6df5e86b2ac61104a6d4af3c607278",
+  "independent_rank_checks": 72000,
+  "procedural_families": 16,
+  "accepted_pairs": 23,
+  "rejected_pairs": 21,
+  "packet_directory_exports": 3,
+  "dependency_audit": true,
+  "pip_check": true,
+  "diff_check": true,
+  "source_rights": "No source corpus or external image library redistributed;original geometric fixtures only;rights assertions not legal attestation.",
+  "empirical_validation": false
+}

@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 43 complete acceptance — 2026-11-06
+- All67acceptance commands pass:1207tests(1107+100),1464CLI(1339+125),24independent verifiers(23+1),registry idempotence,dependency audit,pipcheck anddiffcheck.
+- Rebuilt1923-filebaseline retains1919eligible artifacts byte-for-byte;only4explicit interface/history updates allowed.446source references/291unique sources checked twice;original ranks/variations/taxonomy intact. Exact replay and3actual blind directory exports pass. Evidence in data/remote-viewing-acceptance-checks.json;bounded closure follows.
+
 ## Technique 43 reproducible reports and separated demo — 2026-11-06
 - Saved23accepted/21rejected JSON/Markdown request/output pairs;125CLI checks include complete command-driven lifecycle and3exact directory exports. Persistent synthetic demo separates private trial,viewer packet andjudge PNG files;all public filenames/bytes inspected.
 - Human-origin/manual example is a declared-schema demonstration,not a fabricated participant study.100newtests andcomplete1207-test suite pass;inherited CLI/verifier acceptance running.
