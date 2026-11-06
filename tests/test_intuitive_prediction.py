@@ -173,6 +173,11 @@ class IntuitivePredictionTests(unittest.TestCase):
         with self.assertRaises(ValueError):p.append(l,'resolve',F['resolutions'][0])
     def test_markdown(self):
         q=dict(schema_version=1,task='report',ledger=study());r=p.read(q);raw=p.markdown(r);self.assertIn(json.dumps(r,ensure_ascii=False,indent=2),raw);self.assertEqual(r,p.read(q))
+    def test_catalog_provenance(self):
+        import hashlib
+        q=dict(schema_version=1,task='reference');r=p.read(q)
+        expected=hashlib.sha256(json.dumps(r['algorithm_profiles'],sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()).hexdigest()
+        self.assertEqual(r['catalog_sha256'],expected)
 
 def rejected_probability(v):
     def test(self):

@@ -359,6 +359,7 @@ def read(request, root=ROOT, registry=None):
     return dict(technique_id=45,task=task,status='accepted',schema_version=1,profile_sha256=PROFILE_HASH,
                 request_sha256=digest(request),source_manifest_sha256=DATA['source_manifest_sha256'],source_freeze_sha256=DATA['source_freeze_sha256'],
                 sources=load_input(ROOT/'knowledge/intuitive_prediction_sources.json'),algorithm_profiles=thaw(PROFILES),
+                catalog_sha256=digest(thaw(PROFILES)),catalog_scope='Named algorithm ID mapping embedded in the immutable profile',
                 result=result,result_sha256=digest(result),ledger=ledger,ledger_sha256=digest(ledger) if ledger else None,
                 interpretation_layers=dict(direct='Named inspected algorithm and mathematical rules',user='Recognition,cues,probabilities,context,times,outcomes,rights declarations',
                                            editorial='Abstention,tie,chronology,selection,calibration conventions',unsupported='Expert,psychic,universal-skill or optimal-action certification'),

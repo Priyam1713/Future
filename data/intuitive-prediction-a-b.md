@@ -189,6 +189,8 @@ accepted — explicit rules and descriptive forecast error.
     "recognition": "goldstein-gigerenzer2002-recognition-subset-v1",
     "take-the-best": "gigerenzer-goldstein1996-ttb-deterministic-v1"
   },
+  "catalog_sha256": "134b1a9fd8496f3d6512bb1b0e9f604ef5a79580e42b471c8774d23b6bcbc954",
+  "catalog_scope": "Named algorithm ID mapping embedded in the immutable profile",
   "result": {
     "input": {
       "decision_id": "d1",

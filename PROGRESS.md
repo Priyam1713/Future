@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 45 explicit catalog provenance — 2026-11-07
+-Added the algorithm-ID catalog hash to report provenance without changing frozen rules or numerical behavior.80new tests andcompletecurrent-code1354-test rerun pass;35accepted/18rejected reports regenerated and121CLI lifecycle cases pass.
+-Complete inherited CLI/verifier sweep continues;no46audit before closure.
+
 ## Technique 45 reproducible CLI reports — 2026-11-07
 -35accepted/18rejected JSON/Markdown pairs and121CLI cases pass,including a complete CLI-created linked decision/forecast/resolution lifecycle. Exact5/16Brier,late amendments,dependent forecasters,rights/schema failures and baseline leakage demonstrated.
 -README documents input schemas,decimal strings,algorithm distinctions,privacy and bounded scope. Full inherited acceptance running;not yet Ready.
