@@ -1411,3 +1411,81 @@ Examples: [basic](data/tasseography-basic.md), [zones](data/tasseography-zones.m
 [initials/numerals](data/tasseography-marks.md) and [empty](data/tasseography-empty.md).
 Run `python -m scripts.verify_tasseography`, `python -m scripts.smoke_tasseography_core`
 and `python -m unittest tests.test_tasseography -q`.
+
+## Remote Viewing: offline blinded trial protocol
+
+`rv-air1995-five-choice-blind-trial-v1` implements a five-candidate experiment
+record workflow. It supplies no hidden information, visions, predictions or
+psychic proficiency score. Historical CRV Stage I–VI labels are optional record
+annotations; AIR1995 supplies the blind-rank reference. Packet schemas, hashes,
+state transitions and exclusion rules are explicit Future editorial policies.
+
+Use `python -m future remote-viewing REQUEST.json --asset-root D:/Future`.
+Requests have `schema_version:1`, `profile:"rv-air1995-five-choice-blind-trial-v1"`
+and a `task`. `--format markdown` renders the same exact result JSON.
+See `knowledge/remote_viewing_profile_v1.json` for frozen fields and policies.
+The checked examples under `data/remote-viewing-*-input.json` are runnable requests.
+
+1. `task:"create"` takes `plan`, and either a simulated-only `seed` or a manual
+   `target_id`. OS-uniform assignments take neither. A plan fixes all five assets,
+   rights, participants, knowledge, presentation order, trial IDs, stopping,
+   scoring and reuse policies before assignment. The result contains a **private**
+   `trial`. Save it separately; transfer only designated blind packets.
+2. `task:"apply"` takes `trial`, `action`, `actor`, timezone-aware `at`, and exact
+   `payload`. Actions follow `commit`, `start`, `entry`, `lock_viewer`,
+   `start_judge`, `rank`, `lock_judge`, `reveal`, `report`. Entries preserve raw
+   UTF8 text/whitespace. Obtain lock payloads with the Python API
+   `lock_digest(trial,"viewer")` / `lock_digest(trial,"judge")`. Every planned
+   judge must submit a complete alias-to-rank permutation before the judge lock.
+3. After `commit`, `task:"viewer_packet"` takes only the private trial and returns
+   an allowlisted blind packet. After viewer lock, `task:"judge_packet"` also takes
+   `judge_id`. `--export-dir NEW_DIRECTORY` writes only `packet.json` and neutral
+   PNG names, with exact hashes; it refuses private results or an existing directory.
+   Never transfer the private request, tasker package, original paths or source folder.
+4. `reveal` requires the tasker and `payload:{"preimage":...}` from the private
+   `preimage(trial)` API. It opens the commitment only after both locks. `report`
+   requests return public status before reveal; after reveal they return a clearly
+   **private** report with exact trial replay, full history and each judge’s rank.
+   Manual assignments receive no verified uniform/chance-qualified designation.
+5. `task:"summary"` requires **every** trial in the predeclared `trial_ids` ledger.
+   It retains aborted, invalid, leaked, excluded, conflicted and rejected attempts,
+   reports descriptive metrics separately for every judge, and computes no p-value.
+   Reuse is rejected unless dependence was declared before the sessions.
+
+An invalid action returns exit2 with an updated **private** trial containing the
+hashed rejected attempt. Persist that returned trial, even on exit2. Rejected
+creation/corrupt-input requests have a generic public error and no trusted trial
+to amend. `terminate` records an explicit terminal `status` and `reason`; terminal
+trials cannot restart. Rejected reveal attempts do not mean an actual disclosure
+occurred. If exposure occurred outside the tool, record `terminate`/`leaked`.
+
+The supported asset subset is metadata-free, noninterlaced 8-bit RGB PNG with
+filter0 and exactly IHDR/one IDAT/IEND. All five candidates must have equal image
+dimensions and distinct bytes. EXIF, textual/ancillary chunks, unsupported filters,
+trailing bytes and corrupt CRCs are rejected. Prepare permission-cleared derivatives
+externally when necessary; Core v1 does not claim automatic sanitization. Source
+sidecars and filenames are never copied into the packet. Optional sketch attachments
+use the same bounded PNG/rights checks and receive neutral exported names.
+
+For OS selection, private one-byte entropy draws reject250..255 before modulo5;
+all draws and a 256-bit nonce are logged privately. Fixed seeds are simulated only.
+Digests use canonical sorted-key compact UTF8 JSON, preserve original text values,
+and are domain separated. Commitments bind protocol, plan, pool, target/asset,
+selection and nonce. Public transcript derivatives have their own checkable digest
+in addition to the original private lock anchor. The owner can still rewrite an
+entire local history; retain an independently held commitment and transfer packets
+between separate participants/accounts/machines. Timestamps, identity, rights and
+knowledge remain declarations. No externally witnessed status is certified.
+
+Examples include `remote-viewing-rank1.md`, `remote-viewing-rank3.md`,
+`remote-viewing-rank5.md`, `remote-viewing-multiple-judges.md`,
+`remote-viewing-human-manual.md` and `remote-viewing-failure-retained.md` in `data/`.
+Human-origin examples demonstrate a declared record schema; no human study was
+conducted. Simulated sessions verify software only. Training feedback is explicitly
+unblinded and ineligible for blind scoring; N retains its historical meaning Near
+Site. ERV, ARV and naturalistic/dream protocols remain outside the supported core.
+
+Run `python -m unittest tests.test_remote_viewing`,
+`python -m scripts.verify_remote_viewing` and
+`python -m scripts.smoke_remote_viewing_core` for new checks. The independent oracle
+was committed before production and covers120rankings x5targets x120display orders.

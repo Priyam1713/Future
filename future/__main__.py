@@ -280,7 +280,31 @@ def main():
     feng=sub.add_parser('feng-shui')
     feng.add_argument('input',help='Exact integer-tenth24mountain source heading,reference or comparison JSON')
     feng.add_argument('--format',choices=['json','markdown'],default='json')
+    rv=sub.add_parser('remote-viewing')
+    rv.add_argument('input',help='Versioned offline trial create/apply/packet/report/summary request JSON')
+    rv.add_argument('--asset-root',default=str(ROOT),help='Root for verified relative local asset references')
+    rv.add_argument('--export-dir',help='New directory for allowlisted blind packet and neutral PNG exports only')
+    rv.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='remote-viewing':
+        import sys
+        from .scrying import load_input
+        from .remote_viewing import read,markdown,export_packet
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            try:
+                result=read(load_input(args.input),args.asset_root,registry)
+                if args.export_dir:export_packet(result,args.export_dir)
+            except (ValueError,OSError) as exc:
+                # Do not echo paths/private request text in a public error response.
+                result=dict(visibility='public_error',status='rejected',error='Remote Viewing request rejected',remote_viewing_report=None)
+                print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+            if result.get('accepted') is False:raise SystemExit(2)
+        finally:registry.close()
+        return
     if args.command=='feng-shui':
         import sys
         from .scrying import load_input

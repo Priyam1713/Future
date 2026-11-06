@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 43 offline trial engine — 2026-11-06
+- Source25791b4 andpre-engine fixture752210e committed/pushed. Implemented strict private trial lifecycle,public viewer/judge exports,OS rejection-sampled assignment,domain-separated commitments,transcript/judge locks,authorized reveal andretained rejected attempts/terminal histories.
+- Addedcomplete-ledger descriptive summary,predeclared judges/dependence,metadata-freePNG andrights checks.100newtests,72000independent rankchecks/16families and125CLI cases pass;23accepted/21rejected replay pairs generated. Full inherited acceptance follows;no readiness claim yet.
+
 ## Technique 43 independent fixture freeze — 2026-11-06
 - Source/protocol25791b4 pushed before fixtures. Independently authored120strict rankings x5targets x120display orders(72000checks),exact600-case null space,commitment/event/lock known answers and16procedural families before production.
 - Added5original metadata-free PNG geometric assets with explicit project rights. Synthetic origin and human/manual distinction frozen;no empirical human or paranormal evidence.
