@@ -1053,3 +1053,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Bundled288attributed NOAA2000–2023monthly CO2 observations under inspected public-domain policy. Revised2026snapshot,X2019rescaling,midmonth correction and2022–2023station move prevent a claim of archived real-time validation. No held-out model scores computed.
 - Frozen25validation+25test expanding origins,h1–12,300cells/partition andcomplete failure/denominator accounting;21independent fixture-family plans,source4.86quantile/55.68interval arithmetic,metric zero conventions,rights,hardware andP1/P2 recorded. Recommend CPU baselines+bounded SES;ARIMA/ETS fitting,trees,neural andoptional Chronos adapters remain gated.
 - Audit validation passed;2657pre-audit artifacts unchanged,other59gap entries unchanged,all60IDs/54retained/six exclusions preserved. Only metadata/design/data files added. Next:implement andclose#49in a subsequent pass before#50.
+
+## 2026-11-07 — #49 source/data/convention freeze
+- Rechecked FPP3third-edition identity and§5.2/8.1 equations. Froze exact seven CPU candidates,explicit SES y1 initialization,metric/display conventions and validation-only selection. NOAA288row canonical hash303c231d and source snapshot0ce4e774 verified;audited evaluation design remains byte-unchanged.
+- Captured complete pre-engine manifest;source ranks/five variations preserved. Generic explicit seasonal period supports m4 arithmetic fixture while only m12 enters NOAA benchmark. No production engine yet.
