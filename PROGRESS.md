@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 45 Intuitive Prediction resource audit — 2026-11-07
+- Audit only after pushed44closure20346df and clean0/0. Three source ranks/fourvariation rows unchanged;9facts-only records distinguish2017Klein,2007/2008Gigerenzer and2009paper;full book/1993chapter access gaps retained.
+- Recommend explicit recognition/1996Take-the-Best traces plus resolved binary Brier/calibration evaluation. Unknown-cue handling,editorial abstention/tie conventions,score scale,unresolved denominators,held-out baselines and domain/feedback limits explicit. No45runtime/profile/CLI/catalog/fixtures;no46audit.
+- Validation:2244protected artifacts unchanged;registry idempotence,strictJSON,taxonomy and other gaps preserved. Full44acceptance1274tests/1600CLI/25verifiers retained unchanged;metadata-only audit does not rerun or extend runtime certification. Proposed15fixture families,acceptance,P1/P2 and rights in knowledge/intuitive_prediction_resource_audit.json.
+
 ## Technique 44 Prophetic Dreams Core v1 closure — 2026-11-07
 - **Core v1 Ready — Prospective Dream/Event Ledger and Bounded Comparison Scope**: dunne-revised-prospective-dream-ledger-v1,laterFaber/FadedPagewitness;1927bodyunverified. Completeofflineoriginal-lock/amendment/event/all-pair/judge/reveallifecycle;no prophecyorstatisticalcertification.
 - 1274tests(1207+67),1600CLI(1464+136),25verifiers(24+1);600independentinterval/chronologychecks,2timezonecases,8manualpairs,18families.29accepted/15rejectedreplays andseparatedsyntheticdemo.2088-filebaseline:2084eligiblefiles unchanged;4explicitinterface/historyedits. Registry/dependency/pip/diffpass.

@@ -1,0 +1,388 @@
+{
+  "version": 1,
+  "technique_id": 45,
+  "name": "Intuitive Prediction",
+  "phase": 5,
+  "date": "2026-11-07",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "20346df",
+  "predecessor_gate": "44 accepted closure committed and pushed; empty status and origin/main...HEAD0/0 observed before45research.",
+  "policy": "Audit only. Every executable behavior below is a proposal, not supported functionality. No45runtime,CLI,profile,catalog or implemented fixtures; no46audit.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    45,
+    "5 · Psychic & Paranormal Prediction",
+    "Intuitive Prediction",
+    "RETAIN — simulate / implement",
+    "Guided symbolic / human input",
+    "Recognition-primed judgment; fast-and-frugal heuristics; expert intuition; gut feeling",
+    "Elicit probabilistic judgments, track expertise and calibrate with outcomes",
+    "Human elicitation optional; historical feedback data",
+    "Expert intuition useful only in learnable, feedback-rich environments",
+    "Empirical decision science, domain-dependent; not paranormal detection",
+    "Sources of Power",
+    "Gary Klein",
+    "https://mitpress.mit.edu/9780262534291/sources-of-power/",
+    "Gut Feelings",
+    "Conditions for Intuitive Expertise",
+    null,
+    "43, 51, 55, 57",
+    45
+  ],
+  "ranked_sources": [
+    [
+      45,
+      "Intuitive Prediction",
+      1,
+      "Gary Klein",
+      "Sources of Power",
+      "Recognition-primed decision model",
+      "https://mitpress.mit.edu/9780262534291/sources-of-power/",
+      "Publisher / purchase",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      45,
+      "Intuitive Prediction",
+      2,
+      "Gerd Gigerenzer",
+      "Gut Feelings",
+      "Heuristics and recognition",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      45,
+      "Intuitive Prediction",
+      3,
+      "Daniel Kahneman and Gary Klein",
+      "Conditions for Intuitive Expertise",
+      "Evidence-based boundary conditions",
+      "https://pubmed.ncbi.nlm.nih.gov/19739881/",
+      "Research abstract",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      45,
+      "Intuitive Prediction",
+      "Recognition-primed judgment",
+      "Gut Feelings",
+      "Sources of Power",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      45,
+      "Intuitive Prediction",
+      "fast-and-frugal heuristics",
+      "Gut Feelings",
+      "Conditions for Intuitive Expertise",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      45,
+      "Intuitive Prediction",
+      "expert intuition",
+      "Conditions for Intuitive Expertise",
+      "Gut Feelings",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      45,
+      "Intuitive Prediction",
+      "gut feeling",
+      "Gut Feelings",
+      "Conditions for Intuitive Expertise",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "inventory_mapping_note": "Original indicative variation-to-book mappings preserved exactly, including Recognition-primed judgment listing Gut Feelings first. Supplementary primary sources clarify executable provenance without silently re-ranking inventory.",
+  "source_registry": "knowledge/intuitive_prediction_sources.json",
+  "source_ids": [
+    "intuitive-prediction-klein-publisher-v1",
+    "intuitive-prediction-gut-publisher-v1",
+    "intuitive-prediction-kahneman-klein-2009-v1",
+    "intuitive-prediction-klein-rpd-v1",
+    "intuitive-prediction-ttb-1996-v1",
+    "intuitive-prediction-recognition-2002-v1",
+    "intuitive-prediction-proper-scores-2007-v1",
+    "intuitive-prediction-met-10-1-2-v1",
+    "intuitive-prediction-sampling-2008-v1"
+  ],
+  "edition_and_access_limits": [
+    "2017Klein anniversary edition metadata is verified; actual book chapters are not. No1998page references transferred.",
+    "Gut Feelings2007ebook and2008paperback are separate records; neither full text inspected. Publisher promotional accuracy claims are not empirical validation.",
+    "1993RPDchapter unavailable within bounded research; author overview and coauthored2009paper are actual inspected RPD witnesses. No complete typical/atypical branch reconstruction certified.",
+    "Primary1996algorithm and2002opening recognition rule are sufficient for a bounded explicit heuristic proposal; broader2002less-is-more derivations deferred.",
+    "All source access is facts_only; null snapshot fields mean no raw-byte hash attestation, not missing values inferred from a redirect. No copyrighted source assets or participant data committed."
+  ],
+  "verified_source_notes": {
+    "recognition_primed_model": {
+      "sources": [
+        "intuitive-prediction-klein-rpd-v1",
+        "intuitive-prediction-kahneman-klein-2009-v1"
+      ],
+      "finding": "Experienced fireground commanders use recognized situations to suggest a plausible action, mentally simulate it, modify shortcomings or consider another. This is a descriptive cognitive account, not a universal probability equation.",
+      "case_locator": "2009paper p516: fireground option generation and assessment; same page USS Vincennes1988 tragedy illustrates expert failure, not an RPD success benchmark.",
+      "boundary": "Context cues, goals, expectancies, typicality and anomaly notes may be human-entered checklist fields. Exact1993/2017diagrams and detailed cases remain P1; checklist completeness cannot certify expertise."
+    },
+    "take_the_best_1996": {
+      "source": "intuitive-prediction-ttb-1996-v1",
+      "locator": "pp653-654 Steps1-5,Figure3,footnote1",
+      "rules": [
+        "Recognition first: one recognized wins; neither recognized triggers random choice in source; both recognized proceeds to cues.",
+        "Search subjectively ranked cue validities; stop at first positive-versus-not-positive cue and choose positive. Unknown differs from negative but either can oppose positive.",
+        "Negative versus unknown does not discriminate. No discriminating cue gives random choice in source. No compensating sum of later cues.",
+        "1991version required positive versus negative; do not silently substitute that missing-data convention for1996."
+      ],
+      "worked_examples": [
+        "p653 Figure1 a/b: Cue1 distinguishes; choose a.",
+        "p653 b/c: Cue1 negative/unknown skipped; Cue2 positive/negative chooses b."
+      ],
+      "evidence_scope": "Historical83German cities over100000,9binary cues; Appendix matrix. Simulation comparison is environment-specific, not universal superiority or current population data."
+    },
+    "recognition_heuristic_2002": {
+      "source": "intuitive-prediction-recognition-2002-v1",
+      "locator": "pp75-76",
+      "rule": "Exactly one recognized: infer recognized object has greater criterion under positive recognition association; negative ecological association reverses direction.",
+      "example": "p76 San Diego/San Antonio population illustration; historical participant recognition, not a current population query or universal guarantee.",
+      "limits": "Both or neither recognized lies outside the isolated one-recognized rule. Recognition is a reported memory state, not cue negativity. No probability follows automatically from a choice; less-is-more is conditional."
+    },
+    "expertise_conditions": {
+      "source": "intuitive-prediction-kahneman-klein-2009-v1",
+      "locator": "pp519-524",
+      "finding": "Predictable environmental regularities, valid learnable cues and opportunities for sustained learning with clear timely feedback constrain intuitive expertise. Confidence alone does not establish accuracy; skill is domain-specific.",
+      "proposed_gate": "Record domain,experience,cue validity evidence,feedback latency/quality,changes and evaluation period. Unknown evidence stays unknown; insufficient/changed conditions warn rather than award an expertise badge."
+    },
+    "proper_scores": {
+      "source": "intuitive-prediction-proper-scores-2007-v1",
+      "locator": "pp359,362-363 Examples1/3",
+      "finding": "Strict propriety concerns unique expected-score optimization by truthful probabilities. Source maximizes reward S=-sum_j(delta_ij-p_j)^2 and log(p_actual). Proposed binary losses change sign and explicitly name scale.",
+      "scope": "Correct scoring mathematics does not demonstrate that a person is skilled or that a cognitive model describes them."
+    },
+    "forecast_verification": {
+      "source": "intuitive-prediction-met-10-1-2-v1",
+      "locator": "AppendixC32.4",
+      "finding": "Binary Brier is mean squared probability error; lower is better and base rate matters. Reliability compares conditional frequencies with forecasts; resolution concerns differing conditional event rates. Discrimination compares forecast distributions given outcomes.",
+      "scope": "Calibration and discrimination are distinct. An apparently small error for rare events can reflect an uninformative base-rate forecast."
+    },
+    "sampling": {
+      "source": "intuitive-prediction-sampling-2008-v1",
+      "locator": "Indexed publisher abstract",
+      "finding": "Sampling uncertainty depends on sample size and occurrence frequency; full inferential derivations uninspected. No universal minimum N or synthetic-fixture proof of human accuracy."
+    }
+  },
+  "candidate_comparison": [
+    {
+      "candidate": "RPD checklist",
+      "value": "Human context and action-rationale documentation",
+      "risk": "Low software cost; limited deterministic inference and high risk of mistaking narrative for verified expertise",
+      "decision": "Include documentary companion only; no universal action selector"
+    },
+    {
+      "candidate": "Deterministic heuristic engine",
+      "value": "Inspectable search/stop/choice trace with small independently enumerable truth tables",
+      "risk": "Version,missing-data,tie and ecological-direction conventions require explicit naming",
+      "decision": "Include recognition plus1996TTB deterministic subset with abstention at random branches"
+    },
+    {
+      "candidate": "Resolved binary probability scoring",
+      "value": "Exact numerical loss and honest denominators directly measure submitted forecasts",
+      "risk": "Resolution ambiguity,leakage,event dependence and calibration sample size",
+      "decision": "Implement first foundational component in later authorized engine pass"
+    },
+    {
+      "candidate": "Integrated heuristic/judgment evaluator",
+      "value": "Compare explicit heuristic choices and independently submitted probabilities against fixed outcomes",
+      "risk": "Moderate bounded integration; no automatic probability from cue validity or RPD narrative",
+      "decision": "Recommended first Core candidate, built from scoring plus explicit rules; no generic diary-only release"
+    }
+  ],
+  "proposed_first_scope": {
+    "name": "Explicit Heuristic and Binary Judgment Evaluation — proposed, not a frozen executable profile",
+    "decision_input": [
+      "decision_id",
+      "two distinct alternative IDs",
+      "criterion and higher/lower direction",
+      "domain and observation time",
+      "recognition states true/false/unknown",
+      "ordered cue IDs with positive/negative/unknown per alternative",
+      "cue directions and validity/rank provenance,training interval and sample size",
+      "explicit heuristic/version",
+      "predeclared tie order and abstention convention"
+    ],
+    "decision_output": [
+      "selected alternative or abstain with reason",
+      "recognition branch",
+      "ordered inspected cues and states",
+      "decisive cue",
+      "missing/tied information",
+      "source rule versus editorial convention",
+      "domain-validity warnings",
+      "no automatically inferred success probability"
+    ],
+    "deterministic_conventions": [
+      "Recognition-only: positive association chooses recognized, explicit negative association chooses unrecognized; unknown direction/state or both/neither recognized abstains.",
+      "1996TTB subset: preserve recognition precedence and positive-versus-negative/unknown discrimination. Both recognized searches frozen cue order. Neither recognized or exhausted cues returns abstain instead of source random guess; explicitly an editorial deterministic subset.",
+      "Equal cue ranks require a fixed pre-outcome tie order or abstain; do not claim a verified historical tie randomization rule.",
+      "Validity below0.5 or unknown orientation cannot silently be used as positive evidence. Require explicit direction recoding with provenance or reject configuration; never estimate on evaluation outcomes.",
+      "Raw validity is a conditional ecological quantity, not a universal individual forecast probability. No learned ranking or cue estimation in first core."
+    ],
+    "forecast_input": [
+      "event_id and dependency_group",
+      "fixed binary resolution question/rule/source",
+      "timezone-aware forecast/cutoff/window/resolution timestamps",
+      "declared domain and horizon",
+      "forecaster pseudonym and expertise declaration",
+      "decimal probability in[0,1]",
+      "separate optional subjective confidence scale",
+      "original version and append-only amendments",
+      "outcome0/1 or unresolved/disputed/void",
+      "evidence hash and rights/provenance"
+    ],
+    "selection": "Freeze one latest eligible pre-cutoff forecast per forecaster/event/horizon for primary aggregate; preserve all versions and rejected/late records. Outcome occurrence must be later than forecast; reveal knowledge excluded. Same event across forecasters/horizons is dependent, not independent N.",
+    "resolution": "Predeclare occurrence endpoint and resolution evidence. Unknown/disputed/void remain visible and unscored; do not turn unresolved into0. Late changes require separate analysis, never rewrite original event definition.",
+    "numbers": {
+      "binary_brier_loss": "BS=mean((p-y)^2) over selected resolved pairs, y in{0,1};lower is better,range[0,1]. Exact decimal/rational arithmetic before display rounding;N=0 ->null/not_estimable.",
+      "normalization": "Gneiting/Raftery quadratic reward uses negative multicategory sum. For two complementary categories, positive sum-of-squares loss=2*binary BS. This algebraic conversion is explicit; original1950body not claimed inspected.",
+      "log_loss": "P1 only: -ln(p_actual),natural log,zero assigned probability to actual outcome ->positive infinity;no silent clipping. Strict JSON would need explicit infinity status/null value, not NaN/Infinity.",
+      "calibration": "Freeze bins[0,.1),[.1,.2),...,[.9,1] before outcomes; report N,mean p,event count,observed frequency per bin;empty bin null,never zero-frequency. Show selected event N and unresolved/late/missing counts.",
+      "decomposition": "P1: do not claim exact Brier decomposition of original unbinned probabilities after replacing them by bin means. Any exact-category decomposition or within-bin correction needs separate independent verification.",
+      "baseline": "Predeclare constant base rate from disjoint earlier training sample with provenance and event definition. Evaluate on identical held-out events/horizons. Report BS and paired difference;BSS=1-BS/BS_ref only if reference loss>0,otherwise undefined. No hindsight-fit baseline advertised as predictive.",
+      "uncertainty": "Descriptive first release;display N and event/group counts,rare-event and small-sample warnings. No confidence interval,p-value or independence assertion without separately verified assumptions."
+    },
+    "comparison": "Expert/novice labels are declarations. Compare only same fixed outcomes,cutoffs/horizons and compatible domains; preserve missingness and group sizes. Measured held-out loss is evidence for that sample, not universal intuition quality.",
+    "nonstationarity": "Record cue/environment period and known changes;flag validity learned in another period or domain. No silent rolling refit or transport of historical city cue validities.",
+    "offline": "Manual inputs and local outcomes,versioned rules/hashes,replayable JSON/Markdown;existing stdlib and interfaces. No cloud,LLM,model training or new framework."
+  },
+  "data_availability": {
+    "historical_matrix": "1996Appendix83-city9-cue matrix is source-worked research data. No independently checked transcription or explicit standalone redistribution license inspected; not bundled. Historical German population setting cannot establish2026validity.",
+    "primary_examples": "1996symbolic a/b and b/c and2002historical city illustration can anchor concise fact-level behavioral expectations. No full participant dataset or generic human benchmark acquired.",
+    "first_software_fixtures": "Independently author small toy inputs and exact rational expectations before production. Synthetic cases test mathematics/behavior only.",
+    "held_out_gate": "Any empirical skill claim requires legitimately licensed/provenanced data,pre-outcome probability records,fixed resolutions,training/evaluation separation,domain/horizon reporting,event dependency handling and unresolved denominator. No dataset currently qualifies in this audit."
+  },
+  "proposed_fixture_plan": [
+    {
+      "family": "recognition-choice",
+      "expectation": "A recognized/B not,positive direction ->A;negative direction ->B;both/neither/unknown ->documented abstention. No inferred probability."
+    },
+    {
+      "family": "source-worked-ttb",
+      "expectation": "p653a/b Cue1 ->a;b/c negative/unknown skip,Cue2positive/negative ->b;documentary source checks before production."
+    },
+    {
+      "family": "search-stop",
+      "expectation": "Cue1positive/positive skip;Cue2negative/positive selectsB;laterA-favoring cues cannot compensate;trace ends atCue2."
+    },
+    {
+      "family": "missing-cues",
+      "expectation": "Enumerate all9pairs overpositive/negative/unknown:exactly4discriminating pairs,includingpositive/unknown;negative/unknown skips."
+    },
+    {
+      "family": "ties-abstention",
+      "expectation": "No discrimination ->abstain;equal ranks require frozen tiebreak orabstain;no randomguess advertised as historical deterministic output."
+    },
+    {
+      "family": "invalid-direction",
+      "expectation": "Reversed/unknown ecologicaldirection cannot silently selectrecognized/higher;invalid validity and post-outcome ranking rejected or explicitly recoded."
+    },
+    {
+      "family": "probability-boundaries",
+      "expectation": "p0,y0 andp1,y1 ->loss0;p0,y1 andp1,y0 ->loss1;p.5,either ->1/4;out-of-range,NaN,bool/malformed values reject."
+    },
+    {
+      "family": "exact-brier",
+      "expectation": "p=[.8,.2,.6,.1],y=[1,0,0,1] ->losses[1/25,1/25,9/25,81/100],sum5/4,mean5/16;complementary-category lossmean5/8. Independent Fraction/hand oracle,not production output."
+    },
+    {
+      "family": "unresolved-denominator",
+      "expectation": "Unresolved/disputed/void records retained,unscored;all-unresolved givesN0andnullmean,notzero loss."
+    },
+    {
+      "family": "forecast-versions",
+      "expectation": "Two versions ononeevent countoneprimaryselectedforecast;aftercutoff/outcomeexcluded;original/amendment/knowledge retained;equalcutoff convention frozen beforefixtures."
+    },
+    {
+      "family": "calibration-small-N",
+      "expectation": "Two p.8 forecasts y1/0 giveN2,meanp.8,freq.5;20 with10events same frequencies,N20 distinct;neither is automaticexpert certification. p1 finalbin,p0firstbin,emptybin null."
+    },
+    {
+      "family": "baseline-heldout",
+      "expectation": "Trainingbase.25,testy[0,1] yieldsbaseline5/16;candidatep[.1,.9] mean1/100,pairedimprovement121/400;zero baseline loss ->undefined BSS;leakedtestfitflagged."
+    },
+    {
+      "family": "confidence-performance",
+      "expectation": "Selfreportedhighconfidence plus wrong p1 yieldsloss1;confidencelabelnever replaces probability or grants expertise."
+    },
+    {
+      "family": "nonstationary-domain",
+      "expectation": "Known cuevalidity reversal,stale training,unknown feedback and inappropriate heuristic domain ->explicit warnings/provenance;no automatic validity certification."
+    },
+    {
+      "family": "replay-rights-separation",
+      "expectation": "Source edition/hash/version and original outcomes replay;rights-restricted assets excluded;RPDnotes,heuristicchoice,participantconfidence,numericalscore,empiricalclaim andparanormalclaims remain distinct."
+    }
+  ],
+  "proposed_release_matrix": {
+    "currently_supported": "Audit metadata and source provenance only; no45executable configuration is supported.",
+    "candidate_core": [
+      "Binary probability validation/resolved-outcome Brier loss and honest denominators",
+      "Precommitted descriptive calibration bins",
+      "Recognition rule with declared ecological direction",
+      "1996TTB deterministic subset with explicit editorial abstention/tie convention",
+      "Documentary RPD checklist and domain/feedback warnings"
+    ],
+    "experimental_or_P1": [
+      "Empirical intuition skill comparisons",
+      "Historical full-algorithm stochastic reproduction",
+      "Log loss/infinity serialization",
+      "Inference/intervals/ROC/Brier decomposition",
+      "Cue validity estimation,negative direction recoding and changed environments"
+    ],
+    "unsupported": [
+      "Universal RPD formula or optimal action guarantee",
+      "Automatic expert/psychic detection",
+      "Heuristic choice converted automatically to probability",
+      "Universal heuristic superiority",
+      "Full book coverage or unrestricted source/dataset redistribution",
+      "Human predictive validation from synthetic fixtures"
+    ]
+  },
+  "acceptance_gates": [
+    "Reinspect exact source rules and freeze versioned editorial conventions/profiles before any implementation;retain audit book-access gaps.",
+    "Freeze independently authored source-worked and exhaustive cue truth tables plus rational numerical expectations before production.",
+    "Provide actual heuristic traces and resolved forecast scoring;generic diary-only functionality is insufficient.",
+    "Pass recognition,1996unknown handling,early stopping,tie/abstain,invalid-domain and malformed-input fixtures.",
+    "Pass exact Brier boundaries/aggregates,unresolved/void records,N0,versions,chronology and calibration endpoints.",
+    "Prove no training/evaluation leakage and no multiple-version inflation;report dependence without inferential certification.",
+    "Replay accepted/rejected JSON/Markdown examples offline;preserve all earlier contracts/outputs/immutable records.",
+    "Run complete inherited1274tests,1600CLI,25verifiers plus new tests/CLI/independent mathematical oracle;registry idempotence,dependencies,pip,diff and full current protected-byte manifest.",
+    "Record source rights,privacy,source-access limits and supported/experimental/unsupported configuration matrix;no empirical skill claim without qualifying held-out data.",
+    "Only then consider bounded Core v1 readiness and commit/push closure before46resource audit."
+  ],
+  "backlog": {
+    "P1": [
+      "Legitimate complete2017Klein and Gut Feelings chapter inspection and1993RPDtypical/atypical diagrams/cases",
+      "Independently reproduce broader2002recognition derivations and conditional less-is-more evidence",
+      "License/transcribe/check historical or new held-out benchmark with domain-specific cue validity",
+      "Review protocol/cutoff,dependencies,small-N/rare-event warnings and legitimate empirical comparison",
+      "Verify log loss,infinity serialization,BSSzero denominator and optional exact-category decomposition before adding"
+    ],
+    "P2": [
+      "Preregistered domain-specific human expert/novice studies with independent outcomes",
+      "Separately validated statistical inference and dependent-data models",
+      "External timestamp witnesses and accessible richer elicitation",
+      "More heuristic families only with inspected algorithms and independent fixtures"
+    ]
+  }
+}
