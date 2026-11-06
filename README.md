@@ -1,5 +1,33 @@
 # Future
 
+## Haruspicy: Roman historical reference
+
+`python -m future haruspicy data/haruspicy-input.json --format markdown`
+
+Profile `cicero-falconer1923-roman-entrail-references-v1` compares four bounded
+Falconer1923 source accounts and supplies five critical/contextual references.
+Tasks are `compare`, `reference` and `catalog`, all in manual mode, with exact
+catalog ID/version/hash. See `knowledge/haruspicy_roman_profile_v1.json` for enums
+and `data/haruspicy-caesar-sequence-input.json` for a complete ordered example.
+
+Lung cleft requires explicitly sound other vitals. An absent ancient liver-head
+matches a reported practitioner belief in Marcus's critical discussion; present
+does not imply favorable. Caesar's first account requires the named setting,
+Spurinna attribution and source context. The following-day account requires
+`prior_observation_id` linking an earlier matching heart record. Missing,
+uncertain, contradictory and mismatched conditions remain explicit.
+
+Use reference lookup without observations to compare source cases and criticism.
+Historical source accounts, user declarations, editorial matching and unsupported
+claims remain separate. Raw Unicode annotations and request hashes replay offline
+in JSON and Markdown. These source labels do not certify modern anatomy, future
+events or ritual authority. No animal, specimen, camera, RNG or network is needed.
+Mesopotamian and Etruscan observations return unsupported under this Roman profile.
+
+Run `python -m unittest tests.test_haruspicy`,
+`python -m scripts.verify_haruspicy` and
+`python -m scripts.smoke_haruspicy_core`.
+
 Technique #17 **Oracle Cards — Researching**: resource-only audit in `knowledge/oracle_resource_audit.json`,begun after Tarot closurea036474 pushed. Original three rankings/five variations preserved. Deck/edition-specific inventories,source access,rights,spread/orientation gaps and reusable seeded-draw infrastructure recorded. Lenormand36 is distinct from the newer40-card extension;Kipper,Belline,Sibilla and contemporary decks do not inherit Tarot semantics. No Oracle engine implemented.
 
 **Phase 2 complete — bounded Core v1 scopes** for techniques8-15;this does not imply exhaustive variations or scientific validation.

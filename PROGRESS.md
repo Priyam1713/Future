@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 39 Roman condition engine — 2026-11-06
+- Added strict manual compare/reference/catalog CLI,compound predicates,five statuses,explicit assertions/uncertainty and linked Caesar sequence. Source accounts,Marcus criticism,translation qualifiers and user text remain separate; no combined score or factual prediction.
+- 73 tests,8100 independent rows/32400 condition checks and84 CLI cases pass. Retained pre-engine expectations: valid other labels are unmatched negative controls; known foreign traditions unsupported. No expected fixture changed to fit matcher. Full inherited acceptance follows.
+
 ## Technique 39 immutable Roman catalog — 2026-11-06
 - Source9a1a643 pushed before catalog. Frozen four source-condition and five context records,exact terminology,compound vitals qualifier and linked preceding Caesar account. Source/profile/catalog/fixture hashes pinned; independent8100-row truth matrix precedes production.
 - Complete pre-engine manifest captures1670 files;1665 remain byte-protected. Four intentional interface/history edits plus append-only source metadata are explicit exceptions; original12 source records preserved. Unknowns,contradictions,sequence failures and cross-tradition isolation have named semantics.
