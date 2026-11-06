@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 40 Feng Shui Core v1 closure — 2026-11-06
+- **Core v1 Ready — Source-Specific 24 Mountains Compass Reference Scope**: `yap2024-manual-24-mountain-tenths-v1`;24official2024Yap factual intervals/page2. Independently verified3600headings byID/name/Chinese,150perrow,zero gaps/overlaps;all endpoints/neighbors/centers,northwrap and3600uncertainty ranges pass. No rounding,physical conversion or outcome claims.
+- 1107 tests(1031+76),1339 CLI(1235+104),23 verifiers;24accepted/16rejected JSON/Markdown pairs replay. Complete1785-file baseline:1780 byte-protected files unchanged,including1665prior/1556earlier/1441required. Explicitinterface/history edits andappend-only source metadata preserved;registry/dependency/pip/diff pass.
+- Source92b69e8,catalog281bf41,engine5a858d0,evidence6586e0b,reports4016125;bounded schema/matrix/rights/P1/P2 in `knowledge/feng_shui_core_v1.json`. Commit,push and synchronize before43RemoteViewing audit only;skip41/42.
+
 ## Technique 40 exact compass engine — 2026-11-06
 - Added strict feng-shui classify/reference/compare/catalog CLI. Literal integer-interval scan,entire-range uncertainty,candidate readings,structured conflicts and explicit frame/role separation preserve unknowns;no rounding,declination,opposite-heading inference or outcome claims.
 - 76 new tests and independent3600-heading ID/name/Chinese plus3600 uncertainty-range checks pass;all24 rows have150 headings. CLI report sweep and complete inherited acceptance follow. Verified registry rules certify numerical software only.

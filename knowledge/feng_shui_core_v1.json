@@ -1,0 +1,966 @@
+{
+  "version": 1,
+  "technique_id": 40,
+  "name": "Feng Shui",
+  "date": "2026-11-06",
+  "status": "Core v1 Ready — Source-Specific 24 Mountains Compass Reference Scope",
+  "profile": "yap2024-manual-24-mountain-tenths-v1",
+  "profile_sha256": "ebdebdce355ed61aa2a1f14e6993f928e0baf0302ae21e79947461fc4e85323b",
+  "catalog_id": "yap2024-24-mountain-intervals-v1",
+  "catalog_version": 1,
+  "catalog_sha256": "8a945680e63ba327f4f2ccb82ca2958e63747c56a57d4f3ab717ebee07a2a143",
+  "source_manifest_sha256": "f11980480273579c5b03439685f7e7e463a6a450100edfbe6a0c091672ecdfc4",
+  "source_fixture_sha256": "0e51be933e257b58a43b3dfe352c6c954702599d353f9f7249166e68236566aa",
+  "source_commit": "92b69e8",
+  "catalog_commit": "281bf41",
+  "implementation_commit": "5a858d0",
+  "independent_evidence_commit": "6586e0b",
+  "report_commit": "4016125",
+  "acceptance_commit": "6b000b1",
+  "ranked_sources_unchanged": [
+    [
+      40,
+      "Feng Shui",
+      1,
+      "Stephen Skinner",
+      "Guide to the Feng Shui Compass",
+      "Classical compass formulae",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      40,
+      "Feng Shui",
+      2,
+      "Joey Yap",
+      "Xuan Kong Flying Stars Feng Shui",
+      "Time-cycle Flying Stars",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      40,
+      "Feng Shui",
+      3,
+      "Traditionally attributed to Guo Pu",
+      "Zangshu (Book of Burial)",
+      "Form-school historical text",
+      "https://faculty.trinity.edu/sfield/Fengshui/Zangshu.html",
+      "Scholarly translation; rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows_unchanged": [
+    [
+      40,
+      "Feng Shui",
+      "Form School",
+      "Zangshu (Book of Burial)",
+      "Guide to the Feng Shui Compass",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      40,
+      "Feng Shui",
+      "Compass / Luo Pan",
+      "Guide to the Feng Shui Compass",
+      "Zangshu (Book of Burial)",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      40,
+      "Feng Shui",
+      "Eight Mansions",
+      "Zangshu (Book of Burial)",
+      "Xuan Kong Flying Stars Feng Shui",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      40,
+      "Feng Shui",
+      "Flying Stars",
+      "Xuan Kong Flying Stars Feng Shui",
+      "Zangshu (Book of Burial)",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      40,
+      "Feng Shui",
+      "San He/San Yuan",
+      "Zangshu (Book of Burial)",
+      "Xuan Kong Flying Stars Feng Shui",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      40,
+      "Feng Shui",
+      "BTB",
+      "Zangshu (Book of Burial)",
+      "Xuan Kong Flying Stars Feng Shui",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_freeze": "knowledge/feng_shui_source_freeze_v1.json",
+  "catalog": "knowledge/feng_shui_catalog_v1.json",
+  "profile_record": "knowledge/feng_shui_profile_v1.json",
+  "sources": [
+    {
+      "id": "feng-shui-yap2024-core-compass-v1",
+      "technique_id": 40,
+      "rank": null,
+      "author": "Joey Yap Research International Sdn. Bhd.",
+      "edition": "Joey Yap’s 24 Mountains Compass Degrees;2024;two-page official PDF",
+      "url": "https://joeyyap.com/dlll234/",
+      "resolved_url": "https://joeyyap.com/dlll234/Joey%20Yap%27s%2024%20Mountain%20Compass%20Degrees.pdf",
+      "locator": "PDF page2,24-row direction table;cover/page2 footer;92° illustration",
+      "ingestion": "facts_only",
+      "rights_note": "Project-authorized facts-only extraction: original machine-readable factual names and numerical intervals,with source attribution. Copyright2024 and explicit reproduction restriction on source terminologies/layout/design preserved. No PDF,chart artwork,trace,brand graphic or book chapter redistributed;no general licence or public-domain status asserted.",
+      "checked_on": "2026-11-06",
+      "snapshot_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a",
+      "snapshot_bytes": 768816,
+      "access": "Direct official PDF downloaded for read-only inspection;all24 rows visually collated at3000px;raw PDF excluded from repository.",
+      "metadata": {
+        "title": "Joey Yap's 24 Mountain Compass Degrees",
+        "creator": "Adobe Illustrator28.5(Macintosh)",
+        "producer": "Adobe PDF library17.00",
+        "pages": 2,
+        "pdf_version": "1.6"
+      },
+      "limitations": "Supplemental2024 numerical witness;not Skinner’s book or Yap’s earlier Flying Stars book. Source does not establish physical magnetic/true conversion,measurement accuracy or efficacy."
+    }
+  ],
+  "mountain_rows": [
+    {
+      "id": "S1",
+      "source_name": "Bing",
+      "chinese": "丙",
+      "source_label": "Bing 丙",
+      "compass_group": "S",
+      "source_group_label": "South",
+      "source_group_chinese": "南",
+      "lower_display_degrees": "157.6",
+      "upper_display_degrees": "172.5",
+      "lower_tenths": 1576,
+      "upper_tenths": 1725,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row1 (S1)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "S2",
+      "source_name": "Wu",
+      "chinese": "午",
+      "source_label": "Wu 午",
+      "compass_group": "S",
+      "source_group_label": "South",
+      "source_group_chinese": "南",
+      "lower_display_degrees": "172.6",
+      "upper_display_degrees": "187.5",
+      "lower_tenths": 1726,
+      "upper_tenths": 1875,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row2 (S2)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "S3",
+      "source_name": "Ding",
+      "chinese": "丁",
+      "source_label": "Ding 丁",
+      "compass_group": "S",
+      "source_group_label": "South",
+      "source_group_chinese": "南",
+      "lower_display_degrees": "187.6",
+      "upper_display_degrees": "202.5",
+      "lower_tenths": 1876,
+      "upper_tenths": 2025,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row3 (S3)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "SW1",
+      "source_name": "Wei",
+      "chinese": "未",
+      "source_label": "Wei 未",
+      "compass_group": "SW",
+      "source_group_label": "SouthWest",
+      "source_group_chinese": "西南",
+      "lower_display_degrees": "202.6",
+      "upper_display_degrees": "217.5",
+      "lower_tenths": 2026,
+      "upper_tenths": 2175,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row4 (SW1)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "SW2",
+      "source_name": "Kun",
+      "chinese": "坤",
+      "source_label": "Kun 坤",
+      "compass_group": "SW",
+      "source_group_label": "SouthWest",
+      "source_group_chinese": "西南",
+      "lower_display_degrees": "217.6",
+      "upper_display_degrees": "232.5",
+      "lower_tenths": 2176,
+      "upper_tenths": 2325,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row5 (SW2)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "SW3",
+      "source_name": "Shen",
+      "chinese": "申",
+      "source_label": "Shen 申",
+      "compass_group": "SW",
+      "source_group_label": "SouthWest",
+      "source_group_chinese": "西南",
+      "lower_display_degrees": "232.6",
+      "upper_display_degrees": "247.5",
+      "lower_tenths": 2326,
+      "upper_tenths": 2475,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row6 (SW3)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "W1",
+      "source_name": "Geng",
+      "chinese": "庚",
+      "source_label": "Geng 庚",
+      "compass_group": "W",
+      "source_group_label": "West",
+      "source_group_chinese": "西",
+      "lower_display_degrees": "247.6",
+      "upper_display_degrees": "262.5",
+      "lower_tenths": 2476,
+      "upper_tenths": 2625,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row7 (W1)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "W2",
+      "source_name": "You",
+      "chinese": "酉",
+      "source_label": "You 酉",
+      "compass_group": "W",
+      "source_group_label": "West",
+      "source_group_chinese": "西",
+      "lower_display_degrees": "262.6",
+      "upper_display_degrees": "277.5",
+      "lower_tenths": 2626,
+      "upper_tenths": 2775,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row8 (W2)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "W3",
+      "source_name": "Xin",
+      "chinese": "辛",
+      "source_label": "Xin 辛",
+      "compass_group": "W",
+      "source_group_label": "West",
+      "source_group_chinese": "西",
+      "lower_display_degrees": "277.6",
+      "upper_display_degrees": "292.5",
+      "lower_tenths": 2776,
+      "upper_tenths": 2925,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row9 (W3)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "NW1",
+      "source_name": "Xu",
+      "chinese": "戌",
+      "source_label": "Xu 戌",
+      "compass_group": "NW",
+      "source_group_label": "NorthWest",
+      "source_group_chinese": "西北",
+      "lower_display_degrees": "292.6",
+      "upper_display_degrees": "307.5",
+      "lower_tenths": 2926,
+      "upper_tenths": 3075,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row10 (NW1)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "NW2",
+      "source_name": "Qian",
+      "chinese": "乾",
+      "source_label": "Qian 乾",
+      "compass_group": "NW",
+      "source_group_label": "NorthWest",
+      "source_group_chinese": "西北",
+      "lower_display_degrees": "307.6",
+      "upper_display_degrees": "322.5",
+      "lower_tenths": 3076,
+      "upper_tenths": 3225,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row11 (NW2)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "NW3",
+      "source_name": "Hai",
+      "chinese": "亥",
+      "source_label": "Hai 亥",
+      "compass_group": "NW",
+      "source_group_label": "NorthWest",
+      "source_group_chinese": "西北",
+      "lower_display_degrees": "322.6",
+      "upper_display_degrees": "337.5",
+      "lower_tenths": 3226,
+      "upper_tenths": 3375,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row12 (NW3)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "N1",
+      "source_name": "Ren",
+      "chinese": "壬",
+      "source_label": "Ren 壬",
+      "compass_group": "N",
+      "source_group_label": "North",
+      "source_group_chinese": "北",
+      "lower_display_degrees": "337.6",
+      "upper_display_degrees": "352.5",
+      "lower_tenths": 3376,
+      "upper_tenths": 3525,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row13 (N1)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "N2",
+      "source_name": "Zi",
+      "chinese": "子",
+      "source_label": "Zi 子",
+      "compass_group": "N",
+      "source_group_label": "North",
+      "source_group_chinese": "北",
+      "lower_display_degrees": "352.6",
+      "upper_display_degrees": "7.5",
+      "lower_tenths": 3526,
+      "upper_tenths": 75,
+      "wraps_north": true,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row14 (N2)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "N3",
+      "source_name": "Gui",
+      "chinese": "癸",
+      "source_label": "Gui 癸",
+      "compass_group": "N",
+      "source_group_label": "North",
+      "source_group_chinese": "北",
+      "lower_display_degrees": "7.6",
+      "upper_display_degrees": "22.5",
+      "lower_tenths": 76,
+      "upper_tenths": 225,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row15 (N3)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "NE1",
+      "source_name": "Chou",
+      "chinese": "丑",
+      "source_label": "Chou 丑",
+      "compass_group": "NE",
+      "source_group_label": "NorthEast",
+      "source_group_chinese": "東北",
+      "lower_display_degrees": "22.6",
+      "upper_display_degrees": "37.5",
+      "lower_tenths": 226,
+      "upper_tenths": 375,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row16 (NE1)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "NE2",
+      "source_name": "Gen",
+      "chinese": "艮",
+      "source_label": "Gen 艮",
+      "compass_group": "NE",
+      "source_group_label": "NorthEast",
+      "source_group_chinese": "東北",
+      "lower_display_degrees": "37.6",
+      "upper_display_degrees": "52.5",
+      "lower_tenths": 376,
+      "upper_tenths": 525,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row17 (NE2)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "NE3",
+      "source_name": "Yin",
+      "chinese": "寅",
+      "source_label": "Yin 寅",
+      "compass_group": "NE",
+      "source_group_label": "NorthEast",
+      "source_group_chinese": "東北",
+      "lower_display_degrees": "52.6",
+      "upper_display_degrees": "67.5",
+      "lower_tenths": 526,
+      "upper_tenths": 675,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row18 (NE3)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "E1",
+      "source_name": "Jia",
+      "chinese": "甲",
+      "source_label": "Jia 甲",
+      "compass_group": "E",
+      "source_group_label": "East",
+      "source_group_chinese": "東",
+      "lower_display_degrees": "67.6",
+      "upper_display_degrees": "82.5",
+      "lower_tenths": 676,
+      "upper_tenths": 825,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row19 (E1)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "E2",
+      "source_name": "Mao",
+      "chinese": "卯",
+      "source_label": "Mao 卯",
+      "compass_group": "E",
+      "source_group_label": "East",
+      "source_group_chinese": "東",
+      "lower_display_degrees": "82.6",
+      "upper_display_degrees": "97.5",
+      "lower_tenths": 826,
+      "upper_tenths": 975,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row20 (E2)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "E3",
+      "source_name": "Yi",
+      "chinese": "乙",
+      "source_label": "Yi 乙",
+      "compass_group": "E",
+      "source_group_label": "East",
+      "source_group_chinese": "東",
+      "lower_display_degrees": "97.6",
+      "upper_display_degrees": "112.5",
+      "lower_tenths": 976,
+      "upper_tenths": 1125,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row21 (E3)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "SE1",
+      "source_name": "Chen",
+      "chinese": "辰",
+      "source_label": "Chen 辰",
+      "compass_group": "SE",
+      "source_group_label": "SouthEast",
+      "source_group_chinese": "東南",
+      "lower_display_degrees": "112.6",
+      "upper_display_degrees": "127.5",
+      "lower_tenths": 1126,
+      "upper_tenths": 1275,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row22 (SE1)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "SE2",
+      "source_name": "Xun",
+      "chinese": "巽",
+      "source_label": "Xun 巽",
+      "compass_group": "SE",
+      "source_group_label": "SouthEast",
+      "source_group_chinese": "東南",
+      "lower_display_degrees": "127.6",
+      "upper_display_degrees": "142.5",
+      "lower_tenths": 1276,
+      "upper_tenths": 1425,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row23 (SE2)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    {
+      "id": "SE3",
+      "source_name": "Si",
+      "chinese": "巳",
+      "source_label": "Si 巳",
+      "compass_group": "SE",
+      "source_group_label": "SouthEast",
+      "source_group_chinese": "東南",
+      "lower_display_degrees": "142.6",
+      "upper_display_degrees": "157.5",
+      "lower_tenths": 1426,
+      "upper_tenths": 1575,
+      "wraps_north": false,
+      "source_id": "feng-shui-yap2024-core-compass-v1",
+      "source_locator": "PDF page2,table row24 (SE3)",
+      "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    }
+  ],
+  "source_conventions": [
+    "Printed endpoint precision is one decimal degree;input domain is integertenths0..3599.",
+    "Both printed endpoints included on this discrete domain;onlyN2 crosses north.",
+    "Table order startsS1 and continues cyclically;it is not a north-up spatial grid.",
+    "The illustrated smartphone reads92°/E;E2 is independently derived from its printed interval,not written on the phone.",
+    "Magnetic/true reference and measurement role are not established by numeric table membership. No physical conversion or calibrated building orientation is inferred.",
+    "A150-point discrete interval has two central valid points;its exact geometric midpoint is half a tenth and is not a supported heading input."
+  ],
+  "schema": {
+    "schema_version": 1,
+    "mode": "manual",
+    "tasks": [
+      "classify",
+      "reference",
+      "compare",
+      "catalog"
+    ],
+    "catalog_identity": [
+      "exact catalog_id",
+      "integer catalog_version1",
+      "exact catalog_sha256"
+    ],
+    "classify": "Root bearing_tenths required;optional reading_id,frame,role,uncertainty,alternates,independent declarations and raw text",
+    "compare": "2–8 ordered distinct bounded ASCII reading IDs;each exactinteger bearing required",
+    "reference": "1–24 distinct references by exact ID,name,Chinese or full source label;aliases to same row count as duplicates",
+    "catalog": "Complete24rows in printed source order with cyclic previous/next IDs",
+    "integer_domains": {
+      "bearing_tenths": [
+        0,
+        3599
+      ],
+      "uncertainty_tenths": [
+        0,
+        1800
+      ]
+    },
+    "north_references": [
+      "source_diagram",
+      "magnetic",
+      "true",
+      "unknown"
+    ],
+    "bearing_roles": [
+      "source_heading",
+      "building_facing",
+      "building_sitting",
+      "door",
+      "observer",
+      "unknown"
+    ],
+    "alternate_readings": "Up to12 distinct exactinteger headings;radius applied to all candidates",
+    "contradictory_assertions": "Up to12 values each for bearing_tenths,north_reference,bearing_role;known conflicts include original declaration;unknown never fills omitted frame",
+    "independent_declarations": "Optional declared_facing_tenths and declared_sitting_tenths;no inferred opposite. Exact1800difference checked only as named editorial consistency convention.",
+    "building_identity": "Optional explicit bounded building_id. Only matching nonempty IDs support same_declared_building;this remains user-attributed.",
+    "raw_text": "Root question,notes,reflection and per-reading raw_observation/reflection preserve Unicode and whitespace up to10000codepoints;no prose interpretation",
+    "validation": "Strict unknown-field/type/enums/limits;integerbooleans/floats/strings rejected;duplicate JSON and nonfinite rejected. Negative/3600/multiple-turn headings are not normalized."
+  },
+  "numeric_policy": {
+    "input": "Exact integer tenths0..3599;booleans,floats,strings,negative,3600+ rejected",
+    "endpoint": "Both printed endpoints included;N2 uses heading>=3526 OR heading<=75",
+    "normalization": "No input normalization,rounding,truncation or interpolation. Modulo3600 is used only for explicit uncertainty ranges and differences,not to repair input.",
+    "uncertainty": "Integer symmetric radius0..1800 around every primary/alternate/asserted candidate;enumerate entire discrete circle,union deduplicated;stable possible labels in printed source order",
+    "midpoints": "Two central valid points per150-point interval. Exact geometric midpoint is an odd count of0.05degrees and remains unsupported as a heading input."
+  },
+  "frame_policy": [
+    "Omitted frame/role remains unknown in effective fields;raw request omissions preserved. Numeric table lookup still works.",
+    "source_diagram+source_heading is a complete documentary frame;not a physical measurement.",
+    "Magnetic/true declarations remain user-attributed;neither is converted or certified compatible with an unverified physical source convention.",
+    "source_diagram with a physical role is incompatible for physical interpretation;unknowns remain missing evidence.",
+    "All physical-building,outcome and calibrated-orientation conclusions remain unsupported.",
+    "Door,observer,building-facing and sitting are distinct;no heading or building identity inferred from prose."
+  ],
+  "conflict_policy": [
+    "Two distinct known asserted values including declaration mark explicit conflict. Unknown never fills a missing declaration.",
+    "Conflicting numeric assertions are also evaluated as additional bearing candidates;no definitive ID when any structured contradiction exists.",
+    "Independent facing/sitting declarations must differ by1800tenths when both given under the single declared frame;failure is a consistency conflict,not a new source omen.",
+    "Primary reading must agree with a same-role independent declaration when supplied. No absent opposite bearing is generated."
+  ],
+  "comparison_policy": "Readings retain their roles/frames. Same building only when equal explicit nonempty building_id is supplied. Angular difference/opposition is editorial and withheld across unknown/different north references;no physical interpretation follows.",
+  "evidence_matrix": {
+    "direct": "Source-located factual names and printed degree intervals",
+    "user_attributed": "Manual bearings,north/role/building declarations,uncertainty and raw text",
+    "editorial": "Exact discrete interval scan,uncertainty enumeration,conflict handling and comparison",
+    "unsupported": "MeasuredQi,physical compass calibration,health/wealth/prosperity,safety or interpersonal outcome claims"
+  },
+  "acceptance": {
+    "criteria_passed": true,
+    "tests": 1107,
+    "inherited_tests": 1031,
+    "new_tests": 76,
+    "cli_cases": 1339,
+    "inherited_cli_cases": 1235,
+    "new_cli_cases": 104,
+    "symbolic_verifiers": 23,
+    "source_rows": 24,
+    "exact_heading_checks": 3600,
+    "headings_per_row": 150,
+    "gaps": 0,
+    "overlaps": 0,
+    "id_name_chinese_verified": true,
+    "north_wrap_verified": true,
+    "boundary_neighbor_central_checks": 144,
+    "nominal_centers": 24,
+    "central_valid_points": 48,
+    "geometric_midpoints_not_supported_heading_inputs": 24,
+    "uncertainty_three_point_ranges": 3600,
+    "additional_uncertainty_cases": 9,
+    "source_anchors": 3,
+    "pre_engine_manifest_files": 1785,
+    "protected_files": 1780,
+    "changed_protected_files": [],
+    "prior_protected_files": 1665,
+    "earlier_protected_files": 1556,
+    "required_prior_files": 1441,
+    "intentional_interface_edits": [
+      "PROGRESS.md",
+      "knowledge/gaps.json",
+      "future/__main__.py",
+      "README.md"
+    ],
+    "intentional_source_append": "knowledge/feng_shui_sources.json: exact original14 records preserved as ordered prefix",
+    "original14_metadata_records_unchanged": true,
+    "registry_idempotent": true,
+    "source_registry_records": 436,
+    "registry_rules": "24verified computational interval rules;does not certify FengShui efficacy",
+    "checks": "data/feng-shui-acceptance-checks.json",
+    "regression": "data/feng-shui-regression.json",
+    "independent": "data/feng-shui-verification.json",
+    "preservation": "data/feng-shui-preservation-baseline.json",
+    "empirical_feng_shui_validation": false
+  },
+  "replay": {
+    "accepted_reports": [
+      {
+        "input": "data/feng-shui-source92-input.json",
+        "json": "data/feng-shui-source92.json",
+        "markdown": "data/feng-shui-source92.md"
+      },
+      {
+        "input": "data/feng-shui-n2-upper-input.json",
+        "json": "data/feng-shui-n2-upper.json",
+        "markdown": "data/feng-shui-n2-upper.md"
+      },
+      {
+        "input": "data/feng-shui-n3-lower-input.json",
+        "json": "data/feng-shui-n3-lower.json",
+        "markdown": "data/feng-shui-n3-lower.md"
+      },
+      {
+        "input": "data/feng-shui-zero-input.json",
+        "json": "data/feng-shui-zero.json",
+        "markdown": "data/feng-shui-zero.md"
+      },
+      {
+        "input": "data/feng-shui-last-input.json",
+        "json": "data/feng-shui-last.json",
+        "markdown": "data/feng-shui-last.md"
+      },
+      {
+        "input": "data/feng-shui-east-input.json",
+        "json": "data/feng-shui-east.json",
+        "markdown": "data/feng-shui-east.md"
+      },
+      {
+        "input": "data/feng-shui-south-input.json",
+        "json": "data/feng-shui-south.json",
+        "markdown": "data/feng-shui-south.md"
+      },
+      {
+        "input": "data/feng-shui-west-input.json",
+        "json": "data/feng-shui-west.json",
+        "markdown": "data/feng-shui-west.md"
+      },
+      {
+        "input": "data/feng-shui-northeast-input.json",
+        "json": "data/feng-shui-northeast.json",
+        "markdown": "data/feng-shui-northeast.md"
+      },
+      {
+        "input": "data/feng-shui-southwest-input.json",
+        "json": "data/feng-shui-southwest.json",
+        "markdown": "data/feng-shui-southwest.md"
+      },
+      {
+        "input": "data/feng-shui-northwest-input.json",
+        "json": "data/feng-shui-northwest.json",
+        "markdown": "data/feng-shui-northwest.md"
+      },
+      {
+        "input": "data/feng-shui-boundary-uncertainty-input.json",
+        "json": "data/feng-shui-boundary-uncertainty.json",
+        "markdown": "data/feng-shui-boundary-uncertainty.md"
+      },
+      {
+        "input": "data/feng-shui-north-wrap-input.json",
+        "json": "data/feng-shui-north-wrap.json",
+        "markdown": "data/feng-shui-north-wrap.md"
+      },
+      {
+        "input": "data/feng-shui-magnetic-input.json",
+        "json": "data/feng-shui-magnetic.json",
+        "markdown": "data/feng-shui-magnetic.md"
+      },
+      {
+        "input": "data/feng-shui-true-input.json",
+        "json": "data/feng-shui-true.json",
+        "markdown": "data/feng-shui-true.md"
+      },
+      {
+        "input": "data/feng-shui-unknown-frame-input.json",
+        "json": "data/feng-shui-unknown-frame.json",
+        "markdown": "data/feng-shui-unknown-frame.md"
+      },
+      {
+        "input": "data/feng-shui-missing-frame-input.json",
+        "json": "data/feng-shui-missing-frame.json",
+        "markdown": "data/feng-shui-missing-frame.md"
+      },
+      {
+        "input": "data/feng-shui-facing-door-input.json",
+        "json": "data/feng-shui-facing-door.json",
+        "markdown": "data/feng-shui-facing-door.md"
+      },
+      {
+        "input": "data/feng-shui-two-heading-input.json",
+        "json": "data/feng-shui-two-heading.json",
+        "markdown": "data/feng-shui-two-heading.md"
+      },
+      {
+        "input": "data/feng-shui-reference-input.json",
+        "json": "data/feng-shui-reference.json",
+        "markdown": "data/feng-shui-reference.md"
+      },
+      {
+        "input": "data/feng-shui-catalog-input.json",
+        "json": "data/feng-shui-catalog.json",
+        "markdown": "data/feng-shui-catalog.md"
+      },
+      {
+        "input": "data/feng-shui-contradictory-input.json",
+        "json": "data/feng-shui-contradictory.json",
+        "markdown": "data/feng-shui-contradictory.md"
+      },
+      {
+        "input": "data/feng-shui-alternates-input.json",
+        "json": "data/feng-shui-alternates.json",
+        "markdown": "data/feng-shui-alternates.md"
+      },
+      {
+        "input": "data/feng-shui-unicode-input.json",
+        "json": "data/feng-shui-unicode.json",
+        "markdown": "data/feng-shui-unicode.md"
+      }
+    ],
+    "rejected_reports": [
+      {
+        "input": "data/feng-shui-negative-input.json",
+        "json": "data/feng-shui-negative.json",
+        "markdown": "data/feng-shui-negative.md"
+      },
+      {
+        "input": "data/feng-shui-360-degrees-input.json",
+        "json": "data/feng-shui-360-degrees.json",
+        "markdown": "data/feng-shui-360-degrees.md"
+      },
+      {
+        "input": "data/feng-shui-multiple-turn-input.json",
+        "json": "data/feng-shui-multiple-turn.json",
+        "markdown": "data/feng-shui-multiple-turn.md"
+      },
+      {
+        "input": "data/feng-shui-precision-input.json",
+        "json": "data/feng-shui-precision.json",
+        "markdown": "data/feng-shui-precision.md"
+      },
+      {
+        "input": "data/feng-shui-boolean-input.json",
+        "json": "data/feng-shui-boolean.json",
+        "markdown": "data/feng-shui-boolean.md"
+      },
+      {
+        "input": "data/feng-shui-string-input.json",
+        "json": "data/feng-shui-string.json",
+        "markdown": "data/feng-shui-string.md"
+      },
+      {
+        "input": "data/feng-shui-wrong-profile-input.json",
+        "json": "data/feng-shui-wrong-profile.json",
+        "markdown": "data/feng-shui-wrong-profile.md"
+      },
+      {
+        "input": "data/feng-shui-wrong-hash-input.json",
+        "json": "data/feng-shui-wrong-hash.json",
+        "markdown": "data/feng-shui-wrong-hash.md"
+      },
+      {
+        "input": "data/feng-shui-wrong-version-input.json",
+        "json": "data/feng-shui-wrong-version.json",
+        "markdown": "data/feng-shui-wrong-version.md"
+      },
+      {
+        "input": "data/feng-shui-foreign-catalog-input.json",
+        "json": "data/feng-shui-foreign-catalog.json",
+        "markdown": "data/feng-shui-foreign-catalog.md"
+      },
+      {
+        "input": "data/feng-shui-prediction-input.json",
+        "json": "data/feng-shui-prediction.json",
+        "markdown": "data/feng-shui-prediction.md"
+      },
+      {
+        "input": "data/feng-shui-invalid-role-input.json",
+        "json": "data/feng-shui-invalid-role.json",
+        "markdown": "data/feng-shui-invalid-role.md"
+      },
+      {
+        "input": "data/feng-shui-bad-uncertainty-input.json",
+        "json": "data/feng-shui-bad-uncertainty.json",
+        "markdown": "data/feng-shui-bad-uncertainty.md"
+      },
+      {
+        "input": "data/feng-shui-missing-bearing-input.json",
+        "json": "data/feng-shui-missing-bearing.json",
+        "markdown": "data/feng-shui-missing-bearing.md"
+      },
+      {
+        "input": "data/feng-shui-nonfinite-input.json",
+        "json": "data/feng-shui-nonfinite.json",
+        "markdown": "data/feng-shui-nonfinite.md"
+      },
+      {
+        "input": "data/feng-shui-duplicate-json-input.json",
+        "json": "data/feng-shui-duplicate-json.json",
+        "markdown": "data/feng-shui-duplicate-json.md"
+      }
+    ],
+    "intentional_invalid_json_inputs": [
+      "data/feng-shui-nonfinite-input.json",
+      "data/feng-shui-duplicate-json-input.json"
+    ],
+    "protocol": "Canonical sorted-key compact UTF8 JSON,unescaped Unicode,no terminalLF;exact raw-text replay;no RNG,clock,LLM or network."
+  },
+  "configuration_matrix": {
+    "supported": [
+      "All24source labels and discrete interval classification",
+      "Reference lookup by exact ID/name/Chinese/source label and neighboring source rows",
+      "Entire-range uncertainty and explicit alternate/contradictory readings",
+      "Manual side-by-side comparison without inferred shared building",
+      "Offline immutable JSON/Markdown and raw-text replay"
+    ],
+    "experimental": [
+      "Other LuoPan rings,EightMansions,FlyingStars,FormSchool,SanHe/SanYuan andBTB remain research only;no runtime implementation"
+    ],
+    "unsupported": [
+      "Arbitrary-precision bearing or input rounding/normalization",
+      "True/magnetic declination conversion or compass calibration",
+      "Automatic building/door/sitting inference",
+      "Qi,health,wealth,prosperity,safety or compatibility outcomes",
+      "Other FengShui schools,calendar or FlyingStars generation",
+      "Floorplan/vision/map/3D/LLM pipelines"
+    ]
+  },
+  "rights": {
+    "policy": "facts_only",
+    "authorization": "User explicitly permits facts-only numerical extraction within project policy",
+    "included": "Original factual integer intervals,common direction/name identifiers,provenance and concise qualifications",
+    "excluded": "Source PDF,artwork,layout,branding,protected book text and creative illustrations",
+    "scope": "Project extraction review,not a general legal opinion or redistribution licence for source materials"
+  },
+  "qualification": "Verified software classification of a named source table only;no measured Qi,physical orientation certification or Feng Shui effectiveness claim.",
+  "limits": [
+    "Source-specific discrete lookup only;not every LuoPan ring or FengShui school.",
+    "All24literal Chinese glyphs visually checked;historical/philological name collation across independent editions remainsP1.",
+    "No physical north-reference equivalence,measurement precision,declination or building orientation verified by classification.",
+    "Uncertainty may return several mountains;structured conflicts suppress definitive_id even when numeric candidate labels coincide.",
+    "Exact geometric midpoint of inclusive printed bounds lies between discrete tenths;both central admissible points tested;no interpolation.",
+    "No efficacy,health,wealth,safety,compatibility or paranormal certification."
+  ],
+  "P1": [
+    "Skinner ring chapters and exact edition reconciliation",
+    "Yap earlier book/printing access",
+    "Independent historical Chinese-character collation and additional named LuoPan rings",
+    "EightMansions source-specific solar-year/person-category/zero andrawGua5directionremap",
+    "1945/1946/2001/2002workedexamples andhouse-versus-personalGua isolation",
+    "FlyingStars full9palace generation,forward/reverse,central5 andsubstitutions",
+    "CompletePeriod8E1/W1matrix and source-facing rotation;three anchors alone insufficient",
+    "Period transitions,building construction/occupancy/renovation events andexactsource/calendar conventions"
+  ],
+  "P2": [
+    "SeparateSanHe/SanYuan computational profiles",
+    "FormSchool source-condition comparisons",
+    "SeparateBTBformaldoor orientation",
+    "Originalrights-cleareddiagrams and optionalmanualfloorplan annotation",
+    "Verifiedcalendar/building extensions",
+    "Empirical research independent of numeric software correctness"
+  ],
+  "inventory": {
+    "total": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ],
+    "source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31"
+  },
+  "transition": "After closure pushed and clean0/0,audit next retainedTechnique43RemoteViewing only. Skip excluded41/42;no43implementation in this pass."
+}
