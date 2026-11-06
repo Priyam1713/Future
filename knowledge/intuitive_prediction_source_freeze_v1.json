@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "technique_id": 45,
+  "checked_on": "2026-11-07",
+  "source_manifest_sha256": "9a8e2cc686fc24f5f718ce0bdf55dd2ca488ac7be660b3791ea7e2e220619b98",
+  "source_notes": {
+    "recognition_primed_model": {
+      "sources": [
+        "intuitive-prediction-klein-rpd-v1",
+        "intuitive-prediction-kahneman-klein-2009-v1"
+      ],
+      "finding": "Experienced fireground commanders use recognized situations to suggest a plausible action, mentally simulate it, modify shortcomings or consider another. This is a descriptive cognitive account, not a universal probability equation.",
+      "case_locator": "2009paper p516: fireground option generation and assessment; same page USS Vincennes1988 tragedy illustrates expert failure, not an RPD success benchmark.",
+      "boundary": "Context cues, goals, expectancies, typicality and anomaly notes may be human-entered checklist fields. Exact1993/2017diagrams and detailed cases remain P1; checklist completeness cannot certify expertise."
+    },
+    "take_the_best_1996": {
+      "source": "intuitive-prediction-ttb-1996-v1",
+      "locator": "pp653-654 Steps1-5,Figure3,footnote1",
+      "rules": [
+        "Recognition first: one recognized wins; neither recognized triggers random choice in source; both recognized proceeds to cues.",
+        "Search subjectively ranked cue validities; stop at first positive-versus-not-positive cue and choose positive. Unknown differs from negative but either can oppose positive.",
+        "Negative versus unknown does not discriminate. No discriminating cue gives random choice in source. No compensating sum of later cues.",
+        "1991version required positive versus negative; do not silently substitute that missing-data convention for1996."
+      ],
+      "worked_examples": [
+        "p653 Figure1 a/b: Cue1 distinguishes; choose a.",
+        "p653 b/c: Cue1 negative/unknown skipped; Cue2 positive/negative chooses b."
+      ],
+      "evidence_scope": "Historical83German cities over100000,9binary cues; Appendix matrix. Simulation comparison is environment-specific, not universal superiority or current population data."
+    },
+    "recognition_heuristic_2002": {
+      "source": "intuitive-prediction-recognition-2002-v1",
+      "locator": "pp75-76",
+      "rule": "Exactly one recognized: infer recognized object has greater criterion under positive recognition association; negative ecological association reverses direction.",
+      "example": "p76 San Diego/San Antonio population illustration; historical participant recognition, not a current population query or universal guarantee.",
+      "limits": "Both or neither recognized lies outside the isolated one-recognized rule. Recognition is a reported memory state, not cue negativity. No probability follows automatically from a choice; less-is-more is conditional."
+    },
+    "expertise_conditions": {
+      "source": "intuitive-prediction-kahneman-klein-2009-v1",
+      "locator": "pp519-524",
+      "finding": "Predictable environmental regularities, valid learnable cues and opportunities for sustained learning with clear timely feedback constrain intuitive expertise. Confidence alone does not establish accuracy; skill is domain-specific.",
+      "proposed_gate": "Record domain,experience,cue validity evidence,feedback latency/quality,changes and evaluation period. Unknown evidence stays unknown; insufficient/changed conditions warn rather than award an expertise badge."
+    },
+    "proper_scores": {
+      "source": "intuitive-prediction-proper-scores-2007-v1",
+      "locator": "pp359,362-363 Examples1/3",
+      "finding": "Strict propriety concerns unique expected-score optimization by truthful probabilities. Source maximizes reward S=-sum_j(delta_ij-p_j)^2 and log(p_actual). Proposed binary losses change sign and explicitly name scale.",
+      "scope": "Correct scoring mathematics does not demonstrate that a person is skilled or that a cognitive model describes them."
+    },
+    "forecast_verification": {
+      "source": "intuitive-prediction-met-10-1-2-v1",
+      "locator": "AppendixC32.4",
+      "finding": "Binary Brier is mean squared probability error; lower is better and base rate matters. Reliability compares conditional frequencies with forecasts; resolution concerns differing conditional event rates. Discrimination compares forecast distributions given outcomes.",
+      "scope": "Calibration and discrimination are distinct. An apparently small error for rare events can reflect an uninformative base-rate forecast."
+    },
+    "sampling": {
+      "source": "intuitive-prediction-sampling-2008-v1",
+      "locator": "Indexed publisher abstract",
+      "finding": "Sampling uncertainty depends on sample size and occurrence frequency; full inferential derivations uninspected. No universal minimum N or synthetic-fixture proof of human accuracy."
+    }
+  },
+  "edition_limits": [
+    "2017Klein anniversary edition metadata is verified; actual book chapters are not. No1998page references transferred.",
+    "Gut Feelings2007ebook and2008paperback are separate records; neither full text inspected. Publisher promotional accuracy claims are not empirical validation.",
+    "1993RPDchapter unavailable within bounded research; author overview and coauthored2009paper are actual inspected RPD witnesses. No complete typical/atypical branch reconstruction certified.",
+    "Primary1996algorithm and2002opening recognition rule are sufficient for a bounded explicit heuristic proposal; broader2002less-is-more derivations deferred.",
+    "All source access is facts_only; null snapshot fields mean no raw-byte hash attestation, not missing values inferred from a redirect. No copyrighted source assets or participant data committed."
+  ],
+  "reverification": [
+    {
+      "source": "intuitive-prediction-ttb-1996-v1",
+      "locator": "pp652-654,Steps1-5,Figure3,footnote1",
+      "access": "Primary PDF web text reinspected; positive versus unknown differs from1991. Worked a/b and b/c verified."
+    },
+    {
+      "source": "intuitive-prediction-recognition-2002-v1",
+      "locator": "pp75-76",
+      "access": "Primary indexed PDF text reinspected; positive/negative ecological association. Direct-open restriction retained."
+    },
+    {
+      "source": "intuitive-prediction-kahneman-klein-2009-v1",
+      "locator": "pp519-524;fireground p516",
+      "access": "Primary PDF conclusions and RPD account reinspected; confidence is not skill."
+    },
+    {
+      "source": "intuitive-prediction-klein-rpd-v1",
+      "locator": "Author overview",
+      "access": "Author page reinspected; no full book/1993chapter access gained."
+    },
+    {
+      "source": "intuitive-prediction-proper-scores-2007-v1",
+      "locator": "pp359,362-363,Examples1/3",
+      "access": "Primary PDF reward orientation reinspected; our positive binary loss is explicitly half complementary-category sum."
+    },
+    {
+      "source": "intuitive-prediction-met-10-1-2-v1",
+      "locator": "AppendixC32.4.1-13",
+      "access": "Versioned official documentation reinspected; descriptive bins distinguished from discrimination/decomposition."
+    }
+  ],
+  "rights": "facts_only, original notes and independently authored synthetic fixtures only; no PDFs,figures,full book chapters or historical matrix bundled.",
+  "scope": "Software algorithm correctness and forecast error evaluation; no measured human expertise/psychic validation."
+}

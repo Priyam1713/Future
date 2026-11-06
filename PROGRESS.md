@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 45 source and profile freeze — 2026-11-07
+- Reverified1996TTB/2002recognition,2009expertise and scoring witnesses;separate versioned algorithms,editorial abstention and positive binary loss explicit. Full book/1993chapter gaps unchanged. Exact schema,chronology,version selection,calibration and held-out baseline frozen before production.
+- Captured2249tracked baseline;2245protected,4explicit interface/history exceptions. No46audit.
+
 ## Technique 45 Intuitive Prediction resource audit — 2026-11-07
 - Audit only after pushed44closure20346df and clean0/0. Three source ranks/fourvariation rows unchanged;9facts-only records distinguish2017Klein,2007/2008Gigerenzer and2009paper;full book/1993chapter access gaps retained.
 - Recommend explicit recognition/1996Take-the-Best traces plus resolved binary Brier/calibration evaluation. Unknown-cue handling,editorial abstention/tie conventions,score scale,unresolved denominators,held-out baselines and domain/feedback limits explicit. No45runtime/profile/CLI/catalog/fixtures;no46audit.

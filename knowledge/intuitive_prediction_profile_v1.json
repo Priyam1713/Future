@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "technique_id": 45,
+  "id": "intuitive-prediction-evaluation-v1",
+  "profiles": {
+    "recognition": "goldstein-gigerenzer2002-recognition-subset-v1",
+    "take-the-best": "gigerenzer-goldstein1996-ttb-deterministic-v1"
+  },
+  "source_manifest_sha256": "9a8e2cc686fc24f5f718ce0bdf55dd2ca488ac7be660b3791ea7e2e220619b98",
+  "source_freeze_sha256": "af680f87e165038875eb9214827885370ca3fcde91edcaebbe02c2c1e908bf1f",
+  "fields": {
+    "decision": [
+      "decision_id",
+      "profile",
+      "alternatives",
+      "criterion",
+      "criterion_direction",
+      "domain",
+      "observed_at",
+      "recognition",
+      "ecological_direction",
+      "direction_provenance",
+      "training_period",
+      "cues",
+      "tie_policy",
+      "context",
+      "confidence",
+      "notes"
+    ],
+    "cue": [
+      "cue_id",
+      "values",
+      "validity",
+      "rank",
+      "provenance",
+      "orientation",
+      "training_period"
+    ],
+    "context": [
+      "regularity",
+      "cue_validity",
+      "feedback_quality",
+      "feedback_latency",
+      "practice_history",
+      "environment_changed"
+    ],
+    "plan": [
+      "study_id",
+      "created_at",
+      "domain",
+      "horizon",
+      "event_definition",
+      "events",
+      "slots",
+      "baseline",
+      "privacy_consent"
+    ],
+    "event": [
+      "event_id",
+      "question",
+      "cutoff",
+      "window_start",
+      "window_end"
+    ],
+    "slot": [
+      "forecast_id",
+      "forecaster",
+      "event_id"
+    ],
+    "forecast": [
+      "forecast_id",
+      "at",
+      "probability",
+      "outcome_known",
+      "confidence",
+      "decision_id",
+      "notes",
+      "parent_sha256",
+      "reason"
+    ],
+    "resolution": [
+      "event_id",
+      "at",
+      "status",
+      "outcome",
+      "occurrence_at",
+      "publication_at",
+      "discovery_at",
+      "evidence"
+    ],
+    "evidence": [
+      "path",
+      "sha256",
+      "holder",
+      "permission",
+      "provenance"
+    ],
+    "baseline": [
+      "probability",
+      "frozen_at",
+      "domain",
+      "horizon",
+      "event_definition",
+      "training_start",
+      "training_end",
+      "training_outcomes",
+      "evidence"
+    ],
+    "training_outcome": [
+      "event_id",
+      "outcome"
+    ],
+    "ledger": [
+      "schema_version",
+      "profile_sha256",
+      "plan",
+      "plan_sha256",
+      "actions"
+    ],
+    "action": [
+      "sequence",
+      "kind",
+      "payload",
+      "parent_sha256",
+      "sha256"
+    ]
+  },
+  "recognition": "2002isolated rule; one recognized/one unrecognized,declared positive or negative association; lower criterion inverts explicit higher comparison. Unknown/both/neither abstain.",
+  "ttb": "1996recognition precedence requires positive ecological direction and higher criterion. Both recognized: fixed cue order; positive versus negative/unknown discriminates,negative versus unknown does not. Source random branches replaced by editorial abstention. No negative-recognition import from2002.",
+  "ranking": "Cue validities decimal strings[.5,1] with positive orientation; supplied list must descend in validity and ascend integer rank. Equal validities require tie_policy=frozen_order,otherwise abstain before search. Provenance/training periods mandatory. No learning/reordering.",
+  "probability": "Exact plain decimal string 0..1,up to100digits and100fractional places;no exponents,spaces,leading+,booleans orJSONnumbers. Fraction arithmetic. Output reduced rational string and rounded12-place decimal using HALF_EVEN.",
+  "chronology": "Cutoff inclusive; forecast original/amendment timestamp must precede actual occurrence strictly,knowledge false. Original at<=subsequent amendment and global action time. Resolution at>=occurrence/publication/discovery;unknown times stay unknown. Window closed,occurrence must be inside. Publication/discovery are distinct and do not substitute for occurrence.",
+  "selection": "Select latest temporally eligible version per planned slot/forecaster/event,horizon fixed by plan;equal-time versions resolved by append sequence. Late/known-outcome amendments retained/excluded and cannot displace eligible original. Event definitions/slots/baseline frozen at create;one slot per forecaster/event.",
+  "evidence": "Resolved requires local bytes matching SHA256 plus holder,permission,provenance. Missing evidence retained/unscored. Evidence bytes checked on every replay;no asset bytes exported. Unresolved/disputed/void unscored.",
+  "calibration": "Ten bins[0,.1),...,[.9,1],using exact submitted probabilities,no midpoint replacement;empty frequencies null. Per-bin unscored selected counts;always N. No decomposition/inference.",
+  "baseline": "Optional constant training prevalence frozen before plan;training ends before freeze;distinct event IDs,matching domain,horizon,event definition,verified local evidence;probability must equal mean training outcomes. No evaluation IDs in training. Same eligible resolved pairs,paired loss difference only;BSS/logloss deferred.",
+  "records": "Local hash chain detects mismatch against retained root only;owner may rewrite entire ledger. Identity,clock,knowledge,training validity and rights remain declarations;no trusted timestamp or empirical skill certification.",
+  "limits": [
+    "No automatic choice-to-probability conversion",
+    "RPD/checklist and domain conditions are user declarations,not an expert classifier",
+    "Calibration is descriptive,not discrimination or proof of skill",
+    "Dependence groups reported,never independent trial certification",
+    "No qualifying empirical human benchmark acquired",
+    "No probability,p-value,confidence interval or paranormal mechanism inferred"
+  ],
+  "matrix": {
+    "supported": [
+      "Named deterministic recognition and1996TTB subset",
+      "Strict manual decimal forecasts,version history,chronology and evidence checks",
+      "Exact binary Brier loss,ten-bin calibration,held-out constant-baseline paired difference",
+      "Human RPD/context reference"
+    ],
+    "experimental": [
+      "Empirical expertise and cross-domain skill comparisons",
+      "Source complete stochastic reproduction"
+    ],
+    "unsupported": [
+      "Optimal RPD action selector",
+      "Automatic cue validity learning",
+      "Log loss,BSS,decomposition or inferential significance",
+      "Psychic/neurological diagnosis or expert certification",
+      "Unlicensed historical data corpus"
+    ]
+  },
+  "backlog": {
+    "P1": [
+      "Legitimate complete2017Klein and Gut Feelings chapter inspection and1993RPDtypical/atypical diagrams/cases",
+      "Independently reproduce broader2002recognition derivations and conditional less-is-more evidence",
+      "License/transcribe/check historical or new held-out benchmark with domain-specific cue validity",
+      "Review protocol/cutoff,dependencies,small-N/rare-event warnings and legitimate empirical comparison",
+      "Verify log loss,infinity serialization,BSSzero denominator and optional exact-category decomposition before adding"
+    ],
+    "P2": [
+      "Preregistered domain-specific human expert/novice studies with independent outcomes",
+      "Separately validated statistical inference and dependent-data models",
+      "External timestamp witnesses and accessible richer elicitation",
+      "More heuristic families only with inspected algorithms and independent fixtures"
+    ]
+  }
+}
