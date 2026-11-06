@@ -1,0 +1,217 @@
+{
+  "passed": true,
+  "profile": "rv-air1995-five-choice-blind-trial-v1",
+  "profile_sha256": "bb08a51d84d03ad858d65c1530fd763de8bbee686488ce512e54154877d2a60b",
+  "fixture_sha256": "09d1f287a430ee668c89e692e2974c2a2d6df5e86b2ac61104a6d4af3c607278",
+  "fixture_freeze_commit": "752210e",
+  "rank_permutations": 120,
+  "target_identities": 5,
+  "display_permutations": 120,
+  "independent_rank_checks": 72000,
+  "null_cases": 600,
+  "null_rank_sum": 1800,
+  "null_hits": 120,
+  "null_expected_rank": {
+    "numerator": 3,
+    "denominator": 1
+  },
+  "null_top_rank": {
+    "numerator": 1,
+    "denominator": 5
+  },
+  "known_answer_commitment": true,
+  "known_answer_viewer_lock": true,
+  "known_answer_judge_lock": true,
+  "procedural_families": [
+    {
+      "family": "concealment",
+      "passed": true,
+      "checks": 5,
+      "tests": [
+        "concealment",
+        "judge_packet",
+        "public_status",
+        "pre_reveal_markdown_no_private_replay",
+        "export_viewer_only_packet"
+      ]
+    },
+    {
+      "family": "transcript-lock",
+      "passed": true,
+      "checks": 4,
+      "tests": [
+        "transcript_mutation",
+        "rehashed_transcript_still_breaks_lock",
+        "attachment_lock_and_neutral_export",
+        "no_silent_amendment"
+      ]
+    },
+    {
+      "family": "metadata-leak",
+      "passed": true,
+      "checks": 7,
+      "tests": [
+        "metadata_chunk_eXIf",
+        "metadata_chunk_tEXt",
+        "metadata_chunk_iTXt",
+        "metadata_chunk_zTXt",
+        "metadata_chunk_tIME",
+        "packet_does_not_copy_sidecars",
+        "export_fresh_directory"
+      ]
+    },
+    {
+      "family": "permutations",
+      "passed": true,
+      "checks": 4,
+      "tests": [
+        "actual_target_rank_1",
+        "actual_target_rank_3",
+        "actual_target_rank_5",
+        "duplicate_alias"
+      ]
+    },
+    {
+      "family": "replay",
+      "passed": true,
+      "checks": 4,
+      "tests": [
+        "known_commitment",
+        "known_source_locks",
+        "replay",
+        "original_whitespace"
+      ]
+    },
+    {
+      "family": "score-precommit",
+      "passed": true,
+      "checks": 5,
+      "tests": [
+        "scoring_precommitment",
+        "frozen_primary_endpoint",
+        "frozen_tie_policy",
+        "frozen_stopping_rule",
+        "frozen_exclusion_rule"
+      ]
+    },
+    {
+      "family": "premature-reveal",
+      "passed": true,
+      "checks": 3,
+      "tests": [
+        "premature_reveal_retained",
+        "unauthorized_reveal",
+        "wrong_opening"
+      ]
+    },
+    {
+      "family": "duplicate-reuse",
+      "passed": true,
+      "checks": 5,
+      "tests": [
+        "duplicate_judge_assignment",
+        "duplicate_trial_ledger",
+        "target_reuse_rejected",
+        "declared_dependence",
+        "repeated_ranking_rejected"
+      ]
+    },
+    {
+      "family": "times",
+      "passed": true,
+      "checks": 3,
+      "tests": [
+        "timezone_missing_attempt",
+        "reverse_chronology",
+        "offset_comparison"
+      ]
+    },
+    {
+      "family": "conflicts",
+      "passed": true,
+      "checks": 3,
+      "tests": [
+        "role_collision",
+        "aware_blind_viewer",
+        "judge_lock_requires_every_judge"
+      ]
+    },
+    {
+      "family": "wrong-pool",
+      "passed": true,
+      "checks": 3,
+      "tests": [
+        "wrong_pool",
+        "wrong_asset_digest",
+        "asset_mutation"
+      ]
+    },
+    {
+      "family": "zero-information",
+      "passed": true,
+      "checks": 3,
+      "tests": [
+        "chance_space",
+        "private_os_rejection_sampling",
+        "malformed_uniform_log"
+      ]
+    },
+    {
+      "family": "judges",
+      "passed": true,
+      "checks": 3,
+      "tests": [
+        "judge_disagreement_one_trial",
+        "judge_mutation",
+        "judge_public_text_mutation"
+      ]
+    },
+    {
+      "family": "simulated",
+      "passed": true,
+      "checks": 3,
+      "tests": [
+        "simulated_every_packet",
+        "human_manual_no_uniform_claim",
+        "human_cannot_predictable_seed"
+      ]
+    },
+    {
+      "family": "rights",
+      "passed": true,
+      "checks": 4,
+      "tests": [
+        "rights_holder",
+        "rights_permission",
+        "rights_basis",
+        "rights_attribution"
+      ]
+    },
+    {
+      "family": "failure-history",
+      "passed": true,
+      "checks": 9,
+      "tests": [
+        "failure_then_success_preserved",
+        "full_ledger_required",
+        "terminal_aborted",
+        "terminal_invalid",
+        "terminal_leaked",
+        "terminal_excluded",
+        "terminal_conflicted",
+        "unblinded_training",
+        "blind_feedback_rejected"
+      ]
+    }
+  ],
+  "source_stage_labels": [
+    "I",
+    "II",
+    "III",
+    "IV",
+    "V",
+    "VI"
+  ],
+  "empirical_validation": false,
+  "qualification": "Frozen pre-engine expectations; no real human/ESP benchmark. Procedural family tests exercise public file export,metadata,locks,chronology,all-attempt ledger and truthfully bounded declarations."
+}
