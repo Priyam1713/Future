@@ -1083,15 +1083,15 @@
     "technique_id": 49,
     "name": "AI Predictive Modeling",
     "retained": true,
-    "status": "Researching — Audit Only",
+    "status": "Core v1 Ready — Leakage-Controlled CPU Forecasting and Retrospective Evaluation Scope",
     "variation_count": 5,
     "source_count": 2,
     "missing_source_urls": [],
-    "coverage_status": "Ranked sources,forecasting methods,pinned Chronos2API/weights metadata,NOAA data rights and frozen leakage-controlled evaluation design inspected;no runtime implementation",
+    "coverage_status": "Verified seven fixed CPU baselines,exact rolling-origin forecasts,validation-only selection and measured retrospective NOAA evaluation;all candidate results retained",
     "gaps": [
-      "Subsequent implementation/acceptance required;see knowledge/ai_predictive_modeling_resource_audit.json",
-      "Independent numeric fixtures and exact baseline/SES conventions before production",
-      "Revised data vintage/pretraining contamination limits;no model inference,accuracy benchmark or Chronos adapter certified"
+      "P1/P2 and matrix:knowledge/ai_predictive_modeling_core_v1.json",
+      "Original NOAA publication vintages and external/domain validation remain unresolved",
+      "ARIMA/optimized ETS,Holt-Winters,trees,neural andChronos adapters unimplemented;manual scoring produces no predictive intervals"
     ],
     "provisional_variation_sources_not_in_ranked_list": []
   },

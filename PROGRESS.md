@@ -1084,3 +1084,9 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Final1462tests (1397inherited+65new),2029CLI cases (1867inherited+162new) and28independent verifiers (27inherited+1new) pass. All21families,4200cell predictions,672sentinels and30accepted/49rejected JSON/Markdown pairs verified.
 - Complete2661protected-file bytes unchanged;registry idempotence,rights/source hashes,strict JSON including two inherited malformed rejection fixtures,dependency audit,pip check anddiff check pass. Evidence:data/ai-predictive-modeling-acceptance-checks.json andregression.json.
 - Exact-file EOL attributes preserve existing engineLF/oracleCRLF byte commitments under both Git autocrlf settings;four checkout export hash checks pass. No Python/data/profile/forecast/report hashes changed. Compact review:data/ai-predictive-modeling-noaa-summary.md.
+
+## 2026-11-07 — #49 Core v1 closure
+- Accepted **Core v1 Ready — Leakage-Controlled CPU Forecasting and Retrospective Evaluation Scope** under fpp3-noaa-monthly-rolling-origin-baselines-v1. All13criteria pass;matrix,real scores,resources,vintage/rights limits andP1/P2 frozen inknowledge/ai_predictive_modeling_core_v1.json.
+- Source/profile:d6c68d6;fixtures/oracle:1d5ed6a;engine:8c2fa1f;benchmark:b83c055;verification:e46e1d0;reports:c707a08;acceptance:17a0b96. All2661earlier protected files and60IDs/54retained/six exclusions preserved.
+- Validation-selected drift underperformed seasonal naive on test;readiness certifies bounded software/evaluation behavior,not superior or real-time predictive skill. Chronos remains unimplemented/P1.
+- Next only after closure push andclean0/0main sync:research audit#50Quantum Probability Forecasting only. No#50implementation/package installation/profile andno#51research in this pass.

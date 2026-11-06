@@ -1,0 +1,2465 @@
+{
+  "version": 1,
+  "technique_id": 49,
+  "name": "AI Predictive Modeling",
+  "date": "2026-11-07",
+  "status": "Core v1 Ready — Leakage-Controlled CPU Forecasting and Retrospective Evaluation Scope",
+  "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+  "profile_sha256": "ed2490bf3ddc5861b3a406e2ba8aa93b3f2b2fe33e0b7917371e5c26875e7fdb",
+  "source_commit": "d6c68d6",
+  "fixture_commit": "1d5ed6a",
+  "engine_commit": "8c2fa1f",
+  "benchmark_commit": "b83c055",
+  "verification_commit": "e46e1d0",
+  "ranked_sources_unchanged": [
+    [
+      49,
+      "AI Predictive Modeling",
+      1,
+      "Rob J. Hyndman and George Athanasopoulos",
+      "Forecasting: Principles and Practice (3rd ed.)",
+      "Transparent statistical methods and evaluation",
+      "https://otexts.com/fpp3/",
+      "Open textbook",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      49,
+      "AI Predictive Modeling",
+      2,
+      "Amazon Science",
+      "Chronos-2 Model Card",
+      "Current pretrained foundation-model implementation",
+      "https://huggingface.co/amazon/chronos-2",
+      "Open model card / check license",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows_unchanged": [
+    [
+      49,
+      "AI Predictive Modeling",
+      "Classical ARIMA/ETS",
+      "Chronos-2 Model Card",
+      "Forecasting: Principles and Practice (3rd ed.)",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      49,
+      "AI Predictive Modeling",
+      "boosted trees",
+      "Chronos-2 Model Card",
+      "Forecasting: Principles and Practice (3rd ed.)",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      49,
+      "AI Predictive Modeling",
+      "neural time-series",
+      "Chronos-2 Model Card",
+      "Forecasting: Principles and Practice (3rd ed.)",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      49,
+      "AI Predictive Modeling",
+      "probabilistic transformers",
+      "Chronos-2 Model Card",
+      "Forecasting: Principles and Practice (3rd ed.)",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      49,
+      "AI Predictive Modeling",
+      "foundation models",
+      "Chronos-2 Model Card",
+      "Forecasting: Principles and Practice (3rd ed.)",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_registry": "knowledge/ai_predictive_modeling_sources.json",
+  "source_manifest_sha256": "2ffa3321a1ecea9424c45d53db6b86a26a988c470da1102607edb702294c563d",
+  "source_freeze": "knowledge/ai_predictive_modeling_source_freeze_v1.json",
+  "source_freeze_sha256": "d1d1d9e1eac64fde70f17a2ccfdfb788a128d9bf9b2f83fbaf3f60efe636726b",
+  "edition": "FPP3 third edition online modified2026-11-04;R/fpp3 examples are not Python implementation parity.",
+  "dataset": {
+    "path": "resources/ai-predictive-modeling/noaa_mlo_2000_2023.json",
+    "sha256": "303c231dd00ba7cf6302e02dbb25525b91e226008a71b15856f25f775aa9645c",
+    "count": 288,
+    "first": "2000-01",
+    "last": "2023-12",
+    "source_sha256": "0ce4e7749217b4af2cca8e0bdf263856ad59b0a2946d4e98c7b22ccfbff21cad",
+    "rights": "NOAA government data public domain unless separately annotated;retain source/product credit,no endorsement or misrepresentation. Selected2000–2023 NOAA measurements avoid the pre1974 Scripps-sourced portion of the full file.",
+    "attribution": "Data provided by NOAA Global Monitoring Laboratory, Boulder, Colorado, USA;Carbon Cycle and Greenhouse Gases group. Original NOAA values;this selected research subset is not an official NOAA product or endorsement."
+  },
+  "normalized_workbench_dataset_sha256": "f4355d49cbf7c66ed4a39da079c7dc78bdd281df8537ebe58037d7b35bff9f2b",
+  "protocol_sha256": "c49cb6ed3360bd1905048ace7b45e7df616fb600fa5856df23359d159db45457",
+  "frozen_audit_design": "data/ai-predictive-modeling-evaluation-design.json",
+  "runtime_plan": {
+    "models": [
+      "seasonal_naive_m12",
+      "naive",
+      "drift",
+      "mean",
+      "ses_alpha0.2_initial_y1",
+      "ses_alpha0.5_initial_y1",
+      "ses_alpha0.8_initial_y1"
+    ],
+    "validation_origins": [
+      "2017-12",
+      "2018-01",
+      "2018-02",
+      "2018-03",
+      "2018-04",
+      "2018-05",
+      "2018-06",
+      "2018-07",
+      "2018-08",
+      "2018-09",
+      "2018-10",
+      "2018-11",
+      "2018-12",
+      "2019-01",
+      "2019-02",
+      "2019-03",
+      "2019-04",
+      "2019-05",
+      "2019-06",
+      "2019-07",
+      "2019-08",
+      "2019-09",
+      "2019-10",
+      "2019-11",
+      "2019-12"
+    ],
+    "test_origins": [
+      "2020-12",
+      "2021-01",
+      "2021-02",
+      "2021-03",
+      "2021-04",
+      "2021-05",
+      "2021-06",
+      "2021-07",
+      "2021-08",
+      "2021-09",
+      "2021-10",
+      "2021-11",
+      "2021-12",
+      "2022-01",
+      "2022-02",
+      "2022-03",
+      "2022-04",
+      "2022-05",
+      "2022-06",
+      "2022-07",
+      "2022-08",
+      "2022-09",
+      "2022-10",
+      "2022-11",
+      "2022-12"
+    ],
+    "horizons": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "seasonal_period": 12,
+    "selection": "validation_macro_mae_then_order"
+  },
+  "runtime_plan_sha256": "13f9674dc5853014f1f7e26802855b8fad2d58a9dddfdf942f130b0794f50802",
+  "candidate_configurations": [
+    {
+      "id": "seasonal_naive_m12",
+      "version": 1,
+      "alpha": null,
+      "initialization": null,
+      "seasonal_period": 12
+    },
+    {
+      "id": "naive",
+      "version": 1,
+      "alpha": null,
+      "initialization": null,
+      "seasonal_period": null
+    },
+    {
+      "id": "drift",
+      "version": 1,
+      "alpha": null,
+      "initialization": null,
+      "seasonal_period": null
+    },
+    {
+      "id": "mean",
+      "version": 1,
+      "alpha": null,
+      "initialization": null,
+      "seasonal_period": null
+    },
+    {
+      "id": "ses_alpha0.2_initial_y1",
+      "version": 1,
+      "alpha": "0.2",
+      "initialization": "y1,consume y2..yT",
+      "seasonal_period": null
+    },
+    {
+      "id": "ses_alpha0.5_initial_y1",
+      "version": 1,
+      "alpha": "0.5",
+      "initialization": "y1,consume y2..yT",
+      "seasonal_period": null
+    },
+    {
+      "id": "ses_alpha0.8_initial_y1",
+      "version": 1,
+      "alpha": "0.8",
+      "initialization": "y1,consume y2..yT",
+      "seasonal_period": null
+    }
+  ],
+  "manual_seasonal_period_policy": "Manual seasonal_naive_m{m} for integer1..120 uses same algorithm and explicit period;only m12 is a NOAA benchmark candidate.",
+  "numeric_contract": "Plain finite decimal strings,<=64characters,<=30integer and24fraction digits;Fraction internal values. Exact fractions serialized with12-place HALF_EVEN decimal displays. RMSE retains exact rational radicand and80-digit Decimal square root rounded to12places. No float conversion of input.",
+  "metric_contract": "Per-cell scaled absolute error uses each origin training-only seasonal mean absolute difference. Aggregate MASE averages defined per-cell scaled errors with separate denominator;never divide aggregate MAE by average training scale. Bias actual-forecast. Paired candidate-minus-snaive MAE and ratio use common eligible cells;reference zero ->null ratio.",
+  "metric_limits": "Optional exact absolute-sMAPE only for at most20manual scored pairs;benchmark omits it to avoid impractical denominator growth. Manual quantile/interval reference scoring is supported;no intervals are generated by point models.",
+  "selection": {
+    "selected": "drift",
+    "candidates": [
+      {
+        "model": "seasonal_naive_m12",
+        "validation_macro_mae": {
+          "exact": "9823/3750",
+          "decimal": "2.619466666667",
+          "reason": null
+        },
+        "eligible": true,
+        "reason": null
+      },
+      {
+        "model": "naive",
+        "validation_macro_mae": {
+          "exact": "88141/30000",
+          "decimal": "2.938033333333",
+          "reason": null
+        },
+        "eligible": true,
+        "reason": null
+      },
+      {
+        "model": "drift",
+        "validation_macro_mae": {
+          "exact": "9038466486280529611218791712485438331950269/3477711562518763325806703854084440414000000",
+          "decimal": "2.598969559090",
+          "reason": null
+        },
+        "eligible": true,
+        "reason": null
+      },
+      {
+        "model": "mean",
+        "validation_macro_mae": {
+          "exact": "1510023314731550519840110083902986230796109/65323741335325608087603560765450133000000",
+          "decimal": "23.115995560943",
+          "reason": null
+        },
+        "eligible": true,
+        "reason": null
+      },
+      {
+        "model": "ses_alpha0.2_initial_y1",
+        "validation_macro_mae": {
+          "exact": "10030402437425416416590349654280677484477418890138149903326728728341323003774531554632010133328125590962731962374108064993579301200657888728926042913063683925542816380562553/3395879654560017137815919734082921917755949199302176821093480583725812994472316918027324294485359287295232164736329186120956024827477470751091459533199667930603027343750000",
+          "decimal": "2.953697850852",
+          "reason": null
+        },
+        "eligible": true,
+        "reason": null
+      },
+      {
+        "model": "ses_alpha0.5_initial_y1",
+        "validation_macro_mae": {
+          "exact": "3230912204080504482155204508486851462046002859398131811366497171801880846213/1104279415486490205989560937964324072392177435547261848826003875807887360000",
+          "decimal": "2.925810405202",
+          "reason": null
+        },
+        "eligible": true,
+        "reason": null
+      },
+      {
+        "model": "ses_alpha0.8_initial_y1",
+        "validation_macro_mae": {
+          "exact": "9990682418284624056662483555799922652885659034238559767324640933608361694531664977564546193622752870402683909885847345852997100672868254199147896383689916477976252013880153/3395879654560017137815919734082921917755949199302176821093480583725812994472316918027324294485359287295232164736329186120956024827477470751091459533199667930603027343750000",
+          "decimal": "2.942001317647",
+          "reason": null
+        },
+        "eligible": true,
+        "reason": null
+      }
+    ],
+    "tie_order": [
+      "seasonal_naive_m12",
+      "naive",
+      "drift",
+      "mean",
+      "ses_alpha0.2_initial_y1",
+      "ses_alpha0.5_initial_y1",
+      "ses_alpha0.8_initial_y1"
+    ],
+    "rule": "Validation per-series macro MAE only;complete forecast coverage required. Test diagnostics never select.",
+    "sha256": "6ec32e1824077236d83befd2472349e1a69943ff4aed83f02a56ace933463813"
+  },
+  "candidate_scores": {
+    "seasonal_naive_m12": {
+      "validation": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "9823/3750",
+          "decimal": "2.619466666667",
+          "reason": null
+        },
+        "mse": {
+          "exact": "2660563/375000",
+          "decimal": "7.094834666667",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(2660563/375000)",
+          "decimal": "2.663613085016",
+          "reason": null
+        },
+        "bias": {
+          "exact": "9823/3750",
+          "decimal": "2.619466666667",
+          "reason": null
+        },
+        "mase": {
+          "exact": "3490648887576345300268700862790150306671370333557134438498530501447512060785881509978121370119/2904538044369036313187014986411655301856106075425655668403446990198077846007528904295892720000",
+          "decimal": "1.201791415452",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "78584/12347281",
+          "decimal": "0.006364478139",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "test": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "10897/5000",
+          "decimal": "2.179400000000",
+          "reason": null
+        },
+        "mse": {
+          "exact": "1902517/375000",
+          "decimal": "5.073378666667",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(1902517/375000)",
+          "decimal": "2.252416184160",
+          "reason": null
+        },
+        "bias": {
+          "exact": "10897/5000",
+          "decimal": "2.179400000000",
+          "reason": null
+        },
+        "mase": {
+          "exact": "101689674175664998347348634260032884784823124827985118309157517060687615673326875362772494439464833/103702716046679008783596593153213069133605484843641199122206214708940670499516379789118944276840000",
+          "decimal": "0.980588339942",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "32691/6278461",
+          "decimal": "0.005206849258",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      }
+    },
+    "naive": {
+      "validation": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "88141/30000",
+          "decimal": "2.938033333333",
+          "reason": null
+        },
+        "mse": {
+          "exact": "12763141/1000000",
+          "decimal": "12.763141000000",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(12763141/1000000)",
+          "decimal": "3.572553848440",
+          "reason": null
+        },
+        "bias": {
+          "exact": "45637/30000",
+          "decimal": "1.521233333333",
+          "reason": null
+        },
+        "mase": {
+          "exact": "1816855414823818253525236309863714436532065080208453266060154403348217390932299428866677190237/1348535520599909716836828386548268533004620677876197274615886102591964714217781276994521620000",
+          "decimal": "1.347280354926",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "88141/12347281",
+          "decimal": "0.007138494702",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "test": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "13693/5000",
+          "decimal": "2.738600000000",
+          "reason": null
+        },
+        "mse": {
+          "exact": "8419277/750000",
+          "decimal": "11.225702666667",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(8419277/750000)",
+          "decimal": "3.350477975852",
+          "reason": null
+        },
+        "bias": {
+          "exact": "18337/15000",
+          "decimal": "1.222466666667",
+          "reason": null
+        },
+        "mase": {
+          "exact": "115012599597799946887812916913843175435630717469891930033222654101306964596666857512104526965615713/93332444442011107905236933837891762220244936359277079209985593238046603449564741810207049849156000",
+          "decimal": "1.232289588957",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "41079/6278461",
+          "decimal": "0.006542845452",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      }
+    },
+    "drift": {
+      "validation": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "9038466486280529611218791712485438331950269/3477711562518763325806703854084440414000000",
+          "decimal": "2.598969559090",
+          "reason": null
+        },
+        "mse": {
+          "exact": "1125330626167006580418957527846469602415977964170851621893323526366067751173073902621/109408506072324593639435493623431879897067873257620819380353961257903029859200000000",
+          "decimal": "10.285586254355",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(1125330626167006580418957527846469602415977964170851621893323526366067751173073902621/109408506072324593639435493623431879897067873257620819380353961257903029859200000000)",
+          "decimal": "3.207114942492",
+          "reason": null
+        },
+        "bias": {
+          "exact": "671012410034750653950300737562746288836951/1872613918279334098511302075276237146000000",
+          "decimal": "0.358329286931",
+          "reason": null
+        },
+        "mase": {
+          "exact": "260491757359306682127394549156899133023597430552312624220887154848209600221099140782791848033767459364235061836973847423367/218535027489706798129893650980111497006793430502077286539226129556107733525742345736596169773134739319684237250257282444000",
+          "decimal": "1.191990869160",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "9038466486280529611218791712485438331950269/1431342729978941285207664139005452783980477800",
+          "decimal": "0.006314676630",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "test": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "1431806021635116887106236511696314326339457/564314136314439499865009712443983272000000",
+          "decimal": "2.537249963267",
+          "reason": null
+        },
+        "mse": {
+          "exact": "7692149018766633118503690900036909548611049186107607316915033658349713341536622462097/804787963199664794809213555994930929408582003421786210824010128627355426764800000000",
+          "decimal": "9.557982189724",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(7692149018766633118503690900036909548611049186107607316915033658349713341536622462097/804787963199664794809213555994930929408582003421786210824010128627355426764800000000)",
+          "decimal": "3.091598646287",
+          "reason": null
+        },
+        "bias": {
+          "exact": "195075696457863850853604968051295173445967/5078827226829955498785087411995849448000000",
+          "decimal": "0.038409594921",
+          "reason": null
+        },
+        "mase": {
+          "exact": "420541973640710128410266515149635667588347254758407315783114516563764999342904851335716119745257302661697283435246259449687/368410605736517157595853221401980944488168283829515530911095360523655576440873588421597826210907236872498710225975080800000",
+          "decimal": "1.141503439620",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "1431806021635116887106236511696314326339457/236201619773259475784131249613384243860292800",
+          "decimal": "0.006061795948",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      }
+    },
+    "mean": {
+      "validation": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "1510023314731550519840110083902986230796109/65323741335325608087603560765450133000000",
+          "decimal": "23.115995560943",
+          "reason": null
+        },
+        "mse": {
+          "exact": "15602216386430042386642089319069162263158873871249952731594387528304396444669313591929/28846212390621005624242727496713380989627143435960059193035454901691577640000000000",
+          "decimal": "540.875736999805",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(15602216386430042386642089319069162263158873871249952731594387528304396444669313591929/28846212390621005624242727496713380989627143435960059193035454901691577640000000000)",
+          "decimal": "23.256735303989",
+          "reason": null
+        },
+        "bias": {
+          "exact": "1510023314731550519840110083902986230796109/65323741335325608087603560765450133000000",
+          "decimal": "23.115995560943",
+          "reason": null
+        },
+        "mase": {
+          "exact": "602981121779788187039557358239212560859472407000531075204025691094281814491226917796440083874777026547422302068890269848021/56877248334510155672904651787767596097777353224947818937334735859021677320175856322422369229560805490953098185434226200000",
+          "decimal": "10.601446789998",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "1510023314731550519840110083902986230796109/26885686341286016985117126045719596121279100",
+          "decimal": "0.056164581241",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "test": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "3500817959895280668363673555101667759654561/131523414240616377458577960868418412000000",
+          "decimal": "26.617450437309",
+          "reason": null
+        },
+        "mse": {
+          "exact": "493971332457616460713309045634329556056462762114736760678352540065559654112525977081/691936339740350836529035003937378115844164249012133454277983132024069760000000000",
+          "decimal": "713.897079958222",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(493971332457616460713309045634329556056462762114736760678352540065559654112525977081/691936339740350836529035003937378115844164249012133454277983132024069760000000000)",
+          "decimal": "26.718852519489",
+          "reason": null
+        },
+        "bias": {
+          "exact": "3500817959895280668363673555101667759654561/131523414240616377458577960868418412000000",
+          "decimal": "26.617450437309",
+          "reason": null
+        },
+        "mase": {
+          "exact": "15121216934604094724318892691588664503321607312652149597225007234211682791368750451426852767830148718570941387607412306423/1262715047784523887939853143427225524522957851185063191838474255368751536313048097179720695649055153330277393263390100000",
+          "decimal": "11.975161744635",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "3500817959895280668363673555101667759654561/55050975126436969455664056184792742094928800",
+          "decimal": "0.063592296991",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      }
+    },
+    "ses_alpha0.2_initial_y1": {
+      "validation": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "10030402437425416416590349654280677484477418890138149903326728728341323003774531554632010133328125590962731962374108064993579301200657888728926042913063683925542816380562553/3395879654560017137815919734082921917755949199302176821093480583725812994472316918027324294485359287295232164736329186120956024827477470751091459533199667930603027343750000",
+          "decimal": "2.953697850852",
+          "reason": null
+        },
+        "mse": {
+          "exact": "456722182973989173620340680537182578760786524168418780948364958896218745257157935117160537455115550411734260575678335078720451553596848888510332975963066914058225144171893150918539998465245941011690357700550987109119898107094635406198418402726217228590940617123525639638945301446067200345784785883341053229248404882799044829231460142642327927/38439995427515537749048036130620348718092473217180416047026921182462475782897423343862191825927466111816173441330011812254254881710959658414187843284276100124449117879827456827498878274984353573801608456715802670640622690033199617352799089666215578616925766386585750081031829159082088499113714734345403911675020935945212841033935546875000000",
+          "decimal": "11.881431771635",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(456722182973989173620340680537182578760786524168418780948364958896218745257157935117160537455115550411734260575678335078720451553596848888510332975963066914058225144171893150918539998465245941011690357700550987109119898107094635406198418402726217228590940617123525639638945301446067200345784785883341053229248404882799044829231460142642327927/38439995427515537749048036130620348718092473217180416047026921182462475782897423343862191825927466111816173441330011812254254881710959658414187843284276100124449117879827456827498878274984353573801608456715802670640622690033199617352799089666215578616925766386585750081031829159082088499113714734345403911675020935945212841033935546875000000)",
+          "decimal": "3.446945281207",
+          "reason": null
+        },
+        "bias": {
+          "exact": "7988827796424550901105775612925355178237556787099001966515806192575515722422540015926505708850701743762410308526273836590143078855679678553934459365389655871046940971870753/3395879654560017137815919734082921917755949199302176821093480583725812994472316918027324294485359287295232164736329186120956024827477470751091459533199667930603027343750000",
+          "decimal": "2.352506157189",
+          "reason": null
+        },
+        "mase": {
+          "exact": "4489212649048236261570976999522410697622055312911123361324770452235415561463001800720861031470384198650127021785558612352064571398799994038208221136838583519166388118887646560841891457072274967829114283065748048602703204645374686338004448073894537554164228149/3313307531265854262421482814319095313931487530165756590683466247165541123516872904838084432699783295466206746974866651350112839676886466670547163352992204804494444492009326478963878446416618617582237784455578117302765317475632400601170957088470458984375000000",
+          "decimal": "1.354903704738",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "10030402437425416416590349654280677484477418890138149903326728728341323003774531554632010133328125590962731962374108064993579301200657888728926042913063683925542816380562553/1397662677901182098847629574338903807319719806183632704057597734510221333206704790264577958071249383539798716607924912317891467572928028417766910251884837634861469268798828125",
+          "decimal": "0.007176554541",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "test": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "10858013482815409451174483199752194861616140953014127766669870242589922798691238018752253273626232570926422249803568116128767114583190793865382331961203389857085224347407661517574038334017501134449/4118046071574423134511161738777351174886703664987698261749126181682868863660062340722802879081863511352800032589983779715058850739875768038584234131363904368727801852401171345263719558715820312500",
+          "decimal": "2.636690628054",
+          "reason": null
+        },
+        "mse": {
+          "exact": "6511209447247144911886203696684627742592302117695737644278702782825559037658132526585907709600857888858842269647529979580743627677564204660287676153838170919366477139502190855625734030437982776725452796805734311797772929261867937322327234613982172139045197099379744341760252088932767826385721323060324601288715637157000925836337069599726909750015930615164308597507353049147526969326612057511/678332137904381556226414005819873076450355395954866880335568415212608523240316417735464246143276596136412227065724082554280605845199288765842190044130992163580345804104470642186716220227611780768843032489263706771945564220058123020865576729466122082367070443002862722581740495874011378750401819427446166796195817125999293071192359256163293383537840619545988829486304894089698791503906250000",
+          "decimal": "9.598851482052",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(6511209447247144911886203696684627742592302117695737644278702782825559037658132526585907709600857888858842269647529979580743627677564204660287676153838170919366477139502190855625734030437982776725452796805734311797772929261867937322327234613982172139045197099379744341760252088932767826385721323060324601288715637157000925836337069599726909750015930615164308597507353049147526969326612057511/678332137904381556226414005819873076450355395954866880335568415212608523240316417735464246143276596136412227065724082554280605845199288765842190044130992163580345804104470642186716220227611780768843032489263706771945564220058123020865576729466122082367070443002862722581740495874011378750401819427446166796195817125999293071192359256163293383537840619545988829486304894089698791503906250000)",
+          "decimal": "3.098201330135",
+          "reason": null
+        },
+        "bias": {
+          "exact": "48465200271280610109565181700207589049514597149365254975954705031034463701886656220841580769953530340963863689326148919734943302626854884243347521003269746989647973357912155701052726828866259419669/24708276429446538807066970432664107049320221989926189570494757090097213181960374044336817274491181068116800195539902678290353104439254608231505404788183426212366811114407028071582317352294921875000",
+          "decimal": "1.961496602552",
+          "reason": null
+        },
+        "mase": {
+          "exact": "22796715352365548564524676925688081832481579228538895124085392167379967588369581363688776640844796943851726674940255376782471855647354495298535926757031999864138579691953019474002635298438625316845102241388549309757152318749696229789124233300028191955539960082243774465891962263850132518063/19217365309243097276774343608313721017812505572091913389001814594574711056806454292490201140568939886768133823955130772706314791127721272899718090462768637930895563060270988089525651494389384656637602358355445790817157358871113172050574943956811977546772496339144709054380655288696289062500",
+          "decimal": "1.186256023421",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "9306868699556065243863842742644738452813835102583538085717031636505648113163918301787645663108199346508361928403058385253228955357020680456041998823888619877501620869206567015063461429157858115242/1477428094661898528430061888091759259133162764524704515209124600901417515920229637931247410685896906477234985452282408661347891832864637398588434811922122879244978488344486322603188455104827880859375",
+          "decimal": "0.006299371681",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      }
+    },
+    "ses_alpha0.5_initial_y1": {
+      "validation": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "3230912204080504482155204508486851462046002859398131811366497171801880846213/1104279415486490205989560937964324072392177435547261848826003875807887360000",
+          "decimal": "2.925810405202",
+          "reason": null
+        },
+        "mse": {
+          "exact": "1720091663460954332215505127669258972484277678886924441417081508720748463817482315771427312081423252387992944747369168837768904171774913533285323430143/146331963296062135846012370146554670581965537937420522696522982482439300257176513443139348581101186148116887396315935448224123859966638373732352000000",
+          "decimal": "11.754722787262",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(1720091663460954332215505127669258972484277678886924441417081508720748463817482315771427312081423252387992944747369168837768904171774913533285323430143/146331963296062135846012370146554670581965537937420522696522982482439300257176513443139348581101186148116887396315935448224123859966638373732352000000)",
+          "decimal": "3.428516120315",
+          "reason": null
+        },
+        "bias": {
+          "exact": "5843364558006206174437800833929373976699584005443830699824814256579413367427/3312838246459470617968682813892972217176532306641785546478011627423662080000",
+          "decimal": "1.763854472596",
+          "reason": null
+        },
+        "mase": {
+          "exact": "18403670640018761138200579898093487879078825787794786999174700159591334074239555468077629839134249889016026579762538025038495663524846695152491380485458615100908311/13715947519941929632284142945328787043379771040468230412628935921053621818962800633684324011258919890238120402146799814112036717995171875838741144392989660938240000",
+          "decimal": "1.341771730554",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "9692736612241513446465613525460554386138008578194395434099491515405642538639/1363484824552744627710099196766907729689055699856143082803418996168908725026816",
+          "decimal": "0.007108796840",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "test": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "203341757055630323588089601414255812426622374923072424281652418055603120929057449187221/75885503602567541832791480735293707290719017150474200048898922255425948640828456960000",
+          "decimal": "2.679586316256",
+          "reason": null
+        },
+        "mse": {
+          "exact": "2329643492029250947329351759261485328313125462896441896233424217434840274329413769664404704717496174341258419280477676710322714634695839452316238799683806641951759284455509/230344386280611654799899571593522271174128492457058131614758685317726084130380178960334883128519211886075950624436269830308263222041308144077235977260296389382897664000000",
+          "decimal": "10.113741123221",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(2329643492029250947329351759261485328313125462896441896233424217434840274329413769664404704717496174341258419280477676710322714634695839452316238799683806641951759284455509/230344386280611654799899571593522271174128492457058131614758685317726084130380178960334883128519211886075950624436269830308263222041308144077235977260296389382897664000000)",
+          "decimal": "3.180210861440",
+          "reason": null
+        },
+        "bias": {
+          "exact": "327023903994027992460944460909653342333568120503758598833314302973878277592360057920131/227656510807702625498374442205881121872157051451422600146696766766277845922485370880000",
+          "decimal": "1.436479470030",
+          "reason": null
+        },
+        "mase": {
+          "exact": "2361531401908601924503480711625671953150898333278003981349121742403314950100061280369102884626436199631052721353519727544889408414548769106180205338206341720207044766386137177511/1958677972605273472246790943339983654267475671683561901389948368075034230082326403211710249980802621353890084192446649013815098687083074293164360349820097259875340939281039360000",
+          "decimal": "1.205676193299",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "610025271166890970764268804242767437279867124769217272844957254166809362787172347561663/95288834966815962252609966585758572954039002227516679302641995264544771385888894942707712",
+          "decimal": "0.006401854649",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      }
+    },
+    "ses_alpha0.8_initial_y1": {
+      "validation": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "9990682418284624056662483555799922652885659034238559767324640933608361694531664977564546193622752870402683909885847345852997100672868254199147896383689916477976252013880153/3395879654560017137815919734082921917755949199302176821093480583725812994472316918027324294485359287295232164736329186120956024827477470751091459533199667930603027343750000",
+          "decimal": "2.942001317647",
+          "reason": null
+        },
+        "mse": {
+          "exact": "481160466711048998623583611589803621768582369975655853741739201457612753910560851460773532522031210326000353743094817407943669809956240506235186914238977167988948489910535140314676969492432387886689933073685600140524113460739517711731615611863229089134102866165118047419257853253648124239754949123879383472378924669171735088307995347221267367/38439995427515537749048036130620348718092473217180416047026921182462475782897423343862191825927466111816173441330011812254254881710959658414187843284276100124449117879827456827498878274984353573801608456715802670640622690033199617352799089666215578616925766386585750081031829159082088499113714734345403911675020935945212841033935546875000000",
+          "decimal": "12.517183245205",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(481160466711048998623583611589803621768582369975655853741739201457612753910560851460773532522031210326000353743094817407943669809956240506235186914238977167988948489910535140314676969492432387886689933073685600140524113460739517711731615611863229089134102866165118047419257853253648124239754949123879383472378924669171735088307995347221267367/38439995427515537749048036130620348718092473217180416047026921182462475782897423343862191825927466111816173441330011812254254881710959658414187843284276100124449117879827456827498878274984353573801608456715802670640622690033199617352799089666215578616925766386585750081031829159082088499113714734345403911675020935945212841033935546875000000)",
+          "decimal": "3.537963149215",
+          "reason": null
+        },
+        "bias": {
+          "exact": "5389514100398610662125588728720901792666566563191880215730295822931968053526185724955255114154586677772552515695805143630739562513568833548484598209265884536510671751397137/3395879654560017137815919734082921917755949199302176821093480583725812994472316918027324294485359287295232164736329186120956024827477470751091459533199667930603027343750000",
+          "decimal": "1.587074528145",
+          "reason": null
+        },
+        "mase": {
+          "exact": "2941940721505718353501492627007602176506229926497148556486189395682041092613078623174981687036220075630033431140037010891131131945955847906344894888525902071184389023750275423070153265854399215839329211784371548920966187947735127807246580835941521911010387351/2180697303741302040063118791056955589271234139751952041827383397369157168028962269000575978664653291403778930406927540939615083256726296941329510574163236835611139487087770998909899589733386743204636092830457026183962887522227447334444150328636169433593750000",
+          "decimal": "1.349082569350",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "9990682418284624056662483555799922652885659034238559767324640933608361694531664977564546193622752870402683909885847345852997100672868254199147896383689916477976252013880153/1397662677901182098847629574338903807319719806183632704057597734510221333206704790264577958071249383539798716607924912317891467572928028417766910251884837634861469268798828125",
+          "decimal": "0.007148135653",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "test": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "13492705309636887223246633225681529036245268622312548256337673637653006204182515724176145126686611639875684662692153645116530199972683407120551971779969833280400694266211021108584091725648810216227/4941655285889307761413394086532821409864044397985237914098951418019442636392074808867363454898236213623360039107980535658070620887850921646301080957636685242473362222881405614316463470458984375000",
+          "decimal": "2.730401966354",
+          "reason": null
+        },
+        "mse": {
+          "exact": "14877024300524265004810766755498811836421723213989701442101251912201825383725631720682561137794785455959816990086597833177944856925370004556153349104231699472018032463664581772185348201882455751906248600973575476390949954208713932416467571243077628158632446197407891243984389145067083233670142337595662481032378170187507763039750181609071059709432911020953545555789496195565127554659717541957/1356664275808763112452828011639746152900710791909733760671136830425217046480632835470928492286553192272824454131448165108561211690398577531684380088261984327160691608208941284373432440455223561537686064978527413543891128440116246041731153458932244164734140886005725445163480991748022757500803638854892333592391634251998586142384718512326586767075681239091977658972609788179397583007812500000",
+          "decimal": "10.965884902995",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(14877024300524265004810766755498811836421723213989701442101251912201825383725631720682561137794785455959816990086597833177944856925370004556153349104231699472018032463664581772185348201882455751906248600973575476390949954208713932416467571243077628158632446197407891243984389145067083233670142337595662481032378170187507763039750181609071059709432911020953545555789496195565127554659717541957/1356664275808763112452828011639746152900710791909733760671136830425217046480632835470928492286553192272824454131448165108561211690398577531684380088261984327160691608208941284373432440455223561537686064978527413543891128440116246041731153458932244164734140886005725445163480991748022757500803638854892333592391634251998586142384718512326586767075681239091977658972609788179397583007812500000)",
+          "decimal": "3.311477752152",
+          "reason": null
+        },
+        "bias": {
+          "exact": "31645245855740122800497045885139879398383441297724056531237396632281460314572624674014887516375918953605031777317078841939543479550908707258605812287247048208706630224309626617135742309672423550131/24708276429446538807066970432664107049320221989926189570494757090097213181960374044336817274491181068116800195539902678290353104439254608231505404788183426212366811114407028071582317352294921875000",
+          "decimal": "1.280754889808",
+          "reason": null
+        },
+        "mase": {
+          "exact": "37776580737504026127084697372501569253852136335192499368148452122802416585452467324485705210000592879913672875258971232922345106746525900277631463508280221989781041301617871252303902592962500508871454695744101010351634484485586677671532109979963446304155275024858259284071275840485651025171/30747784494788955642838949773301953628500008915347061422402903351319537690890326867984321824910303818829014118328209236330103665804354036639548944740429820689432900896433580943241042391023015450620163773368713265307451774193781075280919910330899164074835994142631534487009048461914062500000",
+          "decimal": "1.228595209645",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "13492705309636887223246633225681529036245268622312548256337673637653006204182515724176145126686611639875684662692153645116530199972683407120551971779969833280400694266211021108584091725648810216227/2068399332526657939802086643328462962786427870334586321292774441261984522288321493103746374960255669068128979633195372125887048566010492358023808736690972030942969883682280851644463837146759033203125",
+          "decimal": "0.006523259362",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      }
+    }
+  },
+  "selected_test": {
+    "model": "drift",
+    "aggregate": {
+      "planned": 300,
+      "scored": 300,
+      "status_counts": {
+        "success": 300,
+        "missing_target": 0,
+        "ineligible_origin": 0,
+        "unsupported_configuration": 0,
+        "model_failure": 0
+      },
+      "planned_distinct_target_months": 36,
+      "distinct_target_months": 36,
+      "mae": {
+        "exact": "1431806021635116887106236511696314326339457/564314136314439499865009712443983272000000",
+        "decimal": "2.537249963267",
+        "reason": null
+      },
+      "mse": {
+        "exact": "7692149018766633118503690900036909548611049186107607316915033658349713341536622462097/804787963199664794809213555994930929408582003421786210824010128627355426764800000000",
+        "decimal": "9.557982189724",
+        "reason": null
+      },
+      "rmse": {
+        "exact": "sqrt(7692149018766633118503690900036909548611049186107607316915033658349713341536622462097/804787963199664794809213555994930929408582003421786210824010128627355426764800000000)",
+        "decimal": "3.091598646287",
+        "reason": null
+      },
+      "bias": {
+        "exact": "195075696457863850853604968051295173445967/5078827226829955498785087411995849448000000",
+        "decimal": "0.038409594921",
+        "reason": null
+      },
+      "mase": {
+        "exact": "420541973640710128410266515149635667588347254758407315783114516563764999342904851335716119745257302661697283435246259449687/368410605736517157595853221401980944488168283829515530911095360523655576440873588421597826210907236872498710225975080800000",
+        "decimal": "1.141503439620",
+        "reason": null
+      },
+      "mase_count": 300,
+      "undefined_scale_counts": {
+        "zero_training_scale": 0,
+        "insufficient_scale_history": 0,
+        "missing_training_target": 0
+      },
+      "wape": {
+        "exact": "1431806021635116887106236511696314326339457/236201619773259475784131249613384243860292800",
+        "decimal": "0.006061795948",
+        "reason": null
+      },
+      "absolute_smape_percent": {
+        "exact": null,
+        "decimal": null,
+        "reason": "manual_diagnostic_only_max20_pairs"
+      },
+      "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+    },
+    "by_series": {
+      "mlo_co2": {
+        "planned": 300,
+        "scored": 300,
+        "status_counts": {
+          "success": 300,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 36,
+        "distinct_target_months": 36,
+        "mae": {
+          "exact": "1431806021635116887106236511696314326339457/564314136314439499865009712443983272000000",
+          "decimal": "2.537249963267",
+          "reason": null
+        },
+        "mse": {
+          "exact": "7692149018766633118503690900036909548611049186107607316915033658349713341536622462097/804787963199664794809213555994930929408582003421786210824010128627355426764800000000",
+          "decimal": "9.557982189724",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(7692149018766633118503690900036909548611049186107607316915033658349713341536622462097/804787963199664794809213555994930929408582003421786210824010128627355426764800000000)",
+          "decimal": "3.091598646287",
+          "reason": null
+        },
+        "bias": {
+          "exact": "195075696457863850853604968051295173445967/5078827226829955498785087411995849448000000",
+          "decimal": "0.038409594921",
+          "reason": null
+        },
+        "mase": {
+          "exact": "420541973640710128410266515149635667588347254758407315783114516563764999342904851335716119745257302661697283435246259449687/368410605736517157595853221401980944488168283829515530911095360523655576440873588421597826210907236872498710225975080800000",
+          "decimal": "1.141503439620",
+          "reason": null
+        },
+        "mase_count": 300,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "1431806021635116887106236511696314326339457/236201619773259475784131249613384243860292800",
+          "decimal": "0.006061795948",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      }
+    },
+    "macro_mae": {
+      "exact": "1431806021635116887106236511696314326339457/564314136314439499865009712443983272000000",
+      "decimal": "2.537249963267",
+      "reason": null
+    },
+    "by_horizon": {
+      "1": {
+        "planned": 25,
+        "scored": 25,
+        "status_counts": {
+          "success": 25,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 25,
+        "distinct_target_months": 25,
+        "mae": {
+          "exact": "36571439752878479549640227787053625941086097/33012376974394710742103068177973021412000000",
+          "decimal": "1.107809952044",
+          "reason": null
+        },
+        "mse": {
+          "exact": "72608420882965729752344377528925936051702358308422862669620478048289997249523601484369/43592681339981843052165734283058758676298191852013419752967215300648418949760000000000",
+          "decimal": "1.665610342174",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(72608420882965729752344377528925936051702358308422862669620478048289997249523601484369/43592681339981843052165734283058758676298191852013419752967215300648418949760000000000)",
+          "decimal": "1.290585271175",
+          "reason": null
+        },
+        "bias": {
+          "exact": "918977870522026841280439427174436914767567/33012376974394710742103068177973021412000000",
+          "decimal": "0.027837373578",
+          "reason": null
+        },
+        "mase": {
+          "exact": "642672768149951510419637018951727360919061739613092444049125888108345281620640206295945139237694601721939120691791222465557/1289437120077810051585486274906933305708588993403304358188833761832794517543057559475592391738175329053745485790912782800000",
+          "decimal": "0.498413422526",
+          "reason": null
+        },
+        "mase_count": 25,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "36571439752878479549640227787053625941086097/13784370825461670501902323482621719847414859200",
+          "decimal": "0.002653109106",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "2": {
+        "planned": 25,
+        "scored": 25,
+        "status_counts": {
+          "success": 25,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 25,
+        "distinct_target_months": 25,
+        "mae": {
+          "exact": "33068970183550849604793335365498610294071937/16506188487197355371051534088986510706000000",
+          "decimal": "2.003428605532",
+          "reason": null
+        },
+        "mse": {
+          "exact": "59289913292180617415391519195301431058258559228080321839762865138597278784673062698769/10898170334995460763041433570764689669074547963003354938241803825162104737440000000000",
+          "decimal": "5.440354799906",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(59289913292180617415391519195301431058258559228080321839762865138597278784673062698769/10898170334995460763041433570764689669074547963003354938241803825162104737440000000000)",
+          "decimal": "2.332456816300",
+          "reason": null
+        },
+        "bias": {
+          "exact": "635071428542232328898353040843868930624367/16506188487197355371051534088986510706000000",
+          "decimal": "0.038474747155",
+          "reason": null
+        },
+        "mase": {
+          "exact": "7555135785353952722471371705395301685054611425028354772831699942985974608264759264924342953838804399648137637983169784039141/8381341280505765335305660786895066487105828457121478328227419451913164364029874136591350546298139638849345657640933088200000",
+          "decimal": "0.901423236747",
+          "reason": null
+        },
+        "mase_count": 25,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "33068970183550849604793335365498610294071937/6895367805871166901066700477083216522971546400",
+          "decimal": "0.004795823967",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "3": {
+        "planned": 25,
+        "scored": 25,
+        "status_counts": {
+          "success": 25,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 25,
+        "distinct_target_months": 25,
+        "mae": {
+          "exact": "29808865316822924829652571785227459738965537/11004125658131570247367689392657673804000000",
+          "decimal": "2.708880854591",
+          "reason": null
+        },
+        "mse": {
+          "exact": "47385829799702874402071094202940731836574235145188750644876201372430169219973995983569/4843631259997982561351748253673195408477576872445935528107468366738713216640000000000",
+          "decimal": "9.783120814965",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(47385829799702874402071094202940731836574235145188750644876201372430169219973995983569/4843631259997982561351748253673195408477576872445935528107468366738713216640000000000)",
+          "decimal": "3.127798077716",
+          "reason": null
+        },
+        "bias": {
+          "exact": "298345183403406279328901745428544112221967/11004125658131570247367689392657673804000000",
+          "decimal": "0.027112120733",
+          "reason": null
+        },
+        "mase": {
+          "exact": "523828924853961212701488508327479666595354997786012203590296000321004150341226490881769269105846447548921270000969154375997/429812373359270017195162091635644435236196331134434786062944587277598172514352519825197463912725109684581828596970927600000",
+          "decimal": "1.218738587630",
+          "reason": null
+        },
+        "mase_count": 25,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "29808865316822924829652571785227459738965537/4598791375243186806242717386070410279333420800",
+          "decimal": "0.006481891194",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "4": {
+        "planned": 25,
+        "scored": 25,
+        "status_counts": {
+          "success": 25,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 25,
+        "distinct_target_months": 25,
+        "mae": {
+          "exact": "27200361482953005600936694842712495126426337/8253094243598677685525767044493255353000000",
+          "decimal": "3.295777399374",
+          "reason": null
+        },
+        "mse": {
+          "exact": "37226620863180608420047801777208625960066110621839858425826014135336122999493681304369/2724542583748865190760358392691172417268636990750838734560450956290526184360000000000",
+          "decimal": "13.663438804454",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(37226620863180608420047801777208625960066110621839858425826014135336122999493681304369/2724542583748865190760358392691172417268636990750838734560450956290526184360000000000)",
+          "decimal": "3.696408906554",
+          "reason": null
+        },
+        "bias": {
+          "exact": "615264002357595502453091199937085117777167/8253094243598677685525767044493255353000000",
+          "decimal": "0.074549494311",
+          "reason": null
+        },
+        "mase": {
+          "exact": "6213653472042799323169295871580017140887707575381893948810817770093698985552923485570043842245200352948044416935494245350511/4190670640252882667652830393447533243552914228560739164113709725956582182014937068295675273149069819424672828820466544100000",
+          "decimal": "1.482734866434",
+          "reason": null
+        },
+        "mase_count": 25,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "27200361482953005600936694842712495126426337/3450988441870720361078634755666223360929114400",
+          "decimal": "0.007881904544",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "5": {
+        "planned": 25,
+        "scored": 25,
+        "status_counts": {
+          "success": 25,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 25,
+        "distinct_target_months": 25,
+        "mae": {
+          "exact": "2184105849684544807190795269054829126994307/600225035898085649856419421417691298400000",
+          "decimal": "3.638811644064",
+          "reason": null
+        },
+        "mse": {
+          "exact": "28120750417091764972737959516190705539172791374716543765962339392688630398609763629009/1743707253599273722086629371322350347051927674080536790118688612025936757990400000000",
+          "decimal": "16.126990559365",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(28120750417091764972737959516190705539172791374716543765962339392688630398609763629009/1743707253599273722086629371322350347051927674080536790118688612025936757990400000000)",
+          "decimal": "4.015842447030",
+          "reason": null
+        },
+        "bias": {
+          "exact": "607341031883740771874986463574371592638287/6602475394878942148420613635594604282400000",
+          "decimal": "0.091986867888",
+          "reason": null
+        },
+        "mase": {
+          "exact": "238616675680666125355617963975657075740729039318265610727339798775616523238312809442092192910222549743747152488095784456583/145762457052274179744446274554696808471405712297764840490911642641968075896171724114632183413880689371292967958972749360000",
+          "decimal": "1.637024241400",
+          "reason": null
+        },
+        "mase_count": 25,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "2184105849684544807190795269054829126994307/251100782507763102337793869001331215614368960",
+          "decimal": "0.008698124426",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "6": {
+        "planned": 25,
+        "scored": 25,
+        "status_counts": {
+          "success": 25,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 25,
+        "distinct_target_months": 25,
+        "mae": {
+          "exact": "20435563652541865382154164999492042017907297/5502062829065785123683844696328836902000000",
+          "decimal": "3.714163994018",
+          "reason": null
+        },
+        "mse": {
+          "exact": "20697872748794130800060739898955713100011843266605273994645015426070411325624498668369/1210907814999495640337937063418298852119394218111483882026867091684678304160000000000",
+          "decimal": "17.092855865996",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(20697872748794130800060739898955713100011843266605273994645015426070411325624498668369/1210907814999495640337937063418298852119394218111483882026867091684678304160000000000)",
+          "decimal": "4.134350718794",
+          "reason": null
+        },
+        "bias": {
+          "exact": "514026046302785056177308457524634518780367/5502062829065785123683844696328836902000000",
+          "decimal": "0.093424241466",
+          "reason": null
+        },
+        "mase": {
+          "exact": "202967874265989218461659261531766906390600707858723456672280805695219065543604731753102477077310191015085137725653881027167/121468714210228483120371895462247340392838093581470700409093035534973396580143103428860152844900574476077473299143957800000",
+          "decimal": "1.670947746386",
+          "reason": null
+        },
+        "mase_count": 25,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "20435563652541865382154164999492042017907297/2302767351723244916245152153065115450920256000",
+          "decimal": "0.008874350089",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "7": {
+        "planned": 25,
+        "scored": 25,
+        "status_counts": {
+          "success": 25,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 25,
+        "distinct_target_months": 25,
+        "mae": {
+          "exact": "17064458490606320846055809360154056233507297/4716053853484958677443295453996145916000000",
+          "decimal": "3.618376511540",
+          "reason": null
+        },
+        "mse": {
+          "exact": "14571992648305011980804900959570379059399887004493044338898618156144524152636007109969/889646557958813123513586413939974666863228405143131015366677863278539162240000000000",
+          "decimal": "16.379530183019",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(14571992648305011980804900959570379059399887004493044338898618156144524152636007109969/889646557958813123513586413939974666863228405143131015366677863278539162240000000000)",
+          "decimal": "4.047163226634",
+          "reason": null
+        },
+        "bias": {
+          "exact": "128567244677947766940943109084682859245967/4716053853484958677443295453996145916000000",
+          "decimal": "0.027261615043",
+          "reason": null
+        },
+        "mase": {
+          "exact": "556862543783429895193950036479207034868034382606897861850497016342059796705336113221957032855338621898405083575297372045263/342095562469623074910435134158982305596156263555978707274588549057680178123668332105769410052985291381605945209834003600000",
+          "decimal": "1.627798208674",
+          "reason": null
+        },
+        "mase_count": 25,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "17064458490606320846055809360154056233507297/1974347649438357040559570982042762510857904000",
+          "decimal": "0.008643086994",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "8": {
+        "planned": 25,
+        "scored": 25,
+        "status_counts": {
+          "success": 25,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 25,
+        "distinct_target_months": 25,
+        "mae": {
+          "exact": "13726122007209688741511010760432454351175073/4126547121799338842762883522246627676500000",
+          "decimal": "3.326297168569",
+          "reason": null
+        },
+        "mse": {
+          "exact": "9865807093797569191043003054712471494346045438914158238057382865780322351690108601169/681135645937216297690089598172793104317159247687709683640112739072631546090000000000",
+          "decimal": "14.484350000832",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(9865807093797569191043003054712471494346045438914158238057382865780322351690108601169/681135645937216297690089598172793104317159247687709683640112739072631546090000000000)",
+          "decimal": "3.805831052587",
+          "reason": null
+        },
+        "bias": {
+          "exact": "-180334282725317026431592743152064698252033/4126547121799338842762883522246627676500000",
+          "decimal": "-0.043701011379",
+          "reason": null
+        },
+        "mase": {
+          "exact": "783904061305854897061102303058514687463375509541882639721559741854366004213189694778656141194291353063876947771597781346061/523833830031610333456603799180941655444114278570092395514213715744572772751867133536959409143633727428084103602558318012500",
+          "decimal": "1.496474676442",
+          "reason": null
+        },
+        "mase_count": 25,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "13726122007209688741511010760432454351175073/1728013065298506496968939841935091021998292800",
+          "decimal": "0.007943297584",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "9": {
+        "planned": 25,
+        "scored": 25,
+        "status_counts": {
+          "success": 25,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 25,
+        "distinct_target_months": 25,
+        "mae": {
+          "exact": "10901729754955919044686637149650318074815073/3668041886043856749122563130885891268000000",
+          "decimal": "2.972084314641",
+          "reason": null
+        },
+        "mse": {
+          "exact": "5971846346441912914683620151854041022420685522225400844274069784659082667223446428369/538181251110886951261305361519243934275286319160659503123052040748745912960000000000",
+          "decimal": "11.096347808689",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(5971846346441912914683620151854041022420685522225400844274069784659082667223446428369/538181251110886951261305361519243934275286319160659503123052040748745912960000000000)",
+          "decimal": "3.331118101882",
+          "reason": null
+        },
+        "bias": {
+          "exact": "-229852848186909092544747345419024230370033/3668041886043856749122563130885891268000000",
+          "decimal": "-0.062663637801",
+          "reason": null
+        },
+        "mase": {
+          "exact": "7471627431089803816881715403842999847279654889836906059723141205128928487435314737993488929604683747783286949011076168090627/5587560853670510223537107191263377658070552304747652218818279634608776242686582757727567030865426425899563771760622058800000",
+          "decimal": "1.337189451133",
+          "reason": null
+        },
+        "mase_count": 25,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "10901729754955919044686637149650318074815073/1536610238034474799171625550689708152564531200",
+          "decimal": "0.007094661668",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "10": {
+        "planned": 25,
+        "scored": 25,
+        "status_counts": {
+          "success": 25,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 25,
+        "distinct_target_months": 25,
+        "mae": {
+          "exact": "7339107286362398461102545880618904938410913/3301237697439471074210306817797302141200000",
+          "decimal": "2.223138095162",
+          "reason": null
+        },
+        "mse": {
+          "exact": "2750344308155634554561024232924635968952160618010485426872690461130464349791132810129/435926813399818430521657342830587586762981918520134197529672153006484189497600000000",
+          "decimal": "6.309188202271",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(2750344308155634554561024232924635968952160618010485426872690461130464349791132810129/435926813399818430521657342830587586762981918520134197529672153006484189497600000000)",
+          "decimal": "2.511809746432",
+          "reason": null
+        },
+        "bias": {
+          "exact": "-74034428867766057842020863618991569305393/3301237697439471074210306817797302141200000",
+          "decimal": "-0.022426264224",
+          "reason": null
+        },
+        "mase": {
+          "exact": "1676703151795428629776954662554893392704326672762198481384136530859778205614265074425265648111793020336807414914868552856317/1676268256101153067061132157379013297421165691424295665645483890382632872805974827318270109259627927769869131528186617640000",
+          "decimal": "1.000259442779",
+          "reason": null
+        },
+        "mase_count": 25,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "7339107286362398461102545880618904938410913/1383683409494937857621367367857015457304280960",
+          "decimal": "0.005304036484",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "11": {
+        "planned": 25,
+        "scored": 25,
+        "status_counts": {
+          "success": 25,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 25,
+        "distinct_target_months": 25,
+        "mae": {
+          "exact": "3734485396599108727944214958490343105291873/3001125179490428249282097107088456492000000",
+          "decimal": "1.244361755424",
+          "reason": null
+        },
+        "mse": {
+          "exact": "790812001378164199123135937607801268989423739138673221421766875263533072734837701969/360270093718858207042692018868254203936348692991846444239398473559077842560000000000",
+          "decimal": "2.195053142533",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(790812001378164199123135937607801268989423739138673221421766875263533072734837701969/360270093718858207042692018868254203936348692991846444239398473559077842560000000000)",
+          "decimal": "1.481571173630",
+          "reason": null
+        },
+        "bias": {
+          "exact": "173498375936604464158766505773664322154767/3001125179490428249282097107088456492000000",
+          "decimal": "0.057811109354",
+          "reason": null
+        },
+        "mase": {
+          "exact": "9384524887700816823331327008237988362262315652161454324289095024614240508914405666528026063823843489723030438338163253887619/16762682561011530670611321573790132974211656914242956656454838903826328728059748273182701092596279277698691315281866176400000",
+          "decimal": "0.559846244988",
+          "reason": null
+        },
+        "mase_count": 25,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "3734485396599108727944214958490343105291873/1258681503878859977119309229423641335805574400",
+          "decimal": "0.002966982025",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      },
+      "12": {
+        "planned": 25,
+        "scored": 25,
+        "status_counts": {
+          "success": 25,
+          "missing_target": 0,
+          "ineligible_origin": 0,
+          "unsupported_configuration": 0,
+          "model_failure": 0
+        },
+        "planned_distinct_target_months": 25,
+        "distinct_target_months": 25,
+        "mae": {
+          "exact": "1633753002079226211096466572523990173894097/2751031414532892561841922348164418451000000",
+          "decimal": "0.593869264251",
+          "reason": null
+        },
+        "mse": {
+          "exact": "138935249586240314082506136257986191213334129719513101982719284814531625963463458769/302726953749873910084484265854574713029848554527870970506716772921169576040000000000",
+          "decimal": "0.458945752485",
+          "reason": null
+        },
+        "rmse": {
+          "exact": "sqrt(138935249586240314082506136257986191213334129719513101982719284814531625963463458769/302726953749873910084484265854574713029848554527870970506716772921169576040000000000)",
+          "decimal": "0.677455350916",
+          "reason": null
+        },
+        "bias": {
+          "exact": "416089327945414080975736021929981221924767/2751031414532892561841922348164418451000000",
+          "decimal": "0.151248482932",
+          "reason": null
+        },
+        "mase": {
+          "exact": "12039893644117520800436473183312652015639556745711430350888970391682022956824500154873836870443267412058003527508144846941/45060974626375082447879896703736916597343163747964937248534513182328840666827280304254572829559890531448094933553403700000",
+          "decimal": "0.267191150301",
+          "reason": null
+        },
+        "mase_count": 25,
+        "undefined_scale_counts": {
+          "zero_training_scale": 0,
+          "insufficient_scale_history": 0,
+          "missing_training_target": 0
+        },
+        "wape": {
+          "exact": "1633753002079226211096466572523990173894097/1154549562813466910882743760770825338213538800",
+          "decimal": "0.001415056620",
+          "reason": null
+        },
+        "absolute_smape_percent": {
+          "exact": null,
+          "decimal": null,
+          "reason": "manual_diagnostic_only_max20_pairs"
+        },
+        "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+      }
+    },
+    "paired_seasonal_naive": {
+      "common_scored": 300,
+      "candidate_mae": {
+        "exact": "1431806021635116887106236511696314326339457/564314136314439499865009712443983272000000",
+        "decimal": "2.537249963267",
+        "reason": null
+      },
+      "reference_mae": {
+        "exact": "10897/5000",
+        "decimal": "2.179400000000",
+        "reason": null
+      },
+      "candidate_minus_reference_mae": {
+        "exact": "201939792951427441100434344395897183342657/564314136314439499865009712443983272000000",
+        "decimal": "0.357849963267",
+        "reason": null
+      },
+      "ratio": {
+        "exact": "1431806021635116887106236511696314326339457/1229866228683689446005802167300417142996800",
+        "decimal": "1.164196551008",
+        "reason": null
+      },
+      "reference_model": "seasonal_naive",
+      "direction": "Negative MAE difference or ratio<1 favors candidate;comparison limited to common eligible cells."
+    }
+  },
+  "primary_result": "Validation selecteddrift. Test MAE2.537249963267ppm vs seasonal-naive2.1794ppm;ratio1.164196551008. Selected model underperformed on test and is not replaced by the diagnostic test winner.",
+  "denominators": {
+    "candidates": 7,
+    "series": 1,
+    "observations": 288,
+    "validation_origins": 25,
+    "test_origins": 25,
+    "horizons": 12,
+    "cells_per_model_partition": 300,
+    "cells_per_partition": 2100,
+    "total_candidate_cells": 4200,
+    "successful": 4200,
+    "missing": 0,
+    "failed": 0,
+    "distinct_target_months_per_partition": 36
+  },
+  "horizon_evidence": "All candidate/horizon MAE/RMSE/bias and eligible counts in full report and benchmark-summary;not hidden by aggregate scores.",
+  "dependence": "Forecast windows overlap;300cells/model/partition represent36distinct NOAA target months,not300independent trials. No naive significance tests.",
+  "vintage": "Retrospective evaluation on a fixed revised data snapshot. QC/calibration/midmonth corrections and2022–2023Maunakea substitution;historical publication vintages unverified. Prefix isolation does not prove historical source availability.",
+  "source_vintage_certified": false,
+  "benchmark_report": "data/ai-predictive-modeling-noaa-benchmark.json",
+  "benchmark_report_sha256": "9a07847595bc61d0f9816a2f40dc67972fe79ebd52f739e9851ce9ff9ba1931e",
+  "benchmark_markdown": "data/ai-predictive-modeling-noaa-benchmark.md",
+  "benchmark_summary": "data/ai-predictive-modeling-benchmark-summary.json",
+  "resource_evidence": {
+    "profile_sha256": "ed2490bf3ddc5861b3a406e2ba8aa93b3f2b2fe33e0b7917371e5c26875e7fdb",
+    "code_sha256": "b20c30fdfde79e37413bbaae9544ee6ef69cd2765a7ef1ec68a53d0ad765b014",
+    "date": "2026-11-07",
+    "cold_model_seconds": 1.180767900077626,
+    "warm_model_seconds": 1.1594283001031727,
+    "warm_model_repeats_seconds": [
+      1.1576372000854462,
+      1.1594283001031727,
+      1.1622476999182254
+    ],
+    "cold_definition": "First core read(benchmark) in this fresh measurement process after imports;OS caches not flushed.",
+    "warm_definition": "Median of3repeat core read(benchmark) calls in same process;each performs every model/fold again,no forecast cache.",
+    "total_cli_wall_seconds": 2.6804639000911266,
+    "cli_definition": "Fresh python -m future process,including interpreter/imports,core evaluation,JSON serialization and stdout capture;not a machine-cold disk-cache claim.",
+    "json_plus_markdown_serialization_seconds": 0.34195230016484857,
+    "helper_peak_process_bytes": 132526080,
+    "cli_peak_process_bytes": 128671744,
+    "peak_process_bytes": 132526080,
+    "memory_method": "Windows GetProcessMemoryInfo native peak working set for helper and20ms CLI samples;Linux VmHWM/resource fallback. Native peaks retain prior spikes;CLI last-exit interval can be missed.",
+    "physical_memory": {
+      "method": "Windows GlobalMemoryStatusEx",
+      "total": 33597927424,
+      "available": 5387497472
+    },
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+    "logical_cpus": 24,
+    "model_execution_threads": 1,
+    "thread_policy": "Single calling Python thread;no BLAS/neural/GPU model execution. Parent monitor thread only collects CLI output.",
+    "gpu_used": false,
+    "series": 1,
+    "origins": 50,
+    "horizons": 12,
+    "candidates": 7,
+    "forecast_cells": 4200,
+    "stdout_sha256": "f8c1a5a4effa62f25596f54e4d934ace37e9529ea3d35ff90be3aa97b6b404a6",
+    "environment_versions": {
+      "python": "3.12.10",
+      "numeric": "stdlib Fraction/Decimal",
+      "model_dependencies_added": []
+    },
+    "target": {
+      "warm_seconds": 10,
+      "peak_bytes": 536870912
+    },
+    "limits": "Measured on this machine only;timings/resource costs are frozen evidence,not universal performance guarantees.",
+    "target_passed": true
+  },
+  "resource_evidence_sha256": "e334418db7e67ba32b8fa07194b07604ed81aadeab327ab74ba710878f447503",
+  "resource_measurement_policy": "Offline CPU pure arithmetic;no optional model libraries. Resource evidence measured separately,frozen and referenced by hash;timings excluded from deterministic calculation.",
+  "independent_families": [
+    {
+      "id": "constant",
+      "passed": true,
+      "checks": 28
+    },
+    {
+      "id": "seasonal-naive",
+      "passed": true,
+      "checks": 6
+    },
+    {
+      "id": "trend",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "horizon-indexing",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "training-test-isolation",
+      "passed": true,
+      "checks": 672
+    },
+    {
+      "id": "future-covariates",
+      "passed": true,
+      "checks": 1
+    },
+    {
+      "id": "missing-observations",
+      "passed": true,
+      "checks": 2
+    },
+    {
+      "id": "irregular-timestamps",
+      "passed": true,
+      "checks": 2
+    },
+    {
+      "id": "zero-denominators",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "mase-scale",
+      "passed": true,
+      "checks": 2
+    },
+    {
+      "id": "fold-boundaries",
+      "passed": true,
+      "checks": 4200
+    },
+    {
+      "id": "exact-replay",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "deterministic-metrics",
+      "passed": true,
+      "checks": 7
+    },
+    {
+      "id": "interval-ordering",
+      "passed": true,
+      "checks": 4
+    },
+    {
+      "id": "quantile-monotonicity",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "dataset-rights-hashes",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "multiple-series",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "baseline-comparisons",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "structural-break",
+      "passed": true,
+      "checks": 2
+    },
+    {
+      "id": "resource-benchmarks",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "unsupported-configurations",
+      "passed": true,
+      "checks": 5
+    }
+  ],
+  "verification_evidence": "data/ai-predictive-modeling-verification.json",
+  "future_target_sentinels": {
+    "origins": [
+      "2017-12",
+      "2019-12",
+      "2020-12",
+      "2022-12"
+    ],
+    "candidates": 7,
+    "horizons": 24,
+    "predictions_checked": 672,
+    "unchanged": [
+      "point values",
+      "training-prefix commitments"
+    ],
+    "provenance_note": "Changing future values changes full dataset/request hashes and outcomes;does not change forecasts from unchanged prefixes."
+  },
+  "source_rights": "Facts-only original methodological notes;no textbook corpus,figures or implementation copied. NOAA numerical subset retains attribution/public-domain policy. No Chronos assets acquired.",
+  "configuration_matrix": {
+    "supported": [
+      "Seven fixed statistical baseline configurations",
+      "Generic regular monthly series and explicit seasonal-naive manual period",
+      "Exact rolling-origin point forecasts,metrics,validation-only choice and complete ledger",
+      "Manual quantile/interval reference scoring",
+      "Frozen resource evidence and deterministic JSON/Markdown replay"
+    ],
+    "experimental": [
+      "Generalizing revised-snapshot scores to future domains",
+      "As-of historical real-time availability",
+      "Any future optional library/model adapter"
+    ],
+    "unsupported": [
+      "ARIMA search",
+      "Likelihood-fitted ETS",
+      "Holt/Holt-Winters",
+      "Trees or neural training",
+      "Chronos inference/downloads",
+      "Generated prediction intervals",
+      "GPU/cloud forecasting"
+    ]
+  },
+  "acceptance_criteria": [
+    "All seven named models generate independently correct forecasts",
+    "Source and dataset hashes verify with all288original rows",
+    "25+25rolling origins,h1..12 and calendar increments are exact",
+    "Training-prefix sentinels pass without implying historical vintage availability",
+    "Independent metric constants,training scales,bias and paired baseline comparisons pass",
+    "Full4200cell NOAA benchmark actually runs",
+    "Model selection uses validation only with frozen order",
+    "All candidate/fold/horizon results and failure denominators retained",
+    "Preselected drift held-out result remains reported honestly against seasonal naive",
+    "All21pre-engine planned fixture families pass",
+    "Accepted/rejected JSON/Markdown replay exactly",
+    "Complete inherited tests,CLI,verifiers,registry,rights,dependency,pip,diff and protected bytes pass",
+    "No unsupported real-time-vintage,operational model adapter or universal superiority claim"
+  ],
+  "acceptance": {
+    "passed": true,
+    "complete": true,
+    "tests": 1462,
+    "inherited_tests": 1397,
+    "new_tests": 65,
+    "cli_cases": 2029,
+    "inherited_cli_cases": 1867,
+    "new_cli_cases": 162,
+    "independent_verifiers": 28,
+    "protected_files": 2661,
+    "changed_protected_files": [],
+    "allowed_existing_edits": [
+      "PROGRESS.md",
+      "README.md",
+      "future/__main__.py",
+      "knowledge/gaps.json"
+    ],
+    "registry": {
+      "references_checked_twice": 479,
+      "unique": 324,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "strict_json_files": 1934,
+    "historical_invalid_json_rejections": [
+      "data/feng-shui-duplicate-json-input.json",
+      "data/feng-shui-nonfinite-input.json"
+    ],
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    },
+    "other59gap_entries_unchanged": true,
+    "verification": {
+      "passed": true,
+      "numerical_checks_passed": true,
+      "profile_sha256": "ed2490bf3ddc5861b3a406e2ba8aa93b3f2b2fe33e0b7917371e5c26875e7fdb",
+      "fixture_sha256": "dc8efef9f0888a7e144f48f234fb4895c6b069d301142d3daead1f1a3fc5fd9f",
+      "independent_oracle_commit": "1d5ed6a",
+      "cells_checked": 4200,
+      "sentinel_predictions": 672,
+      "families": [
+        {
+          "id": "constant",
+          "passed": true,
+          "checks": 28
+        },
+        {
+          "id": "seasonal-naive",
+          "passed": true,
+          "checks": 6
+        },
+        {
+          "id": "trend",
+          "passed": true,
+          "checks": 3
+        },
+        {
+          "id": "horizon-indexing",
+          "passed": true,
+          "checks": 3
+        },
+        {
+          "id": "training-test-isolation",
+          "passed": true,
+          "checks": 672
+        },
+        {
+          "id": "future-covariates",
+          "passed": true,
+          "checks": 1
+        },
+        {
+          "id": "missing-observations",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "irregular-timestamps",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "zero-denominators",
+          "passed": true,
+          "checks": 3
+        },
+        {
+          "id": "mase-scale",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "fold-boundaries",
+          "passed": true,
+          "checks": 4200
+        },
+        {
+          "id": "exact-replay",
+          "passed": true,
+          "checks": 3
+        },
+        {
+          "id": "deterministic-metrics",
+          "passed": true,
+          "checks": 7
+        },
+        {
+          "id": "interval-ordering",
+          "passed": true,
+          "checks": 4
+        },
+        {
+          "id": "quantile-monotonicity",
+          "passed": true,
+          "checks": 3
+        },
+        {
+          "id": "dataset-rights-hashes",
+          "passed": true,
+          "checks": 3
+        },
+        {
+          "id": "multiple-series",
+          "passed": true,
+          "checks": 3
+        },
+        {
+          "id": "baseline-comparisons",
+          "passed": true,
+          "checks": 3
+        },
+        {
+          "id": "structural-break",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "resource-benchmarks",
+          "passed": true,
+          "checks": 3
+        },
+        {
+          "id": "unsupported-configurations",
+          "passed": true,
+          "checks": 5
+        }
+      ],
+      "selected_reference": "drift",
+      "source_vintage_certified": false,
+      "method": "Pre-engine rational prediction commitments,independent geometric SES oracle,manual constants and untouched input prefixes;no expected output derived from production."
+    },
+    "cli_replay": {
+      "passed": true,
+      "count": 162,
+      "accepted_pairs": 30,
+      "rejected_pairs": 49,
+      "exact_replay": true
+    },
+    "checkout_replay": {
+      "passed": true,
+      "checks": [
+        {
+          "autocrlf": "true",
+          "file": "future/ai_predictive_modeling.py",
+          "sha256": "b20c30fdfde79e37413bbaae9544ee6ef69cd2765a7ef1ec68a53d0ad765b014",
+          "passed": true
+        },
+        {
+          "autocrlf": "true",
+          "file": "scripts/ai_predictive_modeling_oracle.py",
+          "sha256": "2d484658d3acca115702a2687780af843af32b0e55a12d5b52332a2324ffeca9",
+          "passed": true
+        },
+        {
+          "autocrlf": "false",
+          "file": "future/ai_predictive_modeling.py",
+          "sha256": "b20c30fdfde79e37413bbaae9544ee6ef69cd2765a7ef1ec68a53d0ad765b014",
+          "passed": true
+        },
+        {
+          "autocrlf": "false",
+          "file": "scripts/ai_predictive_modeling_oracle.py",
+          "sha256": "2d484658d3acca115702a2687780af843af32b0e55a12d5b52332a2324ffeca9",
+          "passed": true
+        }
+      ],
+      "scope": "Only two new49source files have explicit EOL attributes;no earlier files,profile,oracle fixture,calculation or report hashes changed."
+    }
+  },
+  "backlog": {
+    "P1": [
+      "Original NOAA historical publication vintages and causal release metadata",
+      "Additional independently sourced datasets/domains and station-change sensitivity",
+      "Reproducible fitted ETS/ARIMA Python library parity and license/dependency pins",
+      "Source-verified Holt/Holt-Winters with independent numeric fixtures",
+      "Boosted-tree lag features with purged label windows",
+      "Chronos2explicit offline acquisition,pinned weights/code,real inference and cost benchmarking;currently unimplemented",
+      "Model-produced quantile/interval evaluation and coverage;manual reference scoring already implemented",
+      "WIS/CRPS with independent scoring/distribution fixtures",
+      "Pretraining overlap/data-lineage review before any pretrained adapter",
+      "Broader profiling and cross-platform exact-render/source-byte replay review"
+    ],
+    "P2": [
+      "Neural families only if independently measured held-out gains justify cost",
+      "Larger multivariate/multiseries benchmarks",
+      "Probabilistic calibration and overlapping-error statistical inference",
+      "Prospective monitoring with as-of data",
+      "Drift detection and explicit retraining policy",
+      "Optional accessible UI/ingestion after numerical core"
+    ]
+  },
+  "next_retained": 50,
+  "next_scope": "Audit Quantum Probability Forecasting only after accepted closure,push andclean0/0sync. No51research before50implementation/closure.",
+  "report_commit": "c707a08",
+  "scope_limits": [
+    "The profile-level vintage warning concerns the pinned NOAA benchmark;custom series retain their own declared availability and receive no availability certification.",
+    "Very large exact aggregate denominators may exceed Python integer rendering/resource limits and reject;there is no silent lossy fallback. More exhaustive extreme-size handling is P2.",
+    "Resources are observed on one Windows machine;pure replay reuses recorded measurements and does not remeasure."
+  ],
+  "acceptance_commit": "17a0b96",
+  "acceptance_evidence": "data/ai-predictive-modeling-acceptance-checks.json",
+  "review_summary": "data/ai-predictive-modeling-noaa-summary.md",
+  "release_meaning": "Verified bounded CPU software/evaluation workbench;not optimized ETS/ARIMA,universal predictive superiority,as-of historical certification or operational pretrained inference.",
+  "acceptance_criteria_results": [
+    {
+      "id": 1,
+      "criterion": "All seven named models generate independently correct forecasts",
+      "passed": true
+    },
+    {
+      "id": 2,
+      "criterion": "Source and dataset hashes verify with all288original rows",
+      "passed": true
+    },
+    {
+      "id": 3,
+      "criterion": "25+25rolling origins,h1..12 and calendar increments are exact",
+      "passed": true
+    },
+    {
+      "id": 4,
+      "criterion": "Training-prefix sentinels pass without implying historical vintage availability",
+      "passed": true
+    },
+    {
+      "id": 5,
+      "criterion": "Independent metric constants,training scales,bias and paired baseline comparisons pass",
+      "passed": true
+    },
+    {
+      "id": 6,
+      "criterion": "Full4200cell NOAA benchmark actually runs",
+      "passed": true
+    },
+    {
+      "id": 7,
+      "criterion": "Model selection uses validation only with frozen order",
+      "passed": true
+    },
+    {
+      "id": 8,
+      "criterion": "All candidate/fold/horizon results and failure denominators retained",
+      "passed": true
+    },
+    {
+      "id": 9,
+      "criterion": "Preselected drift held-out result remains reported honestly against seasonal naive",
+      "passed": true
+    },
+    {
+      "id": 10,
+      "criterion": "All21pre-engine planned fixture families pass",
+      "passed": true
+    },
+    {
+      "id": 11,
+      "criterion": "Accepted/rejected JSON/Markdown replay exactly",
+      "passed": true
+    },
+    {
+      "id": 12,
+      "criterion": "Complete inherited tests,CLI,verifiers,registry,rights,dependency,pip,diff and protected bytes pass",
+      "passed": true
+    },
+    {
+      "id": 13,
+      "criterion": "No unsupported real-time-vintage,operational model adapter or universal superiority claim",
+      "passed": true
+    }
+  ],
+  "checkout_replay": "data/ai-predictive-modeling-checkout-replay.json"
+}
