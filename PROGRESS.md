@@ -1,5 +1,11 @@
 # Future progress
 
+## Technique 43 Remote Viewing resource audit — 2026-11-06
+- Began only after40closure88a2ff3 pushed,clean and synchronized0/0;excluded41/42 skipped. Original3ranks/4variation rows preserved. Audit only,no43runtime/profile/CLI/fixtures andno44audit.
+- Inspected1986manual cover/proprietary notice,all6stage openings and training-versus-blind feedback;later Smith commentary,IRVA variants and McMoneagle2000/2023 access gaps remain separate. AIR final1995 blind5-choice ranking supports procedural research,not ESP validation.
+- Recommend bounded offline private/viewer/judge packets,precommitted assignment,locked transcript/ranks,authorized reveal and deterministic integrity/rank reports. Trust/leakage/chance/rights limits,16independent fixture plans,matrix andP1/P2 in `knowledge/remote_viewing_resource_audit.json`;zero functionality certified.
+- Validation:1918tracked protected files unchanged,including1780prior;446source-record references registered twice(291unique),1268JSON files checked,original taxonomy/ranks/variations intact. Full1107-test/1339-CLI/23-verifier acceptance preserved byte-for-byte;metadata-only audit did not rerun it.
+
 ## Technique 40 Feng Shui Core v1 closure — 2026-11-06
 - **Core v1 Ready — Source-Specific 24 Mountains Compass Reference Scope**: `yap2024-manual-24-mountain-tenths-v1`;24official2024Yap factual intervals/page2. Independently verified3600headings byID/name/Chinese,150perrow,zero gaps/overlaps;all endpoints/neighbors/centers,northwrap and3600uncertainty ranges pass. No rounding,physical conversion or outcome claims.
 - 1107 tests(1031+76),1339 CLI(1235+104),23 verifiers;24accepted/16rejected JSON/Markdown pairs replay. Complete1785-file baseline:1780 byte-protected files unchanged,including1665prior/1556earlier/1441required. Explicitinterface/history edits andappend-only source metadata preserved;registry/dependency/pip/diff pass.
