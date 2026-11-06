@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 43 independent fixture freeze — 2026-11-06
+- Source/protocol25791b4 pushed before fixtures. Independently authored120strict rankings x5targets x120display orders(72000checks),exact600-case null space,commitment/event/lock known answers and16procedural families before production.
+- Added5original metadata-free PNG geometric assets with explicit project rights. Synthetic origin and human/manual distinction frozen;no empirical human or paranormal evidence.
+
 ## Technique 43 source and protocol freeze — 2026-11-06
 - Reinspected original1986scan and AIR1995five-choice ranking;6stage references and N=NearSite preserved,training feedback separate. Source rights/access gaps unchanged;no source corpus redistributed.
 - Froze rv-air1995-five-choice-blind-trial-v1,exact state/packet/commitment/rights/PNG policy and trust limits before code. Rebuilt1923-file baseline;1919eligible files byte-protected,4explicit interface/history exceptions. Independent fixture pass follows.
