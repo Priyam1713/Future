@@ -1,0 +1,196 @@
+{
+  "passed": true,
+  "profile": "dunne-revised-prospective-dream-ledger-v1",
+  "profile_sha256": "9f1bf381bf473d31c9cb62b159c890e46437c84b1a69f1e8d551652e8596c712",
+  "fixture_sha256": "3dbcbe3e9fc94f919841ecdacb3b145fa3638b313e064fa1565faf993d567382",
+  "fixture_commit": "2c69e33",
+  "chronology_intervals": 300,
+  "independent_interval_and_chronology_checks": 600,
+  "timezone_cases": 2,
+  "manual_pair_space": 8,
+  "manual_eligible_pairs": 2,
+  "manual_excluded_pairs": 6,
+  "planned_slots": 4,
+  "known_original_and_lock_hashes": 4,
+  "procedural_families": [
+    {
+      "family": "prospective-lock",
+      "passed": true,
+      "checks": 3,
+      "tests": [
+        "prospective_lock",
+        "known_original_hashes",
+        "known_lock_hashes"
+      ]
+    },
+    {
+      "family": "occurrence-vs-record",
+      "passed": true,
+      "checks": 2,
+      "tests": [
+        "occurrence_vs_record",
+        "invalid_dream_occurrence"
+      ]
+    },
+    {
+      "family": "occurrence-vs-discovery",
+      "passed": true,
+      "checks": 2,
+      "tests": [
+        "occurrence_vs_discovery",
+        "publication_endpoint_separate"
+      ]
+    },
+    {
+      "family": "version-mutation",
+      "passed": true,
+      "checks": 5,
+      "tests": [
+        "version_mutation",
+        "mutation_text",
+        "mutation_details",
+        "mutation_first_record_at",
+        "mutation_occurrence"
+      ]
+    },
+    {
+      "family": "after-outcome-edit",
+      "passed": true,
+      "checks": 3,
+      "tests": [
+        "after_outcome_edit",
+        "amend_wrong_parent",
+        "no_amend_original_replacement"
+      ]
+    },
+    {
+      "family": "window-boundaries",
+      "passed": true,
+      "checks": 3,
+      "tests": [
+        "window_boundaries",
+        "uncertain_window",
+        "unknown_event_time"
+      ]
+    },
+    {
+      "family": "missing-conflicting-time",
+      "passed": true,
+      "checks": 2,
+      "tests": [
+        "missing_conflicting_time",
+        "missing_timezone"
+      ]
+    },
+    {
+      "family": "criteria-precommit",
+      "passed": true,
+      "checks": 2,
+      "tests": [
+        "criteria_precommit",
+        "invalid_plan_primary_endpoint"
+      ]
+    },
+    {
+      "family": "universe-version",
+      "passed": true,
+      "checks": 3,
+      "tests": [
+        "universe_version",
+        "wrong_universe_hash",
+        "complete_events_required"
+      ]
+    },
+    {
+      "family": "nonmatches-denominator",
+      "passed": true,
+      "checks": 3,
+      "tests": [
+        "nonmatches_denominator",
+        "late_entry",
+        "withdrawn_entry"
+      ]
+    },
+    {
+      "family": "duplicate-common-event",
+      "passed": true,
+      "checks": 2,
+      "tests": [
+        "duplicate_common_event",
+        "coverage_omissions"
+      ]
+    },
+    {
+      "family": "one-to-many",
+      "passed": true,
+      "checks": 1,
+      "tests": [
+        "one_to_many"
+      ]
+    },
+    {
+      "family": "judge-blinding",
+      "passed": true,
+      "checks": 6,
+      "tests": [
+        "judge_blinding",
+        "packet_leak_answer_flag",
+        "packet_leak_filename",
+        "packet_leak_caption",
+        "exported_bytes",
+        "public_packet_mutation"
+      ]
+    },
+    {
+      "family": "judge-disagreement",
+      "passed": true,
+      "checks": 3,
+      "tests": [
+        "judge_disagreement",
+        "all_judges_required",
+        "after_reveal_rating_rejected"
+      ]
+    },
+    {
+      "family": "feedback-contamination",
+      "passed": true,
+      "checks": 2,
+      "tests": [
+        "feedback_contamination",
+        "premature_reveal"
+      ]
+    },
+    {
+      "family": "zero-information",
+      "passed": true,
+      "checks": 2,
+      "tests": [
+        "zero_information",
+        "known_outcome_capture"
+      ]
+    },
+    {
+      "family": "replay-rights",
+      "passed": true,
+      "checks": 5,
+      "tests": [
+        "replay_rights",
+        "unicode_whitespace",
+        "wrong_local_bytes",
+        "rights_permission",
+        "privacy_gate"
+      ]
+    },
+    {
+      "family": "source-isolation",
+      "passed": true,
+      "checks": 1,
+      "tests": [
+        "source_isolation"
+      ]
+    }
+  ],
+  "null_model": null,
+  "empirical_validation": false,
+  "qualification": "Frozen pre-engine integer-time andhand-enumerated pair/status/version expectations;source/user/editorial layers distinct. Familymutation/leak checks supplementindependenttruth,notan empiricalprecognitionbenchmark."
+}
