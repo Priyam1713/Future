@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "measured": true,
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+    "packages": {
+      "qiskit": "not installed",
+      "qiskit-aer": "not installed",
+      "qiskit-algorithms": "not installed"
+    }
+  },
+  "protocol": "Five untraced warm/cold-order repetitions per phase;separate tracemalloc run per phase measures Python allocations only;CLI includes process/import/registry/report costs;known-p direct is lookup of already derived p. Not a QAE or hardware comparison.",
+  "process_peak_working_set_bytes": 26726400,
+  "process_memory_scope": "Whole measurement process including imports/tracing;not isolated per kernel or CLI child",
+  "profile_sha256": "abe755a144bf38b228ebbd0e6eb313b93405ff2d90fda75e1bcb2295196852dd",
+  "code_sha256": "2fc23924ddfe00d6bf08b7d2d7dbd1c4fb0ca445339ee769faff52dc951866b5",
+  "results": [
+    {
+      "id": "bernoulli",
+      "request_sha256": "e30de3a69d7c883cbc898bffefdfcdd122e720287bda00ca2e564ec1481dc9fc",
+      "qubits": 1,
+      "gates": 1,
+      "shots": 100000,
+      "phases": {
+        "known_p_direct": {
+          "seconds": [
+            6e-07,
+            4e-07,
+            1e-07,
+            0.0,
+            0.0
+          ],
+          "median_seconds": 1e-07,
+          "python_traced_peak_bytes": 0,
+          "shots_per_second": null
+        },
+        "statevector": {
+          "seconds": [
+            1.23e-05,
+            7.4e-06,
+            4.7e-06,
+            4.4e-06,
+            3.9e-06
+          ],
+          "median_seconds": 4.7e-06,
+          "python_traced_peak_bytes": 1000,
+          "shots_per_second": null
+        },
+        "circuit_sampling": {
+          "seconds": [
+            0.0304855,
+            0.0305197,
+            0.0303945,
+            0.0313328,
+            0.0302969
+          ],
+          "median_seconds": 0.0304855,
+          "python_traced_peak_bytes": 1160,
+          "shots_per_second": 3280247.986747798
+        },
+        "classical_bernoulli": {
+          "seconds": [
+            0.019596,
+            0.0195241,
+            0.0196065,
+            0.0202411,
+            0.0195736
+          ],
+          "median_seconds": 0.019596,
+          "python_traced_peak_bytes": 812,
+          "shots_per_second": 5103082.261686059
+        }
+      },
+      "total_cli_seconds": 0.8004956,
+      "event_probability": 0.24999999999999994,
+      "circuit_count": 24978,
+      "classical_count": 24823,
+      "classical_sampling_faster": true,
+      "known_p_faster_than_sampling": true
+    },
+    {
+      "id": "bell",
+      "request_sha256": "f5ba7491cdca54d776a1d1297b01b0e1b742a668dcc2371994423dbcb61081e4",
+      "qubits": 2,
+      "gates": 2,
+      "shots": 100000,
+      "phases": {
+        "known_p_direct": {
+          "seconds": [
+            4e-07,
+            1e-07,
+            1e-07,
+            1e-07,
+            1e-07
+          ],
+          "median_seconds": 1e-07,
+          "python_traced_peak_bytes": 0,
+          "shots_per_second": null
+        },
+        "statevector": {
+          "seconds": [
+            1.21e-05,
+            8.3e-06,
+            6.6e-06,
+            6.5e-06,
+            6.1e-06
+          ],
+          "median_seconds": 6.6e-06,
+          "python_traced_peak_bytes": 1160,
+          "shots_per_second": null
+        },
+        "circuit_sampling": {
+          "seconds": [
+            0.0308073,
+            0.0316088,
+            0.031877,
+            0.0309107,
+            0.0310071
+          ],
+          "median_seconds": 0.0310071,
+          "python_traced_peak_bytes": 1176,
+          "shots_per_second": 3225067.8070506435
+        },
+        "classical_bernoulli": {
+          "seconds": [
+            0.0198816,
+            0.0198246,
+            0.019773,
+            0.0198409,
+            0.0199583
+          ],
+          "median_seconds": 0.0198409,
+          "python_traced_peak_bytes": 812,
+          "shots_per_second": 5040093.947351178
+        }
+      },
+      "total_cli_seconds": 0.8072544,
+      "event_probability": 0.5,
+      "circuit_count": 50053,
+      "classical_count": 49767,
+      "classical_sampling_faster": true,
+      "known_p_faster_than_sampling": true
+    },
+    {
+      "id": "bounded64",
+      "request_sha256": "9d809a791acb468ae96eb77fdf7b6576c21c5c6c86a47b48b0768e891857796a",
+      "qubits": 4,
+      "gates": 64,
+      "shots": 100000,
+      "phases": {
+        "known_p_direct": {
+          "seconds": [
+            5e-07,
+            0.0,
+            1e-07,
+            1e-07,
+            0.0
+          ],
+          "median_seconds": 1e-07,
+          "python_traced_peak_bytes": 0,
+          "shots_per_second": null
+        },
+        "statevector": {
+          "seconds": [
+            0.0002938,
+            0.0002884,
+            0.000287,
+            0.0002886,
+            0.0002894
+          ],
+          "median_seconds": 0.0002886,
+          "python_traced_peak_bytes": 12176,
+          "shots_per_second": null
+        },
+        "circuit_sampling": {
+          "seconds": [
+            0.0439159,
+            0.0439455,
+            0.0429733,
+            0.0449963,
+            0.0435779
+          ],
+          "median_seconds": 0.0439159,
+          "python_traced_peak_bytes": 1416,
+          "shots_per_second": 2277079.5998715726
+        },
+        "classical_bernoulli": {
+          "seconds": [
+            0.0205163,
+            0.0199646,
+            0.020352,
+            0.0200618,
+            0.0203606
+          ],
+          "median_seconds": 0.020352,
+          "python_traced_peak_bytes": 788,
+          "shots_per_second": 4913522.012578617
+        }
+      },
+      "total_cli_seconds": 1.1191758,
+      "event_probability": 0.5136910268907343,
+      "circuit_count": 51413,
+      "classical_count": 51109,
+      "classical_sampling_faster": true,
+      "known_p_faster_than_sampling": true
+    }
+  ],
+  "conclusion": "Direct classical sampling was faster in these measured cases;known-p lookup was fastest. No quantum advantage or unknown-event forecast evidence."
+}

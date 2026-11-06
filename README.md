@@ -1785,3 +1785,16 @@ predictions,exact aggregate/horizon scores and672sentinel predictions. No model
 weights,forecasting framework,cloud service or additional runtime dependency is
 required. Full reports are in `data/ai-predictive-modeling-noaa-benchmark.*`;
 release scope and P1/P2 are in `knowledge/ai_predictive_modeling_core_v1.json`.
+
+
+### Quantum Probability Forecasting (#50)
+
+Offline standalone CPU reference profile `montanaro-ibm-small-circuit-cpu-probability-v1`: 1–4 qubits, at most64 primitive `id/x/h/ry/cx` gates, up to100000 terminal shots. Signed complex amplitudes retain interference and Bell correlations. q0 is the least significant bit;measurement mapping is identity only. Float64 results use1e-12 independent comparison tolerance. No Qiskit installation required.
+
+Run `python -m future quantum-probability-forecasting data/quantum-probability-forecasting-cli/compare-common-input.json --format json` (or `markdown`). Requests explicitly pin profile/catalog hashes, circuit, event, shots, xorshift32-v1 seeds and provenance. Tasks: simulate, sample, compare, reference, report. Unknown fields,unsupported backends,noise,QAE and variational requests reject with exit2.
+
+Reports distinguish raw Born probabilities, verified norm and explicit CDF normalization, finite-shot frequencies and analytical iid Bernoulli moments. No tiny probabilities are clipped. Event-first CDF uses strict u<boundary;common streams match direct Bernoulli event counts by construction. Independent streams use distinct declared seeds. Known p is already directly available;sampling does not discover it. Population standard errors are not certified confidence intervals.
+
+Independent pre-engine dense matrices cover79circuits and three100word PRNG sequences;all20fixture families are exercised by `python -m scripts.verify_quantum_probability_forecasting`. Exact accepted/rejected CLI JSON/Markdown corpus is in `data/quantum-probability-forecasting-cli/`;manifest records raw input hashes. Replay uses recorded runtime and normalized-LF code commitment;cross-platform libm equality is tolerance scoped.
+
+Actual timings and memory are separate in `data/quantum-probability-forecasting-resource-measurements.json`. For100000shots,classical Bernoulli sampling was faster in all three local cases;known-p lookup was fastest. Peak memory covers the whole measurement helper,not an isolated kernel or CLI child;tracemalloc phase peaks cover Python allocations only. No practical quantum advantage,hardware execution,QAE,financial forecast skill,VaR/CVaR or operational Aer compatibility is certified. Source facts and original code only;article/source licenses and edition distinctions are frozen separately. Full acceptance and capability matrix are in the #50core record when closure passes.

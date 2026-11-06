@@ -1107,3 +1107,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #50 standalone engine and independent verification
 - Implemented strict simulate/sample/compare/reference/report CLI,complex amplitude evolution for id/x/h/ry/cx,event-first seeded terminal sampling and direct Bernoulli comparator. Exact known-p and sampled estimates remain separate;no AE/QPU/Aer/advantage claims.
 - 135new tests pass. All20independent families pass:79signed circuits,300frozen PRNG words,dyadic endpoint/count and binomial controls,shared and independent streams,all event mappings and52invalid requests. Maximum amplitude error1.7763568394002505e-15. HH interference and Bell/reversed-control controls pass. Full inherited acceptance pending.
+
+## 2026-11-07 — #50 resource measurements and report isolation
+- Recorded actual known-p,statevector,circuit-sampling,Bernoulli and totalCLI timings,Python allocation peaks and native process peak working set for three100000shot cases. Direct classical sampling was faster;no quantum speedup. No packages installed.
+- Added report-mutation isolation regression;136new tests and20independent families pass. Saved CLI corpus and full inherited acceptance are next.

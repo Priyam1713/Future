@@ -138,14 +138,14 @@ def read(q,registry=None):
     if registry is not None:
         for s in sources:registry.add_source(s)
     n=q['circuit']['qubits'];a,res,trace=evolve(n,q['circuit']['gates']);probs=[z.real*z.real+z.imag*z.imag for z in a];norm=math.fsum(probs);good=indices(n,q['event']);event_p=math.fsum(probs[i] for i in good)/norm
-    result=dict(statevector=[dict(index=i,bitstring=format(i,f'0{n}b'),real=z.real,imag=z.imag,probability=probs[i]) for i,z in enumerate(a)],normalization=dict(norm=norm,error=abs(norm-1),tolerance=1e-12,passed=abs(norm-1)<=1e-12,sampling_norm_divisor=norm),event=dict(predicate=q['event'],indices=good,ideal_model_probability=event_p),trace=trace,resources=res,sampling=None,classical=None,reference=REFERENCES[q['reference']] if q['task']=='reference' else None)
+    result=dict(statevector=[dict(index=i,bitstring=format(i,f'0{n}b'),real=z.real,imag=z.imag,probability=probs[i]) for i,z in enumerate(a)],normalization=dict(norm=norm,error=abs(norm-1),tolerance=1e-12,passed=abs(norm-1)<=1e-12,sampling_norm_divisor=norm),event=dict(predicate=q['event'],indices=good,ideal_model_probability=event_p),trace=trace,resources=res,sampling=None,classical=None,reference=copy.deepcopy(REFERENCES[q['reference']]) if q['task']=='reference' else None)
     if q['shots'] is not None:
         shots=q['shots'];r=q['rng'];cs=sample(probs,good,shots,r['seed']);k=sum(cs[i] for i in good)
         result['sampling']=dict(shots=shots,rng=r,count_total=sum(cs),outcomes=[dict(index=i,bitstring=format(i,f'0{n}b'),count=v,frequency=v/shots,absolute_error=abs(v/shots-probs[i]/norm)) for i,v in enumerate(cs)],event_count=k,event_frequency=k/shots,event_absolute_error=abs(k/shots-event_p),analytical=moments(event_p,shots))
         if q['task'] in ('compare','report'):
             b=bernoulli(event_p,shots,r['comparator_seed'])
             result['classical']=dict(known_p=event_p,known_p_exact_model_answer_available_without_sampling=True,shots=shots,count=b,frequency=b/shots,absolute_error=abs(b/shots-event_p),rng_algorithm=PRNG,seed=r['comparator_seed'],stream=r['stream'],shared_identity_by_construction=r['stream']=='common',quantum_advantage=False,analytical=moments(event_p,shots))
-    out=dict(status='accepted',task=q['task'],profile=q['profile'],request=q,request_sha256=digest(q),sources=sources,source_freeze_sha256=p['source_freeze_sha256'],bit_order=p['indexing'],result=result,code_sha256=hashlib.sha256(Path(__file__).read_bytes().replace(b'\r\n',b'\n')).hexdigest(),limits=LIMITS)
+    out=dict(status='accepted',task=q['task'],profile=q['profile'],request=q,request_sha256=digest(q),sources=sources,source_freeze_sha256=p['source_freeze_sha256'],bit_order=p['indexing'],result=result,code_sha256=hashlib.sha256(Path(__file__).read_bytes().replace(b'\r\n',b'\n')).hexdigest(),limits=list(LIMITS))
     out['report_sha256']=digest(out);return out
 
 

@@ -11,6 +11,8 @@ class QuantumProbabilityTests(unittest.TestCase):
     def test_all_twenty_independent_families(self):self.assertEqual(len(verify()['families']),20)
     def test_immutable_request(self):
         q=e.request('compare',gates=[dict(op='h',target=0)],shots=3);old=copy.deepcopy(q);r=e.read(q);self.assertEqual(q,old);r['request']['circuit']['gates'].clear();self.assertEqual(q,old)
+    def test_report_isolation(self):
+        q=e.request('reference',reference='born');r=e.read(q);old=copy.deepcopy(r);r['limits'].clear();r['result']['reference'].clear();self.assertEqual(e.read(q),old)
     def test_p_preparation(self):
         for p in (0,.001,.2,.25,.5,.99,1):
             r=e.read(e.request(gates=[dict(op='ry',target=0,angle=2*math.asin(math.sqrt(p)))]))['result'];self.assertAlmostEqual(r['event']['ideal_model_probability'],p,places=12)
