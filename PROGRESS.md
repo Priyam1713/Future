@@ -1103,3 +1103,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #50 independent fixture freeze
 - Authored signed symbolic anchors and an independent full dense-matrix oracle before production. Covers all qubit positions,ordered CX pairs,64gate compositions;frozen100word sequences for three seeds,exact dyadic counts,binomial fractions and nonmonotone control. All20family expectations recorded. No production simulator exists yet.
+
+## 2026-11-07 — #50 standalone engine and independent verification
+- Implemented strict simulate/sample/compare/reference/report CLI,complex amplitude evolution for id/x/h/ry/cx,event-first seeded terminal sampling and direct Bernoulli comparator. Exact known-p and sampled estimates remain separate;no AE/QPU/Aer/advantage claims.
+- 135new tests pass. All20independent families pass:79signed circuits,300frozen PRNG words,dyadic endpoint/count and binomial controls,shared and independent streams,all event mappings and52invalid requests. Maximum amplitude error1.7763568394002505e-15. HH interference and Bell/reversed-control controls pass. Full inherited acceptance pending.

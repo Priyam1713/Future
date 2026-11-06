@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "families": {
+    "basis-states": {
+      "passed": true,
+      "expectation": "algebraic basis and X twice"
+    },
+    "hadamard": {
+      "passed": true,
+      "expectation": "signed H0/H1"
+    },
+    "rotation-map": {
+      "passed": true,
+      "expectation": "RY symbolic anchors and negative sign"
+    },
+    "normalization": {
+      "passed": true,
+      "expectation": "norm1 through64gates"
+    },
+    "endpoint-events": {
+      "passed": true,
+      "expectation": "exact X/identity shot endpoints"
+    },
+    "seeded-replay": {
+      "passed": true,
+      "expectation": "exact independent100word seeds"
+    },
+    "low-shot-variance": {
+      "passed": true,
+      "expectation": "exact rational binomial moments"
+    },
+    "nonmonotone-error": {
+      "passed": true,
+      "expectation": "controlled uniforms worsen2to3"
+    },
+    "exact-vs-sampled": {
+      "passed": true,
+      "expectation": "ideal values distinct from observed"
+    },
+    "circuit-resources": {
+      "passed": true,
+      "expectation": "Bell2gates depth2;parallel gates depth1"
+    },
+    "invalid-angles": {
+      "passed": true,
+      "expectation": "reject bool/nonfinite/oversize angles"
+    },
+    "unsupported-backends": {
+      "passed": true,
+      "expectation": "reject Aer/GPU/QPU"
+    },
+    "endianness": {
+      "passed": true,
+      "expectation": "Xq1 index2"
+    },
+    "classical-bernoulli": {
+      "passed": true,
+      "expectation": "same p,N;shared identity;distinct streams"
+    },
+    "uncertainty-assumptions": {
+      "passed": true,
+      "expectation": "iid assumption;CI null"
+    },
+    "no-simulated-speedup": {
+      "passed": true,
+      "expectation": "no advantage claim;AE absent"
+    },
+    "oracle-provenance": {
+      "passed": true,
+      "expectation": "reject missing rights/hash;reference assumptions"
+    },
+    "json-markdown-replay": {
+      "passed": true,
+      "expectation": "CLI saved JSON/MD with Unicode raw hash"
+    },
+    "interference-control": {
+      "passed": true,
+      "expectation": "HH identity probability-only negative control"
+    },
+    "bell-control": {
+      "passed": true,
+      "expectation": "Bell and reversed control signed matrices"
+    }
+  },
+  "independent_circuits": 79,
+  "maximum_amplitude_error": 1.7763568394002505e-15,
+  "seeded_words": 300,
+  "negative_requests": 52,
+  "fixture_freeze": {
+    "version": 1,
+    "hash_convention": "SHA256 UTF8 with CRLF normalized to LF",
+    "files": {
+      "scripts/quantum_probability_forecasting_oracle.py": "fd33f5c07d4e0222568ec836fc3e7b7e23f485cc9c64ec8367d2a353b3caa057",
+      "tests/fixtures/quantum_probability_forecasting_reference_v1.json": "6fe3ca229a8d7aee54f943fe05b66813f232a2286d98acfdfe16ea7ab14721f1"
+    }
+  },
+  "rights": "Original matrices,fixtures and code;source facts and attribution only",
+  "profile_sha256": "abe755a144bf38b228ebbd0e6eb313b93405ff2d90fda75e1bcb2295196852dd"
+}
