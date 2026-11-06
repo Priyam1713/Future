@@ -1115,3 +1115,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #50 CLI/report corpus
 - Saved36accepted/53rejected exact JSON/Markdown pairs:178actual CLI executions,including four malformed rawJSON cases,all task paths,bit order,negative phase,common/independent seeds,maximum bounds and unsupported provenance/backend/method controls. Raw input hashes recorded separately from semantic report hashes.
 - Compact numerical/resource review:data/quantum-probability-forecasting-summary.md. All1598tests pass (1462inherited+136new);full inherited CLI/verifier sweep running. No readiness claimed before final gates.
+
+## 2026-11-07 — #50 portable raw-byte replay
+- Added a new corpus-local -text attribute so Git does not rewrite raw input/output bytes. Both autocrlf=true/false checkout exports preserve all89input and178output commitments;268files checked per export. Existing attributes and protected earlier bytes remain unchanged.
