@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 44 independent fixture specification — 2026-11-07
+- Source/protocol54b377d pushed. Froze300independent integerinterval/chronology cases,2timezone cases,originalversion/lock knownanswers andhand-enumerated2dreams x4events pairspace withnonrecall/missing slots.
+- All18auditfamilies specified beforeproduction;originalsyntheticeventsnapshots permissioncleared. No universalnullmodel orrealhumanstudy implied.
+
 ## Technique 44 source and prospective protocol freeze — 2026-11-07
 - Reinspected revisedDunneChapterX/AppendixIII andhistoricalnonmatch,officialWargoChapter2,andFischhoff1975. LaterFaberwitness remains separatefromuninspected1927body;modernexercisegaps/rights preserved.
 - Froze dunne-revised-prospective-dream-ledger-v1:slots,collectionrule,closedwindows,originalversions,allpairs,humanratings andprivacy/trustlimits. Complete2088-filebaseline protects2084eligibleartifacts;4explicitinterface/historyexceptions. No44engineyet.
