@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 45 heuristic and forecast engine — 2026-11-07
+- Implemented separate2002recognition/1996TTB traces,strict decimal probabilities,hash-chained forecast versions,resolution evidence,exact Brier/calibration and frozen training-baseline comparison. No choice-to-probability conversion or expertise certification.
+-79new tests pass,including source examples,all9cue pairs,versions,denominators,rights and baseline leakage. Independent verification and full inherited acceptance follow;not yet Ready.
+
 ## Technique 45 independent fixture freeze — 2026-11-07
 -15families,all9cue pairs/4discriminating,source-worked a/b,b/c,early-stop trace,42rational loss cases,5/16Brier and121/400baseline improvement independently authored before production. Plan/original hashes frozen.
 - Added explicit event dependency-group field to pre-engine schema;two immutable algorithm IDs and source/editorial boundaries retained. Synthetic evidence original and rights-cleared.

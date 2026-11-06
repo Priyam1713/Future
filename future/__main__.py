@@ -290,7 +290,26 @@ def main():
     pd.add_argument('--asset-root',default=str(ROOT))
     pd.add_argument('--export-dir',help='New directory for consented allowlisted text judge packet only')
     pd.add_argument('--format',choices=['json','markdown'],default='json')
+    ip=sub.add_parser('intuitive-prediction')
+    ip.add_argument('input',help='Source-specific heuristic or exact binary forecast evaluation request JSON')
+    ip.add_argument('--asset-root',default=str(ROOT))
+    ip.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='intuitive-prediction':
+        import sys
+        from .scrying import load_input
+        from .intuitive_prediction import read,markdown
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),args.asset_root,registry)
+            except (ValueError,OSError,TypeError,KeyError):
+                result=dict(status='rejected',error='Intuitive prediction request rejected',result=None)
+                print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+        finally:registry.close()
+        return
     if args.command=='prophetic-dreams':
         import sys
         from .scrying import load_input
