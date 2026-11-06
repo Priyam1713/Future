@@ -1,0 +1,466 @@
+{
+  "visibility": "private_ledger",
+  "accepted": false,
+  "error": "Amendment requires retained locked parent version",
+  "ledger": {
+    "schema_version": 1,
+    "visibility": "private_ledger",
+    "plan": {
+      "schema_version": 1,
+      "profile": "dunne-revised-prospective-dream-ledger-v1",
+      "profile_sha256": "9f1bf381bf473d31c9cb62b159c890e46437c84b1a69f1e8d551652e8596c712",
+      "study_id": "study1",
+      "participant": "person1",
+      "coordinator": "coordinator",
+      "origin": "simulated",
+      "created_at": "2026-11-07T05:00:00+05:30",
+      "slots": [
+        {
+          "id": "s1",
+          "open_at": "2026-11-07T06:00:00+05:30",
+          "due_at": "2026-11-07T07:00:00+05:30"
+        },
+        {
+          "id": "s2",
+          "open_at": "2026-11-07T07:00:00+05:30",
+          "due_at": "2026-11-07T08:00:00+05:30"
+        },
+        {
+          "id": "s3",
+          "open_at": "2026-11-07T08:00:00+05:30",
+          "due_at": "2026-11-07T09:00:00+05:30"
+        },
+        {
+          "id": "s4",
+          "open_at": "2026-11-07T09:00:00+05:30",
+          "due_at": "2026-11-07T10:00:00+05:30"
+        }
+      ],
+      "universe": {
+        "id": "u1",
+        "version": 1,
+        "event_ids": [
+          "e1",
+          "e2",
+          "e3",
+          "e4"
+        ],
+        "collector": "collector",
+        "collection_rule": "Four prespecified synthetic event slots;retain every slot andsource.",
+        "collection_window": {
+          "start": "2026-11-06T00:00:00+05:30",
+          "end": "2026-11-09T23:00:00+05:30"
+        }
+      },
+      "universe_sha256": "4a64c94987d35e80ada2c5a09dac8dae07ad1219fdf31776aebe8273c32cd42a",
+      "window": {
+        "start": "2026-11-08T00:00:00+05:30",
+        "end": "2026-11-09T00:00:00+05:30",
+        "boundary": "closed",
+        "endpoint": "occurrence"
+      },
+      "features": [
+        {
+          "id": "f1",
+          "description": "Human comparison of explicitly recorded object andaction;no inferred details."
+        }
+      ],
+      "judges": [
+        "j1",
+        "j2"
+      ],
+      "blinding": "declared_blind",
+      "stopping_rule": "fixed_slots",
+      "pair_policy": "all_original_locked_dreams_x_all_events",
+      "duplicate_policy": "first_manifest_event_per_group",
+      "uncertainty_policy": "retain_exclude_uncertain",
+      "primary_endpoint": "descriptive_human_categories",
+      "privacy_consent": true
+    },
+    "plan_sha256": "3d479eb8d4866567c8f035516fa1231725b90f4b05d9d61b3f7ec8febbcf7cf4",
+    "events": [
+      {
+        "seq": 1,
+        "previous": "3d479eb8d4866567c8f035516fa1231725b90f4b05d9d61b3f7ec8febbcf7cf4",
+        "action": "record",
+        "actor": "person1",
+        "at": "2026-11-07T06:29:00+05:30",
+        "payload": {
+          "entry": {
+            "id": "dream1",
+            "slot_id": "s1",
+            "participant": "person1",
+            "occurrence": null,
+            "first_record_at": "2026-11-07T06:29:00+05:30",
+            "text": "  Café Café\r\n猫\t red object  ",
+            "details": {
+              "f1": "red object"
+            },
+            "outcome_known": false,
+            "attachments": [],
+            "privacy_consent": true,
+            "witness": "none"
+          }
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "3d1b52f92c5cc0b0aa83fc248e792231776cb3aaf342782402c401b9e1e0f1bb"
+      },
+      {
+        "seq": 2,
+        "previous": "3d1b52f92c5cc0b0aa83fc248e792231776cb3aaf342782402c401b9e1e0f1bb",
+        "action": "lock_entry",
+        "actor": "person1",
+        "at": "2026-11-07T06:31:00+05:30",
+        "payload": {
+          "entry_id": "dream1",
+          "digest": "fdc2f7d986f8cba9cf546aaea908c591f876f1a1a8a33d1532840a795017ff3a"
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "dbcef8bf09e631c06e417f7328868bba5151d2e88987f7adb39bdb8b837cd440"
+      },
+      {
+        "seq": 3,
+        "previous": "dbcef8bf09e631c06e417f7328868bba5151d2e88987f7adb39bdb8b837cd440",
+        "action": "record",
+        "actor": "person1",
+        "at": "2026-11-07T07:29:00+05:30",
+        "payload": {
+          "entry": {
+            "id": "dream2",
+            "slot_id": "s2",
+            "participant": "person1",
+            "occurrence": {
+              "start": "2026-11-07T07:00:00+05:30",
+              "end": "2026-11-07T07:20:00+05:30",
+              "precision": "minute"
+            },
+            "first_record_at": "2026-11-07T07:29:00+05:30",
+            "text": "A different object.",
+            "details": {
+              "f1": "different object"
+            },
+            "outcome_known": false,
+            "attachments": [],
+            "privacy_consent": true,
+            "witness": "declared_unverified"
+          }
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "d707df393be520a745c2144f99630378e6642da6ca4b60a110ae93f8f25dddc9"
+      },
+      {
+        "seq": 4,
+        "previous": "d707df393be520a745c2144f99630378e6642da6ca4b60a110ae93f8f25dddc9",
+        "action": "lock_entry",
+        "actor": "person1",
+        "at": "2026-11-07T07:31:00+05:30",
+        "payload": {
+          "entry_id": "dream2",
+          "digest": "d862e62c3ece3b1e97fb33c78550ed099589b63c8b9a5e51c2224efcaeb640d7"
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "c4557a5d0febcbf68eabdcf28a174c6e9ee7b6c8047acd0526b984ee846e430f"
+      },
+      {
+        "seq": 5,
+        "previous": "c4557a5d0febcbf68eabdcf28a174c6e9ee7b6c8047acd0526b984ee846e430f",
+        "action": "slot_status",
+        "actor": "coordinator",
+        "at": "2026-11-07T09:00:00+05:30",
+        "payload": {
+          "slot_id": "s3",
+          "status": "nonrecall",
+          "reason": "No dream recalled."
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "1d83ccfc49e0b848979531b793a6bd4f39a02d600a5c00ea625df03d2eca5231"
+      },
+      {
+        "seq": 6,
+        "previous": "1d83ccfc49e0b848979531b793a6bd4f39a02d600a5c00ea625df03d2eca5231",
+        "action": "event",
+        "actor": "collector",
+        "at": "2026-11-09T16:00:00+05:30",
+        "payload": {
+          "event": {
+            "id": "e1",
+            "universe_id": "u1",
+            "universe_version": 1,
+            "dedup_group": "g1",
+            "common": false,
+            "occurrence": {
+              "start": "2026-11-08T12:00:00+05:30",
+              "end": "2026-11-08T12:00:00+05:30",
+              "precision": "second"
+            },
+            "publication_at": "2026-11-09T10:00:00+05:30",
+            "discovery_at": "2026-11-09T12:00:00+05:30",
+            "text": "A red object.",
+            "evidence": {
+              "path": "data/prophetic-dreams-assets/e1.txt",
+              "sha256": "c0f0af9d5b435b37cc2cd49223b99e2cf3ea692980ddd92a8c5e0eb7768409a5",
+              "holder": "Future project",
+              "permission": "Original procedural fixture;permission for localtest andblindtextdemonstration.",
+              "provenance": "Project-authored synthetic text;no actualhuman ornewsdata."
+            },
+            "coverage": "complete",
+            "conflicts": []
+          }
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "4799e36761ed6d299ff8dfde7e79a0102d7237c907bb9bfe02f7b6df7711139b"
+      },
+      {
+        "seq": 7,
+        "previous": "4799e36761ed6d299ff8dfde7e79a0102d7237c907bb9bfe02f7b6df7711139b",
+        "action": "event",
+        "actor": "collector",
+        "at": "2026-11-09T16:01:00+05:30",
+        "payload": {
+          "event": {
+            "id": "e2",
+            "universe_id": "u1",
+            "universe_version": 1,
+            "dedup_group": "g2",
+            "common": true,
+            "occurrence": {
+              "start": "2026-11-06T12:00:00+05:30",
+              "end": "2026-11-06T12:00:00+05:30",
+              "precision": "second"
+            },
+            "publication_at": "2026-11-09T10:00:00+05:30",
+            "discovery_at": "2026-11-09T12:00:00+05:30",
+            "text": "A routine meeting.",
+            "evidence": {
+              "path": "data/prophetic-dreams-assets/e2.txt",
+              "sha256": "f31df369626a3faf4af3867304e579f7fc291ea9c2960ee6f61b4a2fc0634146",
+              "holder": "Future project",
+              "permission": "Original procedural fixture;permission for localtest andblindtextdemonstration.",
+              "provenance": "Project-authored synthetic text;no actualhuman ornewsdata."
+            },
+            "coverage": "complete",
+            "conflicts": []
+          }
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "31df3c64ecb5d0ec32a853581fc37a535c0cb25f9d5e7f9fed8d6ab103dd0be8"
+      },
+      {
+        "seq": 8,
+        "previous": "31df3c64ecb5d0ec32a853581fc37a535c0cb25f9d5e7f9fed8d6ab103dd0be8",
+        "action": "event",
+        "actor": "collector",
+        "at": "2026-11-09T16:02:00+05:30",
+        "payload": {
+          "event": {
+            "id": "e3",
+            "universe_id": "u1",
+            "universe_version": 1,
+            "dedup_group": "g1",
+            "common": false,
+            "occurrence": {
+              "start": "2026-11-08T12:00:00+05:30",
+              "end": "2026-11-08T12:00:00+05:30",
+              "precision": "second"
+            },
+            "publication_at": "2026-11-09T10:00:00+05:30",
+            "discovery_at": "2026-11-09T12:00:00+05:30",
+            "text": "Duplicate report of red object.",
+            "evidence": {
+              "path": "data/prophetic-dreams-assets/e3.txt",
+              "sha256": "641f9d0d35518a0fa5de973f0349c75093a7613ab6d4c135dfdad7a9bf033343",
+              "holder": "Future project",
+              "permission": "Original procedural fixture;permission for localtest andblindtextdemonstration.",
+              "provenance": "Project-authored synthetic text;no actualhuman ornewsdata."
+            },
+            "coverage": "complete",
+            "conflicts": []
+          }
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "83868f5caf2a261b96d0fad10200579d5531ba0fdb5851edd7c961436dde35ef"
+      },
+      {
+        "seq": 9,
+        "previous": "83868f5caf2a261b96d0fad10200579d5531ba0fdb5851edd7c961436dde35ef",
+        "action": "event",
+        "actor": "collector",
+        "at": "2026-11-09T16:03:00+05:30",
+        "payload": {
+          "event": {
+            "id": "e4",
+            "universe_id": "u1",
+            "universe_version": 1,
+            "dedup_group": "g4",
+            "common": false,
+            "occurrence": {
+              "start": "2026-11-08T23:00:00+05:30",
+              "end": "2026-11-09T01:00:00+05:30",
+              "precision": "hour"
+            },
+            "publication_at": "2026-11-09T10:00:00+05:30",
+            "discovery_at": "2026-11-09T12:00:00+05:30",
+            "text": "Uncertain interval event.",
+            "evidence": {
+              "path": "data/prophetic-dreams-assets/e4.txt",
+              "sha256": "616359a7ad091072ec705faf70e431b1530f0f90df49138360c2dca557358202",
+              "holder": "Future project",
+              "permission": "Original procedural fixture;permission for localtest andblindtextdemonstration.",
+              "provenance": "Project-authored synthetic text;no actualhuman ornewsdata."
+            },
+            "coverage": "complete",
+            "conflicts": []
+          }
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "17464c20d46b9f9998d8ba5bb18c516b0ab07ded93aa0b11b6a543945902b6b1"
+      },
+      {
+        "seq": 10,
+        "previous": "17464c20d46b9f9998d8ba5bb18c516b0ab07ded93aa0b11b6a543945902b6b1",
+        "action": "seal",
+        "actor": "coordinator",
+        "at": "2026-11-09T17:00:00+05:30",
+        "payload": {},
+        "accepted": true,
+        "error": null,
+        "sha256": "e488c5e5830dee07e6b83fd22482b46d1e4dea7d44ab89b58c8f3edfeb817d2d"
+      },
+      {
+        "seq": 11,
+        "previous": "e488c5e5830dee07e6b83fd22482b46d1e4dea7d44ab89b58c8f3edfeb817d2d",
+        "action": "expose",
+        "actor": "coordinator",
+        "at": "2026-11-09T18:00:00+05:30",
+        "payload": {
+          "judge_id": "j1",
+          "knowledge": "unaware"
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "230bb59ffb34f3701b95ec7b0593c9392173ea4ee736cac0a97307210f48713f"
+      },
+      {
+        "seq": 12,
+        "previous": "230bb59ffb34f3701b95ec7b0593c9392173ea4ee736cac0a97307210f48713f",
+        "action": "rate",
+        "actor": "j1",
+        "at": "2026-11-09T18:01:00+05:30",
+        "payload": {
+          "ratings": {
+            "d1:e1": "match",
+            "d1:e2": "protocol_invalid",
+            "d1:e3": "protocol_invalid",
+            "d1:e4": "protocol_invalid",
+            "d2:e1": "nonmatch",
+            "d2:e2": "protocol_invalid",
+            "d2:e3": "protocol_invalid",
+            "d2:e4": "protocol_invalid"
+          },
+          "notes": "  Original human-declared fixture ratings\r\n"
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "ec62202ddbde85da19bb472662653cc86a30590ec1c9b6704cc911b1614a2617"
+      },
+      {
+        "seq": 13,
+        "previous": "ec62202ddbde85da19bb472662653cc86a30590ec1c9b6704cc911b1614a2617",
+        "action": "expose",
+        "actor": "coordinator",
+        "at": "2026-11-09T18:02:00+05:30",
+        "payload": {
+          "judge_id": "j2",
+          "knowledge": "unaware"
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "43c46eb471a48e2d9f5c9b9803777a6cc5e72a306c73c50f16bffe16363a77b0"
+      },
+      {
+        "seq": 14,
+        "previous": "43c46eb471a48e2d9f5c9b9803777a6cc5e72a306c73c50f16bffe16363a77b0",
+        "action": "rate",
+        "actor": "j2",
+        "at": "2026-11-09T18:03:00+05:30",
+        "payload": {
+          "ratings": {
+            "d1:e1": "nonmatch",
+            "d1:e2": "protocol_invalid",
+            "d1:e3": "protocol_invalid",
+            "d1:e4": "protocol_invalid",
+            "d2:e1": "match",
+            "d2:e2": "protocol_invalid",
+            "d2:e3": "protocol_invalid",
+            "d2:e4": "protocol_invalid"
+          },
+          "notes": "  Original human-declared fixture ratings\r\n"
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "be87bfc5bcdd63bb0fe713da76f09bfe8ede3eb1a0672dd4f3073ab5af170030"
+      },
+      {
+        "seq": 15,
+        "previous": "be87bfc5bcdd63bb0fe713da76f09bfe8ede3eb1a0672dd4f3073ab5af170030",
+        "action": "lock_judges",
+        "actor": "coordinator",
+        "at": "2026-11-09T18:30:00+05:30",
+        "payload": {
+          "digest": "a6abab68c06cff00f54d0a5b7fb9086c4705a13b73b864aec83a3257608fd25d"
+        },
+        "accepted": true,
+        "error": null,
+        "sha256": "72272fa9b57722f2d31d30986fa9a08066c8e0714cab8a99e6fbf67f5345ecdb"
+      },
+      {
+        "seq": 16,
+        "previous": "72272fa9b57722f2d31d30986fa9a08066c8e0714cab8a99e6fbf67f5345ecdb",
+        "action": "reveal",
+        "actor": "coordinator",
+        "at": "2026-11-09T19:00:00+05:30",
+        "payload": {},
+        "accepted": true,
+        "error": null,
+        "sha256": "df2c5d1cd701efdd3bda47d99506055ce37118f44be5cc20643dbadd2da99642"
+      },
+      {
+        "seq": 17,
+        "previous": "df2c5d1cd701efdd3bda47d99506055ce37118f44be5cc20643dbadd2da99642",
+        "action": "finish",
+        "actor": "coordinator",
+        "at": "2026-11-09T20:00:00+05:30",
+        "payload": {},
+        "accepted": true,
+        "error": null,
+        "sha256": "a5760df5dc98715454098e9bc0c48e677acd7a39c04624021fc68883fb669065"
+      },
+      {
+        "seq": 18,
+        "previous": "a5760df5dc98715454098e9bc0c48e677acd7a39c04624021fc68883fb669065",
+        "action": "amend",
+        "actor": "person1",
+        "at": "2026-11-09T21:00:00+05:30",
+        "payload": {
+          "entry_id": "dream1",
+          "parent_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "text": "amend",
+          "reason": "wrongparent",
+          "outcome_known": true
+        },
+        "accepted": false,
+        "error": "Amendment requires retained locked parent version",
+        "sha256": "fc12a991d5bc249228ec8b269068fc592b037625e0b2c40a9c5460133900c401"
+      }
+    ]
+  }
+}

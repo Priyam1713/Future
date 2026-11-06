@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "profile": "dunne-revised-prospective-dream-ledger-v1",
+  "task": "validate_packet",
+  "packet": {
+    "schema_version": 1,
+    "visibility": "judge_packet",
+    "profile": "dunne-revised-prospective-dream-ledger-v1",
+    "profile_sha256": "9f1bf381bf473d31c9cb62b159c890e46437c84b1a69f1e8d551652e8596c712",
+    "cue": "study1",
+    "origin": "simulated",
+    "judge_id": "j1",
+    "instructions": "Content ratings only under declared features;all pairs required. Chronology assessed separately. Public-event familiarity may prevent blinding.",
+    "features": [
+      {
+        "id": "f1",
+        "description": "Human comparison of explicitly recorded object andaction;no inferred details."
+      }
+    ],
+    "rating_scale": [
+      "match",
+      "nonmatch",
+      "insufficient_information",
+      "unscorable",
+      "protocol_invalid"
+    ],
+    "dreams": [
+      {
+        "alias": "d1",
+        "text": "  Café Café\r\n猫\t red object  ",
+        "original_sha256": "212b6aabd1a1bf2c78e23657d31f292fb826ca97bbc7f70ad953702ba464e93e"
+      },
+      {
+        "alias": "d2",
+        "text": "A different object.",
+        "original_sha256": "05e618265492fec8a100ed17b179c5c670eda8ee396ffe5b1951fb1de64bb5eb"
+      }
+    ],
+    "events": [
+      {
+        "alias": "e1",
+        "text": "A red object."
+      },
+      {
+        "alias": "e2",
+        "text": "A routine meeting."
+      },
+      {
+        "alias": "e3",
+        "text": "Duplicate report of red object."
+      },
+      {
+        "alias": "e4",
+        "text": "Uncertain interval event."
+      }
+    ],
+    "pairs": [
+      "d1:e1",
+      "d1:e2",
+      "d1:e3",
+      "d1:e4",
+      "d2:e1",
+      "d2:e2",
+      "d2:e3",
+      "d2:e4"
+    ],
+    "packet_sha256": "2bc9434f4c751ec88116e74e2cef20ffd0bd6623b239590a2ea725b573e2752d",
+    "answer_flag": true
+  }
+}

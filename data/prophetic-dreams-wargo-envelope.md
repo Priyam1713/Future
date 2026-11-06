@@ -1,0 +1,27 @@
+# Prospective dream/event ledger
+
+Visibility: documentary_reference
+
+Descriptive procedural evidence only;no prophecy orstatisticalcertification.
+
+## Exact replay output
+
+```json
+{
+  "visibility": "documentary_reference",
+  "profile": "dunne-revised-prospective-dream-ledger-v1",
+  "source_edition": "FadedPage20181016 later Faber witness:publication history throughSeptember1939;1934third-edition introduction andadditions. Actual1927Macmillan scan body remains unverified.",
+  "records": [
+    {
+      "id": "wargo-envelope",
+      "source_id": "prophetic-dreams-wargo-publisher-v1",
+      "locator": "Official2021Chapter2excerpt,second sealed-envelope account andlater Island of the Blue Dolphins reading",
+      "fixed_target": "Sealed picture",
+      "later_association": "Subsequent associated reading",
+      "same_endpoint": false,
+      "summary": "Later free association doesnot replace the original fixedtarget in thissoftware protocol."
+    }
+  ],
+  "qualification": "Historicalattribution only;notverifiedprediction orparticipantdata."
+}
+```

@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 44 reproducible reports and separated demo — 2026-11-07
+- Saved29accepted/15rejected JSON/Markdown pairs,136CLI cases andcomplete command-driven lifecycle;stricttext-onlyjudge export andpersistent privateledger/report versuspublicpacket separation demonstrated. Allsamples synthetic.
+- Originalamendments,nonmatches/missingslots,duplicate/common events,allpaircounts,postreveals andhistoricaldocumentarycases replayexactly. Completecurrent1274tests/1600CLI/25verifiers pass;acceptanceevidence/closure follows.
+
 ## Technique 44 discovery/publication timing refinement — 2026-11-07
 - Discovery ofan event maylegitimatelyprecedepublication;removedautomaticconflict for thatordering. Conflicting futurepublication/collection declarations stillflagged. Originaltimestamps andactual-event prospectivity remainseparate.
 -67newtests and18independentfamilies pass;completecurrent-codeunit rerun started alongside inheritedCLI/verifier sweep. No source/profile/fixtureexpectations changed.

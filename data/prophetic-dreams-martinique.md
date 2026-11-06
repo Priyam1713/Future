@@ -1,0 +1,28 @@
+# Prospective dream/event ledger
+
+Visibility: documentary_reference
+
+Descriptive procedural evidence only;no prophecy orstatisticalcertification.
+
+## Exact replay output
+
+```json
+{
+  "visibility": "documentary_reference",
+  "profile": "dunne-revised-prospective-dream-ledger-v1",
+  "source_edition": "FadedPage20181016 later Faber witness:publication history throughSeptember1939;1934third-edition introduction andadditions. Actual1927Macmillan scan body remains unverified.",
+  "records": [
+    {
+      "id": "martinique",
+      "source_id": "prophetic-dreams-dunne-revised-v1",
+      "locator": "PartII ChapterVI,Martinique/MontPelée episode;paragraph beginning The number of people",
+      "claim_number": 4000,
+      "newspaper_number": 40000,
+      "retrospective": true,
+      "prospective_timestamp_verified": false,
+      "summary": "Narrated dream number differs from newspaper figure;author latercorrects his recalled reading. Historical memory/source-precision example,notverifiedprediction."
+    }
+  ],
+  "qualification": "Historicalattribution only;notverifiedprediction orparticipantdata."
+}
+```
