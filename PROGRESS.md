@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 44 source and prospective protocol freeze — 2026-11-07
+- Reinspected revisedDunneChapterX/AppendixIII andhistoricalnonmatch,officialWargoChapter2,andFischhoff1975. LaterFaberwitness remains separatefromuninspected1927body;modernexercisegaps/rights preserved.
+- Froze dunne-revised-prospective-dream-ledger-v1:slots,collectionrule,closedwindows,originalversions,allpairs,humanratings andprivacy/trustlimits. Complete2088-filebaseline protects2084eligibleartifacts;4explicitinterface/historyexceptions. No44engineyet.
+
 ## Technique 44 Prophetic Dreams resource audit — 2026-11-06
 - Began only after43closureff0d46e pushed,clean andsynchronized0/0. Original3ranks/4variations preserved;auditonly,no44runtime/profile/CLI/fixtures andno45audit.
 - RankedDunne1927metadata verified,butactualscan accessfailed;laterFaber1939publicationline/1934revisions inspected separately,includingChapterXrecording andAppendixIIInonmatches. WargoofficialChapter2envelope/association example inspected;Cheung/Mossbridgeprint/eBookpagination andgated-exercise gaps keptseparate.

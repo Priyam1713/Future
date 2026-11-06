@@ -1,0 +1,288 @@
+{
+  "version": 1,
+  "technique_id": 44,
+  "profile": "dunne-revised-prospective-dream-ledger-v1",
+  "source_manifest_sha256": "b732a03b9308b7d78a0860da970a17ee57c448f15cb9247c611deda1957e0343",
+  "source_freeze_sha256": "e8dbc7606638816f2a1b43de845a4466a05ee03ebbffef6eeca1628b313373f9",
+  "reference_sha256": "19be7a7607cdfc392b2e0c825d0f14f52d4b8b550cdcafc6e0e67f2a38234ffd",
+  "source_edition": "FadedPage20181016 later Faber witness:publication history throughSeptember1939;1934third-edition introduction andadditions. Actual1927Macmillan scan body remains unverified.",
+  "canonical": "Sorted-key compact UTF8 JSON,ensure_ascii=false,allow_nan=false,no finalLF;no normalization oftext/whitespace. SHA256;domain-separated events,versions,locks,packets,reports.",
+  "domains": {
+    "event": "future.prophetic-dreams.event.v1",
+    "version": "future.prophetic-dreams.version.v1",
+    "lock": "future.prophetic-dreams.lock.v1",
+    "packet": "future.prophetic-dreams.packet.v1",
+    "report": "future.prophetic-dreams.report.v1"
+  },
+  "plan_fields": [
+    "schema_version",
+    "profile",
+    "profile_sha256",
+    "study_id",
+    "participant",
+    "coordinator",
+    "origin",
+    "created_at",
+    "slots",
+    "universe",
+    "universe_sha256",
+    "window",
+    "features",
+    "judges",
+    "blinding",
+    "stopping_rule",
+    "pair_policy",
+    "duplicate_policy",
+    "uncertainty_policy",
+    "primary_endpoint",
+    "privacy_consent"
+  ],
+  "slot_fields": [
+    "id",
+    "open_at",
+    "due_at"
+  ],
+  "universe_fields": [
+    "id",
+    "version",
+    "event_ids",
+    "collector",
+    "collection_rule",
+    "collection_window"
+  ],
+  "window_fields": [
+    "start",
+    "end",
+    "boundary",
+    "endpoint"
+  ],
+  "feature_fields": [
+    "id",
+    "description"
+  ],
+  "dream_fields": [
+    "id",
+    "slot_id",
+    "participant",
+    "occurrence",
+    "first_record_at",
+    "text",
+    "details",
+    "outcome_known",
+    "attachments",
+    "privacy_consent",
+    "witness"
+  ],
+  "event_fields": [
+    "id",
+    "universe_id",
+    "universe_version",
+    "dedup_group",
+    "common",
+    "occurrence",
+    "publication_at",
+    "discovery_at",
+    "text",
+    "evidence",
+    "coverage",
+    "conflicts"
+  ],
+  "asset_fields": [
+    "path",
+    "sha256",
+    "holder",
+    "permission",
+    "provenance"
+  ],
+  "amend_fields": [
+    "entry_id",
+    "parent_sha256",
+    "text",
+    "reason",
+    "outcome_known"
+  ],
+  "ratings": [
+    "match",
+    "nonmatch",
+    "insufficient_information",
+    "unscorable",
+    "protocol_invalid"
+  ],
+  "rating_definitions": {
+    "match": "Judge declares correspondence underfixedhuman-selected features;notprobability.",
+    "nonmatch": "Judge declares no correspondence underthosefeatures.",
+    "insufficient_information": "Evidence insufficient forhumanrating.",
+    "unscorable": "Task/material cannotbe scored.",
+    "protocol_invalid": "Judge flags proceduralinvalidity;notpositiveevidence."
+  },
+  "chronology": [
+    "future_event",
+    "record_after_event_before_discovery",
+    "event_before_or_at_record",
+    "overlaps_lock",
+    "timing_unknown",
+    "outcome_known_at_capture",
+    "conflicting_time"
+  ],
+  "interval_policy": "Timezone-aware instants orclosed {start,end,precision};unknown=null. Windowclosed[endpointsincluded]. Wholeintervalcontained=inside;disjoint=outside;partialoverlap=uncertain;unknown=unknown. Prospectivitystrictlyrequires lock<endpoint;equalnotfuture. Reportactualeventchronologyseparatelyfrompublication/discoveryendpoint.",
+  "plan_constants": {
+    "stopping_rule": "fixed_slots",
+    "pair_policy": "all_original_locked_dreams_x_all_events",
+    "duplicate_policy": "first_manifest_event_per_group",
+    "uncertainty_policy": "retain_exclude_uncertain",
+    "primary_endpoint": "descriptive_human_categories"
+  },
+  "state_machine": {
+    "recording": [
+      "record",
+      "slot_status",
+      "lock_entry",
+      "amend",
+      "event",
+      "seal",
+      "terminate"
+    ],
+    "sealed": [
+      "expose",
+      "rate",
+      "lock_judges",
+      "amend",
+      "terminate"
+    ],
+    "judge_locked": [
+      "reveal",
+      "amend",
+      "terminate"
+    ],
+    "revealed": [
+      "commentary",
+      "finish",
+      "amend"
+    ],
+    "reported": [
+      "commentary",
+      "amend"
+    ],
+    "aborted": [],
+    "excluded": []
+  },
+  "actions": {
+    "record": [
+      "entry"
+    ],
+    "slot_status": [
+      "slot_id",
+      "status",
+      "reason"
+    ],
+    "lock_entry": [
+      "entry_id",
+      "digest"
+    ],
+    "amend": [
+      "entry_id",
+      "parent_sha256",
+      "text",
+      "reason",
+      "outcome_known"
+    ],
+    "event": [
+      "event"
+    ],
+    "seal": [],
+    "expose": [
+      "judge_id",
+      "knowledge"
+    ],
+    "rate": [
+      "ratings",
+      "notes"
+    ],
+    "lock_judges": [
+      "digest"
+    ],
+    "reveal": [],
+    "commentary": [
+      "kind",
+      "text",
+      "event_reference"
+    ],
+    "finish": [],
+    "terminate": [
+      "status",
+      "reason"
+    ]
+  },
+  "state_policy": "Accepted actions strictlyincrease afterplancreatedtime. Replayrecomputes eventdecisions andhashes. Rejected actions arehashed/retained withoutstatechange;persist returnedprivateledger. No implicitrepair. Allsubmitted dreamslocked/allmanifesteventscollected andslotdue timespassed beforeseal. Originalentrylock isalwayscomparisonversion;amendments appendwithoutreplacingit.",
+  "version_policy": "Originalentryversion hashes domain+entry. Amendment hashes domain+entry_id+parent+text+reason+outcome_known+actiontime. Verifyparent islatestversion. No dropping olderoriginals orpost-outcome promotion. Locks bindoriginalentryhash+declaredlocktime.",
+  "universe_policy": "Fixed finite event-ID slots andfixedcollectionrule hash declared before recording;content/evidence mayarrive later. Evidencebytehash/rights verified locally at eachreplay. Completeness complete/known_omissions/unknown retained;omissions suppresscomplete-universe designation.",
+  "pair_policy": "Everyoriginal lockedrecordeddream x everymanifestevent retained,includingexcluded rows. Originalmanifestorder selects duplicate-grouprepresentative;duplicates/commonflagsvisible. Reasons include late/withdrawn/invalidslot,knownoutcome,timeconflict,windowoutside/uncertain/unknown,endpointnotafterlock,duplicate. No inferentialprobabilities orautomaticmatching.",
+  "judge_policy": "Content ratings only,allD*E pairsincludingexcludedrows;human featurecriteria fixedinplan. Timeis assessedprivately byeditorial interval rules. Judgepacket masks allprivatechronology,paths,answerflags anddecisions;containsoriginalrawtext andpublicdigests. Rawsemanticclues/publiceventfamiliarity notguaranteedmasked. Allpredeclaredjudges expose/rate/lock beforeexplicitreveal. Knownjudges/descriptivepolicy labeledunblinded.",
+  "packet_fields": [
+    "schema_version",
+    "visibility",
+    "profile",
+    "profile_sha256",
+    "cue",
+    "origin",
+    "judge_id",
+    "instructions",
+    "features",
+    "rating_scale",
+    "dreams",
+    "events",
+    "pairs",
+    "packet_sha256"
+  ],
+  "requests": {
+    "create": [
+      "plan"
+    ],
+    "apply": [
+      "ledger",
+      "action",
+      "actor",
+      "at",
+      "payload"
+    ],
+    "report": [
+      "ledger"
+    ],
+    "judge_packet": [
+      "ledger",
+      "judge_id"
+    ],
+    "validate_packet": [
+      "packet"
+    ],
+    "reference": [
+      "ids"
+    ]
+  },
+  "matrix": {
+    "supported": [
+      "Offlinefinite-slot prospectiveledger;strictmanualrecords/events;original locks andappend-onlyamendments",
+      "Finitecollectionrule/versionhash,fixedclosedwindow,allpair/exclusiondenominators",
+      "Boundedhumanratings,allplannedjudges,allowlistedtextpackets anddisagreement",
+      "Source-specificdocumentaryreferences andUTF8JSON/Markdownreplay"
+    ],
+    "experimental": [
+      "Declaredblindrating ofpublic/personal-life events;no psychologicalblindingguarantee",
+      "Publication/discoveryendpoint analyses explicitlyseparatefromfutureeventchronology"
+    ],
+    "unsupported": [
+      "Prophecy/precognition/retrocausalphysicscertification",
+      "Universalnullmodel,p-values,1/5chancebaseline,automaticsemanticconfidence",
+      "FullDunneAppendixIIIhistoricalreplication or1927wordingcertification",
+      "ERV/ARV/controlledtargetdreamtrialprotocol",
+      "Unconsentedparticipantpublication;automaticimages/audiointerpretation"
+    ]
+  },
+  "privacy": "Privateledgers/reports containrawparticipantdata. Packetexport requiresplanandentryconsent. Attachmentsverifiedprivately andnotexported intext-onlyCore;judgesseeexactdeclaredtext. No originalsourcetextcorpusdistributed.",
+  "limits": [
+    "Localclock/occurrence/knowledge/identity/rights are declarations;no independentlytrusted chronology.",
+    "Fileowner canrewritewholehistory;retainindependentanchors.",
+    "Humanratings aredescriptive;noinferential orparanormalcertification.",
+    "Packet allowlists do not eliminate semanticclues,priorpublicknowledge orcollusion."
+  ]
+}
