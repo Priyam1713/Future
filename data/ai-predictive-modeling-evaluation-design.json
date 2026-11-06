@@ -1,0 +1,74 @@
+{
+  "status": "Frozen audit design before any model comparison;not an executable profile",
+  "dataset_id": "noaa-mlo-monthly-co2-2000-2023-snapshot-20261009",
+  "series": [
+    "mlo_co2"
+  ],
+  "frequency": "calendar month,period YYYY-MM;no invented timezone offset for monthly labels",
+  "seasonality": 12,
+  "horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "initial_train": [
+    "2000-01",
+    "2017-12"
+  ],
+  "validation": {
+    "origins": [
+      "2017-12",
+      "2019-12"
+    ],
+    "step_months": 1,
+    "origin_count": 25,
+    "target_union": [
+      "2018-01",
+      "2020-12"
+    ],
+    "forecast_cells": 300
+  },
+  "test": {
+    "origins": [
+      "2020-12",
+      "2022-12"
+    ],
+    "step_months": 1,
+    "origin_count": 25,
+    "target_union": [
+      "2021-01",
+      "2023-12"
+    ],
+    "forecast_cells": 300
+  },
+  "window": "Expanding from2000-01;at each origin only periods<=origin may be fitted/used. Refit after earlier outcomes resolve is allowed under frozen selection policy;no tuning on test outcomes.",
+  "selection": "Freeze candidate set,initialization,hyperparameters,tie order and metrics before validation. Select on validation macro MAE;retrain through2020-12 for first test origin. Later refits keep model family/hyperparameters fixed. Report every planned candidate/failure,not only winner.",
+  "transforms": "Identity on ppm by default. Any optional scaler/transform/imputer/decomposition fitted separately on each training prefix and serialized. Never center a rolling feature using future rows,globally normalize or decompose the complete dataset.",
+  "missing": "Require a complete regular monthly grid;duplicates,out-of-order and irregular labels reject. Missing target outcomes remain unscored with denominators;do not use future interpolation/backfill. First bounded models reject missing training values,with later causal imputation separately named.",
+  "features": "If tree/neural routes added:shift before rolling;label availability,not row index alone,governs training. Direct h-step labels must be fully observed by fold origin;purge unobserved label windows. Recursive h>1 inputs use earlier predictions,not actual future targets.",
+  "covariates": "None in initial benchmark. Calendar month is known future. Other future covariates require as-of availability references;observed future weather/prices are forbidden. Past-only covariates cannot be passed as known future.",
+  "multi_series": "Initial dataset has one series. Additional series require group-aware temporal splits;linked/revised targets and cross-series batches must have common as-of cutoff. Disable Chronos cross_learning until independently evaluated;pin batch grouping when enabled.",
+  "availability": "NOAA file is a revised2026snapshot,not archived publication vintages. Monthly means are corrected by the provider toward midmonth using seasonal-cycle information. This supports retrospective fixed-series held-out evaluation,not a certified leakage-free historical real-time replay. Missing historical release times/revisions are unresolved;prospective skill claims require as-of vintages or new prospective observations.",
+  "pretraining": "Chronos card lists chronos_datasets/GiftEvalPretrain;exact overlap with NOAA or other benchmarks not excluded. No claim that a frozen test period is unseen by model pretraining.",
+  "dependence": "25 origins x12h=300 cells per partition/model but only36distinct target months. Report all denominators and horizon-wise results;overlapping forecast errors are dependent,no independent-trial or significance claim.",
+  "candidate_order": [
+    "seasonal_naive_m12",
+    "naive",
+    "drift",
+    "mean",
+    "ses_alpha0.2_initial_y1",
+    "ses_alpha0.5_initial_y1",
+    "ses_alpha0.8_initial_y1"
+  ],
+  "candidate_convention": "Proposed finite CPU set for the subsequent implementation. SES starts level at first training observation,then consumes subsequent observations with fixed alpha;no SSE/MLE optimization or fitted ETS distribution claimed. Lowest validation MAE wins;exact ties use the listed order. Core fixtures/conventions still must be committed before production.",
+  "optional_distributional_request": "If a later verified Chronos adapter is included,request native0.05,0.1,0.5,0.9,0.95quantiles,horizon12,record point functional=median. No interval generation or adapter in this audit."
+}

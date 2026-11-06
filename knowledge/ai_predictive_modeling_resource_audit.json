@@ -1,0 +1,725 @@
+{
+  "version": 1,
+  "technique_id": 49,
+  "name": "AI Predictive Modeling",
+  "phase": 6,
+  "date": "2026-11-07",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "cad6e3e",
+  "predecessor_gate": "Closed,pushed;git fetch succeeded,clean main and main...origin/main0/0 observed before any49research.",
+  "policy": "Audit/data/design only. No49engine,trained model,executable profile,adapter or CLI. No weights downloaded;no model inference or forecast benchmark run. No50work.47/48remain excluded.",
+  "inventory_method_row": [
+    49,
+    "6 · Futuristic & Hypothetical Technologies",
+    "AI Predictive Modeling",
+    "RETAIN — simulate / implement",
+    "Data & simulation",
+    "Classical ARIMA/ETS; boosted trees; neural time-series; probabilistic transformers; foundation models",
+    "Train/validate statistical and ML forecasts; calibrated distributions",
+    "Historical labelled series, compute and temporal train/test split",
+    "Data drift, leakage, and base-rate errors; measurable accuracy required",
+    "Empirical, testable when historical data exists",
+    "Forecasting: Principles and Practice (3rd ed.)",
+    "Rob J. Hyndman and George Athanasopoulos",
+    "https://otexts.com/fpp3/",
+    "Chronos-2 Model Card",
+    null,
+    null,
+    "6, 50, 51, 53, 54, 56, 59",
+    49
+  ],
+  "ranked_sources": [
+    [
+      49,
+      "AI Predictive Modeling",
+      1,
+      "Rob J. Hyndman and George Athanasopoulos",
+      "Forecasting: Principles and Practice (3rd ed.)",
+      "Transparent statistical methods and evaluation",
+      "https://otexts.com/fpp3/",
+      "Open textbook",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      49,
+      "AI Predictive Modeling",
+      2,
+      "Amazon Science",
+      "Chronos-2 Model Card",
+      "Current pretrained foundation-model implementation",
+      "https://huggingface.co/amazon/chronos-2",
+      "Open model card / check license",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      49,
+      "AI Predictive Modeling",
+      "Classical ARIMA/ETS",
+      "Chronos-2 Model Card",
+      "Forecasting: Principles and Practice (3rd ed.)",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      49,
+      "AI Predictive Modeling",
+      "boosted trees",
+      "Chronos-2 Model Card",
+      "Forecasting: Principles and Practice (3rd ed.)",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      49,
+      "AI Predictive Modeling",
+      "neural time-series",
+      "Chronos-2 Model Card",
+      "Forecasting: Principles and Practice (3rd ed.)",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      49,
+      "AI Predictive Modeling",
+      "probabilistic transformers",
+      "Chronos-2 Model Card",
+      "Forecasting: Principles and Practice (3rd ed.)",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      49,
+      "AI Predictive Modeling",
+      "foundation models",
+      "Chronos-2 Model Card",
+      "Forecasting: Principles and Practice (3rd ed.)",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "inventory_mapping_note": "Original ranks and provisional variation-to-resource mappings preserved exactly;they do not assert Chronos defines classical ARIMA/ETS.",
+  "source_registry": "knowledge/ai_predictive_modeling_sources.json",
+  "source_manifest_sha256": "2ffa3321a1ecea9424c45d53db6b86a26a988c470da1102607edb702294c563d",
+  "edition_boundaries": {
+    "fpp3": "Third edition online modified2026-11-04. Former accuracy.html/tscv.html redirect to combined toolbox.html;expsmooth.html redirects to exponential-smoothing.html. Locators use current chapter/section headings. All worked code is R/fpp3,not a verified Python library realization. No textbook body bundled.",
+    "chronos": "Card/model revision29ec3766d36d6f73f0696f85560a422f50e8498c versus separate inference repository commit1224fafa91e1ecd6674f5204066b159e40b5e4a1,whose about.py is2.3.3.dev0. Not interchangeable with Chronos2024or Bolt;main/development snapshot not a stable installed release pin."
+  },
+  "verified_methods": [
+    {
+      "id": "simple-baselines",
+      "source": "ai-predictive-fpp3-v1",
+      "locator": "Chapter5,§5.2",
+      "rules": [
+        "Mean uses training mean;naive uses last observed target.",
+        "Seasonal naive repeats last observed seasonal cycle;h>m indexes the final cycle,not nonexistent future values.",
+        "Drift extrapolates endpoint change divided by T-1;T>=2 required."
+      ]
+    },
+    {
+      "id": "decomposition",
+      "source": "ai-predictive-fpp3-v1",
+      "locator": "Chapter3,§3.2,§3.4,§3.6;Chapter5,§5.7",
+      "rules": [
+        "Additive y=trend+season+remainder versus multiplicative product;STL uses LOESS and can be robust.",
+        "Centered moving averages and full-series seasonal adjustment can leak;fit only training prefixes for forecasts."
+      ]
+    },
+    {
+      "id": "smoothing",
+      "source": "ai-predictive-fpp3-v1",
+      "locator": "Chapter8,§8.1–§8.7",
+      "rules": [
+        "SES level=alpha*y+(1-alpha)*previous level;flat future forecasts. Initial level is part of convention,not an interchangeable library default.",
+        "Holt adds trend;damped Holt uses phi powers. Holt-Winters additive/multiplicative seasonality differ;do not mix gamma with gamma*=gamma/(1-alpha).",
+        "ETS supplies explicit error/trend/season state-space models and intervals;SSE-level smoothing alone is not a complete fitted ETS distribution.",
+        "Likelihood/AICc model selection uses training only;different initial states and optimizers can produce different numerical outputs."
+      ]
+    },
+    {
+      "id": "arima",
+      "source": "ai-predictive-fpp3-v1",
+      "locator": "Chapter9,§9.1,§9.5–§9.9",
+      "rules": [
+        "ARIMA(p,d,q),seasonal(P,D,Q)m require stationarity/differencing conventions and residual checks.",
+        "MLE and AICc order selection are training procedures;AICc across different differencing orders is not directly comparable.",
+        "Fable constants and drift differ by model order/library;default auto search,stepwise and approximation options must be named.",
+        "Ljung-Box/residual bias/ACF assess model errors;white residuals do not prove future accuracy."
+      ]
+    },
+    {
+      "id": "evaluation",
+      "source": "ai-predictive-fpp3-v1",
+      "locator": "Chapter5,§5.3–§5.5,§5.8–§5.10",
+      "rules": [
+        "Forecast errors on held-out data differ from training residuals.",
+        "Rolling origin restricts each fit to earlier observations and evaluates relevant multi-step horizons.",
+        "Normal/residual-bootstrap intervals need explicit assumptions;coverage must be measured,not inferred from nominal labels."
+      ]
+    }
+  ],
+  "source_worked_examples": [
+    {
+      "source": "FPP3 Chapter5 §5.9,Google2016-01-04",
+      "input": {
+        "p": "0.1",
+        "q": "744.54",
+        "y": "741.84"
+      },
+      "expected_twice_pinball": "4.86",
+      "independent_arithmetic": "2*0.9*2.70=4.86;checked with Decimal,not a model run"
+    },
+    {
+      "source": "FPP3 Chapter5 §5.9,Winkler example",
+      "input": {
+        "lower": "744.54",
+        "upper": "773.22",
+        "y": "741.84",
+        "alpha": "0.2"
+      },
+      "expected": "55.68",
+      "independent_arithmetic": "28.68+10*2.70=55.68;checked with Decimal"
+    },
+    {
+      "source": "FPP3 Chapter8 §8.1,weight table",
+      "alpha": "0.2",
+      "expected_first_four_weights": [
+        "0.2",
+        "0.16",
+        "0.128",
+        "0.1024"
+      ],
+      "independent_rule": "alpha*(1-alpha)^j;not fitted parameter/accuracy validation"
+    },
+    {
+      "source": "FPP3 Chapter5 §5.8,beer1992–2007train,next10quarters",
+      "published_snaive_metrics": {
+        "RMSE": "14.31",
+        "MAE": "13.40",
+        "MASE": "0.94"
+      },
+      "status": "Published rounded reference,not independently reproduced from complete beer data;not our benchmark score"
+    }
+  ],
+  "chronos2": {
+    "model_revision": "29ec3766d36d6f73f0696f85560a422f50e8498c",
+    "architecture": "120M parameter,T5-inspired encoder-only,12layers,d_model768,12heads,d_ff3072,group attention;continuous patched input,not originalChronos sampled token decoder",
+    "config_sha256": "ef1143bfdc9c0376d9a056eefca46cb4b1ec3d0ffacd541ff56feb40fb708031",
+    "context_length": 8192,
+    "patch_size": 16,
+    "documented_prediction_length": 1024,
+    "code_boundary": "64output patches x16. predict(limit_prediction_length=False) can extend longer with autoregressive quantile heuristic and warning;predict_df passes false. Proposed bounded adapter must reject horizons>1024 itself.",
+    "native_quantiles": [
+      0.01,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.99
+    ],
+    "capabilities": [
+      "Univariate and multivariate targets",
+      "Numeric/categorical past-only and known-future covariates",
+      "Future covariate names must also exist among past covariates",
+      "Optional cross-learning across related items;batch grouping affects semantics"
+    ],
+    "missing_behavior": "Model creates masks from NaN context/future covariates and zeros masked patches;preprocessing also uses finite masks. Does not mean every all-missing/inf/category pattern is valid. Adapter should reject infinities/all-missing history and independently test supported missing patterns before certification.",
+    "api": {
+      "class": "chronos.Chronos2Pipeline",
+      "load": "from_pretrained(local_pinned_directory,device_map=cpu_or_cuda);explicit separate acquisition required",
+      "predict": "List tensors (n_variates,n_quantiles,horizon)",
+      "predict_quantiles": "(quantile list[n_variates,horizon,Q],point list[n_variates,horizon]);implementation point is median despite variable/docstring naming mean",
+      "predict_df": "df + optional future_df,explicit ID/time/target,horizon and quantiles ->rows per(item,target,step),target_name,predictions,quantile-name columns. predictions is median. Require validate_inputs=True,regular timestamps and matching future rows."
+    },
+    "dependencies": "Python>=3.10;torch>=2.2,<3;transformers>=4.41,<6;accelerate>=1.1,<2;numpy>=1.21,<3;einops>=0.7,<1;pandas>=2,<4;pyarrow only parquet optional. These are inspected dev-source constraints,not an installed lock.",
+    "license": "Apache2.0 card and repository LICENSE inspected;preserve license/NOTICE and upstream conditions on future distribution. Training dataset rights and model benchmark integrity separate.",
+    "weights": {
+      "available": true,
+      "filename": "model.safetensors",
+      "bytes": 477930472,
+      "upstream_lfs_sha256": "ddcda3c7508bf2528087723e98a20707cc04b7f370ae275a9fd88078ddba4f42",
+      "downloaded": false,
+      "hash_independently_verified": false
+    },
+    "release_history": [
+      "2025-10-20 Chronos-2 release per repository news",
+      "2025-12-30 SageMaker deployment announcement",
+      "2026-06-05 AutoGluon-Cloud announcement;does not require cloud for local model"
+    ],
+    "reproducibility": "No local inference performed. No-grad quantile prediction does not certify bitwise determinism. Pin weights/code/dependencies/dtype/device,seeds,threads,TF32/deterministic settings,context,batch grouping and preprocessing;test same-environment replay and separate cross-device tolerances.",
+    "training_overlap": "Card lists autogluon/chronos_datasets and Salesforce/GiftEvalPretrain;NOAA overlap unknown. Leaderboard/vendor throughput claims are not independent evidence for this dataset.",
+    "operational": false
+  },
+  "dataset": {
+    "path": "resources/ai-predictive-modeling/noaa_mlo_2000_2023.json",
+    "canonical_sha256": "303c231dd00ba7cf6302e02dbb25525b91e226008a71b15856f25f775aa9645c",
+    "source_snapshot_sha256": "0ce4e7749217b4af2cca8e0bdf263856ad59b0a2946d4e98c7b22ccfbff21cad",
+    "count": 288,
+    "range": [
+      "2000-01",
+      "2023-12"
+    ],
+    "frequency": "monthly",
+    "units": "ppm",
+    "missing_months": [],
+    "negative_sd_or_target_flags": [],
+    "rights": "NOAA government data public domain unless separately annotated;retain source/product credit,no endorsement or misrepresentation. Selected2000–2023 NOAA measurements avoid the pre1974 Scripps-sourced portion of the full file.",
+    "source_revision_risks": [
+      "Current file quality-control revisions are allowed by provider",
+      "2021X2019calibration rescaling",
+      "2022-11eruption;December2022throughJuly42023observations atMaunakea,thenMaunaLoa resumption",
+      "Monthly mean corrected to midmonth using seasonal-cycle information;no vintage-causal guarantee"
+    ],
+    "retrieval": "Exact288numerical observations bundled as attributed research subset. Full mutable upstream snapshot hash retained;do not silently replace with a later download. Full source body remains outside repository."
+  },
+  "evaluation_protocol_path": "data/ai-predictive-modeling-evaluation-design.json",
+  "evaluation_protocol_sha256": "c49cb6ed3360bd1905048ace7b45e7df616fb600fa5856df23359d159db45457",
+  "evaluation_protocol": {
+    "status": "Frozen audit design before any model comparison;not an executable profile",
+    "dataset_id": "noaa-mlo-monthly-co2-2000-2023-snapshot-20261009",
+    "series": [
+      "mlo_co2"
+    ],
+    "frequency": "calendar month,period YYYY-MM;no invented timezone offset for monthly labels",
+    "seasonality": 12,
+    "horizons": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "initial_train": [
+      "2000-01",
+      "2017-12"
+    ],
+    "validation": {
+      "origins": [
+        "2017-12",
+        "2019-12"
+      ],
+      "step_months": 1,
+      "origin_count": 25,
+      "target_union": [
+        "2018-01",
+        "2020-12"
+      ],
+      "forecast_cells": 300
+    },
+    "test": {
+      "origins": [
+        "2020-12",
+        "2022-12"
+      ],
+      "step_months": 1,
+      "origin_count": 25,
+      "target_union": [
+        "2021-01",
+        "2023-12"
+      ],
+      "forecast_cells": 300
+    },
+    "window": "Expanding from2000-01;at each origin only periods<=origin may be fitted/used. Refit after earlier outcomes resolve is allowed under frozen selection policy;no tuning on test outcomes.",
+    "selection": "Freeze candidate set,initialization,hyperparameters,tie order and metrics before validation. Select on validation macro MAE;retrain through2020-12 for first test origin. Later refits keep model family/hyperparameters fixed. Report every planned candidate/failure,not only winner.",
+    "transforms": "Identity on ppm by default. Any optional scaler/transform/imputer/decomposition fitted separately on each training prefix and serialized. Never center a rolling feature using future rows,globally normalize or decompose the complete dataset.",
+    "missing": "Require a complete regular monthly grid;duplicates,out-of-order and irregular labels reject. Missing target outcomes remain unscored with denominators;do not use future interpolation/backfill. First bounded models reject missing training values,with later causal imputation separately named.",
+    "features": "If tree/neural routes added:shift before rolling;label availability,not row index alone,governs training. Direct h-step labels must be fully observed by fold origin;purge unobserved label windows. Recursive h>1 inputs use earlier predictions,not actual future targets.",
+    "covariates": "None in initial benchmark. Calendar month is known future. Other future covariates require as-of availability references;observed future weather/prices are forbidden. Past-only covariates cannot be passed as known future.",
+    "multi_series": "Initial dataset has one series. Additional series require group-aware temporal splits;linked/revised targets and cross-series batches must have common as-of cutoff. Disable Chronos cross_learning until independently evaluated;pin batch grouping when enabled.",
+    "availability": "NOAA file is a revised2026snapshot,not archived publication vintages. Monthly means are corrected by the provider toward midmonth using seasonal-cycle information. This supports retrospective fixed-series held-out evaluation,not a certified leakage-free historical real-time replay. Missing historical release times/revisions are unresolved;prospective skill claims require as-of vintages or new prospective observations.",
+    "pretraining": "Chronos card lists chronos_datasets/GiftEvalPretrain;exact overlap with NOAA or other benchmarks not excluded. No claim that a frozen test period is unseen by model pretraining.",
+    "dependence": "25 origins x12h=300 cells per partition/model but only36distinct target months. Report all denominators and horizon-wise results;overlapping forecast errors are dependent,no independent-trial or significance claim.",
+    "candidate_order": [
+      "seasonal_naive_m12",
+      "naive",
+      "drift",
+      "mean",
+      "ses_alpha0.2_initial_y1",
+      "ses_alpha0.5_initial_y1",
+      "ses_alpha0.8_initial_y1"
+    ],
+    "candidate_convention": "Proposed finite CPU set for the subsequent implementation. SES starts level at first training observation,then consumes subsequent observations with fixed alpha;no SSE/MLE optimization or fitted ETS distribution claimed. Lowest validation MAE wins;exact ties use the listed order. Core fixtures/conventions still must be committed before production.",
+    "optional_distributional_request": "If a later verified Chronos adapter is included,request native0.05,0.1,0.5,0.9,0.95quantiles,horizon12,record point functional=median. No interval generation or adapter in this audit."
+  },
+  "metric_conventions": {
+    "default": [
+      "MAE in ppm",
+      "RMSE in ppm",
+      "seasonal MASE with m12",
+      "bias mean(y-yhat),positive means underprediction",
+      "paired seasonal-naive MAE difference and ratio when denominator nonzero"
+    ],
+    "formulas": {
+      "MAE": "sum(abs(y-yhat))/N",
+      "RMSE": "sqrt(sum((y-yhat)^2)/N)",
+      "MASE": "MAE / (sum_{t=m+1..T}|train[t]-train[t-m]|/(T-m));per-fold training scale",
+      "bias": "mean(y-yhat)",
+      "WAPE": "sum|y-yhat|/sum|y|;display fraction or explicitly100*percent",
+      "sMAPE_FPP3": "mean(200*abs(y-yhat)/(y+yhat));source warns unstable and can be negative,not recommended",
+      "optional_absolute_sMAPE": "mean(200*abs(y-yhat)/(|y|+|yhat|));different editorial convention,double-zero term0 with explicit count",
+      "quantile_score_FPP3": "2*((1-p)*(q-y) if y<q else p*(y-q));twice common pinball",
+      "coverage": "count(lower<=y<=upper)/N,with nominal level and interval width",
+      "interval_score": "upper-lower+(2/alpha)*outside distance;central1-alpha interval",
+      "WIS": "(0.5*abs(y-median)+sum_k(alpha_k/2)*IS_alpha_k)/(K+0.5);Bracher2021§2.2Eq1–2",
+      "CRPS": "Integral of FPP3 twice-pinball over probability;finite quantile grid only gives a named approximation,not exact CRPS"
+    },
+    "undefined": "N0,zero seasonal training scale,zero WAPE denominator or zero benchmark error produce null+explicit reason and counts;never nonfinite JSON or an invented perfect score.",
+    "secondary": "WAPE is unsuitable as default for this trending/seasonal series (Hyndman2025);sMAPE similarly diagnostic-only. Quantile loss/coverage first distributional metrics;WIS/CRPS P1 pending independent numeric/distribution fixtures.",
+    "aggregation": "Per-model,origin,horizon and series errors retained. Macro average per series and micro average per forecast cell named separately;common eligibility only for paired comparisons. Report missing/failure denominators and time/memory costs. No metric proves universal superiority.",
+    "WIS_source_check": "Primary PLOS manuscript XML retrieved and MathML Eqs1–2 read independently after equation thumbnails were inaccessible;normalizerK+1/2,w0=1/2,wk=alpha_k/2 confirmed."
+  },
+  "independent_fixture_plan": [
+    {
+      "id": "constant",
+      "expectation": "Fixed constant series remains constant for mean,naive,snaive,SES;zero MASE denominator produces null,not perfect skill."
+    },
+    {
+      "id": "seasonal-naive",
+      "expectation": "m4,[10,20,30,40,11,21,31,41],h1..6 ->[11,21,31,41,11,21];independent handwritten index table."
+    },
+    {
+      "id": "trend",
+      "expectation": "[2,4,6,8],drift h1..3 ->[10,12,14];does not claim all trend data linear."
+    },
+    {
+      "id": "horizon-indexing",
+      "expectation": "First prediction is origin+1;test boundary examples independently enumerated."
+    },
+    {
+      "id": "training-test-isolation",
+      "expectation": "Replace all future targets with different sentinel values;forecasts at an unchanged origin must not change."
+    },
+    {
+      "id": "future-covariates",
+      "expectation": "Reject actual future target columns masquerading as exogenous values;known-future metadata required."
+    },
+    {
+      "id": "missing-observations",
+      "expectation": "Missing training rejects in initial strict mode;missing labels unscored with counts,never zero-filled."
+    },
+    {
+      "id": "irregular-timestamps",
+      "expectation": "Duplicate,reversed or absent monthly periods reject;calendar month increment has exact expected labels."
+    },
+    {
+      "id": "zero-denominators",
+      "expectation": "MASE/WAPE/relative-baseline denominator zero ->null+reason;explicit optional absolute-sMAPE double-zero convention tested."
+    },
+    {
+      "id": "mase-scale",
+      "expectation": "Independent training-only absolute seasonal differences,not evaluation MAE or full-series scale."
+    },
+    {
+      "id": "fold-boundaries",
+      "expectation": "25validation+25test origins,12steps each,300cells/partition,36unique outcome months;closed date ranges frozen."
+    },
+    {
+      "id": "exact-replay",
+      "expectation": "Same canonical input/profile/data/version produces identical baseline JSON/Markdown;floating-neural tolerance separately declared."
+    },
+    {
+      "id": "deterministic-metrics",
+      "expectation": "Handwritten rational losses plus independently high-precision square roots;no production-generated expected values."
+    },
+    {
+      "id": "interval-ordering",
+      "expectation": "Reject lower>upper or invalid probabilities;coverage includes equality at both endpoints."
+    },
+    {
+      "id": "quantile-monotonicity",
+      "expectation": "Retain original quantiles;crossing flags/reject policy before scoring,no silent sorting/repair."
+    },
+    {
+      "id": "dataset-rights-hashes",
+      "expectation": "Verify public-domain provenance,288exact rows,subset and source hashes;changed mutable upstream fails pin."
+    },
+    {
+      "id": "multiple-series",
+      "expectation": "Two independent synthetic keys retain per-series metrics,macro/micro weights and no cross-ID feature contamination."
+    },
+    {
+      "id": "baseline-comparisons",
+      "expectation": "Common eligible origin/horizon cells;zero baseline error null ratio with absolute difference retained."
+    },
+    {
+      "id": "structural-break",
+      "expectation": "Known break series retains poor forecasts and break metadata;do not adapt using held-out break labels."
+    },
+    {
+      "id": "resource-benchmarks",
+      "expectation": "Record cold/warm runtime,RSS/VRAM,threads,batch,context,horizon,device,dtype and versions;targets are not measured claims."
+    },
+    {
+      "id": "unsupported-configurations",
+      "expectation": "Unsupported model ID,seasonal period,library,offline weight path,horizon or quantile request fails explicitly."
+    }
+  ],
+  "candidate_comparison": [
+    {
+      "route": "A Classical",
+      "source_complete": "High for naive/mean/snaive/drift/SES;Holt/HW equations inspected;fitted ARIMA/ETS library parity pending",
+      "compute": "CPU,small finite series;pure arithmetic first,no new framework",
+      "predictive_evidence": "Genuine out-of-sample forecasts are possible;no current NOAA model comparison/improvement established",
+      "verification": "Exact rational baseline/SES fixtures cheap;optimizer/interval variants cost more",
+      "recommendation": "Core first:finite baseline workbench+named fixed-initialization SES;Holt only if independent fixtures fit bounded effort. Full ARIMA/ETS P1,not silently claimed implemented."
+    },
+    {
+      "route": "B Boosted trees",
+      "source_complete": "Official sklearn1.9.1 lagged-feature HGB example inspected,shift-before-rolling and TimeSeriesSplit gap;not executed",
+      "compute": "CPU-friendly installed sklearn;Polars/OpenML example dependencies/data not acquired",
+      "predictive_evidence": "May learn nonlinear lag effects;288rows may be insufficient and extrapolation weak;no improvement assumed",
+      "verification": "Direct horizon requires separate fitted targets and purge of unobserved labels;recursive requires predicted rather than observed future lags",
+      "recommendation": "Experimental/P1 adapter only after legitimate example reproduction and frozen held-out protocol;no49tree trained now."
+    },
+    {
+      "route": "C Neural",
+      "source_complete": "FPP3 §12.4 NNAR single-hidden-layer,seasonal lags,random starts averaged and recursive forecasting inspected;N-BEATS/N-HiTS not separately inspected",
+      "compute": "Even small NN needs training/seed/validation design;no GPU training justified for one288row series",
+      "predictive_evidence": "Nonlinear prediction possible but no held-out benefit established",
+      "verification": "Random initialization,optimization and interval simulation raise verification cost",
+      "recommendation": "P2 NNAR investigation;no neural training in audit and no operational N-BEATS/N-HiTS claim."
+    },
+    {
+      "route": "D Pretrained Chronos-2",
+      "source_complete": "Pinned card/config/code/license/API inspected;weights metadata available,package not installed",
+      "compute": "477930472bytes weights;CPU supported per card;local12GBVRAM detected,capacity/latency not benchmarked",
+      "predictive_evidence": "Vendor benchmark claims separate;pretraining overlap unknown;no measured NOAA superiority",
+      "verification": "Median naming,horizon heuristic,NaN handling,batch/group dependence and exact weights/dependency acquisition require dedicated fixtures",
+      "recommendation": "Optional experimental/P1 local adapter after explicit acquisition and offline inference/replay;core release cannot depend on it."
+    }
+  ],
+  "local_compute": {
+    "os": "Windows11 x64;WSL2 not inspected",
+    "python": "3.12.10",
+    "cpu": "AMD Ryzen AI9 HX375,12cores/24logical",
+    "ram_bytes": 33597927424,
+    "gpu": "NVIDIA GeForce RTX5070Ti Laptop",
+    "gpu_total_bytes_torch": 12820480000,
+    "gpu_memory_mib_nvidia_smi": 12227,
+    "driver": "592.82",
+    "cuda_available": true,
+    "installed": {
+      "torch": "2.11.0+cu128",
+      "numpy": "2.5.3",
+      "pandas": "3.0.5",
+      "scikit-learn": "1.9.1"
+    },
+    "not_installed": [
+      "transformers",
+      "chronos-forecasting",
+      "statsmodels",
+      "xgboost"
+    ],
+    "changes": "No packages installed,weights downloaded or forecasting inference/training performed. Torch CUDA device-query only.",
+    "estimates": "Baseline work O(T+H) per fold,at most288history points and12steps;50planned validation/test origins. For4baselines ~57600history-point visits plus2400forecast outputs is an arithmetic order estimate,not timed benchmark. Float32Chronos weight storage ~478MB plus tensors/runtime/attention overhead;no reliable peak memory/latency inferred. The proposed seven-candidate set including three SES recurrences is bounded by~100800history-point visits and4200forecast outputs across50origins under this conservative288point calculation;not a wall-time measurement.",
+    "proposed_acceptance_budget": "Measure CPU baselines on this small dataset;target<10seconds warm and<512MiB RSS is a future acceptance target,not a measured result. Record actual costs and revise honestly if necessary. Chronos cold/warm CPU/GPU timings and peak memory remain P1;no paid cloudGPU required."
+  },
+  "first_implementation_recommendation": "Leakage-controlled expanding-origin workbench with source-verified CPU mean/naive/seasonal-naive/drift and named SES subset,exact metrics and all-candidate evaluation ledger. Hold ARIMA/ETS optimization,trees,neural training and optional Chronos adapter behind independent fixtures/acquisition/evaluation gates. Preserve five inventory variations and source ranks;do not call this full AI accuracy certification.",
+  "configuration_matrix": {
+    "currently_supported": "Research metadata,attributed numerical dataset subset and frozen design only;no49runtime/profile is supported.",
+    "proposed_core": [
+      "Strict regular monthly series input,source/data/plan hashes",
+      "Named deterministic CPU baselines and bounded SES conventions",
+      "Leakage-controlled rolling-origin splits and point metrics",
+      "Complete per-model/fold/horizon outcome/failure ledger and deterministic JSON/Markdown replay"
+    ],
+    "experimental": [
+      "Any measured real-world superiority beyond revised-snapshot backtest",
+      "ARIMA/ETS Python library realization pending parity",
+      "Boosted-tree and neural adapters",
+      "Optional pinned Chronos2adapter pending acquisition/offline execution and contamination review"
+    ],
+    "unsupported": [
+      "49production model certification in this audit",
+      "Randomized ordinary temporal train/test splits",
+      "Hidden online model downloads during offline inference",
+      "Known-future use of actually unknown outcomes/covariates",
+      "Guaranteed forecast accuracy or universal best-model claim",
+      "No50implementation"
+    ]
+  },
+  "acceptance_criteria": [
+    "Commit named source conventions and independent expected fixtures before any49production code",
+    "Pass every21planned family;independent rational/Decimal numeric answers,not production-generated expected values",
+    "Exact288observation data/rights/source hashes and25+25origin boundaries verified",
+    "Training/scaling/feature/imputation and label availability sentinel tests demonstrate no software future leakage",
+    "All configured candidate failures/nonmatches/missing outcomes and common comparison denominators retained",
+    "Reproduce source quantile4.86 and interval55.68 constants;complete beer-data parity remains separate gate before claiming it",
+    "Report frozen held-out NOAA metrics against seasonal naive,per horizon/series with resource costs,even when chosen model is worse",
+    "Revised-source vintages,station change and pretraining-overlap limits explicitly accompany retrospective scores;prospective accuracy requires new evidence",
+    "No mandatory cloud/GPU,hidden network or unpinned dependencies;optional adapters fail closed offline when assets absent",
+    "Same-environment exact deterministic baseline JSON/Markdown replay;neural tolerances separately tested if adapter later added",
+    "Full inherited1397tests,1867CLI,27verifiers plus49tests,CLI,independent oracle and complete pre-engine protected bytes;registry,rights,dependencies,pip,diff checks",
+    "Freeze supported/experimental/unsupported matrix,P1/P2 and truthful readiness;synthetic correctness alone cannot mark model production-ready"
+  ],
+  "backlog": {
+    "P1": [
+      "Freeze final baseline/SES initialization and selection rules with independent fixtures before engine",
+      "Independently reproduce FPP source numerical examples with legitimately reusable complete datasets when used as certification",
+      "Acquire original NOAA publication vintages or separate prospective observations before real-time forecasting claims",
+      "Investigate station-change sensitivity and broader legitimately reusable independent series",
+      "Inspect/pin statsmodels release license/dependencies and reproduce ETS/ARIMA initialization/likelihood/output conventions before integration",
+      "Reproduce official lagged-feature example under compatible dataset rights before tree adapter",
+      "Chronos stable package pin,explicit weight/license acquisition,CPU offline smoke,NaN/quantile/horizon/batch tests and measured memory/latency",
+      "Independent metric/WIS/CRPS examples and interval calibration strategy;do not manufacture intervals for point baselines",
+      "Pretraining contamination/data-lineage review and dependency vulnerability/license audit before optional pretrained adapter"
+    ],
+    "P2": [
+      "Additional domains/multiple series and hierarchical dependence-aware evaluation",
+      "Separately validated small NNAR/N-BEATS/N-HiTS only after sources and held-out benefit",
+      "Prospective monitoring,drift and scheduled retraining under explicit data availability",
+      "Uncertainty inference with overlapping errors,external replication and stress testing",
+      "Accessible data ingestion/UI only after core numerical/reproducibility gates"
+    ]
+  },
+  "research_snapshots": {
+    "http_payloads": {
+      "hf_model": {
+        "url": "https://huggingface.co/api/models/amazon/chronos-2?blobs=true",
+        "sha256": "e110d4aa6e1d419d38b4dd42f05a8838d72fbbe19f0ea36949ca3a4cd5330c5c"
+      },
+      "hf_config": {
+        "url": "https://huggingface.co/amazon/chronos-2/raw/main/config.json",
+        "sha256": "ef1143bfdc9c0376d9a056eefca46cb4b1ec3d0ffacd541ff56feb40fb708031"
+      },
+      "pyproject": {
+        "url": "https://raw.githubusercontent.com/amazon-science/chronos-forecasting/main/pyproject.toml",
+        "sha256": "a6928789495e4d90c7abe9c97d84c03e6b2f704dbbcd73692637c30489e1ed32"
+      },
+      "co2": {
+        "url": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.txt",
+        "sha256": "0ce4e7749217b4af2cca8e0bdf263856ad59b0a2946d4e98c7b22ccfbff21cad"
+      }
+    },
+    "repository_commit": "1224fafa91e1ecd6674f5204066b159e40b5e4a1",
+    "pinned_files": {
+      "src/chronos/chronos2/pipeline.py": {
+        "url": "https://raw.githubusercontent.com/amazon-science/chronos-forecasting/1224fafa91e1ecd6674f5204066b159e40b5e4a1/src/chronos/chronos2/pipeline.py",
+        "sha256": "9fad1e4fb7251471463a40408a32d25d31b23b7afb88069911f095071b9b0599"
+      },
+      "src/chronos/chronos2/model.py": {
+        "url": "https://raw.githubusercontent.com/amazon-science/chronos-forecasting/1224fafa91e1ecd6674f5204066b159e40b5e4a1/src/chronos/chronos2/model.py",
+        "sha256": "2aaab2f90cc9bb486d69483cb1f0d11b593643ce54c97f4902958a7776905782"
+      },
+      "src/chronos/chronos2/layers.py": {
+        "url": "https://raw.githubusercontent.com/amazon-science/chronos-forecasting/1224fafa91e1ecd6674f5204066b159e40b5e4a1/src/chronos/chronos2/layers.py",
+        "sha256": "73493f306ecfaa21fa57636ff46321ccb5d50ded02a382598cf759dbfc9dd60f"
+      },
+      "src/chronos/chronos2/preprocess.py": {
+        "url": "https://raw.githubusercontent.com/amazon-science/chronos-forecasting/1224fafa91e1ecd6674f5204066b159e40b5e4a1/src/chronos/chronos2/preprocess.py",
+        "sha256": "ce52ecf6f5b06ab27d244b8e028f97d87dcea63efa23cb483ea73f46028cbe56"
+      },
+      "pyproject.toml": {
+        "url": "https://raw.githubusercontent.com/amazon-science/chronos-forecasting/1224fafa91e1ecd6674f5204066b159e40b5e4a1/pyproject.toml",
+        "sha256": "a6928789495e4d90c7abe9c97d84c03e6b2f704dbbcd73692637c30489e1ed32"
+      },
+      "src/chronos/__about__.py": {
+        "url": "https://raw.githubusercontent.com/amazon-science/chronos-forecasting/1224fafa91e1ecd6674f5204066b159e40b5e4a1/src/chronos/__about__.py",
+        "sha256": "8d9a58145d6d52b702f21cfeed35dddc6bef3332fda146f65844a755457e4fb0"
+      },
+      "LICENSE": {
+        "url": "https://raw.githubusercontent.com/amazon-science/chronos-forecasting/1224fafa91e1ecd6674f5204066b159e40b5e4a1/LICENSE",
+        "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+      }
+    },
+    "snapshot_policy": "Hashes attest retrieved source bytes/metadata,not independently downloaded weight bytes. Full code/book/model assets not copied into repository."
+  },
+  "audit_validation": {
+    "passed": true,
+    "date": "2026-11-07",
+    "evidence": "data/ai-predictive-modeling-audit-validation.json",
+    "scope": "Source/data/rights/design consistency and protected bytes only;no executable49or empirical model validation."
+  },
+  "next": "49implementation/closure in a subsequent pass;do not begin50.",
+  "schema_recommendations": {
+    "status": "Design only;not an executable profile or accepted runtime schema",
+    "input": [
+      "schema_version and dataset_id/version/hash",
+      "source/license/units and provenance snapshot",
+      "series_id,frequency,seasonal_period,calendar period,decimal target or explicit missing",
+      "observation availability/vintage timestamp or explicit unknown",
+      "frozen plan ID/hash,model family/configuration,initialization,training window,forecast origin,horizons",
+      "transformation/scaling/imputation policy fit on training only",
+      "covariates separated into observed-past and demonstrably-known-future with availability references",
+      "model/library/weight/code hashes,offline asset location,seed/device/dtype/threads and acquisition manifest"
+    ],
+    "output": [
+      "named configuration and all request/data/plan/source/version hashes",
+      "per-series training cutoff,origin,target period,horizon,point forecast and point functional (mean/median)",
+      "requested/native quantile levels,values,intervals and crossing/ordering flags if supported",
+      "all planned candidate/fold successes,failures,unsupported/missing outcomes and reasons",
+      "raw errors and denominators,per-horizon/series metrics,paired baseline comparisons and explicit null reasons",
+      "selected candidate rule with validation-only evidence;all test results retained",
+      "runtime/RSS/VRAM,cold/warm/batch/device/environment metadata",
+      "retrospective-vintage,pretraining-overlap and distributional-assumption limitations",
+      "canonical JSON and Markdown replay,immutable original/plan versions;no silent data revision"
+    ]
+  },
+  "independent_metric_arithmetic": {
+    "status": "Original audit known-answer design and Decimal checks;no49model or scoring implementation",
+    "training": [
+      "1",
+      "2",
+      "3"
+    ],
+    "m": 1,
+    "actual": [
+      "2",
+      "2"
+    ],
+    "predicted": [
+      "1",
+      "4"
+    ],
+    "errors": [
+      "1",
+      "-2"
+    ],
+    "MAE": "1.5",
+    "MSE": "2.5",
+    "RMSE_sqrt_2_5": "1.581138830084189665999446772216359",
+    "MASE_training_scale": "1",
+    "MASE": "1.5",
+    "bias": "-0.5",
+    "WAPE_fraction": "0.75",
+    "absolute_sMAPE_percent": "200/3",
+    "zero_MASE_or_WAPE_denominator": "null with reason",
+    "quantile_factor_control": {
+      "p": "0.5",
+      "q": "0",
+      "actual": "2",
+      "common_pinball": "1",
+      "FPP3_twice_pinball": "2"
+    },
+    "coverage_boundary": "actual equal to either endpoint is covered;N0 ->null",
+    "numeric_policy_proposal": "Exact rational arithmetic for finite decimal input/sums/scales/losses where feasible;RMSE high-precision Decimal square root with declared display rounding and independent tolerance. Numerical tolerance is separate from forecast accuracy."
+  }
+}

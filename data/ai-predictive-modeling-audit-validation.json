@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "technique_id": 49,
+  "audit_only": true,
+  "source_ranks_preserved": [
+    1,
+    2
+  ],
+  "variations_preserved": 5,
+  "source_registry_checked_twice": 9,
+  "independent_fixture_plans": 21,
+  "dataset_observations": 288,
+  "regular_months": true,
+  "source_metric_arithmetic": {
+    "FPP3_quantile": "4.86",
+    "FPP3_Winkler": "55.68",
+    "original_MAE": "1.5",
+    "original_MSE": "2.5",
+    "original_MASE": "1.5",
+    "original_bias": "-0.5",
+    "original_WAPE": "0.75",
+    "RMSE_high_precision_check": true
+  },
+  "validation_origins": 25,
+  "test_origins": 25,
+  "horizons": 12,
+  "forecast_cells_per_partition_per_model": 300,
+  "distinct_target_months_per_partition": 36,
+  "protected_files": 2657,
+  "changed_protected_files": [],
+  "other59gap_entries_unchanged": true,
+  "taxonomy": {
+    "total": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "file_canonical_sha256": {
+    "knowledge/ai_predictive_modeling_resource_audit.json": "68628f6ce7f23a19b73739549d3d9203269721dc7b51455fa8f5618cade4b24f",
+    "knowledge/ai_predictive_modeling_sources.json": "2ffa3321a1ecea9424c45d53db6b86a26a988c470da1102607edb702294c563d",
+    "data/ai-predictive-modeling-evaluation-design.json": "c49cb6ed3360bd1905048ace7b45e7df616fb600fa5856df23359d159db45457",
+    "resources/ai-predictive-modeling/noaa_mlo_2000_2023.json": "303c231dd00ba7cf6302e02dbb25525b91e226008a71b15856f25f775aa9645c"
+  },
+  "new_runtime_files": [],
+  "new_executable_profile": false,
+  "model_weights_downloaded": false,
+  "model_inference_run": false,
+  "model_training_run": false,
+  "forecast_quality_evaluated": false,
+  "prior46acceptance": {
+    "closure_commit": "cad6e3e",
+    "tests": 1397,
+    "cli_cases": 1867,
+    "verifiers": 27,
+    "new_runtime_changes_after_closure": false
+  },
+  "limits": "Audit numerical/source/data checks only;no actual model scores,independent empirical skill or consumer production readiness established."
+}
