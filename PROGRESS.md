@@ -1019,3 +1019,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #46 source/profile freeze
 - Reinspected Curot proof Tables1 and legitimate Europe PMC primary XML Results/Discussion/Table2; verified four labels and 42selected/26classifiable denominators. Preserved proof/final-layout and Dunne edition boundaries, facts-only rights.
 - Froze named curot2018 phenomenology/provenance profile and full pre-engine manifest:2429eligible,2425protected; four intentional interface/history edit points. No production engine yet.
+
+## 2026-11-07 — #46 independent fixture freeze
+- Froze all16planned families,648structured category expectations,11timezone/interval constants,source documentary labels/counts and original synthetic record/amendment hashes before production. Later evidence,missing original timing and external-event order have separate expectations.
