@@ -1,5 +1,39 @@
 # Future
 
+## Feng Shui:24 Mountains source reference
+
+`python -m future feng-shui data/feng-shui-input.json --format markdown`
+
+Profile `yap2024-manual-24-mountain-tenths-v1` classifies all24 factual mountain
+intervals in Joey Yap's supplemental2024 compass document,page2. This is separate
+from the ranked Skinner and Flying Stars books. Tasks are `classify`, `reference`,
+`compare` and `catalog`, with exact catalog/version/hash and manual mode.
+
+Use integer `bearing_tenths`0..3599:75 is7.5°,76 is7.6°,920 is92.0°.
+Both printed endpoints are included in this discrete domain;N2 wraps through0.
+Floats,strings,booleans,negative values and3600+ are rejected without rounding or
+normalization. Source labels and neighbors can be looked up without a heading.
+
+Optional `uncertainty_tenths`0..1800 covers the entire symmetric discrete range.
+`alternate_readings` add independently declared candidates;all possible mountains
+are shown. Explicit `contradictory_assertions` block a definitive result.
+`north_reference` distinguishes source_diagram,magnetic,true andunknown;
+`bearing_role` distinguishes source_heading,building_facing,building_sitting,
+door,observer andunknown. Omitted frames/roles remain unknown while numeric
+lookup works. No declination,measurement calibration or physical interpretation
+is inferred. Optional independent facing/sitting declarations are consistency
+checks only;no opposite is generated. Shared building identity requires explicit
+matching `building_id` values in the2–8 ordered comparison readings.
+
+JSON/Markdown preserve raw Unicode,source provenance and immutable replay hashes.
+No Qi,health/wealth,safety or compatibility outcome is computed. Other LuoPan
+rings,Eight Mansions,Flying Stars andBTB remain outside this profile.
+Source artwork and the originalPDF are not redistributed.
+
+Run `python -m unittest tests.test_feng_shui`,
+`python -m scripts.verify_feng_shui` and
+`python -m scripts.smoke_feng_shui_core`.
+
 ## Haruspicy: Roman historical reference
 
 `python -m future haruspicy data/haruspicy-input.json --format markdown`

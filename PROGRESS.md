@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 40 exact compass engine — 2026-11-06
+- Added strict feng-shui classify/reference/compare/catalog CLI. Literal integer-interval scan,entire-range uncertainty,candidate readings,structured conflicts and explicit frame/role separation preserve unknowns;no rounding,declination,opposite-heading inference or outcome claims.
+- 76 new tests and independent3600-heading ID/name/Chinese plus3600 uncertainty-range checks pass;all24 rows have150 headings. CLI report sweep and complete inherited acceptance follow. Verified registry rules certify numerical software only.
+
 ## Technique 40 catalog and independent numeric oracle — 2026-11-06
 - Source92b69e8 pushed first. Frozen24-row catalog and named tenths profile before production. Independently authored north-origin quotient oracle covers3600 headings by ID,name andChinese glyph;literal interval expansion confirms no gaps/overlaps and150 headings perrow.
 - Froze every endpoint,neighbor,nominal center and both central valid points,three source anchors,nine uncertainty cases and validation/frame/conflict expectations. Unknown north/roles remain unknown;no physical conversion,forced ambiguity resolution or input rounding.
