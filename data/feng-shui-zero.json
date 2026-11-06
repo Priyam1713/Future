@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "technique_id": 40,
+  "profile": "yap2024-manual-24-mountain-tenths-v1",
+  "catalog_id": "yap2024-24-mountain-intervals-v1",
+  "catalog_version": 1,
+  "mode": "manual",
+  "task": "classify",
+  "sources": [
+    {
+      "id": "feng-shui-yap2024-core-compass-v1",
+      "technique_id": 40,
+      "rank": null,
+      "author": "Joey Yap Research International Sdn. Bhd.",
+      "edition": "Joey Yap’s 24 Mountains Compass Degrees;2024;two-page official PDF",
+      "url": "https://joeyyap.com/dlll234/",
+      "resolved_url": "https://joeyyap.com/dlll234/Joey%20Yap%27s%2024%20Mountain%20Compass%20Degrees.pdf",
+      "locator": "PDF page2,24-row direction table;cover/page2 footer;92° illustration",
+      "ingestion": "facts_only",
+      "rights_note": "Project-authorized facts-only extraction: original machine-readable factual names and numerical intervals,with source attribution. Copyright2024 and explicit reproduction restriction on source terminologies/layout/design preserved. No PDF,chart artwork,trace,brand graphic or book chapter redistributed;no general licence or public-domain status asserted.",
+      "checked_on": "2026-11-06",
+      "snapshot_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a",
+      "snapshot_bytes": 768816,
+      "access": "Direct official PDF downloaded for read-only inspection;all24 rows visually collated at3000px;raw PDF excluded from repository.",
+      "metadata": {
+        "title": "Joey Yap's 24 Mountain Compass Degrees",
+        "creator": "Adobe Illustrator28.5(Macintosh)",
+        "producer": "Adobe PDF library17.00",
+        "pages": 2,
+        "pdf_version": "1.6"
+      },
+      "limitations": "Supplemental2024 numerical witness;not Skinner’s book or Yap’s earlier Flying Stars book. Source does not establish physical magnetic/true conversion,measurement accuracy or efficacy."
+    }
+  ],
+  "readings": [
+    {
+      "reading_id": "heading",
+      "declared": {
+        "bearing_tenths": 0,
+        "north_reference": "source_diagram",
+        "bearing_role": "source_heading"
+      },
+      "bearing_tenths": 0,
+      "bearing_degrees_display": "0.0",
+      "north_reference": "source_diagram",
+      "bearing_role": "source_heading",
+      "center_mountain": {
+        "id": "N2",
+        "source_name": "Zi",
+        "chinese": "子",
+        "source_label": "Zi 子",
+        "compass_group": "N",
+        "source_group_label": "North",
+        "source_group_chinese": "北",
+        "lower_display_degrees": "352.6",
+        "upper_display_degrees": "7.5",
+        "lower_tenths": 3526,
+        "upper_tenths": 75,
+        "wraps_north": true,
+        "source_id": "feng-shui-yap2024-core-compass-v1",
+        "source_locator": "PDF page2,table row14 (N2)",
+        "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+      },
+      "status": "classified",
+      "classification_unique": true,
+      "definitive_id": "N2",
+      "possible_mountain_ids": [
+        "N2"
+      ],
+      "possible_mountains": [
+        {
+          "id": "N2",
+          "source_name": "Zi",
+          "chinese": "子",
+          "source_label": "Zi 子",
+          "compass_group": "N",
+          "source_group_label": "North",
+          "source_group_chinese": "北",
+          "lower_display_degrees": "352.6",
+          "upper_display_degrees": "7.5",
+          "lower_tenths": 3526,
+          "upper_tenths": 75,
+          "wraps_north": true,
+          "source_id": "feng-shui-yap2024-core-compass-v1",
+          "source_locator": "PDF page2,table row14 (N2)",
+          "source_sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+        }
+      ],
+      "discrete_heading_count": 1,
+      "heading_counts_by_mountain": {
+        "N2": 1
+      },
+      "uncertainty_tenths": 0,
+      "uncertainty_windows": [
+        {
+          "center_tenths": 0,
+          "lower_unwrapped_tenths": 0,
+          "upper_unwrapped_tenths": 0,
+          "point_count": 1,
+          "possible_ids": [
+            "N2"
+          ],
+          "wraps_north": false
+        }
+      ],
+      "uncertainty_crosses_boundary": false,
+      "wraps_north": false,
+      "candidate_readings_disagree": false,
+      "structured_conflicts": [],
+      "context_status": "source_diagram",
+      "frame_issues": [],
+      "precision_policy": {
+        "input": "Exact integer tenths0..3599;booleans,floats,strings,negative,3600+ rejected",
+        "endpoint": "Both printed endpoints included;N2 uses heading>=3526 OR heading<=75",
+        "normalization": "No input normalization,rounding,truncation or interpolation. Modulo3600 is used only for explicit uncertainty ranges and differences,not to repair input.",
+        "uncertainty": "Integer symmetric radius0..1800 around every primary/alternate/asserted candidate;enumerate entire discrete circle,union deduplicated;stable possible labels in printed source order",
+        "midpoints": "Two central valid points per150-point interval. Exact geometric midpoint is an odd count of0.05degrees and remains unsupported as a heading input."
+      },
+      "match_explanation": "Exact integer-tenth membership in inclusive printed intervals;N2 crosses0. No input rounding or normalization.",
+      "independent_declarations": {
+        "facing_tenths": null,
+        "sitting_tenths": null,
+        "generated_opposite": null
+      },
+      "physical_building_conclusion_supported": false,
+      "declination_conversion": null,
+      "measured_qi": null,
+      "outcome_prediction": null
+    }
+  ],
+  "references": [],
+  "comparisons": [],
+  "numeric_policy": {
+    "input": "Exact integer tenths0..3599;booleans,floats,strings,negative,3600+ rejected",
+    "endpoint": "Both printed endpoints included;N2 uses heading>=3526 OR heading<=75",
+    "normalization": "No input normalization,rounding,truncation or interpolation. Modulo3600 is used only for explicit uncertainty ranges and differences,not to repair input.",
+    "uncertainty": "Integer symmetric radius0..1800 around every primary/alternate/asserted candidate;enumerate entire discrete circle,union deduplicated;stable possible labels in printed source order",
+    "midpoints": "Two central valid points per150-point interval. Exact geometric midpoint is an odd count of0.05degrees and remains unsupported as a heading input."
+  },
+  "frame_policy": [
+    "Omitted frame/role remains unknown in effective fields;raw request omissions preserved. Numeric table lookup still works.",
+    "source_diagram+source_heading is a complete documentary frame;not a physical measurement.",
+    "Magnetic/true declarations remain user-attributed;neither is converted or certified compatible with an unverified physical source convention.",
+    "source_diagram with a physical role is incompatible for physical interpretation;unknowns remain missing evidence.",
+    "All physical-building,outcome and calibrated-orientation conclusions remain unsupported.",
+    "Door,observer,building-facing and sitting are distinct;no heading or building identity inferred from prose."
+  ],
+  "conflict_policy": [
+    "Two distinct known asserted values including declaration mark explicit conflict. Unknown never fills a missing declaration.",
+    "Conflicting numeric assertions are also evaluated as additional bearing candidates;no definitive ID when any structured contradiction exists.",
+    "Independent facing/sitting declarations must differ by1800tenths when both given under the single declared frame;failure is a consistency conflict,not a new source omen.",
+    "Primary reading must agree with a same-role independent declaration when supplied. No absent opposite bearing is generated."
+  ],
+  "comparison_policy": "Readings retain their roles/frames. Same building only when equal explicit nonempty building_id is supplied. Angular difference/opposition is editorial and withheld across unknown/different north references;no physical interpretation follows.",
+  "source_conventions": [
+    "Printed endpoint precision is one decimal degree;input domain is integertenths0..3599.",
+    "Both printed endpoints included on this discrete domain;onlyN2 crosses north.",
+    "Table order startsS1 and continues cyclically;it is not a north-up spatial grid.",
+    "The illustrated smartphone reads92°/E;E2 is independently derived from its printed interval,not written on the phone.",
+    "Magnetic/true reference and measurement role are not established by numeric table membership. No physical conversion or calibrated building orientation is inferred.",
+    "A150-point discrete interval has two central valid points;its exact geometric midpoint is half a tenth and is not a supported heading input."
+  ],
+  "user_text": {},
+  "evidence_matrix": {
+    "direct": "Source-located factual names and printed degree intervals",
+    "user_attributed": "Manual bearings,north/role/building declarations,uncertainty and raw text",
+    "editorial": "Exact discrete interval scan,uncertainty enumeration,conflict handling and comparison",
+    "unsupported": "MeasuredQi,physical compass calibration,health/wealth/prosperity,safety or interpersonal outcome claims"
+  },
+  "variation_matrix": {
+    "supported": [
+      "All24source labels and discrete interval classification",
+      "Reference lookup by exact ID/name/Chinese/source label and neighboring source rows",
+      "Entire-range uncertainty and explicit alternate/contradictory readings",
+      "Manual side-by-side comparison without inferred shared building",
+      "Offline immutable JSON/Markdown and raw-text replay"
+    ],
+    "experimental": [
+      "Other LuoPan rings,EightMansions,FlyingStars,FormSchool,SanHe/SanYuan andBTB remain research only;no runtime implementation"
+    ],
+    "unsupported": [
+      "Arbitrary-precision bearing or input rounding/normalization",
+      "True/magnetic declination conversion or compass calibration",
+      "Automatic building/door/sitting inference",
+      "Qi,health,wealth,prosperity,safety or compatibility outcomes",
+      "Other FengShui schools,calendar or FlyingStars generation",
+      "Floorplan/vision/map/3D/LLM pipelines"
+    ]
+  },
+  "qualification": "Verified software classification of a named source table only;no measured Qi,physical orientation certification or Feng Shui effectiveness claim.",
+  "rights": {
+    "policy": "facts_only",
+    "authorization": "User explicitly permits facts-only numerical extraction within project policy",
+    "included": "Original factual integer intervals,common direction/name identifiers,provenance and concise qualifications",
+    "excluded": "Source PDF,artwork,layout,branding,protected book text and creative illustrations",
+    "scope": "Project extraction review,not a general legal opinion or redistribution licence for source materials"
+  },
+  "replay": {
+    "request": {
+      "schema_version": 1,
+      "profile": "yap2024-manual-24-mountain-tenths-v1",
+      "catalog_id": "yap2024-24-mountain-intervals-v1",
+      "catalog_version": 1,
+      "catalog_sha256": "8a945680e63ba327f4f2ccb82ca2958e63747c56a57d4f3ab717ebee07a2a143",
+      "mode": "manual",
+      "task": "classify",
+      "bearing_tenths": 0,
+      "north_reference": "source_diagram",
+      "bearing_role": "source_heading"
+    },
+    "input_sha256": "b701f9dade9b62258e165f8e9355f93198d2c2f5b6cf54415b31c20c8c2337c0",
+    "profile_sha256": "ebdebdce355ed61aa2a1f14e6993f928e0baf0302ae21e79947461fc4e85323b",
+    "catalog_sha256": "8a945680e63ba327f4f2ccb82ca2958e63747c56a57d4f3ab717ebee07a2a143",
+    "source_manifest_sha256": "f11980480273579c5b03439685f7e7e463a6a450100edfbe6a0c091672ecdfc4",
+    "source_snapshot_sha256": {
+      "feng-shui-yap2024-core-compass-v1": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a"
+    },
+    "serialization": "Canonical sorted-key compact UTF8 JSON,unescapedUnicode,no terminalLF;raw user text preserved",
+    "external_calls": false,
+    "rng": false,
+    "integrity_checked": true
+  }
+}
