@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 38 Roman source/condition freeze — 2026-11-06
+- Rechecked Falconer1923 edition/both books and exact hashes; primary Latin call words independently inspected via web rendering, underlying Latin print edition/direct hash unresolved. Frozen14 source/context records:four main bird conditions,conflicting note226,and classification/public/critical/weather references. I.7.12 calls retain no explicit favorable label;I.39.85 flight examples alone carry it.
+- Four independently authored known answers and864-combination source truth matrix precede matcher. Qualitative observer-relative frame is declared; on/to/from relations stay separate. Note conflicts,Quintus/Marcus and public-authority limits retained. Optional Greek runtime deferredP1;no new source research beyond bounded freeze.
+
 ## Technique 38 Augury resource audit — 2026-11-06
 - Began only after Cleromancy closure33c0b17 was accepted,pushed,clean and synchronized0/0. Two original ranked sources/five variations preserved. Audit only;no38 engine,profile,omen catalog,CLI,detector or39 audit.
 - Inspected1923 Falconer/Cicero edition and both books:Quintus defense versus Marcus criticism;call-side and explicitly favorable flight accounts remain separate. Main crow-left conflicts with note226 crow-right;orientation/Latin species and translator-note layers retained. Independent Murray1924 Iliad12/24 cases preserve narrative/interpreter disagreements rather than universal Greek direction rules.
