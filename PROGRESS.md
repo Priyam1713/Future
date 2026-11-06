@@ -1057,3 +1057,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #49 source/data/convention freeze
 - Rechecked FPP3third-edition identity and§5.2/8.1 equations. Froze exact seven CPU candidates,explicit SES y1 initialization,metric/display conventions and validation-only selection. NOAA288row canonical hash303c231d and source snapshot0ce4e774 verified;audited evaluation design remains byte-unchanged.
 - Captured complete pre-engine manifest;source ranks/five variations preserved. Generic explicit seasonal period supports m4 arithmetic fixture while only m12 enters NOAA benchmark. No production engine yet.
+
+## 2026-11-07 — #49 independent oracle freeze before production
+- Froze21fixture families,handwritten point/metric/period controls and independent full4200NOAA prediction commitments/scores. Oracle uses geometric SES expansion independently of planned recursive production;exact Fraction arithmetic and source4.86/55.68constants retained.
+- Source/profile freeze:d6c68d6. Oracle selectsdrift on validation without using test scores. This is a pre-engine expected-answer reference,not production benchmark evidence.
