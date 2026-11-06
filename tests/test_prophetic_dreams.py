@@ -69,7 +69,7 @@ class PropheticDreamsTests(unittest.TestCase):
     def test_unknown_event_time(self):
         es=copy.deepcopy(F['events']);es[0]['occurrence']=None;r=p.report(build(events=es));self.assertEqual(r['pairs'][0]['chronology'],'timing_unknown');self.assertFalse(r['pairs'][0]['eligible'])
     def test_missing_conflicting_time(self):
-        es=copy.deepcopy(F['events']);es[0]['discovery_at']=tm(8,0)
+        es=copy.deepcopy(F['events']);es[0]['publication_at']=tm(10,0)
         r=p.report(build(events=es));self.assertEqual(r['pairs'][0]['chronology'],'conflicting_time')
     def test_missing_timezone(self):
         l=action(p.create(F['plan']),'seal',at='2026-11-09T17:00:00',check=False);self.assertFalse(l['events'][-1]['accepted'])
@@ -164,6 +164,9 @@ class PropheticDreamsTests(unittest.TestCase):
     def test_locked_rating_mutation(self):
         l=build();event=next(e for e in l['events'] if e['action']=='rate');event['payload']['ratings']['d1:e1']='nonmatch'
         with self.assertRaises(ValueError):p.verify(l)
+    def test_discovery_before_publication_is_distinct(self):
+        es=copy.deepcopy(F['events']);es[0]['discovery_at']=tm(8,13)
+        r=p.report(build(events=es));self.assertEqual(r['pairs'][0]['chronology'],'future_event');self.assertTrue(r['pairs'][0]['eligible'])
 
 def add(name,fn):setattr(PropheticDreamsTests,'test_'+name,fn)
 for field in ['answer_flag','caption','filename','private_ratings','event_time']:

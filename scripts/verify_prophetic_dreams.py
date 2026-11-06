@@ -39,7 +39,7 @@ def run():
     groups={
       'prospective-lock':['prospective_lock','known_original_hashes','known_lock_hashes'],
       'occurrence-vs-record':['occurrence_vs_record','invalid_dream_occurrence'],
-      'occurrence-vs-discovery':['occurrence_vs_discovery','publication_endpoint_separate'],
+      'occurrence-vs-discovery':['occurrence_vs_discovery','publication_endpoint_separate','discovery_before_publication_is_distinct'],
       'version-mutation':['version_mutation','mutation_text','mutation_details','mutation_first_record_at','mutation_occurrence'],
       'after-outcome-edit':['after_outcome_edit','amend_wrong_parent','no_amend_original_replacement'],
       'window-boundaries':['window_boundaries','uncertain_window','unknown_event_time'],

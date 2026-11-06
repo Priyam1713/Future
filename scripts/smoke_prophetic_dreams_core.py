@@ -17,7 +17,7 @@ def examples():
     multi=copy.deepcopy(F['events']);multi[1]['occurrence']=dict(start=tm(8,13),end=tm(8,13),precision='second')
     pp=copy.deepcopy(F['plan']);pp['window'].update(endpoint='publication',end=tm(9,23))
     omissions=copy.deepcopy(F['events']);omissions[0]['coverage']='known_omissions'
-    conflict=copy.deepcopy(F['events']);conflict[0]['discovery_at']=tm(8,0)
+    conflict=copy.deepcopy(F['events']);conflict[0]['publication_at']=tm(10,0)
     withdrawn=build('recording');withdrawn=action(withdrawn,'slot_status',dict(slot_id='s1',status='withdrawn',reason='Explicitwithdrawal'),at=tm(9,16,20));withdrawn=action(withdrawn,'seal',at=tm(9,17))
     aborted=action(p.create(F['plan']),'terminate',dict(status='aborted',reason='Stopped study;all slots retained.'))
     known=copy.deepcopy(F['entries']);known[0]['outcome_known']=True

@@ -157,7 +157,6 @@ def _pairs(ctx,p):
             for k in ('publication_at','discovery_at'):
                 if e[k] is not None and timestamp(e[k])>timestamp(e['_collected_at']):conflicts.append(k+'_after_collection')
             if occ and occ[1]>timestamp(e['_collected_at']):conflicts.append('occurrence_after_collection')
-            if e['publication_at'] and e['discovery_at'] and timestamp(e['discovery_at'])<timestamp(e['publication_at']):conflicts.append('discovery_before_publication')
             chrono=chronology(entry['first_record_at'],d['lock_at'],e['occurrence'],e['discovery_at'],entry['outcome_known'],bool(conflicts))
             endpoint=p['window']['endpoint']
             v=e['occurrence'] if endpoint=='occurrence' else (dict(start=e[endpoint+'_at'],end=e[endpoint+'_at'],precision='second') if e[endpoint+'_at'] else None)

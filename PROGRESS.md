@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 44 discovery/publication timing refinement — 2026-11-07
+- Discovery ofan event maylegitimatelyprecedepublication;removedautomaticconflict for thatordering. Conflicting futurepublication/collection declarations stillflagged. Originaltimestamps andactual-event prospectivity remainseparate.
+-67newtests and18independentfamilies pass;completecurrent-codeunit rerun started alongside inheritedCLI/verifier sweep. No source/profile/fixtureexpectations changed.
+
 ## Technique 44 independent verification — 2026-11-07
 - Pre-engine300intervaltruth rows verify600window/chronology outcomes,plus2timezonecases;8manually enumerated pairs and4original/lockhashknownanswers pass. Nonrecall/unsubmitted/duplicate/common andperjudge counts matchindependent fixtures.
 - All18procedural families pass,including mutations,post-outcomeamendments,sourceisolation,complete denominators,judgeprivacy/disagreement andseparatefeedback. Evidence in data/prophetic-dreams-verification.json;fullinheritedacceptance running.
