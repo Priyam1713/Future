@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "numerical_checks_passed": true,
+  "profile_sha256": "ed2490bf3ddc5861b3a406e2ba8aa93b3f2b2fe33e0b7917371e5c26875e7fdb",
+  "fixture_sha256": "dc8efef9f0888a7e144f48f234fb4895c6b069d301142d3daead1f1a3fc5fd9f",
+  "independent_oracle_commit": "1d5ed6a",
+  "cells_checked": 4200,
+  "sentinel_predictions": 672,
+  "families": [
+    {
+      "id": "constant",
+      "passed": true,
+      "checks": 28
+    },
+    {
+      "id": "seasonal-naive",
+      "passed": true,
+      "checks": 6
+    },
+    {
+      "id": "trend",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "horizon-indexing",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "training-test-isolation",
+      "passed": true,
+      "checks": 672
+    },
+    {
+      "id": "future-covariates",
+      "passed": true,
+      "checks": 1
+    },
+    {
+      "id": "missing-observations",
+      "passed": true,
+      "checks": 2
+    },
+    {
+      "id": "irregular-timestamps",
+      "passed": true,
+      "checks": 2
+    },
+    {
+      "id": "zero-denominators",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "mase-scale",
+      "passed": true,
+      "checks": 2
+    },
+    {
+      "id": "fold-boundaries",
+      "passed": true,
+      "checks": 4200
+    },
+    {
+      "id": "exact-replay",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "deterministic-metrics",
+      "passed": true,
+      "checks": 7
+    },
+    {
+      "id": "interval-ordering",
+      "passed": true,
+      "checks": 4
+    },
+    {
+      "id": "quantile-monotonicity",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "dataset-rights-hashes",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "multiple-series",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "baseline-comparisons",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "structural-break",
+      "passed": true,
+      "checks": 2
+    },
+    {
+      "id": "resource-benchmarks",
+      "passed": true,
+      "checks": 3
+    },
+    {
+      "id": "unsupported-configurations",
+      "passed": true,
+      "checks": 5
+    }
+  ],
+  "selected_reference": "drift",
+  "source_vintage_certified": false,
+  "method": "Pre-engine rational prediction commitments,independent geometric SES oracle,manual constants and untouched input prefixes;no expected output derived from production."
+}
