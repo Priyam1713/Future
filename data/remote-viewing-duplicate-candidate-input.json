@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "profile": "rv-air1995-five-choice-blind-trial-v1",
+  "task": "create",
+  "plan": {
+    "schema_version": 1,
+    "profile": "rv-air1995-five-choice-blind-trial-v1",
+    "profile_sha256": "bb08a51d84d03ad858d65c1530fd763de8bbee686488ce512e54154877d2a60b",
+    "experiment_id": "e001",
+    "trial_ids": [
+      "trial001"
+    ],
+    "trial_id": "trial001",
+    "origin": "simulated",
+    "mode": "blind_evaluation",
+    "tasker": "tasker",
+    "viewer": "viewer",
+    "monitor": null,
+    "judges": [
+      "judge"
+    ],
+    "knowledge": {
+      "viewer": "unaware",
+      "monitor": "absent",
+      "judges": "unaware",
+      "tasker": "aware"
+    },
+    "separation": "transferred_packets",
+    "assignment_policy": "simulated_seed",
+    "presentation_order": [
+      2,
+      4,
+      0,
+      3,
+      1
+    ],
+    "primary_endpoint": "actual_target_rank",
+    "tie_policy": "reject",
+    "stopping_rule": "fixed_trial_ids",
+    "exclusion_rule": "retain_all_attempts",
+    "reuse_policy": "reject",
+    "created_at": "2026-11-06T09:00:00+05:30",
+    "pool": {
+      "id": "pool001",
+      "version": 1,
+      "candidates": [
+        {
+          "id": "t1",
+          "path": "data/remote-viewing-assets/t1.png",
+          "sha256": "3d0302954f7ca7ffb0d053fd23efc88c965c48b5ba57f5bc0134427232da63ad",
+          "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+          "rights": {
+            "holder": "Future project",
+            "basis": "user_owned",
+            "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+            "attribution": "Future project geometric fixtures;not human-trial evidence."
+          }
+        },
+        {
+          "id": "t1",
+          "path": "data/remote-viewing-assets/t2.png",
+          "sha256": "f443538a6b9621f2774e12041fb7f689a0bb775c9e6709d129657d47491c737d",
+          "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+          "rights": {
+            "holder": "Future project",
+            "basis": "user_owned",
+            "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+            "attribution": "Future project geometric fixtures;not human-trial evidence."
+          }
+        },
+        {
+          "id": "t3",
+          "path": "data/remote-viewing-assets/t3.png",
+          "sha256": "678cb505b877cd45ce583d457314a306a2304a0259a52ebcdfaae9064c8f67d9",
+          "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+          "rights": {
+            "holder": "Future project",
+            "basis": "user_owned",
+            "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+            "attribution": "Future project geometric fixtures;not human-trial evidence."
+          }
+        },
+        {
+          "id": "t4",
+          "path": "data/remote-viewing-assets/t4.png",
+          "sha256": "423b545658d02b9809b4198cf29f10c4ffd3d720fddbe8b19cf72bbbc57f9515",
+          "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+          "rights": {
+            "holder": "Future project",
+            "basis": "user_owned",
+            "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+            "attribution": "Future project geometric fixtures;not human-trial evidence."
+          }
+        },
+        {
+          "id": "t5",
+          "path": "data/remote-viewing-assets/t5.png",
+          "sha256": "6bbac476767a04ff3c3b766bc1cd4100caa723faa64a062867c4beae900eda2e",
+          "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+          "rights": {
+            "holder": "Future project",
+            "basis": "user_owned",
+            "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+            "attribution": "Future project geometric fixtures;not human-trial evidence."
+          }
+        }
+      ]
+    }
+  },
+  "seed": "fixture-001"
+}

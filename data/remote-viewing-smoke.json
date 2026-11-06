@@ -1,0 +1,761 @@
+{
+  "passed": true,
+  "cli_cases": 125,
+  "accepted_pairs": 23,
+  "rejected_pairs": 21,
+  "full_cli_lifecycle": true,
+  "actual_directory_exports": 3,
+  "exact_json_markdown_replay": true,
+  "cases": [
+    {
+      "case": "simulated",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "simulated",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "simulated repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "human-manual",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "human-manual",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "human-manual repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "rank1",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "rank1",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "rank1 repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "rank3",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "rank3",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "rank3 repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "rank5",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "rank5",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "rank5 repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "multiple-judges",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "multiple-judges",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "multiple-judges repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "training-feedback",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "training-feedback",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "training-feedback repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "reused-dependence",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "reused-dependence",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "reused-dependence repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "failure-retained",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "failure-retained",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "failure-retained repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "viewer-packet",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "viewer-packet",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "viewer-packet repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "judge-packet",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "judge-packet",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "judge-packet repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "pre-reveal-status",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "pre-reveal-status",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "pre-reveal-status repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "summary",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "summary",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "summary repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "validate-viewer",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "validate-viewer",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "validate-viewer repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "validate-judge",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "validate-judge",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "validate-judge repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "unicode",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "unicode",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "unicode repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "after-reveal-feedback",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "after-reveal-feedback",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "after-reveal-feedback repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "aborted",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "aborted",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "aborted repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "invalid",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "invalid",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "invalid repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "leaked",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "leaked",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "leaked repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "excluded",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "excluded",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "excluded repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "conflicted",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "conflicted",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "conflicted repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "attachment-packet",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "attachment-packet",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "attachment-packet repeat",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "premature-reveal",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "premature-reveal",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "transcript-mutation",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "transcript-mutation",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "judge-mutation",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "judge-mutation",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "wrong-pool",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "wrong-pool",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "wrong-asset",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "wrong-asset",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "duplicate-alias",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "duplicate-alias",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "invalid-ranking",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "invalid-ranking",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "leaking-viewer",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "leaking-viewer",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "exif-metadata",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "exif-metadata",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "no-rights",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "no-rights",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "missing-timezone",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "missing-timezone",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "contradictory-chronology",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "contradictory-chronology",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "conflicting-roles",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "conflicting-roles",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "invalid-protocol",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "invalid-protocol",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "duplicate-candidate",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "duplicate-candidate",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "unauthorized-reveal",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "unauthorized-reveal",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "wrong-opening",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "wrong-opening",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "incomplete-ledger",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "incomplete-ledger",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "forbidden-inference",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "forbidden-inference",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "seeded-human",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "seeded-human",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "unlocked-judge-packet",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "unlocked-judge-packet",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "case": "lifecycle create",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "lifecycle commit",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "lifecycle start",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "lifecycle entry",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "lifecycle lock_viewer",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "lifecycle start_judge",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "lifecycle rank",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "lifecycle lock_judge",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "lifecycle reveal",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "lifecycle report",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "lifecycle final report",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "export viewer-packet",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "export judge-packet",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "case": "export attachment-packet",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    }
+  ]
+}

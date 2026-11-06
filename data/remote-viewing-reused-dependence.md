@@ -1,0 +1,635 @@
+# Remote Viewing procedural record
+
+Visibility: private_summary
+
+- Procedural file validation is not evidence of extrasensory perception or prediction.
+- File owner can rewrite all history; retain an independently held commitment anchor.
+- Clocks, identities, rights, knowledge and operational separation are declarations.
+- Packet allowlists cannot establish absence of semantic clues, collusion or prior knowledge.
+- No independently witnessed status or inferential p-value is certified.
+
+## Exact replay output
+
+``````json
+{
+  "schema_version": 1,
+  "visibility": "private_summary",
+  "profile": "rv-air1995-five-choice-blind-trial-v1",
+  "profile_sha256": "bb08a51d84d03ad858d65c1530fd763de8bbee686488ce512e54154877d2a60b",
+  "experiment_id": "e001",
+  "planned": 2,
+  "completed": 2,
+  "valid": 2,
+  "states": {
+    "planned": 0,
+    "committed": 0,
+    "viewer_recording": 0,
+    "viewer_locked": 0,
+    "judge_recording": 0,
+    "judge_locked": 0,
+    "revealed": 0,
+    "reported": 2,
+    "aborted": 0,
+    "invalid": 0,
+    "leaked": 0,
+    "excluded": 0,
+    "conflicted": 0
+  },
+  "per_trial": [
+    {
+      "trial_id": "trial001",
+      "origin": "simulated",
+      "state": "reported",
+      "eligible": true,
+      "judge_results": [
+        {
+          "judge_id": "judge",
+          "actual_target_rank": 3,
+          "rank1": false,
+          "ranks": {
+            "c1": 1,
+            "c2": 2,
+            "c3": 4,
+            "c4": 5,
+            "c5": 3
+          },
+          "raw_report": "  original judge text\r\n"
+        }
+      ],
+      "rejected_attempts": 0
+    },
+    {
+      "trial_id": "trial002",
+      "origin": "simulated",
+      "state": "reported",
+      "eligible": true,
+      "judge_results": [
+        {
+          "judge_id": "judge",
+          "actual_target_rank": 3,
+          "rank1": false,
+          "ranks": {
+            "c1": 1,
+            "c2": 2,
+            "c3": 4,
+            "c4": 5,
+            "c5": 3
+          },
+          "raw_report": "  original judge text\r\n"
+        }
+      ],
+      "rejected_attempts": 0
+    }
+  ],
+  "per_judge": {
+    "judge": {
+      "trials": 2,
+      "rank1_count": 0,
+      "mean_rank": {
+        "numerator": 6,
+        "denominator": 2
+      }
+    }
+  },
+  "declared_dependence": true,
+  "independence_verified": false,
+  "chance_reference": {
+    "expected_rank": 3,
+    "top_rank": {
+      "numerator": 1,
+      "denominator": 5
+    },
+    "qualification": "Reference only under uniform independent target labels and fixed stopping/judging;no inferential p-values. Manual/simulated/training trials not certified uniform human randomization."
+  },
+  "trials": [
+    {
+      "schema_version": 1,
+      "visibility": "private_tasker",
+      "plan": {
+        "schema_version": 1,
+        "profile": "rv-air1995-five-choice-blind-trial-v1",
+        "profile_sha256": "bb08a51d84d03ad858d65c1530fd763de8bbee686488ce512e54154877d2a60b",
+        "experiment_id": "e001",
+        "trial_ids": [
+          "trial001",
+          "trial002"
+        ],
+        "trial_id": "trial001",
+        "origin": "simulated",
+        "mode": "blind_evaluation",
+        "tasker": "tasker",
+        "viewer": "viewer",
+        "monitor": null,
+        "judges": [
+          "judge"
+        ],
+        "knowledge": {
+          "viewer": "unaware",
+          "monitor": "absent",
+          "judges": "unaware",
+          "tasker": "aware"
+        },
+        "separation": "transferred_packets",
+        "assignment_policy": "simulated_seed",
+        "presentation_order": [
+          2,
+          4,
+          0,
+          3,
+          1
+        ],
+        "primary_endpoint": "actual_target_rank",
+        "tie_policy": "reject",
+        "stopping_rule": "fixed_trial_ids",
+        "exclusion_rule": "retain_all_attempts",
+        "reuse_policy": "declare_dependence",
+        "created_at": "2026-11-06T09:00:00+05:30",
+        "pool": {
+          "id": "pool001",
+          "version": 1,
+          "candidates": [
+            {
+              "id": "t1",
+              "path": "data/remote-viewing-assets/t1.png",
+              "sha256": "3d0302954f7ca7ffb0d053fd23efc88c965c48b5ba57f5bc0134427232da63ad",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            },
+            {
+              "id": "t2",
+              "path": "data/remote-viewing-assets/t2.png",
+              "sha256": "f443538a6b9621f2774e12041fb7f689a0bb775c9e6709d129657d47491c737d",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            },
+            {
+              "id": "t3",
+              "path": "data/remote-viewing-assets/t3.png",
+              "sha256": "678cb505b877cd45ce583d457314a306a2304a0259a52ebcdfaae9064c8f67d9",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            },
+            {
+              "id": "t4",
+              "path": "data/remote-viewing-assets/t4.png",
+              "sha256": "423b545658d02b9809b4198cf29f10c4ffd3d720fddbe8b19cf72bbbc57f9515",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            },
+            {
+              "id": "t5",
+              "path": "data/remote-viewing-assets/t5.png",
+              "sha256": "6bbac476767a04ff3c3b766bc1cd4100caa723faa64a062867c4beae900eda2e",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            }
+          ]
+        }
+      },
+      "plan_sha256": "41ef38b9cf742fe6adca882c9c4c97e1b23e45842284866ba84dcbd45bbb7d3b",
+      "pool_sha256": "b6d1befb3cd24fef103ec2547eb6e20d68d25ef15f9331a6e6ec0df4a8615ecf",
+      "selection": {
+        "policy": "simulated_seed",
+        "draws": [
+          6
+        ],
+        "index": 1,
+        "seed": "fixture-001"
+      },
+      "nonce": "c562da91eccd2436512a2a63aaca642e85145e9ac99e63003bc545ec67825a94",
+      "commitment": "bca9f3348f60c21038a82ce0fba28e2b871f50f5cbb42fe1d0213fb6c804f8b4",
+      "events": [
+        {
+          "seq": 1,
+          "previous": "b883d1154e60c556dbaec0346c7a41f36dfa7c42b4fe480e326eccda59ff669e",
+          "action": "commit",
+          "actor": "tasker",
+          "at": "2026-11-06T09:01:00+05:30",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "28465e37d4dda2a9be4ce9b124a30d653dc66a33a97aa235cc6f35cac646f79c"
+        },
+        {
+          "seq": 2,
+          "previous": "28465e37d4dda2a9be4ce9b124a30d653dc66a33a97aa235cc6f35cac646f79c",
+          "action": "start",
+          "actor": "viewer",
+          "at": "2026-11-06T09:02:00+05:30",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "c7e37a3f5860a2ec3a92ec7c9c8ab360cf95a2a19cb549be4cf0c4f622b1b9f3"
+        },
+        {
+          "seq": 3,
+          "previous": "c7e37a3f5860a2ec3a92ec7c9c8ab360cf95a2a19cb549be4cf0c4f622b1b9f3",
+          "action": "entry",
+          "actor": "viewer",
+          "at": "2026-11-06T09:03:00+05:30",
+          "payload": {
+            "text": "  Café Café\r\n猫\t `````json  ",
+            "stage": "II",
+            "attachments": []
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "61089cbd2315e067c97956d90e7a7844b4a4242d1b77232e9c5035fd8ca6087f"
+        },
+        {
+          "seq": 4,
+          "previous": "61089cbd2315e067c97956d90e7a7844b4a4242d1b77232e9c5035fd8ca6087f",
+          "action": "lock_viewer",
+          "actor": "viewer",
+          "at": "2026-11-06T09:04:00+05:30",
+          "payload": {
+            "digest": "362d8f79003cf764c9ba83f98814c20a883ce9160a43e653209dc825a0b2255c"
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "c828c8a927e5df75c91dc5587ce3b1fa61cbe289e3802ef38057f76826fc2ea5"
+        },
+        {
+          "seq": 5,
+          "previous": "c828c8a927e5df75c91dc5587ce3b1fa61cbe289e3802ef38057f76826fc2ea5",
+          "action": "start_judge",
+          "actor": "tasker",
+          "at": "2026-11-06T09:05:00+05:30",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "d351cb9ae147798a1a89a264c4135940922f4b616a7b2ed83f6bc52e7282d1e7"
+        },
+        {
+          "seq": 6,
+          "previous": "d351cb9ae147798a1a89a264c4135940922f4b616a7b2ed83f6bc52e7282d1e7",
+          "action": "rank",
+          "actor": "judge",
+          "at": "2026-11-06T09:06:00+05:30",
+          "payload": {
+            "ranks": {
+              "c1": 1,
+              "c2": 2,
+              "c3": 4,
+              "c4": 5,
+              "c5": 3
+            },
+            "report": "  original judge text\r\n"
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "aeb4b577e6be67e2ee775fa674cf309f0cd45e5b751e36417da940635839b028"
+        },
+        {
+          "seq": 7,
+          "previous": "aeb4b577e6be67e2ee775fa674cf309f0cd45e5b751e36417da940635839b028",
+          "action": "lock_judge",
+          "actor": "tasker",
+          "at": "2026-11-06T09:07:00+05:30",
+          "payload": {
+            "digest": "9477f0d74ee0a4de8953934e5402e797a84b333441d0290d0b96ac5f234a436a"
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "ebd6e4780e2eff2f0250bd550683945fc5bea182b4afbbc91a6866600f1b76c8"
+        },
+        {
+          "seq": 8,
+          "previous": "ebd6e4780e2eff2f0250bd550683945fc5bea182b4afbbc91a6866600f1b76c8",
+          "action": "reveal",
+          "actor": "tasker",
+          "at": "2026-11-06T09:08:00+05:30",
+          "payload": {
+            "preimage": {
+              "domain": "future.remote-viewing.assignment.v1",
+              "profile": "rv-air1995-five-choice-blind-trial-v1",
+              "profile_sha256": "bb08a51d84d03ad858d65c1530fd763de8bbee686488ce512e54154877d2a60b",
+              "trial_id": "trial001",
+              "plan_sha256": "41ef38b9cf742fe6adca882c9c4c97e1b23e45842284866ba84dcbd45bbb7d3b",
+              "pool_sha256": "b6d1befb3cd24fef103ec2547eb6e20d68d25ef15f9331a6e6ec0df4a8615ecf",
+              "target_id": "t2",
+              "asset_sha256": "f443538a6b9621f2774e12041fb7f689a0bb775c9e6709d129657d47491c737d",
+              "selection": {
+                "policy": "simulated_seed",
+                "draws": [
+                  6
+                ],
+                "index": 1,
+                "seed": "fixture-001"
+              },
+              "nonce": "c562da91eccd2436512a2a63aaca642e85145e9ac99e63003bc545ec67825a94"
+            }
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "03880f01ce21faa9685ab5333e4b1e09cebc64bde1fc3d22754bacc15e2a592f"
+        },
+        {
+          "seq": 9,
+          "previous": "03880f01ce21faa9685ab5333e4b1e09cebc64bde1fc3d22754bacc15e2a592f",
+          "action": "report",
+          "actor": "tasker",
+          "at": "2026-11-06T09:09:00+05:30",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "b81a89cda2176ee79b9c71b727fd7ab4249fb26d43288f2561b12fcb4ff0b9c9"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "visibility": "private_tasker",
+      "plan": {
+        "schema_version": 1,
+        "profile": "rv-air1995-five-choice-blind-trial-v1",
+        "profile_sha256": "bb08a51d84d03ad858d65c1530fd763de8bbee686488ce512e54154877d2a60b",
+        "experiment_id": "e001",
+        "trial_ids": [
+          "trial001",
+          "trial002"
+        ],
+        "trial_id": "trial002",
+        "origin": "simulated",
+        "mode": "blind_evaluation",
+        "tasker": "tasker",
+        "viewer": "viewer",
+        "monitor": null,
+        "judges": [
+          "judge"
+        ],
+        "knowledge": {
+          "viewer": "unaware",
+          "monitor": "absent",
+          "judges": "unaware",
+          "tasker": "aware"
+        },
+        "separation": "transferred_packets",
+        "assignment_policy": "simulated_seed",
+        "presentation_order": [
+          2,
+          4,
+          0,
+          3,
+          1
+        ],
+        "primary_endpoint": "actual_target_rank",
+        "tie_policy": "reject",
+        "stopping_rule": "fixed_trial_ids",
+        "exclusion_rule": "retain_all_attempts",
+        "reuse_policy": "declare_dependence",
+        "created_at": "2026-11-06T09:00:00+05:30",
+        "pool": {
+          "id": "pool001",
+          "version": 1,
+          "candidates": [
+            {
+              "id": "t1",
+              "path": "data/remote-viewing-assets/t1.png",
+              "sha256": "3d0302954f7ca7ffb0d053fd23efc88c965c48b5ba57f5bc0134427232da63ad",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            },
+            {
+              "id": "t2",
+              "path": "data/remote-viewing-assets/t2.png",
+              "sha256": "f443538a6b9621f2774e12041fb7f689a0bb775c9e6709d129657d47491c737d",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            },
+            {
+              "id": "t3",
+              "path": "data/remote-viewing-assets/t3.png",
+              "sha256": "678cb505b877cd45ce583d457314a306a2304a0259a52ebcdfaae9064c8f67d9",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            },
+            {
+              "id": "t4",
+              "path": "data/remote-viewing-assets/t4.png",
+              "sha256": "423b545658d02b9809b4198cf29f10c4ffd3d720fddbe8b19cf72bbbc57f9515",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            },
+            {
+              "id": "t5",
+              "path": "data/remote-viewing-assets/t5.png",
+              "sha256": "6bbac476767a04ff3c3b766bc1cd4100caa723faa64a062867c4beae900eda2e",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            }
+          ]
+        }
+      },
+      "plan_sha256": "bb0c2d8305e3028775b66d3e4196ab088cb90688b3fe8ad0930c836e7cf3c727",
+      "pool_sha256": "b6d1befb3cd24fef103ec2547eb6e20d68d25ef15f9331a6e6ec0df4a8615ecf",
+      "selection": {
+        "policy": "simulated_seed",
+        "draws": [
+          6
+        ],
+        "index": 1,
+        "seed": "fixture-001"
+      },
+      "nonce": "c562da91eccd2436512a2a63aaca642e85145e9ac99e63003bc545ec67825a94",
+      "commitment": "9622ae041b737d377f6def0be672861b78fdb0dff5fdc4d96a12cddeed28181b",
+      "events": [
+        {
+          "seq": 1,
+          "previous": "4ae7a155c822e9cdfbb627a9c052851b9e1bf5205556dfeff7fbb8c6943e5ba1",
+          "action": "commit",
+          "actor": "tasker",
+          "at": "2026-11-06T09:01:00+05:30",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "a89544a4f446cd5928ad480ef22fdf2f2aa92abb346b919e46b549400dbaab7a"
+        },
+        {
+          "seq": 2,
+          "previous": "a89544a4f446cd5928ad480ef22fdf2f2aa92abb346b919e46b549400dbaab7a",
+          "action": "start",
+          "actor": "viewer",
+          "at": "2026-11-06T09:02:00+05:30",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "7dc40396d0ad7573d991392c333a0abe1f90e8059c1adcddf7d2724a84db6805"
+        },
+        {
+          "seq": 3,
+          "previous": "7dc40396d0ad7573d991392c333a0abe1f90e8059c1adcddf7d2724a84db6805",
+          "action": "entry",
+          "actor": "viewer",
+          "at": "2026-11-06T09:03:00+05:30",
+          "payload": {
+            "text": "  Café Café\r\n猫\t `````json  ",
+            "stage": "II",
+            "attachments": []
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "b60025fd4ffa7f7d2343f43183d0083f32271f706a93e7b5bfea1bb2f77dec06"
+        },
+        {
+          "seq": 4,
+          "previous": "b60025fd4ffa7f7d2343f43183d0083f32271f706a93e7b5bfea1bb2f77dec06",
+          "action": "lock_viewer",
+          "actor": "viewer",
+          "at": "2026-11-06T09:04:00+05:30",
+          "payload": {
+            "digest": "857b251c242f6c5b6eb9d792c3559fe58372a36e80c527364033eba589bc709f"
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "d7e032269de39cc1e9198644988fadb79264cb8ab1b6592466433a0e65b52e88"
+        },
+        {
+          "seq": 5,
+          "previous": "d7e032269de39cc1e9198644988fadb79264cb8ab1b6592466433a0e65b52e88",
+          "action": "start_judge",
+          "actor": "tasker",
+          "at": "2026-11-06T09:05:00+05:30",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "8c9bfa51e52ab4a36a212b2798261ea5326facce32c774059d9e818ec21ccbe7"
+        },
+        {
+          "seq": 6,
+          "previous": "8c9bfa51e52ab4a36a212b2798261ea5326facce32c774059d9e818ec21ccbe7",
+          "action": "rank",
+          "actor": "judge",
+          "at": "2026-11-06T09:06:00+05:30",
+          "payload": {
+            "ranks": {
+              "c1": 1,
+              "c2": 2,
+              "c3": 4,
+              "c4": 5,
+              "c5": 3
+            },
+            "report": "  original judge text\r\n"
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "8055c8b58ed32c7ba5f52abb960ca8031dd9b2dc5297e442f751ddae796f37e9"
+        },
+        {
+          "seq": 7,
+          "previous": "8055c8b58ed32c7ba5f52abb960ca8031dd9b2dc5297e442f751ddae796f37e9",
+          "action": "lock_judge",
+          "actor": "tasker",
+          "at": "2026-11-06T09:07:00+05:30",
+          "payload": {
+            "digest": "89df41a60c56e3e57d8ec8916ff3b3b808821218448de877f5e2b360b9c67d8e"
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "946d6880ebfdd3cdeb7aa61adefb6d9c8be0c0933b854aaf9e27be05ecc0120d"
+        },
+        {
+          "seq": 8,
+          "previous": "946d6880ebfdd3cdeb7aa61adefb6d9c8be0c0933b854aaf9e27be05ecc0120d",
+          "action": "reveal",
+          "actor": "tasker",
+          "at": "2026-11-06T09:08:00+05:30",
+          "payload": {
+            "preimage": {
+              "domain": "future.remote-viewing.assignment.v1",
+              "profile": "rv-air1995-five-choice-blind-trial-v1",
+              "profile_sha256": "bb08a51d84d03ad858d65c1530fd763de8bbee686488ce512e54154877d2a60b",
+              "trial_id": "trial002",
+              "plan_sha256": "bb0c2d8305e3028775b66d3e4196ab088cb90688b3fe8ad0930c836e7cf3c727",
+              "pool_sha256": "b6d1befb3cd24fef103ec2547eb6e20d68d25ef15f9331a6e6ec0df4a8615ecf",
+              "target_id": "t2",
+              "asset_sha256": "f443538a6b9621f2774e12041fb7f689a0bb775c9e6709d129657d47491c737d",
+              "selection": {
+                "policy": "simulated_seed",
+                "draws": [
+                  6
+                ],
+                "index": 1,
+                "seed": "fixture-001"
+              },
+              "nonce": "c562da91eccd2436512a2a63aaca642e85145e9ac99e63003bc545ec67825a94"
+            }
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "229e90c0339a34c0bb87ef85a62cf3baf1a584ed629437e42a480f0871f42a45"
+        },
+        {
+          "seq": 9,
+          "previous": "229e90c0339a34c0bb87ef85a62cf3baf1a584ed629437e42a480f0871f42a45",
+          "action": "report",
+          "actor": "tasker",
+          "at": "2026-11-06T09:09:00+05:30",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "d3feffc8c1b4934d92ac988a3462bedd0f222a893272b9939adcc0ddde5a72da"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Procedural file validation is not evidence of extrasensory perception or prediction.",
+    "File owner can rewrite all history; retain an independently held commitment anchor.",
+    "Clocks, identities, rights, knowledge and operational separation are declarations.",
+    "Packet allowlists cannot establish absence of semantic clues, collusion or prior knowledge.",
+    "No independently witnessed status or inferential p-value is certified."
+  ],
+  "report_sha256": "e102780d6603c7652244f55b0186fb3a45c608e62cdbbfa4a6a10e9588f72962"
+}
+``````

@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "visibility": "private_summary",
+  "profile": "rv-air1995-five-choice-blind-trial-v1",
+  "profile_sha256": "bb08a51d84d03ad858d65c1530fd763de8bbee686488ce512e54154877d2a60b",
+  "experiment_id": "e001",
+  "planned": 1,
+  "completed": 0,
+  "valid": 0,
+  "states": {
+    "planned": 0,
+    "committed": 0,
+    "viewer_recording": 0,
+    "viewer_locked": 0,
+    "judge_recording": 0,
+    "judge_locked": 0,
+    "revealed": 0,
+    "reported": 0,
+    "aborted": 1,
+    "invalid": 0,
+    "leaked": 0,
+    "excluded": 0,
+    "conflicted": 0
+  },
+  "per_trial": [
+    {
+      "trial_id": "trial001",
+      "origin": "simulated",
+      "state": "aborted",
+      "eligible": false,
+      "judge_results": [],
+      "rejected_attempts": 0
+    }
+  ],
+  "per_judge": {
+    "judge": {
+      "trials": 0,
+      "rank1_count": 0,
+      "mean_rank": null
+    }
+  },
+  "declared_dependence": false,
+  "independence_verified": false,
+  "chance_reference": {
+    "expected_rank": 3,
+    "top_rank": {
+      "numerator": 1,
+      "denominator": 5
+    },
+    "qualification": "Reference only under uniform independent target labels and fixed stopping/judging;no inferential p-values. Manual/simulated/training trials not certified uniform human randomization."
+  },
+  "trials": [
+    {
+      "schema_version": 1,
+      "visibility": "private_tasker",
+      "plan": {
+        "schema_version": 1,
+        "profile": "rv-air1995-five-choice-blind-trial-v1",
+        "profile_sha256": "bb08a51d84d03ad858d65c1530fd763de8bbee686488ce512e54154877d2a60b",
+        "experiment_id": "e001",
+        "trial_ids": [
+          "trial001"
+        ],
+        "trial_id": "trial001",
+        "origin": "simulated",
+        "mode": "blind_evaluation",
+        "tasker": "tasker",
+        "viewer": "viewer",
+        "monitor": null,
+        "judges": [
+          "judge"
+        ],
+        "knowledge": {
+          "viewer": "unaware",
+          "monitor": "absent",
+          "judges": "unaware",
+          "tasker": "aware"
+        },
+        "separation": "transferred_packets",
+        "assignment_policy": "simulated_seed",
+        "presentation_order": [
+          2,
+          4,
+          0,
+          3,
+          1
+        ],
+        "primary_endpoint": "actual_target_rank",
+        "tie_policy": "reject",
+        "stopping_rule": "fixed_trial_ids",
+        "exclusion_rule": "retain_all_attempts",
+        "reuse_policy": "reject",
+        "created_at": "2026-11-06T09:00:00+05:30",
+        "pool": {
+          "id": "pool001",
+          "version": 1,
+          "candidates": [
+            {
+              "id": "t1",
+              "path": "data/remote-viewing-assets/t1.png",
+              "sha256": "3d0302954f7ca7ffb0d053fd23efc88c965c48b5ba57f5bc0134427232da63ad",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            },
+            {
+              "id": "t2",
+              "path": "data/remote-viewing-assets/t2.png",
+              "sha256": "f443538a6b9621f2774e12041fb7f689a0bb775c9e6709d129657d47491c737d",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            },
+            {
+              "id": "t3",
+              "path": "data/remote-viewing-assets/t3.png",
+              "sha256": "678cb505b877cd45ce583d457314a306a2304a0259a52ebcdfaae9064c8f67d9",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            },
+            {
+              "id": "t4",
+              "path": "data/remote-viewing-assets/t4.png",
+              "sha256": "423b545658d02b9809b4198cf29f10c4ffd3d720fddbe8b19cf72bbbc57f9515",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            },
+            {
+              "id": "t5",
+              "path": "data/remote-viewing-assets/t5.png",
+              "sha256": "6bbac476767a04ff3c3b766bc1cd4100caa723faa64a062867c4beae900eda2e",
+              "provenance": "Original deterministic geometric fixture artwork created for this repository;no external source asset.",
+              "rights": {
+                "holder": "Future project",
+                "basis": "user_owned",
+                "permission": "Project-authored procedural fixture;permitted for repository tests and demonstrations.",
+                "attribution": "Future project geometric fixtures;not human-trial evidence."
+              }
+            }
+          ]
+        }
+      },
+      "plan_sha256": "a90353d8b4a5538e90fe9a36a5671e0f7eb94a34df19c965c336d6b4d2da392e",
+      "pool_sha256": "b6d1befb3cd24fef103ec2547eb6e20d68d25ef15f9331a6e6ec0df4a8615ecf",
+      "selection": {
+        "policy": "simulated_seed",
+        "draws": [
+          6
+        ],
+        "index": 1,
+        "seed": "fixture-001"
+      },
+      "nonce": "c562da91eccd2436512a2a63aaca642e85145e9ac99e63003bc545ec67825a94",
+      "commitment": "cd771ac994662d0ccf4a52f1a95adb1536aa9ff98f68a1d2b879a8121406b87b",
+      "events": [
+        {
+          "seq": 1,
+          "previous": "fa8dc92b65b1b257a64f037a43f4af67ac1db9d51dcfb95fd2709ef23e0bcbcb",
+          "action": "commit",
+          "actor": "tasker",
+          "at": "2026-11-06T09:01:00+05:30",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "67ae9058dda5dd753d0d883cafca0c2c71471bdacaf704a77f7af9d4ddcd815d"
+        },
+        {
+          "seq": 2,
+          "previous": "67ae9058dda5dd753d0d883cafca0c2c71471bdacaf704a77f7af9d4ddcd815d",
+          "action": "start",
+          "actor": "viewer",
+          "at": "2026-11-06T09:02:00+05:30",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "7c510ae2c4b292bd99fc1ecacb0a1fbaf56430053b9c649ba9f620f7abb6b465"
+        },
+        {
+          "seq": 3,
+          "previous": "7c510ae2c4b292bd99fc1ecacb0a1fbaf56430053b9c649ba9f620f7abb6b465",
+          "action": "terminate",
+          "actor": "tasker",
+          "at": "2026-11-06T09:03:00+05:30",
+          "payload": {
+            "status": "aborted",
+            "reason": "Explicitly recorded demonstration exception;retained in ledger."
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "f64f2d8843ed62cbd4b06fb6b6862fa1c8142ea8231a7351fbc5c85f9f6ef250"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Procedural file validation is not evidence of extrasensory perception or prediction.",
+    "File owner can rewrite all history; retain an independently held commitment anchor.",
+    "Clocks, identities, rights, knowledge and operational separation are declarations.",
+    "Packet allowlists cannot establish absence of semantic clues, collusion or prior knowledge.",
+    "No independently witnessed status or inferential p-value is certified."
+  ],
+  "report_sha256": "2fbac584379e96f2a2dca875af0597dee9c6e4ca5de6b8566306c4bfa4965ac1"
+}

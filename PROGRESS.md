@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 43 reproducible reports and separated demo — 2026-11-06
+- Saved23accepted/21rejected JSON/Markdown request/output pairs;125CLI checks include complete command-driven lifecycle and3exact directory exports. Persistent synthetic demo separates private trial,viewer packet andjudge PNG files;all public filenames/bytes inspected.
+- Human-origin/manual example is a declared-schema demonstration,not a fabricated participant study.100newtests andcomplete1207-test suite pass;inherited CLI/verifier acceptance running.
+
 ## Technique 43 independent verification — 2026-11-06
 - Enginecca37f3 implements only frozen profile. Independent pre-engine truth verifies72000rank/target/display mappings and600equal-probability null cases(mean3,rank1probability1/5). Known commitment and both lock digests match.
 - All16procedural families pass,including actual allowlisted directory exports,metadata rejection,mutations,premature reveal,rights,chronology,judge disagreement andcomplete failure ledger. Evidence certifies software only;full inherited acceptance running.
