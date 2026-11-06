@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 39 Haruspicy / Extispicy resource audit — 2026-11-06
+- Started only after Augury closure79193f4 pushed,clean and synchronized0/0. Original three ranked sources/three variations preserved; audit only,no39 engine/profile/CLI or40 audit.
+- Koch2000/2005 editions identified; complete conditional translations remain uninspected. Yale K.4063/P395380 witness metadata verified but embedded edition unavailable. Museum/Colonna separate Piacenza artifact,uncertain function,modern numbering and name-expansion debates; no copied diagrams.
+- Recommend bounded Falconer1923 Roman source-condition comparison with lung-cleft/other-vitals and absent-head references,Caesar narrative attribution and Marcus critique. Source/independent fixture gates,schema,rights,matrix and P1/P2 frozen in `knowledge/haruspicy_resource_audit.json`; no current39 runtime certification. Validation:416 source records registered twice,1098 JSON files parsed,1665 tracked protected files unchanged (including1556 prior/1441 required); no executable39 rules.
+
 ## Technique 38 Augury Core v1 closure — 2026-11-06
 - **Core v1 Ready — Historical Roman Bird-Sign Reference/Observation Scope**: `cicero-falconer1923-roman-bird-signs-v1`;four main bird conditions plus conflicting note226 and nine contextual references. Calls retain no explicit favorable label;flight-to wording is Falconer-specific. Unknowns,opposites,frames and conflicts do not invent judgments;Quintus/Marcus and note layers remain separate. Source47d06d9,catalogd6ece0f,engine3e39eee,evidence5b35287 pushed.
 - 958 tests (895+63),1151 CLI cases (1071+80),21 verifiers pass. Independent14 source records,864 observations/4320 condition checks,four manual known answers and uncertainty/conflict checks pass. All1556 protected files,including required1441,remain byte-identical;registry/dependency/pip/diff checks pass.20 valid/10 rejected JSON/Markdown report pairs replay.

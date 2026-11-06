@@ -1,0 +1,369 @@
+{
+  "version": 1,
+  "technique_id": 39,
+  "name": "Haruspicy / Extispicy",
+  "phase": 4,
+  "date": "2026-11-06",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "79193f4",
+  "predecessor_push": "Augury acceptance8f2fd67 and closure79193f4 pushed; clean main and origin/main...HEAD0/0 explicitly observed before39 research.",
+  "policy": "Audit only. No39 engine,profile,executable catalog,CLI,renderer or rule fixtures implemented. No40 audit. Preserve three traditions separately.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    39,
+    "4 · Nature, Objects & Ancient Practices",
+    "Haruspicy / Extispicy",
+    "RETAIN — simulate / implement",
+    "Deterministic / symbolic rules",
+    "Mesopotamian liver omens; Etruscan hepatoscopy; Roman entrail reading",
+    "Virtual liver-zone chart and omen-table lookup",
+    "Schematic 3D/2D anatomical model; no live animal",
+    "No sacrifice; archaeological reconstruction, not prophecy",
+    "Traditional / not scientifically validated",
+    "Babylonian Liver Omens",
+    "Ulla Susanne Koch",
+    null,
+    "Secrets of Extispicy",
+    "Piacenza Liver",
+    null,
+    "35",
+    39
+  ],
+  "ranked_sources": [
+    [
+      39,
+      "Haruspicy / Extispicy",
+      1,
+      "Ulla Susanne Koch",
+      "Babylonian Liver Omens",
+      "Cuneiform omen series scholarship",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      39,
+      "Haruspicy / Extispicy",
+      2,
+      "Ulla Susanne Koch",
+      "Secrets of Extispicy",
+      "Mesopotamian extispicy research",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      39,
+      "Haruspicy / Extispicy",
+      3,
+      "Visit Piacenza / local heritage",
+      "Piacenza Liver",
+      "Etruscan bronze liver layout",
+      "https://visitpiacenza.it/en/art-and-culture/etruscan-liver/",
+      "Public heritage description",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      39,
+      "Haruspicy / Extispicy",
+      "Mesopotamian liver omens",
+      "Piacenza Liver",
+      "Secrets of Extispicy",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      39,
+      "Haruspicy / Extispicy",
+      "Etruscan hepatoscopy",
+      "Piacenza Liver",
+      "Secrets of Extispicy",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      39,
+      "Haruspicy / Extispicy",
+      "Roman entrail reading",
+      "Piacenza Liver",
+      "Secrets of Extispicy",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_registry": "knowledge/haruspicy_sources.json",
+  "source_access": {
+    "koch2000": {
+      "url": "https://press.uchicago.edu/ucp/books/book/distributed/B/bo19516273.html",
+      "sha256": null,
+      "error": "ReadTimeout"
+    },
+    "koch2005": {
+      "url": "https://www.ugarit-verlag.com/en/products/00b348c7bd7d45f280cb69298ab99119",
+      "resolved_url": "https://www.ugarit-verlag.com/en/products/00b348c7bd7d45f280cb69298ab99119",
+      "status": 200,
+      "sha256": "42cf71d8397977f086a12a8e5b2698c133abeb30d9fa1107dab1457d0932e65d",
+      "bytes": 489458
+    },
+    "cinii2005": {
+      "url": "https://ci.nii.ac.jp/ncid/BA73966503",
+      "resolved_url": "https://ci.nii.ac.jp/ncid/BA73966503",
+      "status": 200,
+      "sha256": "1b27938cea474c366b9db956d82246cb218227f6505c1fc6d97b52ba4680cabd",
+      "bytes": 57540
+    },
+    "piacenza": {
+      "url": "https://visitpiacenza.it/en/art-and-culture/etruscan-liver/",
+      "sha256": null,
+      "error": "ReadTimeout"
+    },
+    "museum": {
+      "url": "https://www.palazzofarnese.piacenza.it/it/page/il-fegato-etrusco",
+      "sha256": null,
+      "error": "ConnectionError"
+    },
+    "colonna": {
+      "url": "https://www.studietruschi.org/wp-content/uploads/2021/06/SE59_09.pdf",
+      "resolved_url": "https://www.studietruschi.org/wp-content/uploads/2021/06/SE59_09.pdf",
+      "status": 200,
+      "sha256": "9eb891ab69a9502cdb53160b805350a45d5cb4ac078d5ad79d594ea095cc84a1",
+      "bytes": 2739833
+    },
+    "ccp": {
+      "url": "https://ccp.yale.edu/P395380",
+      "sha256": null,
+      "error": "ConnectionError"
+    },
+    "met": {
+      "url": "https://www.metmuseum.org/art/collection/search/328932",
+      "sha256": null,
+      "error": "HTTPError"
+    },
+    "cicero1": {
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html",
+      "resolved_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/1*.html",
+      "status": 200,
+      "sha256": "8ee1dac4c378c4a42d22764b7d6bef6e3b70ba462d03ae973a67a2ecb73da79d",
+      "bytes": 252127
+    },
+    "cicero2": {
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/2*.html",
+      "sha256": null,
+      "error": "ReadTimeout"
+    }
+  },
+  "edition_and_access": {
+    "rank1": {
+      "author_alias": "Inventory Ulla Susanne Koch; 2000 edition published as Ulla Koch-Westenholz",
+      "edition": "Museum Tusculanum Press,2000; Carsten Niebuhr Institute Publications25; ISBN8772896205 (KU institutional record/Wellcome corroboration)",
+      "contents": "Publisher identifies canonical barûtu chapters3Manzazu (Presence),4Padanu (Path),5Pan takaltu (Front of the Pouch); title orthographies are edition-specific.",
+      "access": "Publisher metadata/contents inspected; no actual tablet transcription/translation pages inspected.",
+      "bibliographic_disagreement": "Publisher580pages; library record543pages+48plates. Do not infer pagination equivalence; cite physical edition before fixture extraction."
+    },
+    "rank2": {
+      "edition": "Koch, Secrets of Extispicy: The Chapter Multābiltu of the Babylonian Extispicy Series and Niṣirti bārûti Texts mainly from Aššurbanipal’s Library; Münster:Ugarit-Verlag,2005; Alter Orient und Altes Testament326; ISBN3934628672",
+      "access": "Publisher product and CiNii catalogue checked; full text not accessed; no interpretation exceptions or synthesis rules inferred from title."
+    },
+    "rank3": {
+      "edition": "Visit Piacenza official heritage page plus owning museum account",
+      "access": "Tourism HTML rendered; museum indexed text available but opening redirects. Exact ancient use remains uncertain in owning-museum account, despite simplified tourist description."
+    }
+  },
+  "mesopotamian": {
+    "tradition": "Mesopotamian liver omens remain independent of Etruscan and Roman schemas.",
+    "witnesses": [
+      {
+        "source_id": "haruspicy-ccp-v1",
+        "id": "K.4063",
+        "cdli": "P395380",
+        "series": "Bārûtu5 Pān tākalti",
+        "kind": "Assyrian commentary fragment,mukallimtu6; seventhcenturyBCE/Nineveh",
+        "edition": "Koch2000pp.411–414no.80; copyBLOpl.xxxino.80",
+        "duplicate": "K.9048/P397881",
+        "access_gap": "Catalogue visible; embedded edition says item unavailable. No lines silently reconstructed."
+      },
+      {
+        "source_id": "haruspicy-britishmuseum-v1",
+        "id": "1889,0426.238",
+        "kind": "OldBabylonian clay liver model,Sippar; distinct date/context from first-millennium canonical series",
+        "gap": "No complete zone ordering,inscriptions or conditional examples certified."
+      },
+      {
+        "source_id": "haruspicy-met-v1",
+        "id": "86.11.378b",
+        "kind": "Late1stmillenniumBCE Mesopotamian fragment",
+        "gap": "Museum explains military outcomes in general; no specific complete liver-feature/result pair supplied on inspected page."
+      }
+    ],
+    "conditional_pair_gate": "Zero complete Mesopotamian source-located sign/result pairs accepted as executable in this audit. Before coding, inspect legitimate edition/translation lines,complete protasis/apodosis,anatomical term,question context,variants,exceptions,lacunae and independent hand-authored expected output.",
+    "reconstruction_policy": "Keep damaged/uncertain signs,restorations and translation alternatives explicit. Do not fill gaps with modern occult lists or another tradition. Multiple protases and polarity modifications require source-specific proof; no generic positive/negative inversion.",
+    "bounded_open_candidate": "Witness/reference research is possible, but inspected open pages do not yet certify a substantive Mesopotamian conditional engine."
+  },
+  "etruscan": {
+    "sources": [
+      "haruspicy-piacenza-v1",
+      "haruspicy-museum-v1",
+      "haruspicy-colonna-v1",
+      "haruspicy-colonna-index-v1"
+    ],
+    "object": "Bronze sheep-liver model found nearGossolengo26September1877; donated1894. Official museum dates northern-Etruscan manufacture late2nd–firsthalf1stcenturyBCE; tourism gives broader2nd–1stcenturyBCE and126x76x60mm.",
+    "use": "Museum lists teaching aid,professional reminder,honorary-statue element,votive/funerary possibilities. Original use/context unresolved; not a certified predictive algorithm.",
+    "numbering": "Colonna p.123note1 explicitly follows Maggiani REE1981p.267no.37. Visually inspected p.124fig.2 shows1–16rim and17–40internal. Note2 also refers to inscriptions41/42; do not confuse40frontregions with total inscriptions across surfaces.",
+    "surface_orientation": "p.124fig.1 preserves varied inscription directions; fig.2 numbers a particular drawn face,not a north-oriented universal map. Top/bottom,organ-relative versus viewer-relative and reverse-face labels must be named before geometry. No compass-to-omen conversion verified.",
+    "name_example": "Colonna pp.123–125 discusses cells22/3,Tina/Nethuns and competing expansions in Rix; preserve visible inscription,abbreviation expansion,grammatical analysis and divine equivalence separately. A full named cell catalog has NOT been collated.",
+    "rights": "Modern Maggiani drawings and photographs in Colonna are not relicensed by public download. Do not bundle or trace a scholarly diagram without rights clearance. A future original schematic needs independently sourced coordinates/zone topology and explicit attribution.",
+    "release_gate": "Complete selected cell IDs,transcriptions,uncertainty,edition numbering,both-face conventions and independent diagram review before any zone-reference certification. No generated deity-to-fortune mapping."
+  },
+  "roman": {
+    "sources": [
+      "haruspicy-cicero1-v1",
+      "haruspicy-cicero2-v1"
+    ],
+    "edition": "Falconer1923 Loeb; source bird rules from38 do not transfer to entrails.",
+    "candidate_accounts": [
+      {
+        "locator": "I.39.85",
+        "speaker": "Quintus",
+        "condition": "Cleft in lung while other vitals sound",
+        "account": "Reported soothsayer practice postpones undertaking to another day.",
+        "qualification": "Lung,not liver; exact compound condition required; source-reported action,not software advice."
+      },
+      {
+        "locator": "I.52.119",
+        "speaker": "Quintus reporting Spurinna/Caesar narrative",
+        "condition": "Reported missing heart in Caesar’s votive ox; golden throne/purple robe context",
+        "account": "Spurinna warns about loss of thought/life; Quintus construes portents as foretelling death,not preventing it.",
+        "qualification": "Specific narrative and attributed theological claim; not universal death prediction."
+      },
+      {
+        "locator": "I.52.119",
+        "speaker": "Quintus",
+        "condition": "Next day reported missing head of liver in Caesar narrative",
+        "account": "Grouped with preceding portent by Quintus.",
+        "qualification": "Sequence/context retained; do not identify ancient head with a modern organ zone by assumption."
+      },
+      {
+        "locator": "II.13.32",
+        "speaker": "Marcus reporting criticized practice",
+        "condition": "Head of liver absent",
+        "account": "Reported as extremely unpropitious by practitioners.",
+        "qualification": "Marcus reports belief while criticizing inference; source polarity only."
+      }
+    ],
+    "critical_context": "II.12.28–29 Marcus distinguishes political/institutional use from truth and notes differences among nations. II.14.33–34 challenges natural links to wealth; II.15.35–36 critiques divine selection and changing signs; II.16.36–37 disputes vanished-heart inference and suggests disease. Ancient speculation is not a modern biological diagnosis.",
+    "terminology_gate": "Freeze source-language caput/cleft/heart/lung terminology,exact native chapter/section and translation layer before coding; no confident modern anatomical equivalents imported from Mesopotamian/Etruscan reconstructions."
+  },
+  "first_candidate": {
+    "recommendation": "Bounded Falconer1923 Roman historical entrail-sign reference/condition comparator; no operative divination.",
+    "reason": "Four useful located source accounts are inspectable,with corresponding critical dialogue. A complete Piacenza names/surface dataset and Koch sign-result tables remain unverified.",
+    "provisional_profile": "cicero-falconer1923-roman-entrail-references-v1 (proposal only; freeze after independent source cases)",
+    "minimum_value": "Exact lung/other-vitals condition and absent-liver-head reference; specific Caesar narrative only with explicit context/sequence,Spurinna attribution and Marcus critique. Standalone missing-heart must not inherit narrative prognosis.",
+    "cutoff": "Freeze small coherent set after Latin/English/source-case verification; do not expand research into all organs/traditions before source fixtures. If fixtures fail retain Source-Limited.",
+    "alternative": "Piacenza source-specific zone/name reference only after complete selected transcription/numbering and diagram-rights gates; no cross-tradition fallback."
+  },
+  "proposed_manual_schema": {
+    "status": "Design only; no39 input accepted by runtime.",
+    "request": [
+      "schema_version",
+      "exact_profile_id",
+      "mode=manual",
+      "task=reference/compare/catalog",
+      "exact_versioned_catalog_id/hash",
+      "source_case_ids or1–8observations",
+      "raw question/reflection/notes"
+    ],
+    "observation": [
+      "unique observation_id",
+      "origin=hypothetical/museum_document/source_description/unknown",
+      "organ=liver/lung/heart/other/unknown",
+      "source_feature_label (bounded catalog term)",
+      "presence=present/absent/unknown",
+      "feature=cleft/head/other/unknown",
+      "other_vitals=sound/not_sound/unknown",
+      "declared historical narrative/context",
+      "sequence",
+      "uncertain_fields",
+      "contradictory_reports",
+      "raw description"
+    ],
+    "semantics": "Unknown stays unknown; absent differs from unreported. Require source context for narrative matches; no NLP or inferred anatomical mapping. Raw Unicode declarations separate from historical fact. Reference-only lookup works without an observation.",
+    "outcomes": [
+      "applicable",
+      "not_applicable",
+      "insufficient_evidence",
+      "conflicting_evidence",
+      "unsupported"
+    ],
+    "output": "Named immutable edition/profile,catalog/source/request hashes,declared inputs,each condition result and reason,source account/polarity,speaker/maintext/note,critical context,uncertainty,rights,user reflection,unsupported claims,deterministic JSON/Markdown replay. No combined fortune or ritual authority."
+  },
+  "independent_fixture_plan": {
+    "before_engine": "Author source-located literal case expectations BEFORE production matcher; retain witness/page/line,edition hash,translation/Latin qualifications,provenance and independent review notes.",
+    "minimum_examples": [
+      "Lung cleft+other vitals sound -> matches postponement account only",
+      "Lung cleft+other vitals unknown -> insufficient for exact compound case",
+      "Liver cleft does not match lung account",
+      "Absent liver-head -> matches II.13.32 source belief and retains Marcus critique",
+      "Present head -> no inverted favorable omen",
+      "Unspecified organ/presence -> unresolved",
+      "Missing heart without Caesar context -> no Caesar narrative prognosis",
+      "Caesar full source sequence -> documentary comparison,never factual death forecast",
+      "Contradictory declarations -> conflicting evidence",
+      "Piacenza/Mesopotamian IDs rejected under Roman profile",
+      "Unicode raw reflection exact replay"
+    ],
+    "matrix": "Finite cross-product of selected organ,feature,presence,other-vitals,context and uncertainty values; independent literal truth expectations,not generated by production code. Explicit known answers and false-positive controls required.",
+    "archaeological_gate": "If alternative selected, independently collate ALL supported cell IDs/names against declared edition/face; compare numbering and varied inscription direction visually. Counts alone never certify labels."
+  },
+  "configuration_matrix": {
+    "supported_now": [
+      "Audit bibliography/source-access/provenance facts only; no39 runtime support"
+    ],
+    "candidate_after_gates": [
+      "Bounded Roman historical source-condition comparison with explicit speaker/critical context"
+    ],
+    "experimental": [
+      "Piacenza cell-name reconstruction pending complete identifiers/rights",
+      "Mesopotamian tablet comparator pending legitimate complete pair extraction"
+    ],
+    "unsupported": [
+      "Unified Mesopotamian/Etruscan/Roman omen system",
+      "Factual predictions or empirical accuracy certification",
+      "Automated organ recognition/modern anatomical diagnosis",
+      "Generic favorable/unfavorable inversion",
+      "Animal harm,procurement,dissection,heating or sacrifice instructions",
+      "Unverified compass orientation or deity-to-fortune map"
+    ]
+  },
+  "acceptance_gates": [
+    "Preserve inventory60/54/excluded25,27,41,42,47,48;three ranked sources/three variations unchanged.",
+    "Freeze legitimate edition,rights,source terms,condition/result and critical context before catalog.",
+    "Freeze independent source/expected fixtures before engine.",
+    "Complete selected identifiers/conditions; no missing data becomes adverse/favorable judgment.",
+    "Keep traditions and maintext/commentary/speaker/modern reconstruction separate.",
+    "Versioned offline deterministic profile/catalog; no framework,LLM,camera or RNG requirement.",
+    "Strict input validation,exact JSON/Markdown replay,unknown/conflict/unsupported controls.",
+    "Full inherited958tests/1151CLI/21verifiers plus new meaningful tests,independent verifier,registry/dependency/pip/diff and protected-byte checks pass before ready.",
+    "Record bounded supported/experimental/unsupported matrix and P1/P2; release never implies empirical validation."
+  ],
+  "P1": [
+    "Latin-original collation of selected Roman conditions and anatomical ambiguity",
+    "Legitimate Koch chapter/tablet/translation access,complete pairs,exceptions and lacunae",
+    "Resolve CCP embedded-edition access and independent duplicate witnesses",
+    "Full selected Piacenza cell transcriptions/numbering,both faces,disputed readings and image/diagram rights",
+    "Freeze original source fixtures before implementing any39 functionality"
+  ],
+  "P2": [
+    "Broader independent Roman extispicy authors",
+    "Additional Mesopotamian series/periods under separate profiles",
+    "Original rights-cleared schematic geometry after reference core",
+    "Deeper Etruscan cosmological reconstructions kept attributed",
+    "Empirical research independent of historical textual comparison"
+  ],
+  "rights": "Only original concise factual notes/locators distributed. No copyrighted Koch chapters,Colonna diagrams,museum photos or modern deity dictionaries copied. Publicly available is not automatically public domain.",
+  "limits": "Resource audit is complete within bounded scope; source freezes,independent executable fixtures and39 implementation remain future work. No40 resource audit begun."
+}
