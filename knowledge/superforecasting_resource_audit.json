@@ -1,0 +1,536 @@
+{
+  "version": 1,
+  "technique_id": 51,
+  "name": "Superforecasting",
+  "date": "2026-11-07",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "beae4ab",
+  "predecessor_gate": "Accepted50closure pushed;git fetch andcleanmain0ahead/0behind observed before51research.",
+  "policy": "Audit andoriginal analytical checks only. No51engine,CLI,executable profile orforecastskill certification;no52research.",
+  "inventory_method_row": [
+    51,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Superforecasting",
+    "RETAIN — simulate / implement",
+    "Data & simulation",
+    "Outside view; reference classes; decomposition; Bayesian updates; Brier/log scoring; calibration",
+    "Structured question definition, probabilistic update and backtest",
+    "Historical resolved forecasts; event-resolution rules",
+    "Depends on auditable truth and resolvable question wording",
+    "Empirically measurable forecasting skill",
+    "Superforecasting: The Art and Science of Prediction",
+    "Philip E. Tetlock and Dan Gardner",
+    null,
+    "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+    null,
+    null,
+    "44, 45, 49, 57, 58",
+    51
+  ],
+  "ranked_sources": [
+    [
+      51,
+      "Superforecasting",
+      1,
+      "Philip E. Tetlock and Dan Gardner",
+      "Superforecasting: The Art and Science of Prediction",
+      "Practitioner cognitive workflow",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      51,
+      "Superforecasting",
+      2,
+      "Barbara Mellers et al.",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Tournament evidence and scoring",
+      "https://pubmed.ncbi.nlm.nih.gov/24659192/",
+      "Peer-reviewed abstract",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      51,
+      "Superforecasting",
+      "Outside view",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "reference classes",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "decomposition",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "Bayesian updates",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "Brier/log scoring",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "calibration",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_catalog": "knowledge/superforecasting_sources.json",
+  "source_manifest_sha256": "7502f901d5e17b31e7e798e192473bc8ae73854e863484c2f65a6f251d841e0b",
+  "book_access": {
+    "edition": "2016-09-13Crown paperback9780804136716,352pages;publisher separately lists2015-09-29ebook,not silentlysameedition",
+    "read": "Authorizedpublisher Chapter1excerpt read;full later chapters notinspected. GoodJudgment primarybook-derived guidance provides procedural coverage separately.",
+    "finding": "Chapter1 contrasts reputation with independently recorded andassessed forecasts;precise questions anddated records matter. No detailed later-chapter algorithm inferred frommarketing copy.",
+    "rights": "Publisher explicit allrightsreserved;no book/excerpt redistributed."
+  },
+  "primary_guidance": {
+    "source": "superforecasting-commandments-v1",
+    "locators": "Items2–4,6–10",
+    "summary": "Decompose problems andsurface assumptions;compare inside/outside views;use comparable historical classes;update without overreacting;express uncertainty numerically;balance calibration andresolution;review errors andsuccesses;seek constructive disagreement;practice with clear feedback.",
+    "interpretation": "Motivates ledger andreview workflow,not a deterministic recipefor measured probabilities orlikelihood ratios."
+  },
+  "tournament_evidence": {
+    "source": "superforecasting-mellers-author-v1",
+    "publication": "Psychological Science25(5),1106–1115;online2014-03-21;Mayissue",
+    "context": "September2011–April2013;199outcomes:85Year1,114Year2. Starts2246participantsYear1,1648Year2;survey/market split1593/653and943/705. Degree-required recruitedsample,not population representative.",
+    "methods": "Approximately45minute training;Year1training×group assignment;Year2changed design andelite tracking. Probabilitytraining encouraged referenceclasses/averaging andbias checks;teams shared rationales. Elite60in5teams of12 selected fromYear1performance.",
+    "scoring": "Two-category sum-of-squares0–2;averaged overdays/questions. Source p.9,y1=.02 andy0=1.62. Within-question standardization addresses selected-question difficulty;this isnot a single final-cutoff ledger score.",
+    "results": "Training,teaming andtracking improved calibration/resolution inthis tournament. Aggregation algorithm details andprediction-market results are reportedelsewhere,not implemented fromthis paper.",
+    "limits": "Elite selection isnot randomteam assignment;question/revision/dependence/context matter. No universal intervention guarantee.",
+    "normalization_observation": "Paperprose uses two-category0–2;Note1expresses binary-form decomposition. Our mathematical observation,not authorerratum. Namebinary0–1versustwicebinary0–2andscalecomponentsconsistently."
+  },
+  "candidate_comparison": [
+    {
+      "id": "A",
+      "scope": "Question ledger",
+      "value": "High auditability,reuses45concepts,butalone omits referenceclass/update arithmetic"
+    },
+    {
+      "id": "B",
+      "scope": "Reference-class calculator",
+      "value": "Simple exact denominator checks,butalone lacks forecast history/scoring"
+    },
+    {
+      "id": "C",
+      "scope": "Bayesian update",
+      "value": "Exact small arithmetic,butassumed likelihoods alone do not implyforecast skill"
+    },
+    {
+      "id": "D",
+      "scope": "Scoring/calibration",
+      "value": "Strong independently testable core,butrequire disciplined version/time selection"
+    },
+    {
+      "id": "E",
+      "scope": "Bounded integrated workbench",
+      "value": "Recommended:immutable question/class/baseline,versioned forecasts,explicit conditional evidence updates,resolution,paired event scoring andcalibration"
+    }
+  ],
+  "first_scope_recommendation": {
+    "candidate": "E",
+    "name": "Versioned Binary Forecasting andProbability Update Workbench — Synthetic Software Validation Scope",
+    "reason": "Integrates A–Dwith small exact arithmetic andexisting ledger patterns;highest practical value without a heavy framework.",
+    "core": [
+      "Binary resolvable question ledger with immutable wording/resolution source/cutoff",
+      "Explicit reference-class membership andexact empirical base rate",
+      "Versioned original/manual/Bayes probability updates with source/evidence provenance",
+      "Resolution/status ledger andpredeclared eligible-version selection",
+      "Exact rational Brier,explicitlog endpoint statuses,descriptive calibration",
+      "Same-event paired baseline comparison andheld-out event-group partitions"
+    ],
+    "defer": [
+      "Automatic evidence-to-LR estimation",
+      "Multinomial/conditional-event tournament replication",
+      "Daily carry-forward score protocol andquestion-standardized tournament score reproduction",
+      "Team skill/aggregation optimization andstatistical superiority claims"
+    ],
+    "status": "Recommendation only;no executable profile frozen."
+  },
+  "reuse": {
+    "technique45": {
+      "inspected": [
+        "future/intuitive_prediction.py:probability,check_plan,replay,evaluate",
+        "knowledge/intuitive_prediction_profile_v1.json",
+        "knowledge/intuitive_prediction_core_v1.json"
+      ],
+      "reuse": "Design patterns only:exact fractions,hash-linked versions,source assets,cutoff/occurrence checks,ten calibration bins,paired baseline andseparate slot/event/group denominators.",
+      "contract": "Keep45immutable.Latesteligible-beforecutoff andstrictbeforeoccurrence selectedonce per slot;its Brier alsoexposes2Xloss. New51profile mustnameanynew convention;do notchange45outputs."
+    },
+    "technique49": {
+      "inspected": [
+        "knowledge/ai_predictive_modeling_core_v1.json",
+        "knowledge/ai_predictive_modeling_profile_v1.json"
+      ],
+      "reuse": "Temporalpartition/source-snapshot discipline andhonest baseline comparison;do notreuse NOAA monthly horizon/seasonality assumptions for geopolitical events."
+    }
+  },
+  "reference_class_model": {
+    "fields": [
+      "class_id",
+      "definition_version",
+      "event_definition",
+      "eligibility_rule",
+      "freeze_at",
+      "availability_cutoff",
+      "universe_member_ids",
+      "included_member_ids",
+      "excluded_member_ids_and_reasons",
+      "ambiguous_member_ids",
+      "duplicate_or_overlap_groups",
+      "member_event_and_observation_times",
+      "outcome_and_resolution_source",
+      "source_snapshot_sha256",
+      "rights",
+      "target_question_id"
+    ],
+    "convention": "Original unweighted empirical ratek/n overdeclared eligible known-resolved historical members. n0notestimable;0/nandn/n remain observed frequencies,not certainty. No fabricated smoothing prior.",
+    "selection": "Eligibility rule andallmembership/exclusions frozen before targetforecast/test. Historical membership maynotbe chosen tojustify desired outcome;preserveavailableuniverse,missingoutcomes andselectionlimitations. Recordreporting delays andwhat wasknownatfreeze.",
+    "comparability": "Domain,eventwindow,horizon,definition,geography/regime andobservationprocess mustbemotivated;these declarations cannotprove external representativeness.",
+    "dependence": "Deduplicate event identity;overlapping members retainedwithgroups andexplicit weighting/exclusion policy.Nominaln isnot an independent effective sample size."
+  },
+  "forecast_protocol": {
+    "question": [
+      "opaque_id",
+      "precise_binary_event_text",
+      "window_start/end",
+      "cutoff",
+      "resolution_rule/source",
+      "timezone",
+      "void/dispute_policy",
+      "dependency_group",
+      "frozen_baseline_andclasshash"
+    ],
+    "versions": [
+      "forecast_id",
+      "participant/team_id",
+      "version",
+      "parent_sha256",
+      "recorded_at",
+      "knowledge_at",
+      "probability",
+      "evidence_ids/snapshots/rights",
+      "method/manual_or_bayes",
+      "assumptions"
+    ],
+    "selection": "Freeze latesteligible version at/before fixedquestioncutoff,strictlybefore event occurrence/knownoutcome;one event-participant score. Lateupdates remainvisiblebutunscored. No outcome-informed choice ofrevision.",
+    "resolution": "Record occurrence_at,reported_at,resolved_at,status,outcome,sourcehash andcorrections;unresolved/disputed/voidexcludedwithdenominators,not mapped to0.",
+    "time_limits": "Local clocks/identities/knowledge aredeclarations;hashchain cannot prevent owner rewriting history. Independent timestamp/commitment needed forprospective integrity.",
+    "negative_event_time": "For nonoccurrence, distinguish the question window end and earliest outcome-knowable time from a positive occurrence timestamp. Freeze this rule before implementation;never invent an actual occurrence time for an event that did not occur."
+  },
+  "bayesian_conventions": {
+    "source": "superforecasting-bayes-v1;MITslides10–14,18",
+    "identity": "posterior odds=prior odds*LR;posterior=Lp/(1-p+Lp)",
+    "likelihood": "LR=P(E|H)/P(E|notH). LR mustbe finite nonnegative exact rational firstscope orderive fromexplicitvalid conditionalpair. It isanassumption unlessestimatedfromauditable independentdata.",
+    "boundaries": "L1leavesp;p0remains0withfiniteL;p1remains1withpositiveL;L0gives0onlywhendenominatorpositive;p1,L0orzero-evidence denominator rejects. No silent certainty repair.",
+    "dependence": "Unique evidenceIDs anddependencygroups;reject repeated IDs. Multiplication onlyfor conditionalLRgivenhistory ordeclared conditional independence underBOTH hypotheses;differentnews articles can repeatonesource. Declarations do notprove independence.",
+    "certain_event": "No arbitrary confidenceword-to-LR conversion;manual forecaster revisions kept distinct fromBayes formula correctness.",
+    "exact_examples": [
+      {
+        "prior": "1/5",
+        "LR": "1",
+        "posterior": "1/5"
+      },
+      {
+        "prior": "1/5",
+        "LR": "3",
+        "posterior": "3/7"
+      },
+      {
+        "prior": "1/5",
+        "event_likelihood": "3/5",
+        "complement_likelihood": "1/5",
+        "posterior": "3/7"
+      },
+      {
+        "prior": "1/5",
+        "LR": "0",
+        "posterior": "0"
+      }
+    ]
+  },
+  "scoring_conventions": {
+    "source": "superforecasting-proper-scores-v1;Sections1and3;paper normalizationseparate",
+    "binary_brier": "loss=(p-y)^2,range0–1;meanoverpreselectedequalweightedresolved event-participant pairs",
+    "two_category": "(p-y)^2+((1-p)-(1-y))^2=2*binaryloss,range0–2. Nevermixaverages acrossconventions.",
+    "log_loss": "Natural-log loss=-ln(p) fory1,-ln(1-p) fory0. Correctendpoint0;contradictedendpointtagpositive_infinity;undefinednoscorenullwithreason. No nonfinite JSON orsilentclipping. PinDecimalprecision/rounding before implementation.",
+    "aggregation": "Eachquestion selectedonce perparticipant/cutoff;explicitlyseparate event-average,participant-average,teamaggregate anddaily/tournament scores. Missingness andhorizon differ;requirepairmatching.",
+    "calibration": "Propose10leftclosedbins[k/10,(k+1)/10),lastincludes1;reportcount,meanp,outcomerate andnull empty bins. Descriptivebin estimates are not calibrationcertification;bins frozenpreoutcome.",
+    "resolution": "Higherresolution isoutcomerate separation acrossprobabilitygroups;not merely extremep. Murphyidentityusesidentical forecastgroups;coarsebinsneedadditionalwithinbin terms. BinarycaseBrier=REL-RES+UNC;doubleallterms for2categoryscale.",
+    "skill": "Useexactpairedlossdifferenceon sameoutcomes. Relative1-model/referenceonlyifreferencepositive;zero baseline=>notestimable. Splitbytime/dependencygroup beforefit/selection;freezebaselinefromearlierresolvedavailabledata.",
+    "limits": "Rare-event prevalence canproduce lowloss;report prevalence,horizon/missingness,uniqueevents andgroups. Small/dependent samples do notestablish team/individualsuperiority;no automaticpvalues."
+  },
+  "dataset_audit": {
+    "primary_announcement": "IARPA2017-04-28announcesfouryear publicGJP archive",
+    "repository": "https://dataverse.harvard.edu/dataverse/gjp",
+    "access": "HTML bot-verification response anddocumentedpublicmetadata API403. No challenge bypass,no files acquired.",
+    "secondary_lead": "doi10.7910/DVN/BPCDH5appears insecondarycatalogonly;primary datasetmetadata andCC0claim NOTverified.",
+    "verified_fields": [],
+    "unverified": [
+      "datasetversion/DOIauthority",
+      "file-levelrights/consent",
+      "completeexactquestionwording",
+      "timestamp/timezoneandallrevisions",
+      "resolutionsanddisputed/voidevents",
+      "participant/teamcodes",
+      "missingness",
+      "availabilitydelays",
+      "reference-classeligibility",
+      "train/validation/testpartitions",
+      "eventdependence"
+    ],
+    "first_scope": "Original clearly labeled synthetic software fixtures;noempiricalskillclaim. Publicannouncement alone isnot a license orcompleteness certificate.",
+    "P1": "Obtainprimary datasetmetadata/codebooks/termsandhashes;inspectcompleteledger,anonymization andquestionresolutionfiles;thenpredeclareheldoutgroup/time protocol. No genericrepository-default license assumption."
+  },
+  "independent_fixture_plan": [
+    {
+      "id": "reference-base-rate",
+      "expected": "Original10eligible resolved members,3successes =>3/10;preserveall10IDs."
+    },
+    {
+      "id": "empty-zero-full-samples",
+      "expected": "n0=>not_estimable,not0;0/5=>0;5/5=>1;observed endpoints are not population certainty."
+    },
+    {
+      "id": "ambiguous-membership",
+      "expected": "A member with unknown eligibility is explicitly unresolved/excluded with reason;no guessed inclusion."
+    },
+    {
+      "id": "denominator-preservation",
+      "expected": "Universe12,included10,excluded2;unresolved members counted separately;no silent denominator drop."
+    },
+    {
+      "id": "binary-probability",
+      "expected": "Accept exact0,1/2,1;reject bool,nonfinite,negative,>1 andunsupported fields."
+    },
+    {
+      "id": "brier-loss",
+      "expected": "p9/10,y1=>1/100binary,1/50two-category;p9/10,y0=>81/100and81/50."
+    },
+    {
+      "id": "bayes-neutral",
+      "expected": "prior1/5,LR1=>1/5."
+    },
+    {
+      "id": "bayes-positive",
+      "expected": "prior1/5,LR3=>3/7;equivalentconditional likelihoods3/5and1/5 yield3/7."
+    },
+    {
+      "id": "bayes-zero",
+      "expected": "prior1/5,LR0=>0;impossible evidence underboth hypotheses rejects."
+    },
+    {
+      "id": "certain-priors",
+      "expected": "p0withfiniteLR3=>0;p1withLR3=>1;p1withLR0=>undefined/reject."
+    },
+    {
+      "id": "dependent-evidence",
+      "expected": "Repeated evidenceID rejects;naive second LR3 wouldproduce9/13andmustnotbeaccepted asindependent duplicate."
+    },
+    {
+      "id": "forecast-versions",
+      "expected": "Original1/5atJan1,amend2/5atJan2,cutoffJan3=>select2/5once;Jan4revision retainedbutunscored."
+    },
+    {
+      "id": "chronology",
+      "expected": "Forecastat/afterknown occurrence rejects eligibility;strict cutoff/sourceavailability/window/resolution chronology."
+    },
+    {
+      "id": "unresolved-void",
+      "expected": "Resolved2,unresolved1,void1=>score denominator2;showall4statuses andexplicit exclusions."
+    },
+    {
+      "id": "calibration-bins",
+      "expected": "10fixedleft-closed bins,lastincludes1;p.1=>bin1,p1=>bin9;emptybinsnull;[.2,.2]y[0,1]=>mean1/5,frequency1/2,count2."
+    },
+    {
+      "id": "paired-baseline",
+      "expected": "p[4/5,3/10],y[1,0]:binary Brier13/200;baseline1/2loss1/4;improvement37/200;skill37/50."
+    },
+    {
+      "id": "team-dependence",
+      "expected": "Two people forecastingoneevent=>2slots,1uniqueevent,1dependencygroup;team collaboration not2independent events."
+    },
+    {
+      "id": "rights-source",
+      "expected": "Missingrights,source hash orreference-class member provenance rejects."
+    },
+    {
+      "id": "json-markdown-replay",
+      "expected": "Unicode,whitespace,raw-input hashes,exactsemanticreport andsafeMarkdownfence replay;rejectedcases too."
+    },
+    {
+      "id": "log-loss",
+      "expected": "p1/2=>ln2;correctendpoint=>0;contradictedendpoint=>taggedpositiveinfinity,notJSONInfinity orsilentclipping."
+    },
+    {
+      "id": "resolution-decomposition",
+      "expected": "Identicalforecast groups p[.2,.2,.8,.8],y[0,1,1,1]:Brier19/100,REL13/200,RES1/16,UNC3/16;REL-RES+UNC=19/100."
+    },
+    {
+      "id": "heldout-isolation",
+      "expected": "Freezeclass/baseline beforetargettest;futureoutcome alteration cannotchangeearlier selectedforecasts orfrozen priors;splitdependent events together."
+    },
+    {
+      "id": "negative-event-resolution-time",
+      "expected": "Binary nonoccurrence resolves only after the declared window/observation policy;report known_at and window_end separately from positive occurrence_at."
+    }
+  ],
+  "scientific_boundaries": [
+    "Arithmeticvalidity isnot evidence likelihoods aretrue",
+    "Descriptivescore ofsubmittedforecasts differs fromheldoutempiricalskill",
+    "Syntheticfixturecorrectness doesnotdemonstratesuperforecastingskill",
+    "Tournamenthistoricalresults do notguaranteeuniversaltraining/teambenefit",
+    "Calibrationrequiresrepresentativeenoughdata anduncertaintyanalysis",
+    "No psychicintuition orquantum estimate mechanism inferred"
+  ],
+  "configuration_matrix": {
+    "supported_audit": [
+      "Verifiedmetadata/access/locators",
+      "Source-specific method summaries",
+      "Independentanalytical examples andfixture plans"
+    ],
+    "experimental_unimplemented": [
+      "Proposedintegratedbinaryledger/update/scorecore",
+      "Rights-cleared empiricalGJPbenchmark",
+      "Team/aggregationcomparisons"
+    ],
+    "unsupported": [
+      "Any51executable runtime/CLI/profilecertification",
+      "Universalpredictivesuperiority",
+      "Fabricatedreferenceclasses/LRs",
+      "Syntheticvalidationasempiricalskill",
+      "Unlicensedforecastledgerredistribution"
+    ]
+  },
+  "acceptance_criteria": [
+    "Freezeexactsource/rules/profile/versionandrights beforeproduction",
+    "Independentfixtures before51engine;all23plannedfamilies",
+    "Exactrationalreference/Bayes/Brier anddeclaredlog arithmetic/endpoints",
+    "Immutablequestions/classes/baselines andcompleteversion/resolutionhistory",
+    "Cutoff/occurrence/availability/dependencygroupnegativecontrols",
+    "Sameoutcome/horizon pairedbaseline andheldoutisolation",
+    "Explicitdenominators/calibrationlimits;no empiricalclaimfromsyntheticdata",
+    "Accepted/rejected JSON/Markdownreplay andsourcehashintegrity",
+    "Fullinherited1598tests/2207CLI/29verifiers plusnewtests",
+    "Completecurrentbytepreservationmanifest/registry/strictJSON/dependency/pip/diffgates",
+    "Supported/experimental/unsupportedmatrix andP1/P2closure",
+    "No52audituntil51subsequentlyclosed"
+  ],
+  "backlog": {
+    "P1": [
+      "Booklater-chapter/appendixeditionlocators withoutunauthorizedcopying",
+      "PrimaryGJP datasetmetadata/codebooks/rights/consentandcompleteledger",
+      "Freezeexact51schema/numeric/selection/logendpointconventions",
+      "Independent23familyfixturesbeforeengine",
+      "ExplicitBayesconditionaldependenceandimpossibleevidencecontrols",
+      "Latest-cutoffvsdaily/tournament scoringseparation",
+      "Heldoutgroup/timebenchmarkwithoutas-ofavailabilityclaims",
+      "Calibrationuncertainty/selectionbiasanalysis"
+    ],
+    "P2": [
+      "Multinomial/conditionalquestionworkflows",
+      "Predeclaredteam/aggregationcomparisonwithheldoutskilltracking",
+      "Dailycarry-forward/tournamentreproduction",
+      "Moreadvancedcalibration/resolutionanddependency-awareinference",
+      "Prospectiveindependentlyanchoredforecastcollection"
+    ]
+  },
+  "next": "Implement51in a subsequent authorizedpass;no51engine/CLI or52research inthis audit.",
+  "source_payloads": {
+    "local_primary_acquisition": {
+      "mellers_pdf": {
+        "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2015/07/2014---psychological-strategies-for-winning-a-tournament.pdf",
+        "status": 200,
+        "bytes": 606658,
+        "sha256": "f7773ecceb1027ba93721a0750deb8d5c1a478597252d6f4f5ae401c4f6e77b3",
+        "content_type": "application/pdf"
+      },
+      "proper_pdf": {
+        "url": "https://sites.stat.washington.edu/people/raftery/Research/PDF/Gneiting2007jasa.pdf",
+        "error": "<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>"
+      },
+      "bayes_mit": {
+        "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_lec12.pdf",
+        "status": 200,
+        "bytes": 133304,
+        "sha256": "be92bb2a41f1f4d526784f1de3fa2590ad06820a2bc280129c9169cb5e075ba6",
+        "content_type": "application/pdf"
+      },
+      "commandments": {
+        "url": "https://goodjudgment.com/philip-tetlocks-10-commandments-of-superforecasting/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "iarpa": {
+        "url": "https://www.iarpa.gov/newsroom/article/iarpa-announces-publication-of-data-from-the-good-judgment-project",
+        "status": 200,
+        "bytes": 37204,
+        "sha256": "bd61486fa776fc174dc52b70e93b9d20bf2620431e837371a480d0a6105c173b",
+        "content_type": "text/html; charset=utf-8"
+      },
+      "publisher": {
+        "url": "https://www.penguinrandomhouse.com/books/227815/superforecasting-by-philip-e-tetlock-and-dan-gardner/",
+        "status": 200,
+        "bytes": 327611,
+        "sha256": "e56fb8d4bf681167f404476c35088fa5e4c648693d34c45418aa794af6fa99ea",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    "publisher_excerpt_and_repository_attempts": {
+      "retail": {
+        "url": "https://www.penguinrandomhouseretail.com/book/?isbn=9780804136716",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "bytes": 325365,
+        "sha256": "0ce04f2d480da80d5acfaca7ca9027423664004b5ee3bc258c93a3af5795cb60",
+        "preview": "\n<!DOCTYPE html>\n<html lang=\"en\" prefix=\"og: http://ogp.me/ns#\">\n<head>\n\t<title>Superforecasting | P"
+      },
+      "gjp_api": {
+        "url": "https://dataverse.harvard.edu/api/dataverses/gjp/contents",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "gjp_dataset": {
+        "url": "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/BPCDH5",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "policy": "Payload hashes describe exact inspected responses kept only in local temporary storage. No source bodies/PDFs are redistributed. Successful web reading and failed direct-fetch attempts are separate observations."
+  }
+}
