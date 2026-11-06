@@ -1118,3 +1118,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #50 portable raw-byte replay
 - Added a new corpus-local -text attribute so Git does not rewrite raw input/output bytes. Both autocrlf=true/false checkout exports preserve all89input and178output commitments;268files checked per export. Existing attributes and protected earlier bytes remain unchanged.
+
+## 2026-11-07 — #50 full acceptance
+- Passed1598tests (1462inherited+136new),2207CLI cases (2029inherited+178new),29independent verifiers (28inherited+1new). All20families and36accepted/53rejected exact JSON/Markdown pairs pass.
+- All2927protected earlier bytes unchanged. Registry idempotence,rights/source integrity,strict JSON with two inherited malformed rejection fixtures,dependency audit,pip check,diff check,other59gap entries and60IDs/54retained/six exclusions pass. Evidence:data/quantum-probability-forecasting-acceptance-checks.json.
