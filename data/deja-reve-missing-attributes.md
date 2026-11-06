@@ -1,0 +1,75 @@
+# Déjà Rêvé
+
+Human declarations and documentary provenance;no diagnosis,memory authenticity or prediction certification.
+
+```json
+{
+  "status": "accepted",
+  "task": "annotate",
+  "visibility": "private_local",
+  "profile": {
+    "id": "curot2018-phenomenology-and-dream-record-provenance-v1",
+    "version": 1,
+    "sha256": "fdfe3074e23b10deb96928d85b3440d2a3122acdcffc5270af3596a854c3698a",
+    "source_sha256": "4cf84701323b1a6c41bc7e2ec8148949845e6e2a1026c21e0393820df1d92456",
+    "source_freeze_sha256": "d5974022275216a8c0a29bfaebff3ad099b4a4a796dc71cd6b7b2fdefdd20dec"
+  },
+  "request_sha256": "4e33f572aa5a42110a8c573ecb733943696ab5ded65ef5a2a0351795e7c14b4b",
+  "result": {
+    "record": {
+      "original": {
+        "profile": "curot2018-phenomenology-and-dream-record-provenance-v1",
+        "profile_version": 1,
+        "kind": "observation",
+        "id": "obs1",
+        "pseudonym": "synthetic1",
+        "source_ref": "original-synthetic-demonstration",
+        "occurrence": {
+          "start": "2026-11-04T10:00:00Z",
+          "end": "2026-11-04T10:00:00Z"
+        },
+        "first_record_at": "2026-11-04T11:00:00Z",
+        "lock_at": "2026-11-04T11:00:00Z",
+        "narrative": "  Original synthetic recollection: orange kite.\nCafé 🪁\t\n",
+        "narrative_sha256": "3013979e83bdcfbe806c315ebfa040ae920dce90ec26f93723199a26e9524645",
+        "context": "ordinary_nonclinical",
+        "attributes": {
+          "dream_association": null,
+          "specific_recollection": null,
+          "temporal_context": "unknown",
+          "familiarity": true,
+          "present_dreamy_state": false,
+          "subjective_confidence": "High self-reported confidence",
+          "reviewer": "reviewer1",
+          "proposal": "episodic-like",
+          "uncertain": false
+        },
+        "consent": {
+          "local_processing": true,
+          "rights": "self_authored",
+          "export": false
+        }
+      },
+      "original_sha256": "14c29ae306df0e5669ece8752bd1a9ff5d3431af249dbadb750adee43edc16c5",
+      "amendments": []
+    },
+    "compatibility": {
+      "status": "unclassifiable",
+      "reason": "missing_structured_declarations",
+      "conflicting_attributes": [],
+      "declared_proposal": "episodic-like",
+      "proposal_disagrees": true,
+      "qualification": "Compatibility of human declarations only;not expert clinical consensus or verified memory."
+    }
+  },
+  "limits": [
+    "No neurological diagnosis,localization or stimulation advice",
+    "No memory authenticity certification",
+    "No future-event prediction or resemblance probability",
+    "Local owner may rewrite a hash chain;timestamps,identity,consent and knowledge are declarations",
+    "Clinical source examples do not validate consumer classification"
+  ],
+  "privacy": "Local pseudonymous private records. Consent/local processing and rights required;export unsupported in v1. CLI stdout/private JSON includes raw text and must remain private. Reference has no participant data.",
+  "report_sha256": "d94610a0ebd73f6f38cfc2dd10f86d85d0bb28fec5e5100a6014027474e381ac"
+}
+```

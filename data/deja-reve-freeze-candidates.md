@@ -1,0 +1,43 @@
+# Déjà Rêvé
+
+Human declarations and documentary provenance;no diagnosis,memory authenticity or prediction certification.
+
+```json
+{
+  "status": "accepted",
+  "task": "freeze-candidates",
+  "visibility": "private_local",
+  "profile": {
+    "id": "curot2018-phenomenology-and-dream-record-provenance-v1",
+    "version": 1,
+    "sha256": "fdfe3074e23b10deb96928d85b3440d2a3122acdcffc5270af3596a854c3698a",
+    "source_sha256": "4cf84701323b1a6c41bc7e2ec8148949845e6e2a1026c21e0393820df1d92456",
+    "source_freeze_sha256": "d5974022275216a8c0a29bfaebff3ad099b4a4a796dc71cd6b7b2fdefdd20dec"
+  },
+  "request_sha256": "6ee34b2d914140ea4936cc41880e6e3b7b6ed92c2d542d1ca92315e0fbf9aadd",
+  "result": {
+    "payload": {
+      "observation_id": "obs1",
+      "frozen_at": "2026-11-04T11:30:00Z",
+      "candidates": [
+        {
+          "dream_id": "dream1",
+          "original_sha256": "bc5f86f9bc744e75b6c16ed221ad94c891e4fa987343e95867c0f60d2dd0da01",
+          "disposition": "included",
+          "reason": "Exact declared ID search"
+        }
+      ]
+    },
+    "sha256": "7c14f407400264fd7f63e66f06d861603d1328bb1002c5e2ef150a91548ece3f"
+  },
+  "limits": [
+    "No neurological diagnosis,localization or stimulation advice",
+    "No memory authenticity certification",
+    "No future-event prediction or resemblance probability",
+    "Local owner may rewrite a hash chain;timestamps,identity,consent and knowledge are declarations",
+    "Clinical source examples do not validate consumer classification"
+  ],
+  "privacy": "Local pseudonymous private records. Consent/local processing and rights required;export unsupported in v1. CLI stdout/private JSON includes raw text and must remain private. Reference has no participant data.",
+  "report_sha256": "8ee83ff0430a79de9b53b56fbb234fdb1de8c8f7629fa99773e2c34605cc0657"
+}
+```

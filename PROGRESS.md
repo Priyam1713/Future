@@ -1029,3 +1029,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #46 independent verifier
 - All16frozen families pass against648pre-engine category expectations,11chronology constants,four author labels/counts and independent SHA256 commitments. Includes originals/amendments,seven candidate outcome buckets and separate post-hoc denominator. Clinical/empirical validation remains explicitly false.
+
+## 2026-11-07 — #46 reports and CLI replay
+- Saved34accepted/36rejected synthetic JSON/Markdown pairs;144CLI cases include strict duplicate/nonfinite JSON failures and record,amend,freeze,link,compare,report workflows. All byte-exact pair replays generated successfully;inherited acceptance running.
+- README records strict hashing,source cases,private output,manual comparison semantics,external-event declaration limits and unsupported export/import/retrieval.

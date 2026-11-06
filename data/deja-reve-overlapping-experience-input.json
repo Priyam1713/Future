@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "task": "compare",
+  "analysis": {
+    "observation": {
+      "original": {
+        "profile": "curot2018-phenomenology-and-dream-record-provenance-v1",
+        "profile_version": 1,
+        "kind": "observation",
+        "id": "obs1",
+        "pseudonym": "synthetic1",
+        "source_ref": "original-synthetic-demonstration",
+        "occurrence": {
+          "start": "2026-11-01T07:00:00Z",
+          "end": "2026-11-01T09:00:00Z"
+        },
+        "first_record_at": "2026-11-04T11:00:00Z",
+        "lock_at": "2026-11-04T11:00:00Z",
+        "narrative": "  Original synthetic recollection: orange kite.\nCafé 🪁\t\n",
+        "narrative_sha256": "3013979e83bdcfbe806c315ebfa040ae920dce90ec26f93723199a26e9524645",
+        "context": "ordinary_nonclinical",
+        "attributes": {
+          "dream_association": true,
+          "specific_recollection": true,
+          "temporal_context": "specific",
+          "familiarity": true,
+          "present_dreamy_state": false,
+          "subjective_confidence": "High self-reported confidence",
+          "reviewer": "reviewer1",
+          "proposal": "episodic-like",
+          "uncertain": false
+        },
+        "consent": {
+          "local_processing": true,
+          "rights": "self_authored",
+          "export": false
+        }
+      },
+      "original_sha256": "9e142d642a10adce9eb70aab98d8e3925001ec53e00ebf871342253a1fc5c662",
+      "amendments": []
+    },
+    "dreams": [
+      {
+        "original": {
+          "profile": "curot2018-phenomenology-and-dream-record-provenance-v1",
+          "profile_version": 1,
+          "kind": "dream",
+          "id": "dream1",
+          "pseudonym": "synthetic1",
+          "source_ref": "original-synthetic-demonstration",
+          "occurrence": {
+            "start": "2026-11-01T06:00:00Z",
+            "end": "2026-11-01T06:00:00Z"
+          },
+          "first_record_at": "2026-11-01T08:00:00Z",
+          "lock_at": "2026-11-01T08:00:00Z",
+          "narrative": "A vague room and a kite.\n",
+          "narrative_sha256": "7b0e22ce735a7fb7dad7cfefaa79c325fd240e35d8ddbc9f4604f34d214f48e9",
+          "context": "ordinary_nonclinical",
+          "attributes": null,
+          "consent": {
+            "local_processing": true,
+            "rights": "self_authored",
+            "export": false
+          }
+        },
+        "original_sha256": "bc5f86f9bc744e75b6c16ed221ad94c891e4fa987343e95867c0f60d2dd0da01",
+        "amendments": []
+      }
+    ],
+    "manifest": {
+      "payload": {
+        "observation_id": "obs1",
+        "frozen_at": "2026-11-04T11:30:00Z",
+        "candidates": [
+          {
+            "dream_id": "dream1",
+            "original_sha256": "bc5f86f9bc744e75b6c16ed221ad94c891e4fa987343e95867c0f60d2dd0da01",
+            "disposition": "included",
+            "reason": "Exact declared ID search"
+          }
+        ]
+      },
+      "sha256": "7c14f407400264fd7f63e66f06d861603d1328bb1002c5e2ef150a91548ece3f"
+    },
+    "comparisons": [
+      {
+        "dream_id": "dream1",
+        "version_sha256": "bc5f86f9bc744e75b6c16ed221ad94c891e4fa987343e95867c0f60d2dd0da01",
+        "at": "2026-11-04T12:00:00Z",
+        "reviewer": "reviewer1",
+        "criteria": "Manually compare kite and room details",
+        "reasoning": "Vague original is insufficient for precise detail",
+        "status": "insufficient_information"
+      }
+    ],
+    "event": {
+      "id": "event1",
+      "occurrence": {
+        "start": "2026-10-31T10:00:00Z",
+        "end": "2026-10-31T10:00:00Z"
+      },
+      "publication_at": "2026-11-01T00:00:00Z",
+      "discovery_at": "2026-11-04T09:00:00Z",
+      "evidence_ref": "synthetic-local-event-note",
+      "evidence_sha256": "6d9f6ea74cb9a59725ea6d3356bf976920e62a7f6b4b6a7c55a240af75984cc8"
+    },
+    "post_hoc": []
+  }
+}

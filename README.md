@@ -1627,3 +1627,78 @@ validity and rights remain declarations; owners can rewrite complete local hash
 chains. No real human forecasting benchmark or paranormal capability is validated.
 Full ranked-book/1993 RPD chapters and historical dataset rights remain P1 gaps;
 only original synthetic evidence and concise source facts are distributed.
+
+
+## Déjà Rêvé (#46)
+
+The named `curot2018-phenomenology-and-dream-record-provenance-v1` profile
+supports human-guided experience annotations and exact prior-dream record
+comparison. Curot's episodic-like, familiarity-like, dreamy-state and
+unclassifiable documentary categories remain distinct from the four original
+inventory variations. Source examples are Table1 cases4a,6a,5a and Table2
+Penfield H.N.; the last remains unclassifiable. The inspected institutional
+proof uses pages1–11; final journal pages875–885 are bibliographic metadata,
+without a verified final-layout comparison. Dunne's later recording guidance
+supplies no neurological or prophetic classification rules here.
+
+```powershell
+python -m future deja-reve data/deja-reve-reference-input.json
+python -m future deja-reve data/deja-reve-specific-prior-dream-input.json --format markdown
+python -m future deja-reve data/deja-reve-post-event-amendment-input.json
+python -m future deja-reve data/deja-reve-multiple-candidates-input.json --format markdown
+python -m future deja-reve data/deja-reve-post-hoc-search-input.json
+python -m future deja-reve data/deja-reve-version-hash-input.json
+```
+
+The final command intentionally rejects a conflicting version hash with exit2.
+Requests have `schema_version:1` and an explicit `task`: `reference`, `annotate`,
+`record`, `amend`, `freeze-candidates`, `link-dream`, `compare` or `report`.
+The saved synthetic requests document each strict schema. Retain returned records
+and analysis objects for subsequent requests. Original and narrative hashes use
+SHA256; canonical objects use UTF8 JSON with sorted keys, no optional whitespace,
+`ensure_ascii=False`, and no nonfinite values. Raw narratives preserve Unicode,
+newlines and whitespace without normalization. Originals include timing, consent,
+source and profile commitments. Amendments preserve parents, versions, reasons,
+new narratives, timing and declared knowledge; they cannot edit the original.
+
+Annotation reads explicit declarations only. Unknown details remain
+unclassifiable, conflicts/explicit uncertainty require review, and familiarity
+without dream association stays outside the source scope. Subjective confidence
+and the reviewer's source-category proposal are retained separately. The
+software does not infer experience type from narrative keywords or replicate
+the paper's expert clinical consensus.
+
+Freeze the finite candidate manifest before comparisons. Exact dream IDs and
+original hashes are required; every match, nonmatch, insufficient, unscorable,
+unreviewed, excluded or missing-original candidate remains in the ledger.
+Later searches have separate post-hoc manifests and denominators. Each manual
+comparison names the actual narrative version; later precise details retain
+their later timing. Original locks are compared separately to current experience,
+first written report and optional external event. Equal boundaries, overlaps,
+unknown times and conflicting assertions remain explicit. An earlier record
+establishes documentary order under declared clocks, not the truth of a memory.
+
+All participant outputs are **private local records**, including CLI stdout and
+Markdown/JSON reports. Consent and declared rights are required. Public narrative
+export, automatic import of #44 ledgers, restricted attachment references and
+journal-wide semantic retrieval are outside v1. Optional event evidence
+references/hashes are declarations; this engine does not authenticate external
+event bytes. Local owners can rewrite complete hash chains. The CC BY-NC-ND4.0
+article is represented by concise original factual notes, without interviews,
+figures, article PDF or clinical dataset redistribution. All demonstrations use
+original synthetic inputs. No diagnosis, localization, stimulation advice,
+memory-authenticity determination, resemblance probability or prediction is
+produced.
+
+```powershell
+python -m unittest tests.test_deja_reve
+python -m scripts.verify_deja_reve
+python -m scripts.smoke_deja_reve_core
+python -m scripts.accept_deja_reve_core
+```
+
+Independent source/category fixtures were committed before production. They
+include all16audit families,648conservative declaration combinations and11fixed
+chronology constants. These checks establish bounded computational behavior;
+they are not empirical or clinical validation. Release evidence and P1/P2 limits
+are in `knowledge/deja_reve_core_v1.json`.
