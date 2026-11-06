@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 44 prospective ledger engine — 2026-11-07
+- Added strictmanual ledger,original/version hashes,append-onlyamendments,finitecollectionmanifest/windows,completepair/exclusion accounting,consentedjudgepackets,alljudge locks,reveal andseparate commentary. Nestedasset attributes preserveexactfixturebytes acrossplatforms.
+-66newtests,600independentinterval/chronologychecks,2timezonecases,8manualpairs and18families pass. Initial136CLI cases generated29accepted/15rejected pairs;complete-count report refinement checked. Full inherited acceptance/replay follows;no readinessclaim yet. All2084eligiblepre-enginefiles unchanged.
+
 ## Technique 44 independent fixture specification — 2026-11-07
 - Source/protocol54b377d pushed. Froze300independent integerinterval/chronology cases,2timezone cases,originalversion/lock knownanswers andhand-enumerated2dreams x4events pairspace withnonrecall/missing slots.
 - All18auditfamilies specified beforeproduction;originalsyntheticeventsnapshots permissioncleared. No universalnullmodel orrealhumanstudy implied.

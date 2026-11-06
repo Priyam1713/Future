@@ -285,7 +285,30 @@ def main():
     rv.add_argument('--asset-root',default=str(ROOT),help='Root for verified relative local asset references')
     rv.add_argument('--export-dir',help='New directory for allowlisted blind packet and neutral PNG exports only')
     rv.add_argument('--format',choices=['json','markdown'],default='json')
+    pd=sub.add_parser('prophetic-dreams')
+    pd.add_argument('input',help='Prospective dream/event ledger create/apply/report/judge/reference JSON')
+    pd.add_argument('--asset-root',default=str(ROOT))
+    pd.add_argument('--export-dir',help='New directory for consented allowlisted text judge packet only')
+    pd.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='prophetic-dreams':
+        import sys
+        from .scrying import load_input
+        from .prophetic_dreams import read,markdown,export_packet
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            try:
+                result=read(load_input(args.input),args.asset_root,registry)
+                if args.export_dir:export_packet(result,args.export_dir)
+            except (ValueError,OSError):
+                result=dict(visibility='public_error',status='rejected',error='Dream ledger request rejected',prophetic_dreams_report=None)
+                print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+            if result.get('accepted') is False:raise SystemExit(2)
+        finally:registry.close()
+        return
     if args.command=='remote-viewing':
         import sys
         from .scrying import load_input

@@ -1489,3 +1489,86 @@ Run `python -m unittest tests.test_remote_viewing`,
 `python -m scripts.verify_remote_viewing` and
 `python -m scripts.smoke_remote_viewing_core` for new checks. The independent oracle
 was committed before production and covers120rankings x5targets x120display orders.
+
+## Prophetic Dreams: prospective evidence ledger
+
+`dunne-revised-prospective-dream-ledger-v1` implements manual prospective records,
+original locks, append-only amendments and complete human comparison accounting.
+Its historical witness is the later Faber text transcribed in FadedPage20181016,
+with publication history through1939 and1934third-edition additions. It does not
+certify the inaccessible1927scan wording or reproduce Dunne's entire experiment.
+Wargo's fixed picture and later associations remain separate; modern full-book
+exercise access remains a source gap. No prophecy, universal chance baseline,
+semantic confidence model or automatic interpretation is supplied.
+
+Use `python -m future prophetic-dreams REQUEST.json --asset-root D:/Future`
+and optionally `--format markdown`. Every request has `schema_version:1`, the
+exact `profile`, and a `task`. The immutable schema/policy is in
+`knowledge/prophetic_dreams_profile_v1.json`; runnable requests are in
+`data/prophetic-dreams-*-input.json`.
+
+1. `create` takes a complete `plan`. Fix pseudonymous participants, recording
+   slots, finite event-ID manifest and collection rule, universe hash, closed
+   comparison window, human feature definitions, judges and stopping/exclusion
+   policies before recording. The output is a **private** `ledger`.
+2. `apply` takes `ledger`, `action`, `actor`, timezone-aware `at` and `payload`.
+   Actions include `record`, `slot_status`, `lock_entry`, `amend` and `event`.
+   A dream occurrence interval can be unknown; first-record and lock times are
+   distinct. Preserve the original UTF8 narrative and user-selected details.
+   The `original_lock(entry, at)` Python API supplies the expected lock digest.
+3. `amend` requires the latest parent version hash, new raw text, reason and
+   outcome-knowledge declaration. It appends a version and retains the original.
+   Comparisons always use the original locked entry; a later clarification cannot
+   improve the original endpoint. `slot_status` retains nonrecall, missing,
+   withdrawn, invalid and excluded entries. Unsubmitted slots are accounted for
+   after their declared deadline; no occurrence timestamp is invented.
+4. Collect every prespecified event slot with occurrence/publication/discovery
+   times, deduplication group, common-event flag, coverage declaration and local
+   permission-cleared evidence bytes/hash. `seal` requires all events, all
+   submitted original locks and the completed recording schedule.
+5. Every locked original dream is paired with every manifest event. Excluded
+   pairs remain visible with reasons. Exact closed-window boundaries are included;
+   partially overlapping/unknown intervals remain uncertain. Equal lock/endpoint
+   times are not prospective. An existing event discovered after recording remains
+   distinct from a future event. Publication/discovery analyses are labeled as
+   information endpoints; they do not change actual-event chronology.
+6. `expose` records each judge's knowledge declaration. `judge_packet` takes the
+   private ledger and `judge_id`; consent is required. `--export-dir NEW_DIRECTORY`
+   writes only allowlisted `packet.json`. The content-rating task retains exact
+   original text and features while masking private chronology, source paths,
+   answer indicators and prior decisions. Attachments are verified privately and
+   are outside this first text-only judge export. Semantic clues and familiarity
+   with public events cannot be certified absent.
+7. Each judge `rate`s the complete pair-ID map using `match`, `nonmatch`,
+   `insufficient_information`, `unscorable` or `protocol_invalid`. All planned
+   judges must submit before `lock_judges` with `judge_lock(ledger)`. Explicit
+   coordinator `reveal` follows the lock. `commentary` then records feedback or
+   external free associations separately; `finish` records study completion.
+
+`report` returns a **private** full report, including the exact ledger for replay,
+all original versions, schedule statuses, events, pairs, exclusions, judge ratings
+and disagreements. A declared match is a human rating, not a probability or proof
+of precognition. Duplicate-group representatives follow manifest order; duplicates
+stay visible but are excluded from eligible counts. Collection omissions and
+common-event flags remain visible. No best pair/judge selection or p-value is used.
+`reference` takes exact IDs `martinique`, `lecture-nonmatch`, `wargo-envelope` and
+returns source-attributed historical notes, including the lecture nonmatch.
+
+Rejected actions return exit2 with an updated private ledger containing the failed
+attempt. Persist that output even on exit2. Corrupt/incomplete root inputs return a
+generic error and cannot amend an untrusted ledger. `terminate` records an aborted
+or excluded terminal study. Never overwrite the previous input with an output shell
+redirection before the command has read it.
+
+All clocks, dream occurrence, knowledge, identities, rights and witness statements
+are declarations. Hash chains detect inconsistency relative to independently held
+anchors; a file owner can rewrite an entire local history. No independently trusted
+timestamp, human participation or psychological blinding is certified. Only
+synthetic project-authored examples are distributed; do not publish private dream
+narratives or protected event/book material without appropriate permission.
+
+Run `python -m unittest tests.test_prophetic_dreams`,
+`python -m scripts.verify_prophetic_dreams` and
+`python -m scripts.smoke_prophetic_dreams_core`. The pre-engine specification
+freezes300integer interval/chronology cases, timezone cases, original/version lock
+known answers, eight manually enumerated pairs and18procedural fixture families.
