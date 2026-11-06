@@ -297,7 +297,25 @@ def main():
     dr=sub.add_parser('deja-reve')
     dr.add_argument('input',help='Private structured annotation,source reference or finite prior-dream provenance request JSON')
     dr.add_argument('--format',choices=['json','markdown'],default='json')
+    ai=sub.add_parser('ai-predictive-modeling')
+    ai.add_argument('input',help='Offline CPU forecast,evaluation,benchmark or reference scoring request JSON')
+    ai.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='ai-predictive-modeling':
+        import sys
+        from .scrying import load_input
+        from .ai_predictive_modeling import read,markdown
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError,TypeError,KeyError,OverflowError):
+                result=dict(status='rejected',error='CPU forecasting request rejected',result=None)
+                print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+        finally:registry.close()
+        return
     if args.command=='deja-reve':
         import sys
         from .scrying import load_input

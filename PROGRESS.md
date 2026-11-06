@@ -1061,3 +1061,8 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #49 independent oracle freeze before production
 - Froze21fixture families,handwritten point/metric/period controls and independent full4200NOAA prediction commitments/scores. Oracle uses geometric SES expansion independently of planned recursive production;exact Fraction arithmetic and source4.86/55.68constants retained.
 - Source/profile freeze:d6c68d6. Oracle selectsdrift on validation without using test scores. This is a pre-engine expected-answer reference,not production benchmark evidence.
+
+## 2026-11-07 — #49 exact CPU engine
+- Implemented seven fixed configurations,generic regular monthly inputs,explicit manual seasonal period,exact rational point/rolling metrics,validation-only selection and full all-candidate ledgers. Manual quantile/interval reference scoring generates no predictive intervals.
+- 65new tests pass;production predictions match all4200pre-engine cell commitments and70exact aggregate metrics. All numerical/procedural families pass;resource family awaits actual measurement. Optional exact absolute-sMAPE bounded to20manual pairs to avoid impractical rational denominator growth;benchmark default metrics unaffected.
+- Offline CLI added using existing JSON-request conventions. No ARIMA/optimized ETS,trees,neural,Chronos or new dependencies.
