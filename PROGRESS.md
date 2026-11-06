@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 40 numerical source freeze — 2026-11-06
+- Reinspected all24 rows of the official2024 Yap compass PDF,page2; exact hash matches audit. Froze factual names/Chinese glyphs/groups/printed bounds,source-order,north wrap and integer-tenth endpoint semantics. Supplemental witness remains separate from ranked books.
+- Captured complete pre-engine byte manifest; documented interface/history edits and append-only source metadata. Facts-only rights review excludes PDF/artwork/layout and any general reuse licence. No production classifier yet;independent numeric oracle follows.
+
 ## Technique 40 Feng Shui resource audit — 2026-11-06
 - Began only after Haruspicy closure560088d pushed,clean and synchronized0/0. Three original ranks/six variations preserved; audit only,no40engine/profile/CLI andno41/42 work.
 - Skinner2008UK/2010US editions,Joeybookaccess gaps andField2003translation rights distinguished. OfficialYap2024numeric24mountain chart,Period6–9reference sheets and2014Period8E1/W1example inspected;chartsrotatebyfacing. SupplementalEightMansions fourworkedexamples andBTBformaldoorframe remain separate;sourcehouse-facing contradiction recorded.
