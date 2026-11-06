@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 43 Remote Viewing Core v1 closure — 2026-11-06
+- **Core v1 Ready — Offline Blinded-Target Session/Scoring Protocol Scope**: rv-air1995-five-choice-blind-trial-v1. Full private/allowlisted public lifecycle,commitment/locks,authorized reveal anddescriptive per-judge ranks;no ESP or guaranteed blinding claim.
+- 1207tests(1107+100),1464CLI(1339+125),24verifiers(23+1);72000independent rankmappings/16procedural families pass.23accepted/21rejected replay pairs andpersistent separated synthetic demo.1923-filepre-enginebaseline:1919eligiblefiles unchanged;4explicitinterface/history exceptions. Registry/dependency/pip/diff pass.
+- Source/protocol25791b4,fixtures752210e,enginecca37f3,verificationec53a62,reports6115e57;complete acceptance andmatrix/rights/P1/P2 in `knowledge/remote_viewing_core_v1.json`. Commit,push,synchronize0/0 before44audit only.
+
 ## Technique 43 complete acceptance — 2026-11-06
 - All67acceptance commands pass:1207tests(1107+100),1464CLI(1339+125),24independent verifiers(23+1),registry idempotence,dependency audit,pipcheck anddiffcheck.
 - Rebuilt1923-filebaseline retains1919eligible artifacts byte-for-byte;only4explicit interface/history updates allowed.446source references/291unique sources checked twice;original ranks/variations/taxonomy intact. Exact replay and3actual blind directory exports pass. Evidence in data/remote-viewing-acceptance-checks.json;bounded closure follows.
