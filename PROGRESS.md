@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 45 full acceptance — 2026-11-07
+-Current-code1354tests(1274+80),1721CLI(1600+121),26verifiers(25+1) pass;all15independent families and35accepted/18rejected replays pluscomplete linked CLI lifecycle pass.
+-2249-file baseline:2245protected unchanged;4explicit interface/history edits.465source references/310unique registeredtwice;strictJSON,taxonomy,other59gaps,dependency/pip/diff checks pass. Acceptance evidence recorded;bounded closure follows.
+
 ## Technique 45 explicit catalog provenance — 2026-11-07
 -Added the algorithm-ID catalog hash to report provenance without changing frozen rules or numerical behavior.80new tests andcompletecurrent-code1354-test rerun pass;35accepted/18rejected reports regenerated and121CLI lifecycle cases pass.
 -Complete inherited CLI/verifier sweep continues;no46audit before closure.
