@@ -1,5 +1,11 @@
 # Future progress
 
+## Technique 44 Prophetic Dreams resource audit — 2026-11-06
+- Began only after43closureff0d46e pushed,clean andsynchronized0/0. Original3ranks/4variations preserved;auditonly,no44runtime/profile/CLI/fixtures andno45audit.
+- RankedDunne1927metadata verified,butactualscan accessfailed;laterFaber1939publicationline/1934revisions inspected separately,includingChapterXrecording andAppendixIIInonmatches. WargoofficialChapter2envelope/association example inspected;Cheung/Mossbridgeprint/eBookpagination andgated-exercise gaps keptseparate.
+- Proposed prospective dream/event/version ledger andbounded humanmatching,withdistinct occurrence/record/discovery times,frozenuniverse/windows/criteria,allnonmatches andblindjudging. GeneralFischhoff1975outcome-knowledge evidence is not a dreamnullmodel;noautomatic43five-choice probabilities.18fixtureplans,matrix/rights/P1/P2 in `knowledge/prophetic_dreams_resource_audit.json`.
+- Validation:2083eligible tracked artifacts unchanged,including1919pre43protected files;456source references/301unique checked twice. Original taxonomy/ranks/variations andallothergapentries intact. Full1207-test/1464-CLI/24-verifier acceptance retained byte-for-byte;metadata-only audit didnot rerun it.
+
 ## Technique 43 Remote Viewing Core v1 closure — 2026-11-06
 - **Core v1 Ready — Offline Blinded-Target Session/Scoring Protocol Scope**: rv-air1995-five-choice-blind-trial-v1. Full private/allowlisted public lifecycle,commitment/locks,authorized reveal anddescriptive per-judge ranks;no ESP or guaranteed blinding claim.
 - 1207tests(1107+100),1464CLI(1339+125),24verifiers(23+1);72000independent rankmappings/16procedural families pass.23accepted/21rejected replay pairs andpersistent separated synthetic demo.1923-filepre-enginebaseline:1919eligiblefiles unchanged;4explicitinterface/history exceptions. Registry/dependency/pip/diff pass.
