@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 38 Augury Core v1 closure — 2026-11-06
+- **Core v1 Ready — Historical Roman Bird-Sign Reference/Observation Scope**: `cicero-falconer1923-roman-bird-signs-v1`;four main bird conditions plus conflicting note226 and nine contextual references. Calls retain no explicit favorable label;flight-to wording is Falconer-specific. Unknowns,opposites,frames and conflicts do not invent judgments;Quintus/Marcus and note layers remain separate. Source47d06d9,catalogd6ece0f,engine3e39eee,evidence5b35287 pushed.
+- 958 tests (895+63),1151 CLI cases (1071+80),21 verifiers pass. Independent14 source records,864 observations/4320 condition checks,four manual known answers and uncertainty/conflict checks pass. All1556 protected files,including required1441,remain byte-identical;registry/dependency/pip/diff checks pass.20 valid/10 rejected JSON/Markdown report pairs replay.
+- Frozen schema,hashes,rights,source/translation limits and P1/P2: `knowledge/augury_core_v1.json`. No Greek/Kynes runtime,compass conversion,weather forecast,generated event or public auspice authority. Push/synchronize closure before39 Haruspicy / Extispicy audit only.
+
 ## Technique 38 Roman condition engine — 2026-11-06
 - Source47d06d9/catalogd6ece0f pushed before matcher. Added exact manual bird/phenomenon/side/relation/frame evaluation,all five evidence statuses,structured conflicts/uncertainty,context lookup,raw user declarations and deterministic replay. No cardinal conversion,modern species inference,public authority or factual prediction.
 - 63 new tests and independent864 observations/4320 per-condition checks pass. Main calls retain not_stated polarity;only explicit main flight records appear as favorable source wording. Note226 conflict and Latin flight-verb qualification retained. Full inherited acceptance follows before closure.
