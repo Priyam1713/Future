@@ -1033,3 +1033,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #46 reports and CLI replay
 - Saved34accepted/36rejected synthetic JSON/Markdown pairs;144CLI cases include strict duplicate/nonfinite JSON failures and record,amend,freeze,link,compare,report workflows. All byte-exact pair replays generated successfully;inherited acceptance running.
 - README records strict hashing,source cases,private output,manual comparison semantics,external-event declaration limits and unsupported export/import/retrieval.
+
+## 2026-11-07 — #46 final report/provenance refinement
+- Embedded edition,catalog,counts and four documentary labels directly in every accepted report. Returned latest narrative-version hash separately from whole-record hash;reject conflicting original hashes for the same stable dream ID across later searches.
+- Final1397tests pass (1354inherited+43new);current code hashes recorded. Regenerated34accepted/37rejected pairs and146CLI cases. Earlier full validation saved65successful checks before process interruption;resuming only five missing checks plus remaining acceptance gates.

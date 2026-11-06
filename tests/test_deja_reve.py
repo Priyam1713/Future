@@ -20,6 +20,12 @@ class DejaReve(unittest.TestCase):
     def test_reference_without_observation(self):
         self.assertEqual(d.read(req('reference'))['visibility'], 'public_reference')
 
+    def test_private_report_carries_documentary_source_metadata(self):
+        r = d.read(req('report', analysis=F['analysis']))
+        self.assertIn('875', r['source_reference']['edition'])
+        self.assertEqual([c['authors_category'] for c in r['source_reference']['cases']],
+                         ['episodic-like', 'familiarity-like', 'dreamy-state', 'unclassifiable'])
+
     def test_raw_text_never_supplies_declarations(self):
         r = copy.deepcopy(F['observation'])
         r['original']['attributes'].update(dream_association=False, specific_recollection=False, temporal_context='none')
@@ -125,6 +131,12 @@ def invalid_analyses():
     a = analysis(); a['event']['evidence_sha256'] = 'bad'; cases['event-hash'] = a
     a = analysis(); a['event']['occurrence']['start'] = '2026-11-04T00:00:00'; cases['event-timezone'] = a
     a = analysis(); a['comparisons'].append(copy.deepcopy(a['comparisons'][0])); a['comparisons'][-1]['at'] = '2026-11-04T11:45:00Z'; cases['backdated-comparison'] = a
+    a = analysis(); g = {k: copy.deepcopy(a[k]) for k in ('manifest', 'dreams', 'comparisons')}
+    g['dreams'][0]['original']['narrative'] += 'rewritten root'; seal(g['dreams'][0])
+    g['manifest']['payload']['candidates'][0]['original_sha256'] = g['dreams'][0]['original_sha256']
+    g['manifest']['sha256'] = sha(g['manifest']['payload'])
+    g['comparisons'][0]['version_sha256'] = g['dreams'][0]['original_sha256']
+    a['post_hoc'] = [g]; cases['conflicting-posthoc-original'] = a
     return cases
 
 

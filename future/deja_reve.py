@@ -269,10 +269,15 @@ def evaluate(a):
     main = ledger({k: a[k] for k in ('dreams', 'manifest', 'comparisons')}, a['observation'], event)
     sequence(a['post_hoc'])
     later = []
+    roots = {c['dream_id']: c['original_sha256'] for c in a['manifest']['payload']['candidates']}
     for g in a['post_hoc']:
         if timestamp(g['manifest']['payload']['frozen_at']) < timestamp(a['manifest']['payload']['frozen_at']):
             raise ValueError('Post-hoc search predates initial search')
         later.append(ledger(g, a['observation'], event, True))
+        for c in g['manifest']['payload']['candidates']:
+            if c['dream_id'] in roots and roots[c['dream_id']] != c['original_sha256']:
+                raise ValueError('Conflicting original root for stable dream ID across searches')
+            roots[c['dream_id']] = c['original_sha256']
     prior = [r for r in main['candidates'] if r['provenance'] is not None and r['candidate']['disposition'] == 'included' and r['provenance']['chronology']['experience'] == 'strictly_earlier']
     return dict(observation=copy.deepcopy(a['observation']), compatibility=compatibility(o['attributes']),
                 observation_timing_conflicts=timing_conflicts(o), candidate_ledger=main, post_hoc_searches=later,
@@ -331,7 +336,8 @@ def read(q, registry=None):
                 raise ValueError('Observation required')
             value = dict(record=r, compatibility=compatibility(r['original']['attributes']))
         else:
-            value = dict(record=r, record_sha256=digest(r))
+            value = dict(record=r, record_sha256=digest(r), latest_version_sha256=digest(r['amendments'][-1])
+                         if r['amendments'] else r['original_sha256'])
     elif task == 'freeze-candidates':
         value = copy.deepcopy(q['manifest']); validate_manifest(value, value['payload']['observation_id'])
     else:
@@ -343,7 +349,7 @@ def read(q, registry=None):
     result = dict(status='accepted', task=task, visibility='private_local' if task != 'reference' else 'public_reference',
         profile=dict(id=DATA['id'], version=1, sha256=PROFILE_HASH, source_sha256=DATA['source_manifest_sha256'],
                      source_freeze_sha256=DATA['source_freeze_sha256']), request_sha256=digest(q), result=value,
-        limits=thaw(DATA['limits']), privacy=DATA['privacy'])
+        source_reference=reference(), limits=thaw(DATA['limits']), privacy=DATA['privacy'])
     result['report_sha256'] = digest(result)
     return result
 
