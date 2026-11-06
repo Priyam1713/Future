@@ -1100,3 +1100,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #50 source and numerical profile freeze
 - Reopened primary mathematics, journal bibliography, IBM matrices/bit order and Aer metadata. Froze montanaro-ibm-small-circuit-cpu-probability-v1 before production;standalone CPU only, five gates,1–4qubits,64gates,100000shots,xorshift32 event-first CDF and1e-12 verification tolerance. No clipping or AE/quantum advantage. Complete pre-engine byte manifest captured. Independent fixtures next.
+
+## 2026-11-07 — #50 independent fixture freeze
+- Authored signed symbolic anchors and an independent full dense-matrix oracle before production. Covers all qubit positions,ordered CX pairs,64gate compositions;frozen100word sequences for three seeds,exact dyadic counts,binomial fractions and nonmonotone control. All20family expectations recorded. No production simulator exists yet.

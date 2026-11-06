@@ -1,0 +1,5602 @@
+{
+  "version": 1,
+  "oracle": "pre-production dense matrices and symbolic anchors;no engine invocation",
+  "circuits": [
+    {
+      "id": "zero",
+      "qubits": 1,
+      "gates": [],
+      "state": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "identity",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "id",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "one",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "xx",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "x",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "h0",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "h",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0
+        ],
+        [
+          0.7071067811865476,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "h1",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0
+        ],
+        [
+          -0.7071067811865476,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "hh",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "ry0",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": 0
+        }
+      ],
+      "state": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "rythird",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": 1.0471975511965976
+        }
+      ],
+      "state": [
+        [
+          0.8660254037844386,
+          0
+        ],
+        [
+          0.5,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "ryhalf",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": 1.5707963267948966
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0
+        ],
+        [
+          0.7071067811865476,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "rypi",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": 3.141592653589793
+        }
+      ],
+      "state": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "rynegative",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -1.0471975511965976
+        }
+      ],
+      "state": [
+        [
+          0.8660254037844386,
+          0
+        ],
+        [
+          -0.5,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "bell",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "cx",
+          "target": 1,
+          "control": 0
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0.7071067811865476,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "reversed-bell",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "cx",
+          "target": 0,
+          "control": 1
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0
+        ],
+        [
+          0.7071067811865476,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "endian",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        }
+      ],
+      "state": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "provenance": "original algebraic anchor"
+    },
+    {
+      "id": "primitive-1-0-id",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-1-0-x",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "x",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-1-0-h",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0.0
+        ],
+        [
+          -0.7071067811865476,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-1-0-ry",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": 0.731
+        }
+      ],
+      "state": [
+        [
+          -0.35741631171937194,
+          0.0
+        ],
+        [
+          0.9339451697594033,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "composition64-1",
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -0.13
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -0.65
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -1.17
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -1.69
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -2.21
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -2.73
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -3.25
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -3.77
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -4.29
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -4.8100000000000005
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -5.33
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -5.8500000000000005
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -6.37
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -6.890000000000001
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -7.41
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -7.930000000000001
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          0.6792372591554999,
+          0.0
+        ],
+        [
+          0.7339187596559489,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-2-0-id",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-2-0-x",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "x",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-2-0-h",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0.0
+        ],
+        [
+          -0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-2-0-ry",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": 0.731
+        }
+      ],
+      "state": [
+        [
+          -0.35741631171937194,
+          0.0
+        ],
+        [
+          0.9339451697594033,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-2-1-id",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "id",
+          "target": 1
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-2-1-x",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "x",
+          "target": 1
+        }
+      ],
+      "state": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-2-1-h",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 1
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-2-1-ry",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": 0.731
+        }
+      ],
+      "state": [
+        [
+          -0.35741631171937194,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.9339451697594033,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-2-0-1",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "cx",
+          "target": 1,
+          "control": 0
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-2-1-0",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "cx",
+          "target": 0,
+          "control": 1
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "composition64-2",
+      "qubits": 2,
+      "gates": [
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -0.13
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -0.65
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -1.17
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -1.69
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -2.21
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -2.73
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -3.25
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -3.77
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -4.29
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -4.8100000000000005
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -5.33
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -5.8500000000000005
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -6.37
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -6.890000000000001
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -7.41
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -7.930000000000001
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "cx",
+          "target": 1,
+          "control": 0
+        }
+      ],
+      "state": [
+        [
+          0.6792372591555,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.7339187596559491,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-3-0-id",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-3-0-x",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "x",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-3-0-h",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0.0
+        ],
+        [
+          -0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-3-0-ry",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": 0.731
+        }
+      ],
+      "state": [
+        [
+          -0.35741631171937194,
+          0.0
+        ],
+        [
+          0.9339451697594033,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-3-1-id",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "id",
+          "target": 1
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-3-1-x",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "x",
+          "target": 1
+        }
+      ],
+      "state": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-3-1-h",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 1
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-3-1-ry",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": 0.731
+        }
+      ],
+      "state": [
+        [
+          -0.35741631171937194,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.9339451697594033,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-3-2-id",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 2
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-3-2-x",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "x",
+          "target": 2
+        }
+      ],
+      "state": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-3-2-h",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "h",
+          "target": 2
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-3-2-ry",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "ry",
+          "target": 2,
+          "angle": 0.731
+        }
+      ],
+      "state": [
+        [
+          -0.35741631171937194,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.9339451697594033,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-3-0-1",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "cx",
+          "target": 1,
+          "control": 0
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-3-0-2",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "cx",
+          "target": 2,
+          "control": 0
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-3-1-0",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "cx",
+          "target": 0,
+          "control": 1
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-3-1-2",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "cx",
+          "target": 2,
+          "control": 1
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-3-2-0",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "cx",
+          "target": 0,
+          "control": 2
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-3-2-1",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "cx",
+          "target": 1,
+          "control": 2
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "composition64-3",
+      "qubits": 3,
+      "gates": [
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -0.13
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 1
+        },
+        {
+          "op": "ry",
+          "target": 2,
+          "angle": -0.65
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 2
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -1.17
+        },
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "id",
+          "target": 2
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -1.69
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 1
+        },
+        {
+          "op": "ry",
+          "target": 2,
+          "angle": -2.21
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 2
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -2.73
+        },
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "id",
+          "target": 2
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -3.25
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 1
+        },
+        {
+          "op": "ry",
+          "target": 2,
+          "angle": -3.77
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 2
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -4.29
+        },
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "id",
+          "target": 2
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -4.8100000000000005
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 1
+        },
+        {
+          "op": "ry",
+          "target": 2,
+          "angle": -5.33
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 2
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -5.8500000000000005
+        },
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "id",
+          "target": 2
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -6.37
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 1
+        },
+        {
+          "op": "ry",
+          "target": 2,
+          "angle": -6.890000000000001
+        },
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 2
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": -7.41
+        },
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "id",
+          "target": 2
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -7.930000000000001
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "cx",
+          "target": 2,
+          "control": 0
+        }
+      ],
+      "state": [
+        [
+          0.0574679379915462,
+          0.0
+        ],
+        [
+          -0.20727589391317044,
+          0.0
+        ],
+        [
+          0.18000604259888286,
+          0.0
+        ],
+        [
+          -0.64924747073654,
+          0.0
+        ],
+        [
+          -0.05749346393320014,
+          0.0
+        ],
+        [
+          0.20718386758509172,
+          0.0
+        ],
+        [
+          -0.1800859971596573,
+          0.0
+        ],
+        [
+          0.6489592179174675,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-0-id",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "id",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-0-x",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "x",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-0-h",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "h",
+          "target": 0
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0.0
+        ],
+        [
+          -0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-0-ry",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": 0.731
+        }
+      ],
+      "state": [
+        [
+          -0.35741631171937194,
+          0.0
+        ],
+        [
+          0.9339451697594033,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-1-id",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "id",
+          "target": 1
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-1-x",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "x",
+          "target": 1
+        }
+      ],
+      "state": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-1-h",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "h",
+          "target": 1
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-1-ry",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": 0.731
+        }
+      ],
+      "state": [
+        [
+          -0.35741631171937194,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.9339451697594033,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-2-id",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 2
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-2-x",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "x",
+          "target": 2
+        }
+      ],
+      "state": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-2-h",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "h",
+          "target": 2
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-2-ry",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "ry",
+          "target": 2,
+          "angle": 0.731
+        }
+      ],
+      "state": [
+        [
+          -0.35741631171937194,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.9339451697594033,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-3-id",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 3
+        },
+        {
+          "op": "id",
+          "target": 3
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-3-x",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 3
+        },
+        {
+          "op": "x",
+          "target": 3
+        }
+      ],
+      "state": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-3-h",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 3
+        }
+      ],
+      "state": [
+        [
+          0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.7071067811865476,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "primitive-4-3-ry",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 3
+        },
+        {
+          "op": "ry",
+          "target": 3,
+          "angle": 0.731
+        }
+      ],
+      "state": [
+        [
+          -0.35741631171937194,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.9339451697594033,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-4-0-1",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "cx",
+          "target": 1,
+          "control": 0
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-4-0-2",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "cx",
+          "target": 2,
+          "control": 0
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-4-0-3",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 0
+        },
+        {
+          "op": "cx",
+          "target": 3,
+          "control": 0
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-4-1-0",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "cx",
+          "target": 0,
+          "control": 1
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-4-1-2",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "cx",
+          "target": 2,
+          "control": 1
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-4-1-3",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 1
+        },
+        {
+          "op": "cx",
+          "target": 3,
+          "control": 1
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-4-2-0",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "cx",
+          "target": 0,
+          "control": 2
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-4-2-1",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "cx",
+          "target": 1,
+          "control": 2
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-4-2-3",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "cx",
+          "target": 3,
+          "control": 2
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-4-3-0",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 3
+        },
+        {
+          "op": "cx",
+          "target": 0,
+          "control": 3
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-4-3-1",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 3
+        },
+        {
+          "op": "cx",
+          "target": 1,
+          "control": 3
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "cx-4-3-2",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "x",
+          "target": 3
+        },
+        {
+          "op": "cx",
+          "target": 2,
+          "control": 3
+        }
+      ],
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    },
+    {
+      "id": "composition64-4",
+      "qubits": 4,
+      "gates": [
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -0.13
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -0.65
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -1.17
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -1.69
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -2.21
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -2.73
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -3.25
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -3.77
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -4.29
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -4.8100000000000005
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -5.33
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -5.8500000000000005
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -6.37
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -6.890000000000001
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -7.41
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "id",
+          "target": 3
+        },
+        {
+          "op": "h",
+          "target": 0
+        },
+        {
+          "op": "ry",
+          "target": 1,
+          "angle": -7.930000000000001
+        },
+        {
+          "op": "x",
+          "target": 2
+        },
+        {
+          "op": "cx",
+          "target": 3,
+          "control": 0
+        }
+      ],
+      "state": [
+        [
+          0.6792372591555,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.7339187596559491,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "provenance": "independent full dense matrix multiplication frozen before engine"
+    }
+  ],
+  "prng": {
+    "1": [
+      270369,
+      67634689,
+      2647435461,
+      307599695,
+      2398689233,
+      745495504,
+      632435482,
+      435756210,
+      2005365029,
+      2916098932,
+      2657092299,
+      1495045943,
+      3031976842,
+      82049198,
+      87470069,
+      3385103793,
+      891394312,
+      3323190024,
+      321008529,
+      4283899417,
+      2383559219,
+      3822316985,
+      1391776747,
+      3652395599,
+      44632818,
+      1562130985,
+      2440533925,
+      333695716,
+      1028688091,
+      2771657022,
+      57526103,
+      3412600852,
+      53684993,
+      2889104680,
+      1504982240,
+      975386100,
+      3475959034,
+      1149571554,
+      832402814,
+      2037229063,
+      2013870833,
+      3048316442,
+      1210136899,
+      2384770599,
+      82514103,
+      3108354793,
+      3440058693,
+      2371448660,
+      3066322605,
+      2670584965,
+      1410858555,
+      3519656371,
+      403434444,
+      3409541077,
+      1572275124,
+      100300756,
+      723163348,
+      2013576788,
+      369590227,
+      3327198861,
+      916089965,
+      434752806,
+      703511808,
+      932611783,
+      244103520,
+      2914927536,
+      3703987156,
+      3760640330,
+      2080245229,
+      3543986636,
+      3987717774,
+      1437599121,
+      4114869520,
+      2496955744,
+      2338876636,
+      1485200133,
+      4012960822,
+      2759653581,
+      1473112735,
+      3109127632,
+      3029591429,
+      3427210004,
+      3935634630,
+      196204992,
+      565309700,
+      3988694860,
+      330319623,
+      1900412751,
+      455310137,
+      4240982651,
+      1684823864,
+      518928221,
+      3636105407,
+      3742075081,
+      1816987584,
+      1511609050,
+      2013754779,
+      1077905121,
+      2895916176,
+      147405559
+    ],
+    "2": [
+      540738,
+      134253570,
+      697882754,
+      1670953222,
+      3819972634,
+      818967331,
+      3895821145,
+      1401905590,
+      1216754474,
+      1384496955,
+      1228348618,
+      4285479485,
+      490361609,
+      3157281828,
+      52840766,
+      2319215614,
+      4013335487,
+      1399496191,
+      444256053,
+      806719899,
+      3337658760,
+      2331563496,
+      2566268042,
+      3498974617,
+      1956361447,
+      1122888036,
+      132367876,
+      2605468469,
+      1467393568,
+      4126021849,
+      3897644995,
+      2541978743,
+      112191953,
+      2300786555,
+      373830461,
+      366804586,
+      3358496546,
+      1133613735,
+      1231815397,
+      4012378589,
+      745014356,
+      2964379269,
+      3865335061,
+      4095651254,
+      346542370,
+      1056909827,
+      2891701340,
+      769048884,
+      1274495564,
+      3563905523,
+      1107697306,
+      3145126000,
+      1315240268,
+      4176424106,
+      2989891831,
+      3006760835,
+      993987168,
+      2485095545,
+      3615705233,
+      1823984889,
+      809266125,
+      368523407,
+      2922552956,
+      1112633538,
+      3848919590,
+      461624112,
+      1566153602,
+      2870246998,
+      3205180185,
+      2539955085,
+      1639269095,
+      4107338867,
+      1606338012,
+      1738919326,
+      484061237,
+      21698107,
+      302299229,
+      618922394,
+      1043688913,
+      3798959830,
+      1142734348,
+      2826415010,
+      4252721475,
+      3141170346,
+      1078362589,
+      2681230723,
+      963615059,
+      2197164625,
+      1463702511,
+      893146254,
+      1242865752,
+      501622199,
+      4081421055,
+      22230450,
+      2605551168,
+      2050423618,
+      243520589,
+      4114843464,
+      821196349,
+      3095973319
+    ],
+    "4294967295": [
+      253983,
+      4228382207,
+      1958451267,
+      4056713434,
+      2049502865,
+      2560970988,
+      1705115568,
+      279806459,
+      2999224306,
+      1700793103,
+      3829070063,
+      3754945276,
+      1889471796,
+      3053547688,
+      2593368290,
+      511474565,
+      2963207011,
+      2963679066,
+      4259771132,
+      1419052832,
+      2053037592,
+      2452378646,
+      226332769,
+      1363940601,
+      2847473424,
+      2098078621,
+      2529573699,
+      1684013332,
+      3960788373,
+      2725221894,
+      1161868401,
+      706285398,
+      1972019023,
+      3926844350,
+      4183697602,
+      3028855489,
+      2613813001,
+      3983779996,
+      2490167596,
+      1130886408,
+      85186187,
+      2274599978,
+      2445617537,
+      2857856155,
+      3208757337,
+      1847516284,
+      129093684,
+      2338231055,
+      2127867280,
+      2277366851,
+      3129076089,
+      1920982894,
+      3151572807,
+      1476496319,
+      1203617668,
+      4192580578,
+      3164819950,
+      88190593,
+      581128169,
+      546767494,
+      3627286085,
+      1486535352,
+      4135196318,
+      563615114,
+      1174521822,
+      2713529539,
+      2156696817,
+      1346700024,
+      4082443349,
+      2888456442,
+      26740576,
+      804584602,
+      3164303753,
+      2280465244,
+      1397809535,
+      2694577856,
+      926006593,
+      329923757,
+      3553190130,
+      87866425,
+      3317791204,
+      3041664986,
+      3764376737,
+      1135919428,
+      2820259274,
+      1807151450,
+      102799636,
+      3040895285,
+      2511678790,
+      866344008,
+      1566866429,
+      2439900400,
+      2995563433,
+      3637154549,
+      3625615455,
+      2318773943,
+      3280566662,
+      2071999642,
+      3749316723,
+      1357958761
+    ]
+  },
+  "dyadic_counts": {
+    "1": {
+      "0": 0,
+      "0.25": 33,
+      "0.5": 55,
+      "1": 100
+    },
+    "2": {
+      "0": 0,
+      "0.25": 31,
+      "0.5": 56,
+      "1": 100
+    },
+    "4294967295": {
+      "0": 0,
+      "0.25": 18,
+      "0.5": 45,
+      "1": 100
+    }
+  },
+  "binomial": {
+    "p": "1/4",
+    "shots": 100,
+    "expected_count": "25",
+    "count_variance": "75/4",
+    "frequency_variance": "3/1600",
+    "standard_error": "sqrt(3)/40"
+  },
+  "nonmonotone": {
+    "uniforms": [
+      "1/4",
+      "3/4",
+      "1/4"
+    ],
+    "p": "1/2",
+    "counts": [
+      1,
+      2
+    ],
+    "shots": [
+      2,
+      3
+    ],
+    "errors": [
+      "0",
+      "1/6"
+    ]
+  },
+  "family_expectations": {
+    "basis-states": "algebraic basis and X twice",
+    "hadamard": "signed H0/H1",
+    "rotation-map": "RY symbolic anchors and negative sign",
+    "normalization": "norm1 through64gates",
+    "endpoint-events": "exact X/identity shot endpoints",
+    "seeded-replay": "exact independent100word seeds",
+    "low-shot-variance": "exact rational binomial moments",
+    "nonmonotone-error": "controlled uniforms worsen2to3",
+    "exact-vs-sampled": "ideal values distinct from observed",
+    "circuit-resources": "Bell2gates depth2;parallel gates depth1",
+    "invalid-angles": "reject bool/nonfinite/oversize angles",
+    "unsupported-backends": "reject Aer/GPU/QPU",
+    "endianness": "Xq1 index2",
+    "classical-bernoulli": "same p,N;shared identity;distinct streams",
+    "uncertainty-assumptions": "iid assumption;CI null",
+    "no-simulated-speedup": "no advantage claim;AE absent",
+    "oracle-provenance": "reject missing rights/hash;reference assumptions",
+    "json-markdown-replay": "CLI saved JSON/MD with Unicode raw hash",
+    "interference-control": "HH identity probability-only negative control",
+    "bell-control": "Bell and reversed control signed matrices"
+  }
+}
