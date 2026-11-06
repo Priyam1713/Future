@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 38 immutable Roman catalog — 2026-11-06
+- Source47d06d9 pushed first. Frozen `cicero-falconer1923-roman-bird-signs-v1`:14 ordered source records,including four main condition accounts and one conflicting note condition;context references retain dialogue/notes/public/weather distinctions.
+- Additional Latin/English qualification:I.39.85 Latin names sides/birds and ratum without an explicit flight verb;Falconer supplies flight/to. Moving-to matching is deliberately translation-specific,not original-Latin velocity or a universal orientation law. No numeric/compass or Greek convention silently imported.
+
 ## Technique 38 Roman source/condition freeze — 2026-11-06
 - Rechecked Falconer1923 edition/both books and exact hashes; primary Latin call words independently inspected via web rendering, underlying Latin print edition/direct hash unresolved. Frozen14 source/context records:four main bird conditions,conflicting note226,and classification/public/critical/weather references. I.7.12 calls retain no explicit favorable label;I.39.85 flight examples alone carry it.
 - Four independently authored known answers and864-combination source truth matrix precede matcher. Qualitative observer-relative frame is declared; on/to/from relations stay separate. Note conflicts,Quintus/Marcus and public-authority limits retained. Optional Greek runtime deferredP1;no new source research beyond bounded freeze.

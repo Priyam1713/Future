@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "technique_id": 38,
+  "profile": "cicero-falconer1923-roman-bird-signs-v1",
+  "catalog_id": "cicero-falconer1923-bird-cases-v1",
+  "catalog_version": 1,
+  "catalog_path": "knowledge/augury_catalog_v1.json",
+  "catalog_sha256": "108f5326911a30b1891193d82971009d318aa62982a9f8671ce0ca0f2d736416",
+  "source_fixture_sha256": "1db8df3e1dccf7cb783d3066d5d328481148adf3931b67a4f9234a9a825c8fda",
+  "source_manifest_sha256": "22b0ccb26821e84ab00819ef910380dc6d75cb00cfb9dcf9e7ef6f1dbf0d13d8",
+  "conventions": {
+    "call_relation": "located_on_side for the translated call-on-side account",
+    "flight_relation": "moving_to_side for Falconer flight-to-side; located-on and moving-from are distinct and not coerced",
+    "frame": "observer_relative is an explicitly declared qualitative digital comparison frame, not an ancient orientation theorem; unknown frame insufficient, cardinal frame unsupported",
+    "polarity": "Only explicit main-text favorable flight accounts are listed as main-text favorable matches; calls retain not_stated. Note favorable text remains conflicting editorial evidence.",
+    "source_conflict": "Crow-call comparison on either supported side exposes note226/main-text disagreement without changing the main-text condition. Applicable source record and conflicting overall evidence can coexist.",
+    "observation_conflict": "Structured side reports disagreeing with one another or the declared side block a positive match. Raw prose is not interpreted for contradictions.",
+    "unknowns": "Known mismatches exclude exact conditions; unknown/uncertain required fields remain insufficient. Unknown species and cardinal conversion unsupported, never unfavorable."
+  },
+  "translation_notes": {
+    "version": 1,
+    "source_id": "augury-cicero-core-latin1-v1",
+    "locator": "LatinI.39.85 versus FalconerI.39.85",
+    "latin_clause": "a dextra corvus, a sinistra cornix faciat ratum",
+    "qualification": "The inspected Latin clause names sides/birds and ratum, without an explicit flight verb. Falconer English supplies flies/to. This profile deliberately matches the1923 English flight-to wording; it does not claim an independently established original-Latin velocity or universal ancient side convention.",
+    "call_locator": "LatinI.VII continuing12",
+    "call_qualification": "Latin call verb canere explicitly present; section12 continues into chapterVII before13.",
+    "source_access": "Primary Latin web rendering inspected; no successful fresh raw-byte snapshot/printed edition. No silent correction of Latin/English differences."
+  },
+  "required_fields": [
+    "bird_label",
+    "phenomenon",
+    "relative_side",
+    "relation",
+    "reference_frame"
+  ],
+  "phenomena": [
+    "flight",
+    "call",
+    "other",
+    "unknown"
+  ],
+  "sides": [
+    "left",
+    "right",
+    "unknown"
+  ],
+  "relations": [
+    "located_on_side",
+    "moving_to_side",
+    "moving_from_side",
+    "unresolved"
+  ],
+  "frames": [
+    "observer_relative",
+    "cardinal",
+    "unknown"
+  ],
+  "facings": [
+    "N",
+    "NE",
+    "E",
+    "SE",
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "unknown"
+  ],
+  "origins": [
+    "reported_real",
+    "hypothetical",
+    "unknown"
+  ],
+  "context_ids": [
+    "classes-main",
+    "classes-note133",
+    "public-early",
+    "public-decay",
+    "public-criticism",
+    "direction-criticism",
+    "orientation-note226",
+    "cock-criticism",
+    "weather-analogy"
+  ],
+  "evaluation_statuses": [
+    "applicable",
+    "not_applicable",
+    "insufficient_evidence",
+    "conflicting_evidence",
+    "unsupported"
+  ],
+  "priority": "Unrecognized bird unsupported. Known mismatches in bird/phenomenon/side/relation exclude a condition. Structured side conflict blocks positive matching; cardinal frame unsupported; unknown/uncertain required fields insufficient. Note226 full match remains conflicting. Overall crow-call main match also exposes source disagreement without altering its main-text match.",
+  "supported": [
+    "Four source-specific main bird-condition accounts",
+    "One conflicting translator-note condition and nine source/critical/context records",
+    "Manual one-to-eight observations with exact relation/frame/unknown/conflict handling",
+    "Exact reference/catalog lookup, raw user text and neutral side-by-side comparison",
+    "Pinned profile/catalog/source hashes and offline JSON/Markdown replay"
+  ],
+  "unsupported": [
+    "Universal Roman/Greek polarity map or automatic compass conversion",
+    "Greek narrative or Kynes executable profiles",
+    "Weather/Aeromancy interpretations or operational forecasting",
+    "Scientific species identification, camera recognition or generated observations",
+    "Factual future prediction,diagnosis,supernatural accuracy or authorized public auspices"
+  ],
+  "public_qualification": "Voluntary contemporary/manual observations may be compared with a historical account. Neither a declared public setting nor a matched reference confers augural office, ritual validity or public decision authority.",
+  "rights": "Only original concise factual accounts/locators and hashes retained.1923 translated book text has LacusCurtius public-domain indication; site notes/layout/images/later revisions and Kynes books remain distinct.",
+  "greek_scope": "Documentary source metadata retained; independent Greek runtime profiles deferredP1, never Roman side-rule transfer."
+}
