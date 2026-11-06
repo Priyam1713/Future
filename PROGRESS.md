@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 38 Roman condition engine — 2026-11-06
+- Source47d06d9/catalogd6ece0f pushed before matcher. Added exact manual bird/phenomenon/side/relation/frame evaluation,all five evidence statuses,structured conflicts/uncertainty,context lookup,raw user declarations and deterministic replay. No cardinal conversion,modern species inference,public authority or factual prediction.
+- 63 new tests and independent864 observations/4320 per-condition checks pass. Main calls retain not_stated polarity;only explicit main flight records appear as favorable source wording. Note226 conflict and Latin flight-verb qualification retained. Full inherited acceptance follows before closure.
+
+
 ## Technique 38 immutable Roman catalog — 2026-11-06
 - Source47d06d9 pushed first. Frozen `cicero-falconer1923-roman-bird-signs-v1`:14 ordered source records,including four main condition accounts and one conflicting note condition;context references retain dialogue/notes/public/weather distinctions.
 - Additional Latin/English qualification:I.39.85 Latin names sides/birds and ratum without an explicit flight verb;Falconer supplies flight/to. Moving-to matching is deliberately translation-specific,not original-Latin velocity or a universal orientation law. No numeric/compass or Greek convention silently imported.

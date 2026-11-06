@@ -774,6 +774,22 @@ and [clinical scope](data/akashic-clinical.md).
 Run `python -m scripts.verify_akashic`, `python -m scripts.smoke_akashic_core`
 and `python -m unittest tests.test_akashic -q`.
 
+## Augury: Roman bird-sign source-condition reference
+
+`python -m future augury data/augury-input.json --format markdown`
+
+Profile `cicero-falconer1923-roman-bird-signs-v1` compares manual observations with14 frozen source/context records from Falconer's1923 *De Divinatione*. Four main conditions separate crow-left/raven-right calls inI.7.12 from explicitly favorable flight examples inI.39.85. A fifth condition represents conflicting translator note226. Nine contextual references retain Quintus's defense, Marcus's criticism, note133 classifications, public authority and weather-analogy limits.
+
+Copy the profile/catalog ID/version/hash from `data/augury-input.json`. `task:"observe"` takes one to8 ordered `observations`, each with a distinct `observation_id`. Bird labels are source English labels (`crow`,`raven`) or raw unsupported/unknown labels; no Latin-name or scientific-species inference. Declare `phenomenon`, `relative_side`, `relation` and `reference_frame` explicitly when known. Missing values remain unknown. Calls require `located_on_side`; Falconer's flight-to examples require `moving_to_side`. `moving_from_side` and merely located-on flight are not silently equivalent. LatinI.39.85 itself has no explicit flight verb; this translation-specific convention is recorded separately.
+
+The supported comparison frame is declared `observer_relative`. Unknown frame remains insufficient; `cardinal` is retained as an unsupported declaration, without conversion. `observer_facing` is optional declared N/NE/E/SE/S/SW/W/NW/unknown and never fills a missing frame. Explicit `side_reports` can expose conflicting declarations; named `uncertain_fields` prevent those required fields from producing a confident match. Raw prose is not interpreted to infer observations or contradictions.
+
+Results distinguish applicable,not_applicable,insufficient_evidence,conflicting_evidence and unsupported. Applicable means source-condition compatibility. Calls never inherit flight polarity. A crow-left call can match the main text while overall evidence remains conflicting because note226 gives crow-right; a matching note never becomes consensus. No unmatched/opposite input is labeled unfavorable. Main-text favorable IDs identify quoted historical wording, not predictions.
+
+Optional origin (`reported_real`,`hypothetical`,`unknown`), user-attributed modern species, setting, sequence, uncertainty, description and reflection stay separate from source facts. Request question/reflection/notes preserve raw Unicode/whitespace. No observation confers Roman public authority, including a user-declared public setting. `task:"reference"` takes exact `reference_ids`; `task:"catalog"` lists all14 records without observations. Multiple observations receive neutral comparison only, never a combined omen.
+
+Pinned profile/catalog/source hashes and full requests support exact offline JSON/Markdown replay. Greek narrative runtime, Kynes symbolism, compass conversion, weather forecasting, bird identification, generation and factual prediction are unsupported. Source/Latin notes and independent fixtures: `knowledge/augury_source_freeze_v1.json`, `knowledge/augury_translation_notes_v1.json`, `tests/fixtures/augury_reference_v1.json`. Checks: `python -m scripts.verify_augury` and `python -m scripts.smoke_augury_core`.
+
 ## Cleromancy: Greek Alphabet Oracle single declared lot
 
 `python -m future cleromancy data/cleromancy-input.json --format markdown`

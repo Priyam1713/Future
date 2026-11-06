@@ -271,7 +271,26 @@ def main():
     clero=sub.add_parser('cleromancy')
     clero.add_argument('input',help='Named Greek Alphabet Oracle single declared marked-lot or source catalog JSON')
     clero.add_argument('--format',choices=['json','markdown'],default='json')
+    augur=sub.add_parser('augury')
+    augur.add_argument('input',help='Manual Roman bird-sign source observations or exact context references JSON')
+    augur.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='augury':
+        import sys
+        from .scrying import load_input
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
+        registry=load_registry(args.database)
+        try:
+            try:
+                from .augury import read,markdown
+                result=read(load_input(args.input),registry)
+            except (ValueError,OSError) as exc:
+                from html import escape
+                print(json.dumps(dict(status='rejected',error=str(exc),augury_report=None),indent=2) if args.format=='json' else '# Augury request rejected\n\n'+escape(str(exc))+'\n')
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+        finally:registry.close()
+        return
     if args.command=='cleromancy':
         import sys
         from .scrying import load_input
