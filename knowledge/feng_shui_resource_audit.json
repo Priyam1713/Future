@@ -1,0 +1,472 @@
+{
+  "version": 1,
+  "technique_id": 40,
+  "name": "Feng Shui",
+  "phase": 4,
+  "date": "2026-11-06",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "560088d",
+  "predecessor_acceptance": "5ee7ce5",
+  "predecessor_push": "Haruspicy closure560088d accepted,committed,pushed;clean main and origin/main...HEAD0/0 observed before any40 source research.",
+  "policy": "Audit metadata only;no40engine,profile,executable sector table,CLI,calendar/floorplan overlay or image recognition. No41/42 audit or implementation.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    40,
+    "4 · Nature, Objects & Ancient Practices",
+    "Feng Shui",
+    "RETAIN — simulate / implement",
+    "Deterministic / symbolic rules",
+    "Form School; Compass / Luo Pan; Eight Mansions; Flying Stars; San He/San Yuan; BTB",
+    "Building plan + compass headings + school-specific spatial/time overlays",
+    "Floorplan; North orientation; construction date for Flying Stars",
+    "Schools conflict; compass accuracy optional/manual entry",
+    "Traditional / not scientifically validated",
+    "Guide to the Feng Shui Compass",
+    "Stephen Skinner",
+    null,
+    "Xuan Kong Flying Stars Feng Shui",
+    "Zangshu (Book of Burial)",
+    null,
+    "3, 7, 18, 53",
+    40
+  ],
+  "ranked_sources": [
+    [
+      40,
+      "Feng Shui",
+      1,
+      "Stephen Skinner",
+      "Guide to the Feng Shui Compass",
+      "Classical compass formulae",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      40,
+      "Feng Shui",
+      2,
+      "Joey Yap",
+      "Xuan Kong Flying Stars Feng Shui",
+      "Time-cycle Flying Stars",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      40,
+      "Feng Shui",
+      3,
+      "Traditionally attributed to Guo Pu",
+      "Zangshu (Book of Burial)",
+      "Form-school historical text",
+      "https://faculty.trinity.edu/sfield/Fengshui/Zangshu.html",
+      "Scholarly translation; rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      40,
+      "Feng Shui",
+      "Form School",
+      "Zangshu (Book of Burial)",
+      "Guide to the Feng Shui Compass",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      40,
+      "Feng Shui",
+      "Compass / Luo Pan",
+      "Guide to the Feng Shui Compass",
+      "Zangshu (Book of Burial)",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      40,
+      "Feng Shui",
+      "Eight Mansions",
+      "Zangshu (Book of Burial)",
+      "Xuan Kong Flying Stars Feng Shui",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      40,
+      "Feng Shui",
+      "Flying Stars",
+      "Xuan Kong Flying Stars Feng Shui",
+      "Zangshu (Book of Burial)",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      40,
+      "Feng Shui",
+      "San He/San Yuan",
+      "Zangshu (Book of Burial)",
+      "Xuan Kong Flying Stars Feng Shui",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      40,
+      "Feng Shui",
+      "BTB",
+      "Zangshu (Book of Burial)",
+      "Xuan Kong Flying Stars Feng Shui",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_registry": "knowledge/feng_shui_sources.json",
+  "source_access": {
+    "skinner-author": {
+      "url": "https://www.sskinner.com/books.htm",
+      "resolved_url": "https://www.sskinner.com/books.htm",
+      "status": 200,
+      "sha256": "b17788d441b027f302378b006caa1cf0d855b656a0934c96e05818a2b06537b7",
+      "bytes": 112613
+    },
+    "skinner-publisher": {
+      "url": "https://www.llewellyn.com/product.php?ean=9780738723495",
+      "sha256": null,
+      "error": "HTTPError",
+      "access": "Primary web rendering/index inspected;direct snapshot unavailable."
+    },
+    "yap-book": {
+      "url": "https://store.joeyyap.com/products/xuan-kong-flying-stars-feng-shui",
+      "resolved_url": "https://store.joeyyap.com/products/xuan-kong-flying-stars-feng-shui",
+      "status": 200,
+      "sha256": "6fb4cea473d5f600e143eed32b11ddab5cb28cb61996aa4baadd54fac4541c50",
+      "bytes": 639816
+    },
+    "field-zangshu": {
+      "url": "https://faculty.trinity.edu/sfield/Fengshui/Zangshu.html",
+      "resolved_url": "https://faculty.trinity.edu/sfield/Fengshui/Zangshu.html",
+      "status": 200,
+      "sha256": "fe499ee32a81cd2a7cd58c348165bed6adfdd38cad4df5ff0a72b2ba4567bdf7",
+      "bytes": 127429
+    },
+    "yap-compass": {
+      "url": "https://joeyyap.com/dlll234/",
+      "resolved_url": "https://joeyyap.com/dlll234/Joey%20Yap%27s%2024%20Mountain%20Compass%20Degrees.pdf",
+      "status": 200,
+      "sha256": "ef6a47bbb7da8a2b0a1483ed56783a123626b9f82d0614784d6346fb382cec3a",
+      "bytes": 768816
+    },
+    "yap-charts": {
+      "url": "https://joeyyap.com/dlll239/Period%206%20-%209%20Flying%20Star%20Charts.pdf",
+      "resolved_url": "https://joeyyap.com/dlll239/Period%206%20-%209%20Flying%20Star%20Charts.pdf",
+      "status": 200,
+      "sha256": "dbb1f5e9dfcf6d299b25432d3cfdc2a942d9d4cae2939a9a7bb95871e811b524",
+      "bytes": 11133241
+    },
+    "yap-period8-notes": {
+      "url": "https://www.joeyyap.com/dl/v3/Episode_3_Notes.pdf",
+      "resolved_url": "https://www.joeyyap.com/dl/v3/Episode_3_Notes.pdf",
+      "status": 200,
+      "sha256": "a6fdaee0938cfacb678c4ba2ba888aa5df5ed9c6081a31f0d18912e10b1c8491",
+      "bytes": 1967246
+    },
+    "yap-facing": {
+      "url": "https://masteryacademy.com/Academy/media/columncontent.asp?iframe=academic_colum&nid=443",
+      "resolved_url": "https://masteryacademy.com/Academy/media/columncontent.asp?iframe=academic_colum&nid=443",
+      "status": 200,
+      "sha256": "fcdfce19d62c6413bfa7828a1b3f847629d5f251cb0b0f2009883d2ebaa07397",
+      "bytes": 65802
+    },
+    "btb-school": {
+      "url": "https://mindfuldesignschool.com/blog/q-and-a-doors-bagua",
+      "resolved_url": "https://mindfuldesignschool.com/blog/q-and-a-doors-bagua",
+      "status": 200,
+      "sha256": "61c9846a5383eb5df6f3add99c858063980f53388aa68cfbd1a4232043afb724",
+      "bytes": 44586
+    },
+    "eight-formulas": {
+      "url": "https://www.fengshuiweb.co.uk/eight-mansions-feng-shui-2/",
+      "resolved_url": "https://www.fengshuiweb.co.uk/eight-mansions-feng-shui-2/",
+      "status": 200,
+      "sha256": "8ef90136441cfd1acae85cf507d9e8705c3a349493d309af142fa0ad59368159",
+      "bytes": 444876
+    },
+    "eight-houses": {
+      "url": "https://www.fengshuiweb.co.uk/eight-mansions-feng-shui/",
+      "resolved_url": "https://www.fengshuiweb.co.uk/eight-mansions-feng-shui/",
+      "status": 200,
+      "sha256": "c842c6ef55d1458e5745588099ef5552aaa29d4cba5e3d5f9d8786efefd076af",
+      "bytes": 268940
+    },
+    "yap-period9": {
+      "url": "https://home.joeyyap.com/article/flying-star-feng-shui/",
+      "sha256": null,
+      "error": "ConnectTimeout",
+      "access": "Primary web rendering inspected;no raw snapshot."
+    }
+  },
+  "editions": {
+    "rank1": "Skinner UKGoldenHoard2008ISBN9780954763992;USLlewellynSeptember2010ISBN9780738723495,448pages. Author/publisher metadata and partial contents;no actual ring chapter inspected. Reprints/editions are not interchangeable.",
+    "rank2": "JoeyYap official store confirms title/scope;library corroboratesJYBooks2007. Exact printing,titlepage/ISBN and actual chapter access remain gaps;do not silently bind later2024downloads to2007book.",
+    "rank3": "GuoPu attribution preserved as traditional. Field2003webtranslation and its own numbered divisions/notes inspected;underlying critical Chinese edition unverified. Modern translation remains copyrighted."
+  },
+  "variation_findings": {
+    "Form School": {
+      "sources": [
+        "feng-shui-field-zangshu-v1",
+        "feng-shui-yap-period9-v1"
+      ],
+      "coverage": "FieldII.A discusses wind/water/terrain;IV.C distinguishes five unsuitable mountain categories. These are historical siting/burial accounts,not modern apartment-energy measurements.",
+      "manual_candidate": "Explicitly declared terrain/source-term conditions could support a source-comparison checklist after fixing term definitions,qualifiers and negative controls. No physical Qi value,health/wealth forecast or burial-operation advice.",
+      "limits": "Do not assign EightMansions/FlyingStars formulas to Zangshu;modern furnishing advice and ancient terrain contexts differ."
+    },
+    "Compass / Luo Pan": {
+      "sources": [
+        "feng-shui-skinner-author-v1",
+        "feng-shui-yap-compass-v1",
+        "feng-shui-yap-facing-v1"
+      ],
+      "coverage": "Skinner discusses multiple rings/plates;Yap2024officialPDFpage2 supplies24named direction subdivisions and decimal-degree bounds. Manually inspect all rows before selected catalog freeze.",
+      "angles": "Candidate uses declared clockwise degree convention withN2wrapping north. Source displays adjacent tenths such asN2ending7.5andN3starting7.6,not arbitrary-precision real intervals.",
+      "north": "Compass reference/magnetic versus true must be explicit. Chart alone does not certify a universal magnetic/true conversion;no automatic declination. Unknown frame stays unknown for physical assessment.",
+      "roles": "Yap’s facade-facing convention is not necessarily frontdoor orientation. Building-facing,sitting,door bearing and observer heading must be separate inputs.",
+      "boundaries": "Prefer integertenths0..3599 for a literal bounded table profile. Do not round7.55into a source interval or invent half-open endpoints. 360°,negative andmultiple-turn normalization require separately named editorial policy."
+    },
+    "Eight Mansions": {
+      "sources": [
+        "feng-shui-eight-formulas-v1",
+        "feng-shui-eight-houses-v1"
+      ],
+      "coverage": "Supplemental source publishes four worked formula examples before/after2000,solar-year caveats,personal Gua and distinct house-trigram concepts.",
+      "formula": "Source adds lasttwo year digits,reducing toone;male before2000subtracts from10/from2000from9;female before2000adds5/from2000adds6andreduces. RawGua5directionremap male2/female8. This source-specific formulation is not yet a frozen runtime.",
+      "worked_examples": [
+        {
+          "birth": "1945-03-03",
+          "source_category": "male",
+          "source_solar_year": 1945,
+          "raw_gua": 1
+        },
+        {
+          "birth": "1946-01-25",
+          "source_category": "female",
+          "source_solar_year": 1945,
+          "raw_gua": 5,
+          "direction_gua": 8
+        },
+        {
+          "birth": "2001-03-03",
+          "source_category": "male",
+          "source_solar_year": 2001,
+          "raw_gua": 8
+        },
+        {
+          "birth": "2002-01-25",
+          "source_category": "female",
+          "source_solar_year": 2001,
+          "raw_gua": 7
+        }
+      ],
+      "limits": "Birth category is a historical source input,never inferred. Personal versus house Gua,zero/remainder9,century range and exactLiChun date/time/timezone need named conventions. House page178°south=>Kan north-sitting is a useful anchor,but Chen east/east sentence is contradictory;do not silently harmonize."
+    },
+    "Flying Stars": {
+      "sources": [
+        "feng-shui-yap-book-v1",
+        "feng-shui-yap-charts-v1",
+        "feng-shui-yap-period8-notes-v1",
+        "feng-shui-yap-facing-v1",
+        "feng-shui-yap-period9-v1"
+      ],
+      "coverage": "Official2024five-page charts coverPeriods6–9,16facing groups perperiod. InspectedPeriod7and8;2014case5independently provides a Period8E1-sitting/W1-facing example.",
+      "numeric_anchors": {
+        "context": "Period8,facingW1,sittingE1",
+        "coordinate_order": "upper-left small,upper-right small,large base number;interpretive roles require explicit source freeze",
+        "center": [
+          6,
+          1,
+          8
+        ],
+        "facing_W": [
+          4,
+          3,
+          1
+        ],
+        "sitting_E": [
+          8,
+          8,
+          6
+        ],
+        "references": [
+          "2024PDFpage4,row2column1",
+          "Episode3PDFpage7/printed7case5"
+        ]
+      },
+      "orientation": "Each mini-chart rotates to show its facing at the top. A fixed north-up matrix cannot be copied from page positions;read compass labels. Matching three anchors does not certify a full9palace generator.",
+      "time": "Yap article givesPeriod9from4February2024through2043;older article uses moved-in dates,whilecurrentarticle saysbuilt/completedandoccupied. No exactboundaryinstant/timezone or renovation-trigger rule verified. Do not default missing dates,derive period from current year,or assume all buildings change charts when global period changes.",
+      "generation_gates": [
+        "All9palaces and small-number roles",
+        "LoShu traversal order and forward/reverse parity",
+        "mountain/water start stars and central5exceptions",
+        "24mountain yin/yang/sourcevariants",
+        "lower/substitution chart distinction",
+        "birth-period versus annual/monthly/time layers",
+        "construction/occupancy/renovation convention and exact transition treatment"
+      ],
+      "limits": "Real numeric examples are accessible,but complete source-supported generation derivation is not yet verified. Keep chart-reference/generation/interpretation separate;no factual wealth or medical promises."
+    },
+    "San He/San Yuan": {
+      "sources": [
+        "feng-shui-skinner-author-v1"
+      ],
+      "coverage": "Skinner’s author account distinguishesSanYuan/FlyingStar(trigram-based)andSanHe(fivephase/branch combinations)and different rings/plates.",
+      "gates": "Exactplate/ring,angularoffset,water/terrainroles,sequenceand worked examples needed. Skinner’s compatibility claim is author-attributed,not permission to merge conflicting computations. No shared universal overlay certified."
+    },
+    "BTB": {
+      "sources": [
+        "feng-shui-btb-school-v1"
+      ],
+      "coverage": "MindfulDesign’s ownBTBpractice aligns bagua bottom withformal frontdoor and sayscompassdirection is irrelevant to that alignment.",
+      "gates": "Separate contemporary door-frame profile and source-definedgrid/orientation/polygon rules would be required. Never useBTBdooralignment as a classical facing default or attribute it toGuoPu."
+    }
+  },
+  "first_candidate": {
+    "recommendation": "Bounded manual24mountain compass-sector reference/condition engine,using a separately named tenths-resolution source convention. Numeric classification and transparent boundary/uncertainty results,not a reflection-only wrapper.",
+    "provisional_profile": "yap2024-manual-24-mountain-tenths-v1 (proposal only;no40profile exists)",
+    "why": "A complete24-row primary numeric chart is accessible and fits deterministic integer arithmetic. No birth calendar,building-period derivation,3Dfloorplan or invisible-energy estimation is needed. Preserve original ranked sources;this supplemental numerical sheet does not replaceSkinner.",
+    "comparison": [
+      {
+        "candidate": "24mountain sector comparator",
+        "value": "High:precise manual heading/label lookup with useful edge behavior",
+        "cost": "Lowest,subject to fullrow/sourceframe/rights freeze",
+        "decision": "First"
+      },
+      {
+        "candidate": "EightMansions personal Gua",
+        "value": "High:small formula with four real sourceworkedexamples",
+        "cost": "Moderate:solar-year/calendar convention,century/zero/remap andhouse/personal isolation",
+        "decision": "Strong next bounded alternative;explicit source_solar_year could defer astronomical date resolution"
+      },
+      {
+        "candidate": "FlyingStars generation",
+        "value": "High:meaningfulspatial/time9palacecharts",
+        "cost": "Higher:generator/role/parity/substitution/perioddategates;only sparseanchors checked",
+        "decision": "P1aftercompass foundation"
+      },
+      {
+        "candidate": "FormSchoolmanualconditions",
+        "value": "Useful historical terrain reference",
+        "cost": "Lowcomputationalcost,butterm/qualifierinterpretation greater",
+        "decision": "Supplementarysourcecomparison,not replacing accessible numericfunctionality"
+      }
+    ],
+    "rights_gate": "Use original concise factual rules/locators under facts-only policy;do not distribute or trace chart artwork,bookchapters or bulk modern chart layouts. Fullcreative-table reuse would require verified licence/permission. If required factual extraction cannot be cleared,seek independent legitimately reusable witness rather than copy restricted assets.",
+    "cutoff": "After complete24IDs/bounds,sourceframe,precision/edgepolicy and independent fixtures verified,freeze first profile and build;do not require all75rings or every FengShui school."
+  },
+  "proposed_manual_schema": {
+    "status": "Audit design only;no executable40schema or CLI.",
+    "required": [
+      "integer schema_version1",
+      "exactnamed profile/catalog/version/hash",
+      "mode=manual",
+      "task=classify/reference/compare/catalog",
+      "declared integer bearing_tenths0..3599 for classify",
+      "north_reference=source_diagram/magnetic/true/unknown",
+      "bearing_role=source_heading/building_facing/building_sitting/door/observer/unknown"
+    ],
+    "optional": [
+      "bounded uncertainty_tenths",
+      "declared alternative readings",
+      "raw observation/question/reflection",
+      "source reference IDs",
+      "explicit independent sitting/facing bearings"
+    ],
+    "semantics": "Pure source-heading classification may remain documentary. Physical-building use needs verified compatible north/frame/role;no automatictrue/magnetic conversion orfrontdoor/facadeinference. If uncertainty crosses sectors,showpossiblelabels/conflict rather than forceone. No birth/buildingdate needed forcompassslice.",
+    "outputs": "Exactinput/normalizedbearing (only if policy permits),matchedsourceID/name/range,missing/conflictingframe,source-locatednumericrule,editorialprecisionpolicy,rights,unsupportedinferences and exactJSON/Markdown replay withimmutablehashes. No Qi/health/wealth score.",
+    "future_EightMansions": "Separate named sourcecategory and explicit solar_year or complete timestamp/timezone+verifiedcalendar convention;personalrawGua/remap separate from houseGua.",
+    "future_FlyingStars": "Explicitfacing/sitting,chosenperiodor source-verified date/eventkind,school/generation/parity/substitutionpolicy,spatialdisplayframe. No missingdata defaults."
+  },
+  "independent_fixture_plan": {
+    "before_engine": "Freeze source-located literalbounds and separately authored expectedvalues before any40matcher/generator. Data and expectedresults must not come from productioncode.",
+    "compass_examples": [
+      {
+        "source": "Yap2024PDFpage2",
+        "input_degrees": "92.0",
+        "expected": "E2/Mao (derived lookup of source’s illustrated92°reading)",
+        "kind": "Sourceillustration plus independently evaluated printed interval"
+      },
+      {
+        "source": "Yap2024PDFpage2",
+        "input_degrees": "7.5",
+        "expected": "N2/Zi",
+        "kind": "Printed upper endpoint"
+      },
+      {
+        "source": "Yap2024PDFpage2",
+        "input_degrees": "7.6",
+        "expected": "N3/Gui",
+        "kind": "Printed lower endpoint"
+      }
+    ],
+    "complete_compass": "Independently collate all24IDs/names/bounds in order,all centers and bothendpoints,3600integer-tenth headings withnooverlap/gapunderdeclaredwrapconvention. Check0/359.9,northwrap,7.55unsupportedprecision,negative/360degreesexplicitpolicy,Boolean/nonfinite/typefailures,unknownframes andcross-boundaryuncertainty. Do not call an implementation self-check an independent oracle.",
+    "EightMansions": "Use four sourceworkedexamples above plus1945/1946calendarboundary,1999/2000,zero/9cycle,raw5/remap andpersonal/houseisolation. Verify formula against an independently collated finite-year table;nearLiChuninstants remainunsupporteduntilsource/calendargates pass.",
+    "FlyingStars": "Start with full9palaces ofPeriod8E1/W1,signedbycompasslabelsandnumberroles,thenindependent2014/2024comparison. Three inspectedanchors are seeds,notcompletefixturecertification. Need forward/reverse,central5,substitution andperiod-boundarycounterexamples.",
+    "Form_and_BTB": "Literalterrainqualifiersandnegativecontrols mustbelocatedinFieldtext;BTBformaldoorreference testedseparately frommagnetic/trueframes. Neither measuresenvironmentalenergy.",
+    "replay": "RawUnicode/whitespace,JSONduplicate/nonfinite rejection,stableorderedcomparisons,request/source/profile/catalog hashes and exactJSON/Markdown replay;completeinheritedacceptance before release."
+  },
+  "configuration_matrix": {
+    "supported_now": [
+      "Audit bibliography,source-access and original factual notes only;no40runtime"
+    ],
+    "first_supported_candidate_after_gates": [
+      "Named24mountain manualsource-heading classification atdeclaredtenthsresolution",
+      "Source/reference lookup and explicit uncertainty/frame qualification"
+    ],
+    "experimental": [
+      "EightMansions formula research with independent publishedworkedexamples",
+      "FlyingStars chartgeneration pendingcompleteparity/date/rolefixtures",
+      "Source-groundedterrain comparison",
+      "SeparateBTBdoor-frame documentaryprofile"
+    ],
+    "unsupported": [
+      "Unifiedall-schoolsformula",
+      "Automaticconstruction/occupancy/renovationdate selection",
+      "Unverifiedtrue/magneticconversion ormobilecompasscalibration",
+      "FloorplanAI,vision,3Dbuilding/mapAPIs",
+      "Factualsupernatural,medical,financial orscientificoutcomeclaims",
+      "Copiedmodernbookchapters/chartartwork orunlicensedbulkchartcollection"
+    ]
+  },
+  "acceptance_gates": [
+    "Preserve60IDs/54retained/exclusions25,27,41,42,47,48;three ranked sources andsixvariationrows unchanged.",
+    "Sourceedition/rights freeze with allselectednames,bounds andnumberroles;distinguishmoderntranslationsandancientattribution.",
+    "Explicitnorth/frame/angleprecision/normalization/boundary policy;unknownsnever silentlyresolved.",
+    "Independentfullselected-domainfixture andpublishedknownanswers before implementation.",
+    "One substantive boundednumericprofile passes;incompleteotherschoolresearch doesnotblock it.",
+    "All inherited1031tests/1235CLI/22verifiers plus newmeaningfulchecks,registry/dependency/pip/diff/replay/protectedbytechecks pass.",
+    "Frozen supported/experimental/unsupportedmatrix,P1/P2andhonestboundedrelease status;noempiricalcertification implied."
+  ],
+  "P1": [
+    "Full24rowidentifier/boundtranscription andChinesecharacterindependentcollation",
+    "Pin source-specificnorthreference,measurementrole,tenthsresolution andwrap/edgepolicy",
+    "Rights-safeoriginalnumericruleextraction;nochartassetredistribution",
+    "Skinneractualringchapters/editions andJoey2007titlepage/chapters",
+    "IndependentlyverifiedEightMansionszero/century/remap,solar-year/house conventions;Chenhouseconflict",
+    "FlyingStarsfullpalace/parity/central5/substitution derivation,period/date/renovationpolicy andworkedfixtures",
+    "FieldunderlyingChinesewitness/edition andpreciseFormSchoolqualifiers"
+  ],
+  "P2": [
+    "Additional luopanrings/plates andSanHeformula profiles",
+    "IndependentFlyingStars annual/monthlylayers withverifiedcalendar",
+    "SeparateBTBdoor-grid reference",
+    "Originalrights-clearedschematicsaftercomputationalcore",
+    "Broadertraditioncomparisons andempiricalresearch keptseparate"
+  ],
+  "rights": "Facts-onlyoriginalresearchnotes andsparse numeric verificationanchors;nooriginalPDFs,modernchartartwork,protectedtranslationbody,bookchapters orinteriordesignassetsbundled. Author/proponent claims ofefficacy remainattributed,not verifiedfacts.",
+  "limits": "Completeboundedresourceaudit,not a40sourcecatalog,independentexecutablefixture,implementedengine orcertifiedcalculation. Several promisingnumericexamples areverified;source-specificprecision,rights andfullfixturegates remain. No41/42 work."
+}

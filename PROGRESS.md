@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 40 Feng Shui resource audit — 2026-11-06
+- Began only after Haruspicy closure560088d pushed,clean and synchronized0/0. Three original ranks/six variations preserved; audit only,no40engine/profile/CLI andno41/42 work.
+- Skinner2008UK/2010US editions,Joeybookaccess gaps andField2003translation rights distinguished. OfficialYap2024numeric24mountain chart,Period6–9reference sheets and2014Period8E1/W1example inspected;chartsrotatebyfacing. SupplementalEightMansions fourworkedexamples andBTBformaldoorframe remain separate;sourcehouse-facing contradiction recorded.
+- Recommend a bounded manual24mountain tenths-resolution numerical comparator;no energy estimate/reflection-only substitute. North/frame/precision/rights andindependentcomplete-domainfixture gates,schema,matrix andP1/P2 in `knowledge/feng_shui_resource_audit.json`. No generic magnetic/true conversion ordate defaults. Validation:435 source records registered twice,1780 tracked protected files unchanged,inventory intact andzero40executable rules.
+
 ## Technique 39 Haruspicy Core v1 closure — 2026-11-06
 - **Core v1 Ready — Historical Roman Entrail-Sign Reference/Condition Scope**: `cicero-falconer1923-roman-entrail-references-v1`;four source-condition cases/five context references. Exact lung/vitals predicate,reported liver-head belief and linked chronological Caesar comparison preserve Quintus/Spurinna/Marcus and Latin/translation boundaries;no clinical or predictive output.
 - 1031 tests(958+73),1235 CLI(1151+84),22 verifiers pass. Independent8100 rows/32400 condition checks and14 known answers;20 valid/12 rejected report pairs replay. Pre-engine1670-file manifest:1665 byte-protected files unchanged,including1556 earlier/1441 required;four deliberate interface/history edits plus append-only source metadata documented. Registry/dependency/pip/diff pass.
