@@ -1,0 +1,1837 @@
+{
+  "passed": true,
+  "complete": true,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "returncode": 0,
+      "seconds": 151.25,
+      "stdout": "",
+      "stderr": ".....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\skyfield\\searchlib.py:224: DeprecationWarning: Setting the dtype on a NumPy array has been deprecated in NumPy 2.5.\r\nInstead of changing the dtype on an array x, create a new array with x.view(new_dtype)\r\n  y.dtype = int8\r\n................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\r\n----------------------------------------------------------------------\r\nRan 1397 tests in 149.561s\r\n\r\nOK\r\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\r\n",
+      "reason": "Final source-metadata and stable-ID cross-search root consistency refinement.",
+      "code_sha256": {
+        "future/deja_reve.py": "a2c99259fa2ccd66c53b6a7dd79cdb0d768e80387fd2d90583d0192cab631229",
+        "tests/test_deja_reve.py": "209bed7296c3f960c06f498ea36a0e0b052e1c56e2758932db536d20ba517358"
+      }
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aeromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 104.656,
+      "stdout": "72 Aeromancy CLI cases passed;21 JSON/21 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_akashic_core"
+      ],
+      "returncode": 0,
+      "seconds": 38.203,
+      "stdout": "28 Akashic CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_astrocartography_core"
+      ],
+      "returncode": 0,
+      "seconds": 17.187,
+      "stdout": "12 Astrocartography CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aura_core"
+      ],
+      "returncode": 0,
+      "seconds": 19.328,
+      "stdout": "14 Aura CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_automatic_writing_core"
+      ],
+      "returncode": 0,
+      "seconds": 31.829,
+      "stdout": "24 Automatic Writing CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_bibliomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 116.0,
+      "stdout": "80 Bibliomancy CLI cases passed;16 JSON/16 Markdown saved replays;10 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_chinese_core"
+      ],
+      "returncode": 0,
+      "seconds": 40.016,
+      "stdout": "15 Chinese CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_cleromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 117.89,
+      "stdout": "80 Cleromancy CLI cases passed;16 valid JSON/Markdown saved replays and16 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_coffee_core"
+      ],
+      "returncode": 0,
+      "seconds": 77.109,
+      "stdout": "54 Coffee CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_dream_core"
+      ],
+      "returncode": 0,
+      "seconds": 43.156,
+      "stdout": "30 Dream CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_face_reading_core"
+      ],
+      "returncode": 0,
+      "seconds": 17.0,
+      "stdout": "12 Face Reference CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_geomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 81.282,
+      "stdout": "55 Geomancy CLI cases passed; 13 JSON/13 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_graphology_core"
+      ],
+      "returncode": 0,
+      "seconds": 21.469,
+      "stdout": "14 Graphology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_horary"
+      ],
+      "returncode": 0,
+      "seconds": 7.078,
+      "stdout": "5 Horary CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_hydromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 93.141,
+      "stdout": "63 Hydromancy CLI cases passed;18 JSON/18 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iching_core"
+      ],
+      "returncode": 0,
+      "seconds": 45.25,
+      "stdout": "30 I Ching CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iridology_core"
+      ],
+      "returncode": 0,
+      "seconds": 19.984,
+      "stdout": "14 Iridology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_lithomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 90.766,
+      "stdout": "64 Lithomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mirror_core"
+      ],
+      "returncode": 0,
+      "seconds": 43.578,
+      "stdout": "28 Mirror CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_moleosophy_core"
+      ],
+      "returncode": 0,
+      "seconds": 20.5,
+      "stdout": "12 Moleosophy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mundane_core"
+      ],
+      "returncode": 0,
+      "seconds": 15.656,
+      "stdout": "12 Mundane CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_numerology_core"
+      ],
+      "returncode": 0,
+      "seconds": 5.062,
+      "stdout": "4 Numerology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_oracle_core"
+      ],
+      "returncode": 0,
+      "seconds": 23.516,
+      "stdout": "20 Oracle CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_osteomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 82.235,
+      "stdout": "64 Osteomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_palmistry_core"
+      ],
+      "returncode": 0,
+      "seconds": 11.828,
+      "stdout": "10 Palmistry CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pendulum_core"
+      ],
+      "returncode": 0,
+      "seconds": 36.0,
+      "stdout": "28 Pendulum CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_phrenology_core"
+      ],
+      "returncode": 0,
+      "seconds": 14.625,
+      "stdout": "12 Phrenology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_podomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 15.359,
+      "stdout": "12 Podomancy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pyromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 84.062,
+      "stdout": "60 Pyromancy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_runes_core"
+      ],
+      "returncode": 0,
+      "seconds": 34.172,
+      "stdout": "24 Rune CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_scrying_core"
+      ],
+      "returncode": 0,
+      "seconds": 42.547,
+      "stdout": "28 Scrying CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tarot_core"
+      ],
+      "returncode": 0,
+      "seconds": 32.266,
+      "stdout": "22 Tarot CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tasseography_core"
+      ],
+      "returncode": 0,
+      "seconds": 46.297,
+      "stdout": "34 Tasseography CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_vedic_core"
+      ],
+      "returncode": 0,
+      "seconds": 17.828,
+      "stdout": "12 Vedic CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_western_core"
+      ],
+      "returncode": 0,
+      "seconds": 32.281,
+      "stdout": "23 CLI smoke cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tarot"
+      ],
+      "returncode": 0,
+      "seconds": 0.422,
+      "stdout": "30 Tarot source/layout/independent protocol checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_oracle"
+      ],
+      "returncode": 0,
+      "seconds": 1.594,
+      "stdout": "49 Oracle verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_iching"
+      ],
+      "returncode": 0,
+      "seconds": 0.812,
+      "stdout": "8759 I Ching verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_runes"
+      ],
+      "returncode": 0,
+      "seconds": 0.875,
+      "stdout": "84 rune reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pendulum"
+      ],
+      "returncode": 0,
+      "seconds": 0.281,
+      "stdout": "207 Pendulum reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_scrying"
+      ],
+      "returncode": 0,
+      "seconds": 1.094,
+      "stdout": "23 Scrying reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_mirror"
+      ],
+      "returncode": 0,
+      "seconds": 0.704,
+      "stdout": "22 Mirror reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_dream"
+      ],
+      "returncode": 0,
+      "seconds": 0.797,
+      "stdout": "26 Dream reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_automatic_writing"
+      ],
+      "returncode": 0,
+      "seconds": 0.875,
+      "stdout": "27 Automatic Writing reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_akashic"
+      ],
+      "returncode": 0,
+      "seconds": 0.844,
+      "stdout": "47 Akashic independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tasseography"
+      ],
+      "returncode": 0,
+      "seconds": 0.875,
+      "stdout": "68 Tasseography independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_coffee"
+      ],
+      "returncode": 0,
+      "seconds": 1.625,
+      "stdout": "65 Coffee independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pyromancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.328,
+      "stdout": "59 Pyromancy independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_hydromancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.156,
+      "stdout": "44 Hydromancy independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_aeromancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.187,
+      "stdout": "53 Aeromancy independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_geomancy"
+      ],
+      "returncode": 0,
+      "seconds": 4.656,
+      "stdout": "65536 independent Geomancy charts, 256 addition pairs, 4096 associative triples, 16 identities and 6 fixtures passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_lithomancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.047,
+      "stdout": "12 Lithomancy source roles; 1225 independent distance pairs;25 grid rankings;4 authored cases;10 transforms;9 viewpoint checks;2 unknown cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_osteomancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.969,
+      "stdout": "13 Osteomancy source records;5 named relationships;169 ordered pair checks;26 omitted-outcome checks;52 original-evidence checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_bibliomancy"
+      ],
+      "returncode": 0,
+      "seconds": 2.641,
+      "stdout": "141 Bibliomancy selections;85 independently parsed verses;423 context cases;216 historical indices;100 literal dice sums passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_cleromancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.0,
+      "stdout": "24 Cleromancy source accounts;98 alias keys;9016 numerical research tuples;source discrepancies and exact replay passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_augury"
+      ],
+      "returncode": 0,
+      "seconds": 1.406,
+      "stdout": "14 Augury source records;864 finite observations;4320 condition checks;4 known answers;5 uncertain-field and1 structured conflict cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_augury_core"
+      ],
+      "returncode": 0,
+      "seconds": 105.219,
+      "stdout": "80 Augury CLI cases passed;20 valid JSON/Markdown saved replays and10 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_haruspicy_core"
+      ],
+      "returncode": 0,
+      "seconds": 109.078,
+      "stdout": "84 Haruspicy CLI cases passed;20 valid JSON/Markdown saved replays and12 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_haruspicy"
+      ],
+      "returncode": 0,
+      "seconds": 3.984,
+      "stdout": "9 Haruspicy source records;8100 finite observations;32400 condition checks;14 known answers passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_feng_shui_core"
+      ],
+      "returncode": 0,
+      "seconds": 135.422,
+      "stdout": "104 Feng Shui CLI cases passed;24 accepted JSON/Markdown replay pairs and16 rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_feng_shui"
+      ],
+      "returncode": 0,
+      "seconds": 0.531,
+      "stdout": "24 source rows;3600 ID/name/Chinese headings;3600 uncertainty ranges;144 boundary/neighbor/central checks;9 extra ranges;3 anchors passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_remote_viewing"
+      ],
+      "returncode": 0,
+      "seconds": 3.235,
+      "stdout": "72000 independent target/ranking/display checks;600-case uniform null;16 procedural fixture families passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_remote_viewing_core"
+      ],
+      "returncode": 0,
+      "seconds": 166.187,
+      "stdout": "125 Remote Viewing CLI cases passed;23 accepted/21 rejected JSON/Markdown pairs;3 exact blind directory exports\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_prophetic_dreams"
+      ],
+      "returncode": 0,
+      "seconds": 3.531,
+      "stdout": "600 independent interval/chronology checks;2timezone cases;8hand-enumerated pairs;18procedural families passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_prophetic_dreams_core"
+      ],
+      "returncode": 0,
+      "seconds": 176.609,
+      "stdout": "136 Prophetic Dreams CLI cases passed;29accepted/15rejected JSON/Markdown replay pairs;complete lifecycle andexport\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_intuitive_prediction"
+      ],
+      "returncode": 0,
+      "seconds": 0.969,
+      "stdout": "15independent families;9cue pairs;729three-cue traces;42actual-ledger rational scores;chronology and baseline known answers passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_intuitive_prediction_core"
+      ],
+      "returncode": 0,
+      "seconds": 160.094,
+      "stdout": "121CLI cases;35accepted/18rejected JSON/Markdown pairs;complete linked lifecycle passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_deja_reve_core"
+      ],
+      "returncode": 0,
+      "seconds": 183.062,
+      "stdout": "146 Deja Reve CLI cases passed;34accepted/37rejected JSON/Markdown pairs replayed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_deja_reve"
+      ],
+      "returncode": 0,
+      "seconds": 1.109,
+      "stdout": "{\r\n  \"passed\": true,\r\n  \"fixture_sha256\": \"742061f3a6f89f8ef0720214e5d1feee870818aaac36494b4a8ec744c15e9c8d\",\r\n  \"profile_sha256\": \"fdfe3074e23b10deb96928d85b3440d2a3122acdcffc5270af3596a854c3698a\",\r\n  \"fixture_commit\": \"2ee614e\",\r\n  \"families\": [\r\n    {\r\n      \"id\": \"source-category-episodic\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-category-familiarity\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-category-dreamy\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-unclassifiable\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"mixed-uncertain\",\r\n      \"passed\": true,\r\n      \"checks\": 648\r\n    },\r\n    {\r\n      \"id\": \"original-prior-record\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"no-prior-record\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"conflicting-chronology\",\r\n      \"passed\": true,\r\n      \"checks\": 13\r\n    },\r\n    {\r\n      \"id\": \"original-versus-amendment\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"generic-familiarity-negative-control\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"specific-versus-vague\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"manual-nonmatch\",\r\n      \"passed\": true,\r\n      \"checks\": 1\r\n    },\r\n    {\r\n      \"id\": \"multiple-candidates\",\r\n      \"passed\": true,\r\n      \"checks\": 10\r\n    },\r\n    {\r\n      \"id\": \"missing-original-time\",\r\n      \"passed\": true,\r\n      \"checks\": 3\r\n    },\r\n    {\r\n      \"id\": \"no-diagnosis-prediction\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"source-edition-rights-replay\",\r\n      \"passed\": true,\r\n      \"checks\": 7\r\n    }\r\n  ],\r\n  \"category_cases\": 648,\r\n  \"chronology_constants\": 11,\r\n  \"source_case_checks\": 4,\r\n  \"source_counts_verified\": true,\r\n  \"empirical_or_clinical_validation\": false,\r\n  \"method\": \"Pre-engine known-answer tables and constants;independent canonical SHA256;no expected values generated by production.\"\r\n}\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.audit_dependencies"
+      ],
+      "returncode": 0,
+      "seconds": 0.641,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "seconds": 0.922,
+      "stdout": "No broken requirements found.\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "seconds": 1.047,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "tests": 1397,
+  "inherited_tests": 1354,
+  "new_tests": 43,
+  "cli_cases": 1867,
+  "inherited_cli_cases": 1721,
+  "new_cli_cases": 146,
+  "independent_verifiers": 27,
+  "protected_files": 2425,
+  "changed_protected_files": [],
+  "allowed_existing_edits": [
+    "PROGRESS.md",
+    "README.md",
+    "future/__main__.py",
+    "knowledge/gaps.json"
+  ],
+  "registry": {
+    "references_checked_twice": 470,
+    "unique": 315,
+    "skipped": [
+      "chinese-inventory-2-v1"
+    ]
+  },
+  "strict_json_files": 1757,
+  "historical_invalid_json_rejections": [
+    "data/feng-shui-duplicate-json-input.json",
+    "data/feng-shui-nonfinite-input.json"
+  ],
+  "taxonomy": {
+    "total": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "other59gap_entries_unchanged": true,
+  "verification": {
+    "passed": true,
+    "fixture_sha256": "742061f3a6f89f8ef0720214e5d1feee870818aaac36494b4a8ec744c15e9c8d",
+    "profile_sha256": "fdfe3074e23b10deb96928d85b3440d2a3122acdcffc5270af3596a854c3698a",
+    "fixture_commit": "2ee614e",
+    "families": [
+      {
+        "id": "source-category-episodic",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "source-category-familiarity",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "source-category-dreamy",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "source-unclassifiable",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "mixed-uncertain",
+        "passed": true,
+        "checks": 648
+      },
+      {
+        "id": "original-prior-record",
+        "passed": true,
+        "checks": 5
+      },
+      {
+        "id": "no-prior-record",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "conflicting-chronology",
+        "passed": true,
+        "checks": 13
+      },
+      {
+        "id": "original-versus-amendment",
+        "passed": true,
+        "checks": 5
+      },
+      {
+        "id": "generic-familiarity-negative-control",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "specific-versus-vague",
+        "passed": true,
+        "checks": 2
+      },
+      {
+        "id": "manual-nonmatch",
+        "passed": true,
+        "checks": 1
+      },
+      {
+        "id": "multiple-candidates",
+        "passed": true,
+        "checks": 10
+      },
+      {
+        "id": "missing-original-time",
+        "passed": true,
+        "checks": 3
+      },
+      {
+        "id": "no-diagnosis-prediction",
+        "passed": true,
+        "checks": 5
+      },
+      {
+        "id": "source-edition-rights-replay",
+        "passed": true,
+        "checks": 7
+      }
+    ],
+    "category_cases": 648,
+    "chronology_constants": 11,
+    "source_case_checks": 4,
+    "source_counts_verified": true,
+    "empirical_or_clinical_validation": false,
+    "method": "Pre-engine known-answer tables and constants;independent canonical SHA256;no expected values generated by production."
+  },
+  "cli_replay": {
+    "passed": true,
+    "cases": [
+      {
+        "name": "reference",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "reference",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "table1-4a",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "table1-4a",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "table1-6a",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "table1-6a",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "table1-5a",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "table1-5a",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "table2-penfield-hn",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "table2-penfield-hn",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "specific-prior-dream",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "specific-prior-dream",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "general-dream-familiarity",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "general-dream-familiarity",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "present-dreamy-state",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "present-dreamy-state",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "generic-deja-vu",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "generic-deja-vu",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "mixed-uncertain",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "mixed-uncertain",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "missing-attributes",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "missing-attributes",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "high-confidence-undocumented",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "high-confidence-undocumented",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "vague-temporal-context",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "vague-temporal-context",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "record",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "record",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "amend",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "amend",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "freeze-candidates",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "freeze-candidates",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "link-dream",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "link-dream",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "earlier-original",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "earlier-original",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "no-original",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "no-original",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "equal-lock",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "equal-lock",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "later-lock",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "later-lock",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "missing-lock",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "missing-lock",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "missing-first-record",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "missing-first-record",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "missing-dream-occurrence",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "missing-dream-occurrence",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "conflicting-chronology",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "conflicting-chronology",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "overlapping-experience",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "overlapping-experience",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "unknown-experience",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "unknown-experience",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "experience-before-event",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "experience-before-event",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "no-external-event",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "no-external-event",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "post-event-amendment",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "post-event-amendment",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "manual-nonmatch",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "manual-nonmatch",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "multiple-candidates",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "multiple-candidates",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "post-hoc-search",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "post-hoc-search",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "unicode-whitespace",
+        "format": "json",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "unicode-whitespace",
+        "format": "markdown",
+        "rejected": false,
+        "passed": true
+      },
+      {
+        "name": "hash",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "hash",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "bytes",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "bytes",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "version",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "version",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "profile",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "profile",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "kind",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "kind",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "extra",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "extra",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "naive-time",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "naive-time",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "boolean-time",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "boolean-time",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "reversed-time",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "reversed-time",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "export",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "export",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "no-consent",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "no-consent",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "no-rights",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "no-rights",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "boolean-flag",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "boolean-flag",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "temporal-enum",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "temporal-enum",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "proposal-enum",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "proposal-enum",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "context-enum",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "context-enum",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "empty-source",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "empty-source",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "no-reviewer",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "no-reviewer",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "manifest-hash",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "manifest-hash",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "record-hash",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "record-hash",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "version-hash",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "version-hash",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "outside-candidate",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "outside-candidate",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "prefreeze-comparison",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "prefreeze-comparison",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "manual-enum",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "manual-enum",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "duplicate-candidate",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "duplicate-candidate",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "excluded-comparison",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "excluded-comparison",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "duplicate-record",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "duplicate-record",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "event-hash",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "event-hash",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "event-timezone",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "event-timezone",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "backdated-comparison",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "backdated-comparison",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "conflicting-posthoc-original",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "conflicting-posthoc-original",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "unsupported-diagnose",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "unsupported-diagnose",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "unsupported-predict",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "unsupported-predict",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "unsupported-verify-memory",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "unsupported-verify-memory",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "unsupported-export",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "unsupported-export",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "unknown-case",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "unknown-case",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "schema",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "schema",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "strict-json",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "strict-json",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "strict-json",
+        "format": "json",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "name": "strict-json",
+        "format": "markdown",
+        "rejected": true,
+        "passed": true
+      }
+    ],
+    "count": 146,
+    "accepted_pairs": 34,
+    "rejected_pairs": 37,
+    "exact_replay": true
+  }
+}

@@ -1037,3 +1037,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #46 final report/provenance refinement
 - Embedded edition,catalog,counts and four documentary labels directly in every accepted report. Returned latest narrative-version hash separately from whole-record hash;reject conflicting original hashes for the same stable dream ID across later searches.
 - Final1397tests pass (1354inherited+43new);current code hashes recorded. Regenerated34accepted/37rejected pairs and146CLI cases. Earlier full validation saved65successful checks before process interruption;resuming only five missing checks plus remaining acceptance gates.
+
+## 2026-11-07 — #46 full acceptance
+- Final1397tests (1354inherited+43new),1867CLI cases (1721inherited+146new) and27independent verifiers (26inherited+1new) pass. All16families,648category rows,11chronology constants and34accepted/37rejected exact JSON/Markdown pairs verified.
+- Full2425protected-file byte manifest unchanged;source registry idempotence,strict JSON including expected rejections of two inherited intentionally malformed fixtures,dependency audit,pip check anddiff check pass. Evidence:data/deja-reve-acceptance-checks.json andregression.json. No clinical/empirical/memory/prediction certification.
