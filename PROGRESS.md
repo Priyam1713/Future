@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 40 catalog and independent numeric oracle — 2026-11-06
+- Source92b69e8 pushed first. Frozen24-row catalog and named tenths profile before production. Independently authored north-origin quotient oracle covers3600 headings by ID,name andChinese glyph;literal interval expansion confirms no gaps/overlaps and150 headings perrow.
+- Froze every endpoint,neighbor,nominal center and both central valid points,three source anchors,nine uncertainty cases and validation/frame/conflict expectations. Unknown north/roles remain unknown;no physical conversion,forced ambiguity resolution or input rounding.
+
 ## Technique 40 numerical source freeze — 2026-11-06
 - Reinspected all24 rows of the official2024 Yap compass PDF,page2; exact hash matches audit. Froze factual names/Chinese glyphs/groups/printed bounds,source-order,north wrap and integer-tenth endpoint semantics. Supplemental witness remains separate from ranked books.
 - Captured complete pre-engine byte manifest; documented interface/history edits and append-only source metadata. Facts-only rights review excludes PDF/artwork/layout and any general reuse licence. No production classifier yet;independent numeric oracle follows.
