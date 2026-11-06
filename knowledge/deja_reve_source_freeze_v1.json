@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "technique_id": 46,
+  "date": "2026-11-07",
+  "ranked_sources": [
+    [
+      46,
+      "Déjà Rêvé",
+      1,
+      "Jonathan Curot et al.",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Neurological classification and evidence",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6028740/",
+      "Open peer-reviewed study",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      46,
+      "Déjà Rêvé",
+      2,
+      "J. W. Dunne",
+      "An Experiment with Time",
+      "Prospective dream logging",
+      "https://en.wikisource.org/wiki/File:Dunne_-_An_Experiment_with_Time.pdf",
+      "Open historical scan",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      46,
+      "Déjà Rêvé",
+      "Episodic déjà-rêvé",
+      "An Experiment with Time",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      46,
+      "Déjà Rêvé",
+      "familiarity-only",
+      "An Experiment with Time",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      46,
+      "Déjà Rêvé",
+      "dream-reminiscence",
+      "An Experiment with Time",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      46,
+      "Déjà Rêvé",
+      "dream-event matching",
+      "An Experiment with Time",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_ids": [
+    "deja-reve-curot-pmc-v1",
+    "deja-reve-curot-cnrs-v1",
+    "deja-reve-curot-pubmed-v1",
+    "deja-reve-dunne-1927-v1",
+    "deja-reve-dunne-revised-v1"
+  ],
+  "counts": {
+    "local_episodes": 7,
+    "local_patients": 6,
+    "literature_episodes": 35,
+    "literature_patients": 23,
+    "local_classified": [
+      3,
+      3,
+      1
+    ],
+    "literature_classified": [
+      3,
+      1,
+      15
+    ],
+    "literature_unclassifiable": 16,
+    "total_classified": 26
+  },
+  "categories": [
+    {
+      "id": "episodic-like",
+      "definition": "Specific prior-dream recollection with temporal context.",
+      "locator": "Results p5;Figure2p8"
+    },
+    {
+      "id": "familiarity-like",
+      "definition": "Dream-associated elements without a specific dated dream.",
+      "locator": "Results pp5,8;Figure2p8"
+    },
+    {
+      "id": "dreamy-state",
+      "definition": "Dream-like current feeling or consciousness state.",
+      "locator": "Results p8;Figure2p8"
+    },
+    {
+      "id": "unclassifiable",
+      "definition": "Insufficient historical descriptions for categorization.",
+      "locator": "Results p8;Figure2p8"
+    }
+  ],
+  "cases": [
+    {
+      "id": "table1-4a",
+      "locator": "Table1p3;Figure2p8",
+      "authors_category": "episodic-like",
+      "fact": "Orange-room recollection;reported yesterday or two days earlier."
+    },
+    {
+      "id": "table1-6a",
+      "locator": "Table1p4;Figure2p8",
+      "authors_category": "familiarity-like",
+      "fact": "Character/fear recollection with uncertain dream attribution."
+    },
+    {
+      "id": "table1-5a",
+      "locator": "Table1p4",
+      "authors_category": "dreamy-state",
+      "fact": "Hospital imagery;retain authors category despite contextual words."
+    },
+    {
+      "id": "table2-penfield-hn",
+      "locator": "Table2p7;Figure2p8",
+      "authors_category": "unclassifiable",
+      "fact": "Sparse dream-onset report;insufficient detail."
+    }
+  ],
+  "edition": "CNRS article-in-press proof 11 pages; final journal 11(4),875–885,DOI10.1016/j.brs.2018.02.016. No final-layout or PDF byte-equivalence verified.",
+  "reinspection": {
+    "proof": "Web extraction rechecked proof pp1–4 including license and Table1 cases4a/5a/6a. Later web page-range requests timed out.",
+    "primary_fulltext": "Europe PMC fullTextXML API PMC6028740 retrieved and read: Results,Analyses,Discussion and H.N. table rows; direct PMC HTML remains a challenge. XML is a separate text witness,not proof PDF bytes.",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6028740/fullTextXML",
+    "xml_sha256": "465808befee7f638e191ca18ec0a7430fd25c660f739748586f3bbbc36bd9a9e",
+    "local_counts": [
+      3,
+      3,
+      1
+    ],
+    "literature_counts": [
+      3,
+      1,
+      15
+    ],
+    "literature_unclassifiable": 16,
+    "denominators": "7+35=42 selected episodes;7+19=26 classifiable. Not population prevalence.",
+    "hn_boundary": "Two H.N. rows are both unclassifiable; selected example is sudden dream-onset report in Table2 proof p7,not an invented complete interview."
+  },
+  "rights": "CC BY-NC-ND4.0 article; Elsevier proof/publication relationship retained. Facts-only original notes and locators;no PDF,figures,interview corpus or clinical dataset distributed.",
+  "dunne": "1927 ranked scan metadata only/body uninspected. Later Faber/FadedPage witness includes1939 publication history and1934 third-edition additions;ChapterX/AppendixIII recording practice only. No serial-time or prophetic rules transferred.",
+  "limits": "Retrospective selected clinical sample,expert consensus and incomplete historical reports;no diagnostic accuracy,memory authenticity or forecasting validation. Authors reserve deja-reve principally for first two categories;dreamy-state distinct."
+}

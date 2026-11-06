@@ -1015,3 +1015,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Registered HKO primary solar-term/sexagenary tables and1901–2100 conversion references. Exact calendar/day-rollover/clock, luck-pillar and school conventions remain pending in chinese_resource_audit.json.
 - Proposed efficient first slice: named BaZi calendar/four pillars, independently verified solar terms, separately labeled animal year and source-verified ten-god relations. Zi Wei/Nine Star Ki remain distinct systems; rights and worked-example access checked before rule extraction.
 - Vedic release remains73 passing tests,12 Vedic/23 Western CLI cases. Metadata-only handoff validated against inventory/source registry; no runtime dependency change. Next: verify BaZi procedural passages/conventions before coding. Commit: resolve with `git log --grep="audit Chinese sources and variations"`.
+
+## 2026-11-07 — #46 source/profile freeze
+- Reinspected Curot proof Tables1 and legitimate Europe PMC primary XML Results/Discussion/Table2; verified four labels and 42selected/26classifiable denominators. Preserved proof/final-layout and Dunne edition boundaries, facts-only rights.
+- Froze named curot2018 phenomenology/provenance profile and full pre-engine manifest:2429eligible,2425protected; four intentional interface/history edit points. No production engine yet.

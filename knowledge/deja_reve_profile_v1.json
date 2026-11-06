@@ -1,0 +1,124 @@
+{
+  "id": "curot2018-phenomenology-and-dream-record-provenance-v1",
+  "version": 1,
+  "technique_id": 46,
+  "scope": "Human-guided phenomenological annotations plus deterministic prior-dream-record provenance comparison",
+  "source_manifest_sha256": "4cf84701323b1a6c41bc7e2ec8148949845e6e2a1026c21e0393820df1d92456",
+  "source_freeze_sha256": "d5974022275216a8c0a29bfaebff3ad099b4a4a796dc71cd6b7b2fdefdd20dec",
+  "source_ids": [
+    "deja-reve-curot-pmc-v1",
+    "deja-reve-curot-cnrs-v1",
+    "deja-reve-curot-pubmed-v1",
+    "deja-reve-dunne-1927-v1",
+    "deja-reve-dunne-revised-v1"
+  ],
+  "catalog": [
+    {
+      "id": "episodic-like",
+      "definition": "Specific prior-dream recollection with temporal context.",
+      "locator": "Results p5;Figure2p8"
+    },
+    {
+      "id": "familiarity-like",
+      "definition": "Dream-associated elements without a specific dated dream.",
+      "locator": "Results pp5,8;Figure2p8"
+    },
+    {
+      "id": "dreamy-state",
+      "definition": "Dream-like current feeling or consciousness state.",
+      "locator": "Results p8;Figure2p8"
+    },
+    {
+      "id": "unclassifiable",
+      "definition": "Insufficient historical descriptions for categorization.",
+      "locator": "Results p8;Figure2p8"
+    }
+  ],
+  "cases": [
+    {
+      "id": "table1-4a",
+      "locator": "Table1p3;Figure2p8",
+      "authors_category": "episodic-like",
+      "fact": "Orange-room recollection;reported yesterday or two days earlier."
+    },
+    {
+      "id": "table1-6a",
+      "locator": "Table1p4;Figure2p8",
+      "authors_category": "familiarity-like",
+      "fact": "Character/fear recollection with uncertain dream attribution."
+    },
+    {
+      "id": "table1-5a",
+      "locator": "Table1p4",
+      "authors_category": "dreamy-state",
+      "fact": "Hospital imagery;retain authors category despite contextual words."
+    },
+    {
+      "id": "table2-penfield-hn",
+      "locator": "Table2p7;Figure2p8",
+      "authors_category": "unclassifiable",
+      "fact": "Sparse dream-onset report;insufficient detail."
+    }
+  ],
+  "statuses": [
+    "episodic_like_compatible",
+    "familiarity_like_compatible",
+    "dreamy_state_compatible",
+    "unclassifiable",
+    "review_required",
+    "unsupported"
+  ],
+  "compatibility_precedence": [
+    "Explicit uncertainty or conflicting declarations -> review_required. Specific recollection with denied dream association; temporal context with denied specific recollection; recalled dream mixed with present dreamy-state -> conflicting.",
+    "Any unknown declaration -> unclassifiable.",
+    "Specific recollection,dream association and specific temporal context,without present dreamy-state -> episodic_like_compatible.",
+    "Dream-associated familiarity without specific recollection,present dreamy-state or specific temporal context -> familiarity_like_compatible.",
+    "Present dreamy-state without specific recollection or familiarity -> dreamy_state_compatible;not remembered prior dream.",
+    "Generic familiarity with denied dream association and no prior recollection or dreamy-state -> unsupported.",
+    "All other incomplete combinations -> unclassifiable. Temporal vague/unknown with specific recollection remains unclassifiable."
+  ],
+  "editorial_policy": "Conservative compatibility policy,not authors clinical consensus algorithm. Raw narrative is never parsed for category inference. Proposal preserved independently;disagreement exposed. Confidence never supplies missing evidence.",
+  "chronology_states": [
+    "strictly_earlier",
+    "equal_boundary",
+    "later",
+    "overlapping_or_ambiguous",
+    "unknown",
+    "conflicting_evidence"
+  ],
+  "chronology": "Timezone-aware closed intervals;compare every original lock separately to experience,first report,event. Identical point boundary only -> equal;touching non-point interval -> ambiguous. Invalid reversed interval rejects. Missing original version rejects;missing original first/lock -> unknown;lock before original first or occurrence after first -> conflicting evidence. Hashes are not clocks.",
+  "manual_statuses": [
+    "match",
+    "nonmatch",
+    "insufficient_information",
+    "unscorable"
+  ],
+  "privacy": "Local pseudonymous private records. Consent/local processing and rights required;export unsupported in v1. CLI stdout/private JSON includes raw text and must remain private. Reference has no participant data.",
+  "limits": [
+    "No neurological diagnosis,localization or stimulation advice",
+    "No memory authenticity certification",
+    "No future-event prediction or resemblance probability",
+    "Local owner may rewrite a hash chain;timestamps,identity,consent and knowledge are declarations",
+    "Clinical source examples do not validate consumer classification"
+  ],
+  "matrix": {
+    "supported": [
+      "Four attributed documentary source cases",
+      "Strict human-guided annotations",
+      "Immutable original and append-only narrative versions",
+      "Finite exact-ID candidate ledger and manual nonmatch accounting",
+      "Timezone-aware chronology and exact JSON/Markdown replay"
+    ],
+    "experimental": [
+      "Applying clinical phenomenology to ordinary self-report",
+      "Independent reviewer agreement"
+    ],
+    "unsupported": [
+      "Diagnosis or prediction",
+      "Semantic journal retrieval/ranking",
+      "Trusted timestamps",
+      "Public narrative export",
+      "Automatic import of Technique44 records"
+    ]
+  }
+}
