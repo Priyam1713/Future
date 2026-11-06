@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "date": "2026-11-07",
+  "technique_id": 50,
+  "audit_only": true,
+  "ranked_sources_preserved": 3,
+  "variations_preserved": 3,
+  "registry_records_checked_twice": 13,
+  "source_manifest_sha256": "07de668e406ec059fd1e4472da5db6671d13897b67a2a02d8638cc05076772fa",
+  "audit_sha256": "7815ff94bdf56fa9a5383acacfd050e53b552d194605593835f9320b1aab9519",
+  "fixture_families_planned": 20,
+  "analytical_checks": {
+    "quarter_rotation_norm": "1",
+    "p1_4_N100_variance_frequency": "3/1600",
+    "p1_2_N100_variance_frequency": "1/400",
+    "Bell_probability_sum": "1"
+  },
+  "bibliographic_book_correction": true,
+  "uninstalled_packages": [
+    "qiskit",
+    "qiskit-aer",
+    "qiskit-algorithms"
+  ],
+  "new_runtime_files": [],
+  "executable_profile_created": false,
+  "circuit_or_sampling_run": false,
+  "package_install_performed": false,
+  "quantum_hardware_run": false,
+  "benchmark_run": false,
+  "quantum_speedup_certified": false,
+  "forecast_accuracy_certified": false,
+  "protected_files": 2925,
+  "changed_protected_files": [],
+  "other59gap_entries_unchanged": true,
+  "taxonomy": {
+    "total": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "prior49acceptance": {
+    "closure_commit": "6e88765",
+    "tests": 1462,
+    "cli_cases": 2029,
+    "independent_verifiers": 28,
+    "runtime_unchanged_after_closure": true
+  },
+  "limits": "Analytical and source-metadata consistency only;no future quantum engine or simulator package certification. No51research."
+}

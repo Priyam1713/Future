@@ -1090,3 +1090,10 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Source/profile:d6c68d6;fixtures/oracle:1d5ed6a;engine:8c2fa1f;benchmark:b83c055;verification:e46e1d0;reports:c707a08;acceptance:17a0b96. All2661earlier protected files and60IDs/54retained/six exclusions preserved.
 - Validation-selected drift underperformed seasonal naive on test;readiness certifies bounded software/evaluation behavior,not superior or real-time predictive skill. Chronos remains unimplemented/P1.
 - Next only after closure push andclean0/0main sync:research audit#50Quantum Probability Forecasting only. No#50implementation/package installation/profile andno#51research in this pass.
+
+## 2026-11-07 — #50 Quantum Probability Forecasting resource audit only
+- Started only after accepted#49closure6e88765 was pushed andcleanmain0/0sync observed. Preserved allthree original ranked sources/variations. Corrected verified Woerner/Egger bibliography to2019npj Quantum Information journal article;originalinventory Book/rights-check row remains unchanged as historical metadata.
+- Inspected Montanaro2015primary assumptions/Theorems2.2–2.5;final8page risk article throughDNB (separate2018arXivpreprint);Aer0.18.2docs/tagged source andcurrentPyPI metadata. Verified RY/Born mapping,reflection/oracle access,query-vs-gate/runtime distinctions,endianness,seed precedence andlicenses.
+- Aer0.18.2/SDK2.6.2/Algorithms0.4.0metadata inspected;allthree remain uninstalled. WindowsCPUwheel availability is not operational orGPU support. Finance0.4.1tutorial is archived/legacySampler andnot claimed current-compatible.
+- Recommend tinyCPUideal statevector+seededterminal sampling+classicalBernoulli reference,with20independent fixture-family plans. Analyticalvariance/norm checks only;no circuit,sampler,package install,executable profile,hardware orquantum benchmark. No simulatedspeedup/unknownmarketforecasting certification.
+- Audit validation passes;2925pre-audit artifact bytes andother59gap entries unchanged;60IDs/54retained/six exclusions preserved. P1/P2,matrix andacceptance gates recorded. Next:implement/close#50in a subsequent pass;no#51research.

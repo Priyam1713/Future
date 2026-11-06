@@ -1,0 +1,610 @@
+{
+  "version": 1,
+  "technique_id": 50,
+  "name": "Quantum Probability Forecasting",
+  "phase": 6,
+  "date": "2026-11-07",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "6e88765",
+  "predecessor_gate": "49accepted closure pushed;successful git fetch,clean main and0ahead/0behind explicitly observed before50research.",
+  "policy": "Research and analytical design only. No #50engine,circuit execution,sampling run,executable profile,package installation,hardware benchmark or #51research.",
+  "inventory_method_row": [
+    50,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Quantum Probability Forecasting",
+    "RETAIN — simulate / implement",
+    "Research / creative proxy",
+    "Quantum Monte Carlo amplitude estimation; variational simulators; quantum-inspired sampling",
+    "Classically emulate small quantum circuits and compare probabilistic estimates",
+    "CPU simulator (Qiskit Aer); quantum hardware optional/not assumed",
+    "No quantum speedup claimed on classical hardware; tiny tractable circuits",
+    "Research method; software simulation has no demonstrated speedup",
+    "Quantum Speedup of Monte Carlo Methods",
+    "Ashley Montanaro",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC4614442/",
+    "Qiskit Aer Documentation",
+    "Quantum Risk Analysis",
+    null,
+    "49, 60",
+    50
+  ],
+  "ranked_sources": [
+    [
+      50,
+      "Quantum Probability Forecasting",
+      1,
+      "Ashley Montanaro",
+      "Quantum Speedup of Monte Carlo Methods",
+      "Quantum estimation theory",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4614442/",
+      "Open peer-reviewed paper",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      50,
+      "Quantum Probability Forecasting",
+      2,
+      "IBM / Qiskit contributors",
+      "Qiskit Aer Documentation",
+      "Local classical quantum simulator",
+      "https://qiskit.github.io/qiskit-aer/",
+      "Open software docs",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      50,
+      "Quantum Probability Forecasting",
+      3,
+      "Stefan Woerner and Daniel J. Egger",
+      "Quantum Risk Analysis",
+      "Quantum finance/uncertainty demonstration",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      50,
+      "Quantum Probability Forecasting",
+      "Quantum Monte Carlo amplitude estimation",
+      "Quantum Risk Analysis",
+      "Qiskit Aer Documentation",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      50,
+      "Quantum Probability Forecasting",
+      "variational simulators",
+      "Quantum Risk Analysis",
+      "Qiskit Aer Documentation",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      50,
+      "Quantum Probability Forecasting",
+      "quantum-inspired sampling",
+      "Quantum Risk Analysis",
+      "Qiskit Aer Documentation",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_registry": "knowledge/quantum_probability_forecasting_sources.json",
+  "source_manifest_sha256": "07de668e406ec059fd1e4472da5db6671d13897b67a2a02d8638cc05076772fa",
+  "bibliographic_verification": [
+    {
+      "rank": 1,
+      "type": "peer-reviewed journal article",
+      "authors": [
+        "Ashley Montanaro"
+      ],
+      "title": "Quantum speedup of Monte Carlo methods",
+      "journal": "Proceedings of the Royal Society A:Mathematical,Physical and Engineering Sciences",
+      "year": 2015,
+      "volume": "471",
+      "issue": "2181",
+      "article": "20150301",
+      "publication_date": "2015-09-08",
+      "doi": "10.1098/rspa.2015.0301",
+      "pmcid": "PMC4614442",
+      "edition_boundary": "Journal2015primarytext inspected. arXiv1504.06987submitted2015-04-27 andlater author-hosted2017revision are separate witnesses;no byte/layout equivalence attested."
+    },
+    {
+      "rank": 2,
+      "type": "versioned software documentation",
+      "author": "IBM / Qiskit contributors",
+      "version": "Aer0.18.2",
+      "date_boundary": "Docs/PyPI inspected2026-11-07;Windows wheel listed upload2026-10-26. Documentation release is not a local installation."
+    },
+    {
+      "rank": 3,
+      "type": "peer-reviewed journal article",
+      "authors": [
+        "Stefan Woerner",
+        "Daniel J. Egger"
+      ],
+      "title": "Quantum risk analysis",
+      "journal": "npj Quantum Information",
+      "volume": "5",
+      "article": "15",
+      "publication_date": "2019-02-08",
+      "doi": "10.1038/s41534-019-0130-6",
+      "bibliographic_correction": "Inventory classification Book / rights check is preserved as original metadata but is inaccurate as a verified publication type. This is a journal article.",
+      "edition_boundary": "Final8page article read through legitimate DNB PDF witness,including equations,toy models andp8license. Publisher direct page redirects to cookie service;indexed publisher metadata corroborates date/DOI. arXiv1806.06893v1submitted2018-06-18has12pages andis not silently identified with final layout."
+    }
+  ],
+  "verified_algorithms": {
+    "montanaro": {
+      "locators": [
+        "§1discussion ofclassical MC andcoherent randomized subroutines",
+        "§2assumptions,Lemma2.1,Theorems2.2/2.3/2.5"
+      ],
+      "assumptions": "A is coherent unitary state preparation on|0^n>,with access to Ainverse;output phi(x),bounded range or variance as required. State preparation,reversibility,reflections and data/oracle access have costs.",
+      "amplitude_estimation": "Prepared|psi>,projectorPgood,a=<psi|Pgood|psi>;U=2|psi><psi|-I,V=I-2Pgood. Theorem2.2error<=2*pi*sqrt(a(1-a))/t+pi^2/t^2 with success>=8/pi^2,using UandV ttimes each. Repeat/median increases confidence at extra logarithmic cost.",
+      "mean_encoding": "For phi in[0,1],controlled ancilla rotation encodes sqrt(phi(x));good-ancilla probability=sum_xPr(x)*phi(x)=E[phi]. General bounded-variance mean estimation has additional construction/logarithmic overhead,not simply arbitrary forecasting in1/epsilon.",
+      "classical_comparison": "Independent sampling mean variance sigma^2/N;fixed confidence additive error needs order sigma^2/epsilon^2 samples in the stated black-box setting. Near-quadratic quantum query reduction assumes the stronger coherent/inverse/oracle access. No classical-simulator wall-time conclusion."
+    },
+    "qae_variants": {
+      "canonical": "QPE withm evaluation qubits,controlled Grover powers andinverse QFT;M=2^m,a_est=sin^2(pi*y/M). Q powers can be deep;discrete phase grid gives quantization/ambiguity. Counts of controlledQ,baseQ,A/Ainverse andprimitive gates must remain separate.",
+      "iterative": "Qiskit Algorithms0.4.0 IQAE reference uses adaptive Grover powers without QPE;epsilon_target andalpha define precision/confidence,with beta(Clopper-Pearson) orChernoff interval options. Requires statistical assumptions andindependently verified implementation before support.",
+      "maximum_likelihood": "MLAE0.4.0 uses an explicit Grover-power evaluation schedule andlikelihood minimization,no QPE evaluation register. Schedule,shot allocation,minimizer andconfidence convention matter;not the same estimator as finite-shot frequency.",
+      "source_sign_boundary": "Montanaro reflection definitions andarchived Qiskit tutorialQ=A S0 Aadjoint Sgood use different stated sign conventions. Do not merge controlled-phase algorithms without checking signs/global phase;simple probability equivalence is insufficient for controlledQPE.",
+      "archived_tutorial_boundary": "Finance0.4.1 is explicitly archived/unmaintained and uses the legacy qiskit.primitives.Sampler API. It is not a direct runtime proof for SDK2.6.2/SamplerV2. Its opening self-inner-product expression for a appears inconsistent with normalized states;this is our mathematical observation,not an author-issued erratum. Use the full prepared-state projection probability independently corroborated by Montanaro."
+    },
+    "risk": {
+      "locators": "Final articlepp2–3Eqs1–11,pp3–5T-bill andtwo-asset examples,Methods andp8license",
+      "mapping": "R|0>=sum_i sqrt(pi)|i>;controlled F encodes f(i) in ancilla;success probability=sum_i pi*f(i). Distribution preparation,discretization,scaling andpayoff approximation are real assumptions/costs.",
+      "objectives": "Expected value/variance anddistribution-tail VaR/CVaR under a supplied model. CDF threshold estimation plus bisection supports VaR;conditioned expectation supports CVaR withadditional controls/normalization. Discrete mass/tail convention must be named before implementation.",
+      "resources": "Source two-asset example uses5distribution qubits;reportsm+12total forEV/VaR,m+13forCVaR. Approximation/depth trade-off permitsO(M^-2/3)at shallowconstruction,approachingO(M^-1)withgreater depth. These are source-theory/toy results,not our benchmark.",
+      "limits": "T-bill probability30% andrate-rise70%are assumed model inputs. Estimating prices/tail risk from known distributions is not empirical prediction of an unknown future market outcome. No finance dataset or circuits reproduced in this audit."
+    }
+  },
+  "one_qubit_mapping": {
+    "source": "IBM RYGate official matrix andarchived Finance Bernoulli example",
+    "units": "radians",
+    "matrix": "RY(phi)=[[cos(phi/2),-sin(phi/2)],[sin(phi/2),cos(phi/2)]]",
+    "preparation": "RY(phi)|0>=cos(phi/2)|0>+sin(phi/2)|1>",
+    "probability": "P(measure1)=sin(phi/2)^2;p in[0,1] ->phi=2asin(sqrt(p)) yields[sqrt(1-p),sqrt(p)]",
+    "measurement": "Computational-basis end measurement after independent repeated preparation. Knowing p to prepare this toy state means direct classical p is already available;no forecasting or computational advantage inferred.",
+    "amplitude_probability_boundary": "p is the success probability;the |1> coefficient is sqrt(p). The term amplitude estimation in these sources estimates the good-subspace probability a,not an arbitrary complex amplitude coefficient."
+  },
+  "worked_examples": [
+    {
+      "id": "ry-quarter",
+      "source": "IBM RYGate matrix;original analytic substitution",
+      "phi": "pi/3",
+      "amplitudes": [
+        "sqrt(3)/2",
+        "1/2"
+      ],
+      "probabilities": [
+        "3/4",
+        "1/4"
+      ],
+      "normalization": "3/4+1/4=1",
+      "quantum_execution": false
+    },
+    {
+      "id": "ry-bernoulli",
+      "source": "Archived Qiskit Finance0.4.1 Bernoulli example and Woerner/Eggerp3",
+      "probability": "1/5",
+      "phi": "2*asin(sqrt(1/5))",
+      "amplitudes": [
+        "2/sqrt(5)",
+        "1/sqrt(5)"
+      ],
+      "probabilities": [
+        "4/5",
+        "1/5"
+      ],
+      "role": "Source tutorial assumes target p for demonstration;not a method to learn an unknown future market probability."
+    },
+    {
+      "id": "paper-tbill",
+      "source": "Woerner/Egger final article pp3–4 Eq12 and experiment",
+      "assumed_p_constant_rate": "0.3",
+      "assumed_p_rise": "0.7",
+      "rate_step": "0.0025 (0.25percentage points)",
+      "mapping": "V=(1-p)*Vlow+p*Vhigh;normalized high-value event probabilityp. StateA=RY(2asin(sqrtp)).",
+      "source_circuit": "m1..4evaluation qubits,M=2^m,up to5total qubits;8192hardware repetitions per circuit reported by authors.",
+      "status": "Documentary source example only;not independently reproduced andnot a forecast accuracy benchmark."
+    },
+    {
+      "id": "bernoulli-variance",
+      "source": "Original exact probability arithmetic",
+      "p": "1/4",
+      "N": 100,
+      "expected_count": "25",
+      "variance_count": "75/4",
+      "variance_frequency": "3/1600",
+      "standard_error": "sqrt(3)/40",
+      "status": "Analytical expectation,not observed shot results."
+    },
+    {
+      "id": "bell",
+      "source": "IBM bit-ordering and Aer GHZ construction as gate/ordering context;original two-qubit derivation",
+      "amplitudes": [
+        "1/sqrt2",
+        "0",
+        "0",
+        "1/sqrt2"
+      ],
+      "probabilities": [
+        "1/2",
+        "0",
+        "0",
+        "1/2"
+      ],
+      "bit_order": "q1q0",
+      "status": "Planned independent circuit fixture,not executed in audit."
+    }
+  ],
+  "simulator_availability": {
+    "packages": {
+      "aer": {
+        "version": "0.18.2",
+        "requires_python": ">=3.11",
+        "license": "Apache 2.0",
+        "requires_dist": [
+          "qiskit<3,>=1.1.0",
+          "numpy>=1.16.3",
+          "scipy>=1.0",
+          "psutil>=5",
+          "python-dateutil>=2.8.0"
+        ],
+        "listed_wheels": [
+          {
+            "filename": "qiskit_aer-0.18.2-cp312-cp312-win_amd64.whl",
+            "bytes": 9859552,
+            "sha256_upstream": "f5628ab71b791a634a61fac4ec6d51347111ad6e45ffb174db25e2b9afe4080d",
+            "uploaded": "2026-10-26T20:02:19.164291Z"
+          }
+        ],
+        "installed": false,
+        "downloaded": false,
+        "operational": false
+      },
+      "qiskit": {
+        "version": "2.6.2",
+        "requires_python": ">=3.10",
+        "license": "Apache-2.0",
+        "requires_dist": [
+          "numpy<3,>=2.0",
+          "scipy>=1.14",
+          "rustworkx>=0.15.0",
+          "dill>=0.3",
+          "stevedore>=3.0.0",
+          "typing-extensions",
+          "qiskit-qasm3-import>=0.1.0; extra == \"qasm3-import\"",
+          "matplotlib>=3.3; extra == \"visualization\"",
+          "pydot; extra == \"visualization\"",
+          "Pillow>=4.2.1; extra == \"visualization\"",
+          "pylatexenc>=1.4; extra == \"visualization\"",
+          "seaborn>=0.9.0; extra == \"visualization\"",
+          "sympy>=1.3; extra == \"visualization\"",
+          "z3-solver>=4.7; extra == \"crosstalk-pass\"",
+          "python-constraint>=1.4; extra == \"csp-layout-pass\"",
+          "symengine<0.14,>=0.11; extra == \"qpy-compat\"",
+          "qiskit[crosstalk-pass,csp-layout-pass,qasm3-import,qpy-compat,visualization]; extra == \"all\""
+        ],
+        "listed_wheels": [
+          {
+            "filename": "qiskit-2.6.2-cp310-abi3-win_amd64.whl",
+            "bytes": 9285015,
+            "sha256_upstream": "b8e20c86399c916e0e0b515c4cb5d22721a851b97c536b2f7e2afa1ee1931590",
+            "uploaded": "2026-11-05T13:45:55.653338Z"
+          }
+        ],
+        "installed": false,
+        "downloaded": false,
+        "operational": false
+      },
+      "algorithms": {
+        "version": "0.4.0",
+        "requires_python": ">=3.9",
+        "license": "Apache-2.0",
+        "requires_dist": [
+          "qiskit>=1.0",
+          "scipy>=1.4",
+          "numpy>=1.17"
+        ],
+        "listed_wheels": [
+          {
+            "filename": "qiskit_algorithms-0.4.0-py3-none-any.whl",
+            "bytes": 327840,
+            "sha256_upstream": "c8bfc119e270c7cd7d6013e62193914381bd71fd4cdc847c07b50c749fd0114d",
+            "uploaded": "2025-08-29T18:32:22.659785Z"
+          }
+        ],
+        "installed": false,
+        "downloaded": false,
+        "operational": false
+      }
+    },
+    "local_environment": "Windows11 x64,Python3.12.10,numpy2.5.3,scipy1.18.1. qiskit,qiskit-aer,qiskit-algorithms all absent by importlib.metadata;none imported or installed.",
+    "cpu_compatibility": "Aer0.18.2requiresPython>=3.11;SDK2.6.2requires>=3.10. cp312WindowsAer wheel andcp310abi3WindowsSDK wheel are listed. Installednumpy/scipy satisfydeclared minimums;transitive resolver/native ABI/runtime compatibility still untested.",
+    "installation_cost": "Listed Aer9859552bytes+SDK9285015bytes;optional Algorithms327840bytes,plustransitive wheels/env overhead. These are metadata sizes,not downloaded files or measured installed footprint.",
+    "licenses": "Aer/LICENSE.txt at0.18.2inspected Apache2.0,copyright2018IBM/contributors. SDK/AlgorithmsPyPI declareApache2.0. Freeze exact compatible lock,license/notices andwheel checksums before later optional acquisition.",
+    "methods": "Docs listautomatic,statevector,density_matrix,stabilizer,extended_stabilizer,matrix_product_state,unitary,superop,tensor_network. Ideal dense statevector can sample terminal measurements;unitary method excludesmeasurement/reset/noise. Runtimeavailable_methods/devices not queried because library absent.",
+    "gates": "Taggedbackend_utils.py BASIS_GATES[statevector] includesid,x,h,ry,cx(andmanyothers). Proposed compact core must allowlistonly verified subset rather than silently claim completeAer coverage.",
+    "precision": "AerSimulator defaultCPU,double;source docs exposezero_threshold default1e-10,validation_threshold1e-8. Proposed reference adapter must pin precision/truncation thresholds explicitly andtest rare probabilities;do not silently clip small positive probability.",
+    "results": "Aer backend Result.get_counts orSamplerV2 result[index].data.meas.get_counts;bitstrings countshots. Pure statevector/probabilities require explicit save instructions/result extraction;an ideal probability vector is not a finite-shot count estimate.",
+    "seed": "Taggedbackendseed_simulator option;SamplerV2(seed=...)takes precedence overoptions seed_simulator;Noneusesrandomseed. Pinshotcount,registermapping,method,precision,threads andoptimization withseed.",
+    "transpilation": "SDKcompiler.transpile exposesseed_transpiler,basis_gates,target/layout andoptimization_level. A later adapter must recordpre/post circuit/depth,layout,basis andseed;do not assume arbitrary compound instructions execute without transpilation.",
+    "gpu": "Aer getting-started describes x86_64LinuxGPU package andseparate compatible CUDA build;tagsetupdefaults CUDAmajor12 whilegeneral docs retainolderCUDA guidance. NativeWindowsCPUwheel availability is not evidence of nativeWindowsGPU support. Tiny firstscope needsnoGPU;noGPU/backend execution tested.",
+    "operational": false
+  },
+  "candidate_comparison": [
+    {
+      "route": "A exact ideal small-circuit statevector",
+      "substance": "Matrix/gate evolution,amplitudes andBorn probabilities,including interference andBell control",
+      "cost": "Pure stdlibcomplex/math feasible for1–4qubits;no required newframework",
+      "verification": "Independent symbolic matrices/probabilities beforeproduction,abs tolerance/normalization andbit order",
+      "recommendation": "Primary firstslice;double precision is a numerical realization,not symbolic exactness or real hardware."
+    },
+    {
+      "route": "B finite-shot classical simulator",
+      "substance": "Sample the idealcomputed distribution withexplicitPRNG/seed;countdenominators andbinomial expectation/variance",
+      "cost": "O(Nshots)afterstatevector;CPU-only",
+      "verification": "Fixedexternal uniform streams,independent seed replay andendpoint controls;no promise ofmonotonic sample error",
+      "recommendation": "High-value companion toA,withdirectclassicalBernoulli comparator andseparate stochastic vs exact outputs."
+    },
+    {
+      "route": "C source-verified amplitude estimation",
+      "substance": "Coherent A,Ainverse,good projector,controlled Grover/QPE orverifiedIQAE/MLAE,query counts",
+      "cost": "Morequbits/depth/algorithm/statistics andpossibleQiskit dependencies;simulationdoesnotachievequeryspeedupinwalltime",
+      "verification": "Tiny phase-grid/rotation examples must be independently frozen;published financecircuits notautomaticallyreproduced",
+      "recommendation": "P1afterA/B. No supportedAEalgorithm ororacleconstruction in thisaudit."
+    },
+    {
+      "route": "D classical/quantum-inspired sampling",
+      "substance": "DirectiidBernoulli sampling is a clearclassical comparator,not automatically a distinctquantum-inspiredalgorithm",
+      "cost": "O(N)draws orO(1)directknownprobability",
+      "verification": "Same targetandaccess assumptions;recordsharedvsindependentdraws,budgetandruntime",
+      "recommendation": "Includehonestclassicalreference;separately source/validatea namedquantum-inspiredmethod before claiminginventoryvariationcoverage."
+    }
+  ],
+  "first_scope_recommendation": "CPU-Emulated Quantum Probability Estimation — Small-Circuit Reference Scope. Start with deterministic ideal evolution of allowlisted1–4qubit circuits,seeded terminal sampling and a direct classical Bernoulli comparison. No mandatory Aer,cloud or QPU. Keep amplitude estimation,variational and separately sourced quantum-inspired methods unimplemented until independently verified. This scope certifies mathematical software behavior,not quantum speedup or market forecasting accuracy.",
+  "proposed_bounds": {
+    "status": "Audit recommendation only;final conventions and independent fixtures must be frozen before production.",
+    "qubits": "1..4",
+    "primitive_gates": "<=64;proposedid,x,h,ry,cxallowlist",
+    "measurement": "Terminal computational-basis measurement with explicit identity qi->ci mapping initially.",
+    "shots": "positive boundedinteger,proposed<=100000",
+    "initial_state": "|0...0>;arbitraryinvalid/unnormalizedstateinjectionoutoffirstscope",
+    "numeric": "Finite explicitly declared radian/probability inputs. Represent complex outputs by real/imaginary components. Use a float64 numerical realization with named absolute1e-12reference tolerances and independently derived algebraic expected values;do not call floating values symbolically exact.",
+    "unsupported": "noise,midcircuitmeasurements,resets,optimization,unvalidatedgates,largecircuits,hardware andfullAEunlessseparatelyimplemented/verified"
+  },
+  "independent_fixture_plan": [
+    {
+      "id": "basis-states",
+      "expectation": "|0> ->[1,0],|1> ->[0,1] computational probabilities;identity/X controls."
+    },
+    {
+      "id": "hadamard",
+      "expectation": "H|0> amplitudes[1/sqrt2,1/sqrt2],probabilities[1/2,1/2];H|1> second amplitude negative."
+    },
+    {
+      "id": "rotation-map",
+      "expectation": "RY(phi)|0>=[cos(phi/2),sin(phi/2)];phi=0,pi/3,pi/2,pi ->p1=0,1/4,1/2,1. Signed negative rotations preserve amplitude sign."
+    },
+    {
+      "id": "normalization",
+      "expectation": "Independent symbolic square sums=1;reject invalid supplied states/nonfinite values rather than silently renormalizing."
+    },
+    {
+      "id": "endpoint-events",
+      "expectation": "p0/p1 counts impossible/certain for every positive shot count;no invented relative error when true probability0."
+    },
+    {
+      "id": "seeded-replay",
+      "expectation": "Independently frozen PRNG algorithm/version,seed,draw order and expected bitstrings before production. No promise of equal counts across different backend RNGs."
+    },
+    {
+      "id": "low-shot-variance",
+      "expectation": "K~Binomial(N,p),E[K]=Np,Var(K)=Np(1-p);p1/4,N100 ->Var(K/N)=3/1600;not a requirement that one sample equals expectation."
+    },
+    {
+      "id": "nonmonotone-error",
+      "expectation": "p1/2,controlled uniforms[1/4,3/4,1/4]:N2frequency1/2,error0;N3frequency2/3,error1/6. Larger N need not improve each realization."
+    },
+    {
+      "id": "exact-vs-sampled",
+      "expectation": "Reference probabilities and empirical counts/frequencies are separate outputs with shot denominator and statistical assumptions."
+    },
+    {
+      "id": "circuit-resources",
+      "expectation": "H orRY preparation has1primitive gate/depth1;Bell H0,CX0->1 has2gates/depth2. Abstract oracle calls distinct from compiled gate counts."
+    },
+    {
+      "id": "invalid-angles",
+      "expectation": "Reject NaN/Infinity,non-numeric angles,wrong units,invalid probability,qubit index,controls or shot/seed type;freeze finite domain first."
+    },
+    {
+      "id": "unsupported-backends",
+      "expectation": "Uninstalled Aer,unsupported GPU/noisy method or gate fails explicitly;no fallback silently advertised as source algorithm."
+    },
+    {
+      "id": "endianness",
+      "expectation": "q0LSB,basis[00,01,10,11],identity measurement mapping qi->ci;X onq1 ->bitstring10/index2,not01."
+    },
+    {
+      "id": "classical-bernoulli",
+      "expectation": "Same p,N and declared RNG budget for direct classical comparator. With common uniforms,one-qubit direct sampling matches outcomes by construction;no advantage claimed."
+    },
+    {
+      "id": "uncertainty-assumptions",
+      "expectation": "Independent identical preparation/end measurement assumptions;theoretical standard error differs from a validated confidence interval,especially at low shots/endpoints."
+    },
+    {
+      "id": "no-simulated-speedup",
+      "expectation": "Reports say CPU classical simulation;no quantum speedup,hardware run or financial predictive accuracy certification."
+    },
+    {
+      "id": "oracle-provenance",
+      "expectation": "State prep A,Ainverse,good-state projector andcost references explicit. Unknown/unsupported oracle construction cannot receive query-advantage certification."
+    },
+    {
+      "id": "json-markdown-replay",
+      "expectation": "Finite canonical JSON,complex real/imag fields,probability tolerance,source/request hashes and fixed-shot exact replay under pinned environment."
+    },
+    {
+      "id": "interference-control",
+      "expectation": "H followed byH returns|0>;independent matrix multiplication prevents a probability-only shortcut passing gate-composition checks."
+    },
+    {
+      "id": "bell-control",
+      "expectation": "H0thenCX0->1 on|00> ->(|00>+|11>)/sqrt2,probabilities[1/2,0,0,1/2] under frozen bit order;control/target reversal negative control."
+    }
+  ],
+  "reproducibility_policy": "Before production,freeze the local PRNG algorithm/version,seed,draw order and strict CDF comparison u<p. Seed equality does not guarantee equal counts across libraries. Proposed defaults are single-thread CPU,double precision and no automatic backend,noise or shot branching. Record source,plan,request and circuit hashes. Require exact JSON/Markdown and shot replay under a pinned environment;use separate tolerances for statevectors. No simulator or seeded shot counts were exercised in this audit.",
+  "endianness": "q0leastsignificant;basisindex=sum_j bit_j*2^j;renderstringsc[n-1]..c0underexplicitqi->cimeasurementmapping. Wiretoporderandclassicalregisterspacing are separate conventions.",
+  "performance_fairness": {
+    "targets": [
+      "matherror/tolerance",
+      "estimatorbias/variance conditionalonknownmodel",
+      "shots anduniformdraws",
+      "A/Ainverse/reflectioncalls andcontrolledQpowersifactuallyimplemented",
+      "primitivegatecount andcriticalpathdepth",
+      "CPUwalltime,cold/warmimports andRSS",
+      "problemqubits,size,precision andseed/backendversions"
+    ],
+    "fair_comparison": "A supplied known p has an exact O(1) classical reference. For sampling,compare equal p,N and declared random access;include matrix preparation overhead. Do not compare a classical algorithm denied p with a simulator using hardcoded p or cheaply collapsed RY powers while claiming advantage. Abstract Q^k query cost k and compiled single-rotation gate count are different resource measures.",
+    "estimates": "A packed complex128 statevector requires16*2^n bytes;four qubits use256bytes before Python/runtime overhead. Dense density matrices scale as16*4^n. Primitive gate evolution is O(G*2^n);Bernoulli terminal sampling is O(N). These are analytic storage/work bounds,not measured runtime or speedup.",
+    "statistics": "K~Binomial(N,p),Var(K/N)=p(1-p)/N underiididealpreparation. Theoreticalstandarderror isnotanindependentlyvalidatedCI;lowshot/endpoints requireexplicitmethod. No universalmonotonicerroror95%coverageclaim.",
+    "audit_benchmark_run": false
+  },
+  "schema_recommendations": {
+    "input": [
+      "Schema/version and a named convention after source/fixture verification",
+      "Qubit count,initial state,gate order,targets/controls and radian parameters",
+      "Event projector and explicit measurement mapping",
+      "Method,precision,tolerances,shot count,seed and PRNG version",
+      "Source/oracle provenance and cost assumptions",
+      "Explicit classical CPU emulation and unavailable-backend declarations"
+    ],
+    "output": [
+      "Circuit,source,request and version hashes",
+      "Complex amplitudes and normalization residual",
+      "Born reference probabilities separately from empirical counts/frequencies",
+      "Shot denominator,seed,backend/RNG version and all zero-count states",
+      "Classical reference,errors,theoretical variance and assumptions",
+      "Primitive gate/depth counts separately from oracle query counts",
+      "Measured CPU/memory evidence,without quantum-hardware latency claims",
+      "Deterministic JSON/Markdown replay with no quantum-advantage or forecast-accuracy certification"
+    ]
+  },
+  "rights": {
+    "Montanaro": "CC BY4.0 primaryarticle;originalfacts/locatorsonly",
+    "Woerner_Egger": "CC BY4.0 finalarticlep8,thirdpartymaterialexceptions;noPDF/figure/dataredistribution",
+    "Aer": "Apache2.0sourceLICENSEinspected;laterintegrationmustpreservenotices;docsandcode/versionboundariesseparate",
+    "research_assets": "No sourcebody,circuitnotebook,wheelorhistoricalfinancedatasetbundled;onlyoriginalanalyticalnotesandmetadatachecksums"
+  },
+  "configuration_matrix": {
+    "currently_supported": "Research metadata,analytical reference facts and a fixture plan only. No #50runtime or executable profile is certified.",
+    "candidate_core": [
+      "Ideal CPU evolution of allowlisted tiny-circuit statevectors and probabilities",
+      "Seeded terminal counts with a known-p classical comparator",
+      "Strict source,bit-order,precision,resource and replay reporting"
+    ],
+    "experimental": [
+      "AnyfutureAeradapterpendinginstall/ABI/runtimecross-check",
+      "IQAE/MLAE/canonicalAEpendingfullindependentalgorithmfixtures",
+      "Variationalcircuitsandseparatelysourcedquantum-inspiredmethods"
+    ],
+    "unsupported": [
+      "Practical quantum speedup on classical hardware",
+      "Unknown future-market prediction or financial accuracy certification",
+      "Quantum hardware/cloud operations",
+      "Unverified oracle construction from arbitrary data",
+      "Noise,GPU or large-circuit coverage in the proposed first core",
+      "Operational Qiskit support inferred from documentation alone"
+    ]
+  },
+  "acceptance_criteria": [
+    "Freezeverifiedgate/state/projector,bitorder,angle/precision andPRNGconventionswithindependentexpectedfixturesbeforeproduction",
+    "Passall20plannedfixturefamiliesincludinginterference,endpoint,normalizationandBellcontrols",
+    "Statevectorandmeasurementprobabilitiesmatchindependentalgebraic/highprecisionanswerswithinexplicitabsolute tolerance",
+    "Count/frequencyoutputsretainallstates,exactshotdenominators andp0/p1boundaries",
+    "Seededreplaydeterministicunderpinnedalgorithm/environment;nofalsecross-backendcountidentity",
+    "IndependentlyverifyBernoulliexpectation/variance andcontrollednonmonotonesamplingexample;noautomaticallycertifiedCI",
+    "Separateexactmodelprobabilitiesfromsampleestimatesandunknownreal-worldprobabilities",
+    "Recordactualgate/depth/runtime/memoryandoraclecostwhenapplicable;noequatingquerieswithwalltime",
+    "Directclassicalcomparatorsusesameinputs/access/budgets;noquantum-speedupclaimfromsimulation",
+    "Unavailablepackages/backendsorunimplementedAE/variationalconfigurationsfailtruthfully",
+    "NoQPU,paidcloudorrequiredGPU;optionaldependenciesacquiredonlyinexplicitlaterimplementationstep",
+    "Fullinherited1462tests,2029CLI,28verifiers plusnew50tests/CLI/oracle,strictreplay,registry,rights,dependencies,pip,diff andcompletepre-engineprotectedbytes",
+    "Frozensupported/experimental/unsupportedmatrix,P1/P2 andtruthfulCorev1scopebeforeclosure;no51audituntil50subsequentlyimplementedandclosed"
+  ],
+  "backlog": {
+    "P1": [
+      "Freezeindependentmatrices,bitorder,complexprecision/angletolerances andPRNGknownanswerfixturesbeforeengine",
+      "ImplementonlyboundedA/Breferenceandclassicalcomparisonfirst;measureactualcosts",
+      "ReviewcontrolledGroverphase/signconventionsandexplicitA/Ainverse/oraclecostbeforeAE",
+      "OptionalAerCPUacquisitionwithwheel/lock/licensesandnativecompatibilitytest;notinstallednow",
+      "AdaptarchivedFinanceexampletoSamplerV2onlyunderseparatelyverifiedcode",
+      "IndependentlysourceIQAE/MLAE/statisticalconfidencealgorithmsbeforeclaimingsupport",
+      "Checkrareprobabilities,truncationthresholds andfiniteprecisionboundaries"
+    ],
+    "P2": [
+      "SourceverifiedAEandvariationalextensionswherebenefitjustifiescost",
+      "Separatelynamedquantum-inspiredclassicalestimators",
+      "Noisy/multiqubit/GPUsimulationonlyifindependentlyvalidatedanduseful",
+      "Reproducepublishedrisktoydata/circuitswithrightsandallresourcecosts",
+      "Quantumhardware/advantageclaimsrequireseparatefairend-to-endevidence",
+      "Noempiricalforecastingclaimwithoutactualunknownfutureoutcomeevaluation"
+    ]
+  },
+  "source_payloads": {
+    "metadata": {
+      "aer_pypi": {
+        "url": "https://pypi.org/pypi/qiskit-aer/json",
+        "sha256": "3f78406624fcba94df50b55774a238e588714db4563d14e77a6d3815535abf86"
+      },
+      "qiskit_pypi": {
+        "url": "https://pypi.org/pypi/qiskit/json",
+        "sha256": "2bd845c4653db7856f21b1693dcee183855360f7695e4cf03cb1ee53ed1ca66c"
+      },
+      "algorithms_pypi": {
+        "url": "https://pypi.org/pypi/qiskit-algorithms/json",
+        "sha256": "8e9a22f3edbe36cd94a973c04ecb5ed37815f6ec5ac6e17d643f31731dc386d4"
+      },
+      "aer_setup": {
+        "url": "https://raw.githubusercontent.com/Qiskit/qiskit-aer/0.18.2/setup.py",
+        "sha256": "307fb97cc2770748796eb70fd1632d5ca140795cee230e67cd6533facbd7df40"
+      },
+      "aer_license": {
+        "url": "https://raw.githubusercontent.com/Qiskit/qiskit-aer/0.18.2/LICENSE.txt",
+        "sha256": "62110f3e60f594c861674f74d007283a8ed8dfee449859132e11d28e5c2b0d96"
+      }
+    },
+    "tagged_code": {
+      "aer_simulator": {
+        "url": "https://raw.githubusercontent.com/Qiskit/qiskit-aer/0.18.2/qiskit_aer/backends/aer_simulator.py",
+        "sha256": "3bd40077a38ad071810b9a2256542f7a64ecec4bf64289a743c459f55e6fa8c0"
+      },
+      "sampler_v2": {
+        "url": "https://raw.githubusercontent.com/Qiskit/qiskit-aer/0.18.2/qiskit_aer/primitives/sampler_v2.py",
+        "sha256": "725634817183f56201387a4ddd48fea8228b576551f58f1690d8f40a01137f38"
+      }
+    },
+    "gate_list": {
+      "url": "https://raw.githubusercontent.com/Qiskit/qiskit-aer/0.18.2/qiskit_aer/backends/backend_utils.py",
+      "sha256": "9a4d498f682f229ecb214df0e16c53092b51c6b151771bd2539053c20a80166e"
+    },
+    "policy": "HTTPmetadata/sourcehashesattestretrievedbytes;wheelhashesareupstreammetadataonly,notdownloadverified. No sourcebodiesredistributed."
+  },
+  "audit_validation": {
+    "passed": true,
+    "date": "2026-11-07",
+    "evidence": "data/quantum-probability-forecasting-audit-validation.json",
+    "scope": "Bibliographic/source/package-metadata and analytical design checks only;no quantum execution or installed simulator validation."
+  },
+  "next": "Implement and close #50 in a separate pass before any #51 Superforecasting research."
+}
