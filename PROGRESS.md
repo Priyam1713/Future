@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 44 Prophetic Dreams Core v1 closure — 2026-11-07
+- **Core v1 Ready — Prospective Dream/Event Ledger and Bounded Comparison Scope**: dunne-revised-prospective-dream-ledger-v1,laterFaber/FadedPagewitness;1927bodyunverified. Completeofflineoriginal-lock/amendment/event/all-pair/judge/reveallifecycle;no prophecyorstatisticalcertification.
+- 1274tests(1207+67),1600CLI(1464+136),25verifiers(24+1);600independentinterval/chronologychecks,2timezonecases,8manualpairs,18families.29accepted/15rejectedreplays andseparatedsyntheticdemo.2088-filebaseline:2084eligiblefiles unchanged;4explicitinterface/historyedits. Registry/dependency/pip/diffpass.
+- Source54b377d,fixtures2c69e33,engine8abf550,verification28b26a2,timingrefinement508b097;fullacceptance,matrix,rights/privacy/P1/P2 in `knowledge/prophetic_dreams_core_v1.json`. Commit/pushandobserve clean0/0 before45auditonly.
+
 ## Technique 44 complete acceptance — 2026-11-07
 - All70recorded checks pass,includingcurrent-code1274-test rerun aftertimingrefinement,1600CLI and25verifiers.18families andcomplete29accepted/15rejectedreplays pass.
 -2088-filebaseline:2084eligiblepriorfiles unchanged;4explicitinterface/history edits.456source references/301unique registeredtwice;inventory/ranks/variations preserved. Dependency/pip/diff checks pass. Evidence in data/prophetic-dreams-acceptance-checks.json;boundedclosure follows.

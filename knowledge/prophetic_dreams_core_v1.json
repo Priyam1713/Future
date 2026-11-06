@@ -1,0 +1,641 @@
+{
+  "version": 1,
+  "technique_id": 44,
+  "name": "Prophetic Dreams",
+  "date": "2026-11-07",
+  "status": "Core v1 Ready — Prospective Dream/Event Ledger and Bounded Comparison Scope",
+  "profile": "dunne-revised-prospective-dream-ledger-v1",
+  "profile_sha256": "9f1bf381bf473d31c9cb62b159c890e46437c84b1a69f1e8d551652e8596c712",
+  "source_commit": "54b377d",
+  "fixture_commit": "2c69e33",
+  "implementation_commit": "8abf550",
+  "verification_commit": "28b26a2",
+  "chronology_refinement_commit": "508b097",
+  "report_commit": "7a64053",
+  "acceptance_commit": "e6d1574",
+  "source_edition": "FadedPage20181016 later Faber witness:publication history throughSeptember1939;1934third-edition introduction andadditions. Actual1927Macmillan scan body remains unverified.",
+  "source_manifest_sha256": "b732a03b9308b7d78a0860da970a17ee57c448f15cb9247c611deda1957e0343",
+  "source_freeze_sha256": "e8dbc7606638816f2a1b43de845a4466a05ee03ebbffef6eeca1628b313373f9",
+  "source_fixture_sha256": "3dbcbe3e9fc94f919841ecdacb3b145fa3638b313e064fa1565faf993d567382",
+  "ranked_sources_unchanged": [
+    [
+      44,
+      "Prophetic Dreams",
+      1,
+      "J. W. Dunne",
+      "An Experiment with Time",
+      "Prospective diary method",
+      "https://en.wikisource.org/wiki/File:Dunne_-_An_Experiment_with_Time.pdf",
+      "Open historical scan",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      44,
+      "Prophetic Dreams",
+      2,
+      "Eric Wargo",
+      "Precognitive Dreamwork and the Long Self",
+      "Modern practitioner theory",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      44,
+      "Prophetic Dreams",
+      3,
+      "Theresa Cheung and Julia Mossbridge",
+      "The Premonition Code",
+      "Contemporary intuition exercises",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows_unchanged": [
+    [
+      44,
+      "Prophetic Dreams",
+      "Precognitive dream diary",
+      "Precognitive Dreamwork and the Long Self",
+      "An Experiment with Time",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      44,
+      "Prophetic Dreams",
+      "reciprocal time theory",
+      "Precognitive Dreamwork and the Long Self",
+      "An Experiment with Time",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      44,
+      "Prophetic Dreams",
+      "synchronicity reports",
+      "The Premonition Code",
+      "Precognitive Dreamwork and the Long Self",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      44,
+      "Prophetic Dreams",
+      "controlled target dream",
+      "Precognitive Dreamwork and the Long Self",
+      "The Premonition Code",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_freeze": "knowledge/prophetic_dreams_source_freeze_v1.json",
+  "source_registry": "knowledge/prophetic_dreams_sources.json",
+  "profile_record": "knowledge/prophetic_dreams_profile_v1.json",
+  "documentary_references": "knowledge/prophetic_dreams_reference_v1.json",
+  "edition_limits": {
+    "Dunne": "FadedPage20181016 later Faber witness:publication history throughSeptember1939;1934third-edition introduction andadditions. Actual1927Macmillan scan body remains unverified.",
+    "Wargo": "2021ISBN9781644112694,officialChapter2excerpt:sealed unseen pictures anddream recording beforeopening;later association is distinct fromfixedtarget. No full-book exercise coverage.",
+    "Cheung_Mossbridge": "2018printISBN9781786781611,224pages;separateebookISBN9781786781741,256pages. Gateddream-specific exercises unverified.",
+    "hindsight": "1975Hindsight≠Foresight studies outcome knowledge andjudgment;ledger safeguards areeditorial applications,notdreamchance estimates."
+  },
+  "schemas": {
+    "plan_fields": [
+      "schema_version",
+      "profile",
+      "profile_sha256",
+      "study_id",
+      "participant",
+      "coordinator",
+      "origin",
+      "created_at",
+      "slots",
+      "universe",
+      "universe_sha256",
+      "window",
+      "features",
+      "judges",
+      "blinding",
+      "stopping_rule",
+      "pair_policy",
+      "duplicate_policy",
+      "uncertainty_policy",
+      "primary_endpoint",
+      "privacy_consent"
+    ],
+    "slot_fields": [
+      "id",
+      "open_at",
+      "due_at"
+    ],
+    "universe_fields": [
+      "id",
+      "version",
+      "event_ids",
+      "collector",
+      "collection_rule",
+      "collection_window"
+    ],
+    "window_fields": [
+      "start",
+      "end",
+      "boundary",
+      "endpoint"
+    ],
+    "feature_fields": [
+      "id",
+      "description"
+    ],
+    "dream_fields": [
+      "id",
+      "slot_id",
+      "participant",
+      "occurrence",
+      "first_record_at",
+      "text",
+      "details",
+      "outcome_known",
+      "attachments",
+      "privacy_consent",
+      "witness"
+    ],
+    "event_fields": [
+      "id",
+      "universe_id",
+      "universe_version",
+      "dedup_group",
+      "common",
+      "occurrence",
+      "publication_at",
+      "discovery_at",
+      "text",
+      "evidence",
+      "coverage",
+      "conflicts"
+    ],
+    "asset_fields": [
+      "path",
+      "sha256",
+      "holder",
+      "permission",
+      "provenance"
+    ],
+    "amend_fields": [
+      "entry_id",
+      "parent_sha256",
+      "text",
+      "reason",
+      "outcome_known"
+    ],
+    "packet_fields": [
+      "schema_version",
+      "visibility",
+      "profile",
+      "profile_sha256",
+      "cue",
+      "origin",
+      "judge_id",
+      "instructions",
+      "features",
+      "rating_scale",
+      "dreams",
+      "events",
+      "pairs",
+      "packet_sha256"
+    ],
+    "requests": {
+      "create": [
+        "plan"
+      ],
+      "apply": [
+        "ledger",
+        "action",
+        "actor",
+        "at",
+        "payload"
+      ],
+      "report": [
+        "ledger"
+      ],
+      "judge_packet": [
+        "ledger",
+        "judge_id"
+      ],
+      "validate_packet": [
+        "packet"
+      ],
+      "reference": [
+        "ids"
+      ]
+    }
+  },
+  "state_machine": {
+    "recording": [
+      "record",
+      "slot_status",
+      "lock_entry",
+      "amend",
+      "event",
+      "seal",
+      "terminate"
+    ],
+    "sealed": [
+      "expose",
+      "rate",
+      "lock_judges",
+      "amend",
+      "terminate"
+    ],
+    "judge_locked": [
+      "reveal",
+      "amend",
+      "terminate"
+    ],
+    "revealed": [
+      "commentary",
+      "finish",
+      "amend"
+    ],
+    "reported": [
+      "commentary",
+      "amend"
+    ],
+    "aborted": [],
+    "excluded": []
+  },
+  "actions": {
+    "record": [
+      "entry"
+    ],
+    "slot_status": [
+      "slot_id",
+      "status",
+      "reason"
+    ],
+    "lock_entry": [
+      "entry_id",
+      "digest"
+    ],
+    "amend": [
+      "entry_id",
+      "parent_sha256",
+      "text",
+      "reason",
+      "outcome_known"
+    ],
+    "event": [
+      "event"
+    ],
+    "seal": [],
+    "expose": [
+      "judge_id",
+      "knowledge"
+    ],
+    "rate": [
+      "ratings",
+      "notes"
+    ],
+    "lock_judges": [
+      "digest"
+    ],
+    "reveal": [],
+    "commentary": [
+      "kind",
+      "text",
+      "event_reference"
+    ],
+    "finish": [],
+    "terminate": [
+      "status",
+      "reason"
+    ]
+  },
+  "chronology_policy": "Timezone-aware instants orclosed {start,end,precision};unknown=null. Windowclosed[endpointsincluded]. Wholeintervalcontained=inside;disjoint=outside;partialoverlap=uncertain;unknown=unknown. Prospectivitystrictlyrequires lock<endpoint;equalnotfuture. Reportactualeventchronologyseparatelyfrompublication/discoveryendpoint.",
+  "chronology_labels": [
+    "future_event",
+    "record_after_event_before_discovery",
+    "event_before_or_at_record",
+    "overlaps_lock",
+    "timing_unknown",
+    "outcome_known_at_capture",
+    "conflicting_time"
+  ],
+  "discovery_publication_policy": "Participant discovery maylegitimatelyprecede sourcepublication;preservebothwithoutautomaticconflict. Declaredtimesaftertheircollectionorotherexplicitconflicts remainineligible. Futureeventchronology remainsdistinctfrompublication/discoveryendpoints.",
+  "original_version_policy": "Originalentryversion hashes domain+entry. Amendment hashes domain+entry_id+parent+text+reason+outcome_known+actiontime. Verifyparent islatestversion. No dropping olderoriginals orpost-outcome promotion. Locks bindoriginalentryhash+declaredlocktime.",
+  "state_policy": "Accepted actions strictlyincrease afterplancreatedtime. Replayrecomputes eventdecisions andhashes. Rejected actions arehashed/retained withoutstatechange;persist returnedprivateledger. No implicitrepair. Allsubmitted dreamslocked/allmanifesteventscollected andslotdue timespassed beforeseal. Originalentrylock isalwayscomparisonversion;amendments appendwithoutreplacingit.",
+  "universe_policy": "Fixed finite event-ID slots andfixedcollectionrule hash declared before recording;content/evidence mayarrive later. Evidencebytehash/rights verified locally at eachreplay. Completeness complete/known_omissions/unknown retained;omissions suppresscomplete-universe designation.",
+  "pair_enumeration_policy": "Everyoriginal lockedrecordeddream x everymanifestevent retained,includingexcluded rows. Originalmanifestorder selects duplicate-grouprepresentative;duplicates/commonflagsvisible. Reasons include late/withdrawn/invalidslot,knownoutcome,timeconflict,windowoutside/uncertain/unknown,endpointnotafterlock,duplicate. No inferentialprobabilities orautomaticmatching.",
+  "judge_policy": "Content ratings only,allD*E pairsincludingexcludedrows;human featurecriteria fixedinplan. Timeis assessedprivately byeditorial interval rules. Judgepacket masks allprivatechronology,paths,answerflags anddecisions;containsoriginalrawtext andpublicdigests. Rawsemanticclues/publiceventfamiliarity notguaranteedmasked. Allpredeclaredjudges expose/rate/lock beforeexplicitreveal. Knownjudges/descriptivepolicy labeledunblinded.",
+  "rating_scale": [
+    "match",
+    "nonmatch",
+    "insufficient_information",
+    "unscorable",
+    "protocol_invalid"
+  ],
+  "rating_definitions": {
+    "match": "Judge declares correspondence underfixedhuman-selected features;notprobability.",
+    "nonmatch": "Judge declares no correspondence underthosefeatures.",
+    "insufficient_information": "Evidence insufficient forhumanrating.",
+    "unscorable": "Task/material cannotbe scored.",
+    "protocol_invalid": "Judge flags proceduralinvalidity;notpositiveevidence."
+  },
+  "denominator_contract": "Complete frozen scheduledslots,alloriginal-lockeddreams x allmanifestevents;excluded/duplicate/commonrows retained. Perjudgeall-paircounts separatefromeligible-paircounts. Missing/nonrecall/late/withdrawn/invalid/excludedstatuses explicit;no successfulpair-onlyreporting.",
+  "blind_export": "Text-onlypacket withopaque d/e aliases,exactoriginalnarratives,features,allpairIDs andcheckabledigest. Privatechronology,evidencepaths andmatchingdecisions notexported;consentrequired. Attachmentsverifiedprivately,notexported. Public-event familiarity/semanticclues notcertifiedabsent.",
+  "comparison_scope": "Manualhuman categories andeditorial chronology only. No automatic interpretation,weights,universalchance,p-values,43five-choicebaseline orparanormalaccuracycertification.",
+  "acceptance": {
+    "tests": 1274,
+    "inherited_tests": 1207,
+    "new_tests": 67,
+    "cli_cases": 1600,
+    "inherited_cli_cases": 1464,
+    "new_cli_cases": 136,
+    "independent_verifiers": 25,
+    "pre_engine_files": 2088,
+    "protected_files": 2084,
+    "changed_protected_files": [],
+    "intentional_interface_history_edits": [
+      "future/__main__.py",
+      "README.md",
+      "knowledge/gaps.json",
+      "PROGRESS.md"
+    ],
+    "registry_source_references_checked_twice": 456,
+    "registry_unique_sources": 301,
+    "inventory_preserved": true
+  },
+  "acceptance_evidence": "data/prophetic-dreams-acceptance-checks.json",
+  "current_code_rerun": "data/prophetic-dreams-current-unit.json",
+  "regression_evidence": "data/prophetic-dreams-regression.json",
+  "verification": {
+    "passed": true,
+    "profile": "dunne-revised-prospective-dream-ledger-v1",
+    "profile_sha256": "9f1bf381bf473d31c9cb62b159c890e46437c84b1a69f1e8d551652e8596c712",
+    "fixture_sha256": "3dbcbe3e9fc94f919841ecdacb3b145fa3638b313e064fa1565faf993d567382",
+    "fixture_commit": "2c69e33",
+    "chronology_intervals": 300,
+    "independent_interval_and_chronology_checks": 600,
+    "timezone_cases": 2,
+    "manual_pair_space": 8,
+    "manual_eligible_pairs": 2,
+    "manual_excluded_pairs": 6,
+    "planned_slots": 4,
+    "known_original_and_lock_hashes": 4,
+    "procedural_families": [
+      {
+        "family": "prospective-lock",
+        "passed": true,
+        "checks": 3,
+        "tests": [
+          "prospective_lock",
+          "known_original_hashes",
+          "known_lock_hashes"
+        ]
+      },
+      {
+        "family": "occurrence-vs-record",
+        "passed": true,
+        "checks": 2,
+        "tests": [
+          "occurrence_vs_record",
+          "invalid_dream_occurrence"
+        ]
+      },
+      {
+        "family": "occurrence-vs-discovery",
+        "passed": true,
+        "checks": 3,
+        "tests": [
+          "occurrence_vs_discovery",
+          "publication_endpoint_separate",
+          "discovery_before_publication_is_distinct"
+        ]
+      },
+      {
+        "family": "version-mutation",
+        "passed": true,
+        "checks": 5,
+        "tests": [
+          "version_mutation",
+          "mutation_text",
+          "mutation_details",
+          "mutation_first_record_at",
+          "mutation_occurrence"
+        ]
+      },
+      {
+        "family": "after-outcome-edit",
+        "passed": true,
+        "checks": 3,
+        "tests": [
+          "after_outcome_edit",
+          "amend_wrong_parent",
+          "no_amend_original_replacement"
+        ]
+      },
+      {
+        "family": "window-boundaries",
+        "passed": true,
+        "checks": 3,
+        "tests": [
+          "window_boundaries",
+          "uncertain_window",
+          "unknown_event_time"
+        ]
+      },
+      {
+        "family": "missing-conflicting-time",
+        "passed": true,
+        "checks": 2,
+        "tests": [
+          "missing_conflicting_time",
+          "missing_timezone"
+        ]
+      },
+      {
+        "family": "criteria-precommit",
+        "passed": true,
+        "checks": 2,
+        "tests": [
+          "criteria_precommit",
+          "invalid_plan_primary_endpoint"
+        ]
+      },
+      {
+        "family": "universe-version",
+        "passed": true,
+        "checks": 3,
+        "tests": [
+          "universe_version",
+          "wrong_universe_hash",
+          "complete_events_required"
+        ]
+      },
+      {
+        "family": "nonmatches-denominator",
+        "passed": true,
+        "checks": 3,
+        "tests": [
+          "nonmatches_denominator",
+          "late_entry",
+          "withdrawn_entry"
+        ]
+      },
+      {
+        "family": "duplicate-common-event",
+        "passed": true,
+        "checks": 2,
+        "tests": [
+          "duplicate_common_event",
+          "coverage_omissions"
+        ]
+      },
+      {
+        "family": "one-to-many",
+        "passed": true,
+        "checks": 1,
+        "tests": [
+          "one_to_many"
+        ]
+      },
+      {
+        "family": "judge-blinding",
+        "passed": true,
+        "checks": 6,
+        "tests": [
+          "judge_blinding",
+          "packet_leak_answer_flag",
+          "packet_leak_filename",
+          "packet_leak_caption",
+          "exported_bytes",
+          "public_packet_mutation"
+        ]
+      },
+      {
+        "family": "judge-disagreement",
+        "passed": true,
+        "checks": 3,
+        "tests": [
+          "judge_disagreement",
+          "all_judges_required",
+          "after_reveal_rating_rejected"
+        ]
+      },
+      {
+        "family": "feedback-contamination",
+        "passed": true,
+        "checks": 2,
+        "tests": [
+          "feedback_contamination",
+          "premature_reveal"
+        ]
+      },
+      {
+        "family": "zero-information",
+        "passed": true,
+        "checks": 2,
+        "tests": [
+          "zero_information",
+          "known_outcome_capture"
+        ]
+      },
+      {
+        "family": "replay-rights",
+        "passed": true,
+        "checks": 5,
+        "tests": [
+          "replay_rights",
+          "unicode_whitespace",
+          "wrong_local_bytes",
+          "rights_permission",
+          "privacy_gate"
+        ]
+      },
+      {
+        "family": "source-isolation",
+        "passed": true,
+        "checks": 1,
+        "tests": [
+          "source_isolation"
+        ]
+      }
+    ],
+    "null_model": null,
+    "empirical_validation": false,
+    "qualification": "Frozen pre-engine integer-time andhand-enumerated pair/status/version expectations;source/user/editorial layers distinct. Familymutation/leak checks supplementindependenttruth,notan empiricalprecognitionbenchmark."
+  },
+  "verification_evidence": "data/prophetic-dreams-verification.json",
+  "replay": {
+    "accepted_pairs": 29,
+    "rejected_pairs": 15,
+    "cli_cases": 136,
+    "input_pattern": "data/prophetic-dreams-*-input.json",
+    "json_pattern": "data/prophetic-dreams-*.json",
+    "markdown_pattern": "data/prophetic-dreams-*.md",
+    "demo_manifest": "data/prophetic-dreams-demo-manifest.json",
+    "private_demo": "data/prophetic-dreams-demo/private/ledger.json",
+    "judge_demo": "data/prophetic-dreams-demo/judge/packet.json",
+    "qualification": "Explicitlysynthetic,project-authored samples;no realparticipantstudy. Reports retainoriginalledger fordeterministicreplay;publicpacketsneverembedprivaterequests."
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Offlinefinite-slot prospectiveledger;strictmanualrecords/events;original locks andappend-onlyamendments",
+      "Finitecollectionrule/versionhash,fixedclosedwindow,allpair/exclusiondenominators",
+      "Boundedhumanratings,allplannedjudges,allowlistedtextpackets anddisagreement",
+      "Source-specificdocumentaryreferences andUTF8JSON/Markdownreplay"
+    ],
+    "experimental": [
+      "Declaredblindrating ofpublic/personal-life events;no psychologicalblindingguarantee",
+      "Publication/discoveryendpoint analyses explicitlyseparatefromfutureeventchronology"
+    ],
+    "unsupported": [
+      "Prophecy/precognition/retrocausalphysicscertification",
+      "Universalnullmodel,p-values,1/5chancebaseline,automaticsemanticconfidence",
+      "FullDunneAppendixIIIhistoricalreplication or1927wordingcertification",
+      "ERV/ARV/controlledtargetdreamtrialprotocol",
+      "Unconsentedparticipantpublication;automaticimages/audiointerpretation"
+    ]
+  },
+  "privacy_rights": "Privateledgers/reports containrawparticipantdata. Packetexport requiresplanandentryconsent. Attachmentsverifiedprivately andnotexported intext-onlyCore;judgesseeexactdeclaredtext. No originalsourcetextcorpusdistributed.",
+  "source_rights": "Facts-only original summaries/locators. No source book/scan/images orparticipant records bundled.1927host public-domain label not automaticallyapplicable to latertext/editing. Rights/privacy declarations remain assertions.",
+  "limitations": [
+    "Localclock/occurrence/knowledge/identity/rights are declarations;no independentlytrusted chronology.",
+    "Fileowner canrewritewholehistory;retainindependentanchors.",
+    "Humanratings aredescriptive;noinferential orparanormalcertification.",
+    "Packet allowlists do not eliminate semanticclues,priorpublicknowledge orcollusion."
+  ],
+  "P1": [
+    "Inspectactual1927Dunnescan/collate wordingwithoutchanginglater-witnessidentity.",
+    "LegitimatecompleteWargo/Cheung-Mossbridge exerciseaccess/rights.",
+    "Independenthistoricalcaseverification,eventcollectioncompleteness,frequent-eventrates/deduplication andsamplingcontrols.",
+    "Independentjudge/privacy/consentreview andstrongeroperational/timestampwitnesses.",
+    "Separateverifiedstatisticalmodels underexplicit sampling assumptions;currentlydescriptiveonly.",
+    "Eventamendments/updates andlarger-ledger performance review underseparate immutableversions."
+  ],
+  "P2": [
+    "Separatecontrolled-targetdreamtrialprofile.",
+    "Optionalexternalsignatures/trustedtimestamps.",
+    "Source-specificsynchronicity/culturalcommentary.",
+    "Accessibleaudio/sketchcapture andheld-out-testedretrievalaids.",
+    "Independentpreregisteredhumanstudies andjustifieddependent-dataanalysis."
+  ],
+  "inventory": {
+    "total": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ],
+    "source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31"
+  },
+  "transition": "Afterthisclosurepushed,cleanandsynchronized0/0:audit45IntuitivePredictiononly;no45implementationinthispass."
+}
