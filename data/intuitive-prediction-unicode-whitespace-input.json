@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "task": "report",
+  "ledger": {
+    "schema_version": 1,
+    "profile_sha256": "9e744dcb6fcd6f8e4ce854c76cafadeae0d9d4e2fa24e77786646c6cf04bc113",
+    "plan": {
+      "study_id": "s1",
+      "created_at": "2026-11-09T00:00:00Z",
+      "domain": "toy",
+      "horizon": "one-day",
+      "event_definition": "Toy binary event definition v1",
+      "events": [
+        {
+          "event_id": "e1",
+          "dependency_group": "g1",
+          "question": "Toy outcome 1?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        },
+        {
+          "event_id": "e2",
+          "dependency_group": "g2",
+          "question": "Toy outcome 2?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        },
+        {
+          "event_id": "e3",
+          "dependency_group": "g3",
+          "question": "Toy outcome 3?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        },
+        {
+          "event_id": "e4",
+          "dependency_group": "g4",
+          "question": "Toy outcome 4?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        }
+      ],
+      "slots": [
+        {
+          "forecast_id": "f1",
+          "forecaster": "person1",
+          "event_id": "e1"
+        },
+        {
+          "forecast_id": "f2",
+          "forecaster": "person1",
+          "event_id": "e2"
+        },
+        {
+          "forecast_id": "f3",
+          "forecaster": "person1",
+          "event_id": "e3"
+        },
+        {
+          "forecast_id": "f4",
+          "forecaster": "person1",
+          "event_id": "e4"
+        }
+      ],
+      "baseline": null,
+      "privacy_consent": true
+    },
+    "plan_sha256": "4ad1637a0932934381a93829e5b78a354f2dd059d80387833b3f987b937fc147",
+    "actions": [
+      {
+        "sequence": 1,
+        "kind": "forecast",
+        "payload": {
+          "forecast_id": "f1",
+          "at": "2026-11-10T00:00:00Z",
+          "probability": "0.8",
+          "outcome_known": false,
+          "confidence": "high",
+          "decision_id": null,
+          "notes": "é  raw\n```<script>data</script>",
+          "parent_sha256": null,
+          "reason": "Original submission"
+        },
+        "parent_sha256": "4ad1637a0932934381a93829e5b78a354f2dd059d80387833b3f987b937fc147",
+        "sha256": "ef42a85ae18c17be6276a07a4358f1c76719e5b3164700750c3fc616d4bf8897"
+      },
+      {
+        "sequence": 2,
+        "kind": "forecast",
+        "payload": {
+          "forecast_id": "f2",
+          "at": "2026-11-10T00:00:00Z",
+          "probability": "0.2",
+          "outcome_known": false,
+          "confidence": "high",
+          "decision_id": null,
+          "notes": "Original synthetic forecast 2",
+          "parent_sha256": null,
+          "reason": "Original submission"
+        },
+        "parent_sha256": "ef42a85ae18c17be6276a07a4358f1c76719e5b3164700750c3fc616d4bf8897",
+        "sha256": "8ac96ef3db153647a0e602d16bcf0add4f604d0e6ce9649d57142799ae15201d"
+      },
+      {
+        "sequence": 3,
+        "kind": "forecast",
+        "payload": {
+          "forecast_id": "f3",
+          "at": "2026-11-10T00:00:00Z",
+          "probability": "0.6",
+          "outcome_known": false,
+          "confidence": "high",
+          "decision_id": null,
+          "notes": "Original synthetic forecast 3",
+          "parent_sha256": null,
+          "reason": "Original submission"
+        },
+        "parent_sha256": "8ac96ef3db153647a0e602d16bcf0add4f604d0e6ce9649d57142799ae15201d",
+        "sha256": "2d49d2e3092d7313e8620cb0ef0267d3cd3086156690d145451bb78a5dd1ea94"
+      },
+      {
+        "sequence": 4,
+        "kind": "forecast",
+        "payload": {
+          "forecast_id": "f4",
+          "at": "2026-11-10T00:00:00Z",
+          "probability": "0.1",
+          "outcome_known": false,
+          "confidence": "high",
+          "decision_id": null,
+          "notes": "Original synthetic forecast 4",
+          "parent_sha256": null,
+          "reason": "Original submission"
+        },
+        "parent_sha256": "2d49d2e3092d7313e8620cb0ef0267d3cd3086156690d145451bb78a5dd1ea94",
+        "sha256": "13a11146adb411edea42bfdbd4b35a5af63e3ff5871d27cb0185317edd9051c8"
+      },
+      {
+        "sequence": 5,
+        "kind": "resolve",
+        "payload": {
+          "event_id": "e1",
+          "at": "2026-11-12T00:00:00Z",
+          "status": "resolved",
+          "outcome": 1,
+          "occurrence_at": "2026-11-11T00:00:00Z",
+          "publication_at": "2026-11-11T01:00:00Z",
+          "discovery_at": "2026-11-11T02:00:00Z",
+          "evidence": {
+            "path": "data/intuitive-prediction-assets/evidence.txt",
+            "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+            "holder": "Future synthetic fixture authors",
+            "permission": "Original synthetic text;redistribution permitted",
+            "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+          }
+        },
+        "parent_sha256": "13a11146adb411edea42bfdbd4b35a5af63e3ff5871d27cb0185317edd9051c8",
+        "sha256": "b04d6a6537dc88cbed2a8b71a0140a7e6ff3b6cf3c24671116214b49793572a7"
+      },
+      {
+        "sequence": 6,
+        "kind": "resolve",
+        "payload": {
+          "event_id": "e2",
+          "at": "2026-11-12T00:00:00Z",
+          "status": "resolved",
+          "outcome": 0,
+          "occurrence_at": "2026-11-11T00:00:00Z",
+          "publication_at": "2026-11-11T01:00:00Z",
+          "discovery_at": "2026-11-11T02:00:00Z",
+          "evidence": {
+            "path": "data/intuitive-prediction-assets/evidence.txt",
+            "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+            "holder": "Future synthetic fixture authors",
+            "permission": "Original synthetic text;redistribution permitted",
+            "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+          }
+        },
+        "parent_sha256": "b04d6a6537dc88cbed2a8b71a0140a7e6ff3b6cf3c24671116214b49793572a7",
+        "sha256": "807d39aa587d5f07af094eca9fb813c9abeaeea2a39dc0ecd00ab90337128410"
+      },
+      {
+        "sequence": 7,
+        "kind": "resolve",
+        "payload": {
+          "event_id": "e3",
+          "at": "2026-11-12T00:00:00Z",
+          "status": "resolved",
+          "outcome": 0,
+          "occurrence_at": "2026-11-11T00:00:00Z",
+          "publication_at": "2026-11-11T01:00:00Z",
+          "discovery_at": "2026-11-11T02:00:00Z",
+          "evidence": {
+            "path": "data/intuitive-prediction-assets/evidence.txt",
+            "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+            "holder": "Future synthetic fixture authors",
+            "permission": "Original synthetic text;redistribution permitted",
+            "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+          }
+        },
+        "parent_sha256": "807d39aa587d5f07af094eca9fb813c9abeaeea2a39dc0ecd00ab90337128410",
+        "sha256": "4a7c015c2eab1bcda94b3d7fe286dcc597e07e44c7dc351414399f6723348e68"
+      },
+      {
+        "sequence": 8,
+        "kind": "resolve",
+        "payload": {
+          "event_id": "e4",
+          "at": "2026-11-12T00:00:00Z",
+          "status": "resolved",
+          "outcome": 1,
+          "occurrence_at": "2026-11-11T00:00:00Z",
+          "publication_at": "2026-11-11T01:00:00Z",
+          "discovery_at": "2026-11-11T02:00:00Z",
+          "evidence": {
+            "path": "data/intuitive-prediction-assets/evidence.txt",
+            "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+            "holder": "Future synthetic fixture authors",
+            "permission": "Original synthetic text;redistribution permitted",
+            "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+          }
+        },
+        "parent_sha256": "4a7c015c2eab1bcda94b3d7fe286dcc597e07e44c7dc351414399f6723348e68",
+        "sha256": "b8727e8ff3391e82a26f9dee2c6370b50af529200daa9163e228da836617dc57"
+      }
+    ]
+  }
+}

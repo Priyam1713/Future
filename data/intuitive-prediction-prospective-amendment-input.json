@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "task": "forecast-amend",
+  "ledger": {
+    "schema_version": 1,
+    "profile_sha256": "9e744dcb6fcd6f8e4ce854c76cafadeae0d9d4e2fa24e77786646c6cf04bc113",
+    "plan": {
+      "study_id": "s1",
+      "created_at": "2026-11-09T00:00:00Z",
+      "domain": "toy",
+      "horizon": "one-day",
+      "event_definition": "Toy binary event definition v1",
+      "events": [
+        {
+          "event_id": "e1",
+          "dependency_group": "g1",
+          "question": "Toy outcome 1?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        },
+        {
+          "event_id": "e2",
+          "dependency_group": "g2",
+          "question": "Toy outcome 2?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        },
+        {
+          "event_id": "e3",
+          "dependency_group": "g3",
+          "question": "Toy outcome 3?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        },
+        {
+          "event_id": "e4",
+          "dependency_group": "g4",
+          "question": "Toy outcome 4?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        }
+      ],
+      "slots": [
+        {
+          "forecast_id": "f1",
+          "forecaster": "person1",
+          "event_id": "e1"
+        },
+        {
+          "forecast_id": "f2",
+          "forecaster": "person1",
+          "event_id": "e2"
+        },
+        {
+          "forecast_id": "f3",
+          "forecaster": "person1",
+          "event_id": "e3"
+        },
+        {
+          "forecast_id": "f4",
+          "forecaster": "person1",
+          "event_id": "e4"
+        }
+      ],
+      "baseline": null,
+      "privacy_consent": true
+    },
+    "plan_sha256": "4ad1637a0932934381a93829e5b78a354f2dd059d80387833b3f987b937fc147",
+    "actions": [
+      {
+        "sequence": 1,
+        "kind": "forecast",
+        "payload": {
+          "forecast_id": "f1",
+          "at": "2026-11-10T00:00:00Z",
+          "probability": "0.8",
+          "outcome_known": false,
+          "confidence": "high",
+          "decision_id": null,
+          "notes": "Original synthetic forecast 1",
+          "parent_sha256": null,
+          "reason": "Original submission"
+        },
+        "parent_sha256": "4ad1637a0932934381a93829e5b78a354f2dd059d80387833b3f987b937fc147",
+        "sha256": "e53c07166a532bd1f9c5864233ff68a523613655ebd2f76b2fa09cf15ab558b7"
+      },
+      {
+        "sequence": 2,
+        "kind": "forecast",
+        "payload": {
+          "forecast_id": "f2",
+          "at": "2026-11-10T00:00:00Z",
+          "probability": "0.2",
+          "outcome_known": false,
+          "confidence": "high",
+          "decision_id": null,
+          "notes": "Original synthetic forecast 2",
+          "parent_sha256": null,
+          "reason": "Original submission"
+        },
+        "parent_sha256": "e53c07166a532bd1f9c5864233ff68a523613655ebd2f76b2fa09cf15ab558b7",
+        "sha256": "8d68ed8fa00eeabe697e4696d9d35a32427c070907d6770e998256e30f9df1f3"
+      },
+      {
+        "sequence": 3,
+        "kind": "forecast",
+        "payload": {
+          "forecast_id": "f3",
+          "at": "2026-11-10T00:00:00Z",
+          "probability": "0.6",
+          "outcome_known": false,
+          "confidence": "high",
+          "decision_id": null,
+          "notes": "Original synthetic forecast 3",
+          "parent_sha256": null,
+          "reason": "Original submission"
+        },
+        "parent_sha256": "8d68ed8fa00eeabe697e4696d9d35a32427c070907d6770e998256e30f9df1f3",
+        "sha256": "13014877a32d16982688f06eebfe0102240980b08cad0c51ab289d6063b650fd"
+      },
+      {
+        "sequence": 4,
+        "kind": "forecast",
+        "payload": {
+          "forecast_id": "f4",
+          "at": "2026-11-10T00:00:00Z",
+          "probability": "0.1",
+          "outcome_known": false,
+          "confidence": "high",
+          "decision_id": null,
+          "notes": "Original synthetic forecast 4",
+          "parent_sha256": null,
+          "reason": "Original submission"
+        },
+        "parent_sha256": "13014877a32d16982688f06eebfe0102240980b08cad0c51ab289d6063b650fd",
+        "sha256": "59e7598982f16f9d572b12203a42493a0197fd35158f2478d037ebdcd187d4b6"
+      }
+    ]
+  },
+  "forecast": {
+    "forecast_id": "f1",
+    "at": "2026-11-10T01:00:00Z",
+    "probability": "0.9",
+    "outcome_known": false,
+    "confidence": "high",
+    "decision_id": null,
+    "notes": "Original synthetic forecast 1",
+    "parent_sha256": "b3eaece81c203407e55aa8dc78719f928ea0c01c2371966d1113b0abae09f08e",
+    "reason": "Before outcome"
+  }
+}

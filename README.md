@@ -1572,3 +1572,58 @@ Run `python -m unittest tests.test_prophetic_dreams`,
 `python -m scripts.smoke_prophetic_dreams_core`. The pre-engine specification
 freezes300integer interval/chronology cases, timezone cases, original/version lock
 known answers, eight manually enumerated pairs and18procedural fixture families.
+
+## Intuitive Prediction: explicit heuristics and forecast evaluation
+
+`python -m future intuitive-prediction data/intuitive-prediction-exact-brier-input.json --format markdown`
+
+The named `goldstein-gigerenzer2002-recognition-subset-v1` profile implements the
+isolated recognition rule with declared ecological direction. The separate
+`gigerenzer-goldstein1996-ttb-deterministic-v1` profile preserves recognition
+precedence and searches supplied cues until positive opposes negative or unknown.
+Negative versus unknown does not discriminate. Its historical random-choice
+branches return explicit editorial abstentions. Cue order, validity, provenance
+and tie conventions are declared before evaluation; the engine does not learn
+them from outcomes. Heuristic choices never generate probabilities.
+
+Requests use `schema_version: 1` and a `task`. See the committed examples for
+`recognition`, `take-the-best`, `decision-reference`, `create`, `decision-record`,
+`forecast-record`, `forecast-amend`, `resolve`, `forecast-score`, `calibration`,
+`baseline-compare`, `report` and `reference`. Each result contains exact protocol,
+source, request, result and optional ledger hashes. `--asset-root` bounds local
+evidence paths. Reports contain private inputs; store and share them accordingly.
+
+Create a plan with a finite event/forecast-slot manifest, then retain the returned
+`ledger` for the next request. Forecast probabilities are **plain decimal strings**
+such as `"0.8"`, preserving their exact values. Amendments require the previous
+version hash and retain originals. The cutoff is inclusive; eligible forecasts
+must strictly precede actual occurrence and declare outcome knowledge false.
+Latest eligible versions are selected once per forecaster/event at the plan's
+fixed horizon. Late or contaminated revisions remain visible and cannot displace
+an eligible original. Missing occurrence/evidence, unresolved, disputed and void
+outcomes remain unscored. Local evidence bytes and permission declarations are
+checked on replay. Do not overwrite the input before a command finishes reading it.
+
+Binary Brier loss is `mean((p-y)^2)`, lower is better, in `[0,1]`. Reduced rational
+values are authoritative; decimal displays use twelve places and half-even
+rounding. The complementary two-category positive sum is twice this loss.
+`N=0` gives null. Ten fixed calibration bins retain empty bins and sample counts;
+calibration does not establish discrimination or expertise. An optional baseline
+requires separate earlier training outcomes/evidence, compatible scope and no
+evaluation IDs; comparisons use identical resolved pairs. Log loss, Brier skill
+ratios, decomposition and inferential statistics are deferred.
+
+The linked synthetic CLI demonstration is in `data/intuitive-prediction-demo.json`.
+Run `python -m unittest tests.test_intuitive_prediction`,
+`python -m scripts.verify_intuitive_prediction` and
+`python -m scripts.smoke_intuitive_prediction_core` for verification and exact
+accepted/rejected JSON/Markdown replay. The independent verifier checks all nine
+cue pairs, 729 three-cue traces and 42 actual-ledger rational scoring cases.
+
+RPD notes and learning-context reviews are human declarations, not optimal action
+selection or expert certification. Counts of forecasts, unique events and
+dependency groups are separate. Local clocks, knowledge, identities, training
+validity and rights remain declarations; owners can rewrite complete local hash
+chains. No real human forecasting benchmark or paranormal capability is validated.
+Full ranked-book/1993 RPD chapters and historical dataset rights remain P1 gaps;
+only original synthetic evidence and concise source facts are distributed.

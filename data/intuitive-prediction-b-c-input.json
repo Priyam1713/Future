@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "task": "take-the-best",
+  "decision": {
+    "decision_id": "d1",
+    "profile": "gigerenzer-goldstein1996-ttb-deterministic-v1",
+    "alternatives": [
+      "b",
+      "c"
+    ],
+    "criterion": "Toy magnitude",
+    "criterion_direction": "higher",
+    "domain": "toy",
+    "observed_at": "2026-11-10T00:00:00Z",
+    "recognition": [
+      "recognized",
+      "recognized"
+    ],
+    "ecological_direction": "positive",
+    "direction_provenance": "Declared toy association",
+    "training_period": "Synthetic earlier period",
+    "cues": [
+      {
+        "cue_id": "c1",
+        "values": [
+          "negative",
+          "unknown"
+        ],
+        "validity": "0.8",
+        "rank": 1,
+        "provenance": "Frozen toy cue order,not empirical accuracy",
+        "orientation": "positive",
+        "training_period": "Synthetic prior period"
+      },
+      {
+        "cue_id": "c2",
+        "values": [
+          "positive",
+          "negative"
+        ],
+        "validity": "0.7",
+        "rank": 2,
+        "provenance": "Frozen toy cue order,not empirical accuracy",
+        "orientation": "positive",
+        "training_period": "Synthetic prior period"
+      }
+    ],
+    "tie_policy": "abstain",
+    "context": {
+      "regularity": "unknown",
+      "cue_validity": "unknown",
+      "feedback_quality": "unknown",
+      "feedback_latency": "unknown",
+      "practice_history": "Synthetic fixture only",
+      "environment_changed": false
+    },
+    "confidence": "very confident",
+    "notes": "Raw é  narrative\n"
+  }
+}

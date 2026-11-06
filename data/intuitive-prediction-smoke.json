@@ -1,0 +1,736 @@
+{
+  "passed": true,
+  "cli_cases": 121,
+  "accepted_pairs": 35,
+  "rejected_pairs": 18,
+  "complete_cli_lifecycle": true,
+  "exact_replay": true,
+  "cases": [
+    {
+      "name": "positive",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "positive",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "negative",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "negative",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "both",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "both",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "neither",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "neither",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "unknown-recognition",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "unknown-recognition",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "unknown-direction",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "unknown-direction",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "a-b",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "a-b",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "b-c",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "b-c",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "early-stop",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "early-stop",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "third-cue",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "third-cue",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "positive-unknown",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "positive-unknown",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "negative-unknown",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "negative-unknown",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "exhausted",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "exhausted",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "tie-abstain",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "tie-abstain",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "tie-frozen",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "tie-frozen",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "nonstationary",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "nonstationary",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "rpd-reference",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "rpd-reference",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "exact-brier",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "exact-brier",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "unresolved",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "unresolved",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "n0",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "n0",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "disputed-void",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "disputed-void",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "zero-correct",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "zero-correct",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "one-correct",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "one-correct",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "zero-wrong",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "zero-wrong",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "one-wrong",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "one-wrong",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "bin-endpoints",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "bin-endpoints",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "small-n",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "small-n",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "late-amendment",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "late-amendment",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "prospective-amendment",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "prospective-amendment",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "unicode-whitespace",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "unicode-whitespace",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "baseline",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "baseline",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "dependent-forecasters",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "dependent-forecasters",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "record-forecast",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "record-forecast",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "record-decision",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "record-decision",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "reference",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "reference",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "negative-probability",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "negative-probability",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "above-one",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "above-one",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "boolean-probability",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "boolean-probability",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "number-probability",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "number-probability",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "bad-decimal",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "bad-decimal",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "invalid-orientation",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "invalid-orientation",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "invalid-validity",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "invalid-validity",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "invalid-rank",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "invalid-rank",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "missing-cue-provenance",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "missing-cue-provenance",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "ttb-negative-import",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "ttb-negative-import",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "baseline-leak",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "baseline-leak",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "hindsight-base-rate",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "hindsight-base-rate",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "mutation",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "mutation",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "boolean-outcome",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "boolean-outcome",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "rights",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "rights",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "evidence-bytes",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "evidence-bytes",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "unsupported-psychic",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "unsupported-psychic",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "schema",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "schema",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "duplicate-json",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "duplicate-json",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "nonfinite-json",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "nonfinite-json",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "lifecycle-create",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "lifecycle-decision",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "lifecycle-f1",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "lifecycle-f2",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "lifecycle-f3",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "lifecycle-f4",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "lifecycle-e1",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "lifecycle-e2",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "lifecycle-e3",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "lifecycle-e4",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "lifecycle-report",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    }
+  ]
+}

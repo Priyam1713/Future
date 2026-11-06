@@ -1,0 +1,771 @@
+# Intuitive Prediction
+
+accepted — explicit rules and descriptive forecast error.
+
+```json
+{
+  "technique_id": 45,
+  "task": "baseline-compare",
+  "status": "accepted",
+  "schema_version": 1,
+  "profile_sha256": "9e744dcb6fcd6f8e4ce854c76cafadeae0d9d4e2fa24e77786646c6cf04bc113",
+  "request_sha256": "a3e57d5c9ade9923947a2985ac901c84397840836ff963e431307ddbf876db9b",
+  "source_manifest_sha256": "9a8e2cc686fc24f5f718ce0bdf55dd2ca488ac7be660b3791ea7e2e220619b98",
+  "source_freeze_sha256": "af680f87e165038875eb9214827885370ca3fcde91edcaebbe02c2c1e908bf1f",
+  "sources": [
+    {
+      "id": "intuitive-prediction-klein-publisher-v1",
+      "technique_id": 45,
+      "rank": 1,
+      "author": "Gary Klein; MIT Press",
+      "edition": "Sources of Power: How People Make Decisions, 20th Anniversary Edition; paperback ISBN9780262534291, 2017-09-15,354pp; ebook9780262343251,2017-09-08,354pp",
+      "url": "https://mitpress.mit.edu/9780262534291/sources-of-power/",
+      "locator": "Edition/ISBN/publication/description",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by authors/publisher or documentation owner. Public reading access is not a redistribution license. Original concise research notes and mathematical facts only; no source corpus, diagrams, book chapters or benchmark matrix bundled.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null,
+      "access": {
+        "status": null,
+        "resolved_url": null,
+        "notes": "Official metadata and description inspected through web rendering. Full2017chapters and1998pagination not inspected or equated."
+      }
+    },
+    {
+      "id": "intuitive-prediction-gut-publisher-v1",
+      "technique_id": 45,
+      "rank": 2,
+      "author": "Gerd Gigerenzer; Penguin Books",
+      "edition": "Gut Feelings; ebook ISBN9781101202418,2007-07-05,288pp; paperback9780143113768,2008-06-24,288pp",
+      "url": "https://www.penguinrandomhouse.com/books/298863/gut-feelings-by-gerd-gigerenzer/9781101202418/",
+      "locator": "Product details and format dates",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by authors/publisher or documentation owner. Public reading access is not a redistribution license. Original concise research notes and mathematical facts only; no source corpus, diagrams, book chapters or benchmark matrix bundled.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null,
+      "access": {
+        "status": null,
+        "resolved_url": null,
+        "notes": "Official metadata inspected. Look Inside exposed an image link, not readable book text in this session. Full chapters uninspected; algorithms sourced separately below. Inventory rank2 URL remains null."
+      }
+    },
+    {
+      "id": "intuitive-prediction-kahneman-klein-2009-v1",
+      "technique_id": 45,
+      "rank": 3,
+      "author": "Daniel Kahneman and Gary Klein",
+      "edition": "Conditions for Intuitive Expertise: A Failure to Disagree, American Psychologist64(6),515-526,September2009;DOI10.1037/a0016755;PMID19739881",
+      "url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/kahneman-klein-2009.pdf",
+      "locator": "pp515-516 RPD/fireground account;pp519-524 validity,learning,feedback and conclusions",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by authors/publisher or documentation owner. Public reading access is not a redistribution license. Original concise research notes and mathematical facts only; no source corpus, diagrams, book chapters or benchmark matrix bundled.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null,
+      "access": {
+        "status": null,
+        "resolved_url": null,
+        "notes": "Primary paper read in university-hosted12-page PDF web extraction. Original inventory PubMed URL returned footer-only rendering; no claim to a separately inspected PubMed abstract. PDF raw bytes not captured."
+      }
+    },
+    {
+      "id": "intuitive-prediction-klein-rpd-v1",
+      "technique_id": 45,
+      "rank": null,
+      "author": "Gary Klein",
+      "edition": "Recognition-Primed Decision Model, author website, undated",
+      "url": "https://www.gary-klein.com/rpd",
+      "locator": "RPD overview paragraphs",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by authors/publisher or documentation owner. Public reading access is not a redistribution license. Original concise research notes and mathematical facts only; no source corpus, diagrams, book chapters or benchmark matrix bundled.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null,
+      "access": {
+        "status": null,
+        "resolved_url": null,
+        "notes": "Author overview inspected. 1993chapter URL at macrocognition timed out in web and direct requests; ShadowBox full-volume mirror exceeded web size limit. No full1993chapter inspection or book-wide case coverage claimed."
+      }
+    },
+    {
+      "id": "intuitive-prediction-ttb-1996-v1",
+      "technique_id": 45,
+      "rank": null,
+      "author": "Gerd Gigerenzer and Daniel G. Goldstein",
+      "edition": "Reasoning the Fast and Frugal Way: Models of Bounded Rationality, Psychological Review103(4),650-669,1996;DOI10.1037/0033-295X.103.4.650",
+      "url": "https://web.mit.edu/curhan/www/docs/Articles/biases/Gigerenzer_Goldstein_Reasoning%20Fast%20and%20Frugal.pdf",
+      "locator": "pp652-654 Figures1-3,Steps1-5 and footnote1;pp654-655 environment;Appendix historical matrix",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by authors/publisher or documentation owner. Public reading access is not a redistribution license. Original concise research notes and mathematical facts only; no source corpus, diagrams, book chapters or benchmark matrix bundled.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null,
+      "access": {
+        "status": null,
+        "resolved_url": null,
+        "notes": "Primary20-page paper web extraction inspected, including algorithm and worked symbolic comparisons. No raw PDF byte snapshot retained; matrix existence inspected, not independently transcribed/validated."
+      }
+    },
+    {
+      "id": "intuitive-prediction-recognition-2002-v1",
+      "technique_id": 45,
+      "rank": null,
+      "author": "Daniel G. Goldstein and Gerd Gigerenzer",
+      "edition": "Models of Ecological Rationality: The Recognition Heuristic, Psychological Review109(1),75-90,2002;DOI10.1037//0033-295X.109.1.75",
+      "url": "https://cs.nyu.edu/~shasha/papers/RecognitionHeuristic.pdf",
+      "locator": "pp75-76 abstract,recognition rule,San Diego/San Antonio illustration and ecological direction",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by authors/publisher or documentation owner. Public reading access is not a redistribution license. Original concise research notes and mathematical facts only; no source corpus, diagrams, book chapters or benchmark matrix bundled.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null,
+      "access": {
+        "status": null,
+        "resolved_url": null,
+        "notes": "Primary PDF indexed text inspected through targeted search. Direct web open failed; only cited opening sections verified, not full experimental derivations or every appendix. Search crawl date is not publication date."
+      }
+    },
+    {
+      "id": "intuitive-prediction-proper-scores-2007-v1",
+      "technique_id": 45,
+      "rank": null,
+      "author": "Tilmann Gneiting and Adrian E. Raftery",
+      "edition": "Strictly Proper Scoring Rules, Prediction, and Estimation, JASA102(477),359-378,2007;DOI10.1198/016214506000001437",
+      "url": "https://sites.stat.washington.edu/people/raftery/Research/PDF/Gneiting2007jasa.pdf",
+      "locator": "p359 orientation/propriety;pp362-363 Examples1,3 and binary representation",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by authors/publisher or documentation owner. Public reading access is not a redistribution license. Original concise research notes and mathematical facts only; no source corpus, diagrams, book chapters or benchmark matrix bundled.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null,
+      "access": {
+        "status": null,
+        "resolved_url": null,
+        "notes": "Primary author-hosted20-page PDF web extraction inspected. Source uses maximized rewards; proposed loss conventions below explicitly reverse signs. Original Brier1950body not inspected; do not assert its pagination or exact original normalization."
+      }
+    },
+    {
+      "id": "intuitive-prediction-met-10-1-2-v1",
+      "technique_id": 45,
+      "rank": null,
+      "author": "Developmental Testbed Center; MET documentation authors",
+      "edition": "MET10.1.2 User Guide,AppendixC32.4,versioned documentation",
+      "url": "https://metplus.readthedocs.io/projects/met/en/main_v10.1/Users_Guide/appendixC.html",
+      "locator": "32.4.1-32.4.5 reliability,resolution,uncertainty,Brier/BSS;32.4.8,32.4.10,32.4.12-13 calibration/discrimination",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by authors/publisher or documentation owner. Public reading access is not a redistribution license. Original concise research notes and mathematical facts only; no source corpus, diagrams, book chapters or benchmark matrix bundled.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null,
+      "access": {
+        "status": null,
+        "resolved_url": null,
+        "notes": "Official implementation documentation formulas and explanations read. Reference only; no MET dependency or copied implementation introduced."
+      }
+    },
+    {
+      "id": "intuitive-prediction-sampling-2008-v1",
+      "technique_id": 45,
+      "rank": null,
+      "author": "A. Allen Bradley, Stuart S. Schwartz and Tempei Hashino",
+      "edition": "Sampling Uncertainty and Confidence Intervals for the Brier Score and Brier Skill Score,Weather and Forecasting23,992-1006,2008;DOI10.1175/2007WAF2007049.1",
+      "url": "https://journals.ametsoc.org/view/journals/wefo/23/5/2007waf2007049_1.xml",
+      "locator": "Publisher indexed abstract only",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by authors/publisher or documentation owner. Public reading access is not a redistribution license. Original concise research notes and mathematical facts only; no source corpus, diagrams, book chapters or benchmark matrix bundled.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null,
+      "access": {
+        "status": null,
+        "resolved_url": null,
+        "notes": "Primary publisher abstract inspected through search. Direct DOI/article open403; full derivation not inspected. Supports caution about sample size/event frequency only; no confidence-interval implementation licensed or verified here."
+      }
+    }
+  ],
+  "algorithm_profiles": {
+    "recognition": "goldstein-gigerenzer2002-recognition-subset-v1",
+    "take-the-best": "gigerenzer-goldstein1996-ttb-deterministic-v1"
+  },
+  "result": {
+    "plan": {
+      "study_id": "s1",
+      "created_at": "2026-11-09T00:00:00Z",
+      "domain": "toy",
+      "horizon": "one-day",
+      "event_definition": "Toy binary event definition v1",
+      "events": [
+        {
+          "event_id": "e1",
+          "dependency_group": "g1",
+          "question": "Toy outcome 1?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        },
+        {
+          "event_id": "e2",
+          "dependency_group": "g2",
+          "question": "Toy outcome 2?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        }
+      ],
+      "slots": [
+        {
+          "forecast_id": "f1",
+          "forecaster": "person1",
+          "event_id": "e1"
+        },
+        {
+          "forecast_id": "f2",
+          "forecaster": "person1",
+          "event_id": "e2"
+        }
+      ],
+      "baseline": {
+        "probability": "0.25",
+        "frozen_at": "2026-11-08T00:00:00Z",
+        "domain": "toy",
+        "horizon": "one-day",
+        "event_definition": "Toy binary event definition v1",
+        "training_start": "2026-11-01T00:00:00Z",
+        "training_end": "2026-11-07T00:00:00Z",
+        "training_outcomes": [
+          {
+            "event_id": "train0",
+            "outcome": 0
+          },
+          {
+            "event_id": "train1",
+            "outcome": 0
+          },
+          {
+            "event_id": "train2",
+            "outcome": 0
+          },
+          {
+            "event_id": "train3",
+            "outcome": 1
+          }
+        ],
+        "evidence": {
+          "path": "data/intuitive-prediction-assets/evidence.txt",
+          "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+          "holder": "Future synthetic fixture authors",
+          "permission": "Original synthetic text;redistribution permitted",
+          "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+        }
+      },
+      "privacy_consent": true
+    },
+    "decisions": [],
+    "forecasts": [
+      {
+        "slot": {
+          "forecast_id": "f1",
+          "forecaster": "person1",
+          "event_id": "e1"
+        },
+        "event": {
+          "event_id": "e1",
+          "dependency_group": "g1",
+          "question": "Toy outcome 1?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        },
+        "versions": [
+          {
+            "record": {
+              "forecast_id": "f1",
+              "at": "2026-11-10T00:00:00Z",
+              "probability": "0.1",
+              "outcome_known": false,
+              "confidence": "high",
+              "decision_id": null,
+              "notes": "Original synthetic forecast 1",
+              "parent_sha256": null,
+              "reason": "Original submission"
+            },
+            "sha256": "8d856d09e441c4c8fa4cc5f35d173593c3eb3e878dedccf50e9913dc2c427c91",
+            "sequence": 1,
+            "exclusion_reasons": []
+          }
+        ],
+        "selected_version_sha256": "8d856d09e441c4c8fa4cc5f35d173593c3eb3e878dedccf50e9913dc2c427c91",
+        "status": "resolved",
+        "resolution_history": [
+          {
+            "event_id": "e1",
+            "at": "2026-11-12T00:00:00Z",
+            "status": "resolved",
+            "outcome": 0,
+            "occurrence_at": "2026-11-11T00:00:00Z",
+            "publication_at": "2026-11-11T01:00:00Z",
+            "discovery_at": "2026-11-11T02:00:00Z",
+            "evidence": {
+              "path": "data/intuitive-prediction-assets/evidence.txt",
+              "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+              "holder": "Future synthetic fixture authors",
+              "permission": "Original synthetic text;redistribution permitted",
+              "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+            }
+          }
+        ],
+        "scored": true,
+        "exclusion_reasons": [],
+        "loss": {
+          "exact": "1/100",
+          "decimal": "0.010000000000"
+        },
+        "baseline_loss": {
+          "exact": "1/16",
+          "decimal": "0.062500000000"
+        }
+      },
+      {
+        "slot": {
+          "forecast_id": "f2",
+          "forecaster": "person1",
+          "event_id": "e2"
+        },
+        "event": {
+          "event_id": "e2",
+          "dependency_group": "g2",
+          "question": "Toy outcome 2?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        },
+        "versions": [
+          {
+            "record": {
+              "forecast_id": "f2",
+              "at": "2026-11-10T00:00:00Z",
+              "probability": "0.9",
+              "outcome_known": false,
+              "confidence": "high",
+              "decision_id": null,
+              "notes": "Original synthetic forecast 2",
+              "parent_sha256": null,
+              "reason": "Original submission"
+            },
+            "sha256": "f6d09687657ff144553c2504a33c9753a4986da337f710bb034b4b4492e7b445",
+            "sequence": 2,
+            "exclusion_reasons": []
+          }
+        ],
+        "selected_version_sha256": "f6d09687657ff144553c2504a33c9753a4986da337f710bb034b4b4492e7b445",
+        "status": "resolved",
+        "resolution_history": [
+          {
+            "event_id": "e2",
+            "at": "2026-11-12T00:00:00Z",
+            "status": "resolved",
+            "outcome": 1,
+            "occurrence_at": "2026-11-11T00:00:00Z",
+            "publication_at": "2026-11-11T01:00:00Z",
+            "discovery_at": "2026-11-11T02:00:00Z",
+            "evidence": {
+              "path": "data/intuitive-prediction-assets/evidence.txt",
+              "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+              "holder": "Future synthetic fixture authors",
+              "permission": "Original synthetic text;redistribution permitted",
+              "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+            }
+          }
+        ],
+        "scored": true,
+        "exclusion_reasons": [],
+        "loss": {
+          "exact": "1/100",
+          "decimal": "0.010000000000"
+        },
+        "baseline_loss": {
+          "exact": "9/16",
+          "decimal": "0.562500000000"
+        }
+      }
+    ],
+    "denominators": {
+      "planned": 2,
+      "submitted": 2,
+      "versions": 2,
+      "on_time_selected": 2,
+      "late_versions": 0,
+      "amendments": 0,
+      "resolved_and_scored": 2,
+      "unresolved": 0,
+      "disputed": 0,
+      "void": 0,
+      "missing_resolution_evidence": 0,
+      "excluded": 0,
+      "unique_events": 2,
+      "dependency_groups": 2,
+      "scored_unique_events": 2,
+      "scored_dependency_groups": 2
+    },
+    "denominator_units": "Slots for submission/status counts;versions for late/amendment counts. Repeated events/forecasters are dependent;no effective independent sample size estimated.",
+    "brier": {
+      "exact": "1/100",
+      "decimal": "0.010000000000"
+    },
+    "two_category_positive_quadratic": {
+      "exact": "1/50",
+      "decimal": "0.020000000000"
+    },
+    "calibration": [
+      {
+        "index": 0,
+        "lower": "0",
+        "upper": "1/10",
+        "upper_inclusive": false,
+        "count": 0,
+        "events": 0,
+        "mean_probability": null,
+        "observed_frequency": null,
+        "unscored_count": 0
+      },
+      {
+        "index": 1,
+        "lower": "1/10",
+        "upper": "1/5",
+        "upper_inclusive": false,
+        "count": 1,
+        "events": 0,
+        "mean_probability": {
+          "exact": "1/10",
+          "decimal": "0.100000000000"
+        },
+        "observed_frequency": {
+          "exact": "0",
+          "decimal": "0.000000000000"
+        },
+        "unscored_count": 0
+      },
+      {
+        "index": 2,
+        "lower": "1/5",
+        "upper": "3/10",
+        "upper_inclusive": false,
+        "count": 0,
+        "events": 0,
+        "mean_probability": null,
+        "observed_frequency": null,
+        "unscored_count": 0
+      },
+      {
+        "index": 3,
+        "lower": "3/10",
+        "upper": "2/5",
+        "upper_inclusive": false,
+        "count": 0,
+        "events": 0,
+        "mean_probability": null,
+        "observed_frequency": null,
+        "unscored_count": 0
+      },
+      {
+        "index": 4,
+        "lower": "2/5",
+        "upper": "1/2",
+        "upper_inclusive": false,
+        "count": 0,
+        "events": 0,
+        "mean_probability": null,
+        "observed_frequency": null,
+        "unscored_count": 0
+      },
+      {
+        "index": 5,
+        "lower": "1/2",
+        "upper": "3/5",
+        "upper_inclusive": false,
+        "count": 0,
+        "events": 0,
+        "mean_probability": null,
+        "observed_frequency": null,
+        "unscored_count": 0
+      },
+      {
+        "index": 6,
+        "lower": "3/5",
+        "upper": "7/10",
+        "upper_inclusive": false,
+        "count": 0,
+        "events": 0,
+        "mean_probability": null,
+        "observed_frequency": null,
+        "unscored_count": 0
+      },
+      {
+        "index": 7,
+        "lower": "7/10",
+        "upper": "4/5",
+        "upper_inclusive": false,
+        "count": 0,
+        "events": 0,
+        "mean_probability": null,
+        "observed_frequency": null,
+        "unscored_count": 0
+      },
+      {
+        "index": 8,
+        "lower": "4/5",
+        "upper": "9/10",
+        "upper_inclusive": false,
+        "count": 0,
+        "events": 0,
+        "mean_probability": null,
+        "observed_frequency": null,
+        "unscored_count": 0
+      },
+      {
+        "index": 9,
+        "lower": "9/10",
+        "upper": "1",
+        "upper_inclusive": true,
+        "count": 1,
+        "events": 1,
+        "mean_probability": {
+          "exact": "9/10",
+          "decimal": "0.900000000000"
+        },
+        "observed_frequency": {
+          "exact": "1",
+          "decimal": "1.000000000000"
+        },
+        "unscored_count": 0
+      }
+    ],
+    "baseline": {
+      "frozen": {
+        "probability": "0.25",
+        "frozen_at": "2026-11-08T00:00:00Z",
+        "domain": "toy",
+        "horizon": "one-day",
+        "event_definition": "Toy binary event definition v1",
+        "training_start": "2026-11-01T00:00:00Z",
+        "training_end": "2026-11-07T00:00:00Z",
+        "training_outcomes": [
+          {
+            "event_id": "train0",
+            "outcome": 0
+          },
+          {
+            "event_id": "train1",
+            "outcome": 0
+          },
+          {
+            "event_id": "train2",
+            "outcome": 0
+          },
+          {
+            "event_id": "train3",
+            "outcome": 1
+          }
+        ],
+        "evidence": {
+          "path": "data/intuitive-prediction-assets/evidence.txt",
+          "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+          "holder": "Future synthetic fixture authors",
+          "permission": "Original synthetic text;redistribution permitted",
+          "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+        }
+      },
+      "brier": {
+        "exact": "5/16",
+        "decimal": "0.312500000000"
+      },
+      "paired_absolute_improvement": {
+        "exact": "121/400",
+        "decimal": "0.302500000000"
+      },
+      "qualification": "Same selected resolved pairs;training evidence/IDs/time/domain checks are declarations plus local byte checks;external completeness not attested."
+    },
+    "warnings": [
+      "Descriptive sample only;N does not establish calibration or expertise.",
+      "No empirical human benchmark validated.",
+      "Local owner can rewrite history;timestamps,knowledge and identity are declarations.",
+      "Rare-event base rates can produce low loss without individualized skill."
+    ]
+  },
+  "result_sha256": "c4c4bd38b1c40b3900624b113892b94439201ba0951a19d64586e6fb295374d5",
+  "ledger": {
+    "schema_version": 1,
+    "profile_sha256": "9e744dcb6fcd6f8e4ce854c76cafadeae0d9d4e2fa24e77786646c6cf04bc113",
+    "plan": {
+      "study_id": "s1",
+      "created_at": "2026-11-09T00:00:00Z",
+      "domain": "toy",
+      "horizon": "one-day",
+      "event_definition": "Toy binary event definition v1",
+      "events": [
+        {
+          "event_id": "e1",
+          "dependency_group": "g1",
+          "question": "Toy outcome 1?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        },
+        {
+          "event_id": "e2",
+          "dependency_group": "g2",
+          "question": "Toy outcome 2?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        }
+      ],
+      "slots": [
+        {
+          "forecast_id": "f1",
+          "forecaster": "person1",
+          "event_id": "e1"
+        },
+        {
+          "forecast_id": "f2",
+          "forecaster": "person1",
+          "event_id": "e2"
+        }
+      ],
+      "baseline": {
+        "probability": "0.25",
+        "frozen_at": "2026-11-08T00:00:00Z",
+        "domain": "toy",
+        "horizon": "one-day",
+        "event_definition": "Toy binary event definition v1",
+        "training_start": "2026-11-01T00:00:00Z",
+        "training_end": "2026-11-07T00:00:00Z",
+        "training_outcomes": [
+          {
+            "event_id": "train0",
+            "outcome": 0
+          },
+          {
+            "event_id": "train1",
+            "outcome": 0
+          },
+          {
+            "event_id": "train2",
+            "outcome": 0
+          },
+          {
+            "event_id": "train3",
+            "outcome": 1
+          }
+        ],
+        "evidence": {
+          "path": "data/intuitive-prediction-assets/evidence.txt",
+          "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+          "holder": "Future synthetic fixture authors",
+          "permission": "Original synthetic text;redistribution permitted",
+          "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+        }
+      },
+      "privacy_consent": true
+    },
+    "plan_sha256": "02c8c51010f0c0efa95241413b1eb7e07be33f6cb20630efde6cc70c19a8b347",
+    "actions": [
+      {
+        "sequence": 1,
+        "kind": "forecast",
+        "payload": {
+          "forecast_id": "f1",
+          "at": "2026-11-10T00:00:00Z",
+          "probability": "0.1",
+          "outcome_known": false,
+          "confidence": "high",
+          "decision_id": null,
+          "notes": "Original synthetic forecast 1",
+          "parent_sha256": null,
+          "reason": "Original submission"
+        },
+        "parent_sha256": "02c8c51010f0c0efa95241413b1eb7e07be33f6cb20630efde6cc70c19a8b347",
+        "sha256": "bd7f98267ffe6f9e3dd941d6f81e5e58067a62487f9307c2844775620a6bcc03"
+      },
+      {
+        "sequence": 2,
+        "kind": "forecast",
+        "payload": {
+          "forecast_id": "f2",
+          "at": "2026-11-10T00:00:00Z",
+          "probability": "0.9",
+          "outcome_known": false,
+          "confidence": "high",
+          "decision_id": null,
+          "notes": "Original synthetic forecast 2",
+          "parent_sha256": null,
+          "reason": "Original submission"
+        },
+        "parent_sha256": "bd7f98267ffe6f9e3dd941d6f81e5e58067a62487f9307c2844775620a6bcc03",
+        "sha256": "f0551fedd0201ce6328272f51cfff7d13d31f903d605b66173db1c6d5ab53a19"
+      },
+      {
+        "sequence": 3,
+        "kind": "resolve",
+        "payload": {
+          "event_id": "e1",
+          "at": "2026-11-12T00:00:00Z",
+          "status": "resolved",
+          "outcome": 0,
+          "occurrence_at": "2026-11-11T00:00:00Z",
+          "publication_at": "2026-11-11T01:00:00Z",
+          "discovery_at": "2026-11-11T02:00:00Z",
+          "evidence": {
+            "path": "data/intuitive-prediction-assets/evidence.txt",
+            "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+            "holder": "Future synthetic fixture authors",
+            "permission": "Original synthetic text;redistribution permitted",
+            "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+          }
+        },
+        "parent_sha256": "f0551fedd0201ce6328272f51cfff7d13d31f903d605b66173db1c6d5ab53a19",
+        "sha256": "0642ef4bb965398d84a93b88749a337ac9e5fbeed53335623acc0b22aa60114c"
+      },
+      {
+        "sequence": 4,
+        "kind": "resolve",
+        "payload": {
+          "event_id": "e2",
+          "at": "2026-11-12T00:00:00Z",
+          "status": "resolved",
+          "outcome": 1,
+          "occurrence_at": "2026-11-11T00:00:00Z",
+          "publication_at": "2026-11-11T01:00:00Z",
+          "discovery_at": "2026-11-11T02:00:00Z",
+          "evidence": {
+            "path": "data/intuitive-prediction-assets/evidence.txt",
+            "sha256": "3098f9b13cdf9ef3be8b166e12b8a1279330a149ce2265e45618884d6549253f",
+            "holder": "Future synthetic fixture authors",
+            "permission": "Original synthetic text;redistribution permitted",
+            "provenance": "Independently authored software toy evidence,not a measured human benchmark"
+          }
+        },
+        "parent_sha256": "0642ef4bb965398d84a93b88749a337ac9e5fbeed53335623acc0b22aa60114c",
+        "sha256": "fd80c7f5c89c975c48d059df5f4de3cf3abe9a93d7d620a227d47993be072aea"
+      }
+    ]
+  },
+  "ledger_sha256": "d3275900b1c75aed65d7104be12f208f77cffc0ab5088bb3312036e58b6eb5e6",
+  "interpretation_layers": {
+    "direct": "Named inspected algorithm and mathematical rules",
+    "user": "Recognition,cues,probabilities,context,times,outcomes,rights declarations",
+    "editorial": "Abstention,tie,chronology,selection,calibration conventions",
+    "unsupported": "Expert,psychic,universal-skill or optimal-action certification"
+  },
+  "limitations": [
+    "No automatic choice-to-probability conversion",
+    "RPD/checklist and domain conditions are user declarations,not an expert classifier",
+    "Calibration is descriptive,not discrimination or proof of skill",
+    "Dependence groups reported,never independent trial certification",
+    "No qualifying empirical human benchmark acquired",
+    "No probability,p-value,confidence interval or paranormal mechanism inferred"
+  ]
+}
+```

@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 45 reproducible CLI reports — 2026-11-07
+-35accepted/18rejected JSON/Markdown pairs and121CLI cases pass,including a complete CLI-created linked decision/forecast/resolution lifecycle. Exact5/16Brier,late amendments,dependent forecasters,rights/schema failures and baseline leakage demonstrated.
+-README documents input schemas,decimal strings,algorithm distinctions,privacy and bounded scope. Full inherited acceptance running;not yet Ready.
+
 ## Technique 45 independent verification — 2026-11-07
 - All15families pass:9cue pairs/4discriminating,729exhaustive three-cue traces,42actual-ledger rational score cases,3chronology boundaries,source worked cases,original hashes,calibration N2/N20 and121/400held-out improvement.
 - Expected values come from pre-engine frozen tables/rational constants and independent arithmetic;no measured human skill claim. Full regression and report replay follow.

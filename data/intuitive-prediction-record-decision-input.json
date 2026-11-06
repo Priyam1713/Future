@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "task": "decision-record",
+  "ledger": {
+    "schema_version": 1,
+    "profile_sha256": "9e744dcb6fcd6f8e4ce854c76cafadeae0d9d4e2fa24e77786646c6cf04bc113",
+    "plan": {
+      "study_id": "s1",
+      "created_at": "2026-11-09T00:00:00Z",
+      "domain": "toy",
+      "horizon": "one-day",
+      "event_definition": "Toy binary event definition v1",
+      "events": [
+        {
+          "event_id": "e1",
+          "dependency_group": "g1",
+          "question": "Toy outcome 1?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        },
+        {
+          "event_id": "e2",
+          "dependency_group": "g2",
+          "question": "Toy outcome 2?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        },
+        {
+          "event_id": "e3",
+          "dependency_group": "g3",
+          "question": "Toy outcome 3?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        },
+        {
+          "event_id": "e4",
+          "dependency_group": "g4",
+          "question": "Toy outcome 4?",
+          "cutoff": "2026-11-10T23:00:00Z",
+          "window_start": "2026-11-11T00:00:00Z",
+          "window_end": "2026-11-12T00:00:00Z"
+        }
+      ],
+      "slots": [
+        {
+          "forecast_id": "f1",
+          "forecaster": "person1",
+          "event_id": "e1"
+        },
+        {
+          "forecast_id": "f2",
+          "forecaster": "person1",
+          "event_id": "e2"
+        },
+        {
+          "forecast_id": "f3",
+          "forecaster": "person1",
+          "event_id": "e3"
+        },
+        {
+          "forecast_id": "f4",
+          "forecaster": "person1",
+          "event_id": "e4"
+        }
+      ],
+      "baseline": null,
+      "privacy_consent": true
+    },
+    "plan_sha256": "4ad1637a0932934381a93829e5b78a354f2dd059d80387833b3f987b937fc147",
+    "actions": []
+  },
+  "decision": {
+    "decision_id": "d1",
+    "profile": "goldstein-gigerenzer2002-recognition-subset-v1",
+    "alternatives": [
+      "A",
+      "B"
+    ],
+    "criterion": "Toy magnitude",
+    "criterion_direction": "higher",
+    "domain": "toy",
+    "observed_at": "2026-11-10T00:00:00Z",
+    "recognition": [
+      "recognized",
+      "unrecognized"
+    ],
+    "ecological_direction": "positive",
+    "direction_provenance": "Declared toy association",
+    "training_period": "Synthetic earlier period",
+    "cues": [],
+    "tie_policy": "abstain",
+    "context": {
+      "regularity": "unknown",
+      "cue_validity": "unknown",
+      "feedback_quality": "unknown",
+      "feedback_latency": "unknown",
+      "practice_history": "Synthetic fixture only",
+      "environment_changed": false
+    },
+    "confidence": "very confident",
+    "notes": "Raw é  narrative\n"
+  }
+}
