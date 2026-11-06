@@ -1,0 +1,508 @@
+{
+  "version": 1,
+  "technique_id": 45,
+  "name": "Intuitive Prediction",
+  "date": "2026-11-07",
+  "status": "Core v1 Ready — Explicit Heuristic Decision and Binary Forecast Evaluation Scope",
+  "algorithm_profiles": {
+    "recognition": "goldstein-gigerenzer2002-recognition-subset-v1",
+    "take-the-best": "gigerenzer-goldstein1996-ttb-deterministic-v1"
+  },
+  "profile_sha256": "9e744dcb6fcd6f8e4ce854c76cafadeae0d9d4e2fa24e77786646c6cf04bc113",
+  "fixture_sha256": "280a3b7619df57728d9bb47cc809741fc007a805d80cfa11614282ee494b2bc4",
+  "source_commit": "df50b1d",
+  "fixture_commit": "d212583",
+  "engine_commit": "091ac0a",
+  "verification_commit": "68c51c6",
+  "report_commit": "ddeec75",
+  "catalog_provenance_commit": "5033f78",
+  "acceptance_commit": "e619367",
+  "profile_record": "knowledge/intuitive_prediction_profile_v1.json",
+  "source_freeze": "knowledge/intuitive_prediction_source_freeze_v1.json",
+  "source_registry": "knowledge/intuitive_prediction_sources.json",
+  "ranked_sources_unchanged": [
+    [
+      45,
+      "Intuitive Prediction",
+      1,
+      "Gary Klein",
+      "Sources of Power",
+      "Recognition-primed decision model",
+      "https://mitpress.mit.edu/9780262534291/sources-of-power/",
+      "Publisher / purchase",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      45,
+      "Intuitive Prediction",
+      2,
+      "Gerd Gigerenzer",
+      "Gut Feelings",
+      "Heuristics and recognition",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      45,
+      "Intuitive Prediction",
+      3,
+      "Daniel Kahneman and Gary Klein",
+      "Conditions for Intuitive Expertise",
+      "Evidence-based boundary conditions",
+      "https://pubmed.ncbi.nlm.nih.gov/19739881/",
+      "Research abstract",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows_unchanged": [
+    [
+      45,
+      "Intuitive Prediction",
+      "Recognition-primed judgment",
+      "Gut Feelings",
+      "Sources of Power",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      45,
+      "Intuitive Prediction",
+      "fast-and-frugal heuristics",
+      "Gut Feelings",
+      "Conditions for Intuitive Expertise",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      45,
+      "Intuitive Prediction",
+      "expert intuition",
+      "Conditions for Intuitive Expertise",
+      "Gut Feelings",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      45,
+      "Intuitive Prediction",
+      "gut feeling",
+      "Gut Feelings",
+      "Conditions for Intuitive Expertise",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_edition_limits": [
+    "2017Klein anniversary edition metadata is verified; actual book chapters are not. No1998page references transferred.",
+    "Gut Feelings2007ebook and2008paperback are separate records; neither full text inspected. Publisher promotional accuracy claims are not empirical validation.",
+    "1993RPDchapter unavailable within bounded research; author overview and coauthored2009paper are actual inspected RPD witnesses. No complete typical/atypical branch reconstruction certified.",
+    "Primary1996algorithm and2002opening recognition rule are sufficient for a bounded explicit heuristic proposal; broader2002less-is-more derivations deferred.",
+    "All source access is facts_only; null snapshot fields mean no raw-byte hash attestation, not missing values inferred from a redirect. No copyrighted source assets or participant data committed."
+  ],
+  "schema": {
+    "decision": [
+      "decision_id",
+      "profile",
+      "alternatives",
+      "criterion",
+      "criterion_direction",
+      "domain",
+      "observed_at",
+      "recognition",
+      "ecological_direction",
+      "direction_provenance",
+      "training_period",
+      "cues",
+      "tie_policy",
+      "context",
+      "confidence",
+      "notes"
+    ],
+    "cue": [
+      "cue_id",
+      "values",
+      "validity",
+      "rank",
+      "provenance",
+      "orientation",
+      "training_period"
+    ],
+    "context": [
+      "regularity",
+      "cue_validity",
+      "feedback_quality",
+      "feedback_latency",
+      "practice_history",
+      "environment_changed"
+    ],
+    "plan": [
+      "study_id",
+      "created_at",
+      "domain",
+      "horizon",
+      "event_definition",
+      "events",
+      "slots",
+      "baseline",
+      "privacy_consent"
+    ],
+    "event": [
+      "event_id",
+      "dependency_group",
+      "question",
+      "cutoff",
+      "window_start",
+      "window_end"
+    ],
+    "slot": [
+      "forecast_id",
+      "forecaster",
+      "event_id"
+    ],
+    "forecast": [
+      "forecast_id",
+      "at",
+      "probability",
+      "outcome_known",
+      "confidence",
+      "decision_id",
+      "notes",
+      "parent_sha256",
+      "reason"
+    ],
+    "resolution": [
+      "event_id",
+      "at",
+      "status",
+      "outcome",
+      "occurrence_at",
+      "publication_at",
+      "discovery_at",
+      "evidence"
+    ],
+    "evidence": [
+      "path",
+      "sha256",
+      "holder",
+      "permission",
+      "provenance"
+    ],
+    "baseline": [
+      "probability",
+      "frozen_at",
+      "domain",
+      "horizon",
+      "event_definition",
+      "training_start",
+      "training_end",
+      "training_outcomes",
+      "evidence"
+    ],
+    "training_outcome": [
+      "event_id",
+      "outcome"
+    ],
+    "ledger": [
+      "schema_version",
+      "profile_sha256",
+      "plan",
+      "plan_sha256",
+      "actions"
+    ],
+    "action": [
+      "sequence",
+      "kind",
+      "payload",
+      "parent_sha256",
+      "sha256"
+    ]
+  },
+  "recognition": "2002isolated rule; one recognized/one unrecognized,declared positive or negative association; lower criterion inverts explicit higher comparison. Unknown/both/neither abstain.",
+  "take_the_best": "1996recognition precedence requires positive ecological direction and higher criterion. Both recognized: fixed cue order; positive versus negative/unknown discriminates,negative versus unknown does not. Source random branches replaced by editorial abstention. No negative-recognition import from2002.",
+  "cue_ranking": "Cue validities decimal strings[.5,1] with positive orientation; supplied list must descend in validity and ascend integer rank. Equal validities require tie_policy=frozen_order,otherwise abstain before search. Provenance/training periods mandatory. No learning/reordering.",
+  "probability": "Exact plain decimal string 0..1,up to100digits and100fractional places;no exponents,spaces,leading+,booleans orJSONnumbers. Fraction arithmetic. Output reduced rational string and rounded12-place decimal using HALF_EVEN.",
+  "chronology": "Cutoff inclusive; forecast original/amendment timestamp must precede actual occurrence strictly,knowledge false. Original at<=subsequent amendment and global action time. Resolution at>=occurrence/publication/discovery;unknown times stay unknown. Window closed,occurrence must be inside. Publication/discovery are distinct and do not substitute for occurrence.",
+  "version_selection": "Select latest temporally eligible version per planned slot/forecaster/event,horizon fixed by plan;equal-time versions resolved by append sequence. Late/known-outcome amendments retained/excluded and cannot displace eligible original. Event definitions/slots/baseline frozen at create;one slot per forecaster/event.",
+  "evidence_policy": "Resolved requires local bytes matching SHA256 plus holder,permission,provenance. Missing evidence retained/unscored. Evidence bytes checked on every replay;no asset bytes exported. Unresolved/disputed/void unscored.",
+  "calibration": "Ten bins[0,.1),...,[.9,1],using exact submitted probabilities,no midpoint replacement;empty frequencies null. Per-bin unscored selected counts;always N. No decomposition/inference.",
+  "baseline": "Optional constant training prevalence frozen before plan;training ends before freeze;distinct event IDs,matching domain,horizon,event definition,verified local evidence;probability must equal mean training outcomes. No evaluation IDs in training. Same eligible resolved pairs,paired loss difference only;BSS/logloss deferred.",
+  "record_limits": "Local hash chain detects mismatch against retained root only;owner may rewrite entire ledger. Identity,clock,knowledge,training validity and rights remain declarations;no trusted timestamp or empirical skill certification.",
+  "configuration_matrix": {
+    "supported": [
+      "Named deterministic recognition and1996TTB subset",
+      "Strict manual decimal forecasts,version history,chronology and evidence checks",
+      "Exact binary Brier loss,ten-bin calibration,held-out constant-baseline paired difference",
+      "Human RPD/context reference"
+    ],
+    "experimental": [
+      "Empirical expertise and cross-domain skill comparisons",
+      "Source complete stochastic reproduction"
+    ],
+    "unsupported": [
+      "Optimal RPD action selector",
+      "Automatic cue validity learning",
+      "Log loss,BSS,decomposition or inferential significance",
+      "Psychic/neurological diagnosis or expert certification",
+      "Unlicensed historical data corpus"
+    ]
+  },
+  "limitations": [
+    "No automatic choice-to-probability conversion",
+    "RPD/checklist and domain conditions are user declarations,not an expert classifier",
+    "Calibration is descriptive,not discrimination or proof of skill",
+    "Dependence groups reported,never independent trial certification",
+    "No qualifying empirical human benchmark acquired",
+    "No probability,p-value,confidence interval or paranormal mechanism inferred"
+  ],
+  "backlog": {
+    "P1": [
+      "Legitimate complete2017Klein and Gut Feelings chapter inspection and1993RPDtypical/atypical diagrams/cases",
+      "Independently reproduce broader2002recognition derivations and conditional less-is-more evidence",
+      "License/transcribe/check historical or new held-out benchmark with domain-specific cue validity",
+      "Review protocol/cutoff,dependencies,small-N/rare-event warnings and legitimate empirical comparison",
+      "Verify log loss,infinity serialization,BSSzero denominator and optional exact-category decomposition before adding"
+    ],
+    "P2": [
+      "Preregistered domain-specific human expert/novice studies with independent outcomes",
+      "Separately validated statistical inference and dependent-data models",
+      "External timestamp witnesses and accessible richer elicitation",
+      "More heuristic families only with inspected algorithms and independent fixtures"
+    ]
+  },
+  "acceptance": {
+    "passed": true,
+    "date": "2026-11-07",
+    "tests": 1354,
+    "inherited_tests": 1274,
+    "new_tests": 80,
+    "cli_cases": 1721,
+    "inherited_cli_cases": 1600,
+    "new_cli_cases": 121,
+    "independent_verifiers": 26,
+    "inherited_verifiers": 25,
+    "new_verifiers": 1,
+    "procedural_families": 15,
+    "pre_engine_files": 2249,
+    "protected_files": 2245,
+    "changed_protected_files": [],
+    "allowed_existing_edits": [
+      "PROGRESS.md",
+      "knowledge/gaps.json",
+      "README.md",
+      "future/__main__.py"
+    ],
+    "source_registry": {
+      "references_checked_twice": 465,
+      "unique": 310,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "strict_json_files": 1600,
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    },
+    "inventory_preserved": true,
+    "other59gap_entries_unchanged": true,
+    "verification": {
+      "passed": true,
+      "profile_sha256": "9e744dcb6fcd6f8e4ce854c76cafadeae0d9d4e2fa24e77786646c6cf04bc113",
+      "fixture_sha256": "280a3b7619df57728d9bb47cc809741fc007a805d80cfa11614282ee494b2bc4",
+      "fixture_commit": "d212583",
+      "families": [
+        {
+          "id": "recognition-choice",
+          "passed": true,
+          "checks": 8
+        },
+        {
+          "id": "source-worked-ttb",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "search-stop",
+          "passed": true,
+          "checks": 729
+        },
+        {
+          "id": "missing-cues",
+          "passed": true,
+          "checks": 9
+        },
+        {
+          "id": "ties-abstention",
+          "passed": true,
+          "checks": 3
+        },
+        {
+          "id": "invalid-direction",
+          "passed": true,
+          "checks": 4
+        },
+        {
+          "id": "probability-boundaries",
+          "passed": true,
+          "checks": 51
+        },
+        {
+          "id": "exact-brier",
+          "passed": true,
+          "checks": 6
+        },
+        {
+          "id": "unresolved-denominator",
+          "passed": true,
+          "checks": 3
+        },
+        {
+          "id": "forecast-versions",
+          "passed": true,
+          "checks": 6
+        },
+        {
+          "id": "calibration-small-N",
+          "passed": true,
+          "checks": 4
+        },
+        {
+          "id": "baseline-heldout",
+          "passed": true,
+          "checks": 5
+        },
+        {
+          "id": "confidence-performance",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "nonstationary-domain",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "replay-rights-separation",
+          "passed": true,
+          "checks": 4
+        }
+      ],
+      "ordered_cue_pairs": 9,
+      "discriminating_pairs": 4,
+      "exhaustive_three_cue_cases": 729,
+      "frozen_rational_ledger_scores": 42,
+      "chronology_cases": 3,
+      "source_worked_examples": 2,
+      "original_hashes": 4,
+      "baseline_known_answer": "121/400",
+      "empirical_human_validation": false,
+      "method": "Frozen pre-engine tables/rational constants;independent SHA/Fraction arithmetic;production only supplies actual results,never expected values."
+    },
+    "accepted_pairs": 35,
+    "rejected_pairs": 18,
+    "complete_cli_lifecycle": true,
+    "exact_replay": true,
+    "source_rights": "9facts-only sources;original synthetic evidence;no copied PDFs/book bodies/historical matrix or private participant data.",
+    "subprocess_evidence": "data/intuitive-prediction-acceptance-checks.json",
+    "dependency_audit": true,
+    "pip_check": true,
+    "diff_check": true,
+    "empirical_human_validation": false
+  },
+  "acceptance_evidence": "data/intuitive-prediction-regression.json",
+  "subprocess_evidence": "data/intuitive-prediction-acceptance-checks.json",
+  "current_code_unit_evidence": "data/intuitive-prediction-current-unit.json",
+  "acceptance_criteria": [
+    {
+      "id": 1,
+      "criterion": "Source-specific recognition decisions",
+      "passed": true
+    },
+    {
+      "id": 2,
+      "criterion": "1996TTB search/stop",
+      "passed": true
+    },
+    {
+      "id": 3,
+      "criterion": "Missing cues/ties/abstention",
+      "passed": true
+    },
+    {
+      "id": 4,
+      "criterion": "Transparent decision trace",
+      "passed": true
+    },
+    {
+      "id": 5,
+      "criterion": "No inferred choice probabilities",
+      "passed": true
+    },
+    {
+      "id": 6,
+      "criterion": "Strict probability recording/resolution",
+      "passed": true
+    },
+    {
+      "id": 7,
+      "criterion": "Exact independently verified Brier",
+      "passed": true
+    },
+    {
+      "id": 8,
+      "criterion": "Calibration/N0",
+      "passed": true
+    },
+    {
+      "id": 9,
+      "criterion": "Version/denominator preservation",
+      "passed": true
+    },
+    {
+      "id": 10,
+      "criterion": "Frozen held-out baseline",
+      "passed": true
+    },
+    {
+      "id": 11,
+      "criterion": "Domain/feedback limits",
+      "passed": true
+    },
+    {
+      "id": 12,
+      "criterion": "All15independent families",
+      "passed": true
+    },
+    {
+      "id": 13,
+      "criterion": "Full regression/report replay",
+      "passed": true
+    },
+    {
+      "id": 14,
+      "criterion": "No expertise/paranormal certification",
+      "passed": true
+    }
+  ],
+  "replay": {
+    "accepted_pairs": 35,
+    "rejected_pairs": 18,
+    "cli_cases": 121,
+    "demo": "data/intuitive-prediction-demo.json",
+    "command": "python -m scripts.smoke_intuitive_prediction_core"
+  },
+  "transition": "After this closure is committed,pushed and clean0/0 observed,audit46Deja Reve only;do not implement46 or audit49.47/48remain excluded."
+}

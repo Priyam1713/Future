@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 45 Core v1 closure — 2026-11-07
+-**Core v1 Ready — Explicit Heuristic Decision and Binary Forecast Evaluation Scope**. Separate2002recognition/1996TTB deterministic profiles,transparent abstention/traces,exact Brier/calibration,immutable forecast versions and held-out baseline checks;no expertise/psychic certification.
+-1354tests,1721CLI,26verifiers;15independent families,729three-cue traces,42rational ledger scores,35accepted/18rejected replays andcomplete linked lifecycle pass.2245protected prior artifacts unchanged;taxonomy/ranks/variations/othergaps preserved.
+-Source df50b1d,fixtures d212583,engine091ac0a,verification68c51c6,reportsddeec75;acceptance,rights,scope andP1/P2 in knowledge/intuitive_prediction_core_v1.json. Commit/pushclosure andobserve clean0/0 before46auditonly.
+
 ## Technique 45 full acceptance — 2026-11-07
 -Current-code1354tests(1274+80),1721CLI(1600+121),26verifiers(25+1) pass;all15independent families and35accepted/18rejected replays pluscomplete linked CLI lifecycle pass.
 -2249-file baseline:2245protected unchanged;4explicit interface/history edits.465source references/310unique registeredtwice;strictJSON,taxonomy,other59gaps,dependency/pip/diff checks pass. Acceptance evidence recorded;bounded closure follows.
