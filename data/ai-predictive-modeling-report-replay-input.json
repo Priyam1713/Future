@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+  "profile_version": 1,
+  "task": "report",
+  "request": {
+    "schema_version": 1,
+    "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+    "profile_version": 1,
+    "task": "metrics",
+    "scoring": {
+      "training": [
+        "1",
+        "2",
+        "3"
+      ],
+      "actual": [
+        "2",
+        "2"
+      ],
+      "predictions": [
+        "1",
+        "4"
+      ],
+      "seasonal_period": 1
+    }
+  }
+}

@@ -1702,3 +1702,86 @@ include all16audit families,648conservative declaration combinations and11fixed
 chronology constants. These checks establish bounded computational behavior;
 they are not empirical or clinical validation. Release evidence and P1/P2 limits
 are in `knowledge/deja_reve_core_v1.json`.
+
+
+## AI Predictive Modeling (#49)
+
+The offline `fpp3-noaa-monthly-rolling-origin-baselines-v1` workbench supports
+seven fixed CPU configurations: seasonal naive m12, naive, drift, mean, and SES
+with alpha0.2/0.5/0.8, initialized at the first training observation. SES consumes
+subsequent observations in order;it does not optimize alpha or fit an ETS
+predictive distribution. ARIMA,trees,neural models,Chronos inference and automatic
+prediction intervals remain outside this release.
+
+```powershell
+python -m future ai-predictive-modeling data/ai-predictive-modeling-drift-input.json
+python -m future ai-predictive-modeling data/ai-predictive-modeling-rolling-input.json --format markdown
+python -m future ai-predictive-modeling data/ai-predictive-modeling-noaa-benchmark-input.json --format markdown
+python -m future ai-predictive-modeling data/ai-predictive-modeling-source-distribution-score-input.json
+python -m future ai-predictive-modeling data/ai-predictive-modeling-alpha-input.json
+```
+
+The last command is an intentional rejected fixed-alpha request (exit2).
+JSON requests specify `schema_version:1`,the exact `profile`/`profile_version`,
+and `task`: `reference`, `forecast`, `evaluate`, `benchmark`, `metrics`,
+`score-distribution`, or `report`. `report` takes a saved original request and
+recomputes the same deterministic result. The saved examples define the strict
+schemas. Generic datasets accept multiple series with unique IDs,complete
+ordered monthly grids,units,rights/provenance and explicit availability/vintage
+information or unknown status. Values are finite plain decimal strings;null
+marks missing data. A supplied canonical dataset hash must match all metadata
+and observations. Manual seasonal-naive periods use explicit IDs such as
+`seasonal_naive_m4`;only m12 enters the frozen NOAA benchmark.
+
+Every fit receives only its origin's training prefix. Missing training values
+fail that candidate/origin;missing outcomes remain unscored. Every planned cell
+and failure is retained. Validation selects lowest macro per-series MAE,with
+exact ties resolved by frozen order and complete forecast coverage required.
+The selected configuration stays fixed for test;all-candidate test scores are
+reported as diagnostics. Macro weights series equally;micro weights cells
+ equally,so they coincide for the single NOAA series. Forecast windows overlap;
+300cells per model/partition represent36distinct outcome months.
+
+Decimal input is converted directly to exact Fractions. Output preserves exact
+rational values plus12-place HALF_EVEN decimal displays. RMSE retains its exact
+rational radicand and uses an80-digit Decimal square root. Bias is actual minus
+forecast. MASE averages absolute errors divided by each origin's training-only
+seasonal scale,with separate defined-scale counts. Paired seasonal-naive MAE
+differences/ratios use common eligible cells. Empty or zero denominators produce
+null with a reason,never NaN/Infinity or an invented perfect score. Optional
+absolute-denominator sMAPE is a manual diagnostic limited to20scored pairs;
+benchmark aggregates omit it to avoid impractical exact denominator growth.
+This convention differs from FPP3's signed denominator. Manual quantile scoring
+reports ordinary pinball and FPP3 twice-pinball separately;manual central
+interval scores use inclusive endpoint coverage. These functions do not generate
+model prediction intervals. WIS/CRPS and empirical calibration remain deferred.
+
+The pinned NOAA subset contains288months from2000-01through2023-12. The protocol
+uses25monthly validation origins2017-12through2019-12 and25test origins2020-12
+through2022-12,each forecasting h1–12. All4,200candidate cells succeeded in the
+recorded benchmark. Drift won validation (MAE2.59897ppm),then had test MAE2.53725
+versus seasonal-naive2.17940ppm,about16.42%higher error. The software preserves
+that worse held-out result and the horizon-wise comparisons. Results describe
+**retrospective evaluation on a fixed revised snapshot**,not certified original
+as-of historical forecasts. NOAA QC/calibration/midmonth adjustments,station
+substitution and missing publication vintages remain explicit limitations.
+
+Measured resource evidence is separate from pure calculation and frozen by hash
+in the benchmark request. On the recorded machine,warm core median was1.1594s,
+fresh CLI wall time2.6805s andpeak working set132526080bytes. Definitions and
+measurement limitations accompany the record;these are not universal latency
+claims. A normal replay does not remeasure or invent timings. Run the explicit
+measurement script only when intentionally creating new resource evidence.
+
+```powershell
+python -m unittest tests.test_ai_predictive_modeling
+python -m scripts.verify_ai_predictive_modeling
+python -m scripts.smoke_ai_predictive_modeling_core
+python -m scripts.accept_ai_predictive_modeling_core
+```
+
+The independent oracle was committed before production and checks all4,200cell
+predictions,exact aggregate/horizon scores and672sentinel predictions. No model
+weights,forecasting framework,cloud service or additional runtime dependency is
+required. Full reports are in `data/ai-predictive-modeling-noaa-benchmark.*`;
+release scope and P1/P2 are in `knowledge/ai_predictive_modeling_core_v1.json`.

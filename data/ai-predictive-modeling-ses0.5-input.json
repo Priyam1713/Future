@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+  "profile_version": 1,
+  "task": "forecast",
+  "dataset": {
+    "id": "synthetic",
+    "version": 1,
+    "frequency": "monthly",
+    "units": "original units",
+    "provenance": {
+      "source_ref": "original-synthetic",
+      "snapshot_sha256": null,
+      "rights": "self_authored",
+      "attribution": "Original synthetic numerical demonstration",
+      "notes": "Unicode note  \n"
+    },
+    "series": [
+      {
+        "id": "synthetic1",
+        "availability": {
+          "status": "unknown",
+          "vintage": null,
+          "notes": "No independent availability witness"
+        },
+        "observations": [
+          {
+            "period": "2020-01",
+            "value": "1"
+          },
+          {
+            "period": "2020-02",
+            "value": "3"
+          },
+          {
+            "period": "2020-03",
+            "value": "2"
+          },
+          {
+            "period": "2020-04",
+            "value": "8"
+          }
+        ]
+      }
+    ]
+  },
+  "dataset_sha256": "11e7f149a0f7e21ecffe891d7812be86a0b4bbb703b06d2ed4d02de12f638701",
+  "model": "ses_alpha0.5_initial_y1",
+  "origin": "2020-04",
+  "horizons": [
+    1,
+    2,
+    3
+  ],
+  "seasonal_period": 1
+}

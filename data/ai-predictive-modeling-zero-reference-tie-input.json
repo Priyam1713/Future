@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+  "profile_version": 1,
+  "task": "evaluate",
+  "dataset": {
+    "id": "synthetic",
+    "version": 1,
+    "frequency": "monthly",
+    "units": "original units",
+    "provenance": {
+      "source_ref": "original-synthetic",
+      "snapshot_sha256": null,
+      "rights": "self_authored",
+      "attribution": "Original synthetic numerical demonstration",
+      "notes": "Unicode note  \n"
+    },
+    "series": [
+      {
+        "id": "synthetic1",
+        "availability": {
+          "status": "unknown",
+          "vintage": null,
+          "notes": "No independent availability witness"
+        },
+        "observations": [
+          {
+            "period": "2020-01",
+            "value": "0"
+          },
+          {
+            "period": "2020-02",
+            "value": "0"
+          },
+          {
+            "period": "2020-03",
+            "value": "0"
+          },
+          {
+            "period": "2020-04",
+            "value": "0"
+          },
+          {
+            "period": "2020-05",
+            "value": "0"
+          },
+          {
+            "period": "2020-06",
+            "value": "0"
+          },
+          {
+            "period": "2020-07",
+            "value": "0"
+          },
+          {
+            "period": "2020-08",
+            "value": "0"
+          }
+        ]
+      }
+    ]
+  },
+  "dataset_sha256": "db6befb76e618da40d3dd8cf9a3944b7749db5d8df702f865e1109489859fa0d",
+  "plan": {
+    "models": [
+      "mean",
+      "naive"
+    ],
+    "validation_origins": [
+      "2020-02",
+      "2020-03"
+    ],
+    "test_origins": [
+      "2020-04",
+      "2020-05"
+    ],
+    "horizons": [
+      1
+    ],
+    "seasonal_period": 1,
+    "selection": "validation_macro_mae_then_order"
+  }
+}

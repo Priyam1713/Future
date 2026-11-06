@@ -1,0 +1,375 @@
+# CPU forecasting workbench
+
+Retrospective evaluation on a fixed revised data snapshot;historical publication vintages are unverified. Software prefix isolation does not prove as-of historical data availability.
+
+```json
+{
+  "status": "accepted",
+  "task": "forecast",
+  "profile": {
+    "id": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+    "version": 1,
+    "sha256": "ed2490bf3ddc5861b3a406e2ba8aa93b3f2b2fe33e0b7917371e5c26875e7fdb"
+  },
+  "request_sha256": "6ffb9db5384b898e9a31083f89fd6c657a14a8372e40e239d86df99fe1d41433",
+  "source": {
+    "version": 1,
+    "technique_id": 49,
+    "date": "2026-11-07",
+    "edition": "FPP3 third edition online modified2026-11-04;R/fpp3 examples are not Python implementation parity.",
+    "rechecked": [
+      {
+        "url": "https://otexts.com/fpp3/toolbox.html",
+        "locator": "§5.2 mean,naive,seasonal-naive and drift;§5.8–5.10 metrics and rolling origin"
+      },
+      {
+        "url": "https://otexts.com/fpp3/exponential-smoothing.html",
+        "locator": "§8.1 weighted/component SES recurrences and initial-level term;fixed y1 initialization is our explicit convention"
+      }
+    ],
+    "ranked_sources": [
+      [
+        49,
+        "AI Predictive Modeling",
+        1,
+        "Rob J. Hyndman and George Athanasopoulos",
+        "Forecasting: Principles and Practice (3rd ed.)",
+        "Transparent statistical methods and evaluation",
+        "https://otexts.com/fpp3/",
+        "Open textbook",
+        "Bibliographic lead; check edition, chapters, rights before ingesting"
+      ],
+      [
+        49,
+        "AI Predictive Modeling",
+        2,
+        "Amazon Science",
+        "Chronos-2 Model Card",
+        "Current pretrained foundation-model implementation",
+        "https://huggingface.co/amazon/chronos-2",
+        "Open model card / check license",
+        "Bibliographic lead; check edition, chapters, rights before ingesting"
+      ]
+    ],
+    "variation_rows": [
+      [
+        49,
+        "AI Predictive Modeling",
+        "Classical ARIMA/ETS",
+        "Chronos-2 Model Card",
+        "Forecasting: Principles and Practice (3rd ed.)",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      [
+        49,
+        "AI Predictive Modeling",
+        "boosted trees",
+        "Chronos-2 Model Card",
+        "Forecasting: Principles and Practice (3rd ed.)",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      [
+        49,
+        "AI Predictive Modeling",
+        "neural time-series",
+        "Chronos-2 Model Card",
+        "Forecasting: Principles and Practice (3rd ed.)",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      [
+        49,
+        "AI Predictive Modeling",
+        "probabilistic transformers",
+        "Chronos-2 Model Card",
+        "Forecasting: Principles and Practice (3rd ed.)",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      [
+        49,
+        "AI Predictive Modeling",
+        "foundation models",
+        "Chronos-2 Model Card",
+        "Forecasting: Principles and Practice (3rd ed.)",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ]
+    ],
+    "rights": "Facts-only original methodological notes;no textbook corpus,figures or implementation copied. NOAA numerical subset retains attribution/public-domain policy. No Chronos assets acquired.",
+    "dataset": {
+      "path": "resources/ai-predictive-modeling/noaa_mlo_2000_2023.json",
+      "sha256": "303c231dd00ba7cf6302e02dbb25525b91e226008a71b15856f25f775aa9645c",
+      "count": 288,
+      "first": "2000-01",
+      "last": "2023-12",
+      "source_sha256": "0ce4e7749217b4af2cca8e0bdf263856ad59b0a2946d4e98c7b22ccfbff21cad",
+      "rights": "NOAA government data public domain unless separately annotated;retain source/product credit,no endorsement or misrepresentation. Selected2000–2023 NOAA measurements avoid the pre1974 Scripps-sourced portion of the full file.",
+      "attribution": "Data provided by NOAA Global Monitoring Laboratory, Boulder, Colorado, USA;Carbon Cycle and Greenhouse Gases group. Original NOAA values;this selected research subset is not an official NOAA product or endorsement."
+    },
+    "vintage": "Retrospective evaluation on a fixed revised data snapshot. QC/calibration/midmonth corrections and2022–2023Maunakea substitution;historical publication vintages unverified. Prefix isolation does not prove historical source availability.",
+    "formula_provenance": "Seasonal m4 and drift toy sequences are original arithmetic applications,not published empirical accuracy. SES geometric weights and FPP3 Google scoring examples separately source-attributed.",
+    "unsupported": [
+      "ARIMA search",
+      "Likelihood-fitted ETS",
+      "Holt/Holt-Winters",
+      "Trees or neural training",
+      "Chronos inference/downloads",
+      "Generated prediction intervals",
+      "GPU/cloud forecasting"
+    ]
+  },
+  "result": {
+    "cells": [
+      {
+        "model": {
+          "id": "naive",
+          "version": 1,
+          "family": "naive",
+          "alpha": null,
+          "seasonal_period": null,
+          "initialization": null
+        },
+        "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+        "profile_version": 1,
+        "series_id": "synthetic1",
+        "dataset_sha256": "372ab203d99ee3be78294a5227b645c1e249d123c071d58f771b1141d6da5a85",
+        "source_sha256": null,
+        "training_cutoff": "2020-03",
+        "training_rows": 3,
+        "training_prefix_sha256": "be384a25c4c3fc8af8f2dadd9a7f4f2afa3d8bfcead76a1e18ab27fb1eb25944",
+        "origin": "2020-03",
+        "horizon": 1,
+        "target_period": "2020-04",
+        "partition": "forecast",
+        "status": "success",
+        "reason": null,
+        "prediction": {
+          "exact": "3",
+          "decimal": "3.000000000000",
+          "reason": null
+        },
+        "point_functional": "last observed value",
+        "actual": "99999999",
+        "error": {
+          "exact": "99999996",
+          "decimal": "99999996.000000000000",
+          "reason": null
+        },
+        "absolute_error": {
+          "exact": "99999996",
+          "decimal": "99999996.000000000000",
+          "reason": null
+        },
+        "squared_error": {
+          "exact": "9999999200000016",
+          "decimal": "9999999200000016.000000000000",
+          "reason": null
+        },
+        "training_scale": {
+          "exact": "1",
+          "decimal": "1.000000000000",
+          "reason": null
+        },
+        "scaled_absolute_error": {
+          "exact": "99999996",
+          "decimal": "99999996.000000000000",
+          "reason": null
+        },
+        "sha256": "977c50b08fc3a8a977f074157a03c994668fe3df84ae849f362d702de720750a"
+      },
+      {
+        "model": {
+          "id": "naive",
+          "version": 1,
+          "family": "naive",
+          "alpha": null,
+          "seasonal_period": null,
+          "initialization": null
+        },
+        "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+        "profile_version": 1,
+        "series_id": "synthetic1",
+        "dataset_sha256": "372ab203d99ee3be78294a5227b645c1e249d123c071d58f771b1141d6da5a85",
+        "source_sha256": null,
+        "training_cutoff": "2020-03",
+        "training_rows": 3,
+        "training_prefix_sha256": "be384a25c4c3fc8af8f2dadd9a7f4f2afa3d8bfcead76a1e18ab27fb1eb25944",
+        "origin": "2020-03",
+        "horizon": 2,
+        "target_period": "2020-05",
+        "partition": "forecast",
+        "status": "success",
+        "reason": null,
+        "prediction": {
+          "exact": "3",
+          "decimal": "3.000000000000",
+          "reason": null
+        },
+        "point_functional": "last observed value",
+        "actual": "99999999",
+        "error": {
+          "exact": "99999996",
+          "decimal": "99999996.000000000000",
+          "reason": null
+        },
+        "absolute_error": {
+          "exact": "99999996",
+          "decimal": "99999996.000000000000",
+          "reason": null
+        },
+        "squared_error": {
+          "exact": "9999999200000016",
+          "decimal": "9999999200000016.000000000000",
+          "reason": null
+        },
+        "training_scale": {
+          "exact": "1",
+          "decimal": "1.000000000000",
+          "reason": null
+        },
+        "scaled_absolute_error": {
+          "exact": "99999996",
+          "decimal": "99999996.000000000000",
+          "reason": null
+        },
+        "sha256": "10b7c4a917e93ecef0607f3d0ede7378e90ba5144bd2a8f30fe06d50d4c7baaf"
+      },
+      {
+        "model": {
+          "id": "naive",
+          "version": 1,
+          "family": "naive",
+          "alpha": null,
+          "seasonal_period": null,
+          "initialization": null
+        },
+        "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+        "profile_version": 1,
+        "series_id": "synthetic1",
+        "dataset_sha256": "372ab203d99ee3be78294a5227b645c1e249d123c071d58f771b1141d6da5a85",
+        "source_sha256": null,
+        "training_cutoff": "2020-03",
+        "training_rows": 3,
+        "training_prefix_sha256": "be384a25c4c3fc8af8f2dadd9a7f4f2afa3d8bfcead76a1e18ab27fb1eb25944",
+        "origin": "2020-03",
+        "horizon": 3,
+        "target_period": "2020-06",
+        "partition": "forecast",
+        "status": "success",
+        "reason": null,
+        "prediction": {
+          "exact": "3",
+          "decimal": "3.000000000000",
+          "reason": null
+        },
+        "point_functional": "last observed value",
+        "actual": "99999999",
+        "error": {
+          "exact": "99999996",
+          "decimal": "99999996.000000000000",
+          "reason": null
+        },
+        "absolute_error": {
+          "exact": "99999996",
+          "decimal": "99999996.000000000000",
+          "reason": null
+        },
+        "squared_error": {
+          "exact": "9999999200000016",
+          "decimal": "9999999200000016.000000000000",
+          "reason": null
+        },
+        "training_scale": {
+          "exact": "1",
+          "decimal": "1.000000000000",
+          "reason": null
+        },
+        "scaled_absolute_error": {
+          "exact": "99999996",
+          "decimal": "99999996.000000000000",
+          "reason": null
+        },
+        "sha256": "ded9f8f64321ade0ab306d5502ccfffd7e93e76661eaf05b05977d98328a14de"
+      }
+    ],
+    "dataset": {
+      "id": "synthetic",
+      "version": 1,
+      "frequency": "monthly",
+      "units": "original units",
+      "provenance": {
+        "source_ref": "original-synthetic",
+        "snapshot_sha256": null,
+        "rights": "self_authored",
+        "attribution": "Original synthetic numerical demonstration",
+        "notes": "Unicode note  \n"
+      },
+      "series": [
+        {
+          "id": "synthetic1",
+          "availability": {
+            "status": "unknown",
+            "vintage": null,
+            "notes": "No independent availability witness"
+          },
+          "observations": [
+            {
+              "period": "2020-01",
+              "value": "1"
+            },
+            {
+              "period": "2020-02",
+              "value": "2"
+            },
+            {
+              "period": "2020-03",
+              "value": "3"
+            },
+            {
+              "period": "2020-04",
+              "value": "99999999"
+            },
+            {
+              "period": "2020-05",
+              "value": "99999999"
+            },
+            {
+              "period": "2020-06",
+              "value": "99999999"
+            },
+            {
+              "period": "2020-07",
+              "value": "99999999"
+            },
+            {
+              "period": "2020-08",
+              "value": "99999999"
+            }
+          ]
+        }
+      ]
+    },
+    "dataset_sha256": "372ab203d99ee3be78294a5227b645c1e249d123c071d58f771b1141d6da5a85"
+  },
+  "code_sha256": "b20c30fdfde79e37413bbaae9544ee6ef69cd2765a7ef1ec68a53d0ad765b014",
+  "resource_evidence": null,
+  "resource_policy": "Measured separately and frozen by hash;pure deterministic forecasts contain no fabricated runtime measurements.",
+  "vintage": "Retrospective evaluation on a fixed revised data snapshot;historical publication vintages are unverified. Software prefix isolation does not prove as-of historical data availability.",
+  "limits": [
+    "Fixed SES conventions are not optimized ETS",
+    "No ARIMA/trees/neural/Chronos operation or downloaded assets",
+    "No generated prediction intervals or guaranteed accuracy",
+    "All-candidate test scores are diagnostic;selection uses validation only",
+    "Exact absolute-sMAPE is a manual diagnostic for at most20scored pairs;omitted from benchmark aggregates to avoid impractical rational denominator growth"
+  ],
+  "report_sha256": "7742c1f36aab58ec5adf1ef208ca4c903b350be4713d464178144e2d5d6e1503"
+}
+```

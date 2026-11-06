@@ -1,0 +1,4487 @@
+# CPU forecasting workbench
+
+Retrospective evaluation on a fixed revised data snapshot;historical publication vintages are unverified. Software prefix isolation does not prove as-of historical data availability.
+
+Validation-selected model: drift
+
+| Candidate | Validation MAE | Test MAE | Test RMSE | Test MASE |
+|---|---:|---:|---:|---:|
+| naive | 5.500000000000 | 5.500000000000 | 7.106335201776 | 1.000000000000 |
+| mean | 9.625000000000 | 15.125000000000 | 19.623009453190 | 2.750000000000 |
+| drift | 0.000000000000 | 0.000000000000 | 0.000000000000 | 0.000000000000 |
+| ses_alpha0.2_initial_y1 | 11.660000000000 | 17.362400000000 | 22.480438799988 | 3.156800000000 |
+
+Forecast windows overlap;300cells/model/partition represent36distinct NOAA target months,not300independent trials. No naive significance tests.
+
+All cells,failures,horizon scores and paired comparisons follow.
+
+```json
+{
+  "status": "accepted",
+  "task": "evaluate",
+  "profile": {
+    "id": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+    "version": 1,
+    "sha256": "ed2490bf3ddc5861b3a406e2ba8aa93b3f2b2fe33e0b7917371e5c26875e7fdb"
+  },
+  "request_sha256": "4dcef9ae0a7410bcb12e0792abe71c9b72957975a78e1569e849c0ecd76b7cac",
+  "source": {
+    "version": 1,
+    "technique_id": 49,
+    "date": "2026-11-07",
+    "edition": "FPP3 third edition online modified2026-11-04;R/fpp3 examples are not Python implementation parity.",
+    "rechecked": [
+      {
+        "url": "https://otexts.com/fpp3/toolbox.html",
+        "locator": "§5.2 mean,naive,seasonal-naive and drift;§5.8–5.10 metrics and rolling origin"
+      },
+      {
+        "url": "https://otexts.com/fpp3/exponential-smoothing.html",
+        "locator": "§8.1 weighted/component SES recurrences and initial-level term;fixed y1 initialization is our explicit convention"
+      }
+    ],
+    "ranked_sources": [
+      [
+        49,
+        "AI Predictive Modeling",
+        1,
+        "Rob J. Hyndman and George Athanasopoulos",
+        "Forecasting: Principles and Practice (3rd ed.)",
+        "Transparent statistical methods and evaluation",
+        "https://otexts.com/fpp3/",
+        "Open textbook",
+        "Bibliographic lead; check edition, chapters, rights before ingesting"
+      ],
+      [
+        49,
+        "AI Predictive Modeling",
+        2,
+        "Amazon Science",
+        "Chronos-2 Model Card",
+        "Current pretrained foundation-model implementation",
+        "https://huggingface.co/amazon/chronos-2",
+        "Open model card / check license",
+        "Bibliographic lead; check edition, chapters, rights before ingesting"
+      ]
+    ],
+    "variation_rows": [
+      [
+        49,
+        "AI Predictive Modeling",
+        "Classical ARIMA/ETS",
+        "Chronos-2 Model Card",
+        "Forecasting: Principles and Practice (3rd ed.)",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      [
+        49,
+        "AI Predictive Modeling",
+        "boosted trees",
+        "Chronos-2 Model Card",
+        "Forecasting: Principles and Practice (3rd ed.)",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      [
+        49,
+        "AI Predictive Modeling",
+        "neural time-series",
+        "Chronos-2 Model Card",
+        "Forecasting: Principles and Practice (3rd ed.)",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      [
+        49,
+        "AI Predictive Modeling",
+        "probabilistic transformers",
+        "Chronos-2 Model Card",
+        "Forecasting: Principles and Practice (3rd ed.)",
+        "Provisional / chapter check needed",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ],
+      [
+        49,
+        "AI Predictive Modeling",
+        "foundation models",
+        "Chronos-2 Model Card",
+        "Forecasting: Principles and Practice (3rd ed.)",
+        "Indicative (scope match)",
+        "Locate chapters; extract algorithms, symbol tables, exception cases",
+        "Knowledge gathering"
+      ]
+    ],
+    "rights": "Facts-only original methodological notes;no textbook corpus,figures or implementation copied. NOAA numerical subset retains attribution/public-domain policy. No Chronos assets acquired.",
+    "dataset": {
+      "path": "resources/ai-predictive-modeling/noaa_mlo_2000_2023.json",
+      "sha256": "303c231dd00ba7cf6302e02dbb25525b91e226008a71b15856f25f775aa9645c",
+      "count": 288,
+      "first": "2000-01",
+      "last": "2023-12",
+      "source_sha256": "0ce4e7749217b4af2cca8e0bdf263856ad59b0a2946d4e98c7b22ccfbff21cad",
+      "rights": "NOAA government data public domain unless separately annotated;retain source/product credit,no endorsement or misrepresentation. Selected2000–2023 NOAA measurements avoid the pre1974 Scripps-sourced portion of the full file.",
+      "attribution": "Data provided by NOAA Global Monitoring Laboratory, Boulder, Colorado, USA;Carbon Cycle and Greenhouse Gases group. Original NOAA values;this selected research subset is not an official NOAA product or endorsement."
+    },
+    "vintage": "Retrospective evaluation on a fixed revised data snapshot. QC/calibration/midmonth corrections and2022–2023Maunakea substitution;historical publication vintages unverified. Prefix isolation does not prove historical source availability.",
+    "formula_provenance": "Seasonal m4 and drift toy sequences are original arithmetic applications,not published empirical accuracy. SES geometric weights and FPP3 Google scoring examples separately source-attributed.",
+    "unsupported": [
+      "ARIMA search",
+      "Likelihood-fitted ETS",
+      "Holt/Holt-Winters",
+      "Trees or neural training",
+      "Chronos inference/downloads",
+      "Generated prediction intervals",
+      "GPU/cloud forecasting"
+    ]
+  },
+  "result": {
+    "evaluation": {
+      "plan": {
+        "models": [
+          "naive",
+          "mean",
+          "drift",
+          "ses_alpha0.2_initial_y1"
+        ],
+        "validation_origins": [
+          "2020-02",
+          "2020-03"
+        ],
+        "test_origins": [
+          "2020-04",
+          "2020-05"
+        ],
+        "horizons": [
+          1
+        ],
+        "seasonal_period": 1,
+        "selection": "validation_macro_mae_then_order"
+      },
+      "plan_sha256": "ccff48531215a03a31a614ab59d123c5bd304de92bad63b8215f4c485b0161cd",
+      "selection": {
+        "selected": "drift",
+        "candidates": [
+          {
+            "model": "naive",
+            "validation_macro_mae": {
+              "exact": "11/2",
+              "decimal": "5.500000000000",
+              "reason": null
+            },
+            "eligible": true,
+            "reason": null
+          },
+          {
+            "model": "mean",
+            "validation_macro_mae": {
+              "exact": "77/8",
+              "decimal": "9.625000000000",
+              "reason": null
+            },
+            "eligible": true,
+            "reason": null
+          },
+          {
+            "model": "drift",
+            "validation_macro_mae": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "eligible": true,
+            "reason": null
+          },
+          {
+            "model": "ses_alpha0.2_initial_y1",
+            "validation_macro_mae": {
+              "exact": "583/50",
+              "decimal": "11.660000000000",
+              "reason": null
+            },
+            "eligible": true,
+            "reason": null
+          }
+        ],
+        "tie_order": [
+          "naive",
+          "mean",
+          "drift",
+          "ses_alpha0.2_initial_y1"
+        ],
+        "rule": "Validation per-series macro MAE only;complete forecast coverage required. Test diagnostics never select.",
+        "sha256": "e6317d9d871811cc7da68fdd80092d74aa74a8e92ba0fa179b99b470f19b4e9e"
+      },
+      "summary": {
+        "validation": [
+          {
+            "model": "naive",
+            "aggregate": {
+              "planned": 4,
+              "scored": 4,
+              "status_counts": {
+                "success": 4,
+                "missing_target": 0,
+                "ineligible_origin": 0,
+                "unsupported_configuration": 0,
+                "model_failure": 0
+              },
+              "planned_distinct_target_months": 4,
+              "distinct_target_months": 4,
+              "mae": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "mse": {
+                "exact": "101/2",
+                "decimal": "50.500000000000",
+                "reason": null
+              },
+              "rmse": {
+                "exact": "sqrt(101/2)",
+                "decimal": "7.106335201776",
+                "reason": null
+              },
+              "bias": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "mase": {
+                "exact": "1",
+                "decimal": "1.000000000000",
+                "reason": null
+              },
+              "mase_count": 4,
+              "undefined_scale_counts": {
+                "zero_training_scale": 0,
+                "insufficient_scale_history": 0,
+                "missing_training_target": 0
+              },
+              "wape": {
+                "exact": "2/7",
+                "decimal": "0.285714285714",
+                "reason": null
+              },
+              "absolute_smape_percent": {
+                "exact": null,
+                "decimal": null,
+                "reason": "manual_diagnostic_only_max20_pairs"
+              },
+              "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+            },
+            "by_series": {
+              "synthetic1": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "1",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "1",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(1)",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "1",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "1",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "2/7",
+                  "decimal": "0.285714285714",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              },
+              "synthetic2": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "10",
+                  "decimal": "10.000000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "100",
+                  "decimal": "100.000000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(100)",
+                  "decimal": "10.000000000000",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "10",
+                  "decimal": "10.000000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "1",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "2/7",
+                  "decimal": "0.285714285714",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "macro_mae": {
+              "exact": "11/2",
+              "decimal": "5.500000000000",
+              "reason": null
+            },
+            "by_horizon": {
+              "1": {
+                "planned": 4,
+                "scored": 4,
+                "status_counts": {
+                  "success": 4,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 4,
+                "distinct_target_months": 4,
+                "mae": {
+                  "exact": "11/2",
+                  "decimal": "5.500000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "101/2",
+                  "decimal": "50.500000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(101/2)",
+                  "decimal": "7.106335201776",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "11/2",
+                  "decimal": "5.500000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "1",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "mase_count": 4,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "2/7",
+                  "decimal": "0.285714285714",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "paired_seasonal_naive": {
+              "common_scored": 4,
+              "candidate_mae": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "reference_mae": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "candidate_minus_reference_mae": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "ratio": {
+                "exact": "1",
+                "decimal": "1.000000000000",
+                "reason": null
+              },
+              "reference_model": "seasonal_naive",
+              "direction": "Negative MAE difference or ratio<1 favors candidate;comparison limited to common eligible cells."
+            }
+          },
+          {
+            "model": "mean",
+            "aggregate": {
+              "planned": 4,
+              "scored": 4,
+              "status_counts": {
+                "success": 4,
+                "missing_target": 0,
+                "ineligible_origin": 0,
+                "unsupported_configuration": 0,
+                "model_failure": 0
+              },
+              "planned_distinct_target_months": 4,
+              "distinct_target_months": 4,
+              "mae": {
+                "exact": "77/8",
+                "decimal": "9.625000000000",
+                "reason": null
+              },
+              "mse": {
+                "exact": "2525/16",
+                "decimal": "157.812500000000",
+                "reason": null
+              },
+              "rmse": {
+                "exact": "sqrt(2525/16)",
+                "decimal": "12.562344526401",
+                "reason": null
+              },
+              "bias": {
+                "exact": "77/8",
+                "decimal": "9.625000000000",
+                "reason": null
+              },
+              "mase": {
+                "exact": "7/4",
+                "decimal": "1.750000000000",
+                "reason": null
+              },
+              "mase_count": 4,
+              "undefined_scale_counts": {
+                "zero_training_scale": 0,
+                "insufficient_scale_history": 0,
+                "missing_training_target": 0
+              },
+              "wape": {
+                "exact": "1/2",
+                "decimal": "0.500000000000",
+                "reason": null
+              },
+              "absolute_smape_percent": {
+                "exact": null,
+                "decimal": null,
+                "reason": "manual_diagnostic_only_max20_pairs"
+              },
+              "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+            },
+            "by_series": {
+              "synthetic1": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "7/4",
+                  "decimal": "1.750000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "25/8",
+                  "decimal": "3.125000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(25/8)",
+                  "decimal": "1.767766952966",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "7/4",
+                  "decimal": "1.750000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "7/4",
+                  "decimal": "1.750000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "1/2",
+                  "decimal": "0.500000000000",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              },
+              "synthetic2": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "35/2",
+                  "decimal": "17.500000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "625/2",
+                  "decimal": "312.500000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(625/2)",
+                  "decimal": "17.677669529664",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "35/2",
+                  "decimal": "17.500000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "7/4",
+                  "decimal": "1.750000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "1/2",
+                  "decimal": "0.500000000000",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "macro_mae": {
+              "exact": "77/8",
+              "decimal": "9.625000000000",
+              "reason": null
+            },
+            "by_horizon": {
+              "1": {
+                "planned": 4,
+                "scored": 4,
+                "status_counts": {
+                  "success": 4,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 4,
+                "distinct_target_months": 4,
+                "mae": {
+                  "exact": "77/8",
+                  "decimal": "9.625000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "2525/16",
+                  "decimal": "157.812500000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(2525/16)",
+                  "decimal": "12.562344526401",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "77/8",
+                  "decimal": "9.625000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "7/4",
+                  "decimal": "1.750000000000",
+                  "reason": null
+                },
+                "mase_count": 4,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "1/2",
+                  "decimal": "0.500000000000",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "paired_seasonal_naive": {
+              "common_scored": 4,
+              "candidate_mae": {
+                "exact": "77/8",
+                "decimal": "9.625000000000",
+                "reason": null
+              },
+              "reference_mae": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "candidate_minus_reference_mae": {
+                "exact": "33/8",
+                "decimal": "4.125000000000",
+                "reason": null
+              },
+              "ratio": {
+                "exact": "7/4",
+                "decimal": "1.750000000000",
+                "reason": null
+              },
+              "reference_model": "seasonal_naive",
+              "direction": "Negative MAE difference or ratio<1 favors candidate;comparison limited to common eligible cells."
+            }
+          },
+          {
+            "model": "drift",
+            "aggregate": {
+              "planned": 4,
+              "scored": 4,
+              "status_counts": {
+                "success": 4,
+                "missing_target": 0,
+                "ineligible_origin": 0,
+                "unsupported_configuration": 0,
+                "model_failure": 0
+              },
+              "planned_distinct_target_months": 4,
+              "distinct_target_months": 4,
+              "mae": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "mse": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "rmse": {
+                "exact": "sqrt(0)",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "bias": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "mase": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "mase_count": 4,
+              "undefined_scale_counts": {
+                "zero_training_scale": 0,
+                "insufficient_scale_history": 0,
+                "missing_training_target": 0
+              },
+              "wape": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "absolute_smape_percent": {
+                "exact": null,
+                "decimal": null,
+                "reason": "manual_diagnostic_only_max20_pairs"
+              },
+              "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+            },
+            "by_series": {
+              "synthetic1": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(0)",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              },
+              "synthetic2": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(0)",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "macro_mae": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "by_horizon": {
+              "1": {
+                "planned": 4,
+                "scored": 4,
+                "status_counts": {
+                  "success": 4,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 4,
+                "distinct_target_months": 4,
+                "mae": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(0)",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mase_count": 4,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "paired_seasonal_naive": {
+              "common_scored": 4,
+              "candidate_mae": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "reference_mae": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "candidate_minus_reference_mae": {
+                "exact": "-11/2",
+                "decimal": "-5.500000000000",
+                "reason": null
+              },
+              "ratio": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "reference_model": "seasonal_naive",
+              "direction": "Negative MAE difference or ratio<1 favors candidate;comparison limited to common eligible cells."
+            }
+          },
+          {
+            "model": "ses_alpha0.2_initial_y1",
+            "aggregate": {
+              "planned": 4,
+              "scored": 4,
+              "status_counts": {
+                "success": 4,
+                "missing_target": 0,
+                "ineligible_origin": 0,
+                "unsupported_configuration": 0,
+                "model_failure": 0
+              },
+              "planned_distinct_target_months": 4,
+              "distinct_target_months": 4,
+              "mae": {
+                "exact": "583/50",
+                "decimal": "11.660000000000",
+                "reason": null
+              },
+              "mse": {
+                "exact": "290173/1250",
+                "decimal": "232.138400000000",
+                "reason": null
+              },
+              "rmse": {
+                "exact": "sqrt(290173/1250)",
+                "decimal": "15.236088736943",
+                "reason": null
+              },
+              "bias": {
+                "exact": "583/50",
+                "decimal": "11.660000000000",
+                "reason": null
+              },
+              "mase": {
+                "exact": "53/25",
+                "decimal": "2.120000000000",
+                "reason": null
+              },
+              "mase_count": 4,
+              "undefined_scale_counts": {
+                "zero_training_scale": 0,
+                "insufficient_scale_history": 0,
+                "missing_training_target": 0
+              },
+              "wape": {
+                "exact": "106/175",
+                "decimal": "0.605714285714",
+                "reason": null
+              },
+              "absolute_smape_percent": {
+                "exact": null,
+                "decimal": null,
+                "reason": "manual_diagnostic_only_max20_pairs"
+              },
+              "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+            },
+            "by_series": {
+              "synthetic1": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "53/25",
+                  "decimal": "2.120000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "2873/625",
+                  "decimal": "4.596800000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(2873/625)",
+                  "decimal": "2.144014925321",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "53/25",
+                  "decimal": "2.120000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "53/25",
+                  "decimal": "2.120000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "106/175",
+                  "decimal": "0.605714285714",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              },
+              "synthetic2": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "106/5",
+                  "decimal": "21.200000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "11492/25",
+                  "decimal": "459.680000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(11492/25)",
+                  "decimal": "21.440149253212",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "106/5",
+                  "decimal": "21.200000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "53/25",
+                  "decimal": "2.120000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "106/175",
+                  "decimal": "0.605714285714",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "macro_mae": {
+              "exact": "583/50",
+              "decimal": "11.660000000000",
+              "reason": null
+            },
+            "by_horizon": {
+              "1": {
+                "planned": 4,
+                "scored": 4,
+                "status_counts": {
+                  "success": 4,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 4,
+                "distinct_target_months": 4,
+                "mae": {
+                  "exact": "583/50",
+                  "decimal": "11.660000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "290173/1250",
+                  "decimal": "232.138400000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(290173/1250)",
+                  "decimal": "15.236088736943",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "583/50",
+                  "decimal": "11.660000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "53/25",
+                  "decimal": "2.120000000000",
+                  "reason": null
+                },
+                "mase_count": 4,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "106/175",
+                  "decimal": "0.605714285714",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "paired_seasonal_naive": {
+              "common_scored": 4,
+              "candidate_mae": {
+                "exact": "583/50",
+                "decimal": "11.660000000000",
+                "reason": null
+              },
+              "reference_mae": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "candidate_minus_reference_mae": {
+                "exact": "154/25",
+                "decimal": "6.160000000000",
+                "reason": null
+              },
+              "ratio": {
+                "exact": "53/25",
+                "decimal": "2.120000000000",
+                "reason": null
+              },
+              "reference_model": "seasonal_naive",
+              "direction": "Negative MAE difference or ratio<1 favors candidate;comparison limited to common eligible cells."
+            }
+          }
+        ],
+        "test": [
+          {
+            "model": "naive",
+            "aggregate": {
+              "planned": 4,
+              "scored": 4,
+              "status_counts": {
+                "success": 4,
+                "missing_target": 0,
+                "ineligible_origin": 0,
+                "unsupported_configuration": 0,
+                "model_failure": 0
+              },
+              "planned_distinct_target_months": 4,
+              "distinct_target_months": 4,
+              "mae": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "mse": {
+                "exact": "101/2",
+                "decimal": "50.500000000000",
+                "reason": null
+              },
+              "rmse": {
+                "exact": "sqrt(101/2)",
+                "decimal": "7.106335201776",
+                "reason": null
+              },
+              "bias": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "mase": {
+                "exact": "1",
+                "decimal": "1.000000000000",
+                "reason": null
+              },
+              "mase_count": 4,
+              "undefined_scale_counts": {
+                "zero_training_scale": 0,
+                "insufficient_scale_history": 0,
+                "missing_training_target": 0
+              },
+              "wape": {
+                "exact": "2/11",
+                "decimal": "0.181818181818",
+                "reason": null
+              },
+              "absolute_smape_percent": {
+                "exact": null,
+                "decimal": null,
+                "reason": "manual_diagnostic_only_max20_pairs"
+              },
+              "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+            },
+            "by_series": {
+              "synthetic1": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "1",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "1",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(1)",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "1",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "1",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "2/11",
+                  "decimal": "0.181818181818",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              },
+              "synthetic2": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "10",
+                  "decimal": "10.000000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "100",
+                  "decimal": "100.000000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(100)",
+                  "decimal": "10.000000000000",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "10",
+                  "decimal": "10.000000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "1",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "2/11",
+                  "decimal": "0.181818181818",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "macro_mae": {
+              "exact": "11/2",
+              "decimal": "5.500000000000",
+              "reason": null
+            },
+            "by_horizon": {
+              "1": {
+                "planned": 4,
+                "scored": 4,
+                "status_counts": {
+                  "success": 4,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 4,
+                "distinct_target_months": 4,
+                "mae": {
+                  "exact": "11/2",
+                  "decimal": "5.500000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "101/2",
+                  "decimal": "50.500000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(101/2)",
+                  "decimal": "7.106335201776",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "11/2",
+                  "decimal": "5.500000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "1",
+                  "decimal": "1.000000000000",
+                  "reason": null
+                },
+                "mase_count": 4,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "2/11",
+                  "decimal": "0.181818181818",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "paired_seasonal_naive": {
+              "common_scored": 4,
+              "candidate_mae": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "reference_mae": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "candidate_minus_reference_mae": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "ratio": {
+                "exact": "1",
+                "decimal": "1.000000000000",
+                "reason": null
+              },
+              "reference_model": "seasonal_naive",
+              "direction": "Negative MAE difference or ratio<1 favors candidate;comparison limited to common eligible cells."
+            }
+          },
+          {
+            "model": "mean",
+            "aggregate": {
+              "planned": 4,
+              "scored": 4,
+              "status_counts": {
+                "success": 4,
+                "missing_target": 0,
+                "ineligible_origin": 0,
+                "unsupported_configuration": 0,
+                "model_failure": 0
+              },
+              "planned_distinct_target_months": 4,
+              "distinct_target_months": 4,
+              "mae": {
+                "exact": "121/8",
+                "decimal": "15.125000000000",
+                "reason": null
+              },
+              "mse": {
+                "exact": "6161/16",
+                "decimal": "385.062500000000",
+                "reason": null
+              },
+              "rmse": {
+                "exact": "sqrt(6161/16)",
+                "decimal": "19.623009453190",
+                "reason": null
+              },
+              "bias": {
+                "exact": "121/8",
+                "decimal": "15.125000000000",
+                "reason": null
+              },
+              "mase": {
+                "exact": "11/4",
+                "decimal": "2.750000000000",
+                "reason": null
+              },
+              "mase_count": 4,
+              "undefined_scale_counts": {
+                "zero_training_scale": 0,
+                "insufficient_scale_history": 0,
+                "missing_training_target": 0
+              },
+              "wape": {
+                "exact": "1/2",
+                "decimal": "0.500000000000",
+                "reason": null
+              },
+              "absolute_smape_percent": {
+                "exact": null,
+                "decimal": null,
+                "reason": "manual_diagnostic_only_max20_pairs"
+              },
+              "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+            },
+            "by_series": {
+              "synthetic1": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "11/4",
+                  "decimal": "2.750000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "61/8",
+                  "decimal": "7.625000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(61/8)",
+                  "decimal": "2.761340254297",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "11/4",
+                  "decimal": "2.750000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "11/4",
+                  "decimal": "2.750000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "1/2",
+                  "decimal": "0.500000000000",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              },
+              "synthetic2": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "55/2",
+                  "decimal": "27.500000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "1525/2",
+                  "decimal": "762.500000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(1525/2)",
+                  "decimal": "27.613402542968",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "55/2",
+                  "decimal": "27.500000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "11/4",
+                  "decimal": "2.750000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "1/2",
+                  "decimal": "0.500000000000",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "macro_mae": {
+              "exact": "121/8",
+              "decimal": "15.125000000000",
+              "reason": null
+            },
+            "by_horizon": {
+              "1": {
+                "planned": 4,
+                "scored": 4,
+                "status_counts": {
+                  "success": 4,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 4,
+                "distinct_target_months": 4,
+                "mae": {
+                  "exact": "121/8",
+                  "decimal": "15.125000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "6161/16",
+                  "decimal": "385.062500000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(6161/16)",
+                  "decimal": "19.623009453190",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "121/8",
+                  "decimal": "15.125000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "11/4",
+                  "decimal": "2.750000000000",
+                  "reason": null
+                },
+                "mase_count": 4,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "1/2",
+                  "decimal": "0.500000000000",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "paired_seasonal_naive": {
+              "common_scored": 4,
+              "candidate_mae": {
+                "exact": "121/8",
+                "decimal": "15.125000000000",
+                "reason": null
+              },
+              "reference_mae": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "candidate_minus_reference_mae": {
+                "exact": "77/8",
+                "decimal": "9.625000000000",
+                "reason": null
+              },
+              "ratio": {
+                "exact": "11/4",
+                "decimal": "2.750000000000",
+                "reason": null
+              },
+              "reference_model": "seasonal_naive",
+              "direction": "Negative MAE difference or ratio<1 favors candidate;comparison limited to common eligible cells."
+            }
+          },
+          {
+            "model": "drift",
+            "aggregate": {
+              "planned": 4,
+              "scored": 4,
+              "status_counts": {
+                "success": 4,
+                "missing_target": 0,
+                "ineligible_origin": 0,
+                "unsupported_configuration": 0,
+                "model_failure": 0
+              },
+              "planned_distinct_target_months": 4,
+              "distinct_target_months": 4,
+              "mae": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "mse": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "rmse": {
+                "exact": "sqrt(0)",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "bias": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "mase": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "mase_count": 4,
+              "undefined_scale_counts": {
+                "zero_training_scale": 0,
+                "insufficient_scale_history": 0,
+                "missing_training_target": 0
+              },
+              "wape": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "absolute_smape_percent": {
+                "exact": null,
+                "decimal": null,
+                "reason": "manual_diagnostic_only_max20_pairs"
+              },
+              "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+            },
+            "by_series": {
+              "synthetic1": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(0)",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              },
+              "synthetic2": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(0)",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "macro_mae": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "by_horizon": {
+              "1": {
+                "planned": 4,
+                "scored": 4,
+                "status_counts": {
+                  "success": 4,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 4,
+                "distinct_target_months": 4,
+                "mae": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(0)",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "mase_count": 4,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "0",
+                  "decimal": "0.000000000000",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "paired_seasonal_naive": {
+              "common_scored": 4,
+              "candidate_mae": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "reference_mae": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "candidate_minus_reference_mae": {
+                "exact": "-11/2",
+                "decimal": "-5.500000000000",
+                "reason": null
+              },
+              "ratio": {
+                "exact": "0",
+                "decimal": "0.000000000000",
+                "reason": null
+              },
+              "reference_model": "seasonal_naive",
+              "direction": "Negative MAE difference or ratio<1 favors candidate;comparison limited to common eligible cells."
+            }
+          },
+          {
+            "model": "ses_alpha0.2_initial_y1",
+            "aggregate": {
+              "planned": 4,
+              "scored": 4,
+              "status_counts": {
+                "success": 4,
+                "missing_target": 0,
+                "ineligible_origin": 0,
+                "unsupported_configuration": 0,
+                "model_failure": 0
+              },
+              "planned_distinct_target_months": 4,
+              "distinct_target_months": 4,
+              "mae": {
+                "exact": "21703/1250",
+                "decimal": "17.362400000000",
+                "reason": null
+              },
+              "mse": {
+                "exact": "394820413/781250",
+                "decimal": "505.370128640000",
+                "reason": null
+              },
+              "rmse": {
+                "exact": "sqrt(394820413/781250)",
+                "decimal": "22.480438799988",
+                "reason": null
+              },
+              "bias": {
+                "exact": "21703/1250",
+                "decimal": "17.362400000000",
+                "reason": null
+              },
+              "mase": {
+                "exact": "1973/625",
+                "decimal": "3.156800000000",
+                "reason": null
+              },
+              "mase_count": 4,
+              "undefined_scale_counts": {
+                "zero_training_scale": 0,
+                "insufficient_scale_history": 0,
+                "missing_training_target": 0
+              },
+              "wape": {
+                "exact": "3946/6875",
+                "decimal": "0.573963636364",
+                "reason": null
+              },
+              "absolute_smape_percent": {
+                "exact": null,
+                "decimal": null,
+                "reason": "manual_diagnostic_only_max20_pairs"
+              },
+              "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+            },
+            "by_series": {
+              "synthetic1": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "1973/625",
+                  "decimal": "3.156800000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "3909113/390625",
+                  "decimal": "10.007329280000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(3909113/390625)",
+                  "decimal": "3.163436308826",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "1973/625",
+                  "decimal": "3.156800000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "1973/625",
+                  "decimal": "3.156800000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "3946/6875",
+                  "decimal": "0.573963636364",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              },
+              "synthetic2": {
+                "planned": 2,
+                "scored": 2,
+                "status_counts": {
+                  "success": 2,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 2,
+                "distinct_target_months": 2,
+                "mae": {
+                  "exact": "3946/125",
+                  "decimal": "31.568000000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "15636452/15625",
+                  "decimal": "1000.732928000000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(15636452/15625)",
+                  "decimal": "31.634363088262",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "3946/125",
+                  "decimal": "31.568000000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "1973/625",
+                  "decimal": "3.156800000000",
+                  "reason": null
+                },
+                "mase_count": 2,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "3946/6875",
+                  "decimal": "0.573963636364",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "macro_mae": {
+              "exact": "21703/1250",
+              "decimal": "17.362400000000",
+              "reason": null
+            },
+            "by_horizon": {
+              "1": {
+                "planned": 4,
+                "scored": 4,
+                "status_counts": {
+                  "success": 4,
+                  "missing_target": 0,
+                  "ineligible_origin": 0,
+                  "unsupported_configuration": 0,
+                  "model_failure": 0
+                },
+                "planned_distinct_target_months": 4,
+                "distinct_target_months": 4,
+                "mae": {
+                  "exact": "21703/1250",
+                  "decimal": "17.362400000000",
+                  "reason": null
+                },
+                "mse": {
+                  "exact": "394820413/781250",
+                  "decimal": "505.370128640000",
+                  "reason": null
+                },
+                "rmse": {
+                  "exact": "sqrt(394820413/781250)",
+                  "decimal": "22.480438799988",
+                  "reason": null
+                },
+                "bias": {
+                  "exact": "21703/1250",
+                  "decimal": "17.362400000000",
+                  "reason": null
+                },
+                "mase": {
+                  "exact": "1973/625",
+                  "decimal": "3.156800000000",
+                  "reason": null
+                },
+                "mase_count": 4,
+                "undefined_scale_counts": {
+                  "zero_training_scale": 0,
+                  "insufficient_scale_history": 0,
+                  "missing_training_target": 0
+                },
+                "wape": {
+                  "exact": "3946/6875",
+                  "decimal": "0.573963636364",
+                  "reason": null
+                },
+                "absolute_smape_percent": {
+                  "exact": null,
+                  "decimal": null,
+                  "reason": "manual_diagnostic_only_max20_pairs"
+                },
+                "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+              }
+            },
+            "paired_seasonal_naive": {
+              "common_scored": 4,
+              "candidate_mae": {
+                "exact": "21703/1250",
+                "decimal": "17.362400000000",
+                "reason": null
+              },
+              "reference_mae": {
+                "exact": "11/2",
+                "decimal": "5.500000000000",
+                "reason": null
+              },
+              "candidate_minus_reference_mae": {
+                "exact": "7414/625",
+                "decimal": "11.862400000000",
+                "reason": null
+              },
+              "ratio": {
+                "exact": "1973/625",
+                "decimal": "3.156800000000",
+                "reason": null
+              },
+              "reference_model": "seasonal_naive",
+              "direction": "Negative MAE difference or ratio<1 favors candidate;comparison limited to common eligible cells."
+            }
+          }
+        ]
+      },
+      "cells": {
+        "validation": [
+          {
+            "model": {
+              "id": "naive",
+              "version": 1,
+              "family": "naive",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-02",
+            "training_rows": 2,
+            "training_prefix_sha256": "a663d15c7aac44daf61a6be150ca99d0c16dde7271f4cecfe7a8828e9c6fd1e6",
+            "origin": "2020-02",
+            "horizon": 1,
+            "target_period": "2020-03",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "2",
+              "decimal": "2.000000000000",
+              "reason": null
+            },
+            "point_functional": "last observed value",
+            "actual": "3",
+            "error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "sha256": "c0d3e4cc55b6a7e29da23c7c8a65147273fd42cc1dfed395c9d8358be46b02a8"
+          },
+          {
+            "model": {
+              "id": "naive",
+              "version": 1,
+              "family": "naive",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-02",
+            "training_rows": 2,
+            "training_prefix_sha256": "5758bdb0164de2d2a393a5355374e62582348b0e5525374f4497b6f21b2d58fe",
+            "origin": "2020-02",
+            "horizon": 1,
+            "target_period": "2020-03",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "20",
+              "decimal": "20.000000000000",
+              "reason": null
+            },
+            "point_functional": "last observed value",
+            "actual": "30",
+            "error": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "100",
+              "decimal": "100.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "sha256": "be7d910a89d117d4831fe806e5d442791c56cbca9f67e84ec44833a13dbad494"
+          },
+          {
+            "model": {
+              "id": "naive",
+              "version": 1,
+              "family": "naive",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-03",
+            "training_rows": 3,
+            "training_prefix_sha256": "be384a25c4c3fc8af8f2dadd9a7f4f2afa3d8bfcead76a1e18ab27fb1eb25944",
+            "origin": "2020-03",
+            "horizon": 1,
+            "target_period": "2020-04",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "3",
+              "decimal": "3.000000000000",
+              "reason": null
+            },
+            "point_functional": "last observed value",
+            "actual": "4",
+            "error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "sha256": "64b723d9979272bd7ecd789a55a34c351c489ecdb043ea91119a37b7e23f0ffd"
+          },
+          {
+            "model": {
+              "id": "naive",
+              "version": 1,
+              "family": "naive",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-03",
+            "training_rows": 3,
+            "training_prefix_sha256": "df9ff1e8029b030e9bd62f2436ab401a087e3fc8694eeb3783f89fae0d7e2d59",
+            "origin": "2020-03",
+            "horizon": 1,
+            "target_period": "2020-04",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "30",
+              "decimal": "30.000000000000",
+              "reason": null
+            },
+            "point_functional": "last observed value",
+            "actual": "40",
+            "error": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "100",
+              "decimal": "100.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "sha256": "a14d75e0d6647bf6083e775855e53355bf90094132147e1ec0ad893e1b4e1ed4"
+          },
+          {
+            "model": {
+              "id": "mean",
+              "version": 1,
+              "family": "mean",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-02",
+            "training_rows": 2,
+            "training_prefix_sha256": "a663d15c7aac44daf61a6be150ca99d0c16dde7271f4cecfe7a8828e9c6fd1e6",
+            "origin": "2020-02",
+            "horizon": 1,
+            "target_period": "2020-03",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "3/2",
+              "decimal": "1.500000000000",
+              "reason": null
+            },
+            "point_functional": "training arithmetic mean",
+            "actual": "3",
+            "error": {
+              "exact": "3/2",
+              "decimal": "1.500000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "3/2",
+              "decimal": "1.500000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "9/4",
+              "decimal": "2.250000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "3/2",
+              "decimal": "1.500000000000",
+              "reason": null
+            },
+            "sha256": "aca0bcbbf9b7a755ea4089f5965ac9d53e0c5c8e36f55a30a4c04cb07af59612"
+          },
+          {
+            "model": {
+              "id": "mean",
+              "version": 1,
+              "family": "mean",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-02",
+            "training_rows": 2,
+            "training_prefix_sha256": "5758bdb0164de2d2a393a5355374e62582348b0e5525374f4497b6f21b2d58fe",
+            "origin": "2020-02",
+            "horizon": 1,
+            "target_period": "2020-03",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "15",
+              "decimal": "15.000000000000",
+              "reason": null
+            },
+            "point_functional": "training arithmetic mean",
+            "actual": "30",
+            "error": {
+              "exact": "15",
+              "decimal": "15.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "15",
+              "decimal": "15.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "225",
+              "decimal": "225.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "3/2",
+              "decimal": "1.500000000000",
+              "reason": null
+            },
+            "sha256": "399193cb60e65da1229b938873c768e1acdbb998adc5e4ea12498dc4494b0d27"
+          },
+          {
+            "model": {
+              "id": "mean",
+              "version": 1,
+              "family": "mean",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-03",
+            "training_rows": 3,
+            "training_prefix_sha256": "be384a25c4c3fc8af8f2dadd9a7f4f2afa3d8bfcead76a1e18ab27fb1eb25944",
+            "origin": "2020-03",
+            "horizon": 1,
+            "target_period": "2020-04",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "2",
+              "decimal": "2.000000000000",
+              "reason": null
+            },
+            "point_functional": "training arithmetic mean",
+            "actual": "4",
+            "error": {
+              "exact": "2",
+              "decimal": "2.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "2",
+              "decimal": "2.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "4",
+              "decimal": "4.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "2",
+              "decimal": "2.000000000000",
+              "reason": null
+            },
+            "sha256": "7b4cbfdd55fc0b1ff3c676112c91e9d686a6e4352270b7fe7dfb2c3a38df42ed"
+          },
+          {
+            "model": {
+              "id": "mean",
+              "version": 1,
+              "family": "mean",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-03",
+            "training_rows": 3,
+            "training_prefix_sha256": "df9ff1e8029b030e9bd62f2436ab401a087e3fc8694eeb3783f89fae0d7e2d59",
+            "origin": "2020-03",
+            "horizon": 1,
+            "target_period": "2020-04",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "20",
+              "decimal": "20.000000000000",
+              "reason": null
+            },
+            "point_functional": "training arithmetic mean",
+            "actual": "40",
+            "error": {
+              "exact": "20",
+              "decimal": "20.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "20",
+              "decimal": "20.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "400",
+              "decimal": "400.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "2",
+              "decimal": "2.000000000000",
+              "reason": null
+            },
+            "sha256": "261031c6b35dd2a91e6f3e99df03d33ac552f9a948fb0a0526e79ebd57fe428a"
+          },
+          {
+            "model": {
+              "id": "drift",
+              "version": 1,
+              "family": "drift",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-02",
+            "training_rows": 2,
+            "training_prefix_sha256": "a663d15c7aac44daf61a6be150ca99d0c16dde7271f4cecfe7a8828e9c6fd1e6",
+            "origin": "2020-02",
+            "horizon": 1,
+            "target_period": "2020-03",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "3",
+              "decimal": "3.000000000000",
+              "reason": null
+            },
+            "point_functional": "endpoint linear extrapolation",
+            "actual": "3",
+            "error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "sha256": "32b9bd195f0293545ff05e05d83a4d1b4dbe5f8b11232c71b25a7b4c00bd13f3"
+          },
+          {
+            "model": {
+              "id": "drift",
+              "version": 1,
+              "family": "drift",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-02",
+            "training_rows": 2,
+            "training_prefix_sha256": "5758bdb0164de2d2a393a5355374e62582348b0e5525374f4497b6f21b2d58fe",
+            "origin": "2020-02",
+            "horizon": 1,
+            "target_period": "2020-03",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "30",
+              "decimal": "30.000000000000",
+              "reason": null
+            },
+            "point_functional": "endpoint linear extrapolation",
+            "actual": "30",
+            "error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "sha256": "e1de857c29476da6dd144d7daaa0c0d399c52f3efc7ed774411d0028083b4191"
+          },
+          {
+            "model": {
+              "id": "drift",
+              "version": 1,
+              "family": "drift",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-03",
+            "training_rows": 3,
+            "training_prefix_sha256": "be384a25c4c3fc8af8f2dadd9a7f4f2afa3d8bfcead76a1e18ab27fb1eb25944",
+            "origin": "2020-03",
+            "horizon": 1,
+            "target_period": "2020-04",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "4",
+              "decimal": "4.000000000000",
+              "reason": null
+            },
+            "point_functional": "endpoint linear extrapolation",
+            "actual": "4",
+            "error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "sha256": "2f8ccb5a9644de1481fc1c68c62f3d6b327964848c8c77ac6060a79b04894303"
+          },
+          {
+            "model": {
+              "id": "drift",
+              "version": 1,
+              "family": "drift",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-03",
+            "training_rows": 3,
+            "training_prefix_sha256": "df9ff1e8029b030e9bd62f2436ab401a087e3fc8694eeb3783f89fae0d7e2d59",
+            "origin": "2020-03",
+            "horizon": 1,
+            "target_period": "2020-04",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "40",
+              "decimal": "40.000000000000",
+              "reason": null
+            },
+            "point_functional": "endpoint linear extrapolation",
+            "actual": "40",
+            "error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "sha256": "a9d1fc9b42c04a8b18c9f8908726cfa422dd83434fd2393094385563ead9e66e"
+          },
+          {
+            "model": {
+              "id": "ses_alpha0.2_initial_y1",
+              "version": 1,
+              "family": "ses",
+              "alpha": "0.2",
+              "seasonal_period": null,
+              "initialization": "first observation,then consume subsequent observations"
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-02",
+            "training_rows": 2,
+            "training_prefix_sha256": "a663d15c7aac44daf61a6be150ca99d0c16dde7271f4cecfe7a8828e9c6fd1e6",
+            "origin": "2020-02",
+            "horizon": 1,
+            "target_period": "2020-03",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "6/5",
+              "decimal": "1.200000000000",
+              "reason": null
+            },
+            "point_functional": "fixed-alpha final level",
+            "actual": "3",
+            "error": {
+              "exact": "9/5",
+              "decimal": "1.800000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "9/5",
+              "decimal": "1.800000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "81/25",
+              "decimal": "3.240000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "9/5",
+              "decimal": "1.800000000000",
+              "reason": null
+            },
+            "sha256": "975ea68d30efe7f277db6384a41c628fc2775d9ed5c9f0dd62e11dc1530ee411"
+          },
+          {
+            "model": {
+              "id": "ses_alpha0.2_initial_y1",
+              "version": 1,
+              "family": "ses",
+              "alpha": "0.2",
+              "seasonal_period": null,
+              "initialization": "first observation,then consume subsequent observations"
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-02",
+            "training_rows": 2,
+            "training_prefix_sha256": "5758bdb0164de2d2a393a5355374e62582348b0e5525374f4497b6f21b2d58fe",
+            "origin": "2020-02",
+            "horizon": 1,
+            "target_period": "2020-03",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "12",
+              "decimal": "12.000000000000",
+              "reason": null
+            },
+            "point_functional": "fixed-alpha final level",
+            "actual": "30",
+            "error": {
+              "exact": "18",
+              "decimal": "18.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "18",
+              "decimal": "18.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "324",
+              "decimal": "324.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "9/5",
+              "decimal": "1.800000000000",
+              "reason": null
+            },
+            "sha256": "9159dd831c07babf2184d03cd8f0a2cc06c24016a3e2ee0a1a2b8e24b74f3487"
+          },
+          {
+            "model": {
+              "id": "ses_alpha0.2_initial_y1",
+              "version": 1,
+              "family": "ses",
+              "alpha": "0.2",
+              "seasonal_period": null,
+              "initialization": "first observation,then consume subsequent observations"
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-03",
+            "training_rows": 3,
+            "training_prefix_sha256": "be384a25c4c3fc8af8f2dadd9a7f4f2afa3d8bfcead76a1e18ab27fb1eb25944",
+            "origin": "2020-03",
+            "horizon": 1,
+            "target_period": "2020-04",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "39/25",
+              "decimal": "1.560000000000",
+              "reason": null
+            },
+            "point_functional": "fixed-alpha final level",
+            "actual": "4",
+            "error": {
+              "exact": "61/25",
+              "decimal": "2.440000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "61/25",
+              "decimal": "2.440000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "3721/625",
+              "decimal": "5.953600000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "61/25",
+              "decimal": "2.440000000000",
+              "reason": null
+            },
+            "sha256": "33ba227af07641fa60cfdb557fce0e44823883cc3c6fdb474e19e61fa935ed92"
+          },
+          {
+            "model": {
+              "id": "ses_alpha0.2_initial_y1",
+              "version": 1,
+              "family": "ses",
+              "alpha": "0.2",
+              "seasonal_period": null,
+              "initialization": "first observation,then consume subsequent observations"
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-03",
+            "training_rows": 3,
+            "training_prefix_sha256": "df9ff1e8029b030e9bd62f2436ab401a087e3fc8694eeb3783f89fae0d7e2d59",
+            "origin": "2020-03",
+            "horizon": 1,
+            "target_period": "2020-04",
+            "partition": "validation",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "78/5",
+              "decimal": "15.600000000000",
+              "reason": null
+            },
+            "point_functional": "fixed-alpha final level",
+            "actual": "40",
+            "error": {
+              "exact": "122/5",
+              "decimal": "24.400000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "122/5",
+              "decimal": "24.400000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "14884/25",
+              "decimal": "595.360000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "61/25",
+              "decimal": "2.440000000000",
+              "reason": null
+            },
+            "sha256": "97cb6257eb03b86127f57d1364f94d4e9debfcd2dc31e870f3b8fe275364112e"
+          }
+        ],
+        "test": [
+          {
+            "model": {
+              "id": "naive",
+              "version": 1,
+              "family": "naive",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-04",
+            "training_rows": 4,
+            "training_prefix_sha256": "7e5c5c1ffca9c41771f2fcb670fc8f57137ea7ab8cbb8e46d15de406e012b649",
+            "origin": "2020-04",
+            "horizon": 1,
+            "target_period": "2020-05",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "4",
+              "decimal": "4.000000000000",
+              "reason": null
+            },
+            "point_functional": "last observed value",
+            "actual": "5",
+            "error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "sha256": "a5281fe3a8f1600b32f6c61f6c61973f7c3c7b6480ea7f09a079a3f08db15566"
+          },
+          {
+            "model": {
+              "id": "naive",
+              "version": 1,
+              "family": "naive",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-04",
+            "training_rows": 4,
+            "training_prefix_sha256": "c093c03f99306c327816bd9498cb7f6379e3ad9216ea06b957e701b135e82656",
+            "origin": "2020-04",
+            "horizon": 1,
+            "target_period": "2020-05",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "40",
+              "decimal": "40.000000000000",
+              "reason": null
+            },
+            "point_functional": "last observed value",
+            "actual": "50",
+            "error": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "100",
+              "decimal": "100.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "sha256": "b4a52383f10810dfb47e9891a213529bcf9dbaf1c7e40053ac4c66edc1a22e23"
+          },
+          {
+            "model": {
+              "id": "naive",
+              "version": 1,
+              "family": "naive",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-05",
+            "training_rows": 5,
+            "training_prefix_sha256": "bff1034f7cfa80e6237cbe6983fd20603da357222792fcf886cbd0db9fe8e4a3",
+            "origin": "2020-05",
+            "horizon": 1,
+            "target_period": "2020-06",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "5",
+              "decimal": "5.000000000000",
+              "reason": null
+            },
+            "point_functional": "last observed value",
+            "actual": "6",
+            "error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "sha256": "3d167e35769e77fb291573f2287d512164d7f301513a94c5e16d9265a8b7907b"
+          },
+          {
+            "model": {
+              "id": "naive",
+              "version": 1,
+              "family": "naive",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-05",
+            "training_rows": 5,
+            "training_prefix_sha256": "194dcfb68b196f34bc7743e8989ff8c46d69c558f1936d2637a0fc1c92f61562",
+            "origin": "2020-05",
+            "horizon": 1,
+            "target_period": "2020-06",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "50",
+              "decimal": "50.000000000000",
+              "reason": null
+            },
+            "point_functional": "last observed value",
+            "actual": "60",
+            "error": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "100",
+              "decimal": "100.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "sha256": "3c3f59eac5b6568aa270eaf973863ad7c6e578619553a380028e14c0df9b6af0"
+          },
+          {
+            "model": {
+              "id": "mean",
+              "version": 1,
+              "family": "mean",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-04",
+            "training_rows": 4,
+            "training_prefix_sha256": "7e5c5c1ffca9c41771f2fcb670fc8f57137ea7ab8cbb8e46d15de406e012b649",
+            "origin": "2020-04",
+            "horizon": 1,
+            "target_period": "2020-05",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "5/2",
+              "decimal": "2.500000000000",
+              "reason": null
+            },
+            "point_functional": "training arithmetic mean",
+            "actual": "5",
+            "error": {
+              "exact": "5/2",
+              "decimal": "2.500000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "5/2",
+              "decimal": "2.500000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "25/4",
+              "decimal": "6.250000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "5/2",
+              "decimal": "2.500000000000",
+              "reason": null
+            },
+            "sha256": "ddf7dd283398a1ed225042533c7fd550e3261b5a6a4fa4cb9ab920ff6e005aed"
+          },
+          {
+            "model": {
+              "id": "mean",
+              "version": 1,
+              "family": "mean",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-04",
+            "training_rows": 4,
+            "training_prefix_sha256": "c093c03f99306c327816bd9498cb7f6379e3ad9216ea06b957e701b135e82656",
+            "origin": "2020-04",
+            "horizon": 1,
+            "target_period": "2020-05",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "25",
+              "decimal": "25.000000000000",
+              "reason": null
+            },
+            "point_functional": "training arithmetic mean",
+            "actual": "50",
+            "error": {
+              "exact": "25",
+              "decimal": "25.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "25",
+              "decimal": "25.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "625",
+              "decimal": "625.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "5/2",
+              "decimal": "2.500000000000",
+              "reason": null
+            },
+            "sha256": "213d284668d6fb1e513360f1a45785dbd179b12ff50522504de49165067cba4d"
+          },
+          {
+            "model": {
+              "id": "mean",
+              "version": 1,
+              "family": "mean",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-05",
+            "training_rows": 5,
+            "training_prefix_sha256": "bff1034f7cfa80e6237cbe6983fd20603da357222792fcf886cbd0db9fe8e4a3",
+            "origin": "2020-05",
+            "horizon": 1,
+            "target_period": "2020-06",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "3",
+              "decimal": "3.000000000000",
+              "reason": null
+            },
+            "point_functional": "training arithmetic mean",
+            "actual": "6",
+            "error": {
+              "exact": "3",
+              "decimal": "3.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "3",
+              "decimal": "3.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "9",
+              "decimal": "9.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "3",
+              "decimal": "3.000000000000",
+              "reason": null
+            },
+            "sha256": "a9891dff33b9686142aca78d1de95033d084d6cdf21e2620075e2ca8c03025cd"
+          },
+          {
+            "model": {
+              "id": "mean",
+              "version": 1,
+              "family": "mean",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-05",
+            "training_rows": 5,
+            "training_prefix_sha256": "194dcfb68b196f34bc7743e8989ff8c46d69c558f1936d2637a0fc1c92f61562",
+            "origin": "2020-05",
+            "horizon": 1,
+            "target_period": "2020-06",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "30",
+              "decimal": "30.000000000000",
+              "reason": null
+            },
+            "point_functional": "training arithmetic mean",
+            "actual": "60",
+            "error": {
+              "exact": "30",
+              "decimal": "30.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "30",
+              "decimal": "30.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "900",
+              "decimal": "900.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "3",
+              "decimal": "3.000000000000",
+              "reason": null
+            },
+            "sha256": "403af324dbf83aff9d7c26a27ba8601c1b5b483c2ef96ed8252daf14907fce81"
+          },
+          {
+            "model": {
+              "id": "drift",
+              "version": 1,
+              "family": "drift",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-04",
+            "training_rows": 4,
+            "training_prefix_sha256": "7e5c5c1ffca9c41771f2fcb670fc8f57137ea7ab8cbb8e46d15de406e012b649",
+            "origin": "2020-04",
+            "horizon": 1,
+            "target_period": "2020-05",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "5",
+              "decimal": "5.000000000000",
+              "reason": null
+            },
+            "point_functional": "endpoint linear extrapolation",
+            "actual": "5",
+            "error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "sha256": "905857c7f01b666f086e7cbcc59e376799753af88bc641bc26f74c647a4e2b78"
+          },
+          {
+            "model": {
+              "id": "drift",
+              "version": 1,
+              "family": "drift",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-04",
+            "training_rows": 4,
+            "training_prefix_sha256": "c093c03f99306c327816bd9498cb7f6379e3ad9216ea06b957e701b135e82656",
+            "origin": "2020-04",
+            "horizon": 1,
+            "target_period": "2020-05",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "50",
+              "decimal": "50.000000000000",
+              "reason": null
+            },
+            "point_functional": "endpoint linear extrapolation",
+            "actual": "50",
+            "error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "sha256": "22fa56be922d83fbbb791f5b545208e54778a5fc37da007bc3e5125211cf2376"
+          },
+          {
+            "model": {
+              "id": "drift",
+              "version": 1,
+              "family": "drift",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-05",
+            "training_rows": 5,
+            "training_prefix_sha256": "bff1034f7cfa80e6237cbe6983fd20603da357222792fcf886cbd0db9fe8e4a3",
+            "origin": "2020-05",
+            "horizon": 1,
+            "target_period": "2020-06",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "6",
+              "decimal": "6.000000000000",
+              "reason": null
+            },
+            "point_functional": "endpoint linear extrapolation",
+            "actual": "6",
+            "error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "sha256": "3e08c8296153cdc9283a134963fa14027ed8dabb75fcdd0fc4d3b88823a924e6"
+          },
+          {
+            "model": {
+              "id": "drift",
+              "version": 1,
+              "family": "drift",
+              "alpha": null,
+              "seasonal_period": null,
+              "initialization": null
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-05",
+            "training_rows": 5,
+            "training_prefix_sha256": "194dcfb68b196f34bc7743e8989ff8c46d69c558f1936d2637a0fc1c92f61562",
+            "origin": "2020-05",
+            "horizon": 1,
+            "target_period": "2020-06",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "60",
+              "decimal": "60.000000000000",
+              "reason": null
+            },
+            "point_functional": "endpoint linear extrapolation",
+            "actual": "60",
+            "error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "sha256": "ad63664ea9979b19ba5d538b4db3843ecb38883d8085c841a228f337066ab27b"
+          },
+          {
+            "model": {
+              "id": "ses_alpha0.2_initial_y1",
+              "version": 1,
+              "family": "ses",
+              "alpha": "0.2",
+              "seasonal_period": null,
+              "initialization": "first observation,then consume subsequent observations"
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-04",
+            "training_rows": 4,
+            "training_prefix_sha256": "7e5c5c1ffca9c41771f2fcb670fc8f57137ea7ab8cbb8e46d15de406e012b649",
+            "origin": "2020-04",
+            "horizon": 1,
+            "target_period": "2020-05",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "256/125",
+              "decimal": "2.048000000000",
+              "reason": null
+            },
+            "point_functional": "fixed-alpha final level",
+            "actual": "5",
+            "error": {
+              "exact": "369/125",
+              "decimal": "2.952000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "369/125",
+              "decimal": "2.952000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "136161/15625",
+              "decimal": "8.714304000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "369/125",
+              "decimal": "2.952000000000",
+              "reason": null
+            },
+            "sha256": "f8b19e9d161af537a069eaa141a36bf1a4498b25e8f2a99a4f1c3440f8a59097"
+          },
+          {
+            "model": {
+              "id": "ses_alpha0.2_initial_y1",
+              "version": 1,
+              "family": "ses",
+              "alpha": "0.2",
+              "seasonal_period": null,
+              "initialization": "first observation,then consume subsequent observations"
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-04",
+            "training_rows": 4,
+            "training_prefix_sha256": "c093c03f99306c327816bd9498cb7f6379e3ad9216ea06b957e701b135e82656",
+            "origin": "2020-04",
+            "horizon": 1,
+            "target_period": "2020-05",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "512/25",
+              "decimal": "20.480000000000",
+              "reason": null
+            },
+            "point_functional": "fixed-alpha final level",
+            "actual": "50",
+            "error": {
+              "exact": "738/25",
+              "decimal": "29.520000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "738/25",
+              "decimal": "29.520000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "544644/625",
+              "decimal": "871.430400000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "369/125",
+              "decimal": "2.952000000000",
+              "reason": null
+            },
+            "sha256": "978e9153316a062f715e33c5b351789ba69cffc9478827430ed4dd08bcbe99ad"
+          },
+          {
+            "model": {
+              "id": "ses_alpha0.2_initial_y1",
+              "version": 1,
+              "family": "ses",
+              "alpha": "0.2",
+              "seasonal_period": null,
+              "initialization": "first observation,then consume subsequent observations"
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic1",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-05",
+            "training_rows": 5,
+            "training_prefix_sha256": "bff1034f7cfa80e6237cbe6983fd20603da357222792fcf886cbd0db9fe8e4a3",
+            "origin": "2020-05",
+            "horizon": 1,
+            "target_period": "2020-06",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "1649/625",
+              "decimal": "2.638400000000",
+              "reason": null
+            },
+            "point_functional": "fixed-alpha final level",
+            "actual": "6",
+            "error": {
+              "exact": "2101/625",
+              "decimal": "3.361600000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "2101/625",
+              "decimal": "3.361600000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "4414201/390625",
+              "decimal": "11.300354560000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "1",
+              "decimal": "1.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "2101/625",
+              "decimal": "3.361600000000",
+              "reason": null
+            },
+            "sha256": "793f6368e35e7b95f350afe895cda7e07e0199ab71e34361b05466670f99ad64"
+          },
+          {
+            "model": {
+              "id": "ses_alpha0.2_initial_y1",
+              "version": 1,
+              "family": "ses",
+              "alpha": "0.2",
+              "seasonal_period": null,
+              "initialization": "first observation,then consume subsequent observations"
+            },
+            "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+            "profile_version": 1,
+            "series_id": "synthetic2",
+            "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537",
+            "source_sha256": null,
+            "training_cutoff": "2020-05",
+            "training_rows": 5,
+            "training_prefix_sha256": "194dcfb68b196f34bc7743e8989ff8c46d69c558f1936d2637a0fc1c92f61562",
+            "origin": "2020-05",
+            "horizon": 1,
+            "target_period": "2020-06",
+            "partition": "test",
+            "status": "success",
+            "reason": null,
+            "prediction": {
+              "exact": "3298/125",
+              "decimal": "26.384000000000",
+              "reason": null
+            },
+            "point_functional": "fixed-alpha final level",
+            "actual": "60",
+            "error": {
+              "exact": "4202/125",
+              "decimal": "33.616000000000",
+              "reason": null
+            },
+            "absolute_error": {
+              "exact": "4202/125",
+              "decimal": "33.616000000000",
+              "reason": null
+            },
+            "squared_error": {
+              "exact": "17656804/15625",
+              "decimal": "1130.035456000000",
+              "reason": null
+            },
+            "training_scale": {
+              "exact": "10",
+              "decimal": "10.000000000000",
+              "reason": null
+            },
+            "scaled_absolute_error": {
+              "exact": "2101/625",
+              "decimal": "3.361600000000",
+              "reason": null
+            },
+            "sha256": "644be8b81eae868b0227b876d14d8312c961b44c4722084b283c50490dac9dc0"
+          }
+        ]
+      },
+      "primary_selected_test": {
+        "model": "drift",
+        "aggregate": {
+          "planned": 4,
+          "scored": 4,
+          "status_counts": {
+            "success": 4,
+            "missing_target": 0,
+            "ineligible_origin": 0,
+            "unsupported_configuration": 0,
+            "model_failure": 0
+          },
+          "planned_distinct_target_months": 4,
+          "distinct_target_months": 4,
+          "mae": {
+            "exact": "0",
+            "decimal": "0.000000000000",
+            "reason": null
+          },
+          "mse": {
+            "exact": "0",
+            "decimal": "0.000000000000",
+            "reason": null
+          },
+          "rmse": {
+            "exact": "sqrt(0)",
+            "decimal": "0.000000000000",
+            "reason": null
+          },
+          "bias": {
+            "exact": "0",
+            "decimal": "0.000000000000",
+            "reason": null
+          },
+          "mase": {
+            "exact": "0",
+            "decimal": "0.000000000000",
+            "reason": null
+          },
+          "mase_count": 4,
+          "undefined_scale_counts": {
+            "zero_training_scale": 0,
+            "insufficient_scale_history": 0,
+            "missing_training_target": 0
+          },
+          "wape": {
+            "exact": "0",
+            "decimal": "0.000000000000",
+            "reason": null
+          },
+          "absolute_smape_percent": {
+            "exact": null,
+            "decimal": null,
+            "reason": "manual_diagnostic_only_max20_pairs"
+          },
+          "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+        },
+        "by_series": {
+          "synthetic1": {
+            "planned": 2,
+            "scored": 2,
+            "status_counts": {
+              "success": 2,
+              "missing_target": 0,
+              "ineligible_origin": 0,
+              "unsupported_configuration": 0,
+              "model_failure": 0
+            },
+            "planned_distinct_target_months": 2,
+            "distinct_target_months": 2,
+            "mae": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "mse": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "rmse": {
+              "exact": "sqrt(0)",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "bias": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "mase": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "mase_count": 2,
+            "undefined_scale_counts": {
+              "zero_training_scale": 0,
+              "insufficient_scale_history": 0,
+              "missing_training_target": 0
+            },
+            "wape": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "absolute_smape_percent": {
+              "exact": null,
+              "decimal": null,
+              "reason": "manual_diagnostic_only_max20_pairs"
+            },
+            "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+          },
+          "synthetic2": {
+            "planned": 2,
+            "scored": 2,
+            "status_counts": {
+              "success": 2,
+              "missing_target": 0,
+              "ineligible_origin": 0,
+              "unsupported_configuration": 0,
+              "model_failure": 0
+            },
+            "planned_distinct_target_months": 2,
+            "distinct_target_months": 2,
+            "mae": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "mse": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "rmse": {
+              "exact": "sqrt(0)",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "bias": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "mase": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "mase_count": 2,
+            "undefined_scale_counts": {
+              "zero_training_scale": 0,
+              "insufficient_scale_history": 0,
+              "missing_training_target": 0
+            },
+            "wape": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "absolute_smape_percent": {
+              "exact": null,
+              "decimal": null,
+              "reason": "manual_diagnostic_only_max20_pairs"
+            },
+            "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+          }
+        },
+        "macro_mae": {
+          "exact": "0",
+          "decimal": "0.000000000000",
+          "reason": null
+        },
+        "by_horizon": {
+          "1": {
+            "planned": 4,
+            "scored": 4,
+            "status_counts": {
+              "success": 4,
+              "missing_target": 0,
+              "ineligible_origin": 0,
+              "unsupported_configuration": 0,
+              "model_failure": 0
+            },
+            "planned_distinct_target_months": 4,
+            "distinct_target_months": 4,
+            "mae": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "mse": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "rmse": {
+              "exact": "sqrt(0)",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "bias": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "mase": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "mase_count": 4,
+            "undefined_scale_counts": {
+              "zero_training_scale": 0,
+              "insufficient_scale_history": 0,
+              "missing_training_target": 0
+            },
+            "wape": {
+              "exact": "0",
+              "decimal": "0.000000000000",
+              "reason": null
+            },
+            "absolute_smape_percent": {
+              "exact": null,
+              "decimal": null,
+              "reason": "manual_diagnostic_only_max20_pairs"
+            },
+            "smape_convention": "Editorial absolute denominator,double-zero term0;not the signed denominator in FPP3. Diagnostic only."
+          }
+        },
+        "paired_seasonal_naive": {
+          "common_scored": 4,
+          "candidate_mae": {
+            "exact": "0",
+            "decimal": "0.000000000000",
+            "reason": null
+          },
+          "reference_mae": {
+            "exact": "11/2",
+            "decimal": "5.500000000000",
+            "reason": null
+          },
+          "candidate_minus_reference_mae": {
+            "exact": "-11/2",
+            "decimal": "-5.500000000000",
+            "reason": null
+          },
+          "ratio": {
+            "exact": "0",
+            "decimal": "0.000000000000",
+            "reason": null
+          },
+          "reference_model": "seasonal_naive",
+          "direction": "Negative MAE difference or ratio<1 favors candidate;comparison limited to common eligible cells."
+        }
+      },
+      "test_all_candidates_role": "Diagnostic reporting only;not a second selection stage.",
+      "weighting": "Macro weights series equally;micro weights scored cells equally. With one series they coincide. MASE uses per-origin scales.",
+      "dependence": "Forecast windows overlap;300cells/model/partition represent36distinct NOAA target months,not300independent trials. No naive significance tests.",
+      "vintage": "Retrospective evaluation on a fixed revised data snapshot;historical publication vintages are unverified. Software prefix isolation does not prove as-of historical data availability."
+    },
+    "dataset": {
+      "id": "synthetic",
+      "version": 1,
+      "frequency": "monthly",
+      "units": "original units",
+      "provenance": {
+        "source_ref": "original-synthetic",
+        "snapshot_sha256": null,
+        "rights": "self_authored",
+        "attribution": "Original synthetic numerical demonstration",
+        "notes": "Unicode note  \n"
+      },
+      "series": [
+        {
+          "id": "synthetic1",
+          "availability": {
+            "status": "unknown",
+            "vintage": null,
+            "notes": "No independent availability witness"
+          },
+          "observations": [
+            {
+              "period": "2020-01",
+              "value": "1"
+            },
+            {
+              "period": "2020-02",
+              "value": "2"
+            },
+            {
+              "period": "2020-03",
+              "value": "3"
+            },
+            {
+              "period": "2020-04",
+              "value": "4"
+            },
+            {
+              "period": "2020-05",
+              "value": "5"
+            },
+            {
+              "period": "2020-06",
+              "value": "6"
+            },
+            {
+              "period": "2020-07",
+              "value": "7"
+            },
+            {
+              "period": "2020-08",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "id": "synthetic2",
+          "availability": {
+            "status": "unknown",
+            "vintage": null,
+            "notes": "No independent availability witness"
+          },
+          "observations": [
+            {
+              "period": "2020-01",
+              "value": "10"
+            },
+            {
+              "period": "2020-02",
+              "value": "20"
+            },
+            {
+              "period": "2020-03",
+              "value": "30"
+            },
+            {
+              "period": "2020-04",
+              "value": "40"
+            },
+            {
+              "period": "2020-05",
+              "value": "50"
+            },
+            {
+              "period": "2020-06",
+              "value": "60"
+            },
+            {
+              "period": "2020-07",
+              "value": "70"
+            },
+            {
+              "period": "2020-08",
+              "value": "80"
+            }
+          ]
+        }
+      ]
+    },
+    "dataset_sha256": "cc06c06116f3dc2b573a104dc4915b9ca3fde8e40eba4ca0a2352a47e32f7537"
+  },
+  "code_sha256": "b20c30fdfde79e37413bbaae9544ee6ef69cd2765a7ef1ec68a53d0ad765b014",
+  "resource_evidence": null,
+  "resource_policy": "Measured separately and frozen by hash;pure deterministic forecasts contain no fabricated runtime measurements.",
+  "vintage": "Retrospective evaluation on a fixed revised data snapshot;historical publication vintages are unverified. Software prefix isolation does not prove as-of historical data availability.",
+  "limits": [
+    "Fixed SES conventions are not optimized ETS",
+    "No ARIMA/trees/neural/Chronos operation or downloaded assets",
+    "No generated prediction intervals or guaranteed accuracy",
+    "All-candidate test scores are diagnostic;selection uses validation only",
+    "Exact absolute-sMAPE is a manual diagnostic for at most20scored pairs;omitted from benchmark aggregates to avoid impractical rational denominator growth"
+  ],
+  "report_sha256": "7177515407d4addfe4518567fbc436b52c21277f576441568ba8a9f5a70d152d"
+}
+```

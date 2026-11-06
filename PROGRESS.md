@@ -1075,3 +1075,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #49 independent verification
 - All21frozen families pass with resource evidence:4200cell commitments,70exact aggregate scores,168horizon MAEs,672future-target sentinels,source4.86/55.68scoring controls,complete candidate/failure accounting andvalidation-only choice. Oracle code/fixture hashes unchanged from1d5ed6a.
 - Full1462tests pass (1397inherited+65new). Complete inherited CLI/verifier acceptance and saved new CLI pairs are running;no final readiness claimed yet.
+
+## 2026-11-07 — #49 CLI/report replay corpus
+- Saved30accepted/49rejected JSON/Markdown pairs;162CLI cases pass including strict duplicate/nonfinite JSON rejection and full4200cell NOAA replay. Cases cover arbitrary monthly data,m4seasonal indexing,all SES variants,missing/failed candidates,multiseries,source rights/hash failures,manual scores,Unicode and unsupported model/weight requests.
+- README records exact arithmetic,selection/prefix rules,source-vintage limits,measured resources and correct drift underperformance. Full inherited acceptance remains running.

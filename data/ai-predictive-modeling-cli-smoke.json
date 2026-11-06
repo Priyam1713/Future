@@ -1,0 +1,981 @@
+{
+  "passed": true,
+  "count": 162,
+  "accepted_pairs": 30,
+  "rejected_pairs": 49,
+  "exact_replay": true,
+  "cases": [
+    {
+      "name": "reference",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "reference",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "seasonal",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "seasonal",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "drift",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "drift",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "mean",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "mean",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "naive",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "naive",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "ses0.2",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "ses0.2",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "ses0.5",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "ses0.5",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "ses0.8",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "ses0.8",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "constant",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "constant",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "missing-outcome",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "missing-outcome",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "structural-break",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "structural-break",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "prefix-original",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "prefix-original",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "future-sentinel",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "future-sentinel",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "rolling",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "rolling",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "missing-evaluation-target",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "missing-evaluation-target",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "failed-candidates",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "failed-candidates",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "ineligible-origin",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "ineligible-origin",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "zero-reference-tie",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "zero-reference-tie",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "multiple-series",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "multiple-series",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "metric-known",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "metric-known",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "n0",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "n0",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "zero-scale",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "zero-scale",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "zero-wape",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "zero-wape",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "partial-metrics",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "partial-metrics",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "source-distribution-score",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "source-distribution-score",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "lower-endpoint",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "lower-endpoint",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "upper-endpoint",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "upper-endpoint",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "unicode-whitespace",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "unicode-whitespace",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "report-replay",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "report-replay",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "noaa-benchmark",
+      "format": "json",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "noaa-benchmark",
+      "format": "markdown",
+      "rejected": false,
+      "passed": true
+    },
+    {
+      "name": "profile",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "profile",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "version",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "version",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "schema",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "schema",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "model",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "model",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "alpha",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "alpha",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "season",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "season",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "h0",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "h0",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "hbool",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "hbool",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "hduplicate",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "hduplicate",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "horder",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "horder",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "hfloat",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "hfloat",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "hmax",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "hmax",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "origin",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "origin",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "missing-origin",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "missing-origin",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "dataset-hash",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "dataset-hash",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "duplicate-period",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "duplicate-period",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "irregular",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "irregular",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "non-monthly",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "non-monthly",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "no-rights",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "no-rights",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "empty-source",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "empty-source",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "bad-source-hash",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "bad-source-hash",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "duplicate-series",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "duplicate-series",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "future-covariates",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "future-covariates",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "missing-training",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "missing-training",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "availability",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "availability",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-float",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-float",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-bool",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-bool",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-nan",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-nan",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-infinity",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-infinity",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-exponent",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-exponent",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-leading-zero",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-leading-zero",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-plus",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-plus",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-space",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-space",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-empty",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-empty",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-too-big",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-too-big",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-too-precise",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "numeric-too-precise",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "extra-field",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "extra-field",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "short-drift",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "short-drift",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "short-seasonal",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "short-seasonal",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "season-model-mismatch",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "season-model-mismatch",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "resource-hash",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "resource-hash",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "crossing-quantiles",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "crossing-quantiles",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "invalid-quantile-level",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "invalid-quantile-level",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "reversed-interval",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "reversed-interval",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "invalid-interval-alpha",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "invalid-interval-alpha",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "validation-label-leak",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "validation-label-leak",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "duplicate-candidate",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "duplicate-candidate",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "no-local-weights",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "no-local-weights",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "quantum-unsupported",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "quantum-unsupported",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "strict-json",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "strict-json",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "strict-json",
+      "format": "json",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "strict-json",
+      "format": "markdown",
+      "rejected": true,
+      "passed": true
+    }
+  ]
+}
