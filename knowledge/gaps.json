@@ -1099,17 +1099,17 @@
     "technique_id": 50,
     "name": "Quantum Probability Forecasting",
     "retained": true,
-    "status": "Researching — Audit Only",
+    "status": "Core v1 Ready — CPU-Emulated Small-Circuit Probability Reference Scope",
     "variation_count": 3,
     "source_count": 3,
     "missing_source_urls": [
       3
     ],
-    "coverage_status": "Three ranked sources and publication types verified;small-circuit probability mapping,Aer metadata,seed/bit-order conventions andindependent fixture strategy audited;no runtime",
+    "coverage_status": "Verified offline five-gate statevector,seeded terminal sampling and honest classical comparator;all20families andfull inherited acceptance pass",
     "gaps": [
-      "Source/fixture/engine acceptance pending;knowledge/quantum_probability_forecasting_resource_audit.json",
-      "Aer/SDK/Algorithms remain uninstalled;documentation is not operational support",
-      "No simulated quantum speedup or unknown-future market accuracy certified"
+      "Aer/QAE/coherent oracle andinventory variations unimplemented/P1/P2",
+      "PRNG finite-grid/ideal-iid distinction andrare events;no certified confidence interval",
+      "No QPU/quantum advantage/unknown-market forecast skill"
     ],
     "provisional_variation_sources_not_in_ranked_list": []
   },

@@ -1122,3 +1122,9 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #50 full acceptance
 - Passed1598tests (1462inherited+136new),2207CLI cases (2029inherited+178new),29independent verifiers (28inherited+1new). All20families and36accepted/53rejected exact JSON/Markdown pairs pass.
 - All2927protected earlier bytes unchanged. Registry idempotence,rights/source integrity,strict JSON with two inherited malformed rejection fixtures,dependency audit,pip check,diff check,other59gap entries and60IDs/54retained/six exclusions pass. Evidence:data/quantum-probability-forecasting-acceptance-checks.json.
+
+## 2026-11-07 — #50 Core v1 closure
+- Accepted **Core v1 Ready — CPU-Emulated Small-Circuit Probability Reference Scope** undermontanaro-ibm-small-circuit-cpu-probability-v1. All14criteria pass;all20families,79independent signed circuits,300PRNG words,HH/Bell/endianness andexact binomial/nonmonotone controls verified.
+- Full1598tests,2207CLI cases and29independent verifiers pass. All2927pre-engine protected bytes unchanged;registry/rights/strict JSON/dependencies/pip/diff andtaxonomy pass. Saved36accepted/53rejected replay pairs;both Git checkout EOL settings preserve corpus bytes.
+- Source:f9dc213;fixtures:c85b4aa;engine:530ed7a;benchmark:e39c4e0;reports/verification:ccfe862;acceptance:665973c. Actual classical sampling faster than CPU circuit sampling;known-p lookup fastest. Finite-grid PRNG/ideal-iid andmemory measurement limits recorded. No quantum advantage/QAE/Aer/market skill certified.
+- Next only after closure push/clean0/0main:Technique51Superforecasting audit only. No51implementation or52research.

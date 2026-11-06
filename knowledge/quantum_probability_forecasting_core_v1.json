@@ -1,0 +1,616 @@
+{
+  "version": 1,
+  "technique_id": 50,
+  "name": "Quantum Probability Forecasting",
+  "date": "2026-11-07",
+  "status": "Core v1 Ready — CPU-Emulated Small-Circuit Probability Reference Scope",
+  "profile": "montanaro-ibm-small-circuit-cpu-probability-v1",
+  "profile_sha256": "abe755a144bf38b228ebbd0e6eb313b93405ff2d90fda75e1bcb2295196852dd",
+  "source_commit": "f9dc213",
+  "fixture_commit": "c85b4aa",
+  "engine_commit": "530ed7a",
+  "benchmark_and_isolation_commit": "e39c4e0",
+  "verification_commits": [
+    "530ed7a",
+    "ccfe862"
+  ],
+  "report_commit": "ccfe862",
+  "portable_replay_commits": [
+    "808edad",
+    "10ecf95"
+  ],
+  "acceptance_commit": "665973c",
+  "ranked_sources_unchanged": [
+    [
+      50,
+      "Quantum Probability Forecasting",
+      1,
+      "Ashley Montanaro",
+      "Quantum Speedup of Monte Carlo Methods",
+      "Quantum estimation theory",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4614442/",
+      "Open peer-reviewed paper",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      50,
+      "Quantum Probability Forecasting",
+      2,
+      "IBM / Qiskit contributors",
+      "Qiskit Aer Documentation",
+      "Local classical quantum simulator",
+      "https://qiskit.github.io/qiskit-aer/",
+      "Open software docs",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      50,
+      "Quantum Probability Forecasting",
+      3,
+      "Stefan Woerner and Daniel J. Egger",
+      "Quantum Risk Analysis",
+      "Quantum finance/uncertainty demonstration",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows_unchanged": [
+    [
+      50,
+      "Quantum Probability Forecasting",
+      "Quantum Monte Carlo amplitude estimation",
+      "Quantum Risk Analysis",
+      "Qiskit Aer Documentation",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      50,
+      "Quantum Probability Forecasting",
+      "variational simulators",
+      "Quantum Risk Analysis",
+      "Qiskit Aer Documentation",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      50,
+      "Quantum Probability Forecasting",
+      "quantum-inspired sampling",
+      "Quantum Risk Analysis",
+      "Qiskit Aer Documentation",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "profile_record": "knowledge/quantum_probability_forecasting_profile_v1.json",
+  "source_catalog": "knowledge/quantum_probability_forecasting_sources.json",
+  "source_freeze": "knowledge/quantum_probability_forecasting_source_freeze_v1.json",
+  "fixture_freeze": {
+    "version": 1,
+    "hash_convention": "SHA256 UTF8 with CRLF normalized to LF",
+    "files": {
+      "scripts/quantum_probability_forecasting_oracle.py": "fd33f5c07d4e0222568ec836fc3e7b7e23f485cc9c64ec8367d2a353b3caa057",
+      "tests/fixtures/quantum_probability_forecasting_reference_v1.json": "6fe3ca229a8d7aee54f943fe05b66813f232a2286d98acfdfe16ea7ab14721f1"
+    }
+  },
+  "numeric": {
+    "arithmetic": "Python complex binary64, platform libm trig",
+    "absolute_tolerance": 1e-12,
+    "serialization": "Python shortest roundtrip JSON floats;replay pinned runtime;zero retained,no clipping",
+    "normalization": "Verify norm within1e-12;retain raw Born probabilities;sampling CDF divides explicitly by measured norm;no input state injection"
+  },
+  "indexing": "q0 LSB;bitstrings q(n-1)..q0;ascending state index;identity qi->ci terminal mapping only",
+  "bounds": {
+    "qubits": [
+      1,
+      4
+    ],
+    "gates": 64,
+    "shots": [
+      1,
+      100000
+    ],
+    "angle_radians_abs_max": 1000000
+  },
+  "prng": {
+    "id": "xorshift32-v1",
+    "seed_range": [
+      1,
+      4294967295
+    ],
+    "algorithm": "For each draw: x ^= (x<<13)&0xffffffff; x ^= x>>17; x ^= (x<<5)&0xffffffff; x &=0xffffffff;u=x/4294967296.0. One draw per shot.",
+    "sampling": "Event indices first ascending,then complement ascending;CDF normalized by verified norm;strict u<cumulative;last positive cell absorbs only roundoff residual.",
+    "streams": "common:comparator_seed equals seed; independent:distinct seeds. All events use event-first CDF so Bernoulli u<p equals circuit event indicator by construction for common stream."
+  },
+  "gate_allowlist": [
+    "id",
+    "x",
+    "h",
+    "ry",
+    "cx"
+  ],
+  "source_and_rights": "Original implementation and fixtures;source facts only. Montanaro2015Proc.R.Soc.A article and Woerner/Egger2019npj article CC BY4.0. Original Book inventory row retained as historical metadata;no PDFs/figures copied. Aer Apache2.0 source inspected but no code copied/package installed. See immutable catalog and bibliographic audit.",
+  "source_mathematics_vs_editorial": "Born rule,unitary matrices,coherent-oracle assumptions are sourced. Schema,bounds,CDF/PRNG,depth accounting,tolerance and report format are editorial implementation conventions. QAE query complexity is not measured CPU time.",
+  "worked_controls": {
+    "ry_pi_third": {
+      "amplitudes": [
+        "sqrt(3)/2",
+        "1/2"
+      ],
+      "probabilities": [
+        "3/4",
+        "1/4"
+      ],
+      "seed1_shots100_count": 33
+    },
+    "bell": {
+      "probabilities": [
+        "1/2",
+        "0",
+        "0",
+        "1/2"
+      ],
+      "gates": 2,
+      "depth": 2
+    },
+    "hh": {
+      "probabilities": [
+        1,
+        0
+      ]
+    },
+    "endian": "Xq1=>10/index2",
+    "binomial": {
+      "p": "1/4",
+      "shots": 100,
+      "expected_count": "25",
+      "count_variance": "75/4",
+      "frequency_variance": "3/1600",
+      "standard_error": "sqrt(3)/40"
+    },
+    "nonmonotone": "u=[1/4,3/4,1/4],p=1/2:error0 atN2,error1/6 atN3"
+  },
+  "verification": {
+    "passed": true,
+    "families": {
+      "basis-states": {
+        "passed": true,
+        "expectation": "algebraic basis and X twice"
+      },
+      "hadamard": {
+        "passed": true,
+        "expectation": "signed H0/H1"
+      },
+      "rotation-map": {
+        "passed": true,
+        "expectation": "RY symbolic anchors and negative sign"
+      },
+      "normalization": {
+        "passed": true,
+        "expectation": "norm1 through64gates"
+      },
+      "endpoint-events": {
+        "passed": true,
+        "expectation": "exact X/identity shot endpoints"
+      },
+      "seeded-replay": {
+        "passed": true,
+        "expectation": "exact independent100word seeds"
+      },
+      "low-shot-variance": {
+        "passed": true,
+        "expectation": "exact rational binomial moments"
+      },
+      "nonmonotone-error": {
+        "passed": true,
+        "expectation": "controlled uniforms worsen2to3"
+      },
+      "exact-vs-sampled": {
+        "passed": true,
+        "expectation": "ideal values distinct from observed"
+      },
+      "circuit-resources": {
+        "passed": true,
+        "expectation": "Bell2gates depth2;parallel gates depth1"
+      },
+      "invalid-angles": {
+        "passed": true,
+        "expectation": "reject bool/nonfinite/oversize angles"
+      },
+      "unsupported-backends": {
+        "passed": true,
+        "expectation": "reject Aer/GPU/QPU"
+      },
+      "endianness": {
+        "passed": true,
+        "expectation": "Xq1 index2"
+      },
+      "classical-bernoulli": {
+        "passed": true,
+        "expectation": "same p,N;shared identity;distinct streams"
+      },
+      "uncertainty-assumptions": {
+        "passed": true,
+        "expectation": "iid assumption;CI null"
+      },
+      "no-simulated-speedup": {
+        "passed": true,
+        "expectation": "no advantage claim;AE absent"
+      },
+      "oracle-provenance": {
+        "passed": true,
+        "expectation": "reject missing rights/hash;reference assumptions"
+      },
+      "json-markdown-replay": {
+        "passed": true,
+        "expectation": "CLI saved JSON/MD with Unicode raw hash"
+      },
+      "interference-control": {
+        "passed": true,
+        "expectation": "HH identity probability-only negative control"
+      },
+      "bell-control": {
+        "passed": true,
+        "expectation": "Bell and reversed control signed matrices"
+      }
+    },
+    "independent_circuits": 79,
+    "maximum_amplitude_error": 1.7763568394002505e-15,
+    "seeded_words": 300,
+    "negative_requests": 52,
+    "fixture_freeze": {
+      "version": 1,
+      "hash_convention": "SHA256 UTF8 with CRLF normalized to LF",
+      "files": {
+        "scripts/quantum_probability_forecasting_oracle.py": "fd33f5c07d4e0222568ec836fc3e7b7e23f485cc9c64ec8367d2a353b3caa057",
+        "tests/fixtures/quantum_probability_forecasting_reference_v1.json": "6fe3ca229a8d7aee54f943fe05b66813f232a2286d98acfdfe16ea7ab14721f1"
+      }
+    },
+    "rights": "Original matrices,fixtures and code;source facts and attribution only",
+    "profile_sha256": "abe755a144bf38b228ebbd0e6eb313b93405ff2d90fda75e1bcb2295196852dd"
+  },
+  "resource_measurements": {
+    "version": 1,
+    "measured": true,
+    "environment": {
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+      "packages": {
+        "qiskit": "not installed",
+        "qiskit-aer": "not installed",
+        "qiskit-algorithms": "not installed"
+      }
+    },
+    "protocol": "Five untraced warm/cold-order repetitions per phase;separate tracemalloc run per phase measures Python allocations only;CLI includes process/import/registry/report costs;known-p direct is lookup of already derived p. Not a QAE or hardware comparison.",
+    "process_peak_working_set_bytes": 26726400,
+    "process_memory_scope": "Whole measurement process including imports/tracing;not isolated per kernel or CLI child",
+    "profile_sha256": "abe755a144bf38b228ebbd0e6eb313b93405ff2d90fda75e1bcb2295196852dd",
+    "code_sha256": "2fc23924ddfe00d6bf08b7d2d7dbd1c4fb0ca445339ee769faff52dc951866b5",
+    "results": [
+      {
+        "id": "bernoulli",
+        "request_sha256": "e30de3a69d7c883cbc898bffefdfcdd122e720287bda00ca2e564ec1481dc9fc",
+        "qubits": 1,
+        "gates": 1,
+        "shots": 100000,
+        "phases": {
+          "known_p_direct": {
+            "seconds": [
+              6e-07,
+              4e-07,
+              1e-07,
+              0.0,
+              0.0
+            ],
+            "median_seconds": 1e-07,
+            "python_traced_peak_bytes": 0,
+            "shots_per_second": null
+          },
+          "statevector": {
+            "seconds": [
+              1.23e-05,
+              7.4e-06,
+              4.7e-06,
+              4.4e-06,
+              3.9e-06
+            ],
+            "median_seconds": 4.7e-06,
+            "python_traced_peak_bytes": 1000,
+            "shots_per_second": null
+          },
+          "circuit_sampling": {
+            "seconds": [
+              0.0304855,
+              0.0305197,
+              0.0303945,
+              0.0313328,
+              0.0302969
+            ],
+            "median_seconds": 0.0304855,
+            "python_traced_peak_bytes": 1160,
+            "shots_per_second": 3280247.986747798
+          },
+          "classical_bernoulli": {
+            "seconds": [
+              0.019596,
+              0.0195241,
+              0.0196065,
+              0.0202411,
+              0.0195736
+            ],
+            "median_seconds": 0.019596,
+            "python_traced_peak_bytes": 812,
+            "shots_per_second": 5103082.261686059
+          }
+        },
+        "total_cli_seconds": 0.8004956,
+        "event_probability": 0.24999999999999994,
+        "circuit_count": 24978,
+        "classical_count": 24823,
+        "classical_sampling_faster": true,
+        "known_p_faster_than_sampling": true
+      },
+      {
+        "id": "bell",
+        "request_sha256": "f5ba7491cdca54d776a1d1297b01b0e1b742a668dcc2371994423dbcb61081e4",
+        "qubits": 2,
+        "gates": 2,
+        "shots": 100000,
+        "phases": {
+          "known_p_direct": {
+            "seconds": [
+              4e-07,
+              1e-07,
+              1e-07,
+              1e-07,
+              1e-07
+            ],
+            "median_seconds": 1e-07,
+            "python_traced_peak_bytes": 0,
+            "shots_per_second": null
+          },
+          "statevector": {
+            "seconds": [
+              1.21e-05,
+              8.3e-06,
+              6.6e-06,
+              6.5e-06,
+              6.1e-06
+            ],
+            "median_seconds": 6.6e-06,
+            "python_traced_peak_bytes": 1160,
+            "shots_per_second": null
+          },
+          "circuit_sampling": {
+            "seconds": [
+              0.0308073,
+              0.0316088,
+              0.031877,
+              0.0309107,
+              0.0310071
+            ],
+            "median_seconds": 0.0310071,
+            "python_traced_peak_bytes": 1176,
+            "shots_per_second": 3225067.8070506435
+          },
+          "classical_bernoulli": {
+            "seconds": [
+              0.0198816,
+              0.0198246,
+              0.019773,
+              0.0198409,
+              0.0199583
+            ],
+            "median_seconds": 0.0198409,
+            "python_traced_peak_bytes": 812,
+            "shots_per_second": 5040093.947351178
+          }
+        },
+        "total_cli_seconds": 0.8072544,
+        "event_probability": 0.5,
+        "circuit_count": 50053,
+        "classical_count": 49767,
+        "classical_sampling_faster": true,
+        "known_p_faster_than_sampling": true
+      },
+      {
+        "id": "bounded64",
+        "request_sha256": "9d809a791acb468ae96eb77fdf7b6576c21c5c6c86a47b48b0768e891857796a",
+        "qubits": 4,
+        "gates": 64,
+        "shots": 100000,
+        "phases": {
+          "known_p_direct": {
+            "seconds": [
+              5e-07,
+              0.0,
+              1e-07,
+              1e-07,
+              0.0
+            ],
+            "median_seconds": 1e-07,
+            "python_traced_peak_bytes": 0,
+            "shots_per_second": null
+          },
+          "statevector": {
+            "seconds": [
+              0.0002938,
+              0.0002884,
+              0.000287,
+              0.0002886,
+              0.0002894
+            ],
+            "median_seconds": 0.0002886,
+            "python_traced_peak_bytes": 12176,
+            "shots_per_second": null
+          },
+          "circuit_sampling": {
+            "seconds": [
+              0.0439159,
+              0.0439455,
+              0.0429733,
+              0.0449963,
+              0.0435779
+            ],
+            "median_seconds": 0.0439159,
+            "python_traced_peak_bytes": 1416,
+            "shots_per_second": 2277079.5998715726
+          },
+          "classical_bernoulli": {
+            "seconds": [
+              0.0205163,
+              0.0199646,
+              0.020352,
+              0.0200618,
+              0.0203606
+            ],
+            "median_seconds": 0.020352,
+            "python_traced_peak_bytes": 788,
+            "shots_per_second": 4913522.012578617
+          }
+        },
+        "total_cli_seconds": 1.1191758,
+        "event_probability": 0.5136910268907343,
+        "circuit_count": 51413,
+        "classical_count": 51109,
+        "classical_sampling_faster": true,
+        "known_p_faster_than_sampling": true
+      }
+    ],
+    "conclusion": "Direct classical sampling was faster in these measured cases;known-p lookup was fastest. No quantum advantage or unknown-event forecast evidence."
+  },
+  "resource_measurements_sha256": "89e51b462855d1582fd77750348015bf48898c03f2a9b49a3ec36962b2aa7e1e",
+  "measurement_limits": "Native peak is whole measurement process including imports/tracing;not isolated kernel or CLI child. Phase tracemalloc peaks cover Python allocations. Timing and float results are this runtime evidence only.",
+  "comparison": "Classical Bernoulli was faster than CPU distribution sampling in all three local cases;known-p lookup fastest. Shared streams give equal event indicators by construction,not quantum superiority.",
+  "cli": {
+    "cases": 178,
+    "accepted_pairs": 36,
+    "rejected_pairs": 53,
+    "manifest": "data/quantum-probability-forecasting-cli-replay.json",
+    "checkout": {
+      "passed": true,
+      "exports": [
+        {
+          "autocrlf": "true",
+          "files": 268,
+          "passed": true
+        },
+        {
+          "autocrlf": "false",
+          "files": 268,
+          "passed": true
+        }
+      ]
+    },
+    "examples": [
+      "data/quantum-probability-forecasting-cli/compare-common-input.json",
+      "data/quantum-probability-forecasting-cli/bell-markdown.md",
+      "data/quantum-probability-forecasting-cli/reject-qae-json.json",
+      "data/quantum-probability-forecasting-cli/unicode-whitespace-markdown.md"
+    ]
+  },
+  "acceptance": {
+    "criteria": {
+      "all five gates numerically verified": true,
+      "signed amplitudes preserved": true,
+      "HH interference and Bell/reversed control pass": true,
+      "normalization within1e-12": true,
+      "q0LSB and identity mapping correct": true,
+      "versioned seed replay": true,
+      "endpoints and exact binomial moments": true,
+      "same-p same-N classical comparator": true,
+      "actual phase runtime and memory recorded": true,
+      "all20independent families pass": true,
+      "unsupported QAE/Aer/variational fail": true,
+      "accepted/rejected JSON/Markdown replay": true,
+      "full inherited acceptance and preservation": true,
+      "no quantum advantage or financial accuracy certification": true
+    },
+    "tests": 1598,
+    "inherited_tests": 1462,
+    "new_tests": 136,
+    "cli_cases": 2207,
+    "inherited_cli_cases": 2029,
+    "new_cli_cases": 178,
+    "independent_verifiers": 29,
+    "inherited_verifiers": 28,
+    "protected_files": 2927,
+    "protected_changes": [],
+    "allowed_existing_edits": [
+      "PROGRESS.md",
+      "README.md",
+      "future/__main__.py",
+      "knowledge/gaps.json"
+    ],
+    "registry": {
+      "references_checked_twice": 492,
+      "unique": 337,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    },
+    "record": "data/quantum-probability-forecasting-acceptance-checks.json"
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Five allowlisted real unitary gates in complex statevector",
+      "1–4qubits/64gates/100000shots",
+      "q0LSB/identity terminal mapping",
+      "simulate/sample/compare/reference/report",
+      "versioned deterministic PRNG and exact replay",
+      "same supplied-event classical Bernoulli and analytic population moments"
+    ],
+    "experimental_unimplemented": [
+      "Aer SDK adapter/parity",
+      "certified finite-sample intervals",
+      "coherent A,inverse,projector/QAE"
+    ],
+    "unsupported": [
+      "QPU/GPU/cloud",
+      "noise/midmeasure/reset/arbitrary input states",
+      "canonical QAE/IQAE/MLAE",
+      "variational and quantum-inspired inventory variations",
+      "VaR/CVaR",
+      "unknown-event or financial forecasting accuracy",
+      "quantum advantage"
+    ]
+  },
+  "statistical_limits": "Xorshift32 is a deterministic noncryptographic finite-state32bit-grid generator. Sequential draws are not literally iid;analytical moments concern the ideal iid supplied-model experiment. Arbitrarily rare events cannot be faithfully resolved by the finite grid;ideal tiny probabilities are retained. No finite-sample CI,physical randomness or empirical forecast validation.",
+  "backlog": {
+    "P1": [
+      "Pinned optional Aer CPU acquisition and actual independent parity",
+      "Explicit RNG and bit-order contract comparisons",
+      "Verified coherent A/inverse/projector and phase conventions before canonical QAE",
+      "Independent IQAE/MLAE confidence/optimization fixtures",
+      "Explicit oracle queries vs primitive gates",
+      "Rare-event sampling and numerical analysis",
+      "Rights-cleared published risk toy reproduction"
+    ],
+    "P2": [
+      "Source-verified variational and quantum-inspired methods",
+      "Noise and justified larger circuits",
+      "GPU benchmark and separately scoped hardware authorization",
+      "Fair end-to-end quantum/classical comparisons",
+      "Forecast skill only with separate prospective/historical evidence"
+    ]
+  },
+  "next": "After this closure is committed,pushed andcleanmain0/0:Technique51Superforecasting resource audit only;no51engine/CLI andno52research."
+}
