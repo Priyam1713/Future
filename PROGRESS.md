@@ -1111,3 +1111,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #50 resource measurements and report isolation
 - Recorded actual known-p,statevector,circuit-sampling,Bernoulli and totalCLI timings,Python allocation peaks and native process peak working set for three100000shot cases. Direct classical sampling was faster;no quantum speedup. No packages installed.
 - Added report-mutation isolation regression;136new tests and20independent families pass. Saved CLI corpus and full inherited acceptance are next.
+
+## 2026-11-07 — #50 CLI/report corpus
+- Saved36accepted/53rejected exact JSON/Markdown pairs:178actual CLI executions,including four malformed rawJSON cases,all task paths,bit order,negative phase,common/independent seeds,maximum bounds and unsupported provenance/backend/method controls. Raw input hashes recorded separately from semantic report hashes.
+- Compact numerical/resource review:data/quantum-probability-forecasting-summary.md. All1598tests pass (1462inherited+136new);full inherited CLI/verifier sweep running. No readiness claimed before final gates.

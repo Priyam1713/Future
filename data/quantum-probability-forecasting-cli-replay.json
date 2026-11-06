@@ -1,0 +1,898 @@
+{
+  "passed": true,
+  "cli_cases": 178,
+  "accepted_pairs": 36,
+  "rejected_pairs": 53,
+  "records": [
+    {
+      "id": "zero",
+      "input": "data/quantum-probability-forecasting-cli/zero-input.json",
+      "raw_input_sha256": "143fe598a8dcd23d67ebbf0befb77bd9acd1663efe92debb6897f25c9e7bc688",
+      "exit_code": 0,
+      "outputs": {
+        "json": "c7ee74f619555d8b3f28f3d6d5159520ebb1059a23b1bb35f7aaf6cec6740096",
+        "markdown": "0c7dd822e734bfbd234ed6f795eea4f6a79f3c7c2fa4868604882275fc158a66"
+      }
+    },
+    {
+      "id": "identity",
+      "input": "data/quantum-probability-forecasting-cli/identity-input.json",
+      "raw_input_sha256": "58bfd2b4930586667fcc3a2907131083d614115e9a1cddfa2e76ec33676c7cfe",
+      "exit_code": 0,
+      "outputs": {
+        "json": "b438a4a9e5b4fff27e80e1124ea3be69f8817ed5abdeabf6178351cdec707fad",
+        "markdown": "97804a37bf32d3f810e1c622e7614584db324ed5943776390c0cef8760fae9c4"
+      }
+    },
+    {
+      "id": "one",
+      "input": "data/quantum-probability-forecasting-cli/one-input.json",
+      "raw_input_sha256": "e9096beb5063735c7b202d6d682c547844101965a09b9e63123ebbdacd82ab9e",
+      "exit_code": 0,
+      "outputs": {
+        "json": "aebef95def9e84afb3defd4d78992310ab86368b4309fd0c5f145dbba91fd41a",
+        "markdown": "784e384e04c2dcceaa888ed7a14835e4d48dafd5b16c9d01496522fe0118cc95"
+      }
+    },
+    {
+      "id": "xx",
+      "input": "data/quantum-probability-forecasting-cli/xx-input.json",
+      "raw_input_sha256": "98b93eac1ea34bb2c169fccad3f2d3faaa6ece0e8c475980ed59e122ceff2e61",
+      "exit_code": 0,
+      "outputs": {
+        "json": "0fbb943fcb52613f11bcd67b0f4062a2c7c548356e819ada6d5b4ef8ddf896a0",
+        "markdown": "569796138981f459b958fc58af784186cdd8edfb9749a069a1dc471bbfc548ef"
+      }
+    },
+    {
+      "id": "h0",
+      "input": "data/quantum-probability-forecasting-cli/h0-input.json",
+      "raw_input_sha256": "7ebe98d8b198712d2d729da8afc4c80ec79df393a2db816a6f5ce8702a6b324a",
+      "exit_code": 0,
+      "outputs": {
+        "json": "fea7f5ef3ca6a8a5ed822699b626a6a7de1e274d6b46ff81264cbf97d39a2bb6",
+        "markdown": "e4a2745f24fc6a169849123113c9cc6877373fe1b5ff945b6ba862023f157cd1"
+      }
+    },
+    {
+      "id": "h1",
+      "input": "data/quantum-probability-forecasting-cli/h1-input.json",
+      "raw_input_sha256": "79039fc14e6f8430cb363a088a679c3e30570634c1d045c9ab53caa5b2e9cdf1",
+      "exit_code": 0,
+      "outputs": {
+        "json": "c7c72a8d44a52a987ba199b7c34d02964a5615f8db02e8ee9fc4910afd9fc486",
+        "markdown": "c2744b8df52785d7ef13897bc1b9ebdee6914609c9581f572a202ebb83eb55e3"
+      }
+    },
+    {
+      "id": "hh",
+      "input": "data/quantum-probability-forecasting-cli/hh-input.json",
+      "raw_input_sha256": "6b4c11c5c6be014c06d5684536b27ff9bef41ce93e509873b77cc8a6139fd374",
+      "exit_code": 0,
+      "outputs": {
+        "json": "61269a5c2ea94a924ffeae9d949afccbd177961d1685ebb347c72b0551f64bf1",
+        "markdown": "36bd0c36ffbe903388ab3985ae46fe28cc78988427995d4e2b8b0451ea8fcbea"
+      }
+    },
+    {
+      "id": "ry0",
+      "input": "data/quantum-probability-forecasting-cli/ry0-input.json",
+      "raw_input_sha256": "f053bcacd2813c3b9ccebcb449b6051fc66bbc3cd0062b945138575a40bc5d3e",
+      "exit_code": 0,
+      "outputs": {
+        "json": "bbf5b5fb46877be13bb3eb3f5f08d64ca5401f609f4398d9e10e68e62c4eeeeb",
+        "markdown": "c6a29520b5f1d5852c2a7bc2305a65df23353c915506c126be20fe93baa1fcf5"
+      }
+    },
+    {
+      "id": "rythird",
+      "input": "data/quantum-probability-forecasting-cli/rythird-input.json",
+      "raw_input_sha256": "8ba5f2376fbf7de0b87977991bd7166599498db501817e75409cc6092d01a857",
+      "exit_code": 0,
+      "outputs": {
+        "json": "8f3e591de5b18df6a50b4bacc3208c5e3628c3ef3509f197845e825e16d7c0bb",
+        "markdown": "2db7bd4f4d2fc5c4d2b9d4b77e5e9c69f79e50f6391b963854c2be754af98a9e"
+      }
+    },
+    {
+      "id": "ryhalf",
+      "input": "data/quantum-probability-forecasting-cli/ryhalf-input.json",
+      "raw_input_sha256": "7c8208199898acfa715b9963c4dcd91553f372ab24cb7a87b3348aaf2597b572",
+      "exit_code": 0,
+      "outputs": {
+        "json": "94223f4c45d074658264760627ab946d42adf20972e283be718f314e858a7aef",
+        "markdown": "fc4237e4f7ce66271098de3be9c6539384f8ecea8d1d31c91158f25e72f541c6"
+      }
+    },
+    {
+      "id": "rypi",
+      "input": "data/quantum-probability-forecasting-cli/rypi-input.json",
+      "raw_input_sha256": "40beadfbc466b7eccea3687ecc8b09f35eb4b5800b393e5d2f76460eae25d677",
+      "exit_code": 0,
+      "outputs": {
+        "json": "00e367c357b3eca10813b509cbcc445bc2d0bbfac1b1476cd9c3fe8a972d1695",
+        "markdown": "9fc1162630ae8e9abb4c38ccd8efae4590e16ec2cd69a47edd340056934626c5"
+      }
+    },
+    {
+      "id": "rynegative",
+      "input": "data/quantum-probability-forecasting-cli/rynegative-input.json",
+      "raw_input_sha256": "dc9a59f54383424e0ee9146116b2d90ff21954c8dee1ceec1d6ed4ea59571314",
+      "exit_code": 0,
+      "outputs": {
+        "json": "782fef260b98f1bd2c5e221233bdba3b07e83e003da53a2d6e7c3bae9c6583ef",
+        "markdown": "ecdb910d0f1d23251b4efdb30ce227fc1f56f415c91830b2b68af043cf8f531b"
+      }
+    },
+    {
+      "id": "bell",
+      "input": "data/quantum-probability-forecasting-cli/bell-input.json",
+      "raw_input_sha256": "59225cd77a718d2868e127222b44b5459269ca51a47a36f29a81244132bd81d1",
+      "exit_code": 0,
+      "outputs": {
+        "json": "36eb84f50435cb5f33b5a99db1ecbf704995a013bbef5723dbe92c210b4b04b2",
+        "markdown": "c0314392ea30ccfb41a8bfbfa9a088bbfba112e016c323c2ada657be983c88f5"
+      }
+    },
+    {
+      "id": "reversed-bell",
+      "input": "data/quantum-probability-forecasting-cli/reversed-bell-input.json",
+      "raw_input_sha256": "a5fe2f427e373056918b7158ca9ecc366b5e2392baaad01bb1f120fc65f0f613",
+      "exit_code": 0,
+      "outputs": {
+        "json": "a9419d200cc4508227a0ade9a4bd3ad737c7ce2321fb5b1632547a9f694e3de7",
+        "markdown": "67c0b3ac425c99067cd1c7b31fb45a6103b0dfb95b4a07ef014291c5143be588"
+      }
+    },
+    {
+      "id": "endian",
+      "input": "data/quantum-probability-forecasting-cli/endian-input.json",
+      "raw_input_sha256": "b3447869169bdf58cebabf863088bf3cee17a7a9756dee6221a1b9cbe84e6428",
+      "exit_code": 0,
+      "outputs": {
+        "json": "e876bb5baa719dfd2f052167f1e5c939bb7461a4422612652d0adae7852bd74b",
+        "markdown": "0a0ea2098d6fb3da673b55cc98c254c2433e7433fe13ccd77aeb27b19908628c"
+      }
+    },
+    {
+      "id": "sample-1-1",
+      "input": "data/quantum-probability-forecasting-cli/sample-1-1-input.json",
+      "raw_input_sha256": "9e8927b3b9cb670b4ab75ee4821599c93c22801f5d5f3fb443aed14955c75156",
+      "exit_code": 0,
+      "outputs": {
+        "json": "4d426a988d32a3083a8e9be2af68915ce18daebdbb6a79b84e1fe8928eec56c5",
+        "markdown": "82b6e2204567c2a2f43d45cecc00df4e72d729f62f3431877cc256576adc17af"
+      }
+    },
+    {
+      "id": "sample-1-2",
+      "input": "data/quantum-probability-forecasting-cli/sample-1-2-input.json",
+      "raw_input_sha256": "ad70369a2a7fe49a86b5b63b768387254ca9cb6284f210f11d0477080ae0d99a",
+      "exit_code": 0,
+      "outputs": {
+        "json": "184f591e214c881fb24aa1ee7a24f609080ebc3f08f9457e78062a8005f677f2",
+        "markdown": "c4371136706dbfcf5f4818c1e702bdc0740eac44f0762e83028fd0f41ed240d5"
+      }
+    },
+    {
+      "id": "sample-1-4294967295",
+      "input": "data/quantum-probability-forecasting-cli/sample-1-4294967295-input.json",
+      "raw_input_sha256": "540175f4531b007caa06b0696da288fbc077dbd3e65a8f70f25058a5038d1953",
+      "exit_code": 0,
+      "outputs": {
+        "json": "fd3b0433bde946b734f8f5abf6cf4ba879e20eca4303dd38e9ee8c44f1902aaa",
+        "markdown": "b6e2ff7d0d190d327180b5a7a2742223a58722e26d6b2df97b079d6c0b88e614"
+      }
+    },
+    {
+      "id": "sample-100-1",
+      "input": "data/quantum-probability-forecasting-cli/sample-100-1-input.json",
+      "raw_input_sha256": "94bfb3995cee53ddfa5a331164c784f2e6310b2e64fff14f80cb12eb76484520",
+      "exit_code": 0,
+      "outputs": {
+        "json": "f62ad9f3f763a662681aef7b62b8d6d6067e1fd3041d773f1f624fa28ec9e95d",
+        "markdown": "3b75c994c438a346c4e4c51321af5cc9f207eb794b71d6103220feeb9fb890eb"
+      }
+    },
+    {
+      "id": "sample-100-2",
+      "input": "data/quantum-probability-forecasting-cli/sample-100-2-input.json",
+      "raw_input_sha256": "e9809c2080924f015f2a7af09be3580bc53043e757a97d13be3ec526820165d3",
+      "exit_code": 0,
+      "outputs": {
+        "json": "523550f7ef3c7d2d6ecf0b0658d1d4b45f57faf695e33a0e26570f0909d5a2f5",
+        "markdown": "cfff84429aec82d41f93cf84f5e20d23193fcfe48c5effe9b6fdfe300a6785fc"
+      }
+    },
+    {
+      "id": "sample-100-4294967295",
+      "input": "data/quantum-probability-forecasting-cli/sample-100-4294967295-input.json",
+      "raw_input_sha256": "3b369400f6664c0fac06167478a89c2143be0d2ea340928a7b662f05001bb005",
+      "exit_code": 0,
+      "outputs": {
+        "json": "19cf92cdafd5c3ba682b39d21a7aaca0027f3b22b6f2d63cb949d729854fa206",
+        "markdown": "1494659937a0efe8aa793b1cd4a11b2ccdbf665d0e09d177af3c584b66cb9b45"
+      }
+    },
+    {
+      "id": "certain-shots",
+      "input": "data/quantum-probability-forecasting-cli/certain-shots-input.json",
+      "raw_input_sha256": "116e8e187345a7a385808d30568218f9f278aa6c45763d9361f48e1cd006ca3e",
+      "exit_code": 0,
+      "outputs": {
+        "json": "025eba990fc16aeb17f2366651947ef9bbcbd81aecdba376b5caad0da4648515",
+        "markdown": "b0beb9a5c4d9298bc7954d62519782d13e9cd4b36176cf397468a54c0fee5a5e"
+      }
+    },
+    {
+      "id": "impossible-shots",
+      "input": "data/quantum-probability-forecasting-cli/impossible-shots-input.json",
+      "raw_input_sha256": "1f7304070cadc8397ff5f80a917bf50d841a7f7cee2749fe450e22d94a281e04",
+      "exit_code": 0,
+      "outputs": {
+        "json": "bd1ca57858273faf93fac72e63316f0d5b24595736d87bd3374244b6211bf76f",
+        "markdown": "289cc88b5db8cd95f38757c19273a0cfc3af4281389a38dc33aa4f0d5a351d93"
+      }
+    },
+    {
+      "id": "bell-shots",
+      "input": "data/quantum-probability-forecasting-cli/bell-shots-input.json",
+      "raw_input_sha256": "3655de04dc73dc08b3b7fdec9578d21c09c47f0ac308c89d9942b02876dde37f",
+      "exit_code": 0,
+      "outputs": {
+        "json": "55eeffe0f64ffaa8de535054c3e9e3c9bb0d0337f9e3e68e54f44a7c9a6296bd",
+        "markdown": "c839cd6453efc1b8a8b422d076d0118b5c5801ac718be72a0ea407c745a5adaf"
+      }
+    },
+    {
+      "id": "compare-common",
+      "input": "data/quantum-probability-forecasting-cli/compare-common-input.json",
+      "raw_input_sha256": "473f5a6578e13cd012443e67147d5fedf939cd872bd80d81a03790b4e8e26d0e",
+      "exit_code": 0,
+      "outputs": {
+        "json": "ad5aa4aceb7739a3c2128262eda4b16dd56e4eddd8b370e6332ec561d9008d47",
+        "markdown": "7a807561ea8232cd7268c5bd528a038acc03d1762ad7937005a2bc8f2124fdfb"
+      }
+    },
+    {
+      "id": "compare-independent",
+      "input": "data/quantum-probability-forecasting-cli/compare-independent-input.json",
+      "raw_input_sha256": "ad9cf07a224db0a5fdecd61bb84cce247ff13242c6aef38ee01a5b1cd7480f0c",
+      "exit_code": 0,
+      "outputs": {
+        "json": "a3d53ee9031653eaafa242faf5957d776db6cab6ab93caab25f4aaa9d76bfb65",
+        "markdown": "55c7a47bd7fbe0f1f3188d62c443bc68fa2b77ab74561199b5ede5b8bb18f3aa"
+      }
+    },
+    {
+      "id": "report",
+      "input": "data/quantum-probability-forecasting-cli/report-input.json",
+      "raw_input_sha256": "c08fa563ee8920c80f474851eb01eedc6d54c9bbaf93617a3a80a8bc06a32cb2",
+      "exit_code": 0,
+      "outputs": {
+        "json": "48722af12c70bdaccde7062fbd5de4e8981a2ba0ec1d3814a37ca07def2fea72",
+        "markdown": "b442345a69a72e9756a11d786f282f2ea4728ca2b13a46243a34635f150e0f7b"
+      }
+    },
+    {
+      "id": "report-ideal",
+      "input": "data/quantum-probability-forecasting-cli/report-ideal-input.json",
+      "raw_input_sha256": "d44fc2c1d10f733992492d49e80c5d2b6bb6788417aabeb251bc9240104612dc",
+      "exit_code": 0,
+      "outputs": {
+        "json": "b573ad78e2a88fc723d5b1f31924f5cdcc29e7c90774716c07e025bbb5875125",
+        "markdown": "e99b6f115fe5a596cb69fc44c209757850d7d6fe379a2e893401fadcdfd573df"
+      }
+    },
+    {
+      "id": "maximum",
+      "input": "data/quantum-probability-forecasting-cli/maximum-input.json",
+      "raw_input_sha256": "3bcc3287ceb54a83ca3b4d8a1b5e8f192e366a6e3e44e2141f327af00beb288c",
+      "exit_code": 0,
+      "outputs": {
+        "json": "d0c6b7db09f2eec3da916c64c25f7a23ff10789a9733e8d77a56ec2a9fd17621",
+        "markdown": "aeec17e83ffd1bff72bdf440f24bf1c0f7b17149363790edd98a15ca432cc91b"
+      }
+    },
+    {
+      "id": "reference-born",
+      "input": "data/quantum-probability-forecasting-cli/reference-born-input.json",
+      "raw_input_sha256": "1a5edd76eb6ac1e3931feaa2128ccf838d726f79e1a0b4742a03c7ae9a0381c8",
+      "exit_code": 0,
+      "outputs": {
+        "json": "18b80f119af6fc765ff3d5333fc169370dcf3f64fc4dc63c9661edc3b366d268",
+        "markdown": "855b3f6055ac7f9811851d341e9d814f3993abc605d590ec60f199b5c7637d46"
+      }
+    },
+    {
+      "id": "reference-ry",
+      "input": "data/quantum-probability-forecasting-cli/reference-ry-input.json",
+      "raw_input_sha256": "8145119f09615eb358e00f521c0ceac95f54f0f5b86a7eb4264c1d934dfafa70",
+      "exit_code": 0,
+      "outputs": {
+        "json": "04e42fe7a028cae58caa47b96b940355f3bd698dc7d49e79efdfdebb4d66eb7c",
+        "markdown": "406e270b2b9439daacfcc66cb51b532317d24fe3d54fea093c9b8dea0b96f1a4"
+      }
+    },
+    {
+      "id": "reference-bell",
+      "input": "data/quantum-probability-forecasting-cli/reference-bell-input.json",
+      "raw_input_sha256": "3cf6d43975bd03f96b3d25c49429bb590ec62832bb55d7a0078764159b58a405",
+      "exit_code": 0,
+      "outputs": {
+        "json": "c9cf71b498dc6d36fd3ca01b684fe011d77bb7b9aea5ace8d4b110f9fdf273d3",
+        "markdown": "d3805e0e32a8968e162b85c02fe8f9b4cacb020e4654c1a98acf22457e92d57e"
+      }
+    },
+    {
+      "id": "reference-montanaro",
+      "input": "data/quantum-probability-forecasting-cli/reference-montanaro-input.json",
+      "raw_input_sha256": "7c0684d30e4d7d755f76d5a0709af7e6fbbe1822202299d81840248735592229",
+      "exit_code": 0,
+      "outputs": {
+        "json": "3704d0cd62842ad879672a0329fab4e11069ec370fd4049583b3291427651989",
+        "markdown": "b3f9c4eccf27fa804d69ca03a6958f48c148a0e0287f2671a802b7da5b08e922"
+      }
+    },
+    {
+      "id": "reference-variance",
+      "input": "data/quantum-probability-forecasting-cli/reference-variance-input.json",
+      "raw_input_sha256": "bae2ef905caa8b41af613c8251883da38992afaec3c35260dbbc2d69ca9bda3d",
+      "exit_code": 0,
+      "outputs": {
+        "json": "100b7db5b0ec1b3adc72a1211a56012ef180926de7dd02532e9c46669704e3ae",
+        "markdown": "0152280ad0f6d1a193556b149c74648b48262cbdbccc508db5eb3f189ee88007"
+      }
+    },
+    {
+      "id": "reference-risk",
+      "input": "data/quantum-probability-forecasting-cli/reference-risk-input.json",
+      "raw_input_sha256": "563cac4e08e5af91aa30fc6f4c7454803da64f620481f20489d605abbf736481",
+      "exit_code": 0,
+      "outputs": {
+        "json": "f2030d5ac4a7a5a97e0dc9d64f493e1b68423c4c3eb19cbc97ea6383762219b5",
+        "markdown": "1ba9fc9adc4cb11c038356447ad4e0902639adb03e19126611a6878af32ba4ab"
+      }
+    },
+    {
+      "id": "unicode-whitespace",
+      "input": "data/quantum-probability-forecasting-cli/unicode-whitespace-input.json",
+      "raw_input_sha256": "115ce3e438b0bd1f4cd7bf7b43e39e51c749e994b3f17c6f7a3c2dfa50b76921",
+      "exit_code": 0,
+      "outputs": {
+        "json": "3f597820abdbc67ebaf776dc8a4cd1b81c6ce812391f608c3d58777c1cf65d46",
+        "markdown": "85852f2bb5a1c4e19991e8fc98844e4b7998c5313ac7c1ff4496ca96b74ddc76"
+      }
+    },
+    {
+      "id": "reject-qubits0",
+      "input": "data/quantum-probability-forecasting-cli/reject-qubits0-input.json",
+      "raw_input_sha256": "e1eb255fbdbd48c1d72d971bbe7223029ed3c4857ecb1ad6159f3bd67e11044f",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-qubits5",
+      "input": "data/quantum-probability-forecasting-cli/reject-qubits5-input.json",
+      "raw_input_sha256": "1ac935496ea4b912cd2de1c36967659389f43254495a1a55ab4db3914671b061",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-qubitsbool",
+      "input": "data/quantum-probability-forecasting-cli/reject-qubitsbool-input.json",
+      "raw_input_sha256": "783ee1da23623cb6188035bf3698728b89ae1f0ab48f7bea44f070a994130723",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-manygates",
+      "input": "data/quantum-probability-forecasting-cli/reject-manygates-input.json",
+      "raw_input_sha256": "bd0c5453a06801ed64389f9e5788f26efb2f2423b88d46508176758c84702519",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-badgate",
+      "input": "data/quantum-probability-forecasting-cli/reject-badgate-input.json",
+      "raw_input_sha256": "1e39d1b512bcd718e3161e374c843b7a4adf4322244415a4f72fcd3ceb46b5d6",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-target",
+      "input": "data/quantum-probability-forecasting-cli/reject-target-input.json",
+      "raw_input_sha256": "1e2050ef7ad93b308d72c00760312e03e0c0154c60174deb8d9141491779687b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-targetbool",
+      "input": "data/quantum-probability-forecasting-cli/reject-targetbool-input.json",
+      "raw_input_sha256": "45e782e16c4fd138eafd9ff4579f0da477ac23bdad9d6c40fc8dcf17386da9f6",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-cxself",
+      "input": "data/quantum-probability-forecasting-cli/reject-cxself-input.json",
+      "raw_input_sha256": "552c7531f85ad9d6c58ce5347d041e556119f85bc9e6fb1241833843a51d8699",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-cxnegative",
+      "input": "data/quantum-probability-forecasting-cli/reject-cxnegative-input.json",
+      "raw_input_sha256": "1c9fa459f6d3ded99349e064d24a27973d2cc758c0af478cf2980993da4e6a25",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-anglebool",
+      "input": "data/quantum-probability-forecasting-cli/reject-anglebool-input.json",
+      "raw_input_sha256": "d9250313f49b198e5667d852cc373cb724a4bd19d6f7a5d366135e7f5a5de457",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-anglestring",
+      "input": "data/quantum-probability-forecasting-cli/reject-anglestring-input.json",
+      "raw_input_sha256": "c866b4c37b119e794b6067f52ab4078aed583dfa77e3cfb2d5d2429ff4c3e564",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-anglehuge",
+      "input": "data/quantum-probability-forecasting-cli/reject-anglehuge-input.json",
+      "raw_input_sha256": "f55ea4ea430908d2c594726e8ae4976bbbb03c0e2399d114c248b9a879a79d3c",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-anglenull",
+      "input": "data/quantum-probability-forecasting-cli/reject-anglenull-input.json",
+      "raw_input_sha256": "21ec91ebd8fe45f81ec6875208bdef5397910bac4d0dcf446ed4f743e426b47d",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-mapping",
+      "input": "data/quantum-probability-forecasting-cli/reject-mapping-input.json",
+      "raw_input_sha256": "b1d0412cc21e6629dd284c01c6eeee7ab40ee135f2e2148b78e96c798b109249",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-mappingbool",
+      "input": "data/quantum-probability-forecasting-cli/reject-mappingbool-input.json",
+      "raw_input_sha256": "4d1c3a13a0cfdbeda10b9443b6f8f1e4368d8334110b0cf048738127ac20be6b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-shots0",
+      "input": "data/quantum-probability-forecasting-cli/reject-shots0-input.json",
+      "raw_input_sha256": "e6de8506e60f83d08406173b91a893be2151c02d371c396885f07024a05b2e8f",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-shotsexcess",
+      "input": "data/quantum-probability-forecasting-cli/reject-shotsexcess-input.json",
+      "raw_input_sha256": "e76ef6ea84a4f7f49e60f0e291148b6a8d024bfad1f59296805633780f0f593f",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-shotsbool",
+      "input": "data/quantum-probability-forecasting-cli/reject-shotsbool-input.json",
+      "raw_input_sha256": "a4b6857bc2c7dc96d609abcefdb4e1e05ecbd5590d4a9320be4124dcd4116225",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-shotsfloat",
+      "input": "data/quantum-probability-forecasting-cli/reject-shotsfloat-input.json",
+      "raw_input_sha256": "667802844359b681a5bc71e51850935db608862c9c3fc46005dfcb21fa075821",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-seed0",
+      "input": "data/quantum-probability-forecasting-cli/reject-seed0-input.json",
+      "raw_input_sha256": "8d228defc96bda889a734844ad57200e9f6f2cb2d34b9a44cfb71733978fad53",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-seedexcess",
+      "input": "data/quantum-probability-forecasting-cli/reject-seedexcess-input.json",
+      "raw_input_sha256": "caa268e41b4234dd00b600a3f9e02ef87d33cd2f91d1f6d1d07089d127d18ceb",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-seedbool",
+      "input": "data/quantum-probability-forecasting-cli/reject-seedbool-input.json",
+      "raw_input_sha256": "f56e1064a32f46eb7318a76133f71f953b7fa8c1e301ab9bf02579a819e3405e",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-rng",
+      "input": "data/quantum-probability-forecasting-cli/reject-rng-input.json",
+      "raw_input_sha256": "8f4a017cc69147a3ea19a16ba12dc7958791e6c549d81e69666dd44e399eac58",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-stream",
+      "input": "data/quantum-probability-forecasting-cli/reject-stream-input.json",
+      "raw_input_sha256": "23fc8772486772215ab2ed8b8b4137dd7a0be9727151a8ae6b4e79f40ab31746",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-independentcollision",
+      "input": "data/quantum-probability-forecasting-cli/reject-independentcollision-input.json",
+      "raw_input_sha256": "ba65d937d0cd48080afd2979d9321f009caed740a2cccb9c46a4a7f7348def58",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-commonmismatch",
+      "input": "data/quantum-probability-forecasting-cli/reject-commonmismatch-input.json",
+      "raw_input_sha256": "39dd3a3e23202fc0f58759e48032fcec4eda03dafd0df3e64647fc7c19d8e179",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-backend-aer",
+      "input": "data/quantum-probability-forecasting-cli/reject-backend-aer-input.json",
+      "raw_input_sha256": "3b5fe8c75d9fbb6e302d8d27da8e0f45015fdedadf4e27bc40b07db85b5b0f8b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-backend-gpu",
+      "input": "data/quantum-probability-forecasting-cli/reject-backend-gpu-input.json",
+      "raw_input_sha256": "41cdb76c6c390920950f97a88df963f909629c70d93dda35025d8fe3a7c271c9",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-backend-qpu",
+      "input": "data/quantum-probability-forecasting-cli/reject-backend-qpu-input.json",
+      "raw_input_sha256": "5c01c84e3f077932fa4b2743780435adcedef08160866fd8b723c678bd0d3990",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-qae",
+      "input": "data/quantum-probability-forecasting-cli/reject-qae-input.json",
+      "raw_input_sha256": "834b1bebfd9a24219559badc3f101b0b191e8c5bf5535835f221e102c4bb7a0a",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-variational",
+      "input": "data/quantum-probability-forecasting-cli/reject-variational-input.json",
+      "raw_input_sha256": "0f85c7a286056d3422a51b3bff085fa2b4c5a0d3a8381575e38fa4fcd55eaf1b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-inspired",
+      "input": "data/quantum-probability-forecasting-cli/reject-inspired-input.json",
+      "raw_input_sha256": "437e9429fd5735eadd9593c7eb7a19bab5bfb6381f42f311bd69c321723458f6",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-hash",
+      "input": "data/quantum-probability-forecasting-cli/reject-hash-input.json",
+      "raw_input_sha256": "743ceff18548c949d5a389b0b6f2e778f07d275f03b357a8112861707dc4a35b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-catalog",
+      "input": "data/quantum-probability-forecasting-cli/reject-catalog-input.json",
+      "raw_input_sha256": "6b985e15dbb79d5012c98b3994d881129a3c144b357e50805fbf9a6e68af7687",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-profile",
+      "input": "data/quantum-probability-forecasting-cli/reject-profile-input.json",
+      "raw_input_sha256": "84d55a79297c0d38a20ae67e7301fb531ad8243ce7beb07a578acfda71064d26",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-rights",
+      "input": "data/quantum-probability-forecasting-cli/reject-rights-input.json",
+      "raw_input_sha256": "064c97eea465e48d3a4e3cbcab151ec433a6fa7b1f4309a203be050009644ad2",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-attribution",
+      "input": "data/quantum-probability-forecasting-cli/reject-attribution-input.json",
+      "raw_input_sha256": "4cbe80c90d7049b59ba7c02b589a1e45340a252b07c2c2d3f7baeb1e9905b8af",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-source",
+      "input": "data/quantum-probability-forecasting-cli/reject-source-input.json",
+      "raw_input_sha256": "0d8d7f1bc02f1c743f8a522aee1102a82ca6ee72325291e1161aac8b60d2b9bb",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-event",
+      "input": "data/quantum-probability-forecasting-cli/reject-event-input.json",
+      "raw_input_sha256": "abdd0c8079171d9a8ae1f869fbc02296c4c97f85ab2b2ca51b76757c66486fdf",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-eventbit",
+      "input": "data/quantum-probability-forecasting-cli/reject-eventbit-input.json",
+      "raw_input_sha256": "7bdbdacbfa9b3f76d4489b9d1f0453b99617936f3e1ef417d3c2a8b1f22da10b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-eventindex",
+      "input": "data/quantum-probability-forecasting-cli/reject-eventindex-input.json",
+      "raw_input_sha256": "5d8642dc9a6f9ad3c2bc980cbe4ee919fe9e0d0775a3c7579c17860ac66e7bfb",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-eventbool",
+      "input": "data/quantum-probability-forecasting-cli/reject-eventbool-input.json",
+      "raw_input_sha256": "7f8eac0fe57b9b645488682938b9f3b998a951ade7bdf9b10519a76f43ac836d",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-reference",
+      "input": "data/quantum-probability-forecasting-cli/reject-reference-input.json",
+      "raw_input_sha256": "59a6ace40447ba9576634cb40137a6bbb8629bd41335cdcc39d80f88b067f2ce",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-schema",
+      "input": "data/quantum-probability-forecasting-cli/reject-schema-input.json",
+      "raw_input_sha256": "a993ff583b27de08d1e2b1ccd5d97c9dae705825b2c9d23c690168fa023efade",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-noise",
+      "input": "data/quantum-probability-forecasting-cli/reject-noise-input.json",
+      "raw_input_sha256": "f3d20a0eefefcb7d8ac8981f636849a475cc08ab376fc9162601af995f4e01f3",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-state",
+      "input": "data/quantum-probability-forecasting-cli/reject-state-input.json",
+      "raw_input_sha256": "6dcc1852f2a875f045708bfcfafefcafd095a43f4694645912ddc067da247216",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-unknown",
+      "input": "data/quantum-probability-forecasting-cli/reject-unknown-input.json",
+      "raw_input_sha256": "08446c71aec8dd69040e9806d3e5f81bfccc933f8487dfe987aa2b680e49c384",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-missingprovenance",
+      "input": "data/quantum-probability-forecasting-cli/reject-missingprovenance-input.json",
+      "raw_input_sha256": "28ed64844feb05db901054f8fd206e965dd18f7cef162b3f7c1c957d106bf2ea",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "reject-gate-extra",
+      "input": "data/quantum-probability-forecasting-cli/reject-gate-extra-input.json",
+      "raw_input_sha256": "fbd34807c5f9960837f08cd8ecc75fecea9d81445d62a59f5f2a6374aa5f0182",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "duplicate",
+      "input": "data/quantum-probability-forecasting-cli/duplicate-input.txt",
+      "raw_input_sha256": "dfd205aeecbcf824d6da92dcf6cfd8102bc604002f14aa2356923cbfcaae789b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "nan",
+      "input": "data/quantum-probability-forecasting-cli/nan-input.txt",
+      "raw_input_sha256": "63dac5cedf2981fa17f35764c81773fde18ad9b2aee4145927e4df01503f242b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "infinity",
+      "input": "data/quantum-probability-forecasting-cli/infinity-input.txt",
+      "raw_input_sha256": "81962d1b7c32a9401be47c119e611b26285365ed5d4c1e5327b1bbc33c8847ad",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    },
+    {
+      "id": "negative-infinity",
+      "input": "data/quantum-probability-forecasting-cli/negative-infinity-input.txt",
+      "raw_input_sha256": "19dccda60ac845fcc1fc480104b9e4cabb77b433fd8bdea62f9ac85f0294b834",
+      "exit_code": 2,
+      "outputs": {
+        "json": "d9cd46b6cdfa8c3bff2e17ca20495324f17e4193a5200f3ab90758349d3e03b1",
+        "markdown": "25019c4efdf3bf333a67ffcca881896b85ccadac4ec57de6248baba50bf8bec7"
+      }
+    }
+  ]
+}

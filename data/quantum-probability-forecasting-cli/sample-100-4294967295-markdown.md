@@ -1,0 +1,372 @@
+# Quantum Probability Reference
+
+Status: accepted
+
+| Basis | Amplitude (real, imaginary) | Ideal probability |
+|---|---|---|
+| 0 | (0.8660254037844387, 0.0) | 0.7500000000000001 |
+| 1 | (0.49999999999999994, 0.0) | 0.24999999999999994 |
+
+CPU classical emulation only;no QPU,GPU,cloud,Aer execution or quantum advantage.
+QAE,coherent oracle construction,variational and quantum-inspired algorithms are unimplemented.
+Ideal model probabilities,finite simulated frequencies and unknown real-world event probabilities are distinct.
+Known p is available directly without sampling;shared-stream identity is by construction,not superiority.
+Population moments assume independent identically prepared Bernoulli trials;PRNG emulates this model. No confidence interval or financial forecasting skill certified.
+Float64 libm results and exact JSON replay are scoped to the recorded runtime;cross-platform comparisons use1e-12 absolute tolerance.
+
+```json
+{
+  "status": "accepted",
+  "task": "sample",
+  "profile": {
+    "id": "montanaro-ibm-small-circuit-cpu-probability-v1",
+    "sha256": "abe755a144bf38b228ebbd0e6eb313b93405ff2d90fda75e1bcb2295196852dd",
+    "catalog_sha256": "07de668e406ec059fd1e4472da5db6671d13897b67a2a02d8638cc05076772fa"
+  },
+  "request": {
+    "schema_version": 1,
+    "profile": {
+      "id": "montanaro-ibm-small-circuit-cpu-probability-v1",
+      "sha256": "abe755a144bf38b228ebbd0e6eb313b93405ff2d90fda75e1bcb2295196852dd",
+      "catalog_sha256": "07de668e406ec059fd1e4472da5db6671d13897b67a2a02d8638cc05076772fa"
+    },
+    "task": "sample",
+    "backend": "standalone_cpu",
+    "circuit": {
+      "qubits": 1,
+      "gates": [
+        {
+          "op": "ry",
+          "target": 0,
+          "angle": 1.0471975511965976
+        }
+      ],
+      "measurement": [
+        0
+      ]
+    },
+    "shots": 100,
+    "rng": {
+      "algorithm": "xorshift32-v1",
+      "seed": 4294967295,
+      "comparator_seed": 4294967295,
+      "stream": "common"
+    },
+    "event": {
+      "kind": "qubit_one",
+      "value": 0
+    },
+    "reference": null,
+    "provenance": {
+      "source_ref": "quantum-prob-ibm-gates-v1",
+      "rights": "self_authored",
+      "attribution": "Original user-supplied circuit;IBM gate conventions."
+    }
+  },
+  "request_sha256": "a3edd2b7558a2bd2d2cfc816cbe0c1547bb6a5da7d7ac3c7fbc66ea7d33f80ed",
+  "sources": [
+    {
+      "id": "quantum-prob-montanaro-v1",
+      "technique_id": 50,
+      "rank": 1,
+      "author": "Ashley Montanaro",
+      "edition": "Quantum speedup of Monte Carlo methods;Proc.R.Soc.A471(2181),20150301;2015-09-08;DOI10.1098/rspa.2015.0301",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4614442/",
+      "locator": "Sections/source-payload hashes recorded in quantum_probability_forecasting_resource_audit.json",
+      "ingestion": "facts_only",
+      "rights_note": "CC BY4.0 per primary article;original concise mathematical facts only,no article body or figures redistributed.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "quantum-prob-aer-docs-v1",
+      "technique_id": 50,
+      "rank": 2,
+      "author": "IBM / Qiskit contributors",
+      "edition": "Qiskit Aer0.18.2 documentation;inspected2026-11-07",
+      "url": "https://qiskit.github.io/qiskit-aer/",
+      "locator": "Sections/source-payload hashes recorded in quantum_probability_forecasting_resource_audit.json",
+      "ingestion": "facts_only",
+      "rights_note": "Facts-only API notes. Aer source Apache2.0 separately verified;documentation access does not certify installed operation.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "quantum-prob-risk-v1",
+      "technique_id": 50,
+      "rank": 3,
+      "author": "Stefan Woerner and Daniel J. Egger",
+      "edition": "Quantum risk analysis;npj Quantum Information5,Article15;2019-02-08;DOI10.1038/s41534-019-0130-6;peer-reviewed article,not book",
+      "url": "https://www.nature.com/articles/s41534-019-0130-6",
+      "locator": "Sections/source-payload hashes recorded in quantum_probability_forecasting_resource_audit.json",
+      "ingestion": "facts_only",
+      "rights_note": "CC BY4.0 verified in final article witness p8,subject to separately credited third-party material. Facts-only notes,no PDF/figures/data redistributed.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "quantum-prob-risk-dnb-v1",
+      "technique_id": 50,
+      "rank": null,
+      "author": "Stefan Woerner and Daniel J. Egger;German National Library witness",
+      "edition": "Final8page npj article archived by DNB;distinct from arXiv1806.06893v1(2018),12pages",
+      "url": "https://d-nb.info/1180117980/34",
+      "locator": "Sections/source-payload hashes recorded in quantum_probability_forecasting_resource_audit.json",
+      "ingestion": "facts_only",
+      "rights_note": "CC BY4.0 article license inspected p8;metadata,math facts and locators only. No final/preprint byte-equivalence attested.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "quantum-prob-ibm-gates-v1",
+      "technique_id": 50,
+      "rank": null,
+      "author": "IBM / Qiskit contributors",
+      "edition": "IBM Quantum SDK latest gate documentation;RY andH matrix conventions",
+      "url": "https://quantum.cloud.ibm.com/docs/en/api/qiskit/qiskit.circuit.library.RYGate",
+      "locator": "Sections/source-payload hashes recorded in quantum_probability_forecasting_resource_audit.json",
+      "ingestion": "facts_only",
+      "rights_note": "Original gate-matrix factual notes;no third-party code copied. SDK package metadata separately declares Apache2.0.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "quantum-prob-ibm-bits-v1",
+      "technique_id": 50,
+      "rank": null,
+      "author": "IBM / Qiskit contributors",
+      "edition": "Bit-ordering guide;example requirementsqiskit[all]~=2.6.1",
+      "url": "https://quantum.cloud.ibm.com/docs/en/guides/bit-ordering",
+      "locator": "Sections/source-payload hashes recorded in quantum_probability_forecasting_resource_audit.json",
+      "ingestion": "facts_only",
+      "rights_note": "Facts-only bit/register ordering notes.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "quantum-prob-aer-source-v1",
+      "technique_id": 50,
+      "rank": null,
+      "author": "IBM / Qiskit contributors",
+      "edition": "Qiskit Aer tag0.18.2;simulator,SamplerV2,backend gate sets andLICENSE source bytes inspected",
+      "url": "https://github.com/Qiskit/qiskit-aer/tree/0.18.2",
+      "locator": "Sections/source-payload hashes recorded in quantum_probability_forecasting_resource_audit.json",
+      "ingestion": "facts_only",
+      "rights_note": "Apache2.0 LICENSE.txt inspected. No source implementation or wheel redistributed;preserve license/notices on any later integration.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "quantum-prob-finance-tutorial-v1",
+      "technique_id": 50,
+      "rank": null,
+      "author": "Qiskit Finance contributors",
+      "edition": "Archived Qiskit Finance0.4.1 amplitude-estimation tutorial;legacy Sampler API,not current runtime proof",
+      "url": "https://qiskit-community.github.io/qiskit-finance/tutorials/00_amplitude_estimation.html",
+      "locator": "Sections/source-payload hashes recorded in quantum_probability_forecasting_resource_audit.json",
+      "ingestion": "facts_only",
+      "rights_note": "Facts-only archived example/algorithm notes;no notebook/code copied. Site warns code may not work with current Qiskit.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "quantum-prob-iqae-v1",
+      "technique_id": 50,
+      "rank": null,
+      "author": "Qiskit Algorithms contributors",
+      "edition": "Qiskit Algorithms0.4.0 IterativeAmplitudeEstimation reference",
+      "url": "https://qiskit-community.github.io/qiskit-algorithms/stubs/qiskit_algorithms.IterativeAmplitudeEstimation.html",
+      "locator": "Sections/source-payload hashes recorded in quantum_probability_forecasting_resource_audit.json",
+      "ingestion": "facts_only",
+      "rights_note": "Facts-only algorithm/API notes;package metadata Apache2.0. No installed operation or theorem proof reproduction claimed.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "quantum-prob-mlae-v1",
+      "technique_id": 50,
+      "rank": null,
+      "author": "Qiskit Algorithms contributors",
+      "edition": "Qiskit Algorithms0.4.0 MaximumLikelihoodAmplitudeEstimation reference",
+      "url": "https://qiskit-community.github.io/qiskit-algorithms/stubs/qiskit_algorithms.MaximumLikelihoodAmplitudeEstimation.html",
+      "locator": "Sections/source-payload hashes recorded in quantum_probability_forecasting_resource_audit.json",
+      "ingestion": "facts_only",
+      "rights_note": "Facts-only schedule/likelihood/API notes;no implementation copied.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "quantum-prob-aer-pypi-v1",
+      "technique_id": 50,
+      "rank": null,
+      "author": "Qiskit Aer maintainers / PyPI",
+      "edition": "qiskit-aer0.18.2 release metadata and WindowsCPython3.12wheel listing",
+      "url": "https://pypi.org/pypi/qiskit-aer/json",
+      "locator": "Sections/source-payload hashes recorded in quantum_probability_forecasting_resource_audit.json",
+      "ingestion": "facts_only",
+      "rights_note": "Metadata only;Apache2.0 declared,source license inspected separately. Wheel not downloaded/installed.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "quantum-prob-sdk-pypi-v1",
+      "technique_id": 50,
+      "rank": null,
+      "author": "Qiskit maintainers / PyPI",
+      "edition": "qiskit2.6.2 release metadata;Windowscp310abi3wheel listing",
+      "url": "https://pypi.org/pypi/qiskit/json",
+      "locator": "Sections/source-payload hashes recorded in quantum_probability_forecasting_resource_audit.json",
+      "ingestion": "facts_only",
+      "rights_note": "Metadata declares Apache2.0;no package acquired or runtime certified.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "quantum-prob-algorithms-pypi-v1",
+      "technique_id": 50,
+      "rank": null,
+      "author": "Qiskit Algorithms maintainers / PyPI",
+      "edition": "qiskit-algorithms0.4.0 release metadata;pure Python wheel listing",
+      "url": "https://pypi.org/pypi/qiskit-algorithms/json",
+      "locator": "Sections/source-payload hashes recorded in quantum_probability_forecasting_resource_audit.json",
+      "ingestion": "facts_only",
+      "rights_note": "Metadata declares Apache2.0;no package acquired or runtime certified.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    }
+  ],
+  "source_freeze_sha256": "dc7a03a73733b4adb1e6e2827df290a7fb8248ba14e75021bb7f25d53b822e5a",
+  "bit_order": "q0 LSB;bitstrings q(n-1)..q0;ascending state index;identity qi->ci terminal mapping only",
+  "result": {
+    "statevector": [
+      {
+        "index": 0,
+        "bitstring": "0",
+        "real": 0.8660254037844387,
+        "imag": 0.0,
+        "probability": 0.7500000000000001
+      },
+      {
+        "index": 1,
+        "bitstring": "1",
+        "real": 0.49999999999999994,
+        "imag": 0.0,
+        "probability": 0.24999999999999994
+      }
+    ],
+    "normalization": {
+      "norm": 1.0,
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true,
+      "sampling_norm_divisor": 1.0
+    },
+    "event": {
+      "predicate": {
+        "kind": "qubit_one",
+        "value": 0
+      },
+      "indices": [
+        1
+      ],
+      "ideal_model_probability": 0.24999999999999994
+    },
+    "trace": [
+      {
+        "gate": {
+          "op": "ry",
+          "target": 0,
+          "angle": 1.0471975511965976
+        },
+        "depth": 1,
+        "norm": 1.0
+      }
+    ],
+    "resources": {
+      "qubits": 1,
+      "dimension": 2,
+      "primitive_gates": 1,
+      "depth": 1,
+      "gate_counts": {
+        "id": 0,
+        "x": 0,
+        "h": 0,
+        "ry": 1,
+        "cx": 0
+      },
+      "measurement": [
+        0
+      ],
+      "precision": "complex binary64",
+      "statevector_payload_bytes": 32,
+      "python_overhead_excluded": true,
+      "ae_oracle_calls": null,
+      "qae_implemented": false,
+      "runtime_memory_measurement": "Separate resource measurements artifact;no variable timing in deterministic report."
+    },
+    "sampling": {
+      "shots": 100,
+      "rng": {
+        "algorithm": "xorshift32-v1",
+        "seed": 4294967295,
+        "comparator_seed": 4294967295,
+        "stream": "common"
+      },
+      "count_total": 100,
+      "outcomes": [
+        {
+          "index": 0,
+          "bitstring": "0",
+          "count": 82,
+          "frequency": 0.82,
+          "absolute_error": 0.06999999999999984
+        },
+        {
+          "index": 1,
+          "bitstring": "1",
+          "count": 18,
+          "frequency": 0.18,
+          "absolute_error": 0.06999999999999995
+        }
+      ],
+      "event_count": 18,
+      "event_frequency": 0.18,
+      "event_absolute_error": 0.06999999999999995,
+      "analytical": {
+        "expected_count": 24.999999999999993,
+        "count_variance": 18.749999999999993,
+        "frequency_variance": 0.0018749999999999995,
+        "frequency_standard_error": 0.043301270189221926,
+        "confidence_interval": null,
+        "assumptions": "iid identical preparations under ideal supplied model;population moments,not observed uncertainty validation"
+      }
+    },
+    "classical": null,
+    "reference": null
+  },
+  "code_sha256": "2fc23924ddfe00d6bf08b7d2d7dbd1c4fb0ca445339ee769faff52dc951866b5",
+  "limits": [
+    "CPU classical emulation only;no QPU,GPU,cloud,Aer execution or quantum advantage.",
+    "QAE,coherent oracle construction,variational and quantum-inspired algorithms are unimplemented.",
+    "Ideal model probabilities,finite simulated frequencies and unknown real-world event probabilities are distinct.",
+    "Known p is available directly without sampling;shared-stream identity is by construction,not superiority.",
+    "Population moments assume independent identically prepared Bernoulli trials;PRNG emulates this model. No confidence interval or financial forecasting skill certified.",
+    "Float64 libm results and exact JSON replay are scoped to the recorded runtime;cross-platform comparisons use1e-12 absolute tolerance."
+  ],
+  "report_sha256": "9f1042cb20b1e895860f388d16577b233ac9c9167db2fe5153448f943f55e227"
+}
+```
+

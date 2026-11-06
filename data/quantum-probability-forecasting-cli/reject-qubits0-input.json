@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "montanaro-ibm-small-circuit-cpu-probability-v1",
+    "sha256": "abe755a144bf38b228ebbd0e6eb313b93405ff2d90fda75e1bcb2295196852dd",
+    "catalog_sha256": "07de668e406ec059fd1e4472da5db6671d13897b67a2a02d8638cc05076772fa"
+  },
+  "task": "compare",
+  "backend": "standalone_cpu",
+  "circuit": {
+    "qubits": 0,
+    "gates": [
+      {
+        "op": "ry",
+        "target": 0,
+        "angle": 1.0471975511965976
+      }
+    ],
+    "measurement": [
+      0
+    ]
+  },
+  "shots": 100,
+  "rng": {
+    "algorithm": "xorshift32-v1",
+    "seed": 1,
+    "comparator_seed": 1,
+    "stream": "common"
+  },
+  "event": {
+    "kind": "qubit_one",
+    "value": 0
+  },
+  "reference": null,
+  "provenance": {
+    "source_ref": "quantum-prob-ibm-gates-v1",
+    "rights": "self_authored",
+    "attribution": "Original user-supplied circuit;IBM gate conventions."
+  }
+}

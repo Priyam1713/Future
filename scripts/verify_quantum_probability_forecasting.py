@@ -90,6 +90,13 @@ def verify(write=False):
     assert json.loads(payload)==rr and e.read(q)==rr and e.markdown(rr)==md
     assert not r['classical']['quantum_advantage'] and r['resources']['ae_oracle_calls'] is None and not r['resources']['qae_implemented']
     assert 'A,inverse A' in e.REFERENCES['montanaro']['rule']
+    resources=load_input(R/'data/quantum-probability-forecasting-resource-measurements.json')
+    assert resources['measured'] and resources['profile_sha256']==e.PROFILE_HASH
+    assert resources['code_sha256']==e.read(e.request())['code_sha256']
+    assert resources['process_peak_working_set_bytes']>0
+    for case in resources['results']:
+        assert case['shots']==100000 and case['total_cli_seconds']>0
+        for phase in case['phases'].values():assert phase['median_seconds']>0 and len(phase['seconds'])==5
     out=dict(passed=True,families={name:dict(passed=True,expectation=desc) for name,desc in f['family_expectations'].items()},independent_circuits=len(f['circuits']),maximum_amplitude_error=maximum,seeded_words=300,negative_requests=len(negative_requests())+3,fixture_freeze=freeze,rights='Original matrices,fixtures and code;source facts and attribution only',profile_sha256=e.PROFILE_HASH)
     assert len(out['families'])==20
     if write:(R/'data/quantum-probability-forecasting-verification.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8')
