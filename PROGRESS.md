@@ -1,5 +1,10 @@
 # Future progress
 
+## Technique 46 Déjà Rêvé resource audit — 2026-11-07
+-After pushed45closure4a68403andclean0/0,inspected complete11-page Curot primary proof through CNRS;PMCchallenge and final-versus-proof pagination explicit. Three experiential categories/unclassifiable cases,clinical limits and Dunne editions separated.
+-Recommend source-guided human annotation plus original dream-ID/version/chronology comparison andcomplete manual candidate accounting. No diagnosis,memory-authenticity or prediction certification;no46runtime/profile/CLI/catalog/fixtures;no49audit.
+-2424protected artifacts unchanged,allothergap entries/ranks/variations/taxonomy preserved;5facts-only sources,registry idempotence/strictJSON/diff checked. Inherited1354tests/1721CLI/26verifiers remain protected;metadata-only audit does not rerun runtime certification.16planned families,acceptance andP1/P2 in knowledge/deja_reve_resource_audit.json.
+
 ## Technique 45 Core v1 closure — 2026-11-07
 -**Core v1 Ready — Explicit Heuristic Decision and Binary Forecast Evaluation Scope**. Separate2002recognition/1996TTB deterministic profiles,transparent abstention/traces,exact Brier/calibration,immutable forecast versions and held-out baseline checks;no expertise/psychic certification.
 -1354tests,1721CLI,26verifiers;15independent families,729three-cue traces,42rational ledger scores,35accepted/18rejected replays andcomplete linked lifecycle pass.2245protected prior artifacts unchanged;taxonomy/ranks/variations/othergaps preserved.

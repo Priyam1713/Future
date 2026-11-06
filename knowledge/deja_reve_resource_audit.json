@@ -1,0 +1,415 @@
+{
+  "version": 1,
+  "technique_id": 46,
+  "name": "Déjà Rêvé",
+  "phase": 5,
+  "date": "2026-11-07",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "4a68403",
+  "predecessor_gate": "45accepted closure committed,pushed;empty status andorigin/main...HEAD0/0 explicitly observed before46resource research.",
+  "policy": "Audit only;no46engine,CLI,executable profile/catalog or implemented fixtures. No47/48implementation andno49audit. All proposed behavior below is unimplemented.",
+  "inventory_source_sha256": "6960f490e7fd71e5026c9810f5f673ae094e82ded114a57ada6fe8039b90bc31",
+  "inventory_method_row": [
+    46,
+    "5 · Psychic & Paranormal Prediction",
+    "Déjà Rêvé",
+    "RETAIN — simulate / implement",
+    "Guided symbolic / human input",
+    "Episodic déjà-rêvé; familiarity-only; dream-reminiscence; dream-event matching",
+    "Dream log retrieval + semantic event-match UI; prospective timestamp controls",
+    "Personal dream journal, event description",
+    "Neurological phenomenon not a technique for verified forecasting",
+    "Neurological experiential reports; predictive claim not validated",
+    "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+    "Jonathan Curot et al.",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6028740/",
+    "An Experiment with Time",
+    null,
+    "23",
+    "23, 44",
+    46
+  ],
+  "ranked_sources": [
+    [
+      46,
+      "Déjà Rêvé",
+      1,
+      "Jonathan Curot et al.",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Neurological classification and evidence",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6028740/",
+      "Open peer-reviewed study",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      46,
+      "Déjà Rêvé",
+      2,
+      "J. W. Dunne",
+      "An Experiment with Time",
+      "Prospective dream logging",
+      "https://en.wikisource.org/wiki/File:Dunne_-_An_Experiment_with_Time.pdf",
+      "Open historical scan",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      46,
+      "Déjà Rêvé",
+      "Episodic déjà-rêvé",
+      "An Experiment with Time",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      46,
+      "Déjà Rêvé",
+      "familiarity-only",
+      "An Experiment with Time",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      46,
+      "Déjà Rêvé",
+      "dream-reminiscence",
+      "An Experiment with Time",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      46,
+      "Déjà Rêvé",
+      "dream-event matching",
+      "An Experiment with Time",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "inventory_mapping_note": "Original provisional variation-to-book mappings retained exactly,including Dunne-first mappings. They are inventory leads,not verification that Dunne defines Curot categories.",
+  "source_registry": "knowledge/deja_reve_sources.json",
+  "source_ids": [
+    "deja-reve-curot-pmc-v1",
+    "deja-reve-curot-cnrs-v1",
+    "deja-reve-curot-pubmed-v1",
+    "deja-reve-dunne-1927-v1",
+    "deja-reve-dunne-revised-v1"
+  ],
+  "inspected_neurological_source": {
+    "setting": "Retrospectively selected presurgical epilepsy reports from three French centers,2003-2015,plus literature review;two evaluators used consensus.",
+    "counts": {
+      "local_episodes": 7,
+      "local_patients": 6,
+      "literature_episodes": 35,
+      "literature_patients": 23,
+      "local_classified": [
+        3,
+        3,
+        1
+      ],
+      "literature_classified": [
+        3,
+        1,
+        15
+      ],
+      "literature_unclassifiable": 16,
+      "total_classified": 26
+    },
+    "categories": [
+      {
+        "id": "episodic-like",
+        "definition": "Specific prior-dream recollection with temporal context.",
+        "locator": "Results p5;Figure2p8"
+      },
+      {
+        "id": "familiarity-like",
+        "definition": "Dream-associated elements without a specific dated dream.",
+        "locator": "Results pp5,8;Figure2p8"
+      },
+      {
+        "id": "dreamy-state",
+        "definition": "Dream-like current feeling or consciousness state.",
+        "locator": "Results p8;Figure2p8"
+      },
+      {
+        "id": "unclassifiable",
+        "definition": "Insufficient historical descriptions for categorization.",
+        "locator": "Results p8;Figure2p8"
+      }
+    ],
+    "case_locators": [
+      {
+        "id": "table1-4a",
+        "locator": "Table1p3;Figure2p8",
+        "authors_category": "episodic-like",
+        "fact": "Orange-room recollection;reported yesterday or two days earlier."
+      },
+      {
+        "id": "table1-6a",
+        "locator": "Table1p4;Figure2p8",
+        "authors_category": "familiarity-like",
+        "fact": "Character/fear recollection with uncertain dream attribution."
+      },
+      {
+        "id": "table1-5a",
+        "locator": "Table1p4",
+        "authors_category": "dreamy-state",
+        "fact": "Hospital imagery;retain authors category despite contextual words."
+      },
+      {
+        "id": "table2-penfield-hn",
+        "locator": "Table2p7;Figure2p8",
+        "authors_category": "unclassifiable",
+        "fact": "Sparse dream-onset report;insufficient detail."
+      }
+    ],
+    "interpretation": "Discussion pp9-10 reserves déjà-rêvé for the first two types;dreamy state remains distinct. Déjà vu is not interchangeable.",
+    "limitations": "Small selected clinical sample,abbreviated older reports,classification bias and uncertain authenticity of prior-dream recollection. No prospective forecasting endpoint."
+  },
+  "source_reading_coverage": {
+    "witness": "deja-reve-curot-cnrs-v1",
+    "proof_pages": 11,
+    "sections": [
+      "Introduction",
+      "Methods:Data collection,clinical setting,Analyses",
+      "Results andTables1-2",
+      "Phenomenology andFigures2-3definitions/counts",
+      "Location/parameter results read for context only",
+      "Discussion andlimitations",
+      "Funding/conflicts/acknowledgments/references"
+    ],
+    "operational_detail_policy": "No stimulation instructions,electrode configurations or clinical recommendations are extracted into this audit or proposed software."
+  },
+  "evidence_layers": {
+    "source_report": "Published clinical observation and author category;not independently witnessed earlier dream content.",
+    "subjective_memory": "Participant recollection/confidence retained without certifying memory authenticity.",
+    "documentary_record": "Earlier retained original narrative with hash/version/timestamp provenance;does not prove the dream itself occurred as remembered.",
+    "prospective_timing": "Factual earlier/later comparison only;prediction requires a separately preregistered design and is not certified here.",
+    "retrospective_reconstruction": "Later descriptions/associations/amendments remain separate from original records.",
+    "unsupported": "No diagnosis,neurological localization,memory-authenticity determination or prophecy inference."
+  },
+  "taxonomy_crosswalk": [
+    {
+      "inventory_variation": "Episodic déjà-rêvé",
+      "proposed_layer": "Source-guided episodic annotation;prior-record status evaluated separately"
+    },
+    {
+      "inventory_variation": "familiarity-only",
+      "proposed_layer": "Dream-associated familiarity may use source familiarity label;generic familiarity without dream association remains outside source scope/uncertain"
+    },
+    {
+      "inventory_variation": "dream-reminiscence",
+      "proposed_layer": "Umbrella inventory variation,not an invented fourth Curot subtype;retain specific label or ambiguity"
+    },
+    {
+      "inventory_variation": "dream-event matching",
+      "proposed_layer": "Editorial manual documentary comparison;not a prediction algorithm supplied by Curot"
+    }
+  ],
+  "dunne_boundary": {
+    "original": "Rank2is1927bibliographic lead;actual scan body unverified.",
+    "revised": "FadedPage20181016laterFaber witness,publication history through1939,1934third-edition additions;44ChapterX/AppendixIII provenance only.",
+    "use": "Recording before review is a documentary practice. No import of serial-time theory,44prophecy interpretations,event windows,judgment criteria or null models into neurological categories.",
+    "rights": "Inherited44rights qualifications preserved;first-edition status does not govern later additions automatically."
+  },
+  "candidate_comparison": [
+    {
+      "candidate": "Source reference/category annotation",
+      "value": "Concrete definitions and documentary case IDs",
+      "risk": "Human clinical categories cannot become a validated consumer diagnostic classifier",
+      "decision": "Retain as source-guided structured annotation with uncertainty"
+    },
+    {
+      "candidate": "Memory-event observation ledger",
+      "value": "Raw reports and amendments preserve what was said when",
+      "risk": "Generic diary alone lacks source-specific/comparative substance",
+      "decision": "Useful foundation,insufficient alone"
+    },
+    {
+      "candidate": "Existing dream-record retrieval/provenance comparator",
+      "value": "Exact-ID retrieval,version and chronology checks independently testable",
+      "risk": "A later hash or searched resemblance cannot establish an earlier original",
+      "decision": "High-value deterministic component;manual candidate manifest,not semantic ranking"
+    },
+    {
+      "candidate": "Integrated annotation/provenance engine",
+      "value": "Source-specific declared categories plus original-record and complete manual-link accounting",
+      "risk": "Requires careful clinical/subjective/documentary separation",
+      "decision": "Recommended bounded first candidate"
+    }
+  ],
+  "proposed_first_profile": {
+    "name": "curot2018-phenomenology-and-dream-record-provenance-v1",
+    "status": "Proposal only;not an immutable executable profile or supported certification",
+    "source_annotation": "Human-declared structured attributes and explicit category proposal with reasons. Conservative compatibility checks only;mixed or insufficient declarations return review_required/uncertain. No semantic diagnosis from prose.",
+    "source_case_handling": "Retain published authors labels as documentary facts with locators. Do not assert a few keywords reproduce their evaluator consensus;table1-5a is a negative control for simplistic text classification.",
+    "observation_schema": [
+      "observation_id",
+      "participant pseudonym",
+      "reported experience interval or unknown",
+      "first written record timestamp",
+      "original raw UTF8 narrative/hash",
+      "append-only amendments with parent/reason/knowledge",
+      "clinical context declared or ordinary nonclinical context",
+      "dream association declaration",
+      "specificity and temporal-context declarations",
+      "dream-like-state declaration",
+      "source label/uncertainty/reviewer identities",
+      "subjective confidence separate from documentary status",
+      "consent and rights"
+    ],
+    "dream_link_schema": [
+      "observation_id",
+      "frozen candidate-manifest ID/hash",
+      "dream_id",
+      "original_version_hash",
+      "original first-record/lock timestamps or unknown",
+      "reported dream interval separately",
+      "retained exact original narrative or restricted local reference",
+      "amendment lineage and timestamps",
+      "link declaration and reviewer",
+      "manual match/nonmatch/insufficient_information/unscorable",
+      "optional event_id/time/evidence/reference",
+      "attempt timestamp and post-event knowledge",
+      "rights/privacy policy"
+    ],
+    "chronology_rules": [
+      "Compare original lock with experience occurrence and observation first-record separately;strictly earlier,equal,later,unknown andconflicting labels. Preserve timezone-aware strings and interval precision.",
+      "Prior dream record means original retained version existed before the experience under declared times;equal time is not strictly earlier. An interval overlapping the boundary remains uncertain.",
+      "If an external event is linked,compare original lock and event occurrence separately. Earlier than current recollection does not establish earlier than event.",
+      "No earlier original ->subjective_recollection_without_prior_documentary_record;do not call memory false or verified.",
+      "A post-event amendment cannot substitute for original content or acquire earlier provenance through a new hash. Preserve original and all alternatives.",
+      "Missing original timestamps,wrong parent/hash,backdated declarations andconflicting sequences remain explicit;hash consistency alone is not a trusted timestamp.",
+      "A local owner may rewrite an entire chain. Retained independent anchors can improve provenance,but first core must not certify independence or memory authenticity."
+    ],
+    "candidate_accounting": "Freeze the finite user-supplied prior-dream candidate list for each observation before comparisons;record all proposed links,nonmatches,unknowns,excluded candidates and later added searches as new analyses. No best-match-only view or unbounded retrospective retrieval promoted to prospective evidence.",
+    "output": "Exact source/profile/request/original-version hashes;category declaration and compatibility rationale;all chronology/link statuses,denominators,nonmatches and uncertainty;JSON/Markdown replay. No numeric semantic probability,forecast accuracy or source-derived chance baseline.",
+    "reuse44": "Reuse only inspected pure timestamp,canonical UTF8 hashing and version/reference integrity helpers if contracts fit. Keep46categories,schemas and timing semantics separate;do not edit44frozen artifacts.",
+    "privacy": "Voluntary local private records with pseudonyms,explicit consent,rights and bounded attachments. No real clinical interviews or private dream records bundled;reports preserve raw content only in the intended private view.",
+    "clinical_boundary": "Clinical study observations remain attributed research context. Ordinary self-reports are not classified as epilepsy,localized to brain regions or assigned treatment. No consumer stimulation feature."
+  },
+  "independent_fixture_plan": [
+    {
+      "id": "source-category-episodic",
+      "expectation": "Documentary table1-4a label retained with relative temporal uncertainty,not an invented exact date or prospectively witnessed dream."
+    },
+    {
+      "id": "source-category-familiarity",
+      "expectation": "Documentary table1-6a label retained;vague association cannot create a specific earlier record."
+    },
+    {
+      "id": "source-category-dreamy",
+      "expectation": "Documentary table1-5a label retained independently of words suggesting recent imagery;do not force prior-dream recall."
+    },
+    {
+      "id": "source-unclassifiable",
+      "expectation": "Sparse table2/figure2case remains unclassifiable,not auto-filled."
+    },
+    {
+      "id": "mixed-uncertain",
+      "expectation": "Conflicting structured subtype declarations return uncertainty/review;all declarations retained."
+    },
+    {
+      "id": "original-prior-record",
+      "expectation": "Manual earlier original-ID/hash lookup succeeds with strict temporal comparison;does not prove subjective authenticity."
+    },
+    {
+      "id": "no-prior-record",
+      "expectation": "Retrospective memory without an original remains subjective and unverified;not labeled false."
+    },
+    {
+      "id": "conflicting-chronology",
+      "expectation": "Experience before claimed lock,backdated amendment,equal/overlapping/unknown intervals and timezone ordering remain explicit."
+    },
+    {
+      "id": "original-versus-amendment",
+      "expectation": "Original fixed bytes selected;post-event amendment retained but cannot replace original evidence."
+    },
+    {
+      "id": "generic-familiarity-negative-control",
+      "expectation": "No dream association or episodic content ->outside dream-recollection scope/uncertain;do not silently equate déjà vu."
+    },
+    {
+      "id": "specific-versus-vague",
+      "expectation": "Declared specificity and temporal evidence independently stored;confidence alone does not create documentation."
+    },
+    {
+      "id": "manual-nonmatch",
+      "expectation": "Prior dream and event may be documented but manual comparison nonmatch remains in denominator."
+    },
+    {
+      "id": "multiple-candidates",
+      "expectation": "All frozen candidate IDs and unsuccessful comparisons retained;later added candidates marked post-hoc."
+    },
+    {
+      "id": "missing-original-time",
+      "expectation": "Valid bytes with missing original timestamp produce unknown chronology,not inferred prospectivity."
+    },
+    {
+      "id": "no-diagnosis-prediction",
+      "expectation": "No output diagnosis,brain-localization judgment,stimulation recommendation,forecast probability or prophecy certification."
+    },
+    {
+      "id": "source-edition-rights-replay",
+      "expectation": "Curot categories versus Dunne recording practices separated;UTF8 whitespace,version hashes,rights/private views and JSON/Markdown replay independently verified."
+    }
+  ],
+  "acceptance_gates": [
+    "Freeze actual versioned source/category conventions and independently authored source-case/chronology fixtures before production;this audit is not that executable freeze.",
+    "Provide meaningful structured category/reference behavior with explicit uncertainty and documentary case attribution;no generic narrative generation substitute.",
+    "Validate immutable originals/amendments and manual ID links to earlier dream records with independent timestamp/interval/hash oracle.",
+    "Preserve all candidate/nonmatch/unknown/excluded records and distinguish experience timing,event timing and first written record.",
+    "Pass every planned source/negative-control family without claiming diagnosis,memory authenticity or future prediction.",
+    "Verify restricted rights/privacy behavior and deterministic accepted/rejected JSON/Markdown replay using only original synthetic data.",
+    "Run complete inherited1354tests,1721CLI,26verifiers plus new tests,smokes and independent verifier;source registry idempotence,dependencies,pip,diff and full current protected-byte manifest.",
+    "Freeze bounded supported/experimental/unsupported matrix and P1/P2;commit/push closure before advancing.47/48remain excluded;49must not be audited prematurely."
+  ],
+  "proposed_matrix": {
+    "currently_supported": "Audit metadata and reference provenance only;no46runtime is supported.",
+    "candidate_core": [
+      "Source-guided human category annotations with uncertainty",
+      "Immutable observation/original dream-ID reference records",
+      "Pure version/chronology comparison",
+      "Complete finite manual candidate accounting and replay"
+    ],
+    "experimental": [
+      "Generalization of clinical categories to ordinary self-report",
+      "Inter-reviewer reproducibility beyond source cases",
+      "Any semantic retrieval or empirical memory study"
+    ],
+    "unsupported": [
+      "Neurological diagnosis or localization",
+      "Consumer brain stimulation",
+      "Memory authenticity certification",
+      "Automatic dream/event semantic-match probabilities",
+      "Paranormal/prophecy detection",
+      "Full clinical corpus redistribution or universal category classifier"
+    ]
+  },
+  "backlog": {
+    "P1": [
+      "Independent expert review of category compatibility and ambiguous source cases",
+      "Compare final publication layout with proof;verify any errata without conflating pagination",
+      "Review source-linked dataset licensing/access before any ingestion",
+      "Independent privacy/consent and imported44record-format review",
+      "Freeze exhaustive interval/version/category negative controls before code"
+    ],
+    "P2": [
+      "Voluntary preregistered nonclinical observational studies with consent",
+      "External timestamp witnesses or signatures",
+      "Accessible audio/sketch capture with rights controls",
+      "Held-out retrieval aids only under an explicit separately validated protocol",
+      "Broader phenomenology sources without changing preserved inventory taxonomy"
+    ]
+  },
+  "research_cutoff": "Complete primary article inspected through CNRS institutional proof despite PMC challenge. Category/case/rights/limits sufficient for bounded audit;no need to wait for raw download or broader clinical literature. No executable implementation in this pass."
+}
