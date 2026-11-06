@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "task": "benchmark",
+  "profile": "fpp3-noaa-monthly-rolling-origin-baselines-v1",
+  "profile_version": 1,
+  "resource_evidence": {
+    "record": {
+      "profile_sha256": "ed2490bf3ddc5861b3a406e2ba8aa93b3f2b2fe33e0b7917371e5c26875e7fdb",
+      "code_sha256": "b20c30fdfde79e37413bbaae9544ee6ef69cd2765a7ef1ec68a53d0ad765b014",
+      "date": "2026-11-07",
+      "cold_model_seconds": 1.180767900077626,
+      "warm_model_seconds": 1.1594283001031727,
+      "warm_model_repeats_seconds": [
+        1.1576372000854462,
+        1.1594283001031727,
+        1.1622476999182254
+      ],
+      "cold_definition": "First core read(benchmark) in this fresh measurement process after imports;OS caches not flushed.",
+      "warm_definition": "Median of3repeat core read(benchmark) calls in same process;each performs every model/fold again,no forecast cache.",
+      "total_cli_wall_seconds": 2.6804639000911266,
+      "cli_definition": "Fresh python -m future process,including interpreter/imports,core evaluation,JSON serialization and stdout capture;not a machine-cold disk-cache claim.",
+      "json_plus_markdown_serialization_seconds": 0.34195230016484857,
+      "helper_peak_process_bytes": 132526080,
+      "cli_peak_process_bytes": 128671744,
+      "peak_process_bytes": 132526080,
+      "memory_method": "Windows GetProcessMemoryInfo native peak working set for helper and20ms CLI samples;Linux VmHWM/resource fallback. Native peaks retain prior spikes;CLI last-exit interval can be missed.",
+      "physical_memory": {
+        "method": "Windows GlobalMemoryStatusEx",
+        "total": 33597927424,
+        "available": 5387497472
+      },
+      "python": "3.12.10",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+      "logical_cpus": 24,
+      "model_execution_threads": 1,
+      "thread_policy": "Single calling Python thread;no BLAS/neural/GPU model execution. Parent monitor thread only collects CLI output.",
+      "gpu_used": false,
+      "series": 1,
+      "origins": 50,
+      "horizons": 12,
+      "candidates": 7,
+      "forecast_cells": 4200,
+      "stdout_sha256": "f8c1a5a4effa62f25596f54e4d934ace37e9529ea3d35ff90be3aa97b6b404a6",
+      "environment_versions": {
+        "python": "3.12.10",
+        "numeric": "stdlib Fraction/Decimal",
+        "model_dependencies_added": []
+      },
+      "target": {
+        "warm_seconds": 10,
+        "peak_bytes": 536870912
+      },
+      "limits": "Measured on this machine only;timings/resource costs are frozen evidence,not universal performance guarantees.",
+      "target_passed": true
+    },
+    "sha256": "e334418db7e67ba32b8fa07194b07604ed81aadeab327ab74ba710878f447503"
+  }
+}

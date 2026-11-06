@@ -1066,3 +1066,8 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Implemented seven fixed configurations,generic regular monthly inputs,explicit manual seasonal period,exact rational point/rolling metrics,validation-only selection and full all-candidate ledgers. Manual quantile/interval reference scoring generates no predictive intervals.
 - 65new tests pass;production predictions match all4200pre-engine cell commitments and70exact aggregate metrics. All numerical/procedural families pass;resource family awaits actual measurement. Optional exact absolute-sMAPE bounded to20manual pairs to avoid impractical rational denominator growth;benchmark default metrics unaffected.
 - Offline CLI added using existing JSON-request conventions. No ARIMA/optimized ETS,trees,neural,Chronos or new dependencies.
+
+## 2026-11-07 — #49 actual NOAA benchmark and resources
+- All4200planned candidate cells succeeded:sevenmodels x25origins x12h x2partitions;36distinct target months/partition. Validation selecteddrift (MAE2.598969559090ppm),kept fixed for test.
+- Testdrift MAE2.537249963267/RMSE3.091598646287/MASE1.141503439620 versus seasonal-naive MAE2.179400000000;drift has16.419655%higher MAE. All-candidate test scores remain diagnostic,not reselection.
+- Measured first-core1.1808s,warm median1.1594s,CLI2.6805s andpeak132526080bytes (~126.4MiB);under10s/512MiB targets. Separate frozen resource evidence permits exact deterministic reports. Full per-cell/horizon JSON/Markdown retained;no live-vintage or universal skill claim.
