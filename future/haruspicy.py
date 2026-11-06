@@ -10,7 +10,7 @@ from .scrying import freeze, digest, _object, _optional_text, load_input
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILE = 'cicero-falconer1923-roman-entrail-references-v1'
-PROFILE_HASH = '3d00ed48911aa9e685af6d8d3e14443a3e7d26a7bcbe76e1442a4b9ced023e79'
+PROFILE_HASH = '44b5d1c3c779c1308ac6d929d593ac8d87cbc98cd51cace967dc423088ac2dd6'
 DATA = freeze(load_input(ROOT / 'knowledge/haruspicy_roman_profile_v1.json'))
 CATALOG_HASH = DATA['catalog_sha256']
 

@@ -761,13 +761,14 @@ Profile: cicero-falconer1923-roman-entrail-references-v1
     "id": "causal-criticism",
     "source_id": "haruspicy-core-cicero-book2-v1",
     "edition": "On Divination,Loeb Classical Library,Cicero volumeXX,Harvard University Press,1923,William Armistead Falconer",
-    "locator": "II.13.32–34",
+    "locator": "II.13.32–II.14.34",
     "native": {
       "book": 2,
       "chapter": 13,
       "section_start": 32,
       "section_end": 34,
-      "note": null
+      "note": null,
+      "chapter_end": 14
     },
     "text_layer": "main_text_dialogue",
     "speaker": "Marcus",
@@ -963,7 +964,7 @@ Profile: cicero-falconer1923-roman-entrail-references-v1
     "task": "compare",
     "catalog_id": "cicero-falconer1923-entrail-cases-v1",
     "catalog_version": 1,
-    "catalog_sha256": "b3fed577830afead41828c016dcf5bc94a7aa752a8de39c23c50be60cb189a60",
+    "catalog_sha256": "60c326e83fde3a8b774b781b53ae050635c1f88f48e2fad54e30ac690d322ad7",
     "observations": [
       {
         "observation_id": "heart1",
@@ -994,9 +995,9 @@ Profile: cicero-falconer1923-roman-entrail-references-v1
       }
     ]
   },
-  "input_sha256": "4de87635d4471cb48af56750884a8a25bd186dc723fce42beb0f6298cfa9b2b1",
-  "profile_sha256": "3d00ed48911aa9e685af6d8d3e14443a3e7d26a7bcbe76e1442a4b9ced023e79",
-  "catalog_sha256": "b3fed577830afead41828c016dcf5bc94a7aa752a8de39c23c50be60cb189a60",
+  "input_sha256": "665542877b43be7d0177ecabf1e122938d81a1a3c49a2117171b9aab39565563",
+  "profile_sha256": "44b5d1c3c779c1308ac6d929d593ac8d87cbc98cd51cace967dc423088ac2dd6",
+  "catalog_sha256": "60c326e83fde3a8b774b781b53ae050635c1f88f48e2fad54e30ac690d322ad7",
   "source_manifest_sha256": "b81c4c8b07edf8fc1cfd0bcc8402e0b825a3eb5b7acc84a727c328ed11ff51d7",
   "source_snapshot_sha256": {
     "haruspicy-core-cicero-edition-v1": "250d74fd88ca2e29741213f8e9a41a7a0c9d752d4d996814255360598103fc08",

@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 39 critical citation range correction — 2026-11-06
+- Corrected contextual Marcus range to II.13.32–II.14.34,including explicit ending chapter14. Repinned source/catalog/profile and replay hashes; all four predicates,14 known answers and8100 matrix expectations are unchanged,with provenance evidence saved.
+- New73 tests and independent32400 condition checks pass;20 accepted/12 rejected report pairs regenerated and84 CLI cases pass. Full acceptance coordinator refreshed after the metadata pin change.
+
 ## Technique 39 Roman condition engine — 2026-11-06
 - Added strict manual compare/reference/catalog CLI,compound predicates,five statuses,explicit assertions/uncertainty and linked Caesar sequence. Source accounts,Marcus criticism,translation qualifiers and user text remain separate; no combined score or factual prediction.
 - 73 tests,8100 independent rows/32400 condition checks and84 CLI cases pass. Retained pre-engine expectations: valid other labels are unmatched negative controls; known foreign traditions unsupported. No expected fixture changed to fit matcher. Full inherited acceptance follows.

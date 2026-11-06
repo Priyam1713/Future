@@ -64,7 +64,11 @@ class HaruspicyTests(unittest.TestCase):
     def test_catalog(self):x={k:v for k,v in q(task='catalog').items() if k!='observations'};self.assertEqual(len(h.read(x)['references']),9)
     def test_context_always_visible(self):self.assertEqual(len(h.read(q())['context_references']),5)
     def test_critical_heart(self):self.assertEqual(h.lookup('heart-criticism')['speaker'],'Marcus');self.assertIn('ancient speculation',h.lookup('heart-criticism')['source_account'])
-    def test_source_terms(self):self.assertEqual(h.lookup('lung-cleft')['latin_terms'],['pulmo incisus']);self.assertIn('modern anatomical',h.lookup('liver-head-absent')['qualification'])
+    def test_source_terms(self):
+        self.assertEqual(h.lookup('lung-cleft')['latin_terms'],['pulmo incisus'])
+        self.assertIn('modern anatomical',h.lookup('liver-head-absent')['qualification'])
+        self.assertEqual(h.lookup('causal-criticism')['locator'],'II.13.32–II.14.34')
+        self.assertEqual(h.lookup('causal-criticism')['native']['chapter_end'],14)
     def test_no_prediction_diagnosis_authority(self):r=result();self.assertIsNone(r['empirical_prediction']);self.assertIsNone(r['anatomical_diagnosis']);self.assertFalse(r['ritual_authority'])
     def test_user_origin(self):self.assertEqual(result(obs(origin='hypothetical'))['declared']['origin'],'hypothetical')
     def test_raw_unicode(self):raw='  Café Café\r\n猫\t `````json ';r=h.read(q(obs(user_association=raw),question=raw));self.assertEqual(r['user_text']['question'],raw);self.assertEqual(r['observations'][0]['declared']['user_association'],raw)
