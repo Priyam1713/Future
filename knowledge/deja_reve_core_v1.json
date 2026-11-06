@@ -1,0 +1,542 @@
+{
+  "version": 1,
+  "technique_id": 46,
+  "name": "Déjà Rêvé",
+  "date": "2026-11-07",
+  "status": "Core v1 Ready — Source-Guided Déjà Rêvé Annotation and Dream-Record Provenance Scope",
+  "profile": "curot2018-phenomenology-and-dream-record-provenance-v1",
+  "profile_sha256": "fdfe3074e23b10deb96928d85b3440d2a3122acdcffc5270af3596a854c3698a",
+  "source_commit": "f9e9d2f",
+  "fixture_commit": "2ee614e",
+  "engine_commit": "a764d28",
+  "verification_commit": "75e05fb",
+  "report_commit": "2564277",
+  "source_registry": "knowledge/deja_reve_sources.json",
+  "source_freeze": "knowledge/deja_reve_source_freeze_v1.json",
+  "source_manifest_sha256": "4cf84701323b1a6c41bc7e2ec8148949845e6e2a1026c21e0393820df1d92456",
+  "source_freeze_sha256": "d5974022275216a8c0a29bfaebff3ad099b4a4a796dc71cd6b7b2fdefdd20dec",
+  "fixture_sha256": "742061f3a6f89f8ef0720214e5d1feee870818aaac36494b4a8ec744c15e9c8d",
+  "ranked_sources_unchanged": [
+    [
+      46,
+      "Déjà Rêvé",
+      1,
+      "Jonathan Curot et al.",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Neurological classification and evidence",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6028740/",
+      "Open peer-reviewed study",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      46,
+      "Déjà Rêvé",
+      2,
+      "J. W. Dunne",
+      "An Experiment with Time",
+      "Prospective dream logging",
+      "https://en.wikisource.org/wiki/File:Dunne_-_An_Experiment_with_Time.pdf",
+      "Open historical scan",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows_unchanged": [
+    [
+      46,
+      "Déjà Rêvé",
+      "Episodic déjà-rêvé",
+      "An Experiment with Time",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      46,
+      "Déjà Rêvé",
+      "familiarity-only",
+      "An Experiment with Time",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      46,
+      "Déjà Rêvé",
+      "dream-reminiscence",
+      "An Experiment with Time",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      46,
+      "Déjà Rêvé",
+      "dream-event matching",
+      "An Experiment with Time",
+      "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "edition_boundary": "CNRS article-in-press proof 11 pages; final journal 11(4),875–885,DOI10.1016/j.brs.2018.02.016. No final-layout or PDF byte-equivalence verified.",
+  "verified_documentary_cases": [
+    {
+      "id": "table1-4a",
+      "locator": "Table1p3;Figure2p8",
+      "authors_category": "episodic-like",
+      "fact": "Orange-room recollection;reported yesterday or two days earlier."
+    },
+    {
+      "id": "table1-6a",
+      "locator": "Table1p4;Figure2p8",
+      "authors_category": "familiarity-like",
+      "fact": "Character/fear recollection with uncertain dream attribution."
+    },
+    {
+      "id": "table1-5a",
+      "locator": "Table1p4",
+      "authors_category": "dreamy-state",
+      "fact": "Hospital imagery;retain authors category despite contextual words."
+    },
+    {
+      "id": "table2-penfield-hn",
+      "locator": "Table2p7;Figure2p8",
+      "authors_category": "unclassifiable",
+      "fact": "Sparse dream-onset report;insufficient detail."
+    }
+  ],
+  "historical_counts": {
+    "local_episodes": 7,
+    "local_patients": 6,
+    "literature_episodes": 35,
+    "literature_patients": 23,
+    "local_classified": [
+      3,
+      3,
+      1
+    ],
+    "literature_classified": [
+      3,
+      1,
+      15
+    ],
+    "literature_unclassifiable": 16,
+    "total_classified": 26
+  },
+  "category_definitions": [
+    {
+      "id": "episodic-like",
+      "definition": "Specific prior-dream recollection with temporal context.",
+      "locator": "Results p5;Figure2p8"
+    },
+    {
+      "id": "familiarity-like",
+      "definition": "Dream-associated elements without a specific dated dream.",
+      "locator": "Results pp5,8;Figure2p8"
+    },
+    {
+      "id": "dreamy-state",
+      "definition": "Dream-like current feeling or consciousness state.",
+      "locator": "Results p8;Figure2p8"
+    },
+    {
+      "id": "unclassifiable",
+      "definition": "Insufficient historical descriptions for categorization.",
+      "locator": "Results p8;Figure2p8"
+    }
+  ],
+  "category_precedence": [
+    "Explicit uncertainty or conflicting declarations -> review_required. Specific recollection with denied dream association; temporal context with denied specific recollection; recalled dream mixed with present dreamy-state -> conflicting.",
+    "Any unknown declaration -> unclassifiable.",
+    "Specific recollection,dream association and specific temporal context,without present dreamy-state -> episodic_like_compatible.",
+    "Dream-associated familiarity without specific recollection,present dreamy-state or specific temporal context -> familiarity_like_compatible.",
+    "Present dreamy-state without specific recollection or familiarity -> dreamy_state_compatible;not remembered prior dream.",
+    "Generic familiarity with denied dream association and no prior recollection or dreamy-state -> unsupported.",
+    "All other incomplete combinations -> unclassifiable. Temporal vague/unknown with specific recollection remains unclassifiable."
+  ],
+  "human_guidance": "Conservative compatibility policy,not authors clinical consensus algorithm. Raw narrative is never parsed for category inference. Proposal preserved independently;disagreement exposed. Confidence never supplies missing evidence.",
+  "schema": {
+    "original": [
+      "profile",
+      "profile_version",
+      "kind",
+      "id",
+      "pseudonym",
+      "source_ref",
+      "occurrence",
+      "first_record_at",
+      "lock_at",
+      "narrative",
+      "narrative_sha256",
+      "context",
+      "attributes",
+      "consent"
+    ],
+    "attributes": [
+      "dream_association",
+      "specific_recollection",
+      "temporal_context",
+      "familiarity",
+      "present_dreamy_state",
+      "subjective_confidence",
+      "reviewer",
+      "proposal",
+      "uncertain"
+    ],
+    "amendment": [
+      "version",
+      "parent_sha256",
+      "at",
+      "reason",
+      "narrative",
+      "narrative_sha256",
+      "knowledge"
+    ],
+    "analysis": [
+      "observation",
+      "dreams",
+      "manifest",
+      "comparisons",
+      "event",
+      "post_hoc"
+    ],
+    "comparison": [
+      "dream_id",
+      "version_sha256",
+      "at",
+      "reviewer",
+      "criteria",
+      "reasoning",
+      "status"
+    ]
+  },
+  "immutable_originals": "Canonical SHA256 commits original metadata and exact UTF8 narrative hash;append-only narrative amendments retain original plus parent/version,time,reason and knowledge. Comparison identifies exact original/amended version;later details never inherit original chronology.",
+  "chronology": "Timezone-aware closed intervals;compare every original lock separately to experience,first report,event. Identical point boundary only -> equal;touching non-point interval -> ambiguous. Invalid reversed interval rejects. Missing original version rejects;missing original first/lock -> unknown;lock before original first or occurrence after first -> conflicting evidence. Hashes are not clocks.",
+  "chronology_states": [
+    "strictly_earlier",
+    "equal_boundary",
+    "later",
+    "overlapping_or_ambiguous",
+    "unknown",
+    "conflicting_evidence"
+  ],
+  "candidate_policy": "Finite manifest frozen before manual comparison;every candidate,attempt,nonmatch,unreviewed,excluded,missing-original and unscorable included. Final declaration per candidate uses chronological append order. Later searches have separate post-hoc ledgers/denominators. No semantic retrieval/ranking.",
+  "event_policy": "Occurrence distinct from publication/discovery and current experience/report;external evidence reference/hash retained as declarations,without external byte or clock authentication. No prediction inferred.",
+  "privacy": "Local pseudonymous private records. Consent/local processing and rights required;export unsupported in v1. CLI stdout/private JSON includes raw text and must remain private. Reference has no participant data.",
+  "rights": "CC BY-NC-ND4.0 article; Elsevier proof/publication relationship retained. Facts-only original notes and locators;no PDF,figures,interview corpus or clinical dataset distributed.",
+  "dunne_boundary": "1927 ranked scan metadata only/body uninspected. Later Faber/FadedPage witness includes1939 publication history and1934 third-edition additions;ChapterX/AppendixIII recording practice only. No serial-time or prophetic rules transferred.",
+  "limits": [
+    "No neurological diagnosis,localization or stimulation advice",
+    "No memory authenticity certification",
+    "No future-event prediction or resemblance probability",
+    "Local owner may rewrite a hash chain;timestamps,identity,consent and knowledge are declarations",
+    "Clinical source examples do not validate consumer classification"
+  ],
+  "configuration_matrix": {
+    "supported": [
+      "Four attributed documentary source cases",
+      "Strict human-guided annotations",
+      "Immutable original and append-only narrative versions",
+      "Finite exact-ID candidate ledger and manual nonmatch accounting",
+      "Timezone-aware chronology and exact JSON/Markdown replay"
+    ],
+    "experimental": [
+      "Applying clinical phenomenology to ordinary self-report",
+      "Independent reviewer agreement"
+    ],
+    "unsupported": [
+      "Diagnosis or prediction",
+      "Semantic journal retrieval/ranking",
+      "Trusted timestamps",
+      "Public narrative export",
+      "Automatic import of Technique44 records"
+    ]
+  },
+  "acceptance_criteria": [
+    "Four documentary labels,edition distinctions and source denominators match independent frozen source facts",
+    "All648pre-engine structured compatibility expectations pass;no raw-text inference",
+    "Missing,ambiguous and contradictory declarations remain unclassifiable or review-required",
+    "Exact original dream IDs and hashes resolve;conflicting hashes reject",
+    "Original/amended narratives,knowledge and chronology remain distinct",
+    "Independent timezone,boundary,overlap,unknown and conflict expectations pass",
+    "All finite candidate links,nonmatches,exclusions and later searches retain denominators",
+    "No claim of universal clinical category accuracy",
+    "No neurological diagnosis or memory-authenticity claim",
+    "No future prediction or semantic probability inferred",
+    "All16pre-engine fixture families pass",
+    "Accepted/rejected JSON and Markdown replay exactly",
+    "Complete inherited tests,CLI,26verifiers,registry,dependency,pip,diff and2425protected byte checks pass"
+  ],
+  "independent_fixture_families": [
+    "source-category-episodic",
+    "source-category-familiarity",
+    "source-category-dreamy",
+    "source-unclassifiable",
+    "mixed-uncertain",
+    "original-prior-record",
+    "no-prior-record",
+    "conflicting-chronology",
+    "original-versus-amendment",
+    "generic-familiarity-negative-control",
+    "specific-versus-vague",
+    "manual-nonmatch",
+    "multiple-candidates",
+    "missing-original-time",
+    "no-diagnosis-prediction",
+    "source-edition-rights-replay"
+  ],
+  "backlog": {
+    "P1": [
+      "Independent clinical/category review;not a consumer clinical classifier",
+      "Final journal layout and errata cross-check against inspected proof",
+      "Source-linked clinical dataset rights/access review",
+      "More independently authored mixed-category negative controls",
+      "Independent privacy/consent review",
+      "Explicit compatibility verification before importing Technique44 records",
+      "Restricted local attachment-reference records;v1 requires consented inline original text",
+      "External event byte-evidence verification;v1 preserves declared references/hashes only"
+    ],
+    "P2": [
+      "Voluntary nonclinical observational studies with consent and independent review",
+      "External timestamp witnesses/signatures",
+      "Accessible audio/sketch capture",
+      "Separately evaluated dream-record retrieval",
+      "Broader neurological phenomenology sources",
+      "No diagnostic or paranormal certification without appropriate evidence"
+    ]
+  },
+  "acceptance": {
+    "passed": true,
+    "complete": true,
+    "tests": 1397,
+    "inherited_tests": 1354,
+    "new_tests": 43,
+    "cli_cases": 1867,
+    "inherited_cli_cases": 1721,
+    "new_cli_cases": 146,
+    "independent_verifiers": 27,
+    "protected_files": 2425,
+    "changed_protected_files": [],
+    "allowed_existing_edits": [
+      "PROGRESS.md",
+      "README.md",
+      "future/__main__.py",
+      "knowledge/gaps.json"
+    ],
+    "registry": {
+      "references_checked_twice": 470,
+      "unique": 315,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "strict_json_files": 1757,
+    "historical_invalid_json_rejections": [
+      "data/feng-shui-duplicate-json-input.json",
+      "data/feng-shui-nonfinite-input.json"
+    ],
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    },
+    "other59gap_entries_unchanged": true,
+    "verification": {
+      "passed": true,
+      "fixture_sha256": "742061f3a6f89f8ef0720214e5d1feee870818aaac36494b4a8ec744c15e9c8d",
+      "profile_sha256": "fdfe3074e23b10deb96928d85b3440d2a3122acdcffc5270af3596a854c3698a",
+      "fixture_commit": "2ee614e",
+      "families": [
+        {
+          "id": "source-category-episodic",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "source-category-familiarity",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "source-category-dreamy",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "source-unclassifiable",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "mixed-uncertain",
+          "passed": true,
+          "checks": 648
+        },
+        {
+          "id": "original-prior-record",
+          "passed": true,
+          "checks": 5
+        },
+        {
+          "id": "no-prior-record",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "conflicting-chronology",
+          "passed": true,
+          "checks": 13
+        },
+        {
+          "id": "original-versus-amendment",
+          "passed": true,
+          "checks": 5
+        },
+        {
+          "id": "generic-familiarity-negative-control",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "specific-versus-vague",
+          "passed": true,
+          "checks": 2
+        },
+        {
+          "id": "manual-nonmatch",
+          "passed": true,
+          "checks": 1
+        },
+        {
+          "id": "multiple-candidates",
+          "passed": true,
+          "checks": 10
+        },
+        {
+          "id": "missing-original-time",
+          "passed": true,
+          "checks": 3
+        },
+        {
+          "id": "no-diagnosis-prediction",
+          "passed": true,
+          "checks": 5
+        },
+        {
+          "id": "source-edition-rights-replay",
+          "passed": true,
+          "checks": 7
+        }
+      ],
+      "category_cases": 648,
+      "chronology_constants": 11,
+      "source_case_checks": 4,
+      "source_counts_verified": true,
+      "empirical_or_clinical_validation": false,
+      "method": "Pre-engine known-answer tables and constants;independent canonical SHA256;no expected values generated by production."
+    },
+    "cli_replay": {
+      "passed": true,
+      "count": 146,
+      "accepted_pairs": 34,
+      "rejected_pairs": 37,
+      "exact_replay": true
+    }
+  },
+  "excluded_next": [
+    47,
+    48
+  ],
+  "next_retained": 49,
+  "report_provenance_refinement_commit": "d2af8b4",
+  "current_tests": 1397,
+  "current_new_tests": 43,
+  "current_cli_cases": 146,
+  "current_saved_pairs": {
+    "accepted": 34,
+    "rejected": 37
+  },
+  "acceptance_commit": "7159ae4",
+  "acceptance_evidence": "data/deja-reve-acceptance-checks.json",
+  "independent_verification": "data/deja-reve-verification.json",
+  "report_replay": "data/deja-reve-cli-smoke.json",
+  "release_meaning": "Verified bounded software core;not exhaustive,empirically validated or clinical/predictive certification.",
+  "acceptance_criteria_results": [
+    {
+      "id": 1,
+      "criterion": "Four documentary labels,edition distinctions and source denominators match independent frozen source facts",
+      "passed": true
+    },
+    {
+      "id": 2,
+      "criterion": "All648pre-engine structured compatibility expectations pass;no raw-text inference",
+      "passed": true
+    },
+    {
+      "id": 3,
+      "criterion": "Missing,ambiguous and contradictory declarations remain unclassifiable or review-required",
+      "passed": true
+    },
+    {
+      "id": 4,
+      "criterion": "Exact original dream IDs and hashes resolve;conflicting hashes reject",
+      "passed": true
+    },
+    {
+      "id": 5,
+      "criterion": "Original/amended narratives,knowledge and chronology remain distinct",
+      "passed": true
+    },
+    {
+      "id": 6,
+      "criterion": "Independent timezone,boundary,overlap,unknown and conflict expectations pass",
+      "passed": true
+    },
+    {
+      "id": 7,
+      "criterion": "All finite candidate links,nonmatches,exclusions and later searches retain denominators",
+      "passed": true
+    },
+    {
+      "id": 8,
+      "criterion": "No claim of universal clinical category accuracy",
+      "passed": true
+    },
+    {
+      "id": 9,
+      "criterion": "No neurological diagnosis or memory-authenticity claim",
+      "passed": true
+    },
+    {
+      "id": 10,
+      "criterion": "No future prediction or semantic probability inferred",
+      "passed": true
+    },
+    {
+      "id": 11,
+      "criterion": "All16pre-engine fixture families pass",
+      "passed": true
+    },
+    {
+      "id": 12,
+      "criterion": "Accepted/rejected JSON and Markdown replay exactly",
+      "passed": true
+    },
+    {
+      "id": 13,
+      "criterion": "Complete inherited tests,CLI,26verifiers,registry,dependency,pip,diff and2425protected byte checks pass",
+      "passed": true
+    }
+  ]
+}

@@ -1041,3 +1041,8 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #46 full acceptance
 - Final1397tests (1354inherited+43new),1867CLI cases (1721inherited+146new) and27independent verifiers (26inherited+1new) pass. All16families,648category rows,11chronology constants and34accepted/37rejected exact JSON/Markdown pairs verified.
 - Full2425protected-file byte manifest unchanged;source registry idempotence,strict JSON including expected rejections of two inherited intentionally malformed fixtures,dependency audit,pip check anddiff check pass. Evidence:data/deja-reve-acceptance-checks.json andregression.json. No clinical/empirical/memory/prediction certification.
+
+## 2026-11-07 — #46 Core v1 closure
+- Accepted **Core v1 Ready — Source-Guided Déjà Rêvé Annotation and Dream-Record Provenance Scope** under exact curot2018-phenomenology-and-dream-record-provenance-v1 profile. All13acceptance criteria pass;matrix,edition/rights/privacy limits andP1/P2 frozen inknowledge/deja_reve_core_v1.json.
+- Source:f9e9d2f;fixtures:2ee614e;engine:a764d28;verification:75e05fb;reports:2564277;report/root refinement:d2af8b4;acceptance:7159ae4. Preserved2425earlier artifacts andall60inventory IDs/54retained/six exclusions.
+- #47Divine Prophecy and#48Time-Slip Experiences remain excluded;no audit/implementation. Next only after this closure is pushed andmain synchronized:#49AI Predictive Modeling resource audit,without models/profile/CLI or#50work.
