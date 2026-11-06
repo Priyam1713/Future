@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 39 immutable Roman catalog — 2026-11-06
+- Source9a1a643 pushed before catalog. Frozen four source-condition and five context records,exact terminology,compound vitals qualifier and linked preceding Caesar account. Source/profile/catalog/fixture hashes pinned; independent8100-row truth matrix precedes production.
+- Complete pre-engine manifest captures1670 files;1665 remain byte-protected. Four intentional interface/history edits plus append-only source metadata are explicit exceptions; original12 source records preserved. Unknowns,contradictions,sequence failures and cross-tradition isolation have named semantics.
+
 ## Technique 39 Roman source freeze — 2026-11-06
 - Verified Falconer1923 four Roman accounts and five contextual references; independent Latin digital wording checked with printed-edition limits. Lung incisus/cleft,ancient liver-head label,Spurinna attribution and explicit following-day sequence remain distinct; no empirical or anatomical inference.
 - Captured exact pre-engine protected-byte manifest; original12 source records preserved with five versioned core records appended. Fourteen hand-authored cases and8100 finite source-truth rows prepared before matcher. Koch/Piacenza runtime deferredP1; source cutoff reached.

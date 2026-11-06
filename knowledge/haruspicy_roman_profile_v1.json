@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "profile": "cicero-falconer1923-roman-entrail-references-v1",
+  "catalog_id": "cicero-falconer1923-entrail-cases-v1",
+  "catalog_version": 1,
+  "catalog_sha256": "b3fed577830afead41828c016dcf5bc94a7aa752a8de39c23c50be60cb189a60",
+  "source_manifest_sha256": "b81c4c8b07edf8fc1cfd0bcc8402e0b825a3eb5b7acc84a727c328ed11ff51d7",
+  "source_fixture_sha256": "eb055fbb8f8ac20f6c85e29395e8fc0a34e19680438eae6166359df2bd747be1",
+  "domains": {
+    "tradition": [
+      "roman",
+      "etruscan",
+      "mesopotamian",
+      "other",
+      "unknown"
+    ],
+    "organ": [
+      "lung",
+      "liver",
+      "heart",
+      "other",
+      "unknown"
+    ],
+    "feature": [
+      "cleft",
+      "liver_head",
+      "whole_organ",
+      "other",
+      "unknown"
+    ],
+    "presence": [
+      "present",
+      "absent",
+      "unknown"
+    ],
+    "other_vitals": [
+      "sound",
+      "not_sound",
+      "unknown"
+    ],
+    "narrative_context": [
+      "caesar-I52-119",
+      "none",
+      "other",
+      "unknown"
+    ],
+    "event_phase": [
+      "first_day",
+      "following_day",
+      "other",
+      "unknown"
+    ],
+    "animal": [
+      "votive_ox",
+      "other",
+      "unknown"
+    ],
+    "setting_id": [
+      "golden_throne_purple_robe",
+      "other",
+      "unknown"
+    ],
+    "warning_attribution": [
+      "spurinna",
+      "other",
+      "unknown"
+    ]
+  },
+  "origins": [
+    "hypothetical",
+    "museum_document",
+    "source_description",
+    "unknown"
+  ],
+  "required_fields": [
+    "tradition",
+    "organ",
+    "feature",
+    "presence",
+    "other_vitals",
+    "narrative_context",
+    "event_phase",
+    "animal",
+    "setting_id",
+    "warning_attribution",
+    "prior_observation_id"
+  ],
+  "condition_case_ids": [
+    "lung-cleft",
+    "liver-head-absent",
+    "caesar-heart",
+    "caesar-liver-next-day"
+  ],
+  "context_ids": [
+    "customs-criticism",
+    "causal-criticism",
+    "selection-criticism",
+    "heart-criticism",
+    "public-context"
+  ],
+  "supported": [
+    "Exact four Roman historical source-condition comparisons",
+    "Reference/catalog lookup without specimens",
+    "Ordered manual observations and neutral side-by-side comparison",
+    "Linked Caesar two-event documentary comparison",
+    "Explicit unknown,contradiction and foreign-tradition outcomes",
+    "Offline deterministic JSON/Markdown and immutable replay"
+  ],
+  "experimental": [
+    "Mesopotamian source extraction and Etruscan cell reconstruction are audit-only research;no runtime implementation"
+  ],
+  "unsupported": [
+    "Factual future,death,wealth or clinical prediction",
+    "Anatomical recognition or diagnosis",
+    "Sacrifice or specimen procedures",
+    "Mesopotamian/Etruscan/Augury rule transfer",
+    "Generic positive/negative inversion",
+    "Automatic prose extraction or inferred chronology"
+  ],
+  "conventions": [
+    "Explicit source terms only;unknown is not absent. Optional declarations never inferred from prose.",
+    "All predicates must match;known mismatches precede missing fields for per-case status.",
+    "Foreign known tradition or organ/feature other is unsupported;unknown yields insufficient evidence where otherwise compatible.",
+    "Contradictory reports never fill missing declarations;distinct known values mark conflict.",
+    "Per-case relevant contradiction precedes missing evidence and blocks applicability. Overall any structured contradiction is conflicting.",
+    "Each uncertain field is treated as unknown;other unrelated fields remain unchanged.",
+    "CaseD requires named earlier CaseC in request order. Missing ID/record is insufficient;self/later/nonmatching predecessor is not applicable. Uncertain/conflicting predecessor propagates.",
+    "CaseB can match a standalone or Caesar liver observation;CaseD never follows automatically from CaseB.",
+    "User-declared context proves no real-world event. Sequence comparison is documentary compatibility,not a fortune."
+  ],
+  "priority": [
+    "overall structured conflict",
+    "known unsupported label/tradition",
+    "any applicable",
+    "any conflicting",
+    "any insufficient",
+    "not_applicable"
+  ],
+  "rights": "Original concise notes only;no modern Koch text,Colonna diagram,museum photo or anatomy image redistributed.",
+  "qualification": "Historical text and hypothetical manual comparison only. No animal is needed. No prediction,modern anatomical diagnosis or ritual authority is conferred.",
+  "P1": [
+    "Latin-original collation of selected Roman conditions and anatomical ambiguity",
+    "Legitimate Koch chapter/tablet/translation access,complete pairs,exceptions and lacunae",
+    "Resolve CCP embedded-edition access and independent duplicate witnesses",
+    "Full selected Piacenza cell transcriptions/numbering,both faces,disputed readings and image/diagram rights",
+    "Freeze original source fixtures before implementing any39 functionality"
+  ],
+  "P2": [
+    "Broader independent Roman extispicy authors",
+    "Additional Mesopotamian series/periods under separate profiles",
+    "Original rights-cleared schematic geometry after reference core",
+    "Deeper Etruscan cosmological reconstructions kept attributed",
+    "Empirical research independent of historical textual comparison"
+  ]
+}
