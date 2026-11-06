@@ -1,5 +1,9 @@
 # Future progress
 
+## Technique 39 Roman source freeze — 2026-11-06
+- Verified Falconer1923 four Roman accounts and five contextual references; independent Latin digital wording checked with printed-edition limits. Lung incisus/cleft,ancient liver-head label,Spurinna attribution and explicit following-day sequence remain distinct; no empirical or anatomical inference.
+- Captured exact pre-engine protected-byte manifest; original12 source records preserved with five versioned core records appended. Fourteen hand-authored cases and8100 finite source-truth rows prepared before matcher. Koch/Piacenza runtime deferredP1; source cutoff reached.
+
 ## Technique 39 Haruspicy / Extispicy resource audit — 2026-11-06
 - Started only after Augury closure79193f4 pushed,clean and synchronized0/0. Original three ranked sources/three variations preserved; audit only,no39 engine/profile/CLI or40 audit.
 - Koch2000/2005 editions identified; complete conditional translations remain uninspected. Yale K.4063/P395380 witness metadata verified but embedded edition unavailable. Museum/Colonna separate Piacenza artifact,uncertain function,modern numbering and name-expansion debates; no copied diagrams.
