@@ -1,0 +1,2166 @@
+{
+  "version": 1,
+  "technique_id": 59,
+  "families": [
+    "derivative",
+    "four-stages",
+    "exact-one-step",
+    "origin-fixed",
+    "nonzero-equilibrium",
+    "symmetry",
+    "zero-perturbation",
+    "explicit-perturbation",
+    "exact-time-grid",
+    "zero-horizon",
+    "matched-refinement",
+    "independent-taylor",
+    "local-convergence",
+    "full-integration-stride",
+    "finite-state-guard",
+    "parameter-bounds",
+    "time-bounds",
+    "work-caps",
+    "strict-schema",
+    "unsupported-modes",
+    "source-rights",
+    "snapshot-binding",
+    "canonical-replay"
+  ],
+  "cases": {
+    "one-step": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 0,
+      "family": "exact-one-step",
+      "expected": {}
+    },
+    "origin": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "0",
+          "0",
+          "0"
+        ],
+        "perturbed_initial": [
+          "0",
+          "0",
+          "0"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 0,
+      "family": "origin-fixed",
+      "expected": {}
+    },
+    "equilibrium": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "2",
+          "beta": "1"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "-1",
+          "-1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 0,
+      "family": "nonzero-equilibrium",
+      "expected": {}
+    },
+    "identical": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 0,
+      "family": "zero-perturbation",
+      "expected": {}
+    },
+    "zero-horizon": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 0,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 0,
+      "family": "zero-horizon",
+      "expected": {}
+    },
+    "symmetric": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "-1",
+          "-1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 20,
+          "trace_stride": 3
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 0,
+      "family": "symmetry",
+      "expected": {}
+    },
+    "short-coarse": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/200",
+          "steps": 2,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 0,
+      "family": "local-convergence",
+      "expected": {}
+    },
+    "short-fine": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/400",
+          "steps": 4,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 0,
+      "family": "local-convergence",
+      "expected": {}
+    },
+    "stride": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/1000",
+          "steps": 11,
+          "trace_stride": 4
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 0,
+      "family": "full-integration-stride",
+      "expected": {}
+    },
+    "tiny-step": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100000",
+          "steps": 10,
+          "trace_stride": 4096
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 0,
+      "family": "time-bounds",
+      "expected": {}
+    },
+    "long-sensitive": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 2000,
+          "trace_stride": 200
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 0,
+      "family": "explicit-perturbation",
+      "expected": {}
+    },
+    "maximum-steps": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/1000",
+          "steps": 4096,
+          "trace_stride": 4096
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 0,
+      "family": "work-caps",
+      "expected": {}
+    },
+    "sigma-zero": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "0",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "parameter-bounds",
+      "expected": {}
+    },
+    "rho-negative": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "-1",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "parameter-bounds",
+      "expected": {}
+    },
+    "beta-too-large": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "21"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "parameter-bounds",
+      "expected": {}
+    },
+    "parameter-float": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": 10.0,
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "strict-schema",
+      "expected": {}
+    },
+    "parameter-bool": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": true,
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "strict-schema",
+      "expected": {}
+    },
+    "bad-fraction": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "1/0"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "strict-schema",
+      "expected": {}
+    },
+    "nonfinite": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "NaN",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "strict-schema",
+      "expected": {}
+    },
+    "decimal": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28.0",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "strict-schema",
+      "expected": {}
+    },
+    "huge-number": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "11111111111111111111111111111111111111111111111111",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "parameter-bounds",
+      "expected": {}
+    },
+    "negative-zero": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "-0"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "parameter-bounds",
+      "expected": {}
+    },
+    "state-size": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "2"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "strict-schema",
+      "expected": {}
+    },
+    "state-too-large": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "101",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "parameter-bounds",
+      "expected": {}
+    },
+    "missing-perturbation": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": null,
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "explicit-perturbation",
+      "expected": {}
+    },
+    "dt-zero": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "0",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "time-bounds",
+      "expected": {}
+    },
+    "dt-small": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100001",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "time-bounds",
+      "expected": {}
+    },
+    "dt-large": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "time-bounds",
+      "expected": {}
+    },
+    "steps-negative": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": -1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "time-bounds",
+      "expected": {}
+    },
+    "steps-large": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 4097,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "work-caps",
+      "expected": {}
+    },
+    "steps-bool": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": true,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "strict-schema",
+      "expected": {}
+    },
+    "stride-zero": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 0
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "strict-schema",
+      "expected": {}
+    },
+    "solver-rk45": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "RK45",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "unsupported-modes",
+      "expected": {}
+    },
+    "solver-lyapunov": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "lyapunov",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "unsupported-modes",
+      "expected": {}
+    },
+    "source": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "missing",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "source-rights",
+      "expected": {}
+    },
+    "rights": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "unknown",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "source-rights",
+      "expected": {}
+    },
+    "not-synthetic": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": false,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "source-rights",
+      "expected": {}
+    },
+    "empty-attribution": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "source-rights",
+      "expected": {}
+    },
+    "snapshot": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "exit_code": 2,
+      "family": "snapshot-binding",
+      "expected": {}
+    },
+    "profile": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "canonical-replay",
+      "expected": {}
+    },
+    "catalog": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "canonical-replay",
+      "expected": {}
+    },
+    "version": {
+      "input": {
+        "schema_version": true,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "strict-schema",
+      "expected": {}
+    },
+    "extra": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/100",
+          "steps": 1,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        },
+        "rng_seed": 1
+      },
+      "exit_code": 2,
+      "family": "unsupported-modes",
+      "expected": {}
+    },
+    "time-product": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "10",
+          "rho": "28",
+          "beta": "8/3"
+        },
+        "initial": [
+          "1",
+          "1",
+          "1"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/20",
+          "steps": 1001,
+          "trace_stride": 1
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "time-bounds",
+      "expected": {}
+    },
+    "unstable-stage": {
+      "input": {
+        "schema_version": 1,
+        "profile": {
+          "id": "chaos-theory-lorenz63-rk4-v1",
+          "version": 1,
+          "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+          "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+        },
+        "parameters": {
+          "sigma": "50",
+          "rho": "100",
+          "beta": "20"
+        },
+        "initial": [
+          "100",
+          "-100",
+          "100"
+        ],
+        "perturbed_initial": [
+          "1000001/1000000",
+          "1",
+          "1"
+        ],
+        "integration": {
+          "solver": "classical_rk4",
+          "dt": "1/20",
+          "steps": 1000,
+          "trace_stride": 1000
+        },
+        "provenance": {
+          "synthetic": true,
+          "source_ref": "chaos-theory-ucar-v1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic educational fixture",
+          "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+          "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+        }
+      },
+      "exit_code": 2,
+      "family": "finite-state-guard",
+      "expected": {}
+    }
+  },
+  "numerical_vectors": [
+    {
+      "state": [
+        "1",
+        "1",
+        "1"
+      ],
+      "parameters": [
+        "10",
+        "28",
+        "8/3"
+      ],
+      "dt": "1/100",
+      "derivative": [
+        "0",
+        "26",
+        "-5/3"
+      ],
+      "stages": [
+        [
+          "0",
+          "26",
+          "-5/3"
+        ],
+        [
+          "13/10",
+          "15527/600",
+          "-1363/900"
+        ],
+        [
+          "14747/12000",
+          "1042149191/40000000",
+          "-3261041341/2160000000"
+        ],
+        [
+          "2978977573/1200000000",
+          "6761634576609055727/259200000000000000",
+          "-175009072564768721/129600000000000000"
+        ]
+      ],
+      "next": [
+        "729048377573/720000000000",
+        "195942416091969055727/155520000000000000000",
+        "76585121966515231279/77760000000000000000"
+      ]
+    },
+    {
+      "state": [
+        "0",
+        "0",
+        "0"
+      ],
+      "parameters": [
+        "10",
+        "28",
+        "8/3"
+      ],
+      "dt": "1/100",
+      "derivative": [
+        "0",
+        "0",
+        "0"
+      ],
+      "stages": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "next": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "state": [
+        "1",
+        "1",
+        "1"
+      ],
+      "parameters": [
+        "10",
+        "2",
+        "1"
+      ],
+      "dt": "1/100",
+      "derivative": [
+        "0",
+        "0",
+        "0"
+      ],
+      "stages": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "next": [
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "state": [
+        "-1",
+        "-1",
+        "1"
+      ],
+      "parameters": [
+        "10",
+        "28",
+        "8/3"
+      ],
+      "dt": "1/100",
+      "derivative": [
+        "0",
+        "-26",
+        "-5/3"
+      ],
+      "stages": [
+        [
+          "0",
+          "-26",
+          "-5/3"
+        ],
+        [
+          "-13/10",
+          "-15527/600",
+          "-1363/900"
+        ],
+        [
+          "-14747/12000",
+          "-1042149191/40000000",
+          "-3261041341/2160000000"
+        ],
+        [
+          "-2978977573/1200000000",
+          "-6761634576609055727/259200000000000000",
+          "-175009072564768721/129600000000000000"
+        ]
+      ],
+      "next": [
+        "-729048377573/720000000000",
+        "-195942416091969055727/155520000000000000000",
+        "76585121966515231279/77760000000000000000"
+      ]
+    }
+  ],
+  "taylor": {
+    "order": 100,
+    "comparison_order": 80,
+    "time": "1/100",
+    "state": [
+      "1",
+      "1",
+      "1"
+    ],
+    "parameters": [
+      "10",
+      "28",
+      "8/3"
+    ],
+    "reference": [
+      "136997533316829628041239012779906057975984224297144775839311069354593207566496492699211221419278035826877874509426039761337385314981603879674155509954821245003696121452218652926672599615500262418309356088084076805226940653930592638231288257328598360129691543178516479805932988681939806235457328319174408650335907624643884381174886842692691264914649294500490441180135419228715316518005419820806970586377/135297422038822738720991835312698237971131984497966451867708850527323295227645841388816384211448998887017900238240516828575450054477844512411904360618331544965703594062295123099648000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "504999397148818417723557527154533250752002786937250096689288205101038262126655020920250865731772561414804729184310748406240382717592004183431076694045630720845205864673659066354650340781391560084204792632540895626881575038568232763639701071589476428779945477509506496682947371563273404042673693415915440756515494617609810770343622943753526602869209894686113583691838158411659856345703623809449276559540611/400818612790012363460938312113868529989478504075225613658087469687195262111900805114368538226417659202790529455787531104654770786390614368020266668331807201960896897409549302182707200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "4737151948472683182817577016585970492534947194846540875013331246990880888050971181587566446159067872141694212028271310262416214021031889632572525218076539096260905118161581226440775621274421147377371993946093191531490440062139009844584409891907941788674816352560889136634733877782825655914971684925818966161848628956252116773977755874902085297029010178976239975157827633150240547591893222448476836589177767/4809823353480148361531259745366422359873742048902707363897049636246343145342809661372422458717011910433486353469450373255857249436687372416243200019981686423530762768914591626192486400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "order_difference": "172022620923112573995410148755292157938838945129319697536545632515695358809642564851229202398259813633121789315488417799623749918788598086785791239117061228292626204993437914226403285975175688431442418930478610450872512004612342057704314229804215960842172366849759452408106777551523163410822233/4809823353480148361531259745366422359873742048902707363897049636246343145342809661372422458717011910433486353469450373255857249436687372416243200019981686423530762768914591626192486400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "limit": "High-order local series stability witness; no analytic remainder certification."
+  }
+}
