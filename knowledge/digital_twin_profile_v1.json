@@ -1,0 +1,120 @@
+{
+  "id": "digital-twin-offline-scalar-state-replay-v1",
+  "version": 1,
+  "technique_id": 53,
+  "scope": "Offline Scalar State-Space Assimilation Replay and Scenario Scope",
+  "source_manifest_sha256": "9e25d912734ccee8c74fe1315fb668fd09196156ff38b4de6ffa066f3f31a85d",
+  "source_freeze_sha256": "dcf761387ae33b7dc816380ef0f7af60cfcedda8c4783faa5614cf32b8c2f239",
+  "schema": {
+    "root": [
+      "schema_version",
+      "profile",
+      "mode",
+      "asset",
+      "parameters",
+      "timeline",
+      "records",
+      "horizon",
+      "scenarios",
+      "reference_scenario",
+      "provenance"
+    ],
+    "profile": [
+      "id",
+      "sha256",
+      "catalog_sha256"
+    ],
+    "asset": [
+      "id",
+      "state_unit",
+      "measurement_unit",
+      "parameter_version"
+    ],
+    "parameters": [
+      "version",
+      "A",
+      "B",
+      "H",
+      "Q",
+      "R",
+      "m0",
+      "P0"
+    ],
+    "timeline": [
+      "initial_at",
+      "step_seconds",
+      "evaluation_at"
+    ],
+    "record": [
+      "id",
+      "asset_id",
+      "state_unit",
+      "measurement_unit",
+      "tick",
+      "timestamp",
+      "available_at",
+      "value",
+      "control"
+    ],
+    "scenario": [
+      "id",
+      "controls"
+    ],
+    "provenance": [
+      "source_ref",
+      "rights",
+      "attribution",
+      "snapshot",
+      "snapshot_sha256",
+      "archive_checks"
+    ],
+    "archive_checks": [
+      "source",
+      "units",
+      "timestamps",
+      "rights"
+    ]
+  },
+  "equations": [
+    "x_k=A*x_(k-1)+B*u_k+w_(k-1); z_k=H*x_k+v_k",
+    "m_minus=A*m_previous+B*u_k; P_minus=A*A*P_previous+Q",
+    "innovation=z_k-H*m_minus; S=H*H*P_minus+R; K=P_minus*H/S",
+    "m_plus=m_minus+K*innovation; P_plus=(1-K*H)*P_minus"
+  ],
+  "contract": [
+    "Strict exact object fields. schema_version integer1. Opaque ASCII IDs [A-Za-z0-9][A-Za-z0-9_.-]{0,63}; declared unit IDs are not physical-unit certification. One asset/state/measurement. Parameter version matches asset declaration; all record identities/units match asset.",
+    "Inputs are canonical signed integer or fraction strings; each integer at most18 decimal digits, positive denominator, no floats/bools/decimals. P0>=0,Q>=0,R>0. H=0 is valid; K is not constrained to[0,1]. Exact Fraction arithmetic, no tolerances. Independent zero-mean white process/measurement noise and known linear parameters are assumptions; Gaussian covariance interpretation is conditional, not calibrated empirical coverage.",
+    "UTC whole-second Z timestamps only. initial_at is the initial posterior time. Positive integer step_seconds<=86400. Rows have contiguous ticks1..T, exact grid timestamps initial_at+tick*step, unique IDs, explicit control u_k, no sorting. Evaluation cutoff >= final grid time. Future scenario timestamps must remain representable.",
+    "Each pre-update forecast originates at the preceding grid timestamp, from accepted past posterior and declared known control assumptions. Compute prior before reading current measurement. Nonmissing sample availability >= sample timestamp. Assimilate only if available_at equals scheduled sample/update timestamp. Delayed samples are skipped forever by the filter; no out-of-sequence backfill, smoothing, fitting, imputation or automatic outlier deletion.",
+    "Missing value requires available_at=null; nonmissing requires timestamp. Record missing/not_available_at_update/applied explicitly. Innovation and gain are null when skipped; S is still the positive model predictive measurement variance. Evaluation uses pre-update H*m_minus against nonmissing targets available_at<=evaluation_at; later-known targets can be scored but never revise saved forecasts.",
+    "Open-loop baseline starts from the same initial model and controls, with no measurement corrections. Persistence predicts the latest earlier sample by sample time whose availability<=forecast_origin, on measurement units; delayed earlier samples can become eligible for persistence later. Current/future samples cannot enter persistence. No latent-state ground truth is inferred from sensor values.",
+    "Report filter/open-loop all eligible target scores separately and three-way scores only on exactly identical target IDs with persistence available. Exact squared errors and MSE, explicit counts/exclusions; empty denominators not_estimable. No posterior fit scored as a forecast, and no empirical skill claim from declared/synthetic parameters or targets.",
+    "Optional scenarios: none requires horizon0 and reference=null; otherwise1..8 unique IDs with equal controls length horizon0..128 and chosen existing reference. Fork from identical accepted final historical posterior at final grid time, not from later evaluation information. Future branches have controls only, no observations. Report t0 and future means/variances and paired differences; history is immutable. Differences are hypothetical conditional predictions, not causal effects or actuator commands.",
+    "mode synthetic or archival only; live/personal/privacy/causal extensions reject as unknown/unsupported. Frozen source_ref, nonempty attribution/snapshot<=4000chars and exact UTF8 snapshot SHA256. Declared rights self_authored/permission_granted/public_domain/cc_by. archive_checks exact booleans: allfalse for synthetic, alltrue for archival. Archival checks assert independent source/units/timestamp/rights review; engine cannot verify declarations or certify empirical accuracy.",
+    "Preflight combined steps=T+S*horizon<=2048; conservative scalar-cell reservation=48*T+8*S*(horizon+1)+128<=20000 includes historical diagnostics, baseline scores and paired scenario trajectories; fixed metadata/input echo/hashes excluded. T<=256,S<=8. Current individual maxima make step cap redundant; cell and integer-growth caps remain binding. No PRNG or network.",
+    "Every exact rational result numerator/denominator <=8192bits. Before product, cross-cancel then reserve sum of nonzero factor bit lengths; reject reservation>8192 even if exact product might fit. Factors0/1/-1 use exact trivial paths. Before addition, use gcd denominator, guarded products, reserve max(term bits)+1 for nonzero terms and guarded denominator product; reject reservation>8192 even if cancellation might fit. Division uses guarded reciprocal multiplication; zero denominator rejects. Check final reduced operands/results too. Conservative operation reservations intentionally restrict some boundary expressions; no oversized multiplication/addition is performed first."
+  ],
+  "bounds": {
+    "assets": 1,
+    "state_dimension": 1,
+    "records": 256,
+    "horizon": 128,
+    "scenarios": 8,
+    "combined_steps": 2048,
+    "scalar_cells": 20000,
+    "input_digits": 18,
+    "integer_bits": 8192
+  },
+  "unsupported": [
+    "Complete real-time digital twin certification",
+    "Live synchronization or decision feedback",
+    "Actuator control",
+    "Empirical accuracy or uncertainty coverage without held-out validation",
+    "Parameter learning",
+    "Smoothing or delayed asynchronous correction",
+    "Automatic imputation/outlier deletion",
+    "Multivariate/nonlinear models",
+    "Urban/personal/behavioral twin certification"
+  ],
+  "runtime": "Python stdlib CPU, offline; no new dependencies"
+}
