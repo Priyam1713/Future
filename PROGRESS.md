@@ -1320,3 +1320,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #55 Core v1 closure
 - Core v1 Ready — Offline Trial-Window Feature Classification and Leakage Diagnostic Scope. All28 independent families,62 new tests,2023 total tests,2893 CLI cases and34 independent verifiers pass.14accepted/41rejected pairs replay110raw outputs under each actual checkout mode. All4219 pre-engine protected files unchanged; registry,strictJSON,inventory,dependency,pip,diff pass.
 - Synthetic arithmetic and procedural scope only; no EEG/fMRI/clinical or unrestricted intention prediction. Errata preserve original fixture and numerical expectations. Source/rights,measurements,matrix and P1/P2 recorded. After closure push and clean0/0, continue #56 audit under master directive.
+
+## 2026-11-07 — #56 resource audit only
+- After #55 closure9fd9c39 pushed and clean0/0, preserved3 ranked sources/5 variations and audited9 primary references. Recommend exact finite DAG/supplied-set back-door checks,positivity,graph-table compatibility and standardization; latent/general identification unsupported. Literal structural toy contrasts1/5 adjusted versus2/5 observational; no56runtime/profile/production fixtures. Source-access/rights limits and P1/P2 recorded.

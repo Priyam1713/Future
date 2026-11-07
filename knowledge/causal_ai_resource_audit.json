@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "technique_id": 56,
+  "name": "Causal AI Forecasting",
+  "date": "2026-11-07",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "9fd9c39",
+  "predecessor_gate": "Closure push succeeded and clean synchronized main0/0 observed before56 inventory/source audit.",
+  "inventory_method_row": [
+    56,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Causal AI Forecasting",
+    "RETAIN — simulate / implement",
+    "Data & simulation",
+    "Causal DAG; back-door adjustment; structural causal models; do-calculus; counterfactual uplift",
+    "Causal graph + assumptions + intervention estimates and sensitivity analysis",
+    "Observational/intervention data; domain causal assumptions",
+    "Causality not identified from correlations alone",
+    "Empirical under explicit identification assumptions",
+    "Causality",
+    "Judea Pearl",
+    "https://www.cambridge.org/core/books/causality/B0046844FAE10CBF274D4ACBDAEB5F5B",
+    "Causal Inference: What If",
+    "DoWhy Documentation",
+    "49",
+    "49, 53, 54, 59",
+    56
+  ],
+  "ranked_sources": [
+    [
+      56,
+      "Causal AI Forecasting",
+      1,
+      "Judea Pearl",
+      "Causality",
+      "Structural causal theory",
+      "https://www.cambridge.org/core/books/causality/B0046844FAE10CBF274D4ACBDAEB5F5B",
+      "Publisher / purchase",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      56,
+      "Causal AI Forecasting",
+      2,
+      "Miguel A. Hernán and James M. Robins",
+      "Causal Inference: What If",
+      "Practical causal estimation",
+      "https://miguelhernan.org/whatifbook",
+      "Open author textbook",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      56,
+      "Causal AI Forecasting",
+      3,
+      "Microsoft Research / PyWhy",
+      "DoWhy Documentation",
+      "Software causal estimation",
+      "https://www.microsoft.com/en-us/research/project/dowhy/",
+      "Open research software",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      56,
+      "Causal AI Forecasting",
+      "Causal DAG",
+      "DoWhy Documentation",
+      "Causal Inference: What If",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      56,
+      "Causal AI Forecasting",
+      "back-door adjustment",
+      "DoWhy Documentation",
+      "Causal Inference: What If",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      56,
+      "Causal AI Forecasting",
+      "structural causal models",
+      "DoWhy Documentation",
+      "Causal Inference: What If",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      56,
+      "Causal AI Forecasting",
+      "do-calculus",
+      "DoWhy Documentation",
+      "Causal Inference: What If",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      56,
+      "Causal AI Forecasting",
+      "counterfactual uplift",
+      "DoWhy Documentation",
+      "Causal Inference: What If",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_catalog_sha256": "c56f7f98dc6a48fdab97587c09e04ef711ec91792f43980596d15ac766889230",
+  "policy": "Audit only; no runtime, executable profile or production fixtures.",
+  "recommendation": {
+    "name": "Finite Discrete Causal DAG and Identifiable Back-Door Adjustment Scope",
+    "core": [
+      "Finite small categorical DAG,explicit treatment/outcome and supplied adjustment set",
+      "No descendant of treatment in adjustment; d-separation after removing outgoing treatment edges",
+      "Exact rational joint normalization,standardization and observational comparison",
+      "Explicit overlap/positivity failures and no causal estimate for unsupported adjustment",
+      "All-observed complete-joint factorization compatibility check; causal truth still an assumption",
+      "Latent graphs diagnostic/unsupported in first core; no general nonidentifiability theorem"
+    ],
+    "formula": "P(Y=y|do(X=x))=sum_z P(Y=y|X=x,Z=z)*P(Z=z)",
+    "scientific_limit": "A graph is an input causal assumption,not a conclusion from correlations. Graphical identification,statistical estimability and empirical causal validity are separate.",
+    "status_matrix": {
+      "supported_candidate": [
+        "Original synthetic finite exact tables and assumed causal DAGs",
+        "Supplied-set back-door diagnostics and exact standardization"
+      ],
+      "experimental": [
+        "Interpreting synthetic effects as domain predictions"
+      ],
+      "unsupported": [
+        "Graph discovery",
+        "General do-calculus/front-door/IV identification",
+        "Individual counterfactuals/uplift",
+        "Continuous/learned estimators",
+        "Latent-graph effect certification",
+        "Clinical/policy recommendations"
+      ]
+    }
+  },
+  "conventions": [
+    "Back-door surgery removes OUTGOING treatment arrows; do-intervention structural oracle removes incoming assignment mechanism. Do not confuse the two.",
+    "A failed supplied-set criterion means unsupported by this method,not a proof of universal nonidentifiability. Never compute adjustment just because a Z column exists.",
+    "Positive P(Z=z) requires positive P(X=x,Z=z) for every requested treatment level; zero-mass strata omitted transparently,not fabricated. No smoothing or extrapolation.",
+    "Finite normalized joint must account for zero cells and all declared states. In an all-observed DAG, verify exact factorization compatibility over full joint before certifying the table/model pair. Compatibility does not establish causal truth.",
+    "Explicit graph/consistency/exchangeability assumptions; no interference or ill-defined treatment interpretation is established by file validation.",
+    "No real human dataset ingestion; self-authored synthetic tables and hash/rights declarations only."
+  ],
+  "source_disagreements": [
+    "DoWhy offers more identification/adjustment strategies than the original sufficient back-door criterion. First core deliberately checks one supplied set and may conservatively decline otherwise identifiable effects.",
+    "Potential-outcome and graphical formulations express related assumptions differently; keep consistency,exchangeability and positivity explicit.",
+    "Latest What If author link is2026; indexed2025/2024 passages do not certify access to latest complete text."
+  ],
+  "planned_fixture_families": [
+    "confounding",
+    "mediation",
+    "collider-closed",
+    "collider-conditioned",
+    "collider-descendant",
+    "no-confounding",
+    "descendant-adjustment",
+    "missing-positivity",
+    "zero-mass-stratum",
+    "cycle-refusal",
+    "unknown-edge",
+    "duplicate-edge",
+    "exact-adjusted-risk",
+    "observational-interventional-disagreement",
+    "deterministic-intervention-oracle",
+    "joint-normalization",
+    "graph-table-incompatibility",
+    "latent-graph-unsupported",
+    "canonical-order",
+    "source-rights",
+    "rational-bounds",
+    "json-markdown-replay"
+  ],
+  "literal_anchors": {
+    "joint_counts_Z_X_Y": {
+      "0,0,0": 27,
+      "0,0,1": 3,
+      "0,1,0": 7,
+      "0,1,1": 3,
+      "1,0,0": 5,
+      "1,0,1": 5,
+      "1,1,0": 9,
+      "1,1,1": 21
+    },
+    "total": 80,
+    "adjusted_risk_X0": "3/10",
+    "adjusted_risk_X1": "1/2",
+    "adjusted_contrast": "1/5",
+    "observational_risk_X0": "1/5",
+    "observational_risk_X1": "3/5",
+    "observational_contrast": "2/5",
+    "independent_oracle": "Enumerate Z in{0,1}, E_X in0..3,E_Y in0..9,all80 equally likely. X=1 iff E_X<(1 if Z=0 else3);Y=1 iff E_Y<1+2X+4Z. Force X=0/1 before computing Y for interventional oracle; does not call adjustment implementation."
+  },
+  "proposed_bounds": {
+    "nodes": 8,
+    "states_per_node": 3,
+    "complete_joint_cells": 4096,
+    "input_component_digits": 18,
+    "intermediate_integer_bits": 8192,
+    "work": 5000000,
+    "returned_cells": 100000,
+    "cpu_target_seconds": 5,
+    "peak_target_MiB": 128,
+    "status": "Unmeasured proposals,not executable or benchmark claims."
+  },
+  "rights": "Original facts/notes only. No third-party book/article body,figure,software code or dataset copied. No new dependency.",
+  "backlog": {
+    "P1": [
+      "Lawful full-book/latest-revision source access and edition-specific equation verification",
+      "Empirical dataset-specific provenance,consent,causal assumptions,selection/measurement and sensitivity review",
+      "Latent-variable identification and separately verified front-door/IV extensions"
+    ],
+    "P2": [
+      "General do-calculus ID algorithm",
+      "Continuous estimators and statistical uncertainty",
+      "Structural-equation language and individual counterfactual uplift",
+      "Large-scale graphs and learned mechanisms"
+    ]
+  }
+}
