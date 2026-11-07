@@ -1349,3 +1349,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-08 — #56 Core v1 closure
 - Core v1 Ready — Finite Discrete Causal DAG and Identifiable Back-Door Adjustment Scope. All22 families,256 frozen and3072 expanded graph checks,80 structural cases and50 new tests pass. Full2073tests,2985CLIcases and35independentverifiers pass; all4419protected files unchanged.15accepted/31rejected pairs replay92raw outputs under each actual checkout mode.
 - Exact causal risks3/10,1/2 versus observational1/5,3/5; positivity,graph/table compatibility and unsupported identification produce explicit diagnostics. Source/rights,measurements,matrix and P1/P2 recorded. After closure push and clean0/0,continue57audit; no57implementation yet.
+
+## 2026-11-08 — #57 resource audit only
+- After56closure998b796 pushed and clean0/0,preserved3ranked sources/5variations and audited7primary references. Recommend exact versioned binary equal/declared-weight pools,latest eligible revisions,missingness/dependence and matched held-out evaluation. Literal1/2 equal mean,13/20 weighted mean and17/50 exact Brier decomposition verified.
+- Distinct0–1/0–2 scoring scales and51compatibility documented; no learned-weight,tournament or independent-human superiority claim.31fixture families planned; no57runtime/profile/production fixtures. Source/rights access limits and P1/P2 recorded.

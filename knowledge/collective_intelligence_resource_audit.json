@@ -1,0 +1,277 @@
+{
+  "version": 1,
+  "technique_id": 57,
+  "name": "Collective Intelligence Forecasting",
+  "date": "2026-11-08",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "998b796",
+  "predecessor_gate": "56closure push/fetch verified,main clean0/0 before57inventory/source audit.",
+  "inventory_method_row": [
+    57,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Collective Intelligence Forecasting",
+    "RETAIN — simulate / implement",
+    "Data & simulation",
+    "Delphi; weighted expert pools; crowd aggregation; LLM committee simulation; prediction tournaments",
+    "Aggregate independent probability estimates and learn forecaster weights",
+    "Human forecasters or marked synthetic agents; outcome history",
+    "Synthetic LLM consensus is not independent human wisdom",
+    "Testable when independent forecasts and outcomes exist",
+    "Superminds",
+    "Thomas W. Malone",
+    "https://cci.mit.edu/superminds-by-thomas-w-malone/",
+    "The Wisdom of Crowds",
+    "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+    "51",
+    "45, 51, 52, 58",
+    57
+  ],
+  "ranked_sources": [
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      1,
+      "Thomas W. Malone",
+      "Superminds",
+      "Collective-intelligence design",
+      "https://cci.mit.edu/superminds-by-thomas-w-malone/",
+      "Author/institute",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      2,
+      "James Surowiecki",
+      "The Wisdom of Crowds",
+      "Diverse-judgment aggregation",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      3,
+      "Barbara Mellers et al.",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Forecast crowd effectiveness",
+      "https://pubmed.ncbi.nlm.nih.gov/24659192/",
+      "Peer-reviewed abstract",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      "Delphi",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "The Wisdom of Crowds",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      "weighted expert pools",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "The Wisdom of Crowds",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      "crowd aggregation",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "The Wisdom of Crowds",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      "LLM committee simulation",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "The Wisdom of Crowds",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      "prediction tournaments",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "The Wisdom of Crowds",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_catalog_sha256": "4d5b136cc95b9747c782d1c446e1a8b36d157eeeae969cf4aa2b0a90ab071d58",
+  "policy": "Audit only; no57runtime,executable profile or production fixtures.",
+  "recommendation": {
+    "name": "Versioned Binary Forecast Aggregation and Evaluation Scope",
+    "core": [
+      "Explicit versioned binary questions,event/cutoff/resolution identity and dependence groups",
+      "Unique forecaster roster,immutable revision parent chains and latest eligible selection",
+      "Equal arithmetic means and user-declared nonnegative normalized weights frozen before evaluation outcomes",
+      "Missing/abstaining/zero-weight accounting with no fabricated aggregate at zero denominator",
+      "Exact Fraction binary Brier0–1 and separately named doubled two-category0–2",
+      "Matched aggregate/individual/baseline evaluation; exact-probability decomposition and descriptive calibration",
+      "Dependency disclosure and explicit synthetic/LLM versus human-declared identities; no independence certification"
+    ],
+    "formula": "p_pool=sum_i w_i*p_i/sum_i w_i over eligible non-abstaining participants; equal mode w_i=1",
+    "scientific_limit": "Correct pooling/scoring does not demonstrate crowd superiority,independence,causality or empirical forecasting skill. This editorial linear pool is not replication of advanced tournament aggregation.",
+    "matrix": {
+      "supported_candidate": [
+        "Offline declared binary forecast records and exact pooling/scoring",
+        "Pre-cutoff revision and outcome-information eligibility",
+        "Precommitted fixed weights,missingness and matched denominators"
+      ],
+      "experimental": [
+        "Interpreting dependent/synthetic/LLM committees as useful real-world forecasts"
+      ],
+      "unsupported": [
+        "Learned weights from current outcomes",
+        "Iterative Delphi orchestration",
+        "LLM/provider APIs",
+        "Full tournament operations",
+        "Automatic empirical superiority or iid significance"
+      ]
+    }
+  },
+  "conventions": [
+    "Retain #51 UTC-Z timestamps,versioned binary identities,cutoff-inclusive eligibility and named binary0–1/two-category0–2 scales; changes to51 contracts prohibited. No forced full-schema adapter.",
+    "Question definition hashes exclude subsequently supplied resolutions/outcomes. Weights and selection must not depend on outcome labels; label-flip control changes scores only.",
+    "Forecast revisions are one dependent history per question/forecaster,not separate voters. Late or outcome-informed revisions receive explicit rejection/exclusion and cannot replace earlier eligible revisions.",
+    "Latest eligible abstention withdraws that forecaster rather than silently restoring an older probability. Nonnegative weights renormalize over available non-abstaining entries; zero available weight is not_estimable.",
+    "Duplicate identities/versions,unknown references,broken hash parents,invalid probabilities and chronology reject structurally. Numeric agreement alone does not establish duplicate identity.",
+    "Dependency groups and kind declarations do not certify independent experts. No confidence intervals/effective sample size inferred from roster size.",
+    "Score resolved held-out test questions separately from train; compare model/individual/baseline on identical question/event IDs. Never learn weights from evaluation outcomes.",
+    "Exact identical-probability grouping gives Brier decomposition; coarse calibration bins are descriptive and must not be substituted into the exact identity. No small-N skill certification."
+  ],
+  "source_boundaries": [
+    "Malone and Surowiecki are design/context sources; only official metadata/overviews inspected,not full algorithmic chapters.",
+    "Mellers2014 studies training,teaming and tracking. Advanced statistical aggregation is reported elsewhere; median team leaderboard scores differ from mean forecast probability pooling.",
+    "Paper0–2 scores and normalized0–1 binary decomposition must be explicitly scaled. First core is fixed-cutoff,event-level scoring,not daily/question-standardized tournament replication.",
+    "All tests/fixtures will be self-authored synthetic. Actual participant records need permission/provenance and separate empirical validation; no paper figures/body/data copied."
+  ],
+  "compatibility_with_51": {
+    "profile": "tetlock-mellers-binary-forecast-updates-v1",
+    "profile_sha256": "bd6d71ded4dbb2ddc1f60b230c46daff2b735793f6bfe4098899d49bfc6b9933",
+    "compatible": [
+      "Exact Fraction probabilities and squared-error scoring",
+      "UTC-Z chronology and named cutoff equality",
+      "Binary0–1 and two-category0–2 output separation",
+      "Exact identical-probability REL/RES/UNC identity"
+    ],
+    "deferred": "Full ledger import adapter requires distinct schema mapping; document rather than refactor51."
+  },
+  "planned_fixture_families": [
+    "equal-pool",
+    "weighted-pool",
+    "weight-normalization",
+    "weight-scale-invariance",
+    "missing-forecaster",
+    "abstention-withdrawal",
+    "zero-weight",
+    "all-zero-roster",
+    "all-missing-positive-weight",
+    "revision-latest",
+    "cutoff-inclusive",
+    "late-revision-refusal",
+    "duplicate-revision",
+    "parent-chain",
+    "question-identity",
+    "outcome-information-gate",
+    "outcome-label-isolation",
+    "dependency-reporting",
+    "llm-not-independent",
+    "binary-brier",
+    "two-category-scale",
+    "exact-decomposition",
+    "certainty-boundaries",
+    "matched-individual-comparison",
+    "baseline-comparison",
+    "heldout-partition",
+    "unresolved-exclusion",
+    "canonical-order",
+    "rights-provenance",
+    "resource-bounds",
+    "raw-json-markdown-replay"
+  ],
+  "literal_anchors": {
+    "equal_mean": "1/2",
+    "weights": [
+      "1",
+      "3"
+    ],
+    "normalized_weights": [
+      "1/4",
+      "3/4"
+    ],
+    "weighted_mean": "13/20",
+    "weighted_brier_if_outcome1": "49/400",
+    "equal_brier_if_outcome1": "1/4",
+    "fixed_half_baseline": "1/4",
+    "paired_individual_losses": [
+      "16/25",
+      "1/25"
+    ],
+    "mean_individual_loss": "17/50",
+    "equal_pool_dispersion": "9/100",
+    "binary_decomposition": {
+      "probabilities": [
+        "1/5",
+        "1/5",
+        "4/5",
+        "4/5"
+      ],
+      "outcomes": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "mean_brier": "17/50",
+      "reliability": "9/100",
+      "resolution": "0",
+      "uncertainty": "1/4",
+      "two_category_brier": "17/25"
+    },
+    "perfect_binary_brier": "0",
+    "contradicted_binary_brier": "1"
+  },
+  "proposed_bounds": {
+    "questions": 32,
+    "forecasters": 32,
+    "revisions": 2048,
+    "rational_component_digits": 18,
+    "intermediate_integer_bits": 8192,
+    "work": 5000000,
+    "returned_cells": 100000,
+    "cpu_target_seconds": 5,
+    "peak_target_MiB": 128,
+    "status": "Proposed,unmeasured; freeze before runtime."
+  },
+  "backlog": {
+    "P1": [
+      "Detailed rights-cleared source chapters and advanced aggregation recipes",
+      "Real forecast corpus permissions,independence/selection/timing audit and out-of-sample empirical evaluation",
+      "Formal stable51ledger adapter without changing51",
+      "Separately justified pre-history learned weights and robust missingness/dependence evaluation"
+    ],
+    "P2": [
+      "Iterative Delphi facilitation",
+      "Multi-season learned weighting/extremization",
+      "LLM committee API integrations and cost/provenance contracts",
+      "Full competition platforms,large-scale calibration and statistical uncertainty"
+    ]
+  }
+}
