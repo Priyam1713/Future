@@ -1237,3 +1237,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #53 independent fixtures before engine
 - Frozen all27families,22accepted and43rejected original cases. Independent information-form corrections,closed-form future-control convolution andseparate batch precision/information anchors agree withmandatory rational examples. Chronology,matched-score,missing/H0/gain>1 andresource/bit-growth negative controls included. No production filter yet.
+
+## 2026-11-07 — #53 verified exact engine pass
+- Implemented guarded Fraction gain-form prediction/correction,strict grid/availability rules,visible skipped delayed/missing samples,matched pre-update measurement scores andboth baselines. Future controls fork fromidentical historical posteriors without future assimilation.
+- All76new tests and27independent families pass against frozen information-form,closed-form convolution andbatch anchors. Changing evaluation cutoff ornot-yet-available values leavesaccepted filter-state commitments unchanged. No live/empirical certification.
