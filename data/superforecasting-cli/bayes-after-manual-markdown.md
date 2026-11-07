@@ -1566,7 +1566,12 @@ Source facts andworkflow context areseparate fromeditorial schema,cutoff,binning
           "participant_kind": "individual",
           "question_sha256": "a14062b371e53d0275db7d2804522bf17fe1d739ba0cb69c1b1ab38fb28d9ee9",
           "cutoff": "2025-01-03T00:00:00Z",
-          "lead_seconds": 604800,
+          "lead_seconds": {
+            "status": "finite",
+            "exact": "604800",
+            "decimal": "604800.000000000000",
+            "reason": null
+          },
           "versions": [
             {
               "record": {
@@ -2778,13 +2783,13 @@ Source facts andworkflow context areseparate fromeditorial schema,cutoff,binning
       ]
     }
   },
-  "code_sha256": "6d5d5609717fd9ed309383fe0ea9a4935e7392397eef8dbcc33e5bc206fa9e67",
+  "code_sha256": "e4c81aa68825ada8baebab8c8e725e78a562303786ed44a7cec6b5328ec990c1",
   "limits": [
     "Arithmetic andledger correctness are not demonstrated human expertise,geopolitical skill orhistorical tournament replication.",
     "Book later chapters andGJP file-level rights/completeness remain unverified;no corpus acquired.",
     "Source facts andworkflow context areseparate fromeditorial schema,cutoff,binning andreport conventions."
   ],
-  "report_sha256": "f097ede22713cfa74e5ab0f9d4a0f47cbbb67256264d8c7d254c9d72b25588af"
+  "report_sha256": "b9c008eece4fb4cdf5f65c110685a3d2ae67afb27461336a6f7182c404aed370"
 }
 ```
 

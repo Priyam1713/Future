@@ -176,13 +176,13 @@ Source facts andworkflow context areseparate fromeditorial schema,cutoff,binning
     "locator": "Items2–4,6–10",
     "scope": "Documentary outside-view,decomposition,updating andfeedback context;not a source-certified prose-to-probability algorithm."
   },
-  "code_sha256": "6d5d5609717fd9ed309383fe0ea9a4935e7392397eef8dbcc33e5bc206fa9e67",
+  "code_sha256": "e4c81aa68825ada8baebab8c8e725e78a562303786ed44a7cec6b5328ec990c1",
   "limits": [
     "Arithmetic andledger correctness are not demonstrated human expertise,geopolitical skill orhistorical tournament replication.",
     "Book later chapters andGJP file-level rights/completeness remain unverified;no corpus acquired.",
     "Source facts andworkflow context areseparate fromeditorial schema,cutoff,binning andreport conventions."
   ],
-  "report_sha256": "eb10f148a1d5148e6ee04f23fcbb2657ba14c42a9f5697584884cdfd95911c29"
+  "report_sha256": "68792872c6e341ba68b948aaeca2c3642134273076e80772b12b33753d91c090"
 }
 ```
 

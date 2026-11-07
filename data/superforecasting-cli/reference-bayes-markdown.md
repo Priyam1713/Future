@@ -176,13 +176,13 @@ Source facts andworkflow context areseparate fromeditorial schema,cutoff,binning
     "locator": "Slides10–14,18",
     "scope": "Posterior odds=likelihood ratio*prior odds;likelihood models andindependence remain user declarations."
   },
-  "code_sha256": "6d5d5609717fd9ed309383fe0ea9a4935e7392397eef8dbcc33e5bc206fa9e67",
+  "code_sha256": "e4c81aa68825ada8baebab8c8e725e78a562303786ed44a7cec6b5328ec990c1",
   "limits": [
     "Arithmetic andledger correctness are not demonstrated human expertise,geopolitical skill orhistorical tournament replication.",
     "Book later chapters andGJP file-level rights/completeness remain unverified;no corpus acquired.",
     "Source facts andworkflow context areseparate fromeditorial schema,cutoff,binning andreport conventions."
   ],
-  "report_sha256": "6153efd132a683f7ad9ddb45efbfea26c1a6708f3039648cc29c455a16437140"
+  "report_sha256": "2f5c338cb39c6c0778e785d09910590b7725ca5c4c49da17c72c039eca723c9f"
 }
 ```
 

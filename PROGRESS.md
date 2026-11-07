@@ -1178,3 +1178,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #51 resolution correction gate
 - Enforced dispute/void after the latest earlier resolved entry,including resolved→unresolved→resolved andstale-dispute routes. All seven independent transition anchors pass. Added accepted correction andtwo rejected bypass CLI scenarios;all23families,77in-process scenarios and121new tests pass.
 - Earlier inherited sweep completed all75command groups without failures before final #51corrections;those unchanged inherited commands are retained. Final full unit/replay/verifier checks will replace affected evidence. The new total will be1719tests and2369CLI cases if final gates pass.
+
+## 2026-11-07 — #51 final corrected replay corpus
+- Regenerated andverified162CLI cases:44accepted/37rejected JSON/Markdown pairs after both numerical/provenance refinements. New cases explicitly cover a valid dispute-led correction andunresolved/stale-dispute bypass rejection.
+- Both Git EOL exports preserve244raw corpus files and5normalized engine/oracle/fixture commitments,including both independently frozen review addenda. All3223earlier protected bytes remain untouched;final unit andacceptance rechecks follow.

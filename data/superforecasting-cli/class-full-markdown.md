@@ -550,13 +550,13 @@ Source facts andworkflow context areseparate fromeditorial schema,cutoff,binning
       "Membership,availability andcomparability are declarations;nominal n isnot an independent effective sample size."
     ]
   },
-  "code_sha256": "6d5d5609717fd9ed309383fe0ea9a4935e7392397eef8dbcc33e5bc206fa9e67",
+  "code_sha256": "e4c81aa68825ada8baebab8c8e725e78a562303786ed44a7cec6b5328ec990c1",
   "limits": [
     "Arithmetic andledger correctness are not demonstrated human expertise,geopolitical skill orhistorical tournament replication.",
     "Book later chapters andGJP file-level rights/completeness remain unverified;no corpus acquired.",
     "Source facts andworkflow context areseparate fromeditorial schema,cutoff,binning andreport conventions."
   ],
-  "report_sha256": "35bba7f1038d32b128d3c51ed2c8f4dfec4774235efdcf9b3d886482a8f3a966"
+  "report_sha256": "0f5772e065d34f888eff9d50a284797b21ac84f513a4846293a12cc404496b00"
 }
 ```
 
