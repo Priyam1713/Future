@@ -93,10 +93,22 @@ def verify(write=False):
     assert row['lead_seconds']['exact']==precision['expected']['lead_seconds']
     assert e.question(precision['plan']['questions'][0])['lead_seconds']['exact']==precision['expected']['lead_seconds']
     checked['chronology']['fractional_timestamp_boundary_passed']=True
+    transitions_freeze=load_input(R/'knowledge/superforecasting_resolution_fixture_freeze_v1.json')
+    for path,h in transitions_freeze['files'].items():assert hashlib.sha256((R/path).read_bytes().replace(b'\r\n',b'\n')).hexdigest()==h
+    transitions=load_input(R/'tests/fixtures/superforecasting_resolution_transitions_v1.json')
+    for case in transitions['cases']:
+        pp=plan(1);ledger=e.create(pp);parent=None
+        for i,status in enumerate(case['history'],1):
+            record=resolution(pp,status=status,version=i,parent=parent,at=f'2025-01-{10+i:02}T00:00:00Z');ledger=e.append(ledger,'resolve',record);parent=sha(record)
+        i=len(case['history'])+1;record=resolution(pp,status=case['new_status'],version=i,parent=parent,at=f'2025-01-{10+i:02}T00:00:00Z')
+        try:e.append(ledger,'resolve',record);accepted=True
+        except ValueError:accepted=False
+        assert accepted==case['accepted'],case
+    checked['unresolved-void']['resolution_transition_table_cases']=len(transitions['cases'])
     assert set(checked)==set(f['families']) and len(checked)==23
-    out=dict(passed=True,families=checked,bayes_anchors=len(f['bayes']),loss_bin_log_anchors=len(f['losses']),in_process_scenarios=len(cs),fixture_freeze=freeze,timestamp_fixture_freeze=extra,profile_sha256=e.PROFILE_HASH,code_sha256=e.read(e.request('reference',dict(id='scores')))['code_sha256'],empirical_skill_validated=False)
+    out=dict(passed=True,families=checked,bayes_anchors=len(f['bayes']),loss_bin_log_anchors=len(f['losses']),in_process_scenarios=len(cs),fixture_freeze=freeze,timestamp_fixture_freeze=extra,resolution_fixture_freeze=transitions_freeze,profile_sha256=e.PROFILE_HASH,code_sha256=e.read(e.request('reference',dict(id='scores')))['code_sha256'],empirical_skill_validated=False)
     if write:(R/'data/superforecasting-verification.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8',newline='\n')
     return out
 
 if __name__=='__main__':
-    out=verify(True);print('23 independent fixture families pass;30Bayes anchors;22loss/bin/log anchors;74scenarios')
+    out=verify(True);print('23 independent fixture families pass;30Bayes anchors;22loss/bin/log anchors;77scenarios')

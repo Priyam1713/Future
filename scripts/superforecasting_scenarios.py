@@ -56,6 +56,11 @@ def cases():
     for name,change in [('negative-early',lambda b:b.update(outcome_known_at='2025-01-09T00:00:00Z')),('negative-invented-occurrence',lambda b:b.update(occurrence_at=b['window_end'])),('resolution-no-source',lambda b:b['source'].update(snapshot_sha256='0'*64))]:
         bad=resolution(p,outcome=0);change(bad);add('reject-'+name,'resolve',dict(ledger=first,record=bad),2)
     bad=copy.deepcopy(d['final']);bad['actions'][0]['record']['probability']='1';add('reject-chain-mutation','report',bad,2)
+    rp=plan(1);rl=e.create(rp);r1=resolution(rp);rl=e.append(rl,'resolve',r1)
+    unresolved=resolution(rp,status='unresolved',version=2,parent=sha(r1),at='2025-01-12T00:00:00Z');reopened=e.append(rl,'resolve',unresolved)
+    correction=resolution(rp,outcome=0,version=3,parent=sha(unresolved),at='2025-01-13T00:00:00Z');add('reject-resolution-unresolved-bypass','resolve',dict(ledger=reopened,record=correction),2)
+    dispute=resolution(rp,status='disputed',version=2,parent=sha(r1),at='2025-01-12T00:00:00Z');disputed=e.append(rl,'resolve',dispute);correction=resolution(rp,outcome=0,version=3,parent=sha(dispute),at='2025-01-13T00:00:00Z');add('resolution-correction-after-dispute','resolve',dict(ledger=disputed,record=correction))
+    corrected=e.append(disputed,'resolve',correction);reopen=resolution(rp,status='unresolved',version=4,parent=sha(correction),at='2025-01-14T00:00:00Z');reopened=e.append(corrected,'resolve',reopen);stale=resolution(rp,version=5,parent=sha(reopen),at='2025-01-15T00:00:00Z');add('reject-resolution-stale-dispute','resolve',dict(ledger=reopened,record=stale),2)
     q=e.request('report',d['final']);q['profile']['catalog_sha256']='0'*64;out['reject-catalog-hash']=(q,2)
     q=e.request('certify_skill',d['final']);out['reject-empirical-skill']=(q,2)
     return out

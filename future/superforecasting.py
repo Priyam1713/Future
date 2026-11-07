@@ -246,7 +246,8 @@ def apply_record(kind,v,state,context,sequence_number):
                 occurred=at(v['occurrence_at'])
                 if not at(q['window_start'])<=occurred<at(q['window_end']) or occurred>known:raise ValueError('Positive occurrence chronology')
             elif v['occurrence_at'] is not None or known<at(q['window_end']):raise ValueError('Negative outcome requires closedwindow andnull occurrence')
-            if old and old[-1]['record']['status']=='resolved':raise ValueError('Resolution correction requires intervening dispute/void')
+            prior_resolved=[i for i,row in enumerate(old) if row['record']['status']=='resolved']
+            if prior_resolved and not any(row['record']['status'] in ('disputed','void') for row in old[prior_resolved[-1]+1:]):raise ValueError('Resolution correction requires intervening dispute/void after latest resolved entry')
         else:
             if v['outcome'] is not None or v['occurrence_at'] is not None:raise ValueError('Nonresolved outcomes/occurrences remain null')
             if v['outcome_known_at'] is not None and at(v['outcome_known_at'])>available:raise ValueError('Nonresolved knowledge chronology')

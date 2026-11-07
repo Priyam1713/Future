@@ -233,3 +233,15 @@ class SuperforecastingTimestampPrecisionTests(unittest.TestCase):
         f=load_input(Path('tests/fixtures/superforecasting_timestamp_precision_v1.json'));r=e.evaluate(e.create(f['plan']));training=r['rows'][0]['reference_training']
         for key in ('member_event_start','member_observed_end'):self.assertEqual(training[key],f['expected'][key])
         self.assertEqual(r['rows'][0]['lead_seconds']['exact'],f['expected']['lead_seconds']);self.assertEqual(e.question(f['plan']['questions'][0])['lead_seconds']['exact'],f['expected']['lead_seconds'])
+
+class SuperforecastingResolutionTransitionTests(unittest.TestCase):
+    def test_frozen_transition_table(self):
+        f=load_input(Path('tests/fixtures/superforecasting_resolution_transitions_v1.json'))
+        for case in f['cases']:
+            p=plan(1);l=e.create(p);parent=None
+            for i,status in enumerate(case['history'],1):
+                r=resolution(p,status=status,version=i,parent=parent,at=f'2025-01-{10+i:02}T00:00:00Z');l=e.append(l,'resolve',r);parent=sha(r)
+            i=len(case['history'])+1;r=resolution(p,status=case['new_status'],version=i,parent=parent,at=f'2025-01-{10+i:02}T00:00:00Z')
+            if case['accepted']:e.append(l,'resolve',r)
+            else:
+                with self.assertRaises(ValueError):e.append(l,'resolve',r)

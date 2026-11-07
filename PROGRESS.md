@@ -1174,3 +1174,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #51 independent resolution transition table
 - Froze seven original transition expectations before correcting a review finding:resolved→unresolved→resolved mustnot bypass the frozen intervening dispute/void requirement. Any marker beforethe latest resolved entry isinsufficient. This extends the existing unresolved/history family;original23-family fixtures unchanged.
+
+## 2026-11-07 — #51 resolution correction gate
+- Enforced dispute/void after the latest earlier resolved entry,including resolved→unresolved→resolved andstale-dispute routes. All seven independent transition anchors pass. Added accepted correction andtwo rejected bypass CLI scenarios;all23families,77in-process scenarios and121new tests pass.
+- Earlier inherited sweep completed all75command groups without failures before final #51corrections;those unchanged inherited commands are retained. Final full unit/replay/verifier checks will replace affected evidence. The new total will be1719tests and2369CLI cases if final gates pass.

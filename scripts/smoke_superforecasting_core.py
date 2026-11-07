@@ -8,11 +8,13 @@ from future.scrying import load_input
 from scripts.superforecasting_scenarios import cases
 R=Path(__file__).resolve().parents[1]
 D=R/'data/superforecasting-cli'
+POLICY=b'# Preserve exact CLI bytes and intentional replay whitespace.\n* -text\n*.md whitespace=-blank-at-eof\nunicode-whitespace-input.json -whitespace\n'
 
 
 def run(write=False):
     D.mkdir(exist_ok=True)
-    if write:(D/'.gitattributes').write_bytes(b'* -text\n')
+    if write:(D/'.gitattributes').write_bytes(POLICY)
+    else:assert (D/'.gitattributes').read_bytes()==POLICY
     records=[]
     for name,(q,code) in cases().items():
         payload=json.dumps(q,ensure_ascii=False,indent=2)+'\n'
