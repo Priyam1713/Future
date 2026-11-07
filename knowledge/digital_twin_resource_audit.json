@@ -1,0 +1,498 @@
+{
+  "version": 1,
+  "technique_id": 53,
+  "name": "Digital Twin Simulation",
+  "date": "2026-11-07",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "e2189fb",
+  "predecessor_gate": "Closure push succeeded andclean main0/0 observed beforeinventory/source53research.",
+  "policy": "80/20 bounded core recommendation only;no53engine,executableprofile,CLI,filterexecution orbenchmark.",
+  "inventory_method_row": [
+    53,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Digital Twin Simulation",
+    "RETAIN — simulate / implement",
+    "Data & simulation",
+    "Physical asset twins; urban twins; individual/behavioral proxy twins; synthetic populations",
+    "State-space model updated from observed data; intervention scenarios",
+    "Domain simulator + time-stamped sensor or archival data",
+    "Without live telemetry, label as static scenario model, not real-time twin",
+    "Empirical twin only to degree real-world state is measured",
+    "Foundational Research Gaps and Future Directions for Digital Twins",
+    "National Academies of Sciences, Engineering, and Medicine",
+    "https://www.nationalacademies.org/read/26894",
+    "Digital Twin: Manufacturing Excellence through Virtual Factory Replication",
+    null,
+    "49",
+    "40, 49, 52, 54, 55, 56",
+    53
+  ],
+  "ranked_sources": [
+    [
+      53,
+      "Digital Twin Simulation",
+      1,
+      "National Academies of Sciences, Engineering, and Medicine",
+      "Foundational Research Gaps and Future Directions for Digital Twins",
+      "Research standards and limitations",
+      "https://www.nationalacademies.org/read/26894",
+      "Open research report",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      53,
+      "Digital Twin Simulation",
+      2,
+      "Michael Grieves",
+      "Digital Twin: Manufacturing Excellence through Virtual Factory Replication",
+      "Foundational digital-twin formulation",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      53,
+      "Digital Twin Simulation",
+      "Physical asset twins",
+      "Foundational Research Gaps and Future Directions for Digital Twins",
+      "Digital Twin: Manufacturing Excellence through Virtual Factory Replication",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      53,
+      "Digital Twin Simulation",
+      "urban twins",
+      "Foundational Research Gaps and Future Directions for Digital Twins",
+      "Digital Twin: Manufacturing Excellence through Virtual Factory Replication",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      53,
+      "Digital Twin Simulation",
+      "individual/behavioral proxy twins",
+      "Foundational Research Gaps and Future Directions for Digital Twins",
+      "Digital Twin: Manufacturing Excellence through Virtual Factory Replication",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      53,
+      "Digital Twin Simulation",
+      "synthetic populations",
+      "Digital Twin: Manufacturing Excellence through Virtual Factory Replication",
+      "Foundational Research Gaps and Future Directions for Digital Twins",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_catalog": "knowledge/digital_twin_sources.json",
+  "source_manifest_sha256": "9e25d912734ccee8c74fe1315fb668fd09196156ff38b4de6ffa066f3f31a85d",
+  "edition_and_access": {
+    "rank1": {
+      "year": 2024,
+      "doi": "10.17226/26894",
+      "edition": "2024consensus study;not2023study-announcement date",
+      "inspected": [
+        "Publisher definition/landscape/VVUQ,Chapter2",
+        "Physical counterpart/data quality,Chapter4",
+        "Physical-to-virtual updating,Chapter5",
+        "Summary andpublisher permissions"
+      ],
+      "limits": "No complete report redistribution;selection ofchapters,notexhaustive book extraction."
+    },
+    "rank2": {
+      "inventory_url": null,
+      "inventory_type": "Book / rights check",
+      "verified_type": "2014author whitepaper,notverifiedbook",
+      "witness": "https://edisciplinas.usp.br/pluginfile.php/8935104/mod_resource/content/1/MichaelGrieves-white-paper-2014.pdf",
+      "pdf_pages": 8,
+      "numbered_body_pages": 7,
+      "copyright": "Michael W. Grieves,LLC2014",
+      "bibliographic_limit": "NoISBN ormonograph publisher asserted. Later2015upload dates are notpaper copyright date. Historical2003course origin isauthor claim;notindependent dating ofterm.",
+      "rejected_shortcut": "NASA20160005402 isComposites Materials andManufacturing Technologies forSpace Applications;it cites Grieves,nottheranked whitepaper itself."
+    },
+    "numerical_supplement": {
+      "author_host_status": "UNC direct URL404;do notclaim2006fulltextread",
+      "inspected_version": "MITeducational witness explicitlyupdated2002-03-11,16pages",
+      "locators": "Section1,Tables1-1/1-2 p5,Eqs1.9–1.13",
+      "scope": "Supplemental computational method,notpromoted intooriginal rank list"
+    }
+  },
+  "source_supported_findings": [
+    {
+      "source": "digital-twin-nasem-landscape-v1",
+      "finding": "The report combines physical-data updates,predictive use anddecision feedback initsdefinition. Software verification,empirical validation anduncertainty assessment are distinct;one doesnotcertifytheothers."
+    },
+    {
+      "source": "digital-twin-nasem-physical-v1",
+      "finding": "Sampling adequacy,sensor quality,integration,privacy andgovernance constrain usable counterparts. Outliers canbe faults ormeaningful rareevents;automatic deletion needsdomain evidence."
+    },
+    {
+      "source": "digital-twin-nasem-feedback-v1",
+      "finding": "Assimilation andcontinual model assessment are necessary butnotafull twin. State correction alone doesnotprovide parameter learning,decision interfaces orcalibrated deployment."
+    },
+    {
+      "source": "digital-twin-grieves-v1",
+      "finding": "Physical product,virtual product andtheirdata connections formtheconcept. Comparing actual versusdesigned state supports manufacturing discussion;no universalnumerical state-transition algorithm isprovided."
+    },
+    {
+      "source": "digital-twin-welch-bishop-2002-v1",
+      "finding": "Linear discrete prediction/correction with specified model andnoise covariances supports bounded state estimation. Independent zero-mean white noise andlinear-model assumptions matter;Gaussian posterior interpretation isconditional onthem."
+    }
+  ],
+  "first_scope_recommendation": {
+    "name": "Offline Scalar State-Space Assimilation Replay and Scenario Scope",
+    "reason": "One auditable measured-variable proxy givesexact tinyknown answers,visibleuncertainty/availability andcheapscenario forks;noCAD,IoTcloud ormultiscalephysics framework needed.",
+    "labels": {
+      "synthetic": "Synthetic state-estimation/scenario replay;notanempirical orreal-time digital twin",
+      "archival": "Offline observation replay onlyifrights,timestamps,asset identity andunits verified;empirical accuracy remains unvalidated",
+      "live": "Unsupported untilphysical synchronization,predictive validation anddecision-feedback semantics areimplemented andverified"
+    },
+    "source_math": [
+      "x_k = A*x_(k-1)+B*u_k+w_(k-1); z_k=H*x_k+v_k",
+      "m_minus=A*m_previous+B*u_k; P_minus=A^2*P_previous+Q",
+      "innovation=z-H*m_minus; S=H^2*P_minus+R; K=P_minus*H/S",
+      "m_plus=m_minus+K*innovation; P_plus=(1-K*H)*P_minus"
+    ],
+    "editorial_conventions": [
+      "Propose scalar exact-rational arithmetic with boundednumerator/denominator growth;freezeaformal contractbeforeimplementation. Generalmatrix,nonlinear andensemble filters deferred.",
+      "P0>=0,Q>=0,R>0;strictR>0 keepsS positive. R0/perfectmeasurement support deferredexplicitly. H0 isvaliduninformative observation withK0;do notrequireK in[0,1]forgeneralH.",
+      "Missing z explicitly skipscorrection;predictionstillruns. No hidden imputation,sorting,automatic fitting oroutlier deletion.",
+      "Regular declaredtimegrid,oneasset andonescalar observation perstep. Reject duplicate/out-of-order oroff-grid samples. Freezeavailability-at-update andforecast-origin rules;no future orlate-not-yet-known measurement mayenteranearlierprediction.",
+      "One-step measurement forecasts H*m_minus are recorded BEFOREassimilation andscoredonmatchedeligible targets. Posterior agreement withitsownobservation isnotforecastvalidation.",
+      "Forkstatic futurecontrol scenarios fromthesame acceptedprefix posterior;neverassimilate futuremeasurements inforecastbranches. Noactuator commands,optimization orcausalclaim.",
+      "Alwaysretainopen-loop no-assimilation andlast-available-observation measurement-scale persistence baselines withmatchedscoring coverage. Emptybaseline denominators arenotestimable.",
+      "ConditionalGaussian variance isamodel quantity,notempiricallycalibratedcoverage. Parameters,units,independence andcovariance assumptions remainexplicit. Noautomatic assertion ofconfidenceinterval reliability."
+    ],
+    "proposed_outputs": [
+      "Prior/posterior means andvariances,measurement-scale forecast,innovation,S,K,update/skipped reason",
+      "Timestamp/sample availability/asset/unit/parameter versions andsource/input/model/code hashes",
+      "Matched preupdate error andbaseline coverage;noobservedground-truth latentstate inferred fromsensorvalues",
+      "Future scenario mean/variance trajectories,changedcontrols andidentical-fork zero differences"
+    ]
+  },
+  "original_literal_tables": {
+    "constant_state_first": {
+      "prior_mean": "0",
+      "prior_variance": "1",
+      "measurement": "2",
+      "innovation": "2",
+      "innovation_variance": "2",
+      "gain": "1/2",
+      "posterior_mean": "1",
+      "posterior_variance": "1/2"
+    },
+    "constant_state_second": {
+      "prior_mean": "1",
+      "prior_variance": "1/2",
+      "measurement": "2",
+      "innovation": "1",
+      "innovation_variance": "3/2",
+      "gain": "1/3",
+      "posterior_mean": "4/3",
+      "posterior_variance": "1/3"
+    },
+    "batch_precision_crosscheck": {
+      "prior_precision": "1",
+      "measurement_precision_sum": "2",
+      "posterior_precision": "3",
+      "posterior_information": "4",
+      "posterior_mean": "4/3",
+      "posterior_variance": "1/3"
+    },
+    "missing_after_first": {
+      "mean": "1",
+      "variance": "1/2",
+      "update": "skipped;no measurement"
+    },
+    "higher_measurement_noise": {
+      "measurement_variance": "3",
+      "gain": "1/4",
+      "posterior_mean": "1/2",
+      "posterior_variance": "3/4"
+    },
+    "scaled_measurement": {
+      "H": "2",
+      "innovation_variance": "5",
+      "gain": "2/5",
+      "posterior_mean": "4/5",
+      "posterior_variance": "1/5"
+    },
+    "control_scenario": {
+      "A": "1/2",
+      "B": "1",
+      "u": "1",
+      "prior_initial_mean": "4",
+      "prior_initial_variance": "4",
+      "predicted_mean": "3",
+      "predicted_variance": "1",
+      "measurement": "4",
+      "posterior_mean": "7/2",
+      "posterior_variance": "1/2",
+      "next_u0_mean": "7/4",
+      "next_u1_mean": "11/4",
+      "next_mean_difference": "1",
+      "next_variance": "1/8"
+    },
+    "baseline_negative_control": {
+      "second_target": "2",
+      "filter_preupdate_prediction": "1",
+      "filter_squared_error": "1",
+      "last_observation_prediction": "2",
+      "persistence_squared_error": "0",
+      "open_loop_prediction": "0",
+      "open_loop_squared_error": "4",
+      "interpretation": "One synthetic example doesnotestablish superiority;do notscoreposterior againstitsassimilation measurement."
+    },
+    "nis_diagnostic": {
+      "first": "2",
+      "higher_R": "1",
+      "not_a_p_value": true
+    }
+  },
+  "literal_table_validation": "Only direct Fraction arithmetic andbatch precision identities executed inthisaudit;no recursive filter/model,PRNG,productionfixtures orruntime implementation.",
+  "variation_assessment": {
+    "Physical asset twins": "HighestROI subset:one scalar asset/state observation replay;notcomplete factory/CAD twin",
+    "urban twins": "Defercoupled infrastructure,urban geospatialdata andvalidatedpolicy interactions",
+    "individual/behavioral proxy twins": "Deferpersonal/behavioral/health twins;requireconsent,privacy anddomain-specific empirical validation",
+    "synthetic populations": "Existing52synthetic population engine remainsseparate;coupling/cross-model validation deferred,notanempirical population twin"
+  },
+  "fixture_plan": [
+    {
+      "id": "scalar-prediction",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "measurement-correction",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "batch-precision-oracle",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "process-variance",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "measurement-variance",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "missing-observation",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "zero-prior-variance",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "scaled-observation",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "unobservable-H-zero",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "invalid-variance",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "innovation-singularity-boundary",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "covariance-algebra",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "control-input",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "timestamp-grid",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "observation-availability",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "future-observation-leakage",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "duplicate-out-of-order",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "asset-identity-units",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "open-loop-baseline",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "last-observation-baseline",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "matched-preupdate-scores",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "scenario-fork-no-future-updates",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "identical-scenario-control",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "source-rights",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "synthetic-live-boundary",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "resource-bit-growth",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    },
+    {
+      "id": "json-markdown-hashes",
+      "status": "planned_before_engine",
+      "verification": "Independent original oracle/literal orstrictrejection/chronology/property check;freezeexpectedinputs/outputs beforecorrespondingproductioncode"
+    }
+  ],
+  "proposed_resource_budget": {
+    "assets": 1,
+    "state_dimension": 1,
+    "observation_rows": 256,
+    "forecast_horizon": 128,
+    "scenarios": 8,
+    "combined_filter_and_forecast_steps": 2048,
+    "returned_scalar_cells": 20000,
+    "input_rational_digits": 18,
+    "intermediate_integer_bits": 8192,
+    "combined_caps": "Enforcecombinedstep/output andrationalbit-growth reservations;individual maxima arenotfreelycombinable. Exactoperationguards mustprevent expensivegrowth,notjusttruncate display.",
+    "runtime": "Python stdlibCPU offline;nonewframework,GPU,cloud,sensorconnection orfrontend",
+    "targets": {
+      "wall_seconds": 5,
+      "peak_MiB": 128,
+      "status": "Proposed only;no53timing/memory benchmark executed"
+    }
+  },
+  "rights_and_data": {
+    "policy": "Facts andoriginalsynthetic algebra only;nosourcebody,figure,codecopy orrealasset dataset redistributed.",
+    "nas": "Publisherall-rights-reserved andexplicitPDFdistribution permissionpolicy;linkoriginal,donotbundle.",
+    "grieves": "Authorcopyright2014;institutional educationalaccess isnotcommercialredistribution license.",
+    "kalman": "No blanketredistributionlicense observed;original scalarimplementation mayusemathematicalfactsafterseparateprofile/fixturefreeze,notcopytutorialtextorcode.",
+    "datasets": "Noexactasset telemetry,urban,individual orpopulationfile acquired. Requiredataset-specificlicense,consent,units,clock/availability,calibration,train/test andprivacyreview before empirical use."
+  },
+  "configuration_matrix": {
+    "supported_audit": [
+      "Ranked-source/variation/edition/access distinctions",
+      "Primarydefinition,VVUQ,physicaldata andassimilation boundaries",
+      "Originalliteral rational/batch known-answer calculations",
+      "Boundedcore,resource andfixture recommendations"
+    ],
+    "experimental_unimplemented": [
+      "All53scalarfilter/forecast/scenario functionality",
+      "Empirical archivalreplay andcalibration",
+      "Realtime synchronization anddecisionfeedback"
+    ],
+    "unsupported": [
+      "Operational53engine/profile/CLI orCorev1certification",
+      "Realtime/fulltwin fromasynthetic orstaticmodel",
+      "Personal/medical/urban forecasting certification",
+      "Causalinterventions orautonomous physicalcontrol",
+      "GuaranteedGaussian coverage orsuperiority fromsmallsoftwarefixtures"
+    ]
+  },
+  "acceptance_criteria": [
+    "Freezeprofile/source/rights/schema/time/variance/bitbounds beforeengine",
+    "Freezeall27independentfixturefamilies beforeproduction",
+    "Verifyexactscalarprediction/correction andindependentbatchoracle",
+    "Keepmissing/availability/predictionorigin semantics andparameter/units provenance explicit",
+    "VerifyP>=0,S>0,covarianceidentity anduninformativeobservations",
+    "Verify matchedpreupdate scores andbothbaselines withouttarget leakage",
+    "Verify identicalscenario controls andno futureassimilation",
+    "ActualCPU/memorymeasurements andcombined/bitgrowth rejection",
+    "Strictaccepted/rejected JSON/Markdown replay,bothcheckout settings,registry,taxonomy,rights andprotectedbytes",
+    "Complete inherited1790tests/2507CLIcases/31verifiers plusnewchecks",
+    "Boundedsupported/experimental/unsupportedmatrix;empiricalvalidation remainsseparate",
+    "Commit/push53closure before54audit"
+  ],
+  "backlog": {
+    "P1": [
+      "Freezeexecutable scalarprofile,schema,units,chronology andbit-growth bounds",
+      "Materializeall27independentfamilies andexactbatch/numericalnegativecontrols",
+      "Implementandreplaybounded filter/baselines/scenarios;measureactualresources",
+      "Legitimatecurrentauthor-hostedKalmanversion access;do notsubstitute2006forinspected2002",
+      "Exactdataset/asset rights,consent,calibration,availability andtime-held-outvalidation beforeempirical claims",
+      "Externalprovenance/timestamp anchors anddeclaredphysicalcounterpart/decisionworkflow beforetwin status"
+    ],
+    "P2": [
+      "Multivariate/nonlinear/ensemble filters,smoothing anddelayed-asynchronous observations",
+      "Parameterlearning,change-point/outliermodels andnon-GaussianUQ",
+      "Coupled urban,behavioral,syntheticpopulation andmultiscalephysicsmodels",
+      "LiveIoT/actuatorfeedback withsecurity,latency,fail-safe anddomainvalidation",
+      "Optimizedclosed-loop control orcausal estimation onlywithappropriatevalidateddesigns"
+    ]
+  },
+  "payloads": [
+    {
+      "id": "grieves",
+      "url": "https://edisciplinas.usp.br/pluginfile.php/8935104/mod_resource/content/1/MichaelGrieves-white-paper-2014.pdf",
+      "bytes": 374215,
+      "sha256": "498e9f447ee1128cd28433098f9dbdaf48d9f78c9b8e257c206a203c02a79513",
+      "storage": "Temporary research file only;not redistributed"
+    },
+    {
+      "id": "kalman-2002",
+      "url": "https://www.mit.edu/course/16/16.070/www/project/PF_kalman_intro.pdf",
+      "bytes": 157862,
+      "sha256": "067dbbe98a848e9a3e1a1ca936fa8335b0342f1fccebbd9a1bde201d54951224",
+      "storage": "Temporary research file only;not redistributed"
+    }
+  ],
+  "next": "Technique53implementationonlyafterseparateusercontinuation:profile/sourcefreeze,independentfixtures,thenengine. No54researchnow."
+}
