@@ -1199,3 +1199,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Inspected primary Watts2002Model Specification:at-least fractional threshold,irreversible activation andrandom asynchronous schedule. Recommend explicitly editorial synchronous finite synthetic graph/seed ensembles andpaired no-influence baseline,with23fixture plans andexact original tiny-network/moment tables;no52model execution orbenchmark.
 - SocioPatterns terms are CC BY-NC-SA3.0,not an unrestricted dataset license;Census docs expose vintage replacement/API-key andaggregate-data limits. No real data,traces,source bodies orPDFs acquired forredistribution. Synthetic-onlyfirstscope andcausal/forecasting limits recorded.
 - Audit validation passes:3493protected pre-audit files andother59gap entries unchanged;registry516references/361unique checked twice;strictJSON and60IDs/54retained/six exclusions preserved. No52engine/profile/CLI/runtime andno53research.
+
+## 2026-11-07 — #52 frozen executable contract
+- Frozen synthetic synchronous exact-threshold profile, source/rights boundaries, strict schema, shared xorshift32 initialization and combined preflight budgets before engine code. Actual pre-engine protected count: 3496. Independent fixtures follow before production.

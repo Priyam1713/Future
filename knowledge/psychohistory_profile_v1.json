@@ -1,0 +1,100 @@
+{
+  "id": "psychohistory-synthetic-threshold-dynamics-v1",
+  "version": 1,
+  "technique_id": 52,
+  "scope": "Synthetic Population Threshold Dynamics and Scenario Simulation — Bounded Reference Scope",
+  "source_manifest_sha256": "9dbd60a7838818c8e4332caaea837b4a2e7232ec02ec1a8434415150880144db",
+  "source_freeze_sha256": "59a045aa4a7ee17579f7973cc91f2175fe842302c61dc087ae8bd919d914c99a",
+  "schema": {
+    "root": [
+      "schema_version",
+      "profile",
+      "population",
+      "runs",
+      "rounds",
+      "trace_states",
+      "rng",
+      "scenarios",
+      "reference_scenario",
+      "provenance"
+    ],
+    "profile": [
+      "id",
+      "sha256",
+      "catalog_sha256"
+    ],
+    "population": [
+      "size",
+      "nodes"
+    ],
+    "rng": [
+      "algorithm",
+      "seed"
+    ],
+    "scenario": [
+      "id",
+      "edges",
+      "thresholds",
+      "initial"
+    ],
+    "threshold": [
+      "node",
+      "phi"
+    ],
+    "initial": [
+      "mode",
+      "probability",
+      "fixed_seeds",
+      "run_seeds",
+      "overrides"
+    ],
+    "override": [
+      "node",
+      "state"
+    ],
+    "provenance": [
+      "synthetic",
+      "source_ref",
+      "rights",
+      "attribution",
+      "snapshot",
+      "snapshot_sha256"
+    ]
+  },
+  "contract": [
+    "Strict exact fields; schema_version integer1. All IDs ASCII [A-Za-z0-9][A-Za-z0-9_.-]{0,63}. Nodes sorted unique; population.size matches. Scenarios unique IDs; reference must exist.",
+    "Edges lexicographically sorted unique two-ID lists with u<v. Threshold rows cover nodes in their order. Exact probability strings: unsigned integer or fraction, each integer <=32digits; value0..1; no floats/bools/decimals.",
+    "next_i = current_i OR (degree_i>0 AND active_neighbors_i*denominator_i >= degree_i*numerator_i). One previous-round snapshot. Activation irreversible; unseeded isolates never activate even phi0; seeded isolates persist; phi0 positive-degree nodes activate without active neighbors.",
+    "Static graphs, thresholds and semantic identities. Rounds0..N are dimensionless. Include t0, append only changing states. At cap inspect one additional candidate state to distinguish fixed point from truncation. No-change candidate is not appended.",
+    "Initial modes fixed, bernoulli, explicit_runs. Fixed requires null probability, empty run_seeds; bernoulli requires exact probability and empty fixed_seeds/run_seeds; explicit_runs requires null probability, empty fixed_seeds and exactly R ordered seed lists. Seed lists sorted unique known IDs. Overrides sorted unique known nodes, exact binary integer state; overrides win.",
+    "xorshift32-v1 seed exact JSON integer1..4294967295. Mask32 after left13, right17, left5 XORs. Stream starts after first update. One word per run then sorted semantic node, including fixed/explicit/overridden nodes; shared table across all scenarios. Success iff word*denominator < 2**32*numerator. No draws during cascades. Endpoints0/1 exact. Stream hash commits algorithm/seed/nodes/runs/words.",
+    "Per-run initial/final count/fraction; active/inactive actual trajectories; state vectors only when trace_states true, otherwise state hashes. Per-round means through cap hold final absorbing states. Persistence baseline shares initial state, never activates; gains paired per run.",
+    "Exact rational means and population variance divide by R; sample variance divides by R-1 and is not_estimable for R1. Fraction variance scales by N**2. IID Bernoulli initial moments with overrides are ideal theoretical values; finite PRNG results are deterministic sample summaries and cascades correlated. Explicit runs are supplied equal-weight design, not Monte Carlo.",
+    "Static scenarios share semantic draws; comparisons use scenario minus reference per run, list changed edges/thresholds/initial parameters, and report identical-configuration controls. No guaranteed CRN variance reduction, causal inference or real-world predictive validity.",
+    "Provenance synthetic must be true; source_ref in frozen catalog; rights self_authored or permission_granted. Nonempty attribution/snapshot <=4000UTF8 characters with SHA256 over exact snapshot UTF8. Rights are declarations, not external certification. Unknown/empirical/causal/calendar fields reject.",
+    "Preflight BEFORE words/transition execution: work=sum(R*(cap+1)*(N+2E)); count_cells=S*(2*(R+1)*(cap+1)+12*R+32); state_cells=trace*S*R*(cap+1)*N. Conservative generated count/trace-cell reservation; input echo, hashes and fixed descriptive metadata excluded. Maxima cannot freely combine."
+  ],
+  "bounds": {
+    "nodes": 128,
+    "edges": 2048,
+    "runs": 256,
+    "scenarios": 8,
+    "count_cells": 100000,
+    "state_cells": 10000,
+    "work_units": 10000000
+  },
+  "unsupported": [
+    "Real population forecasting",
+    "Empirical calibration",
+    "Held-out predictive validation",
+    "Causal inference",
+    "Asimovian population laws",
+    "Dynamic/weighted graphs",
+    "Births/deaths/migration",
+    "Learning/adaptation",
+    "Infection/recovery",
+    "Per-contact transmission",
+    "Watts random-asynchronous experiment reproduction"
+  ],
+  "runtime": "Python stdlib CPU, offline; no new dependencies"
+}
