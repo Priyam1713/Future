@@ -1,0 +1,619 @@
+{
+  "version": 1,
+  "technique_id": 52,
+  "name": "Psychohistory",
+  "date": "2026-11-07",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "ea102bb",
+  "predecessor_gate": "Accepted51closure pushed;git fetch,cleanmain and0ahead/0behind explicitly observed before52research.",
+  "policy": "Source/method audit and original literal-table algebra only. No52simulation engine,executable profile,CLI,model execution orruntime benchmark;no53research.",
+  "inventory_method_row": [
+    52,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Psychohistory",
+    "RETAIN — simulate / implement",
+    "Research / creative proxy",
+    "Asimovian fictional psychohistory; social physics; population forecasting; complex adaptive models",
+    "Population-level stochastic simulation and macro-scenario forecasts",
+    "Population, mobility, network and economic data; agent models optional",
+    "Asimov’s version fiction; plausible proxies not civilization-scale deterministic laws",
+    "Fiction-inspired model; empirical proxies possible",
+    "Foundation",
+    "Isaac Asimov",
+    null,
+    "Social Physics",
+    "The Model Thinker",
+    "49",
+    "53, 54, 57",
+    52
+  ],
+  "ranked_sources": [
+    [
+      52,
+      "Psychohistory",
+      1,
+      "Isaac Asimov",
+      "Foundation",
+      "Original fictional concept",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      52,
+      "Psychohistory",
+      2,
+      "Alex Pentland",
+      "Social Physics",
+      "Empirical social dynamics and network data",
+      "https://ilpstex.mit.edu/content/books/social-physics-how-ideas-turn-into-action-25070",
+      "Publisher / purchase",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      52,
+      "Psychohistory",
+      3,
+      "Scott E. Page",
+      "The Model Thinker",
+      "Practical multi-model social reasoning",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      52,
+      "Psychohistory",
+      "Asimovian fictional psychohistory",
+      "Foundation",
+      "The Model Thinker",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      52,
+      "Psychohistory",
+      "social physics",
+      "The Model Thinker",
+      "Social Physics",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      52,
+      "Psychohistory",
+      "population forecasting",
+      "The Model Thinker",
+      "Social Physics",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      52,
+      "Psychohistory",
+      "complex adaptive models",
+      "The Model Thinker",
+      "Social Physics",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_catalog": "knowledge/psychohistory_sources.json",
+  "source_manifest_sha256": "9dbd60a7838818c8e4332caaea837b4a2e7232ec02ec1a8434415150880144db",
+  "editions": {
+    "Asimov": {
+      "verified": "2008-04-29Del Rey paperback9780553382570,272pages;1991mass-market9780553293357and2004eBook are separate publisher formats.",
+      "original_context": "Literary bibliography identifies1942–1944Astounding material assembled as1951Foundation;not a scientific publication.",
+      "access": "Authorized opening excerpt read;its2004copyright notice isnot silently treated as the2008edition date. Fullnovel andlater precise mathematical assumptions not ingested."
+    },
+    "Pentland": {
+      "verified": "2015-01-27Penguin Books paperback9780143126331,320pages;publisher separately lists2014-01-30eBook.",
+      "original_lead": "Original ranked MIT listing uses heading How Ideas Turn into Action andwebpage date2013-09-27. Preserve thatlead;do not substitute itsdate/heading for book-edition metadata.",
+      "access": "Publisher description andMIT listing inspected;no detailed book formulas claimed. Primary2009author whitepaper supplies measurement/privacy context separately."
+    },
+    "Page": {
+      "verified": "2018-11-27Basic Books hardcover9780465094622,448pages;2021-03-16trade paperback9781541675711,464pages isdistinct.",
+      "access": "Publisher metadata/many-model context andofficial university publication context inspected;no full chapters or detailed book code examples ingested. Specific chapter algorithms remain P1."
+    }
+  },
+  "fiction_boundary": {
+    "layer": "Literary concept,not empirical law",
+    "finding": "Seldon's psychohistory is an in-universe fictional predictive science. Literary reference describes mass behavior and unawareness of the analysis as fictional assumptions;no numerical population threshold or operational law is certified from the accessible excerpt.",
+    "interpretation": "Large synthetic N doesnot establish accurate real-world forecasts. Reflexive behavior,common shocks,nonstationarity,unobserved structure andmeasurement error remain real modeling limitations.",
+    "different_term": "Do not conflate Asimovian psychohistory with historical/psychoanalytic study using the same term."
+  },
+  "pentland_context": {
+    "source": "psychohistory-pentland-whitepaper-v1",
+    "finding": "The primary2009whitepaper describes phone-based proximity/communication measurement,including100phones in an MIT2004–2005study,anddiscusses privacy. These are bounded measured social contexts,not civilization-scale laws.",
+    "limits": "Proximity isnot automatically influence;predictive association isnot randomized causal identification. Sampling,missing sensing,selection andconsent limits need explicit checking. No medical-performance claim orprivate trace imported here."
+  },
+  "page_context": {
+    "source": "psychohistory-page-v1",
+    "finding": "Accessible material motivates comparing multiple explicit models;it doesnot supply an inspected complete computational chapter algorithm.",
+    "application": "Use a separately sourced model plus an editorial no-influence baseline andscenario comparison. Neither model averaging norin-sample explanation automatically yields held-out predictive accuracy."
+  },
+  "verified_quantitative_method": {
+    "source": "psychohistory-watts-threshold-v1",
+    "locator": "Model Specification,p5767",
+    "verified_summary": "Binary agents observe a fraction of active neighbors and activate at or above their thresholds. Thresholds and degrees can be heterogeneous. The paper starts from small seeds,updates in random asynchronous order,and keeps activated nodes on. Its sparse random-graph analysis uses large-network/local-tree assumptions;it is not a finite social forecast certificate.",
+    "source_rule": "m_i/k_i >= phi_i;activation irreversible",
+    "source_vs_proposal": "The proposed synchronous finite graph convention is editorial andmust be named separately from the paper's random asynchronous schedule. The source doesnot provide empirical thresholds for this project.",
+    "access": "Primary PMC/publisher access intermittently challenged/403;SNAP/NYU institutional article witnesses andprimary indexed Model Specification inspected. Berkeley witness has aJSTOR cover plus6article pages;no mirror byte equivalence attested."
+  },
+  "candidate_comparison": [
+    {
+      "id": "A",
+      "mechanism": "Independent finite-population binary Markov transitions",
+      "advantages": "Cheap,exact one-step moments andconservation;clean zero/certain probability controls",
+      "limits": "Doesnot represent network reinforcement;book-specific transition formulas not inspected;empirical parameters absent",
+      "priority": "P1 independent comparator;not recommended interaction core"
+    },
+    {
+      "id": "B",
+      "mechanism": "Finite graph irreversible fractional-threshold cascade withstochastic initial seeds",
+      "advantages": "Source-inspectable rule,exact small-network traces,nonlinear feedback,topology andpaired scenario controls;stdlib CPU feasible",
+      "limits": "Proposed synchronous schedule differs from source;fixed synthetic graph/thresholds are assumptions,not fitted social laws",
+      "priority": "Recommended first core"
+    },
+    {
+      "id": "C",
+      "mechanism": "Aggregate count/compartment representation",
+      "advantages": "Low memory andsimple baseline",
+      "limits": "Count alone generally loses whichnodes areactive andcannot exactly predict threshold dynamics. Any mean-field closure needs explicit extra assumptions",
+      "priority": "Core no-influence count baseline;fitted/mixing approximation P1"
+    },
+    {
+      "id": "D",
+      "mechanism": "Multi-model/scenario comparison",
+      "advantages": "Exposes sensitivity tograph,thresholds,seeding andbaseline assumptions oncommon inputs",
+      "limits": "More models do not establish truth;paired random mapping andshared denominators mustbe fixed",
+      "priority": "Bounded comparison wrapper for B plus no-influence baseline"
+    }
+  ],
+  "first_scope_recommendation": {
+    "name": "Synthetic Population Threshold Dynamics and Scenario Simulation — Bounded Reference Scope",
+    "status": "Proposal only;no executable profile frozen",
+    "scope": [
+      "Finite fixed population of binary agents onexplicit simple undirected graphs",
+      "Exact rational per-node fractional thresholds andirreversible activation",
+      "Explicitly named synchronous rounds;fixed-node-order diagnostic for update-order controls only",
+      "Fixed initial seed sets orversioned seeded Bernoulli initial conditions",
+      "Repeated-run aggregate trajectories,descriptive variability andpaired scenario differences",
+      "Same initial-state no-influence/persistence baseline",
+      "Static graph/threshold/initial-seed scenario variations withsource provenance"
+    ],
+    "not_first_core": [
+      "Demographic births/deaths/migration prediction",
+      "Per-contact infection probability,stochastic recovery oradaptive agent learning",
+      "Random-graph asymptotic cascade-probability theorem certification",
+      "Source random-asynchronous experiment reproduction",
+      "Calibrated influence/causal intervention estimates",
+      "Large proprietary networks,cloud/GPU orLLM-generated behavior"
+    ]
+  },
+  "proposed_model": {
+    "state": "a_i(t) in{0,1};fixed N;edge list defines neighbors;d_i=degree,m_i(t)=active-neighbor count.",
+    "update": "a_i(t+1)=a_i(t) OR [d_i>0 AND m_i(t)/d_i>=phi_i]. Compute froma full copy of the prior round;no within-round influence leakage.",
+    "exact_boundary": "Forphi_i=u/v,useinteger comparison m_i*v>=d_i*u,orprecomputedceil(d_i*u/v). No float tie tolerance.",
+    "isolated": "Editorial convention:unseeded degree-zero nodes neveractivate,evenatphi0;initially seededisolates stayactive.",
+    "zero_threshold": "Forpositive degree,phi0 permits spontaneous activation evenwith noseed. Do not conflate a zero threshold withzero transition probability.",
+    "initial": "Fixed explicit seeds orBernoulli initial seeds underdeclared probabilityrho. Stochasticity initially comesfromthese seeds,not a fabricated per-contact transition law.",
+    "feedback": "Neighbor states create nonlinear feedback. Thresholds remain fixed;this isnot an adaptive learning model.",
+    "conservation": "active(t)+inactive(t)=N;active ismonotone. Stable/no-change state isabsorbing underthis fixed rule.",
+    "time": "Rounds are model steps,not days orcalendar forecasts. Random-asynchronous visits/sweeps andsynchronous rounds are not interchangeable clock units.",
+    "interventions": "First compare static graph,threshold orinitial-seed variants. Keep N/node identity constant forpaired experiments;reportedge edits separately fromchangingthresholds. Dynamic interventions/blocked-node denominator conventions are P1."
+  },
+  "proposed_schema": {
+    "inputs": [
+      "schema/model/source versions andhashes",
+      "synthetic label andrights",
+      "population IDs andN",
+      "canonical undirected edge list",
+      "exact thresholds",
+      "fixed seeds orrho",
+      "PRNG ID,seed andsemantic draw order",
+      "run count andround cap",
+      "scenario IDs andchanges",
+      "trace/output/work budgets",
+      "declared interpretation limits"
+    ],
+    "outputs": [
+      "per-run active/inactive count trajectories",
+      "finalactive fractions andfixed-point/truncation status",
+      "seed provenance oruniform commitments",
+      "aggregate mean/variance andsample denominator",
+      "paired differences andshared run/node IDs",
+      "graph/parameter hashes andsource locators",
+      "actual CPU/memory evidence whenlatermeasured",
+      "unsupported empirical/civilization predictions flag"
+    ]
+  },
+  "randomness_replay": {
+    "proposal": "Prefer reusing thealready documented xorshift32-v1 contract oranother fully specified generator without changing its prior contracts. Freeze independent vectors before52production;no52draws orsimulation run performed here.",
+    "mapping": "One initial uniform perreplicate andstable node ID,generated once andshared across scenarios withsameN/node identities;consume draws evenwhen fixed assignments override a node. No graph-dependent orstate-dependent draw consumption.",
+    "comparison": "Common uniforms create coupling byconstruction;they do not independently validate either model anddo not always reduce paired variance. Separate independent seeded streams need their own provenance.",
+    "precision": "Finite-state PRNG grid anddeterministic dependence mustbe disclosed. Ideal iid initial-seed moments are not a theorem about theactual pseudorandom stream.",
+    "replay": "Pin model/source/graph/threshold/seed/schema/code identities,exact threshold ties,output ordering andrawJSON/Markdown bytes before later release."
+  },
+  "independent_worked_tables": {
+    "path3": {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "threshold": "1/2",
+      "seed": [
+        0
+      ],
+      "synchronous_states": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "ordered_sweep_forward": [
+        1,
+        1,
+        1
+      ],
+      "ordered_sweep_reverse": [
+        1,
+        1,
+        0
+      ]
+    },
+    "topology_counterexample": {
+      "population": 4,
+      "threshold": "2/3",
+      "seed": [
+        0
+      ],
+      "star_final_count": 4,
+      "complete_final_count": 1,
+      "interpretation": "Addinglinks can raise fractional reinforcement requirements;conditionalmodel result,not causal population evidence."
+    },
+    "aggregate_insufficiency": {
+      "path3_initial_count": 1,
+      "seed_at_middle_next_count": 3,
+      "seed_at_endpoint_next_count": 2
+    },
+    "two_node_seed_ensemble": {
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "threshold": "1/2",
+      "initial_seed_probability": "1/2",
+      "literal_rows": [
+        {
+          "initial": [
+            0,
+            0
+          ],
+          "probability": "1/4",
+          "final_count": 0,
+          "initial_count": 0
+        },
+        {
+          "initial": [
+            0,
+            1
+          ],
+          "probability": "1/4",
+          "final_count": 2,
+          "initial_count": 1
+        },
+        {
+          "initial": [
+            1,
+            0
+          ],
+          "probability": "1/4",
+          "final_count": 2,
+          "initial_count": 1
+        },
+        {
+          "initial": [
+            1,
+            1
+          ],
+          "probability": "1/4",
+          "final_count": 2,
+          "initial_count": 2
+        }
+      ],
+      "expected_final_count": "3/2",
+      "variance_final_count": "3/4",
+      "expected_final_fraction": "3/4",
+      "variance_final_fraction": "3/16",
+      "expected_paired_count_gain": "1/2",
+      "variance_paired_count_gain": "1/4"
+    },
+    "initial_binomial": {
+      "N": 4,
+      "p": "1/4",
+      "mean": "1",
+      "variance": "3/4"
+    },
+    "candidate_independent_transition": {
+      "N0": 2,
+      "N1": 1,
+      "p01": "1/4",
+      "p10": "1/2",
+      "mean_next_active": "1",
+      "variance_next_active": "5/8",
+      "qualification": "Original algebra for an independent-transition comparator candidate;not thechosen threshold core or a claimed book algorithm."
+    }
+  },
+  "independent_fixture_plan": [
+    {
+      "id": "population-conservation",
+      "expected": "For every finite binary state,active+inactive=N;N is fixed,not a demographic birth/death forecast."
+    },
+    {
+      "id": "one-step-transitions",
+      "expected": "Path0–1–2,threshold1/2,seed{0}:t0={0},t1={0,1},t2={0,1,2}."
+    },
+    {
+      "id": "zero-probability-events",
+      "expected": "Initial Bernoulli seed probability0 andstrictly positive thresholds produce no cascade;emptygraph prevents neighbor-driven activation. Candidate independent-transition model withp01=p10=0 preserves all states."
+    },
+    {
+      "id": "certain-transitions",
+      "expected": "Seed probability1 makes all agents active at t0. Degree1neighbor withthreshold1 activates when its sole neighbor is active; threshold0 onpositive-degree nodes activates without seeds."
+    },
+    {
+      "id": "absorbing-states",
+      "expected": "Irreversibly active agents remain active;all-active is absorbing. No new additions means a fixed point under the synchronous rule."
+    },
+    {
+      "id": "isolated-nodes",
+      "expected": "N1,noedges:unseeded stays0,seeded stays1. Proposed isolated-node convention forbids spontaneous adoption evenatthreshold0."
+    },
+    {
+      "id": "fully-connected",
+      "expected": "K4,one seed,threshold1/3 activates all at t1 by equality;threshold1/2 leaves one seed unchanged."
+    },
+    {
+      "id": "seeded-event-ordering",
+      "expected": "Freeze exact PRNG,seed type,replicate/node mapping anddraw order before production;one initial uniform pernode/run,including overridden nodes;no state-dependent stream consumption."
+    },
+    {
+      "id": "repeated-run-counts",
+      "expected": "Two connected nodes,threshold1/2,independent initial seedp1/2:four equally likely seed states yield final counts[0,2,2,2];mean3/2,variance3/4."
+    },
+    {
+      "id": "scenario-boundaries",
+      "expected": "Identical graph,thresholds,initial-state/draw table must yield identical traces andzero paired difference."
+    },
+    {
+      "id": "common-random-pairing",
+      "expected": "Use shared controlled uniforms[1/8,3/8,5/8,7/8]:seedp1/4 selects{0};seedp3/4 selects{0,1,2}. Pair stable node identities,not arbitrary changed draw positions."
+    },
+    {
+      "id": "causal-claims",
+      "expected": "A conditional synthetic graph edit is not a causal treatment estimate;reject claims of measured real-world intervention efficacy."
+    },
+    {
+      "id": "parameter-misspecification",
+      "expected": "Path0–1–2,seed{0}:threshold1/2 spreads to3;threshold2/3 stalls at1. Report parameter sensitivity without fitting orprediction claims."
+    },
+    {
+      "id": "topology-sensitivity",
+      "expected": "N4,seedcenter0,threshold2/3:star reaches4;complete graph stalls at1. Adding edges neednot increase fractional-threshold adoption."
+    },
+    {
+      "id": "synthetic-mode",
+      "expected": "Original graph/parameters labeled synthetic,with source snapshot/rights;no fabricated observed population or contacts."
+    },
+    {
+      "id": "rights-source",
+      "expected": "Reject missing provenance/license,unapproved individual traces andsource/profile hash mismatch in a later implementation."
+    },
+    {
+      "id": "json-markdown-replay",
+      "expected": "Future accepted/rejected deterministic JSON andsafe Markdown replay,raw byte hashes,immutable model/source/graph/RNG identities."
+    },
+    {
+      "id": "unsupported-real-world-prediction",
+      "expected": "Reject fictional deterministic psychohistory,uncalibrated civilizational forecasting andempirical accuracy certification fromsynthetic tests."
+    },
+    {
+      "id": "synchronous-asynchronous",
+      "expected": "On the3node path,one synchronous round reaches2active;one ordered in-place sweep0,1,2 reaches3;reverse sweep reaches2. Timing units are not equivalent."
+    },
+    {
+      "id": "fraction-threshold-boundary",
+      "expected": "Use exact m*denominator>=degree*numerator. One of2active neighbors atthreshold1/2 activates;strict> is a negative control."
+    },
+    {
+      "id": "initial-seed-binomial",
+      "expected": "Under ideal independent initial seeding:N4,p1/4 givesE[count]=1,Var=3/4. Post-cascade counts are correlated andneednot bebinomial."
+    },
+    {
+      "id": "finite-work-resource-caps",
+      "expected": "Reject combined scenario/run/round/edge budgets above the frozen cap;validate conservation,truncation andtrace limits. No benchmark passes asserted inthis audit."
+    },
+    {
+      "id": "node-relabeling-invariance",
+      "expected": "Relabel every node-indexed input through one bijection:graph edges,thresholds andfixed seeds must map to the same deterministic trace. Stochastic CRN additionally preserves or explicitly maps semantic node identities."
+    }
+  ],
+  "evaluation_limits": {
+    "verification": "Exact execution ofspecified mathematics mustbe independently tested later;this audit only authors expectations.",
+    "scenario": "Counterfactual conditional simulation isnot observed causal efficacy.",
+    "calibration": "Needs justified observed graph/parameters,source vintages,missingness andsampling assumptions;none fitted here.",
+    "prediction": "Needs event/group/time held-out outcomes andhonest baselines;larger N/ensemble runs do not supply empirical skill.",
+    "uncertainty": "ReportR andsample variance onlywhenR>1;R1 variance notestimable. Initial iid binomial moments do not apply tocorrelated post-cascade states. No automatic confidence intervals orcausal p-values.",
+    "pairing": "For ideal iid run pairs,Var(mean(YA-YB))=[VarYA+VarYB-2Cov(YA,YB)]/R. Coupling isnot guaranteed variance reduction."
+  },
+  "performance_assessment": {
+    "status": "Analytical budget proposal only;no52benchmark orengine execution",
+    "bounds_proposal": {
+      "N": [
+        1,
+        128
+      ],
+      "edges_max": 2048,
+      "runs": [
+        1,
+        256
+      ],
+      "scenarios": [
+        1,
+        8
+      ],
+      "rounds_max": "N orsmaller explicit truncation cap",
+      "returned_count_cells_max": 100000,
+      "returned_state_cells_max": 10000,
+      "combined_node_neighbor_work_budget": 10000000
+    },
+    "combined_limit": "Individual maxima cannot allbe combined arbitrarily. Budget units count node plus neighbor visits. Before running,enforce sum_s R*(T_s+1)*(N+2E_s)<=10000000andoutput caps.",
+    "cost": "Adjacency-list synchronous update O(R*sum_s T_s*(N+E_s));integer threshold comparisons avoid Fraction/float loops. Working state O(N+E);aggregate counts orbounded traces ratherthan allstates atallmaxima.",
+    "future_measurement_gate": "Measure actual walltime andnative/allocator memory onrepresentative sparse/dense/ensemble cases. Proposed local target<=5s and<=128MiB foraccepted benchmark cases isnot certified untilmeasured.",
+    "dependencies": "Python stdlib CPU reference shouldsuffice;no NetworkX/GPU/cloud/distributed framework orlanguage-model agent policies required."
+  },
+  "data_rights_audit": {
+    "first_mode": "Original synthetic graphs/thresholds/seeds only;no real graph,traces orpopulation dataset acquired.",
+    "census": {
+      "source": "psychohistory-census-v1",
+      "finding": "Publicdocumentation explains aggregate population estimates based onbirths,deaths andmigration;newvintages supersede earlier annual series. The inspected API page nowrequires akey.",
+      "scope": "Aggregate population counts do not identify an influence graph orbehavioral thresholds. Selectexactfile/vintage/geography/units/rights before anyfuture empirical use;no dataset-specificlicense certifiedhere."
+    },
+    "sociopatterns": {
+      "source": "psychohistory-sociopatterns-v1",
+      "observations": "2011fourday/2012sevenday school contacts;20second bins withsupplier-described anonymous IDs,class/gender metadata.",
+      "license": "Exact linkedCC BY-NC-SA3.0;attribution,noncommercial andshare-alike restrictions. Associatedarticle license mustnot be substituted for dataset terms.",
+      "privacy": "Temporal contacts andsensitive labels canremain identifying;need consent/ethics/permitted-use assessment before anyfuture acquisition. Proximity isnot direct causal influence.",
+      "status": "No files downloaded,redistributed orusedfor fitted/held-outforecast claims."
+    },
+    "reality_mining": {
+      "source": "psychohistory-pentland-whitepaper-v1",
+      "finding": "Primarystudy/context describes individual phone traces;dataset ownership,reuse terms andconsent notverified. No files acquired."
+    },
+    "requirements": [
+      "Source andfile-level license/attribution",
+      "Exact snapshot hash,vintage,geography andunits",
+      "Collection andsensor/missingness mechanisms",
+      "Privacy andconsent scope forindividual traces",
+      "Representative sampling andnonstationary parameters",
+      "Training/validation/test groups andtimes frozenbeforefitting",
+      "Causal versus predictive interpretation separated"
+    ]
+  },
+  "configuration_matrix": {
+    "supported_audit": [
+      "Verified edition/metadata/access boundaries",
+      "Primary threshold-rule andupdate-order facts",
+      "Original literal graph tables andexact population-moment expectations",
+      "Dataset terms/privacy review andbudget recommendations"
+    ],
+    "experimental_unimplemented": [
+      "All proposed52model/sampler/ensemble/scenario functionality",
+      "Real-data fitting andheld-out population prediction",
+      "Aggregate/mean-field/independent-transition comparators beyond no-influence baseline",
+      "Source random-asynchronous reproduction anddynamic interventions"
+    ],
+    "unsupported": [
+      "Operational52runtime/CLI/profile orCorev1certification",
+      "LiteralAsimovian deterministic psychohistory",
+      "Empirical/causal superiority fromsynthetic correctness",
+      "Unlicensed/private individual-trace ingestion",
+      "Universalforecasting accuracy fromlargeN",
+      "Language-model narrative as anumerical simulation"
+    ]
+  },
+  "acceptance_criteria": [
+    "Freeze source access/rights,model/schema/bounds,threshold equality,isolated-node andtime conventions beforeproduction",
+    "Freeze independent known-answer state/seed/ensemble fixtures beforeengine code",
+    "Actual CPU synchronous threshold simulation andpaired scenario/no-influence baseline work",
+    "Conservation,irreversibility,absorbing states,exact ties andupdate-order negative controls pass",
+    "Independent seeded vectors,semantic CRNmapping andendpoint checks pass",
+    "All23planned fixture families plus source gaps addressed ortruthfully bounded",
+    "Observed/scenario/calibrated/validated/fictional layers separately named",
+    "Actual runtime/memory andcombinedwork/output limits recorded;no universalperformance claim",
+    "Accepted/rejected deterministic JSON/Markdown replay andsource/profile/input/code hashes",
+    "Full inherited1719tests/2369CLIcases/30verifiers plusnewchecks,registry,strictJSON,dependency/pip/diff andcompletepre-enginebyte preservation",
+    "Supported/experimental/unsupportedmatrix,P1/P2andboundedclosurecommitted/pushed",
+    "No53research before52issubsequentlyimplemented andclosed"
+  ],
+  "backlog": {
+    "P1": [
+      "Legitimate detailed Pentland/Page book chapter andcomputational example locators",
+      "Freeze exact52numeric/RNG/schema/graph/update conventions andindependent vectors",
+      "Resolve source-asynchronous versus editorial synchronous scope explicitly",
+      "Implement bounded graph dynamics,initial-seed ensemble andpaired baseline",
+      "Actual CPU/memory/trace-budget measurements",
+      "Dataset-specific rights,vintage,privacy/consent andrepresentativeness audit before realdata",
+      "Empirical parameter estimation andgroup/time held-out protocol",
+      "Independent Markov/mean-field comparator onlywith explicitclosure assumptions"
+    ],
+    "P2": [
+      "Dynamic networks,weighted/directed influence andblocked-node semantics",
+      "Adaptive/learning agents andchanging thresholds",
+      "Demographic population forecasts withbirth/death/migration models",
+      "Source random-asynchronous andasymptotic cascade analysis reproduction",
+      "Causal intervention estimation fromappropriate empirical designs",
+      "Larger/GPU/distributed simulation onlyifjustified andbenchmarked"
+    ]
+  },
+  "source_payloads": {
+    "watts": {
+      "url": "https://snap.stanford.edu/class/cs224w-readings/watts02randomnetworks.pdf",
+      "error": "<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>"
+    },
+    "foundation": {
+      "url": "https://www.penguinrandomhouseretail.com/book/?isbn=9780553382570",
+      "status": 200,
+      "bytes": 424209,
+      "sha256": "f048f63ad50283ad57e345dfc750c708dd26b32881436563d9dc6460646a2750",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    "pentland": {
+      "url": "https://www.penguinrandomhouseretail.com/book/?isbn=9780143126331",
+      "status": 200,
+      "bytes": 263538,
+      "sha256": "2d47f1f1dd3b33f5050ff3a3e9f8fe2a26f04c41290235048e959c302e66dec5",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    "page": {
+      "url": "https://sites.lsa.umich.edu/scottepage/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "hachette": {
+      "url": "https://www.hachettebookgroup.com/titles/scott-e-page/the-model-thinker/9780465094622/?lens=basic-books",
+      "error": "<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>"
+    },
+    "reality": {
+      "url": "https://www.media.mit.edu/publications/reality-mining-sensing-complex-social-systems/",
+      "error": "<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>"
+    }
+  },
+  "source_body_policy": "Primaryresponse hashes andaccess errors are recorded;source bodies stay inlocal temporary storage only. No book/PDF/figure/dataset redistribution.",
+  "next": "Implement/verify/close52in a subsequent pass. Thispass audits52only;no52engine/profile/CLI/runtime andno53DigitalTwinSimulation research."
+}

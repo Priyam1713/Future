@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "scope": "Metadata/method audit and literal-table rational checks only;no52simulation orbenchmark",
+  "protected_files": 3493,
+  "changed_protected_files": [],
+  "other59gap_entries_unchanged": true,
+  "taxonomy": {
+    "total": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "source_records": 14,
+  "registry": {
+    "references_checked_twice": 516,
+    "unique": 361,
+    "skipped": [
+      "chinese-inventory-2-v1"
+    ]
+  },
+  "strict_json_files": 2311,
+  "analytical_checks": {
+    "literal_two_node_moments": {
+      "mean": "3/2",
+      "variance": "3/4",
+      "fraction_mean": "3/4",
+      "fraction_variance": "3/16",
+      "paired_gain": "1/2",
+      "paired_variance": "1/4"
+    },
+    "ideal_initial_binomial_moments": true,
+    "independent_transition_candidate_algebra": true,
+    "threshold_equality_boundary": true,
+    "controlled_uniform_pairing": true,
+    "literal_population_conservation": true
+  },
+  "fixture_plans": 23,
+  "source_bodies_redistributed": false,
+  "empirical_dataset_acquired": false,
+  "engine_profile_or_cli_implemented": false,
+  "runtime_benchmark_performed": false,
+  "predecessor_acceptance_unchanged": true,
+  "git_diff_check": true
+}
