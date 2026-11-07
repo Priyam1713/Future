@@ -1,0 +1,656 @@
+{
+  "version": 1,
+  "technique_id": 54,
+  "name": "Agent-Based Simulation",
+  "date": "2026-11-07",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "2595ed8",
+  "predecessor_gate": "Closure pushed successfully;clean synchronized main0/0 observed before54inventory/source research.",
+  "policy": "80/20 boundedrecommendation only;no54runtime,executable profile,productionfixtures,implementation orbenchmark.",
+  "inventory_method_row": [
+    54,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Agent-Based Simulation",
+    "RETAIN — simulate / implement",
+    "Data & simulation",
+    "Cellular automata; Schelling segregation; Sugarscape; epidemiological/social ABM; LLM generative agents",
+    "Agent rules, environment, interactions, Monte Carlo ensembles and sensitivity tests",
+    "CPU; optional GPUs/LLM API; synthetic or historical parameters",
+    "Emergent outputs parameter-sensitive; simulate scenarios, not fate",
+    "Empirical/synthetic scenario testing possible",
+    "Generative Social Science",
+    "Joshua M. Epstein",
+    null,
+    "Agent-Based and Individual-Based Modeling",
+    "Generative Agents: Interactive Simulacra of Human Behavior",
+    null,
+    "49, 52, 53, 56, 59",
+    54
+  ],
+  "ranked_sources": [
+    [
+      54,
+      "Agent-Based Simulation",
+      1,
+      "Joshua M. Epstein",
+      "Generative Social Science",
+      "Foundational agent-based modeling",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      2,
+      "Steven F. Railsback and Volker Grimm",
+      "Agent-Based and Individual-Based Modeling",
+      "Stepwise ABM validation",
+      "https://www.railsback-grimm-abm-book.com/",
+      "Authors site / resources",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      3,
+      "Joon Sung Park et al.",
+      "Generative Agents: Interactive Simulacra of Human Behavior",
+      "LLM multi-agent modern approach",
+      "https://research.google/pubs/generative-agents-interactive-simulacra-of-human-behavior/",
+      "Open research paper",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      4,
+      "Mesa maintainers",
+      "Mesa Documentation",
+      "Python ABM implementation",
+      "https://mesa.readthedocs.io/stable/",
+      "Open docs",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      54,
+      "Agent-Based Simulation",
+      "Cellular automata",
+      "Mesa Documentation",
+      "Generative Agents: Interactive Simulacra of Human Behavior",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      "Schelling segregation",
+      "Mesa Documentation",
+      "Generative Agents: Interactive Simulacra of Human Behavior",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      "Sugarscape",
+      "Mesa Documentation",
+      "Generative Agents: Interactive Simulacra of Human Behavior",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      "epidemiological/social ABM",
+      "Generative Social Science",
+      "Mesa Documentation",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      "LLM generative agents",
+      "Generative Agents: Interactive Simulacra of Human Behavior",
+      "Generative Social Science",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_catalog": "knowledge/agent_based_sources.json",
+  "source_manifest_sha256": "d95cbfa701819bf23b3df2647c8ee6454963a397654588672818e8daec2ee02f",
+  "edition_and_access": {
+    "Epstein": {
+      "year": 2006,
+      "inspected": "Primary Chapter1 viaTU Delft educational witness;copyright cover andprintedpp4–8,38–39",
+      "boundary": "Generative sufficiency andexplanation/prediction distinctions;nofullbook/CD-ROM extraction orinvented rules."
+    },
+    "Railsback_Grimm": {
+      "edition": "Second Edition released2019 perauthors",
+      "inspected": "Author objectives/resources andauthorized publisherChapter1/preface",
+      "format_distinction": "Publisher indexed ebookISBN9780691285122 dated2025-06-03 retains2019copyright;notanewthirdedition. PaperbackISBN9780691190839 page blocked byrobots,notfulltext read.",
+      "limits": "Detailed laterchapters,model exercise source licenses andcomplete algorithms remainP1;preface NetLogo6.0.4 isedition context,notcurrentruntime requirement."
+    },
+    "Park": {
+      "paper": "UIST2023 DOI10.1145/3586183.3606763;arxivv2 dated2023-08-06",
+      "repository_commit": "fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4",
+      "inspected": "Primarypaper architecture/evaluation/limitations andauthorrepo README/LICENSE",
+      "boundary": "25-agent sandbox believability/ablation evidence isnot prospective realhuman prediction;noAPIcalls,servers orpaidmodels run."
+    },
+    "Mesa": {
+      "original_lead": "https://mesa.readthedocs.io/stable/",
+      "canonical_repository": "https://github.com/mesa/mesa",
+      "observed_aliases": "Original projectmesa/mesa APIredirects;canonicalmesa/mesa readsuccessfully.",
+      "git_commit": "fe24c24ee34762de2ff85d487af14bfb5cd1dbb2",
+      "commit_date": "2026-11-06T14:58:36Z",
+      "source_version": "4.0.0a0",
+      "version_blob": "c26a49f4060e72f7cd005b6a26a5b496860eae50",
+      "limits": "Pinnedmainisalpha,notstablecertification. Mutable stable/latest docs showedinconsistentlabels andcode;do notinferimmutableversion fromURL. No Mesa installed."
+    }
+  },
+  "source_supported_rules": {
+    "Life": {
+      "sources": [
+        "agent-based-mesa-life-agents-v1",
+        "agent-based-mesa-life-model-v1"
+      ],
+      "rule": "B3/S23:deadcell becomesalive iff3live neighbors;alivecell survives iff2or3. Eight-position Moore radius1;two-phase prior-snapshot compute thencommit.",
+      "source_boundary": "PinnedMesa uses torus=True andrandom initialization;recommendation uses explicitinitialstates andnamedfinitezero-exterior boundary,aneditorial boundaryvariant."
+    },
+    "Schelling": {
+      "sources": [
+        "agent-based-mesa-schelling-agents-v1",
+        "agent-based-mesa-schelling-model-v1"
+      ],
+      "rule": "Pinnedcode uses similar/occupied-neighbor fraction>=homophily;zeroneighbors fraction0;default0.4. Happinessassignedbeforetick,unhappyagentsmove in shuffledorder tocurrentrandomemptycells,thenallhappinessrecomputed.",
+      "conflict": "Summary/docstrings stilldescribea minimumsimilar-neighbor count,includinglegacydefault3. Do notmergecount andfraction conventions. No source1971experiment reproduction orarbitrarylexicographic movement advertised."
+    },
+    "Sugarscape": {
+      "source": "agent-based-mesa-sugar-v1",
+      "rule": "InspectedG1Mt has sugar/spice growback cappedbylandscape,vision-limited vacantdestination/welfare choice,harvesting,metabolism/death,andoptionalMRS-based trade. Resourcegrowthprecedes shuffledtrader movement/eating/death;tradingusesanother shuffle.",
+      "limits": "Aone-resource toyisnotfullSugarscape;trade,vision/ties,landscapes andactivation/order needseparatefreeze. Book1996fullmethod notinspected."
+    },
+    "epidemiological_social": {
+      "source": "agent-based-mesa-virus-v1",
+      "rule": "Sourcecodesusceptible/infected/resistant states withcontact infection,checks,recoveryandresistance;recoverycanreturnI→Sbeforeoptionalresistance. Shuffledagentsteps allow order-sensitiveimmediatechanges.",
+      "limits": "SummarySIRlabeldoesnotmakecodepurepermanent-recoverySIR. No clinicaltransmission/calibration validity or52threshold-equivalence certified."
+    },
+    "LLM": {
+      "source": "agent-based-park-arxiv-v2",
+      "rule": "Memoryretrieval combinesnormalizedrecency/importance/relevance,withunitweights inpaper;recencydecay0.995pergamehour,importanceLLMrated1–10,embeddingcosinerelevance. Reflections triggerwhenrecentimportance sumexceeds150;planning/reactingusesretrievedmemory.",
+      "limits": "Thesearepaperarchitectureparameters,notimmutableprompt/modelbehavior orpopulationlaws. Believability,failedretrieval andmemoryembellishment findings requireexternal empiricalvalidation beforeforecastclaims."
+    }
+  },
+  "first_core_recommendation": {
+    "name": "Finite-Grid Synchronous Binary Cellular Automata — B3/S23 Reference Scope",
+    "reason": "Transparentdeterministic localinteractions giveexactindependentlycheckable states andhighROI CPU implementation;thefivevariationtaxonomy remainsintact whileexpensive social/LLMmodels remainseparate.",
+    "proposed_conventions": [
+      "Onebinary cell perfixedcoordinate;explicitcanonical initialbitmatrix;nohuman-agentidentityinference.",
+      "Rectangulargrid withnamedfinitezero-exterior boundary:out-of-grid positions aredead;centerexcluded;distinctMoore radius1neighbors. ThisdiffersfrompinnedMesa toroidalexample.",
+      "B3/S23 only initially;allupdatesreadthesamepriorstate. Birthanddeatharebothallowed;activecountisnotconserved orirreversible.",
+      "Countsobeyalive+dead=gridcells andalive_next=alive+births-deaths. Ticksarenotsocialcalendarforecasts.",
+      "Returnboundedtraces,counts andstate/input/model/source/code hashes. Exactstateequality distinguishesfixedpoint fromcycles;period2isnotconvergence. Truncationisvisible.",
+      "Staticinitial-condition comparisonsrequirematchinggeometry/convention;identicalcontrols givezero differences. Symmetrytestsmusttransformcoordinates/geometry together;arbitrarynodepermutation isnotgrid symmetry.",
+      "No stochastic initialization orMonteCarloclaim ininitialdeterministic scope. Anyfutureseed/ordering contractmustbefrozenindependently.",
+      "Freezeexecutableprofile/source/bounds andindependentexpectedtables beforeproduction;audittables hereareplans,notproductionfixturefiles."
+    ],
+    "deferred_high_value": "Schellingfraction diagnostics andmovement followonlyafterseparatethreshold/empty-cell/tie/scheduling/RNG freeze andindependentfixtures. Do not silentlysubstitutefraction forcount orsimultaneous forshuffledmovement."
+  },
+  "original_literal_tables": {
+    "local_truth": [
+      {
+        "current": 0,
+        "neighbors": 0,
+        "next": 0
+      },
+      {
+        "current": 0,
+        "neighbors": 1,
+        "next": 0
+      },
+      {
+        "current": 0,
+        "neighbors": 2,
+        "next": 0
+      },
+      {
+        "current": 0,
+        "neighbors": 3,
+        "next": 1
+      },
+      {
+        "current": 0,
+        "neighbors": 4,
+        "next": 0
+      },
+      {
+        "current": 0,
+        "neighbors": 5,
+        "next": 0
+      },
+      {
+        "current": 0,
+        "neighbors": 6,
+        "next": 0
+      },
+      {
+        "current": 0,
+        "neighbors": 7,
+        "next": 0
+      },
+      {
+        "current": 0,
+        "neighbors": 8,
+        "next": 0
+      },
+      {
+        "current": 1,
+        "neighbors": 0,
+        "next": 0
+      },
+      {
+        "current": 1,
+        "neighbors": 1,
+        "next": 0
+      },
+      {
+        "current": 1,
+        "neighbors": 2,
+        "next": 1
+      },
+      {
+        "current": 1,
+        "neighbors": 3,
+        "next": 1
+      },
+      {
+        "current": 1,
+        "neighbors": 4,
+        "next": 0
+      },
+      {
+        "current": 1,
+        "neighbors": 5,
+        "next": 0
+      },
+      {
+        "current": 1,
+        "neighbors": 6,
+        "next": 0
+      },
+      {
+        "current": 1,
+        "neighbors": 7,
+        "next": 0
+      },
+      {
+        "current": 1,
+        "neighbors": 8,
+        "next": 0
+      }
+    ],
+    "local_configuration_combinatorics": {
+      "center_and_neighbors_bits": 9,
+      "configurations": 512,
+      "next_alive": 140,
+      "birth_configurations": 56,
+      "survival_configurations": 84,
+      "uniform_iid_local_fraction": "35/128",
+      "interpretation": "Exact count overbinary local configurations,notanempirical probability orsampled simulation."
+    },
+    "empty": {
+      "active_before": 0,
+      "active_after": 0
+    },
+    "single": {
+      "initial_live": [
+        [
+          1,
+          1
+        ]
+      ],
+      "next_live": [],
+      "active_before": 1,
+      "active_after": 0,
+      "births": 0,
+      "deaths": 1
+    },
+    "block": {
+      "board": [
+        4,
+        4
+      ],
+      "initial_live": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "next_live": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "reason": "Everylivecell has3live neighbors;each outsidecell hasatmost2."
+    },
+    "blinker": {
+      "board": [
+        3,
+        3
+      ],
+      "t0": [
+        "000",
+        "111",
+        "000"
+      ],
+      "prior_neighbor_counts": [
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          2
+        ]
+      ],
+      "t1": [
+        "010",
+        "010",
+        "010"
+      ],
+      "t2": [
+        "000",
+        "111",
+        "000"
+      ],
+      "active_counts": [
+        3,
+        3,
+        3
+      ],
+      "births_per_transition": 2,
+      "deaths_per_transition": 2,
+      "period": 2,
+      "fixed_point": false
+    },
+    "in_place_negative": {
+      "board": [
+        3,
+        3
+      ],
+      "t0": [
+        "000",
+        "111",
+        "000"
+      ],
+      "cell": [
+        0,
+        2
+      ],
+      "synchronous_next": 0,
+      "row_major_in_place_next": 1,
+      "reason": "Earlybirth at[0,1]raises later[0,2]neighbor count from2to3;in-place traversal isadifferent schedule."
+    },
+    "schelling_static_diagnostic": {
+      "occupied_neighbors": 3,
+      "same_type": 1,
+      "fraction": "1/3",
+      "threshold_equal": "1/3",
+      "happy_at_equal": true,
+      "threshold_higher": "2/5",
+      "happy_at_higher": false,
+      "no_neighbors_fraction": "0",
+      "no_neighbors_happy_at_zero": true,
+      "no_neighbors_happy_at_positive": false,
+      "scope": "PinnedMesa fraction convention,notitsstale minimum-count prose;nomovement simulation."
+    },
+    "single_resource_balance": {
+      "patch_before": 4,
+      "capacity": 5,
+      "growback": 1,
+      "patch_after_growth": 5,
+      "harvest_all": 5,
+      "patch_after_harvest": 0,
+      "agent_before": 3,
+      "metabolism": 1,
+      "agent_after": 7,
+      "total_before": 7,
+      "total_after": 7,
+      "scope": "Original one-resource accounting identity underdeclared growth→harvest→metabolism order;notfullSugarscape/G1Mt replication."
+    }
+  },
+  "independent_table_status": "Literalneighbor-count/state tables and18-case/binomial combinatorics reviewed;noCA,Schelling,Sugarscape,epidemic orLLMmodel executed. No54fixturefiles created.",
+  "variation_assessment": {
+    "Cellular automata": "Recommendedfirstboundedfinite-grid referencecore;sourceboundaryandclock explicitlynamed",
+    "Schelling segregation": "High-valueP1;sourceprose/codeconflict andactivation/vacancy/RNGneedfreeze",
+    "Sugarscape": "P1/P2;growth,vision,trade,metabolism andlandscape variants notinterchangeable",
+    "epidemiological/social ABM": "P2afterdomain-specificrules,rights,calibration andheld-out validation;notmedical/populationforecastcertification",
+    "LLM generative agents": "P2separatearchitecture;API/model/version/prompt/cost/data-rights/replay challenges;LLMorGPUunnecessaryforfirstcore"
+  },
+  "fixture_plan": [
+    {
+      "id": "local-rule-18-cases",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "local-512-combinatorial-oracle",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "synchronous-inplace-negative",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "clipped-edge-neighbors",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "toroidal-alias-refusal",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "center-exclusion",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "distinct-neighbor-positions",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "empty-board",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "single-cell-death",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "block-fixed-point",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "blinker-period-two",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "glider-translation-plan",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "birth-death-count-balance",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "active-plus-dead-cells",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "fixed-point-detection",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "period-versus-fixed",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "zero-steps",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "cap-truncation",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "interior-translation",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "rotation-reflection",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "identical-scenario-control",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "strict-binary-grid",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "unsupported-variation-rejection",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "source-rights-and-data",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "combined-resource-caps",
+      "status": "planned_only;freeze beforeimplementation"
+    },
+    {
+      "id": "raw-json-markdown-hashes",
+      "status": "planned_only;freeze beforeimplementation"
+    }
+  ],
+  "resource_recommendation": {
+    "runtime": "PythonstdlibCPU offline;noMesa/NetLogo/LLM/API/GPU/cloud/frontend dependency required",
+    "proposed_maxima": {
+      "height": 64,
+      "width": 64,
+      "cells": 4096,
+      "steps": 256,
+      "scenarios": 8,
+      "combined_cell_steps": 1000000,
+      "neighbor_and_cell_work": 9000000,
+      "returned_state_cells": 100000,
+      "returned_count_cells": 20000
+    },
+    "combined_caps": "Preflightcombineddimensions*steps*scenarios andtracecell reservations;individualmaxima cannotfreelycombine. Sourceframeworkperformance isnotFutureperformance.",
+    "targets": {
+      "wall_seconds": 5,
+      "peak_MiB": 128,
+      "status": "Proposed,unmeasured;no54benchmark executed"
+    }
+  },
+  "rights": {
+    "books": "Copyright Princeton University Press. Reading/browsing access is not permission to redistribute chapters,figures,CD-ROM models or downloaded teaching code. Original facts/notes only;no body orcode bundled.",
+    "Mesa": "Apache2 LICENSE andNOTICE inspectedatpinnedcommit;futurecopying requirescompliance. Weuseonlymathematicalfacts/originalnotes andvendornothing.",
+    "Park_code": "Apache2 source license inspected;pinnedREADMEacknowledgesmultipleexternalartists. Asset-specificrights unverified;nosprites,maps,memorylogs orcode redistributed.",
+    "Park_paper": "arxivv2 non-exclusive distributionlicense,notCC-BY;codeApache2mustnotbesubstituted.",
+    "data": "No realhuman/clinical/urban data orbooklandscape acquired. Syntheticfirst;dataset-specificlicense,consent,privacy,clock,representativeness andcalibration requiredbeforeempiricaluse."
+  },
+  "configuration_matrix": {
+    "supported_audit": [
+      "Exactinventoryranks/fivevariationpreservation",
+      "Primarybookchapter/sample/edition boundaries",
+      "PinnedLife/Schelling codeconventions andlicense/NOTICEfacts",
+      "Sugarscape,virus andLLMarchitecture/empiricallimits",
+      "Originalliteral/combinatorialtoyanswers andresourceplans"
+    ],
+    "experimental_unimplemented": [
+      "All54CA/grid/agent runtimefeatures",
+      "Schellingrelocation andstochasticensembles",
+      "Sugarscape/social/epidemiological/LLMsimulators"
+    ],
+    "unsupported": [
+      "54Corev1certification,executableprofile,CLI orproductionfixtures",
+      "Empiricalforecastaccuracy fromemergence orsyntheticpatterns",
+      "Causalpolicy ormedicalsuperiority fromtoyABMs",
+      "CurrentLLMAPIreplay/cost/compatibilitycertification",
+      "Unlicensedbook,asset,trace orlandscape redistribution"
+    ]
+  },
+  "acceptance_criteria": [
+    "Freezeexactsource/version/boundary/neighborhood/schedule/modelmatrix beforeengine",
+    "Freezeindependentlocal18case and512configurationoracles andallplannedfamilies",
+    "Verifyblinker/block/birthdeath/symmetry/edgeexamples againstindependentstateoracles",
+    "Noactivepopulationconservation assumption orperiod2-as-fixedmistake",
+    "Exactscenarioidenticalcontrols andboundedhistory/cycle/truncation behavior",
+    "Strictbinary/schema/source/rights/unsupportedvariation andcombinedbudget rejection",
+    "ActualCPUwall/memorymeasurement andno universalperformanceclaim",
+    "Rawaccepted/rejectedJSON/Markdownreplay,bothGitcheckoutsettings andhashidentities",
+    "Fullinherited1866tests/2645CLIcases/32verifiers plusnewchecks",
+    "Registry,strictJSON,dependency/pip/diff,taxonomy andpre-enginebytepreservation",
+    "Supported/experimental/unsupportedmatrix andP1/P2;noempiricalaccuracycertification",
+    "Commit/push54closure andcleanmainbefore55audit"
+  ],
+  "backlog": {
+    "P1": [
+      "FreezeCPUfinite-grid executablecontract andindependentoracles beforeimplementation",
+      "ResolveLife source-torus versusproposedzero-exterior conventions explicitly",
+      "FreezeSchellingfraction/count,empty-neighbor andvacancy/scheduling/RNG semantics beforemovement support",
+      "Legitimatecompletebook/laterchapter access andper-resource exercise/code/landscape rights",
+      "ActualCPU/memory/work/outputmeasurements",
+      "Dataset-specificconsent/rights,calibration,held-outvalidation andparameter-sensitivity analysis"
+    ],
+    "P2": [
+      "Sugarscapevision/trade/reproduction/resource variants",
+      "Calibratedepidemiological/socialmodels",
+      "LLMmemory/reflection/planning enginewithpinnedmodels,prompts,costs andper-asset rights",
+      "Stochasticensembles,alternativeactivation andboundary families",
+      "Coupledpopulations/twins,larger/distributedmodels onlywithjustifieddemand andmeasurements"
+    ]
+  },
+  "next": "Technique54implementationrequiresseparatecontinuation:freezeprofile/sources,independentfixtures,thenboundedengine. No55researchnow."
+}
