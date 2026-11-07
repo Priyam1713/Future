@@ -1326,3 +1326,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #56 source/profile freeze
 - Frozen exact finite categorical DAG/supplied-set back-door reference. Distinct graph validity,graph-table compatibility,adjustment,positivity and declared causal assumptions; failed gates return no causal estimate. Latent graphs/general identification unsupported. Independent structural/path fixtures follow before engine.
+
+## 2026-11-07 — #56 verified engine
+- Implemented exact complete finite tables,acyclic graph validation,active-trail back-door diagnostics,graph/table factorization compatibility,positivity and guarded rational standardization. All22 independent families,256 path-oracle graph cases,80 structural cases and49 new unit tests pass.
+- Verified causal risks3/10 and1/2 versus observational1/5 and3/5; last-minus-first causal contrast1/5,first-minus-last -1/5. Unsupported adjustment,latent graph,incompatible table and missing overlap return no causal estimate. CLI/full acceptance follows; no57audit.

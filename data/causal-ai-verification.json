@@ -1,0 +1,159 @@
+{
+  "passed": true,
+  "fixture_families": 22,
+  "families": {
+    "confounding": {
+      "passed": true,
+      "cases": [
+        "confounding",
+        "unblocked-confounding"
+      ]
+    },
+    "mediation": {
+      "passed": true,
+      "cases": [
+        "mediation",
+        "mediator-adjusted"
+      ]
+    },
+    "collider-closed": {
+      "passed": true,
+      "cases": [
+        "collider-closed"
+      ]
+    },
+    "collider-conditioned": {
+      "passed": true,
+      "cases": [
+        "collider-conditioned"
+      ]
+    },
+    "collider-descendant": {
+      "passed": true,
+      "cases": [
+        "collider-descendant"
+      ]
+    },
+    "no-confounding": {
+      "passed": true,
+      "cases": [
+        "no-confounding"
+      ]
+    },
+    "descendant-adjustment": {
+      "passed": true,
+      "cases": [
+        "mediator-adjusted"
+      ]
+    },
+    "missing-positivity": {
+      "passed": true,
+      "cases": [
+        "missing-positivity"
+      ]
+    },
+    "zero-mass-stratum": {
+      "passed": true,
+      "cases": [
+        "zero-mass-stratum"
+      ]
+    },
+    "cycle-refusal": {
+      "passed": true,
+      "cases": [
+        "cycle"
+      ]
+    },
+    "unknown-edge": {
+      "passed": true,
+      "cases": [
+        "unknown-edge"
+      ]
+    },
+    "duplicate-edge": {
+      "passed": true,
+      "cases": [
+        "duplicate-edge"
+      ]
+    },
+    "exact-adjusted-risk": {
+      "passed": true,
+      "cases": [
+        "confounding"
+      ]
+    },
+    "observational-interventional-disagreement": {
+      "passed": true,
+      "cases": [
+        "confounding"
+      ]
+    },
+    "deterministic-intervention-oracle": {
+      "passed": true,
+      "cases": [
+        "confounding",
+        "deterministic-intervention"
+      ]
+    },
+    "joint-normalization": {
+      "passed": true,
+      "cases": [
+        "unnormalized",
+        "missing-row",
+        "duplicate-row"
+      ]
+    },
+    "graph-table-incompatibility": {
+      "passed": true,
+      "cases": [
+        "incompatible"
+      ]
+    },
+    "latent-graph-unsupported": {
+      "passed": true,
+      "cases": [
+        "latent"
+      ]
+    },
+    "canonical-order": {
+      "passed": true,
+      "cases": [
+        "reordered"
+      ]
+    },
+    "source-rights": {
+      "passed": true,
+      "cases": [
+        "empirical",
+        "rights",
+        "source",
+        "snapshot"
+      ]
+    },
+    "rational-bounds": {
+      "passed": true,
+      "cases": [
+        "large-rational",
+        "float-weight",
+        "boolean-weight"
+      ]
+    },
+    "json-markdown-replay": {
+      "passed": true,
+      "cases": [
+        "profile",
+        "categorical"
+      ]
+    }
+  },
+  "accepted": 15,
+  "rejected": 27,
+  "independent_graph_cases": 256,
+  "structural_enumeration_cases": 80,
+  "interventional_oracle_passed": true,
+  "observational_disagreement_passed": true,
+  "canonical_order_passed": true,
+  "zero_strata_passed": true,
+  "fixture_sha256": "b618f7c6a0ecc5210e11b245729941fabf7a570fed95c996f23f065f57c8f190",
+  "scope": "Finite exact synthetic model software,not causal discovery or empirical effect validation"
+}
