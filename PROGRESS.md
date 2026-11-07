@@ -1333,3 +1333,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #56 CLI and measured workloads
 - Saved92 raw CLI cases:15 accepted/31 rejected JSON-Markdown pairs. Complete small/medium/dense/diagnostic workloads measured. Dense7nodes/3states/2187rows median0.1112s,fullCLI1.4365s; whole helper peak34.203MiB,not CLI-child/per-workload. All49 new unit tests and22 families pass. Full inherited acceptance and both indexed checkout replays follow.
+
+## 2026-11-08 — #56 expanded independent graph verification
+- All50 new unit tests pass. Extended verification uses the immutable pre-engine simple-path oracle across all12 treatment/outcome pairs and4 adjustment subsets in each of64 ordered DAGs:3072 additional graph cases,alongside256 frozen cases and80 structural cases. Original fixtures and production engine unchanged.
+- Both actual checkout modes replay92 raw outputs each. Full inherited sweep is running and refreshed full2073-unit run is in progress. Closure must consume the latest unit count,not the earlier in-flight2072 expectation. After56closure/push/clean0/0,continue57–60 then final all54 acceptance under master directive; no57audityet.

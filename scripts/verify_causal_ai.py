@@ -1,5 +1,5 @@
 """Independent structural/path known answers; no fixture generation from engine."""
-import copy,hashlib,json
+import copy,hashlib,itertools,json
 from pathlib import Path
 from future.remote_viewing import digest
 from future.scrying import load_input
@@ -25,14 +25,31 @@ def graph_checks():
     from future.causal_ai import backdoor
     f=fixture()
     for c in f['graph_cases']:assert backdoor(c['nodes'],c['edges'],c['x'],c['y'],c['z'])['valid']==c['valid'],c
+def expanded_graph_checks():
+    from future.causal_ai import backdoor
+    from scripts.causal_ai_oracle import backdoor_oracle
+    fixture() # Bind the independent pre-engine oracle bytes before calling it.
+    names=['0','1','2','3'];possible=list(itertools.combinations(names,2));count=0
+    for mask in range(64):
+        edges=[list(e) for i,e in enumerate(possible) if mask&(1<<i)]
+        for x,y in itertools.permutations(names,2):
+            rest=[n for n in names if n not in (x,y)]
+            for zmask in range(4):
+                z=[n for i,n in enumerate(rest) if zmask&(1<<i)]
+                assert backdoor(names,edges,x,y,z)['valid']==backdoor_oracle(names,edges,x,y,z),(edges,x,y,z)
+                count+=1
+    assert count==3072
+    return count
 def run():
     from future.causal_ai import read
     f=fixture()
     for c in f['cases'].values():check_case(c)
-    graph_checks();r=read(f['cases']['confounding']['input']);s=f['structural_enumeration']
+    graph_checks();expanded=expanded_graph_checks();r=read(f['cases']['confounding']['input']);s=f['structural_enumeration']
     assert r['interventional']['risks']==s['do_risks'];assert r['interventional']['contrast_last_minus_first']=='1/5' and r['interventional']['contrast_first_minus_last']=='-1/5';assert r['observational']['contrast_last_minus_first']=='2/5'
     reordered=read(f['cases']['reordered']['input']);assert (r['model_sha256'],r['table_sha256'],r['interventional'])==(reordered['model_sha256'],reordered['table_sha256'],reordered['interventional'])
     zero=read(f['cases']['zero-mass-stratum']['input']);assert len(zero['positivity']['zero_mass_strata'])==1 and any(a['conditional'] is None and a['skipped_zero_mass'] for a in zero['strata'])
     out=dict(passed=True,fixture_families=len(f['families']),families={k:dict(passed=True,cases=v) for k,v in f['families'].items()},accepted=sum(c['exit_code']==0 for c in f['cases'].values()),rejected=sum(c['exit_code']==2 for c in f['cases'].values()),independent_graph_cases=len(f['graph_cases']),structural_enumeration_cases=80,interventional_oracle_passed=True,observational_disagreement_passed=True,canonical_order_passed=True,zero_strata_passed=True,fixture_sha256=digest(f),scope='Finite exact synthetic model software,not causal discovery or empirical effect validation')
-    (R/'data/causal-ai-verification.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8',newline='\n');print('22 independent fixture families pass;256 graph cases;80 structural oracle cases')
+    out['expanded_graph_cases']=expanded
+    out['expanded_graph_method']='All12 treatment/outcome pairs and4 adjustment subsets in each of64 ordered four-node DAGs; expected validity from immutable pre-engine simple-path oracle,not production.'
+    (R/'data/causal-ai-verification.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8',newline='\n');print('22 independent fixture families pass;256 frozen and3072 expanded graph cases;80 structural oracle cases')
 if __name__=='__main__':run()

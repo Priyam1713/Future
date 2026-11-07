@@ -1,9 +1,10 @@
 import copy,unittest
 from fractions import Fraction as F
 from future.causal_ai import read,operation,ratio
-from scripts.verify_causal_ai import fixture,check_case,graph_checks
+from scripts.verify_causal_ai import fixture,check_case,graph_checks,expanded_graph_checks
 class CausalAITests(unittest.TestCase):
     def test_graphs(self):graph_checks()
+    def test_all_treatment_outcome_pairs(self):self.assertEqual(expanded_graph_checks(),3072)
     def test_structural_contrasts(self):
         r=read(fixture()['cases']['confounding']['input']);self.assertEqual(r['interventional']['contrast_last_minus_first'],'1/5');self.assertEqual(r['interventional']['contrast_first_minus_last'],'-1/5');self.assertEqual(r['observational']['contrast_last_minus_first'],'2/5')
     def test_zero_mass(self):
