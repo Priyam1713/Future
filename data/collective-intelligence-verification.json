@@ -1,0 +1,244 @@
+{
+  "passed": true,
+  "fixture_families": 31,
+  "families": {
+    "equal-pool": {
+      "passed": true,
+      "cases": [
+        "equal"
+      ]
+    },
+    "weighted-pool": {
+      "passed": true,
+      "cases": [
+        "weighted"
+      ]
+    },
+    "weight-normalization": {
+      "passed": true,
+      "cases": [
+        "weighted"
+      ]
+    },
+    "weight-scale-invariance": {
+      "passed": true,
+      "cases": [
+        "weighted",
+        "weight-scale"
+      ]
+    },
+    "missing-forecaster": {
+      "passed": true,
+      "cases": [
+        "missing",
+        "unsubmitted-roster"
+      ]
+    },
+    "abstention-withdrawal": {
+      "passed": true,
+      "cases": [
+        "abstention"
+      ]
+    },
+    "zero-weight": {
+      "passed": true,
+      "cases": [
+        "zero-weight"
+      ]
+    },
+    "all-zero-roster": {
+      "passed": true,
+      "cases": [
+        "all-zero-weights"
+      ]
+    },
+    "all-missing-positive-weight": {
+      "passed": true,
+      "cases": [
+        "no-positive-available",
+        "no-forecasts"
+      ]
+    },
+    "revision-latest": {
+      "passed": true,
+      "cases": [
+        "revision"
+      ]
+    },
+    "cutoff-inclusive": {
+      "passed": true,
+      "cases": [
+        "cutoff-equality"
+      ]
+    },
+    "late-revision-refusal": {
+      "passed": true,
+      "cases": [
+        "late-revision"
+      ]
+    },
+    "duplicate-revision": {
+      "passed": true,
+      "cases": [
+        "duplicate-revision"
+      ]
+    },
+    "parent-chain": {
+      "passed": true,
+      "cases": [
+        "broken-parent",
+        "initial-parent",
+        "revision-gap"
+      ]
+    },
+    "question-identity": {
+      "passed": true,
+      "cases": [
+        "question-hash",
+        "duplicate-event"
+      ]
+    },
+    "outcome-information-gate": {
+      "passed": true,
+      "cases": [
+        "informed-revision",
+        "outcome-before-weights"
+      ]
+    },
+    "outcome-label-isolation": {
+      "passed": true,
+      "cases": [
+        "equal",
+        "outcome-flip"
+      ]
+    },
+    "dependency-reporting": {
+      "passed": true,
+      "cases": [
+        "dependent"
+      ]
+    },
+    "llm-not-independent": {
+      "passed": true,
+      "cases": [
+        "llm"
+      ]
+    },
+    "binary-brier": {
+      "passed": true,
+      "cases": [
+        "weighted"
+      ]
+    },
+    "two-category-scale": {
+      "passed": true,
+      "cases": [
+        "weighted",
+        "decomposition"
+      ]
+    },
+    "exact-decomposition": {
+      "passed": true,
+      "cases": [
+        "decomposition"
+      ]
+    },
+    "certainty-boundaries": {
+      "passed": true,
+      "cases": [
+        "perfect",
+        "contradicted"
+      ]
+    },
+    "matched-individual-comparison": {
+      "passed": true,
+      "cases": [
+        "missing",
+        "train-test"
+      ]
+    },
+    "baseline-comparison": {
+      "passed": true,
+      "cases": [
+        "weighted"
+      ]
+    },
+    "heldout-partition": {
+      "passed": true,
+      "cases": [
+        "train-test",
+        "cross-partition-dependence"
+      ]
+    },
+    "unresolved-exclusion": {
+      "passed": true,
+      "cases": [
+        "unresolved",
+        "void",
+        "disputed"
+      ]
+    },
+    "canonical-order": {
+      "passed": true,
+      "cases": [
+        "reordered"
+      ]
+    },
+    "rights-provenance": {
+      "passed": true,
+      "cases": [
+        "unvalidated-declared",
+        "synthetic-human",
+        "source",
+        "rights",
+        "snapshot"
+      ]
+    },
+    "resource-bounds": {
+      "passed": true,
+      "cases": [
+        "forecast-cap",
+        "roster-cap",
+        "large-rational"
+      ]
+    },
+    "raw-json-markdown-replay": {
+      "passed": true,
+      "cases": [
+        "profile",
+        "reordered"
+      ]
+    }
+  },
+  "accepted": 25,
+  "rejected": 35,
+  "literal_anchors": {
+    "equal": "1/2",
+    "weighted": "13/20",
+    "normalized_weights": [
+      "1/4",
+      "3/4"
+    ],
+    "weighted_binary_brier": "49/400",
+    "weighted_two_category_brier": "49/200",
+    "equal_binary_brier": "1/4",
+    "individual_losses": [
+      "16/25",
+      "1/25"
+    ],
+    "decomposition": {
+      "binary_brier": "17/50",
+      "reliability": "9/100",
+      "resolution": "0",
+      "uncertainty": "1/4",
+      "two_category_brier": "17/25"
+    },
+    "perfect": "0",
+    "contradicted": "1"
+  },
+  "outcome_label_isolation_passed": true,
+  "canonical_order_passed": true,
+  "compatibility_51_scoring_passed": true,
+  "fixture_sha256": "c8521456eb2be17b039810ed1cc17e48e139ed55bc2a22e59dfd2529470168d3",
+  "scope": "Exact declared offline pooling/scoring and eligibility software; no independent crowd or empirical skill certification"
+}

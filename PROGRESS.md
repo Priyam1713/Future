@@ -1356,3 +1356,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-08 — #57 source/profile freeze
 - Frozen versioned binary editorial linear pool,precommitted weights,immutable forecast parent chains,cutoff-inclusive latest eligibility,abstention withdrawal and zero-denominator diagnostics. Outcome-free definition/model identities and matched held-out scoring preserve51conventions without changing51. Source/rights,resource and unsupported matrix fixed; independent fixtures follow before engine.
+
+## 2026-11-08 — #57 verified engine
+- Implemented exact versioned binary equal/declared-weight pools,immutable revision chains,cutoff/outcome-information selection,latest abstention withdrawal,missing/zero-weight accounting and matched TEST/TRAIN scoring. All31 independent families and71 new tests pass.
+- Verified1/2 equal pool,13/20 weighted pool,49/400 weighted Brier and17/50 exact decomposition; readonly numerical comparison matches51binary0–1/two-category0–2 conventions. Outcome flips change scores,not model/predictions; pre-lock forecasts and cross-partition question-dependency groups reject. No learned weights,independence or empirical skill certification. CLI/full acceptance follows; no58audit.
