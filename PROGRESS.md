@@ -1360,3 +1360,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-08 — #57 verified engine
 - Implemented exact versioned binary equal/declared-weight pools,immutable revision chains,cutoff/outcome-information selection,latest abstention withdrawal,missing/zero-weight accounting and matched TEST/TRAIN scoring. All31 independent families and71 new tests pass.
 - Verified1/2 equal pool,13/20 weighted pool,49/400 weighted Brier and17/50 exact decomposition; readonly numerical comparison matches51binary0–1/two-category0–2 conventions. Outcome flips change scores,not model/predictions; pre-lock forecasts and cross-partition question-dependency groups reject. No learned weights,independence or empirical skill certification. CLI/full acceptance follows; no58audit.
+
+## 2026-11-08 — #57 CLI and measured workloads
+- Saved128 raw CLI cases:25 accepted/39 rejected JSON-Markdown pairs. All31 families and71 new tests pass; weighted label flip preserves13/20/model while changing loss49/400 to169/400.
+- Complete small/medium/dense/missing-weighted reports measured. Dense32questions/32forecasters/2048revisions median0.0694s,fullCLI1.5642s; whole helper peak38.215MiB,not CLI-child/per-workload. Full inherited acceptance and both actual checkout replays follow.

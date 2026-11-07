@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "collective-intelligence-binary-linear-pool-v1",
+    "version": 1,
+    "sha256": "925a21d05410b91f073d50b403f17c3cf709d28194f539d5c292bf328dd8b854",
+    "catalog_sha256": "4d5b136cc95b9747c782d1c446e1a8b36d157eeeae969cf4aa2b0a90ab071d58"
+  },
+  "pool": {
+    "kind": "equal",
+    "frozen_at": "2025-01-03T00:00:00Z",
+    "weights_available_at": "2025-01-03T00:00:00Z"
+  },
+  "forecasters": [
+    {
+      "id": "fa",
+      "kind": "synthetic",
+      "dependency_group": "person-fa",
+      "weight": "1"
+    },
+    {
+      "id": "fb",
+      "kind": "synthetic",
+      "dependency_group": "person-fb",
+      "weight": "1"
+    }
+  ],
+  "questions": [
+    {
+      "definition": {
+        "id": "q1",
+        "version": 1,
+        "event_id": "event1",
+        "dependency_group": "group-event1",
+        "partition": "test",
+        "text": "Does synthetic event event1 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    }
+  ],
+  "forecasts": [
+    {
+      "question_id": "unknown",
+      "question_sha256": "f71d8ea1393c306ee9329850b211694b2e52af6f3b6818ccd328bb110f9f2b2c",
+      "forecaster": "fa",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q1",
+      "question_sha256": "f71d8ea1393c306ee9329850b211694b2e52af6f3b6818ccd328bb110f9f2b2c",
+      "forecaster": "fb",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    }
+  ],
+  "provenance": {
+    "evidence_mode": "synthetic",
+    "source_ref": "collective-intelligence-mellers-author-v1",
+    "rights": "self_authored",
+    "attribution": "Future original fictional forecast example",
+    "snapshot": "Self-authored fictional probability records; no participant data.",
+    "snapshot_sha256": "d30bdfa4057e1a57b5cdbd5f7f6573eb60755ec35e88ead04ee24a4d4818b380"
+  }
+}

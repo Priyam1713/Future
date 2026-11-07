@@ -1,0 +1,3548 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "collective-intelligence-binary-linear-pool-v1",
+    "version": 1,
+    "sha256": "925a21d05410b91f073d50b403f17c3cf709d28194f539d5c292bf328dd8b854",
+    "catalog_sha256": "4d5b136cc95b9747c782d1c446e1a8b36d157eeeae969cf4aa2b0a90ab071d58"
+  },
+  "pool": {
+    "kind": "declared_weight",
+    "frozen_at": "2025-01-03T00:00:00Z",
+    "weights_available_at": "2025-01-03T00:00:00Z"
+  },
+  "forecasters": [
+    {
+      "id": "f0",
+      "kind": "synthetic",
+      "dependency_group": "g0",
+      "weight": "0"
+    },
+    {
+      "id": "f1",
+      "kind": "synthetic",
+      "dependency_group": "g0",
+      "weight": "2"
+    },
+    {
+      "id": "f2",
+      "kind": "synthetic",
+      "dependency_group": "g0",
+      "weight": "3"
+    },
+    {
+      "id": "f3",
+      "kind": "synthetic",
+      "dependency_group": "g0",
+      "weight": "0"
+    },
+    {
+      "id": "f4",
+      "kind": "synthetic",
+      "dependency_group": "g1",
+      "weight": "5"
+    },
+    {
+      "id": "f5",
+      "kind": "synthetic",
+      "dependency_group": "g1",
+      "weight": "6"
+    },
+    {
+      "id": "f6",
+      "kind": "synthetic",
+      "dependency_group": "g1",
+      "weight": "0"
+    },
+    {
+      "id": "f7",
+      "kind": "synthetic",
+      "dependency_group": "g1",
+      "weight": "8"
+    },
+    {
+      "id": "f8",
+      "kind": "synthetic",
+      "dependency_group": "g2",
+      "weight": "9"
+    },
+    {
+      "id": "f9",
+      "kind": "synthetic",
+      "dependency_group": "g2",
+      "weight": "0"
+    },
+    {
+      "id": "f10",
+      "kind": "synthetic",
+      "dependency_group": "g2",
+      "weight": "11"
+    },
+    {
+      "id": "f11",
+      "kind": "synthetic",
+      "dependency_group": "g2",
+      "weight": "12"
+    },
+    {
+      "id": "f12",
+      "kind": "synthetic",
+      "dependency_group": "g3",
+      "weight": "0"
+    },
+    {
+      "id": "f13",
+      "kind": "synthetic",
+      "dependency_group": "g3",
+      "weight": "14"
+    },
+    {
+      "id": "f14",
+      "kind": "synthetic",
+      "dependency_group": "g3",
+      "weight": "15"
+    },
+    {
+      "id": "f15",
+      "kind": "synthetic",
+      "dependency_group": "g3",
+      "weight": "0"
+    },
+    {
+      "id": "f16",
+      "kind": "synthetic",
+      "dependency_group": "g4",
+      "weight": "17"
+    },
+    {
+      "id": "f17",
+      "kind": "synthetic",
+      "dependency_group": "g4",
+      "weight": "18"
+    },
+    {
+      "id": "f18",
+      "kind": "synthetic",
+      "dependency_group": "g4",
+      "weight": "0"
+    },
+    {
+      "id": "f19",
+      "kind": "synthetic",
+      "dependency_group": "g4",
+      "weight": "20"
+    },
+    {
+      "id": "f20",
+      "kind": "synthetic",
+      "dependency_group": "g5",
+      "weight": "21"
+    },
+    {
+      "id": "f21",
+      "kind": "synthetic",
+      "dependency_group": "g5",
+      "weight": "0"
+    },
+    {
+      "id": "f22",
+      "kind": "synthetic",
+      "dependency_group": "g5",
+      "weight": "23"
+    },
+    {
+      "id": "f23",
+      "kind": "synthetic",
+      "dependency_group": "g5",
+      "weight": "24"
+    },
+    {
+      "id": "f24",
+      "kind": "synthetic",
+      "dependency_group": "g6",
+      "weight": "0"
+    },
+    {
+      "id": "f25",
+      "kind": "synthetic",
+      "dependency_group": "g6",
+      "weight": "26"
+    },
+    {
+      "id": "f26",
+      "kind": "synthetic",
+      "dependency_group": "g6",
+      "weight": "27"
+    },
+    {
+      "id": "f27",
+      "kind": "synthetic",
+      "dependency_group": "g6",
+      "weight": "0"
+    },
+    {
+      "id": "f28",
+      "kind": "synthetic",
+      "dependency_group": "g7",
+      "weight": "29"
+    },
+    {
+      "id": "f29",
+      "kind": "synthetic",
+      "dependency_group": "g7",
+      "weight": "30"
+    },
+    {
+      "id": "f30",
+      "kind": "synthetic",
+      "dependency_group": "g7",
+      "weight": "0"
+    },
+    {
+      "id": "f31",
+      "kind": "synthetic",
+      "dependency_group": "g7",
+      "weight": "32"
+    }
+  ],
+  "questions": [
+    {
+      "definition": {
+        "id": "q0",
+        "version": 1,
+        "event_id": "e0",
+        "dependency_group": "group-e0",
+        "partition": "test",
+        "text": "Does synthetic event e0 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q1",
+        "version": 1,
+        "event_id": "e1",
+        "dependency_group": "group-e1",
+        "partition": "test",
+        "text": "Does synthetic event e1 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q2",
+        "version": 1,
+        "event_id": "e2",
+        "dependency_group": "group-e2",
+        "partition": "test",
+        "text": "Does synthetic event e2 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q3",
+        "version": 1,
+        "event_id": "e3",
+        "dependency_group": "group-e3",
+        "partition": "test",
+        "text": "Does synthetic event e3 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q4",
+        "version": 1,
+        "event_id": "e4",
+        "dependency_group": "group-e4",
+        "partition": "test",
+        "text": "Does synthetic event e4 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q5",
+        "version": 1,
+        "event_id": "e5",
+        "dependency_group": "group-e5",
+        "partition": "test",
+        "text": "Does synthetic event e5 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q6",
+        "version": 1,
+        "event_id": "e6",
+        "dependency_group": "group-e6",
+        "partition": "test",
+        "text": "Does synthetic event e6 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q7",
+        "version": 1,
+        "event_id": "e7",
+        "dependency_group": "group-e7",
+        "partition": "test",
+        "text": "Does synthetic event e7 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q8",
+        "version": 1,
+        "event_id": "e8",
+        "dependency_group": "group-e8",
+        "partition": "test",
+        "text": "Does synthetic event e8 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q9",
+        "version": 1,
+        "event_id": "e9",
+        "dependency_group": "group-e9",
+        "partition": "test",
+        "text": "Does synthetic event e9 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q10",
+        "version": 1,
+        "event_id": "e10",
+        "dependency_group": "group-e10",
+        "partition": "test",
+        "text": "Does synthetic event e10 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q11",
+        "version": 1,
+        "event_id": "e11",
+        "dependency_group": "group-e11",
+        "partition": "test",
+        "text": "Does synthetic event e11 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q12",
+        "version": 1,
+        "event_id": "e12",
+        "dependency_group": "group-e12",
+        "partition": "test",
+        "text": "Does synthetic event e12 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q13",
+        "version": 1,
+        "event_id": "e13",
+        "dependency_group": "group-e13",
+        "partition": "test",
+        "text": "Does synthetic event e13 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q14",
+        "version": 1,
+        "event_id": "e14",
+        "dependency_group": "group-e14",
+        "partition": "test",
+        "text": "Does synthetic event e14 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q15",
+        "version": 1,
+        "event_id": "e15",
+        "dependency_group": "group-e15",
+        "partition": "test",
+        "text": "Does synthetic event e15 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q16",
+        "version": 1,
+        "event_id": "e16",
+        "dependency_group": "group-e16",
+        "partition": "test",
+        "text": "Does synthetic event e16 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q17",
+        "version": 1,
+        "event_id": "e17",
+        "dependency_group": "group-e17",
+        "partition": "test",
+        "text": "Does synthetic event e17 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q18",
+        "version": 1,
+        "event_id": "e18",
+        "dependency_group": "group-e18",
+        "partition": "test",
+        "text": "Does synthetic event e18 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q19",
+        "version": 1,
+        "event_id": "e19",
+        "dependency_group": "group-e19",
+        "partition": "test",
+        "text": "Does synthetic event e19 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q20",
+        "version": 1,
+        "event_id": "e20",
+        "dependency_group": "group-e20",
+        "partition": "test",
+        "text": "Does synthetic event e20 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q21",
+        "version": 1,
+        "event_id": "e21",
+        "dependency_group": "group-e21",
+        "partition": "test",
+        "text": "Does synthetic event e21 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q22",
+        "version": 1,
+        "event_id": "e22",
+        "dependency_group": "group-e22",
+        "partition": "test",
+        "text": "Does synthetic event e22 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q23",
+        "version": 1,
+        "event_id": "e23",
+        "dependency_group": "group-e23",
+        "partition": "test",
+        "text": "Does synthetic event e23 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q24",
+        "version": 1,
+        "event_id": "e24",
+        "dependency_group": "group-e24",
+        "partition": "test",
+        "text": "Does synthetic event e24 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q25",
+        "version": 1,
+        "event_id": "e25",
+        "dependency_group": "group-e25",
+        "partition": "test",
+        "text": "Does synthetic event e25 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q26",
+        "version": 1,
+        "event_id": "e26",
+        "dependency_group": "group-e26",
+        "partition": "test",
+        "text": "Does synthetic event e26 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q27",
+        "version": 1,
+        "event_id": "e27",
+        "dependency_group": "group-e27",
+        "partition": "test",
+        "text": "Does synthetic event e27 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q28",
+        "version": 1,
+        "event_id": "e28",
+        "dependency_group": "group-e28",
+        "partition": "test",
+        "text": "Does synthetic event e28 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q29",
+        "version": 1,
+        "event_id": "e29",
+        "dependency_group": "group-e29",
+        "partition": "test",
+        "text": "Does synthetic event e29 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q30",
+        "version": 1,
+        "event_id": "e30",
+        "dependency_group": "group-e30",
+        "partition": "test",
+        "text": "Does synthetic event e30 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 0,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    },
+    {
+      "definition": {
+        "id": "q31",
+        "version": 1,
+        "event_id": "e31",
+        "dependency_group": "group-e31",
+        "partition": "test",
+        "text": "Does synthetic event e31 occur?",
+        "positive_rule": "Declared synthetic outcome1",
+        "negative_rule": "Declared synthetic outcome0 at event end",
+        "clarity_confirmed": true,
+        "created_at": "2025-01-01T00:00:00Z",
+        "locked_at": "2025-01-02T00:00:00Z",
+        "cutoff": "2025-01-10T00:00:00Z",
+        "event_end": "2025-01-20T00:00:00Z"
+      },
+      "resolution": {
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2025-01-20T00:00:00Z",
+        "outcome_known_at": "2025-01-20T00:00:00Z",
+        "resolved_at": "2025-01-21T00:00:00Z"
+      }
+    }
+  ],
+  "forecasts": [
+    {
+      "question_id": "q0",
+      "question_sha256": "620bb3685b8f89cb7ee8352c82e7d20ef444c665fcad3580a665a007f5c88b73",
+      "forecaster": "f0",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q0",
+      "question_sha256": "620bb3685b8f89cb7ee8352c82e7d20ef444c665fcad3580a665a007f5c88b73",
+      "forecaster": "f4",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q0",
+      "question_sha256": "620bb3685b8f89cb7ee8352c82e7d20ef444c665fcad3580a665a007f5c88b73",
+      "forecaster": "f8",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q0",
+      "question_sha256": "620bb3685b8f89cb7ee8352c82e7d20ef444c665fcad3580a665a007f5c88b73",
+      "forecaster": "f12",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q0",
+      "question_sha256": "620bb3685b8f89cb7ee8352c82e7d20ef444c665fcad3580a665a007f5c88b73",
+      "forecaster": "f16",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q0",
+      "question_sha256": "620bb3685b8f89cb7ee8352c82e7d20ef444c665fcad3580a665a007f5c88b73",
+      "forecaster": "f20",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q0",
+      "question_sha256": "620bb3685b8f89cb7ee8352c82e7d20ef444c665fcad3580a665a007f5c88b73",
+      "forecaster": "f24",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q0",
+      "question_sha256": "620bb3685b8f89cb7ee8352c82e7d20ef444c665fcad3580a665a007f5c88b73",
+      "forecaster": "f28",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q1",
+      "question_sha256": "26991b316f571583f6eaee78191f8b3b7373039c112faefd9c43f64284830584",
+      "forecaster": "f3",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q1",
+      "question_sha256": "26991b316f571583f6eaee78191f8b3b7373039c112faefd9c43f64284830584",
+      "forecaster": "f7",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q1",
+      "question_sha256": "26991b316f571583f6eaee78191f8b3b7373039c112faefd9c43f64284830584",
+      "forecaster": "f11",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q1",
+      "question_sha256": "26991b316f571583f6eaee78191f8b3b7373039c112faefd9c43f64284830584",
+      "forecaster": "f15",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q1",
+      "question_sha256": "26991b316f571583f6eaee78191f8b3b7373039c112faefd9c43f64284830584",
+      "forecaster": "f19",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q1",
+      "question_sha256": "26991b316f571583f6eaee78191f8b3b7373039c112faefd9c43f64284830584",
+      "forecaster": "f23",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q1",
+      "question_sha256": "26991b316f571583f6eaee78191f8b3b7373039c112faefd9c43f64284830584",
+      "forecaster": "f27",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q1",
+      "question_sha256": "26991b316f571583f6eaee78191f8b3b7373039c112faefd9c43f64284830584",
+      "forecaster": "f31",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q2",
+      "question_sha256": "9de682fb20216fa584c3395222df350495f5990a09f191b23a734c631bf4496f",
+      "forecaster": "f2",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q2",
+      "question_sha256": "9de682fb20216fa584c3395222df350495f5990a09f191b23a734c631bf4496f",
+      "forecaster": "f6",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q2",
+      "question_sha256": "9de682fb20216fa584c3395222df350495f5990a09f191b23a734c631bf4496f",
+      "forecaster": "f10",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q2",
+      "question_sha256": "9de682fb20216fa584c3395222df350495f5990a09f191b23a734c631bf4496f",
+      "forecaster": "f14",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q2",
+      "question_sha256": "9de682fb20216fa584c3395222df350495f5990a09f191b23a734c631bf4496f",
+      "forecaster": "f18",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q2",
+      "question_sha256": "9de682fb20216fa584c3395222df350495f5990a09f191b23a734c631bf4496f",
+      "forecaster": "f22",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q2",
+      "question_sha256": "9de682fb20216fa584c3395222df350495f5990a09f191b23a734c631bf4496f",
+      "forecaster": "f26",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q2",
+      "question_sha256": "9de682fb20216fa584c3395222df350495f5990a09f191b23a734c631bf4496f",
+      "forecaster": "f30",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q3",
+      "question_sha256": "6d573bdbcf4d48a0fcbd7c14dc5397008c3f6d75d115a442a5b35326df197ac0",
+      "forecaster": "f1",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q3",
+      "question_sha256": "6d573bdbcf4d48a0fcbd7c14dc5397008c3f6d75d115a442a5b35326df197ac0",
+      "forecaster": "f5",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q3",
+      "question_sha256": "6d573bdbcf4d48a0fcbd7c14dc5397008c3f6d75d115a442a5b35326df197ac0",
+      "forecaster": "f9",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q3",
+      "question_sha256": "6d573bdbcf4d48a0fcbd7c14dc5397008c3f6d75d115a442a5b35326df197ac0",
+      "forecaster": "f13",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q3",
+      "question_sha256": "6d573bdbcf4d48a0fcbd7c14dc5397008c3f6d75d115a442a5b35326df197ac0",
+      "forecaster": "f17",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q3",
+      "question_sha256": "6d573bdbcf4d48a0fcbd7c14dc5397008c3f6d75d115a442a5b35326df197ac0",
+      "forecaster": "f21",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q3",
+      "question_sha256": "6d573bdbcf4d48a0fcbd7c14dc5397008c3f6d75d115a442a5b35326df197ac0",
+      "forecaster": "f25",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q3",
+      "question_sha256": "6d573bdbcf4d48a0fcbd7c14dc5397008c3f6d75d115a442a5b35326df197ac0",
+      "forecaster": "f29",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q4",
+      "question_sha256": "b7eea388a94c1ca10628c987813ff7c375cd60cf199f8a7893a59d5afaaf647c",
+      "forecaster": "f0",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q4",
+      "question_sha256": "b7eea388a94c1ca10628c987813ff7c375cd60cf199f8a7893a59d5afaaf647c",
+      "forecaster": "f4",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q4",
+      "question_sha256": "b7eea388a94c1ca10628c987813ff7c375cd60cf199f8a7893a59d5afaaf647c",
+      "forecaster": "f8",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q4",
+      "question_sha256": "b7eea388a94c1ca10628c987813ff7c375cd60cf199f8a7893a59d5afaaf647c",
+      "forecaster": "f12",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q4",
+      "question_sha256": "b7eea388a94c1ca10628c987813ff7c375cd60cf199f8a7893a59d5afaaf647c",
+      "forecaster": "f16",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q4",
+      "question_sha256": "b7eea388a94c1ca10628c987813ff7c375cd60cf199f8a7893a59d5afaaf647c",
+      "forecaster": "f20",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q4",
+      "question_sha256": "b7eea388a94c1ca10628c987813ff7c375cd60cf199f8a7893a59d5afaaf647c",
+      "forecaster": "f24",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q4",
+      "question_sha256": "b7eea388a94c1ca10628c987813ff7c375cd60cf199f8a7893a59d5afaaf647c",
+      "forecaster": "f28",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q5",
+      "question_sha256": "fabdc54b274a9dd51aaff27e8a5dfbf18885d3ee8c33987bc775449c900a3456",
+      "forecaster": "f3",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q5",
+      "question_sha256": "fabdc54b274a9dd51aaff27e8a5dfbf18885d3ee8c33987bc775449c900a3456",
+      "forecaster": "f7",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q5",
+      "question_sha256": "fabdc54b274a9dd51aaff27e8a5dfbf18885d3ee8c33987bc775449c900a3456",
+      "forecaster": "f11",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q5",
+      "question_sha256": "fabdc54b274a9dd51aaff27e8a5dfbf18885d3ee8c33987bc775449c900a3456",
+      "forecaster": "f15",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q5",
+      "question_sha256": "fabdc54b274a9dd51aaff27e8a5dfbf18885d3ee8c33987bc775449c900a3456",
+      "forecaster": "f19",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q5",
+      "question_sha256": "fabdc54b274a9dd51aaff27e8a5dfbf18885d3ee8c33987bc775449c900a3456",
+      "forecaster": "f23",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q5",
+      "question_sha256": "fabdc54b274a9dd51aaff27e8a5dfbf18885d3ee8c33987bc775449c900a3456",
+      "forecaster": "f27",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q5",
+      "question_sha256": "fabdc54b274a9dd51aaff27e8a5dfbf18885d3ee8c33987bc775449c900a3456",
+      "forecaster": "f31",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q6",
+      "question_sha256": "68928219eb39fbb5cd63650e18429115d03e2b7483cca390ef59fa30df075778",
+      "forecaster": "f2",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q6",
+      "question_sha256": "68928219eb39fbb5cd63650e18429115d03e2b7483cca390ef59fa30df075778",
+      "forecaster": "f6",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q6",
+      "question_sha256": "68928219eb39fbb5cd63650e18429115d03e2b7483cca390ef59fa30df075778",
+      "forecaster": "f10",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q6",
+      "question_sha256": "68928219eb39fbb5cd63650e18429115d03e2b7483cca390ef59fa30df075778",
+      "forecaster": "f14",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q6",
+      "question_sha256": "68928219eb39fbb5cd63650e18429115d03e2b7483cca390ef59fa30df075778",
+      "forecaster": "f18",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q6",
+      "question_sha256": "68928219eb39fbb5cd63650e18429115d03e2b7483cca390ef59fa30df075778",
+      "forecaster": "f22",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q6",
+      "question_sha256": "68928219eb39fbb5cd63650e18429115d03e2b7483cca390ef59fa30df075778",
+      "forecaster": "f26",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q6",
+      "question_sha256": "68928219eb39fbb5cd63650e18429115d03e2b7483cca390ef59fa30df075778",
+      "forecaster": "f30",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q7",
+      "question_sha256": "e800ab2833f3dd8d64c03c4ba6279f83122aff301979f7ab64a835bc47fee8cf",
+      "forecaster": "f1",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q7",
+      "question_sha256": "e800ab2833f3dd8d64c03c4ba6279f83122aff301979f7ab64a835bc47fee8cf",
+      "forecaster": "f5",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q7",
+      "question_sha256": "e800ab2833f3dd8d64c03c4ba6279f83122aff301979f7ab64a835bc47fee8cf",
+      "forecaster": "f9",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q7",
+      "question_sha256": "e800ab2833f3dd8d64c03c4ba6279f83122aff301979f7ab64a835bc47fee8cf",
+      "forecaster": "f13",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q7",
+      "question_sha256": "e800ab2833f3dd8d64c03c4ba6279f83122aff301979f7ab64a835bc47fee8cf",
+      "forecaster": "f17",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q7",
+      "question_sha256": "e800ab2833f3dd8d64c03c4ba6279f83122aff301979f7ab64a835bc47fee8cf",
+      "forecaster": "f21",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q7",
+      "question_sha256": "e800ab2833f3dd8d64c03c4ba6279f83122aff301979f7ab64a835bc47fee8cf",
+      "forecaster": "f25",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q7",
+      "question_sha256": "e800ab2833f3dd8d64c03c4ba6279f83122aff301979f7ab64a835bc47fee8cf",
+      "forecaster": "f29",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q8",
+      "question_sha256": "ce561b256f125e4eb1ee7b65de395ca59719090dde990ac6022b326f9f3d1723",
+      "forecaster": "f0",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q8",
+      "question_sha256": "ce561b256f125e4eb1ee7b65de395ca59719090dde990ac6022b326f9f3d1723",
+      "forecaster": "f4",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q8",
+      "question_sha256": "ce561b256f125e4eb1ee7b65de395ca59719090dde990ac6022b326f9f3d1723",
+      "forecaster": "f8",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q8",
+      "question_sha256": "ce561b256f125e4eb1ee7b65de395ca59719090dde990ac6022b326f9f3d1723",
+      "forecaster": "f12",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q8",
+      "question_sha256": "ce561b256f125e4eb1ee7b65de395ca59719090dde990ac6022b326f9f3d1723",
+      "forecaster": "f16",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q8",
+      "question_sha256": "ce561b256f125e4eb1ee7b65de395ca59719090dde990ac6022b326f9f3d1723",
+      "forecaster": "f20",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q8",
+      "question_sha256": "ce561b256f125e4eb1ee7b65de395ca59719090dde990ac6022b326f9f3d1723",
+      "forecaster": "f24",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q8",
+      "question_sha256": "ce561b256f125e4eb1ee7b65de395ca59719090dde990ac6022b326f9f3d1723",
+      "forecaster": "f28",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q9",
+      "question_sha256": "3dba7cd786887b612c3479b159e95bc511820fc7fa885274ec2b3328c25c5070",
+      "forecaster": "f3",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q9",
+      "question_sha256": "3dba7cd786887b612c3479b159e95bc511820fc7fa885274ec2b3328c25c5070",
+      "forecaster": "f7",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q9",
+      "question_sha256": "3dba7cd786887b612c3479b159e95bc511820fc7fa885274ec2b3328c25c5070",
+      "forecaster": "f11",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q9",
+      "question_sha256": "3dba7cd786887b612c3479b159e95bc511820fc7fa885274ec2b3328c25c5070",
+      "forecaster": "f15",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q9",
+      "question_sha256": "3dba7cd786887b612c3479b159e95bc511820fc7fa885274ec2b3328c25c5070",
+      "forecaster": "f19",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q9",
+      "question_sha256": "3dba7cd786887b612c3479b159e95bc511820fc7fa885274ec2b3328c25c5070",
+      "forecaster": "f23",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q9",
+      "question_sha256": "3dba7cd786887b612c3479b159e95bc511820fc7fa885274ec2b3328c25c5070",
+      "forecaster": "f27",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q9",
+      "question_sha256": "3dba7cd786887b612c3479b159e95bc511820fc7fa885274ec2b3328c25c5070",
+      "forecaster": "f31",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q10",
+      "question_sha256": "ed1984f4cb1d66d579b1e04f6d885b3798a7997b56eb719b898c89eb6989d43d",
+      "forecaster": "f2",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q10",
+      "question_sha256": "ed1984f4cb1d66d579b1e04f6d885b3798a7997b56eb719b898c89eb6989d43d",
+      "forecaster": "f6",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q10",
+      "question_sha256": "ed1984f4cb1d66d579b1e04f6d885b3798a7997b56eb719b898c89eb6989d43d",
+      "forecaster": "f10",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q10",
+      "question_sha256": "ed1984f4cb1d66d579b1e04f6d885b3798a7997b56eb719b898c89eb6989d43d",
+      "forecaster": "f14",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q10",
+      "question_sha256": "ed1984f4cb1d66d579b1e04f6d885b3798a7997b56eb719b898c89eb6989d43d",
+      "forecaster": "f18",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q10",
+      "question_sha256": "ed1984f4cb1d66d579b1e04f6d885b3798a7997b56eb719b898c89eb6989d43d",
+      "forecaster": "f22",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q10",
+      "question_sha256": "ed1984f4cb1d66d579b1e04f6d885b3798a7997b56eb719b898c89eb6989d43d",
+      "forecaster": "f26",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q10",
+      "question_sha256": "ed1984f4cb1d66d579b1e04f6d885b3798a7997b56eb719b898c89eb6989d43d",
+      "forecaster": "f30",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q11",
+      "question_sha256": "29819b7bc3ed6a158cdc6501e18d12d550f92f807943ea498e8ee207e94f0073",
+      "forecaster": "f1",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q11",
+      "question_sha256": "29819b7bc3ed6a158cdc6501e18d12d550f92f807943ea498e8ee207e94f0073",
+      "forecaster": "f5",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q11",
+      "question_sha256": "29819b7bc3ed6a158cdc6501e18d12d550f92f807943ea498e8ee207e94f0073",
+      "forecaster": "f9",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q11",
+      "question_sha256": "29819b7bc3ed6a158cdc6501e18d12d550f92f807943ea498e8ee207e94f0073",
+      "forecaster": "f13",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q11",
+      "question_sha256": "29819b7bc3ed6a158cdc6501e18d12d550f92f807943ea498e8ee207e94f0073",
+      "forecaster": "f17",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q11",
+      "question_sha256": "29819b7bc3ed6a158cdc6501e18d12d550f92f807943ea498e8ee207e94f0073",
+      "forecaster": "f21",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q11",
+      "question_sha256": "29819b7bc3ed6a158cdc6501e18d12d550f92f807943ea498e8ee207e94f0073",
+      "forecaster": "f25",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q11",
+      "question_sha256": "29819b7bc3ed6a158cdc6501e18d12d550f92f807943ea498e8ee207e94f0073",
+      "forecaster": "f29",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q12",
+      "question_sha256": "9f57b7ce3182855b3bc5abac425cc0e8124fedb5953a3cee9982b8aa49bf7440",
+      "forecaster": "f0",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q12",
+      "question_sha256": "9f57b7ce3182855b3bc5abac425cc0e8124fedb5953a3cee9982b8aa49bf7440",
+      "forecaster": "f4",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q12",
+      "question_sha256": "9f57b7ce3182855b3bc5abac425cc0e8124fedb5953a3cee9982b8aa49bf7440",
+      "forecaster": "f8",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q12",
+      "question_sha256": "9f57b7ce3182855b3bc5abac425cc0e8124fedb5953a3cee9982b8aa49bf7440",
+      "forecaster": "f12",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q12",
+      "question_sha256": "9f57b7ce3182855b3bc5abac425cc0e8124fedb5953a3cee9982b8aa49bf7440",
+      "forecaster": "f16",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q12",
+      "question_sha256": "9f57b7ce3182855b3bc5abac425cc0e8124fedb5953a3cee9982b8aa49bf7440",
+      "forecaster": "f20",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q12",
+      "question_sha256": "9f57b7ce3182855b3bc5abac425cc0e8124fedb5953a3cee9982b8aa49bf7440",
+      "forecaster": "f24",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q12",
+      "question_sha256": "9f57b7ce3182855b3bc5abac425cc0e8124fedb5953a3cee9982b8aa49bf7440",
+      "forecaster": "f28",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q13",
+      "question_sha256": "b8e7933dec00c2c55cc89b153c421a2f58f7da42dbe9b24230017240a1619a25",
+      "forecaster": "f3",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q13",
+      "question_sha256": "b8e7933dec00c2c55cc89b153c421a2f58f7da42dbe9b24230017240a1619a25",
+      "forecaster": "f7",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q13",
+      "question_sha256": "b8e7933dec00c2c55cc89b153c421a2f58f7da42dbe9b24230017240a1619a25",
+      "forecaster": "f11",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q13",
+      "question_sha256": "b8e7933dec00c2c55cc89b153c421a2f58f7da42dbe9b24230017240a1619a25",
+      "forecaster": "f15",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q13",
+      "question_sha256": "b8e7933dec00c2c55cc89b153c421a2f58f7da42dbe9b24230017240a1619a25",
+      "forecaster": "f19",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q13",
+      "question_sha256": "b8e7933dec00c2c55cc89b153c421a2f58f7da42dbe9b24230017240a1619a25",
+      "forecaster": "f23",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q13",
+      "question_sha256": "b8e7933dec00c2c55cc89b153c421a2f58f7da42dbe9b24230017240a1619a25",
+      "forecaster": "f27",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q13",
+      "question_sha256": "b8e7933dec00c2c55cc89b153c421a2f58f7da42dbe9b24230017240a1619a25",
+      "forecaster": "f31",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q14",
+      "question_sha256": "1f4361ef1c0b36e2c7bd56a304c3c7fde9c8fce277747bcbd008a860c94e6538",
+      "forecaster": "f2",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q14",
+      "question_sha256": "1f4361ef1c0b36e2c7bd56a304c3c7fde9c8fce277747bcbd008a860c94e6538",
+      "forecaster": "f6",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q14",
+      "question_sha256": "1f4361ef1c0b36e2c7bd56a304c3c7fde9c8fce277747bcbd008a860c94e6538",
+      "forecaster": "f10",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q14",
+      "question_sha256": "1f4361ef1c0b36e2c7bd56a304c3c7fde9c8fce277747bcbd008a860c94e6538",
+      "forecaster": "f14",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q14",
+      "question_sha256": "1f4361ef1c0b36e2c7bd56a304c3c7fde9c8fce277747bcbd008a860c94e6538",
+      "forecaster": "f18",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q14",
+      "question_sha256": "1f4361ef1c0b36e2c7bd56a304c3c7fde9c8fce277747bcbd008a860c94e6538",
+      "forecaster": "f22",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q14",
+      "question_sha256": "1f4361ef1c0b36e2c7bd56a304c3c7fde9c8fce277747bcbd008a860c94e6538",
+      "forecaster": "f26",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q14",
+      "question_sha256": "1f4361ef1c0b36e2c7bd56a304c3c7fde9c8fce277747bcbd008a860c94e6538",
+      "forecaster": "f30",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q15",
+      "question_sha256": "0d803d8a19d597f1c87e8d4dd769d00f3a464432e6a3fa4a8cab060bc5b8ddd4",
+      "forecaster": "f1",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q15",
+      "question_sha256": "0d803d8a19d597f1c87e8d4dd769d00f3a464432e6a3fa4a8cab060bc5b8ddd4",
+      "forecaster": "f5",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q15",
+      "question_sha256": "0d803d8a19d597f1c87e8d4dd769d00f3a464432e6a3fa4a8cab060bc5b8ddd4",
+      "forecaster": "f9",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q15",
+      "question_sha256": "0d803d8a19d597f1c87e8d4dd769d00f3a464432e6a3fa4a8cab060bc5b8ddd4",
+      "forecaster": "f13",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q15",
+      "question_sha256": "0d803d8a19d597f1c87e8d4dd769d00f3a464432e6a3fa4a8cab060bc5b8ddd4",
+      "forecaster": "f17",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q15",
+      "question_sha256": "0d803d8a19d597f1c87e8d4dd769d00f3a464432e6a3fa4a8cab060bc5b8ddd4",
+      "forecaster": "f21",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q15",
+      "question_sha256": "0d803d8a19d597f1c87e8d4dd769d00f3a464432e6a3fa4a8cab060bc5b8ddd4",
+      "forecaster": "f25",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q15",
+      "question_sha256": "0d803d8a19d597f1c87e8d4dd769d00f3a464432e6a3fa4a8cab060bc5b8ddd4",
+      "forecaster": "f29",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q16",
+      "question_sha256": "b2532a71efb40cb76b0c11c1b2364ce71af6dcf17ddcb2791a7815b2cc4efa79",
+      "forecaster": "f0",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q16",
+      "question_sha256": "b2532a71efb40cb76b0c11c1b2364ce71af6dcf17ddcb2791a7815b2cc4efa79",
+      "forecaster": "f4",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q16",
+      "question_sha256": "b2532a71efb40cb76b0c11c1b2364ce71af6dcf17ddcb2791a7815b2cc4efa79",
+      "forecaster": "f8",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q16",
+      "question_sha256": "b2532a71efb40cb76b0c11c1b2364ce71af6dcf17ddcb2791a7815b2cc4efa79",
+      "forecaster": "f12",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q16",
+      "question_sha256": "b2532a71efb40cb76b0c11c1b2364ce71af6dcf17ddcb2791a7815b2cc4efa79",
+      "forecaster": "f16",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q16",
+      "question_sha256": "b2532a71efb40cb76b0c11c1b2364ce71af6dcf17ddcb2791a7815b2cc4efa79",
+      "forecaster": "f20",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q16",
+      "question_sha256": "b2532a71efb40cb76b0c11c1b2364ce71af6dcf17ddcb2791a7815b2cc4efa79",
+      "forecaster": "f24",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q16",
+      "question_sha256": "b2532a71efb40cb76b0c11c1b2364ce71af6dcf17ddcb2791a7815b2cc4efa79",
+      "forecaster": "f28",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q17",
+      "question_sha256": "f4c12298f847b5fead705a8cb993ddba4c516e18433d040e3aa93f0be1c1ea84",
+      "forecaster": "f3",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q17",
+      "question_sha256": "f4c12298f847b5fead705a8cb993ddba4c516e18433d040e3aa93f0be1c1ea84",
+      "forecaster": "f7",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q17",
+      "question_sha256": "f4c12298f847b5fead705a8cb993ddba4c516e18433d040e3aa93f0be1c1ea84",
+      "forecaster": "f11",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q17",
+      "question_sha256": "f4c12298f847b5fead705a8cb993ddba4c516e18433d040e3aa93f0be1c1ea84",
+      "forecaster": "f15",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q17",
+      "question_sha256": "f4c12298f847b5fead705a8cb993ddba4c516e18433d040e3aa93f0be1c1ea84",
+      "forecaster": "f19",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q17",
+      "question_sha256": "f4c12298f847b5fead705a8cb993ddba4c516e18433d040e3aa93f0be1c1ea84",
+      "forecaster": "f23",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q17",
+      "question_sha256": "f4c12298f847b5fead705a8cb993ddba4c516e18433d040e3aa93f0be1c1ea84",
+      "forecaster": "f27",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q17",
+      "question_sha256": "f4c12298f847b5fead705a8cb993ddba4c516e18433d040e3aa93f0be1c1ea84",
+      "forecaster": "f31",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q18",
+      "question_sha256": "14fa3e389b5d10b33e09ca6dabf12c9661a4887aea0f051911a2e004a96cc1e0",
+      "forecaster": "f2",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q18",
+      "question_sha256": "14fa3e389b5d10b33e09ca6dabf12c9661a4887aea0f051911a2e004a96cc1e0",
+      "forecaster": "f6",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q18",
+      "question_sha256": "14fa3e389b5d10b33e09ca6dabf12c9661a4887aea0f051911a2e004a96cc1e0",
+      "forecaster": "f10",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q18",
+      "question_sha256": "14fa3e389b5d10b33e09ca6dabf12c9661a4887aea0f051911a2e004a96cc1e0",
+      "forecaster": "f14",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q18",
+      "question_sha256": "14fa3e389b5d10b33e09ca6dabf12c9661a4887aea0f051911a2e004a96cc1e0",
+      "forecaster": "f18",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q18",
+      "question_sha256": "14fa3e389b5d10b33e09ca6dabf12c9661a4887aea0f051911a2e004a96cc1e0",
+      "forecaster": "f22",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q18",
+      "question_sha256": "14fa3e389b5d10b33e09ca6dabf12c9661a4887aea0f051911a2e004a96cc1e0",
+      "forecaster": "f26",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q18",
+      "question_sha256": "14fa3e389b5d10b33e09ca6dabf12c9661a4887aea0f051911a2e004a96cc1e0",
+      "forecaster": "f30",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q19",
+      "question_sha256": "3eba79fa10bbbe97861471ed878a44f7326ad4af6b04b5c62420d73187478c7e",
+      "forecaster": "f1",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q19",
+      "question_sha256": "3eba79fa10bbbe97861471ed878a44f7326ad4af6b04b5c62420d73187478c7e",
+      "forecaster": "f5",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q19",
+      "question_sha256": "3eba79fa10bbbe97861471ed878a44f7326ad4af6b04b5c62420d73187478c7e",
+      "forecaster": "f9",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q19",
+      "question_sha256": "3eba79fa10bbbe97861471ed878a44f7326ad4af6b04b5c62420d73187478c7e",
+      "forecaster": "f13",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q19",
+      "question_sha256": "3eba79fa10bbbe97861471ed878a44f7326ad4af6b04b5c62420d73187478c7e",
+      "forecaster": "f17",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q19",
+      "question_sha256": "3eba79fa10bbbe97861471ed878a44f7326ad4af6b04b5c62420d73187478c7e",
+      "forecaster": "f21",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q19",
+      "question_sha256": "3eba79fa10bbbe97861471ed878a44f7326ad4af6b04b5c62420d73187478c7e",
+      "forecaster": "f25",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q19",
+      "question_sha256": "3eba79fa10bbbe97861471ed878a44f7326ad4af6b04b5c62420d73187478c7e",
+      "forecaster": "f29",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q20",
+      "question_sha256": "b3b8280a7de68f0a48355421254a03a169e37f04a9fd5f1f75b091be78c99ca7",
+      "forecaster": "f0",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "9/10"
+    },
+    {
+      "question_id": "q20",
+      "question_sha256": "b3b8280a7de68f0a48355421254a03a169e37f04a9fd5f1f75b091be78c99ca7",
+      "forecaster": "f4",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q20",
+      "question_sha256": "b3b8280a7de68f0a48355421254a03a169e37f04a9fd5f1f75b091be78c99ca7",
+      "forecaster": "f8",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q20",
+      "question_sha256": "b3b8280a7de68f0a48355421254a03a169e37f04a9fd5f1f75b091be78c99ca7",
+      "forecaster": "f12",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q20",
+      "question_sha256": "b3b8280a7de68f0a48355421254a03a169e37f04a9fd5f1f75b091be78c99ca7",
+      "forecaster": "f16",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q20",
+      "question_sha256": "b3b8280a7de68f0a48355421254a03a169e37f04a9fd5f1f75b091be78c99ca7",
+      "forecaster": "f20",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q20",
+      "question_sha256": "b3b8280a7de68f0a48355421254a03a169e37f04a9fd5f1f75b091be78c99ca7",
+      "forecaster": "f24",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q20",
+      "question_sha256": "b3b8280a7de68f0a48355421254a03a169e37f04a9fd5f1f75b091be78c99ca7",
+      "forecaster": "f28",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q21",
+      "question_sha256": "fdd91450e1bcdb7358101625b889786d219a0a14fdc0f585569b89c290fa482b",
+      "forecaster": "f3",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q21",
+      "question_sha256": "fdd91450e1bcdb7358101625b889786d219a0a14fdc0f585569b89c290fa482b",
+      "forecaster": "f7",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q21",
+      "question_sha256": "fdd91450e1bcdb7358101625b889786d219a0a14fdc0f585569b89c290fa482b",
+      "forecaster": "f11",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q21",
+      "question_sha256": "fdd91450e1bcdb7358101625b889786d219a0a14fdc0f585569b89c290fa482b",
+      "forecaster": "f15",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q21",
+      "question_sha256": "fdd91450e1bcdb7358101625b889786d219a0a14fdc0f585569b89c290fa482b",
+      "forecaster": "f19",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q21",
+      "question_sha256": "fdd91450e1bcdb7358101625b889786d219a0a14fdc0f585569b89c290fa482b",
+      "forecaster": "f23",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q21",
+      "question_sha256": "fdd91450e1bcdb7358101625b889786d219a0a14fdc0f585569b89c290fa482b",
+      "forecaster": "f27",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q21",
+      "question_sha256": "fdd91450e1bcdb7358101625b889786d219a0a14fdc0f585569b89c290fa482b",
+      "forecaster": "f31",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q22",
+      "question_sha256": "f25f1761d276f1c9e8535a8e731b5ab1c3705c5b859d7780a7d31cd982f6b1d3",
+      "forecaster": "f2",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q22",
+      "question_sha256": "f25f1761d276f1c9e8535a8e731b5ab1c3705c5b859d7780a7d31cd982f6b1d3",
+      "forecaster": "f6",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q22",
+      "question_sha256": "f25f1761d276f1c9e8535a8e731b5ab1c3705c5b859d7780a7d31cd982f6b1d3",
+      "forecaster": "f10",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q22",
+      "question_sha256": "f25f1761d276f1c9e8535a8e731b5ab1c3705c5b859d7780a7d31cd982f6b1d3",
+      "forecaster": "f14",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q22",
+      "question_sha256": "f25f1761d276f1c9e8535a8e731b5ab1c3705c5b859d7780a7d31cd982f6b1d3",
+      "forecaster": "f18",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q22",
+      "question_sha256": "f25f1761d276f1c9e8535a8e731b5ab1c3705c5b859d7780a7d31cd982f6b1d3",
+      "forecaster": "f22",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q22",
+      "question_sha256": "f25f1761d276f1c9e8535a8e731b5ab1c3705c5b859d7780a7d31cd982f6b1d3",
+      "forecaster": "f26",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q22",
+      "question_sha256": "f25f1761d276f1c9e8535a8e731b5ab1c3705c5b859d7780a7d31cd982f6b1d3",
+      "forecaster": "f30",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q23",
+      "question_sha256": "666ce5974965b3ac21e47646a18cc53d82ba3825757a019f1cef60edf9ac485c",
+      "forecaster": "f1",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q23",
+      "question_sha256": "666ce5974965b3ac21e47646a18cc53d82ba3825757a019f1cef60edf9ac485c",
+      "forecaster": "f5",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q23",
+      "question_sha256": "666ce5974965b3ac21e47646a18cc53d82ba3825757a019f1cef60edf9ac485c",
+      "forecaster": "f9",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q23",
+      "question_sha256": "666ce5974965b3ac21e47646a18cc53d82ba3825757a019f1cef60edf9ac485c",
+      "forecaster": "f13",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q23",
+      "question_sha256": "666ce5974965b3ac21e47646a18cc53d82ba3825757a019f1cef60edf9ac485c",
+      "forecaster": "f17",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q23",
+      "question_sha256": "666ce5974965b3ac21e47646a18cc53d82ba3825757a019f1cef60edf9ac485c",
+      "forecaster": "f21",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q23",
+      "question_sha256": "666ce5974965b3ac21e47646a18cc53d82ba3825757a019f1cef60edf9ac485c",
+      "forecaster": "f25",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q23",
+      "question_sha256": "666ce5974965b3ac21e47646a18cc53d82ba3825757a019f1cef60edf9ac485c",
+      "forecaster": "f29",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q24",
+      "question_sha256": "97b905f0d1e299d02abd908a565d30f16d6b08c2a5caa6884d82103e59a9a52e",
+      "forecaster": "f0",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/5"
+    },
+    {
+      "question_id": "q24",
+      "question_sha256": "97b905f0d1e299d02abd908a565d30f16d6b08c2a5caa6884d82103e59a9a52e",
+      "forecaster": "f4",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q24",
+      "question_sha256": "97b905f0d1e299d02abd908a565d30f16d6b08c2a5caa6884d82103e59a9a52e",
+      "forecaster": "f8",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q24",
+      "question_sha256": "97b905f0d1e299d02abd908a565d30f16d6b08c2a5caa6884d82103e59a9a52e",
+      "forecaster": "f12",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q24",
+      "question_sha256": "97b905f0d1e299d02abd908a565d30f16d6b08c2a5caa6884d82103e59a9a52e",
+      "forecaster": "f16",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q24",
+      "question_sha256": "97b905f0d1e299d02abd908a565d30f16d6b08c2a5caa6884d82103e59a9a52e",
+      "forecaster": "f20",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q24",
+      "question_sha256": "97b905f0d1e299d02abd908a565d30f16d6b08c2a5caa6884d82103e59a9a52e",
+      "forecaster": "f24",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q24",
+      "question_sha256": "97b905f0d1e299d02abd908a565d30f16d6b08c2a5caa6884d82103e59a9a52e",
+      "forecaster": "f28",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q25",
+      "question_sha256": "cac590151381d0414002e42654aee9d701178c9021b521f25bc6ca20c631b4a7",
+      "forecaster": "f3",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q25",
+      "question_sha256": "cac590151381d0414002e42654aee9d701178c9021b521f25bc6ca20c631b4a7",
+      "forecaster": "f7",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q25",
+      "question_sha256": "cac590151381d0414002e42654aee9d701178c9021b521f25bc6ca20c631b4a7",
+      "forecaster": "f11",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q25",
+      "question_sha256": "cac590151381d0414002e42654aee9d701178c9021b521f25bc6ca20c631b4a7",
+      "forecaster": "f15",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q25",
+      "question_sha256": "cac590151381d0414002e42654aee9d701178c9021b521f25bc6ca20c631b4a7",
+      "forecaster": "f19",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q25",
+      "question_sha256": "cac590151381d0414002e42654aee9d701178c9021b521f25bc6ca20c631b4a7",
+      "forecaster": "f23",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q25",
+      "question_sha256": "cac590151381d0414002e42654aee9d701178c9021b521f25bc6ca20c631b4a7",
+      "forecaster": "f27",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q25",
+      "question_sha256": "cac590151381d0414002e42654aee9d701178c9021b521f25bc6ca20c631b4a7",
+      "forecaster": "f31",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q26",
+      "question_sha256": "b8d94eb5fc191db787d97bfb85d8a1ecf4a3a9ec1bd5c1003ad273602ed9bd4d",
+      "forecaster": "f2",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q26",
+      "question_sha256": "b8d94eb5fc191db787d97bfb85d8a1ecf4a3a9ec1bd5c1003ad273602ed9bd4d",
+      "forecaster": "f6",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q26",
+      "question_sha256": "b8d94eb5fc191db787d97bfb85d8a1ecf4a3a9ec1bd5c1003ad273602ed9bd4d",
+      "forecaster": "f10",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q26",
+      "question_sha256": "b8d94eb5fc191db787d97bfb85d8a1ecf4a3a9ec1bd5c1003ad273602ed9bd4d",
+      "forecaster": "f14",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q26",
+      "question_sha256": "b8d94eb5fc191db787d97bfb85d8a1ecf4a3a9ec1bd5c1003ad273602ed9bd4d",
+      "forecaster": "f18",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q26",
+      "question_sha256": "b8d94eb5fc191db787d97bfb85d8a1ecf4a3a9ec1bd5c1003ad273602ed9bd4d",
+      "forecaster": "f22",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q26",
+      "question_sha256": "b8d94eb5fc191db787d97bfb85d8a1ecf4a3a9ec1bd5c1003ad273602ed9bd4d",
+      "forecaster": "f26",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q26",
+      "question_sha256": "b8d94eb5fc191db787d97bfb85d8a1ecf4a3a9ec1bd5c1003ad273602ed9bd4d",
+      "forecaster": "f30",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q27",
+      "question_sha256": "d994162235660aeabbd1050ced9e9f51a19af330151b6f7de696f04ad9481716",
+      "forecaster": "f1",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q27",
+      "question_sha256": "d994162235660aeabbd1050ced9e9f51a19af330151b6f7de696f04ad9481716",
+      "forecaster": "f5",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q27",
+      "question_sha256": "d994162235660aeabbd1050ced9e9f51a19af330151b6f7de696f04ad9481716",
+      "forecaster": "f9",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q27",
+      "question_sha256": "d994162235660aeabbd1050ced9e9f51a19af330151b6f7de696f04ad9481716",
+      "forecaster": "f13",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q27",
+      "question_sha256": "d994162235660aeabbd1050ced9e9f51a19af330151b6f7de696f04ad9481716",
+      "forecaster": "f17",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q27",
+      "question_sha256": "d994162235660aeabbd1050ced9e9f51a19af330151b6f7de696f04ad9481716",
+      "forecaster": "f21",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q27",
+      "question_sha256": "d994162235660aeabbd1050ced9e9f51a19af330151b6f7de696f04ad9481716",
+      "forecaster": "f25",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q27",
+      "question_sha256": "d994162235660aeabbd1050ced9e9f51a19af330151b6f7de696f04ad9481716",
+      "forecaster": "f29",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q28",
+      "question_sha256": "0d6e64b2232e9d14a2c5b800a477ced84f18b91738420b2cc09a418d8f91b04b",
+      "forecaster": "f0",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/5"
+    },
+    {
+      "question_id": "q28",
+      "question_sha256": "0d6e64b2232e9d14a2c5b800a477ced84f18b91738420b2cc09a418d8f91b04b",
+      "forecaster": "f4",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q28",
+      "question_sha256": "0d6e64b2232e9d14a2c5b800a477ced84f18b91738420b2cc09a418d8f91b04b",
+      "forecaster": "f8",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q28",
+      "question_sha256": "0d6e64b2232e9d14a2c5b800a477ced84f18b91738420b2cc09a418d8f91b04b",
+      "forecaster": "f12",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q28",
+      "question_sha256": "0d6e64b2232e9d14a2c5b800a477ced84f18b91738420b2cc09a418d8f91b04b",
+      "forecaster": "f16",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q28",
+      "question_sha256": "0d6e64b2232e9d14a2c5b800a477ced84f18b91738420b2cc09a418d8f91b04b",
+      "forecaster": "f20",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q28",
+      "question_sha256": "0d6e64b2232e9d14a2c5b800a477ced84f18b91738420b2cc09a418d8f91b04b",
+      "forecaster": "f24",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q28",
+      "question_sha256": "0d6e64b2232e9d14a2c5b800a477ced84f18b91738420b2cc09a418d8f91b04b",
+      "forecaster": "f28",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q29",
+      "question_sha256": "4b1aa1b17c7a3599435d4fff8173bf00dcaabf5a28237c1675ee3908dae751d9",
+      "forecaster": "f3",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q29",
+      "question_sha256": "4b1aa1b17c7a3599435d4fff8173bf00dcaabf5a28237c1675ee3908dae751d9",
+      "forecaster": "f7",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q29",
+      "question_sha256": "4b1aa1b17c7a3599435d4fff8173bf00dcaabf5a28237c1675ee3908dae751d9",
+      "forecaster": "f11",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q29",
+      "question_sha256": "4b1aa1b17c7a3599435d4fff8173bf00dcaabf5a28237c1675ee3908dae751d9",
+      "forecaster": "f15",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q29",
+      "question_sha256": "4b1aa1b17c7a3599435d4fff8173bf00dcaabf5a28237c1675ee3908dae751d9",
+      "forecaster": "f19",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q29",
+      "question_sha256": "4b1aa1b17c7a3599435d4fff8173bf00dcaabf5a28237c1675ee3908dae751d9",
+      "forecaster": "f23",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q29",
+      "question_sha256": "4b1aa1b17c7a3599435d4fff8173bf00dcaabf5a28237c1675ee3908dae751d9",
+      "forecaster": "f27",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q29",
+      "question_sha256": "4b1aa1b17c7a3599435d4fff8173bf00dcaabf5a28237c1675ee3908dae751d9",
+      "forecaster": "f31",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q30",
+      "question_sha256": "e60f937a72a43c3bfa6f13697b226568ba0aa4a7959102aea7d9734183a8df2f",
+      "forecaster": "f2",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q30",
+      "question_sha256": "e60f937a72a43c3bfa6f13697b226568ba0aa4a7959102aea7d9734183a8df2f",
+      "forecaster": "f6",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q30",
+      "question_sha256": "e60f937a72a43c3bfa6f13697b226568ba0aa4a7959102aea7d9734183a8df2f",
+      "forecaster": "f10",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q30",
+      "question_sha256": "e60f937a72a43c3bfa6f13697b226568ba0aa4a7959102aea7d9734183a8df2f",
+      "forecaster": "f14",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q30",
+      "question_sha256": "e60f937a72a43c3bfa6f13697b226568ba0aa4a7959102aea7d9734183a8df2f",
+      "forecaster": "f18",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q30",
+      "question_sha256": "e60f937a72a43c3bfa6f13697b226568ba0aa4a7959102aea7d9734183a8df2f",
+      "forecaster": "f22",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q30",
+      "question_sha256": "e60f937a72a43c3bfa6f13697b226568ba0aa4a7959102aea7d9734183a8df2f",
+      "forecaster": "f26",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q30",
+      "question_sha256": "e60f937a72a43c3bfa6f13697b226568ba0aa4a7959102aea7d9734183a8df2f",
+      "forecaster": "f30",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    },
+    {
+      "question_id": "q31",
+      "question_sha256": "283a1ea839818661ac458ea47f6617d8063fcf6e28621595ea9eb967f0abe3dd",
+      "forecaster": "f1",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1"
+    },
+    {
+      "question_id": "q31",
+      "question_sha256": "283a1ea839818661ac458ea47f6617d8063fcf6e28621595ea9eb967f0abe3dd",
+      "forecaster": "f5",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "3/10"
+    },
+    {
+      "question_id": "q31",
+      "question_sha256": "283a1ea839818661ac458ea47f6617d8063fcf6e28621595ea9eb967f0abe3dd",
+      "forecaster": "f9",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "7/10"
+    },
+    {
+      "question_id": "q31",
+      "question_sha256": "283a1ea839818661ac458ea47f6617d8063fcf6e28621595ea9eb967f0abe3dd",
+      "forecaster": "f13",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "0"
+    },
+    {
+      "question_id": "q31",
+      "question_sha256": "283a1ea839818661ac458ea47f6617d8063fcf6e28621595ea9eb967f0abe3dd",
+      "forecaster": "f17",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "2/5"
+    },
+    {
+      "question_id": "q31",
+      "question_sha256": "283a1ea839818661ac458ea47f6617d8063fcf6e28621595ea9eb967f0abe3dd",
+      "forecaster": "f21",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "4/5"
+    },
+    {
+      "question_id": "q31",
+      "question_sha256": "283a1ea839818661ac458ea47f6617d8063fcf6e28621595ea9eb967f0abe3dd",
+      "forecaster": "f25",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/10"
+    },
+    {
+      "question_id": "q31",
+      "question_sha256": "283a1ea839818661ac458ea47f6617d8063fcf6e28621595ea9eb967f0abe3dd",
+      "forecaster": "f29",
+      "revision": 1,
+      "parent_sha256": null,
+      "issued_at": "2025-01-05T00:00:00Z",
+      "knowledge_at": "2025-01-04T00:00:00Z",
+      "probability": "1/2"
+    }
+  ],
+  "provenance": {
+    "evidence_mode": "synthetic",
+    "source_ref": "collective-intelligence-mellers-author-v1",
+    "rights": "self_authored",
+    "attribution": "Future original fictional forecast example",
+    "snapshot": "Self-authored fictional probability records; no participant data.",
+    "snapshot_sha256": "d30bdfa4057e1a57b5cdbd5f7f6573eb60755ec35e88ead04ee24a4d4818b380"
+  }
+}

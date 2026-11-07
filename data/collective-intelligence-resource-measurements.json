@@ -1,0 +1,95 @@
+{
+  "measured": true,
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "profile_sha256": "925a21d05410b91f073d50b403f17c3cf709d28194f539d5c292bf328dd8b854",
+  "code_sha256": "134412c37ea8122285d7bb8a95717a71d0fed29a2a62cd11b3f7c5e5a2c819ba",
+  "protocol": "Three untraced complete in-process reports; separate tracemalloc report; one complete CLI including imports/registry/serialization. Native peak is whole helper including imports,all workloads and tracing,not CLI-child/per-workload peak.",
+  "process_peak_working_set_bytes": 40071168,
+  "under_proposed_128_MiB": true,
+  "results": [
+    {
+      "id": "small",
+      "questions": 1,
+      "forecasters": 2,
+      "revisions": 2,
+      "input_sha256": "a216db23a99ade867a45236dc6b0c909afd2d6269b5eeda44394666f19b200fa",
+      "budget": {
+        "work": 192,
+        "returned_cells": 80
+      },
+      "seconds": [
+        0.001352400053292513,
+        0.0007670000195503235,
+        0.0008140001446008682
+      ],
+      "median_seconds": 0.0008140001446008682,
+      "cli_seconds": 1.054298299830407,
+      "python_traced_peak_bytes": 100243,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "medium",
+      "questions": 8,
+      "forecasters": 8,
+      "revisions": 64,
+      "input_sha256": "c258cfbe678f76a7fbd17f3e17c105df4c101c85174a31f7bac23f0a12214c60",
+      "budget": {
+        "work": 6144,
+        "returned_cells": 2560
+      },
+      "seconds": [
+        0.005523700267076492,
+        0.00552080012857914,
+        0.003583600278943777
+      ],
+      "median_seconds": 0.00552080012857914,
+      "cli_seconds": 0.675447600428015,
+      "python_traced_peak_bytes": 475403,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "dense",
+      "questions": 32,
+      "forecasters": 32,
+      "revisions": 2048,
+      "input_sha256": "7bcf4ee3a444effd664df9a0d96b7aabca5bb2cf68ecd1904c6a44c1a73d7f74",
+      "budget": {
+        "work": 163840,
+        "returned_cells": 57344
+      },
+      "seconds": [
+        0.07141169998794794,
+        0.06892970018088818,
+        0.06943290028721094
+      ],
+      "median_seconds": 0.06943290028721094,
+      "cli_seconds": 1.5641720001585782,
+      "python_traced_peak_bytes": 8971295,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "missing-weighted",
+      "questions": 32,
+      "forecasters": 32,
+      "revisions": 256,
+      "input_sha256": "7735923a1543125c95d55173db2c37b4e9504a9fdd6b4214d99268e3205db208",
+      "budget": {
+        "work": 49152,
+        "returned_cells": 28672
+      },
+      "seconds": [
+        0.03134169988334179,
+        0.030626200139522552,
+        0.03154690004885197
+      ],
+      "median_seconds": 0.03134169988334179,
+      "cli_seconds": 1.685386700090021,
+      "python_traced_peak_bytes": 2923906,
+      "under_proposed_five_seconds": true
+    }
+  ],
+  "scope": "Recorded local synthetic workloads,not universal performance or empirical forecast skill."
+}

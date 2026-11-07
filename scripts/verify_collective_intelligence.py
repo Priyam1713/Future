@@ -32,6 +32,10 @@ def convention_checks():
     base=read(f['cases']['equal']['input']);flip=read(f['cases']['outcome-flip']['input'])
     assert base['model_sha256']==flip['model_sha256'] and base['questions']['q1']['probability']==flip['questions']['q1']['probability']
     assert base['resolution_sha256']!=flip['resolution_sha256']
+    weighted_input=copy.deepcopy(f['cases']['weighted']['input']);weighted=read(weighted_input);weighted_input['questions'][0]['resolution']['outcome']=0;weighted_flip=read(weighted_input)
+    assert weighted['model_sha256']==weighted_flip['model_sha256']
+    assert weighted['questions']['q1']['probability']==weighted_flip['questions']['q1']['probability']=='13/20'
+    assert weighted['primary']['binary_brier']=='49/400' and weighted_flip['primary']['binary_brier']=='169/400'
     order=read(f['cases']['reordered']['input']);assert base['model_sha256']==order['model_sha256'] and base['split_sha256']==order['split_sha256']
 def compatibility_51():
     from future.superforecasting import aggregate,number

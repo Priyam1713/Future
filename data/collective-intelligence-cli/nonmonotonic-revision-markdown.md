@@ -1,0 +1,11 @@
+# Collective intelligence — offline binary linear pool
+
+```json
+{
+  "status": "rejected",
+  "error": "Offline collective forecast request rejected",
+  "reason": "Forecast revision times must strictly increase",
+  "result": null
+}
+```
+
