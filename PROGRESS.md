@@ -1149,3 +1149,8 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #51 forecast/update/resolution engine
 - Added hash-linked append-only actions, original/manual/Bayes version ancestry, exact odds updates and conditional likelihood inputs. Evidence IDs,underlying fact IDs andsnapshot reuse reject; subsequent likelihood updates require complete conditional history orboth-hypothesis independence with distinct groups. Assumptions remain unvalidated declarations.
 - Rejected attempts preserve payload/reason without changing accepted state. Positive occurrence andnegative nonoccurrence timing differ;resolution correction requires a visible intervening dispute. All73tests pass,including30independent Bayes anchors andsource/ancestry/chronology/dependence controls.
+
+## 2026-11-07 — #51 scoring,calibration and CLI
+- Implemented fixed-cutoff eligible-version selection, separate train/test summaries, exact binary/two-category Brier, Decimal80 natural-log losses with safe endpoint statuses, ten descriptive bins andexact identical-probability-group decomposition. Equal-slot,event-average andparticipant-average losses are separately named;no team aggregation.
+- Paired baseline uses the same selected resolved subset,including explicit excluded pairs andzero-baseline skill handling. Exact HALF_EVEN rational display handles very small positive baselines without overflowing a fixed Decimal context. Future-resolution sentinel leaves plans/priors/forecast records unchanged.
+- Added standard JSON-input superforecasting CLI for question/reference-class/create/forecast/update/resolve/attempt/score/report/reference. All116new tests pass. Full independent family verifier and saved CLI corpus follow;no readiness yet.

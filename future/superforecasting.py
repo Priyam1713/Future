@@ -61,9 +61,12 @@ def probability(v):
 def number(q,reason=None):
     if q is None:return dict(status='not_estimable',exact=None,decimal=None,reason=reason or 'empty_denominator')
     q=Q(q)
-    with localcontext() as ctx:
-        ctx.prec=80;d=(Decimal(q.numerator)/Decimal(q.denominator)).quantize(Decimal('.000000000001'),rounding=ROUND_HALF_EVEN)
-    return dict(status='finite',exact=str(q),decimal=format(d,'f'),reason=None)
+    # Exact fixed-place HALF_EVEN projection also handles very large skill ratios.
+    # Logarithms use the separately frozen Decimal80 context.
+    whole,remainder=divmod(abs(q.numerator)*10**12,q.denominator)
+    if 2*remainder>q.denominator or 2*remainder==q.denominator and whole%2:whole+=1
+    digits=str(whole).zfill(13);display=('-' if q<0 and whole else '')+digits[:-12]+'.'+digits[-12:]
+    return dict(status='finite',exact=str(q),decimal=display,reason=None)
 
 
 def source(v,book=None,not_after=None):
@@ -320,3 +323,137 @@ def append(l,kind,record,attempted_at=None,keep_rejected=False):
     if decision=='rejected' and not keep_rejected:raise ValueError(reason)
     a=dict(sequence=len(l['actions'])+1,kind=kind,at=action_at,record=copy.deepcopy(record),parent_sha256=l['actions'][-1]['sha256'] if l['actions'] else l['plan_sha256'],decision=decision,reason=reason);a['sha256']=digest(a)
     out=copy.deepcopy(l);out['actions'].append(a);replay(out);return out
+
+
+def log_value(p,y):
+    success=p if y else 1-p
+    if success==0:return None
+    with localcontext() as ctx:
+        ctx.prec=80
+        return -(Decimal(success.numerator)/Decimal(success.denominator)).ln()
+
+
+def decimal_number(v,expression=None):
+    with localcontext() as ctx:
+        ctx.prec=80;d=v.quantize(Decimal('.000000000001'),rounding=ROUND_HALF_EVEN)
+    if d==0:d=abs(d)
+    return dict(status='finite',exact=expression,decimal=format(d,'f'),reason=None)
+
+
+def log_loss(p,y):
+    p=p if isinstance(p,Q) else probability(p);integer(y,0,1);value=log_value(p,y)
+    if value is None:return dict(status='positive_infinity',exact=None,decimal=None,reason='contradicted_certain_forecast')
+    success=p if y else 1-p
+    return decimal_number(value,'0' if success==1 else '-ln('+str(success)+')')
+
+
+def eligibility(q,v,history):
+    reasons=[];recorded=at(v['recorded_at']);knowledge=at(v['knowledge_at'])
+    if recorded>at(q['cutoff']) or knowledge>at(q['cutoff']):reasons.append('after_cutoff')
+    if v['outcome_known']:reasons.append('outcome_declared_known')
+    boundaries=[at(r['record'][key]) for r in history for key in ('outcome_known_at','occurrence_at') if r['record'][key] is not None]
+    if boundaries and (recorded>=min(boundaries) or knowledge>=min(boundaries)):reasons.append('at_or_after_outcome_information')
+    return reasons
+
+
+def aggregate(rows):
+    selected=[r for r in rows if r['scored']];n=len(selected)
+    ps=[Q(r['probability']['exact']) for r in selected];ys=[r['outcome'] for r in selected];losses=[(p-y)**2 for p,y in zip(ps,ys)]
+    mean=sum(losses,Q(0))/n if n else None
+    bins=[dict(index=i,lower=str(Q(i,10)),upper=str(Q(i+1,10)),upper_inclusive=i==9,count=0,positive_count=0,mean_probability=number(None),observed_frequency=number(None),unique_events=0,dependency_groups=0) for i in range(10)]
+    for i,b in enumerate(bins):
+        entries=[(r,p,y) for r,p,y in zip(selected,ps,ys) if min(9,(10*p).numerator//(10*p).denominator)==i]
+        if entries:
+            count=len(entries);b.update(count=count,positive_count=sum(y for _,_,y in entries),mean_probability=number(sum((p for _,p,_ in entries),Q(0))/count),observed_frequency=number(Q(sum(y for _,_,y in entries),count)),unique_events=len({r['event_id'] for r,_,_ in entries}),dependency_groups=len({r['dependency_group'] for r,_,_ in entries}))
+    groups=[];rel=res=unc=None
+    if n:
+        overall=Q(sum(ys),n);rel=Q(0);res=Q(0);unc=overall*(1-overall)
+        for p in sorted(set(ps)):
+            outcomes=[y for v,y in zip(ps,ys) if v==p];count=len(outcomes);frequency=Q(sum(outcomes),count);rel+=Q(count,n)*(p-frequency)**2;res+=Q(count,n)*(frequency-overall)**2
+            groups.append(dict(probability=number(p),count=count,observed_frequency=number(frequency)))
+        if rel-res+unc!=mean:raise ValueError('Exact-category Brier decomposition failed')
+    logs=[log_value(p,y) for p,y in zip(ps,ys)];infinite=sum(v is None for v in logs)
+    if not n:logmean=number(None)
+    elif infinite:logmean=dict(status='positive_infinity',exact=None,decimal=None,reason='at_least_one_contradicted_certain_forecast')
+    else:
+        with localcontext() as ctx:
+            ctx.prec=80;logmean=decimal_number(sum(logs,Decimal(0))/n)
+    paired=[r for r in selected if r['baseline_probability'] is not None];paired_model=[Q(r['binary_brier']['exact']) for r in paired];paired_base=[(Q(r['baseline_probability'])-r['outcome'])**2 for r in paired]
+    pm=sum(paired_model,Q(0))/len(paired) if paired else None;pb=sum(paired_base,Q(0))/len(paired) if paired else None
+    groupmeans={}
+    for field in ('event_id','participant'):
+        by={}
+        for r in selected:by.setdefault(r[field],[]).append(Q(r['binary_brier']['exact']))
+        means=[sum(v,Q(0))/len(v) for v in by.values()];groupmeans[field]=dict(mean=number(sum(means,Q(0))/len(means) if means else None),groups=len(by),members=[dict(id=k,slots=len(v),binary_brier=number(sum(v,Q(0))/len(v))) for k,v in by.items()])
+    return dict(denominator=n,unique_questions=len({r['question_id'] for r in selected}),unique_events=len({r['event_id'] for r in selected}),dependency_groups=len({r['dependency_group'] for r in selected}),participants=len({r['participant'] for r in selected}),binary_brier=number(mean),two_category_sum_of_squares=number(2*mean if mean is not None else None),natural_log_loss=logmean,infinite_log_losses=infinite,calibration=bins,decomposition=dict(grouping='Exact identical probabilities;separate from coarse calibration bins',groups=groups,reliability=number(rel),resolution=number(res),uncertainty=number(unc),identity_passed=rel-res+unc==mean if n else None),baseline=dict(denominator=len(paired),paired_slot_ids=[r['forecast_id'] for r in paired],excluded_pairs=[dict(forecast_id=r['forecast_id'],reasons=r['exclusion_reasons'] or ['no_precommitted_baseline']) for r in rows if not r['scored'] or r['baseline_probability'] is None],forecast_brier_on_paired=number(pm),baseline_brier=number(pb),absolute_improvement=number(pb-pm if paired else None),relative_skill=number(1-pm/pb if paired and pb>0 else None,'zero_baseline_loss' if paired and pb==0 else 'empty_denominator')),event_average=groupmeans['event_id'],participant_average=groupmeans['participant'],team_aggregation=None)
+
+
+def evaluate(l):
+    state=replay(l);ctx=state['context'];p=l['plan'];rows=[];question_statuses=[]
+    for qid,q in ctx['questions'].items():
+        history=state['resolutions'][qid];latest=history[-1]['record'] if history else None
+        question_statuses.append(dict(question_id=qid,event_id=q['event_id'],partition=q['partition'],status=latest['status'] if latest else 'unresolved',outcome=latest['outcome'] if latest else None,resolution_history=copy.deepcopy(history)))
+    for fid,slot in ctx['slots'].items():
+        q=ctx['questions'][slot['question_id']];rh=state['resolutions'][q['id']];latest=rh[-1]['record'] if rh else None;history=[];eligible=[]
+        for v in state['forecasts'][fid]:
+            reasons=eligibility(q,v['record'],rh);history.append(dict(**copy.deepcopy(v),exclusion_reasons=reasons))
+            if not reasons:eligible.append(v)
+        chosen=eligible[-1] if eligible else None;reasons=[]
+        if chosen is None:reasons.append('no_eligible_forecast' if history else 'unsubmitted')
+        status=latest['status'] if latest else 'unresolved'
+        if status!='resolved':reasons.append(status)
+        prob=probability(chosen['record']['probability']) if chosen else None;y=latest['outcome'] if status=='resolved' else None;scored=not reasons
+        baseline=q['baseline'];training=None
+        if q['class_id'] is not None:
+            c=ctx['classes'][q['class_id']]['input'];training=dict(class_id=c['id'],class_sha256=digest(c),availability_cutoff=c['availability_cutoff'],frozen_at=c['frozen_at'],member_event_start=min((m['event_at'] for m in c['members']),default=None),member_observed_end=max((m['observed_at'] for m in c['members']),default=None))
+        rows.append(dict(forecast_id=fid,question_id=q['id'],event_id=q['event_id'],dependency_group=q['dependency_group'],partition=q['partition'],participant=slot['participant'],participant_kind=slot['participant_kind'],question_sha256=digest(q),cutoff=q['cutoff'],lead_seconds=int((at(q['window_end'])-at(q['cutoff'])).total_seconds()),versions=history,selected_version_sha256=chosen['sha256'] if chosen else None,selected_version=chosen['record']['version'] if chosen else None,probability=number(prob),status=status,outcome=y,scored=scored,primary_included=scored and q['partition']=='test',exclusion_reasons=reasons,binary_brier=number((prob-y)**2 if scored else None,'not_eligible_resolved_pair'),two_category_sum_of_squares=number(2*(prob-y)**2 if scored else None,'not_eligible_resolved_pair'),natural_log_loss=log_loss(prob,y) if scored else number(None,'not_eligible_resolved_pair'),baseline_probability=baseline['probability'] if baseline else None,baseline=copy.deepcopy(baseline),reference_training=training))
+    bypart={part:aggregate([r for r in rows if r['partition']==part]) for part in ('train','test')};primary=bypart['test'];status_counts={k:sum(r['status']==k for r in question_statuses) for k in ('resolved','unresolved','disputed','void')}
+    return dict(aggregation_policy='Equal forecast-slot weight on latest eligible fixed-cutoff resolved TEST questions;training separately summarized;not daily orquestion-standardized tournament replication',evidence_mode=p['evidence_mode'],empirical_skill_validated=False,questions=question_statuses,reference_classes=list(copy.deepcopy(ctx['classes']).values()),rows=rows,primary=primary,by_partition=bypart,denominators=dict(planned_questions=len(ctx['questions']),planned_events=len({q['event_id'] for q in ctx['questions'].values()}),planned_slots=len(rows),participants=len({s['participant'] for s in ctx['slots'].values()}),versions=sum(len(v) for v in state['forecasts'].values()),actions=len(l['actions']),rejected_attempts=sum(a['decision']=='rejected' for a in l['actions']),selected_slots=sum(r['selected_version'] is not None for r in rows),primary_scored_slots=primary['denominator'],primary_unique_events=primary['unique_events'],primary_dependency_groups=primary['dependency_groups'],question_statuses=status_counts,primary_excluded_slot_ids=[r['forecast_id'] for r in rows if not r['primary_included']]),rejected_attempts=[copy.deepcopy(a) for a in l['actions'] if a['decision']=='rejected'],limits=['Selection/availability,identity,rights,comparability andconditional independence aredeclared,not externallyattested.','Multiple participants/updates share events;counts are not effective independent sample sizes.','Calibration andscores are descriptive;synthetic validation establishes software mechanics,not human superforecasting skill.','Local owners can rewrite all hashes/history;prospective integrity requires independent anchoring.'])
+
+
+REFERENCES={
+    'workflow':dict(source='superforecasting-commandments-v1',locator='Items2–4,6–10',scope='Documentary outside-view,decomposition,updating andfeedback context;not a source-certified prose-to-probability algorithm.'),
+    'tournament':dict(source='superforecasting-mellers-author-v1',locator='Methods pp3–4,results,Note1',scope='Historical study context;two-category loss anddaily/question aggregation differ from our fixed-cutoff binary software evaluation.'),
+    'scores':dict(source='superforecasting-proper-scores-v1',locator='Sections1and3',scope='Proper scoring rewards translated into explicitly minimized squared-error/natural-log losses;correctness isnot skill validation.'),
+    'bayes':dict(source='superforecasting-bayes-v1',locator='Slides10–14,18',scope='Posterior odds=likelihood ratio*prior odds;likelihood models andindependence remain user declarations.')
+}
+
+
+def request(task,payload):
+    p=assets();return dict(schema_version=1,profile=dict(id=p['id'],sha256=PROFILE_HASH,catalog_sha256=p['source_manifest_sha256']),task=task,payload=copy.deepcopy(payload))
+
+
+def read(q,registry=None):
+    p=assets();fields(q,'request');integer(q['schema_version'],1,1);fields(q['profile'],'profile')
+    if q['profile']!=dict(id=p['id'],sha256=PROFILE_HASH,catalog_sha256=p['source_manifest_sha256']) or q['task'] not in p['tasks']:raise ValueError('Unsupported task/profile/catalog')
+    request_hash=digest(q);task=q['task'];v=q['payload'];ledger=None
+    if task=='question':result=question(v)
+    elif task=='reference-class':result=reference_class(v)
+    elif task=='create':ledger=create(v)
+    elif task in ('forecast','update','resolve'):
+        obj(v,('ledger','record'));ledger=append(v['ledger'],task,v['record'])
+    elif task=='attempt':
+        obj(v,('ledger','kind','record','attempted_at'));ledger=append(v['ledger'],v['kind'],v['record'],v['attempted_at'],True)
+    elif task in ('score','report'):ledger=copy.deepcopy(v)
+    else:
+        obj(v,('id',))
+        if v['id'] not in REFERENCES:raise ValueError('Unknown reference')
+        result=copy.deepcopy(REFERENCES[v['id']])
+    if ledger is not None:result=dict(ledger=ledger,evaluation=evaluate(ledger))
+    sources=load_input(ROOT/'knowledge/superforecasting_sources.json')
+    if registry is not None:
+        for row in sources:registry.add_source(row)
+    out=dict(status='accepted',task=task,profile=copy.deepcopy(q['profile']),request=copy.deepcopy(q),request_sha256=request_hash,source_freeze_sha256=p['source_freeze_sha256'],sources=sources,result=result,code_sha256=hashlib.sha256(Path(__file__).read_bytes().replace(b'\r\n',b'\n')).hexdigest(),limits=['Arithmetic andledger correctness are not demonstrated human expertise,geopolitical skill orhistorical tournament replication.','Book later chapters andGJP file-level rights/completeness remain unverified;no corpus acquired.','Source facts andworkflow context areseparate fromeditorial schema,cutoff,binning andreport conventions.'])
+    out['report_sha256']=digest(out);return out
+
+
+def markdown(r):
+    payload=json.dumps(r,ensure_ascii=False,indent=2,allow_nan=False);fence='`'*max(3,max((len(x) for x in re.findall(r'`+',payload)),default=0)+1)
+    lines=['# Superforecasting Workbench','','Status: '+r['status'],'']
+    if r['status']=='accepted':
+        result=r['result']
+        if 'evaluation' in result:
+            e=result['evaluation'];lines+=['Synthetic software validation or user-supplied unvalidated records;empirical skill validated: false.','', '| Slot | Selected version | Status | Binary Brier |','|---|---|---|---|']+[f"| {x['forecast_id']} | {x['selected_version']} | {x['status']} | {x['binary_brier']['exact']} |" for x in e['rows']]
+            lines+=['','Primary binary Brier: '+str(e['primary']['binary_brier']['exact']),'Primary two-category sum: '+str(e['primary']['two_category_sum_of_squares']['exact']),'Natural-log loss status: '+e['primary']['natural_log_loss']['status'],'',*e['limits'],'']
+        lines+=r['limits']+['']
+    return '\n'.join(lines+[fence+'json',payload,fence,''])
