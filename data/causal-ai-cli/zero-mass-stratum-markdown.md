@@ -1,0 +1,377 @@
+# Causal AI — finite synthetic back-door reference
+
+```json
+{
+  "status": "accepted",
+  "technique_id": 56,
+  "schema_version": 1,
+  "profile": {
+    "id": "causal-ai-finite-discrete-backdoor-v1",
+    "version": 1,
+    "sha256": "872e27c27228050ad3a6714bc7549d5c29a98406bc4fec70ddccc99d6d7ace20",
+    "catalog_sha256": "c56f7f98dc6a48fdab97587c09e04ef711ec91792f43980596d15ac766889230"
+  },
+  "request": {
+    "schema_version": 1,
+    "profile": {
+      "id": "causal-ai-finite-discrete-backdoor-v1",
+      "version": 1,
+      "sha256": "872e27c27228050ad3a6714bc7549d5c29a98406bc4fec70ddccc99d6d7ace20",
+      "catalog_sha256": "c56f7f98dc6a48fdab97587c09e04ef711ec91792f43980596d15ac766889230"
+    },
+    "nodes": [
+      {
+        "id": "Z",
+        "states": [
+          "0",
+          "1"
+        ],
+        "observed": true
+      },
+      {
+        "id": "X",
+        "states": [
+          "0",
+          "1"
+        ],
+        "observed": true
+      },
+      {
+        "id": "Y",
+        "states": [
+          "0",
+          "1"
+        ],
+        "observed": true
+      }
+    ],
+    "edges": [
+      [
+        "Z",
+        "X"
+      ],
+      [
+        "Z",
+        "Y"
+      ],
+      [
+        "X",
+        "Y"
+      ]
+    ],
+    "treatment": "X",
+    "outcome": "Y",
+    "outcome_value": "1",
+    "adjustment": [
+      "Z"
+    ],
+    "joint": [
+      {
+        "assignment": {
+          "Z": "0",
+          "X": "0",
+          "Y": "0"
+        },
+        "weight": "1/4"
+      },
+      {
+        "assignment": {
+          "Z": "0",
+          "X": "0",
+          "Y": "1"
+        },
+        "weight": "1/4"
+      },
+      {
+        "assignment": {
+          "Z": "0",
+          "X": "1",
+          "Y": "0"
+        },
+        "weight": "1/4"
+      },
+      {
+        "assignment": {
+          "Z": "0",
+          "X": "1",
+          "Y": "1"
+        },
+        "weight": "1/4"
+      },
+      {
+        "assignment": {
+          "Z": "1",
+          "X": "0",
+          "Y": "0"
+        },
+        "weight": "0"
+      },
+      {
+        "assignment": {
+          "Z": "1",
+          "X": "0",
+          "Y": "1"
+        },
+        "weight": "0"
+      },
+      {
+        "assignment": {
+          "Z": "1",
+          "X": "1",
+          "Y": "0"
+        },
+        "weight": "0"
+      },
+      {
+        "assignment": {
+          "Z": "1",
+          "X": "1",
+          "Y": "1"
+        },
+        "weight": "0"
+      }
+    ],
+    "assumptions": {
+      "causal_graph": true,
+      "consistency": true,
+      "exchangeability_under_graph": true,
+      "selection_bias": false
+    },
+    "provenance": {
+      "synthetic": true,
+      "source_ref": "causal-ai-pearl-chapter3-v1",
+      "rights": "self_authored",
+      "attribution": "Future self-authored finite structural model",
+      "snapshot": "Original finite synthetic causal table; no human data.",
+      "snapshot_sha256": "d55640589e56faad069386661c146c4f617b2c2cc1f437b000815a9e2cee8044"
+    }
+  },
+  "input_sha256": "a0bb4bcc824e86bd586093b9d39ff4882abadb812d3b35c7a1686c504673525a",
+  "model_sha256": "07228c7e29639cb36d8da58c981f73f2ebead0826806158349b089302a6fdb27",
+  "table_sha256": "a467651a9b3f6596ba70b1e017ca0869ed2b3cde037a949211c91e368fea31af",
+  "source_manifest_sha256": "c56f7f98dc6a48fdab97587c09e04ef711ec91792f43980596d15ac766889230",
+  "source_freeze_sha256": "912bf09650cae99e295227c6a8727229a8b71cdf3f77f07c386944e4af3ca66c",
+  "schema_sha256": "4bb97a0c11895326dc46d13f6008b5a61090a52d84378e37f88b3d3d40649c5a",
+  "code_sha256": "9467ac0f236fb05ada62e7fb50a0277a1dba4dc3c41721eff528fa202861c139",
+  "identification_status": "identified_under_declared_assumptions",
+  "backdoor": {
+    "valid": true,
+    "descendants_in_adjustment": [],
+    "surgery": "Remove outgoing treatment edges for back-door check; not intervention surgery"
+  },
+  "latent_nodes": [],
+  "compatibility": {
+    "status": "compatible",
+    "mismatch_count": 0,
+    "first_mismatch": null,
+    "scope": "Exact finite probability compatibility,not empirical causal truth"
+  },
+  "positivity": {
+    "passed": true,
+    "failures": [],
+    "zero_mass_strata": [
+      {
+        "Z": "1"
+      }
+    ]
+  },
+  "observational": {
+    "risks": {
+      "0": "1/2",
+      "1": "1/2"
+    },
+    "contrast_first_minus_last": "0",
+    "contrast_last_minus_first": "0",
+    "level_order": [
+      "0",
+      "1"
+    ],
+    "scope": "Association only"
+  },
+  "interventional": {
+    "risks": {
+      "0": "1/2",
+      "1": "1/2"
+    },
+    "contrast_first_minus_last": "0",
+    "contrast_last_minus_first": "0",
+    "level_order": [
+      "0",
+      "1"
+    ],
+    "scope": "Conditional on declared causal graph,consistency,exchangeability and absence of selection bias"
+  },
+  "strata": [
+    {
+      "assignment": {
+        "Z": "0"
+      },
+      "mass": "1",
+      "skipped_zero_mass": false,
+      "conditional": {
+        "0": "1/2",
+        "1": "1/2"
+      },
+      "weighted_terms": {
+        "0": "1/2",
+        "1": "1/2"
+      }
+    },
+    {
+      "assignment": {
+        "Z": "1"
+      },
+      "mass": "0",
+      "skipped_zero_mass": true,
+      "conditional": null,
+      "weighted_terms": null
+    }
+  ],
+  "budget": {
+    "joint_cells": 8,
+    "work": 576,
+    "returned_cells": 56
+  },
+  "sources": [
+    {
+      "id": "causal-ai-pearl-v1",
+      "technique_id": 56,
+      "rank": 1,
+      "author": "Judea Pearl",
+      "edition": "Causality,2nd edition;2009;DOI10.1017/CBO9780511803161;digital2013",
+      "url": "https://www.cambridge.org/core/books/causality/B0046844FAE10CBF274D4ACBDAEB5F5B",
+      "locator": "Publisher metadata/TOC; printISBN9780521895606,digital9780511803161. Full book not inspected.",
+      "ingestion": "facts_only",
+      "rights_note": "Cambridge copyright; facts only,no book body/figures reproduced.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "causal-ai-whatif-v1",
+      "technique_id": 56,
+      "rank": 2,
+      "author": "Miguel A. Hernán and James M. Robins",
+      "edition": "Causal Inference: What If;2020 citation;latest author link19August2026",
+      "url": "https://miguelhernan.org/whatifbook",
+      "locator": "Author landing page; latest11.3MB PDF exceeds web retrieval limit. Indexed author2025/Harvard2024 text supports standardization and consistency/exchangeability/positivity; full latest body not inspected.",
+      "ingestion": "facts_only",
+      "rights_note": "Free author access is not blanket redistribution license; no text,code or dataset copied.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "causal-ai-dowhy-v1",
+      "technique_id": 56,
+      "rank": 3,
+      "author": "Microsoft Research / PyWhy",
+      "edition": "DoWhy project; established2018",
+      "url": "https://www.microsoft.com/en-us/research/project/dowhy/",
+      "locator": "Original ranked project page: models,interventions and robustness to assumptions.",
+      "ingestion": "facts_only",
+      "rights_note": "Facts only; no code installed/copied; software/data rights distinct from mathematical facts.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "causal-ai-pearl-author-v1",
+      "technique_id": 56,
+      "rank": null,
+      "author": "Judea Pearl / UCLA",
+      "edition": "Causality2nd edition2009 author page",
+      "url": "https://bayes.cs.ucla.edu/BOOK-2K/",
+      "locator": "Author confirms edition,selected excerpts and errata.",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained; metadata only.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "causal-ai-pearl-chapter3-v1",
+      "technique_id": 56,
+      "rank": null,
+      "author": "Judea Pearl / UCLA",
+      "edition": "Causality chapter3 corrected June2013;42PDFpages",
+      "url": "https://web.cs.ucla.edu/~kaoru/CAUSALITY-REPRINTED-W-CORRECTIONS-2013/causality-ch3-june2013.pdf",
+      "locator": "Primary chapter introduction inspected; indexed3.3.1 back-door criterion excludes descendants and3.3.2 gives adjustment. Later repeated section fetches timed out; no exhaustive chapter reading claimed.",
+      "ingestion": "facts_only",
+      "rights_note": "Author-university reading witness; no chapter/figures redistributed.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "causal-ai-backdoor-doc-v1",
+      "technique_id": 56,
+      "rank": null,
+      "author": "PyWhy contributors",
+      "edition": "DoWhy0.13 Backdoor criterion documentation",
+      "url": "https://www.pywhy.org/dowhy/v0.13/user_guide/causal_tasks/estimating_causal_effects/identifying_causal_effect/backdoor.html",
+      "locator": "Identification precedes estimation; maximal,minimal,exhaustive/default search scopes. Proposed core checks supplied set only.",
+      "ingestion": "facts_only",
+      "rights_note": "Facts only; no code copied or package installed.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "causal-ai-graph-doc-v1",
+      "technique_id": 56,
+      "rank": null,
+      "author": "PyWhy contributors",
+      "edition": "DoWhy0.14 graph documentation",
+      "url": "https://www.pywhy.org/dowhy/v0.14/_modules/dowhy/graph.html",
+      "locator": "check_valid_backdoor_set removes outgoing treatment edges and checks d-separation; path colliders depend on conditioned descendants. Backdoor surgery differs from intervention removal of incoming edges.",
+      "ingestion": "facts_only",
+      "rights_note": "Read source for conventions only; original implementation/fixtures to follow; no third-party code copied.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "causal-ai-dseparation-v1",
+      "technique_id": 56,
+      "rank": null,
+      "author": "NetworkX developers",
+      "edition": "NetworkX3.7 D-Separation documentation",
+      "url": "https://networkx.org/documentation/stable/reference/algorithms/d_separation.html",
+      "locator": "Directed path collider/noncollider blocking definitions and conditioned collider-descendant examples; graphical test does not learn causal truth.",
+      "ingestion": "facts_only",
+      "rights_note": "Facts only; no NetworkX dependency or source code copied.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "causal-ai-whatif-dated-v1",
+      "technique_id": 56,
+      "rank": null,
+      "author": "Miguel A. Hernán and James M. Robins",
+      "edition": "What If author2January2025 edition,indexed chapters2/3",
+      "url": "https://miguelhernan.org/s/hernanrobins_WhatIf_2jan25.pdf",
+      "locator": "Author-indexed standardization and identification conditions. Direct PDF11.2MB exceeds web tool retrieval limit; latest author link differs.",
+      "ingestion": "facts_only",
+      "rights_note": "No PDF body or code/data bundled; explicit limited access.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    }
+  ],
+  "limitations": [
+    "Latent-graph effect estimation",
+    "General do-calculus/front-door/IV identification",
+    "Individual counterfactual uplift",
+    "Continuous/learned models",
+    "Causal graph discovery",
+    "Empirical clinical or policy claims",
+    "Supplied-set sufficient criterion failure does not prove general nonidentifiability.",
+    "Graph/table compatibility and synthetic arithmetic are not causal discovery or empirical validation.",
+    "Identities,rights and assumptions are declarations,not independently certified truth."
+  ],
+  "report_sha256": "eef2921352e52379b2b51ff14ac410807878cdc374009313a9f909a184c7b054"
+}
+```
+

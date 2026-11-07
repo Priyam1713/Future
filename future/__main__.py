@@ -318,7 +318,25 @@ def main():
     bi=sub.add_parser('brain-intention')
     bi.add_argument('input',help='Synthetic offline trial classification and leakage diagnostics JSON')
     bi.add_argument('--format',choices=['json','markdown'],default='json')
+    ca=sub.add_parser('causal-ai')
+    ca.add_argument('input',help='Synthetic finite causal DAG and exact back-door diagnostics JSON')
+    ca.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='causal-ai':
+        import sys
+        from .scrying import load_input
+        from .causal_ai import read,markdown
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8',newline='\n')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError,TypeError,KeyError,OverflowError) as error:
+                result=dict(status='rejected',error='Finite causal DAG request rejected',reason=str(error),result=None)
+                print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+        finally:registry.close()
+        return
     if args.command=='brain-intention':
         import sys
         from .scrying import load_input

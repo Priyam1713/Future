@@ -1,0 +1,99 @@
+{
+  "measured": true,
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "profile_sha256": "872e27c27228050ad3a6714bc7549d5c29a98406bc4fec70ddccc99d6d7ace20",
+  "code_sha256": "9467ac0f236fb05ada62e7fb50a0277a1dba4dc3c41721eff528fa202861c139",
+  "protocol": "Three untraced complete in-process reports; separate tracemalloc report; one complete CLI. Native peak covers whole helper,imports,all workloads and tracing,not CLI-child/per-workload peak.",
+  "process_peak_working_set_bytes": 35864576,
+  "under_proposed_128_MiB": true,
+  "results": [
+    {
+      "id": "small",
+      "nodes": 3,
+      "joint_rows": 8,
+      "input_sha256": "b1018220be2fecb190ec8ad4303a30d027c2ff8a739100d177231279759040d9",
+      "budget": {
+        "joint_cells": 8,
+        "work": 576,
+        "returned_cells": 56
+      },
+      "identification_status": "identified_under_declared_assumptions",
+      "seconds": [
+        0.001130599994212389,
+        0.0007885000668466091,
+        0.0007440000772476196
+      ],
+      "median_seconds": 0.0007885000668466091,
+      "cli_seconds": 1.5336994002573192,
+      "python_traced_peak_bytes": 49998,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "medium",
+      "nodes": 5,
+      "joint_rows": 32,
+      "input_sha256": "bde98dfb7a4b561646114f6dd90af0cc0c937fbf8d3463a19af194c6c2ef35a5",
+      "budget": {
+        "joint_cells": 32,
+        "work": 6400,
+        "returned_cells": 288
+      },
+      "identification_status": "identified_under_declared_assumptions",
+      "seconds": [
+        0.0034352997317910194,
+        0.0022456999868154526,
+        0.0017303000204265118
+      ],
+      "median_seconds": 0.0022456999868154526,
+      "cli_seconds": 0.827320100273937,
+      "python_traced_peak_bytes": 103629,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "dense",
+      "nodes": 7,
+      "joint_rows": 2187,
+      "input_sha256": "46381d5671ca6a1c95297e9694d129a739d36b4cdea0aebdce9a2dd0cd93c996",
+      "budget": {
+        "joint_cells": 2187,
+        "work": 857304,
+        "returned_cells": 21141
+      },
+      "identification_status": "identified_under_declared_assumptions",
+      "seconds": [
+        0.10626479983329773,
+        0.11116750026121736,
+        0.11577050015330315
+      ],
+      "median_seconds": 0.11116750026121736,
+      "cli_seconds": 1.436530000064522,
+      "python_traced_peak_bytes": 4128049,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "diagnostic",
+      "nodes": 3,
+      "joint_rows": 8,
+      "input_sha256": "43c51645b6141cf763bceb986db96a7fd0f2255fd729fc2ba3f5f2946d500049",
+      "budget": {
+        "joint_cells": 8,
+        "work": 576,
+        "returned_cells": 40
+      },
+      "identification_status": "unsupported_adjustment",
+      "seconds": [
+        0.0020858999341726303,
+        0.001113200094550848,
+        0.001424499787390232
+      ],
+      "median_seconds": 0.001424499787390232,
+      "cli_seconds": 1.1543164001777768,
+      "python_traced_peak_bytes": 45512,
+      "under_proposed_five_seconds": true
+    }
+  ],
+  "scope": "Local synthetic measurements only; not universal performance or empirical causal validation."
+}

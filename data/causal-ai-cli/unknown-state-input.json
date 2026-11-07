@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "causal-ai-finite-discrete-backdoor-v1",
+    "version": 1,
+    "sha256": "872e27c27228050ad3a6714bc7549d5c29a98406bc4fec70ddccc99d6d7ace20",
+    "catalog_sha256": "c56f7f98dc6a48fdab97587c09e04ef711ec91792f43980596d15ac766889230"
+  },
+  "nodes": [
+    {
+      "id": "X",
+      "states": [
+        "0",
+        "1"
+      ],
+      "observed": true
+    },
+    {
+      "id": "Y",
+      "states": [
+        "0",
+        "1"
+      ],
+      "observed": true
+    }
+  ],
+  "edges": [
+    [
+      "X",
+      "Y"
+    ]
+  ],
+  "treatment": "X",
+  "outcome": "Y",
+  "outcome_value": "1",
+  "adjustment": [],
+  "joint": [
+    {
+      "assignment": {
+        "X": "2",
+        "Y": "0"
+      },
+      "weight": "1/4"
+    },
+    {
+      "assignment": {
+        "X": "0",
+        "Y": "1"
+      },
+      "weight": "1/4"
+    },
+    {
+      "assignment": {
+        "X": "1",
+        "Y": "0"
+      },
+      "weight": "1/4"
+    },
+    {
+      "assignment": {
+        "X": "1",
+        "Y": "1"
+      },
+      "weight": "1/4"
+    }
+  ],
+  "assumptions": {
+    "causal_graph": true,
+    "consistency": true,
+    "exchangeability_under_graph": true,
+    "selection_bias": false
+  },
+  "provenance": {
+    "synthetic": true,
+    "source_ref": "causal-ai-pearl-chapter3-v1",
+    "rights": "self_authored",
+    "attribution": "Future self-authored finite structural model",
+    "snapshot": "Original finite synthetic causal table; no human data.",
+    "snapshot_sha256": "d55640589e56faad069386661c146c4f617b2c2cc1f437b000815a9e2cee8044"
+  }
+}
