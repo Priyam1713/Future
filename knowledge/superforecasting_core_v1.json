@@ -1,0 +1,677 @@
+{
+  "version": 1,
+  "technique_id": 51,
+  "name": "Superforecasting",
+  "date": "2026-11-07",
+  "status": "Core v1 Ready — Versioned Binary Forecasting, Reference-Class and Probability Update Scope",
+  "profile": "tetlock-mellers-binary-forecast-updates-v1",
+  "profile_sha256": "bd6d71ded4dbb2ddc1f60b230c46daff2b735793f6bfe4098899d49bfc6b9933",
+  "source_commit": "c0bc6aa",
+  "fixture_commit": "a1d5bb1",
+  "timestamp_fixture_commit": "c2c5462",
+  "timestamp_correction_commit": "8c5d68e",
+  "resolution_fixture_commit": "b8c1bd6",
+  "resolution_correction_commit": "292f1e1",
+  "question_reference_engine_commit": "d292994",
+  "forecast_bayes_resolution_commit": "3a78255",
+  "scoring_cli_commit": "299235f",
+  "verification_commit": "e062ca7",
+  "report_commit": "5a0938e",
+  "acceptance_commit": "cfa4564",
+  "ranked_sources_unchanged": [
+    [
+      51,
+      "Superforecasting",
+      1,
+      "Philip E. Tetlock and Dan Gardner",
+      "Superforecasting: The Art and Science of Prediction",
+      "Practitioner cognitive workflow",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      51,
+      "Superforecasting",
+      2,
+      "Barbara Mellers et al.",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Tournament evidence and scoring",
+      "https://pubmed.ncbi.nlm.nih.gov/24659192/",
+      "Peer-reviewed abstract",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows_unchanged": [
+    [
+      51,
+      "Superforecasting",
+      "Outside view",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "reference classes",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "decomposition",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "Bayesian updates",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "Brier/log scoring",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "calibration",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_catalog": "knowledge/superforecasting_sources.json",
+  "source_freeze": "knowledge/superforecasting_source_freeze_v1.json",
+  "profile_record": "knowledge/superforecasting_profile_v1.json",
+  "fixture_freeze": {
+    "version": 1,
+    "hash_convention": "SHA256 with CRLF normalized to LF;all expectations committed before production",
+    "files": {
+      "scripts/superforecasting_oracle.py": "e02edd1f2f0340c3364695b44b794686bc5cc02b23831f28846db2b7e2e50aac",
+      "tests/fixtures/superforecasting_reference_v1.json": "ae4d239f0128b4e9367e833334cab77a69074f6d5d016ff686527e4b7f3d1017"
+    }
+  },
+  "timestamp_fixture_freeze": {
+    "version": 1,
+    "hash_convention": "SHA256 with CRLF normalized to LF",
+    "files": {
+      "tests/fixtures/superforecasting_timestamp_precision_v1.json": "ad12c7365e0aa17ea5b18d4e53dc8027d575d7de49f677d33cc125f8a095b5fe"
+    }
+  },
+  "resolution_fixture_freeze": {
+    "version": 1,
+    "hash_convention": "SHA256 with CRLF normalized to LF",
+    "files": {
+      "tests/fixtures/superforecasting_resolution_transitions_v1.json": "15c110f0374641e3d5dff90eb459c20d0855c7fa4381fd50a948731e2892a9ea"
+    }
+  },
+  "source_boundary": {
+    "book": "2016 Crown paperback9780804136716;2015eBook separate. Authorized Chapter1 excerpt and separately published book-derived guidance inspected;later book chapters uninspected.",
+    "mellers": "2014Psychological Science25(5),1106–1115;daily/question tournament averaging andquestion standardization are not our fixed-cutoff score. Two-category loss is twice binary Brier.",
+    "proper_scores": "Gneiting/Raftery2007Sections1and3:positively oriented rewards;our named losses minimize negative-log/squared error. Proper algebra does not establish human skill.",
+    "bayes": "MIT18.05Spring2022slides10–14/18:posterior odds=prior odds*likelihood ratio. User likelihoods remain assumptions."
+  },
+  "rights": "Source facts andoriginal implementation/fixtures only;no book/article bodies orsourcePDFs redistributed. Later book chapters uninspected;no GJP dataset acquired orfile-level license/participant privacy completeness certified. User snapshot rights remain declarations.",
+  "schema": {
+    "request": [
+      "schema_version",
+      "profile",
+      "task",
+      "payload"
+    ],
+    "profile": [
+      "id",
+      "sha256",
+      "catalog_sha256"
+    ],
+    "plan": [
+      "study_id",
+      "created_at",
+      "evidence_mode",
+      "domain",
+      "horizon",
+      "partition",
+      "questions",
+      "classes",
+      "slots",
+      "provenance"
+    ],
+    "partition": [
+      "frozen_at",
+      "train_groups",
+      "test_groups"
+    ],
+    "question": [
+      "id",
+      "version",
+      "event_id",
+      "dependency_group",
+      "partition",
+      "text",
+      "event_definition",
+      "window_start",
+      "window_end",
+      "cutoff",
+      "created_at",
+      "locked_at",
+      "timezone",
+      "clarity_confirmed",
+      "resolution",
+      "class_id",
+      "class_sha256",
+      "baseline",
+      "reasoning",
+      "source"
+    ],
+    "resolution_policy": [
+      "source_ref",
+      "positive_rule",
+      "negative_rule",
+      "dispute_policy",
+      "void_policy"
+    ],
+    "reasoning": [
+      "base_rate_rationale",
+      "comparability",
+      "assumptions",
+      "subquestions",
+      "evidence_gaps",
+      "alternatives",
+      "dependence",
+      "disagreement"
+    ],
+    "baseline": [
+      "kind",
+      "probability",
+      "frozen_at",
+      "domain",
+      "horizon",
+      "source"
+    ],
+    "reference_class": [
+      "id",
+      "version",
+      "target_question_id",
+      "definition",
+      "eligibility_rule",
+      "frozen_at",
+      "availability_cutoff",
+      "comparability",
+      "members",
+      "source"
+    ],
+    "member": [
+      "id",
+      "event_id",
+      "dependency_group",
+      "eligibility",
+      "reason",
+      "status",
+      "outcome",
+      "event_at",
+      "observed_at",
+      "source"
+    ],
+    "slot": [
+      "forecast_id",
+      "question_id",
+      "participant",
+      "participant_kind"
+    ],
+    "source": [
+      "id",
+      "locator",
+      "rights",
+      "attribution",
+      "snapshot",
+      "snapshot_sha256",
+      "available_at"
+    ],
+    "forecast": [
+      "forecast_id",
+      "question_id",
+      "question_version",
+      "question_sha256",
+      "participant",
+      "version",
+      "parent_sha256",
+      "recorded_at",
+      "knowledge_at",
+      "probability",
+      "mode",
+      "reason",
+      "evidence",
+      "assumptions",
+      "outcome_known",
+      "bayes"
+    ],
+    "evidence": [
+      "id",
+      "dependency_group",
+      "original_fact_id",
+      "statement",
+      "source"
+    ],
+    "bayes": [
+      "kind",
+      "ratio",
+      "likelihood_h",
+      "likelihood_not_h",
+      "dependence",
+      "conditioned_on",
+      "independent_given_h",
+      "independent_given_not_h",
+      "model_status",
+      "measurement_notes",
+      "source"
+    ],
+    "resolution": [
+      "question_id",
+      "question_version",
+      "question_sha256",
+      "version",
+      "parent_sha256",
+      "status",
+      "outcome",
+      "occurrence_at",
+      "window_end",
+      "outcome_known_at",
+      "publication_at",
+      "recorded_at",
+      "reason",
+      "source"
+    ],
+    "ledger": [
+      "schema_version",
+      "profile_sha256",
+      "plan",
+      "plan_sha256",
+      "actions"
+    ],
+    "action": [
+      "sequence",
+      "kind",
+      "at",
+      "record",
+      "parent_sha256",
+      "decision",
+      "reason",
+      "sha256"
+    ]
+  },
+  "bounds": {
+    "questions": 100,
+    "classes": 100,
+    "members_per_class": 1000,
+    "total_members": 5000,
+    "slots": 500,
+    "actions": 2000,
+    "evidence_per_version": 10,
+    "text": 4000,
+    "rational_characters": 128,
+    "rational_digits": 60
+  },
+  "numeric": {
+    "input": "Plain decimal or integer/fraction strings only,up to60digits per integer;no exponent,float,bool or nonfinite values. Denominator positive.",
+    "exact": "fractions.Fraction for probabilities,ratios,rates,losses,decomposition andskill;no smoothing.",
+    "decimal_precision": 80,
+    "decimal_places": 12,
+    "rounding": "ROUND_HALF_EVEN",
+    "log": "Decimal80 natural log of exact fraction;aggregate unrounded Decimal80 losses then round display to12places. Positive infinity structured;no clipping ornonfinite JSON."
+  },
+  "display_implementation": "Rational outputs use exact integer HALF_EVEN projection to12decimal places,including very large finite relative ratios;logarithms andunrounded log aggregation useDecimal80.",
+  "chronology": {
+    "timestamps": "Timezone-aware UTC Z timestamps with seconds;question timezone UTC only. All times are declared,not externally attested.",
+    "window": "[window_start,window_end);positive occurrence withinwindow;negative occurrence_at must be null,outcome_known_at>=window_end.",
+    "freeze": "Source availability<=class availability cutoff<=class freeze<=plan creation;question source<=question lock<=plan creation<=question cutoff<=window_end;created<=locked. Partition frozen<=plan creation. Baseline frozen<=plan creation.",
+    "selection": "One latest accepted forecast by append sequence per slot,recorded_at<=cutoff,knowledge_at<=cutoff,strictly before earliest declared outcome-known time andpositive occurrence across ALL resolution history;outcome_known must be false. Late/postknown versions retained butunscored.",
+    "resolution": "Positive occurrence<=outcome_known_at<=source.available_at<=recorded_at;publication_at<=source.available_at. Negative window_end<=known<=available<=recorded;no invented occurrence. Nonresolved outcome null. Resolved-to-resolved correction requires intervening dispute/void.",
+    "actions": "Nondecreasing declared action time;accepted record recorded_at equals action at. Rejected attempts retain original payload anddeterministic reason,consume chain sequence butnever state. Source records with sameID must remain byte-identical amongaccepted records."
+  },
+  "reference_class_policy": "One member record per distinct event ID,including exclusions/ambiguous/unresolved. Exact rate uses included resolved only;denominators/statuses andallIDs preserved. No automaticprior. Classes bind targetquestion anddigest. No historical member event ID overlaps any planned event;historical groups mustbe training groups anddisjoint test groups. Representativeness remains a declaration.",
+  "forecast_policy": "Planned unique slot(question,participant);question version1/hash andparent/version checked. Original/manual revisions distinct fromBayes. Optional documentary reasoning never generates probability.",
+  "evidence_policy": "New IDs andoriginal_fact_id andsnapshot hashes per slot across ALL earlier accepted evidence. One new evidence perBayes update. First uses dependence=first;subsequent independent requires distinct groups andexplicit independence under H AND notH plusprovenance. Conditional requires conditioned_on exactly allprior evidenceIDs in insertion order;repeated facts neveraccepted. User-assumed/declared-measured labels aredeclarations,not empirical model certification.",
+  "scoring_policy": {
+    "primary": "Equal forecast-slot weight overselected resolved TEST questions;not daily/tournament score. Training/test summaries separate;all planned slots/questions visible.",
+    "brier": "Exact binary0–1 andseparately namedtwo-category0–2;no implicit mixing.",
+    "log_endpoints": "finite/correct certain zero/positive_infinity/not_estimable statuses;no NaN/Infinity literal.",
+    "calibration": "Ten bins[k/10,(k+1)/10),lastincludes1;emptymeans/frequencies null;descriptive only.",
+    "decomposition": "Group exact identical Fractions;report REL/RES/UNC andverifyidentity independently from coarse calibrationbins.",
+    "baseline": "Per-question precommitted constant or exact linked-class rate onidentical selected pairs;unpaired exclusions explicit. Relative skill onlywhenbaseline loss>0.",
+    "denominators": "Separate slots,versions,rejected attempts,questions,events,participants anddependencygroups. Event-average andparticipant-average losses separately named;no automaticteam aggregate.",
+    "heldout": "Frozen group partitions;historical reference observations/source availability beforeplan/test. Sentinel changes future resolutions cannotchange plan/priors/forecastversions/evidence/partitions."
+  },
+  "provenance": "Inline bounded source snapshots SHA256 of exact UTF8 text;explicit rights(self_authored,public_domain,permission_granted,cc_by),attribution,locator,availability. No generic copyrighted source corpus ingestion. Local owner can rewrite hashes/history;independent anchoring remains P1.",
+  "variant_matrix": {
+    "outside_view": "Documentary reasoning plus explicitly linked empirical historical rate;no automatic prose-to-probability conversion",
+    "reference_classes": "Complete frozen member/status ledger andexact unweighted rates",
+    "decomposition": "Documentary subquestions/dependence only;separate mathematical Brier exact-category decomposition supported",
+    "bayesian_updates": "Exact supplied finite likelihood ratios/conditional pairs;dependence provenance guards,not empirical model validation",
+    "brier_log_scoring": "Explicit fixed-cutoff slot-average losses andsafe endpoints;historical daily/question tournament protocol unimplemented",
+    "calibration": "Ten descriptive bins;not expert/calibration certification"
+  },
+  "worked_answers": {
+    "reference": "3/10 fromten included resolved members;empty not_estimable;0/5and5/5 observed endpoints",
+    "bayes": "prior1/5,LR1=>1/5,LR3=>3/7;conditional3/5vs1/5=>3/7;zero denominatorrejects",
+    "duplicate": "Samefact/evidence rejects rather than acceptingnaive9/13;newconditional orboth-hypothesis-independent evidence requiresprovenance",
+    "versions": "FrozenJan1original/Jan2amendment/Jan3cutoff/Jan4late example selectsJan2once",
+    "synthetic_lifecycle": "Original1/5,manual2/5,Bayes2/3,duplicateattemptrejected,late9/10 retained;selectedversion3,Brier1/9,two-category2/9,reference49/100,difference341/900,relative341/441",
+    "brier": "p9/10,y1=>1/100binaryand1/50two-category;y0=>81/100and81/50",
+    "log": "p1/2=>0.693147180560;correctcertain=>0;contradictedcertain=>positive_infinitywithnullnumeric;unresolved=>not_estimable",
+    "paired": "p[4/5,3/10],y[1,0]:13/200versus1/4;difference37/200,relative37/50",
+    "calibration": "Two p1/5,y[0,1]=>count2,mean1/5,frequency1/2;empty bins null",
+    "decomposition": "Exact-p groups[1/5,1/5,4/5,4/5],y[0,1,1,1]:Brier19/100=REL13/200-RES1/16+UNC3/16",
+    "negative_event": "No occurrence timestamp;window end,outcome-known time,source publication/availability andresolution recording separate"
+  },
+  "verification": {
+    "passed": true,
+    "families": {
+      "reference-base-rate": {
+        "passed": true,
+        "evidence": "Exact3/10,all10member identities retained",
+        "frozen_expectation": "Original10eligible resolved members,3successes =>3/10;preserveall10IDs."
+      },
+      "empty-zero-full-samples": {
+        "passed": true,
+        "evidence": "Independent empty/unresolved/0of5/5of5 boundaries",
+        "frozen_expectation": "n0=>not_estimable,not0;0/5=>0;5/5=>1;observed endpoints are not population certainty."
+      },
+      "ambiguous-membership": {
+        "passed": true,
+        "evidence": "Ambiguous/excluded members visible andnot guessed into rate",
+        "frozen_expectation": "A member with unknown eligibility is explicitly unresolved/excluded with reason;no guessed inclusion."
+      },
+      "denominator-preservation": {
+        "passed": true,
+        "evidence": "12historical records/10included;4questions/2scored;excluded lists preserved",
+        "frozen_expectation": "Universe12,included10,excluded2;unresolved members counted separately;no silent denominator drop."
+      },
+      "binary-probability": {
+        "passed": true,
+        "evidence": "Exact string bounds;bool/float/nonfinite/out-of-range rejected",
+        "frozen_expectation": "Accept exact0,1/2,1;reject bool,nonfinite,negative,>1 andunsupported fields."
+      },
+      "bayes-neutral": {
+        "passed": true,
+        "evidence": "30pre-engine odds-based rational anchors including impossible denominator andlargefiniteLR",
+        "frozen_expectation": "prior1/5,LR1=>1/5."
+      },
+      "bayes-positive": {
+        "passed": true,
+        "evidence": "30pre-engine odds-based rational anchors including impossible denominator andlargefiniteLR",
+        "frozen_expectation": "prior1/5,LR3=>3/7;equivalentconditional likelihoods3/5and1/5 yield3/7."
+      },
+      "bayes-zero": {
+        "passed": true,
+        "evidence": "30pre-engine odds-based rational anchors including impossible denominator andlargefiniteLR",
+        "frozen_expectation": "prior1/5,LR0=>0;impossible evidence underboth hypotheses rejects."
+      },
+      "certain-priors": {
+        "passed": true,
+        "evidence": "30pre-engine odds-based rational anchors including impossible denominator andlargefiniteLR",
+        "frozen_expectation": "p0withfiniteLR3=>0;p1withLR3=>1;p1withLR0=>undefined/reject."
+      },
+      "brier-loss": {
+        "passed": true,
+        "evidence": "22independent category loss examples;binary andtwicebinary scales separate",
+        "frozen_expectation": "p9/10,y1=>1/100binary,1/50two-category;p9/10,y0=>81/100and81/50."
+      },
+      "log-loss": {
+        "passed": true,
+        "evidence": "22Decimal/original endpoint anchors;no JSON nonfinite values,clipping orzero substitution",
+        "frozen_expectation": "p1/2=>ln2;correctendpoint=>0;contradictedendpoint=>taggedpositiveinfinity,notJSONInfinity orsilentclipping."
+      },
+      "dependent-evidence": {
+        "passed": true,
+        "evidence": "RepeatedIDs/facts/snapshots andsame-group independence reject;explicit conditional history andboth-hypothesis distinct-group assumptions pass",
+        "frozen_expectation": "Repeated evidenceID rejects;naive second LR3 wouldproduce9/13andmustnotbeaccepted asindependent duplicate."
+      },
+      "forecast-versions": {
+        "passed": true,
+        "evidence": "FrozenJan1/Jan2/Jan3cutoff/Jan4table selects2once;separate fullmanual/Bayes lifecycle selects3andretainslate4",
+        "frozen_expectation": "Original1/5atJan1,amend2/5atJan2,cutoffJan3=>select2/5once;Jan4revision retainedbutunscored."
+      },
+      "chronology": {
+        "passed": true,
+        "evidence": "Frozeninclusivecutoff/strictoccurrence table;post-outcome andsource/class/partitionchronology guards",
+        "frozen_expectation": "Forecastat/afterknown occurrence rejects eligibility;strict cutoff/sourceavailability/window/resolution chronology.",
+        "fractional_timestamp_boundary_passed": true
+      },
+      "unresolved-void": {
+        "passed": true,
+        "evidence": "Allplannedquestions visible;unresolved/disputed/void never mapped to0",
+        "frozen_expectation": "Resolved2,unresolved1,void1=>score denominator2;showall4statuses andexplicit exclusions.",
+        "resolution_transition_table_cases": 7
+      },
+      "calibration-bins": {
+        "passed": true,
+        "evidence": "Exactboundary22cases;count2,mean1/5,frequency1/2;empty null status",
+        "frozen_expectation": "10fixedleft-closed bins,lastincludes1;p.1=>bin1,p1=>bin9;emptybinsnull;[.2,.2]y[0,1]=>mean1/5,frequency1/2,count2."
+      },
+      "paired-baseline": {
+        "passed": true,
+        "evidence": "Matched2pairs;13/200model,1/4baseline,37/200difference,37/50relative ratio",
+        "frozen_expectation": "p[4/5,3/10],y[1,0]:binary Brier13/200;baseline1/2loss1/4;improvement37/200;skill37/50."
+      },
+      "team-dependence": {
+        "passed": true,
+        "evidence": "2slots,1event,1group;no team aggregation orindependentsample claim",
+        "frozen_expectation": "Two people forecastingoneevent=>2slots,1uniqueevent,1dependencygroup;team collaboration not2independent events."
+      },
+      "rights-source": {
+        "passed": true,
+        "evidence": "Pinnedprofile/catalog,inlineoriginal snapshot hashes/rights;no GJP corpus orcopyrighted body acquired",
+        "frozen_expectation": "Missingrights,source hash orreference-class member provenance rejects."
+      },
+      "json-markdown-replay": {
+        "passed": true,
+        "evidence": "Canonicalrequest/reporthashes andsafeUnicode/fence replay;CLI corpus separately executes accepted/rejected pairs",
+        "frozen_expectation": "Unicode,whitespace,raw-input hashes,exactsemanticreport andsafeMarkdownfence replay;rejectedcases too."
+      },
+      "resolution-decomposition": {
+        "passed": true,
+        "evidence": "Independentexactp groups:19/100=13/200-1/16+3/16;not coarsebins",
+        "frozen_expectation": "Identicalforecast groups p[.2,.2,.8,.8],y[0,1,1,1]:Brier19/100,REL13/200,RES1/16,UNC3/16;REL-RES+UNC=19/100."
+      },
+      "heldout-isolation": {
+        "passed": true,
+        "evidence": "Futurepositive/negative outcomes leavefrozenclass/plan/priors/versions/evidence/partition andselected historicalforecast unchanged",
+        "frozen_expectation": "Freezeclass/baseline beforetargettest;futureoutcome alteration cannotchangeearlier selectedforecasts orfrozen priors;splitdependent events together."
+      },
+      "negative-event-resolution-time": {
+        "passed": true,
+        "evidence": "Distinctwindowend/known/sourceavailability/resolution;nulloccurrence andpremature/fabricatedoccurrence rejection",
+        "frozen_expectation": "Binary nonoccurrence resolves only after the declared window/observation policy;report known_at and window_end separately from positive occurrence_at."
+      }
+    },
+    "bayes_anchors": 30,
+    "loss_bin_log_anchors": 22,
+    "in_process_scenarios": 77,
+    "fixture_freeze": {
+      "version": 1,
+      "hash_convention": "SHA256 with CRLF normalized to LF;all expectations committed before production",
+      "files": {
+        "scripts/superforecasting_oracle.py": "e02edd1f2f0340c3364695b44b794686bc5cc02b23831f28846db2b7e2e50aac",
+        "tests/fixtures/superforecasting_reference_v1.json": "ae4d239f0128b4e9367e833334cab77a69074f6d5d016ff686527e4b7f3d1017"
+      }
+    },
+    "timestamp_fixture_freeze": {
+      "version": 1,
+      "hash_convention": "SHA256 with CRLF normalized to LF",
+      "files": {
+        "tests/fixtures/superforecasting_timestamp_precision_v1.json": "ad12c7365e0aa17ea5b18d4e53dc8027d575d7de49f677d33cc125f8a095b5fe"
+      }
+    },
+    "resolution_fixture_freeze": {
+      "version": 1,
+      "hash_convention": "SHA256 with CRLF normalized to LF",
+      "files": {
+        "tests/fixtures/superforecasting_resolution_transitions_v1.json": "15c110f0374641e3d5dff90eb459c20d0855c7fa4381fd50a948731e2892a9ea"
+      }
+    },
+    "profile_sha256": "bd6d71ded4dbb2ddc1f60b230c46daff2b735793f6bfe4098899d49bfc6b9933",
+    "code_sha256": "e4c81aa68825ada8baebab8c8e725e78a562303786ed44a7cec6b5328ec990c1",
+    "empirical_skill_validated": false
+  },
+  "acceptance": {
+    "criteria": {
+      "Precise user-confirmed immutable binary question definitions": true,
+      "Exact reference membership andbase-rate denominators": true,
+      "Independent rational Bayesian update anchors": true,
+      "Evidence IDs/facts/snapshots andconditional-dependence guards": true,
+      "Distinct original/manual/Bayesian versions": true,
+      "Outcome-independent predeclared selection rule": true,
+      "Positive occurrence andnegative window chronology": true,
+      "Explicit exact binary/two-category Brier normalization": true,
+      "Safe natural-log endpoints anddisplay": true,
+      "Descriptive calibration andmatched baseline comparisons": true,
+      "Complete rejected/unresolved histories": true,
+      "All23independent families": true,
+      "Exact offline JSON/Markdown replay": true,
+      "Full inherited acceptance andbyte preservation": true,
+      "No synthetic arithmetic result advertised as empirical superforecasting skill": true
+    },
+    "tests": 1719,
+    "inherited_tests": 1598,
+    "new_tests": 121,
+    "cli_cases": 2369,
+    "inherited_cli_cases": 2207,
+    "new_cli_cases": 162,
+    "independent_verifiers": 30,
+    "inherited_verifiers": 29,
+    "protected_files": 3223,
+    "changed_protected_files": [],
+    "allowed_existing_edits": [
+      "PROGRESS.md",
+      "README.md",
+      "future/__main__.py",
+      "knowledge/gaps.json"
+    ],
+    "registry": {
+      "references_checked_twice": 502,
+      "unique": 347,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    },
+    "record": "data/superforecasting-acceptance-checks.json",
+    "refinement_recheck": "data/superforecasting-refinement-recheck.json"
+  },
+  "replay": {
+    "accepted_pairs": 44,
+    "rejected_pairs": 37,
+    "manifest": "data/superforecasting-cli-replay.json",
+    "checkout": {
+      "passed": true,
+      "exports": [
+        {
+          "autocrlf": "true",
+          "raw_corpus_files": 244,
+          "normalized_code_fixture_files": 5,
+          "passed": true
+        },
+        {
+          "autocrlf": "false",
+          "raw_corpus_files": 244,
+          "normalized_code_fixture_files": 5,
+          "passed": true
+        }
+      ]
+    },
+    "examples": [
+      "data/superforecasting-cli/lifecycle-report-input.json",
+      "data/superforecasting-cli/lifecycle-report-markdown.md",
+      "data/superforecasting-cli/reject-duplicate-evidence-input.json",
+      "data/superforecasting-cli/reject-duplicate-evidence-json.json",
+      "data/superforecasting-cli/unicode-whitespace-input.json"
+    ]
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Immutable binary question/class plans",
+      "Exact empirical rates/manual/Bayes revisions",
+      "Explicit evidence guards andresolution history",
+      "Fixed-cutoff Brier/log/calibration/decomposition andpairedbaseline",
+      "Synthetic/user-supplied-unvalidated ledger replay"
+    ],
+    "experimental_unimplemented": [
+      "Empirical GJP validation",
+      "Automatic likelihood estimation",
+      "Team aggregation",
+      "Multinomial/dailytournament replication",
+      "Dependency-aware inference/external timestamps"
+    ],
+    "unsupported": [
+      "Guaranteed skill/expertise",
+      "Psychic/quantum mechanism",
+      "Fabricated real data/LRs",
+      "Unlicensed participant corpus",
+      "Synthetic results as human skill"
+    ]
+  },
+  "statistical_limits": [
+    "Pure arithmetic anddeclared ledger integrity are not demonstrated human expertise,geopolitical forecasting skill orpublished tournament replication.",
+    "Source ownership,semantic clarity,availability,independence,measurement status,comparability andexternal completeness remain declarations.",
+    "Finite likelihood ratio inputs only;zero complement likelihood/infinite ratio unsupported. Question/class schema version1only;material redefinitions needdistinctquestionidentity.",
+    "Selection isfixed-cutoff perparticipant/question;dailycarry-forward andquestion-standardized tournament scores unimplemented.",
+    "Calibration andloss ratios are descriptive;repeated events/forecasters aredependent;no effective independent N orsuperiority p-values certified.",
+    "Local owner can rewrite all hashes;independent prospective anchoring isnot provided.",
+    "Synthetic future-outcome sentinels establish software isolation,not historical as-ofdata availability."
+  ],
+  "backlog": {
+    "P1": [
+      "Legitimate later-book chapter access andexact edition locators",
+      "Primary GJP metadata/codebooks/file rights/participant privacy andcomplete historical revisions",
+      "Verified empirical group/timeheldout protocol",
+      "Stronger conditional evidence/dependence verification",
+      "Additional scoring conventions anddaily/tournament comparison",
+      "Calibration uncertainty andselection-bias analysis",
+      "Independently anchored prospective timestamps"
+    ],
+    "P2": [
+      "Multinomial forecasting",
+      "Predeclared team/source-verified ensemble aggregation",
+      "Dailycarry-forward/published tournament replication",
+      "Dependence-aware uncertainty/skill comparison",
+      "Larger genuine heldout evaluation",
+      "Optional accessible interface after numerical maturity"
+    ]
+  },
+  "next": "Onlyafterthisclosureispushedandcleanmain0/0:Technique52Psychohistory resource audit only. No52engine/profile/CLI/runtime andno53research."
+}

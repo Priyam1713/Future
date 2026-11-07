@@ -1187,3 +1187,9 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Passed1719tests (1598inherited+121new),2369CLI cases (2207inherited+162new),30independent verifiers (29inherited+1new). All23families plusindependent timestamp/transition addenda and44accepted/37rejected exact report pairs pass.
 - All3223pre-engine protected bytes unchanged. Registry idempotence,source/rights integrity,strict JSON includingtwo inherited malformed rejection fixtures,dependency audit,pip check,diff check and60IDs/54retained/six exclusions pass. Both Git EOL export commitments pass.
 - Full unit suite rerun after corrections;allaffected51CLI/verifier commands rerun.73unchanged inherited command receipts retained with explicit recheck provenance indata/superforecasting-refinement-recheck.json. Final evidence:data/superforecasting-acceptance-checks.json.
+
+## 2026-11-07 — #51 Core v1 closure
+- Accepted **Core v1 Ready — Versioned Binary Forecasting, Reference-Class and Probability Update Scope** under tetlock-mellers-binary-forecast-updates-v1. All15criteria and23independent families pass;exact rates/Bayes/Brier/log endpoints,version/knowledge timing,evidence dependencies,decomposition andpaired denominators verified.
+- Full1719tests,2369CLI cases and30independent verifiers pass;all3223protected pre-engine files unchanged. Saved44accepted/37rejected JSON/Markdown pairs andboth checkout EOL exports pass. No empirical human skill,tournament reproduction orGJP corpus rights certification.
+- Source:c0bc6aa;fixtures:a1d5bb1;question/class:d292994;forecast/Bayes/resolution:3a78255;scoring/CLI:299235f;verification:e062ca7;reports:5a0938e;acceptance:cfa4564. Detailed matrix,statistical limits andP1/P2 frozen inknowledge/superforecasting_core_v1.json.
+- Nextonlyafterclosurepushandclean0/0main:Technique52Psychohistory resource audit only. No52implementation andno53research.
