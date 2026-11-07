@@ -1388,3 +1388,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-08 — #58 CLI and measured workloads
 - Saved134 raw CLI cases:33 accepted/34 rejected JSON-Markdown pairs. All31families,145numericalvectors,200-term ln2reference and75newtests pass. Complete small/medium/dense/settlement reports measured;dense512actions/256trades median0.1219s,fullCLI1.5394s. Whole helper peak41.898MiB,not CLI-child/per-workload. Bothactualcheckout replays andfull inherited acceptance follow.
+
+## 2026-11-08 — #58 full units and actual checkout verification
+- Full2219 unit tests pass (2144 inherited+75 new). Both indexed core.autocrlf=false/true exports preserve202 raw corpus files and3 normalized commitments,replaying134 actual CLI outputs each without newline normalization. Full inherited CLI/verifier sweep remains in progress; no59auditstarted.
