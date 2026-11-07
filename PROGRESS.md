@@ -1341,3 +1341,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-08 — #56 full units and actual checkout verification
 - Refreshed full2073 tests pass (2023 inherited+50 new). Both indexed core.autocrlf=false/true exports preserve139 raw corpus files and3 normalized commitments,replaying92 actual CLI outputs each without newline normalization. Full inherited CLI/verifier sweep still running.
 - Independent read-only stdlib XLSX extraction confirms all6 original workbook sheets match frozen inventory cell-for-cell and SHA256,including60 IDs and six exclusions. Added as an acceptance gate without installing the absent openpyxl package. Expanded3072 graph checks preserve the original oracle/fixtures and production engine.
+
+## 2026-11-08 — #56 full acceptance passed
+- Passed2073tests (2023 inherited+50 new),2985CLIcases (2893 inherited+92 new),35independentverifiers,all22families,256frozen/3072expanded graph configurations and80structural cases. Expanded sweep includes the original endpoint configurations; not3328distinct configurations. Both checkout modes replay92outputs each.
+- All4419protected files unchanged; registry,strictJSON,workbook cell-for-cell/SHA,inventory/exclusions,dependency,pip anddiff pass. Refreshed final aggregation from completed commands after in-flight harness retained earlier2072 expectation; latest2073unit receipt and workbook gate used. No failed engine check treated as passing. Closure follows before57audit.

@@ -1,0 +1,1700 @@
+{
+  "passed": true,
+  "complete": true,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "returncode": 0,
+      "seconds": 171.11,
+      "stdout": "",
+      "stderr": ".................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\skyfield\\searchlib.py:224: DeprecationWarning: Setting the dtype on a NumPy array has been deprecated in NumPy 2.5.\r\nInstead of changing the dtype on an array x, create a new array with x.view(new_dtype)\r\n  y.dtype = int8\r\n........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\r\n----------------------------------------------------------------------\r\nRan 2073 tests in 169.203s\r\n\r\nOK\r\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\r\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aeromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 96.375,
+      "stdout": "72 Aeromancy CLI cases passed;21 JSON/21 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_akashic_core"
+      ],
+      "returncode": 0,
+      "seconds": 36.829,
+      "stdout": "28 Akashic CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_astrocartography_core"
+      ],
+      "returncode": 0,
+      "seconds": 15.641,
+      "stdout": "12 Astrocartography CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aura_core"
+      ],
+      "returncode": 0,
+      "seconds": 18.735,
+      "stdout": "14 Aura CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_automatic_writing_core"
+      ],
+      "returncode": 0,
+      "seconds": 31.734,
+      "stdout": "24 Automatic Writing CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_bibliomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 111.844,
+      "stdout": "80 Bibliomancy CLI cases passed;16 JSON/16 Markdown saved replays;10 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_chinese_core"
+      ],
+      "returncode": 0,
+      "seconds": 37.421,
+      "stdout": "15 Chinese CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_cleromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 117.063,
+      "stdout": "80 Cleromancy CLI cases passed;16 valid JSON/Markdown saved replays and16 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_coffee_core"
+      ],
+      "returncode": 0,
+      "seconds": 84.641,
+      "stdout": "54 Coffee CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_dream_core"
+      ],
+      "returncode": 0,
+      "seconds": 46.829,
+      "stdout": "30 Dream CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_face_reading_core"
+      ],
+      "returncode": 0,
+      "seconds": 22.828,
+      "stdout": "12 Face Reference CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_geomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 77.781,
+      "stdout": "55 Geomancy CLI cases passed; 13 JSON/13 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_graphology_core"
+      ],
+      "returncode": 0,
+      "seconds": 21.297,
+      "stdout": "14 Graphology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_horary"
+      ],
+      "returncode": 0,
+      "seconds": 8.391,
+      "stdout": "5 Horary CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_hydromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 84.281,
+      "stdout": "63 Hydromancy CLI cases passed;18 JSON/18 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iching_core"
+      ],
+      "returncode": 0,
+      "seconds": 39.937,
+      "stdout": "30 I Ching CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iridology_core"
+      ],
+      "returncode": 0,
+      "seconds": 17.546,
+      "stdout": "14 Iridology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_lithomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 84.719,
+      "stdout": "64 Lithomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mirror_core"
+      ],
+      "returncode": 0,
+      "seconds": 38.75,
+      "stdout": "28 Mirror CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_moleosophy_core"
+      ],
+      "returncode": 0,
+      "seconds": 17.219,
+      "stdout": "12 Moleosophy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mundane_core"
+      ],
+      "returncode": 0,
+      "seconds": 17.046,
+      "stdout": "12 Mundane CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_numerology_core"
+      ],
+      "returncode": 0,
+      "seconds": 4.156,
+      "stdout": "4 Numerology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_oracle_core"
+      ],
+      "returncode": 0,
+      "seconds": 25.266,
+      "stdout": "20 Oracle CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_osteomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 86.313,
+      "stdout": "64 Osteomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_palmistry_core"
+      ],
+      "returncode": 0,
+      "seconds": 12.391,
+      "stdout": "10 Palmistry CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pendulum_core"
+      ],
+      "returncode": 0,
+      "seconds": 39.25,
+      "stdout": "28 Pendulum CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_phrenology_core"
+      ],
+      "returncode": 0,
+      "seconds": 17.25,
+      "stdout": "12 Phrenology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_podomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 17.953,
+      "stdout": "12 Podomancy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pyromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 83.203,
+      "stdout": "60 Pyromancy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_runes_core"
+      ],
+      "returncode": 0,
+      "seconds": 32.75,
+      "stdout": "24 Rune CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_scrying_core"
+      ],
+      "returncode": 0,
+      "seconds": 39.781,
+      "stdout": "28 Scrying CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tarot_core"
+      ],
+      "returncode": 0,
+      "seconds": 29.266,
+      "stdout": "22 Tarot CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tasseography_core"
+      ],
+      "returncode": 0,
+      "seconds": 46.328,
+      "stdout": "34 Tasseography CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_vedic_core"
+      ],
+      "returncode": 0,
+      "seconds": 16.703,
+      "stdout": "12 Vedic CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_western_core"
+      ],
+      "returncode": 0,
+      "seconds": 31.094,
+      "stdout": "23 CLI smoke cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tarot"
+      ],
+      "returncode": 0,
+      "seconds": 0.422,
+      "stdout": "30 Tarot source/layout/independent protocol checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_oracle"
+      ],
+      "returncode": 0,
+      "seconds": 0.453,
+      "stdout": "49 Oracle verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_iching"
+      ],
+      "returncode": 0,
+      "seconds": 0.844,
+      "stdout": "8759 I Ching verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_runes"
+      ],
+      "returncode": 0,
+      "seconds": 0.391,
+      "stdout": "84 rune reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pendulum"
+      ],
+      "returncode": 0,
+      "seconds": 0.797,
+      "stdout": "207 Pendulum reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_scrying"
+      ],
+      "returncode": 0,
+      "seconds": 0.64,
+      "stdout": "23 Scrying reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_mirror"
+      ],
+      "returncode": 0,
+      "seconds": 0.828,
+      "stdout": "22 Mirror reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_dream"
+      ],
+      "returncode": 0,
+      "seconds": 0.766,
+      "stdout": "26 Dream reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_automatic_writing"
+      ],
+      "returncode": 0,
+      "seconds": 1.766,
+      "stdout": "27 Automatic Writing reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_akashic"
+      ],
+      "returncode": 0,
+      "seconds": 1.047,
+      "stdout": "47 Akashic independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tasseography"
+      ],
+      "returncode": 0,
+      "seconds": 1.0,
+      "stdout": "68 Tasseography independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_coffee"
+      ],
+      "returncode": 0,
+      "seconds": 0.375,
+      "stdout": "65 Coffee independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pyromancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.0,
+      "stdout": "59 Pyromancy independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_hydromancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.609,
+      "stdout": "44 Hydromancy independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_aeromancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.969,
+      "stdout": "53 Aeromancy independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_geomancy"
+      ],
+      "returncode": 0,
+      "seconds": 3.687,
+      "stdout": "65536 independent Geomancy charts, 256 addition pairs, 4096 associative triples, 16 identities and 6 fixtures passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_lithomancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.937,
+      "stdout": "12 Lithomancy source roles; 1225 independent distance pairs;25 grid rankings;4 authored cases;10 transforms;9 viewpoint checks;2 unknown cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_osteomancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.985,
+      "stdout": "13 Osteomancy source records;5 named relationships;169 ordered pair checks;26 omitted-outcome checks;52 original-evidence checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_bibliomancy"
+      ],
+      "returncode": 0,
+      "seconds": 2.25,
+      "stdout": "141 Bibliomancy selections;85 independently parsed verses;423 context cases;216 historical indices;100 literal dice sums passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_cleromancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.922,
+      "stdout": "24 Cleromancy source accounts;98 alias keys;9016 numerical research tuples;source discrepancies and exact replay passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_augury"
+      ],
+      "returncode": 0,
+      "seconds": 1.265,
+      "stdout": "14 Augury source records;864 finite observations;4320 condition checks;4 known answers;5 uncertain-field and1 structured conflict cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_augury_core"
+      ],
+      "returncode": 0,
+      "seconds": 99.282,
+      "stdout": "80 Augury CLI cases passed;20 valid JSON/Markdown saved replays and10 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_haruspicy_core"
+      ],
+      "returncode": 0,
+      "seconds": 104.438,
+      "stdout": "84 Haruspicy CLI cases passed;20 valid JSON/Markdown saved replays and12 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_haruspicy"
+      ],
+      "returncode": 0,
+      "seconds": 4.234,
+      "stdout": "9 Haruspicy source records;8100 finite observations;32400 condition checks;14 known answers passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_feng_shui_core"
+      ],
+      "returncode": 0,
+      "seconds": 127.844,
+      "stdout": "104 Feng Shui CLI cases passed;24 accepted JSON/Markdown replay pairs and16 rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_feng_shui"
+      ],
+      "returncode": 0,
+      "seconds": 1.109,
+      "stdout": "24 source rows;3600 ID/name/Chinese headings;3600 uncertainty ranges;144 boundary/neighbor/central checks;9 extra ranges;3 anchors passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_remote_viewing"
+      ],
+      "returncode": 0,
+      "seconds": 2.922,
+      "stdout": "72000 independent target/ranking/display checks;600-case uniform null;16 procedural fixture families passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_remote_viewing_core"
+      ],
+      "returncode": 0,
+      "seconds": 158.766,
+      "stdout": "125 Remote Viewing CLI cases passed;23 accepted/21 rejected JSON/Markdown pairs;3 exact blind directory exports\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_prophetic_dreams"
+      ],
+      "returncode": 0,
+      "seconds": 3.89,
+      "stdout": "600 independent interval/chronology checks;2timezone cases;8hand-enumerated pairs;18procedural families passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_prophetic_dreams_core"
+      ],
+      "returncode": 0,
+      "seconds": 178.406,
+      "stdout": "136 Prophetic Dreams CLI cases passed;29accepted/15rejected JSON/Markdown replay pairs;complete lifecycle andexport\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_intuitive_prediction"
+      ],
+      "returncode": 0,
+      "seconds": 1.093,
+      "stdout": "15independent families;9cue pairs;729three-cue traces;42actual-ledger rational scores;chronology and baseline known answers passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_intuitive_prediction_core"
+      ],
+      "returncode": 0,
+      "seconds": 160.063,
+      "stdout": "121CLI cases;35accepted/18rejected JSON/Markdown pairs;complete linked lifecycle passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_deja_reve_core"
+      ],
+      "returncode": 0,
+      "seconds": 182.047,
+      "stdout": "146 Deja Reve CLI cases passed;34accepted/37rejected JSON/Markdown pairs replayed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_deja_reve"
+      ],
+      "returncode": 0,
+      "seconds": 0.515,
+      "stdout": "{\r\n  \"passed\": true,\r\n  \"fixture_sha256\": \"742061f3a6f89f8ef0720214e5d1feee870818aaac36494b4a8ec744c15e9c8d\",\r\n  \"profile_sha256\": \"fdfe3074e23b10deb96928d85b3440d2a3122acdcffc5270af3596a854c3698a\",\r\n  \"fixture_commit\": \"2ee614e\",\r\n  \"families\": [\r\n    {\r\n      \"id\": \"source-category-episodic\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-category-familiarity\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-category-dreamy\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-unclassifiable\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"mixed-uncertain\",\r\n      \"passed\": true,\r\n      \"checks\": 648\r\n    },\r\n    {\r\n      \"id\": \"original-prior-record\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"no-prior-record\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"conflicting-chronology\",\r\n      \"passed\": true,\r\n      \"checks\": 13\r\n    },\r\n    {\r\n      \"id\": \"original-versus-amendment\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"generic-familiarity-negative-control\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"specific-versus-vague\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"manual-nonmatch\",\r\n      \"passed\": true,\r\n      \"checks\": 1\r\n    },\r\n    {\r\n      \"id\": \"multiple-candidates\",\r\n      \"passed\": true,\r\n      \"checks\": 10\r\n    },\r\n    {\r\n      \"id\": \"missing-original-time\",\r\n      \"passed\": true,\r\n      \"checks\": 3\r\n    },\r\n    {\r\n      \"id\": \"no-diagnosis-prediction\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"source-edition-rights-replay\",\r\n      \"passed\": true,\r\n      \"checks\": 7\r\n    }\r\n  ],\r\n  \"category_cases\": 648,\r\n  \"chronology_constants\": 11,\r\n  \"source_case_checks\": 4,\r\n  \"source_counts_verified\": true,\r\n  \"empirical_or_clinical_validation\": false,\r\n  \"method\": \"Pre-engine known-answer tables and constants;independent canonical SHA256;no expected values generated by production.\"\r\n}\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_ai_predictive_modeling_core"
+      ],
+      "returncode": 0,
+      "seconds": 194.406,
+      "stdout": "162 AI Predictive Modeling CLI cases passed;30accepted/49rejected JSON/Markdown pairs;full NOAA ledger replayed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_ai_predictive_modeling"
+      ],
+      "returncode": 0,
+      "seconds": 2.953,
+      "stdout": "21 forecasting families;4200 independent cells;672 sentinel predictions;source metrics and complete candidate ledger passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_quantum_probability_forecasting_core"
+      ],
+      "returncode": 0,
+      "seconds": 202.422,
+      "stdout": "178 CLI cases pass;exact accepted/rejected JSON and Markdown replay\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_quantum_probability_forecasting"
+      ],
+      "returncode": 0,
+      "seconds": 0.5,
+      "stdout": "20 independent fixture families pass;79 circuits;300 PRNG words;max amplitude error 1.7763568394002505e-15\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_superforecasting_core"
+      ],
+      "returncode": 0,
+      "seconds": 182.547,
+      "stdout": "162 CLI cases pass;44accepted/37rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_superforecasting"
+      ],
+      "returncode": 0,
+      "seconds": 1.016,
+      "stdout": "23 independent fixture families pass;30Bayes anchors;22loss/bin/log anchors;77scenarios\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_psychohistory_core"
+      ],
+      "returncode": 0,
+      "seconds": 164.968,
+      "stdout": "138 CLI cases pass;23accepted/46rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_psychohistory"
+      ],
+      "returncode": 0,
+      "seconds": 0.532,
+      "stdout": "23 independent fixture families pass;21 accepted/41 rejected cases;exact algebra,PRNG,pairing and conservation\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_digital_twin_core"
+      ],
+      "returncode": 0,
+      "seconds": 85.812,
+      "stdout": "138 CLI cases pass;22accepted/47rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_digital_twin"
+      ],
+      "returncode": 0,
+      "seconds": 0.438,
+      "stdout": "27 independent fixture families pass;22 accepted/43 rejected cases;batch,chronology,baselines,scenarios andbit bounds\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_agent_based_core"
+      ],
+      "returncode": 0,
+      "seconds": 109.406,
+      "stdout": "138 CLI cases pass;23accepted/46rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_agent_based"
+      ],
+      "returncode": 0,
+      "seconds": 0.672,
+      "stdout": "26 independent families pass;18local cases;512configurations=56birth+84survival=140alive/372dead;block,blinker,glider andgeometry\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_brain_intention_core"
+      ],
+      "returncode": 0,
+      "seconds": 93.078,
+      "stdout": "110 CLI cases pass;14accepted/41rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_brain_intention"
+      ],
+      "returncode": 0,
+      "seconds": 0.719,
+      "stdout": "28 independent fixture families pass;14 accepted/37 rejected\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_causal_ai_core"
+      ],
+      "returncode": 0,
+      "seconds": 78.609,
+      "stdout": "92 CLI cases pass;15accepted/31rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_causal_ai"
+      ],
+      "returncode": 0,
+      "seconds": 0.844,
+      "stdout": "22 independent fixture families pass;256 frozen and3072 expanded graph cases;80 structural oracle cases\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.audit_dependencies"
+      ],
+      "returncode": 0,
+      "seconds": 0.672,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "seconds": 0.937,
+      "stdout": "No broken requirements found.\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "seconds": 0.781,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.check_inventory_workbook"
+      ],
+      "returncode": 0,
+      "seconds": 0.813,
+      "stdout": "Original workbook SHA256 and all six sheets match frozen inventory cell-for-cell;60 IDs and six exclusions pass\r\n",
+      "stderr": ""
+    }
+  ],
+  "tests": 2073,
+  "inherited_tests": 2023,
+  "new_tests": 50,
+  "cli_cases": 2985,
+  "inherited_cli_cases": 2893,
+  "new_cli_cases": 92,
+  "independent_verifiers": 35,
+  "protected_files": 4419,
+  "changed_protected_files": [],
+  "allowed_existing_edits": [
+    "PROGRESS.md",
+    "README.md",
+    "future/__main__.py",
+    "knowledge/gaps.json"
+  ],
+  "registry": {
+    "references_checked_twice": 566,
+    "unique": 411,
+    "skipped": [
+      "chinese-inventory-2-v1"
+    ]
+  },
+  "strict_json_files": 3006,
+  "historical_invalid_json_rejections": [
+    "data/feng-shui-duplicate-json-input.json",
+    "data/feng-shui-nonfinite-input.json"
+  ],
+  "taxonomy": {
+    "total": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "other59gap_entries_unchanged": true,
+  "verification": {
+    "passed": true,
+    "fixture_families": 22,
+    "families": {
+      "confounding": {
+        "passed": true,
+        "cases": [
+          "confounding",
+          "unblocked-confounding"
+        ]
+      },
+      "mediation": {
+        "passed": true,
+        "cases": [
+          "mediation",
+          "mediator-adjusted"
+        ]
+      },
+      "collider-closed": {
+        "passed": true,
+        "cases": [
+          "collider-closed"
+        ]
+      },
+      "collider-conditioned": {
+        "passed": true,
+        "cases": [
+          "collider-conditioned"
+        ]
+      },
+      "collider-descendant": {
+        "passed": true,
+        "cases": [
+          "collider-descendant"
+        ]
+      },
+      "no-confounding": {
+        "passed": true,
+        "cases": [
+          "no-confounding"
+        ]
+      },
+      "descendant-adjustment": {
+        "passed": true,
+        "cases": [
+          "mediator-adjusted"
+        ]
+      },
+      "missing-positivity": {
+        "passed": true,
+        "cases": [
+          "missing-positivity"
+        ]
+      },
+      "zero-mass-stratum": {
+        "passed": true,
+        "cases": [
+          "zero-mass-stratum"
+        ]
+      },
+      "cycle-refusal": {
+        "passed": true,
+        "cases": [
+          "cycle"
+        ]
+      },
+      "unknown-edge": {
+        "passed": true,
+        "cases": [
+          "unknown-edge"
+        ]
+      },
+      "duplicate-edge": {
+        "passed": true,
+        "cases": [
+          "duplicate-edge"
+        ]
+      },
+      "exact-adjusted-risk": {
+        "passed": true,
+        "cases": [
+          "confounding"
+        ]
+      },
+      "observational-interventional-disagreement": {
+        "passed": true,
+        "cases": [
+          "confounding"
+        ]
+      },
+      "deterministic-intervention-oracle": {
+        "passed": true,
+        "cases": [
+          "confounding",
+          "deterministic-intervention"
+        ]
+      },
+      "joint-normalization": {
+        "passed": true,
+        "cases": [
+          "unnormalized",
+          "missing-row",
+          "duplicate-row"
+        ]
+      },
+      "graph-table-incompatibility": {
+        "passed": true,
+        "cases": [
+          "incompatible"
+        ]
+      },
+      "latent-graph-unsupported": {
+        "passed": true,
+        "cases": [
+          "latent"
+        ]
+      },
+      "canonical-order": {
+        "passed": true,
+        "cases": [
+          "reordered"
+        ]
+      },
+      "source-rights": {
+        "passed": true,
+        "cases": [
+          "empirical",
+          "rights",
+          "source",
+          "snapshot"
+        ]
+      },
+      "rational-bounds": {
+        "passed": true,
+        "cases": [
+          "large-rational",
+          "float-weight",
+          "boolean-weight"
+        ]
+      },
+      "json-markdown-replay": {
+        "passed": true,
+        "cases": [
+          "profile",
+          "categorical"
+        ]
+      }
+    },
+    "accepted": 15,
+    "rejected": 27,
+    "independent_graph_cases": 256,
+    "structural_enumeration_cases": 80,
+    "interventional_oracle_passed": true,
+    "observational_disagreement_passed": true,
+    "canonical_order_passed": true,
+    "zero_strata_passed": true,
+    "fixture_sha256": "b618f7c6a0ecc5210e11b245729941fabf7a570fed95c996f23f065f57c8f190",
+    "scope": "Finite exact synthetic model software,not causal discovery or empirical effect validation",
+    "expanded_graph_cases": 3072,
+    "expanded_graph_method": "All12 treatment/outcome pairs and4 adjustment subsets in each of64 ordered four-node DAGs; expected validity from immutable pre-engine simple-path oracle,not production."
+  },
+  "cli_replay": {
+    "passed": true,
+    "cli_cases": 92,
+    "accepted_pairs": 15,
+    "rejected_pairs": 31,
+    "records": [
+      {
+        "id": "confounding",
+        "input": "data/causal-ai-cli/confounding-input.json",
+        "raw_input_sha256": "049c016eb834b0ab828e76096d1b019b59d9d7406b9afe0e68e2ff9565729feb",
+        "exit_code": 0,
+        "outputs": {
+          "json": "cddeb571833281ee33dc26aa51ab585860c928a2422fb90c0ec0da8810c748ab",
+          "markdown": "63b7183cae0b9c01e57b06454652f346c47815d5d1cb77294d16cc441690db63"
+        }
+      },
+      {
+        "id": "unblocked-confounding",
+        "input": "data/causal-ai-cli/unblocked-confounding-input.json",
+        "raw_input_sha256": "3117b912391e3c95437b71d8b22d8b4d4818f9ad04fbec4da29a6cb37a823cb8",
+        "exit_code": 0,
+        "outputs": {
+          "json": "0da1636f38f0a5f2ed73c9a00d44c8553efef3c9d18d1d45d3440f50ccca8d19",
+          "markdown": "8a978ac06fbdbfea61907e7caba785a44374643987e238ff42e5eea11cc476fd"
+        }
+      },
+      {
+        "id": "no-confounding",
+        "input": "data/causal-ai-cli/no-confounding-input.json",
+        "raw_input_sha256": "3e77f3bf05e2efe360e40e211574f4b83500555b4863d81a306d28de4f35a86e",
+        "exit_code": 0,
+        "outputs": {
+          "json": "d37485684d2c1eda0579fd4ec5614a3c4acc524946e4b4facce993dfbe184de4",
+          "markdown": "9a6fa8cdde62ce1dd456784d8a38cc9c94296aeb42209c402a42236ea00eb4a1"
+        }
+      },
+      {
+        "id": "mediation",
+        "input": "data/causal-ai-cli/mediation-input.json",
+        "raw_input_sha256": "e56f5e960d05e7725181dcceed92e1688c0aac11898a96a446fe0899e370498d",
+        "exit_code": 0,
+        "outputs": {
+          "json": "26c8bb5284c49a3b77bdf6f6d178fe5ab9b4cca2e77dd94b320b5bfc7d3c1aa8",
+          "markdown": "5cb5cbb432996db39fa18dfac19456b891cf8dd6ddfa13c8516d35c3f78593c5"
+        }
+      },
+      {
+        "id": "mediator-adjusted",
+        "input": "data/causal-ai-cli/mediator-adjusted-input.json",
+        "raw_input_sha256": "f7a31de5cd25e4e0a71b8f46e0e42413e60a58e0933bf5eda38461cbc7dc5fbe",
+        "exit_code": 0,
+        "outputs": {
+          "json": "4a4d8b121870e52a64650bfab87577280525bdf4327bdd617af6958d19932db9",
+          "markdown": "e29033d76201aa558e874b8bcbf22b27aebe012e55fa87de8cb80fa820f4a6d5"
+        }
+      },
+      {
+        "id": "collider-closed",
+        "input": "data/causal-ai-cli/collider-closed-input.json",
+        "raw_input_sha256": "a08acdf8b4c0a74f9d6d9d65d829a70b2b20e953808222c1426879035305e9ad",
+        "exit_code": 0,
+        "outputs": {
+          "json": "e286f9f2133c2fb36bccc3a3ce1283726790dabe7c4af6748f9a3d61ceda4ae9",
+          "markdown": "e2e579076baf35499272d261430f2acbf895bf28bb06e52cfdd23930657f5e6d"
+        }
+      },
+      {
+        "id": "collider-conditioned",
+        "input": "data/causal-ai-cli/collider-conditioned-input.json",
+        "raw_input_sha256": "1f35d263deb0da88244f77e48d35fc13170520f00db52a286d5491ff30d96dd6",
+        "exit_code": 0,
+        "outputs": {
+          "json": "2b59f0397a1fac7223efa91ed0dc728182fb66985166a235b6d13856af441ccf",
+          "markdown": "48e8b74495e223c1196989035b0aab7193aaba754dd13720b8f1ca78537a0fb1"
+        }
+      },
+      {
+        "id": "collider-descendant",
+        "input": "data/causal-ai-cli/collider-descendant-input.json",
+        "raw_input_sha256": "a4187fff34c3580290f121f5b67225795929b8854261617aed2cd26eb9bb9152",
+        "exit_code": 0,
+        "outputs": {
+          "json": "16254adb00009d221bad9b23b03b2b3895d749a04fa653fba09e83a2460098f9",
+          "markdown": "60527d4c7a5862a09bea7c352b85cc2f845ec48e0581e305cb057b770fd9e6dc"
+        }
+      },
+      {
+        "id": "missing-positivity",
+        "input": "data/causal-ai-cli/missing-positivity-input.json",
+        "raw_input_sha256": "48a5a6505d121368034dfbb56249d71954cc2682161b56c8f2a7b9cefab2f127",
+        "exit_code": 0,
+        "outputs": {
+          "json": "83a504f257f4da7f0ce83c2ddac17138fa931b3208bc99d835f7cc2eb5f27e57",
+          "markdown": "80c831c79fb5fd22455722279f26a05221fd7c611973e35ea50f4db77afcf3e3"
+        }
+      },
+      {
+        "id": "zero-mass-stratum",
+        "input": "data/causal-ai-cli/zero-mass-stratum-input.json",
+        "raw_input_sha256": "d190dba92d0eb2ffc25f30f137b0c9713ccda92cec0347607c136bc29bea7e3f",
+        "exit_code": 0,
+        "outputs": {
+          "json": "3b217cecce210049d356a95e13a8845e26cb9786bb774b70632327d5b03f9094",
+          "markdown": "a1b838d1a7342635702fe674aa0b4671700451fa8f7188086821b52dd3e2e642"
+        }
+      },
+      {
+        "id": "deterministic-intervention",
+        "input": "data/causal-ai-cli/deterministic-intervention-input.json",
+        "raw_input_sha256": "70920d0ad63d07acfe9a5793c9bd98552432b870fc87c155f7a3d3b84d1d40dc",
+        "exit_code": 0,
+        "outputs": {
+          "json": "165afae3b6c9c28e80b5e30728f60dcb3a494cc76e63bf15db978a32f1e6bb0d",
+          "markdown": "67046142ae68697e5d99d98ed7e2d99001f9fb9d1bedcd87b6ccb1d7bcd251e5"
+        }
+      },
+      {
+        "id": "incompatible",
+        "input": "data/causal-ai-cli/incompatible-input.json",
+        "raw_input_sha256": "770f263558b34e4a92a56607045a1ab5de7475482dec676de5aa90bc7bda0995",
+        "exit_code": 0,
+        "outputs": {
+          "json": "a2652d8cec8806e773aea1d91ad3ea3867845ddb0f6faae927ff1ac02564e7e6",
+          "markdown": "76393d6f17dc39ff58f123a68febdba9a1c7ccf97d19e5822339b5fc5474940a"
+        }
+      },
+      {
+        "id": "latent",
+        "input": "data/causal-ai-cli/latent-input.json",
+        "raw_input_sha256": "0d6bebbc351787a02114f6428fa442402106c41a3d65ec0ff6de0854fd71d525",
+        "exit_code": 0,
+        "outputs": {
+          "json": "94715ed8c33f1474dee2816049eaf43de43407076cee82c63952959cd0869b14",
+          "markdown": "c2fdd7ee8dcef57b93284f010da2e565f0bfc16368eaa7cc29d1cdc134e4229d"
+        }
+      },
+      {
+        "id": "reordered",
+        "input": "data/causal-ai-cli/reordered-input.json",
+        "raw_input_sha256": "e484bfd495b4443b89866fa5060549631e0b1ed8dcf729c30139fd2ac7d75113",
+        "exit_code": 0,
+        "outputs": {
+          "json": "15637e5bb158d7cf820e3cf5f01a7b7e96aecee720e8a08f3b72cb0b20c990d5",
+          "markdown": "21f9d43403e42c874b49979132a4db52c7108d57e291b6cdcf6a83a5c366012b"
+        }
+      },
+      {
+        "id": "categorical",
+        "input": "data/causal-ai-cli/categorical-input.json",
+        "raw_input_sha256": "01361ffe4fbde1e7250c0642e255ca064afb1182ac6a8443bc70ac0f323be691",
+        "exit_code": 0,
+        "outputs": {
+          "json": "1fa0d9b127e96a4816d50019f7d4272a94f28b4001710c61437f3fe351bcfb8d",
+          "markdown": "89c98a5021f9cd235aa5fcd5d2df9af47a9f66830020fb3bd7b11522b45672bc"
+        }
+      },
+      {
+        "id": "cycle",
+        "input": "data/causal-ai-cli/cycle-input.json",
+        "raw_input_sha256": "f64233857fc3ebc7e53b15b189469813931a21e288562361eb7ff0d1ca96c43f",
+        "exit_code": 2,
+        "outputs": {
+          "json": "6132d8e36ec1b92d81efd81eb4b767b1569295c60f69522998a68207c177062c",
+          "markdown": "2f1055bde828fc7d0e7d07564bc86fbcbdb7a6edba5461b24ace04266760a3f4"
+        }
+      },
+      {
+        "id": "unknown-edge",
+        "input": "data/causal-ai-cli/unknown-edge-input.json",
+        "raw_input_sha256": "a7dc65fcc7826317a3fced70d8bacde7ec7c4ce18807dba9ff21033ef6be63db",
+        "exit_code": 2,
+        "outputs": {
+          "json": "911eba73ff158e0300433468e0a49ffcc8807ad2ad5f05595fb0b771b1052d80",
+          "markdown": "cc86b6735e1857fd34bf935cf72aa3c1d305ecd7f1b2ae0cd7356bfddbe3cf7f"
+        }
+      },
+      {
+        "id": "duplicate-edge",
+        "input": "data/causal-ai-cli/duplicate-edge-input.json",
+        "raw_input_sha256": "b1d86b3a495fc139eb12a398d536f4291d70fd28e230983e7439777838b7a72f",
+        "exit_code": 2,
+        "outputs": {
+          "json": "d425fa9e05c99e70511899b8e239efebd6686cd84e1544136a7dc0f0d3ab059f",
+          "markdown": "6f1632a691c6198daef4b8a959040679e138655d7c90db4dadc53f509934e9f9"
+        }
+      },
+      {
+        "id": "self-edge",
+        "input": "data/causal-ai-cli/self-edge-input.json",
+        "raw_input_sha256": "534a929aa8996aa3f2c33ce2483bcf872279ed3a48febf7545f0d7988b28fb81",
+        "exit_code": 2,
+        "outputs": {
+          "json": "911eba73ff158e0300433468e0a49ffcc8807ad2ad5f05595fb0b771b1052d80",
+          "markdown": "cc86b6735e1857fd34bf935cf72aa3c1d305ecd7f1b2ae0cd7356bfddbe3cf7f"
+        }
+      },
+      {
+        "id": "duplicate-node",
+        "input": "data/causal-ai-cli/duplicate-node-input.json",
+        "raw_input_sha256": "afa1a7e8553a695424979114db60841688b04e6964fb67b5930a258633b05438",
+        "exit_code": 2,
+        "outputs": {
+          "json": "b68f5354bbb1f0a6d3d3f760082123223228a9dc71dcc58bbdede8feea09dcce",
+          "markdown": "628980bd97ba6456c3e4ed0b5bf633b746c1995d024fa47b9b36c49a90cb9d89"
+        }
+      },
+      {
+        "id": "duplicate-state",
+        "input": "data/causal-ai-cli/duplicate-state-input.json",
+        "raw_input_sha256": "001c11d041684296d25035c884723506d56397d41d226e47b003ca7e6dfe549d",
+        "exit_code": 2,
+        "outputs": {
+          "json": "9b96a8d7996a1cb7af3256bc8a9b29bcfaa5ea13189e92efe39bf7169b10aabd",
+          "markdown": "61398bc2ad798559fb7bcd529a78be144f284175958c5457bc750b4dc38ac556"
+        }
+      },
+      {
+        "id": "duplicate-row",
+        "input": "data/causal-ai-cli/duplicate-row-input.json",
+        "raw_input_sha256": "14ff4cabac865a382ed653285e09805c50ae0d75a6c83c58d26d1c58bf81a3f3",
+        "exit_code": 2,
+        "outputs": {
+          "json": "c48f8920ecf5a6266aebb93d97c5f9d0ff73e53d4a2629b129931beeb3391d96",
+          "markdown": "564d9415f72716fb25ecce091e1c3ee29f060d34d3f51de43b44a74dcb5f57a5"
+        }
+      },
+      {
+        "id": "missing-row",
+        "input": "data/causal-ai-cli/missing-row-input.json",
+        "raw_input_sha256": "e5d0bbda25a74fa6b1b643b48968d1824001d1cbbcb7a5561431f692f9ca4e48",
+        "exit_code": 2,
+        "outputs": {
+          "json": "c48f8920ecf5a6266aebb93d97c5f9d0ff73e53d4a2629b129931beeb3391d96",
+          "markdown": "564d9415f72716fb25ecce091e1c3ee29f060d34d3f51de43b44a74dcb5f57a5"
+        }
+      },
+      {
+        "id": "unknown-state",
+        "input": "data/causal-ai-cli/unknown-state-input.json",
+        "raw_input_sha256": "056eacd76a3cd8e1b0d3d54110a4c569a27984ea0080ffc84dd733de1d51e691",
+        "exit_code": 2,
+        "outputs": {
+          "json": "52186e6a816018d0ca50bc4a5b73f4f10c58f8ed052a9df21d3d3a5446598937",
+          "markdown": "993de47ecaf866e399d9b4db544c0fb9f4a249462e100ecbecd73486d921ea63"
+        }
+      },
+      {
+        "id": "negative-weight",
+        "input": "data/causal-ai-cli/negative-weight-input.json",
+        "raw_input_sha256": "fa0b29261a960af8b8841a1bced66cf5701c905006783c84754da6608c69f3f4",
+        "exit_code": 2,
+        "outputs": {
+          "json": "9f84b8a37f1279dcd866aca7e74000841f20c7fc1bc8964b0d112c7ccda56063",
+          "markdown": "f55822f9f76c1e0e9edbe367d8af9c4f813fb86442b8bc96132007521542d064"
+        }
+      },
+      {
+        "id": "unnormalized",
+        "input": "data/causal-ai-cli/unnormalized-input.json",
+        "raw_input_sha256": "ae7c32ffe54d26b2a951cf7961e0271bdf67da60f14445bdfffb8cc2b2926fdb",
+        "exit_code": 2,
+        "outputs": {
+          "json": "1f39101bda66e02aedcb75579de5d14d4b87519efad5bf9f34bbd4eebd93df64",
+          "markdown": "ea87cba80bcf31dc7c617445ee7299894e6f77e627c0d10d42a1e007d9d102b9"
+        }
+      },
+      {
+        "id": "float-weight",
+        "input": "data/causal-ai-cli/float-weight-input.json",
+        "raw_input_sha256": "61e2bc8a8b74530e75f5f35b833a43a98f7e4b76749b917761643499276514bb",
+        "exit_code": 2,
+        "outputs": {
+          "json": "78a083f1b27ed31c662ede23b2af6060ce83a6382693d3e975f0792de349f1e9",
+          "markdown": "ea7672ef1e4770c93d10dcd2520219ec35fb1267135225a664f62e9eac8ba78a"
+        }
+      },
+      {
+        "id": "boolean-weight",
+        "input": "data/causal-ai-cli/boolean-weight-input.json",
+        "raw_input_sha256": "414b0371ed89776fadcae3f20e14f7f10cda341124827469eaf160b49a2d8712",
+        "exit_code": 2,
+        "outputs": {
+          "json": "78a083f1b27ed31c662ede23b2af6060ce83a6382693d3e975f0792de349f1e9",
+          "markdown": "ea7672ef1e4770c93d10dcd2520219ec35fb1267135225a664f62e9eac8ba78a"
+        }
+      },
+      {
+        "id": "zero-denominator",
+        "input": "data/causal-ai-cli/zero-denominator-input.json",
+        "raw_input_sha256": "69a9e0bdede75e5352d32c080cc804c47c1d105985557c5109b80e9a3ddcec47",
+        "exit_code": 2,
+        "outputs": {
+          "json": "78a083f1b27ed31c662ede23b2af6060ce83a6382693d3e975f0792de349f1e9",
+          "markdown": "ea7672ef1e4770c93d10dcd2520219ec35fb1267135225a664f62e9eac8ba78a"
+        }
+      },
+      {
+        "id": "large-rational",
+        "input": "data/causal-ai-cli/large-rational-input.json",
+        "raw_input_sha256": "0f3ce821530419ce8fb003a2823dc6bce01a8ebb42a1f84a78e9ac2a0fd26684",
+        "exit_code": 2,
+        "outputs": {
+          "json": "c226a40037cca0c2bb810afd02f1109970eb9ae90f4e93aafbf07e32b4cc56f0",
+          "markdown": "e94c341d18fb4cc28d76cc793ea4783ad7931c4eb50d1934a67d8a9c63787e42"
+        }
+      },
+      {
+        "id": "bad-assumption",
+        "input": "data/causal-ai-cli/bad-assumption-input.json",
+        "raw_input_sha256": "f2b026866f1f527fd01748a92adaf84caf7c3c8572f2cb82d734f3636718daea",
+        "exit_code": 2,
+        "outputs": {
+          "json": "0c74b7d99884c9647bdbc3aca44c6e7629f7bf07b07e8fe129c65d190591ba33",
+          "markdown": "5a0b5c50ae3401663316899a5b9e238a50bc3224a1c8827733483cac1453b670"
+        }
+      },
+      {
+        "id": "selection-bias",
+        "input": "data/causal-ai-cli/selection-bias-input.json",
+        "raw_input_sha256": "cc932fbad2df7732c9d9e1f2deb60de3f0fbafd398a7fcbb9c12a05f989d076c",
+        "exit_code": 2,
+        "outputs": {
+          "json": "0c74b7d99884c9647bdbc3aca44c6e7629f7bf07b07e8fe129c65d190591ba33",
+          "markdown": "5a0b5c50ae3401663316899a5b9e238a50bc3224a1c8827733483cac1453b670"
+        }
+      },
+      {
+        "id": "adjust-X",
+        "input": "data/causal-ai-cli/adjust-X-input.json",
+        "raw_input_sha256": "99afe6f3fdd68d36e4e938c86233e293871d8f655f30a1c8eaefe96d523d0e61",
+        "exit_code": 2,
+        "outputs": {
+          "json": "c7066089eda7c2f616b0e96cd7459a08dd32d08853f23cd1f18c7894794a21f6",
+          "markdown": "cf6dad256415c2d8790f77e18f07420abbbe5ccd3c179181510b585560c3da72"
+        }
+      },
+      {
+        "id": "unknown-adjustment",
+        "input": "data/causal-ai-cli/unknown-adjustment-input.json",
+        "raw_input_sha256": "10a6d24e12c59e8fb15fe99c9287e53de42a6412c8e390dec63bbdfad66aec83",
+        "exit_code": 2,
+        "outputs": {
+          "json": "c7066089eda7c2f616b0e96cd7459a08dd32d08853f23cd1f18c7894794a21f6",
+          "markdown": "cf6dad256415c2d8790f77e18f07420abbbe5ccd3c179181510b585560c3da72"
+        }
+      },
+      {
+        "id": "unknown-outcome",
+        "input": "data/causal-ai-cli/unknown-outcome-input.json",
+        "raw_input_sha256": "3a56a4f6ca76b7908ee7609c5f22ec4bffd051c48532ed03ca5f0ac9da216df4",
+        "exit_code": 2,
+        "outputs": {
+          "json": "bf9ce0c99487c877721b4572288d82f2886d0cf2b4852d6b42ebc67a193e8526",
+          "markdown": "d24f6dbcd47eabd8d37792e311facbd49841df757ee913cc3cfd546146eaf023"
+        }
+      },
+      {
+        "id": "empirical",
+        "input": "data/causal-ai-cli/empirical-input.json",
+        "raw_input_sha256": "d900bc606ab2668dfb3bdddfa5ea32fe8485a02e53013eb96e38a0e4f99c9fc8",
+        "exit_code": 2,
+        "outputs": {
+          "json": "e7140741ad33c9e6cafffcaf5a6181df96d5b50688349623f46c5e8e7e5ef0a1",
+          "markdown": "6de1f3ec0f340e9b79ffe4c8746800a0a9702ff91e6131f247e7309bff3f6d36"
+        }
+      },
+      {
+        "id": "rights",
+        "input": "data/causal-ai-cli/rights-input.json",
+        "raw_input_sha256": "1aaa83c89ed4023ee4ee09650dc009514ea3c6d708f4c2834c37bc90b4daefd4",
+        "exit_code": 2,
+        "outputs": {
+          "json": "e7140741ad33c9e6cafffcaf5a6181df96d5b50688349623f46c5e8e7e5ef0a1",
+          "markdown": "6de1f3ec0f340e9b79ffe4c8746800a0a9702ff91e6131f247e7309bff3f6d36"
+        }
+      },
+      {
+        "id": "source",
+        "input": "data/causal-ai-cli/source-input.json",
+        "raw_input_sha256": "e02946e1521d91a276e23694874e64d639db808e2c374e8309c3c44c4c69771a",
+        "exit_code": 2,
+        "outputs": {
+          "json": "88987e1f6d2ec67e0e284de76536ced1518e6b7ef7cb71197fb91c7b5633eb92",
+          "markdown": "87fcf14b824d985e4b677d31dc2e81e3d5911fe5f71982e23bbf7efca9180364"
+        }
+      },
+      {
+        "id": "snapshot",
+        "input": "data/causal-ai-cli/snapshot-input.json",
+        "raw_input_sha256": "58c20871012abc42b207606607269e626d77441ff82b762f0071573ab7c19e93",
+        "exit_code": 2,
+        "outputs": {
+          "json": "ef94fc12d3529d8f56715d908ad515e4ed4cb56418835f39a514dd97755a63cd",
+          "markdown": "b0a25ad7aaf6acd9db67f449b8263e2efcf4119b8edde9cda15c51479441baba"
+        }
+      },
+      {
+        "id": "profile",
+        "input": "data/causal-ai-cli/profile-input.json",
+        "raw_input_sha256": "b637a7d8edb36659cb5939a8132db7ed6273c2afb45eefff8d3743b0880ae63c",
+        "exit_code": 2,
+        "outputs": {
+          "json": "63786457d5e377b4b819e45cbffd860ea71a1afcbd9b4862f7c3d33570bec3c9",
+          "markdown": "534bf1a9dfd4dd3519d6b69ecc0dd27363096dd44281259b7f48e7312f0c4f33"
+        }
+      },
+      {
+        "id": "extra-field",
+        "input": "data/causal-ai-cli/extra-field-input.json",
+        "raw_input_sha256": "ec40e813a4166cf1e1eb51dc81520494b3a6afcb5e3bbe2bd56a44669e3473ab",
+        "exit_code": 2,
+        "outputs": {
+          "json": "37be35893ded048174320c5ad2e98272315bfa2411ea1cb59f3f70fc16b725fa",
+          "markdown": "96bf657aca95fda87b1eaebeccd3ad368c184a46d7b231dd1b452ccd0b5a6303"
+        }
+      },
+      {
+        "id": "nodes-cap",
+        "input": "data/causal-ai-cli/nodes-cap-input.json",
+        "raw_input_sha256": "0c3a9cc4c6be88378774157fc140def92cd2943722399b9b52fc4f845d61c560",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4183d740b776430a5e10800a8328fdb800fbcabc6a723dddcb97f64c564ecf54",
+          "markdown": "27660051645c126be2e9f68ae8ccd41e82418246d8236ef5f8e7f9d6f8191390"
+        }
+      },
+      {
+        "id": "duplicate",
+        "input": "data/causal-ai-cli/duplicate-input.txt",
+        "raw_input_sha256": "dfd205aeecbcf824d6da92dcf6cfd8102bc604002f14aa2356923cbfcaae789b",
+        "exit_code": 2,
+        "outputs": {
+          "json": "131ab1ac158a4ed1a81f1fc7d066ce57e7147f118c346c6c0afe8bf5e54a461c",
+          "markdown": "0ee06f3d4b88abfe2d2aeee9959e51f6cfb4faab695d11983e29652d0447cdb2"
+        }
+      },
+      {
+        "id": "nan",
+        "input": "data/causal-ai-cli/nan-input.txt",
+        "raw_input_sha256": "9f991a7e62c13c3e385c7700758024414364952d48d33f4f348a9915fead04b5",
+        "exit_code": 2,
+        "outputs": {
+          "json": "34abd8e58070322089336ac2e9e64ad5e4eb927b437324facdd602eba51d6e36",
+          "markdown": "28b31fdcc30334b105986a37a63592dfbd66f4d52089511cf0c355ef416a83d5"
+        }
+      },
+      {
+        "id": "infinity",
+        "input": "data/causal-ai-cli/infinity-input.txt",
+        "raw_input_sha256": "3782c077ea71fcb7241aba900b4f4083b18f1b952cf89068bb44abdf615f1f95",
+        "exit_code": 2,
+        "outputs": {
+          "json": "45dede4e0271a4e3bb569609d1e34881a06ec070c447c1e4eedf764b3985f2e3",
+          "markdown": "4d6d515201e432842d00f86721e1ffde7cc8c6d902b7053af6f5e49ea64fbbd8"
+        }
+      },
+      {
+        "id": "negative-infinity",
+        "input": "data/causal-ai-cli/negative-infinity-input.txt",
+        "raw_input_sha256": "0236a6c7faf3825112d4cc0e0c325f92500a52bcd92c3063201a2d8c41429acd",
+        "exit_code": 2,
+        "outputs": {
+          "json": "a28e90c0d47bbc513a23609c5ee3c2ea64618d780e94627922c0813c4a62be92",
+          "markdown": "29d60ac030e8029d3b2bb6b4814cdca0bda884662c8239403e89daa0393530a7"
+        }
+      }
+    ]
+  },
+  "harness_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "checkout_replay": {
+    "passed": true,
+    "exports": [
+      {
+        "autocrlf": "false",
+        "raw_corpus_files": 139,
+        "normalized_commitments": 3,
+        "actual_cli_replays": 92,
+        "passed": true
+      },
+      {
+        "autocrlf": "true",
+        "raw_corpus_files": 139,
+        "normalized_commitments": 3,
+        "actual_cli_replays": 92,
+        "passed": true
+      }
+    ],
+    "method": "git checkout-index from staged files with core.autocrlf false/true;actual exported CLI executions;stdout bytes SHA256 matches saved JSON/Markdown,without newline normalization",
+    "subprocess_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "harness_limit": "Two parallel CLI processes; limits inherited numerical-library import threads,not the stdlib finite causal engine."
+  }
+}
