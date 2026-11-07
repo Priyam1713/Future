@@ -1391,3 +1391,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-08 — #58 full units and actual checkout verification
 - Full2219 unit tests pass (2144 inherited+75 new). Both indexed core.autocrlf=false/true exports preserve202 raw corpus files and3 normalized commitments,replaying134 actual CLI outputs each without newline normalization. Full inherited CLI/verifier sweep remains in progress; no59auditstarted.
+
+## 2026-11-08 — #58 full acceptance passed
+- Passed2219tests (2144 inherited+75new),3247CLIcases (3113 inherited+134new),37independentverifiers andall31families.145numericalvectors/200-term ln2reference andbothactualcheckoutreplays pass. All4816protectedfiles unchanged;registry,strictJSON,workbook/inventory/exclusions,dependency,pip/diff pass. No failed check treated as passing. Closure follows before59audit.
