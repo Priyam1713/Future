@@ -1245,3 +1245,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #53 CLI reports and local measurements
 - Saved138raw UTF8/LF CLI cases:22accepted/47rejected JSON/Markdown pairs with explicit rejection reasons. Worked sequential,batch,missing,scaled,availability,matched baselines,scenario andgrowth/cell refusal reports included.
 - Measured short/long256-row/missing256-row/eight-scenario128-step workloads onPython3.12.10 Windows:in-process medians0.000966/0.0558/0.0291/0.1116seconds;CLI1.159/0.867/1.263/1.449seconds;whole measurement helper peak28.906MiB. These arelocal representative observations,notuniversal bounds. Full units andboth real checkout exports arepending.
+
+## 2026-11-07 — #53 full units and actual checkout replay
+- Full1866tests pass (1790inherited+76new). Both indexed core.autocrlf=false/true exports preserve208raw corpus files and3normalized commitments andeach replay138actual CLI outputs byte-for-byte without newline normalization.
+- Bounded inherited-library import threads areconfigured fromthe start;full inherited CLI/verifier/registry/dependency/preservation sweep isstillpending. No54research yet.
