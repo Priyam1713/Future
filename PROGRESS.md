@@ -1202,3 +1202,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #52 frozen executable contract
 - Frozen synthetic synchronous exact-threshold profile, source/rights boundaries, strict schema, shared xorshift32 initialization and combined preflight budgets before engine code. Actual pre-engine protected count: 3496. Independent fixtures follow before production.
+
+## 2026-11-07 — #52 independent fixtures before engine
+- Frozen 23 families,21 accepted and41 rejected original cases; independent dense Fraction/set oracle and arithmetic PRNG vectors. Literal path,star/complete and exhaustive two-node count/fraction/gain moments pass. No production engine yet.
