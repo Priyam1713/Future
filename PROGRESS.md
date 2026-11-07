@@ -1398,3 +1398,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-08 — #58 Core v1 closure
 - Core v1 Ready — Offline Binary LMSR Play-Money Market and Resolution Ledger Scope. All31families/75newtests,145numericalvectors and200-term exactln2reference pass. Full2219tests,3247CLIcases and37independentverifiers pass;all4816protectedfiles unchanged.33accepted/34rejectedpairs replay134rawoutputs ineachactualcheckoutmode;repositorygates pass.
 - Exactcashgrid conservation,potentialtelescoping,funding,quote/execution,idempotency andonce-onlysettlement verified. Decimaltranscendentals approximate,notrationalexact. Source/rights,measurements,matrix andP1/P2 frozen;no actualmoney/externalservices/empiricalmarketaccuracy. Afterclosurepush/clean0/0,continue59audit;no59implementationyet.
+
+## 2026-11-08 — #59 resource audit
+- Preserved three ranked sources and five variations. Official UCAR equations/solver conventions and Moler classical RK4 inspected; ranked full-text access gaps explicit. Candidate finite deterministic simulation only. No production engine yet.
