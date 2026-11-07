@@ -1234,3 +1234,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #53 source/profile freeze
 - Frozen exact scalar replay, strict identity/units/schema, forecast-origin/availability/evaluation semantics, matched baselines, isolated future controls and conservative pre-operation rational growth checks. NASEM2024/Grieves2014/Welch–Bishop2002 source distinctions retained. No engine yet; independent fixtures follow. Protected pre-engine files: 3739.
+
+## 2026-11-07 — #53 independent fixtures before engine
+- Frozen all27families,22accepted and43rejected original cases. Independent information-form corrections,closed-form future-control convolution andseparate batch precision/information anchors agree withmandatory rational examples. Chronology,matched-score,missing/H0/gain>1 andresource/bit-growth negative controls included. No production filter yet.
