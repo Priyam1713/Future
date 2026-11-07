@@ -1,0 +1,648 @@
+{
+  "version": 1,
+  "technique_id": 55,
+  "name": "Brain-Based Intention Prediction",
+  "date": "2026-11-07",
+  "status": "Core v1 Ready — Offline Trial-Window Feature Classification and Leakage Diagnostic Scope",
+  "certification_scope": "Exact synthetic classification software and declared leakage checks only; no empirical neural forecasting,live BCI,clinical or unrestricted intention inference.",
+  "profile": "brain-intention-synthetic-offline-classification-v1",
+  "profile_sha256": "30f541e00247d4c9f78fa5218cba83e5e5caf7417868743cf4e3b4cebfa629a0",
+  "profile_file": "knowledge/brain_intention_profile_v1.json",
+  "cli_command": "brain-intention",
+  "source_catalog": "knowledge/brain_intention_sources.json",
+  "source_manifest_sha256": "3fdd4d5fd4490cc162e2f6a4aa1926a418522be894e6a6f43daae2287fd30ab1",
+  "source_freeze_sha256": "93ea4163ac65b1525b21474c882df807d80599426f5fce1606666c91bce35847",
+  "source_boundaries": {
+    "version": 1,
+    "technique_id": 55,
+    "audit_sha256": "d723065713c3706f8715e40f46af1f96864a683a884d784e509e213254d3f292",
+    "source_manifest_sha256": "3fdd4d5fd4490cc162e2f6a4aa1926a418522be894e6a6f43daae2287fd30ab1",
+    "access": "Reuse audit5c0c1bd. Wolpaw metadata/TOC/abstracts only; Soon full methods/supplement not available; no raw EEG downloaded.",
+    "rights": "Original self-authored synthetic examples and mathematical facts only; no book/article/code/data redistributed. ODC-By database rights do not establish participant consent.",
+    "algorithm": "Editorial exact unscaled uniform-prior nearest arithmetic centroid, not reproduction of MNE CSP/LDA or empirical neural performance."
+  },
+  "inventory_method_row": [
+    55,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Brain-Based Intention Prediction",
+    "RETAIN — simulate / implement",
+    "Research / creative proxy",
+    "Readiness potential; EEG motor imagery; fMRI decision decoding; behavioral intention proxy",
+    "Reproduce published offline signal-classification tasks; optional behavioral surrogate",
+    "Public EEG datasets; actual live BCI would require specialized sensors",
+    "Cannot directly read a user’s intentions without electrodes/scanner; do not extrapolate lab tasks",
+    "Experimental neuroscience; narrow task, no mind reading",
+    "Brain–Computer Interfaces: Principles and Practice",
+    "Jonathan Wolpaw and Elizabeth Wolpaw (eds.)",
+    null,
+    "Unconscious Determinants of Free Decisions in the Human Brain",
+    "EEG Motor Movement/Imagery Dataset",
+    null,
+    "45, 53",
+    55
+  ],
+  "ranked_sources": [
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      1,
+      "Jonathan Wolpaw and Elizabeth Wolpaw (eds.)",
+      "Brain–Computer Interfaces: Principles and Practice",
+      "BCI principles and protocols",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      2,
+      "Chun Siong Soon et al.",
+      "Unconscious Determinants of Free Decisions in the Human Brain",
+      "fMRI decision-decoding benchmark",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      3,
+      "PhysioNet / BCI2000 team",
+      "EEG Motor Movement/Imagery Dataset",
+      "Reusable offline motor task data",
+      "https://www.physionet.org/content/eegmmidb/1.0.0/",
+      "Open research dataset; check rules",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      "Readiness potential",
+      "EEG Motor Movement/Imagery Dataset",
+      "Unconscious Determinants of Free Decisions in the Human Brain",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      "EEG motor imagery",
+      "EEG Motor Movement/Imagery Dataset",
+      "Unconscious Determinants of Free Decisions in the Human Brain",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      "fMRI decision decoding",
+      "Unconscious Determinants of Free Decisions in the Human Brain",
+      "EEG Motor Movement/Imagery Dataset",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      "behavioral intention proxy",
+      "EEG Motor Movement/Imagery Dataset",
+      "Unconscious Determinants of Free Decisions in the Human Brain",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "configuration_matrix": {
+    "supported": [
+      "Self-authored synthetic windows/features",
+      "Exact mean/population variance and TRAIN-only centroids",
+      "Subject-disjoint or within-subject held-out-run checks",
+      "Explicit interval/availability/label checks",
+      "Exact matched evaluation and deterministic JSON/Markdown"
+    ],
+    "experimental_research_only": [
+      "Interpreting toy features as neural or behavioral intention information"
+    ],
+    "unsupported": [
+      "Real EEG ingestion",
+      "CSP/LDA or signal preprocessing",
+      "fMRI and readiness potential replication",
+      "Cross-session generalization",
+      "Clinical assessment",
+      "Live BCI or unrestricted intention prediction"
+    ]
+  },
+  "equations": [
+    "mean=sum(x)/n",
+    "population_variance=sum((x-mean)^2)/n; sample variance is not the feature",
+    "features=[mean(channel0),variance(channel0),mean(channel1),variance(channel1),...]",
+    "centroid[class]=arithmetic mean of TRAIN features for that class",
+    "distance=sum((feature-centroid)^2); equal distances choose A",
+    "confusion rows actual A/B,columns predicted A/B; accuracy=diagonal/TEST count; balanced_accuracy=(recallA+recallB)/2 when both true classes present",
+    "TRAIN-majority baseline; ties A; same TEST IDs and denominators",
+    "Declared iid fair-binary arithmetic toy Pr(K>=8;n=10,p=1/2)=7/128; no empirical inferential claim"
+  ],
+  "exact_contract": [
+    "Exact object fields; profile identity and catalog digest required. All opaque IDs ASCII1..64. schema_version/profile.version exact integer1. Canonical trial ordering by id; model hashes exclude TEST labels and TEST features. Input/report hashes retain complete request.",
+    "mode windows: each trial.values is channel-major array of 2..512 exact rational samples, all channels same length=end-start. mode features: length2*channels, declared mean/variance pairs, variances nonnegative; start/end still identify original synthetic interval. No mixed mode.",
+    "Exact rational inputs are integers (not bool) or canonical signed integer / positive integer strings with each component <=18 digits. Decimal strings, floats, exponent, zero/negative denominators and excess fields reject. Reduced output always Fraction string. Every arithmetic operation reserves numerator/denominator bits conservatively before multiplication/addition; >8192 bits rejects before that operation.",
+    "1..8 ordered unique channels with units arbitrary_units only; no inferred EEG units. task editorial_binary uses null annotations. task synthetic_imagined_hands_feet uses runs6/10/14, T1=A/hands,T2=B/feet. No other T1/T2 interpretation or real data supported.",
+    "2..256 unique trials; TRAIN and TEST required, VALIDATION optional and not used for fitting/scoring. Both TRAIN labels A/B required. Every label A/B supplied for retrospective scoring. TEST labels never enter centroids,predictions,training-majority or model hash. No learned scaling or hyperparameter search.",
+    "protocol subject_disjoint: subject IDs disjoint across TRAIN/VALIDATION/TEST. protocol within_subject_heldout_run: exactly one subject and disjoint run IDs across partitions. session must be null; no cross-session claim. run labels are not assumed sessions.",
+    "source_id identifies one synthetic file and maps to one subject/run. (subject,run,trial_id) dependent groups stay in one partition. A source interval [start,end) may not overlap another in a different partition; duplicate source windows reject even under different IDs. Same numeric features alone do not establish leakage.",
+    "Integer synthetic global-clock start/end/available_at/predict_at/label_available_at and fit_at in0..1000000000. start<end<=available_at<=predict_at. TRAIN window and label available by fit_at. TEST/VALIDATION predict_at>=fit_at and label_available_at>predict_at. This encodes declared availability only, not externally witnessed timing.",
+    "filter must be none. Noncausal, zero-phase or future-sample preprocessing unsupported. No post-outcome input availability in earlier predictions; no live or pre-decision neural claim.",
+    "Provenance synthetic=true, rights=self_authored, source_ref in frozen catalog, nonempty attribution/snapshot <=4000characters and exact UTF8 snapshot SHA256. Declarations/hashes are not independent rights or truth certification.",
+    "Preflight total raw sample/feature cells<=262144, feature dimension<=16, distance/fit reserved operations<=5000000, output reservation trials*(2*features+32)<=100000. All numeric inputs validated before fitting. Resource error returns no partial result.",
+    "Absent true TEST class: accuracy exists, that class recall=null and balanced_accuracy=null,status=not_estimable. Majority baseline fitted only on TRAIN. No automatic p-value/CI or claim of superiority. Fixed iid7/128 toy separately labeled arithmetic only."
+  ],
+  "bounds": {
+    "trials": 256,
+    "channels": 8,
+    "samples": 512,
+    "raw_cells": 262144,
+    "features": 16,
+    "work": 5000000,
+    "returned_cells": 100000,
+    "rational_component_digits": 18,
+    "integer_bits": 8192
+  },
+  "acceptance_criteria": [
+    {
+      "criterion": "Source/profile freeze before engine",
+      "passed": true
+    },
+    {
+      "criterion": "Independent fixture freeze before engine; explicit preserved identity/binding errata",
+      "passed": true
+    },
+    {
+      "criterion": "All28 independent families and62 new unit tests",
+      "passed": true
+    },
+    {
+      "criterion": "Exact means/population variance and literal sample/population distinction",
+      "passed": true
+    },
+    {
+      "criterion": "TRAIN-only centroids, squared distances, A ties and TEST-label isolation",
+      "passed": true
+    },
+    {
+      "criterion": "Subject/run/trial/source separation and declared availability",
+      "passed": true
+    },
+    {
+      "criterion": "No noncausal filtering or unsupported neural/session claim",
+      "passed": true
+    },
+    {
+      "criterion": "Exact matched confusion,accuracy,balanced accuracy and TRAIN-majority baseline",
+      "passed": true
+    },
+    {
+      "criterion": "Absent true class explicitly not_estimable",
+      "passed": true
+    },
+    {
+      "criterion": "110 accepted/rejected raw CLI reports; both actual checkout exports",
+      "passed": true
+    },
+    {
+      "criterion": "Complete inherited unit/CLI/verifier regressions",
+      "passed": true
+    },
+    {
+      "criterion": "Registry,strictJSON,inventory/exclusions,dependency,pip,diff and4219 protected files",
+      "passed": true
+    },
+    {
+      "criterion": "Actual complete-report CPU/memory measurements with named scope",
+      "passed": true
+    },
+    {
+      "criterion": "Supported/experimental/unsupported matrix and P1/P2",
+      "passed": true
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "fixture_families": 28,
+    "families": {
+      "window-mean": {
+        "passed": true,
+        "cases": [
+          "windows"
+        ]
+      },
+      "population-variance": {
+        "passed": true,
+        "cases": [
+          "windows",
+          "rational"
+        ]
+      },
+      "constant-window": {
+        "passed": true,
+        "cases": [
+          "constant"
+        ]
+      },
+      "dc-offset": {
+        "passed": true,
+        "cases": [
+          "offset"
+        ]
+      },
+      "amplitude-scaling": {
+        "passed": true,
+        "cases": [
+          "scaled"
+        ]
+      },
+      "channel-order-units": {
+        "passed": true,
+        "cases": [
+          "two-channels",
+          "bad-units",
+          "duplicate-channel"
+        ]
+      },
+      "training-centroid": {
+        "passed": true,
+        "cases": [
+          "worked"
+        ]
+      },
+      "squared-distance": {
+        "passed": true,
+        "cases": [
+          "worked"
+        ]
+      },
+      "exact-tie": {
+        "passed": true,
+        "cases": [
+          "tie"
+        ]
+      },
+      "train-only-fit": {
+        "passed": true,
+        "cases": [
+          "worked",
+          "validation-unused"
+        ]
+      },
+      "test-label-isolation": {
+        "passed": true,
+        "cases": [
+          "worked",
+          "test-label-flip"
+        ]
+      },
+      "subject-disjoint": {
+        "passed": true,
+        "cases": [
+          "worked",
+          "subject-leak"
+        ]
+      },
+      "heldout-run": {
+        "passed": true,
+        "cases": [
+          "heldout-run",
+          "run-leak"
+        ]
+      },
+      "session-metadata": {
+        "passed": true,
+        "cases": [
+          "session-claim"
+        ]
+      },
+      "trial-overlap": {
+        "passed": true,
+        "cases": [
+          "overlap"
+        ]
+      },
+      "duplicate-source": {
+        "passed": true,
+        "cases": [
+          "source-alias"
+        ]
+      },
+      "cue-run-label-map": {
+        "passed": true,
+        "cases": [
+          "cue-labels",
+          "bad-cue-run",
+          "bad-cue-label"
+        ]
+      },
+      "modality-separation": {
+        "passed": true,
+        "cases": [
+          "mixed-modality"
+        ]
+      },
+      "window-availability": {
+        "passed": true,
+        "cases": [
+          "future-data",
+          "future-train",
+          "outcome-known",
+          "fit-after-predict"
+        ]
+      },
+      "noncausal-filter-refusal": {
+        "passed": true,
+        "cases": [
+          "noncausal-filter"
+        ]
+      },
+      "confusion-matrix": {
+        "passed": true,
+        "cases": [
+          "worked"
+        ]
+      },
+      "matched-majority-baseline": {
+        "passed": true,
+        "cases": [
+          "worked"
+        ]
+      },
+      "balanced-accuracy": {
+        "passed": true,
+        "cases": [
+          "worked"
+        ]
+      },
+      "absent-class": {
+        "passed": true,
+        "cases": [
+          "absent-class"
+        ]
+      },
+      "chance-null": {
+        "passed": true,
+        "cases": [
+          "literal-anchors"
+        ]
+      },
+      "rights-consent": {
+        "passed": true,
+        "cases": [
+          "empirical",
+          "rights",
+          "source",
+          "snapshot"
+        ]
+      },
+      "resource-bounds": {
+        "passed": true,
+        "cases": [
+          "sample-cap",
+          "too-many-trials",
+          "large-number"
+        ]
+      },
+      "json-markdown-hashes": {
+        "passed": true,
+        "cases": [
+          "reordered",
+          "profile"
+        ]
+      }
+    },
+    "accepted": 14,
+    "rejected": 37,
+    "literal_anchors_passed": true,
+    "test_label_isolation_passed": true,
+    "canonical_order_passed": true,
+    "original_erroneous_fixture_rejected": true,
+    "fixture_sha256": "9903d631c64368e3f721b1c2e651ecf5d60da13a27257fc4b8771de812aef057",
+    "errata_sha256": "56ac1f0c4a2807f5d5cf6b054f38b909e02f2a9dec5ef0488c2b4de152f8c3ce",
+    "scope": "Synthetic exact arithmetic and declared procedural checks,not empirical intention decoding"
+  },
+  "regression": {
+    "tests": 2023,
+    "inherited_tests": 1961,
+    "new_tests": 62,
+    "cli_cases": 2893,
+    "inherited_cli_cases": 2783,
+    "new_cli_cases": 110,
+    "independent_verifiers": 34,
+    "protected_files": 4219,
+    "changed_protected_files": [],
+    "registry": {
+      "references_checked_twice": 557,
+      "unique": 402,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "strict_json_files": 2898,
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    }
+  },
+  "replay": {
+    "accepted_pairs": 14,
+    "rejected_pairs": 41,
+    "cli_cases": 110,
+    "checkout": {
+      "passed": true,
+      "exports": [
+        {
+          "autocrlf": "false",
+          "raw_corpus_files": 166,
+          "normalized_commitments": 4,
+          "actual_cli_replays": 110,
+          "passed": true
+        },
+        {
+          "autocrlf": "true",
+          "raw_corpus_files": 166,
+          "normalized_commitments": 4,
+          "actual_cli_replays": 110,
+          "passed": true
+        }
+      ],
+      "method": "git checkout-index from staged files with core.autocrlf false/true;actual exported CLI executions;stdout bytes SHA256 matches saved JSON/Markdown,without newline normalization",
+      "subprocess_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "harness_limit": "Two parallel CLI processes; limits inherited numerical-library import threads,not the stdlib synthetic classifier."
+    }
+  },
+  "performance": {
+    "measured": true,
+    "environment": {
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0"
+    },
+    "profile_sha256": "30f541e00247d4c9f78fa5218cba83e5e5caf7417868743cf4e3b4cebfa629a0",
+    "code_sha256": "c2c0ab880202fbaa9cb3140cdabf7962eb2d2a30e222a8dd527b52d0651f0384",
+    "protocol": "Three untraced complete-report repetitions; separate tracemalloc repetition; one full CLI including imports,registry and serialization. Native peak is whole helper process including all workloads and tracing, not CLI-child or per-workload peak.",
+    "process_peak_working_set_bytes": 80986112,
+    "under_proposed_128_MiB": true,
+    "results": [
+      {
+        "id": "small",
+        "trials": 8,
+        "channels": 1,
+        "mode": "windows",
+        "samples": 4,
+        "input_sha256": "10b2444ada8b9ead7f6653bdf15e50ecc9ca9d1d84c63ba8d03f6839cb7e2a9a",
+        "budget": {
+          "raw_cells": 32,
+          "features": 2,
+          "work": 384,
+          "returned_cells": 288
+        },
+        "seconds": [
+          0.001269300002604723,
+          0.0009146998636424541,
+          0.0008486001752316952
+        ],
+        "median_seconds": 0.0009146998636424541,
+        "cli_seconds": 1.2685348996892571,
+        "python_traced_peak_bytes": 109393,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "medium",
+        "trials": 32,
+        "channels": 4,
+        "mode": "windows",
+        "samples": 64,
+        "input_sha256": "bfe6a18a9c385428b99af35e97a624b26fe352a50a6878a9958c4a0218bb14aa",
+        "budget": {
+          "raw_cells": 8192,
+          "features": 8,
+          "work": 52224,
+          "returned_cells": 1536
+        },
+        "seconds": [
+          0.033923900220543146,
+          0.04141659988090396,
+          0.03629280021414161
+        ],
+        "median_seconds": 0.03629280021414161,
+        "cli_seconds": 1.623477099929005,
+        "python_traced_peak_bytes": 881219,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "dense",
+        "trials": 64,
+        "channels": 8,
+        "mode": "windows",
+        "samples": 512,
+        "input_sha256": "76ba4b62c100b65bacefc8a5b9ca089184bd882ce18f3e2d6fb17e827a21e930",
+        "budget": {
+          "raw_cells": 262144,
+          "features": 16,
+          "work": 1585152,
+          "returned_cells": 4096
+        },
+        "seconds": [
+          1.887665799818933,
+          1.7656272002495825,
+          1.7532930998131633
+        ],
+        "median_seconds": 1.7656272002495825,
+        "cli_seconds": 2.0475634997710586,
+        "python_traced_peak_bytes": 20681777,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "features",
+        "trials": 8,
+        "channels": 1,
+        "mode": "features",
+        "samples": 0,
+        "input_sha256": "6322e79a8f7f0abe30a1352f7f19e1f74eaa3dd7354c40c4c1e86d840ea2cf9a",
+        "budget": {
+          "raw_cells": 16,
+          "features": 2,
+          "work": 288,
+          "returned_cells": 288
+        },
+        "seconds": [
+          0.002956000156700611,
+          0.0024955999106168747,
+          0.0012122001498937607
+        ],
+        "median_seconds": 0.0024955999106168747,
+        "cli_seconds": 0.7255533002316952,
+        "python_traced_peak_bytes": 107026,
+        "under_proposed_five_seconds": true
+      }
+    ],
+    "scope": "Local synthetic examples; no empirical accuracy or universal performance bound."
+  },
+  "evidence": {
+    "data/brain-intention-acceptance-checks.json": "c685934f53014fefa336da3c9895c7da95112ce109352d14a3e739d6f5202b50",
+    "data/brain-intention-unit.json": "f465a6924d44a80d5fb654bfdca2c0397d045e2f49e296ce22f73578dbb88ca6",
+    "data/brain-intention-verification.json": "c7114e5c8daf9b0622e565592b31f6caed1be17e652364387f65ae7152c06ff8",
+    "data/brain-intention-cli-replay.json": "f41366ea97bd566970c023cb4bf7b3d9443c1202c444b13ce0bf702672a94e68",
+    "data/brain-intention-checkout-replay.json": "4e8d2624455a9eba8143e744ca1c046d34eedebfae7a2e688711b1e3ee88df64",
+    "data/brain-intention-resource-measurements.json": "52d961917b353174db3bb202fae95e0bfebf74290d5efcb4544e6490d81a8996",
+    "knowledge/brain_intention_fixture_freeze_v1.json": "cbaba83c6097503ae8e4e0ef99df01cfca0d6da479740016e65fe10c00321750",
+    "knowledge/brain_intention_fixture_errata_v1.json": "012ea88c444ca106c7bd223c0a02ab2494759513502076e80a3945a66670438a",
+    "knowledge/brain_intention_fixture_errata_v2.json": "56ac1f0c4a2807f5d5cf6b054f38b909e02f2a9dec5ef0488c2b4de152f8c3ce"
+  },
+  "milestones": {
+    "audit": "5c0c1bd",
+    "source_profile": "3ba130c",
+    "independent_fixtures": "5103b11",
+    "fixture_identity_erratum": "dd18d43",
+    "fixture_binding_correction": "98192dc",
+    "engine": "28fa5fa",
+    "cli_reports": "e282443",
+    "verification": "1a26075",
+    "isolated_leakage_controls": "4cb9bb2",
+    "acceptance": "58ab718f189a750653115aa431720bd59cefa0bf"
+  },
+  "backlog": {
+    "P1": [
+      "Obtain Soon full methods/supplement lawfully and verify numerical protocol/data availability",
+      "Inspect rights/consent and immutable EEG file manifests; verify channels,units,missing data and grouping",
+      "Freeze real EEG preprocessing,CSP/LDA and held-out-subject/run replication separately from synthetic reference",
+      "Freeze proposed core schema,limits,tie/absent-class conventions and independent fixtures before runtime"
+    ],
+    "P2": [
+      "Readiness-potential accumulator/awareness protocol replication",
+      "fMRI decoding with suitable data and independent evaluation",
+      "Larger datasets,nested selection,correlation-aware uncertainty and deployment validation"
+    ]
+  },
+  "scientific_limits": [
+    "All trial data are self-authored synthetic declarations; no human dataset consumed.",
+    "No CSP/LDA,signal preprocessing,readiness-potential,fMRI or original laboratory replication.",
+    "Labels/clocks/subjects/rights are declarations; hashes cannot independently certify them.",
+    "No empirical significance inferred from the exact7/128 iid arithmetic toy.",
+    "The four original inventory variations remain preserved; neural variants remain unsupported and behavioral-proxy interpretation experimental."
+  ],
+  "next": "After closure commit,push and clean synchronized main, audit56 only; complete56–60 in order and final all54 integration under master directive."
+}

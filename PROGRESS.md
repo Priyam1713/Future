@@ -1316,3 +1316,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #55 full acceptance passed
 - Passed2023 tests (1961 inherited+62 new),2893 CLI cases (2783 inherited+110 new),34 independent verifiers and all28 #55 families. Both actual checkout exports replay110 raw outputs each. All4219 pre-engine protected files unchanged; registry,strictJSON,60/54/exclusions,dependency,pip,diff pass.
 - Aggregator refreshed from complete command receipts after initial in-flight process retained the pre-additional-tests2020 expectation. Current acceptance checks2023 exactly; no failing engine check was treated as passing. Closure follows before #56 audit.
+
+## 2026-11-07 — #55 Core v1 closure
+- Core v1 Ready — Offline Trial-Window Feature Classification and Leakage Diagnostic Scope. All28 independent families,62 new tests,2023 total tests,2893 CLI cases and34 independent verifiers pass.14accepted/41rejected pairs replay110raw outputs under each actual checkout mode. All4219 pre-engine protected files unchanged; registry,strictJSON,inventory,dependency,pip,diff pass.
+- Synthetic arithmetic and procedural scope only; no EEG/fMRI/clinical or unrestricted intention prediction. Errata preserve original fixture and numerical expectations. Source/rights,measurements,matrix and P1/P2 recorded. After closure push and clean0/0, continue #56 audit under master directive.
