@@ -1205,3 +1205,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #52 independent fixtures before engine
 - Frozen 23 families,21 accepted and41 rejected original cases; independent dense Fraction/set oracle and arithmetic PRNG vectors. Literal path,star/complete and exhaustive two-node count/fraction/gain moments pass. No production engine yet.
+
+## 2026-11-07 — #52 verified engine pass
+- Implemented pure synchronous integer-comparison cascades,strict graph/schema/rights validation,preflight work/output limits,shared replicate/node xorshift32 draws,exact aggregate variances andpaired scenario/persistence differences. All68new unit tests and23independent families pass against frozen pre-engine tables. No empirical orcausal certification.
