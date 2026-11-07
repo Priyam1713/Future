@@ -1353,3 +1353,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-08 — #57 resource audit only
 - After56closure998b796 pushed and clean0/0,preserved3ranked sources/5variations and audited7primary references. Recommend exact versioned binary equal/declared-weight pools,latest eligible revisions,missingness/dependence and matched held-out evaluation. Literal1/2 equal mean,13/20 weighted mean and17/50 exact Brier decomposition verified.
 - Distinct0–1/0–2 scoring scales and51compatibility documented; no learned-weight,tournament or independent-human superiority claim.31fixture families planned; no57runtime/profile/production fixtures. Source/rights access limits and P1/P2 recorded.
+
+## 2026-11-08 — #57 source/profile freeze
+- Frozen versioned binary editorial linear pool,precommitted weights,immutable forecast parent chains,cutoff-inclusive latest eligibility,abstention withdrawal and zero-denominator diagnostics. Outcome-free definition/model identities and matched held-out scoring preserve51conventions without changing51. Source/rights,resource and unsupported matrix fixed; independent fixtures follow before engine.

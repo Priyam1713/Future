@@ -1,0 +1,151 @@
+{
+  "id": "collective-intelligence-binary-linear-pool-v1",
+  "version": 1,
+  "technique_id": 57,
+  "scope": "Versioned Binary Forecast Aggregation and Evaluation Scope",
+  "schema": {
+    "root": [
+      "schema_version",
+      "profile",
+      "pool",
+      "forecasters",
+      "questions",
+      "forecasts",
+      "provenance"
+    ],
+    "profile": [
+      "id",
+      "version",
+      "sha256",
+      "catalog_sha256"
+    ],
+    "pool": [
+      "kind",
+      "frozen_at",
+      "weights_available_at"
+    ],
+    "forecaster": [
+      "id",
+      "kind",
+      "dependency_group",
+      "weight"
+    ],
+    "question": [
+      "definition",
+      "resolution"
+    ],
+    "definition": [
+      "id",
+      "version",
+      "event_id",
+      "dependency_group",
+      "partition",
+      "text",
+      "positive_rule",
+      "negative_rule",
+      "clarity_confirmed",
+      "created_at",
+      "locked_at",
+      "cutoff",
+      "event_end"
+    ],
+    "resolution": [
+      "status",
+      "outcome",
+      "event_at",
+      "outcome_known_at",
+      "resolved_at"
+    ],
+    "forecast": [
+      "question_id",
+      "question_sha256",
+      "forecaster",
+      "revision",
+      "parent_sha256",
+      "issued_at",
+      "knowledge_at",
+      "probability"
+    ],
+    "provenance": [
+      "evidence_mode",
+      "source_ref",
+      "rights",
+      "attribution",
+      "snapshot",
+      "snapshot_sha256"
+    ]
+  },
+  "source_manifest_sha256": "4d5b136cc95b9747c782d1c446e1a8b36d157eeeae969cf4aa2b0a90ab071d58",
+  "source_freeze_sha256": "60d31c96e29d3a88b41af2e67d524a6e958440a7524b53558bcfd9b84c8fe8b1",
+  "equations": [
+    "pool=sum(w_i*p_i)/sum(w_i),eligible non-abstaining positive-weight entries only; equal mode all roster weights1",
+    "TRAIN and TEST separately; primary summary uses resolved TEST questions with estimable pool",
+    "binary_brier=(p-y)^2 in0..1; two_category_brier=2*binary_brier in0..2",
+    "REL=sum_k n_k/N*(p_k-ybar_k)^2;RES=sum_k n_k/N*(ybar_k-ybar)^2;UNC=ybar*(1-ybar);meanBrier=REL-RES+UNC with exact identical probabilities",
+    "Baseline constant1/2 and equal-probability pool; compare only identical resolved question IDs",
+    "Each individual is compared with aggregate on identical resolved TEST question IDs where both have an eligible probability"
+  ],
+  "contract": [
+    "Strict exact fields,pinned profile/catalog hashes; schema_version/profile.version exactinteger1. Opaque IDs ASCII1..64. Questions1..32,forecasters1..32,forecasts0..2048; unique question,forecaster and event IDs. Related distinct events may share dependency_group,but no independence inference.",
+    "All times UTC-Z seconds with optional up to6fractional digits,parsed with existing timestamp convention. created_at<=locked_at<=pool.frozen_at<=cutoff<=event_end and created_at<event_end. weights_available_at<=pool.frozen_at. Question.version exactinteger1; clarity_confirmed=true and nonempty text/positive_rule/negative_rule<=4000characters. No natural-language probability generation.",
+    "Question identity hash is SHA256 canonical definition ONLY,excluding resolution/outcome. Forecast question_sha256 must match. Root input hash retains full request,while model hash excludes outcome labels and future resolution facts except their effects on declared eligibility boundaries.",
+    "Resolution status resolved requires outcome exactint0/1 and nonnull UTC event_at<=outcome_known_at<=resolved_at,event_at within[created_at,event_end]. For outcome0,event_at=event_end. Unresolved requires all other resolution fields null. Void/disputed require outcome/event_at null and nonnull outcome_known_at<=resolved_at. Every supplied outcome-information boundary must be strictly after pool.frozen_at,so current payload outcomes cannot fit weights.",
+    "pool.kind equal or declared_weight. Forecaster weights exact nonnegative rationals,at least one positive roster weight; equal kind requires every weight exactly1. Weights fixed globally before all question cutoffs/outcome information; no learned weights or tuning from this payload,including TRAIN outcomes.",
+    "Forecaster.kind human_declared,synthetic or llm_simulated; dependency_group explicit. Synthetic evidence_mode prohibits human_declared and requires self_authored rights. user_supplied_unvalidated accepts declared rights but never certifies skill,independence or consent. All repository examples synthetic; no human dataset redistributed.",
+    "Numeric probabilities/weights are exact integers(notbool) or signed integer/positive-denominator strings,each component<=18digits. No floats,decimal/exponent strings,noncanonical integer strings or zero denominators. Probabilities in[0,1] or null abstention; negative weights reject. Guard every fitting/scoring arithmetic operation before numerator/denominator cross products exceeding8192bits.",
+    "Per(question_id,forecaster) revisions unique,contiguous1..N with exactinteger revision; v1 parent_sha256=null,later parent_sha256 equals canonical hash of prior entire record. issued_at strictly increases,knowledge_at<=issued_at. Validate full chains before selection; records canonicalized by question,forecaster,revision. Unknown references,duplicate versions or broken parents reject the request.",
+    "Revision eligibility: issued_at and knowledge_at <= question cutoff (equality permitted,matching51),and both strictly before any declared event_at/outcome_known_at. Structurally valid late/informed revisions are explicitly rejected/excluded in diagnostics and cannot replace earlier eligible history. The latest eligible record wins; if null,forecaster abstains/withdraws with no fallback to older probability.",
+    "Report every question/forecaster pair: missing,abstaining,zero_weight or contributing; include rejected revision reasons and selected record hashes. Same forecaster revisions are not independent voters. Numeric agreement alone does not identify dependence; dependency/kind declarations never certify independent human expertise or effective sample size.",
+    "Renormalize positive declared weights over eligible non-abstaining forecasts per question. Zero contributing-weight denominator gives pool=null,status=not_estimable; no artificial0or1/2 substitution. Equal-pool comparison uses all eligible non-abstaining forecasters,including declared-zero-weight participants,with its distinct participant count named.",
+    "Scoring requires resolved outcome and estimable probability. Nonresolved/void/disputed and empty denominator summaries return explicit not_estimable/null. Primary TEST and separate TRAIN summaries use one row per distinct event/question. Baseline and individual comparisons explicitly list matched question IDs and counts; no missing event silently scored0.",
+    "Calibration10fixed bins[0,.1),...,[.9,1],with p=1 inlast bin; descriptive counts/means/frequencies only. Exact decomposition groups identical Fraction probabilities separately; verify identity. No logloss,confidence intervals,p-values,learned calibration or empirical superiority claims.",
+    "Canonical model hash binds profile,pool,roster,question definitions and chosen forecast records; excludes resolution labels. Split hash binds question/event/dependency/partition and cutoff identities; resolution hash separate. Input/report/code/source/snapshot hashes retained; code commitment normalizes CRLF->LF. Inputs not mutated.",
+    "Provenance evidence_mode synthetic or user_supplied_unvalidated; source_ref in frozen catalog,rights self_authored/permission_granted/public_domain/cc_by; nonempty attribution/snapshot<=4000characters,exact UTF8 SHA. Declarations/hashes cannot independently certify clocks,truth,permissions or consent.",
+    "Preflight work=forecasts*64+questions*forecasters*32<=5000000;returned_cells=questions*forecasters*24+forecasts*16<=100000. Account for every revision/pair before pooling. Limits are bounded work reservations,not universal timing guarantees; complete-report CPU/memory measured before closure."
+  ],
+  "bounds": {
+    "questions": 32,
+    "forecasters": 32,
+    "forecasts": 2048,
+    "work": 5000000,
+    "returned_cells": 100000,
+    "rational_component_digits": 18,
+    "integer_bits": 8192
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Offline exact declared binary forecast pools",
+      "Precommitted equal or nonnegative declared weights",
+      "Immutable local revision chains and explicit eligibility",
+      "Missing/abstention/zero-weight/dependence accounting",
+      "Matched TEST/TRAIN scoring,descriptive calibration and exact decomposition"
+    ],
+    "experimental_research_only": [
+      "Real-world interpretations of synthetic/dependent/LLM consensus"
+    ],
+    "unsupported": [
+      "Automatic independence or empirical skill certification",
+      "Learned weights from current outcomes",
+      "Full51ledger adapter",
+      "Iterative Delphi orchestration",
+      "LLM/provider APIs",
+      "Complete tournament operations",
+      "Automatic statistical significance"
+    ]
+  },
+  "backlog": {
+    "P1": [
+      "Detailed rights-cleared source chapters and advanced aggregation recipes",
+      "Real forecast corpus permissions,independence/selection/timing audit and out-of-sample empirical evaluation",
+      "Formal stable51ledger adapter without changing51",
+      "Separately justified pre-history learned weights and robust missingness/dependence evaluation"
+    ],
+    "P2": [
+      "Iterative Delphi facilitation",
+      "Multi-season learned weighting/extremization",
+      "LLM committee API integrations and cost/provenance contracts",
+      "Full competition platforms,large-scale calibration and statistical uncertainty"
+    ]
+  },
+  "runtime": "Python standard library offline CPU; no provider API,cloud,new framework or51interface changes"
+}
