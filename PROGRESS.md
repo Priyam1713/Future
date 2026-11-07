@@ -1249,3 +1249,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #53 full units and actual checkout replay
 - Full1866tests pass (1790inherited+76new). Both indexed core.autocrlf=false/true exports preserve208raw corpus files and3normalized commitments andeach replay138actual CLI outputs byte-for-byte without newline normalization.
 - Bounded inherited-library import threads areconfigured fromthe start;full inherited CLI/verifier/registry/dependency/preservation sweep isstillpending. No54research yet.
+
+## 2026-11-07 — #53 full acceptance passed
+- Passed1866tests (1790inherited+76new),2645CLI cases (2507inherited+138new),32independent verifiers (31inherited+1new),all27independent families andboth actual checkout replays. All3739protected pre-engine files unchanged.
+- Source registry idempotence,strictJSON,60IDs/54retained/six exclusions,dependency audit,pip check anddiff check pass. No failing receipt retained aspassing evidence. Finaldata:data/digital-twin-acceptance-checks.json. Closure follows;no54research yet.
