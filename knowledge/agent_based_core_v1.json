@@ -1,0 +1,710 @@
+{
+  "version": 1,
+  "technique_id": 54,
+  "name": "Agent-Based Simulation",
+  "date": "2026-11-07",
+  "status": "Core v1 Ready — Finite-Grid Synchronous Binary Cellular Automata Scope",
+  "certification_scope": "Verified exact synthetic B3/S23 execution andconditional initial-state sensitivity;notempirically predictive human/social/epidemiological orLLM behavior.",
+  "profile": "agent-based-finite-grid-b3s23-v1",
+  "profile_sha256": "e6d0487cf23393a1262efb227ef912542f38ae6cb9232358a6bbc34c9053a62b",
+  "profile_file": "knowledge/agent_based_profile_v1.json",
+  "source_manifest_sha256": "d95cbfa701819bf23b3df2647c8ee6454963a397654588672818e8daec2ee02f",
+  "source_freeze_sha256": "7f253ec16471ce6a5a4a35193cb06fa065077a598a1aed293d61a63e82c1232b",
+  "equations": [
+    "neighbor_count=sum ofliving cells atdistinct in-grid Moore offsets,excluding(0,0),fromcompleteprior snapshot",
+    "next_alive = neighbor_count==3 OR (current_alive==1 AND neighbor_count==2)",
+    "alive+dead=height*width; alive_next=alive_previous+births-deaths"
+  ],
+  "exact_contract": [
+    "Strict exact object fields;schema_version/profile.version integer1. All IDs ASCII [A-Za-z0-9][A-Za-z0-9_.-]{0,63}. One shared geometry/model/horizon;1..8 distinctscenario IDs withcanonical explicitinitialgrids andchosen reference.",
+    "Height/width exactintegers1..64,N<=4096. Grid isalist ofheight rowlists eachwidth exactinteger0or1;bools,floats,strings,ragged rows andimplicit padding reject. Initialcoordinates row-major[r,c],origin top-left.",
+    "Finite zero-exterior boundaries:out-of-grid positions dead,no wrap oralias. Eight distinct Moore radius1positions exclude center. Every nextcell readscompletepriorstate;commitallcells together. B3/S23 only;unknownmodels,schedules,boundaries,random orLLM fields reject.",
+    "Alwayscompute exactly requestedticks0..256;no earlystop orfastforward. Include t0 plus allactual transitions. At t0 births/deaths=null because no transition occurred. Initial/final complete grids alwaysreturned;optional state_trace contains every t0..T completegrid.",
+    "Cycle classification usesexact complete row-major binary-state equality,notaggregatecounts orhash equality alone. Keepfirst occurrence ofeach state;thefirst repeat atj ofearlieri establishescycle_start=i,period=j-i,first_repeat_tick=j. period1=fixed_point;period>1=periodic_cycle. Continue allrequestedticks afterdetection sofinalphase istruthful. No repeat=unclassified,truncated=true. Establishedfixed/cycle classification hastruncated=false. T0 hasno transition,classifiesunclassified andtruncated=true evenifinitialpattern wouldbe stable.",
+    "State SHA256 isoverraw row-majorbytes0/1,notASCII digits;geometry/model hashes bindshape. Source/profile/schema/input/code/initial/final/state identities recorded. Inputs copied,notmutated. Liveness isnotconserved orirreversible;birthsanddeaths bothallowed.",
+    "Compare eachscenario minusreference atidenticalticks:alive-count differences andcomplete-state Hammingdistance. Finaldifferences includeactual finalgrids,notprojectedafterearlystop. Identicalinitialconfigurations givezero differences. Equalcounts do notimplyequalstates. Differences areconditionalsyntheticmodel sensitivity,notreal-world causal effects.",
+    "Resource preflight before neighborhood construction/transitions:cell_ticks=N*T*S<=1000000;neighbor_cell_work=9*cell_ticks<=9000000;returned_state_cells=S*N*(2+(T+1 iftrace_states else0))<=100000;returned_count_cells=S*(10*(T+1)+32)<=20000. Conservative outputreservations include initial/finalgrids andfulltraces/comparisons;inputecho,histories/hashes andfixedmetadata excluded. Individualmaxima cannotfreelycombine;work cap isredundantgivenfactor9 butexplicitly checked. Internalstatehistory isbounded bycell-tick cap plusinitialstates.",
+    "Provenance synthetic mustbetrue;source_ref infrozencatalog. Rights self_authored/permission_granted/public_domain/cc_by;nonemptyattribution/snapshot<=4000chars andexactUTF8 snapshotSHA256. Declarations are not independenttruth/rights certification. Noactualhuman/clinical/socialdata ingestion orforecastclaim.",
+    "Geometric invariance requiresmatching transformedgeometry/coordinates/boundaries. Arbitrarynodepermutations are notgrid symmetries. Interiortranslation tests needadequateboundaryclearance. Ticks aremodelupdates,notdates. FullLife states andlocalcombinatorics are notempiricaltransition probabilities."
+  ],
+  "bounds": {
+    "height": 64,
+    "width": 64,
+    "cells": 4096,
+    "ticks": 256,
+    "scenarios": 8,
+    "cell_ticks": 1000000,
+    "neighbor_cell_work": 9000000,
+    "returned_state_cells": 100000,
+    "returned_count_cells": 20000
+  },
+  "source_boundaries": {
+    "Epstein": "Generative Social Science,2006: generative explanation is distinct from prospective prediction; inspected Chapter1 only.",
+    "Railsback_Grimm": "Second edition2019; inspected authorized Chapter1/preface andauthors site. 2025ebook format isnotthird edition.",
+    "Park": "UIST2023/arXivv2:believable25-agent sandbox,notempirical human forecasting. Source/code/assets have distinct rights.",
+    "Mesa": "Immediate rule reference atfe24c24ee34762de2ff85d487af14bfb5cd1dbb2,version4.0.0a0 alpha. Two-stage B3/S23 reference uses torus andrandom initialization. Our zero-exterior andexplicit-input conventions areeditorial,notexactMesa replication."
+  },
+  "inventory_method_row": [
+    54,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Agent-Based Simulation",
+    "RETAIN — simulate / implement",
+    "Data & simulation",
+    "Cellular automata; Schelling segregation; Sugarscape; epidemiological/social ABM; LLM generative agents",
+    "Agent rules, environment, interactions, Monte Carlo ensembles and sensitivity tests",
+    "CPU; optional GPUs/LLM API; synthetic or historical parameters",
+    "Emergent outputs parameter-sensitive; simulate scenarios, not fate",
+    "Empirical/synthetic scenario testing possible",
+    "Generative Social Science",
+    "Joshua M. Epstein",
+    null,
+    "Agent-Based and Individual-Based Modeling",
+    "Generative Agents: Interactive Simulacra of Human Behavior",
+    null,
+    "49, 52, 53, 56, 59",
+    54
+  ],
+  "ranked_sources": [
+    [
+      54,
+      "Agent-Based Simulation",
+      1,
+      "Joshua M. Epstein",
+      "Generative Social Science",
+      "Foundational agent-based modeling",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      2,
+      "Steven F. Railsback and Volker Grimm",
+      "Agent-Based and Individual-Based Modeling",
+      "Stepwise ABM validation",
+      "https://www.railsback-grimm-abm-book.com/",
+      "Authors site / resources",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      3,
+      "Joon Sung Park et al.",
+      "Generative Agents: Interactive Simulacra of Human Behavior",
+      "LLM multi-agent modern approach",
+      "https://research.google/pubs/generative-agents-interactive-simulacra-of-human-behavior/",
+      "Open research paper",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      4,
+      "Mesa maintainers",
+      "Mesa Documentation",
+      "Python ABM implementation",
+      "https://mesa.readthedocs.io/stable/",
+      "Open docs",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      54,
+      "Agent-Based Simulation",
+      "Cellular automata",
+      "Mesa Documentation",
+      "Generative Agents: Interactive Simulacra of Human Behavior",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      "Schelling segregation",
+      "Mesa Documentation",
+      "Generative Agents: Interactive Simulacra of Human Behavior",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      "Sugarscape",
+      "Mesa Documentation",
+      "Generative Agents: Interactive Simulacra of Human Behavior",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      "epidemiological/social ABM",
+      "Generative Social Science",
+      "Mesa Documentation",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      54,
+      "Agent-Based Simulation",
+      "LLM generative agents",
+      "Generative Agents: Interactive Simulacra of Human Behavior",
+      "Generative Social Science",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "configuration_matrix": {
+    "supported": [
+      "Explicit synthetic finite binarygrids",
+      "Exact synchronous B3/S23 withzeroexterior",
+      "Full requestedhorizon,exactstate fixed/cycle classification",
+      "Bounded state/counttraces andstaticinitial-state comparisons",
+      "Offline strict JSON/Markdown andhash provenance"
+    ],
+    "experimental_research_only": [
+      "Any interpretation ofautomaton patterns asobservedagent/socialbehavior"
+    ],
+    "unsupported": [
+      "Schelling relocation",
+      "Sugarscape",
+      "Epidemiological/social forecasting",
+      "LLM generative agents",
+      "Stochastic initialization/scheduling",
+      "Toroidal boundaries",
+      "Other CA rules",
+      "Empirical calibration",
+      "Causalpolicy effects",
+      "Arbitrarynodepermutation invariance"
+    ]
+  },
+  "variations": {
+    "Cellular automata": "Supported boundedfinitezero-exterior synchronous B3/S23 only",
+    "Schelling segregation": "Unimplemented;source-specificfraction/no-neighbor/vacancy/scheduling/RNG freeze andfixtures required",
+    "Sugarscape": "Unimplemented fullresource/trade/vision models",
+    "epidemiological/social ABM": "Unimplemented domain-specific empiricalmodels;noclinical/social forecasting certification",
+    "LLM generative agents": "Unimplemented language-model behavior;noAPI/model/assets used"
+  },
+  "acceptance_criteria": [
+    {
+      "criterion": "Source/profile/schema/boundary/schedule/rights frozen beforeengine",
+      "passed": true
+    },
+    {
+      "criterion": "All26independent fixture families frozen beforeproduction",
+      "passed": true
+    },
+    {
+      "criterion": "All18local cases and512configurations independentlyverified",
+      "passed": true
+    },
+    {
+      "criterion": "56birth+84survival=140alive/372dead and35/128 exactidentity",
+      "passed": true
+    },
+    {
+      "criterion": "Exactempty/single/block/blinker/glider states",
+      "passed": true
+    },
+    {
+      "criterion": "Birth/death accounting andalive+dead=N withoutirreversibility assumptions",
+      "passed": true
+    },
+    {
+      "criterion": "Clippededge/tinygrid/centerexclusion andinplace negativecontrol",
+      "passed": true
+    },
+    {
+      "criterion": "Validrectangular rotation/reflection/interiortranslation controls",
+      "passed": true
+    },
+    {
+      "criterion": "Exactfull-state fixed/cycle detection,period2notfixed",
+      "passed": true
+    },
+    {
+      "criterion": "Fullrequestedhorizon andtruthfulT0/truncation semantics",
+      "passed": true
+    },
+    {
+      "criterion": "Staticinitial-state comparisons,Hammingdistance andidentical controls",
+      "passed": true
+    },
+    {
+      "criterion": "Strictunsupported/schema/rights/resourcepreflight rejection",
+      "passed": true
+    },
+    {
+      "criterion": "138accepted/rejected rawCLI cases andallhashidentities",
+      "passed": true
+    },
+    {
+      "criterion": "BothactualGitcheckout exports replay138outputs exactly",
+      "passed": true
+    },
+    {
+      "criterion": "1961tests/2783CLIcases/33independent verifiers includingcompleteinheritedbaselines",
+      "passed": true
+    },
+    {
+      "criterion": "3979protected files;registry/strictJSON/taxonomy/dependency/pip/diff gates",
+      "passed": true
+    },
+    {
+      "criterion": "Actualsmall/medium/dense/scenarioCPUandmemorymeasurements",
+      "passed": true
+    },
+    {
+      "criterion": "Boundedconfigurationmatrix,source/rights limits andP1/P2",
+      "passed": true
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "fixture_families": 26,
+    "families": {
+      "local-rule-18-cases": {
+        "passed": true,
+        "cases": [
+          "local_truth"
+        ]
+      },
+      "local-512-combinatorial-oracle": {
+        "passed": true,
+        "cases": [
+          "local_configurations"
+        ]
+      },
+      "synchronous-inplace-negative": {
+        "passed": true,
+        "cases": [
+          "blinker"
+        ]
+      },
+      "clipped-edge-neighbors": {
+        "passed": true,
+        "cases": [
+          "clipped-corners"
+        ]
+      },
+      "toroidal-alias-refusal": {
+        "passed": true,
+        "cases": [
+          "torus",
+          "wrap"
+        ]
+      },
+      "center-exclusion": {
+        "passed": true,
+        "cases": [
+          "tiny-one",
+          "single"
+        ]
+      },
+      "distinct-neighbor-positions": {
+        "passed": true,
+        "cases": [
+          "tiny-line",
+          "tiny-two"
+        ]
+      },
+      "empty-board": {
+        "passed": true,
+        "cases": [
+          "empty"
+        ]
+      },
+      "single-cell-death": {
+        "passed": true,
+        "cases": [
+          "single"
+        ]
+      },
+      "block-fixed-point": {
+        "passed": true,
+        "cases": [
+          "block"
+        ]
+      },
+      "blinker-period-two": {
+        "passed": true,
+        "cases": [
+          "blinker",
+          "blinker-odd"
+        ]
+      },
+      "glider-translation-plan": {
+        "passed": true,
+        "cases": [
+          "glider",
+          "glider-no-trace"
+        ]
+      },
+      "birth-death-count-balance": {
+        "passed": true,
+        "cases": [
+          "scenario-comparison"
+        ]
+      },
+      "active-plus-dead-cells": {
+        "passed": true,
+        "cases": [
+          "scenario-comparison"
+        ]
+      },
+      "fixed-point-detection": {
+        "passed": true,
+        "cases": [
+          "block",
+          "full-horizon-fixed"
+        ]
+      },
+      "period-versus-fixed": {
+        "passed": true,
+        "cases": [
+          "blinker",
+          "blinker-one"
+        ]
+      },
+      "zero-steps": {
+        "passed": true,
+        "cases": [
+          "zero-tick",
+          "zero-tick-no-trace"
+        ]
+      },
+      "cap-truncation": {
+        "passed": true,
+        "cases": [
+          "blinker-one",
+          "glider"
+        ]
+      },
+      "interior-translation": {
+        "passed": true,
+        "cases": [
+          "glider",
+          "translated"
+        ]
+      },
+      "rotation-reflection": {
+        "passed": true,
+        "cases": [
+          "rectangle",
+          "rotated",
+          "reflected"
+        ]
+      },
+      "identical-scenario-control": {
+        "passed": true,
+        "cases": [
+          "identical",
+          "equal-count-different-state"
+        ]
+      },
+      "strict-binary-grid": {
+        "passed": true,
+        "cases": [
+          "ragged",
+          "binary-bool",
+          "binary-two",
+          "row-string"
+        ]
+      },
+      "unsupported-variation-rejection": {
+        "passed": true,
+        "cases": [
+          "variation",
+          "rng",
+          "other-rule"
+        ]
+      },
+      "source-rights-and-data": {
+        "passed": true,
+        "cases": [
+          "source",
+          "rights",
+          "snapshot",
+          "empirical"
+        ]
+      },
+      "combined-resource-caps": {
+        "passed": true,
+        "cases": [
+          "work-cap",
+          "state-cap",
+          "count-cap"
+        ]
+      },
+      "raw-json-markdown-hashes": {
+        "passed": true,
+        "cases": [
+          "unicode",
+          "profile"
+        ]
+      }
+    },
+    "accepted": 23,
+    "rejected": 42,
+    "profile_sha256": "e6d0487cf23393a1262efb227ef912542f38ae6cb9232358a6bbc34c9053a62b",
+    "pre_engine_hashes_passed": true,
+    "local_truth_cases": 18,
+    "exhaustive_local_configurations": 512,
+    "combinatorics": {
+      "configurations": 512,
+      "births": 56,
+      "survivals": 84,
+      "next_alive": 140,
+      "next_dead": 372,
+      "exact_fraction": "35/128"
+    },
+    "block_blinker_glider_passed": true,
+    "geometric_controls_passed": true,
+    "inplace_negative_passed": true,
+    "scientific_scope": "Exact bounded synthetic automaton correctness;notempirical social,clinical,LLM orcausal prediction"
+  },
+  "exact_fraction_identity_passed": true,
+  "regression": {
+    "tests": 1961,
+    "inherited_tests": 1866,
+    "new_tests": 95,
+    "cli_cases": 2783,
+    "inherited_cli_cases": 2645,
+    "new_cli_cases": 138,
+    "independent_verifiers": 33,
+    "inherited_verifiers": 32,
+    "protected_files": 3979,
+    "changed_protected_files": [],
+    "registry": {
+      "references_checked_twice": 542,
+      "unique": 387,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "strict_json_files": 2770,
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    }
+  },
+  "replay": {
+    "accepted_pairs": 23,
+    "rejected_pairs": 46,
+    "cli_cases": 138,
+    "checkout": {
+      "passed": true,
+      "exports": [
+        {
+          "autocrlf": "false",
+          "raw_corpus_files": 208,
+          "normalized_commitments": 3,
+          "actual_cli_replays": 138,
+          "passed": true
+        },
+        {
+          "autocrlf": "true",
+          "raw_corpus_files": 208,
+          "normalized_commitments": 3,
+          "actual_cli_replays": 138,
+          "passed": true
+        }
+      ],
+      "method": "git checkout-index from staged files with core.autocrlf false/true;actual exported CLI executions;stdout bytes SHA256 matches saved JSON/Markdown,without newline normalization",
+      "subprocess_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "harness_limit": "Two parallel CLI processes; limits inherited numerical-library import threads,not the stdlib cellular automaton."
+    }
+  },
+  "performance": {
+    "version": 1,
+    "measured": true,
+    "environment": {
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD"
+    },
+    "profile_sha256": "e6d0487cf23393a1262efb227ef912542f38ae6cb9232358a6bbc34c9053a62b",
+    "code_sha256": "cd6d2b3efba558253ab77212b67fd2e80c1d632d8c48e8fd358b38b7b80c896c",
+    "protocol": "Five untraced complete in-process report repetitions perworkload;separate tracemalloc repetition forPythonallocations;onecompleteCLI invocation includingimports,registry andserialization. Native memory iswhole measurement-process peak includingimports,allworkloads andtracing;notisolated perworkload orCLIchild.",
+    "process_peak_working_set_bytes": 31526912,
+    "under_proposed_128_MiB": true,
+    "results": [
+      {
+        "id": "small",
+        "geometry": {
+          "height": 7,
+          "width": 7
+        },
+        "ticks": 4,
+        "scenarios": 1,
+        "initialization": "Explicitdeterministic pattern;nostochastic initialization",
+        "request_sha256": "daa34b3fd069b1ca98ce5757881a3b247547a9c060df7c151f5c190c8d1e0274",
+        "budget": {
+          "cell_ticks": 196,
+          "neighbor_cell_work": 1764,
+          "returned_state_cells": 343,
+          "returned_count_cells": 82
+        },
+        "seconds": [
+          0.002047,
+          0.0017306,
+          0.001631,
+          0.0011398,
+          0.0010523
+        ],
+        "median_seconds": 0.001631,
+        "cli_seconds": 0.9270826,
+        "python_traced_peak_bytes": 127680,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "medium",
+        "geometry": {
+          "height": 32,
+          "width": 32
+        },
+        "ticks": 64,
+        "scenarios": 1,
+        "initialization": "Explicitdeterministic pattern;nostochastic initialization",
+        "request_sha256": "ab775cc4aa25f0d0296c67606c01ade741ce9936646c9f50cbac08d043f10b11",
+        "budget": {
+          "cell_ticks": 65536,
+          "neighbor_cell_work": 589824,
+          "returned_state_cells": 2048,
+          "returned_count_cells": 682
+        },
+        "seconds": [
+          0.0398056,
+          0.0418056,
+          0.0395279,
+          0.0382954,
+          0.0398262
+        ],
+        "median_seconds": 0.0398056,
+        "cli_seconds": 1.4684596,
+        "python_traced_peak_bytes": 632060,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "dense",
+        "geometry": {
+          "height": 64,
+          "width": 64
+        },
+        "ticks": 128,
+        "scenarios": 1,
+        "initialization": "Explicitdeterministic pattern;nostochastic initialization",
+        "request_sha256": "ef80291a80efcce8b0cae9e5f51aa2466084afad22da94cb0d000b3e8ed767bb",
+        "budget": {
+          "cell_ticks": 524288,
+          "neighbor_cell_work": 4718592,
+          "returned_state_cells": 8192,
+          "returned_count_cells": 1322
+        },
+        "seconds": [
+          0.4695601,
+          0.5842855,
+          0.6232826,
+          0.5406093,
+          0.5944125
+        ],
+        "median_seconds": 0.5842855,
+        "cli_seconds": 1.1565569,
+        "python_traced_peak_bytes": 2482045,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "scenarios",
+        "geometry": {
+          "height": 32,
+          "width": 32
+        },
+        "ticks": 64,
+        "scenarios": 4,
+        "initialization": "Explicitdeterministic pattern;nostochastic initialization",
+        "request_sha256": "9dc613a23892e075d96d98134add04b5d46b61146be43e4d77b710fa56f75388",
+        "budget": {
+          "cell_ticks": 262144,
+          "neighbor_cell_work": 2359296,
+          "returned_state_cells": 8192,
+          "returned_count_cells": 2728
+        },
+        "seconds": [
+          0.3428597,
+          0.3471727,
+          0.2750712,
+          0.3025709,
+          0.2647463
+        ],
+        "median_seconds": 0.3025709,
+        "cli_seconds": 1.0258017,
+        "python_traced_peak_bytes": 1360874,
+        "under_proposed_five_seconds": true
+      }
+    ],
+    "scope": "Localrepresentative explicit syntheticboards only;notuniversal performance orreal-world predictive accuracy."
+  },
+  "evidence": {
+    "data/agent-based-acceptance-checks.json": "89cf0354199f32ee91ff5742bd1b796f5ff1a25caff49055a4d6120b97f22155",
+    "data/agent-based-unit.json": "a38c51ba1debb567c73da2aa0e89b0a24c202709c383abb5433f23de69d3ca38",
+    "data/agent-based-verification.json": "801c136f4dd69d22792d07e2ec1cf0c2d4d9de96afc2e975ad3459a31eaed32b",
+    "data/agent-based-cli-replay.json": "72deccd3cd59eb4841f8c427df710e7123db1df1493eefd9dc07429a211c891a",
+    "data/agent-based-checkout-replay.json": "68a8de1823fd19ec87fbe61def383fe350834335f959c72854a174f9c210aaf7",
+    "data/agent-based-resource-measurements.json": "88c62d25ea0b6cd49686c36e80b259ae9e2994177532ca87b53b17a83a5a34e4",
+    "knowledge/agent_based_fixture_freeze_v1.json": "4bdd4afbb26177c1bdb820e823fd6622969ba46d206f5532a8e01c1434e9734f"
+  },
+  "milestones": {
+    "source_profile": "d39b28c",
+    "independent_fixtures": "ca7ec11",
+    "engine": "4bd1ee2",
+    "cli_reports": "dc10483",
+    "verification": "cd92df2",
+    "acceptance": "d4845ff"
+  },
+  "scientific_limits": [
+    "Ticksaremodelupdates,notcalendar forecasts;combinatorial fractions arenotempirical transitionprobabilities.",
+    "Fullgridstate equality,notalive-count equality,establishescycles. Noearlystop/fastforward;acceptedexecution alwaysreachesrequestedhorizon. Truncatedmeansclassification remainsunconfirmed,notmissingrequestedupdates.",
+    "ThepinnedMesa4.0.0a0 referenceistoroidal/random-initial;thisfinitezero-exterior/explicit-input variantisnamededitorial,notexactsourceexperiment replication.",
+    "Geometrictransformations mustpreserveneighborhoodrelations andtransformgeometry too. Arbitrarynode permutations arenotvalidgrid symmetries.",
+    "Workreservations areboundedtransitioncell/neighborhood units;CPU/hash/bookkeeping/serialization costsarecoveredbyactualcomplete-report measurements,notuniversaloperation-count timingguarantees.",
+    "Localhashes cannotcertify rights,truth,independent timestamps orreal-world applicability. Originalrankedbooks/LLMsystems arenotimplementedbythisLifecore."
+  ],
+  "rights": "Mathematical facts andoriginal synthetic examples only. No Mesa code,book models,text,figures,assets,LLM code orrealdata copied orredistributed. No newframework dependency.",
+  "backlog": {
+    "P1": [
+      "FreezeSchelling source-specificfractionthreshold/equality andno-neighbor convention",
+      "Freezevacancyselection,activation/scheduling andRNG/semanticdrawcontract beforeSchelling movement",
+      "IndependentlyfreezeSchellingfixtures beforeproduction",
+      "Legitimatecompletebook/laterchapter access andper-modelsource/code/data rights",
+      "Dataset-specificconsent,privacy,calibration,held-out validation andexternalprovenance beforeempirical claims"
+    ],
+    "P2": [
+      "FullSugarscape resource/vision/metabolism/trade variants",
+      "Epidemiological/socialABM withdomain-specificvalidated designs",
+      "LLMgenerative agents withpinnedprompts/models/costs andasset rights",
+      "Stochasticinitialization/scheduling andMonteCarlo ensembles",
+      "OtherCArules,boundaryfamilies,coupledmodels andlarger/distributed simulation"
+    ]
+  },
+  "next": "Onlyafterclosurecommit,push andcleanmain0/0:Technique55Brain-Based Intention Prediction resource/variationauditonly;no55runtime,profile orproductionfixtures."
+}

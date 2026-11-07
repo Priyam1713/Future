@@ -1287,3 +1287,8 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #54 full acceptance passed
 - Passed1961tests (1866inherited+95new),2783CLIcases (2645inherited+138new),33independentverifiers (32inherited+1new),all26families/18localcases/512configurations andbothactualcheckoutreplays. All3979protected pre-engine files unchanged.
 - Source registry idempotence,strictJSON,60IDs/54retained/six exclusions,dependency audit,pip check anddiff check pass. Finaldata:data/agent-based-acceptance-checks.json. No failingchecktreatedaspass;no55researchyet. Boundedclosure follows.
+
+## 2026-11-07 — #54 Core v1 closure
+- Accepted **Core v1 Ready — Finite-Grid Synchronous Binary Cellular Automata Scope** under agent-based-finite-grid-b3s23-v1. All18criteria,26families,18localcases and512configurations pass;56birth+84survival=140alive/372dead,35/128. Exactblock/blinker/glider,geometry,counts/cycles andfullhorizon semantics verified.
+- Full1961tests,2783CLIcases and33independentverifiers pass;all3979protected pre-engine files unchanged.23accepted/46rejected pairs andbothactualEOLexports replay138raw outputs each. Registry,strictJSON,taxonomy,dependency/pip/diff pass.
+- Source/rights matrix,measuredCPU/memory scope andP1/P2 frozen inknowledge/agent_based_core_v1.json. Noempiricalsocial/clinical/LLMprediction orotherABMimplementation. Nextonlyafterclosurepushandclean0/0:Technique55auditonly.
