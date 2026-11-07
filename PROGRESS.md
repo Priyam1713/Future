@@ -1299,3 +1299,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — Master completion run; #55 profile freeze
 - Authorized continuous #55–#60 completion and final all-54 integration. Reused #55 audit5c0c1bd; workbook SHA matches inventory and initial main clean0/0. Froze synthetic exact windows/features, train-only centroid, class-A ties, split/group/availability checks and resource/rights boundaries before engine. Independent fixtures follow; no #56 audit yet.
+
+## 2026-11-07 — #55 engine verified
+- Implemented exact synthetic windows/features, guarded rational arithmetic, TRAIN-only centroids/class-A ties, matched scoring and strict source/group/availability checks. All28 independent families and59 new unit tests pass. TEST-label/features isolation and canonical model/split ordering verified.
+- Original fixture remains immutable. Explicit errata preserve corrected validation identities and fix their original-corpus hash binding; original leaking input still rejects. No numerical expected answers changed. CLI/full inherited acceptance follows.

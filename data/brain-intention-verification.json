@@ -1,0 +1,201 @@
+{
+  "passed": true,
+  "fixture_families": 28,
+  "families": {
+    "window-mean": {
+      "passed": true,
+      "cases": [
+        "windows"
+      ]
+    },
+    "population-variance": {
+      "passed": true,
+      "cases": [
+        "windows",
+        "rational"
+      ]
+    },
+    "constant-window": {
+      "passed": true,
+      "cases": [
+        "constant"
+      ]
+    },
+    "dc-offset": {
+      "passed": true,
+      "cases": [
+        "offset"
+      ]
+    },
+    "amplitude-scaling": {
+      "passed": true,
+      "cases": [
+        "scaled"
+      ]
+    },
+    "channel-order-units": {
+      "passed": true,
+      "cases": [
+        "two-channels",
+        "bad-units",
+        "duplicate-channel"
+      ]
+    },
+    "training-centroid": {
+      "passed": true,
+      "cases": [
+        "worked"
+      ]
+    },
+    "squared-distance": {
+      "passed": true,
+      "cases": [
+        "worked"
+      ]
+    },
+    "exact-tie": {
+      "passed": true,
+      "cases": [
+        "tie"
+      ]
+    },
+    "train-only-fit": {
+      "passed": true,
+      "cases": [
+        "worked",
+        "validation-unused"
+      ]
+    },
+    "test-label-isolation": {
+      "passed": true,
+      "cases": [
+        "worked",
+        "test-label-flip"
+      ]
+    },
+    "subject-disjoint": {
+      "passed": true,
+      "cases": [
+        "worked",
+        "subject-leak"
+      ]
+    },
+    "heldout-run": {
+      "passed": true,
+      "cases": [
+        "heldout-run",
+        "run-leak"
+      ]
+    },
+    "session-metadata": {
+      "passed": true,
+      "cases": [
+        "session-claim"
+      ]
+    },
+    "trial-overlap": {
+      "passed": true,
+      "cases": [
+        "overlap"
+      ]
+    },
+    "duplicate-source": {
+      "passed": true,
+      "cases": [
+        "source-alias"
+      ]
+    },
+    "cue-run-label-map": {
+      "passed": true,
+      "cases": [
+        "cue-labels",
+        "bad-cue-run",
+        "bad-cue-label"
+      ]
+    },
+    "modality-separation": {
+      "passed": true,
+      "cases": [
+        "mixed-modality"
+      ]
+    },
+    "window-availability": {
+      "passed": true,
+      "cases": [
+        "future-data",
+        "future-train",
+        "outcome-known",
+        "fit-after-predict"
+      ]
+    },
+    "noncausal-filter-refusal": {
+      "passed": true,
+      "cases": [
+        "noncausal-filter"
+      ]
+    },
+    "confusion-matrix": {
+      "passed": true,
+      "cases": [
+        "worked"
+      ]
+    },
+    "matched-majority-baseline": {
+      "passed": true,
+      "cases": [
+        "worked"
+      ]
+    },
+    "balanced-accuracy": {
+      "passed": true,
+      "cases": [
+        "worked"
+      ]
+    },
+    "absent-class": {
+      "passed": true,
+      "cases": [
+        "absent-class"
+      ]
+    },
+    "chance-null": {
+      "passed": true,
+      "cases": [
+        "literal-anchors"
+      ]
+    },
+    "rights-consent": {
+      "passed": true,
+      "cases": [
+        "empirical",
+        "rights",
+        "source",
+        "snapshot"
+      ]
+    },
+    "resource-bounds": {
+      "passed": true,
+      "cases": [
+        "sample-cap",
+        "too-many-trials",
+        "large-number"
+      ]
+    },
+    "json-markdown-hashes": {
+      "passed": true,
+      "cases": [
+        "reordered",
+        "profile"
+      ]
+    }
+  },
+  "accepted": 14,
+  "rejected": 37,
+  "literal_anchors_passed": true,
+  "test_label_isolation_passed": true,
+  "canonical_order_passed": true,
+  "original_erroneous_fixture_rejected": true,
+  "fixture_sha256": "9903d631c64368e3f721b1c2e651ecf5d60da13a27257fc4b8771de812aef057",
+  "errata_sha256": "56ac1f0c4a2807f5d5cf6b054f38b909e02f2a9dec5ef0488c2b4de152f8c3ce",
+  "scope": "Synthetic exact arithmetic and declared procedural checks,not empirical intention decoding"
+}
