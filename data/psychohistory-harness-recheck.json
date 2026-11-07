@@ -1,0 +1,118 @@
+{
+  "reason": "Unrestricted inherited BLAS imports exhausted allocation under concurrent verification; preserve passing receipts and rerun any failed groups with bounded imported-library threads. No numerical or report mismatch diagnosed.",
+  "initial_failed_checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_cleromancy_core"
+      ],
+      "returncode": 1,
+      "seconds": 141.64,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\r\n  File \"<frozen runpy>\", line 88, in _run_code\r\n  File \"D:\\Future\\scripts\\smoke_cleromancy_core.py\", line 53, in <module>\r\n    if __name__=='__main__':run()\r\n                            ^^^^^\r\n  File \"D:\\Future\\scripts\\smoke_cleromancy_core.py\", line 45, in run\r\n    check(name+' JSON',q,reject=True,save=f'cleromancy-{name}.json');check(name+' Markdown',q,'markdown',True,f'cleromancy-{name}.md')\r\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\Future\\scripts\\smoke_cleromancy_core.py\", line 22, in check\r\n    assert p.returncode==(2 if reject else 0),(name,p.stderr,p.stdout[:300])\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: ('wrong-version JSON', b'OpenBLAS error: Memory allocation still failed after 10 retries, giving up.\\n', b'')\r\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_graphology_core"
+      ],
+      "returncode": 1,
+      "seconds": 22.672,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\r\n  File \"<frozen runpy>\", line 88, in _run_code\r\n  File \"D:\\Future\\scripts\\smoke_graphology_core.py\", line 56, in <module>\r\n    if __name__=='__main__':run()\r\n                            ^^^^^\r\n  File \"D:\\Future\\scripts\\smoke_graphology_core.py\", line 45, in run\r\n    check('unsupported direction',base|dict(script='arabic',writing_direction='rtl'))\r\n  File \"D:\\Future\\scripts\\smoke_graphology_core.py\", line 26, in check\r\n    assert (p.returncode!=0)==reject,(name,p.stderr)\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: ('unsupported direction', 'OpenBLAS error: Memory allocation still failed after 10 retries, giving up.\\nOpenBLAS error: Memory allocation still failed after 10 retries, giving up.\\nOpenBLAS error: Memory allocation still failed after 10 retries, giving up.\\n')\r\n"
+    }
+  ],
+  "retry_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "restart": "Terminated only verified acceptance process tree PID29684 and descendants;resumed successful receipts,rerunning incomplete/failed groups under bounded inherited BLAS threads.",
+  "captured_passing_receipts_after_restart": [
+    [
+      "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_aeromancy_core"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_akashic_core"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_astrocartography_core"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_aura_core"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_automatic_writing_core"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_bibliomancy_core"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_chinese_core"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_coffee_core"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_dream_core"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_face_reading_core"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_geomancy_core"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_graphology_core"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_horary"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_iching_core"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.smoke_iridology_core"
+    ]
+  ]
+}

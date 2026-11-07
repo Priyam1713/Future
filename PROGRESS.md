@@ -1212,3 +1212,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #52 CLI and measured synthetic reports
 - Saved138exact CLI cases:23accepted/46rejected JSON/Markdown pairs,including independently frozen count-only refusal anddraw equality addenda. CLI emits explicit UTF8/LF bytes.71new tests andall23families pass.
 - Measured sparse128/dense64/ensemble128-run workloads onPython3.12.10 Windows:in-process medians0.0464/0.00725/0.0143seconds;CLI0.987/0.987/1.094seconds;whole measurement helper peak25.996MiB. These are local measurements,not universal performance claims. Full inherited gates andactual both-EOL exported CLI replay follow.
+
+## 2026-11-07 — #52 actual checkout replay andfull unit gate
+- Both indexed core.autocrlf=false/true exports replay138actual CLI invocations each with exact raw stdout SHA256 agreement;208raw corpus files and5normalized commitments perexport.1790full unit tests pass (1719inherited+71new).
+- Initial unrestricted verification overlap caused OpenBLAS import allocation failures,notreport disagreement. Bounded import-thread harness resumed passing receipts andreruns interrupted/failed groups;details indata/psychohistory-harness-recheck.json. Full acceptance remains pending.
