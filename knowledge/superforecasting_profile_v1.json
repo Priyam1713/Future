@@ -1,0 +1,298 @@
+{
+  "id": "tetlock-mellers-binary-forecast-updates-v1",
+  "version": 1,
+  "technique_id": 51,
+  "source_manifest_sha256": "7502f901d5e17b31e7e798e192473bc8ae73854e863484c2f65a6f251d841e0b",
+  "source_freeze_sha256": "b8c23a38db5511a2d6a73f8dddce441b22731b4e2de4d5e76b38ce1b22754563",
+  "schema": {
+    "request": [
+      "schema_version",
+      "profile",
+      "task",
+      "payload"
+    ],
+    "profile": [
+      "id",
+      "sha256",
+      "catalog_sha256"
+    ],
+    "plan": [
+      "study_id",
+      "created_at",
+      "evidence_mode",
+      "domain",
+      "horizon",
+      "partition",
+      "questions",
+      "classes",
+      "slots",
+      "provenance"
+    ],
+    "partition": [
+      "frozen_at",
+      "train_groups",
+      "test_groups"
+    ],
+    "question": [
+      "id",
+      "version",
+      "event_id",
+      "dependency_group",
+      "partition",
+      "text",
+      "event_definition",
+      "window_start",
+      "window_end",
+      "cutoff",
+      "created_at",
+      "locked_at",
+      "timezone",
+      "clarity_confirmed",
+      "resolution",
+      "class_id",
+      "class_sha256",
+      "baseline",
+      "reasoning",
+      "source"
+    ],
+    "resolution_policy": [
+      "source_ref",
+      "positive_rule",
+      "negative_rule",
+      "dispute_policy",
+      "void_policy"
+    ],
+    "reasoning": [
+      "base_rate_rationale",
+      "comparability",
+      "assumptions",
+      "subquestions",
+      "evidence_gaps",
+      "alternatives",
+      "dependence",
+      "disagreement"
+    ],
+    "baseline": [
+      "kind",
+      "probability",
+      "frozen_at",
+      "domain",
+      "horizon",
+      "source"
+    ],
+    "reference_class": [
+      "id",
+      "version",
+      "target_question_id",
+      "definition",
+      "eligibility_rule",
+      "frozen_at",
+      "availability_cutoff",
+      "comparability",
+      "members",
+      "source"
+    ],
+    "member": [
+      "id",
+      "event_id",
+      "dependency_group",
+      "eligibility",
+      "reason",
+      "status",
+      "outcome",
+      "event_at",
+      "observed_at",
+      "source"
+    ],
+    "slot": [
+      "forecast_id",
+      "question_id",
+      "participant",
+      "participant_kind"
+    ],
+    "source": [
+      "id",
+      "locator",
+      "rights",
+      "attribution",
+      "snapshot",
+      "snapshot_sha256",
+      "available_at"
+    ],
+    "forecast": [
+      "forecast_id",
+      "question_id",
+      "question_version",
+      "question_sha256",
+      "participant",
+      "version",
+      "parent_sha256",
+      "recorded_at",
+      "knowledge_at",
+      "probability",
+      "mode",
+      "reason",
+      "evidence",
+      "assumptions",
+      "outcome_known",
+      "bayes"
+    ],
+    "evidence": [
+      "id",
+      "dependency_group",
+      "original_fact_id",
+      "statement",
+      "source"
+    ],
+    "bayes": [
+      "kind",
+      "ratio",
+      "likelihood_h",
+      "likelihood_not_h",
+      "dependence",
+      "conditioned_on",
+      "independent_given_h",
+      "independent_given_not_h",
+      "model_status",
+      "measurement_notes",
+      "source"
+    ],
+    "resolution": [
+      "question_id",
+      "question_version",
+      "question_sha256",
+      "version",
+      "parent_sha256",
+      "status",
+      "outcome",
+      "occurrence_at",
+      "window_end",
+      "outcome_known_at",
+      "publication_at",
+      "recorded_at",
+      "reason",
+      "source"
+    ],
+    "ledger": [
+      "schema_version",
+      "profile_sha256",
+      "plan",
+      "plan_sha256",
+      "actions"
+    ],
+    "action": [
+      "sequence",
+      "kind",
+      "at",
+      "record",
+      "parent_sha256",
+      "decision",
+      "reason",
+      "sha256"
+    ]
+  },
+  "tasks": [
+    "question",
+    "reference-class",
+    "create",
+    "forecast",
+    "update",
+    "resolve",
+    "attempt",
+    "score",
+    "report",
+    "reference"
+  ],
+  "payloads": "question/reference-class accept the corresponding object;create accepts plan;forecast/update/resolve accept {ledger,record};attempt accepts {ledger,kind,record,attempted_at};score/report accept ledger;reference accepts {id}. All fields exact;unknown/missing fields reject.",
+  "bounds": {
+    "questions": 100,
+    "classes": 100,
+    "members_per_class": 1000,
+    "total_members": 5000,
+    "slots": 500,
+    "actions": 2000,
+    "evidence_per_version": 10,
+    "text": 4000,
+    "rational_characters": 128,
+    "rational_digits": 60
+  },
+  "numeric": {
+    "input": "Plain decimal or integer/fraction strings only,up to60digits per integer;no exponent,float,bool or nonfinite values. Denominator positive.",
+    "exact": "fractions.Fraction for probabilities,ratios,rates,losses,decomposition andskill;no smoothing.",
+    "decimal_precision": 80,
+    "decimal_places": 12,
+    "rounding": "ROUND_HALF_EVEN",
+    "log": "Decimal80 natural log of exact fraction;aggregate unrounded Decimal80 losses then round display to12places. Positive infinity structured;no clipping ornonfinite JSON."
+  },
+  "chronology": {
+    "timestamps": "Timezone-aware UTC Z timestamps with seconds;question timezone UTC only. All times are declared,not externally attested.",
+    "window": "[window_start,window_end);positive occurrence withinwindow;negative occurrence_at must be null,outcome_known_at>=window_end.",
+    "freeze": "Source availability<=class availability cutoff<=class freeze<=plan creation;question source<=question lock<=plan creation<=question cutoff<=window_end;created<=locked. Partition frozen<=plan creation. Baseline frozen<=plan creation.",
+    "selection": "One latest accepted forecast by append sequence per slot,recorded_at<=cutoff,knowledge_at<=cutoff,strictly before earliest declared outcome-known time andpositive occurrence across ALL resolution history;outcome_known must be false. Late/postknown versions retained butunscored.",
+    "resolution": "Positive occurrence<=outcome_known_at<=source.available_at<=recorded_at;publication_at<=source.available_at. Negative window_end<=known<=available<=recorded;no invented occurrence. Nonresolved outcome null. Resolved-to-resolved correction requires intervening dispute/void.",
+    "actions": "Nondecreasing declared action time;accepted record recorded_at equals action at. Rejected attempts retain original payload anddeterministic reason,consume chain sequence butnever state. Source records with sameID must remain byte-identical amongaccepted records."
+  },
+  "reference_class": "One member record per distinct event ID,including exclusions/ambiguous/unresolved. Exact rate uses included resolved only;denominators/statuses andallIDs preserved. No automaticprior. Classes bind targetquestion anddigest. No historical member event ID overlaps any planned event;historical groups mustbe training groups anddisjoint test groups. Representativeness remains a declaration.",
+  "forecast": "Planned unique slot(question,participant);question version1/hash andparent/version checked. Original/manual revisions distinct fromBayes. Optional documentary reasoning never generates probability.",
+  "evidence_policy": "New IDs andoriginal_fact_id andsnapshot hashes per slot across ALL earlier accepted evidence. One new evidence perBayes update. First uses dependence=first;subsequent independent requires distinct groups andexplicit independence under H AND notH plusprovenance. Conditional requires conditioned_on exactly allprior evidenceIDs in insertion order;repeated facts neveraccepted. User-assumed/declared-measured labels aredeclarations,not empirical model certification.",
+  "scoring": {
+    "primary": "Equal forecast-slot weight overselected resolved TEST questions;not daily/tournament score. Training/test summaries separate;all planned slots/questions visible.",
+    "brier": "Exact binary0–1 andseparately namedtwo-category0–2;no implicit mixing.",
+    "log_endpoints": "finite/correct certain zero/positive_infinity/not_estimable statuses;no NaN/Infinity literal.",
+    "calibration": "Ten bins[k/10,(k+1)/10),lastincludes1;emptymeans/frequencies null;descriptive only.",
+    "decomposition": "Group exact identical Fractions;report REL/RES/UNC andverifyidentity independently from coarse calibrationbins.",
+    "baseline": "Per-question precommitted constant or exact linked-class rate onidentical selected pairs;unpaired exclusions explicit. Relative skill onlywhenbaseline loss>0.",
+    "denominators": "Separate slots,versions,rejected attempts,questions,events,participants anddependencygroups. Event-average andparticipant-average losses separately named;no automaticteam aggregate.",
+    "heldout": "Frozen group partitions;historical reference observations/source availability beforeplan/test. Sentinel changes future resolutions cannotchange plan/priors/forecastversions/evidence/partitions."
+  },
+  "provenance": "Inline bounded source snapshots SHA256 of exact UTF8 text;explicit rights(self_authored,public_domain,permission_granted,cc_by),attribution,locator,availability. No generic copyrighted source corpus ingestion. Local owner can rewrite hashes/history;independent anchoring remains P1.",
+  "report": "Canonical sorted UTF8 JSON semantic request/source/profile/report SHA256;normalized-LF code SHA256. Exact safe-fence Markdown embeds JSON. Raw CLI input bytes hashed separately andpreserved by corpus-local Git -text.",
+  "configuration_matrix": {
+    "supported": [
+      "Immutable binary question/class plans",
+      "Exact empirical rates/manual/Bayes revisions",
+      "Explicit evidence guards andresolution history",
+      "Fixed-cutoff Brier/log/calibration/decomposition andpairedbaseline",
+      "Synthetic/user-supplied-unvalidated ledger replay"
+    ],
+    "experimental_unimplemented": [
+      "Empirical GJP validation",
+      "Automatic likelihood estimation",
+      "Team aggregation",
+      "Multinomial/dailytournament replication",
+      "Dependency-aware inference/external timestamps"
+    ],
+    "unsupported": [
+      "Guaranteed skill/expertise",
+      "Psychic/quantum mechanism",
+      "Fabricated real data/LRs",
+      "Unlicensed participant corpus",
+      "Synthetic results as human skill"
+    ]
+  },
+  "fixture_families": [
+    "reference-base-rate",
+    "empty-zero-full-samples",
+    "ambiguous-membership",
+    "denominator-preservation",
+    "binary-probability",
+    "brier-loss",
+    "bayes-neutral",
+    "bayes-positive",
+    "bayes-zero",
+    "certain-priors",
+    "dependent-evidence",
+    "forecast-versions",
+    "chronology",
+    "unresolved-void",
+    "calibration-bins",
+    "paired-baseline",
+    "team-dependence",
+    "rights-source",
+    "json-markdown-replay",
+    "log-loss",
+    "resolution-decomposition",
+    "heldout-isolation",
+    "negative-event-resolution-time"
+  ]
+}

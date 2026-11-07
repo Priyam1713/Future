@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "date": "2026-11-07",
+  "audit_sha256": "ea02731325cbd07eee4463be1d651c369c64bd36f5d92f8a14d658f230b58c7a",
+  "source_manifest_sha256": "7502f901d5e17b31e7e798e192473bc8ae73854e863484c2f65a6f251d841e0b",
+  "ranked_sources": [
+    [
+      51,
+      "Superforecasting",
+      1,
+      "Philip E. Tetlock and Dan Gardner",
+      "Superforecasting: The Art and Science of Prediction",
+      "Practitioner cognitive workflow",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      51,
+      "Superforecasting",
+      2,
+      "Barbara Mellers et al.",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Tournament evidence and scoring",
+      "https://pubmed.ncbi.nlm.nih.gov/24659192/",
+      "Peer-reviewed abstract",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      51,
+      "Superforecasting",
+      "Outside view",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "reference classes",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "decomposition",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "Bayesian updates",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "Brier/log scoring",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      51,
+      "Superforecasting",
+      "calibration",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Superforecasting: The Art and Science of Prediction",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "primary_reverification": "Reopened publisher edition metadata, Good Judgment primary guidance, author-hosted Mellers full text, Gneiting/Raftery proper scoring review and MIT odds slides before production.",
+  "source_boundaries": {
+    "book": "2016 Crown paperback9780804136716;2015eBook separate. Authorized Chapter1 excerpt and separately published book-derived guidance inspected;later book chapters uninspected.",
+    "mellers": "2014Psychological Science25(5),1106–1115;daily/question tournament averaging andquestion standardization are not our fixed-cutoff score. Two-category loss is twice binary Brier.",
+    "proper_scores": "Gneiting/Raftery2007Sections1and3:positively oriented rewards;our named losses minimize negative-log/squared error. Proper algebra does not establish human skill.",
+    "bayes": "MIT18.05Spring2022slides10–14/18:posterior odds=prior odds*likelihood ratio. User likelihoods remain assumptions."
+  },
+  "mathematics": {
+    "rate": "k/n over included resolved distinct members;n0 not estimable",
+    "bayes": "Lp/(1-p+Lp);zero denominator undefined",
+    "brier": "binary(p-y)^2;two-category2*(p-y)^2",
+    "log": "-ln(p) for1,-ln(1-p) for0;contradicted endpoint tagged positive infinity",
+    "decomposition": "Exact identical-p groups only:REL-RES+UNC=Brier"
+  },
+  "rights": "Facts and original code/fixtures only;no book/article bodies or source PDFs redistributed. No GJP dataset acquired or file-level rights certified."
+}

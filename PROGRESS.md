@@ -1134,3 +1134,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Recommend bounded versioned binary ledger/reference-class/update/scoring workbench; explicit binary vs two-category Brier scales, predeclared version/horizon selection, conditional evidence/dependence and nonoccurrence chronology. Inspected #45/#49 reuse boundaries; prior contracts unchanged.
 - IARPA verifies GJP public archive existence, but primary repository/API access blocks prevent file rights/codebook/revision completeness certification. No dataset acquired; recommend synthetic software fixtures initially, no empirical skill claim.
 - 23 independent fixture plans; exact analytical audit checks pass. All3220 pre-audit protected bytes and other59gap entries unchanged; source registry502references/347unique checked twice; strict JSON andtaxonomy preserved. Audit only: no51engine/CLI/executable profile or52research.
+
+## 2026-11-07 — #51 source and executable profile freeze
+- Reopened primary book-context, tournament, proper-scoring and Bayes references. Froze tetlock-mellers-binary-forecast-updates-v1 before production: exact rational arithmetic, Decimal80 log/12place HALF_EVEN display, immutable plans, source snapshots, evidence dependencies, fixed-cutoff selection and distinct positive/nonoccurrence timing.
+- Source facts remain separate from editorial schema/selection/bin conventions. No empirical GJP or human-skill certification. Complete current pre-engine byte manifest captured; independent fixtures next.
