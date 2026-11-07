@@ -1141,3 +1141,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #51 independent fixture freeze
 - Authored original synthetic plan, complete historical member ledger and independent odds/category-loss/group-frequency oracle before production. Froze all23 family expectations,30 Bayes cases,22 loss/bin/log cases,base-rate boundaries,paired/decomposition answers andexplicit time boundaries. No production engine invoked orpresent.
+
+## 2026-11-07 — #51 question and reference-class engine
+- Implemented strict immutable question/class/partition/slot plans, exact source-snapshot integrity and rights checks, complete historical-member/status denominators and exact unweighted rates. Historical/test event and dependency-group overlap reject; reference baselines must equal the frozen class rate.
+- 22 initial tests pass, including all frozen reference-rate boundaries, ambiguous/unresolved members, class mutation, unavailable observations and duplicate-event controls. Forecast actions and scoring follow within this same technique.
