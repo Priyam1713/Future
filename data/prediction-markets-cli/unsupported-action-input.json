@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "prediction-markets-binary-lmsr-play-money-v1",
+    "version": 1,
+    "sha256": "d36cca55bf080adabc57d6190820812802ec4386ffe5199676a6ef0b17aad000",
+    "catalog_sha256": "e36ed82d53463ad118427a7825c22e293d6a1cec15fd587bb5f55b8de72f36b1"
+  },
+  "market": {
+    "id": "market1",
+    "version": 1,
+    "question_id": "question1",
+    "question_version": 1,
+    "event_id": "event1",
+    "definition": "Does synthetic event1 occur?",
+    "positive_rule": "YES pays1playcredit per recordedshare",
+    "negative_rule": "NO pays1playcredit per recordedshare",
+    "outcomes": [
+      "YES",
+      "NO"
+    ],
+    "exhaustive": true,
+    "created_at": "2025-01-01T00:00:00Z",
+    "close_at": "2025-01-10T00:00:00Z",
+    "resolver": "admin",
+    "liquidity": "1",
+    "money_unit": "play_credit"
+  },
+  "accounts": [
+    {
+      "id": "alice",
+      "initial_credit": "10"
+    },
+    {
+      "id": "bob",
+      "initial_credit": "10"
+    }
+  ],
+  "events": [
+    {
+      "id": "bad",
+      "type": "deposit",
+      "at": "2025-01-02T00:00:00Z",
+      "actor": "alice"
+    }
+  ],
+  "provenance": {
+    "synthetic": true,
+    "source_ref": "prediction-markets-cost-function-v1",
+    "rights": "self_authored",
+    "attribution": "Future original synthetic play-credit example",
+    "snapshot": "Original fictional LMSR play-credit ledger; no actual money or traders.",
+    "snapshot_sha256": "e61decf19b247c86d53c92ac181ef7f671ab25716bb00e472abac61806d4b35d"
+  }
+}

@@ -1385,3 +1385,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-08 — #58 verified engine
 - Implemented stable Decimal80 binary LMSR play-credit pricing,total-potential1e-24 cash charges,computed reserve,long-only quote/execution protocol,immutable hash-chained financial entries,idempotent intents andonce-only declared-authority settlement. All31families/75newtests pass;145Decimal120vectors and200-term exactFraction ln2 bounds verify numerical/funding references.
 - Every accepted trace independently checks exactFraction cash conservation,positions=q,potential telescoping andfunded maker exposure. Isolated budget/shorting/stalequote/cutoff/authority refusals andpost-settlement idempotency pass. No real money,external services orforecast-accuracy claim. CLI/full acceptance follows;no59audit.
+
+## 2026-11-08 — #58 CLI and measured workloads
+- Saved134 raw CLI cases:33 accepted/34 rejected JSON-Markdown pairs. All31families,145numericalvectors,200-term ln2reference and75newtests pass. Complete small/medium/dense/settlement reports measured;dense512actions/256trades median0.1219s,fullCLI1.5394s. Whole helper peak41.898MiB,not CLI-child/per-workload. Bothactualcheckout replays andfull inherited acceptance follow.

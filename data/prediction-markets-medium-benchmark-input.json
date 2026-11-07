@@ -1,0 +1,569 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "prediction-markets-binary-lmsr-play-money-v1",
+    "version": 1,
+    "sha256": "d36cca55bf080adabc57d6190820812802ec4386ffe5199676a6ef0b17aad000",
+    "catalog_sha256": "e36ed82d53463ad118427a7825c22e293d6a1cec15fd587bb5f55b8de72f36b1"
+  },
+  "market": {
+    "id": "market1",
+    "version": 1,
+    "question_id": "question1",
+    "question_version": 1,
+    "event_id": "event1",
+    "definition": "Does synthetic event1 occur?",
+    "positive_rule": "YES pays1playcredit per recordedshare",
+    "negative_rule": "NO pays1playcredit per recordedshare",
+    "outcomes": [
+      "YES",
+      "NO"
+    ],
+    "exhaustive": true,
+    "created_at": "2025-01-01T00:00:00Z",
+    "close_at": "2025-01-10T00:00:00Z",
+    "resolver": "admin",
+    "liquidity": "10",
+    "money_unit": "play_credit"
+  },
+  "accounts": [
+    {
+      "id": "a0",
+      "initial_credit": "1000"
+    },
+    {
+      "id": "a1",
+      "initial_credit": "1000"
+    },
+    {
+      "id": "a2",
+      "initial_credit": "1000"
+    },
+    {
+      "id": "a3",
+      "initial_credit": "1000"
+    }
+  ],
+  "events": [
+    {
+      "id": "quote0",
+      "type": "quote",
+      "at": "2025-01-02T00:00:00Z",
+      "actor": "a0",
+      "quote_id": "q0",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute0",
+      "type": "execute",
+      "at": "2025-01-02T00:00:01Z",
+      "actor": "a0",
+      "quote_id": "q0"
+    },
+    {
+      "id": "quote1",
+      "type": "quote",
+      "at": "2025-01-02T00:00:02Z",
+      "actor": "a1",
+      "quote_id": "q1",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute1",
+      "type": "execute",
+      "at": "2025-01-02T00:00:03Z",
+      "actor": "a1",
+      "quote_id": "q1"
+    },
+    {
+      "id": "quote2",
+      "type": "quote",
+      "at": "2025-01-02T00:00:04Z",
+      "actor": "a2",
+      "quote_id": "q2",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute2",
+      "type": "execute",
+      "at": "2025-01-02T00:00:05Z",
+      "actor": "a2",
+      "quote_id": "q2"
+    },
+    {
+      "id": "quote3",
+      "type": "quote",
+      "at": "2025-01-02T00:00:06Z",
+      "actor": "a3",
+      "quote_id": "q3",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute3",
+      "type": "execute",
+      "at": "2025-01-02T00:00:07Z",
+      "actor": "a3",
+      "quote_id": "q3"
+    },
+    {
+      "id": "quote4",
+      "type": "quote",
+      "at": "2025-01-02T00:00:08Z",
+      "actor": "a0",
+      "quote_id": "q4",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute4",
+      "type": "execute",
+      "at": "2025-01-02T00:00:09Z",
+      "actor": "a0",
+      "quote_id": "q4"
+    },
+    {
+      "id": "quote5",
+      "type": "quote",
+      "at": "2025-01-02T00:00:10Z",
+      "actor": "a1",
+      "quote_id": "q5",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute5",
+      "type": "execute",
+      "at": "2025-01-02T00:00:11Z",
+      "actor": "a1",
+      "quote_id": "q5"
+    },
+    {
+      "id": "quote6",
+      "type": "quote",
+      "at": "2025-01-02T00:00:12Z",
+      "actor": "a2",
+      "quote_id": "q6",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute6",
+      "type": "execute",
+      "at": "2025-01-02T00:00:13Z",
+      "actor": "a2",
+      "quote_id": "q6"
+    },
+    {
+      "id": "quote7",
+      "type": "quote",
+      "at": "2025-01-02T00:00:14Z",
+      "actor": "a3",
+      "quote_id": "q7",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute7",
+      "type": "execute",
+      "at": "2025-01-02T00:00:15Z",
+      "actor": "a3",
+      "quote_id": "q7"
+    },
+    {
+      "id": "quote8",
+      "type": "quote",
+      "at": "2025-01-02T00:00:16Z",
+      "actor": "a0",
+      "quote_id": "q8",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute8",
+      "type": "execute",
+      "at": "2025-01-02T00:00:17Z",
+      "actor": "a0",
+      "quote_id": "q8"
+    },
+    {
+      "id": "quote9",
+      "type": "quote",
+      "at": "2025-01-02T00:00:18Z",
+      "actor": "a1",
+      "quote_id": "q9",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute9",
+      "type": "execute",
+      "at": "2025-01-02T00:00:19Z",
+      "actor": "a1",
+      "quote_id": "q9"
+    },
+    {
+      "id": "quote10",
+      "type": "quote",
+      "at": "2025-01-02T00:00:20Z",
+      "actor": "a2",
+      "quote_id": "q10",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute10",
+      "type": "execute",
+      "at": "2025-01-02T00:00:21Z",
+      "actor": "a2",
+      "quote_id": "q10"
+    },
+    {
+      "id": "quote11",
+      "type": "quote",
+      "at": "2025-01-02T00:00:22Z",
+      "actor": "a3",
+      "quote_id": "q11",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute11",
+      "type": "execute",
+      "at": "2025-01-02T00:00:23Z",
+      "actor": "a3",
+      "quote_id": "q11"
+    },
+    {
+      "id": "quote12",
+      "type": "quote",
+      "at": "2025-01-02T00:00:24Z",
+      "actor": "a0",
+      "quote_id": "q12",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute12",
+      "type": "execute",
+      "at": "2025-01-02T00:00:25Z",
+      "actor": "a0",
+      "quote_id": "q12"
+    },
+    {
+      "id": "quote13",
+      "type": "quote",
+      "at": "2025-01-02T00:00:26Z",
+      "actor": "a1",
+      "quote_id": "q13",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute13",
+      "type": "execute",
+      "at": "2025-01-02T00:00:27Z",
+      "actor": "a1",
+      "quote_id": "q13"
+    },
+    {
+      "id": "quote14",
+      "type": "quote",
+      "at": "2025-01-02T00:00:28Z",
+      "actor": "a2",
+      "quote_id": "q14",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute14",
+      "type": "execute",
+      "at": "2025-01-02T00:00:29Z",
+      "actor": "a2",
+      "quote_id": "q14"
+    },
+    {
+      "id": "quote15",
+      "type": "quote",
+      "at": "2025-01-02T00:00:30Z",
+      "actor": "a3",
+      "quote_id": "q15",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute15",
+      "type": "execute",
+      "at": "2025-01-02T00:00:31Z",
+      "actor": "a3",
+      "quote_id": "q15"
+    },
+    {
+      "id": "quote16",
+      "type": "quote",
+      "at": "2025-01-02T00:00:32Z",
+      "actor": "a0",
+      "quote_id": "q16",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute16",
+      "type": "execute",
+      "at": "2025-01-02T00:00:33Z",
+      "actor": "a0",
+      "quote_id": "q16"
+    },
+    {
+      "id": "quote17",
+      "type": "quote",
+      "at": "2025-01-02T00:00:34Z",
+      "actor": "a1",
+      "quote_id": "q17",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute17",
+      "type": "execute",
+      "at": "2025-01-02T00:00:35Z",
+      "actor": "a1",
+      "quote_id": "q17"
+    },
+    {
+      "id": "quote18",
+      "type": "quote",
+      "at": "2025-01-02T00:00:36Z",
+      "actor": "a2",
+      "quote_id": "q18",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute18",
+      "type": "execute",
+      "at": "2025-01-02T00:00:37Z",
+      "actor": "a2",
+      "quote_id": "q18"
+    },
+    {
+      "id": "quote19",
+      "type": "quote",
+      "at": "2025-01-02T00:00:38Z",
+      "actor": "a3",
+      "quote_id": "q19",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute19",
+      "type": "execute",
+      "at": "2025-01-02T00:00:39Z",
+      "actor": "a3",
+      "quote_id": "q19"
+    },
+    {
+      "id": "quote20",
+      "type": "quote",
+      "at": "2025-01-02T00:00:40Z",
+      "actor": "a0",
+      "quote_id": "q20",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute20",
+      "type": "execute",
+      "at": "2025-01-02T00:00:41Z",
+      "actor": "a0",
+      "quote_id": "q20"
+    },
+    {
+      "id": "quote21",
+      "type": "quote",
+      "at": "2025-01-02T00:00:42Z",
+      "actor": "a1",
+      "quote_id": "q21",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute21",
+      "type": "execute",
+      "at": "2025-01-02T00:00:43Z",
+      "actor": "a1",
+      "quote_id": "q21"
+    },
+    {
+      "id": "quote22",
+      "type": "quote",
+      "at": "2025-01-02T00:00:44Z",
+      "actor": "a2",
+      "quote_id": "q22",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute22",
+      "type": "execute",
+      "at": "2025-01-02T00:00:45Z",
+      "actor": "a2",
+      "quote_id": "q22"
+    },
+    {
+      "id": "quote23",
+      "type": "quote",
+      "at": "2025-01-02T00:00:46Z",
+      "actor": "a3",
+      "quote_id": "q23",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute23",
+      "type": "execute",
+      "at": "2025-01-02T00:00:47Z",
+      "actor": "a3",
+      "quote_id": "q23"
+    },
+    {
+      "id": "quote24",
+      "type": "quote",
+      "at": "2025-01-02T00:00:48Z",
+      "actor": "a0",
+      "quote_id": "q24",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute24",
+      "type": "execute",
+      "at": "2025-01-02T00:00:49Z",
+      "actor": "a0",
+      "quote_id": "q24"
+    },
+    {
+      "id": "quote25",
+      "type": "quote",
+      "at": "2025-01-02T00:00:50Z",
+      "actor": "a1",
+      "quote_id": "q25",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute25",
+      "type": "execute",
+      "at": "2025-01-02T00:00:51Z",
+      "actor": "a1",
+      "quote_id": "q25"
+    },
+    {
+      "id": "quote26",
+      "type": "quote",
+      "at": "2025-01-02T00:00:52Z",
+      "actor": "a2",
+      "quote_id": "q26",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute26",
+      "type": "execute",
+      "at": "2025-01-02T00:00:53Z",
+      "actor": "a2",
+      "quote_id": "q26"
+    },
+    {
+      "id": "quote27",
+      "type": "quote",
+      "at": "2025-01-02T00:00:54Z",
+      "actor": "a3",
+      "quote_id": "q27",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute27",
+      "type": "execute",
+      "at": "2025-01-02T00:00:55Z",
+      "actor": "a3",
+      "quote_id": "q27"
+    },
+    {
+      "id": "quote28",
+      "type": "quote",
+      "at": "2025-01-02T00:00:56Z",
+      "actor": "a0",
+      "quote_id": "q28",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute28",
+      "type": "execute",
+      "at": "2025-01-02T00:00:57Z",
+      "actor": "a0",
+      "quote_id": "q28"
+    },
+    {
+      "id": "quote29",
+      "type": "quote",
+      "at": "2025-01-02T00:00:58Z",
+      "actor": "a1",
+      "quote_id": "q29",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute29",
+      "type": "execute",
+      "at": "2025-01-02T00:00:59Z",
+      "actor": "a1",
+      "quote_id": "q29"
+    },
+    {
+      "id": "quote30",
+      "type": "quote",
+      "at": "2025-01-02T00:01:00Z",
+      "actor": "a2",
+      "quote_id": "q30",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute30",
+      "type": "execute",
+      "at": "2025-01-02T00:01:01Z",
+      "actor": "a2",
+      "quote_id": "q30"
+    },
+    {
+      "id": "quote31",
+      "type": "quote",
+      "at": "2025-01-02T00:01:02Z",
+      "actor": "a3",
+      "quote_id": "q31",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute31",
+      "type": "execute",
+      "at": "2025-01-02T00:01:03Z",
+      "actor": "a3",
+      "quote_id": "q31"
+    }
+  ],
+  "provenance": {
+    "synthetic": true,
+    "source_ref": "prediction-markets-cost-function-v1",
+    "rights": "self_authored",
+    "attribution": "Future original synthetic play-credit example",
+    "snapshot": "Original fictional LMSR play-credit ledger; no actual money or traders.",
+    "snapshot_sha256": "e61decf19b247c86d53c92ac181ef7f671ab25716bb00e472abac61806d4b35d"
+  }
+}

@@ -1,0 +1,1094 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "prediction-markets-binary-lmsr-play-money-v1",
+    "version": 1,
+    "sha256": "d36cca55bf080adabc57d6190820812802ec4386ffe5199676a6ef0b17aad000",
+    "catalog_sha256": "e36ed82d53463ad118427a7825c22e293d6a1cec15fd587bb5f55b8de72f36b1"
+  },
+  "market": {
+    "id": "market1",
+    "version": 1,
+    "question_id": "question1",
+    "question_version": 1,
+    "event_id": "event1",
+    "definition": "Does synthetic event1 occur?",
+    "positive_rule": "YES pays1playcredit per recordedshare",
+    "negative_rule": "NO pays1playcredit per recordedshare",
+    "outcomes": [
+      "YES",
+      "NO"
+    ],
+    "exhaustive": true,
+    "created_at": "2025-01-01T00:00:00Z",
+    "close_at": "2025-01-10T00:00:00Z",
+    "resolver": "admin",
+    "liquidity": "10",
+    "money_unit": "play_credit"
+  },
+  "accounts": [
+    {
+      "id": "a0",
+      "initial_credit": "1000"
+    },
+    {
+      "id": "a1",
+      "initial_credit": "1000"
+    },
+    {
+      "id": "a2",
+      "initial_credit": "1000"
+    },
+    {
+      "id": "a3",
+      "initial_credit": "1000"
+    }
+  ],
+  "events": [
+    {
+      "id": "quote0",
+      "type": "quote",
+      "at": "2025-01-02T00:00:00Z",
+      "actor": "a0",
+      "quote_id": "q0",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute0",
+      "type": "execute",
+      "at": "2025-01-02T00:00:01Z",
+      "actor": "a0",
+      "quote_id": "q0"
+    },
+    {
+      "id": "quote1",
+      "type": "quote",
+      "at": "2025-01-02T00:00:02Z",
+      "actor": "a1",
+      "quote_id": "q1",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute1",
+      "type": "execute",
+      "at": "2025-01-02T00:00:03Z",
+      "actor": "a1",
+      "quote_id": "q1"
+    },
+    {
+      "id": "quote2",
+      "type": "quote",
+      "at": "2025-01-02T00:00:04Z",
+      "actor": "a2",
+      "quote_id": "q2",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute2",
+      "type": "execute",
+      "at": "2025-01-02T00:00:05Z",
+      "actor": "a2",
+      "quote_id": "q2"
+    },
+    {
+      "id": "quote3",
+      "type": "quote",
+      "at": "2025-01-02T00:00:06Z",
+      "actor": "a3",
+      "quote_id": "q3",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute3",
+      "type": "execute",
+      "at": "2025-01-02T00:00:07Z",
+      "actor": "a3",
+      "quote_id": "q3"
+    },
+    {
+      "id": "quote4",
+      "type": "quote",
+      "at": "2025-01-02T00:00:08Z",
+      "actor": "a0",
+      "quote_id": "q4",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute4",
+      "type": "execute",
+      "at": "2025-01-02T00:00:09Z",
+      "actor": "a0",
+      "quote_id": "q4"
+    },
+    {
+      "id": "quote5",
+      "type": "quote",
+      "at": "2025-01-02T00:00:10Z",
+      "actor": "a1",
+      "quote_id": "q5",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute5",
+      "type": "execute",
+      "at": "2025-01-02T00:00:11Z",
+      "actor": "a1",
+      "quote_id": "q5"
+    },
+    {
+      "id": "quote6",
+      "type": "quote",
+      "at": "2025-01-02T00:00:12Z",
+      "actor": "a2",
+      "quote_id": "q6",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute6",
+      "type": "execute",
+      "at": "2025-01-02T00:00:13Z",
+      "actor": "a2",
+      "quote_id": "q6"
+    },
+    {
+      "id": "quote7",
+      "type": "quote",
+      "at": "2025-01-02T00:00:14Z",
+      "actor": "a3",
+      "quote_id": "q7",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute7",
+      "type": "execute",
+      "at": "2025-01-02T00:00:15Z",
+      "actor": "a3",
+      "quote_id": "q7"
+    },
+    {
+      "id": "quote8",
+      "type": "quote",
+      "at": "2025-01-02T00:00:16Z",
+      "actor": "a0",
+      "quote_id": "q8",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute8",
+      "type": "execute",
+      "at": "2025-01-02T00:00:17Z",
+      "actor": "a0",
+      "quote_id": "q8"
+    },
+    {
+      "id": "quote9",
+      "type": "quote",
+      "at": "2025-01-02T00:00:18Z",
+      "actor": "a1",
+      "quote_id": "q9",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute9",
+      "type": "execute",
+      "at": "2025-01-02T00:00:19Z",
+      "actor": "a1",
+      "quote_id": "q9"
+    },
+    {
+      "id": "quote10",
+      "type": "quote",
+      "at": "2025-01-02T00:00:20Z",
+      "actor": "a2",
+      "quote_id": "q10",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute10",
+      "type": "execute",
+      "at": "2025-01-02T00:00:21Z",
+      "actor": "a2",
+      "quote_id": "q10"
+    },
+    {
+      "id": "quote11",
+      "type": "quote",
+      "at": "2025-01-02T00:00:22Z",
+      "actor": "a3",
+      "quote_id": "q11",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute11",
+      "type": "execute",
+      "at": "2025-01-02T00:00:23Z",
+      "actor": "a3",
+      "quote_id": "q11"
+    },
+    {
+      "id": "quote12",
+      "type": "quote",
+      "at": "2025-01-02T00:00:24Z",
+      "actor": "a0",
+      "quote_id": "q12",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute12",
+      "type": "execute",
+      "at": "2025-01-02T00:00:25Z",
+      "actor": "a0",
+      "quote_id": "q12"
+    },
+    {
+      "id": "quote13",
+      "type": "quote",
+      "at": "2025-01-02T00:00:26Z",
+      "actor": "a1",
+      "quote_id": "q13",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute13",
+      "type": "execute",
+      "at": "2025-01-02T00:00:27Z",
+      "actor": "a1",
+      "quote_id": "q13"
+    },
+    {
+      "id": "quote14",
+      "type": "quote",
+      "at": "2025-01-02T00:00:28Z",
+      "actor": "a2",
+      "quote_id": "q14",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute14",
+      "type": "execute",
+      "at": "2025-01-02T00:00:29Z",
+      "actor": "a2",
+      "quote_id": "q14"
+    },
+    {
+      "id": "quote15",
+      "type": "quote",
+      "at": "2025-01-02T00:00:30Z",
+      "actor": "a3",
+      "quote_id": "q15",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute15",
+      "type": "execute",
+      "at": "2025-01-02T00:00:31Z",
+      "actor": "a3",
+      "quote_id": "q15"
+    },
+    {
+      "id": "quote16",
+      "type": "quote",
+      "at": "2025-01-02T00:00:32Z",
+      "actor": "a0",
+      "quote_id": "q16",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute16",
+      "type": "execute",
+      "at": "2025-01-02T00:00:33Z",
+      "actor": "a0",
+      "quote_id": "q16"
+    },
+    {
+      "id": "quote17",
+      "type": "quote",
+      "at": "2025-01-02T00:00:34Z",
+      "actor": "a1",
+      "quote_id": "q17",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute17",
+      "type": "execute",
+      "at": "2025-01-02T00:00:35Z",
+      "actor": "a1",
+      "quote_id": "q17"
+    },
+    {
+      "id": "quote18",
+      "type": "quote",
+      "at": "2025-01-02T00:00:36Z",
+      "actor": "a2",
+      "quote_id": "q18",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute18",
+      "type": "execute",
+      "at": "2025-01-02T00:00:37Z",
+      "actor": "a2",
+      "quote_id": "q18"
+    },
+    {
+      "id": "quote19",
+      "type": "quote",
+      "at": "2025-01-02T00:00:38Z",
+      "actor": "a3",
+      "quote_id": "q19",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute19",
+      "type": "execute",
+      "at": "2025-01-02T00:00:39Z",
+      "actor": "a3",
+      "quote_id": "q19"
+    },
+    {
+      "id": "quote20",
+      "type": "quote",
+      "at": "2025-01-02T00:00:40Z",
+      "actor": "a0",
+      "quote_id": "q20",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute20",
+      "type": "execute",
+      "at": "2025-01-02T00:00:41Z",
+      "actor": "a0",
+      "quote_id": "q20"
+    },
+    {
+      "id": "quote21",
+      "type": "quote",
+      "at": "2025-01-02T00:00:42Z",
+      "actor": "a1",
+      "quote_id": "q21",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute21",
+      "type": "execute",
+      "at": "2025-01-02T00:00:43Z",
+      "actor": "a1",
+      "quote_id": "q21"
+    },
+    {
+      "id": "quote22",
+      "type": "quote",
+      "at": "2025-01-02T00:00:44Z",
+      "actor": "a2",
+      "quote_id": "q22",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute22",
+      "type": "execute",
+      "at": "2025-01-02T00:00:45Z",
+      "actor": "a2",
+      "quote_id": "q22"
+    },
+    {
+      "id": "quote23",
+      "type": "quote",
+      "at": "2025-01-02T00:00:46Z",
+      "actor": "a3",
+      "quote_id": "q23",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute23",
+      "type": "execute",
+      "at": "2025-01-02T00:00:47Z",
+      "actor": "a3",
+      "quote_id": "q23"
+    },
+    {
+      "id": "quote24",
+      "type": "quote",
+      "at": "2025-01-02T00:00:48Z",
+      "actor": "a0",
+      "quote_id": "q24",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute24",
+      "type": "execute",
+      "at": "2025-01-02T00:00:49Z",
+      "actor": "a0",
+      "quote_id": "q24"
+    },
+    {
+      "id": "quote25",
+      "type": "quote",
+      "at": "2025-01-02T00:00:50Z",
+      "actor": "a1",
+      "quote_id": "q25",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute25",
+      "type": "execute",
+      "at": "2025-01-02T00:00:51Z",
+      "actor": "a1",
+      "quote_id": "q25"
+    },
+    {
+      "id": "quote26",
+      "type": "quote",
+      "at": "2025-01-02T00:00:52Z",
+      "actor": "a2",
+      "quote_id": "q26",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute26",
+      "type": "execute",
+      "at": "2025-01-02T00:00:53Z",
+      "actor": "a2",
+      "quote_id": "q26"
+    },
+    {
+      "id": "quote27",
+      "type": "quote",
+      "at": "2025-01-02T00:00:54Z",
+      "actor": "a3",
+      "quote_id": "q27",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute27",
+      "type": "execute",
+      "at": "2025-01-02T00:00:55Z",
+      "actor": "a3",
+      "quote_id": "q27"
+    },
+    {
+      "id": "quote28",
+      "type": "quote",
+      "at": "2025-01-02T00:00:56Z",
+      "actor": "a0",
+      "quote_id": "q28",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute28",
+      "type": "execute",
+      "at": "2025-01-02T00:00:57Z",
+      "actor": "a0",
+      "quote_id": "q28"
+    },
+    {
+      "id": "quote29",
+      "type": "quote",
+      "at": "2025-01-02T00:00:58Z",
+      "actor": "a1",
+      "quote_id": "q29",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute29",
+      "type": "execute",
+      "at": "2025-01-02T00:00:59Z",
+      "actor": "a1",
+      "quote_id": "q29"
+    },
+    {
+      "id": "quote30",
+      "type": "quote",
+      "at": "2025-01-02T00:01:00Z",
+      "actor": "a2",
+      "quote_id": "q30",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute30",
+      "type": "execute",
+      "at": "2025-01-02T00:01:01Z",
+      "actor": "a2",
+      "quote_id": "q30"
+    },
+    {
+      "id": "quote31",
+      "type": "quote",
+      "at": "2025-01-02T00:01:02Z",
+      "actor": "a3",
+      "quote_id": "q31",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute31",
+      "type": "execute",
+      "at": "2025-01-02T00:01:03Z",
+      "actor": "a3",
+      "quote_id": "q31"
+    },
+    {
+      "id": "quote32",
+      "type": "quote",
+      "at": "2025-01-02T00:01:04Z",
+      "actor": "a0",
+      "quote_id": "q32",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute32",
+      "type": "execute",
+      "at": "2025-01-02T00:01:05Z",
+      "actor": "a0",
+      "quote_id": "q32"
+    },
+    {
+      "id": "quote33",
+      "type": "quote",
+      "at": "2025-01-02T00:01:06Z",
+      "actor": "a1",
+      "quote_id": "q33",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute33",
+      "type": "execute",
+      "at": "2025-01-02T00:01:07Z",
+      "actor": "a1",
+      "quote_id": "q33"
+    },
+    {
+      "id": "quote34",
+      "type": "quote",
+      "at": "2025-01-02T00:01:08Z",
+      "actor": "a2",
+      "quote_id": "q34",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute34",
+      "type": "execute",
+      "at": "2025-01-02T00:01:09Z",
+      "actor": "a2",
+      "quote_id": "q34"
+    },
+    {
+      "id": "quote35",
+      "type": "quote",
+      "at": "2025-01-02T00:01:10Z",
+      "actor": "a3",
+      "quote_id": "q35",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute35",
+      "type": "execute",
+      "at": "2025-01-02T00:01:11Z",
+      "actor": "a3",
+      "quote_id": "q35"
+    },
+    {
+      "id": "quote36",
+      "type": "quote",
+      "at": "2025-01-02T00:01:12Z",
+      "actor": "a0",
+      "quote_id": "q36",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute36",
+      "type": "execute",
+      "at": "2025-01-02T00:01:13Z",
+      "actor": "a0",
+      "quote_id": "q36"
+    },
+    {
+      "id": "quote37",
+      "type": "quote",
+      "at": "2025-01-02T00:01:14Z",
+      "actor": "a1",
+      "quote_id": "q37",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute37",
+      "type": "execute",
+      "at": "2025-01-02T00:01:15Z",
+      "actor": "a1",
+      "quote_id": "q37"
+    },
+    {
+      "id": "quote38",
+      "type": "quote",
+      "at": "2025-01-02T00:01:16Z",
+      "actor": "a2",
+      "quote_id": "q38",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute38",
+      "type": "execute",
+      "at": "2025-01-02T00:01:17Z",
+      "actor": "a2",
+      "quote_id": "q38"
+    },
+    {
+      "id": "quote39",
+      "type": "quote",
+      "at": "2025-01-02T00:01:18Z",
+      "actor": "a3",
+      "quote_id": "q39",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute39",
+      "type": "execute",
+      "at": "2025-01-02T00:01:19Z",
+      "actor": "a3",
+      "quote_id": "q39"
+    },
+    {
+      "id": "quote40",
+      "type": "quote",
+      "at": "2025-01-02T00:01:20Z",
+      "actor": "a0",
+      "quote_id": "q40",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute40",
+      "type": "execute",
+      "at": "2025-01-02T00:01:21Z",
+      "actor": "a0",
+      "quote_id": "q40"
+    },
+    {
+      "id": "quote41",
+      "type": "quote",
+      "at": "2025-01-02T00:01:22Z",
+      "actor": "a1",
+      "quote_id": "q41",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute41",
+      "type": "execute",
+      "at": "2025-01-02T00:01:23Z",
+      "actor": "a1",
+      "quote_id": "q41"
+    },
+    {
+      "id": "quote42",
+      "type": "quote",
+      "at": "2025-01-02T00:01:24Z",
+      "actor": "a2",
+      "quote_id": "q42",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute42",
+      "type": "execute",
+      "at": "2025-01-02T00:01:25Z",
+      "actor": "a2",
+      "quote_id": "q42"
+    },
+    {
+      "id": "quote43",
+      "type": "quote",
+      "at": "2025-01-02T00:01:26Z",
+      "actor": "a3",
+      "quote_id": "q43",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute43",
+      "type": "execute",
+      "at": "2025-01-02T00:01:27Z",
+      "actor": "a3",
+      "quote_id": "q43"
+    },
+    {
+      "id": "quote44",
+      "type": "quote",
+      "at": "2025-01-02T00:01:28Z",
+      "actor": "a0",
+      "quote_id": "q44",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute44",
+      "type": "execute",
+      "at": "2025-01-02T00:01:29Z",
+      "actor": "a0",
+      "quote_id": "q44"
+    },
+    {
+      "id": "quote45",
+      "type": "quote",
+      "at": "2025-01-02T00:01:30Z",
+      "actor": "a1",
+      "quote_id": "q45",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute45",
+      "type": "execute",
+      "at": "2025-01-02T00:01:31Z",
+      "actor": "a1",
+      "quote_id": "q45"
+    },
+    {
+      "id": "quote46",
+      "type": "quote",
+      "at": "2025-01-02T00:01:32Z",
+      "actor": "a2",
+      "quote_id": "q46",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute46",
+      "type": "execute",
+      "at": "2025-01-02T00:01:33Z",
+      "actor": "a2",
+      "quote_id": "q46"
+    },
+    {
+      "id": "quote47",
+      "type": "quote",
+      "at": "2025-01-02T00:01:34Z",
+      "actor": "a3",
+      "quote_id": "q47",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute47",
+      "type": "execute",
+      "at": "2025-01-02T00:01:35Z",
+      "actor": "a3",
+      "quote_id": "q47"
+    },
+    {
+      "id": "quote48",
+      "type": "quote",
+      "at": "2025-01-02T00:01:36Z",
+      "actor": "a0",
+      "quote_id": "q48",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute48",
+      "type": "execute",
+      "at": "2025-01-02T00:01:37Z",
+      "actor": "a0",
+      "quote_id": "q48"
+    },
+    {
+      "id": "quote49",
+      "type": "quote",
+      "at": "2025-01-02T00:01:38Z",
+      "actor": "a1",
+      "quote_id": "q49",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute49",
+      "type": "execute",
+      "at": "2025-01-02T00:01:39Z",
+      "actor": "a1",
+      "quote_id": "q49"
+    },
+    {
+      "id": "quote50",
+      "type": "quote",
+      "at": "2025-01-02T00:01:40Z",
+      "actor": "a2",
+      "quote_id": "q50",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute50",
+      "type": "execute",
+      "at": "2025-01-02T00:01:41Z",
+      "actor": "a2",
+      "quote_id": "q50"
+    },
+    {
+      "id": "quote51",
+      "type": "quote",
+      "at": "2025-01-02T00:01:42Z",
+      "actor": "a3",
+      "quote_id": "q51",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute51",
+      "type": "execute",
+      "at": "2025-01-02T00:01:43Z",
+      "actor": "a3",
+      "quote_id": "q51"
+    },
+    {
+      "id": "quote52",
+      "type": "quote",
+      "at": "2025-01-02T00:01:44Z",
+      "actor": "a0",
+      "quote_id": "q52",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute52",
+      "type": "execute",
+      "at": "2025-01-02T00:01:45Z",
+      "actor": "a0",
+      "quote_id": "q52"
+    },
+    {
+      "id": "quote53",
+      "type": "quote",
+      "at": "2025-01-02T00:01:46Z",
+      "actor": "a1",
+      "quote_id": "q53",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute53",
+      "type": "execute",
+      "at": "2025-01-02T00:01:47Z",
+      "actor": "a1",
+      "quote_id": "q53"
+    },
+    {
+      "id": "quote54",
+      "type": "quote",
+      "at": "2025-01-02T00:01:48Z",
+      "actor": "a2",
+      "quote_id": "q54",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute54",
+      "type": "execute",
+      "at": "2025-01-02T00:01:49Z",
+      "actor": "a2",
+      "quote_id": "q54"
+    },
+    {
+      "id": "quote55",
+      "type": "quote",
+      "at": "2025-01-02T00:01:50Z",
+      "actor": "a3",
+      "quote_id": "q55",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute55",
+      "type": "execute",
+      "at": "2025-01-02T00:01:51Z",
+      "actor": "a3",
+      "quote_id": "q55"
+    },
+    {
+      "id": "quote56",
+      "type": "quote",
+      "at": "2025-01-02T00:01:52Z",
+      "actor": "a0",
+      "quote_id": "q56",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute56",
+      "type": "execute",
+      "at": "2025-01-02T00:01:53Z",
+      "actor": "a0",
+      "quote_id": "q56"
+    },
+    {
+      "id": "quote57",
+      "type": "quote",
+      "at": "2025-01-02T00:01:54Z",
+      "actor": "a1",
+      "quote_id": "q57",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute57",
+      "type": "execute",
+      "at": "2025-01-02T00:01:55Z",
+      "actor": "a1",
+      "quote_id": "q57"
+    },
+    {
+      "id": "quote58",
+      "type": "quote",
+      "at": "2025-01-02T00:01:56Z",
+      "actor": "a2",
+      "quote_id": "q58",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute58",
+      "type": "execute",
+      "at": "2025-01-02T00:01:57Z",
+      "actor": "a2",
+      "quote_id": "q58"
+    },
+    {
+      "id": "quote59",
+      "type": "quote",
+      "at": "2025-01-02T00:01:58Z",
+      "actor": "a3",
+      "quote_id": "q59",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute59",
+      "type": "execute",
+      "at": "2025-01-02T00:01:59Z",
+      "actor": "a3",
+      "quote_id": "q59"
+    },
+    {
+      "id": "quote60",
+      "type": "quote",
+      "at": "2025-01-02T00:02:00Z",
+      "actor": "a0",
+      "quote_id": "q60",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute60",
+      "type": "execute",
+      "at": "2025-01-02T00:02:01Z",
+      "actor": "a0",
+      "quote_id": "q60"
+    },
+    {
+      "id": "quote61",
+      "type": "quote",
+      "at": "2025-01-02T00:02:02Z",
+      "actor": "a1",
+      "quote_id": "q61",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute61",
+      "type": "execute",
+      "at": "2025-01-02T00:02:03Z",
+      "actor": "a1",
+      "quote_id": "q61"
+    },
+    {
+      "id": "quote62",
+      "type": "quote",
+      "at": "2025-01-02T00:02:04Z",
+      "actor": "a2",
+      "quote_id": "q62",
+      "outcome": "YES",
+      "delta": "1"
+    },
+    {
+      "id": "execute62",
+      "type": "execute",
+      "at": "2025-01-02T00:02:05Z",
+      "actor": "a2",
+      "quote_id": "q62"
+    },
+    {
+      "id": "quote63",
+      "type": "quote",
+      "at": "2025-01-02T00:02:06Z",
+      "actor": "a3",
+      "quote_id": "q63",
+      "outcome": "NO",
+      "delta": "1"
+    },
+    {
+      "id": "execute63",
+      "type": "execute",
+      "at": "2025-01-02T00:02:07Z",
+      "actor": "a3",
+      "quote_id": "q63"
+    },
+    {
+      "id": "close",
+      "type": "close",
+      "at": "2025-01-10T00:00:00Z",
+      "actor": "admin"
+    },
+    {
+      "id": "resolve",
+      "type": "resolve",
+      "at": "2025-01-11T00:00:00Z",
+      "actor": "admin",
+      "outcome": "YES"
+    }
+  ],
+  "provenance": {
+    "synthetic": true,
+    "source_ref": "prediction-markets-cost-function-v1",
+    "rights": "self_authored",
+    "attribution": "Future original synthetic play-credit example",
+    "snapshot": "Original fictional LMSR play-credit ledger; no actual money or traders.",
+    "snapshot_sha256": "e61decf19b247c86d53c92ac181ef7f671ab25716bb00e472abac61806d4b35d"
+  }
+}
