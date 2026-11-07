@@ -1,0 +1,107 @@
+{
+  "measured": true,
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "profile_sha256": "30f541e00247d4c9f78fa5218cba83e5e5caf7417868743cf4e3b4cebfa629a0",
+  "code_sha256": "c2c0ab880202fbaa9cb3140cdabf7962eb2d2a30e222a8dd527b52d0651f0384",
+  "protocol": "Three untraced complete-report repetitions; separate tracemalloc repetition; one full CLI including imports,registry and serialization. Native peak is whole helper process including all workloads and tracing, not CLI-child or per-workload peak.",
+  "process_peak_working_set_bytes": 80986112,
+  "under_proposed_128_MiB": true,
+  "results": [
+    {
+      "id": "small",
+      "trials": 8,
+      "channels": 1,
+      "mode": "windows",
+      "samples": 4,
+      "input_sha256": "10b2444ada8b9ead7f6653bdf15e50ecc9ca9d1d84c63ba8d03f6839cb7e2a9a",
+      "budget": {
+        "raw_cells": 32,
+        "features": 2,
+        "work": 384,
+        "returned_cells": 288
+      },
+      "seconds": [
+        0.001269300002604723,
+        0.0009146998636424541,
+        0.0008486001752316952
+      ],
+      "median_seconds": 0.0009146998636424541,
+      "cli_seconds": 1.2685348996892571,
+      "python_traced_peak_bytes": 109393,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "medium",
+      "trials": 32,
+      "channels": 4,
+      "mode": "windows",
+      "samples": 64,
+      "input_sha256": "bfe6a18a9c385428b99af35e97a624b26fe352a50a6878a9958c4a0218bb14aa",
+      "budget": {
+        "raw_cells": 8192,
+        "features": 8,
+        "work": 52224,
+        "returned_cells": 1536
+      },
+      "seconds": [
+        0.033923900220543146,
+        0.04141659988090396,
+        0.03629280021414161
+      ],
+      "median_seconds": 0.03629280021414161,
+      "cli_seconds": 1.623477099929005,
+      "python_traced_peak_bytes": 881219,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "dense",
+      "trials": 64,
+      "channels": 8,
+      "mode": "windows",
+      "samples": 512,
+      "input_sha256": "76ba4b62c100b65bacefc8a5b9ca089184bd882ce18f3e2d6fb17e827a21e930",
+      "budget": {
+        "raw_cells": 262144,
+        "features": 16,
+        "work": 1585152,
+        "returned_cells": 4096
+      },
+      "seconds": [
+        1.887665799818933,
+        1.7656272002495825,
+        1.7532930998131633
+      ],
+      "median_seconds": 1.7656272002495825,
+      "cli_seconds": 2.0475634997710586,
+      "python_traced_peak_bytes": 20681777,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "features",
+      "trials": 8,
+      "channels": 1,
+      "mode": "features",
+      "samples": 0,
+      "input_sha256": "6322e79a8f7f0abe30a1352f7f19e1f74eaa3dd7354c40c4c1e86d840ea2cf9a",
+      "budget": {
+        "raw_cells": 16,
+        "features": 2,
+        "work": 288,
+        "returned_cells": 288
+      },
+      "seconds": [
+        0.002956000156700611,
+        0.0024955999106168747,
+        0.0012122001498937607
+      ],
+      "median_seconds": 0.0024955999106168747,
+      "cli_seconds": 0.7255533002316952,
+      "python_traced_peak_bytes": 107026,
+      "under_proposed_five_seconds": true
+    }
+  ],
+  "scope": "Local synthetic examples; no empirical accuracy or universal performance bound."
+}

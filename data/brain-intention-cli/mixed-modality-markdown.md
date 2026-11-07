@@ -1,0 +1,11 @@
+# Brain-Based Intention Prediction — synthetic offline reference
+
+```json
+{
+  "status": "rejected",
+  "error": "Synthetic offline classification request rejected",
+  "reason": "Unsupported task or modality",
+  "result": null
+}
+```
+

@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "brain-intention-synthetic-offline-classification-v1",
+    "version": 1,
+    "sha256": "30f541e00247d4c9f78fa5218cba83e5e5caf7417868743cf4e3b4cebfa629a0",
+    "catalog_sha256": "3fdd4d5fd4490cc162e2f6a4aa1926a418522be894e6a6f43daae2287fd30ab1"
+  },
+  "mode": "features",
+  "channels": [
+    {
+      "id": "c0",
+      "unit": "arbitrary_units"
+    }
+  ],
+  "task": "synthetic_imagined_hands_feet",
+  "protocol": "subject_disjoint",
+  "fit_at": 100,
+  "filter": "none",
+  "trials": [
+    {
+      "id": "t0",
+      "subject": "train",
+      "run": "4",
+      "session": null,
+      "source_id": "file-train",
+      "trial_id": "trial0",
+      "start": 0,
+      "end": 4,
+      "available_at": 50,
+      "predict_at": 90,
+      "label_available_at": 80,
+      "partition": "TRAIN",
+      "label": "A",
+      "annotation": "T1",
+      "values": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "t1",
+      "subject": "train",
+      "run": "6",
+      "session": null,
+      "source_id": "file-train",
+      "trial_id": "trial1",
+      "start": 5,
+      "end": 9,
+      "available_at": 50,
+      "predict_at": 90,
+      "label_available_at": 80,
+      "partition": "TRAIN",
+      "label": "A",
+      "annotation": "T1",
+      "values": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": "t2",
+      "subject": "train",
+      "run": "6",
+      "session": null,
+      "source_id": "file-train",
+      "trial_id": "trial2",
+      "start": 10,
+      "end": 14,
+      "available_at": 50,
+      "predict_at": 90,
+      "label_available_at": 80,
+      "partition": "TRAIN",
+      "label": "B",
+      "annotation": "T2",
+      "values": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "t3",
+      "subject": "train",
+      "run": "6",
+      "session": null,
+      "source_id": "file-train",
+      "trial_id": "trial3",
+      "start": 15,
+      "end": 19,
+      "available_at": 50,
+      "predict_at": 90,
+      "label_available_at": 80,
+      "partition": "TRAIN",
+      "label": "B",
+      "annotation": "T2",
+      "values": [
+        6,
+        4
+      ]
+    },
+    {
+      "id": "t4",
+      "subject": "test",
+      "run": "6",
+      "session": null,
+      "source_id": "file-test",
+      "trial_id": "trial4",
+      "start": 20,
+      "end": 24,
+      "available_at": 110,
+      "predict_at": 120,
+      "label_available_at": 130,
+      "partition": "TEST",
+      "label": "A",
+      "annotation": "T1",
+      "values": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "t5",
+      "subject": "test",
+      "run": "6",
+      "session": null,
+      "source_id": "file-test",
+      "trial_id": "trial5",
+      "start": 25,
+      "end": 29,
+      "available_at": 110,
+      "predict_at": 120,
+      "label_available_at": 130,
+      "partition": "TEST",
+      "label": "A",
+      "annotation": "T1",
+      "values": [
+        4,
+        3
+      ]
+    },
+    {
+      "id": "t6",
+      "subject": "test",
+      "run": "6",
+      "session": null,
+      "source_id": "file-test",
+      "trial_id": "trial6",
+      "start": 30,
+      "end": 34,
+      "available_at": 110,
+      "predict_at": 120,
+      "label_available_at": 130,
+      "partition": "TEST",
+      "label": "B",
+      "annotation": "T2",
+      "values": [
+        4,
+        3
+      ]
+    },
+    {
+      "id": "t7",
+      "subject": "test",
+      "run": "6",
+      "session": null,
+      "source_id": "file-test",
+      "trial_id": "trial7",
+      "start": 35,
+      "end": 39,
+      "available_at": 110,
+      "predict_at": 120,
+      "label_available_at": 130,
+      "partition": "TEST",
+      "label": "B",
+      "annotation": "T2",
+      "values": [
+        5,
+        3
+      ]
+    }
+  ],
+  "provenance": {
+    "synthetic": true,
+    "source_ref": "brain-intention-centroid-v1",
+    "rights": "self_authored",
+    "attribution": "Future original synthetic arithmetic example",
+    "snapshot": "Original synthetic trial table; no human data.",
+    "snapshot_sha256": "7811d5503fd38d958f3f83d61d104e0a4e6480534c7fc65a65cb579521df8b69"
+  }
+}

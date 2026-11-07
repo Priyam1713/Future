@@ -315,7 +315,25 @@ def main():
     ab=sub.add_parser('agent-based')
     ab.add_argument('input',help='Offline exact finite-grid synchronous B3/S23 scenarios JSON')
     ab.add_argument('--format',choices=['json','markdown'],default='json')
+    bi=sub.add_parser('brain-intention')
+    bi.add_argument('input',help='Synthetic offline trial classification and leakage diagnostics JSON')
+    bi.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='brain-intention':
+        import sys
+        from .scrying import load_input
+        from .brain_intention import read,markdown
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8',newline='\n')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError,TypeError,KeyError,OverflowError) as error:
+                result=dict(status='rejected',error='Synthetic offline classification request rejected',reason=str(error),result=None)
+                print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+        finally:registry.close()
+        return
     if args.command=='agent-based':
         import sys
         from .scrying import load_input

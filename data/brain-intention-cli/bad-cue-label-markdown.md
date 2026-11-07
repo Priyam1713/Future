@@ -1,0 +1,11 @@
+# Brain-Based Intention Prediction — synthetic offline reference
+
+```json
+{
+  "status": "rejected",
+  "error": "Synthetic offline classification request rejected",
+  "reason": "Run-specific T1 hands/T2 feet mapping required",
+  "result": null
+}
+```
+
