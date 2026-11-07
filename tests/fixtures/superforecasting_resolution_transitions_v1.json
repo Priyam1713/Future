@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "provenance": "Independent transition table derived from the already frozen requirement: every new resolved correction needs a dispute/void after the latest earlier resolved entry. Authored before gate correction.",
+  "cases": [
+    {
+      "history": [],
+      "new_status": "resolved",
+      "accepted": true
+    },
+    {
+      "history": [
+        "resolved"
+      ],
+      "new_status": "resolved",
+      "accepted": false
+    },
+    {
+      "history": [
+        "resolved",
+        "unresolved"
+      ],
+      "new_status": "resolved",
+      "accepted": false
+    },
+    {
+      "history": [
+        "resolved",
+        "disputed",
+        "unresolved"
+      ],
+      "new_status": "resolved",
+      "accepted": true
+    },
+    {
+      "history": [
+        "resolved",
+        "void"
+      ],
+      "new_status": "resolved",
+      "accepted": true
+    },
+    {
+      "history": [
+        "resolved",
+        "disputed",
+        "resolved",
+        "unresolved"
+      ],
+      "new_status": "resolved",
+      "accepted": false
+    },
+    {
+      "history": [
+        "resolved",
+        "disputed",
+        "resolved",
+        "unresolved",
+        "void"
+      ],
+      "new_status": "resolved",
+      "accepted": true
+    }
+  ]
+}

@@ -1171,3 +1171,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #51 timestamp precision correction
 - Corrected reference-period extrema to compare parsed UTC timestamps andlead-time displays to use exact rational seconds,including fractional boundaries. The independent c2c5462fixture nowpasses;all23families and120new tests pass. No earlier protected engine/report orsource/profile/primaryfixture hash changed.
 - Regenerating affected #51CLI output commitments andrerunning the full unit suite plusaffected verifier/replay commands before acceptance. Inherited commands continue unchanged.
+
+## 2026-11-07 — #51 independent resolution transition table
+- Froze seven original transition expectations before correcting a review finding:resolved→unresolved→resolved mustnot bypass the frozen intervening dispute/void requirement. Any marker beforethe latest resolved entry isinsufficient. This extends the existing unresolved/history family;original23-family fixtures unchanged.
