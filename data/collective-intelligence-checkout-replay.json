@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "exports": [
+    {
+      "autocrlf": "false",
+      "raw_corpus_files": 193,
+      "normalized_commitments": 3,
+      "actual_cli_replays": 128,
+      "passed": true
+    },
+    {
+      "autocrlf": "true",
+      "raw_corpus_files": 193,
+      "normalized_commitments": 3,
+      "actual_cli_replays": 128,
+      "passed": true
+    }
+  ],
+  "method": "git checkout-index from staged files with core.autocrlf false/true;actual exported CLI executions;stdout bytes SHA256 matches saved JSON/Markdown,without newline normalization",
+  "subprocess_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "harness_limit": "Two parallel CLI processes; limits inherited numerical-library import threads,not the stdlib binary pooling engine."
+}
