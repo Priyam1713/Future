@@ -227,3 +227,9 @@ class SuperforecastingIntegrityTests(unittest.TestCase):
     def test_internal_log_range(self):
         for p in (e.Q(-1,2),e.Q(3,2)):
             with self.assertRaises(ValueError):e.log_loss(p,1)
+
+class SuperforecastingTimestampPrecisionTests(unittest.TestCase):
+    def test_frozen_fractional_timestamp_boundaries(self):
+        f=load_input(Path('tests/fixtures/superforecasting_timestamp_precision_v1.json'));r=e.evaluate(e.create(f['plan']));training=r['rows'][0]['reference_training']
+        for key in ('member_event_start','member_observed_end'):self.assertEqual(training[key],f['expected'][key])
+        self.assertEqual(r['rows'][0]['lead_seconds']['exact'],f['expected']['lead_seconds']);self.assertEqual(e.question(f['plan']['questions'][0])['lead_seconds']['exact'],f['expected']['lead_seconds'])

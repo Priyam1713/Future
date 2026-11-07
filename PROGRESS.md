@@ -1167,3 +1167,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #51 independent timestamp-precision reproducer
 - Review identified lexical min/max ordering andwhole-second truncation in derived reference-period/lead-time displays when UTC timestamps include fractional seconds. Eligibility already uses parsed datetime values. Froze an original boundary table before correction:00.0 precedes00.1;latestobserved00.1;lead6047999/10seconds. Original23family freeze andearlier technique artifacts unchanged.
+
+## 2026-11-07 — #51 timestamp precision correction
+- Corrected reference-period extrema to compare parsed UTC timestamps andlead-time displays to use exact rational seconds,including fractional boundaries. The independent c2c5462fixture nowpasses;all23families and120new tests pass. No earlier protected engine/report orsource/profile/primaryfixture hash changed.
+- Regenerating affected #51CLI output commitments andrerunning the full unit suite plusaffected verifier/replay commands before acceptance. Inherited commands continue unchanged.

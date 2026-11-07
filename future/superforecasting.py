@@ -47,6 +47,10 @@ def at(v):
     return timestamp(v)
 
 
+def seconds(delta):
+    return Q(delta.days*86400+delta.seconds)+Q(delta.microseconds,1000000)
+
+
 def rational(v):
     if not isinstance(v,str) or len(v)>128 or re.fullmatch(r'-?(?:0|[1-9][0-9]{0,59})(?:/[1-9][0-9]{0,59}|\.[0-9]{1,60})?',v) is None:raise ValueError('Bounded exact rational string required')
     return Q(v)
@@ -131,7 +135,7 @@ def question(q,book=None):
         if b['kind'] not in ('constant','reference_class'):raise ValueError('Precommitted baseline kind')
         for key in ('domain','horizon'):nonempty(b[key])
         source(b['source'],book,at(b['frozen_at']))
-    return dict(input=copy.deepcopy(q),sha256=digest(q),binary_clarity='User-confirmed declaration;software cannot prove semantic resolvability.',lead_seconds=int((end-cutoff).total_seconds()),reasoning_probability_generated=False)
+    return dict(input=copy.deepcopy(q),sha256=digest(q),binary_clarity='User-confirmed declaration;software cannot prove semantic resolvability.',lead_seconds=number(seconds(end-cutoff)),reasoning_probability_generated=False)
 
 
 def identifiers(v):
@@ -407,8 +411,8 @@ def evaluate(l):
         prob=probability(chosen['record']['probability']) if chosen else None;y=latest['outcome'] if status=='resolved' else None;scored=not reasons
         baseline=q['baseline'];training=None
         if q['class_id'] is not None:
-            c=ctx['classes'][q['class_id']]['input'];training=dict(class_id=c['id'],class_sha256=digest(c),availability_cutoff=c['availability_cutoff'],frozen_at=c['frozen_at'],member_event_start=min((m['event_at'] for m in c['members']),default=None),member_observed_end=max((m['observed_at'] for m in c['members']),default=None))
-        rows.append(dict(forecast_id=fid,question_id=q['id'],event_id=q['event_id'],dependency_group=q['dependency_group'],partition=q['partition'],participant=slot['participant'],participant_kind=slot['participant_kind'],question_sha256=digest(q),cutoff=q['cutoff'],lead_seconds=int((at(q['window_end'])-at(q['cutoff'])).total_seconds()),versions=history,selected_version_sha256=chosen['sha256'] if chosen else None,selected_version=chosen['record']['version'] if chosen else None,probability=number(prob),status=status,outcome=y,scored=scored,primary_included=scored and q['partition']=='test',exclusion_reasons=reasons,binary_brier=number((prob-y)**2 if scored else None,'not_eligible_resolved_pair'),two_category_sum_of_squares=number(2*(prob-y)**2 if scored else None,'not_eligible_resolved_pair'),natural_log_loss=log_loss(prob,y) if scored else number(None,'not_eligible_resolved_pair'),baseline_probability=baseline['probability'] if baseline else None,baseline=copy.deepcopy(baseline),reference_training=training))
+            c=ctx['classes'][q['class_id']]['input'];training=dict(class_id=c['id'],class_sha256=digest(c),availability_cutoff=c['availability_cutoff'],frozen_at=c['frozen_at'],member_event_start=min((m['event_at'] for m in c['members']),key=at,default=None),member_observed_end=max((m['observed_at'] for m in c['members']),key=at,default=None))
+        rows.append(dict(forecast_id=fid,question_id=q['id'],event_id=q['event_id'],dependency_group=q['dependency_group'],partition=q['partition'],participant=slot['participant'],participant_kind=slot['participant_kind'],question_sha256=digest(q),cutoff=q['cutoff'],lead_seconds=number(seconds(at(q['window_end'])-at(q['cutoff']))),versions=history,selected_version_sha256=chosen['sha256'] if chosen else None,selected_version=chosen['record']['version'] if chosen else None,probability=number(prob),status=status,outcome=y,scored=scored,primary_included=scored and q['partition']=='test',exclusion_reasons=reasons,binary_brier=number((prob-y)**2 if scored else None,'not_eligible_resolved_pair'),two_category_sum_of_squares=number(2*(prob-y)**2 if scored else None,'not_eligible_resolved_pair'),natural_log_loss=log_loss(prob,y) if scored else number(None,'not_eligible_resolved_pair'),baseline_probability=baseline['probability'] if baseline else None,baseline=copy.deepcopy(baseline),reference_training=training))
     bypart={part:aggregate([r for r in rows if r['partition']==part]) for part in ('train','test')};primary=bypart['test'];status_counts={k:sum(r['status']==k for r in question_statuses) for k in ('resolved','unresolved','disputed','void')}
     return dict(aggregation_policy='Equal forecast-slot weight on latest eligible fixed-cutoff resolved TEST questions;training separately summarized;not daily orquestion-standardized tournament replication',evidence_mode=p['evidence_mode'],empirical_skill_validated=False,questions=question_statuses,reference_classes=list(copy.deepcopy(ctx['classes']).values()),rows=rows,primary=primary,by_partition=bypart,denominators=dict(planned_questions=len(ctx['questions']),planned_events=len({q['event_id'] for q in ctx['questions'].values()}),planned_slots=len(rows),participants=len({s['participant'] for s in ctx['slots'].values()}),versions=sum(len(v) for v in state['forecasts'].values()),actions=len(l['actions']),rejected_attempts=sum(a['decision']=='rejected' for a in l['actions']),selected_slots=sum(r['selected_version'] is not None for r in rows),primary_scored_slots=primary['denominator'],primary_unique_events=primary['unique_events'],primary_dependency_groups=primary['dependency_groups'],question_statuses=status_counts,primary_excluded_slot_ids=[r['forecast_id'] for r in rows if not r['primary_included']]),rejected_attempts=[copy.deepcopy(a) for a in l['actions'] if a['decision']=='rejected'],limits=['Selection/availability,identity,rights,comparability andconditional independence aredeclared,not externallyattested.','Multiple participants/updates share events;counts are not effective independent sample sizes.','Calibration andscores are descriptive;synthetic validation establishes software mechanics,not human superforecasting skill.','Local owners can rewrite all hashes/history;prospective integrity requires independent anchoring.'])
 

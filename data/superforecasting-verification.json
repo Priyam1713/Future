@@ -69,7 +69,8 @@
     "chronology": {
       "passed": true,
       "evidence": "Frozeninclusivecutoff/strictoccurrence table;post-outcome andsource/class/partitionchronology guards",
-      "frozen_expectation": "Forecastat/afterknown occurrence rejects eligibility;strict cutoff/sourceavailability/window/resolution chronology."
+      "frozen_expectation": "Forecastat/afterknown occurrence rejects eligibility;strict cutoff/sourceavailability/window/resolution chronology.",
+      "fractional_timestamp_boundary_passed": true
     },
     "unresolved-void": {
       "passed": true,
@@ -128,7 +129,14 @@
       "tests/fixtures/superforecasting_reference_v1.json": "ae4d239f0128b4e9367e833334cab77a69074f6d5d016ff686527e4b7f3d1017"
     }
   },
+  "timestamp_fixture_freeze": {
+    "version": 1,
+    "hash_convention": "SHA256 with CRLF normalized to LF",
+    "files": {
+      "tests/fixtures/superforecasting_timestamp_precision_v1.json": "ad12c7365e0aa17ea5b18d4e53dc8027d575d7de49f677d33cc125f8a095b5fe"
+    }
+  },
   "profile_sha256": "bd6d71ded4dbb2ddc1f60b230c46daff2b735793f6bfe4098899d49bfc6b9933",
-  "code_sha256": "6d5d5609717fd9ed309383fe0ea9a4935e7392397eef8dbcc33e5bc206fa9e67",
+  "code_sha256": "2d6e7a455600fd2311ec0863c1f8d7152e8d431363934c35984fe81eba031718",
   "empirical_skill_validated": false
 }

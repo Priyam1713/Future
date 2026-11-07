@@ -86,8 +86,15 @@ def verify(write=False):
     passed('heldout-isolation','Futurepositive/negative outcomes leavefrozenclass/plan/priors/versions/evidence/partition andselected historicalforecast unchanged')
     nr=e.read(cs['negative-event'][0])['result']['evaluation']['questions'][0]['resolution_history'][0]['record'];assert nr['occurrence_at'] is None and e.at(nr['outcome_known_at'])>=e.at(nr['window_end']) and e.at(nr['recorded_at'])>e.at(nr['outcome_known_at'])
     passed('negative-event-resolution-time','Distinctwindowend/known/sourceavailability/resolution;nulloccurrence andpremature/fabricatedoccurrence rejection')
+    extra=load_input(R/'knowledge/superforecasting_timestamp_fixture_freeze_v1.json')
+    for path,h in extra['files'].items():assert hashlib.sha256((R/path).read_bytes().replace(b'\r\n',b'\n')).hexdigest()==h
+    precision=load_input(R/'tests/fixtures/superforecasting_timestamp_precision_v1.json');row=e.evaluate(e.create(precision['plan']))['rows'][0]
+    for key in ('member_event_start','member_observed_end'):assert row['reference_training'][key]==precision['expected'][key]
+    assert row['lead_seconds']['exact']==precision['expected']['lead_seconds']
+    assert e.question(precision['plan']['questions'][0])['lead_seconds']['exact']==precision['expected']['lead_seconds']
+    checked['chronology']['fractional_timestamp_boundary_passed']=True
     assert set(checked)==set(f['families']) and len(checked)==23
-    out=dict(passed=True,families=checked,bayes_anchors=len(f['bayes']),loss_bin_log_anchors=len(f['losses']),in_process_scenarios=len(cs),fixture_freeze=freeze,profile_sha256=e.PROFILE_HASH,code_sha256=e.read(e.request('reference',dict(id='scores')))['code_sha256'],empirical_skill_validated=False)
+    out=dict(passed=True,families=checked,bayes_anchors=len(f['bayes']),loss_bin_log_anchors=len(f['losses']),in_process_scenarios=len(cs),fixture_freeze=freeze,timestamp_fixture_freeze=extra,profile_sha256=e.PROFILE_HASH,code_sha256=e.read(e.request('reference',dict(id='scores')))['code_sha256'],empirical_skill_validated=False)
     if write:(R/'data/superforecasting-verification.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8',newline='\n')
     return out
 
