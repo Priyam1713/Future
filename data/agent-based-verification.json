@@ -1,0 +1,204 @@
+{
+  "passed": true,
+  "fixture_families": 26,
+  "families": {
+    "local-rule-18-cases": {
+      "passed": true,
+      "cases": [
+        "local_truth"
+      ]
+    },
+    "local-512-combinatorial-oracle": {
+      "passed": true,
+      "cases": [
+        "local_configurations"
+      ]
+    },
+    "synchronous-inplace-negative": {
+      "passed": true,
+      "cases": [
+        "blinker"
+      ]
+    },
+    "clipped-edge-neighbors": {
+      "passed": true,
+      "cases": [
+        "clipped-corners"
+      ]
+    },
+    "toroidal-alias-refusal": {
+      "passed": true,
+      "cases": [
+        "torus",
+        "wrap"
+      ]
+    },
+    "center-exclusion": {
+      "passed": true,
+      "cases": [
+        "tiny-one",
+        "single"
+      ]
+    },
+    "distinct-neighbor-positions": {
+      "passed": true,
+      "cases": [
+        "tiny-line",
+        "tiny-two"
+      ]
+    },
+    "empty-board": {
+      "passed": true,
+      "cases": [
+        "empty"
+      ]
+    },
+    "single-cell-death": {
+      "passed": true,
+      "cases": [
+        "single"
+      ]
+    },
+    "block-fixed-point": {
+      "passed": true,
+      "cases": [
+        "block"
+      ]
+    },
+    "blinker-period-two": {
+      "passed": true,
+      "cases": [
+        "blinker",
+        "blinker-odd"
+      ]
+    },
+    "glider-translation-plan": {
+      "passed": true,
+      "cases": [
+        "glider",
+        "glider-no-trace"
+      ]
+    },
+    "birth-death-count-balance": {
+      "passed": true,
+      "cases": [
+        "scenario-comparison"
+      ]
+    },
+    "active-plus-dead-cells": {
+      "passed": true,
+      "cases": [
+        "scenario-comparison"
+      ]
+    },
+    "fixed-point-detection": {
+      "passed": true,
+      "cases": [
+        "block",
+        "full-horizon-fixed"
+      ]
+    },
+    "period-versus-fixed": {
+      "passed": true,
+      "cases": [
+        "blinker",
+        "blinker-one"
+      ]
+    },
+    "zero-steps": {
+      "passed": true,
+      "cases": [
+        "zero-tick",
+        "zero-tick-no-trace"
+      ]
+    },
+    "cap-truncation": {
+      "passed": true,
+      "cases": [
+        "blinker-one",
+        "glider"
+      ]
+    },
+    "interior-translation": {
+      "passed": true,
+      "cases": [
+        "glider",
+        "translated"
+      ]
+    },
+    "rotation-reflection": {
+      "passed": true,
+      "cases": [
+        "rectangle",
+        "rotated",
+        "reflected"
+      ]
+    },
+    "identical-scenario-control": {
+      "passed": true,
+      "cases": [
+        "identical",
+        "equal-count-different-state"
+      ]
+    },
+    "strict-binary-grid": {
+      "passed": true,
+      "cases": [
+        "ragged",
+        "binary-bool",
+        "binary-two",
+        "row-string"
+      ]
+    },
+    "unsupported-variation-rejection": {
+      "passed": true,
+      "cases": [
+        "variation",
+        "rng",
+        "other-rule"
+      ]
+    },
+    "source-rights-and-data": {
+      "passed": true,
+      "cases": [
+        "source",
+        "rights",
+        "snapshot",
+        "empirical"
+      ]
+    },
+    "combined-resource-caps": {
+      "passed": true,
+      "cases": [
+        "work-cap",
+        "state-cap",
+        "count-cap"
+      ]
+    },
+    "raw-json-markdown-hashes": {
+      "passed": true,
+      "cases": [
+        "unicode",
+        "profile"
+      ]
+    }
+  },
+  "accepted": 23,
+  "rejected": 42,
+  "profile_sha256": "e6d0487cf23393a1262efb227ef912542f38ae6cb9232358a6bbc34c9053a62b",
+  "pre_engine_hashes_passed": true,
+  "local_truth_cases": 18,
+  "exhaustive_local_configurations": 512,
+  "combinatorics": {
+    "configurations": 512,
+    "births": 56,
+    "survivals": 84,
+    "next_alive": 140,
+    "next_dead": 372,
+    "exact_fraction": "35/128"
+  },
+  "block_blinker_glider_passed": true,
+  "geometric_controls_passed": true,
+  "inplace_negative_passed": true,
+  "scientific_scope": "Exact bounded synthetic automaton correctness;notempirical social,clinical,LLM orcausal prediction"
+}

@@ -1271,3 +1271,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #54 independent fixtures before engine
 - Frozen all26families,23accepted/42rejected board/configuration cases,18literal localtruth rows and512nine-bit configurations. Sparse Counter/set oracle isindependent ofplanned dense-neighbor production kernel;binomial anchors give56birth+84survival=140alive/372dead,35/128.
 - Exactblock,blinkerperiod2,glider(1,1)translation after4ticks,geometric transforms,equal-count/different-state controls andtargetedwork/state/count caprefusals passpre-engine checks. No production engine yet.
+
+## 2026-11-07 — #54 verified engine and scenarios
+- Implemented exactfinite-byte-grid kernel,synchronous prior snapshots,zero exterior,full requestedhorizons andexactcomplete-state repeat detection. Controlledinitialstates compareper-tick counts andHammingdistance;equalcounts neverstandinforstateequality.
+- All95new unit tests and26families pass,includingall18localcases/512configurations,56birth/84survival combinatorics,block,blinker,glider,geometry,in-place negativecontrol andwork/state/count preflight refusals. No empirical/otherABM certification.
