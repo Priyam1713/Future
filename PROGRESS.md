@@ -1182,3 +1182,8 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #51 final corrected replay corpus
 - Regenerated andverified162CLI cases:44accepted/37rejected JSON/Markdown pairs after both numerical/provenance refinements. New cases explicitly cover a valid dispute-led correction andunresolved/stale-dispute bypass rejection.
 - Both Git EOL exports preserve244raw corpus files and5normalized engine/oracle/fixture commitments,including both independently frozen review addenda. All3223earlier protected bytes remain untouched;final unit andacceptance rechecks follow.
+
+## 2026-11-07 — #51 final full acceptance
+- Passed1719tests (1598inherited+121new),2369CLI cases (2207inherited+162new),30independent verifiers (29inherited+1new). All23families plusindependent timestamp/transition addenda and44accepted/37rejected exact report pairs pass.
+- All3223pre-engine protected bytes unchanged. Registry idempotence,source/rights integrity,strict JSON includingtwo inherited malformed rejection fixtures,dependency audit,pip check,diff check and60IDs/54retained/six exclusions pass. Both Git EOL export commitments pass.
+- Full unit suite rerun after corrections;allaffected51CLI/verifier commands rerun.73unchanged inherited command receipts retained with explicit recheck provenance indata/superforecasting-refinement-recheck.json. Final evidence:data/superforecasting-acceptance-checks.json.

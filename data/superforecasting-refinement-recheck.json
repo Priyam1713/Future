@@ -1,0 +1,35 @@
+{
+  "reason": "After timestamp-display andresolution-correction refinements,rerunfullunit suite andallaffected51replay/verifier commands. Protected earlier code/data/profile/report bytes areunchanged;all73inherited command receipts retained.",
+  "retained_inherited_commands": 73,
+  "inherited_cli_cases": 2207,
+  "inherited_verifiers": 29,
+  "changed_protected_files": [],
+  "rerun_commands": [
+    "scripts.smoke_superforecasting_core",
+    "scripts.verify_superforecasting"
+  ],
+  "prior_affected_command_receipts": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_superforecasting_core"
+      ],
+      "returncode": 0,
+      "seconds": 173.406,
+      "stdout": "156 CLI cases pass;43accepted/35rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_superforecasting"
+      ],
+      "returncode": 0,
+      "seconds": 1.656,
+      "stdout": "23 independent fixture families pass;30Bayes anchors;22loss/bin/log anchors;74scenarios\r\n",
+      "stderr": ""
+    }
+  ]
+}

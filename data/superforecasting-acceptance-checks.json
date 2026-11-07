@@ -1,0 +1,1887 @@
+{
+  "passed": true,
+  "complete": true,
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "returncode": 0,
+      "seconds": 166.4069999998901,
+      "stdout": "",
+      "stderr": "......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\skyfield\\searchlib.py:224: DeprecationWarning: Setting the dtype on a NumPy array has been deprecated in NumPy 2.5.\r\nInstead of changing the dtype on an array x, create a new array with x.view(new_dtype)\r\n  y.dtype = int8\r\n.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\r\n----------------------------------------------------------------------\r\nRan 1719 tests in 163.679s\r\n\r\nOK\r\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\r\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aeromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 113.734,
+      "stdout": "72 Aeromancy CLI cases passed;21 JSON/21 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_akashic_core"
+      ],
+      "returncode": 0,
+      "seconds": 44.563,
+      "stdout": "28 Akashic CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_astrocartography_core"
+      ],
+      "returncode": 0,
+      "seconds": 18.89,
+      "stdout": "12 Astrocartography CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aura_core"
+      ],
+      "returncode": 0,
+      "seconds": 21.765,
+      "stdout": "14 Aura CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_automatic_writing_core"
+      ],
+      "returncode": 0,
+      "seconds": 40.953,
+      "stdout": "24 Automatic Writing CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_bibliomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 124.11,
+      "stdout": "80 Bibliomancy CLI cases passed;16 JSON/16 Markdown saved replays;10 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_chinese_core"
+      ],
+      "returncode": 0,
+      "seconds": 46.078,
+      "stdout": "15 Chinese CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_cleromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 117.375,
+      "stdout": "80 Cleromancy CLI cases passed;16 valid JSON/Markdown saved replays and16 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_coffee_core"
+      ],
+      "returncode": 0,
+      "seconds": 79.875,
+      "stdout": "54 Coffee CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_dream_core"
+      ],
+      "returncode": 0,
+      "seconds": 42.219,
+      "stdout": "30 Dream CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_face_reading_core"
+      ],
+      "returncode": 0,
+      "seconds": 17.75,
+      "stdout": "12 Face Reference CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_geomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 75.969,
+      "stdout": "55 Geomancy CLI cases passed; 13 JSON/13 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_graphology_core"
+      ],
+      "returncode": 0,
+      "seconds": 22.64,
+      "stdout": "14 Graphology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_horary"
+      ],
+      "returncode": 0,
+      "seconds": 9.797,
+      "stdout": "5 Horary CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_hydromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 92.672,
+      "stdout": "63 Hydromancy CLI cases passed;18 JSON/18 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iching_core"
+      ],
+      "returncode": 0,
+      "seconds": 40.375,
+      "stdout": "30 I Ching CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iridology_core"
+      ],
+      "returncode": 0,
+      "seconds": 19.938,
+      "stdout": "14 Iridology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_lithomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 101.953,
+      "stdout": "64 Lithomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mirror_core"
+      ],
+      "returncode": 0,
+      "seconds": 43.812,
+      "stdout": "28 Mirror CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_moleosophy_core"
+      ],
+      "returncode": 0,
+      "seconds": 18.656,
+      "stdout": "12 Moleosophy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mundane_core"
+      ],
+      "returncode": 0,
+      "seconds": 29.563,
+      "stdout": "12 Mundane CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_numerology_core"
+      ],
+      "returncode": 0,
+      "seconds": 8.438,
+      "stdout": "4 Numerology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_oracle_core"
+      ],
+      "returncode": 0,
+      "seconds": 35.766,
+      "stdout": "20 Oracle CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_osteomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 99.125,
+      "stdout": "64 Osteomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_palmistry_core"
+      ],
+      "returncode": 0,
+      "seconds": 16.109,
+      "stdout": "10 Palmistry CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pendulum_core"
+      ],
+      "returncode": 0,
+      "seconds": 43.734,
+      "stdout": "28 Pendulum CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_phrenology_core"
+      ],
+      "returncode": 0,
+      "seconds": 21.219,
+      "stdout": "12 Phrenology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_podomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 21.969,
+      "stdout": "12 Podomancy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pyromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 79.968,
+      "stdout": "60 Pyromancy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_runes_core"
+      ],
+      "returncode": 0,
+      "seconds": 35.203,
+      "stdout": "24 Rune CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_scrying_core"
+      ],
+      "returncode": 0,
+      "seconds": 39.672,
+      "stdout": "28 Scrying CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tarot_core"
+      ],
+      "returncode": 0,
+      "seconds": 29.984,
+      "stdout": "22 Tarot CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tasseography_core"
+      ],
+      "returncode": 0,
+      "seconds": 45.703,
+      "stdout": "34 Tasseography CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_vedic_core"
+      ],
+      "returncode": 0,
+      "seconds": 15.547,
+      "stdout": "12 Vedic CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_western_core"
+      ],
+      "returncode": 0,
+      "seconds": 34.922,
+      "stdout": "23 CLI smoke cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tarot"
+      ],
+      "returncode": 0,
+      "seconds": 0.5,
+      "stdout": "30 Tarot source/layout/independent protocol checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_oracle"
+      ],
+      "returncode": 0,
+      "seconds": 1.11,
+      "stdout": "49 Oracle verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_iching"
+      ],
+      "returncode": 0,
+      "seconds": 1.437,
+      "stdout": "8759 I Ching verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_runes"
+      ],
+      "returncode": 0,
+      "seconds": 1.266,
+      "stdout": "84 rune reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pendulum"
+      ],
+      "returncode": 0,
+      "seconds": 1.062,
+      "stdout": "207 Pendulum reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_scrying"
+      ],
+      "returncode": 0,
+      "seconds": 0.938,
+      "stdout": "23 Scrying reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_mirror"
+      ],
+      "returncode": 0,
+      "seconds": 0.422,
+      "stdout": "22 Mirror reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_dream"
+      ],
+      "returncode": 0,
+      "seconds": 1.062,
+      "stdout": "26 Dream reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_automatic_writing"
+      ],
+      "returncode": 0,
+      "seconds": 1.172,
+      "stdout": "27 Automatic Writing reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_akashic"
+      ],
+      "returncode": 0,
+      "seconds": 0.875,
+      "stdout": "47 Akashic independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tasseography"
+      ],
+      "returncode": 0,
+      "seconds": 0.422,
+      "stdout": "68 Tasseography independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_coffee"
+      ],
+      "returncode": 0,
+      "seconds": 0.984,
+      "stdout": "65 Coffee independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pyromancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.61,
+      "stdout": "59 Pyromancy independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_hydromancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.547,
+      "stdout": "44 Hydromancy independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_aeromancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.531,
+      "stdout": "53 Aeromancy independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_geomancy"
+      ],
+      "returncode": 0,
+      "seconds": 5.25,
+      "stdout": "65536 independent Geomancy charts, 256 addition pairs, 4096 associative triples, 16 identities and 6 fixtures passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_lithomancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.437,
+      "stdout": "12 Lithomancy source roles; 1225 independent distance pairs;25 grid rankings;4 authored cases;10 transforms;9 viewpoint checks;2 unknown cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_osteomancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.672,
+      "stdout": "13 Osteomancy source records;5 named relationships;169 ordered pair checks;26 omitted-outcome checks;52 original-evidence checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_bibliomancy"
+      ],
+      "returncode": 0,
+      "seconds": 2.219,
+      "stdout": "141 Bibliomancy selections;85 independently parsed verses;423 context cases;216 historical indices;100 literal dice sums passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_cleromancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.078,
+      "stdout": "24 Cleromancy source accounts;98 alias keys;9016 numerical research tuples;source discrepancies and exact replay passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_augury"
+      ],
+      "returncode": 0,
+      "seconds": 1.203,
+      "stdout": "14 Augury source records;864 finite observations;4320 condition checks;4 known answers;5 uncertain-field and1 structured conflict cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_augury_core"
+      ],
+      "returncode": 0,
+      "seconds": 103.938,
+      "stdout": "80 Augury CLI cases passed;20 valid JSON/Markdown saved replays and10 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_haruspicy_core"
+      ],
+      "returncode": 0,
+      "seconds": 110.016,
+      "stdout": "84 Haruspicy CLI cases passed;20 valid JSON/Markdown saved replays and12 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_haruspicy"
+      ],
+      "returncode": 0,
+      "seconds": 4.375,
+      "stdout": "9 Haruspicy source records;8100 finite observations;32400 condition checks;14 known answers passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_feng_shui_core"
+      ],
+      "returncode": 0,
+      "seconds": 142.172,
+      "stdout": "104 Feng Shui CLI cases passed;24 accepted JSON/Markdown replay pairs and16 rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_feng_shui"
+      ],
+      "returncode": 0,
+      "seconds": 0.578,
+      "stdout": "24 source rows;3600 ID/name/Chinese headings;3600 uncertainty ranges;144 boundary/neighbor/central checks;9 extra ranges;3 anchors passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_remote_viewing"
+      ],
+      "returncode": 0,
+      "seconds": 3.235,
+      "stdout": "72000 independent target/ranking/display checks;600-case uniform null;16 procedural fixture families passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_remote_viewing_core"
+      ],
+      "returncode": 0,
+      "seconds": 171.921,
+      "stdout": "125 Remote Viewing CLI cases passed;23 accepted/21 rejected JSON/Markdown pairs;3 exact blind directory exports\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_prophetic_dreams"
+      ],
+      "returncode": 0,
+      "seconds": 4.828,
+      "stdout": "600 independent interval/chronology checks;2timezone cases;8hand-enumerated pairs;18procedural families passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_prophetic_dreams_core"
+      ],
+      "returncode": 0,
+      "seconds": 226.406,
+      "stdout": "136 Prophetic Dreams CLI cases passed;29accepted/15rejected JSON/Markdown replay pairs;complete lifecycle andexport\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_intuitive_prediction"
+      ],
+      "returncode": 0,
+      "seconds": 1.203,
+      "stdout": "15independent families;9cue pairs;729three-cue traces;42actual-ledger rational scores;chronology and baseline known answers passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_intuitive_prediction_core"
+      ],
+      "returncode": 0,
+      "seconds": 167.937,
+      "stdout": "121CLI cases;35accepted/18rejected JSON/Markdown pairs;complete linked lifecycle passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_deja_reve_core"
+      ],
+      "returncode": 0,
+      "seconds": 206.062,
+      "stdout": "146 Deja Reve CLI cases passed;34accepted/37rejected JSON/Markdown pairs replayed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_deja_reve"
+      ],
+      "returncode": 0,
+      "seconds": 0.454,
+      "stdout": "{\r\n  \"passed\": true,\r\n  \"fixture_sha256\": \"742061f3a6f89f8ef0720214e5d1feee870818aaac36494b4a8ec744c15e9c8d\",\r\n  \"profile_sha256\": \"fdfe3074e23b10deb96928d85b3440d2a3122acdcffc5270af3596a854c3698a\",\r\n  \"fixture_commit\": \"2ee614e\",\r\n  \"families\": [\r\n    {\r\n      \"id\": \"source-category-episodic\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-category-familiarity\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-category-dreamy\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-unclassifiable\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"mixed-uncertain\",\r\n      \"passed\": true,\r\n      \"checks\": 648\r\n    },\r\n    {\r\n      \"id\": \"original-prior-record\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"no-prior-record\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"conflicting-chronology\",\r\n      \"passed\": true,\r\n      \"checks\": 13\r\n    },\r\n    {\r\n      \"id\": \"original-versus-amendment\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"generic-familiarity-negative-control\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"specific-versus-vague\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"manual-nonmatch\",\r\n      \"passed\": true,\r\n      \"checks\": 1\r\n    },\r\n    {\r\n      \"id\": \"multiple-candidates\",\r\n      \"passed\": true,\r\n      \"checks\": 10\r\n    },\r\n    {\r\n      \"id\": \"missing-original-time\",\r\n      \"passed\": true,\r\n      \"checks\": 3\r\n    },\r\n    {\r\n      \"id\": \"no-diagnosis-prediction\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"source-edition-rights-replay\",\r\n      \"passed\": true,\r\n      \"checks\": 7\r\n    }\r\n  ],\r\n  \"category_cases\": 648,\r\n  \"chronology_constants\": 11,\r\n  \"source_case_checks\": 4,\r\n  \"source_counts_verified\": true,\r\n  \"empirical_or_clinical_validation\": false,\r\n  \"method\": \"Pre-engine known-answer tables and constants;independent canonical SHA256;no expected values generated by production.\"\r\n}\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_ai_predictive_modeling_core"
+      ],
+      "returncode": 0,
+      "seconds": 227.125,
+      "stdout": "162 AI Predictive Modeling CLI cases passed;30accepted/49rejected JSON/Markdown pairs;full NOAA ledger replayed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_ai_predictive_modeling"
+      ],
+      "returncode": 0,
+      "seconds": 2.969,
+      "stdout": "21 forecasting families;4200 independent cells;672 sentinel predictions;source metrics and complete candidate ledger passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_quantum_probability_forecasting_core"
+      ],
+      "returncode": 0,
+      "seconds": 215.297,
+      "stdout": "178 CLI cases pass;exact accepted/rejected JSON and Markdown replay\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_quantum_probability_forecasting"
+      ],
+      "returncode": 0,
+      "seconds": 1.094,
+      "stdout": "20 independent fixture families pass;79 circuits;300 PRNG words;max amplitude error 1.7763568394002505e-15\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_superforecasting_core"
+      ],
+      "returncode": 0,
+      "seconds": 95.203,
+      "stdout": "162 CLI cases pass;44accepted/37rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_superforecasting"
+      ],
+      "returncode": 0,
+      "seconds": 0.906,
+      "stdout": "23 independent fixture families pass;30Bayes anchors;22loss/bin/log anchors;77scenarios\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.audit_dependencies"
+      ],
+      "returncode": 0,
+      "seconds": 1.016,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "seconds": 1.562,
+      "stdout": "No broken requirements found.\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "seconds": 0.781,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "tests": 1719,
+  "inherited_tests": 1598,
+  "new_tests": 121,
+  "cli_cases": 2369,
+  "inherited_cli_cases": 2207,
+  "new_cli_cases": 162,
+  "independent_verifiers": 30,
+  "protected_files": 3223,
+  "changed_protected_files": [],
+  "allowed_existing_edits": [
+    "PROGRESS.md",
+    "README.md",
+    "future/__main__.py",
+    "knowledge/gaps.json"
+  ],
+  "registry": {
+    "references_checked_twice": 502,
+    "unique": 347,
+    "skipped": [
+      "chinese-inventory-2-v1"
+    ]
+  },
+  "strict_json_files": 2306,
+  "historical_invalid_json_rejections": [
+    "data/feng-shui-duplicate-json-input.json",
+    "data/feng-shui-nonfinite-input.json"
+  ],
+  "taxonomy": {
+    "total": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "other59gap_entries_unchanged": true,
+  "verification": {
+    "passed": true,
+    "families": {
+      "reference-base-rate": {
+        "passed": true,
+        "evidence": "Exact3/10,all10member identities retained",
+        "frozen_expectation": "Original10eligible resolved members,3successes =>3/10;preserveall10IDs."
+      },
+      "empty-zero-full-samples": {
+        "passed": true,
+        "evidence": "Independent empty/unresolved/0of5/5of5 boundaries",
+        "frozen_expectation": "n0=>not_estimable,not0;0/5=>0;5/5=>1;observed endpoints are not population certainty."
+      },
+      "ambiguous-membership": {
+        "passed": true,
+        "evidence": "Ambiguous/excluded members visible andnot guessed into rate",
+        "frozen_expectation": "A member with unknown eligibility is explicitly unresolved/excluded with reason;no guessed inclusion."
+      },
+      "denominator-preservation": {
+        "passed": true,
+        "evidence": "12historical records/10included;4questions/2scored;excluded lists preserved",
+        "frozen_expectation": "Universe12,included10,excluded2;unresolved members counted separately;no silent denominator drop."
+      },
+      "binary-probability": {
+        "passed": true,
+        "evidence": "Exact string bounds;bool/float/nonfinite/out-of-range rejected",
+        "frozen_expectation": "Accept exact0,1/2,1;reject bool,nonfinite,negative,>1 andunsupported fields."
+      },
+      "bayes-neutral": {
+        "passed": true,
+        "evidence": "30pre-engine odds-based rational anchors including impossible denominator andlargefiniteLR",
+        "frozen_expectation": "prior1/5,LR1=>1/5."
+      },
+      "bayes-positive": {
+        "passed": true,
+        "evidence": "30pre-engine odds-based rational anchors including impossible denominator andlargefiniteLR",
+        "frozen_expectation": "prior1/5,LR3=>3/7;equivalentconditional likelihoods3/5and1/5 yield3/7."
+      },
+      "bayes-zero": {
+        "passed": true,
+        "evidence": "30pre-engine odds-based rational anchors including impossible denominator andlargefiniteLR",
+        "frozen_expectation": "prior1/5,LR0=>0;impossible evidence underboth hypotheses rejects."
+      },
+      "certain-priors": {
+        "passed": true,
+        "evidence": "30pre-engine odds-based rational anchors including impossible denominator andlargefiniteLR",
+        "frozen_expectation": "p0withfiniteLR3=>0;p1withLR3=>1;p1withLR0=>undefined/reject."
+      },
+      "brier-loss": {
+        "passed": true,
+        "evidence": "22independent category loss examples;binary andtwicebinary scales separate",
+        "frozen_expectation": "p9/10,y1=>1/100binary,1/50two-category;p9/10,y0=>81/100and81/50."
+      },
+      "log-loss": {
+        "passed": true,
+        "evidence": "22Decimal/original endpoint anchors;no JSON nonfinite values,clipping orzero substitution",
+        "frozen_expectation": "p1/2=>ln2;correctendpoint=>0;contradictedendpoint=>taggedpositiveinfinity,notJSONInfinity orsilentclipping."
+      },
+      "dependent-evidence": {
+        "passed": true,
+        "evidence": "RepeatedIDs/facts/snapshots andsame-group independence reject;explicit conditional history andboth-hypothesis distinct-group assumptions pass",
+        "frozen_expectation": "Repeated evidenceID rejects;naive second LR3 wouldproduce9/13andmustnotbeaccepted asindependent duplicate."
+      },
+      "forecast-versions": {
+        "passed": true,
+        "evidence": "FrozenJan1/Jan2/Jan3cutoff/Jan4table selects2once;separate fullmanual/Bayes lifecycle selects3andretainslate4",
+        "frozen_expectation": "Original1/5atJan1,amend2/5atJan2,cutoffJan3=>select2/5once;Jan4revision retainedbutunscored."
+      },
+      "chronology": {
+        "passed": true,
+        "evidence": "Frozeninclusivecutoff/strictoccurrence table;post-outcome andsource/class/partitionchronology guards",
+        "frozen_expectation": "Forecastat/afterknown occurrence rejects eligibility;strict cutoff/sourceavailability/window/resolution chronology.",
+        "fractional_timestamp_boundary_passed": true
+      },
+      "unresolved-void": {
+        "passed": true,
+        "evidence": "Allplannedquestions visible;unresolved/disputed/void never mapped to0",
+        "frozen_expectation": "Resolved2,unresolved1,void1=>score denominator2;showall4statuses andexplicit exclusions.",
+        "resolution_transition_table_cases": 7
+      },
+      "calibration-bins": {
+        "passed": true,
+        "evidence": "Exactboundary22cases;count2,mean1/5,frequency1/2;empty null status",
+        "frozen_expectation": "10fixedleft-closed bins,lastincludes1;p.1=>bin1,p1=>bin9;emptybinsnull;[.2,.2]y[0,1]=>mean1/5,frequency1/2,count2."
+      },
+      "paired-baseline": {
+        "passed": true,
+        "evidence": "Matched2pairs;13/200model,1/4baseline,37/200difference,37/50relative ratio",
+        "frozen_expectation": "p[4/5,3/10],y[1,0]:binary Brier13/200;baseline1/2loss1/4;improvement37/200;skill37/50."
+      },
+      "team-dependence": {
+        "passed": true,
+        "evidence": "2slots,1event,1group;no team aggregation orindependentsample claim",
+        "frozen_expectation": "Two people forecastingoneevent=>2slots,1uniqueevent,1dependencygroup;team collaboration not2independent events."
+      },
+      "rights-source": {
+        "passed": true,
+        "evidence": "Pinnedprofile/catalog,inlineoriginal snapshot hashes/rights;no GJP corpus orcopyrighted body acquired",
+        "frozen_expectation": "Missingrights,source hash orreference-class member provenance rejects."
+      },
+      "json-markdown-replay": {
+        "passed": true,
+        "evidence": "Canonicalrequest/reporthashes andsafeUnicode/fence replay;CLI corpus separately executes accepted/rejected pairs",
+        "frozen_expectation": "Unicode,whitespace,raw-input hashes,exactsemanticreport andsafeMarkdownfence replay;rejectedcases too."
+      },
+      "resolution-decomposition": {
+        "passed": true,
+        "evidence": "Independentexactp groups:19/100=13/200-1/16+3/16;not coarsebins",
+        "frozen_expectation": "Identicalforecast groups p[.2,.2,.8,.8],y[0,1,1,1]:Brier19/100,REL13/200,RES1/16,UNC3/16;REL-RES+UNC=19/100."
+      },
+      "heldout-isolation": {
+        "passed": true,
+        "evidence": "Futurepositive/negative outcomes leavefrozenclass/plan/priors/versions/evidence/partition andselected historicalforecast unchanged",
+        "frozen_expectation": "Freezeclass/baseline beforetargettest;futureoutcome alteration cannotchangeearlier selectedforecasts orfrozen priors;splitdependent events together."
+      },
+      "negative-event-resolution-time": {
+        "passed": true,
+        "evidence": "Distinctwindowend/known/sourceavailability/resolution;nulloccurrence andpremature/fabricatedoccurrence rejection",
+        "frozen_expectation": "Binary nonoccurrence resolves only after the declared window/observation policy;report known_at and window_end separately from positive occurrence_at."
+      }
+    },
+    "bayes_anchors": 30,
+    "loss_bin_log_anchors": 22,
+    "in_process_scenarios": 77,
+    "fixture_freeze": {
+      "version": 1,
+      "hash_convention": "SHA256 with CRLF normalized to LF;all expectations committed before production",
+      "files": {
+        "scripts/superforecasting_oracle.py": "e02edd1f2f0340c3364695b44b794686bc5cc02b23831f28846db2b7e2e50aac",
+        "tests/fixtures/superforecasting_reference_v1.json": "ae4d239f0128b4e9367e833334cab77a69074f6d5d016ff686527e4b7f3d1017"
+      }
+    },
+    "timestamp_fixture_freeze": {
+      "version": 1,
+      "hash_convention": "SHA256 with CRLF normalized to LF",
+      "files": {
+        "tests/fixtures/superforecasting_timestamp_precision_v1.json": "ad12c7365e0aa17ea5b18d4e53dc8027d575d7de49f677d33cc125f8a095b5fe"
+      }
+    },
+    "resolution_fixture_freeze": {
+      "version": 1,
+      "hash_convention": "SHA256 with CRLF normalized to LF",
+      "files": {
+        "tests/fixtures/superforecasting_resolution_transitions_v1.json": "15c110f0374641e3d5dff90eb459c20d0855c7fa4381fd50a948731e2892a9ea"
+      }
+    },
+    "profile_sha256": "bd6d71ded4dbb2ddc1f60b230c46daff2b735793f6bfe4098899d49bfc6b9933",
+    "code_sha256": "e4c81aa68825ada8baebab8c8e725e78a562303786ed44a7cec6b5328ec990c1",
+    "empirical_skill_validated": false
+  },
+  "cli_replay": {
+    "passed": true,
+    "cli_cases": 162,
+    "accepted_pairs": 44,
+    "rejected_pairs": 37,
+    "records": [
+      {
+        "id": "question",
+        "input": "data/superforecasting-cli/question-input.json",
+        "raw_input_sha256": "7e1cf93910900097760786c19af657a469b7d20026fa290bcf590fb4b6b5f799",
+        "exit_code": 0,
+        "outputs": {
+          "json": "f2626841dc41ff101edc3c16445efdc2ff253e35f78924bb02ccfcd66a2ef149",
+          "markdown": "e9db9119d5093e4ed70bd3c27dd7886e05ee91dd14ea11bb658762b5f342145e"
+        }
+      },
+      {
+        "id": "class-ten-three",
+        "input": "data/superforecasting-cli/class-ten-three-input.json",
+        "raw_input_sha256": "92982ecb9b9d16e4429e55924ee47287699927a75561bb1a0333bef2c2c06904",
+        "exit_code": 0,
+        "outputs": {
+          "json": "8367cf0634cfdd5fbc6374013a4ee36cc2e69848218c58dfe1f8de0908ea3880",
+          "markdown": "dd8887dd8751bf169e78d4e1ccee9077d36a5672d9296a3809af9f0b8c0bf5c2"
+        }
+      },
+      {
+        "id": "create",
+        "input": "data/superforecasting-cli/create-input.json",
+        "raw_input_sha256": "cb6c326d45e1ef4a45c4458a4e37de8e4442c9aab8c2568ad6f7ef37a351d3ea",
+        "exit_code": 0,
+        "outputs": {
+          "json": "58e8b40e065b8edc7bc26fc64ea86b8f57761797a2aa2d61b15b62eff1af356f",
+          "markdown": "720185936adffd6b613364a50e78d999e1d61fa54c9574043c1d45bd344117be"
+        }
+      },
+      {
+        "id": "class-empty",
+        "input": "data/superforecasting-cli/class-empty-input.json",
+        "raw_input_sha256": "5d64828f753d076066eea6fb6d616f81fd07b643cb3d4e6affa3dd03f2ea1d67",
+        "exit_code": 0,
+        "outputs": {
+          "json": "33723a5adff8814d4c0894488b13efc51e20811c6de8e612e0c07122971f976f",
+          "markdown": "836f943ea0897003783bb84caac5738c01cce9e42b71c5a04113c252d256b950"
+        }
+      },
+      {
+        "id": "class-zero",
+        "input": "data/superforecasting-cli/class-zero-input.json",
+        "raw_input_sha256": "b8473dadd17bacf2beae09bc2a4aa6b55550c55ab4b7476588c431537c7b879a",
+        "exit_code": 0,
+        "outputs": {
+          "json": "d2cfcb4fbe44a336fbff5596516c29eed36073dc6e61e2c809f831b43206e267",
+          "markdown": "a9c77e8b53e839f0be25b2425e52a61260f2ac9768af56bbf0ace15065a3484d"
+        }
+      },
+      {
+        "id": "class-full",
+        "input": "data/superforecasting-cli/class-full-input.json",
+        "raw_input_sha256": "3fc6ac2cb1dabdfc76e96861d1c95519343a1ab1ccb96c128b0ceb4369d8b185",
+        "exit_code": 0,
+        "outputs": {
+          "json": "42737f75a5394a1089ce9ac560cdda9a180a73a95ef401488dd2df1a72344611",
+          "markdown": "c78042c4acd44a5f06d863458268b868b43e87ac580a77f99adcee6c9b922cde"
+        }
+      },
+      {
+        "id": "class-missing",
+        "input": "data/superforecasting-cli/class-missing-input.json",
+        "raw_input_sha256": "c2ecc320e43ab716ef33329115e1314aa99f4d5de94aeb97bf3e36b216515915",
+        "exit_code": 0,
+        "outputs": {
+          "json": "cfba8f5a346f7610e919e2d6ec40d65d31eda512c49eccc4659b516bc52ba225",
+          "markdown": "9e3580f8584b5b89f19adc4d904683aba97b0f9187b1a24673c143f3c0ea4070"
+        }
+      },
+      {
+        "id": "class-ambiguous-excluded",
+        "input": "data/superforecasting-cli/class-ambiguous-excluded-input.json",
+        "raw_input_sha256": "cfb7a198d419b873597a700ca0581a323d8044805d90af69ea8822f321ad93be",
+        "exit_code": 0,
+        "outputs": {
+          "json": "e02c21406b9027bebd013b1238c4b573df95f8a5ecb08d70f18b9059a79b259a",
+          "markdown": "3a93d1d7da0edab3fe9b64983b134b1e8f7133fa1d2eddd0eb6d6704165f5c48"
+        }
+      },
+      {
+        "id": "original",
+        "input": "data/superforecasting-cli/original-input.json",
+        "raw_input_sha256": "224f73688e0a283de3a819fcf8e66f2e193c18e3f7764015b3e9fb4d20732a85",
+        "exit_code": 0,
+        "outputs": {
+          "json": "9cefc4117391e36d3d32599d78f9aac57b5bc931380ac35a5eae32b60a48df3b",
+          "markdown": "d92e032d4149eee296d5a61ac9136a299850875e6fe9bfbd96df34baea0f07e7"
+        }
+      },
+      {
+        "id": "manual",
+        "input": "data/superforecasting-cli/manual-input.json",
+        "raw_input_sha256": "b4815d23262374c0971279654883cd27660ee0ac34026d0e720c865516979e35",
+        "exit_code": 0,
+        "outputs": {
+          "json": "f9e5b8b334ee4ce7c8a1f816aa78c22cd55c43dba37078266432c2031bc59cbd",
+          "markdown": "799bd5f91f805c433f926a6d71dc088a7b8dafc9622cc72747f86e8a36b37259"
+        }
+      },
+      {
+        "id": "bayes-after-manual",
+        "input": "data/superforecasting-cli/bayes-after-manual-input.json",
+        "raw_input_sha256": "8ef0b0fe44a558b111048aad97cf631c4b632cf9abcc4325c675ee2f289d531d",
+        "exit_code": 0,
+        "outputs": {
+          "json": "a4e0cb99c33e584917d94a460674ea65500dc95655559359ea4a3349aac204f5",
+          "markdown": "51e0eb6229dd1de28e9f9ec3928dfdc0f0eb41646becafc3259922562da51429"
+        }
+      },
+      {
+        "id": "retained-rejected-attempt",
+        "input": "data/superforecasting-cli/retained-rejected-attempt-input.json",
+        "raw_input_sha256": "a4ab678f38eac6b9bdf6b3e079be30ada4fc12cef37db8154c593297d8afa751",
+        "exit_code": 0,
+        "outputs": {
+          "json": "d714ead1f47ccbb90924a145e3f21df3022de1636a0c9d8057686434f7111e97",
+          "markdown": "397461d4555a2dfd0413c92272c73274cd86ef97552eee4a262306bb6def1d6d"
+        }
+      },
+      {
+        "id": "late",
+        "input": "data/superforecasting-cli/late-input.json",
+        "raw_input_sha256": "3d30bf315a1db123e25c5aab0a7886a1c24d31c9f5ea80d34799445fd8caf86b",
+        "exit_code": 0,
+        "outputs": {
+          "json": "5b6390a1596d4217f1901842b5ce1d7a62a792b6f23138ab609b1326c50b6591",
+          "markdown": "b233891fc1ab3495e0d6ae816856a2884cbc956a889a61214d2af9acd6024146"
+        }
+      },
+      {
+        "id": "resolve",
+        "input": "data/superforecasting-cli/resolve-input.json",
+        "raw_input_sha256": "3b5e0fd9c60dca4f67baa1bb1b974fbd15e7dc2532373b57baa978b9dedb2174",
+        "exit_code": 0,
+        "outputs": {
+          "json": "fea223ea058ba70dace39c75b3c0ce91fc81dae90399803d09ef69632f0c4958",
+          "markdown": "2f6dfd141dd776fbf18c23d6fd0985df3d25fed4340ac1b40cbb07b58602a2b9"
+        }
+      },
+      {
+        "id": "lifecycle-report",
+        "input": "data/superforecasting-cli/lifecycle-report-input.json",
+        "raw_input_sha256": "aa095a0d6737de080284467bf0f7f738e9484ad6c768e1b2cabb87e8b83e4fbe",
+        "exit_code": 0,
+        "outputs": {
+          "json": "b418c21f4860efb8d43e3e9668209dc570f1c836d3616c11fce9efaff8980f3d",
+          "markdown": "d9d93692788a8384398d9d53318391ce20422fb4dfed3ed70642fb942331294a"
+        }
+      },
+      {
+        "id": "lifecycle-score",
+        "input": "data/superforecasting-cli/lifecycle-score-input.json",
+        "raw_input_sha256": "7969dce8932447f71eaa70ef94b081913d2c6be6ea117350e605aea4429d2082",
+        "exit_code": 0,
+        "outputs": {
+          "json": "c37bd92860e9d5d8e7f735256772b5581198d2f4fbe5d9bfb44f864cfb41098f",
+          "markdown": "aece1580755cd9c9f9e14b446b5aafa581afb1f1ac33f62321607318a06528df"
+        }
+      },
+      {
+        "id": "unresolved-report",
+        "input": "data/superforecasting-cli/unresolved-report-input.json",
+        "raw_input_sha256": "90730238a3ea7512c749cddae9fd3409fc7bda5e9653daa907bb1891f81733ea",
+        "exit_code": 0,
+        "outputs": {
+          "json": "e301a4444d6255a7bc877980e711965e241471cb0961a9903ca93c0331e3512a",
+          "markdown": "546b7cfacae454b5368df0fcaeeb5e8f5fa4a463119d239873880af5641aebc8"
+        }
+      },
+      {
+        "id": "bayes-neutral",
+        "input": "data/superforecasting-cli/bayes-neutral-input.json",
+        "raw_input_sha256": "60d0239e83f9c648794de27c19cf9c3efbd42b6ba39dc114266190426d87713c",
+        "exit_code": 0,
+        "outputs": {
+          "json": "b05a292a3743583f21a2a80173a12298a491ec1348995c7dc235b8e4c9fc042a",
+          "markdown": "a3664989732001f1c3b873e5a0f790760f5cc16a36d97dd42db8fe6060f12b22"
+        }
+      },
+      {
+        "id": "bayes-positive",
+        "input": "data/superforecasting-cli/bayes-positive-input.json",
+        "raw_input_sha256": "6ad7be5baafead11dfe8199d0ee67b778feaf970dafa677acb69f3b4f41c356f",
+        "exit_code": 0,
+        "outputs": {
+          "json": "0997cfa0fe663c65d8a3aa1bca45861db14d5f70059aa758481b46c46f243c36",
+          "markdown": "7e40eb945d08559015babbc8db15e80ebfdd12762db531af52caaa014a73f011"
+        }
+      },
+      {
+        "id": "bayes-zero",
+        "input": "data/superforecasting-cli/bayes-zero-input.json",
+        "raw_input_sha256": "e644db83a59c1dd16674bfd1ce3317217fab77a15863d5e1f62a5aa5b79fd502",
+        "exit_code": 0,
+        "outputs": {
+          "json": "cbc0a9feb26980ec849e316421e1eb58fd2e12d3c129f3973f1bba0ab4c62691",
+          "markdown": "ea6033ef738693d143af7a9ba7a778ac4f25e2296020e10bb936d3336787dadf"
+        }
+      },
+      {
+        "id": "conditional-likelihoods",
+        "input": "data/superforecasting-cli/conditional-likelihoods-input.json",
+        "raw_input_sha256": "7e83bb010ae2e2fbd062cf177b9c0b79c15edadab0c09ac23dc9f0ddd9d425cc",
+        "exit_code": 0,
+        "outputs": {
+          "json": "4067e655fb7dd29321ecae6c5540ae8ed6eb670af8a69cdaa58f10ef952f0fa4",
+          "markdown": "2fe07fa92ccf03f8fc2b1d348febc766f1f791d814128e84ef1b907582475a00"
+        }
+      },
+      {
+        "id": "certain-prior-0",
+        "input": "data/superforecasting-cli/certain-prior-0-input.json",
+        "raw_input_sha256": "d94c01c45bbea67e6c6863f0f0bb5d25b850054d55a4e5eb2b81957d6c0e0de5",
+        "exit_code": 0,
+        "outputs": {
+          "json": "60d76dc2de08d0ca19888382bc9a81c5007b39a3d3db6a331a31d114a8b748d3",
+          "markdown": "22052c0e72623953dd2b588b36dd68bf8f96fc65b95c0efce31793ac0185561b"
+        }
+      },
+      {
+        "id": "certain-prior-1",
+        "input": "data/superforecasting-cli/certain-prior-1-input.json",
+        "raw_input_sha256": "edb2380b71531a8447d109d12d4c0f09bda19df8ea7adb22fa72abdf3827be35",
+        "exit_code": 0,
+        "outputs": {
+          "json": "b7cdebbc153f2f4c8008e68225d49bf9457ddd5d62d1e1e8a04caf7c13d86a2b",
+          "markdown": "8b998bf743f964f876fba04201828e49c0e23e7030d85be10988f8b6b4c770cc"
+        }
+      },
+      {
+        "id": "independent-new-evidence",
+        "input": "data/superforecasting-cli/independent-new-evidence-input.json",
+        "raw_input_sha256": "5b7ac41095f5a08a77579777d4a70c3b591944ce74216ce2c8f05b21ce11ebc2",
+        "exit_code": 0,
+        "outputs": {
+          "json": "eecd57e23f5d424fa5c3f1d118bdca6bf4d9d079f52b8fc478119a97c0f44bbe",
+          "markdown": "dc09283ac9e1504e459264af3e793f762fc196313d74c00ab861f66606ab0684"
+        }
+      },
+      {
+        "id": "conditional-history",
+        "input": "data/superforecasting-cli/conditional-history-input.json",
+        "raw_input_sha256": "b9e85ab08f4c8b1cacec489e451498526b05fb11491ccacb6c9212b7c1fe8c27",
+        "exit_code": 0,
+        "outputs": {
+          "json": "db48924552c7d1e90297fbe77048f1375d214c22ad361b63a4efb5cf635407c8",
+          "markdown": "8bc44d0481985affd4d8b7d6ae85866d6425f8d3daf2bd57d1a700cfa76b6d44"
+        }
+      },
+      {
+        "id": "paired",
+        "input": "data/superforecasting-cli/paired-input.json",
+        "raw_input_sha256": "a9e8ac270f5f87a5d90d2201fc4a03749818be1ee0da7f51682bd63b04bae320",
+        "exit_code": 0,
+        "outputs": {
+          "json": "c2e72de7f45aa0c8479648159150873956ed4531760007ba954fe06ac71a2279",
+          "markdown": "578fe3b016d609684499c41d8788f313525d2640e5dbd18ec6fc36a9650c06e5"
+        }
+      },
+      {
+        "id": "decomposition",
+        "input": "data/superforecasting-cli/decomposition-input.json",
+        "raw_input_sha256": "c18a9be10d1009e288cfd854e3c0ea80660befe14e2566ea2798fcb41fa6be2a",
+        "exit_code": 0,
+        "outputs": {
+          "json": "2b2b1329cb4e1687c9bf94a62e92e86f6b27130d24ef4a6c916f6ad57e41a8d6",
+          "markdown": "6fa1a143c72cf6bc36640dd7ae5905697b7f1d3f88b40e89d755c6d2ca02e074"
+        }
+      },
+      {
+        "id": "calibration",
+        "input": "data/superforecasting-cli/calibration-input.json",
+        "raw_input_sha256": "c97806673362301a7a62824393639001397a9eca984ee53d4f5d6d9a50f70f33",
+        "exit_code": 0,
+        "outputs": {
+          "json": "ec8d46501595f447ad1029c8f822bb0268fe165ffe4c2e57d3a89803fdbb5b6d",
+          "markdown": "e5efeff936b914e8e14205a71ef3f711197a6976c21637818d54ec7fca5681f9"
+        }
+      },
+      {
+        "id": "brier-one",
+        "input": "data/superforecasting-cli/brier-one-input.json",
+        "raw_input_sha256": "0c3947f3fa748f4a134e8f983587d90d09e48ba0cd5e6e7591969fe7c8895bfb",
+        "exit_code": 0,
+        "outputs": {
+          "json": "7c8da4b984fa4d91696c5aada995b560e240f2b5ee33b00e06f0ea293a6d1b80",
+          "markdown": "5cfa25e5a191fc802983daa5e9c46e46b68e6d18a6dac139ac4b35454f8989e5"
+        }
+      },
+      {
+        "id": "brier-zero",
+        "input": "data/superforecasting-cli/brier-zero-input.json",
+        "raw_input_sha256": "5fca1ce29df219c3abac466c6da16956d0a5cd17a16bc7075ff585ea6e4fb34c",
+        "exit_code": 0,
+        "outputs": {
+          "json": "d39d600c4ce888859e6e274094f797fdce2cfb4f00ebbe120e01cea4acdcd7a1",
+          "markdown": "38cd8fe6d97a3abc3155380be43c377398fa20eb780607d6bac5873946908d1e"
+        }
+      },
+      {
+        "id": "log-infinite",
+        "input": "data/superforecasting-cli/log-infinite-input.json",
+        "raw_input_sha256": "970900269fdbb678bbfe9ad4362a6eac30c4b235686c758998e64de71d9ea455",
+        "exit_code": 0,
+        "outputs": {
+          "json": "6158b9721ec93f5a816fb36d5604c08f9ca60a2039f46f40519fe874c0f95010",
+          "markdown": "e927cb15ef43f0e9637ccc4fa58fa0abef496c8253fd676a612567f4d818c97f"
+        }
+      },
+      {
+        "id": "log-correct-endpoints",
+        "input": "data/superforecasting-cli/log-correct-endpoints-input.json",
+        "raw_input_sha256": "2d63bef18a6b51c3220ba23fd770c359448961ecaef7d1033da6159e5290751d",
+        "exit_code": 0,
+        "outputs": {
+          "json": "01765e5cc2490af857bfebf8b2394e5872c625cd773047ae907ccc8e77c4d76d",
+          "markdown": "79998fc16d2de6c2695f14ada3a856a1da3c9b5a9938106df56f1346c8b68b97"
+        }
+      },
+      {
+        "id": "log-half",
+        "input": "data/superforecasting-cli/log-half-input.json",
+        "raw_input_sha256": "4f2e769b63a935234f4e44047a6f09fad4267f2efe3b82357d7c16557a099345",
+        "exit_code": 0,
+        "outputs": {
+          "json": "dae96f0100db0db3c5ac90709546eb2b62026cf1935508dc102459ee27f7524a",
+          "markdown": "9ac32cc974259ab187bc4a592cc0703b8a6f192c5c58e2e1446e1438aec51c6d"
+        }
+      },
+      {
+        "id": "negative-event",
+        "input": "data/superforecasting-cli/negative-event-input.json",
+        "raw_input_sha256": "8b300f412ef1ca59b58343d97a29c63f138c529c3087fa3153c4e1ad0610e089",
+        "exit_code": 0,
+        "outputs": {
+          "json": "86c23602a7cd4d6e392f7b32f0e6bd1ef804286e70df022fabb91fcb0e8f5ab6",
+          "markdown": "3862b465135575f9228ed9fd17c3514b792be1e49a375247d659ae611107db00"
+        }
+      },
+      {
+        "id": "statuses",
+        "input": "data/superforecasting-cli/statuses-input.json",
+        "raw_input_sha256": "e90499d65c2bdaebd9af061589ac8587d3a6f79fb8140f1df265989f67deb513",
+        "exit_code": 0,
+        "outputs": {
+          "json": "792d51a90b84fa97d97570f0a4406239830fb1f67b01205daf44787486e41e04",
+          "markdown": "6fe486f4cdceb80b5ce67456ab317574c420ac8f6e7b45453ce38b486361784b"
+        }
+      },
+      {
+        "id": "at-cutoff",
+        "input": "data/superforecasting-cli/at-cutoff-input.json",
+        "raw_input_sha256": "bc0cf82065a628764d0c9c9234110843faad760795dfcc482654acd45e5403f6",
+        "exit_code": 0,
+        "outputs": {
+          "json": "b75cb89db6c001de240bcdc1ecc1d597d6880a42f9f25c6fe8847e77ca7d9515",
+          "markdown": "0bf4bc039206798a7178091b64d5ffcc5434e65c98d4c8d22a3a61396353976d"
+        }
+      },
+      {
+        "id": "post-outcome-retained",
+        "input": "data/superforecasting-cli/post-outcome-retained-input.json",
+        "raw_input_sha256": "a59b5fcabe9b7784bc1be797f9f413f77b378140eb9b9f605329ebc70c611141",
+        "exit_code": 0,
+        "outputs": {
+          "json": "66d0363caf547d9b9574af90e455bcd229504b1845e3de993d697b4ba793e9bc",
+          "markdown": "833e1f0620e5f7c09c56a5c280d40eb830dd0d2e505a7c9f0ee5971d2a8c748e"
+        }
+      },
+      {
+        "id": "two-people-one-event",
+        "input": "data/superforecasting-cli/two-people-one-event-input.json",
+        "raw_input_sha256": "4816da537df448c46648eab969cc5592bd5d69a0d73fa1f42a88757925ccdde7",
+        "exit_code": 0,
+        "outputs": {
+          "json": "905ea489e9e67207495d056f8f8ec212dd07d5c0e2cb1907b6580e1defe55065",
+          "markdown": "980705235a926cf7e5524e7e9fe03ae0a7486b6e9bd3e7b4005fedd654762b8b"
+        }
+      },
+      {
+        "id": "unicode-whitespace",
+        "input": "data/superforecasting-cli/unicode-whitespace-input.json",
+        "raw_input_sha256": "bb1b113b9338bbd23d61772d7fd3509364dee405798dcea2cf8cd418f1a84a3c",
+        "exit_code": 0,
+        "outputs": {
+          "json": "a61f2fc04faf217a2a8902385c572e3fc3a0d197385f0653cd2ced4ebd4465cb",
+          "markdown": "1ac51933b5e260c45922c199ba4cca2ec6796f3dbb53b1abcff7c4ed2538b5c5"
+        }
+      },
+      {
+        "id": "reference-workflow",
+        "input": "data/superforecasting-cli/reference-workflow-input.json",
+        "raw_input_sha256": "fa95969f16f47d7d17d3f380b7ae663d88fc7368642faf06af25e278c326abbf",
+        "exit_code": 0,
+        "outputs": {
+          "json": "68fe7dceba8719dafa1ac36c969deaeeb76e9ef1c48f89a8e52d50a41f28674a",
+          "markdown": "b9b1740ff1afb785ac1d26bb4a0c7d36bac7bdc57853c374fc0fe5b8ae1c871b"
+        }
+      },
+      {
+        "id": "reference-tournament",
+        "input": "data/superforecasting-cli/reference-tournament-input.json",
+        "raw_input_sha256": "4e2b9f657caaea07b9f049f9261116763d049445ef320261bcc6ab4d6c117c98",
+        "exit_code": 0,
+        "outputs": {
+          "json": "1d011e2a6c3f4e80e160de35d990a1767a9d2f704ed3ccc3bfca41e7a78ddedf",
+          "markdown": "27c281213933dbaa66b73da092302f25d644e2c27d6d195511a45a7ed6145dbf"
+        }
+      },
+      {
+        "id": "reference-scores",
+        "input": "data/superforecasting-cli/reference-scores-input.json",
+        "raw_input_sha256": "8342515088a737cc094b251dc40d9dc4fd590210e92036eef126a0acc8b37b98",
+        "exit_code": 0,
+        "outputs": {
+          "json": "96ba6e8bd49784063f389578cce040215c523cb0c2819edaa7372d68f0f32926",
+          "markdown": "e512a86736d43555949b7bae39efce21fdc77a907e7b28961db1888a566202fd"
+        }
+      },
+      {
+        "id": "reference-bayes",
+        "input": "data/superforecasting-cli/reference-bayes-input.json",
+        "raw_input_sha256": "a035596479a564f7bd09e1b14ec8601b9f276aa8a1d078823926d97115b8183a",
+        "exit_code": 0,
+        "outputs": {
+          "json": "6e90cad392f005bbc9fec3ba4c21f3664d99233870244d044fbcc2c9de68f9cb",
+          "markdown": "f14b58a7286c13c0462708a2936d4b15fecfafa0fbc3b512fbc98e2d56aca556"
+        }
+      },
+      {
+        "id": "reject-ambiguous",
+        "input": "data/superforecasting-cli/reject-ambiguous-input.json",
+        "raw_input_sha256": "ab631c6bd5d0a605e505a2aa9df5c6e98af3aa625c2d099a7c4341103fe55153",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-duplicate-history",
+        "input": "data/superforecasting-cli/reject-duplicate-history-input.json",
+        "raw_input_sha256": "9032b3b34f856aec127742187242c7ed71fc0f30007e173b88ea829da2a64026",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-unknown-class",
+        "input": "data/superforecasting-cli/reject-unknown-class-input.json",
+        "raw_input_sha256": "5f8bc7052acd52a50079deb4851e83c3292cf546ac6af98bb426d826bad33e34",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-class-mutation",
+        "input": "data/superforecasting-cli/reject-class-mutation-input.json",
+        "raw_input_sha256": "3ebdc50591844b3db06c70b36f24d12bcb4f90173efb342a80c23050642a3e80",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-baseline-leak",
+        "input": "data/superforecasting-cli/reject-baseline-leak-input.json",
+        "raw_input_sha256": "25c2e8824bff8cb38f0c1230c610af1fcda8cf0a8f58b51f2f53d7c03736549f",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-reference-leak",
+        "input": "data/superforecasting-cli/reject-reference-leak-input.json",
+        "raw_input_sha256": "98924c9706dfaa29a3d55e6cab3e692cad8b9e506042bb485e636e29fbcc1c28",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-missing-rights",
+        "input": "data/superforecasting-cli/reject-missing-rights-input.json",
+        "raw_input_sha256": "92db3cbaef3d502204dfdb5475777d9fdf3e2e487def9143006cec4e4ee708ff",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-snapshot-hash",
+        "input": "data/superforecasting-cli/reject-snapshot-hash-input.json",
+        "raw_input_sha256": "0564ae47437359a93c700cc259e8d28177d6a905b1883947dbc84d9075c19ed9",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-missing-resolution-source",
+        "input": "data/superforecasting-cli/reject-missing-resolution-source-input.json",
+        "raw_input_sha256": "59c14410b26ed56afd5ce76dbf64fd594f83713b3359942c1504c3e40efd3c19",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-unknown-field",
+        "input": "data/superforecasting-cli/reject-unknown-field-input.json",
+        "raw_input_sha256": "752d9019de4391a5db91d52c0ee2edececfbb27d4c5146c1159dd24b18f97e4b",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-empirical-mode",
+        "input": "data/superforecasting-cli/reject-empirical-mode-input.json",
+        "raw_input_sha256": "6c5eb5a59f7092331920782c28b26ad9610f9b8c66651da1cc3cfdf6566b04d8",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-duplicate-evidence",
+        "input": "data/superforecasting-cli/reject-duplicate-evidence-input.json",
+        "raw_input_sha256": "9695028c0765f7381e160ab07d022e3c6f017b337271054c80bc80574aa85cb1",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-same-fact",
+        "input": "data/superforecasting-cli/reject-same-fact-input.json",
+        "raw_input_sha256": "59a175ceea748abf69e8c047e3f26937b06819081c14b0814ef3a74247fd0e0a",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-same-group",
+        "input": "data/superforecasting-cli/reject-same-group-input.json",
+        "raw_input_sha256": "bd512b3b7d940f3d7f0951b53114224233f66f06802210a0816052792a501f8c",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-one-hypothesis-only",
+        "input": "data/superforecasting-cli/reject-one-hypothesis-only-input.json",
+        "raw_input_sha256": "977d25f4c32dddbf3ae90a477b5efe5763435a7cd5a63b0123bd95ed478f4a48",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-negative-ratio",
+        "input": "data/superforecasting-cli/reject-negative-ratio-input.json",
+        "raw_input_sha256": "4477e69cf0eafe0d2ca2aeb9c3cd7ab8474af75f447a7d12b6815b8693ed08a1",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-wrong-posterior",
+        "input": "data/superforecasting-cli/reject-wrong-posterior-input.json",
+        "raw_input_sha256": "0e873778335b1d04f138aadbc6805852666baa5d577c68740140af4ba508c23f",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-bad-parent",
+        "input": "data/superforecasting-cli/reject-bad-parent-input.json",
+        "raw_input_sha256": "e29180aa8610178f8ddb6b74ca3da96e050360033421d6323663278df65d14f0",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-bool-probability",
+        "input": "data/superforecasting-cli/reject-bool-probability-input.json",
+        "raw_input_sha256": "8ac154808e361e998ee561f25d79db0f6aee7f43106432cf3648ed5a8b150ea5",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-above-one",
+        "input": "data/superforecasting-cli/reject-above-one-input.json",
+        "raw_input_sha256": "c9b925af13941a00176ab33cc3fcaae9ba2edd459dcbca687e61f469728da49d",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-nonfinite-probability",
+        "input": "data/superforecasting-cli/reject-nonfinite-probability-input.json",
+        "raw_input_sha256": "91da501b725a4f3b9aa6eea0f34724932445f47f42b70d70379b1daa45035787",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-both-likelihoods-zero",
+        "input": "data/superforecasting-cli/reject-both-likelihoods-zero-input.json",
+        "raw_input_sha256": "cace7674991e30306e71ecca915cdab61243ff7ea62785a821b59f647dbc01eb",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-conditional-history",
+        "input": "data/superforecasting-cli/reject-conditional-history-input.json",
+        "raw_input_sha256": "af4d7d2ed72a413247226e5736099bbd93c6288dfaa6212da019f16e140bb502",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-certain-impossible",
+        "input": "data/superforecasting-cli/reject-certain-impossible-input.json",
+        "raw_input_sha256": "2a41010e69857c1975477a4a50625467e9a0c33f8b8c262105c1e99605d5cf27",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-amendment-parent",
+        "input": "data/superforecasting-cli/reject-amendment-parent-input.json",
+        "raw_input_sha256": "e4a9e77686ce6c1115a110e2bee555255092045771a7ddd082e99d52b052a7d0",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-negative-early",
+        "input": "data/superforecasting-cli/reject-negative-early-input.json",
+        "raw_input_sha256": "e135d897ed907d135bd27c3e3f1b39e2dcd99ad47d58334600aecf73e0c9a060",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-negative-invented-occurrence",
+        "input": "data/superforecasting-cli/reject-negative-invented-occurrence-input.json",
+        "raw_input_sha256": "768461496b720b5f45fce6f29fec07f2b1a45dd6493e9a1642d13640cbdd9d1e",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-resolution-no-source",
+        "input": "data/superforecasting-cli/reject-resolution-no-source-input.json",
+        "raw_input_sha256": "a08e2a432e115696857cde9681f3a9f70e303176edd79d89dd6e71b0302cd16a",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-chain-mutation",
+        "input": "data/superforecasting-cli/reject-chain-mutation-input.json",
+        "raw_input_sha256": "44093bdff85373dce6ff08ed7077b70678676c66ca25a4ec1b2a209377588edd",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-resolution-unresolved-bypass",
+        "input": "data/superforecasting-cli/reject-resolution-unresolved-bypass-input.json",
+        "raw_input_sha256": "ff313d5cc14f651a18d90dcf2e5293eaf5bb7a7bfead04514e2f75ebbfd2bfbe",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "resolution-correction-after-dispute",
+        "input": "data/superforecasting-cli/resolution-correction-after-dispute-input.json",
+        "raw_input_sha256": "4db380bf3e92d6b27424d63c49133662b65077e8e7bd3b24e01e363b7d0941e8",
+        "exit_code": 0,
+        "outputs": {
+          "json": "fbd122b0c82d63a38343523cbd3f28dd8e24097ef041dc9154a841ea35bc1bb0",
+          "markdown": "ea0c774fe2573e1379f1c65e0714022004d10cc64af13880162b26b2b63b8daf"
+        }
+      },
+      {
+        "id": "reject-resolution-stale-dispute",
+        "input": "data/superforecasting-cli/reject-resolution-stale-dispute-input.json",
+        "raw_input_sha256": "6a0f8101c57fe92c56ad4a504452a6f9d8f7ffa73e74fe62b1451ed44f21ae76",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-catalog-hash",
+        "input": "data/superforecasting-cli/reject-catalog-hash-input.json",
+        "raw_input_sha256": "74679463383bae12b9aff3b47df4252c4e3ad789c86064c2d5caf09060fd5412",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "reject-empirical-skill",
+        "input": "data/superforecasting-cli/reject-empirical-skill-input.json",
+        "raw_input_sha256": "eccf74e6ee7237fdbe75bd1d3d831917491521d32086dbe4280981ebd56898ee",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "duplicate",
+        "input": "data/superforecasting-cli/duplicate-input.txt",
+        "raw_input_sha256": "dfd205aeecbcf824d6da92dcf6cfd8102bc604002f14aa2356923cbfcaae789b",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "nan",
+        "input": "data/superforecasting-cli/nan-input.txt",
+        "raw_input_sha256": "bc9de3fde4d33e012a2f8a6673f3c266bf45170616bec42d9cd18b612af003cb",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "infinity",
+        "input": "data/superforecasting-cli/infinity-input.txt",
+        "raw_input_sha256": "5eebdf3a3e2bfbcc90294a2bcfd1e950ca504951bdc2133b1eb9bc987d22da23",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      },
+      {
+        "id": "negative-infinity",
+        "input": "data/superforecasting-cli/negative-infinity-input.txt",
+        "raw_input_sha256": "9232890e7641c0010c2d67b61dfbb60de2ffe216857579242b18ea9087afc4bd",
+        "exit_code": 2,
+        "outputs": {
+          "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+          "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+        }
+      }
+    ]
+  }
+}
