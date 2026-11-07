@@ -1253,3 +1253,8 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #53 full acceptance passed
 - Passed1866tests (1790inherited+76new),2645CLI cases (2507inherited+138new),32independent verifiers (31inherited+1new),all27independent families andboth actual checkout replays. All3739protected pre-engine files unchanged.
 - Source registry idempotence,strictJSON,60IDs/54retained/six exclusions,dependency audit,pip check anddiff check pass. No failing receipt retained aspassing evidence. Finaldata:data/digital-twin-acceptance-checks.json. Closure follows;no54research yet.
+
+## 2026-11-07 — #53 Core v1 closure
+- Accepted **Core v1 Ready — Offline Scalar State-Space Assimilation Replay and Scenario Scope** under digital-twin-offline-scalar-state-replay-v1. All18criteria and27independent families pass;1866tests,2645CLI cases and32independent verifiers. All3739protected pre-engine files unchanged.
+- Saved22accepted/47rejected JSON/Markdown pairs;both actual EOL exports replay138raw outputs each. Exact batch/covariance,availability/no-backfill,matched baseline andfuture-fork invariants pass. Source/rights,registry,strictJSON,dependencies,pip,diff and60/54/six-exclusion gates pass.
+- Actual resource scope,source versions,configuration matrix andP1/P2 frozen inknowledge/digital_twin_core_v1.json. No empirical accuracy,live synchronization,decision feedback,actuator control orcomplete real-time twin certification. Next onlyafterclosurepushandclean0/0:Technique54audit only.

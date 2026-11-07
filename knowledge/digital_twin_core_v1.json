@@ -1,0 +1,671 @@
+{
+  "version": 1,
+  "technique_id": 53,
+  "name": "Digital Twin Simulation",
+  "date": "2026-11-07",
+  "status": "Core v1 Ready — Offline Scalar State-Space Assimilation Replay and Scenario Scope",
+  "certification_scope": "Synthetic state-estimation software correctness is supported. Offline archival replay requires independent source,units,timestamp andrights checks. Empirical accuracy/coverage is not certified. No live physical synchronization,decision feedback oractuator control exists;this is not certified as a complete real-time digital twin.",
+  "profile": "digital-twin-offline-scalar-state-replay-v1",
+  "profile_sha256": "3a16aa2f9855eae8351726f565a616dcefc3a7d1a14db0c9642dadd7df091db4",
+  "profile_file": "knowledge/digital_twin_profile_v1.json",
+  "source_manifest_sha256": "9e25d912734ccee8c74fe1315fb668fd09196156ff38b4de6ffa066f3f31a85d",
+  "source_freeze_sha256": "dcf761387ae33b7dc816380ef0f7af60cfcedda8c4783faa5614cf32b8c2f239",
+  "mathematics": [
+    "x_k=A*x_(k-1)+B*u_k+w_(k-1); z_k=H*x_k+v_k",
+    "m_minus=A*m_previous+B*u_k; P_minus=A*A*P_previous+Q",
+    "innovation=z_k-H*m_minus; S=H*H*P_minus+R; K=P_minus*H/S",
+    "m_plus=m_minus+K*innovation; P_plus=(1-K*H)*P_minus"
+  ],
+  "time_and_arithmetic_contract": [
+    "Strict exact object fields. schema_version integer1. Opaque ASCII IDs [A-Za-z0-9][A-Za-z0-9_.-]{0,63}; declared unit IDs are not physical-unit certification. One asset/state/measurement. Parameter version matches asset declaration; all record identities/units match asset.",
+    "Inputs are canonical signed integer or fraction strings; each integer at most18 decimal digits, positive denominator, no floats/bools/decimals. P0>=0,Q>=0,R>0. H=0 is valid; K is not constrained to[0,1]. Exact Fraction arithmetic, no tolerances. Independent zero-mean white process/measurement noise and known linear parameters are assumptions; Gaussian covariance interpretation is conditional, not calibrated empirical coverage.",
+    "UTC whole-second Z timestamps only. initial_at is the initial posterior time. Positive integer step_seconds<=86400. Rows have contiguous ticks1..T, exact grid timestamps initial_at+tick*step, unique IDs, explicit control u_k, no sorting. Evaluation cutoff >= final grid time. Future scenario timestamps must remain representable.",
+    "Each pre-update forecast originates at the preceding grid timestamp, from accepted past posterior and declared known control assumptions. Compute prior before reading current measurement. Nonmissing sample availability >= sample timestamp. Assimilate only if available_at equals scheduled sample/update timestamp. Delayed samples are skipped forever by the filter; no out-of-sequence backfill, smoothing, fitting, imputation or automatic outlier deletion.",
+    "Missing value requires available_at=null; nonmissing requires timestamp. Record missing/not_available_at_update/applied explicitly. Innovation and gain are null when skipped; S is still the positive model predictive measurement variance. Evaluation uses pre-update H*m_minus against nonmissing targets available_at<=evaluation_at; later-known targets can be scored but never revise saved forecasts.",
+    "Open-loop baseline starts from the same initial model and controls, with no measurement corrections. Persistence predicts the latest earlier sample by sample time whose availability<=forecast_origin, on measurement units; delayed earlier samples can become eligible for persistence later. Current/future samples cannot enter persistence. No latent-state ground truth is inferred from sensor values.",
+    "Report filter/open-loop all eligible target scores separately and three-way scores only on exactly identical target IDs with persistence available. Exact squared errors and MSE, explicit counts/exclusions; empty denominators not_estimable. No posterior fit scored as a forecast, and no empirical skill claim from declared/synthetic parameters or targets.",
+    "Optional scenarios: none requires horizon0 and reference=null; otherwise1..8 unique IDs with equal controls length horizon0..128 and chosen existing reference. Fork from identical accepted final historical posterior at final grid time, not from later evaluation information. Future branches have controls only, no observations. Report t0 and future means/variances and paired differences; history is immutable. Differences are hypothetical conditional predictions, not causal effects or actuator commands.",
+    "mode synthetic or archival only; live/personal/privacy/causal extensions reject as unknown/unsupported. Frozen source_ref, nonempty attribution/snapshot<=4000chars and exact UTF8 snapshot SHA256. Declared rights self_authored/permission_granted/public_domain/cc_by. archive_checks exact booleans: allfalse for synthetic, alltrue for archival. Archival checks assert independent source/units/timestamp/rights review; engine cannot verify declarations or certify empirical accuracy.",
+    "Preflight combined steps=T+S*horizon<=2048; conservative scalar-cell reservation=48*T+8*S*(horizon+1)+128<=20000 includes historical diagnostics, baseline scores and paired scenario trajectories; fixed metadata/input echo/hashes excluded. T<=256,S<=8. Current individual maxima make step cap redundant; cell and integer-growth caps remain binding. No PRNG or network.",
+    "Every exact rational result numerator/denominator <=8192bits. Before product, cross-cancel then reserve sum of nonzero factor bit lengths; reject reservation>8192 even if exact product might fit. Factors0/1/-1 use exact trivial paths. Before addition, use gcd denominator, guarded products, reserve max(term bits)+1 for nonzero terms and guarded denominator product; reject reservation>8192 even if cancellation might fit. Division uses guarded reciprocal multiplication; zero denominator rejects. Check final reduced operands/results too. Conservative operation reservations intentionally restrict some boundary expressions; no oversized multiplication/addition is performed first."
+  ],
+  "bounds": {
+    "assets": 1,
+    "state_dimension": 1,
+    "records": 256,
+    "horizon": 128,
+    "scenarios": 8,
+    "combined_steps": 2048,
+    "scalar_cells": 20000,
+    "input_digits": 18,
+    "integer_bits": 8192
+  },
+  "source_boundaries": {
+    "NASEM": "2024 report DOI10.17226/26894: physical counterpart, updating, prediction, decision feedback; verification is distinct from empirical validation and uncertainty calibration.",
+    "Grieves": "2014 whitepaper, cover plus seven numbered pages; physical/virtual products and information connections. Original inventory book lead preserved; no invented numerical law.",
+    "Welch_Bishop": "Separately identified numerical supplement: inspected MIT-hosted TR95-041 updated2002-03-11, Tables1-1/1-2,p5,Eqs1.9–1.13. Unfetched2006 author-host URL remains404; never substituted."
+  },
+  "inventory_method_row": [
+    53,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Digital Twin Simulation",
+    "RETAIN — simulate / implement",
+    "Data & simulation",
+    "Physical asset twins; urban twins; individual/behavioral proxy twins; synthetic populations",
+    "State-space model updated from observed data; intervention scenarios",
+    "Domain simulator + time-stamped sensor or archival data",
+    "Without live telemetry, label as static scenario model, not real-time twin",
+    "Empirical twin only to degree real-world state is measured",
+    "Foundational Research Gaps and Future Directions for Digital Twins",
+    "National Academies of Sciences, Engineering, and Medicine",
+    "https://www.nationalacademies.org/read/26894",
+    "Digital Twin: Manufacturing Excellence through Virtual Factory Replication",
+    null,
+    "49",
+    "40, 49, 52, 54, 55, 56",
+    53
+  ],
+  "ranked_sources": [
+    [
+      53,
+      "Digital Twin Simulation",
+      1,
+      "National Academies of Sciences, Engineering, and Medicine",
+      "Foundational Research Gaps and Future Directions for Digital Twins",
+      "Research standards and limitations",
+      "https://www.nationalacademies.org/read/26894",
+      "Open research report",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      53,
+      "Digital Twin Simulation",
+      2,
+      "Michael Grieves",
+      "Digital Twin: Manufacturing Excellence through Virtual Factory Replication",
+      "Foundational digital-twin formulation",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      53,
+      "Digital Twin Simulation",
+      "Physical asset twins",
+      "Foundational Research Gaps and Future Directions for Digital Twins",
+      "Digital Twin: Manufacturing Excellence through Virtual Factory Replication",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      53,
+      "Digital Twin Simulation",
+      "urban twins",
+      "Foundational Research Gaps and Future Directions for Digital Twins",
+      "Digital Twin: Manufacturing Excellence through Virtual Factory Replication",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      53,
+      "Digital Twin Simulation",
+      "individual/behavioral proxy twins",
+      "Foundational Research Gaps and Future Directions for Digital Twins",
+      "Digital Twin: Manufacturing Excellence through Virtual Factory Replication",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      53,
+      "Digital Twin Simulation",
+      "synthetic populations",
+      "Digital Twin: Manufacturing Excellence through Virtual Factory Replication",
+      "Foundational Research Gaps and Future Directions for Digital Twins",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "configuration_matrix": {
+    "supported": [
+      "One scalar asset with declared units andparameter version",
+      "Exact rational linear prediction/correction under known declared parameters",
+      "Regular UTC whole-second historical grid with strict availability andevaluation cutoff",
+      "Missing anddelayed sample visibility;delayed correction skipped permanently",
+      "Open-loop andlast-available-observation baselines onmeasurement scale",
+      "All-target model/open-loop andcommon-target three-way pre-update exact scores",
+      "Future control-only scenario forks andidentical-control negative checks",
+      "Strict conditional archival review declarations andsynthetic labels",
+      "Offline deterministic JSON/Markdown CLI,source/model/input/schema/code hashes",
+      "Conservative combined resource andpre-operation integer-growth guards"
+    ],
+    "experimental_research_only": [
+      "Usefulness ofsynthetic replay forphysical-state estimation",
+      "Empirical archival accuracy orconditional Gaussian coverage;unvalidated without exact data andheld-out design"
+    ],
+    "unsupported": [
+      "Complete real-time digital twin certification",
+      "Live synchronization or decision feedback",
+      "Actuator control",
+      "Empirical accuracy or uncertainty coverage without held-out validation",
+      "Parameter learning",
+      "Smoothing or delayed asynchronous correction",
+      "Automatic imputation/outlier deletion",
+      "Multivariate/nonlinear models",
+      "Urban/personal/behavioral twin certification"
+    ]
+  },
+  "variations": {
+    "Physical asset twins": "Bounded one-scalar offline asset proxy;not complete factory/CAD twin",
+    "urban twins": "Unimplemented urban/coupled-infrastructure domain",
+    "individual/behavioral proxy twins": "Unimplemented personal/behavioral domain;privacy,consent andvalidation gaps",
+    "synthetic populations": "Technique52 remains separate;population coupling/twin calibration unimplemented"
+  },
+  "acceptance_criteria": [
+    {
+      "criterion": "Immutable source/profile/schema/time/units freeze before engine",
+      "passed": true
+    },
+    {
+      "criterion": "All27independent fixture families frozen before production",
+      "passed": true
+    },
+    {
+      "criterion": "Exact gain-form production against independent information-form andbatch precision oracles",
+      "passed": true
+    },
+    {
+      "criterion": "Closed-form future convolution versus isolated production scenario recurrence",
+      "passed": true
+    },
+    {
+      "criterion": "P0>=0,Q>=0,R>0,S>0,Pposterior>=0,H0 andgain>1 boundaries",
+      "passed": true
+    },
+    {
+      "criterion": "Missing/delayed correction skips with no backfill",
+      "passed": true
+    },
+    {
+      "criterion": "Prediction origin andmeasurement availability without future leakage",
+      "passed": true
+    },
+    {
+      "criterion": "Matched pre-update measurement-scale evaluation andboth baselines",
+      "passed": true
+    },
+    {
+      "criterion": "Explicit undefined scores,coverage,identities andunit/version rejection",
+      "passed": true
+    },
+    {
+      "criterion": "Conservative pre-operation rational/product/addition andcombined resource caps",
+      "passed": true
+    },
+    {
+      "criterion": "138raw accepted/rejected CLI cases andallprovenance hashes",
+      "passed": true
+    },
+    {
+      "criterion": "Both actual Git checkout exports replay138outputs exactly",
+      "passed": true
+    },
+    {
+      "criterion": "1866tests including1790inherited",
+      "passed": true
+    },
+    {
+      "criterion": "2645CLI cases including2507inherited",
+      "passed": true
+    },
+    {
+      "criterion": "32independent verifiers including31inherited",
+      "passed": true
+    },
+    {
+      "criterion": "3739protected files plusregistry/strictJSON/taxonomy/dependency/pip/diff gates",
+      "passed": true
+    },
+    {
+      "criterion": "Actual short/long/missing/multi-scenario measurements",
+      "passed": true
+    },
+    {
+      "criterion": "Bounded configuration matrix,source/rights limits andP1/P2 backlog",
+      "passed": true
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "fixture_families": 27,
+    "families": {
+      "scalar-prediction": {
+        "passed": true,
+        "cases": [
+          "controls"
+        ]
+      },
+      "measurement-correction": {
+        "passed": true,
+        "cases": [
+          "sequential"
+        ]
+      },
+      "batch-precision-oracle": {
+        "passed": true,
+        "cases": [
+          "sequential"
+        ]
+      },
+      "process-variance": {
+        "passed": true,
+        "cases": [
+          "process-noise"
+        ]
+      },
+      "measurement-variance": {
+        "passed": true,
+        "cases": [
+          "noisy"
+        ]
+      },
+      "missing-observation": {
+        "passed": true,
+        "cases": [
+          "missing",
+          "all-missing"
+        ]
+      },
+      "zero-prior-variance": {
+        "passed": true,
+        "cases": [
+          "zero-prior"
+        ]
+      },
+      "scaled-observation": {
+        "passed": true,
+        "cases": [
+          "scaled",
+          "gain-over-one"
+        ]
+      },
+      "unobservable-H-zero": {
+        "passed": true,
+        "cases": [
+          "unobservable"
+        ]
+      },
+      "invalid-variance": {
+        "passed": true,
+        "cases": [
+          "negative-Q",
+          "negative-P",
+          "negative-R"
+        ]
+      },
+      "innovation-singularity-boundary": {
+        "passed": true,
+        "cases": [
+          "zero-R",
+          "zero-prior"
+        ]
+      },
+      "covariance-algebra": {
+        "passed": true,
+        "cases": [
+          "sequential",
+          "signed-rationals"
+        ]
+      },
+      "control-input": {
+        "passed": true,
+        "cases": [
+          "controls"
+        ]
+      },
+      "timestamp-grid": {
+        "passed": true,
+        "cases": [
+          "off-grid",
+          "fractional-time",
+          "offset"
+        ]
+      },
+      "observation-availability": {
+        "passed": true,
+        "cases": [
+          "delayed",
+          "not-yet-known",
+          "delayed-persistence"
+        ]
+      },
+      "future-observation-leakage": {
+        "passed": true,
+        "cases": [
+          "delayed",
+          "delayed-changed",
+          "later-evaluation"
+        ]
+      },
+      "duplicate-out-of-order": {
+        "passed": true,
+        "cases": [
+          "duplicate-id",
+          "reverse",
+          "duplicate-row"
+        ]
+      },
+      "asset-identity-units": {
+        "passed": true,
+        "cases": [
+          "asset",
+          "state-unit",
+          "measurement-unit",
+          "version"
+        ]
+      },
+      "open-loop-baseline": {
+        "passed": true,
+        "cases": [
+          "sequential"
+        ]
+      },
+      "last-observation-baseline": {
+        "passed": true,
+        "cases": [
+          "sequential",
+          "empty"
+        ]
+      },
+      "matched-preupdate-scores": {
+        "passed": true,
+        "cases": [
+          "sequential",
+          "missing",
+          "delayed-persistence"
+        ]
+      },
+      "scenario-fork-no-future-updates": {
+        "passed": true,
+        "cases": [
+          "controls",
+          "future-convolution",
+          "branch-measurement"
+        ]
+      },
+      "identical-scenario-control": {
+        "passed": true,
+        "cases": [
+          "controls",
+          "zero-horizon"
+        ]
+      },
+      "source-rights": {
+        "passed": true,
+        "cases": [
+          "source",
+          "rights",
+          "snapshot"
+        ]
+      },
+      "synthetic-live-boundary": {
+        "passed": true,
+        "cases": [
+          "live",
+          "privacy",
+          "declared-archival",
+          "archival-unchecked"
+        ]
+      },
+      "resource-bit-growth": {
+        "passed": true,
+        "cases": [
+          "cell-cap",
+          "record-cap",
+          "bit-growth"
+        ]
+      },
+      "json-markdown-hashes": {
+        "passed": true,
+        "cases": [
+          "unicode",
+          "profile"
+        ]
+      }
+    },
+    "accepted": 22,
+    "rejected": 43,
+    "profile_sha256": "3a16aa2f9855eae8351726f565a616dcefc3a7d1a14db0c9642dadd7df091db4",
+    "pre_engine_fixture_hashes_passed": true,
+    "batch_anchor": {
+      "precision": "3",
+      "information": "4",
+      "mean": "4/3",
+      "variance": "1/3"
+    },
+    "chronology_and_future_forks_passed": true,
+    "matched_preupdate_scores_passed": true,
+    "scientific_scope": "Bounded exact synthetic replay correctness; not empirical accuracy, calibrated uncertainty or complete real-time twin certification"
+  },
+  "regression": {
+    "tests": 1866,
+    "inherited_tests": 1790,
+    "new_tests": 76,
+    "cli_cases": 2645,
+    "inherited_cli_cases": 2507,
+    "new_cli_cases": 138,
+    "independent_verifiers": 32,
+    "inherited_verifiers": 31,
+    "protected_files": 3739,
+    "changed_protected_files": [],
+    "registry": {
+      "references_checked_twice": 525,
+      "unique": 370,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "strict_json_files": 2616,
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    }
+  },
+  "replay": {
+    "accepted_pairs": 22,
+    "rejected_pairs": 47,
+    "cli_cases": 138,
+    "checkout": {
+      "passed": true,
+      "exports": [
+        {
+          "autocrlf": "false",
+          "raw_corpus_files": 208,
+          "normalized_commitments": 3,
+          "actual_cli_replays": 138,
+          "passed": true
+        },
+        {
+          "autocrlf": "true",
+          "raw_corpus_files": 208,
+          "normalized_commitments": 3,
+          "actual_cli_replays": 138,
+          "passed": true
+        }
+      ],
+      "method": "git checkout-index from staged files with core.autocrlf false/true;actual exported CLI executions;stdout bytes SHA256 matches saved JSON/Markdown,without newline normalization",
+      "subprocess_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "harness_limit": "Two parallel CLI processes; limits inherited numerical-library import threads,not the stdlib scalar engine."
+    }
+  },
+  "performance": {
+    "version": 1,
+    "measured": true,
+    "environment": {
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD"
+    },
+    "profile_sha256": "3a16aa2f9855eae8351726f565a616dcefc3a7d1a14db0c9642dadd7df091db4",
+    "code_sha256": "baafad5ee98e365b18b168ad1500c44dc9e20718d10e137f3f6bd78dd99ab45f",
+    "protocol": "Five untraced complete in-process report repetitions per workload;separate tracemalloc run per workload;one complete CLI invocation including imports,registry andserialization. Native memory iswhole measurement-process peak includingall imports,workloads andtracing;notisolated perworkload orCLIchild.",
+    "process_peak_working_set_bytes": 30310400,
+    "under_proposed_128_MiB": true,
+    "results": [
+      {
+        "id": "short",
+        "records": 2,
+        "horizon": 0,
+        "scenarios": 0,
+        "request_sha256": "eb2893fa5690a63c804c249f897f19d1eff1163dfc1a8e6b2c390210757254b9",
+        "budget": {
+          "combined_steps": 2,
+          "scalar_cells": 224,
+          "integer_bits": 8192
+        },
+        "seconds": [
+          0.0015266,
+          0.0010093,
+          0.0009663,
+          0.0009199,
+          0.0009009
+        ],
+        "median_seconds": 0.0009663,
+        "cli_seconds": 1.1587822,
+        "python_traced_peak_bytes": 82318,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "long",
+        "records": 256,
+        "horizon": 0,
+        "scenarios": 0,
+        "request_sha256": "ec935c9c8f97cb0d34b20612895e8d186a85417a88e36d08ac1ae7a8513f6208",
+        "budget": {
+          "combined_steps": 256,
+          "scalar_cells": 12416,
+          "integer_bits": 8192
+        },
+        "seconds": [
+          0.0554178,
+          0.0553435,
+          0.0558677,
+          0.0558255,
+          0.0569054
+        ],
+        "median_seconds": 0.0558255,
+        "cli_seconds": 0.8665786,
+        "python_traced_peak_bytes": 1726522,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "missing-data",
+        "records": 256,
+        "horizon": 0,
+        "scenarios": 0,
+        "request_sha256": "1ed26f16aef254e4efe0b7cc4dbd8508d23bce9e844f4e9ae3a252984a1172e1",
+        "budget": {
+          "combined_steps": 256,
+          "scalar_cells": 12416,
+          "integer_bits": 8192
+        },
+        "seconds": [
+          0.029236,
+          0.0291933,
+          0.0286937,
+          0.0291032,
+          0.0289994
+        ],
+        "median_seconds": 0.0291032,
+        "cli_seconds": 1.2630319,
+        "python_traced_peak_bytes": 1655534,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "multi-scenario",
+        "records": 128,
+        "horizon": 128,
+        "scenarios": 8,
+        "request_sha256": "1dd20168f7a05867ee85421615fbf217c5448c929920abb73371ea497ab5242c",
+        "budget": {
+          "combined_steps": 1152,
+          "scalar_cells": 14528,
+          "integer_bits": 8192
+        },
+        "seconds": [
+          0.13389,
+          0.1116146,
+          0.1254024,
+          0.0987461,
+          0.0977419
+        ],
+        "median_seconds": 0.1116146,
+        "cli_seconds": 1.4485,
+        "python_traced_peak_bytes": 2863104,
+        "under_proposed_five_seconds": true
+      }
+    ],
+    "scope": "Representative local synthetic workloads;not universal performance or empirical accuracy."
+  },
+  "evidence": {
+    "data/digital-twin-acceptance-checks.json": "16b79b8cead64166e4a41bb1f0569fa197fec528de0321944797c66d64c35d77",
+    "data/digital-twin-unit.json": "83c9e275df309f84fc3557dfa97bf8ec6f612708529d4f9255207b2d1dfe2740",
+    "data/digital-twin-verification.json": "5ce13a22cf6b48e255e867eb4f2577b9dc5c8f95d409e1d77dfd13ad7df39d95",
+    "data/digital-twin-cli-replay.json": "113283abf9132e998d341795bf9958d152aa57c01bc4a34de111dbd1b05a2442",
+    "data/digital-twin-checkout-replay.json": "ca03deff78c29d5654fde797de73b546e31049e45fbe23a71897237dbbf447ff",
+    "data/digital-twin-resource-measurements.json": "f09ada58da0ac00d5c5dd509264bc311e8a1560d0dbf794f3288d4de9a22ca28",
+    "knowledge/digital_twin_fixture_freeze_v1.json": "cee5470fb7c82675a85b80e66272b07188d3d16a156051cd56b5ccaefa73bdf4"
+  },
+  "milestones": {
+    "source_profile": "6ab963f",
+    "independent_fixtures": "779910a",
+    "engine": "bb02208",
+    "cli_reports": "587e935",
+    "verification": "7929b29",
+    "acceptance": "88612d2"
+  },
+  "scientific_limits": [
+    "Declared units/parameters andarchive review booleans cannot certify physical dimensions,rights,consent,sensor accuracy orclock truth.",
+    "Model-derived covariance is conditional onlinear/noise/known-parameter assumptions andis not empirical coverage.",
+    "Pre-update sensor prediction is distinct from unobserved latent-state truth;posterior fit is notforecastvalidation.",
+    "Evaluation cutoff can make delayed targets scoreable butcannot revise accepted filter history. Delayed samples may later enter persistence,never backfilled correction.",
+    "Future controls are declared assumptions;scenario differences are not causal effects,physical commands orvalidated outcomes.",
+    "Conservative integer reservations deliberately reject some expressions whose reduced exact result might fit. Current individual maxima make the2048step cap redundant;scalar-cell andbit limits remain binding.",
+    "Local hashes cannot establish independent timestamps,semantic truth orcomplete provenance;stronger external anchoring remainsP1."
+  ],
+  "rights": "Facts and original numerical examples only; no copyrighted text, reports, figures, code or real-asset dataset redistribution.",
+  "backlog": {
+    "P1": [
+      "Empirical calibration andtime-held-out validation before accuracy oruncertainty-coverage claims",
+      "Source access:current author-hosted Kalman2006 URL returned404;keepinspected2002 distinct",
+      "Independent timestamp/availability provenance andphysical-counterpart documentation",
+      "Dataset-specific source,license,consent,units,sampling andsensor-quality review",
+      "External commitment anchors forinputs,source/version andcode identities"
+    ],
+    "P2": [
+      "Nonlinear/multivariate/ensemble filters andsmoothing",
+      "Parameter learning andoutlier/change-point models",
+      "Delayed asynchronous observation correction",
+      "Coupled populations andurban/behavioral twins",
+      "Live physical synchronization,decision feedback andactuator control withappropriate domain/security/latency validation"
+    ]
+  },
+  "next": "Only after closure commit,push andclean main0/0:Technique54Agent-Based Simulation resource/variation audit only;no54runtime,profile,fixtures orimplementation."
+}
