@@ -1,0 +1,717 @@
+{
+  "version": 1,
+  "technique_id": 57,
+  "name": "Collective Intelligence Forecasting",
+  "date": "2026-11-08",
+  "status": "Core v1 Ready — Versioned Binary Forecast Aggregation and Evaluation Scope",
+  "certification_scope": "Exact declared offline pooling,eligibility andscoring software only; not independent crowd wisdom or empirical forecast superiority.",
+  "profile": "collective-intelligence-binary-linear-pool-v1",
+  "profile_sha256": "925a21d05410b91f073d50b403f17c3cf709d28194f539d5c292bf328dd8b854",
+  "profile_file": "knowledge/collective_intelligence_profile_v1.json",
+  "cli_command": "collective-intelligence",
+  "source_catalog": "knowledge/collective_intelligence_sources.json",
+  "source_manifest_sha256": "4d5b136cc95b9747c782d1c446e1a8b36d157eeeae969cf4aa2b0a90ab071d58",
+  "source_freeze_sha256": "60d31c96e29d3a88b41af2e67d524a6e958440a7524b53558bcfd9b84c8fe8b1",
+  "source_boundaries": {
+    "version": 1,
+    "technique_id": 57,
+    "audit_sha256": "6b079b81969472a9c580e8d256c5eef7d495835b4ff3b70a54068e505744cd80",
+    "source_manifest_sha256": "4d5b136cc95b9747c782d1c446e1a8b36d157eeeae969cf4aa2b0a90ab071d58",
+    "boundaries": "Malone2018/Surowiecki publisher/institute metadata/overviews only; no full-book numerical recipe. Mellers2014 primary methods/note1 inspected:0–2 scoring and decomposition; advanced statistical aggregation reported elsewhere. Linear pools here are named editorial definitions,not tournament replication.",
+    "rights": "Mathematical facts and original implementation/synthetic fixtures only; no book/article body,figure,third-party code or participant dataset copied.",
+    "compatibility_51": "Preserve existing51profile/CLI/contracts; reuse UTC-Z/inclusive-cutoff and binary0–1 versus two-category0–2 conventions. Full ledger adapter deferred; numerical comparison can use stable scoring outputs without modifying51."
+  },
+  "inventory_method_row": [
+    57,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Collective Intelligence Forecasting",
+    "RETAIN — simulate / implement",
+    "Data & simulation",
+    "Delphi; weighted expert pools; crowd aggregation; LLM committee simulation; prediction tournaments",
+    "Aggregate independent probability estimates and learn forecaster weights",
+    "Human forecasters or marked synthetic agents; outcome history",
+    "Synthetic LLM consensus is not independent human wisdom",
+    "Testable when independent forecasts and outcomes exist",
+    "Superminds",
+    "Thomas W. Malone",
+    "https://cci.mit.edu/superminds-by-thomas-w-malone/",
+    "The Wisdom of Crowds",
+    "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+    "51",
+    "45, 51, 52, 58",
+    57
+  ],
+  "ranked_sources": [
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      1,
+      "Thomas W. Malone",
+      "Superminds",
+      "Collective-intelligence design",
+      "https://cci.mit.edu/superminds-by-thomas-w-malone/",
+      "Author/institute",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      2,
+      "James Surowiecki",
+      "The Wisdom of Crowds",
+      "Diverse-judgment aggregation",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      3,
+      "Barbara Mellers et al.",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "Forecast crowd effectiveness",
+      "https://pubmed.ncbi.nlm.nih.gov/24659192/",
+      "Peer-reviewed abstract",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      "Delphi",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "The Wisdom of Crowds",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      "weighted expert pools",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "The Wisdom of Crowds",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      "crowd aggregation",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "The Wisdom of Crowds",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      "LLM committee simulation",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "The Wisdom of Crowds",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      57,
+      "Collective Intelligence Forecasting",
+      "prediction tournaments",
+      "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "The Wisdom of Crowds",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "variations": {
+    "Delphi": "Unsupported iterative facilitation;P2",
+    "weighted expert pools": "Supported precommitted nonnegative linear weights only; no learned expertise certification",
+    "crowd aggregation": "Supported declared binary linear pools; no independence/superiority certification",
+    "LLM committee simulation": "Numeric pooling of declared simulated records only; no LLM API/committee execution",
+    "prediction tournaments": "Fixed-cutoff matched scoring reference only; full tournament operations unsupported"
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Offline exact declared binary forecast pools",
+      "Precommitted equal or nonnegative declared weights",
+      "Immutable local revision chains and explicit eligibility",
+      "Missing/abstention/zero-weight/dependence accounting",
+      "Matched TEST/TRAIN scoring,descriptive calibration and exact decomposition"
+    ],
+    "experimental_research_only": [
+      "Real-world interpretations of synthetic/dependent/LLM consensus"
+    ],
+    "unsupported": [
+      "Automatic independence or empirical skill certification",
+      "Learned weights from current outcomes",
+      "Full51ledger adapter",
+      "Iterative Delphi orchestration",
+      "LLM/provider APIs",
+      "Complete tournament operations",
+      "Automatic statistical significance"
+    ]
+  },
+  "equations": [
+    "pool=sum(w_i*p_i)/sum(w_i),eligible non-abstaining positive-weight entries only; equal mode all roster weights1",
+    "TRAIN and TEST separately; primary summary uses resolved TEST questions with estimable pool",
+    "binary_brier=(p-y)^2 in0..1; two_category_brier=2*binary_brier in0..2",
+    "REL=sum_k n_k/N*(p_k-ybar_k)^2;RES=sum_k n_k/N*(ybar_k-ybar)^2;UNC=ybar*(1-ybar);meanBrier=REL-RES+UNC with exact identical probabilities",
+    "Baseline constant1/2 and equal-probability pool; compare only identical resolved question IDs",
+    "Each individual is compared with aggregate on identical resolved TEST question IDs where both have an eligible probability"
+  ],
+  "exact_contract": [
+    "Strict exact fields,pinned profile/catalog hashes; schema_version/profile.version exactinteger1. Opaque IDs ASCII1..64. Questions1..32,forecasters1..32,forecasts0..2048; unique question,forecaster and event IDs. Related distinct events may share dependency_group,but no independence inference.",
+    "All times UTC-Z seconds with optional up to6fractional digits,parsed with existing timestamp convention. created_at<=locked_at<=pool.frozen_at<=cutoff<=event_end and created_at<event_end. weights_available_at<=pool.frozen_at. Question.version exactinteger1; clarity_confirmed=true and nonempty text/positive_rule/negative_rule<=4000characters. No natural-language probability generation.",
+    "Question identity hash is SHA256 canonical definition ONLY,excluding resolution/outcome. Forecast question_sha256 must match. Root input hash retains full request,while model hash excludes outcome labels and future resolution facts except their effects on declared eligibility boundaries.",
+    "Resolution status resolved requires outcome exactint0/1 and nonnull UTC event_at<=outcome_known_at<=resolved_at,event_at within[created_at,event_end]. For outcome0,event_at=event_end. Unresolved requires all other resolution fields null. Void/disputed require outcome/event_at null and nonnull outcome_known_at<=resolved_at. Every supplied outcome-information boundary must be strictly after pool.frozen_at,so current payload outcomes cannot fit weights.",
+    "pool.kind equal or declared_weight. Forecaster weights exact nonnegative rationals,at least one positive roster weight; equal kind requires every weight exactly1. Weights fixed globally before all question cutoffs/outcome information; no learned weights or tuning from this payload,including TRAIN outcomes.",
+    "Forecaster.kind human_declared,synthetic or llm_simulated; dependency_group explicit. Synthetic evidence_mode prohibits human_declared and requires self_authored rights. user_supplied_unvalidated accepts declared rights but never certifies skill,independence or consent. All repository examples synthetic; no human dataset redistributed.",
+    "Numeric probabilities/weights are exact integers(notbool) or signed integer/positive-denominator strings,each component<=18digits. No floats,decimal/exponent strings,noncanonical integer strings or zero denominators. Probabilities in[0,1] or null abstention; negative weights reject. Guard every fitting/scoring arithmetic operation before numerator/denominator cross products exceeding8192bits.",
+    "Per(question_id,forecaster) revisions unique,contiguous1..N with exactinteger revision; v1 parent_sha256=null,later parent_sha256 equals canonical hash of prior entire record. issued_at strictly increases,knowledge_at<=issued_at. Validate full chains before selection; records canonicalized by question,forecaster,revision. Unknown references,duplicate versions or broken parents reject the request.",
+    "Revision eligibility: issued_at and knowledge_at <= question cutoff (equality permitted,matching51),and both strictly before any declared event_at/outcome_known_at. Structurally valid late/informed revisions are explicitly rejected/excluded in diagnostics and cannot replace earlier eligible history. The latest eligible record wins; if null,forecaster abstains/withdraws with no fallback to older probability.",
+    "Report every question/forecaster pair: missing,abstaining,zero_weight or contributing; include rejected revision reasons and selected record hashes. Same forecaster revisions are not independent voters. Numeric agreement alone does not identify dependence; dependency/kind declarations never certify independent human expertise or effective sample size.",
+    "Renormalize positive declared weights over eligible non-abstaining forecasts per question. Zero contributing-weight denominator gives pool=null,status=not_estimable; no artificial0or1/2 substitution. Equal-pool comparison uses all eligible non-abstaining forecasters,including declared-zero-weight participants,with its distinct participant count named.",
+    "Scoring requires resolved outcome and estimable probability. Nonresolved/void/disputed and empty denominator summaries return explicit not_estimable/null. Primary TEST and separate TRAIN summaries use one row per distinct event/question. Baseline and individual comparisons explicitly list matched question IDs and counts; no missing event silently scored0.",
+    "Calibration10fixed bins[0,.1),...,[.9,1],with p=1 inlast bin; descriptive counts/means/frequencies only. Exact decomposition groups identical Fraction probabilities separately; verify identity. No logloss,confidence intervals,p-values,learned calibration or empirical superiority claims.",
+    "Canonical model hash binds profile,pool,roster,question definitions and chosen forecast records; excludes resolution labels. Split hash binds question/event/dependency/partition and cutoff identities; resolution hash separate. Input/report/code/source/snapshot hashes retained; code commitment normalizes CRLF->LF. Inputs not mutated.",
+    "Provenance evidence_mode synthetic or user_supplied_unvalidated; source_ref in frozen catalog,rights self_authored/permission_granted/public_domain/cc_by; nonempty attribution/snapshot<=4000characters,exact UTF8 SHA. Declarations/hashes cannot independently certify clocks,truth,permissions or consent.",
+    "Preflight work=forecasts*64+questions*forecasters*32<=5000000;returned_cells=questions*forecasters*24+forecasts*16<=100000. Account for every revision/pair before pooling. Limits are bounded work reservations,not universal timing guarantees; complete-report CPU/memory measured before closure."
+  ],
+  "bounds": {
+    "questions": 32,
+    "forecasters": 32,
+    "forecasts": 2048,
+    "work": 5000000,
+    "returned_cells": 100000,
+    "rational_component_digits": 18,
+    "integer_bits": 8192
+  },
+  "acceptance_criteria": [
+    {
+      "criterion": "Source/profile conventions frozen before engine",
+      "passed": true
+    },
+    {
+      "criterion": "Independent literal selection/arithmetic fixtures frozen before engine",
+      "passed": true
+    },
+    {
+      "criterion": "All31families and71new unit tests",
+      "passed": true
+    },
+    {
+      "criterion": "Exact1/2 equal pool,13/20 weighted pool and weight normalization/scale invariance",
+      "passed": true
+    },
+    {
+      "criterion": "Immutable revision chains,one voter per forecaster,cutoff-inclusive latest eligible selection",
+      "passed": true
+    },
+    {
+      "criterion": "Late/informed revisions excluded; latest abstention withdraws without fallback",
+      "passed": true
+    },
+    {
+      "criterion": "Missing/zero-weight roster accounting and explicit zero-denominator not_estimable",
+      "passed": true
+    },
+    {
+      "criterion": "Question definitions exclude future resolution labels; weighted label flip49/400 to169/400 preserves13/20 model",
+      "passed": true
+    },
+    {
+      "criterion": "Pre-lock forecasts and cross-partition question-dependency groups reject",
+      "passed": true
+    },
+    {
+      "criterion": "Exact matched TEST/TRAIN and individual/baseline denominators",
+      "passed": true
+    },
+    {
+      "criterion": "Exact binary0–1/two-category0–2 convention and17/50 REL-RES+UNC identity",
+      "passed": true
+    },
+    {
+      "criterion": "Read-only51scoring compatibility without rewriting51",
+      "passed": true
+    },
+    {
+      "criterion": "No independence/effective-N/empirical skill certification for dependent orLLM records",
+      "passed": true
+    },
+    {
+      "criterion": "128raw accepted/rejected JSON-Markdown reports andbothactualcheckout replays",
+      "passed": true
+    },
+    {
+      "criterion": "Full2144tests/3113CLIcases/36verifiers;4591protectedfiles andallrepository gates",
+      "passed": true
+    },
+    {
+      "criterion": "Actual local complete-report CPU/memory measurements withscope",
+      "passed": true
+    },
+    {
+      "criterion": "Bounded configuration matrix,source/rights limits andP1/P2",
+      "passed": true
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "fixture_families": 31,
+    "families": {
+      "equal-pool": {
+        "passed": true,
+        "cases": [
+          "equal"
+        ]
+      },
+      "weighted-pool": {
+        "passed": true,
+        "cases": [
+          "weighted"
+        ]
+      },
+      "weight-normalization": {
+        "passed": true,
+        "cases": [
+          "weighted"
+        ]
+      },
+      "weight-scale-invariance": {
+        "passed": true,
+        "cases": [
+          "weighted",
+          "weight-scale"
+        ]
+      },
+      "missing-forecaster": {
+        "passed": true,
+        "cases": [
+          "missing",
+          "unsubmitted-roster"
+        ]
+      },
+      "abstention-withdrawal": {
+        "passed": true,
+        "cases": [
+          "abstention"
+        ]
+      },
+      "zero-weight": {
+        "passed": true,
+        "cases": [
+          "zero-weight"
+        ]
+      },
+      "all-zero-roster": {
+        "passed": true,
+        "cases": [
+          "all-zero-weights"
+        ]
+      },
+      "all-missing-positive-weight": {
+        "passed": true,
+        "cases": [
+          "no-positive-available",
+          "no-forecasts"
+        ]
+      },
+      "revision-latest": {
+        "passed": true,
+        "cases": [
+          "revision"
+        ]
+      },
+      "cutoff-inclusive": {
+        "passed": true,
+        "cases": [
+          "cutoff-equality"
+        ]
+      },
+      "late-revision-refusal": {
+        "passed": true,
+        "cases": [
+          "late-revision"
+        ]
+      },
+      "duplicate-revision": {
+        "passed": true,
+        "cases": [
+          "duplicate-revision"
+        ]
+      },
+      "parent-chain": {
+        "passed": true,
+        "cases": [
+          "broken-parent",
+          "initial-parent",
+          "revision-gap"
+        ]
+      },
+      "question-identity": {
+        "passed": true,
+        "cases": [
+          "question-hash",
+          "duplicate-event"
+        ]
+      },
+      "outcome-information-gate": {
+        "passed": true,
+        "cases": [
+          "informed-revision",
+          "outcome-before-weights"
+        ]
+      },
+      "outcome-label-isolation": {
+        "passed": true,
+        "cases": [
+          "equal",
+          "outcome-flip"
+        ]
+      },
+      "dependency-reporting": {
+        "passed": true,
+        "cases": [
+          "dependent"
+        ]
+      },
+      "llm-not-independent": {
+        "passed": true,
+        "cases": [
+          "llm"
+        ]
+      },
+      "binary-brier": {
+        "passed": true,
+        "cases": [
+          "weighted"
+        ]
+      },
+      "two-category-scale": {
+        "passed": true,
+        "cases": [
+          "weighted",
+          "decomposition"
+        ]
+      },
+      "exact-decomposition": {
+        "passed": true,
+        "cases": [
+          "decomposition"
+        ]
+      },
+      "certainty-boundaries": {
+        "passed": true,
+        "cases": [
+          "perfect",
+          "contradicted"
+        ]
+      },
+      "matched-individual-comparison": {
+        "passed": true,
+        "cases": [
+          "missing",
+          "train-test"
+        ]
+      },
+      "baseline-comparison": {
+        "passed": true,
+        "cases": [
+          "weighted"
+        ]
+      },
+      "heldout-partition": {
+        "passed": true,
+        "cases": [
+          "train-test",
+          "cross-partition-dependence"
+        ]
+      },
+      "unresolved-exclusion": {
+        "passed": true,
+        "cases": [
+          "unresolved",
+          "void",
+          "disputed"
+        ]
+      },
+      "canonical-order": {
+        "passed": true,
+        "cases": [
+          "reordered"
+        ]
+      },
+      "rights-provenance": {
+        "passed": true,
+        "cases": [
+          "unvalidated-declared",
+          "synthetic-human",
+          "source",
+          "rights",
+          "snapshot"
+        ]
+      },
+      "resource-bounds": {
+        "passed": true,
+        "cases": [
+          "forecast-cap",
+          "roster-cap",
+          "large-rational"
+        ]
+      },
+      "raw-json-markdown-replay": {
+        "passed": true,
+        "cases": [
+          "profile",
+          "reordered"
+        ]
+      }
+    },
+    "accepted": 25,
+    "rejected": 35,
+    "literal_anchors": {
+      "equal": "1/2",
+      "weighted": "13/20",
+      "normalized_weights": [
+        "1/4",
+        "3/4"
+      ],
+      "weighted_binary_brier": "49/400",
+      "weighted_two_category_brier": "49/200",
+      "equal_binary_brier": "1/4",
+      "individual_losses": [
+        "16/25",
+        "1/25"
+      ],
+      "decomposition": {
+        "binary_brier": "17/50",
+        "reliability": "9/100",
+        "resolution": "0",
+        "uncertainty": "1/4",
+        "two_category_brier": "17/25"
+      },
+      "perfect": "0",
+      "contradicted": "1"
+    },
+    "outcome_label_isolation_passed": true,
+    "canonical_order_passed": true,
+    "compatibility_51_scoring_passed": true,
+    "fixture_sha256": "c8521456eb2be17b039810ed1cc17e48e139ed55bc2a22e59dfd2529470168d3",
+    "scope": "Exact declared offline pooling/scoring and eligibility software; no independent crowd or empirical skill certification"
+  },
+  "regression": {
+    "tests": 2144,
+    "inherited_tests": 2073,
+    "new_tests": 71,
+    "cli_cases": 3113,
+    "inherited_cli_cases": 2985,
+    "new_cli_cases": 128,
+    "independent_verifiers": 36,
+    "protected_files": 4591,
+    "changed_protected_files": [],
+    "registry": {
+      "references_checked_twice": 573,
+      "unique": 418,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "strict_json_files": 3150,
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    }
+  },
+  "replay": {
+    "accepted_pairs": 25,
+    "rejected_pairs": 39,
+    "cli_cases": 128,
+    "checkout": {
+      "passed": true,
+      "exports": [
+        {
+          "autocrlf": "false",
+          "raw_corpus_files": 193,
+          "normalized_commitments": 3,
+          "actual_cli_replays": 128,
+          "passed": true
+        },
+        {
+          "autocrlf": "true",
+          "raw_corpus_files": 193,
+          "normalized_commitments": 3,
+          "actual_cli_replays": 128,
+          "passed": true
+        }
+      ],
+      "method": "git checkout-index from staged files with core.autocrlf false/true;actual exported CLI executions;stdout bytes SHA256 matches saved JSON/Markdown,without newline normalization",
+      "subprocess_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "harness_limit": "Two parallel CLI processes; limits inherited numerical-library import threads,not the stdlib binary pooling engine."
+    }
+  },
+  "performance": {
+    "measured": true,
+    "environment": {
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0"
+    },
+    "profile_sha256": "925a21d05410b91f073d50b403f17c3cf709d28194f539d5c292bf328dd8b854",
+    "code_sha256": "134412c37ea8122285d7bb8a95717a71d0fed29a2a62cd11b3f7c5e5a2c819ba",
+    "protocol": "Three untraced complete in-process reports; separate tracemalloc report; one complete CLI including imports/registry/serialization. Native peak is whole helper including imports,all workloads and tracing,not CLI-child/per-workload peak.",
+    "process_peak_working_set_bytes": 40071168,
+    "under_proposed_128_MiB": true,
+    "results": [
+      {
+        "id": "small",
+        "questions": 1,
+        "forecasters": 2,
+        "revisions": 2,
+        "input_sha256": "a216db23a99ade867a45236dc6b0c909afd2d6269b5eeda44394666f19b200fa",
+        "budget": {
+          "work": 192,
+          "returned_cells": 80
+        },
+        "seconds": [
+          0.001352400053292513,
+          0.0007670000195503235,
+          0.0008140001446008682
+        ],
+        "median_seconds": 0.0008140001446008682,
+        "cli_seconds": 1.054298299830407,
+        "python_traced_peak_bytes": 100243,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "medium",
+        "questions": 8,
+        "forecasters": 8,
+        "revisions": 64,
+        "input_sha256": "c258cfbe678f76a7fbd17f3e17c105df4c101c85174a31f7bac23f0a12214c60",
+        "budget": {
+          "work": 6144,
+          "returned_cells": 2560
+        },
+        "seconds": [
+          0.005523700267076492,
+          0.00552080012857914,
+          0.003583600278943777
+        ],
+        "median_seconds": 0.00552080012857914,
+        "cli_seconds": 0.675447600428015,
+        "python_traced_peak_bytes": 475403,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "dense",
+        "questions": 32,
+        "forecasters": 32,
+        "revisions": 2048,
+        "input_sha256": "7bcf4ee3a444effd664df9a0d96b7aabca5bb2cf68ecd1904c6a44c1a73d7f74",
+        "budget": {
+          "work": 163840,
+          "returned_cells": 57344
+        },
+        "seconds": [
+          0.07141169998794794,
+          0.06892970018088818,
+          0.06943290028721094
+        ],
+        "median_seconds": 0.06943290028721094,
+        "cli_seconds": 1.5641720001585782,
+        "python_traced_peak_bytes": 8971295,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "missing-weighted",
+        "questions": 32,
+        "forecasters": 32,
+        "revisions": 256,
+        "input_sha256": "7735923a1543125c95d55173db2c37b4e9504a9fdd6b4214d99268e3205db208",
+        "budget": {
+          "work": 49152,
+          "returned_cells": 28672
+        },
+        "seconds": [
+          0.03134169988334179,
+          0.030626200139522552,
+          0.03154690004885197
+        ],
+        "median_seconds": 0.03134169988334179,
+        "cli_seconds": 1.685386700090021,
+        "python_traced_peak_bytes": 2923906,
+        "under_proposed_five_seconds": true
+      }
+    ],
+    "scope": "Recorded local synthetic workloads,not universal performance or empirical forecast skill."
+  },
+  "evidence": {
+    "data/collective-intelligence-acceptance-checks.json": "52d35dc1d282b5040d320efd987860ddec6125d42a2e18801889b1a5bb4fe574",
+    "data/collective-intelligence-unit.json": "09d3931472685d8080592f28d8f91d772b7f6501fb7386d789aba7244c0a9d64",
+    "data/collective-intelligence-verification.json": "e0991393eb0f2d85cd043c3be6329b00b338eadbfe2f2c138865f46db982fb1b",
+    "data/collective-intelligence-cli-replay.json": "f59b2095cb6867ff2a63d8b2cd6524fef0f07f9fee339f4398d5d2aa39819ccf",
+    "data/collective-intelligence-checkout-replay.json": "a6f2d302cba4256d2e9c72b50e56aa91b061b508d3099f7bce2d5f2d6089bc34",
+    "data/collective-intelligence-resource-measurements.json": "12d633dd34390cb87b5f5879c965a5b8bdcdaa71a688e8fc416c25419cff7bda",
+    "knowledge/collective_intelligence_fixture_freeze_v1.json": "6d1a5109a37009d727c45c2185f247ed436f69e640721578f7013aa6ee56de79"
+  },
+  "milestones": {
+    "audit": "19d55d2",
+    "source_profile": "3e4693f",
+    "independent_fixtures": "070f381",
+    "engine": "fdecba4",
+    "cli_reports": "c948057",
+    "acceptance": "a5d5b51709e0643234bd44bc7f9b777fe1a7f2c2",
+    "verification": "b5b3154"
+  },
+  "compatibility_51": {
+    "profile": "tetlock-mellers-binary-forecast-updates-v1",
+    "profile_sha256": "bd6d71ded4dbb2ddc1f60b230c46daff2b735793f6bfe4098899d49bfc6b9933",
+    "compatible": [
+      "Exact Fraction probabilities and squared-error scoring",
+      "UTC-Z chronology and named cutoff equality",
+      "Binary0–1 and two-category0–2 output separation",
+      "Exact identical-probability REL/RES/UNC identity"
+    ],
+    "deferred": "Full ledger import adapter requires distinct schema mapping; document rather than refactor51."
+  },
+  "backlog": {
+    "P1": [
+      "Detailed rights-cleared source chapters and advanced aggregation recipes",
+      "Real forecast corpus permissions,independence/selection/timing audit and out-of-sample empirical evaluation",
+      "Formal stable51ledger adapter without changing51",
+      "Separately justified pre-history learned weights and robust missingness/dependence evaluation"
+    ],
+    "P2": [
+      "Iterative Delphi facilitation",
+      "Multi-season learned weighting/extremization",
+      "LLM committee API integrations and cost/provenance contracts",
+      "Full competition platforms,large-scale calibration and statistical uncertainty"
+    ]
+  },
+  "scientific_limits": [
+    "Editorial linear pools are not full Mellers advanced aggregation or daily/question-standardized tournament replication.",
+    "Outcome labels score; weights fixed before current outcomes. No weight learning from this payload.",
+    "Declared identifiers,clocks,dependency groups and permissions are not external certifications; local owner can rewrite history.",
+    "Dependent/synthetic/LLM agreement does not establish independent human expertise,effective sample size or empirical skill.",
+    "All repository corpus data self-authored synthetic; user-supplied records unvalidated.",
+    "No full51ledger import adapter,Delphi orchestration,LLM APIs or significance claims."
+  ],
+  "next": "After closure push andclean synchronized main,audit58only;finish58–60 andfinal all54integration under master directive."
+}

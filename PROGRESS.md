@@ -1370,3 +1370,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-08 — #57 full acceptance passed
 - Passed2144tests (2073 inherited+71 new),3113CLIcases (2985 inherited+128 new),36independentverifiers andall31families. Bothactualcheckoutmodes replay128raw outputs each. All4591protectedfiles unchanged;registry,strictJSON,workbook/inventory/exclusions,dependency,pip/diff pass. No failed check treated as passing. Closure follows before58audit.
+
+## 2026-11-08 — #57 Core v1 closure
+- Core v1 Ready — Versioned Binary Forecast Aggregation and Evaluation Scope. All31families/71newtests andfull2144tests,3113CLIcases,36independentverifiers pass;all4591protectedfiles unchanged.25accepted/39rejectedpairs replay128raw outputs under eachactualcheckoutmode;registry,strictJSON,workbook/inventory/exclusions,dependency,pip/diff pass.
+- Exact1/2equal,13/20weighted,49/400weightedBrier and17/50decomposition;readonly51scoringmatch. Source/rights,measurements,matrix andP1/P2 frozen. No empiricalindependent-crowd/LLMsuperiority claim. After closurepush/clean0/0,continue58audit;no58implementationyet.
