@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "technique_id": 55,
+  "name": "Brain-Based Intention Prediction",
+  "date": "2026-11-07",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "3453ae0",
+  "predecessor_gate": "Closure successfully pushed; clean main0/0 observed before research.",
+  "policy": "Audit only: no runtime, executable profile, production fixtures, raw-data ingestion, model execution or performance claim.",
+  "inventory_method_row": [
+    55,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Brain-Based Intention Prediction",
+    "RETAIN — simulate / implement",
+    "Research / creative proxy",
+    "Readiness potential; EEG motor imagery; fMRI decision decoding; behavioral intention proxy",
+    "Reproduce published offline signal-classification tasks; optional behavioral surrogate",
+    "Public EEG datasets; actual live BCI would require specialized sensors",
+    "Cannot directly read a user’s intentions without electrodes/scanner; do not extrapolate lab tasks",
+    "Experimental neuroscience; narrow task, no mind reading",
+    "Brain–Computer Interfaces: Principles and Practice",
+    "Jonathan Wolpaw and Elizabeth Wolpaw (eds.)",
+    null,
+    "Unconscious Determinants of Free Decisions in the Human Brain",
+    "EEG Motor Movement/Imagery Dataset",
+    null,
+    "45, 53",
+    55
+  ],
+  "ranked_sources": [
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      1,
+      "Jonathan Wolpaw and Elizabeth Wolpaw (eds.)",
+      "Brain–Computer Interfaces: Principles and Practice",
+      "BCI principles and protocols",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      2,
+      "Chun Siong Soon et al.",
+      "Unconscious Determinants of Free Decisions in the Human Brain",
+      "fMRI decision-decoding benchmark",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      3,
+      "PhysioNet / BCI2000 team",
+      "EEG Motor Movement/Imagery Dataset",
+      "Reusable offline motor task data",
+      "https://www.physionet.org/content/eegmmidb/1.0.0/",
+      "Open research dataset; check rules",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      "Readiness potential",
+      "EEG Motor Movement/Imagery Dataset",
+      "Unconscious Determinants of Free Decisions in the Human Brain",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      "EEG motor imagery",
+      "EEG Motor Movement/Imagery Dataset",
+      "Unconscious Determinants of Free Decisions in the Human Brain",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      "fMRI decision decoding",
+      "Unconscious Determinants of Free Decisions in the Human Brain",
+      "EEG Motor Movement/Imagery Dataset",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      55,
+      "Brain-Based Intention Prediction",
+      "behavioral intention proxy",
+      "EEG Motor Movement/Imagery Dataset",
+      "Unconscious Determinants of Free Decisions in the Human Brain",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_catalog_sha256": "3fdd4d5fd4490cc162e2f6a4aa1926a418522be894e6a6f43daae2287fd30ab1",
+  "bibliographic_corrections": [
+    "Rank2 is a 2008 Nature Neuroscience journal Brief Communication, not the inventory's provisional Book / rights check. Original inventory remains unchanged.",
+    "Rank1 editor's full name is Elizabeth Winter Wolpaw; original ranking/name preserved."
+  ],
+  "findings": {
+    "dataset": "EEGMMIDB1.0.0:64 EEG channels,160Hz,EDF+,109 subject IDs documented by MNE,14 runs. Dataset index reports3.4GB uncompressed/1.9GB ZIP. No raw files downloaded or file checksums certified.",
+    "run_labels": {
+      "1": "rest eyes open",
+      "2": "rest eyes closed",
+      "3,7,11": "executed left/right fist",
+      "4,8,12": "imagined left/right fist",
+      "5,9,13": "executed both fists/feet",
+      "6,10,14": "imagined both fists/feet",
+      "T0": "rest",
+      "T1/T2": "task-specific, not universal left/right labels"
+    },
+    "mne": "Published example uses subject1 and runs6/10/14 imagined hands/feet, post-cue1–2s features,7–30Hz zero-phase noncausal FIR,CSP4+LDA Pipeline,trial-level ShuffleSplit10,test_size.2,random_state103. Not cross-subject/run/session or pre-decision prediction; not executed here. Full-data CSP fit for visualization must not enter held-out scoring.",
+    "readiness": "Movement-locked averages and awareness-clock reports are different measurements from cued motor imagery. EEGMMIDB does not supply the Libet awareness-clock protocol. Schurger2012 offers an accumulator/selection interpretation of average RP; this does not certify single-trial intention decoding.",
+    "fmri": "Soon2008 indexed abstract reports information before reported awareness in a constrained experiment. Full publisher methods/supplement unavailable in this audit. No exact classifier,split,lead time,accuracy or dataset replication certified.",
+    "rights": "PhysioNet database ODC-By1.0 requires attribution; it does not license individual contents or waive privacy/personality rights. Detailed original consent/IRB/participant-use restrictions not inspected. No raw data or copyrighted bodies/figures/code redistributed."
+  },
+  "recommendation": {
+    "name": "Offline Trial-Window Feature Classification and Leakage Diagnostics — Synthetic Reference Scope",
+    "supported_candidate": "Self-authored synthetic rational windows or declared feature tables; exact mean/population variance; binary unscaled uniform-prior nearest arithmetic centroid; train-only fit; named class-A tie; confusion,accuracy,fixed-class balanced accuracy and train-majority baseline on matched test IDs.",
+    "scientific_limit": "Editorial mathematical reference only: not CSP/LDA replication, band-specific neural features, empirical decoding, mind reading, free-will adjudication or a live BCI.",
+    "experimental": [
+      "Later rights-cleared offline EEG replication with frozen file manifest and numerical preprocessing recipe",
+      "Behavioral proxy explicitly labeled non-neural and task-specific"
+    ],
+    "unsupported": [
+      "Unrestricted future decisions or covert intentions",
+      "Live electrodes/scanner acquisition",
+      "fMRI or readiness-potential replication",
+      "Clinical, forensic or individual-intent certification"
+    ]
+  },
+  "required_contract": [
+    "Freeze subject_disjoint protocol OR within_subject_heldout_run protocol; do not rename runs as sessions. Verify session metadata before session-level claims.",
+    "Fixed train/validation/test identities before feature selection or tuning. Fit centroids,scaling,CSP and every learned transform on train only. Test labels may score,never fit or select predictions.",
+    "Keep all dependent windows from one trial and overlapping source intervals in one partition; verify source-file/trial/group identity,not just duplicate feature values. Numeric duplicates may occur legitimately.",
+    "Declare channel order,units,reference,sampling rate,task/run family,window half-open bounds,event origin and feature availability. Prohibit post-outcome information for a pre-outcome claim.",
+    "A zero-phase/noncausal filter cannot support online pre-decision availability claims; freeze filtering boundaries and train/test contamination controls.",
+    "T1/T2 semantics are run-dependent. Do not pool executed/imagined/rest or hands/feet versus left/right tasks.",
+    "Matched eligible IDs and denominators for model/baseline; train-majority tie goes to canonical A. Test prevalence is descriptive only. Missing true class makes fixed-binary balanced accuracy not_estimable,not perfect.",
+    "Chance .5 is a declared balanced iid binary null,not universal EEG chance. Correlation,selection and multiplicity invalidate naive binomial claims; toy p-values certify only arithmetic.",
+    "Provenance requires dataset DOI/version,exact file hashes,rights/consent review,channel/run/window manifest and split hashes before empirical work."
+  ],
+  "proposed_limits": {
+    "status": "Unmeasured proposals; freeze and benchmark before implementation acceptance.",
+    "trials": 256,
+    "channels": 8,
+    "samples_per_window": [
+      2,
+      512
+    ],
+    "combined_raw_sample_cells": 262144,
+    "feature_count": 16,
+    "input_rational_digits": 18,
+    "intermediate_integer_bits": 8192,
+    "work_items": 5000000,
+    "returned_cells": 100000,
+    "cpu_seconds_target": 5,
+    "peak_mib_target": 128,
+    "note": "Combined caps govern; maxima cannot all be combined. Exact arithmetic bit growth needs pre-operation reservation. No new dependencies proposed."
+  },
+  "independent_fixture_plan": [
+    {
+      "id": "window-mean",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "population-variance",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "constant-window",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "dc-offset",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "amplitude-scaling",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "channel-order-units",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "training-centroid",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "squared-distance",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "exact-tie",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "train-only-fit",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "test-label-isolation",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "subject-disjoint",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "heldout-run",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "session-metadata",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "trial-overlap",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "duplicate-source",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "cue-run-label-map",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "modality-separation",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "window-availability",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "noncausal-filter-refusal",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "confusion-matrix",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "matched-majority-baseline",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "balanced-accuracy",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "absent-class",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "chance-null",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "rights-consent",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "resource-bounds",
+      "status": "planned, not production fixture"
+    },
+    {
+      "id": "json-markdown-hashes",
+      "status": "planned, not production fixture"
+    }
+  ],
+  "literal_mathematical_anchors": {
+    "window_mean": "0",
+    "population_variance": "1",
+    "sample_variance": "4/3",
+    "scaled_variance": "4",
+    "constant_variance": "0",
+    "offset_mean": "5",
+    "offset_variance": "1",
+    "centroid_A": [
+      "1",
+      "3"
+    ],
+    "centroid_B": [
+      "5",
+      "3"
+    ],
+    "test_2_3_squared_distances": [
+      "1",
+      "9"
+    ],
+    "test_4_3_squared_distances": [
+      "9",
+      "1"
+    ],
+    "tie_3_3_squared_distances": [
+      "4",
+      "4"
+    ],
+    "confusion_actual_rows_predicted_columns": [
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "accuracy": "3/4",
+    "balanced_accuracy": "3/4",
+    "majority_baseline_accuracy": "1/2",
+    "iid_binomial_8_of_10_upper_tail": "7/128"
+  },
+  "anchor_scope": "Fraction/math.comb arithmetic only; no neural model or benchmark executed. Variance denominator n; squared distances exact; confusion rows actual,columns predicted. Tie A. 7/128 toy tail is not empirical significance.",
+  "backlog": {
+    "P1": [
+      "Obtain Soon full methods/supplement lawfully and verify numerical protocol/data availability",
+      "Inspect rights/consent and immutable EEG file manifests; verify channels,units,missing data and grouping",
+      "Freeze real EEG preprocessing,CSP/LDA and held-out-subject/run replication separately from synthetic reference",
+      "Freeze proposed core schema,limits,tie/absent-class conventions and independent fixtures before runtime"
+    ],
+    "P2": [
+      "Readiness-potential accumulator/awareness protocol replication",
+      "fMRI decoding with suitable data and independent evaluation",
+      "Larger datasets,nested selection,correlation-aware uncertainty and deployment validation"
+    ]
+  }
+}
