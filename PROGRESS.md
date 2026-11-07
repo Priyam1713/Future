@@ -1267,3 +1267,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #54 immutable source/profile freeze
 - Frozen B3/S23,finitezero-exterior,explicitbinary inputs,synchronous snapshots,full requestedhorizons andexactcomplete-state repeat classification beforeengine. Noearlystop/fastforward;T0 fabricatesnotransition. Combined work/state/count reservations andsupported/experimental/unsupported matrix fixed. PinnedMesa alpha/source rights distinctions preserved. Protected pre-engine count: 3979. Independentfixtures follow.
+
+## 2026-11-07 — #54 independent fixtures before engine
+- Frozen all26families,23accepted/42rejected board/configuration cases,18literal localtruth rows and512nine-bit configurations. Sparse Counter/set oracle isindependent ofplanned dense-neighbor production kernel;binomial anchors give56birth+84survival=140alive/372dead,35/128.
+- Exactblock,blinkerperiod2,glider(1,1)translation after4ticks,geometric transforms,equal-count/different-state controls andtargetedwork/state/count caprefusals passpre-engine checks. No production engine yet.
