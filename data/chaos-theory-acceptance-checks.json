@@ -1,0 +1,1832 @@
+{
+  "passed": true,
+  "complete": true,
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "returncode": 0,
+      "seconds": 146.953,
+      "stdout": "",
+      "stderr": ".................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\skyfield\\searchlib.py:224: DeprecationWarning: Setting the dtype on a NumPy array has been deprecated in NumPy 2.5.\r\nInstead of changing the dtype on an array x, create a new array with x.view(new_dtype)\r\n  y.dtype = int8\r\n...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\r\n----------------------------------------------------------------------\r\nRan 2276 tests in 145.862s\r\n\r\nOK\r\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\r\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aeromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 91.203,
+      "stdout": "72 Aeromancy CLI cases passed;21 JSON/21 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_akashic_core"
+      ],
+      "returncode": 0,
+      "seconds": 36.625,
+      "stdout": "28 Akashic CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_astrocartography_core"
+      ],
+      "returncode": 0,
+      "seconds": 15.187,
+      "stdout": "12 Astrocartography CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_aura_core"
+      ],
+      "returncode": 0,
+      "seconds": 17.718,
+      "stdout": "14 Aura CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_automatic_writing_core"
+      ],
+      "returncode": 0,
+      "seconds": 32.578,
+      "stdout": "24 Automatic Writing CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_bibliomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 104.282,
+      "stdout": "80 Bibliomancy CLI cases passed;16 JSON/16 Markdown saved replays;10 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_chinese_core"
+      ],
+      "returncode": 0,
+      "seconds": 38.75,
+      "stdout": "15 Chinese CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_cleromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 104.469,
+      "stdout": "80 Cleromancy CLI cases passed;16 valid JSON/Markdown saved replays and16 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_coffee_core"
+      ],
+      "returncode": 0,
+      "seconds": 72.734,
+      "stdout": "54 Coffee CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_dream_core"
+      ],
+      "returncode": 0,
+      "seconds": 39.734,
+      "stdout": "30 Dream CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_face_reading_core"
+      ],
+      "returncode": 0,
+      "seconds": 17.734,
+      "stdout": "12 Face Reference CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_geomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 72.375,
+      "stdout": "55 Geomancy CLI cases passed; 13 JSON/13 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_graphology_core"
+      ],
+      "returncode": 0,
+      "seconds": 18.406,
+      "stdout": "14 Graphology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_horary"
+      ],
+      "returncode": 0,
+      "seconds": 7.438,
+      "stdout": "5 Horary CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_hydromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 81.891,
+      "stdout": "63 Hydromancy CLI cases passed;18 JSON/18 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iching_core"
+      ],
+      "returncode": 0,
+      "seconds": 39.906,
+      "stdout": "30 I Ching CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_iridology_core"
+      ],
+      "returncode": 0,
+      "seconds": 19.891,
+      "stdout": "14 Iridology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_lithomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 83.953,
+      "stdout": "64 Lithomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mirror_core"
+      ],
+      "returncode": 0,
+      "seconds": 37.297,
+      "stdout": "28 Mirror CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_moleosophy_core"
+      ],
+      "returncode": 0,
+      "seconds": 16.625,
+      "stdout": "12 Moleosophy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mundane_core"
+      ],
+      "returncode": 0,
+      "seconds": 15.531,
+      "stdout": "12 Mundane CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_numerology_core"
+      ],
+      "returncode": 0,
+      "seconds": 5.125,
+      "stdout": "4 Numerology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_oracle_core"
+      ],
+      "returncode": 0,
+      "seconds": 25.875,
+      "stdout": "20 Oracle CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_osteomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 85.641,
+      "stdout": "64 Osteomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_palmistry_core"
+      ],
+      "returncode": 0,
+      "seconds": 12.922,
+      "stdout": "10 Palmistry CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pendulum_core"
+      ],
+      "returncode": 0,
+      "seconds": 38.281,
+      "stdout": "28 Pendulum CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_phrenology_core"
+      ],
+      "returncode": 0,
+      "seconds": 15.875,
+      "stdout": "12 Phrenology CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_podomancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 16.469,
+      "stdout": "12 Podomancy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_pyromancy_core"
+      ],
+      "returncode": 0,
+      "seconds": 80.187,
+      "stdout": "60 Pyromancy CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_runes_core"
+      ],
+      "returncode": 0,
+      "seconds": 32.765,
+      "stdout": "24 Rune CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_scrying_core"
+      ],
+      "returncode": 0,
+      "seconds": 38.797,
+      "stdout": "28 Scrying CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tarot_core"
+      ],
+      "returncode": 0,
+      "seconds": 31.469,
+      "stdout": "22 Tarot CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_tasseography_core"
+      ],
+      "returncode": 0,
+      "seconds": 46.016,
+      "stdout": "34 Tasseography CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_vedic_core"
+      ],
+      "returncode": 0,
+      "seconds": 17.297,
+      "stdout": "12 Vedic CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_western_core"
+      ],
+      "returncode": 0,
+      "seconds": 29.766,
+      "stdout": "23 CLI smoke cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tarot"
+      ],
+      "returncode": 0,
+      "seconds": 0.64,
+      "stdout": "30 Tarot source/layout/independent protocol checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_oracle"
+      ],
+      "returncode": 0,
+      "seconds": 0.641,
+      "stdout": "49 Oracle verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_iching"
+      ],
+      "returncode": 0,
+      "seconds": 0.937,
+      "stdout": "8759 I Ching verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_runes"
+      ],
+      "returncode": 0,
+      "seconds": 0.907,
+      "stdout": "84 rune reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pendulum"
+      ],
+      "returncode": 0,
+      "seconds": 1.062,
+      "stdout": "207 Pendulum reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_scrying"
+      ],
+      "returncode": 0,
+      "seconds": 1.078,
+      "stdout": "23 Scrying reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_mirror"
+      ],
+      "returncode": 0,
+      "seconds": 0.422,
+      "stdout": "22 Mirror reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_dream"
+      ],
+      "returncode": 0,
+      "seconds": 1.578,
+      "stdout": "26 Dream reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_automatic_writing"
+      ],
+      "returncode": 0,
+      "seconds": 1.235,
+      "stdout": "27 Automatic Writing reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_akashic"
+      ],
+      "returncode": 0,
+      "seconds": 0.625,
+      "stdout": "47 Akashic independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_tasseography"
+      ],
+      "returncode": 0,
+      "seconds": 0.906,
+      "stdout": "68 Tasseography independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_coffee"
+      ],
+      "returncode": 0,
+      "seconds": 0.594,
+      "stdout": "65 Coffee independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pyromancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.312,
+      "stdout": "59 Pyromancy independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_hydromancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.141,
+      "stdout": "44 Hydromancy independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_aeromancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.281,
+      "stdout": "53 Aeromancy independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_geomancy"
+      ],
+      "returncode": 0,
+      "seconds": 4.609,
+      "stdout": "65536 independent Geomancy charts, 256 addition pairs, 4096 associative triples, 16 identities and 6 fixtures passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_lithomancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.922,
+      "stdout": "12 Lithomancy source roles; 1225 independent distance pairs;25 grid rankings;4 authored cases;10 transforms;9 viewpoint checks;2 unknown cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_osteomancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.516,
+      "stdout": "13 Osteomancy source records;5 named relationships;169 ordered pair checks;26 omitted-outcome checks;52 original-evidence checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_bibliomancy"
+      ],
+      "returncode": 0,
+      "seconds": 2.344,
+      "stdout": "141 Bibliomancy selections;85 independently parsed verses;423 context cases;216 historical indices;100 literal dice sums passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_cleromancy"
+      ],
+      "returncode": 0,
+      "seconds": 1.375,
+      "stdout": "24 Cleromancy source accounts;98 alias keys;9016 numerical research tuples;source discrepancies and exact replay passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_augury"
+      ],
+      "returncode": 0,
+      "seconds": 1.296,
+      "stdout": "14 Augury source records;864 finite observations;4320 condition checks;4 known answers;5 uncertain-field and1 structured conflict cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_augury_core"
+      ],
+      "returncode": 0,
+      "seconds": 104.688,
+      "stdout": "80 Augury CLI cases passed;20 valid JSON/Markdown saved replays and10 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_haruspicy_core"
+      ],
+      "returncode": 0,
+      "seconds": 108.969,
+      "stdout": "84 Haruspicy CLI cases passed;20 valid JSON/Markdown saved replays and12 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_haruspicy"
+      ],
+      "returncode": 0,
+      "seconds": 3.953,
+      "stdout": "9 Haruspicy source records;8100 finite observations;32400 condition checks;14 known answers passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_feng_shui_core"
+      ],
+      "returncode": 0,
+      "seconds": 135.765,
+      "stdout": "104 Feng Shui CLI cases passed;24 accepted JSON/Markdown replay pairs and16 rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_feng_shui"
+      ],
+      "returncode": 0,
+      "seconds": 0.594,
+      "stdout": "24 source rows;3600 ID/name/Chinese headings;3600 uncertainty ranges;144 boundary/neighbor/central checks;9 extra ranges;3 anchors passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_remote_viewing"
+      ],
+      "returncode": 0,
+      "seconds": 2.75,
+      "stdout": "72000 independent target/ranking/display checks;600-case uniform null;16 procedural fixture families passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_remote_viewing_core"
+      ],
+      "returncode": 0,
+      "seconds": 161.265,
+      "stdout": "125 Remote Viewing CLI cases passed;23 accepted/21 rejected JSON/Markdown pairs;3 exact blind directory exports\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_prophetic_dreams"
+      ],
+      "returncode": 0,
+      "seconds": 3.468,
+      "stdout": "600 independent interval/chronology checks;2timezone cases;8hand-enumerated pairs;18procedural families passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_prophetic_dreams_core"
+      ],
+      "returncode": 0,
+      "seconds": 167.797,
+      "stdout": "136 Prophetic Dreams CLI cases passed;29accepted/15rejected JSON/Markdown replay pairs;complete lifecycle andexport\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_intuitive_prediction"
+      ],
+      "returncode": 0,
+      "seconds": 1.313,
+      "stdout": "15independent families;9cue pairs;729three-cue traces;42actual-ledger rational scores;chronology and baseline known answers passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_intuitive_prediction_core"
+      ],
+      "returncode": 0,
+      "seconds": 149.375,
+      "stdout": "121CLI cases;35accepted/18rejected JSON/Markdown pairs;complete linked lifecycle passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_deja_reve_core"
+      ],
+      "returncode": 0,
+      "seconds": 170.125,
+      "stdout": "146 Deja Reve CLI cases passed;34accepted/37rejected JSON/Markdown pairs replayed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_deja_reve"
+      ],
+      "returncode": 0,
+      "seconds": 0.703,
+      "stdout": "{\r\n  \"passed\": true,\r\n  \"fixture_sha256\": \"742061f3a6f89f8ef0720214e5d1feee870818aaac36494b4a8ec744c15e9c8d\",\r\n  \"profile_sha256\": \"fdfe3074e23b10deb96928d85b3440d2a3122acdcffc5270af3596a854c3698a\",\r\n  \"fixture_commit\": \"2ee614e\",\r\n  \"families\": [\r\n    {\r\n      \"id\": \"source-category-episodic\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-category-familiarity\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-category-dreamy\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-unclassifiable\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"mixed-uncertain\",\r\n      \"passed\": true,\r\n      \"checks\": 648\r\n    },\r\n    {\r\n      \"id\": \"original-prior-record\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"no-prior-record\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"conflicting-chronology\",\r\n      \"passed\": true,\r\n      \"checks\": 13\r\n    },\r\n    {\r\n      \"id\": \"original-versus-amendment\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"generic-familiarity-negative-control\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"specific-versus-vague\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"manual-nonmatch\",\r\n      \"passed\": true,\r\n      \"checks\": 1\r\n    },\r\n    {\r\n      \"id\": \"multiple-candidates\",\r\n      \"passed\": true,\r\n      \"checks\": 10\r\n    },\r\n    {\r\n      \"id\": \"missing-original-time\",\r\n      \"passed\": true,\r\n      \"checks\": 3\r\n    },\r\n    {\r\n      \"id\": \"no-diagnosis-prediction\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"source-edition-rights-replay\",\r\n      \"passed\": true,\r\n      \"checks\": 7\r\n    }\r\n  ],\r\n  \"category_cases\": 648,\r\n  \"chronology_constants\": 11,\r\n  \"source_case_checks\": 4,\r\n  \"source_counts_verified\": true,\r\n  \"empirical_or_clinical_validation\": false,\r\n  \"method\": \"Pre-engine known-answer tables and constants;independent canonical SHA256;no expected values generated by production.\"\r\n}\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_ai_predictive_modeling_core"
+      ],
+      "returncode": 0,
+      "seconds": 187.875,
+      "stdout": "162 AI Predictive Modeling CLI cases passed;30accepted/49rejected JSON/Markdown pairs;full NOAA ledger replayed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_ai_predictive_modeling"
+      ],
+      "returncode": 0,
+      "seconds": 2.937,
+      "stdout": "21 forecasting families;4200 independent cells;672 sentinel predictions;source metrics and complete candidate ledger passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_quantum_probability_forecasting_core"
+      ],
+      "returncode": 0,
+      "seconds": 195.063,
+      "stdout": "178 CLI cases pass;exact accepted/rejected JSON and Markdown replay\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_quantum_probability_forecasting"
+      ],
+      "returncode": 0,
+      "seconds": 0.532,
+      "stdout": "20 independent fixture families pass;79 circuits;300 PRNG words;max amplitude error 1.7763568394002505e-15\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_superforecasting_core"
+      ],
+      "returncode": 0,
+      "seconds": 178.328,
+      "stdout": "162 CLI cases pass;44accepted/37rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_superforecasting"
+      ],
+      "returncode": 0,
+      "seconds": 1.11,
+      "stdout": "23 independent fixture families pass;30Bayes anchors;22loss/bin/log anchors;77scenarios\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_psychohistory_core"
+      ],
+      "returncode": 0,
+      "seconds": 162.562,
+      "stdout": "138 CLI cases pass;23accepted/46rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_psychohistory"
+      ],
+      "returncode": 0,
+      "seconds": 0.453,
+      "stdout": "23 independent fixture families pass;21 accepted/41 rejected cases;exact algebra,PRNG,pairing and conservation\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_digital_twin_core"
+      ],
+      "returncode": 0,
+      "seconds": 83.407,
+      "stdout": "138 CLI cases pass;22accepted/47rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_digital_twin"
+      ],
+      "returncode": 0,
+      "seconds": 0.625,
+      "stdout": "27 independent fixture families pass;22 accepted/43 rejected cases;batch,chronology,baselines,scenarios andbit bounds\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_agent_based_core"
+      ],
+      "returncode": 0,
+      "seconds": 125.109,
+      "stdout": "138 CLI cases pass;23accepted/46rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_agent_based"
+      ],
+      "returncode": 0,
+      "seconds": 1.031,
+      "stdout": "26 independent families pass;18local cases;512configurations=56birth+84survival=140alive/372dead;block,blinker,glider andgeometry\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_brain_intention_core"
+      ],
+      "returncode": 0,
+      "seconds": 101.766,
+      "stdout": "110 CLI cases pass;14accepted/41rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_brain_intention"
+      ],
+      "returncode": 0,
+      "seconds": 0.734,
+      "stdout": "28 independent fixture families pass;14 accepted/37 rejected\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_causal_ai_core"
+      ],
+      "returncode": 0,
+      "seconds": 84.266,
+      "stdout": "92 CLI cases pass;15accepted/31rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_causal_ai"
+      ],
+      "returncode": 0,
+      "seconds": 0.625,
+      "stdout": "22 independent fixture families pass;256 frozen and3072 expanded graph cases;80 structural oracle cases\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_collective_intelligence_core"
+      ],
+      "returncode": 0,
+      "seconds": 112.782,
+      "stdout": "128 CLI cases pass;25accepted/39rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_collective_intelligence"
+      ],
+      "returncode": 0,
+      "seconds": 0.468,
+      "stdout": "31 independent fixture families pass;25 accepted/35 rejected;51 scoring conventions match\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_prediction_markets_core"
+      ],
+      "returncode": 0,
+      "seconds": 84.516,
+      "stdout": "134 CLI cases pass;33accepted/34rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_prediction_markets"
+      ],
+      "returncode": 0,
+      "seconds": 0.609,
+      "stdout": "31 independent fixture families pass;145 numerical vectors;200-term rational ln2 reference;33 accepted/30 rejected\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_chaos_theory_core"
+      ],
+      "returncode": 0,
+      "seconds": 62.828,
+      "stdout": "98 CLI cases pass;12accepted/37rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_chaos_theory"
+      ],
+      "returncode": 0,
+      "seconds": 0.766,
+      "stdout": "23 independent families pass;4 exact stage vectors;Taylor/local convergence andEuler negative control pass\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.audit_dependencies"
+      ],
+      "returncode": 0,
+      "seconds": 0.734,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "seconds": 1.157,
+      "stdout": "No broken requirements found.\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "seconds": 0.734,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'data/aeromancy-conflicting-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-conflicting.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-conflicting.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-empty-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-empty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-empty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-fleecy-full-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-fleecy-full.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-fleecy-full.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-fleecy-partial-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-fleecy-partial.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-fleecy-partial.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-hake-ew-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-hake-ew.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-hake-ew.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-hake-ns-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-hake-ns.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-hake-ns.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-hake-unknown-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-hake-unknown.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-hake-unknown.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-hypothetical-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-hypothetical.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-hypothetical.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-invalid.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-mackerel-alone-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-mackerel-alone.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-mackerel-alone.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-mackerel-competing-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-mackerel-competing.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-mackerel-competing.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-mackerel-mares-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-mackerel-mares.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-mackerel-mares.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-reference-only-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-reference-only.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-reference-only.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-region-mismatch-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-region-mismatch.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-region-mismatch.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-region-unknown-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-region-unknown.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-region-unknown.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-smoke-east-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-smoke-east.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-smoke-east.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-smoke-unknown-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-smoke-unknown.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-smoke-unknown.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-smoke-west-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-smoke-west.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-smoke-west.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-texas-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-texas-missing-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-texas-missing.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-texas-missing.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-texas.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-texas.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-wind-not-smoke-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-wind-not-smoke.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-wind-not-smoke.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-wing-south-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-wing-south.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/aeromancy-wing-south.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/agent-based-verification.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-clinical.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-clinical.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-comparison.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-comparison.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-concepts.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-concepts.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-creative.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-creative.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-empty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-empty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-guided.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-guided.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-invalid.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-prediction.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-prediction.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-reframed.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-reframed.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-unknown.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/akashic-unknown.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-call-flight-compare.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-call-flight-compare.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-cardinal-frame.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-cardinal-frame.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-catalog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-catalog.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-compass-conversion.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-compass-conversion.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-conflicting-sides.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-conflicting-sides.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-crow-left-call.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-crow-left-call.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-crow-left-flight.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-crow-left-flight.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-duplicate-id.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-duplicate-id.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-greek-profile.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-greek-profile.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-invalid-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-invalid-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-invalid.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-located-flight.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-located-flight.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-marcus.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-marcus.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-missing-phenomenon.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-missing-phenomenon.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-moving-from.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-moving-from.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-note226.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-note226.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-opposite-flight.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-opposite-flight.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-ordinary.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-ordinary.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-prediction.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-prediction.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-public.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-public.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-raven-right-call.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-raven-right-call.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-raven-right-flight.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-raven-right-flight.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-uncertain-bird.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-uncertain-bird.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-unknown-bird.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-unknown-bird.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-unknown-reference.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-unknown-reference.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-unknown-side.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-unknown-side.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-wrong-hash.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-wrong-hash.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-wrong-profile.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-wrong-profile.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-wrong-version.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/augury-wrong-version.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-complete.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-complete.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-empty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-empty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-interrupted.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-interrupted.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-invalid.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-partial-timing.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-partial-timing.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-procedure.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-procedure.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-revisions.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-revisions.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/automatic-writing-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-another-page-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-another-page.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-another-page.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-basic-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-basic.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-basic.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-boolean.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-boolean.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-boundary-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-boundary.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-boundary.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-context-two-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-context-two.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-context-two.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-context-zero-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-context-zero.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-context-zero.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-empty-page.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-empty-page.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-fine.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-fine.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-first-last-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-first-last.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-first-last.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-homeric-index-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-homeric-index.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-homeric-index.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-homeric-last-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-homeric-last.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-homeric-last.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-multiple-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-multiple.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-multiple.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-native-logical-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-native-logical.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-native-logical.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-nested-quotes-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-nested-quotes.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-nested-quotes.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-out-of-range.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-out-of-range.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-question-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-question.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-question.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-reflection-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-reflection.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-reflection.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-repeated-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-repeated.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-repeated.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-seeded.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-seeded.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-sentence-id-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-sentence-id.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-sentence-id.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-unicode-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-unknown-corpus.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-unknown-corpus.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-unknown-sentence.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-unknown-sentence.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-unsupported-edition.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-unsupported-edition.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-wrong-hash.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-wrong-hash.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-zero.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/bibliomancy-zero.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/brain-intention-verification.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/causal-ai-verification.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/chaos-theory-verification.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-alpha-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-alpha.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-alpha.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-ambiguous-mark.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-ambiguous-mark.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-catalog-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-catalog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-catalog.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-chi-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-chi.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-chi.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-confusable.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-confusable.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-delta-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-delta.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-delta.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-epsilon-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-epsilon.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-epsilon.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-final-sigma-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-final-sigma.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-final-sigma.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-five-astragaloi.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-five-astragaloi.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-five-d6.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-five-d6.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-homeric-passage.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-homeric-passage.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-hypothetical-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-hypothetical.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-hypothetical.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-interior-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-interior.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-interior.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-invalid-type.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-invalid-type.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-invalid-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-invalid-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-khi-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-khi.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-khi.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-lookup-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-lookup.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-lookup.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-missing-mark.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-missing-mark.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-multiple-draw.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-multiple-draw.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-omega-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-omega.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-omega.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-prediction.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-prediction.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-question-a-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-question-a.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-question-a.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-question-b-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-question-b.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-question-b.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-reported-real-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-reported-real.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-reported-real.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-seeded.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-seeded.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-sigma-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-sigma.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-sigma.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-source-face-five.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-source-face-five.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-unicode-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-unknown-mark.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-unknown-mark.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-wrong-hash.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-wrong-hash.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-wrong-profile.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-wrong-profile.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-wrong-version.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/cleromancy-wrong-version.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-basic-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-basic.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-basic.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-bird-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-bird.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-bird.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-camel-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-camel.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-camel.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-conflicting-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-conflicting.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-conflicting.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-direction-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-direction.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-direction.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-documentary-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-documentary.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-documentary.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-empty-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-empty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-empty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-halves-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-halves.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-halves.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-invalid.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-line-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-line.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-line.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-missing-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-missing.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-missing.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-moon-cup-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-moon-cup.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-moon-cup.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-moon-saucer-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-moon-saucer.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-moon-saucer.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-multiple-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-multiple.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-multiple.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-timing-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-timing.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-timing.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-unknown-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-unknown.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/coffee-unknown.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/collective-intelligence-verification.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/digital-twin-verification.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-360-degrees.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-360-degrees.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-alternates.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-alternates.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-bad-uncertainty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-bad-uncertainty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-boolean.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-boolean.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-boundary-uncertainty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-boundary-uncertainty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-catalog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-catalog.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-contradictory.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-contradictory.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-duplicate-json.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-duplicate-json.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-east.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-east.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-facing-door.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-facing-door.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-foreign-catalog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-foreign-catalog.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-invalid-role.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-invalid-role.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-last.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-last.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-magnetic.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-magnetic.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-missing-bearing.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-missing-bearing.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-missing-frame.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-missing-frame.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-multiple-turn.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-multiple-turn.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-n2-upper.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-n2-upper.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-n3-lower.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-n3-lower.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-negative.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-negative.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-nonfinite.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-nonfinite.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-north-wrap.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-north-wrap.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-northeast.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-northeast.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-northwest.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-northwest.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-precision.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-precision.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-prediction.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-prediction.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-reference.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-reference.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-source92.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-source92.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-south.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-south.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-southwest.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-southwest.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-string.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-string.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-true.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-true.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-two-heading.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-two-heading.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-unknown-frame.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-unknown-frame.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-west.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-west.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-wrong-hash.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-wrong-hash.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-wrong-profile.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-wrong-profile.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-wrong-version.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-wrong-version.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-zero.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/feng-shui-zero.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-all-double-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-all-double.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-all-double.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-all-single-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-all-single.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-all-single.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-asymmetric-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-asymmetric.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-asymmetric.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-basic-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-basic.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-basic.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-bennett-published-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-bennett-published.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-bennett-published.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-catalog-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-catalog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-catalog.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-display-ltr-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-display-ltr.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-display-ltr.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-figure-ids-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-figure-ids.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-figure-ids.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-horary.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-horary.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-house.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-house.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-invalid.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-lookup-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-lookup.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-lookup.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-marks-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-marks.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-marks.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-mixed-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-mixed.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-mixed.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-repeated-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-repeated.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-repeated.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-unicode-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-unknown-convention.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/geomancy-unknown-convention.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-absent-head.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-absent-head.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-caesar-first.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-caesar-first.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-caesar-sequence.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-caesar-sequence.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-catalog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-catalog.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-contradiction.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-contradiction.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-duplicate-id.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-duplicate-id.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-etruscan.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-etruscan.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-exact-lung.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-exact-lung.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-foreign-catalog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-foreign-catalog.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-incomplete-lung.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-incomplete-lung.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-feature.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-feature.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-link.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-link.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-organ.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-organ.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-schema.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-schema.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-invalid-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-mesopotamian.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-mesopotamian.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-missing-predecessor.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-missing-predecessor.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-prediction.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-prediction.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-present-head.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-present-head.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-reference.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-reference.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-reversed-sequence.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-reversed-sequence.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-standalone-heart.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-standalone-heart.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-uncertain-predecessor.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-uncertain-predecessor.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-unknown-head.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-unknown-head.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-unknown-reference.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-unknown-reference.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-vitals-conflict.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-vitals-conflict.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-hash.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-hash.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-organ.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-organ.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-predecessor.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-predecessor.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-profile.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-profile.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-version.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/haruspicy-wrong-version.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-conflicting-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-conflicting.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-conflicting.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-coptic-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-coptic.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-coptic.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-discontinued-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-discontinued.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-discontinued.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-empty-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-empty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-empty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-fog-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-fog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-fog.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-glare-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-glare.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-glare.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-imagined-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-imagined.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-imagined.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-intense-gaze-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-intense-gaze.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-intense-gaze.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-invalid.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-mist-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-mist.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-mist.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-no-imagery-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-no-imagery.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-no-imagery.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-oil-water-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-oil-water.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-oil-water.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-rain-pool-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-rain-pool.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-rain-pool.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-ripples-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-ripples.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-ripples.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-soft-gaze-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-soft-gaze.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-soft-gaze.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-unknown-gaze-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-unknown-gaze.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-unknown-gaze.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-unknown-medium-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-unknown-medium.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-unknown-medium.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-unsupported-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-unsupported.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-unsupported.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-water-bowl-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-water-bowl.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/hydromancy-water-bowl.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-asymmetric-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-asymmetric.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-asymmetric.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-basic-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-basic.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-basic.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-coincident-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-coincident.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-coincident.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-down-frame-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-down-frame.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-down-frame.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-duplicate-id.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-duplicate-id.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-groups-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-groups.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-groups.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-incomplete-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-incomplete.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-incomplete.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-invalid-coordinate.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-invalid-coordinate.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-missing-anchor-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-missing-anchor.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-missing-anchor.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-missing-position-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-missing-position.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-missing-position.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-mixed-author.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-mixed-author.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-nearest-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-nearest.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-nearest.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-personal-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-personal.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-personal.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-reader-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-reader.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-reader.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-relations-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-relations.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-relations.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-tie-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-tie.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-tie.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-uncertainty-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-uncertainty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-uncertainty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-unicode-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-unknown-anchor-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-unknown-anchor.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-unknown-anchor.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-unknown-role.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-unknown-role.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-wimmer-circle.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/lithomancy-wimmer-circle.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-ancestor-contrast-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-ancestor-contrast.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-ancestor-contrast.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-approval-uncertainty-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-approval-uncertainty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-approval-uncertainty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-basic-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-basic.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-basic.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-bone-toss.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-bone-toss.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-catalog-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-catalog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-catalog.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-crack-classification.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-crack-classification.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-days-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-days.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-days.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-harvest-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-harvest.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-harvest.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-invalid.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-missing-prognostication-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-missing-prognostication.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-missing-prognostication.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-multiple-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-multiple.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-multiple.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-named-group-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-named-group.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-named-group.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-reversed-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-reversed.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-reversed.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-settlement-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-settlement.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-settlement.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-topic-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-topic.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-topic.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-unavailable-verification-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-unavailable-verification.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-unavailable-verification.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-unicode-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-unknown-case.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-unknown-case.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-unresolved-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-unresolved.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-unresolved.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-warfare-distinct-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-warfare-distinct.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/osteomancy-warfare-distinct.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prediction-markets-verification.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-aborted.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-aborted.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-after-event-before-discovery.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-after-event-before-discovery.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-after-reveal-rating.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-after-reveal-rating.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-amendment.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-amendment.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-boundary.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-boundary.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-changed-criteria.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-changed-criteria.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-common.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-common.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-conflicting-time.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-conflicting-time.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-duplicate-news.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-duplicate-news.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-incomplete-universe.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-incomplete-universe.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-invalid-schema.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-invalid-schema.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-judge-packet.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-judge-packet.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-known-omissions.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-known-omissions.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-known-outcome.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-known-outcome.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-late.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-late.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-later-association.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-later-association.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-lecture-nonmatch.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-lecture-nonmatch.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-martinique.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-martinique.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-missing-timezone.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-missing-timezone.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-multiple-matches.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-multiple-matches.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-no-consent.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-no-consent.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-no-rights.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-no-rights.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-nonmatch.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-nonmatch.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-nonrecall.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-nonrecall.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-one-byte-mutation.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-one-byte-mutation.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-outside-window.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-outside-window.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-packet-leak.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-packet-leak.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-premature-reveal.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-premature-reveal.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-prospective.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-prospective.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-publication-endpoint.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-publication-endpoint.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-rating-mutation.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-rating-mutation.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-two-judges.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-two-judges.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unblinded.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unblinded.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-uncertain-interval.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-uncertain-interval.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unknown-dream-time.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unknown-dream-time.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unsubmitted.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unsubmitted.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unsupported-prophecy.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-unsupported-prophecy.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-wargo-envelope.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-wargo-envelope.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-window-expansion.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-window-expansion.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-withdrawn.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-withdrawn.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-wrong-parent.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-wrong-parent.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-wrong-universe.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-wrong-universe.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-zero-information.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/prophetic-dreams-zero-information.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/psychohistory-verification.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-active-hazard-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-active-hazard.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-active-hazard.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-color-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-color.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-color.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-conflicting-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-conflicting.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-conflicting.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-empty-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-empty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-empty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-full-soot-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-full-soot.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-full-soot.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-hypothetical-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-hypothetical.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-hypothetical.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-invalid.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-lamp-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-lamp.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-lamp.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-light-haze-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-light-haze.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-light-haze.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-live-smoke-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-live-smoke.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-live-smoke.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-low-improved-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-low-improved.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-low-improved.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-low-persistent-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-low-persistent.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-low-persistent.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-tall-changed-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-tall-changed.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-tall-changed.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-tall-persistent-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-tall-persistent.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-tall-persistent.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-tall-physical-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-tall-physical.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-tall-physical.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-unknown-soot-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-unknown-soot.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-unknown-soot.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-unsafe-stopped-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-unsafe-stopped.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-unsafe-stopped.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-upper-soot-input.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-upper-soot.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/pyromancy-upper-soot.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-aborted.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-aborted.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-after-reveal-feedback.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-after-reveal-feedback.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-attachment-packet.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-attachment-packet.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-conflicted.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-conflicted.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-conflicting-roles.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-conflicting-roles.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-contradictory-chronology.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-contradictory-chronology.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-duplicate-alias.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-duplicate-alias.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-duplicate-candidate.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-duplicate-candidate.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-excluded.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-excluded.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-exif-metadata.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-exif-metadata.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-failure-retained.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-failure-retained.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-forbidden-inference.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-forbidden-inference.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-human-manual.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-human-manual.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-incomplete-ledger.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-incomplete-ledger.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-invalid-protocol.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-invalid-protocol.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-invalid-ranking.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-invalid-ranking.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-invalid.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-judge-mutation.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-judge-mutation.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-judge-packet.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-judge-packet.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-leaked.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-leaked.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-leaking-viewer.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-leaking-viewer.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-missing-timezone.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-missing-timezone.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-multiple-judges.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-multiple-judges.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-no-rights.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-no-rights.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-pre-reveal-status.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-pre-reveal-status.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-premature-reveal.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-premature-reveal.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-rank1.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-rank1.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-rank3.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-rank3.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-rank5.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-rank5.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-reused-dependence.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-reused-dependence.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-seeded-human.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-seeded-human.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-simulated.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-simulated.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-summary.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-summary.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-training-feedback.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-training-feedback.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-transcript-mutation.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-transcript-mutation.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-unauthorized-reveal.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-unauthorized-reveal.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-unicode.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-unicode.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-unlocked-judge-packet.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-unlocked-judge-packet.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-validate-judge.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-validate-judge.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-validate-viewer.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-validate-viewer.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-viewer-packet.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-viewer-packet.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-wrong-asset.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-wrong-asset.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-wrong-opening.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-wrong-opening.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-wrong-pool.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/remote-viewing-wrong-pool.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/superforecasting-verification.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-adjacency.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-adjacency.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-basic.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-basic.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-conflicting.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-conflicting.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-direction.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-direction.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-empty.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-empty.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-figure-viii.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-figure-viii.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-handle.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-handle.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-invalid.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-invalid.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-marks.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-marks.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-missing.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-missing.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-multiplicity.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-multiplicity.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-saucer-unsupported.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-saucer-unsupported.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-zones.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'data/tasseography-zones.md', LF will be replaced by CRLF the next time Git touches it\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.check_inventory_workbook"
+      ],
+      "returncode": 0,
+      "seconds": 0.281,
+      "stdout": "Original workbook SHA256 and all six sheets match frozen inventory cell-for-cell;60 IDs and six exclusions pass\r\n",
+      "stderr": ""
+    }
+  ],
+  "tests": 2276,
+  "inherited_tests": 2219,
+  "new_tests": 57,
+  "cli_cases": 3345,
+  "inherited_cli_cases": 3247,
+  "new_cli_cases": 98,
+  "independent_verifiers": 38,
+  "protected_files": 5050,
+  "changed_protected_files": [],
+  "allowed_existing_edits": [
+    "PROGRESS.md",
+    "README.md",
+    "future/__main__.py",
+    "knowledge/gaps.json"
+  ],
+  "registry": {
+    "references_checked_twice": 585,
+    "unique": 430,
+    "skipped": [
+      "chinese-inventory-2-v1"
+    ]
+  },
+  "strict_json_files": 3413,
+  "historical_invalid_json_rejections": [
+    "data/feng-shui-duplicate-json-input.json",
+    "data/feng-shui-nonfinite-input.json"
+  ],
+  "taxonomy": {
+    "total": 60,
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ]
+  },
+  "other59gap_entries_unchanged": true,
+  "verification": {
+    "passed": true,
+    "fixture_families": 23,
+    "families": {
+      "derivative": {
+        "passed": true,
+        "cases": [],
+        "additional_check": "exact frozen numerical stages"
+      },
+      "four-stages": {
+        "passed": true,
+        "cases": [],
+        "additional_check": "exact frozen numerical stages"
+      },
+      "exact-one-step": {
+        "passed": true,
+        "cases": [
+          "one-step"
+        ],
+        "additional_check": null
+      },
+      "origin-fixed": {
+        "passed": true,
+        "cases": [
+          "origin"
+        ],
+        "additional_check": null
+      },
+      "nonzero-equilibrium": {
+        "passed": true,
+        "cases": [
+          "equilibrium"
+        ],
+        "additional_check": null
+      },
+      "symmetry": {
+        "passed": true,
+        "cases": [
+          "symmetric"
+        ],
+        "additional_check": null
+      },
+      "zero-perturbation": {
+        "passed": true,
+        "cases": [
+          "identical"
+        ],
+        "additional_check": null
+      },
+      "explicit-perturbation": {
+        "passed": true,
+        "cases": [
+          "long-sensitive",
+          "missing-perturbation"
+        ],
+        "additional_check": null
+      },
+      "exact-time-grid": {
+        "passed": true,
+        "cases": [],
+        "additional_check": "aligned rows,independent distances,integrated counts andreport hashes"
+      },
+      "zero-horizon": {
+        "passed": true,
+        "cases": [
+          "zero-horizon"
+        ],
+        "additional_check": null
+      },
+      "matched-refinement": {
+        "passed": true,
+        "cases": [],
+        "additional_check": "aligned rows,independent distances,integrated counts andreport hashes"
+      },
+      "independent-taylor": {
+        "passed": true,
+        "cases": [],
+        "additional_check": "Taylor recurrence and local convergence witness"
+      },
+      "local-convergence": {
+        "passed": true,
+        "cases": [
+          "short-coarse",
+          "short-fine"
+        ],
+        "additional_check": null
+      },
+      "full-integration-stride": {
+        "passed": true,
+        "cases": [
+          "stride"
+        ],
+        "additional_check": null
+      },
+      "finite-state-guard": {
+        "passed": true,
+        "cases": [
+          "unstable-stage"
+        ],
+        "additional_check": null
+      },
+      "parameter-bounds": {
+        "passed": true,
+        "cases": [
+          "sigma-zero",
+          "rho-negative",
+          "beta-too-large",
+          "huge-number",
+          "negative-zero",
+          "state-too-large"
+        ],
+        "additional_check": null
+      },
+      "time-bounds": {
+        "passed": true,
+        "cases": [
+          "tiny-step",
+          "dt-zero",
+          "dt-small",
+          "dt-large",
+          "steps-negative",
+          "time-product"
+        ],
+        "additional_check": null
+      },
+      "work-caps": {
+        "passed": true,
+        "cases": [
+          "maximum-steps",
+          "steps-large"
+        ],
+        "additional_check": null
+      },
+      "strict-schema": {
+        "passed": true,
+        "cases": [
+          "parameter-float",
+          "parameter-bool",
+          "bad-fraction",
+          "nonfinite",
+          "decimal",
+          "state-size",
+          "steps-bool",
+          "stride-zero",
+          "version"
+        ],
+        "additional_check": null
+      },
+      "unsupported-modes": {
+        "passed": true,
+        "cases": [
+          "solver-rk45",
+          "solver-lyapunov",
+          "extra"
+        ],
+        "additional_check": null
+      },
+      "source-rights": {
+        "passed": true,
+        "cases": [
+          "source",
+          "rights",
+          "not-synthetic",
+          "empty-attribution"
+        ],
+        "additional_check": null
+      },
+      "snapshot-binding": {
+        "passed": true,
+        "cases": [
+          "snapshot"
+        ],
+        "additional_check": null
+      },
+      "canonical-replay": {
+        "passed": true,
+        "cases": [
+          "profile",
+          "catalog"
+        ],
+        "additional_check": "aligned rows,independent distances,integrated counts andreport hashes"
+      }
+    },
+    "numerical_vectors": 4,
+    "accepted_cases": 12,
+    "rejected_cases": 33,
+    "local_reference": {
+      "errors": [
+        1.5271759813705364e-07,
+        9.148182558336961e-09
+      ],
+      "observed_refinement_ratio": 16.693763724454577,
+      "euler_negative_control_error": 0.012662168315940405,
+      "taylor_order_difference": "172022620923112573995410148755292157938838945129319697536545632515695358809642564851229202398259813633121789315488417799623749918788598086785791239117061228292626204993437914226403285975175688431442418930478610450872512004612342057704314229804215960842172366849759452408106777551523163410822233/4809823353480148361531259745366422359873742048902707363897049636246343145342809661372422458717011910433486353469450373255857249436687372416243200019981686423530762768914591626192486400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "scope": "Deterministic synthetic finite Lorenz ODE software verification; no empirical forecast or global Lyapunov validation."
+  },
+  "cli_replay": {
+    "passed": true,
+    "cli_cases": 98,
+    "accepted_pairs": 12,
+    "rejected_pairs": 37,
+    "records": [
+      {
+        "id": "one-step",
+        "input": "data/chaos-theory-cli/one-step-input.json",
+        "raw_input_sha256": "795a7fb1e0ac7a5547b2607eea778bb8987edb4158ec2848113458de2d135f6d",
+        "exit_code": 0,
+        "outputs": {
+          "json": "870b2e073bc468d8e3ed7ddf648d8479a8e45e4bba2a45fed7bb14e52424fcde",
+          "markdown": "c13804acf425c2140e2e569e4ca272f13236c2f04ba69ba9acac940ac3934fea"
+        }
+      },
+      {
+        "id": "origin",
+        "input": "data/chaos-theory-cli/origin-input.json",
+        "raw_input_sha256": "572f3b401cb334170ea9a16263727ed8f5bffb481e5c261e3e0f3ba65ca620e8",
+        "exit_code": 0,
+        "outputs": {
+          "json": "2b73d7e4f8b69fa408c4301341be7d831683027801078f499ab79a350ec16dca",
+          "markdown": "5aa4c60aa60001cd85df1c1332b920d2d2fe0bcfc89ff7deb67eafdd7b94ab6f"
+        }
+      },
+      {
+        "id": "equilibrium",
+        "input": "data/chaos-theory-cli/equilibrium-input.json",
+        "raw_input_sha256": "5250ef34e0ac75a1de770c47abbe70c71610f477cd54369e82fced86f99fbc31",
+        "exit_code": 0,
+        "outputs": {
+          "json": "e5ea58bd217337c2f0f0d81b80d446a1a5606fac9ec2f4ec5b9c7405cebfe0ef",
+          "markdown": "52faa4978e43ce8749432f7218f9c2cd4188d80646cf0fedcaf79dba3479ae08"
+        }
+      },
+      {
+        "id": "identical",
+        "input": "data/chaos-theory-cli/identical-input.json",
+        "raw_input_sha256": "2c1c3454a43bf498b3e2669e1b0f0313bfa782bdf23398f357c50861ce7ff7c2",
+        "exit_code": 0,
+        "outputs": {
+          "json": "325c199517b46983feca6a1ba8b26ac3abfeed2111b82acf7a129dce6c3f8432",
+          "markdown": "9b8d1f56a89932002d174a1bb89217e46c17a13bd33780d2e6cbb289ac881741"
+        }
+      },
+      {
+        "id": "zero-horizon",
+        "input": "data/chaos-theory-cli/zero-horizon-input.json",
+        "raw_input_sha256": "e223adf0c68ccdb792334fb7eb9f67c7b0038c4d74adaa4b0b86aebce2458295",
+        "exit_code": 0,
+        "outputs": {
+          "json": "7bf2eba3170cc4fad864c24fa70c841b8fea326d76f4dcd2027c40291b5ea8f1",
+          "markdown": "24019e4b591a984d74a05b56cb41c39750273a7226eb370202834b74de8c9b9f"
+        }
+      },
+      {
+        "id": "symmetric",
+        "input": "data/chaos-theory-cli/symmetric-input.json",
+        "raw_input_sha256": "258881677f3e160df4e570c33ab6deac101caa3f008dbcdce90f64f877770399",
+        "exit_code": 0,
+        "outputs": {
+          "json": "5cd73917ce349f7a0996744d9ad72ba35d081aa70b38e8dab0ddc14558aa8662",
+          "markdown": "49cdaa3637feb7ef5abfb50adfd8176d24248bfa5095606a1e52708a5030d50c"
+        }
+      },
+      {
+        "id": "short-coarse",
+        "input": "data/chaos-theory-cli/short-coarse-input.json",
+        "raw_input_sha256": "a2e517b547e9debb7cf571eb790dcb777150049c4e50bfddefdbaed721000578",
+        "exit_code": 0,
+        "outputs": {
+          "json": "2fd1285777745542bb9d59494e19404c043bcf6646046b46ea9f21fe610e1bf6",
+          "markdown": "dcb0de2bd4e48251c749f9d2d84c5a195adb0cf3a679237939a207e11f25bdbf"
+        }
+      },
+      {
+        "id": "short-fine",
+        "input": "data/chaos-theory-cli/short-fine-input.json",
+        "raw_input_sha256": "b448c4a265bd945737deb9bf8294dcb7a3272b73455068eb8e03dfbc8efcea9b",
+        "exit_code": 0,
+        "outputs": {
+          "json": "336405de73428676d5042c77c2f919e38d865cbc9c492354a8e43a5d5233559a",
+          "markdown": "e9f4c86a8a85dba7d834cce7ca2b9b10e2fec3713ed5ef401a0ab19f2d7f3843"
+        }
+      },
+      {
+        "id": "stride",
+        "input": "data/chaos-theory-cli/stride-input.json",
+        "raw_input_sha256": "eb591f1cb0d329452213d3e366cdbd52ae94740d9b7099ba8d842cd09247387f",
+        "exit_code": 0,
+        "outputs": {
+          "json": "0747d65dac8939298a968c548dbe3c8941a4c7723863e35f5c0bacb439bad16e",
+          "markdown": "eaed3f28fa4c6d31b4348832be8e3f862973f027c8ef3f1732a6d137a34c6d7c"
+        }
+      },
+      {
+        "id": "tiny-step",
+        "input": "data/chaos-theory-cli/tiny-step-input.json",
+        "raw_input_sha256": "30f3699688b84f276657cebaf59517d167d6ad2e218cc898eb12b8288ced719c",
+        "exit_code": 0,
+        "outputs": {
+          "json": "901e604e90878e05d9c5c4971a78517a822ba734fcaa8f58c3f2d496df15ae61",
+          "markdown": "2ffe99bb0c8c7fb2ee9e1d977b8c7ac0060a75c455a0cd92cc275e7bc36da05b"
+        }
+      },
+      {
+        "id": "long-sensitive",
+        "input": "data/chaos-theory-cli/long-sensitive-input.json",
+        "raw_input_sha256": "28038b478eaf85a08082001b5f5fb6ee3190fa93c9b8fbf9c73441a9aabfc3dd",
+        "exit_code": 0,
+        "outputs": {
+          "json": "ecbf254f4b4025e7a440471ccd3ba2c5f2a70789cee0deffe928f99b8947859b",
+          "markdown": "46baff082ff0b419d8c9b4466dadf35ee701349f7842984b0ce8e3ca9b7b840d"
+        }
+      },
+      {
+        "id": "maximum-steps",
+        "input": "data/chaos-theory-cli/maximum-steps-input.json",
+        "raw_input_sha256": "396c977d9b194b6e71fc1d8ae6d633014609f4d199619751ab47d7be5ef91e40",
+        "exit_code": 0,
+        "outputs": {
+          "json": "5671f2dc2f7a91050bc932af3a7c095366499cb85f1f0164c95a114609b1da2d",
+          "markdown": "403a837d1d80f0132cb038d55d0fe7cc663ad4c6e998c9df6039e22787b930e3"
+        }
+      },
+      {
+        "id": "sigma-zero",
+        "input": "data/chaos-theory-cli/sigma-zero-input.json",
+        "raw_input_sha256": "27d00beccc6b4c1bb6d481b2289556497a8f6914474469e038913096481e0504",
+        "exit_code": 2,
+        "outputs": {
+          "json": "b70fe54488145812b96c5e3c13ad6ec67817e674ff69fa003da799c78d1f0e18",
+          "markdown": "8b495efb031821d347aa2925f4a25af0c7c39b79f06795d64292b2270e85bb69"
+        }
+      },
+      {
+        "id": "rho-negative",
+        "input": "data/chaos-theory-cli/rho-negative-input.json",
+        "raw_input_sha256": "08882049520ecec7f70cea3341d1749c25f304091a459bf4f5ac5c54ad951ac2",
+        "exit_code": 2,
+        "outputs": {
+          "json": "b70fe54488145812b96c5e3c13ad6ec67817e674ff69fa003da799c78d1f0e18",
+          "markdown": "8b495efb031821d347aa2925f4a25af0c7c39b79f06795d64292b2270e85bb69"
+        }
+      },
+      {
+        "id": "beta-too-large",
+        "input": "data/chaos-theory-cli/beta-too-large-input.json",
+        "raw_input_sha256": "ea0c9133f19bc6d30474e89d8d318f097de94074be5c01eb2521bc960f7ecd19",
+        "exit_code": 2,
+        "outputs": {
+          "json": "b70fe54488145812b96c5e3c13ad6ec67817e674ff69fa003da799c78d1f0e18",
+          "markdown": "8b495efb031821d347aa2925f4a25af0c7c39b79f06795d64292b2270e85bb69"
+        }
+      },
+      {
+        "id": "parameter-float",
+        "input": "data/chaos-theory-cli/parameter-float-input.json",
+        "raw_input_sha256": "caab00485c9120579cc96a7e52e722a348dfc416a67e7a5ef4d4feb9e6e797e3",
+        "exit_code": 2,
+        "outputs": {
+          "json": "9c1f073ac62aa4cd983bb8aec0439d4fe8b117dc30951b5c0d73ea66ea5f53e5",
+          "markdown": "6b20b9ef56b645f936455e6ae0015372885c6add93f7ee5d34d07a83ec25c6cb"
+        }
+      },
+      {
+        "id": "parameter-bool",
+        "input": "data/chaos-theory-cli/parameter-bool-input.json",
+        "raw_input_sha256": "7b44fa06f16dd3a1a921048c727eb0d7a96d03c5f4b6f9925641f2209fd8fd00",
+        "exit_code": 2,
+        "outputs": {
+          "json": "9c1f073ac62aa4cd983bb8aec0439d4fe8b117dc30951b5c0d73ea66ea5f53e5",
+          "markdown": "6b20b9ef56b645f936455e6ae0015372885c6add93f7ee5d34d07a83ec25c6cb"
+        }
+      },
+      {
+        "id": "bad-fraction",
+        "input": "data/chaos-theory-cli/bad-fraction-input.json",
+        "raw_input_sha256": "c4b6da6e4d34f63bc8a3d3e8fc7907de0d474aab180a52bab0fd2050aa2fd03a",
+        "exit_code": 2,
+        "outputs": {
+          "json": "9c1f073ac62aa4cd983bb8aec0439d4fe8b117dc30951b5c0d73ea66ea5f53e5",
+          "markdown": "6b20b9ef56b645f936455e6ae0015372885c6add93f7ee5d34d07a83ec25c6cb"
+        }
+      },
+      {
+        "id": "nonfinite",
+        "input": "data/chaos-theory-cli/nonfinite-input.json",
+        "raw_input_sha256": "db8c409d0308a11e487e1ec9aa66d1fbd197df7f7b587ed0b3462eeccd5918a7",
+        "exit_code": 2,
+        "outputs": {
+          "json": "9c1f073ac62aa4cd983bb8aec0439d4fe8b117dc30951b5c0d73ea66ea5f53e5",
+          "markdown": "6b20b9ef56b645f936455e6ae0015372885c6add93f7ee5d34d07a83ec25c6cb"
+        }
+      },
+      {
+        "id": "decimal",
+        "input": "data/chaos-theory-cli/decimal-input.json",
+        "raw_input_sha256": "81248fe5f45296ad00735239cb9855a53e0d60e940f493a7370db9ca51cff8b9",
+        "exit_code": 2,
+        "outputs": {
+          "json": "9c1f073ac62aa4cd983bb8aec0439d4fe8b117dc30951b5c0d73ea66ea5f53e5",
+          "markdown": "6b20b9ef56b645f936455e6ae0015372885c6add93f7ee5d34d07a83ec25c6cb"
+        }
+      },
+      {
+        "id": "huge-number",
+        "input": "data/chaos-theory-cli/huge-number-input.json",
+        "raw_input_sha256": "92ef1d0c23c5d884d040c4f0d26cff7eb74be6b79e95f7d8b680d28b49b3ead2",
+        "exit_code": 2,
+        "outputs": {
+          "json": "9c1f073ac62aa4cd983bb8aec0439d4fe8b117dc30951b5c0d73ea66ea5f53e5",
+          "markdown": "6b20b9ef56b645f936455e6ae0015372885c6add93f7ee5d34d07a83ec25c6cb"
+        }
+      },
+      {
+        "id": "negative-zero",
+        "input": "data/chaos-theory-cli/negative-zero-input.json",
+        "raw_input_sha256": "692b1b1003503a29ca836ebc698ed92727d0c0f70fb8507de7a565055e95c94d",
+        "exit_code": 2,
+        "outputs": {
+          "json": "b70fe54488145812b96c5e3c13ad6ec67817e674ff69fa003da799c78d1f0e18",
+          "markdown": "8b495efb031821d347aa2925f4a25af0c7c39b79f06795d64292b2270e85bb69"
+        }
+      },
+      {
+        "id": "state-size",
+        "input": "data/chaos-theory-cli/state-size-input.json",
+        "raw_input_sha256": "5593ec32a540cfdb5701fe3d67a3e63bb6eebdee6e5871d1cbb1561381527253",
+        "exit_code": 2,
+        "outputs": {
+          "json": "3b1e75195e9cfe21ae8ba2557bccb1d287a6b4248f54815316d5bc8abeb81be7",
+          "markdown": "88c9ab2bfed2c90cee16e416de3ce0287fcc273e7a564a65b3985b34a379be87"
+        }
+      },
+      {
+        "id": "state-too-large",
+        "input": "data/chaos-theory-cli/state-too-large-input.json",
+        "raw_input_sha256": "380a3bd08431b5db500aaabe5e17ed7ebd0364759c677846883f4a3f815a045c",
+        "exit_code": 2,
+        "outputs": {
+          "json": "586f1ce8a0e1138c8efa6626c96afdbf94e37b54b387c832344b33378df9e79a",
+          "markdown": "f500da9b3697c8fe4a0beea720cda73f304d46f8d299c6f9987ecff88b2948ca"
+        }
+      },
+      {
+        "id": "missing-perturbation",
+        "input": "data/chaos-theory-cli/missing-perturbation-input.json",
+        "raw_input_sha256": "7db02b60f1b805220fafea355d660e1fd38c2efd39a3ade82df4fec3c1e30914",
+        "exit_code": 2,
+        "outputs": {
+          "json": "3b1e75195e9cfe21ae8ba2557bccb1d287a6b4248f54815316d5bc8abeb81be7",
+          "markdown": "88c9ab2bfed2c90cee16e416de3ce0287fcc273e7a564a65b3985b34a379be87"
+        }
+      },
+      {
+        "id": "dt-zero",
+        "input": "data/chaos-theory-cli/dt-zero-input.json",
+        "raw_input_sha256": "649cf8976e2b8fcc4c2ea476e8cbef9b1e4e60ee6c5d472fa751bf0bc6f8f312",
+        "exit_code": 2,
+        "outputs": {
+          "json": "09ac3fa59736652e3f877cd22ab3d7b81a2d0fe519a557a178c876b767630542",
+          "markdown": "5c3c967c15f90a32e508e0711f8dd5fa1bda7a27fc15a86631bcf590ec7bf2bb"
+        }
+      },
+      {
+        "id": "dt-small",
+        "input": "data/chaos-theory-cli/dt-small-input.json",
+        "raw_input_sha256": "9167798f469404fe97be2e2cdff22a67ab8e4bba4063b9bddbd06d1ae333a46c",
+        "exit_code": 2,
+        "outputs": {
+          "json": "09ac3fa59736652e3f877cd22ab3d7b81a2d0fe519a557a178c876b767630542",
+          "markdown": "5c3c967c15f90a32e508e0711f8dd5fa1bda7a27fc15a86631bcf590ec7bf2bb"
+        }
+      },
+      {
+        "id": "dt-large",
+        "input": "data/chaos-theory-cli/dt-large-input.json",
+        "raw_input_sha256": "49fc0d9a6db4f649f1dde907f1d7460a6890d163396b9447235dc0a47438be73",
+        "exit_code": 2,
+        "outputs": {
+          "json": "09ac3fa59736652e3f877cd22ab3d7b81a2d0fe519a557a178c876b767630542",
+          "markdown": "5c3c967c15f90a32e508e0711f8dd5fa1bda7a27fc15a86631bcf590ec7bf2bb"
+        }
+      },
+      {
+        "id": "steps-negative",
+        "input": "data/chaos-theory-cli/steps-negative-input.json",
+        "raw_input_sha256": "1141247864250e0cb4ea4420e8f702499cab254f17a5ba1e8123e94b2c6f0046",
+        "exit_code": 2,
+        "outputs": {
+          "json": "fc0b50378b7d4d371794ca49eb1d1d1cd413e7e4c570e49bf2abec33ea61f9a0",
+          "markdown": "6d5ab39beb831e57fef999e53509ce019e9d3fc3feb754aa88691d8ebd985071"
+        }
+      },
+      {
+        "id": "steps-large",
+        "input": "data/chaos-theory-cli/steps-large-input.json",
+        "raw_input_sha256": "d6d21f18a35cfb82183780cc9ea534fbe19734f8d837e7848c89ad0cdf9ed86e",
+        "exit_code": 2,
+        "outputs": {
+          "json": "fc0b50378b7d4d371794ca49eb1d1d1cd413e7e4c570e49bf2abec33ea61f9a0",
+          "markdown": "6d5ab39beb831e57fef999e53509ce019e9d3fc3feb754aa88691d8ebd985071"
+        }
+      },
+      {
+        "id": "steps-bool",
+        "input": "data/chaos-theory-cli/steps-bool-input.json",
+        "raw_input_sha256": "68bf00d14ace07fa83cb8c4adef4a20b2effa3598c6c5227dcfdd35c89d31e72",
+        "exit_code": 2,
+        "outputs": {
+          "json": "fc0b50378b7d4d371794ca49eb1d1d1cd413e7e4c570e49bf2abec33ea61f9a0",
+          "markdown": "6d5ab39beb831e57fef999e53509ce019e9d3fc3feb754aa88691d8ebd985071"
+        }
+      },
+      {
+        "id": "stride-zero",
+        "input": "data/chaos-theory-cli/stride-zero-input.json",
+        "raw_input_sha256": "d714e58e43c5bb1bc35cde7cf4a481bc716083a4d69556b68f13eeeea8147f21",
+        "exit_code": 2,
+        "outputs": {
+          "json": "fc0b50378b7d4d371794ca49eb1d1d1cd413e7e4c570e49bf2abec33ea61f9a0",
+          "markdown": "6d5ab39beb831e57fef999e53509ce019e9d3fc3feb754aa88691d8ebd985071"
+        }
+      },
+      {
+        "id": "solver-rk45",
+        "input": "data/chaos-theory-cli/solver-rk45-input.json",
+        "raw_input_sha256": "1c5fa80a16cfbdf5c2fd8c8cad8efe7a125f923a51a7bab0834b7b468fda50c1",
+        "exit_code": 2,
+        "outputs": {
+          "json": "a1e69833c03375f42b43b0e6ea1323654c913252bc8bc0c4fd7bcd0f950b9b76",
+          "markdown": "84998756603ccca3c68c6e2a2af3e12b2f5240fe9185bea71cf91c612edebb5b"
+        }
+      },
+      {
+        "id": "solver-lyapunov",
+        "input": "data/chaos-theory-cli/solver-lyapunov-input.json",
+        "raw_input_sha256": "98804277f09a4fae8d071e56c530d3937e61849598dce11eb789bb0ca7c1eeff",
+        "exit_code": 2,
+        "outputs": {
+          "json": "a1e69833c03375f42b43b0e6ea1323654c913252bc8bc0c4fd7bcd0f950b9b76",
+          "markdown": "84998756603ccca3c68c6e2a2af3e12b2f5240fe9185bea71cf91c612edebb5b"
+        }
+      },
+      {
+        "id": "source",
+        "input": "data/chaos-theory-cli/source-input.json",
+        "raw_input_sha256": "ceece7a0671fccf0f0237b9713449727da78ad234b8bf8783513c4c18da50c61",
+        "exit_code": 2,
+        "outputs": {
+          "json": "344655fbbd23cf655745566eacaf2a1d0085a00a628a06fcc400d1ae10d0f5f6",
+          "markdown": "5c6d3ec9e8cef8fcf2b491c531222b500d41c4ca489d9588e228b2bd86fc6450"
+        }
+      },
+      {
+        "id": "rights",
+        "input": "data/chaos-theory-cli/rights-input.json",
+        "raw_input_sha256": "0001455bc1858d68ef45b9d442138796af1e6a84b06ac10d204de167003c368e",
+        "exit_code": 2,
+        "outputs": {
+          "json": "52453a68b3f9a604a4f629bed8d32557a58e4336076cc3996ad826bf6543ee3c",
+          "markdown": "a9c63dba305ce368646eac2b80ad823ba6b55cb20d874434f31b02f1a07d4a31"
+        }
+      },
+      {
+        "id": "not-synthetic",
+        "input": "data/chaos-theory-cli/not-synthetic-input.json",
+        "raw_input_sha256": "e78f0829c77d44749082711c9c12d262739b8b0a3fe3bd4a53ca05bb28ab543b",
+        "exit_code": 2,
+        "outputs": {
+          "json": "52453a68b3f9a604a4f629bed8d32557a58e4336076cc3996ad826bf6543ee3c",
+          "markdown": "a9c63dba305ce368646eac2b80ad823ba6b55cb20d874434f31b02f1a07d4a31"
+        }
+      },
+      {
+        "id": "empty-attribution",
+        "input": "data/chaos-theory-cli/empty-attribution-input.json",
+        "raw_input_sha256": "ed993eac4916ed777ee06e4471305a7c77348675650bb993f766aac183f58859",
+        "exit_code": 2,
+        "outputs": {
+          "json": "6c7c4ab0d6b0cb8825d52e33d354e4b045f62f0c8dda8ffa2ca7f109e0ba8588",
+          "markdown": "76153fc9198782c8b5b9a6f4857abb58c93c32ac93e9ce8479a4b19583899f2a"
+        }
+      },
+      {
+        "id": "snapshot",
+        "input": "data/chaos-theory-cli/snapshot-input.json",
+        "raw_input_sha256": "2e61cfaac330753bf8828cfa95ba14804df49434294ea9f1049cb8e565f1725e",
+        "exit_code": 2,
+        "outputs": {
+          "json": "8fe0c73e36bf0078287d1b5a45b074e15baac45263ade5debdf54fcceb1c7cff",
+          "markdown": "61f3999210e9e0c3e909c8bd88cf326b9649bcd202a9f7d06b06ae5bf621e210"
+        }
+      },
+      {
+        "id": "profile",
+        "input": "data/chaos-theory-cli/profile-input.json",
+        "raw_input_sha256": "c21cf74fbecc99c78d69ef34aed3b5d8c688a032e44f480013f856d4735e18c2",
+        "exit_code": 2,
+        "outputs": {
+          "json": "1d56ebf656cc5240d53b1686227f41d95a3de4be02ff522f152cd70ef6d030ca",
+          "markdown": "f40312a8ef4edc1816b000243b1f8eaf01f99b5a2993d78e5c9e4d65de47b35e"
+        }
+      },
+      {
+        "id": "catalog",
+        "input": "data/chaos-theory-cli/catalog-input.json",
+        "raw_input_sha256": "b7f6dd3b90b42ac116fd6363ce11337e295c0c2670cd1da9cf3e3a3533208bb8",
+        "exit_code": 2,
+        "outputs": {
+          "json": "1d56ebf656cc5240d53b1686227f41d95a3de4be02ff522f152cd70ef6d030ca",
+          "markdown": "f40312a8ef4edc1816b000243b1f8eaf01f99b5a2993d78e5c9e4d65de47b35e"
+        }
+      },
+      {
+        "id": "version",
+        "input": "data/chaos-theory-cli/version-input.json",
+        "raw_input_sha256": "374dab0cf44b9c0f88fb6745780dcd38aa198fd255fffc8744b4dbccdda26353",
+        "exit_code": 2,
+        "outputs": {
+          "json": "fc0b50378b7d4d371794ca49eb1d1d1cd413e7e4c570e49bf2abec33ea61f9a0",
+          "markdown": "6d5ab39beb831e57fef999e53509ce019e9d3fc3feb754aa88691d8ebd985071"
+        }
+      },
+      {
+        "id": "extra",
+        "input": "data/chaos-theory-cli/extra-input.json",
+        "raw_input_sha256": "d9d861f12697a5554697810512a522d5749eb26438be414a8d3dbce07c16e3bb",
+        "exit_code": 2,
+        "outputs": {
+          "json": "fa186e98665b2aaa6449e657049dbf67107488c5d0bb0729cca7574cc6b0b84f",
+          "markdown": "be36699dddead6538fcf1df74169fc415d5f05eaef89813b591845384c7ea37e"
+        }
+      },
+      {
+        "id": "time-product",
+        "input": "data/chaos-theory-cli/time-product-input.json",
+        "raw_input_sha256": "d302b5a81e8053af7a98d211663eea506a264c19c8452ce562a3f0e98442bef7",
+        "exit_code": 2,
+        "outputs": {
+          "json": "09ac3fa59736652e3f877cd22ab3d7b81a2d0fe519a557a178c876b767630542",
+          "markdown": "5c3c967c15f90a32e508e0711f8dd5fa1bda7a27fc15a86631bcf590ec7bf2bb"
+        }
+      },
+      {
+        "id": "unstable-stage",
+        "input": "data/chaos-theory-cli/unstable-stage-input.json",
+        "raw_input_sha256": "ac7ea35b0acb9be273fad797c24ff72296e756c9a301947d061772cb6887d34e",
+        "exit_code": 2,
+        "outputs": {
+          "json": "081202738bdb9ca2e51b42c875a60b1ad9396782dfa1418a8c33aaf0123447f3",
+          "markdown": "7aec73373ce5188e78078eba5d49d7d65ac7fa4176e65a04d1e0b4a1b32a7fb8"
+        }
+      },
+      {
+        "id": "duplicate",
+        "input": "data/chaos-theory-cli/duplicate-input.txt",
+        "raw_input_sha256": "dfd205aeecbcf824d6da92dcf6cfd8102bc604002f14aa2356923cbfcaae789b",
+        "exit_code": 2,
+        "outputs": {
+          "json": "300cddec4d58a3dab928ba767939966dc9b7700fef614006095def61d13e3230",
+          "markdown": "4413bf0b83993aad363c2776b373bd786ee1a9fb25b17ebeac136e92ac7b5262"
+        }
+      },
+      {
+        "id": "nan",
+        "input": "data/chaos-theory-cli/nan-input.txt",
+        "raw_input_sha256": "9f991a7e62c13c3e385c7700758024414364952d48d33f4f348a9915fead04b5",
+        "exit_code": 2,
+        "outputs": {
+          "json": "8d8b17ef95564d4abe6ee80e35f99ea2087d36463e677aa812763fe03eac7cd1",
+          "markdown": "eb8637e7b3bf33fc656ea1eb0e4a0103adc72c8976fe8cb41b7e234b8fed9ed6"
+        }
+      },
+      {
+        "id": "infinity",
+        "input": "data/chaos-theory-cli/infinity-input.txt",
+        "raw_input_sha256": "3782c077ea71fcb7241aba900b4f4083b18f1b952cf89068bb44abdf615f1f95",
+        "exit_code": 2,
+        "outputs": {
+          "json": "1c785d877372f8516ff4032c974bf44346463215a3a549246f349435e3575e75",
+          "markdown": "d950bb1c32a425a132c0e8b1881535674c0f3a763cfb29f54ff95519cadd2d59"
+        }
+      },
+      {
+        "id": "negative-infinity",
+        "input": "data/chaos-theory-cli/negative-infinity-input.txt",
+        "raw_input_sha256": "0236a6c7faf3825112d4cc0e0c325f92500a52bcd92c3063201a2d8c41429acd",
+        "exit_code": 2,
+        "outputs": {
+          "json": "a46d54671c733053904a41acdc440f5bb4d7dcb1bfe5bd2e4d15ae736c0bba0f",
+          "markdown": "f9645201d7a70dd3913dd0b045ba4bbf92902ce7a9e54dd0e6d7430502c9c3c3"
+        }
+      }
+    ]
+  },
+  "harness_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "checkout_replay": {
+    "passed": true,
+    "exports": [
+      {
+        "autocrlf": "false",
+        "raw_corpus_files": 148,
+        "normalized_commitments": 3,
+        "actual_cli_replays": 98,
+        "passed": true
+      },
+      {
+        "autocrlf": "true",
+        "raw_corpus_files": 148,
+        "normalized_commitments": 3,
+        "actual_cli_replays": 98,
+        "passed": true
+      }
+    ],
+    "method": "git checkout-index from staged files with core.autocrlf false/true;actual exported CLI executions;stdout bytes SHA256 matches saved JSON/Markdown,without newline normalization",
+    "subprocess_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "harness_limit": "Two parallel CLI processes; limits inherited numerical-library import threads,not the stdlib Lorenz63 RK4 engine."
+  }
+}
