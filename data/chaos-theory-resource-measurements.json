@@ -1,0 +1,99 @@
+{
+  "measured": true,
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "profile_sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+  "code_sha256": "ffac2760befd1870402e7e2100a84a82b1a018d965b1440421983486fde5d1af",
+  "protocol": "Three untraced complete in-process reports; separate tracemalloc report; one full CLI withimports/registry/serialization perworkload. Native peak covers whole helper includingimports/allworkloads/tracing; not CLIchild/perworkload.",
+  "process_peak_working_set_bytes": 53301248,
+  "under_proposed_128_MiB": true,
+  "results": [
+    {
+      "id": "small",
+      "steps": 1,
+      "dt": "1/100",
+      "horizon": "1/100",
+      "returned_times": 2,
+      "budget": {
+        "work": 24,
+        "returned_cells": 34
+      },
+      "input_sha256": "4eb00fc06936df286e9a91af179aa008782685bc3f520b354069948084d6735e",
+      "seconds": [
+        0.0007675997912883759,
+        0.0004992997273802757,
+        0.0004444001242518425
+      ],
+      "median_seconds": 0.0004992997273802757,
+      "cli_seconds": 1.4160465002059937,
+      "python_traced_peak_bytes": 49887,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "medium",
+      "steps": 1000,
+      "dt": "1/1000",
+      "horizon": "1",
+      "returned_times": 101,
+      "budget": {
+        "work": 24000,
+        "returned_cells": 1717
+      },
+      "input_sha256": "5d3ad7523ead87ea135047c0846332e918e057758eb7ee29aaa1e48db88c682e",
+      "seconds": [
+        0.031254000030457973,
+        0.03063250007107854,
+        0.03000809997320175
+      ],
+      "median_seconds": 0.03063250007107854,
+      "cli_seconds": 0.924227399751544,
+      "python_traced_peak_bytes": 417020,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "dense",
+      "steps": 4096,
+      "dt": "1/1000",
+      "horizon": "512/125",
+      "returned_times": 4097,
+      "budget": {
+        "work": 98304,
+        "returned_cells": 69649
+      },
+      "input_sha256": "a8afabeb5a0b8761d48c482fd1abe8052b8cb3796bb8e3c70cf36d0b183daa93",
+      "seconds": [
+        0.16108019975945354,
+        0.2606101999990642,
+        0.2802720000036061
+      ],
+      "median_seconds": 0.2606101999990642,
+      "cli_seconds": 1.06900139991194,
+      "python_traced_peak_bytes": 15383372,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "long",
+      "steps": 4000,
+      "dt": "1/100",
+      "horizon": "40",
+      "returned_times": 41,
+      "budget": {
+        "work": 96000,
+        "returned_cells": 697
+      },
+      "input_sha256": "354faea4874c9946399299d500f2925dfbcaed801dd8b67a6675084264faa2f3",
+      "seconds": [
+        0.23720869980752468,
+        0.23877090029418468,
+        0.19677359983325005
+      ],
+      "median_seconds": 0.23720869980752468,
+      "cli_seconds": 2.013994799926877,
+      "python_traced_peak_bytes": 190121,
+      "under_proposed_five_seconds": true
+    }
+  ],
+  "scope": "Synthetic finite dimensionless trajectories;no empirical forecast accuracy."
+}

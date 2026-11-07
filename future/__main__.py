@@ -327,7 +327,25 @@ def main():
     pm=sub.add_parser('prediction-markets')
     pm.add_argument('input',help='Offline binary LMSR synthetic play-credit ledger JSON')
     pm.add_argument('--format',choices=['json','markdown'],default='json')
+    ct=sub.add_parser('chaos-theory')
+    ct.add_argument('input',help='Bounded synthetic Lorenz63 RK4 paired trajectories JSON')
+    ct.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='chaos-theory':
+        import sys
+        from .scrying import load_input
+        from .chaos_theory import read,markdown
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8',newline='\n')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError,TypeError,KeyError,OverflowError) as error:
+                result=dict(status='rejected',error='Finite Lorenz63 request rejected',reason=str(error),result=None)
+                print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+        finally:registry.close()
+        return
     if args.command=='prediction-markets':
         import sys
         from decimal import DecimalException

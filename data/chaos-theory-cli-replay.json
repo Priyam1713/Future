@@ -1,0 +1,498 @@
+{
+  "passed": true,
+  "cli_cases": 98,
+  "accepted_pairs": 12,
+  "rejected_pairs": 37,
+  "records": [
+    {
+      "id": "one-step",
+      "input": "data/chaos-theory-cli/one-step-input.json",
+      "raw_input_sha256": "795a7fb1e0ac7a5547b2607eea778bb8987edb4158ec2848113458de2d135f6d",
+      "exit_code": 0,
+      "outputs": {
+        "json": "870b2e073bc468d8e3ed7ddf648d8479a8e45e4bba2a45fed7bb14e52424fcde",
+        "markdown": "c13804acf425c2140e2e569e4ca272f13236c2f04ba69ba9acac940ac3934fea"
+      }
+    },
+    {
+      "id": "origin",
+      "input": "data/chaos-theory-cli/origin-input.json",
+      "raw_input_sha256": "572f3b401cb334170ea9a16263727ed8f5bffb481e5c261e3e0f3ba65ca620e8",
+      "exit_code": 0,
+      "outputs": {
+        "json": "2b73d7e4f8b69fa408c4301341be7d831683027801078f499ab79a350ec16dca",
+        "markdown": "5aa4c60aa60001cd85df1c1332b920d2d2fe0bcfc89ff7deb67eafdd7b94ab6f"
+      }
+    },
+    {
+      "id": "equilibrium",
+      "input": "data/chaos-theory-cli/equilibrium-input.json",
+      "raw_input_sha256": "5250ef34e0ac75a1de770c47abbe70c71610f477cd54369e82fced86f99fbc31",
+      "exit_code": 0,
+      "outputs": {
+        "json": "e5ea58bd217337c2f0f0d81b80d446a1a5606fac9ec2f4ec5b9c7405cebfe0ef",
+        "markdown": "52faa4978e43ce8749432f7218f9c2cd4188d80646cf0fedcaf79dba3479ae08"
+      }
+    },
+    {
+      "id": "identical",
+      "input": "data/chaos-theory-cli/identical-input.json",
+      "raw_input_sha256": "2c1c3454a43bf498b3e2669e1b0f0313bfa782bdf23398f357c50861ce7ff7c2",
+      "exit_code": 0,
+      "outputs": {
+        "json": "325c199517b46983feca6a1ba8b26ac3abfeed2111b82acf7a129dce6c3f8432",
+        "markdown": "9b8d1f56a89932002d174a1bb89217e46c17a13bd33780d2e6cbb289ac881741"
+      }
+    },
+    {
+      "id": "zero-horizon",
+      "input": "data/chaos-theory-cli/zero-horizon-input.json",
+      "raw_input_sha256": "e223adf0c68ccdb792334fb7eb9f67c7b0038c4d74adaa4b0b86aebce2458295",
+      "exit_code": 0,
+      "outputs": {
+        "json": "7bf2eba3170cc4fad864c24fa70c841b8fea326d76f4dcd2027c40291b5ea8f1",
+        "markdown": "24019e4b591a984d74a05b56cb41c39750273a7226eb370202834b74de8c9b9f"
+      }
+    },
+    {
+      "id": "symmetric",
+      "input": "data/chaos-theory-cli/symmetric-input.json",
+      "raw_input_sha256": "258881677f3e160df4e570c33ab6deac101caa3f008dbcdce90f64f877770399",
+      "exit_code": 0,
+      "outputs": {
+        "json": "5cd73917ce349f7a0996744d9ad72ba35d081aa70b38e8dab0ddc14558aa8662",
+        "markdown": "49cdaa3637feb7ef5abfb50adfd8176d24248bfa5095606a1e52708a5030d50c"
+      }
+    },
+    {
+      "id": "short-coarse",
+      "input": "data/chaos-theory-cli/short-coarse-input.json",
+      "raw_input_sha256": "a2e517b547e9debb7cf571eb790dcb777150049c4e50bfddefdbaed721000578",
+      "exit_code": 0,
+      "outputs": {
+        "json": "2fd1285777745542bb9d59494e19404c043bcf6646046b46ea9f21fe610e1bf6",
+        "markdown": "dcb0de2bd4e48251c749f9d2d84c5a195adb0cf3a679237939a207e11f25bdbf"
+      }
+    },
+    {
+      "id": "short-fine",
+      "input": "data/chaos-theory-cli/short-fine-input.json",
+      "raw_input_sha256": "b448c4a265bd945737deb9bf8294dcb7a3272b73455068eb8e03dfbc8efcea9b",
+      "exit_code": 0,
+      "outputs": {
+        "json": "336405de73428676d5042c77c2f919e38d865cbc9c492354a8e43a5d5233559a",
+        "markdown": "e9f4c86a8a85dba7d834cce7ca2b9b10e2fec3713ed5ef401a0ab19f2d7f3843"
+      }
+    },
+    {
+      "id": "stride",
+      "input": "data/chaos-theory-cli/stride-input.json",
+      "raw_input_sha256": "eb591f1cb0d329452213d3e366cdbd52ae94740d9b7099ba8d842cd09247387f",
+      "exit_code": 0,
+      "outputs": {
+        "json": "0747d65dac8939298a968c548dbe3c8941a4c7723863e35f5c0bacb439bad16e",
+        "markdown": "eaed3f28fa4c6d31b4348832be8e3f862973f027c8ef3f1732a6d137a34c6d7c"
+      }
+    },
+    {
+      "id": "tiny-step",
+      "input": "data/chaos-theory-cli/tiny-step-input.json",
+      "raw_input_sha256": "30f3699688b84f276657cebaf59517d167d6ad2e218cc898eb12b8288ced719c",
+      "exit_code": 0,
+      "outputs": {
+        "json": "901e604e90878e05d9c5c4971a78517a822ba734fcaa8f58c3f2d496df15ae61",
+        "markdown": "2ffe99bb0c8c7fb2ee9e1d977b8c7ac0060a75c455a0cd92cc275e7bc36da05b"
+      }
+    },
+    {
+      "id": "long-sensitive",
+      "input": "data/chaos-theory-cli/long-sensitive-input.json",
+      "raw_input_sha256": "28038b478eaf85a08082001b5f5fb6ee3190fa93c9b8fbf9c73441a9aabfc3dd",
+      "exit_code": 0,
+      "outputs": {
+        "json": "ecbf254f4b4025e7a440471ccd3ba2c5f2a70789cee0deffe928f99b8947859b",
+        "markdown": "46baff082ff0b419d8c9b4466dadf35ee701349f7842984b0ce8e3ca9b7b840d"
+      }
+    },
+    {
+      "id": "maximum-steps",
+      "input": "data/chaos-theory-cli/maximum-steps-input.json",
+      "raw_input_sha256": "396c977d9b194b6e71fc1d8ae6d633014609f4d199619751ab47d7be5ef91e40",
+      "exit_code": 0,
+      "outputs": {
+        "json": "5671f2dc2f7a91050bc932af3a7c095366499cb85f1f0164c95a114609b1da2d",
+        "markdown": "403a837d1d80f0132cb038d55d0fe7cc663ad4c6e998c9df6039e22787b930e3"
+      }
+    },
+    {
+      "id": "sigma-zero",
+      "input": "data/chaos-theory-cli/sigma-zero-input.json",
+      "raw_input_sha256": "27d00beccc6b4c1bb6d481b2289556497a8f6914474469e038913096481e0504",
+      "exit_code": 2,
+      "outputs": {
+        "json": "b70fe54488145812b96c5e3c13ad6ec67817e674ff69fa003da799c78d1f0e18",
+        "markdown": "8b495efb031821d347aa2925f4a25af0c7c39b79f06795d64292b2270e85bb69"
+      }
+    },
+    {
+      "id": "rho-negative",
+      "input": "data/chaos-theory-cli/rho-negative-input.json",
+      "raw_input_sha256": "08882049520ecec7f70cea3341d1749c25f304091a459bf4f5ac5c54ad951ac2",
+      "exit_code": 2,
+      "outputs": {
+        "json": "b70fe54488145812b96c5e3c13ad6ec67817e674ff69fa003da799c78d1f0e18",
+        "markdown": "8b495efb031821d347aa2925f4a25af0c7c39b79f06795d64292b2270e85bb69"
+      }
+    },
+    {
+      "id": "beta-too-large",
+      "input": "data/chaos-theory-cli/beta-too-large-input.json",
+      "raw_input_sha256": "ea0c9133f19bc6d30474e89d8d318f097de94074be5c01eb2521bc960f7ecd19",
+      "exit_code": 2,
+      "outputs": {
+        "json": "b70fe54488145812b96c5e3c13ad6ec67817e674ff69fa003da799c78d1f0e18",
+        "markdown": "8b495efb031821d347aa2925f4a25af0c7c39b79f06795d64292b2270e85bb69"
+      }
+    },
+    {
+      "id": "parameter-float",
+      "input": "data/chaos-theory-cli/parameter-float-input.json",
+      "raw_input_sha256": "caab00485c9120579cc96a7e52e722a348dfc416a67e7a5ef4d4feb9e6e797e3",
+      "exit_code": 2,
+      "outputs": {
+        "json": "9c1f073ac62aa4cd983bb8aec0439d4fe8b117dc30951b5c0d73ea66ea5f53e5",
+        "markdown": "6b20b9ef56b645f936455e6ae0015372885c6add93f7ee5d34d07a83ec25c6cb"
+      }
+    },
+    {
+      "id": "parameter-bool",
+      "input": "data/chaos-theory-cli/parameter-bool-input.json",
+      "raw_input_sha256": "7b44fa06f16dd3a1a921048c727eb0d7a96d03c5f4b6f9925641f2209fd8fd00",
+      "exit_code": 2,
+      "outputs": {
+        "json": "9c1f073ac62aa4cd983bb8aec0439d4fe8b117dc30951b5c0d73ea66ea5f53e5",
+        "markdown": "6b20b9ef56b645f936455e6ae0015372885c6add93f7ee5d34d07a83ec25c6cb"
+      }
+    },
+    {
+      "id": "bad-fraction",
+      "input": "data/chaos-theory-cli/bad-fraction-input.json",
+      "raw_input_sha256": "c4b6da6e4d34f63bc8a3d3e8fc7907de0d474aab180a52bab0fd2050aa2fd03a",
+      "exit_code": 2,
+      "outputs": {
+        "json": "9c1f073ac62aa4cd983bb8aec0439d4fe8b117dc30951b5c0d73ea66ea5f53e5",
+        "markdown": "6b20b9ef56b645f936455e6ae0015372885c6add93f7ee5d34d07a83ec25c6cb"
+      }
+    },
+    {
+      "id": "nonfinite",
+      "input": "data/chaos-theory-cli/nonfinite-input.json",
+      "raw_input_sha256": "db8c409d0308a11e487e1ec9aa66d1fbd197df7f7b587ed0b3462eeccd5918a7",
+      "exit_code": 2,
+      "outputs": {
+        "json": "9c1f073ac62aa4cd983bb8aec0439d4fe8b117dc30951b5c0d73ea66ea5f53e5",
+        "markdown": "6b20b9ef56b645f936455e6ae0015372885c6add93f7ee5d34d07a83ec25c6cb"
+      }
+    },
+    {
+      "id": "decimal",
+      "input": "data/chaos-theory-cli/decimal-input.json",
+      "raw_input_sha256": "81248fe5f45296ad00735239cb9855a53e0d60e940f493a7370db9ca51cff8b9",
+      "exit_code": 2,
+      "outputs": {
+        "json": "9c1f073ac62aa4cd983bb8aec0439d4fe8b117dc30951b5c0d73ea66ea5f53e5",
+        "markdown": "6b20b9ef56b645f936455e6ae0015372885c6add93f7ee5d34d07a83ec25c6cb"
+      }
+    },
+    {
+      "id": "huge-number",
+      "input": "data/chaos-theory-cli/huge-number-input.json",
+      "raw_input_sha256": "92ef1d0c23c5d884d040c4f0d26cff7eb74be6b79e95f7d8b680d28b49b3ead2",
+      "exit_code": 2,
+      "outputs": {
+        "json": "9c1f073ac62aa4cd983bb8aec0439d4fe8b117dc30951b5c0d73ea66ea5f53e5",
+        "markdown": "6b20b9ef56b645f936455e6ae0015372885c6add93f7ee5d34d07a83ec25c6cb"
+      }
+    },
+    {
+      "id": "negative-zero",
+      "input": "data/chaos-theory-cli/negative-zero-input.json",
+      "raw_input_sha256": "692b1b1003503a29ca836ebc698ed92727d0c0f70fb8507de7a565055e95c94d",
+      "exit_code": 2,
+      "outputs": {
+        "json": "b70fe54488145812b96c5e3c13ad6ec67817e674ff69fa003da799c78d1f0e18",
+        "markdown": "8b495efb031821d347aa2925f4a25af0c7c39b79f06795d64292b2270e85bb69"
+      }
+    },
+    {
+      "id": "state-size",
+      "input": "data/chaos-theory-cli/state-size-input.json",
+      "raw_input_sha256": "5593ec32a540cfdb5701fe3d67a3e63bb6eebdee6e5871d1cbb1561381527253",
+      "exit_code": 2,
+      "outputs": {
+        "json": "3b1e75195e9cfe21ae8ba2557bccb1d287a6b4248f54815316d5bc8abeb81be7",
+        "markdown": "88c9ab2bfed2c90cee16e416de3ce0287fcc273e7a564a65b3985b34a379be87"
+      }
+    },
+    {
+      "id": "state-too-large",
+      "input": "data/chaos-theory-cli/state-too-large-input.json",
+      "raw_input_sha256": "380a3bd08431b5db500aaabe5e17ed7ebd0364759c677846883f4a3f815a045c",
+      "exit_code": 2,
+      "outputs": {
+        "json": "586f1ce8a0e1138c8efa6626c96afdbf94e37b54b387c832344b33378df9e79a",
+        "markdown": "f500da9b3697c8fe4a0beea720cda73f304d46f8d299c6f9987ecff88b2948ca"
+      }
+    },
+    {
+      "id": "missing-perturbation",
+      "input": "data/chaos-theory-cli/missing-perturbation-input.json",
+      "raw_input_sha256": "7db02b60f1b805220fafea355d660e1fd38c2efd39a3ade82df4fec3c1e30914",
+      "exit_code": 2,
+      "outputs": {
+        "json": "3b1e75195e9cfe21ae8ba2557bccb1d287a6b4248f54815316d5bc8abeb81be7",
+        "markdown": "88c9ab2bfed2c90cee16e416de3ce0287fcc273e7a564a65b3985b34a379be87"
+      }
+    },
+    {
+      "id": "dt-zero",
+      "input": "data/chaos-theory-cli/dt-zero-input.json",
+      "raw_input_sha256": "649cf8976e2b8fcc4c2ea476e8cbef9b1e4e60ee6c5d472fa751bf0bc6f8f312",
+      "exit_code": 2,
+      "outputs": {
+        "json": "09ac3fa59736652e3f877cd22ab3d7b81a2d0fe519a557a178c876b767630542",
+        "markdown": "5c3c967c15f90a32e508e0711f8dd5fa1bda7a27fc15a86631bcf590ec7bf2bb"
+      }
+    },
+    {
+      "id": "dt-small",
+      "input": "data/chaos-theory-cli/dt-small-input.json",
+      "raw_input_sha256": "9167798f469404fe97be2e2cdff22a67ab8e4bba4063b9bddbd06d1ae333a46c",
+      "exit_code": 2,
+      "outputs": {
+        "json": "09ac3fa59736652e3f877cd22ab3d7b81a2d0fe519a557a178c876b767630542",
+        "markdown": "5c3c967c15f90a32e508e0711f8dd5fa1bda7a27fc15a86631bcf590ec7bf2bb"
+      }
+    },
+    {
+      "id": "dt-large",
+      "input": "data/chaos-theory-cli/dt-large-input.json",
+      "raw_input_sha256": "49fc0d9a6db4f649f1dde907f1d7460a6890d163396b9447235dc0a47438be73",
+      "exit_code": 2,
+      "outputs": {
+        "json": "09ac3fa59736652e3f877cd22ab3d7b81a2d0fe519a557a178c876b767630542",
+        "markdown": "5c3c967c15f90a32e508e0711f8dd5fa1bda7a27fc15a86631bcf590ec7bf2bb"
+      }
+    },
+    {
+      "id": "steps-negative",
+      "input": "data/chaos-theory-cli/steps-negative-input.json",
+      "raw_input_sha256": "1141247864250e0cb4ea4420e8f702499cab254f17a5ba1e8123e94b2c6f0046",
+      "exit_code": 2,
+      "outputs": {
+        "json": "fc0b50378b7d4d371794ca49eb1d1d1cd413e7e4c570e49bf2abec33ea61f9a0",
+        "markdown": "6d5ab39beb831e57fef999e53509ce019e9d3fc3feb754aa88691d8ebd985071"
+      }
+    },
+    {
+      "id": "steps-large",
+      "input": "data/chaos-theory-cli/steps-large-input.json",
+      "raw_input_sha256": "d6d21f18a35cfb82183780cc9ea534fbe19734f8d837e7848c89ad0cdf9ed86e",
+      "exit_code": 2,
+      "outputs": {
+        "json": "fc0b50378b7d4d371794ca49eb1d1d1cd413e7e4c570e49bf2abec33ea61f9a0",
+        "markdown": "6d5ab39beb831e57fef999e53509ce019e9d3fc3feb754aa88691d8ebd985071"
+      }
+    },
+    {
+      "id": "steps-bool",
+      "input": "data/chaos-theory-cli/steps-bool-input.json",
+      "raw_input_sha256": "68bf00d14ace07fa83cb8c4adef4a20b2effa3598c6c5227dcfdd35c89d31e72",
+      "exit_code": 2,
+      "outputs": {
+        "json": "fc0b50378b7d4d371794ca49eb1d1d1cd413e7e4c570e49bf2abec33ea61f9a0",
+        "markdown": "6d5ab39beb831e57fef999e53509ce019e9d3fc3feb754aa88691d8ebd985071"
+      }
+    },
+    {
+      "id": "stride-zero",
+      "input": "data/chaos-theory-cli/stride-zero-input.json",
+      "raw_input_sha256": "d714e58e43c5bb1bc35cde7cf4a481bc716083a4d69556b68f13eeeea8147f21",
+      "exit_code": 2,
+      "outputs": {
+        "json": "fc0b50378b7d4d371794ca49eb1d1d1cd413e7e4c570e49bf2abec33ea61f9a0",
+        "markdown": "6d5ab39beb831e57fef999e53509ce019e9d3fc3feb754aa88691d8ebd985071"
+      }
+    },
+    {
+      "id": "solver-rk45",
+      "input": "data/chaos-theory-cli/solver-rk45-input.json",
+      "raw_input_sha256": "1c5fa80a16cfbdf5c2fd8c8cad8efe7a125f923a51a7bab0834b7b468fda50c1",
+      "exit_code": 2,
+      "outputs": {
+        "json": "a1e69833c03375f42b43b0e6ea1323654c913252bc8bc0c4fd7bcd0f950b9b76",
+        "markdown": "84998756603ccca3c68c6e2a2af3e12b2f5240fe9185bea71cf91c612edebb5b"
+      }
+    },
+    {
+      "id": "solver-lyapunov",
+      "input": "data/chaos-theory-cli/solver-lyapunov-input.json",
+      "raw_input_sha256": "98804277f09a4fae8d071e56c530d3937e61849598dce11eb789bb0ca7c1eeff",
+      "exit_code": 2,
+      "outputs": {
+        "json": "a1e69833c03375f42b43b0e6ea1323654c913252bc8bc0c4fd7bcd0f950b9b76",
+        "markdown": "84998756603ccca3c68c6e2a2af3e12b2f5240fe9185bea71cf91c612edebb5b"
+      }
+    },
+    {
+      "id": "source",
+      "input": "data/chaos-theory-cli/source-input.json",
+      "raw_input_sha256": "ceece7a0671fccf0f0237b9713449727da78ad234b8bf8783513c4c18da50c61",
+      "exit_code": 2,
+      "outputs": {
+        "json": "344655fbbd23cf655745566eacaf2a1d0085a00a628a06fcc400d1ae10d0f5f6",
+        "markdown": "5c6d3ec9e8cef8fcf2b491c531222b500d41c4ca489d9588e228b2bd86fc6450"
+      }
+    },
+    {
+      "id": "rights",
+      "input": "data/chaos-theory-cli/rights-input.json",
+      "raw_input_sha256": "0001455bc1858d68ef45b9d442138796af1e6a84b06ac10d204de167003c368e",
+      "exit_code": 2,
+      "outputs": {
+        "json": "52453a68b3f9a604a4f629bed8d32557a58e4336076cc3996ad826bf6543ee3c",
+        "markdown": "a9c63dba305ce368646eac2b80ad823ba6b55cb20d874434f31b02f1a07d4a31"
+      }
+    },
+    {
+      "id": "not-synthetic",
+      "input": "data/chaos-theory-cli/not-synthetic-input.json",
+      "raw_input_sha256": "e78f0829c77d44749082711c9c12d262739b8b0a3fe3bd4a53ca05bb28ab543b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "52453a68b3f9a604a4f629bed8d32557a58e4336076cc3996ad826bf6543ee3c",
+        "markdown": "a9c63dba305ce368646eac2b80ad823ba6b55cb20d874434f31b02f1a07d4a31"
+      }
+    },
+    {
+      "id": "empty-attribution",
+      "input": "data/chaos-theory-cli/empty-attribution-input.json",
+      "raw_input_sha256": "ed993eac4916ed777ee06e4471305a7c77348675650bb993f766aac183f58859",
+      "exit_code": 2,
+      "outputs": {
+        "json": "6c7c4ab0d6b0cb8825d52e33d354e4b045f62f0c8dda8ffa2ca7f109e0ba8588",
+        "markdown": "76153fc9198782c8b5b9a6f4857abb58c93c32ac93e9ce8479a4b19583899f2a"
+      }
+    },
+    {
+      "id": "snapshot",
+      "input": "data/chaos-theory-cli/snapshot-input.json",
+      "raw_input_sha256": "2e61cfaac330753bf8828cfa95ba14804df49434294ea9f1049cb8e565f1725e",
+      "exit_code": 2,
+      "outputs": {
+        "json": "8fe0c73e36bf0078287d1b5a45b074e15baac45263ade5debdf54fcceb1c7cff",
+        "markdown": "61f3999210e9e0c3e909c8bd88cf326b9649bcd202a9f7d06b06ae5bf621e210"
+      }
+    },
+    {
+      "id": "profile",
+      "input": "data/chaos-theory-cli/profile-input.json",
+      "raw_input_sha256": "c21cf74fbecc99c78d69ef34aed3b5d8c688a032e44f480013f856d4735e18c2",
+      "exit_code": 2,
+      "outputs": {
+        "json": "1d56ebf656cc5240d53b1686227f41d95a3de4be02ff522f152cd70ef6d030ca",
+        "markdown": "f40312a8ef4edc1816b000243b1f8eaf01f99b5a2993d78e5c9e4d65de47b35e"
+      }
+    },
+    {
+      "id": "catalog",
+      "input": "data/chaos-theory-cli/catalog-input.json",
+      "raw_input_sha256": "b7f6dd3b90b42ac116fd6363ce11337e295c0c2670cd1da9cf3e3a3533208bb8",
+      "exit_code": 2,
+      "outputs": {
+        "json": "1d56ebf656cc5240d53b1686227f41d95a3de4be02ff522f152cd70ef6d030ca",
+        "markdown": "f40312a8ef4edc1816b000243b1f8eaf01f99b5a2993d78e5c9e4d65de47b35e"
+      }
+    },
+    {
+      "id": "version",
+      "input": "data/chaos-theory-cli/version-input.json",
+      "raw_input_sha256": "374dab0cf44b9c0f88fb6745780dcd38aa198fd255fffc8744b4dbccdda26353",
+      "exit_code": 2,
+      "outputs": {
+        "json": "fc0b50378b7d4d371794ca49eb1d1d1cd413e7e4c570e49bf2abec33ea61f9a0",
+        "markdown": "6d5ab39beb831e57fef999e53509ce019e9d3fc3feb754aa88691d8ebd985071"
+      }
+    },
+    {
+      "id": "extra",
+      "input": "data/chaos-theory-cli/extra-input.json",
+      "raw_input_sha256": "d9d861f12697a5554697810512a522d5749eb26438be414a8d3dbce07c16e3bb",
+      "exit_code": 2,
+      "outputs": {
+        "json": "fa186e98665b2aaa6449e657049dbf67107488c5d0bb0729cca7574cc6b0b84f",
+        "markdown": "be36699dddead6538fcf1df74169fc415d5f05eaef89813b591845384c7ea37e"
+      }
+    },
+    {
+      "id": "time-product",
+      "input": "data/chaos-theory-cli/time-product-input.json",
+      "raw_input_sha256": "d302b5a81e8053af7a98d211663eea506a264c19c8452ce562a3f0e98442bef7",
+      "exit_code": 2,
+      "outputs": {
+        "json": "09ac3fa59736652e3f877cd22ab3d7b81a2d0fe519a557a178c876b767630542",
+        "markdown": "5c3c967c15f90a32e508e0711f8dd5fa1bda7a27fc15a86631bcf590ec7bf2bb"
+      }
+    },
+    {
+      "id": "unstable-stage",
+      "input": "data/chaos-theory-cli/unstable-stage-input.json",
+      "raw_input_sha256": "ac7ea35b0acb9be273fad797c24ff72296e756c9a301947d061772cb6887d34e",
+      "exit_code": 2,
+      "outputs": {
+        "json": "081202738bdb9ca2e51b42c875a60b1ad9396782dfa1418a8c33aaf0123447f3",
+        "markdown": "7aec73373ce5188e78078eba5d49d7d65ac7fa4176e65a04d1e0b4a1b32a7fb8"
+      }
+    },
+    {
+      "id": "duplicate",
+      "input": "data/chaos-theory-cli/duplicate-input.txt",
+      "raw_input_sha256": "dfd205aeecbcf824d6da92dcf6cfd8102bc604002f14aa2356923cbfcaae789b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "300cddec4d58a3dab928ba767939966dc9b7700fef614006095def61d13e3230",
+        "markdown": "4413bf0b83993aad363c2776b373bd786ee1a9fb25b17ebeac136e92ac7b5262"
+      }
+    },
+    {
+      "id": "nan",
+      "input": "data/chaos-theory-cli/nan-input.txt",
+      "raw_input_sha256": "9f991a7e62c13c3e385c7700758024414364952d48d33f4f348a9915fead04b5",
+      "exit_code": 2,
+      "outputs": {
+        "json": "8d8b17ef95564d4abe6ee80e35f99ea2087d36463e677aa812763fe03eac7cd1",
+        "markdown": "eb8637e7b3bf33fc656ea1eb0e4a0103adc72c8976fe8cb41b7e234b8fed9ed6"
+      }
+    },
+    {
+      "id": "infinity",
+      "input": "data/chaos-theory-cli/infinity-input.txt",
+      "raw_input_sha256": "3782c077ea71fcb7241aba900b4f4083b18f1b952cf89068bb44abdf615f1f95",
+      "exit_code": 2,
+      "outputs": {
+        "json": "1c785d877372f8516ff4032c974bf44346463215a3a549246f349435e3575e75",
+        "markdown": "d950bb1c32a425a132c0e8b1881535674c0f3a763cfb29f54ff95519cadd2d59"
+      }
+    },
+    {
+      "id": "negative-infinity",
+      "input": "data/chaos-theory-cli/negative-infinity-input.txt",
+      "raw_input_sha256": "0236a6c7faf3825112d4cc0e0c325f92500a52bcd92c3063201a2d8c41429acd",
+      "exit_code": 2,
+      "outputs": {
+        "json": "a46d54671c733053904a41acdc440f5bb4d7dcb1bfe5bd2e4d15ae736c0bba0f",
+        "markdown": "f9645201d7a70dd3913dd0b045ba4bbf92902ce7a9e54dd0e6d7430502c9c3c3"
+      }
+    }
+  ]
+}

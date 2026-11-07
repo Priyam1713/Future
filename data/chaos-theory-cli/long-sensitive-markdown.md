@@ -1,0 +1,472 @@
+# Chaos theory — finite Lorenz63 simulation
+
+```json
+{
+  "status": "accepted",
+  "technique_id": 59,
+  "schema_version": 1,
+  "profile": {
+    "id": "chaos-theory-lorenz63-rk4-v1",
+    "version": 1,
+    "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+    "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+  },
+  "request": {
+    "schema_version": 1,
+    "profile": {
+      "id": "chaos-theory-lorenz63-rk4-v1",
+      "version": 1,
+      "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+      "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+    },
+    "parameters": {
+      "sigma": "10",
+      "rho": "28",
+      "beta": "8/3"
+    },
+    "initial": [
+      "1",
+      "1",
+      "1"
+    ],
+    "perturbed_initial": [
+      "1000001/1000000",
+      "1",
+      "1"
+    ],
+    "integration": {
+      "solver": "classical_rk4",
+      "dt": "1/100",
+      "steps": 2000,
+      "trace_stride": 200
+    },
+    "provenance": {
+      "synthetic": true,
+      "source_ref": "chaos-theory-ucar-v1",
+      "rights": "self_authored",
+      "attribution": "Original synthetic educational fixture",
+      "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+      "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+    }
+  },
+  "input_sha256": "20271af6979bc47993dc71a9a81519d3a1b8eee807f37d0c22034288f8ab5790",
+  "model_sha256": "dbb1412bf0862be68a408fe046b644daf2ed8515a4a5509460ada1a148433bff",
+  "schema_sha256": "f9f63b00543be666baecdaafcecffdae3f4309d8bc1d60c422eb34e9ea35444f",
+  "source_manifest_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1",
+  "source_freeze_sha256": "9663f768b409a7fe59d56f65415df4121d005836f705dc1207beca56b0d88695",
+  "code_sha256": "ffac2760befd1870402e7e2100a84a82b1a018d965b1440421983486fde5d1af",
+  "budget": {
+    "work": 48000,
+    "returned_cells": 187
+  },
+  "rows": [
+    {
+      "time": "0",
+      "coarse_base": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "coarse_perturbed": [
+        1.000001,
+        1.0,
+        1.0
+      ],
+      "refined_base": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "refined_perturbed": [
+        1.000001,
+        1.0,
+        1.0
+      ],
+      "coarse_separation": 9.999999999177334e-07,
+      "refined_separation": 9.999999999177334e-07,
+      "base_refinement_difference": 0.0,
+      "perturbed_refinement_difference": 0.0
+    },
+    {
+      "time": "2",
+      "coarse_base": [
+        -8.173442490346254,
+        -9.561995763765367,
+        24.620577816379946
+      ],
+      "coarse_perturbed": [
+        -8.173443129200587,
+        -9.561996640041093,
+        24.62057832140932
+      ],
+      "refined_base": [
+        -8.173497619297175,
+        -9.562021024515222,
+        24.620699415409394
+      ],
+      "refined_perturbed": [
+        -8.173498258139574,
+        -9.56202190075527,
+        24.62069992045948
+      ],
+      "coarse_separation": 1.196264466543692e-06,
+      "refined_separation": 1.1962407036407517e-06,
+      "base_refinement_difference": 0.00013588094301853138,
+      "perturbed_refinement_difference": 0.00013588095007954965
+    },
+    {
+      "time": "4",
+      "coarse_base": [
+        -10.090694528965882,
+        -10.93059374674114,
+        27.971924189684355
+      ],
+      "coarse_perturbed": [
+        -10.090694963507772,
+        -10.930593345763931,
+        27.97192584484291
+      ],
+      "refined_base": [
+        -10.090696302349045,
+        -10.93044741484208,
+        27.972115922938983
+      ],
+      "refined_perturbed": [
+        -10.090696736827308,
+        -10.93044701377972,
+        27.972117578021813
+      ],
+      "coarse_separation": 1.7576004159070618e-06,
+      "refined_separation": 1.757532802467665e-06,
+      "base_refinement_difference": 0.00024120076803475462,
+      "perturbed_refinement_difference": 0.0002412007590311966
+    },
+    {
+      "time": "6",
+      "coarse_base": [
+        -9.742366615567768,
+        -7.707169464228695,
+        30.88620362936301
+      ],
+      "coarse_perturbed": [
+        -9.742365768798992,
+        -7.707167861572235,
+        30.88620344536787
+      ],
+      "refined_base": [
+        -9.742129806415205,
+        -7.706853468904856,
+        30.886012846589335
+      ],
+      "refined_perturbed": [
+        -9.742128959599048,
+        -7.706851866352075,
+        30.886012662397235
+      ],
+      "coarse_separation": 1.8219163813408146e-06,
+      "refined_separation": 1.821867105283569e-06,
+      "base_refinement_difference": 0.00043855408578282167,
+      "perturbed_refinement_difference": 0.00043855412234515036
+    },
+    {
+      "time": "8",
+      "coarse_base": [
+        -7.012807499828467,
+        -4.585868132223253,
+        28.38615572819984
+      ],
+      "coarse_perturbed": [
+        -7.012806459937218,
+        -4.585867684446005,
+        28.386154019910986
+      ],
+      "refined_base": [
+        -7.012504955587532,
+        -4.585889971414184,
+        28.385482340602593
+      ],
+      "refined_perturbed": [
+        -7.012503915805718,
+        -4.585889523827289,
+        28.385480632299068
+      ],
+      "coarse_separation": 2.0494216444988804e-06,
+      "refined_separation": 2.0493367665188964e-06,
+      "base_refinement_difference": 0.000738553196532345,
+      "perturbed_refinement_difference": 0.0007385531707097531
+    },
+    {
+      "time": "10",
+      "coarse_base": [
+        -4.902819483748822,
+        -3.7434076752715657,
+        24.691885987964348
+      ],
+      "coarse_perturbed": [
+        -4.902818926490316,
+        -3.7434078604783565,
+        24.691884331251302
+      ],
+      "refined_base": [
+        -4.902695615445928,
+        -3.743864676033989,
+        24.690890456472452
+      ],
+      "refined_perturbed": [
+        -4.9026950583624735,
+        -3.743864861392303,
+        24.690888799832013
+      ],
+      "coarse_separation": 1.7577078011429412e-06,
+      "refined_separation": 1.7575998474168498e-06,
+      "base_refinement_difference": 0.0011023955754053075,
+      "perturbed_refinement_difference": 0.0011023955529818762
+    },
+    {
+      "time": "12",
+      "coarse_base": [
+        -3.34356842634788,
+        -1.981261293883573,
+        23.598317045486905
+      ],
+      "coarse_perturbed": [
+        -3.3435678734743233,
+        -1.9812610149587333,
+        23.59831610815688
+      ],
+      "refined_base": [
+        -3.3433024919671177,
+        -1.9820975248007064,
+        23.59622600030056
+      ],
+      "refined_perturbed": [
+        -3.3433019391952756,
+        -1.982097246001749,
+        23.596225062821922
+      ],
+      "coarse_separation": 1.1234125742355774e-06,
+      "refined_separation": 1.1234552799895797e-06,
+      "base_refinement_difference": 0.0022677021878924346,
+      "perturbed_refinement_difference": 0.0022677023594206256
+    },
+    {
+      "time": "14",
+      "coarse_base": [
+        8.749137559984142,
+        16.247109061841922,
+        12.39098223189276
+      ],
+      "coarse_perturbed": [
+        8.749173611502231,
+        16.247164008022658,
+        12.391043296824785
+      ],
+      "refined_base": [
+        8.727082458897664,
+        16.213781377243592,
+        12.352749559253038
+      ],
+      "refined_perturbed": [
+        8.727118600717038,
+        16.213836568224135,
+        12.352810592139408
+      ],
+      "coarse_separation": 8.970908904443284e-05,
+      "refined_separation": 8.987373731834918e-05,
+      "base_refinement_difference": 0.05530731689204141,
+      "perturbed_refinement_difference": 0.0553071555209489
+    },
+    {
+      "time": "16",
+      "coarse_base": [
+        -6.579354658082066,
+        -10.806497343312206,
+        15.857633386130773
+      ],
+      "coarse_perturbed": [
+        -6.579331003803208,
+        -10.806466282298462,
+        15.857594544630478
+      ],
+      "refined_base": [
+        -6.598742234945622,
+        -10.832677856896968,
+        15.887273284348485
+      ],
+      "refined_perturbed": [
+        -6.598718712702635,
+        -10.832647077149927,
+        15.887234432004007
+      ],
+      "coarse_separation": 5.507243982435812e-05,
+      "refined_separation": 5.4865229557694106e-05,
+      "base_refinement_difference": 0.04404339898961599,
+      "perturbed_refinement_difference": 0.04404361700563302
+    },
+    {
+      "time": "18",
+      "coarse_base": [
+        0.8353916008459104,
+        -0.8464235152459104,
+        22.289910292953977
+      ],
+      "coarse_perturbed": [
+        0.8354490288187002,
+        -0.8463345353426641,
+        22.289879936708036
+      ],
+      "refined_base": [
+        0.7934205750847281,
+        -0.910320432873993,
+        22.309842054371508
+      ],
+      "refined_perturbed": [
+        0.7934768127020956,
+        -0.9102311051076366,
+        22.30980699848632
+      ],
+      "coarse_separation": 0.0001101675855596623,
+      "refined_separation": 0.000111225152441994,
+      "base_refinement_difference": 0.07900416570675999,
+      "perturbed_refinement_difference": 0.07900333122460386
+    },
+    {
+      "time": "20",
+      "coarse_base": [
+        13.472905743332278,
+        12.691475056103124,
+        34.39214731917505
+      ],
+      "coarse_perturbed": [
+        13.472468362310991,
+        12.691400755561837,
+        34.39117517138226
+      ],
+      "refined_base": [
+        13.794281127918474,
+        12.953535894180956,
+        34.9025023279788
+      ],
+      "refined_perturbed": [
+        13.793822270724622,
+        12.95286124082143,
+        34.90206476262487
+      ],
+      "coarse_separation": 0.00106859443160259,
+      "refined_separation": 0.0009258350386711787,
+      "base_refinement_difference": 0.6575866906218947,
+      "perturbed_refinement_difference": 0.6577523046291354
+    }
+  ],
+  "diagnostics": {
+    "maxima_over_all_aligned_times": {
+      "coarse_separation": 0.008773218612298506,
+      "refined_separation": 0.006929701855737529,
+      "base_refinement_difference": 5.586768413486759,
+      "perturbed_refinement_difference": 5.588505997703779
+    },
+    "initial_separation": 9.999999999177334e-07,
+    "final_refined_amplification": 925.8350387473441,
+    "amplification_status": "finite_pair_ratio_only",
+    "integrated_coarse_steps_per_trajectory": 2000,
+    "integrated_refined_steps_per_trajectory": 4000,
+    "aligned_times": 2001,
+    "returned_times": 11,
+    "horizon": "20",
+    "lyapunov_exponent": null,
+    "validated_forecast_horizon": null,
+    "refinement_is_rigorous_error_bound": false
+  },
+  "sources": [
+    {
+      "id": "chaos-theory-lorenz-v1",
+      "technique_id": 59,
+      "rank": 1,
+      "author": "Edward N. Lorenz",
+      "edition": "Deterministic Nonperiodic Flow;1963;JAS20(2),130–141;DOI10.1175/1520-0469(1963)020<0130:DNF>2.0.CO;2",
+      "url": "https://journals.ametsoc.org/abstract/journals/atsc/20/2/1520-0469_1963_020_0130_dnf_2_0_co_2.xml",
+      "locator": "Official abstract/metadata inspected; original ranked full-text URL403. Sensitivity context only; no full-text replication claim.",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by source owners; mathematical facts and original synthetic fixtures only; no bodies,figures,data or third-party code redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "chaos-theory-strogatz-v1",
+      "technique_id": 59,
+      "rank": 2,
+      "author": "Steven H. Strogatz",
+      "edition": "Nonlinear Dynamics and Chaos;3rdedition;2024;616pages;Chapman and Hall",
+      "url": "https://www.routledge.com/Nonlinear-Dynamics-and-Chaos/Strogatz/p/book/9780429398490",
+      "locator": "Official indexed publisher metadata only; direct403; no chapters inspected or inferred.",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by source owners; mathematical facts and original synthetic fixtures only; no bodies,figures,data or third-party code redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "chaos-theory-sugihara-may-v1",
+      "technique_id": 59,
+      "rank": 3,
+      "author": "George Sugihara and Robert M. May",
+      "edition": "Nature344,734–741;19April1990;DOI10.1038/344734a0",
+      "url": "https://www.nature.com/articles/344734a0",
+      "locator": "Official abstract/metadata inspected; nonlinear forecasting context,not an RK4 recipe. Author-hosted scanned witness copyright restrictions observed; no methods OCR or empirical reproduction.",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by source owners; mathematical facts and original synthetic fixtures only; no bodies,figures,data or third-party code redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "chaos-theory-ucar-v1",
+      "technique_id": 59,
+      "rank": null,
+      "author": "UCAR DART developers",
+      "edition": "DART10.10.1 Lorenz63 model documentation",
+      "url": "https://docs.dart.ucar.edu/en/v10.10.1/models/lorenz_63/readme.html",
+      "locator": "Equations/defaults and namelist solver sections inspected. RK2 default distinguished from optional classical RK4. Dimensionless model time.",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by source owners; mathematical facts and original synthetic fixtures only; no bodies,figures,data or third-party code redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "chaos-theory-moler-v1",
+      "technique_id": 59,
+      "rank": null,
+      "author": "Cleve Moler / MathWorks",
+      "edition": "Ordinary Differential Equation Suite;12May2014",
+      "url": "https://blogs.mathworks.com/cleve/2014/05/12/ordinary-differential-equation-suite/",
+      "locator": "Classical RK4 four-stage formula inspected. Facts independently reimplemented; fixed-step method has no automatic error estimate.",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by source owners; mathematical facts and original synthetic fixtures only; no bodies,figures,data or third-party code redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    }
+  ],
+  "numerics": {
+    "arithmetic": "IEEE754 binary64 scalar Python",
+    "oracle": "ExactFraction RK4 stages and independent Taylor coefficient recurrence",
+    "one_step_absolute_tolerance": "1e-12",
+    "model_time": "dimensionless"
+  },
+  "empirical_forecast_accuracy_validated": false,
+  "limitations": [
+    "Certified Lyapunov exponent or forecast horizon",
+    "Nonlinear delay embedding",
+    "Reservoir computing",
+    "Empirical weather-like ensembles",
+    "Random/stochastic/data assimilation modes",
+    "Initial-state separation and step-refinement difference are separate diagnostics.",
+    "No original Lorenz RK2 replication or long-horizon accuracy certification.",
+    "Binary64 integration uses approximate h; displayed times are exact nominal grid values."
+  ],
+  "report_sha256": "7bfb3159440067407f38cee1b6ce16724ea3959d7cab67dcad392af4eaa2ffc0"
+}
+```
+

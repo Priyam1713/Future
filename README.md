@@ -1865,3 +1865,9 @@ Technique #56: `python -m future causal-ai data/causal-ai-cli/confounding-input.
 Technique #57: `python -m future collective-intelligence data/collective-intelligence-cli/weighted-input.json --format markdown` runs exact versioned binary forecast pooling and evaluation. Latest eligible revisions, precommitted weights, missingness/dependence and matched scoring are explicit. Software verification does not certify independent crowd wisdom or empirical forecasting skill.
 
 Technique #58: `python -m future prediction-markets data/prediction-markets-cli/settle-yes-input.json --format markdown` runs an offline binary LMSR synthetic play-credit ledger. Quotes, long-only execution, idempotent intents, strict cutoff, declared resolution and funded accounting are explicit. No real-money or external trading/settlement services are supported.
+
+### Technique59: finite Lorenz63 simulation
+
+`python -m future chaos-theory data/chaos-theory-cli/one-step-input.json --format markdown`
+
+Classical scalar RK4 integrates explicit synthetic initial pairs at h and h/2. Reports separate initial-condition separation from step-refinement differences. Dimensionless finite horizons; no certified Lyapunov exponent, rigorous error bound, weather skill or empirical predictability. Exact contract: `knowledge/chaos_theory_profile_v1.json`.

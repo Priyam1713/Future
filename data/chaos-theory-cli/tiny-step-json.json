@@ -1,0 +1,224 @@
+{
+  "status": "accepted",
+  "technique_id": 59,
+  "schema_version": 1,
+  "profile": {
+    "id": "chaos-theory-lorenz63-rk4-v1",
+    "version": 1,
+    "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+    "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+  },
+  "request": {
+    "schema_version": 1,
+    "profile": {
+      "id": "chaos-theory-lorenz63-rk4-v1",
+      "version": 1,
+      "sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+      "catalog_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1"
+    },
+    "parameters": {
+      "sigma": "10",
+      "rho": "28",
+      "beta": "8/3"
+    },
+    "initial": [
+      "1",
+      "1",
+      "1"
+    ],
+    "perturbed_initial": [
+      "1000001/1000000",
+      "1",
+      "1"
+    ],
+    "integration": {
+      "solver": "classical_rk4",
+      "dt": "1/100000",
+      "steps": 10,
+      "trace_stride": 4096
+    },
+    "provenance": {
+      "synthetic": true,
+      "source_ref": "chaos-theory-ucar-v1",
+      "rights": "self_authored",
+      "attribution": "Original synthetic educational fixture",
+      "snapshot": "Self-authored synthetic Lorenz63 initial states; no observations.",
+      "snapshot_sha256": "d9b576eb2d65d69d3bb255d6761a281a455c86c66a45e0ec9ce4f87e184bfee7"
+    }
+  },
+  "input_sha256": "d62b13d19fae7f93db4bbfceaf1fd341e5caece8ce24497e34f618eaf6ffcce2",
+  "model_sha256": "dbb1412bf0862be68a408fe046b644daf2ed8515a4a5509460ada1a148433bff",
+  "schema_sha256": "f9f63b00543be666baecdaafcecffdae3f4309d8bc1d60c422eb34e9ea35444f",
+  "source_manifest_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1",
+  "source_freeze_sha256": "9663f768b409a7fe59d56f65415df4121d005836f705dc1207beca56b0d88695",
+  "code_sha256": "ffac2760befd1870402e7e2100a84a82b1a018d965b1440421983486fde5d1af",
+  "budget": {
+    "work": 240,
+    "returned_cells": 34
+  },
+  "rows": [
+    {
+      "time": "0",
+      "coarse_base": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "coarse_perturbed": [
+        1.000001,
+        1.0,
+        1.0
+      ],
+      "refined_base": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "refined_perturbed": [
+        1.000001,
+        1.0,
+        1.0
+      ],
+      "coarse_separation": 9.999999999177334e-07,
+      "refined_separation": 9.999999999177334e-07,
+      "base_refinement_difference": 0.0,
+      "perturbed_refinement_difference": 0.0
+    },
+    {
+      "time": "1/10000",
+      "coarse_base": [
+        1.0000012995265217,
+        1.0025998795019704,
+        0.9998334855814025
+      ],
+      "coarse_perturbed": [
+        1.0000022985283705,
+        1.002599882200491,
+        0.9998334856816042
+      ],
+      "refined_base": [
+        1.0000012995265217,
+        1.0025998795019704,
+        0.9998334855814026
+      ],
+      "refined_perturbed": [
+        1.0000022985283705,
+        1.002599882200491,
+        0.9998334856816044
+      ],
+      "coarse_separation": 9.99005498463361e-07,
+      "refined_separation": 9.99005498463361e-07,
+      "base_refinement_difference": 1.1102230246251565e-16,
+      "perturbed_refinement_difference": 1.1102230246251565e-16
+    }
+  ],
+  "diagnostics": {
+    "maxima_over_all_aligned_times": {
+      "coarse_separation": 9.999999999177334e-07,
+      "refined_separation": 9.999999999177334e-07,
+      "base_refinement_difference": 3.3306690738754696e-16,
+      "perturbed_refinement_difference": 3.3306690738754696e-16
+    },
+    "initial_separation": 9.999999999177334e-07,
+    "final_refined_amplification": 0.9990054985455459,
+    "amplification_status": "finite_pair_ratio_only",
+    "integrated_coarse_steps_per_trajectory": 10,
+    "integrated_refined_steps_per_trajectory": 20,
+    "aligned_times": 11,
+    "returned_times": 2,
+    "horizon": "1/10000",
+    "lyapunov_exponent": null,
+    "validated_forecast_horizon": null,
+    "refinement_is_rigorous_error_bound": false
+  },
+  "sources": [
+    {
+      "id": "chaos-theory-lorenz-v1",
+      "technique_id": 59,
+      "rank": 1,
+      "author": "Edward N. Lorenz",
+      "edition": "Deterministic Nonperiodic Flow;1963;JAS20(2),130–141;DOI10.1175/1520-0469(1963)020<0130:DNF>2.0.CO;2",
+      "url": "https://journals.ametsoc.org/abstract/journals/atsc/20/2/1520-0469_1963_020_0130_dnf_2_0_co_2.xml",
+      "locator": "Official abstract/metadata inspected; original ranked full-text URL403. Sensitivity context only; no full-text replication claim.",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by source owners; mathematical facts and original synthetic fixtures only; no bodies,figures,data or third-party code redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "chaos-theory-strogatz-v1",
+      "technique_id": 59,
+      "rank": 2,
+      "author": "Steven H. Strogatz",
+      "edition": "Nonlinear Dynamics and Chaos;3rdedition;2024;616pages;Chapman and Hall",
+      "url": "https://www.routledge.com/Nonlinear-Dynamics-and-Chaos/Strogatz/p/book/9780429398490",
+      "locator": "Official indexed publisher metadata only; direct403; no chapters inspected or inferred.",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by source owners; mathematical facts and original synthetic fixtures only; no bodies,figures,data or third-party code redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "chaos-theory-sugihara-may-v1",
+      "technique_id": 59,
+      "rank": 3,
+      "author": "George Sugihara and Robert M. May",
+      "edition": "Nature344,734–741;19April1990;DOI10.1038/344734a0",
+      "url": "https://www.nature.com/articles/344734a0",
+      "locator": "Official abstract/metadata inspected; nonlinear forecasting context,not an RK4 recipe. Author-hosted scanned witness copyright restrictions observed; no methods OCR or empirical reproduction.",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by source owners; mathematical facts and original synthetic fixtures only; no bodies,figures,data or third-party code redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "chaos-theory-ucar-v1",
+      "technique_id": 59,
+      "rank": null,
+      "author": "UCAR DART developers",
+      "edition": "DART10.10.1 Lorenz63 model documentation",
+      "url": "https://docs.dart.ucar.edu/en/v10.10.1/models/lorenz_63/readme.html",
+      "locator": "Equations/defaults and namelist solver sections inspected. RK2 default distinguished from optional classical RK4. Dimensionless model time.",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by source owners; mathematical facts and original synthetic fixtures only; no bodies,figures,data or third-party code redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "chaos-theory-moler-v1",
+      "technique_id": 59,
+      "rank": null,
+      "author": "Cleve Moler / MathWorks",
+      "edition": "Ordinary Differential Equation Suite;12May2014",
+      "url": "https://blogs.mathworks.com/cleve/2014/05/12/ordinary-differential-equation-suite/",
+      "locator": "Classical RK4 four-stage formula inspected. Facts independently reimplemented; fixed-step method has no automatic error estimate.",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright retained by source owners; mathematical facts and original synthetic fixtures only; no bodies,figures,data or third-party code redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    }
+  ],
+  "numerics": {
+    "arithmetic": "IEEE754 binary64 scalar Python",
+    "oracle": "ExactFraction RK4 stages and independent Taylor coefficient recurrence",
+    "one_step_absolute_tolerance": "1e-12",
+    "model_time": "dimensionless"
+  },
+  "empirical_forecast_accuracy_validated": false,
+  "limitations": [
+    "Certified Lyapunov exponent or forecast horizon",
+    "Nonlinear delay embedding",
+    "Reservoir computing",
+    "Empirical weather-like ensembles",
+    "Random/stochastic/data assimilation modes",
+    "Initial-state separation and step-refinement difference are separate diagnostics.",
+    "No original Lorenz RK2 replication or long-horizon accuracy certification.",
+    "Binary64 integration uses approximate h; displayed times are exact nominal grid values."
+  ],
+  "report_sha256": "9402fb42ba790d14e33f9b9db2ac1072e83ae7a65eaa190ad3af8aeb2b6db379"
+}
