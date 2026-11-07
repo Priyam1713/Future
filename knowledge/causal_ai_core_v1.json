@@ -1,0 +1,618 @@
+{
+  "version": 1,
+  "technique_id": 56,
+  "name": "Causal AI Forecasting",
+  "date": "2026-11-08",
+  "status": "Core v1 Ready — Finite Discrete Causal DAG and Identifiable Back-Door Adjustment Scope",
+  "certification_scope": "Exact finite synthetic conditional-on-assumptions causal calculations and diagnostics; not graph discovery or empirical causal validity.",
+  "profile": "causal-ai-finite-discrete-backdoor-v1",
+  "profile_sha256": "872e27c27228050ad3a6714bc7549d5c29a98406bc4fec70ddccc99d6d7ace20",
+  "profile_file": "knowledge/causal_ai_profile_v1.json",
+  "cli_command": "causal-ai",
+  "source_catalog": "knowledge/causal_ai_sources.json",
+  "source_manifest_sha256": "c56f7f98dc6a48fdab97587c09e04ef711ec91792f43980596d15ac766889230",
+  "source_freeze_sha256": "912bf09650cae99e295227c6a8727229a8b71cdf3f77f07c386944e4af3ca66c",
+  "source_boundaries": {
+    "version": 1,
+    "technique_id": 56,
+    "audit_sha256": "0805072f4f5554c42894c8583d024c415d7dd1ff1eb1c2813d2c54c9472dbb88",
+    "source_manifest_sha256": "c56f7f98dc6a48fdab97587c09e04ef711ec91792f43980596d15ac766889230",
+    "boundaries": "Pearl2nd2009/2013 corrected chapter primary witness; limited deep fetch. What If landing/indexed dated passages; latest2026 complete PDF not retrieved. DoWhy0.13 guide/0.14 graph conventions; no library installation or replication.",
+    "rights": "Original mathematical implementation and self-authored synthetic tables only; no book bodies,figures,software code or human data copied.",
+    "conventions": "Original sufficient back-door criterion; supplied-set check only. Back-door removes outgoing X arrows; intervention oracle replaces X mechanism. Failure is not a general nonidentifiability proof."
+  },
+  "inventory_method_row": [
+    56,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Causal AI Forecasting",
+    "RETAIN — simulate / implement",
+    "Data & simulation",
+    "Causal DAG; back-door adjustment; structural causal models; do-calculus; counterfactual uplift",
+    "Causal graph + assumptions + intervention estimates and sensitivity analysis",
+    "Observational/intervention data; domain causal assumptions",
+    "Causality not identified from correlations alone",
+    "Empirical under explicit identification assumptions",
+    "Causality",
+    "Judea Pearl",
+    "https://www.cambridge.org/core/books/causality/B0046844FAE10CBF274D4ACBDAEB5F5B",
+    "Causal Inference: What If",
+    "DoWhy Documentation",
+    "49",
+    "49, 53, 54, 59",
+    56
+  ],
+  "ranked_sources": [
+    [
+      56,
+      "Causal AI Forecasting",
+      1,
+      "Judea Pearl",
+      "Causality",
+      "Structural causal theory",
+      "https://www.cambridge.org/core/books/causality/B0046844FAE10CBF274D4ACBDAEB5F5B",
+      "Publisher / purchase",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      56,
+      "Causal AI Forecasting",
+      2,
+      "Miguel A. Hernán and James M. Robins",
+      "Causal Inference: What If",
+      "Practical causal estimation",
+      "https://miguelhernan.org/whatifbook",
+      "Open author textbook",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      56,
+      "Causal AI Forecasting",
+      3,
+      "Microsoft Research / PyWhy",
+      "DoWhy Documentation",
+      "Software causal estimation",
+      "https://www.microsoft.com/en-us/research/project/dowhy/",
+      "Open research software",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      56,
+      "Causal AI Forecasting",
+      "Causal DAG",
+      "DoWhy Documentation",
+      "Causal Inference: What If",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      56,
+      "Causal AI Forecasting",
+      "back-door adjustment",
+      "DoWhy Documentation",
+      "Causal Inference: What If",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      56,
+      "Causal AI Forecasting",
+      "structural causal models",
+      "DoWhy Documentation",
+      "Causal Inference: What If",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      56,
+      "Causal AI Forecasting",
+      "do-calculus",
+      "DoWhy Documentation",
+      "Causal Inference: What If",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      56,
+      "Causal AI Forecasting",
+      "counterfactual uplift",
+      "DoWhy Documentation",
+      "Causal Inference: What If",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "variations": {
+    "Causal DAG": "Supported finite synthetic assumed DAG",
+    "back-door adjustment": "Supported supplied-set sufficient criterion and exact standardization",
+    "structural causal models": "Independent structural fixture oracle only; no general production SCM language",
+    "do-calculus": "Unsupported; deferred",
+    "counterfactual uplift": "Unsupported; deferred"
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Synthetic categorical assumed DAGs",
+      "All-observed exact joint/graph compatibility",
+      "Supplied-set sufficient back-door checks",
+      "Exact standardized and observational probabilities with overlap diagnostics"
+    ],
+    "experimental_research_only": [
+      "Interpreting synthetic risks as empirical causal forecasts"
+    ],
+    "unsupported": [
+      "Latent-graph effect estimation",
+      "General do-calculus/front-door/IV identification",
+      "Individual counterfactual uplift",
+      "Continuous/learned models",
+      "Causal graph discovery",
+      "Empirical clinical or policy claims"
+    ]
+  },
+  "equations": [
+    "No Z descendant of X in original DAG; X and Y d-separated by Z after removal of OUTGOING X edges",
+    "P(Y=y|do(X=x))=sum_z P(Y=y|X=x,Z=z)*P(Z=z)",
+    "Positive P(z) requires positive P(x,z) for every treatment level; zero-mass strata skipped explicitly",
+    "Observational P(Y=y|X=x) and first-versus-last treatment-level risk differences are distinct outputs",
+    "All-observed graph compatibility: P(v)=product_i P(v_i|parents_i) for every complete assignment,including zero cells"
+  ],
+  "exact_contract": [
+    "Strict exact fields and pinned profile/catalog hashes. schema_version/profile.version exact integer1. Opaque IDs ASCII1..64. Nodes2..8,unique ids; states2..3 unique IDs sorted lexicographically for canonical risk/contrast order; observed exactbool. Edges distinct directed pairs,known endpoints,no self-edge,no cycle.",
+    "Treatment/outcome distinct observed nodes; outcome_value declared state. Adjustment distinct known observed nodes,excluding treatment/outcome. Descendants of treatment yield accepted unsupported_adjustment diagnostic,not an estimate. Latent nodes yield unsupported_latent_graph; no latent identification certified.",
+    "joint explicitly contains exactly one row for EVERY assignment of OBSERVED nodes,including zero weights; row.assignment exact observed keys anddeclared states. Complete observed Cartesian product<=4096. Weights exact nonnegative rationals,total exactly1; no implicit missing cells,duplicates or normalization/smoothing.",
+    "Input rationals integer (notbool) or signed integer/positive-denominator strings,each component<=18digits. No float,decimal,exponent,leadingzero,-zero or zero denominator. Output reduced Fraction strings. Guard each addition,multiplication anddivision by conservative8192-bit numerator/denominator reservations before the operation.",
+    "Assumptions exactbooleans causal_graph=true,consistency=true,exchangeability_under_graph=true,selection_bias=false are declared,not inferred from data. No causal learning,source truth or real-world adequacy certification.",
+    "Production d-separation uses a bounded active-trail direction-state traversal with ancestors of conditioning set. Independently verify through complete simple-path collider/noncollider enumeration before engine. Original sufficient criterion only,not generalized adjustment or general do-calculus.",
+    "All-observed exact factorization compatibility checked for every complete joint assignment. Conditional factor with zero parent marginal yields product0 for that assignment; any positive full-row cannot have zero parent marginal. Latent graphs report compatibility not_checked. Compatibility is necessary mathematical consistency,not proof of causal truth or faithfulness.",
+    "Diagnostic priority: unsupported_latent_graph,unsupported_adjustment,incompatible_joint_graph,not_estimable_positivity,identified_under_declared_assumptions. Each failed gate leaves interventional=null. Observational conditionals may still be reported; zero treatment mass gives null observational probability.",
+    "For valid compatible graphs, aggregate marginal P(z) and joint P(x,z),P(y,x,z). All positive P(z) require overlap for ALL declared X levels. Zero P(z) strata listed and skipped; any missing positive-mass overlap prevents ALL interventional estimates. Report exact per-stratum terms,each risk and first-minus-last contrast named explicitly.",
+    "Canonical nodes,edges,adjustment,row assignments and state labels. Model hash binds graph,assumptions and query; table hash binds sorted rows. Input/report hashes retain exact original input order. Inputs not mutated.",
+    "Synthetic provenance true,self_authored rights,source_ref in frozen catalog,nonempty attribution/snapshot<=4000characters and exact UTF8 snapshot SHA. No real dataset ingestion; declarations/hashes are not independent rights or causal validation.",
+    "Preflight complete cells<=4096,nodes<=8,states<=3,edges<=28;work reservation joint_cells*nodes*nodes*8<=5000000;returned_cells=joint_cells*nodes+strata*treatment_states*8<=100000. No exponential simple-path production search; individual maxima cannot combine freely. Actual CPU/memory measurements required before closure."
+  ],
+  "bounds": {
+    "nodes": 8,
+    "states": 3,
+    "edges": 28,
+    "joint_cells": 4096,
+    "work": 5000000,
+    "returned_cells": 100000,
+    "rational_component_digits": 18,
+    "integer_bits": 8192
+  },
+  "acceptance_criteria": [
+    {
+      "criterion": "Source/profile conventions frozen before production",
+      "passed": true
+    },
+    {
+      "criterion": "Independent structural/path fixtures frozen before production",
+      "passed": true
+    },
+    {
+      "criterion": "All22 fixture families,256 graph cases and80 structural cases",
+      "passed": true
+    },
+    {
+      "criterion": "Exact adjusted risks3/10,1/2 and observational risks1/5,3/5",
+      "passed": true
+    },
+    {
+      "criterion": "Explicit signed contrast conventions and canonical identities",
+      "passed": true
+    },
+    {
+      "criterion": "Strict acyclic graph,complete joint and exact normalization checks",
+      "passed": true
+    },
+    {
+      "criterion": "Descendant and open-back-door/collider refusals",
+      "passed": true
+    },
+    {
+      "criterion": "Exact graph/table factorization compatibility",
+      "passed": true
+    },
+    {
+      "criterion": "Positive-mass overlap required; zero-mass strata explicit",
+      "passed": true
+    },
+    {
+      "criterion": "Latent/unsupported/invalid identification produces no causal estimate",
+      "passed": true
+    },
+    {
+      "criterion": "92 raw accepted/rejected JSON-Markdown CLI outputs",
+      "passed": true
+    },
+    {
+      "criterion": "Both actual checkout modes replay92 raw outputs each",
+      "passed": true
+    },
+    {
+      "criterion": "Complete2073tests/2985CLIcases/35independentverifiers",
+      "passed": true
+    },
+    {
+      "criterion": "Registry,strictJSON,inventory/exclusions,dependency,pip,diff and4419 protected files",
+      "passed": true
+    },
+    {
+      "criterion": "Actual local complete-report CPU/memory measurements",
+      "passed": true
+    },
+    {
+      "criterion": "Scientific/source/rights boundaries and P1/P2",
+      "passed": true
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "fixture_families": 22,
+    "families": {
+      "confounding": {
+        "passed": true,
+        "cases": [
+          "confounding",
+          "unblocked-confounding"
+        ]
+      },
+      "mediation": {
+        "passed": true,
+        "cases": [
+          "mediation",
+          "mediator-adjusted"
+        ]
+      },
+      "collider-closed": {
+        "passed": true,
+        "cases": [
+          "collider-closed"
+        ]
+      },
+      "collider-conditioned": {
+        "passed": true,
+        "cases": [
+          "collider-conditioned"
+        ]
+      },
+      "collider-descendant": {
+        "passed": true,
+        "cases": [
+          "collider-descendant"
+        ]
+      },
+      "no-confounding": {
+        "passed": true,
+        "cases": [
+          "no-confounding"
+        ]
+      },
+      "descendant-adjustment": {
+        "passed": true,
+        "cases": [
+          "mediator-adjusted"
+        ]
+      },
+      "missing-positivity": {
+        "passed": true,
+        "cases": [
+          "missing-positivity"
+        ]
+      },
+      "zero-mass-stratum": {
+        "passed": true,
+        "cases": [
+          "zero-mass-stratum"
+        ]
+      },
+      "cycle-refusal": {
+        "passed": true,
+        "cases": [
+          "cycle"
+        ]
+      },
+      "unknown-edge": {
+        "passed": true,
+        "cases": [
+          "unknown-edge"
+        ]
+      },
+      "duplicate-edge": {
+        "passed": true,
+        "cases": [
+          "duplicate-edge"
+        ]
+      },
+      "exact-adjusted-risk": {
+        "passed": true,
+        "cases": [
+          "confounding"
+        ]
+      },
+      "observational-interventional-disagreement": {
+        "passed": true,
+        "cases": [
+          "confounding"
+        ]
+      },
+      "deterministic-intervention-oracle": {
+        "passed": true,
+        "cases": [
+          "confounding",
+          "deterministic-intervention"
+        ]
+      },
+      "joint-normalization": {
+        "passed": true,
+        "cases": [
+          "unnormalized",
+          "missing-row",
+          "duplicate-row"
+        ]
+      },
+      "graph-table-incompatibility": {
+        "passed": true,
+        "cases": [
+          "incompatible"
+        ]
+      },
+      "latent-graph-unsupported": {
+        "passed": true,
+        "cases": [
+          "latent"
+        ]
+      },
+      "canonical-order": {
+        "passed": true,
+        "cases": [
+          "reordered"
+        ]
+      },
+      "source-rights": {
+        "passed": true,
+        "cases": [
+          "empirical",
+          "rights",
+          "source",
+          "snapshot"
+        ]
+      },
+      "rational-bounds": {
+        "passed": true,
+        "cases": [
+          "large-rational",
+          "float-weight",
+          "boolean-weight"
+        ]
+      },
+      "json-markdown-replay": {
+        "passed": true,
+        "cases": [
+          "profile",
+          "categorical"
+        ]
+      }
+    },
+    "accepted": 15,
+    "rejected": 27,
+    "independent_graph_cases": 256,
+    "structural_enumeration_cases": 80,
+    "interventional_oracle_passed": true,
+    "observational_disagreement_passed": true,
+    "canonical_order_passed": true,
+    "zero_strata_passed": true,
+    "fixture_sha256": "b618f7c6a0ecc5210e11b245729941fabf7a570fed95c996f23f065f57c8f190",
+    "scope": "Finite exact synthetic model software,not causal discovery or empirical effect validation",
+    "expanded_graph_cases": 3072,
+    "expanded_graph_method": "All12 treatment/outcome pairs and4 adjustment subsets in each of64 ordered four-node DAGs; expected validity from immutable pre-engine simple-path oracle,not production.",
+    "graph_count_note": "The3072 expanded configurations include the256 original endpoint configurations; do not sum them as3328 distinct configurations."
+  },
+  "regression": {
+    "tests": 2073,
+    "inherited_tests": 2023,
+    "new_tests": 50,
+    "cli_cases": 2985,
+    "inherited_cli_cases": 2893,
+    "new_cli_cases": 92,
+    "independent_verifiers": 35,
+    "protected_files": 4419,
+    "changed_protected_files": [],
+    "registry": {
+      "references_checked_twice": 566,
+      "unique": 411,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "strict_json_files": 3006,
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    }
+  },
+  "replay": {
+    "accepted_pairs": 15,
+    "rejected_pairs": 31,
+    "cli_cases": 92,
+    "checkout": {
+      "passed": true,
+      "exports": [
+        {
+          "autocrlf": "false",
+          "raw_corpus_files": 139,
+          "normalized_commitments": 3,
+          "actual_cli_replays": 92,
+          "passed": true
+        },
+        {
+          "autocrlf": "true",
+          "raw_corpus_files": 139,
+          "normalized_commitments": 3,
+          "actual_cli_replays": 92,
+          "passed": true
+        }
+      ],
+      "method": "git checkout-index from staged files with core.autocrlf false/true;actual exported CLI executions;stdout bytes SHA256 matches saved JSON/Markdown,without newline normalization",
+      "subprocess_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "harness_limit": "Two parallel CLI processes; limits inherited numerical-library import threads,not the stdlib finite causal engine."
+    }
+  },
+  "performance": {
+    "measured": true,
+    "environment": {
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0"
+    },
+    "profile_sha256": "872e27c27228050ad3a6714bc7549d5c29a98406bc4fec70ddccc99d6d7ace20",
+    "code_sha256": "9467ac0f236fb05ada62e7fb50a0277a1dba4dc3c41721eff528fa202861c139",
+    "protocol": "Three untraced complete in-process reports; separate tracemalloc report; one complete CLI. Native peak covers whole helper,imports,all workloads and tracing,not CLI-child/per-workload peak.",
+    "process_peak_working_set_bytes": 35864576,
+    "under_proposed_128_MiB": true,
+    "results": [
+      {
+        "id": "small",
+        "nodes": 3,
+        "joint_rows": 8,
+        "input_sha256": "b1018220be2fecb190ec8ad4303a30d027c2ff8a739100d177231279759040d9",
+        "budget": {
+          "joint_cells": 8,
+          "work": 576,
+          "returned_cells": 56
+        },
+        "identification_status": "identified_under_declared_assumptions",
+        "seconds": [
+          0.001130599994212389,
+          0.0007885000668466091,
+          0.0007440000772476196
+        ],
+        "median_seconds": 0.0007885000668466091,
+        "cli_seconds": 1.5336994002573192,
+        "python_traced_peak_bytes": 49998,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "medium",
+        "nodes": 5,
+        "joint_rows": 32,
+        "input_sha256": "bde98dfb7a4b561646114f6dd90af0cc0c937fbf8d3463a19af194c6c2ef35a5",
+        "budget": {
+          "joint_cells": 32,
+          "work": 6400,
+          "returned_cells": 288
+        },
+        "identification_status": "identified_under_declared_assumptions",
+        "seconds": [
+          0.0034352997317910194,
+          0.0022456999868154526,
+          0.0017303000204265118
+        ],
+        "median_seconds": 0.0022456999868154526,
+        "cli_seconds": 0.827320100273937,
+        "python_traced_peak_bytes": 103629,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "dense",
+        "nodes": 7,
+        "joint_rows": 2187,
+        "input_sha256": "46381d5671ca6a1c95297e9694d129a739d36b4cdea0aebdce9a2dd0cd93c996",
+        "budget": {
+          "joint_cells": 2187,
+          "work": 857304,
+          "returned_cells": 21141
+        },
+        "identification_status": "identified_under_declared_assumptions",
+        "seconds": [
+          0.10626479983329773,
+          0.11116750026121736,
+          0.11577050015330315
+        ],
+        "median_seconds": 0.11116750026121736,
+        "cli_seconds": 1.436530000064522,
+        "python_traced_peak_bytes": 4128049,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "diagnostic",
+        "nodes": 3,
+        "joint_rows": 8,
+        "input_sha256": "43c51645b6141cf763bceb986db96a7fd0f2255fd729fc2ba3f5f2946d500049",
+        "budget": {
+          "joint_cells": 8,
+          "work": 576,
+          "returned_cells": 40
+        },
+        "identification_status": "unsupported_adjustment",
+        "seconds": [
+          0.0020858999341726303,
+          0.001113200094550848,
+          0.001424499787390232
+        ],
+        "median_seconds": 0.001424499787390232,
+        "cli_seconds": 1.1543164001777768,
+        "python_traced_peak_bytes": 45512,
+        "under_proposed_five_seconds": true
+      }
+    ],
+    "scope": "Local synthetic measurements only; not universal performance or empirical causal validation."
+  },
+  "evidence": {
+    "data/causal-ai-acceptance-checks.json": "cedbccda58f92404d692dd1dd7e3e7d6da81dff1d81b4d06da16b4f41c8059f1",
+    "data/causal-ai-unit.json": "d2bf7d5d5a04d53c8ce0c4c1874f3bc7dde669932ad8f5106e49156754e172e4",
+    "data/causal-ai-verification.json": "27cf85e2118d068b4a954fb0cf72b17c9819c3364ce2b159fe885a2595426da5",
+    "data/causal-ai-cli-replay.json": "6e816b9937f3a05c12dcdbcc454470e3a920617cc3c2867b114740915c3bf97f",
+    "data/causal-ai-checkout-replay.json": "9b649459d5c53d6f61ea64192c92800eaf63bf90a3d33941a6f22eb62a1e5c14",
+    "data/causal-ai-resource-measurements.json": "2ef5ec0d35ec6959e24e78a580e7c0a1447284449fdc437cf91066019fdc928f",
+    "knowledge/causal_ai_fixture_freeze_v1.json": "44e0ba80b0acf033290c350d3b40ea8a609ae8da34f1c3fb838886cc99f01b4b"
+  },
+  "milestones": {
+    "audit": "15efaa5",
+    "source_profile": "1ac1c9d",
+    "independent_fixtures": "750435f",
+    "engine": "af4a3bd",
+    "cli_reports": "b84be8f",
+    "acceptance": "1f37f5b594ccb506b7baaa7a5c02fde1d42db768",
+    "expanded_graph_verification": "d8bc3fb",
+    "verification": "2fa1eef"
+  },
+  "backlog": {
+    "P1": [
+      "Lawful full-book/latest-revision source access and edition-specific equation verification",
+      "Empirical dataset-specific provenance,consent,causal assumptions,selection/measurement and sensitivity review",
+      "Latent-variable identification and separately verified front-door/IV extensions"
+    ],
+    "P2": [
+      "General do-calculus ID algorithm",
+      "Continuous estimators and statistical uncertainty",
+      "Structural-equation language and individual counterfactual uplift",
+      "Large-scale graphs and learned mechanisms"
+    ]
+  },
+  "scientific_limits": [
+    "Graph,consistency,exchangeability and selection assumptions are declared,not established from correlations.",
+    "All-observed exact factorization compatibility does not prove causal truth or faithfulness.",
+    "Supplied-set sufficient criterion failure does not prove universal nonidentifiability.",
+    "Latent graphs and general identification/individual counterfactuals unsupported.",
+    "Self-authored synthetic tables only; no clinical/policy recommendations or empirical causal accuracy.",
+    "Rights/identity/hash declarations do not independently certify facts or permissions."
+  ],
+  "next": "After closure push and clean synchronized main,audit57 only; finish57–60 and final all54 integration under master directive."
+}

@@ -1345,3 +1345,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-08 — #56 full acceptance passed
 - Passed2073tests (2023 inherited+50 new),2985CLIcases (2893 inherited+92 new),35independentverifiers,all22families,256frozen/3072expanded graph configurations and80structural cases. Expanded sweep includes the original endpoint configurations; not3328distinct configurations. Both checkout modes replay92outputs each.
 - All4419protected files unchanged; registry,strictJSON,workbook cell-for-cell/SHA,inventory/exclusions,dependency,pip anddiff pass. Refreshed final aggregation from completed commands after in-flight harness retained earlier2072 expectation; latest2073unit receipt and workbook gate used. No failed engine check treated as passing. Closure follows before57audit.
+
+## 2026-11-08 — #56 Core v1 closure
+- Core v1 Ready — Finite Discrete Causal DAG and Identifiable Back-Door Adjustment Scope. All22 families,256 frozen and3072 expanded graph checks,80 structural cases and50 new tests pass. Full2073tests,2985CLIcases and35independentverifiers pass; all4419protected files unchanged.15accepted/31rejected pairs replay92raw outputs under each actual checkout mode.
+- Exact causal risks3/10,1/2 versus observational1/5,3/5; positivity,graph/table compatibility and unsupported identification produce explicit diagnostics. Source/rights,measurements,matrix and P1/P2 recorded. After closure push and clean0/0,continue57audit; no57implementation yet.
