@@ -1309,3 +1309,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #55 full units and actual checkout verification
 - Full2020 unit tests pass (1961 inherited+59 new). Both indexed core.autocrlf=false/true exports preserve166 raw corpus files and4 normalized commitments, replaying110 actual CLI stdout hashes each without newline normalization. All4219 protected files unchanged. Full inherited CLI/verifier sweep remains in progress.
+
+## 2026-11-07 — #55 isolated leakage regression controls
+- Added three isolated controls so subject/run/dependent-trial rejection cannot be masked by another source-identity failure. All62 #55 tests and the refreshed full2023 unit suite pass. Engine/profile/fixtures and golden reports unchanged. Current full CLI/verifier sweep continues; acceptance will refresh against the new unit count before closure.

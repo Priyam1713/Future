@@ -89,7 +89,7 @@ def run(skip_unit=False, resume=False):
     tests = int(re.search(r'Ran (\d+) tests', unit['stderr'])[1])
     cli = sum(int(re.match(r'(\d+)', c['stdout'])[1]) for c in checks if any('scripts.smoke_' in x for x in c['command']))
     verifier_count = sum(any('scripts.verify_' in x for x in c['command']) for c in checks)
-    assert (tests, cli, verifier_count) == (2020, 2893, 34), (tests, cli, verifier_count)
+    assert (tests, cli, verifier_count) == (2023, 2893, 34), (tests, cli, verifier_count)
     assert baseline['protected_count'] == 4219
     out = dict(passed=True, complete=True, checks=checks, tests=tests, inherited_tests=1961, new_tests=tests-1961,
                cli_cases=cli, inherited_cli_cases=2783, new_cli_cases=cli-2783, independent_verifiers=verifier_count,

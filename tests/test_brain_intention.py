@@ -16,6 +16,18 @@ class BrainIntentionTests(unittest.TestCase):
         r=score(['A','A'],['A','B']);self.assertEqual(r['accuracy'],'1/2');self.assertIsNone(r['balanced_accuracy']);self.assertEqual(r['status'],'not_estimable')
     def test_bit_reservation(self):
         with self.assertRaisesRegex(ValueError,'bit reservation'):checked(F(1,2**8190),F(1,2**8190),'mul')
+    def test_isolated_subject_leak(self):
+        q=copy.deepcopy(fixture()['cases']['worked']['input'])
+        for t in q['trials']:t['subject']='same-subject'
+        with self.assertRaisesRegex(ValueError,'Subject leakage'):read(q)
+    def test_isolated_run_leak(self):
+        q=copy.deepcopy(fixture()['cases']['heldout-run']['input'])
+        for t in q['trials']:t['run']='same-run'
+        with self.assertRaisesRegex(ValueError,'held-out runs'):read(q)
+    def test_isolated_dependent_trial(self):
+        q=copy.deepcopy(fixture()['cases']['heldout-run']['input']);t=q['trials'][4]
+        t.update(run='r1',trial_id=q['trials'][0]['trial_id'],source_id='separate-file')
+        with self.assertRaisesRegex(ValueError,'Dependent trial'):read(q)
     def test_rational_rejections(self):
         for x in [True,1.0,'1e2','-0','01','1/-2','1/0',10**18]:
             with self.subTest(x=x),self.assertRaises(ValueError):rational(x)
