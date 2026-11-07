@@ -341,7 +341,9 @@ def decimal_number(v,expression=None):
 
 
 def log_loss(p,y):
-    p=p if isinstance(p,Q) else probability(p);integer(y,0,1);value=log_value(p,y)
+    p=p if isinstance(p,Q) else probability(p);integer(y,0,1)
+    if not 0<=p<=1:raise ValueError('Probability outside0–1')
+    value=log_value(p,y)
     if value is None:return dict(status='positive_infinity',exact=None,decimal=None,reason='contradicted_certain_forecast')
     success=p if y else 1-p
     return decimal_number(value,'0' if success==1 else '-ln('+str(success)+')')

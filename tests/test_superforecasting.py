@@ -207,3 +207,23 @@ class SuperforecastingNumericBoundaryTests(unittest.TestCase):
         with self.assertRaises(ValueError):e.read(q)
         q=e.request('create',plan());q['extra']=True
         with self.assertRaises(ValueError):e.read(q)
+
+from unittest.mock import patch
+class SuperforecastingIntegrityTests(unittest.TestCase):
+    def test_all_independent_families(self):
+        from scripts.verify_superforecasting import verify
+        self.assertEqual(len(verify()['families']),23)
+    def test_pinned_assets(self):
+        q=e.request('create',plan());old=e.load_input
+        for ending in ('profile_v1.json','sources.json','source_freeze_v1.json'):
+            def altered(path,ending=ending):
+                v=old(path)
+                if str(path).endswith(ending):
+                    if isinstance(v,list):v[0]['author']='tampered'
+                    else:v['tampered']=True
+                return v
+            with patch.object(e,'load_input',altered):
+                with self.assertRaises(ValueError):e.read(q)
+    def test_internal_log_range(self):
+        for p in (e.Q(-1,2),e.Q(3,2)):
+            with self.assertRaises(ValueError):e.log_loss(p,1)
