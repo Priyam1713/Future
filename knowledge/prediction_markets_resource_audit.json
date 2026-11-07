@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "technique_id": 58,
+  "name": "Prediction Markets",
+  "date": "2026-11-08",
+  "status": "Researching — Audit Only",
+  "predecessor_closure": "467ee85",
+  "predecessor_gate": "57closure pushed;clean main0/0 observed before58inventory/source audit.",
+  "inventory_method_row": [
+    58,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Prediction Markets",
+    "RETAIN — simulate / implement",
+    "Data & simulation",
+    "Continuous double auction; market scoring rules; LMSR; play-money internal market",
+    "Virtual shares, automated market maker, resolution and probability extraction",
+    "Internal play-money ledger; optional human traders",
+    "Avoid regulated real-money trading unless legal compliance resolved",
+    "Empirical with genuine traders and verifiable resolution",
+    "Prediction Markets",
+    "Justin Wolfers and Eric Zitzewitz",
+    "https://www.aeaweb.org/articles?id=10.1257%2F0895330041371321",
+    "Logarithmic Market Scoring Rules for Modular Combinatorial Information Aggregation",
+    null,
+    "51,57",
+    "51, 57",
+    58
+  ],
+  "ranked_sources": [
+    [
+      58,
+      "Prediction Markets",
+      1,
+      "Justin Wolfers and Eric Zitzewitz",
+      "Prediction Markets",
+      "Economic basis and information aggregation",
+      "https://www.aeaweb.org/articles?id=10.1257%2F0895330041371321",
+      "Peer-reviewed journal",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      58,
+      "Prediction Markets",
+      2,
+      "Robin Hanson",
+      "Logarithmic Market Scoring Rules for Modular Combinatorial Information Aggregation",
+      "LMSR market maker",
+      "https://www.ubplj.org/index.php/jpm/article/view/417",
+      "Research article",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      58,
+      "Prediction Markets",
+      "Continuous double auction",
+      "Logarithmic Market Scoring Rules for Modular Combinatorial Information Aggregation",
+      "Prediction Markets",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      58,
+      "Prediction Markets",
+      "market scoring rules",
+      "Logarithmic Market Scoring Rules for Modular Combinatorial Information Aggregation",
+      "Prediction Markets",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      58,
+      "Prediction Markets",
+      "LMSR",
+      "Logarithmic Market Scoring Rules for Modular Combinatorial Information Aggregation",
+      "Prediction Markets",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      58,
+      "Prediction Markets",
+      "play-money internal market",
+      "Logarithmic Market Scoring Rules for Modular Combinatorial Information Aggregation",
+      "Prediction Markets",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_catalog_sha256": "e36ed82d53463ad118427a7825c22e293d6a1cec15fd587bb5f55b8de72f36b1",
+  "policy": "Audit only; no58runtime,executableprofile,production fixtures,trades or benchmark.",
+  "recommendation": {
+    "name": "Offline Binary LMSR Play-Money Market and Resolution Ledger Scope",
+    "core": [
+      "Two mutually exclusive exhaustive YES/NO outcomes,zero initial quantities and fixed positive b",
+      "Stable max-shift Decimal cost/prices; named finite precision and rounding tolerances",
+      "Quote/execution separation with economic revision binding and no cash reservation by quotes",
+      "Long-only positions; sell only held shares; no negative balances or external funds",
+      "Immutable successful trade ledger,idempotent intent IDs and explicit action-level refusals",
+      "Declared authority close/resolution and deterministic one-time settlement",
+      "Cash conservation,position/quantity equality and funded maker-loss exposure"
+    ],
+    "formulae": [
+      "C(q)=b*ln(exp(qYES/b)+exp(qNO/b))",
+      "p_i=exp(q_i/b)/sum_j exp(q_j/b)",
+      "Trade charge=C(q+delta)-C(q)",
+      "Ideal zero-initial two-outcome maker loss<=b*ln(2)"
+    ],
+    "scientific_limit": "Mechanism/accounting correctness does not establish market efficiency,calibrated probabilities or real-world forecasting accuracy. All examples synthetic play credits; no real money or service connections.",
+    "matrix": {
+      "supported_candidate": [
+        "Offline one-market binary fixed-liquidity synthetic play ledger",
+        "Versioned creation,quotes,trades,close/resolution and accounting",
+        "Stable bounded pricing and explicit rounding/funding conventions"
+      ],
+      "experimental": [
+        "Interpreting synthetic trader prices as empirical forecasts"
+      ],
+      "unsupported": [
+        "Real-money deposits,wagering,external trading/settlement",
+        "Continuous double auction",
+        "Combinatorial/conditional markets",
+        "Short selling or leverage",
+        "Live participant services",
+        "Authenticated external resolution or empirical trader accuracy"
+      ]
+    }
+  },
+  "conventions": [
+    "Zero initial q and one-credit payoff per winning share are required for the stated b ln2 baseline. Long-only account positions sum to pricing quantities.",
+    "Use independent Decimal120 direct-exp oracle and stable max-shift Decimal80 production. ln/exp are approximations; verify absolute tolerances and extreme accepted ratios. Never label them exact fractions.",
+    "Propose monetary potential rounded HALF_EVEN to1e-24; executed charge is difference of two rounded TOTAL potentials. Ledger cash telescopes exactly on this grid,including reversals; do not round each incremental analytic charge independently.",
+    "Ideal max(q)<=C(q),so max(q)-(C(q)-C(0))<=b ln2. Quantized potentials add at most one cash quantum plus numerical error; reserve ceiling(b ln2+2quanta) provides declared conservative funding margin. Freeze/independently verify before implementation.",
+    "Quotes show hypothetical charges and feasibility but do not move cash/positions. Confirmed execution binds quote intent,actor and current economic revision; stale quotes refuse.",
+    "Valid economic refusals are explicit rejected actions with unchanged financial state; structural malformed requests reject entirely. No failed action silently mutates accounts.",
+    "Idempotent event intent excludes delivery timestamp,so exact intent retries at later declared time cannot duplicate financial effects. Conflicting reuse of same ID refuses; immutable original ledger retained.",
+    "Trades/quotes require time strictly before close_at; clock closure may occur without explicit close action. This differs from51/57forecast cutoff-inclusive convention and must be documented,not silently mapped.",
+    "Resolution actor must equal declared authority and occur at/after close. Equality is a local declaration,not external authentication. Settle once; retain historical positions with settled flag and no remaining payout liability.",
+    "Cumulative trader cash plus maker cash equals total initial synthetic endowments. Maker initial reserve is a separate computed synthetic endowment,not deducted from trader credit allocations. No later deposits,fees,transfers or margin lending.",
+    "Stable price computation evaluates both softmax numerators separately to preserve tiny positive complements. Dominant price may round to1 at extreme ratios; normalization is tolerance-based,not an exact-real claim.",
+    "All repository data self-authored synthetic; no real traders,capital,transaction data or copyrighted material redistributed."
+  ],
+  "bibliographic_distinctions": [
+    "Hanson ranked article is JPM1(1),3–15(2007),DOI10.5750/jpm.v1i1.417; journal web upload metadata2012 is separate.",
+    "Accessible mktscore draft is January2002,not identical to2007journal version; do not confuse with different2003Information Systems Frontiers article.",
+    "Primary Chen/Vaughan2010 cost-function supplement supplies implementation form; supplement remains unranked."
+  ],
+  "literal_anchors": {
+    "b": "1",
+    "initial_q": [
+      "0",
+      "0"
+    ],
+    "initial_prices": [
+      "1/2",
+      "1/2"
+    ],
+    "ideal_initial_cost": "0.693147180559945309417232121458176568075500134360255254120680009493393621969694715605863326996418687542001481020570685734",
+    "ideal_cost_q_1_0": "1.31326168751822283404899549496785564191528008567034837471906351483719490150918722093620040627729239138902104681546435352",
+    "ideal_price_YES_q_1_0": "0.731058578630004879251159241821836274365144640165056519276365907919040453070204639387474532075981245292174466493140774566",
+    "money_quantum": "0.000000000000000000000001",
+    "rounded_potential_charge_buy_one": "0.620114506958277524631763",
+    "rounded_reverse_refund": "-0.620114506958277524631763",
+    "rounded_second_opposite_share_charge": "0.379885493041722475368237",
+    "balanced_one_each_total_charge": "1",
+    "balanced_one_each_payout": "1",
+    "balanced_maker_net_profit": "0",
+    "one_yes_winning_payout": "1",
+    "one_yes_maker_loss": "0.379885493041722475368237",
+    "ideal_binary_maker_bound": "0.693147180559945309417232121458176568075500134360255254120680009493393621969694715605863326996418687542001481020570685734",
+    "oracle": "Independent Decimal120 direct exp/sum/log before production; future stable production max-shift Decimal80; audit arithmetic only,not a market runtime."
+  },
+  "planned_fixture_families": [
+    "initial-half-prices",
+    "positive-normalized-prices",
+    "positive-liquidity",
+    "stable-extreme-pricing",
+    "monotone-buy",
+    "cost-difference-charge",
+    "quantized-potential-accounting",
+    "buy-sell-reversal",
+    "balanced-shares",
+    "common-shift-invariance",
+    "cash-conservation",
+    "funding-reserve",
+    "maker-loss-bound",
+    "budget-refusal",
+    "no-naked-short",
+    "positions-equal-quantities",
+    "stale-quote-refusal",
+    "quote-no-execution",
+    "quote-actor-match",
+    "idempotent-retry",
+    "trade-id-conflict",
+    "event-time-order",
+    "close-cutoff-refusal",
+    "authorized-resolution",
+    "deterministic-settlement",
+    "duplicate-resolution",
+    "ordered-ledger-replay",
+    "strict-schema",
+    "source-rights",
+    "resource-bounds",
+    "raw-json-markdown-replay"
+  ],
+  "proposed_bounds": {
+    "accounts": 8,
+    "events": 512,
+    "liquidity_min": "0.01",
+    "liquidity_max": "1000000",
+    "max_quantity_over_b": "1000",
+    "decimal_precision": 80,
+    "cash_quantum": "1e-24",
+    "price_absolute_tolerance": "1e-60",
+    "cost_absolute_tolerance": "1e-60",
+    "work": 5000000,
+    "returned_cells": 100000,
+    "cpu_target_seconds": 5,
+    "peak_target_MiB": 128,
+    "status": "Unmeasured proposals; schema/funding/tolerances must freeze before engine."
+  },
+  "backlog": {
+    "P1": [
+      "Full source-equivalence and independent numerical/funding proof coverage before broad parameter expansion",
+      "Real participant-data rights,consent,identity/resolution evidence and empirical price-calibration studies",
+      "Stable51event-resolution/57forecast interfaces only after explicit semantic mapping"
+    ],
+    "P2": [
+      "Continuous double auctions",
+      "Combinatorial and conditional scoring-rule markets",
+      "Advanced funding/shorting/fees/market-maker variants",
+      "Live user/trader operations and product interfaces; real-money/external trading remains outside this scope"
+    ]
+  }
+}
