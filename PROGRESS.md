@@ -1279,3 +1279,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #54 CLI reports and measured workloads
 - Saved138raw UTF8/LF CLI cases:23accepted/46rejected JSON/Markdown pairs. Workedempty/single/block/blinker/glider,controlled/identical/equal-countstate comparisons,torus/nonbinary andcombinedcaprefusals included.
 - Full1961tests pass (1866inherited+95new). Measuredsmall/medium/dense/scenario complete-report workloads onPython3.12.10 Windows;details indata/agent-based-resource-measurements.json. Dense64×64×128 median0.5843seconds,CLI1.1566seconds;whole measurement helper peak30.066MiB. Measurements arelocalrepresentative observations,notuniversal orCLI-child memory bounds. Bothcheckoutreplays andfull inheritedacceptance pending.
+
+## 2026-11-07 — #54 full units and actual checkout replay
+- Full1961tests pass. Both indexed core.autocrlf=false/true exports preserve208raw corpus files and3normalized commitments andeach replay138actualCLI outputs byte-for-byte,without newline normalization.
+- All26families/18localcases/512configurations andblock/blinker/glider controls pass. Full inherited CLI/verifier/source/dependency/preservation sweep remainsinprogress withnofailures observed. No55research yet.
