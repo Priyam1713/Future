@@ -1,0 +1,661 @@
+{
+  "version": 1,
+  "technique_id": 52,
+  "name": "Psychohistory",
+  "date": "2026-11-07",
+  "status": "Core v1 Ready — Synthetic Population Threshold Dynamics and Scenario Simulation Scope",
+  "certification_scope": "Bounded synthetic software correctness;not real-world forecasting accuracy,population laws orAsimovian psychohistory.",
+  "profile": "psychohistory-synthetic-threshold-dynamics-v1",
+  "profile_sha256": "b7e9f2d27994be3e89ac0bba0e2066bbc19bd89241e01e4b0989621de061988f",
+  "profile_file": "knowledge/psychohistory_profile_v1.json",
+  "source_manifest_sha256": "9dbd60a7838818c8e4332caaea837b4a2e7232ec02ec1a8434415150880144db",
+  "source_freeze_sha256": "59a045aa4a7ee17579f7973cc91f2175fe842302c61dc087ae8bd919d914c99a",
+  "equations": [
+    "Strict exact fields; schema_version integer1. All IDs ASCII [A-Za-z0-9][A-Za-z0-9_.-]{0,63}. Nodes sorted unique; population.size matches. Scenarios unique IDs; reference must exist.",
+    "Edges lexicographically sorted unique two-ID lists with u<v. Threshold rows cover nodes in their order. Exact probability strings: unsigned integer or fraction, each integer <=32digits; value0..1; no floats/bools/decimals.",
+    "next_i = current_i OR (degree_i>0 AND active_neighbors_i*denominator_i >= degree_i*numerator_i). One previous-round snapshot. Activation irreversible; unseeded isolates never activate even phi0; seeded isolates persist; phi0 positive-degree nodes activate without active neighbors.",
+    "Static graphs, thresholds and semantic identities. Rounds0..N are dimensionless. Include t0, append only changing states. At cap inspect one additional candidate state to distinguish fixed point from truncation. No-change candidate is not appended.",
+    "Initial modes fixed, bernoulli, explicit_runs. Fixed requires null probability, empty run_seeds; bernoulli requires exact probability and empty fixed_seeds/run_seeds; explicit_runs requires null probability, empty fixed_seeds and exactly R ordered seed lists. Seed lists sorted unique known IDs. Overrides sorted unique known nodes, exact binary integer state; overrides win.",
+    "xorshift32-v1 seed exact JSON integer1..4294967295. Mask32 after left13, right17, left5 XORs. Stream starts after first update. One word per run then sorted semantic node, including fixed/explicit/overridden nodes; shared table across all scenarios. Success iff word*denominator < 2**32*numerator. No draws during cascades. Endpoints0/1 exact. Stream hash commits algorithm/seed/nodes/runs/words.",
+    "Per-run initial/final count/fraction; active/inactive actual trajectories; state vectors only when trace_states true, otherwise state hashes. Per-round means through cap hold final absorbing states. Persistence baseline shares initial state, never activates; gains paired per run.",
+    "Exact rational means and population variance divide by R; sample variance divides by R-1 and is not_estimable for R1. Fraction variance scales by N**2. IID Bernoulli initial moments with overrides are ideal theoretical values; finite PRNG results are deterministic sample summaries and cascades correlated. Explicit runs are supplied equal-weight design, not Monte Carlo.",
+    "Static scenarios share semantic draws; comparisons use scenario minus reference per run, list changed edges/thresholds/initial parameters, and report identical-configuration controls. No guaranteed CRN variance reduction, causal inference or real-world predictive validity.",
+    "Provenance synthetic must be true; source_ref in frozen catalog; rights self_authored or permission_granted. Nonempty attribution/snapshot <=4000UTF8 characters with SHA256 over exact snapshot UTF8. Rights are declarations, not external certification. Unknown/empirical/causal/calendar fields reject.",
+    "Preflight BEFORE words/transition execution: work=sum(R*(cap+1)*(N+2E)); count_cells=S*(2*(R+1)*(cap+1)+12*R+32); state_cells=trace*S*R*(cap+1)*N. Conservative generated count/trace-cell reservation; input echo, hashes and fixed descriptive metadata excluded. Maxima cannot freely combine."
+  ],
+  "bounds": {
+    "nodes": 128,
+    "edges": 2048,
+    "runs": 256,
+    "scenarios": 8,
+    "count_cells": 100000,
+    "state_cells": 10000,
+    "work_units": 10000000
+  },
+  "inherited_inventory_row": [
+    52,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Psychohistory",
+    "RETAIN — simulate / implement",
+    "Research / creative proxy",
+    "Asimovian fictional psychohistory; social physics; population forecasting; complex adaptive models",
+    "Population-level stochastic simulation and macro-scenario forecasts",
+    "Population, mobility, network and economic data; agent models optional",
+    "Asimov’s version fiction; plausible proxies not civilization-scale deterministic laws",
+    "Fiction-inspired model; empirical proxies possible",
+    "Foundation",
+    "Isaac Asimov",
+    null,
+    "Social Physics",
+    "The Model Thinker",
+    "49",
+    "53, 54, 57",
+    52
+  ],
+  "ranked_sources": [
+    [
+      52,
+      "Psychohistory",
+      1,
+      "Isaac Asimov",
+      "Foundation",
+      "Original fictional concept",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      52,
+      "Psychohistory",
+      2,
+      "Alex Pentland",
+      "Social Physics",
+      "Empirical social dynamics and network data",
+      "https://ilpstex.mit.edu/content/books/social-physics-how-ideas-turn-into-action-25070",
+      "Publisher / purchase",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      52,
+      "Psychohistory",
+      3,
+      "Scott E. Page",
+      "The Model Thinker",
+      "Practical multi-model social reasoning",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      52,
+      "Psychohistory",
+      "Asimovian fictional psychohistory",
+      "Foundation",
+      "The Model Thinker",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      52,
+      "Psychohistory",
+      "social physics",
+      "The Model Thinker",
+      "Social Physics",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      52,
+      "Psychohistory",
+      "population forecasting",
+      "The Model Thinker",
+      "Social Physics",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      52,
+      "Psychohistory",
+      "complex adaptive models",
+      "The Model Thinker",
+      "Social Physics",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "source_boundaries": {
+    "Asimov": "Fictional inspiration; no operational or validated population law.",
+    "Pentland": "Empirical measurement/privacy context; detailed book formulas uninspected.",
+    "Page": "Many-model comparison context; detailed book algorithms uninspected.",
+    "Watts2002": "Model Specification p5767: irreversible >= fractional activation; random asynchronous source schedule. Our synchronous finite explicit graph is editorial; no experiment/theorem replication."
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Original synthetic finite simple undirected graphs",
+      "Exact node-specific rational >= thresholds",
+      "Editorial synchronous irreversible updates,fixed-point/truncation distinction",
+      "Fixed/Bernoulli/explicit per-run seeds andfixed overrides",
+      "Frozen shared xorshift32-v1 semantic-node initialization",
+      "Bounded count/state traces,exact aggregate moments andpopulation/sample denominators",
+      "Static edges/threshold/rho/override scenario variants",
+      "Matched no-influence persistence baseline,paired differences andidentical controls",
+      "Strict offline JSON/Markdown CLI,hash provenance andresource preflight"
+    ],
+    "experimental_research_only": [
+      "Usefulness of synthetic results as a proxy for observed social diffusion",
+      "Future legally acquired book methods ordata-calibrated population models;unimplemented,not accepted input configurations"
+    ],
+    "unsupported": [
+      "Real population forecasting",
+      "Empirical calibration",
+      "Held-out predictive validation",
+      "Causal inference",
+      "Asimovian population laws",
+      "Dynamic/weighted graphs",
+      "Births/deaths/migration",
+      "Learning/adaptation",
+      "Infection/recovery",
+      "Per-contact transmission",
+      "Watts random-asynchronous experiment reproduction",
+      "Restricted/private trace ingestion",
+      "Narrative LLM behavior as numerical transitions"
+    ]
+  },
+  "variations": {
+    "Asimovian fictional psychohistory": "Fictional inspiration/reference only;no operational law",
+    "social physics": "Synthetic threshold proxy only;empirical measurement/fitting unsupported",
+    "population forecasting": "Synthetic count trajectories only;real population forecasts unsupported",
+    "complex adaptive models": "Static threshold-network subset;learning/adaptive topology unsupported"
+  },
+  "acceptance_criteria": [
+    {
+      "criterion": "Pre-engine immutable profile/source/rights freeze",
+      "passed": true
+    },
+    {
+      "criterion": "Independent pre-engine graph/ensemble/RNG fixtures",
+      "passed": true
+    },
+    {
+      "criterion": "Exact synchronous deterministic kernel and isolate/zero conventions",
+      "passed": true
+    },
+    {
+      "criterion": "Fixed/Bernoulli/explicit-run initialization and immutable semantic pairing",
+      "passed": true
+    },
+    {
+      "criterion": "Exact means,population/sample variance andsame-state persistence baseline",
+      "passed": true
+    },
+    {
+      "criterion": "All23fixture families pluscount-only/draw-equality addenda",
+      "passed": true
+    },
+    {
+      "criterion": "Strict rejection beforePRNG/transitions oncombined caps",
+      "passed": true
+    },
+    {
+      "criterion": "138accepted/rejected CLI cases exact replay",
+      "passed": true
+    },
+    {
+      "criterion": "Both actual exported checkout CLI replays",
+      "passed": true
+    },
+    {
+      "criterion": "1790tests including1719inherited",
+      "passed": true
+    },
+    {
+      "criterion": "2507CLI cases including2369inherited",
+      "passed": true
+    },
+    {
+      "criterion": "31independent verifiers including30inherited",
+      "passed": true
+    },
+    {
+      "criterion": "Registry idempotence,strictJSON,taxonomy anddependency/pip/diff gates",
+      "passed": true
+    },
+    {
+      "criterion": "3496pre-engine protected files unchanged",
+      "passed": true
+    },
+    {
+      "criterion": "Actual sparse/dense/ensemble resource observations",
+      "passed": true
+    },
+    {
+      "criterion": "Supported/experimental/unsupported matrix andP1/P2 limits",
+      "passed": true
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "profile_sha256": "b7e9f2d27994be3e89ac0bba0e2066bbc19bd89241e01e4b0989621de061988f",
+    "families": {
+      "population-conservation": {
+        "passed": true,
+        "cases": [
+          "path",
+          "bernoulli"
+        ]
+      },
+      "one-step-transitions": {
+        "passed": true,
+        "cases": [
+          "path"
+        ]
+      },
+      "zero-probability-events": {
+        "passed": true,
+        "cases": [
+          "rho-zero"
+        ]
+      },
+      "certain-transitions": {
+        "passed": true,
+        "cases": [
+          "rho-one"
+        ]
+      },
+      "absorbing-states": {
+        "passed": true,
+        "cases": [
+          "all-seed",
+          "truncated",
+          "zero-cap"
+        ]
+      },
+      "isolated-nodes": {
+        "passed": true,
+        "cases": [
+          "isolated",
+          "singleton"
+        ]
+      },
+      "fully-connected": {
+        "passed": true,
+        "cases": [
+          "complete-tie"
+        ]
+      },
+      "seeded-event-ordering": {
+        "passed": true,
+        "cases": [
+          "bernoulli",
+          "overrides"
+        ]
+      },
+      "repeated-run-counts": {
+        "passed": true,
+        "cases": [
+          "exhaustive",
+          "bernoulli"
+        ]
+      },
+      "scenario-boundaries": {
+        "passed": true,
+        "cases": [
+          "reference",
+          "duplicate-scenario"
+        ]
+      },
+      "common-random-pairing": {
+        "passed": true,
+        "cases": [
+          "identical",
+          "paired-rho",
+          "overrides"
+        ]
+      },
+      "causal-claims": {
+        "passed": true,
+        "cases": [
+          "causal"
+        ]
+      },
+      "parameter-misspecification": {
+        "passed": true,
+        "cases": [
+          "threshold-comparison"
+        ]
+      },
+      "topology-sensitivity": {
+        "passed": true,
+        "cases": [
+          "topology"
+        ]
+      },
+      "synthetic-mode": {
+        "passed": true,
+        "cases": [
+          "empirical"
+        ]
+      },
+      "rights-source": {
+        "passed": true,
+        "cases": [
+          "rights",
+          "source",
+          "snapshot"
+        ]
+      },
+      "json-markdown-replay": {
+        "passed": true,
+        "cases": [
+          "unicode"
+        ]
+      },
+      "unsupported-real-world-prediction": {
+        "passed": true,
+        "cases": [
+          "unknown-field"
+        ]
+      },
+      "synchronous-asynchronous": {
+        "passed": true,
+        "cases": [
+          "path"
+        ]
+      },
+      "fraction-threshold-boundary": {
+        "passed": true,
+        "cases": [
+          "complete-tie",
+          "node-thresholds"
+        ]
+      },
+      "initial-seed-binomial": {
+        "passed": true,
+        "cases": [
+          "exhaustive",
+          "bernoulli"
+        ]
+      },
+      "finite-work-resource-caps": {
+        "passed": true,
+        "cases": [
+          "count-cap",
+          "state-cap",
+          "work-cap",
+          "edge-cap"
+        ]
+      },
+      "node-relabeling-invariance": {
+        "passed": true,
+        "cases": [
+          "node-thresholds",
+          "relabelled"
+        ]
+      }
+    },
+    "fixture_families": 23,
+    "accepted": 21,
+    "rejected": 41,
+    "boundary_addendum_cases": 3,
+    "literal_anchors": {
+      "path": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "forward_inplace_one_sweep": [
+        1,
+        1,
+        1
+      ],
+      "reverse_inplace_one_sweep": [
+        1,
+        1,
+        0
+      ],
+      "two_node_final_counts": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "final_count": {
+        "mean": "3/2",
+        "population_variance": "3/4",
+        "sample_variance": "1"
+      },
+      "final_fraction": {
+        "mean": "3/4",
+        "population_variance": "3/16",
+        "sample_variance": "1/4"
+      },
+      "gain": {
+        "mean": "1/2",
+        "population_variance": "1/4",
+        "sample_variance": "1/3"
+      },
+      "binomial_N4_rho_quarter": {
+        "mean": "1",
+        "variance": "3/4"
+      }
+    },
+    "prng_vectors_passed": true,
+    "pairing_and_order_passed": true,
+    "pre_engine_fixture_hashes_passed": true,
+    "scientific_scope": "Independent synthetic software correctness only; no empirical validation"
+  },
+  "regression": {
+    "tests": 1790,
+    "inherited_tests": 1719,
+    "new_tests": 71,
+    "cli_cases": 2507,
+    "inherited_cli_cases": 2369,
+    "new_cli_cases": 138,
+    "independent_verifiers": 31,
+    "inherited_verifiers": 30,
+    "protected_files": 3496,
+    "changed_protected_files": [],
+    "registry": {
+      "references_checked_twice": 516,
+      "unique": 361,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    },
+    "strict_json_files": 2462
+  },
+  "replay": {
+    "accepted_pairs": 23,
+    "rejected_pairs": 46,
+    "cli_cases": 138,
+    "checkout": {
+      "passed": true,
+      "exports": [
+        {
+          "autocrlf": "false",
+          "raw_corpus_files": 208,
+          "normalized_commitments": 5,
+          "actual_cli_replays": 138,
+          "passed": true
+        },
+        {
+          "autocrlf": "true",
+          "raw_corpus_files": 208,
+          "normalized_commitments": 5,
+          "actual_cli_replays": 138,
+          "passed": true
+        }
+      ],
+      "method": "git checkout-index from staged files with core.autocrlf false/true;actual exported CLI executions;stdout bytes SHA256 matches saved JSON/Markdown,without newline normalization",
+      "subprocess_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "harness_limit": "Two parallel CLI processes; limits inherited numerical-library import threads,not the stdlib threshold engine. First unrestricted four-worker attempt overlapped regression jobs and failed an OpenBLAS import allocation; no report mismatch."
+    }
+  },
+  "performance": {
+    "version": 1,
+    "measured": true,
+    "environment": {
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD"
+    },
+    "profile_sha256": "b7e9f2d27994be3e89ac0bba0e2066bbc19bd89241e01e4b0989621de061988f",
+    "code_sha256": "fd187915dfca927e046800be389a1fe9b547653488d29055fcfb5cfb39445386",
+    "protocol": "Five untraced complete in-process report repetitions per workload;separate tracemalloc repetition for Python allocations;one whole CLI invocation including imports,registry,serialization. Native memory is whole measurement helper peak including all workloads/imports/tracing,not isolated per workload or CLI child.",
+    "process_peak_working_set_bytes": 27258880,
+    "under_proposed_128_MiB": true,
+    "results": [
+      {
+        "id": "sparse",
+        "nodes": 128,
+        "edges": 127,
+        "runs": 16,
+        "round_cap": 128,
+        "request_sha256": "575cbca6783ec0a34297e208098af883f8aad10b6a6406af20100c88eb6cbe27",
+        "budget": {
+          "work_units": 788448,
+          "count_cells": 4610,
+          "state_cells": 0
+        },
+        "seconds": [
+          0.0463815,
+          0.0464613,
+          0.0462638,
+          0.0466642,
+          0.0459827
+        ],
+        "median_seconds": 0.0463815,
+        "cli_seconds": 0.9869426,
+        "python_traced_peak_bytes": 577363,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "dense",
+        "nodes": 64,
+        "edges": 2016,
+        "runs": 4,
+        "round_cap": 64,
+        "request_sha256": "75bfb3602e7084bb23fafffae96a88c4e0be07e86079ae26ee9a9b5c88904816",
+        "budget": {
+          "work_units": 1064960,
+          "count_cells": 730,
+          "state_cells": 0
+        },
+        "seconds": [
+          0.00725,
+          0.0067909,
+          0.0074768,
+          0.0067198,
+          0.0074437
+        ],
+        "median_seconds": 0.00725,
+        "cli_seconds": 0.9872391,
+        "python_traced_peak_bytes": 520487,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "ensemble",
+        "nodes": 32,
+        "edges": 31,
+        "runs": 128,
+        "round_cap": 32,
+        "request_sha256": "faf874ab04dd7482ab203658da0a546e10e0592b1e60584591115621634cf26e",
+        "budget": {
+          "work_units": 397056,
+          "count_cells": 10082,
+          "state_cells": 0
+        },
+        "seconds": [
+          0.0144163,
+          0.0142951,
+          0.0141641,
+          0.0142558,
+          0.0141304
+        ],
+        "median_seconds": 0.0142558,
+        "cli_seconds": 1.0940301,
+        "python_traced_peak_bytes": 816050,
+        "under_proposed_five_seconds": true
+      }
+    ],
+    "scope": "Local representative synthetic workloads only;not universal or real-world forecast performance."
+  },
+  "evidence": {
+    "data/psychohistory-acceptance-checks.json": "9f01ef5b87b5299c84e912e08a572d014a719dafb8ec66ea31f6d18532854b60",
+    "data/psychohistory-unit.json": "79cc21601bf4498e421649343c5c146542cd52ae263168e70c53899be759192e",
+    "data/psychohistory-verification.json": "47eb293af63ea450b425228d74aff8d47df8d0276b4085fc33be19505f88c7c1",
+    "data/psychohistory-cli-replay.json": "b3c86f9e47d7d30e7e5dc5f0843db89f6a83f83f071905f66bca16ea0b87a14e",
+    "data/psychohistory-checkout-replay.json": "66222d9b46c73f78e15c7f86c2a0385ccab4539d711287564217ff1609d61602",
+    "data/psychohistory-resource-measurements.json": "f3e40325b16dd7b080f62798a1f92a761245857de636e99d61966bd0bf22fbc0",
+    "knowledge/psychohistory_fixture_freeze_v1.json": "81653d793b11e9bf0c01db6a02c5fda2cf7929bdfa693cd1cc09021432a5de30",
+    "knowledge/psychohistory_boundary_fixture_freeze_v1.json": "c374f0e1e5edf4f20ac724dc3f038ac0bdda5ee84e1eb4f646d1ec640c068270"
+  },
+  "milestones": {
+    "source_profile": "8db3289",
+    "independent_fixtures": "b13351e",
+    "engine_verification": "6286015",
+    "boundary_fixtures": "4f5cd88",
+    "cli_worked_reports": "720ba39",
+    "checkout_verification": "e52bfc3",
+    "full_acceptance": "9fe09bb"
+  },
+  "scientific_limits": [
+    "Exact exhaustive two-node design isnotMonteCarlo. Finite PRNG summaries arenotideal iid expectations. Cascade outcomes arecorrelated.",
+    "Shared random numbers donotguarantee variance reduction;paired synthetic differences arenotobserved interventions.",
+    "Fixed-input relabeling preserves physical dynamics. Arbitrary renaming ofsorted semanticIDs changes finite-PRNG drawassignment;nodal law symmetry doesnotguarantee identical stochastic realizations.",
+    "Rounds arenotcalendar dates. Fixed points aremodel states,notverified social equilibria.",
+    "Local hashes commit content,nottruth,rights orindependent timestamp anchoring. Source/rights/identity declarations require external review forrealdata."
+  ],
+  "rights": "Facts-only source catalog andoriginal synthetic examples/code. No book/article bodies,figures orindividual traces redistributed. SocioPatterns CC BY-NC-SA3.0 andprivacy/consent restrictions remain dataset-specific. Census vintage/API/rights applicability unvalidated;no realdata acquired.",
+  "backlog": {
+    "P1": [
+      "Legitimate detailed Pentland/Page chapter/formula inspection beforeattributing additional rules",
+      "Dataset-specific rights,consent,privacy,vintage andrepresentativeness beforeanyrealdata",
+      "Empirical threshold/network estimation,group/time held-out validation andappropriate uncertainty design",
+      "Independent Markov/mean-field comparators with explicit closure assumptions",
+      "Prospective external commitments forinput/code/source hashes"
+    ],
+    "P2": [
+      "Watts random-asynchronous source experiment/theorem reproduction",
+      "Dynamic/weighted/directed graphs andchanging thresholds",
+      "Adaptive/learning agents anddemographic birth/death/migration models",
+      "Causal identification fromappropriate empirical designs",
+      "Larger/distributed simulations onlyifjustified bymeasured demand"
+    ]
+  },
+  "next": "Only after this closure is committed,pushed andclean main0/0 observed:Technique53 Digital Twin Simulation resource/variation audit only;no53engine/profile/CLI."
+}

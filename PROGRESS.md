@@ -1221,3 +1221,8 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Passed1790tests (1719inherited+71new),2507CLI cases (2369inherited+138new),31independent verifiers (30inherited+1new),all23families and3boundary addenda. All3496pre-engine protected files unchanged.
 - Source registry idempotence,strictJSON,60IDs/54retained/six exclusions,dependency audit,pip check anddiff check pass. Both actual EOL exports match138raw CLI outputs each. All failed/interrupted allocation-affected groups were rerun successfully under bounded import threads;no prior failure is treated as passing evidence.
 - Final evidence:data/psychohistory-acceptance-checks.json. Bounded Core v1 closure follows;no53research yet.
+
+## 2026-11-07 — #52 Core v1 closure
+- Accepted **Core v1 Ready — Synthetic Population Threshold Dynamics and Scenario Simulation Scope** under psychohistory-synthetic-threshold-dynamics-v1. All16criteria,23families and3boundary addenda pass;1790tests,2507CLI cases and31independent verifiers. All3496protected pre-engine files unchanged.
+- Saved23accepted/46rejected report pairs;both real Git EOL exports replay138CLI outputs exactly each. Source/rights,registry,strictJSON,dependencies,pip,diff and60/54/six-exclusion invariants pass. Actual resource results andscientific limits frozen inknowledge/psychohistory_core_v1.json.
+- Next onlyafterclosurepushandclean0/0:Technique53resource audit only. No53implementation.
