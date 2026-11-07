@@ -1164,3 +1164,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Corpus-local -text preserves raw bytes. Both autocrlf=true/false exports verify235raw corpus files plus3normalized code/oracle/fixture commitments. Compact review:data/superforecasting-synthetic-summary.md.
 - All1717tests pass (1598inherited+119new). Full inherited CLI/verifier acceptance isrunning;no readiness yet.
 - Git whitespace attributes exempt only intentional Markdown terminal blank lines andthe named raw-whitespace input fixture;all code/history checks remain active. Both checkout exports rechecked afterthis corpus-local policy.
+
+## 2026-11-07 — #51 independent timestamp-precision reproducer
+- Review identified lexical min/max ordering andwhole-second truncation in derived reference-period/lead-time displays when UTC timestamps include fractional seconds. Eligibility already uses parsed datetime values. Froze an original boundary table before correction:00.0 precedes00.1;latestobserved00.1;lead6047999/10seconds. Original23family freeze andearlier technique artifacts unchanged.
