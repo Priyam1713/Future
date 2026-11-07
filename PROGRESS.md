@@ -1216,3 +1216,8 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #52 actual checkout replay andfull unit gate
 - Both indexed core.autocrlf=false/true exports replay138actual CLI invocations each with exact raw stdout SHA256 agreement;208raw corpus files and5normalized commitments perexport.1790full unit tests pass (1719inherited+71new).
 - Initial unrestricted verification overlap caused OpenBLAS import allocation failures,notreport disagreement. Bounded import-thread harness resumed passing receipts andreruns interrupted/failed groups;details indata/psychohistory-harness-recheck.json. Full acceptance remains pending.
+
+## 2026-11-07 — #52 full acceptance passed
+- Passed1790tests (1719inherited+71new),2507CLI cases (2369inherited+138new),31independent verifiers (30inherited+1new),all23families and3boundary addenda. All3496pre-engine protected files unchanged.
+- Source registry idempotence,strictJSON,60IDs/54retained/six exclusions,dependency audit,pip check anddiff check pass. Both actual EOL exports match138raw CLI outputs each. All failed/interrupted allocation-affected groups were rerun successfully under bounded import threads;no prior failure is treated as passing evidence.
+- Final evidence:data/psychohistory-acceptance-checks.json. Bounded Core v1 closure follows;no53research yet.
