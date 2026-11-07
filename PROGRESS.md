@@ -1407,3 +1407,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-08 — #59 Core v1 closure
 - Core v1 Ready — Deterministic Lorenz Dynamics, Perturbation Sensitivity and Finite-Horizon Simulation Scope. Full2276tests,3345CLIcases,38verifiers;5050protectedfiles unchanged.23families/57newtests,4exact stagevectors andindependent Taylor80/100 reference pass.12accepted/37rejectedpairs replay98rawoutputs ineachactualcheckout. CPU/memory measured;sourcegaps/matrix/P1P2 explicit. No empiricalforecast,globalLyapunov orrigorouserror certification. Afterclosurepush/clean0/0,continue60.
+
+## 2026-11-08 — #60 resource audit
+- Original three ranks/four variations preserved; full ranked-text gaps explicit. Generic finite conditional probability anddeclaredutility core only,usinginspected MITprimary probabilitynotes. No quantum-state/other-universe predictionclaim;no engineyet.
