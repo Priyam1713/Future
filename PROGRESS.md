@@ -1264,3 +1264,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - PinnedMesa sourcefe24c24(2026-11-06),version4.0.0a0,LICENSE/NOTICE. LifeB3/S23 istwo-phase/toroidal inreference;recommendexplicitfinitezero-exterior synchronous CPUcore. Schellingcount-prose versusfraction-code conflict andshuffledmovement keptdistinct. Sugarscape/virus/LLMmechanisms,license/data andempirical limits audited.
 - Original18-case/512configuration combinatorics andliteralblock/blinker/birth-death/order controls recorded;26families planned only. No54runtime,executableprofile,productionfixtures,CLI,modelrun orbenchmark. NoMesa/LLM/GPU dependency orsource/asset redistribution.
 - Auditpasses3976protected pre-audit files,other59gapentries,registry542references/387unique checked twice,2621strictJSON and60/54/six-exclusion invariants. No55research.
+
+## 2026-11-07 — #54 immutable source/profile freeze
+- Frozen B3/S23,finitezero-exterior,explicitbinary inputs,synchronous snapshots,full requestedhorizons andexactcomplete-state repeat classification beforeengine. Noearlystop/fastforward;T0 fabricatesnotransition. Combined work/state/count reservations andsupported/experimental/unsupported matrix fixed. PinnedMesa alpha/source rights distinctions preserved. Protected pre-engine count: 3979. Independentfixtures follow.

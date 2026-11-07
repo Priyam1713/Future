@@ -1,0 +1,108 @@
+{
+  "id": "agent-based-finite-grid-b3s23-v1",
+  "version": 1,
+  "technique_id": 54,
+  "scope": "Finite-Grid Synchronous Binary Cellular Automata Scope",
+  "source_manifest_sha256": "d95cbfa701819bf23b3df2647c8ee6454963a397654588672818e8daec2ee02f",
+  "source_freeze_sha256": "7f253ec16471ce6a5a4a35193cb06fa065077a598a1aed293d61a63e82c1232b",
+  "schema": {
+    "root": [
+      "schema_version",
+      "profile",
+      "model",
+      "geometry",
+      "ticks",
+      "trace_states",
+      "scenarios",
+      "reference_scenario",
+      "provenance"
+    ],
+    "profile": [
+      "id",
+      "version",
+      "sha256",
+      "catalog_sha256"
+    ],
+    "model": [
+      "rule",
+      "boundary",
+      "scheduler",
+      "neighborhood"
+    ],
+    "geometry": [
+      "height",
+      "width"
+    ],
+    "scenario": [
+      "id",
+      "initial_grid"
+    ],
+    "provenance": [
+      "synthetic",
+      "source_ref",
+      "rights",
+      "attribution",
+      "snapshot",
+      "snapshot_sha256"
+    ]
+  },
+  "model": {
+    "rule": "B3/S23",
+    "boundary": "finite-zero-exterior",
+    "scheduler": "synchronous",
+    "neighborhood": "moore-radius-1-exclude-center"
+  },
+  "equations": [
+    "neighbor_count=sum ofliving cells atdistinct in-grid Moore offsets,excluding(0,0),fromcompleteprior snapshot",
+    "next_alive = neighbor_count==3 OR (current_alive==1 AND neighbor_count==2)",
+    "alive+dead=height*width; alive_next=alive_previous+births-deaths"
+  ],
+  "contract": [
+    "Strict exact object fields;schema_version/profile.version integer1. All IDs ASCII [A-Za-z0-9][A-Za-z0-9_.-]{0,63}. One shared geometry/model/horizon;1..8 distinctscenario IDs withcanonical explicitinitialgrids andchosen reference.",
+    "Height/width exactintegers1..64,N<=4096. Grid isalist ofheight rowlists eachwidth exactinteger0or1;bools,floats,strings,ragged rows andimplicit padding reject. Initialcoordinates row-major[r,c],origin top-left.",
+    "Finite zero-exterior boundaries:out-of-grid positions dead,no wrap oralias. Eight distinct Moore radius1positions exclude center. Every nextcell readscompletepriorstate;commitallcells together. B3/S23 only;unknownmodels,schedules,boundaries,random orLLM fields reject.",
+    "Alwayscompute exactly requestedticks0..256;no earlystop orfastforward. Include t0 plus allactual transitions. At t0 births/deaths=null because no transition occurred. Initial/final complete grids alwaysreturned;optional state_trace contains every t0..T completegrid.",
+    "Cycle classification usesexact complete row-major binary-state equality,notaggregatecounts orhash equality alone. Keepfirst occurrence ofeach state;thefirst repeat atj ofearlieri establishescycle_start=i,period=j-i,first_repeat_tick=j. period1=fixed_point;period>1=periodic_cycle. Continue allrequestedticks afterdetection sofinalphase istruthful. No repeat=unclassified,truncated=true. Establishedfixed/cycle classification hastruncated=false. T0 hasno transition,classifiesunclassified andtruncated=true evenifinitialpattern wouldbe stable.",
+    "State SHA256 isoverraw row-majorbytes0/1,notASCII digits;geometry/model hashes bindshape. Source/profile/schema/input/code/initial/final/state identities recorded. Inputs copied,notmutated. Liveness isnotconserved orirreversible;birthsanddeaths bothallowed.",
+    "Compare eachscenario minusreference atidenticalticks:alive-count differences andcomplete-state Hammingdistance. Finaldifferences includeactual finalgrids,notprojectedafterearlystop. Identicalinitialconfigurations givezero differences. Equalcounts do notimplyequalstates. Differences areconditionalsyntheticmodel sensitivity,notreal-world causal effects.",
+    "Resource preflight before neighborhood construction/transitions:cell_ticks=N*T*S<=1000000;neighbor_cell_work=9*cell_ticks<=9000000;returned_state_cells=S*N*(2+(T+1 iftrace_states else0))<=100000;returned_count_cells=S*(10*(T+1)+32)<=20000. Conservative outputreservations include initial/finalgrids andfulltraces/comparisons;inputecho,histories/hashes andfixedmetadata excluded. Individualmaxima cannotfreelycombine;work cap isredundantgivenfactor9 butexplicitly checked. Internalstatehistory isbounded bycell-tick cap plusinitialstates.",
+    "Provenance synthetic mustbetrue;source_ref infrozencatalog. Rights self_authored/permission_granted/public_domain/cc_by;nonemptyattribution/snapshot<=4000chars andexactUTF8 snapshotSHA256. Declarations are not independenttruth/rights certification. Noactualhuman/clinical/socialdata ingestion orforecastclaim.",
+    "Geometric invariance requiresmatching transformedgeometry/coordinates/boundaries. Arbitrarynodepermutations are notgrid symmetries. Interiortranslation tests needadequateboundaryclearance. Ticks aremodelupdates,notdates. FullLife states andlocalcombinatorics are notempiricaltransition probabilities."
+  ],
+  "bounds": {
+    "height": 64,
+    "width": 64,
+    "cells": 4096,
+    "ticks": 256,
+    "scenarios": 8,
+    "cell_ticks": 1000000,
+    "neighbor_cell_work": 9000000,
+    "returned_state_cells": 100000,
+    "returned_count_cells": 20000
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Explicit synthetic finite binarygrids",
+      "Exact synchronous B3/S23 withzeroexterior",
+      "Full requestedhorizon,exactstate fixed/cycle classification",
+      "Bounded state/counttraces andstaticinitial-state comparisons",
+      "Offline strict JSON/Markdown andhash provenance"
+    ],
+    "experimental_research_only": [
+      "Any interpretation ofautomaton patterns asobservedagent/socialbehavior"
+    ],
+    "unsupported": [
+      "Schelling relocation",
+      "Sugarscape",
+      "Epidemiological/social forecasting",
+      "LLM generative agents",
+      "Stochastic initialization/scheduling",
+      "Toroidal boundaries",
+      "Other CA rules",
+      "Empirical calibration",
+      "Causalpolicy effects",
+      "Arbitrarynodepermutation invariance"
+    ]
+  },
+  "runtime": "PythonstdlibCPU offline;noMesa,NetLogo,GPU,cloud,paidAPI orfrontend"
+}
