@@ -1312,3 +1312,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #55 isolated leakage regression controls
 - Added three isolated controls so subject/run/dependent-trial rejection cannot be masked by another source-identity failure. All62 #55 tests and the refreshed full2023 unit suite pass. Engine/profile/fixtures and golden reports unchanged. Current full CLI/verifier sweep continues; acceptance will refresh against the new unit count before closure.
+
+## 2026-11-07 — #55 full acceptance passed
+- Passed2023 tests (1961 inherited+62 new),2893 CLI cases (2783 inherited+110 new),34 independent verifiers and all28 #55 families. Both actual checkout exports replay110 raw outputs each. All4219 pre-engine protected files unchanged; registry,strictJSON,60/54/exclusions,dependency,pip,diff pass.
+- Aggregator refreshed from complete command receipts after initial in-flight process retained the pre-additional-tests2020 expectation. Current acceptance checks2023 exactly; no failing engine check was treated as passing. Closure follows before #56 audit.
