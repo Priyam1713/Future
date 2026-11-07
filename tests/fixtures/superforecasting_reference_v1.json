@@ -1,0 +1,1080 @@
+{
+  "version": 1,
+  "provenance": "Original synthetic independently authored odds/category/group calculations;production engine did not exist at freeze",
+  "families": {
+    "reference-base-rate": "Original10eligible resolved members,3successes =>3/10;preserveall10IDs.",
+    "empty-zero-full-samples": "n0=>not_estimable,not0;0/5=>0;5/5=>1;observed endpoints are not population certainty.",
+    "ambiguous-membership": "A member with unknown eligibility is explicitly unresolved/excluded with reason;no guessed inclusion.",
+    "denominator-preservation": "Universe12,included10,excluded2;unresolved members counted separately;no silent denominator drop.",
+    "binary-probability": "Accept exact0,1/2,1;reject bool,nonfinite,negative,>1 andunsupported fields.",
+    "brier-loss": "p9/10,y1=>1/100binary,1/50two-category;p9/10,y0=>81/100and81/50.",
+    "bayes-neutral": "prior1/5,LR1=>1/5.",
+    "bayes-positive": "prior1/5,LR3=>3/7;equivalentconditional likelihoods3/5and1/5 yield3/7.",
+    "bayes-zero": "prior1/5,LR0=>0;impossible evidence underboth hypotheses rejects.",
+    "certain-priors": "p0withfiniteLR3=>0;p1withLR3=>1;p1withLR0=>undefined/reject.",
+    "dependent-evidence": "Repeated evidenceID rejects;naive second LR3 wouldproduce9/13andmustnotbeaccepted asindependent duplicate.",
+    "forecast-versions": "Original1/5atJan1,amend2/5atJan2,cutoffJan3=>select2/5once;Jan4revision retainedbutunscored.",
+    "chronology": "Forecastat/afterknown occurrence rejects eligibility;strict cutoff/sourceavailability/window/resolution chronology.",
+    "unresolved-void": "Resolved2,unresolved1,void1=>score denominator2;showall4statuses andexplicit exclusions.",
+    "calibration-bins": "10fixedleft-closed bins,lastincludes1;p.1=>bin1,p1=>bin9;emptybinsnull;[.2,.2]y[0,1]=>mean1/5,frequency1/2,count2.",
+    "paired-baseline": "p[4/5,3/10],y[1,0]:binary Brier13/200;baseline1/2loss1/4;improvement37/200;skill37/50.",
+    "team-dependence": "Two people forecastingoneevent=>2slots,1uniqueevent,1dependencygroup;team collaboration not2independent events.",
+    "rights-source": "Missingrights,source hash orreference-class member provenance rejects.",
+    "json-markdown-replay": "Unicode,whitespace,raw-input hashes,exactsemanticreport andsafeMarkdownfence replay;rejectedcases too.",
+    "log-loss": "p1/2=>ln2;correctendpoint=>0;contradictedendpoint=>taggedpositiveinfinity,notJSONInfinity orsilentclipping.",
+    "resolution-decomposition": "Identicalforecast groups p[.2,.2,.8,.8],y[0,1,1,1]:Brier19/100,REL13/200,RES1/16,UNC3/16;REL-RES+UNC=19/100.",
+    "heldout-isolation": "Freezeclass/baseline beforetargettest;futureoutcome alteration cannotchangeearlier selectedforecasts orfrozen priors;splitdependent events together.",
+    "negative-event-resolution-time": "Binary nonoccurrence resolves only after the declared window/observation policy;report known_at and window_end separately from positive occurrence_at."
+  },
+  "base_rates": [
+    {
+      "outcomes": [],
+      "k": 0,
+      "n": 0,
+      "rate": null
+    },
+    {
+      "outcomes": [
+        null
+      ],
+      "k": 0,
+      "n": 0,
+      "rate": null
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "k": 0,
+      "n": 5,
+      "rate": "0"
+    },
+    {
+      "outcomes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "k": 5,
+      "n": 5,
+      "rate": "1"
+    },
+    {
+      "outcomes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "k": 3,
+      "n": 10,
+      "rate": "3/10"
+    }
+  ],
+  "bayes": [
+    {
+      "prior": "0",
+      "ratio": "0",
+      "posterior": "0",
+      "status": "finite"
+    },
+    {
+      "prior": "0",
+      "ratio": "1/10",
+      "posterior": "0",
+      "status": "finite"
+    },
+    {
+      "prior": "0",
+      "ratio": "1",
+      "posterior": "0",
+      "status": "finite"
+    },
+    {
+      "prior": "0",
+      "ratio": "3",
+      "posterior": "0",
+      "status": "finite"
+    },
+    {
+      "prior": "0",
+      "ratio": "1000000000000000000000000000000",
+      "posterior": "0",
+      "status": "finite"
+    },
+    {
+      "prior": "1/1000",
+      "ratio": "0",
+      "posterior": "0",
+      "status": "finite"
+    },
+    {
+      "prior": "1/1000",
+      "ratio": "1/10",
+      "posterior": "1/9991",
+      "status": "finite"
+    },
+    {
+      "prior": "1/1000",
+      "ratio": "1",
+      "posterior": "1/1000",
+      "status": "finite"
+    },
+    {
+      "prior": "1/1000",
+      "ratio": "3",
+      "posterior": "1/334",
+      "status": "finite"
+    },
+    {
+      "prior": "1/1000",
+      "ratio": "1000000000000000000000000000000",
+      "posterior": "1000000000000000000000000000000/1000000000000000000000000000999",
+      "status": "finite"
+    },
+    {
+      "prior": "1/5",
+      "ratio": "0",
+      "posterior": "0",
+      "status": "finite"
+    },
+    {
+      "prior": "1/5",
+      "ratio": "1/10",
+      "posterior": "1/41",
+      "status": "finite"
+    },
+    {
+      "prior": "1/5",
+      "ratio": "1",
+      "posterior": "1/5",
+      "status": "finite"
+    },
+    {
+      "prior": "1/5",
+      "ratio": "3",
+      "posterior": "3/7",
+      "status": "finite"
+    },
+    {
+      "prior": "1/5",
+      "ratio": "1000000000000000000000000000000",
+      "posterior": "250000000000000000000000000000/250000000000000000000000000001",
+      "status": "finite"
+    },
+    {
+      "prior": "1/2",
+      "ratio": "0",
+      "posterior": "0",
+      "status": "finite"
+    },
+    {
+      "prior": "1/2",
+      "ratio": "1/10",
+      "posterior": "1/11",
+      "status": "finite"
+    },
+    {
+      "prior": "1/2",
+      "ratio": "1",
+      "posterior": "1/2",
+      "status": "finite"
+    },
+    {
+      "prior": "1/2",
+      "ratio": "3",
+      "posterior": "3/4",
+      "status": "finite"
+    },
+    {
+      "prior": "1/2",
+      "ratio": "1000000000000000000000000000000",
+      "posterior": "1000000000000000000000000000000/1000000000000000000000000000001",
+      "status": "finite"
+    },
+    {
+      "prior": "9/10",
+      "ratio": "0",
+      "posterior": "0",
+      "status": "finite"
+    },
+    {
+      "prior": "9/10",
+      "ratio": "1/10",
+      "posterior": "9/19",
+      "status": "finite"
+    },
+    {
+      "prior": "9/10",
+      "ratio": "1",
+      "posterior": "9/10",
+      "status": "finite"
+    },
+    {
+      "prior": "9/10",
+      "ratio": "3",
+      "posterior": "27/28",
+      "status": "finite"
+    },
+    {
+      "prior": "9/10",
+      "ratio": "1000000000000000000000000000000",
+      "posterior": "9000000000000000000000000000000/9000000000000000000000000000001",
+      "status": "finite"
+    },
+    {
+      "prior": "1",
+      "ratio": "0",
+      "posterior": null,
+      "status": "undefined"
+    },
+    {
+      "prior": "1",
+      "ratio": "1/10",
+      "posterior": "1",
+      "status": "finite"
+    },
+    {
+      "prior": "1",
+      "ratio": "1",
+      "posterior": "1",
+      "status": "finite"
+    },
+    {
+      "prior": "1",
+      "ratio": "3",
+      "posterior": "1",
+      "status": "finite"
+    },
+    {
+      "prior": "1",
+      "ratio": "1000000000000000000000000000000",
+      "posterior": "1",
+      "status": "finite"
+    }
+  ],
+  "losses": [
+    {
+      "p": "0",
+      "y": 0,
+      "binary": "0",
+      "two_category": "0",
+      "log_status": "finite",
+      "log_decimal": "0.000000000000",
+      "calibration_bin": 0
+    },
+    {
+      "p": "0",
+      "y": 1,
+      "binary": "1",
+      "two_category": "2",
+      "log_status": "positive_infinity",
+      "log_decimal": null,
+      "calibration_bin": 0
+    },
+    {
+      "p": "1/10",
+      "y": 0,
+      "binary": "1/100",
+      "two_category": "1/50",
+      "log_status": "finite",
+      "log_decimal": "0.105360515658",
+      "calibration_bin": 1
+    },
+    {
+      "p": "1/10",
+      "y": 1,
+      "binary": "81/100",
+      "two_category": "81/50",
+      "log_status": "finite",
+      "log_decimal": "2.302585092994",
+      "calibration_bin": 1
+    },
+    {
+      "p": "1/5",
+      "y": 0,
+      "binary": "1/25",
+      "two_category": "2/25",
+      "log_status": "finite",
+      "log_decimal": "0.223143551314",
+      "calibration_bin": 2
+    },
+    {
+      "p": "1/5",
+      "y": 1,
+      "binary": "16/25",
+      "two_category": "32/25",
+      "log_status": "finite",
+      "log_decimal": "1.609437912434",
+      "calibration_bin": 2
+    },
+    {
+      "p": "3/10",
+      "y": 0,
+      "binary": "9/100",
+      "two_category": "9/50",
+      "log_status": "finite",
+      "log_decimal": "0.356674943939",
+      "calibration_bin": 3
+    },
+    {
+      "p": "3/10",
+      "y": 1,
+      "binary": "49/100",
+      "two_category": "49/50",
+      "log_status": "finite",
+      "log_decimal": "1.203972804326",
+      "calibration_bin": 3
+    },
+    {
+      "p": "2/5",
+      "y": 0,
+      "binary": "4/25",
+      "two_category": "8/25",
+      "log_status": "finite",
+      "log_decimal": "0.510825623766",
+      "calibration_bin": 4
+    },
+    {
+      "p": "2/5",
+      "y": 1,
+      "binary": "9/25",
+      "two_category": "18/25",
+      "log_status": "finite",
+      "log_decimal": "0.916290731874",
+      "calibration_bin": 4
+    },
+    {
+      "p": "1/2",
+      "y": 0,
+      "binary": "1/4",
+      "two_category": "1/2",
+      "log_status": "finite",
+      "log_decimal": "0.693147180560",
+      "calibration_bin": 5
+    },
+    {
+      "p": "1/2",
+      "y": 1,
+      "binary": "1/4",
+      "two_category": "1/2",
+      "log_status": "finite",
+      "log_decimal": "0.693147180560",
+      "calibration_bin": 5
+    },
+    {
+      "p": "3/5",
+      "y": 0,
+      "binary": "9/25",
+      "two_category": "18/25",
+      "log_status": "finite",
+      "log_decimal": "0.916290731874",
+      "calibration_bin": 6
+    },
+    {
+      "p": "3/5",
+      "y": 1,
+      "binary": "4/25",
+      "two_category": "8/25",
+      "log_status": "finite",
+      "log_decimal": "0.510825623766",
+      "calibration_bin": 6
+    },
+    {
+      "p": "7/10",
+      "y": 0,
+      "binary": "49/100",
+      "two_category": "49/50",
+      "log_status": "finite",
+      "log_decimal": "1.203972804326",
+      "calibration_bin": 7
+    },
+    {
+      "p": "7/10",
+      "y": 1,
+      "binary": "9/100",
+      "two_category": "9/50",
+      "log_status": "finite",
+      "log_decimal": "0.356674943939",
+      "calibration_bin": 7
+    },
+    {
+      "p": "4/5",
+      "y": 0,
+      "binary": "16/25",
+      "two_category": "32/25",
+      "log_status": "finite",
+      "log_decimal": "1.609437912434",
+      "calibration_bin": 8
+    },
+    {
+      "p": "4/5",
+      "y": 1,
+      "binary": "1/25",
+      "two_category": "2/25",
+      "log_status": "finite",
+      "log_decimal": "0.223143551314",
+      "calibration_bin": 8
+    },
+    {
+      "p": "9/10",
+      "y": 0,
+      "binary": "81/100",
+      "two_category": "81/50",
+      "log_status": "finite",
+      "log_decimal": "2.302585092994",
+      "calibration_bin": 9
+    },
+    {
+      "p": "9/10",
+      "y": 1,
+      "binary": "1/100",
+      "two_category": "1/50",
+      "log_status": "finite",
+      "log_decimal": "0.105360515658",
+      "calibration_bin": 9
+    },
+    {
+      "p": "1",
+      "y": 0,
+      "binary": "1",
+      "two_category": "2",
+      "log_status": "positive_infinity",
+      "log_decimal": null,
+      "calibration_bin": 9
+    },
+    {
+      "p": "1",
+      "y": 1,
+      "binary": "0",
+      "two_category": "0",
+      "log_status": "finite",
+      "log_decimal": "0.000000000000",
+      "calibration_bin": 9
+    }
+  ],
+  "paired": {
+    "ps": [
+      "4/5",
+      "3/10"
+    ],
+    "ys": [
+      1,
+      0
+    ],
+    "expected": {
+      "binary": "13/200",
+      "two_category": "13/100",
+      "reliability": "13/200",
+      "resolution": "1/4",
+      "uncertainty": "1/4"
+    },
+    "baseline": "1/4",
+    "improvement": "37/200",
+    "skill": "37/50"
+  },
+  "decomposition": {
+    "ps": [
+      "1/5",
+      "1/5",
+      "4/5",
+      "4/5"
+    ],
+    "ys": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "expected": {
+      "binary": "19/100",
+      "two_category": "19/50",
+      "reliability": "13/200",
+      "resolution": "1/16",
+      "uncertainty": "3/16"
+    }
+  },
+  "calibration": {
+    "ps": [
+      "1/5",
+      "1/5"
+    ],
+    "ys": [
+      0,
+      1
+    ],
+    "count": 2,
+    "mean": "1/5",
+    "frequency": "1/2"
+  },
+  "chronology": [
+    {
+      "id": "before-cutoff",
+      "recorded_at": "2025-01-02T12:00:00Z",
+      "eligible": true
+    },
+    {
+      "id": "at-cutoff",
+      "recorded_at": "2025-01-03T00:00:00Z",
+      "eligible": true
+    },
+    {
+      "id": "after-cutoff",
+      "recorded_at": "2025-01-03T00:00:01Z",
+      "eligible": false
+    },
+    {
+      "id": "positive-at-occurrence",
+      "recorded_at": "2025-01-05T00:00:00Z",
+      "eligible": false
+    },
+    {
+      "id": "negative-known-at-window-end",
+      "occurrence_at": null,
+      "known_at": "2025-01-10T00:00:00Z",
+      "valid": true
+    }
+  ],
+  "original_plan": {
+    "study_id": "synthetic-study",
+    "created_at": "2025-01-01T00:00:00Z",
+    "evidence_mode": "synthetic_software_validation",
+    "domain": "synthetic-switches",
+    "horizon": "fixed-window",
+    "partition": {
+      "frozen_at": "2024-12-31T00:00:00Z",
+      "train_groups": [
+        "history"
+      ],
+      "test_groups": [
+        "test1",
+        "test2",
+        "test3",
+        "test4"
+      ]
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "version": 1,
+        "event_id": "event1",
+        "dependency_group": "test1",
+        "partition": "test",
+        "text": "Will synthetic switch 1 enter state 1 in the declared observation window?",
+        "event_definition": "Binary occurrence recorded by the synthetic switch log",
+        "window_start": "2025-01-01T00:00:00Z",
+        "window_end": "2025-01-10T00:00:00Z",
+        "cutoff": "2025-01-03T00:00:00Z",
+        "created_at": "2024-12-31T00:00:00Z",
+        "locked_at": "2024-12-31T00:00:00Z",
+        "timezone": "UTC",
+        "clarity_confirmed": true,
+        "resolution": {
+          "source_ref": "original-synthetic-switch-log",
+          "positive_rule": "First state1 observation within the half-open window",
+          "negative_rule": "No state1 observation through the complete window",
+          "dispute_policy": "Disputed questions are excluded pending a sourced correction",
+          "void_policy": "Incomplete observation logs void the question"
+        },
+        "class_id": "class1",
+        "class_sha256": "beaeee6344c02525dcbb5e6933069bb89a454a85c24893e0ffbb701a6158bae7",
+        "baseline": {
+          "kind": "constant",
+          "probability": "1/2",
+          "frozen_at": "2024-12-31T00:00:00Z",
+          "domain": "synthetic-switches",
+          "horizon": "fixed-window",
+          "source": {
+            "id": "baseline-source",
+            "locator": "original:baseline-source",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: baseline-source",
+            "snapshot_sha256": "ee865768d0e9b7ee132821254268aabfb5d991fbfd408ed585e6f2d4b252fc43",
+            "available_at": "2024-12-30T00:00:00Z"
+          }
+        },
+        "reasoning": {
+          "base_rate_rationale": "Documentary synthetic reasoning only",
+          "comparability": "Documentary synthetic reasoning only",
+          "assumptions": [],
+          "subquestions": [],
+          "evidence_gaps": [],
+          "alternatives": [],
+          "dependence": "Documentary synthetic reasoning only",
+          "disagreement": "Documentary synthetic reasoning only"
+        },
+        "source": {
+          "id": "question-source",
+          "locator": "original:question-source",
+          "rights": "self_authored",
+          "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+          "snapshot": "Original synthetic software validation evidence: question-source",
+          "snapshot_sha256": "7d584a19ae00f69e020e04d21268fa118b6ee1b1a046cfbee85622bf1659dacf",
+          "available_at": "2024-12-30T00:00:00Z"
+        }
+      },
+      {
+        "id": "q2",
+        "version": 1,
+        "event_id": "event2",
+        "dependency_group": "test2",
+        "partition": "test",
+        "text": "Will synthetic switch 2 enter state 1 in the declared observation window?",
+        "event_definition": "Binary occurrence recorded by the synthetic switch log",
+        "window_start": "2025-01-01T00:00:00Z",
+        "window_end": "2025-01-10T00:00:00Z",
+        "cutoff": "2025-01-03T00:00:00Z",
+        "created_at": "2024-12-31T00:00:00Z",
+        "locked_at": "2024-12-31T00:00:00Z",
+        "timezone": "UTC",
+        "clarity_confirmed": true,
+        "resolution": {
+          "source_ref": "original-synthetic-switch-log",
+          "positive_rule": "First state1 observation within the half-open window",
+          "negative_rule": "No state1 observation through the complete window",
+          "dispute_policy": "Disputed questions are excluded pending a sourced correction",
+          "void_policy": "Incomplete observation logs void the question"
+        },
+        "class_id": null,
+        "class_sha256": null,
+        "baseline": {
+          "kind": "constant",
+          "probability": "1/2",
+          "frozen_at": "2024-12-31T00:00:00Z",
+          "domain": "synthetic-switches",
+          "horizon": "fixed-window",
+          "source": {
+            "id": "baseline-source",
+            "locator": "original:baseline-source",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: baseline-source",
+            "snapshot_sha256": "ee865768d0e9b7ee132821254268aabfb5d991fbfd408ed585e6f2d4b252fc43",
+            "available_at": "2024-12-30T00:00:00Z"
+          }
+        },
+        "reasoning": {
+          "base_rate_rationale": "Documentary synthetic reasoning only",
+          "comparability": "Documentary synthetic reasoning only",
+          "assumptions": [],
+          "subquestions": [],
+          "evidence_gaps": [],
+          "alternatives": [],
+          "dependence": "Documentary synthetic reasoning only",
+          "disagreement": "Documentary synthetic reasoning only"
+        },
+        "source": {
+          "id": "question-source",
+          "locator": "original:question-source",
+          "rights": "self_authored",
+          "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+          "snapshot": "Original synthetic software validation evidence: question-source",
+          "snapshot_sha256": "7d584a19ae00f69e020e04d21268fa118b6ee1b1a046cfbee85622bf1659dacf",
+          "available_at": "2024-12-30T00:00:00Z"
+        }
+      },
+      {
+        "id": "q3",
+        "version": 1,
+        "event_id": "event3",
+        "dependency_group": "test3",
+        "partition": "test",
+        "text": "Will synthetic switch 3 enter state 1 in the declared observation window?",
+        "event_definition": "Binary occurrence recorded by the synthetic switch log",
+        "window_start": "2025-01-01T00:00:00Z",
+        "window_end": "2025-01-10T00:00:00Z",
+        "cutoff": "2025-01-03T00:00:00Z",
+        "created_at": "2024-12-31T00:00:00Z",
+        "locked_at": "2024-12-31T00:00:00Z",
+        "timezone": "UTC",
+        "clarity_confirmed": true,
+        "resolution": {
+          "source_ref": "original-synthetic-switch-log",
+          "positive_rule": "First state1 observation within the half-open window",
+          "negative_rule": "No state1 observation through the complete window",
+          "dispute_policy": "Disputed questions are excluded pending a sourced correction",
+          "void_policy": "Incomplete observation logs void the question"
+        },
+        "class_id": null,
+        "class_sha256": null,
+        "baseline": {
+          "kind": "constant",
+          "probability": "1/2",
+          "frozen_at": "2024-12-31T00:00:00Z",
+          "domain": "synthetic-switches",
+          "horizon": "fixed-window",
+          "source": {
+            "id": "baseline-source",
+            "locator": "original:baseline-source",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: baseline-source",
+            "snapshot_sha256": "ee865768d0e9b7ee132821254268aabfb5d991fbfd408ed585e6f2d4b252fc43",
+            "available_at": "2024-12-30T00:00:00Z"
+          }
+        },
+        "reasoning": {
+          "base_rate_rationale": "Documentary synthetic reasoning only",
+          "comparability": "Documentary synthetic reasoning only",
+          "assumptions": [],
+          "subquestions": [],
+          "evidence_gaps": [],
+          "alternatives": [],
+          "dependence": "Documentary synthetic reasoning only",
+          "disagreement": "Documentary synthetic reasoning only"
+        },
+        "source": {
+          "id": "question-source",
+          "locator": "original:question-source",
+          "rights": "self_authored",
+          "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+          "snapshot": "Original synthetic software validation evidence: question-source",
+          "snapshot_sha256": "7d584a19ae00f69e020e04d21268fa118b6ee1b1a046cfbee85622bf1659dacf",
+          "available_at": "2024-12-30T00:00:00Z"
+        }
+      },
+      {
+        "id": "q4",
+        "version": 1,
+        "event_id": "event4",
+        "dependency_group": "test4",
+        "partition": "test",
+        "text": "Will synthetic switch 4 enter state 1 in the declared observation window?",
+        "event_definition": "Binary occurrence recorded by the synthetic switch log",
+        "window_start": "2025-01-01T00:00:00Z",
+        "window_end": "2025-01-10T00:00:00Z",
+        "cutoff": "2025-01-03T00:00:00Z",
+        "created_at": "2024-12-31T00:00:00Z",
+        "locked_at": "2024-12-31T00:00:00Z",
+        "timezone": "UTC",
+        "clarity_confirmed": true,
+        "resolution": {
+          "source_ref": "original-synthetic-switch-log",
+          "positive_rule": "First state1 observation within the half-open window",
+          "negative_rule": "No state1 observation through the complete window",
+          "dispute_policy": "Disputed questions are excluded pending a sourced correction",
+          "void_policy": "Incomplete observation logs void the question"
+        },
+        "class_id": null,
+        "class_sha256": null,
+        "baseline": {
+          "kind": "constant",
+          "probability": "1/2",
+          "frozen_at": "2024-12-31T00:00:00Z",
+          "domain": "synthetic-switches",
+          "horizon": "fixed-window",
+          "source": {
+            "id": "baseline-source",
+            "locator": "original:baseline-source",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: baseline-source",
+            "snapshot_sha256": "ee865768d0e9b7ee132821254268aabfb5d991fbfd408ed585e6f2d4b252fc43",
+            "available_at": "2024-12-30T00:00:00Z"
+          }
+        },
+        "reasoning": {
+          "base_rate_rationale": "Documentary synthetic reasoning only",
+          "comparability": "Documentary synthetic reasoning only",
+          "assumptions": [],
+          "subquestions": [],
+          "evidence_gaps": [],
+          "alternatives": [],
+          "dependence": "Documentary synthetic reasoning only",
+          "disagreement": "Documentary synthetic reasoning only"
+        },
+        "source": {
+          "id": "question-source",
+          "locator": "original:question-source",
+          "rights": "self_authored",
+          "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+          "snapshot": "Original synthetic software validation evidence: question-source",
+          "snapshot_sha256": "7d584a19ae00f69e020e04d21268fa118b6ee1b1a046cfbee85622bf1659dacf",
+          "available_at": "2024-12-30T00:00:00Z"
+        }
+      }
+    ],
+    "classes": [
+      {
+        "id": "class1",
+        "version": 1,
+        "target_question_id": "q1",
+        "definition": "Original finite synthetic historical switch events",
+        "eligibility_rule": "All distinct synthetic switch events in the declared historical window",
+        "frozen_at": "2024-12-30T00:00:00Z",
+        "availability_cutoff": "2024-12-29T00:00:00Z",
+        "comparability": "Synthetic demonstration only;no population representativeness claimed.",
+        "members": [
+          {
+            "id": "m0",
+            "event_id": "historical-0",
+            "dependency_group": "history",
+            "eligibility": "included",
+            "reason": "Eligible under the frozen synthetic rule",
+            "status": "resolved",
+            "outcome": 1,
+            "event_at": "2024-12-01T00:00:00Z",
+            "observed_at": "2024-12-20T00:00:00Z",
+            "source": {
+              "id": "member-0",
+              "locator": "original:member-0",
+              "rights": "self_authored",
+              "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+              "snapshot": "Original synthetic software validation evidence: member-0",
+              "snapshot_sha256": "b2c56227f8f73938d69b8476d05b6b3db549b170d49e1ec2529994a990cd45d8",
+              "available_at": "2024-12-20T00:00:00Z"
+            }
+          },
+          {
+            "id": "m1",
+            "event_id": "historical-1",
+            "dependency_group": "history",
+            "eligibility": "included",
+            "reason": "Eligible under the frozen synthetic rule",
+            "status": "resolved",
+            "outcome": 1,
+            "event_at": "2024-12-02T00:00:00Z",
+            "observed_at": "2024-12-20T00:00:00Z",
+            "source": {
+              "id": "member-1",
+              "locator": "original:member-1",
+              "rights": "self_authored",
+              "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+              "snapshot": "Original synthetic software validation evidence: member-1",
+              "snapshot_sha256": "80a4c7004b3e2d93e9aa55f08b6428c23aefcac01f76ebefbb798af6d4c87443",
+              "available_at": "2024-12-20T00:00:00Z"
+            }
+          },
+          {
+            "id": "m2",
+            "event_id": "historical-2",
+            "dependency_group": "history",
+            "eligibility": "included",
+            "reason": "Eligible under the frozen synthetic rule",
+            "status": "resolved",
+            "outcome": 1,
+            "event_at": "2024-12-03T00:00:00Z",
+            "observed_at": "2024-12-20T00:00:00Z",
+            "source": {
+              "id": "member-2",
+              "locator": "original:member-2",
+              "rights": "self_authored",
+              "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+              "snapshot": "Original synthetic software validation evidence: member-2",
+              "snapshot_sha256": "019f9724fabd99e5cffc8e64da53e9be85e9d6984ddbebcfcf637cca5d88680b",
+              "available_at": "2024-12-20T00:00:00Z"
+            }
+          },
+          {
+            "id": "m3",
+            "event_id": "historical-3",
+            "dependency_group": "history",
+            "eligibility": "included",
+            "reason": "Eligible under the frozen synthetic rule",
+            "status": "resolved",
+            "outcome": 0,
+            "event_at": "2024-12-04T00:00:00Z",
+            "observed_at": "2024-12-20T00:00:00Z",
+            "source": {
+              "id": "member-3",
+              "locator": "original:member-3",
+              "rights": "self_authored",
+              "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+              "snapshot": "Original synthetic software validation evidence: member-3",
+              "snapshot_sha256": "1bbccc0692938b7c36f4e745a8cfbc084dff169af1bf68d8e9a9abc49dd86a1d",
+              "available_at": "2024-12-20T00:00:00Z"
+            }
+          },
+          {
+            "id": "m4",
+            "event_id": "historical-4",
+            "dependency_group": "history",
+            "eligibility": "included",
+            "reason": "Eligible under the frozen synthetic rule",
+            "status": "resolved",
+            "outcome": 0,
+            "event_at": "2024-12-05T00:00:00Z",
+            "observed_at": "2024-12-20T00:00:00Z",
+            "source": {
+              "id": "member-4",
+              "locator": "original:member-4",
+              "rights": "self_authored",
+              "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+              "snapshot": "Original synthetic software validation evidence: member-4",
+              "snapshot_sha256": "6a3969d2f67626987e4933118d5ec0702baa408e8c00f5bbe8d0e53c34fcf81c",
+              "available_at": "2024-12-20T00:00:00Z"
+            }
+          },
+          {
+            "id": "m5",
+            "event_id": "historical-5",
+            "dependency_group": "history",
+            "eligibility": "included",
+            "reason": "Eligible under the frozen synthetic rule",
+            "status": "resolved",
+            "outcome": 0,
+            "event_at": "2024-12-06T00:00:00Z",
+            "observed_at": "2024-12-20T00:00:00Z",
+            "source": {
+              "id": "member-5",
+              "locator": "original:member-5",
+              "rights": "self_authored",
+              "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+              "snapshot": "Original synthetic software validation evidence: member-5",
+              "snapshot_sha256": "7a132046ab2dece3d5a6e074bf672b503e41a5e6fa4a46ccc6492342a982e802",
+              "available_at": "2024-12-20T00:00:00Z"
+            }
+          },
+          {
+            "id": "m6",
+            "event_id": "historical-6",
+            "dependency_group": "history",
+            "eligibility": "included",
+            "reason": "Eligible under the frozen synthetic rule",
+            "status": "resolved",
+            "outcome": 0,
+            "event_at": "2024-12-07T00:00:00Z",
+            "observed_at": "2024-12-20T00:00:00Z",
+            "source": {
+              "id": "member-6",
+              "locator": "original:member-6",
+              "rights": "self_authored",
+              "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+              "snapshot": "Original synthetic software validation evidence: member-6",
+              "snapshot_sha256": "4fb9f6db24a04ca5191e98c461f07a2010598ff8d11fef41b929289a691ba1c7",
+              "available_at": "2024-12-20T00:00:00Z"
+            }
+          },
+          {
+            "id": "m7",
+            "event_id": "historical-7",
+            "dependency_group": "history",
+            "eligibility": "included",
+            "reason": "Eligible under the frozen synthetic rule",
+            "status": "resolved",
+            "outcome": 0,
+            "event_at": "2024-12-08T00:00:00Z",
+            "observed_at": "2024-12-20T00:00:00Z",
+            "source": {
+              "id": "member-7",
+              "locator": "original:member-7",
+              "rights": "self_authored",
+              "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+              "snapshot": "Original synthetic software validation evidence: member-7",
+              "snapshot_sha256": "b3891163980c3aaf9d38be9e161f503b1871a57c1af0199ecf683ea97bcf565e",
+              "available_at": "2024-12-20T00:00:00Z"
+            }
+          },
+          {
+            "id": "m8",
+            "event_id": "historical-8",
+            "dependency_group": "history",
+            "eligibility": "included",
+            "reason": "Eligible under the frozen synthetic rule",
+            "status": "resolved",
+            "outcome": 0,
+            "event_at": "2024-12-09T00:00:00Z",
+            "observed_at": "2024-12-20T00:00:00Z",
+            "source": {
+              "id": "member-8",
+              "locator": "original:member-8",
+              "rights": "self_authored",
+              "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+              "snapshot": "Original synthetic software validation evidence: member-8",
+              "snapshot_sha256": "f60c7a635c556c921a35312e862a7178464561ab6a4136cffc795cdd8690b07f",
+              "available_at": "2024-12-20T00:00:00Z"
+            }
+          },
+          {
+            "id": "m9",
+            "event_id": "historical-9",
+            "dependency_group": "history",
+            "eligibility": "included",
+            "reason": "Eligible under the frozen synthetic rule",
+            "status": "resolved",
+            "outcome": 0,
+            "event_at": "2024-12-10T00:00:00Z",
+            "observed_at": "2024-12-20T00:00:00Z",
+            "source": {
+              "id": "member-9",
+              "locator": "original:member-9",
+              "rights": "self_authored",
+              "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+              "snapshot": "Original synthetic software validation evidence: member-9",
+              "snapshot_sha256": "119152113fcdb397d68fb82c202cc4100cecc72e9c2f4b8cb973e293d548e8b5",
+              "available_at": "2024-12-20T00:00:00Z"
+            }
+          }
+        ],
+        "source": {
+          "id": "class-source",
+          "locator": "original:class-source",
+          "rights": "self_authored",
+          "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+          "snapshot": "Original synthetic software validation evidence: class-source",
+          "snapshot_sha256": "cba781691cf75ace7849c564f835eec03241068d1c0e83ffe164e9331d17aa72",
+          "available_at": "2024-12-29T00:00:00Z"
+        }
+      }
+    ],
+    "slots": [
+      {
+        "forecast_id": "f1",
+        "question_id": "q1",
+        "participant": "person1",
+        "participant_kind": "individual"
+      },
+      {
+        "forecast_id": "f2",
+        "question_id": "q2",
+        "participant": "person1",
+        "participant_kind": "individual"
+      },
+      {
+        "forecast_id": "f3",
+        "question_id": "q3",
+        "participant": "person1",
+        "participant_kind": "individual"
+      },
+      {
+        "forecast_id": "f4",
+        "question_id": "q4",
+        "participant": "person1",
+        "participant_kind": "individual"
+      }
+    ],
+    "provenance": {
+      "id": "study-source",
+      "locator": "original:study-source",
+      "rights": "self_authored",
+      "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+      "snapshot": "Original synthetic software validation evidence: study-source",
+      "snapshot_sha256": "852af0c234dfa57c63067f12e4adb05ef1d3716e1dd8584ec9808d2e88225918",
+      "available_at": "2024-12-30T00:00:00Z"
+    }
+  },
+  "version_expected": {
+    "selected_version": 2,
+    "selected_probability": "2/5",
+    "retained_versions": 3
+  },
+  "nonindependent": {
+    "prior": "1/5",
+    "first": "3/7",
+    "naive_duplicate": "9/13",
+    "second_must_reject": true
+  }
+}

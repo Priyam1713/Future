@@ -1138,3 +1138,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #51 source and executable profile freeze
 - Reopened primary book-context, tournament, proper-scoring and Bayes references. Froze tetlock-mellers-binary-forecast-updates-v1 before production: exact rational arithmetic, Decimal80 log/12place HALF_EVEN display, immutable plans, source snapshots, evidence dependencies, fixed-cutoff selection and distinct positive/nonoccurrence timing.
 - Source facts remain separate from editorial schema/selection/bin conventions. No empirical GJP or human-skill certification. Complete current pre-engine byte manifest captured; independent fixtures next.
+
+## 2026-11-07 — #51 independent fixture freeze
+- Authored original synthetic plan, complete historical member ledger and independent odds/category-loss/group-frequency oracle before production. Froze all23 family expectations,30 Bayes cases,22 loss/bin/log cases,base-rate boundaries,paired/decomposition answers andexplicit time boundaries. No production engine invoked orpresent.
