@@ -1,0 +1,224 @@
+{
+  "passed": true,
+  "fixture_families": 31,
+  "families": {
+    "initial-half-prices": {
+      "passed": true,
+      "cases": [
+        "initial"
+      ]
+    },
+    "positive-normalized-prices": {
+      "passed": true,
+      "cases": [
+        "numeric-vectors"
+      ]
+    },
+    "positive-liquidity": {
+      "passed": true,
+      "cases": [
+        "zero-b",
+        "negative-b"
+      ]
+    },
+    "stable-extreme-pricing": {
+      "passed": true,
+      "cases": [
+        "extreme",
+        "numeric-vectors"
+      ]
+    },
+    "monotone-buy": {
+      "passed": true,
+      "cases": [
+        "buy-one"
+      ]
+    },
+    "cost-difference-charge": {
+      "passed": true,
+      "cases": [
+        "buy-one"
+      ]
+    },
+    "quantized-potential-accounting": {
+      "passed": true,
+      "cases": [
+        "buy-one",
+        "balanced"
+      ]
+    },
+    "buy-sell-reversal": {
+      "passed": true,
+      "cases": [
+        "reverse"
+      ]
+    },
+    "balanced-shares": {
+      "passed": true,
+      "cases": [
+        "balanced-settlement"
+      ]
+    },
+    "common-shift-invariance": {
+      "passed": true,
+      "cases": [
+        "numeric-vectors"
+      ]
+    },
+    "cash-conservation": {
+      "passed": true,
+      "cases": [
+        "settle-yes",
+        "settle-no"
+      ]
+    },
+    "funding-reserve": {
+      "passed": true,
+      "cases": [
+        "numeric-vectors"
+      ]
+    },
+    "maker-loss-bound": {
+      "passed": true,
+      "cases": [
+        "extreme",
+        "settle-yes"
+      ]
+    },
+    "budget-refusal": {
+      "passed": true,
+      "cases": [
+        "budget"
+      ]
+    },
+    "no-naked-short": {
+      "passed": true,
+      "cases": [
+        "naked-short"
+      ]
+    },
+    "positions-equal-quantities": {
+      "passed": true,
+      "cases": [
+        "balanced"
+      ]
+    },
+    "stale-quote-refusal": {
+      "passed": true,
+      "cases": [
+        "stale-quote"
+      ]
+    },
+    "quote-no-execution": {
+      "passed": true,
+      "cases": [
+        "quote-only"
+      ]
+    },
+    "quote-actor-match": {
+      "passed": true,
+      "cases": [
+        "actor-mismatch"
+      ]
+    },
+    "idempotent-retry": {
+      "passed": true,
+      "cases": [
+        "idempotent",
+        "idempotent-after-settlement"
+      ]
+    },
+    "trade-id-conflict": {
+      "passed": true,
+      "cases": [
+        "id-conflict"
+      ]
+    },
+    "event-time-order": {
+      "passed": true,
+      "cases": [
+        "event-time-order"
+      ]
+    },
+    "close-cutoff-refusal": {
+      "passed": true,
+      "cases": [
+        "quote-at-cutoff",
+        "execute-at-cutoff"
+      ]
+    },
+    "authorized-resolution": {
+      "passed": true,
+      "cases": [
+        "unauthorized-resolution",
+        "early-resolution"
+      ]
+    },
+    "deterministic-settlement": {
+      "passed": true,
+      "cases": [
+        "settle-yes",
+        "settle-no"
+      ]
+    },
+    "duplicate-resolution": {
+      "passed": true,
+      "cases": [
+        "duplicate-resolution",
+        "resolution-idempotent"
+      ]
+    },
+    "ordered-ledger-replay": {
+      "passed": true,
+      "cases": [
+        "balanced-settlement"
+      ]
+    },
+    "strict-schema": {
+      "passed": true,
+      "cases": [
+        "unsupported-action",
+        "extra-field"
+      ]
+    },
+    "source-rights": {
+      "passed": true,
+      "cases": [
+        "empirical",
+        "rights",
+        "source",
+        "snapshot"
+      ]
+    },
+    "resource-bounds": {
+      "passed": true,
+      "cases": [
+        "quantity-cap",
+        "account-cap",
+        "event-cap"
+      ]
+    },
+    "raw-json-markdown-replay": {
+      "passed": true,
+      "cases": [
+        "profile",
+        "buy-one"
+      ]
+    }
+  },
+  "accepted": 33,
+  "rejected": 30,
+  "numerical_vectors": 145,
+  "ln2_series_terms": 200,
+  "decimal_oracle_precision": 120,
+  "production_precision": 80,
+  "price_cost_absolute_tolerance": "1e-60",
+  "cash_quantum": "1e-24",
+  "literal_buy_one_charge": "0.620114506958277524631763",
+  "exact_fraction_cash_conservation_passed": true,
+  "series_funding_reference_passed": true,
+  "ledger_hash_chains_passed": true,
+  "all_trace_potentials_independently_checked": true,
+  "fixture_sha256": "2b8abcc3e9915acd4c11e54a1179fabf128e7f4cbeada8b6b3e4f6a267a7e512",
+  "scope": "Synthetic play-credit mechanism/numerical/accounting verification; no actual money or empirically calibrated prediction market"
+}

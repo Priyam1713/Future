@@ -1381,3 +1381,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-08 — #58 source/profile freeze
 - Frozen zero-initial binary fixed-b LMSR play-credit reference;Decimal80 stable max-shift/independent120precision expectations,total-potential1e-24 quantization,conservative computedmakerreserve,long-onlycash/positions,quote-executionrevisionbinding,idempotentintentIDs andonce-only declaredauthoritysettlement. Strictcutoffdiffersfrom51/57inclusiveforecast timing. No real-money orservicesupport. Independent fixtures follow before engine.
+
+## 2026-11-08 — #58 verified engine
+- Implemented stable Decimal80 binary LMSR play-credit pricing,total-potential1e-24 cash charges,computed reserve,long-only quote/execution protocol,immutable hash-chained financial entries,idempotent intents andonce-only declared-authority settlement. All31families/75newtests pass;145Decimal120vectors and200-term exactFraction ln2 bounds verify numerical/funding references.
+- Every accepted trace independently checks exactFraction cash conservation,positions=q,potential telescoping andfunded maker exposure. Isolated budget/shorting/stalequote/cutoff/authority refusals andpost-settlement idempotency pass. No real money,external services orforecast-accuracy claim. CLI/full acceptance follows;no59audit.
