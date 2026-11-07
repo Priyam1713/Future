@@ -1,0 +1,677 @@
+{
+  "version": 1,
+  "technique_id": 58,
+  "name": "Prediction Markets",
+  "date": "2026-11-08",
+  "status": "Core v1 Ready — Offline Binary LMSR Play-Money Market and Resolution Ledger Scope",
+  "certification_scope": "Bounded synthetic market mechanism,numerical andexactcash-grid accounting software; no real trading or empirical market-prediction accuracy.",
+  "profile": "prediction-markets-binary-lmsr-play-money-v1",
+  "profile_sha256": "d36cca55bf080adabc57d6190820812802ec4386ffe5199676a6ef0b17aad000",
+  "profile_file": "knowledge/prediction_markets_profile_v1.json",
+  "cli_command": "prediction-markets",
+  "source_catalog": "knowledge/prediction_markets_sources.json",
+  "source_manifest_sha256": "e36ed82d53463ad118427a7825c22e293d6a1cec15fd587bb5f55b8de72f36b1",
+  "source_freeze_sha256": "ad9ed7d6709b65be7f17c66dc3ba59fdf625ee46e995975de671e725e61e06f9",
+  "source_boundaries": {
+    "version": 1,
+    "technique_id": 58,
+    "audit_sha256": "eb7cacbb68e154547ca0f2bb1ff55d06647055d79d8b27a35f0357e8a85e8818",
+    "source_manifest_sha256": "e36ed82d53463ad118427a7825c22e293d6a1cec15fd587bb5f55b8de72f36b1",
+    "boundaries": "Wolfers/Zitzewitz2004 economic context; Hanson2007journal/JPM1,3–15 distinct from2012web upload andJanuary2002draft. Chen/Vaughan2010Section2 unranked primary cost-function supplement. Decimal3.12 numerical semantics; tested runtime recorded in measurements.",
+    "rights": "Mathematical facts and original implementation/synthetic play-credit fixtures only; no copyrighted bodies,figures,third-party code or participant/trading data copied.",
+    "mechanism": "Fixed-b binary cost-function LMSR fromzero quantities; editorial long-only,funding,rounding,idempotency andevent-protocol conventions are explicit,not a replica of an exchange or empirical trader study."
+  },
+  "inventory_method_row": [
+    58,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Prediction Markets",
+    "RETAIN — simulate / implement",
+    "Data & simulation",
+    "Continuous double auction; market scoring rules; LMSR; play-money internal market",
+    "Virtual shares, automated market maker, resolution and probability extraction",
+    "Internal play-money ledger; optional human traders",
+    "Avoid regulated real-money trading unless legal compliance resolved",
+    "Empirical with genuine traders and verifiable resolution",
+    "Prediction Markets",
+    "Justin Wolfers and Eric Zitzewitz",
+    "https://www.aeaweb.org/articles?id=10.1257%2F0895330041371321",
+    "Logarithmic Market Scoring Rules for Modular Combinatorial Information Aggregation",
+    null,
+    "51,57",
+    "51, 57",
+    58
+  ],
+  "ranked_sources": [
+    [
+      58,
+      "Prediction Markets",
+      1,
+      "Justin Wolfers and Eric Zitzewitz",
+      "Prediction Markets",
+      "Economic basis and information aggregation",
+      "https://www.aeaweb.org/articles?id=10.1257%2F0895330041371321",
+      "Peer-reviewed journal",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      58,
+      "Prediction Markets",
+      2,
+      "Robin Hanson",
+      "Logarithmic Market Scoring Rules for Modular Combinatorial Information Aggregation",
+      "LMSR market maker",
+      "https://www.ubplj.org/index.php/jpm/article/view/417",
+      "Research article",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      58,
+      "Prediction Markets",
+      "Continuous double auction",
+      "Logarithmic Market Scoring Rules for Modular Combinatorial Information Aggregation",
+      "Prediction Markets",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      58,
+      "Prediction Markets",
+      "market scoring rules",
+      "Logarithmic Market Scoring Rules for Modular Combinatorial Information Aggregation",
+      "Prediction Markets",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      58,
+      "Prediction Markets",
+      "LMSR",
+      "Logarithmic Market Scoring Rules for Modular Combinatorial Information Aggregation",
+      "Prediction Markets",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      58,
+      "Prediction Markets",
+      "play-money internal market",
+      "Logarithmic Market Scoring Rules for Modular Combinatorial Information Aggregation",
+      "Prediction Markets",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "variations": {
+    "Continuous double auction": "Unsupported order-book/double-auction engine;P2",
+    "market scoring rules": "Supported bounded binary fixed-b LMSR cost-function instance only",
+    "LMSR": "Supported zero-initial binary stable Decimal LMSR withnamedquantization/funding",
+    "play-money internal market": "Supported offline synthetic play-credit ledger only;no liveparticipants/services"
+  },
+  "configuration_matrix": {
+    "supported": [
+      "One offline synthetic binary fixed-b LMSR play-credit market",
+      "Stable bounded Decimal pricing withnamed tolerances",
+      "Quotes,atomic long-only execution anddeclared authority cutoff/settlement",
+      "Idempotent local intent ledger andexact cash-grid accounting",
+      "Explicit funding/loss exposure andactionrefusals"
+    ],
+    "experimental_research_only": [
+      "Interpreting synthetic modeled prices as real-world forecasts"
+    ],
+    "unsupported": [
+      "Real money,deposits,wagering,external trading orsettlement",
+      "Live trader/user services orauthenticated authority",
+      "Continuous double auction",
+      "Conditional/combinatorial/multioutcome markets",
+      "Short selling,leverage,fees,fundingchanges",
+      "Empirical market efficiency orforecast accuracy"
+    ]
+  },
+  "equations": [
+    "C(q)=b*ln(exp(qYES/b)+exp(qNO/b));stable evaluation with m=max(q_i/b): b*(m+ln(sum(exp(q_i/b-m))))",
+    "p_i=exp(q_i/b-m)/sum(exp(q_j/b-m));compute each numerator separately",
+    "Cash potential Chat(q)=ROUND_HALF_EVEN(C80(q),quantum1e-24);executed charge=Chat(q_new)-Chat(q_old)",
+    "Initial quantities0,0;C(0)=b ln2;winning share pays1play_credit",
+    "Ideal worst maker loss=max(q)-[C(q)-C(0)]<=b ln2;funded reserve=CEILING_grid(b ln2+2cashquanta)",
+    "All user cash+maker cash=initial user endowments+computed maker reserve; pricing quantities=sum ofrecorded account positions",
+    "Net successful trade charges telescope to Chat(q)-Chat(0);reverse unchanged-state trade refunds exactly oncash grid"
+  ],
+  "exact_contract": [
+    "Strict exact fields,pinned profile/catalog hashes;schema_version/profile.version/market.version/question_version exactinteger1. Opaque IDs ASCII1..64. One market,accounts1..8 distinct,events0..512. Outcomes exactly[YES,NO],exhaustive=true,money_unit=play_credit. Nonempty definition/positive_rule/negative_rule<=4000characters. No actual money or external services.",
+    "All input numeric parameters/credits/quantities are decimal STRINGS,not numbers/bools/Fractions. Canonical optional minus,integer0 or1..10digits,no exponent/leadingzero/negativezero. Liquidity/shares <=8fractional places;credits<=24places. b in[0.01,1000000];initial credits in[0,1000000000];trade delta nonzero withabs<=1000000000. Quotes constrain each projected quantity to[0,1000*b]. Initial positions andpricing quantities alwayszero.",
+    "Use an explicit independent Decimal Context precision80,ROUND_HALF_EVEN,Emin=-999999,Emax=999999;trap invalid/divzero/overflow/float operation. No global-context dependence. Transcendentals approximate; cash-grid arithmetic exact under bounded magnitudes. Numerical price/cost verification tolerance absolute1e-60 against independent Decimal120 direct-exp oracle;cash charges exactquantum equality.",
+    "Max-shift cost andbothsoftmax numerators required. Each modeled price positive;sum within1e-60 of1. Extreme dominant price mayroundto1 whilecomplement remainspositive; do not derive complement by1-dominant orclaim exact-real normalization. Allowed q_i/b<=1000 avoids Decimal exponent underflow. No naive binaryfloat exponential.",
+    "Quantize TOTAL cost potential to1e-24 HALF_EVEN before differencing;never separately round ideal incremental charges. Compute reserve CEILING_grid(b*ln(2)+2*quantum). Ideal b ln2 bound isapproximate numeric output;funded grid reserve explicitlycovers quantization/numerical margin. No realcapital provision implied.",
+    "UTC-Z created_at<close_at;all delivery times>=created_at andnondecreasing,withtiesallowed. Validate all event syntax/time ordering before any action. Trades andquotes require delivery_at<close_at,strict boundary unlike inclusive51/57forecast cutoffs. At firstevent time>=close_at,clock automatically closes anopen market before processing theaction;no reopening.",
+    "quote action hasactor,unique quote_id,outcomeYES/NO,signeddelta. It stores current economicrevision andhypothetical old/new roundedpotentials/charge andprice diagnostics. It can show infeasible budget/owned-position constraints,butdoesnot reserve cash,execute or mutate positions/financialledger. Unknown actor orprojected globalquantity outsidebounds is anaction refusal.",
+    "execute action references storedquote_id andsameactor. Reject unknown/used/stale quote,closed/resolved market,insufficient usercredit,negative ownposition ormaker funding. Recheck constraints atomically before state mutation. Successful execute updates user/maker cash,one outcome position,pricingquantity andeconomicrevision together;marksquoteused andappends one immutable hash-chained financialentry. No naked shorting,leverage,fees,deposits ortransfers.",
+    "Event ID binds canonical intent excluding delivery at only;firstresult isimmutable. Repeated same intent ID atsame/laterdeclaredtime is idempotent_noop withoriginal decision,no duplicated financialeffect. Conflicting IDreuse is rejected. Retries ofpreviousrefusals also cannot acquire neweffect;use new ID/fresh quote. Clock-driven closure canstilladvance nonfinancial marketstatus.",
+    "close action requires actor==declared resolver andtime>=close_at;otherwiseactionrefusal. Explicit close is optional becauseclock closure enforcescutoff. Resolver identity equality is a declared offline convention,not cryptographic/external authentication.",
+    "resolve action requires declared resolver,delivery>=close_at,outcomeYES/NO,andnotalreadyresolved. Settle exactlyonce:pay everyaccount itswinning recordedshares,subtracttotalpayout frommaker,andappend hash-chained settlemententry. Retain recorded positions/pricingquantities ashistory withsettled=true;remaining liability0. Any different resolution/repeated new ID refuses;identical intent retry noops.",
+    "Structural malformed root/event fields,invalid numeric types/liquidity,duplicates account IDs,unsupported modes,nonfinite strings andbadchronology reject entire request withno partialresult. Syntacticallyvalid economic/protocol failures are accepted report events withdecision=rejected/reason andunchanged financialstate. Track unsuccessful actions separately fromsuccessful trades/settlement.",
+    "After each action assert cashconservation,nonnegative balances/positions,recorded positionsum=q,netcharges=Chat(q)-Chat(0),andworst modeled liability-loss<=funded reserve. Atsettlement paidtotal=q_winner;realizedmakerprofit=netcharges-paidtotal. Quotes/rejections/idempotent attempts havezero financialeffect. Rounded ledger equality isnot a claim that ln/exp are exact.",
+    "Canonical accounts byID;events preserve declaredorder. Market/account/input/schema/source/code/snapshot/ledger/report identities retained. Successful financialentries bindprevious entrySHA;economicrevision invalidates stale quotes even if round-trip quantities/cash return toearliervalues. Original request notmutated. Final prices afterresolution arehistorical modeldiagnostics,not executable quotes.",
+    "Provenance synthetic=true,self_authored rights,source_ref infrozen catalog,nonempty attribution/snapshot<=4000characters,exact UTF8 SHA. No actual traders/transaction data consumed byrepository examples; declarations/hashes cannot certify identities,consent,truth orrealworldauthority.",
+    "Preflight work=events*(64+accounts*16)<=5000000;returned_cells=events*(64+accounts*8)+accounts*32<=100000. Bounded metadata/decimalcomponents/ratios checked beforefinancial simulation. Complete-report CPU/memory measured beforeclosure;targetsnot universalguarantees."
+  ],
+  "numeric": {
+    "precision": 80,
+    "rounding": "ROUND_HALF_EVEN",
+    "Emin": -999999,
+    "Emax": 999999,
+    "cash_quantum": "1e-24",
+    "price_absolute_tolerance": "1e-60",
+    "cost_absolute_tolerance": "1e-60",
+    "reserve_pad_quanta": 2,
+    "oracle_precision": 120
+  },
+  "bounds": {
+    "accounts": 8,
+    "events": 512,
+    "liquidity_min": "0.01",
+    "liquidity_max": "1000000",
+    "initial_credit_max": "1000000000",
+    "delta_abs_max": "1000000000",
+    "quantity_over_b": "1000",
+    "work": 5000000,
+    "returned_cells": 100000
+  },
+  "acceptance_criteria": [
+    {
+      "criterion": "Source/profile/rounding/funding/event conventions frozen beforeproduction",
+      "passed": true
+    },
+    {
+      "criterion": "Independent literal execution/settlement fixtures frozen beforeproduction",
+      "passed": true
+    },
+    {
+      "criterion": "All31families and75new unit tests",
+      "passed": true
+    },
+    {
+      "criterion": "145Decimal120 direct-exp vectors versus stable80-digit production,absolute1e-60tol",
+      "passed": true
+    },
+    {
+      "criterion": "200-term exactFraction ln2 interval independently verifies fundingreference",
+      "passed": true
+    },
+    {
+      "criterion": "Initialhalfprices,positivecomplements/normalization,monotonicity/common-shift andextremequantitystability",
+      "passed": true
+    },
+    {
+      "criterion": "Quantized total-potential charges,exactunchanged-state reversals andbalancedshares",
+      "passed": true
+    },
+    {
+      "criterion": "Alltrace exactFraction cashconservation,positions=q,potentialtelescoping andfunded makerexposure",
+      "passed": true
+    },
+    {
+      "criterion": "Quote no-execution,actor/revision/usedquote andstalequote guards",
+      "passed": true
+    },
+    {
+      "criterion": "Isolated budget/nakedshorting/cutoff/authority refusals withnofinancialmutation",
+      "passed": true
+    },
+    {
+      "criterion": "Idempotent intent retries/conflicts andpost-settlement replay have noduplicatefinancialeffect",
+      "passed": true
+    },
+    {
+      "criterion": "Declared-authority once-onlysettlement,payouts andmaker accounting",
+      "passed": true
+    },
+    {
+      "criterion": "134raw accepted/rejected JSON-Markdown outputs andbothactualcheckoutreplays",
+      "passed": true
+    },
+    {
+      "criterion": "Full2219tests/3247CLIcases/37verifiers;4816protectedfiles andrepositorygates",
+      "passed": true
+    },
+    {
+      "criterion": "Actualcomplete-report CPU/memory measurements withnamedprocessscope",
+      "passed": true
+    },
+    {
+      "criterion": "No real-money,externaltrader/authentication/service orforecast-accuracycertification",
+      "passed": true
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "fixture_families": 31,
+    "families": {
+      "initial-half-prices": {
+        "passed": true,
+        "cases": [
+          "initial"
+        ]
+      },
+      "positive-normalized-prices": {
+        "passed": true,
+        "cases": [
+          "numeric-vectors"
+        ]
+      },
+      "positive-liquidity": {
+        "passed": true,
+        "cases": [
+          "zero-b",
+          "negative-b"
+        ]
+      },
+      "stable-extreme-pricing": {
+        "passed": true,
+        "cases": [
+          "extreme",
+          "numeric-vectors"
+        ]
+      },
+      "monotone-buy": {
+        "passed": true,
+        "cases": [
+          "buy-one"
+        ]
+      },
+      "cost-difference-charge": {
+        "passed": true,
+        "cases": [
+          "buy-one"
+        ]
+      },
+      "quantized-potential-accounting": {
+        "passed": true,
+        "cases": [
+          "buy-one",
+          "balanced"
+        ]
+      },
+      "buy-sell-reversal": {
+        "passed": true,
+        "cases": [
+          "reverse"
+        ]
+      },
+      "balanced-shares": {
+        "passed": true,
+        "cases": [
+          "balanced-settlement"
+        ]
+      },
+      "common-shift-invariance": {
+        "passed": true,
+        "cases": [
+          "numeric-vectors"
+        ]
+      },
+      "cash-conservation": {
+        "passed": true,
+        "cases": [
+          "settle-yes",
+          "settle-no"
+        ]
+      },
+      "funding-reserve": {
+        "passed": true,
+        "cases": [
+          "numeric-vectors"
+        ]
+      },
+      "maker-loss-bound": {
+        "passed": true,
+        "cases": [
+          "extreme",
+          "settle-yes"
+        ]
+      },
+      "budget-refusal": {
+        "passed": true,
+        "cases": [
+          "budget"
+        ]
+      },
+      "no-naked-short": {
+        "passed": true,
+        "cases": [
+          "naked-short"
+        ]
+      },
+      "positions-equal-quantities": {
+        "passed": true,
+        "cases": [
+          "balanced"
+        ]
+      },
+      "stale-quote-refusal": {
+        "passed": true,
+        "cases": [
+          "stale-quote"
+        ]
+      },
+      "quote-no-execution": {
+        "passed": true,
+        "cases": [
+          "quote-only"
+        ]
+      },
+      "quote-actor-match": {
+        "passed": true,
+        "cases": [
+          "actor-mismatch"
+        ]
+      },
+      "idempotent-retry": {
+        "passed": true,
+        "cases": [
+          "idempotent",
+          "idempotent-after-settlement"
+        ]
+      },
+      "trade-id-conflict": {
+        "passed": true,
+        "cases": [
+          "id-conflict"
+        ]
+      },
+      "event-time-order": {
+        "passed": true,
+        "cases": [
+          "event-time-order"
+        ]
+      },
+      "close-cutoff-refusal": {
+        "passed": true,
+        "cases": [
+          "quote-at-cutoff",
+          "execute-at-cutoff"
+        ]
+      },
+      "authorized-resolution": {
+        "passed": true,
+        "cases": [
+          "unauthorized-resolution",
+          "early-resolution"
+        ]
+      },
+      "deterministic-settlement": {
+        "passed": true,
+        "cases": [
+          "settle-yes",
+          "settle-no"
+        ]
+      },
+      "duplicate-resolution": {
+        "passed": true,
+        "cases": [
+          "duplicate-resolution",
+          "resolution-idempotent"
+        ]
+      },
+      "ordered-ledger-replay": {
+        "passed": true,
+        "cases": [
+          "balanced-settlement"
+        ]
+      },
+      "strict-schema": {
+        "passed": true,
+        "cases": [
+          "unsupported-action",
+          "extra-field"
+        ]
+      },
+      "source-rights": {
+        "passed": true,
+        "cases": [
+          "empirical",
+          "rights",
+          "source",
+          "snapshot"
+        ]
+      },
+      "resource-bounds": {
+        "passed": true,
+        "cases": [
+          "quantity-cap",
+          "account-cap",
+          "event-cap"
+        ]
+      },
+      "raw-json-markdown-replay": {
+        "passed": true,
+        "cases": [
+          "profile",
+          "buy-one"
+        ]
+      }
+    },
+    "accepted": 33,
+    "rejected": 30,
+    "numerical_vectors": 145,
+    "ln2_series_terms": 200,
+    "decimal_oracle_precision": 120,
+    "production_precision": 80,
+    "price_cost_absolute_tolerance": "1e-60",
+    "cash_quantum": "1e-24",
+    "literal_buy_one_charge": "0.620114506958277524631763",
+    "exact_fraction_cash_conservation_passed": true,
+    "series_funding_reference_passed": true,
+    "ledger_hash_chains_passed": true,
+    "all_trace_potentials_independently_checked": true,
+    "fixture_sha256": "2b8abcc3e9915acd4c11e54a1179fabf128e7f4cbeada8b6b3e4f6a267a7e512",
+    "scope": "Synthetic play-credit mechanism/numerical/accounting verification; no actual money or empirically calibrated prediction market"
+  },
+  "regression": {
+    "tests": 2219,
+    "inherited_tests": 2144,
+    "new_tests": 75,
+    "cli_cases": 3247,
+    "inherited_cli_cases": 3113,
+    "new_cli_cases": 134,
+    "independent_verifiers": 37,
+    "protected_files": 4816,
+    "changed_protected_files": [],
+    "registry": {
+      "references_checked_twice": 580,
+      "unique": 425,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "strict_json_files": 3300,
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    }
+  },
+  "replay": {
+    "accepted_pairs": 33,
+    "rejected_pairs": 34,
+    "cli_cases": 134,
+    "checkout": {
+      "passed": true,
+      "exports": [
+        {
+          "autocrlf": "false",
+          "raw_corpus_files": 202,
+          "normalized_commitments": 3,
+          "actual_cli_replays": 134,
+          "passed": true
+        },
+        {
+          "autocrlf": "true",
+          "raw_corpus_files": 202,
+          "normalized_commitments": 3,
+          "actual_cli_replays": 134,
+          "passed": true
+        }
+      ],
+      "method": "git checkout-index from staged files with core.autocrlf false/true;actual exported CLI executions;stdout bytes SHA256 matches saved JSON/Markdown,without newline normalization",
+      "subprocess_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "harness_limit": "Two parallel CLI processes; limits inherited numerical-library import threads,not the stdlib play-credit LMSR engine."
+    }
+  },
+  "performance": {
+    "measured": true,
+    "environment": {
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0"
+    },
+    "profile_sha256": "d36cca55bf080adabc57d6190820812802ec4386ffe5199676a6ef0b17aad000",
+    "code_sha256": "7bde9e5304e3c0f3d2b87ddae17b792d758e75c448f968f5629f3245a0daf1b5",
+    "protocol": "Three untraced complete in-process reports; separate tracemalloc report; one complete CLI including imports,registry andserialization. Native peak covers whole helper,imports,all workloads andtracing,not CLI-child/per-workload peak.",
+    "process_peak_working_set_bytes": 43933696,
+    "under_proposed_128_MiB": true,
+    "results": [
+      {
+        "id": "small",
+        "accounts": 2,
+        "events": 2,
+        "executed_trades": 1,
+        "settlements": 0,
+        "input_sha256": "ccfd9584f54d4902748965c4cc0c4664b3f33c2f9d609b0791a244905922807d",
+        "budget": {
+          "work": 192,
+          "returned_cells": 224
+        },
+        "seconds": [
+          0.0019817999564111233,
+          0.0014684000052511692,
+          0.0012564999051392078
+        ],
+        "median_seconds": 0.0014684000052511692,
+        "cli_seconds": 1.0622007003985345,
+        "python_traced_peak_bytes": 93670,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "medium",
+        "accounts": 4,
+        "events": 64,
+        "executed_trades": 32,
+        "settlements": 0,
+        "input_sha256": "a3128bea630be4ae5576920375dd3cba07734a124325f9a1b265b9e8c7bb9967",
+        "budget": {
+          "work": 8192,
+          "returned_cells": 6272
+        },
+        "seconds": [
+          0.01482510007917881,
+          0.014833499677479267,
+          0.014820999931544065
+        ],
+        "median_seconds": 0.01482510007917881,
+        "cli_seconds": 1.0327317998744547,
+        "python_traced_peak_bytes": 1225335,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "dense",
+        "accounts": 8,
+        "events": 512,
+        "executed_trades": 256,
+        "settlements": 0,
+        "input_sha256": "93e150a62f979fdecb06bed4e44eb7136d69e7b213e17b8f16eb3a709f2dc6d9",
+        "budget": {
+          "work": 98304,
+          "returned_cells": 65792
+        },
+        "seconds": [
+          0.12194379977881908,
+          0.12503249989822507,
+          0.11531009990721941
+        ],
+        "median_seconds": 0.12194379977881908,
+        "cli_seconds": 1.5394292999990284,
+        "python_traced_peak_bytes": 11338263,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "settlement",
+        "accounts": 4,
+        "events": 130,
+        "executed_trades": 64,
+        "settlements": 1,
+        "input_sha256": "cabf40c4c20c6f49c8ce0c48f278a7e809219dad6e3d02f723d0cdecdd01006a",
+        "budget": {
+          "work": 16640,
+          "returned_cells": 12608
+        },
+        "seconds": [
+          0.08637520018965006,
+          0.06405299995094538,
+          0.08105250028893352
+        ],
+        "median_seconds": 0.08105250028893352,
+        "cli_seconds": 1.1280176001600921,
+        "python_traced_peak_bytes": 2433091,
+        "under_proposed_five_seconds": true
+      }
+    ],
+    "scope": "Recorded local self-authored synthetic play-credit workloads; no real money,traders or empirical market accuracy."
+  },
+  "evidence": {
+    "data/prediction-markets-acceptance-checks.json": "8b52f85a1549b5273d4099f85df935f5eb17f601895a34fbc8e247b04cd49f71",
+    "data/prediction-markets-unit.json": "9c3629cb8cede1ed962e48ea0f9d528e5dcd1eb1df8b40ddbe291e532ffaab64",
+    "data/prediction-markets-verification.json": "4b7a5a6266ea8020d88c68fac45ff2482fa09503994f265e8c4b0d9614d3b3cc",
+    "data/prediction-markets-cli-replay.json": "f01274063b67f426952ff45352b35018687efaa3ef63322a5233b7d5226c8ebe",
+    "data/prediction-markets-checkout-replay.json": "e30f7ca02b20bae3a9188b24cd10d666b09fca065eea30ce461670cb14d989ca",
+    "data/prediction-markets-resource-measurements.json": "7ca92a45f0a977309a60721e5a51c60ef2b1bbf47482e1bebcdd0071cf7cd6c3",
+    "knowledge/prediction_markets_fixture_freeze_v1.json": "f1eb18c1182e2420643cdd833ba23cf34fdd1c26264079ca778aee62e3f4906a"
+  },
+  "milestones": {
+    "audit": "e091955",
+    "source_profile": "9c59157",
+    "independent_fixtures": "11a35f5",
+    "engine": "879dcf6",
+    "cli_reports": "8708d42",
+    "acceptance": "75bba77d46169e8dc5cb00005dd97712248dbd27",
+    "verification": "c564436"
+  },
+  "backlog": {
+    "P1": [
+      "Full source-equivalence and independent numerical/funding proof coverage before broad parameter expansion",
+      "Real participant-data rights,consent,identity/resolution evidence and empirical price-calibration studies",
+      "Stable51event-resolution/57forecast interfaces only after explicit semantic mapping"
+    ],
+    "P2": [
+      "Continuous double auctions",
+      "Combinatorial and conditional scoring-rule markets",
+      "Advanced funding/shorting/fees/market-maker variants",
+      "Live user/trader operations and product interfaces; real-money/external trading remains outside this scope"
+    ]
+  },
+  "scientific_limits": [
+    "Every repository record is synthetic play credit;no actualmoney,traderdata,externalexchange orsettlementservice used.",
+    "Ideal b ln2 bound is conditional onzero initialquantities,fixedb andone-credit binarypayouts;gridreserveexplicitlycoversrounding/numericalmargin.",
+    "Cash-grid equality isexact underbounded Decimal arithmetic;ln/exp prices/costs approximate withfrozen1e-60verificationtolerance.",
+    "Actor/resolver/clock/rights aredeclarations,not external authentication,truth orconsentcertification.",
+    "Local owner canrewrite allhistory;hashchainsalone are not external immutabilityproof.",
+    "Strict-before-close markettiming differsfrom51/57inclusiveforecastcutoffs;no automaticintegration.",
+    "No general MSR,combinatorialmarket,incentive/efficiency or empirical forecastaccuracycertification."
+  ],
+  "next": "Afterclosurepush andcleanmain0/0,audit59only;finish59–60 thenfinalall54integration.Notechnique61."
+}
