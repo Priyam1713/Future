@@ -1,0 +1,627 @@
+{
+  "version": 1,
+  "technique_id": 59,
+  "name": "Chaos-Theory Forecasting",
+  "date": "2026-11-08",
+  "status": "Core v1 Ready — Deterministic Lorenz Dynamics, Perturbation Sensitivity and Finite-Horizon Simulation Scope",
+  "certification_scope": "Finite synthetic deterministic ODE software verification; no empirical forecast horizon,weather skill or global Lyapunov certification.",
+  "profile": "chaos-theory-lorenz63-rk4-v1",
+  "profile_sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+  "profile_file": "knowledge/chaos_theory_profile_v1.json",
+  "cli_command": "chaos-theory",
+  "source_catalog": "knowledge/chaos_theory_sources.json",
+  "source_manifest_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1",
+  "source_freeze_sha256": "9663f768b409a7fe59d56f65415df4121d005836f705dc1207beca56b0d88695",
+  "source_boundaries": {
+    "version": 1,
+    "technique_id": 59,
+    "audit_sha256": "97cd213488d5597253c230bd658ddd20f48df1eb63604f8f64efe919b0edeb22",
+    "source_manifest_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1",
+    "boundaries": "Ranked abstract/metadata only; UCAR DART10.10.1 equations/defaults and RK2 versus RK4 conventions; Moler2014 classical four-stage method inspected. No original Lorenz run reproduction.",
+    "rights": "Mathematical facts and original code/synthetic fixtures only; no third-party text,data,figures or code copied."
+  },
+  "inventory_method_row": [
+    59,
+    "6 · Futuristic & Hypothetical Technologies",
+    "Chaos-Theory Forecasting",
+    "RETAIN — simulate / implement",
+    "Data & simulation",
+    "Lorenz systems; Lyapunov horizon; nonlinear delay embedding; reservoir computing; ensemble weather-like models",
+    "Reconstruct state, perturb initial conditions, quantify forecast horizon",
+    "Time series; CPU/GPU optional; reproducible simulation",
+    "Sensitive initial conditions bound accurate long-horizon forecasts",
+    "Scientifically grounded but forecast horizons limited",
+    "Deterministic Nonperiodic Flow",
+    "Edward N. Lorenz",
+    "https://journals.ametsoc.org/view/journals/atsc/20/2/1520-0469_1963_020_0130_dnf_2_0_co_2.xml",
+    "Nonlinear Dynamics and Chaos",
+    "Nonlinear Forecasting as a Way of Distinguishing Chaos from Measurement Error in Time Series",
+    "49",
+    "49, 54, 56, 60",
+    59
+  ],
+  "ranked_sources": [
+    [
+      59,
+      "Chaos-Theory Forecasting",
+      1,
+      "Edward N. Lorenz",
+      "Deterministic Nonperiodic Flow",
+      "Foundational chaotic dynamical system",
+      "https://journals.ametsoc.org/view/journals/atsc/20/2/1520-0469_1963_020_0130_dnf_2_0_co_2.xml",
+      "Peer-reviewed paper",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      59,
+      "Chaos-Theory Forecasting",
+      2,
+      "Steven H. Strogatz",
+      "Nonlinear Dynamics and Chaos",
+      "Mathematical models and intuition",
+      null,
+      "Book / rights check",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ],
+    [
+      59,
+      "Chaos-Theory Forecasting",
+      3,
+      "George Sugihara and Robert M. May",
+      "Nonlinear Forecasting as a Way of Distinguishing Chaos from Measurement Error in Time Series",
+      "Empirical nonlinear forecasting",
+      "https://www.nature.com/articles/344734a0",
+      "Peer-reviewed paper",
+      "Bibliographic lead; check edition, chapters, rights before ingesting"
+    ]
+  ],
+  "variation_rows": [
+    [
+      59,
+      "Chaos-Theory Forecasting",
+      "Lorenz systems",
+      "Nonlinear Forecasting as a Way of Distinguishing Chaos from Measurement Error in Time Series",
+      "Nonlinear Dynamics and Chaos",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      59,
+      "Chaos-Theory Forecasting",
+      "Lyapunov horizon",
+      "Nonlinear Forecasting as a Way of Distinguishing Chaos from Measurement Error in Time Series",
+      "Nonlinear Dynamics and Chaos",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      59,
+      "Chaos-Theory Forecasting",
+      "nonlinear delay embedding",
+      "Nonlinear Forecasting as a Way of Distinguishing Chaos from Measurement Error in Time Series",
+      "Nonlinear Dynamics and Chaos",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      59,
+      "Chaos-Theory Forecasting",
+      "reservoir computing",
+      "Nonlinear Forecasting as a Way of Distinguishing Chaos from Measurement Error in Time Series",
+      "Nonlinear Dynamics and Chaos",
+      "Provisional / chapter check needed",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ],
+    [
+      59,
+      "Chaos-Theory Forecasting",
+      "ensemble weather-like models",
+      "Nonlinear Dynamics and Chaos",
+      "Nonlinear Forecasting as a Way of Distinguishing Chaos from Measurement Error in Time Series",
+      "Indicative (scope match)",
+      "Locate chapters; extract algorithms, symbol tables, exception cases",
+      "Knowledge gathering"
+    ]
+  ],
+  "variations": {
+    "Lorenz systems": "Supported deterministic Lorenz63 paired RK4 instance",
+    "Lyapunov horizon": "Unsupported certified horizon/exponent;finite-pair sensitivity diagnostics only",
+    "nonlinear delay embedding": "Unsupported;P2",
+    "reservoir computing": "Unsupported;P2",
+    "ensemble weather-like models": "Unsupported;P2"
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Bounded deterministic Lorenz63 classical RK4",
+      "Explicit paired initial states,aligned separation",
+      "Full h/h2 integration and matched refinement diagnostics"
+    ],
+    "experimental_research_only": [
+      "Synthetic sensitivity interpretation"
+    ],
+    "unsupported": [
+      "Certified Lyapunov exponent or forecast horizon",
+      "Nonlinear delay embedding",
+      "Reservoir computing",
+      "Empirical weather-like ensembles",
+      "Random/stochastic/data assimilation modes"
+    ]
+  },
+  "equations": [
+    "f(x,y,z)=(sigma*(y-x),x*(rho-z)-y,x*y-beta*z)",
+    "k1=f(s); k2=f(s+h*k1/2); k3=f(s+h*k2/2); k4=f(s+h*k3)",
+    "snew[j]=s[j]+(h/6)*(k1[j]+2*k2[j]+2*k3[j]+k4[j])"
+  ],
+  "exact_contract": [
+    "Strict exact root and nested fields; versions exactinteger1; pinned canonical profile/catalog/source hashes. Input not mutated. Only solver classical_rk4.",
+    "All numeric ODE parameters,dt andstatecomponents are rational STRINGS matching -?(0|nonzero up to9digits)(/positive up to9digits)?; no floats,integers,bools,decimalpoints,exponents or whitespace. Fraction then once converted to IEEE754 binary64. Equivalent rational spellings share mathematics but retain distinct request hashes.",
+    "sigma in(0,50],rho in(0,100],beta in(0,20]; each initial component in[-100,100]; exactly3 components. dt in[1/100000,1/20],steps exactinteger0..4096,trace_stride exactinteger1..4096,steps*dt<=50 dimensionless model units.",
+    "Explicit base andperturbed initial states; no RNG orimplicit perturbation. Four full integrations: base/perturbed at h andh/2 with N and2N steps. No skipped integration at output stride. Every RK4 intermediate state,derivative andcompleted state mustbe finite andabsolute<=1000000; otherwise reject whole request withoutpartialresult.",
+    "Frozen scalar Python binary64 operation order exactly as equations; h*k/2 at stages2/3; h*k atstage4; weighted sum left-to-right; final h/6 multiplication. No adaptive stepping,FMA,vector reassociation orSciPy RK45 substitution.",
+    "Nominal aligned times are exact Fraction i*dt strings; actual integration uses float(dt) and float(dt)/2,not rounded accumulated times. Every row has coarse/refined base/perturbed states,their Euclidean separations andeach coarse-refined state difference via math.hypot.",
+    "Return initial/final andindices divisible bytrace_stride; diagnostics maxima computed overALL N+1aligned times includingunreturned rows. T0 valid:initialstates only,refinement errors0. Initialzero separation leaves amplification undefined/null; otherwise final_refined_separation/initial_separation,explicitly not Lyapunov exponent.",
+    "Preflight work=24*steps derivative evaluations; returned numericcells=17*(numberofreturnedrows),caps100000and100000. Count includes exacttime/index,12statecomponents and4distances. Metadata bounded4000characters. No earlystop/truncation/hiddenhorizon.",
+    "Provenance synthetic=true,rights=self_authored,knownsource_ref,nonemptyattribution/snapshot<=4000characters andexactUTF8snapshotSHA. Declarations/hashes do not certify source truth or rights in real data.",
+    "Numerical verification: one-step/stages against exactFraction RK4 absolute1e-12; independent local Taylor80/100reference agreement<1e-60,short-horizon convergence observed not analytically bounded; symmetry/fixedpoints anddeterministicreplay. Long chaotic trajectories carry no accuracy certification.",
+    "Refinement differences approximate diagnostics,not rigorous errorbounds. State separation isinitial-condition sensitivity,not numericalerror. No global Lyapunov exponent,validated forecast horizon,weather skill,delay embedding,reservoir training or dataassimilation."
+  ],
+  "numeric": {
+    "arithmetic": "IEEE754 binary64 scalar Python",
+    "oracle": "ExactFraction RK4 stages and independent Taylor coefficient recurrence",
+    "one_step_absolute_tolerance": "1e-12",
+    "model_time": "dimensionless"
+  },
+  "bounds": {
+    "steps": 4096,
+    "time_max": "50",
+    "dt_min": "1/100000",
+    "dt_max": "1/20",
+    "state_guard": 1000000,
+    "work": 100000,
+    "returned_cells": 100000
+  },
+  "acceptance_criteria": [
+    {
+      "criterion": "Pinned sources/profile frozen before independentfixtures andproduction",
+      "passed": true
+    },
+    {
+      "criterion": "ExactFraction derivative,fourstage andonestep anchors;independent Taylor80/100 localreference",
+      "passed": true
+    },
+    {
+      "criterion": "Short-horizon convergence ratio16.693763724454577 andlower-orderEuler negativecontrol",
+      "passed": true
+    },
+    {
+      "criterion": "Origin/nonzero equilibria,symmetry,identical/explicitpairs andzero horizon",
+      "passed": true
+    },
+    {
+      "criterion": "Separate coarse/refined initial-condition separation andmatched numericalrefinement differences",
+      "passed": true
+    },
+    {
+      "criterion": "Exact nominal aligned timegrid;stride never skips integration or diagnostic maxima",
+      "passed": true
+    },
+    {
+      "criterion": "Finite stage guards,strictschema,parameter/time/work/outputbounds",
+      "passed": true
+    },
+    {
+      "criterion": "Source/rights/snapshot andasset tampering refusals;registry idempotence",
+      "passed": true
+    },
+    {
+      "criterion": "98raw accepted/rejected JSON/Markdown outputs inbothactualcheckoutsettings",
+      "passed": true
+    },
+    {
+      "criterion": "Complete2276tests/3345CLIcases/38verifiers;5050protectedfiles unchanged",
+      "passed": true
+    },
+    {
+      "criterion": "Actualcomplete-report CPU/memory measurements;unsupportedmatrix/P1P2 frozen",
+      "passed": true
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "fixture_families": 23,
+    "families": {
+      "derivative": {
+        "passed": true,
+        "cases": [],
+        "additional_check": "exact frozen numerical stages"
+      },
+      "four-stages": {
+        "passed": true,
+        "cases": [],
+        "additional_check": "exact frozen numerical stages"
+      },
+      "exact-one-step": {
+        "passed": true,
+        "cases": [
+          "one-step"
+        ],
+        "additional_check": null
+      },
+      "origin-fixed": {
+        "passed": true,
+        "cases": [
+          "origin"
+        ],
+        "additional_check": null
+      },
+      "nonzero-equilibrium": {
+        "passed": true,
+        "cases": [
+          "equilibrium"
+        ],
+        "additional_check": null
+      },
+      "symmetry": {
+        "passed": true,
+        "cases": [
+          "symmetric"
+        ],
+        "additional_check": null
+      },
+      "zero-perturbation": {
+        "passed": true,
+        "cases": [
+          "identical"
+        ],
+        "additional_check": null
+      },
+      "explicit-perturbation": {
+        "passed": true,
+        "cases": [
+          "long-sensitive",
+          "missing-perturbation"
+        ],
+        "additional_check": null
+      },
+      "exact-time-grid": {
+        "passed": true,
+        "cases": [],
+        "additional_check": "aligned rows,independent distances,integrated counts andreport hashes"
+      },
+      "zero-horizon": {
+        "passed": true,
+        "cases": [
+          "zero-horizon"
+        ],
+        "additional_check": null
+      },
+      "matched-refinement": {
+        "passed": true,
+        "cases": [],
+        "additional_check": "aligned rows,independent distances,integrated counts andreport hashes"
+      },
+      "independent-taylor": {
+        "passed": true,
+        "cases": [],
+        "additional_check": "Taylor recurrence and local convergence witness"
+      },
+      "local-convergence": {
+        "passed": true,
+        "cases": [
+          "short-coarse",
+          "short-fine"
+        ],
+        "additional_check": null
+      },
+      "full-integration-stride": {
+        "passed": true,
+        "cases": [
+          "stride"
+        ],
+        "additional_check": null
+      },
+      "finite-state-guard": {
+        "passed": true,
+        "cases": [
+          "unstable-stage"
+        ],
+        "additional_check": null
+      },
+      "parameter-bounds": {
+        "passed": true,
+        "cases": [
+          "sigma-zero",
+          "rho-negative",
+          "beta-too-large",
+          "huge-number",
+          "negative-zero",
+          "state-too-large"
+        ],
+        "additional_check": null
+      },
+      "time-bounds": {
+        "passed": true,
+        "cases": [
+          "tiny-step",
+          "dt-zero",
+          "dt-small",
+          "dt-large",
+          "steps-negative",
+          "time-product"
+        ],
+        "additional_check": null
+      },
+      "work-caps": {
+        "passed": true,
+        "cases": [
+          "maximum-steps",
+          "steps-large"
+        ],
+        "additional_check": null
+      },
+      "strict-schema": {
+        "passed": true,
+        "cases": [
+          "parameter-float",
+          "parameter-bool",
+          "bad-fraction",
+          "nonfinite",
+          "decimal",
+          "state-size",
+          "steps-bool",
+          "stride-zero",
+          "version"
+        ],
+        "additional_check": null
+      },
+      "unsupported-modes": {
+        "passed": true,
+        "cases": [
+          "solver-rk45",
+          "solver-lyapunov",
+          "extra"
+        ],
+        "additional_check": null
+      },
+      "source-rights": {
+        "passed": true,
+        "cases": [
+          "source",
+          "rights",
+          "not-synthetic",
+          "empty-attribution"
+        ],
+        "additional_check": null
+      },
+      "snapshot-binding": {
+        "passed": true,
+        "cases": [
+          "snapshot"
+        ],
+        "additional_check": null
+      },
+      "canonical-replay": {
+        "passed": true,
+        "cases": [
+          "profile",
+          "catalog"
+        ],
+        "additional_check": "aligned rows,independent distances,integrated counts andreport hashes"
+      }
+    },
+    "numerical_vectors": 4,
+    "accepted_cases": 12,
+    "rejected_cases": 33,
+    "local_reference": {
+      "errors": [
+        1.5271759813705364e-07,
+        9.148182558336961e-09
+      ],
+      "observed_refinement_ratio": 16.693763724454577,
+      "euler_negative_control_error": 0.012662168315940405,
+      "taylor_order_difference": "172022620923112573995410148755292157938838945129319697536545632515695358809642564851229202398259813633121789315488417799623749918788598086785791239117061228292626204993437914226403285975175688431442418930478610450872512004612342057704314229804215960842172366849759452408106777551523163410822233/4809823353480148361531259745366422359873742048902707363897049636246343145342809661372422458717011910433486353469450373255857249436687372416243200019981686423530762768914591626192486400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "scope": "Deterministic synthetic finite Lorenz ODE software verification; no empirical forecast or global Lyapunov validation."
+  },
+  "regression": {
+    "tests": 2276,
+    "inherited_tests": 2219,
+    "new_tests": 57,
+    "cli_cases": 3345,
+    "inherited_cli_cases": 3247,
+    "new_cli_cases": 98,
+    "independent_verifiers": 38,
+    "protected_files": 5050,
+    "changed_protected_files": [],
+    "registry": {
+      "references_checked_twice": 585,
+      "unique": 430,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "strict_json_files": 3413,
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    }
+  },
+  "replay": {
+    "accepted_pairs": 12,
+    "rejected_pairs": 37,
+    "cli_cases": 98,
+    "checkout": {
+      "passed": true,
+      "exports": [
+        {
+          "autocrlf": "false",
+          "raw_corpus_files": 148,
+          "normalized_commitments": 3,
+          "actual_cli_replays": 98,
+          "passed": true
+        },
+        {
+          "autocrlf": "true",
+          "raw_corpus_files": 148,
+          "normalized_commitments": 3,
+          "actual_cli_replays": 98,
+          "passed": true
+        }
+      ],
+      "method": "git checkout-index from staged files with core.autocrlf false/true;actual exported CLI executions;stdout bytes SHA256 matches saved JSON/Markdown,without newline normalization",
+      "subprocess_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "harness_limit": "Two parallel CLI processes; limits inherited numerical-library import threads,not the stdlib Lorenz63 RK4 engine."
+    }
+  },
+  "performance": {
+    "measured": true,
+    "environment": {
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0"
+    },
+    "profile_sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+    "code_sha256": "ffac2760befd1870402e7e2100a84a82b1a018d965b1440421983486fde5d1af",
+    "protocol": "Three untraced complete in-process reports; separate tracemalloc report; one full CLI withimports/registry/serialization perworkload. Native peak covers whole helper includingimports/allworkloads/tracing; not CLIchild/perworkload.",
+    "process_peak_working_set_bytes": 53301248,
+    "under_proposed_128_MiB": true,
+    "results": [
+      {
+        "id": "small",
+        "steps": 1,
+        "dt": "1/100",
+        "horizon": "1/100",
+        "returned_times": 2,
+        "budget": {
+          "work": 24,
+          "returned_cells": 34
+        },
+        "input_sha256": "4eb00fc06936df286e9a91af179aa008782685bc3f520b354069948084d6735e",
+        "seconds": [
+          0.0007675997912883759,
+          0.0004992997273802757,
+          0.0004444001242518425
+        ],
+        "median_seconds": 0.0004992997273802757,
+        "cli_seconds": 1.4160465002059937,
+        "python_traced_peak_bytes": 49887,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "medium",
+        "steps": 1000,
+        "dt": "1/1000",
+        "horizon": "1",
+        "returned_times": 101,
+        "budget": {
+          "work": 24000,
+          "returned_cells": 1717
+        },
+        "input_sha256": "5d3ad7523ead87ea135047c0846332e918e057758eb7ee29aaa1e48db88c682e",
+        "seconds": [
+          0.031254000030457973,
+          0.03063250007107854,
+          0.03000809997320175
+        ],
+        "median_seconds": 0.03063250007107854,
+        "cli_seconds": 0.924227399751544,
+        "python_traced_peak_bytes": 417020,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "dense",
+        "steps": 4096,
+        "dt": "1/1000",
+        "horizon": "512/125",
+        "returned_times": 4097,
+        "budget": {
+          "work": 98304,
+          "returned_cells": 69649
+        },
+        "input_sha256": "a8afabeb5a0b8761d48c482fd1abe8052b8cb3796bb8e3c70cf36d0b183daa93",
+        "seconds": [
+          0.16108019975945354,
+          0.2606101999990642,
+          0.2802720000036061
+        ],
+        "median_seconds": 0.2606101999990642,
+        "cli_seconds": 1.06900139991194,
+        "python_traced_peak_bytes": 15383372,
+        "under_proposed_five_seconds": true
+      },
+      {
+        "id": "long",
+        "steps": 4000,
+        "dt": "1/100",
+        "horizon": "40",
+        "returned_times": 41,
+        "budget": {
+          "work": 96000,
+          "returned_cells": 697
+        },
+        "input_sha256": "354faea4874c9946399299d500f2925dfbcaed801dd8b67a6675084264faa2f3",
+        "seconds": [
+          0.23720869980752468,
+          0.23877090029418468,
+          0.19677359983325005
+        ],
+        "median_seconds": 0.23720869980752468,
+        "cli_seconds": 2.013994799926877,
+        "python_traced_peak_bytes": 190121,
+        "under_proposed_five_seconds": true
+      }
+    ],
+    "scope": "Synthetic finite dimensionless trajectories;no empirical forecast accuracy."
+  },
+  "evidence": {
+    "data/chaos-theory-acceptance-checks.json": "5a99e80dce85e23720bc5471c115adbef9469676d75d2aeae4e1ee62ec46e8e5",
+    "data/chaos-theory-unit.json": "90f53e6f31c33f6fd38bafcdddfa1ebe831ef9b4a7a790003408698fb2a9152a",
+    "data/chaos-theory-verification.json": "0f2836e98055232186d48838a78412980bf51f9a5b8b41d7ec055a7df07fa81c",
+    "data/chaos-theory-cli-replay.json": "3e16474e30dcd3d8ecc74737010d89b252ca209e4781c2520e25a65db6031462",
+    "data/chaos-theory-checkout-replay.json": "594e7ef683ff1dd2dd02a147d8499d5ef1b384ddd3443b7f5a7a5aad92dbf649",
+    "data/chaos-theory-resource-measurements.json": "e3b19aca08a78b07f0e1f6f1d6256f0b8b451dbd6ccff744d0ecdecca187cb88",
+    "knowledge/chaos_theory_fixture_freeze_v1.json": "46ebd716a5d1d027682b8441aad26f6ea468207e2954b498219e3963d616bba3"
+  },
+  "milestones": {
+    "audit": "e8113a2",
+    "source_profile": "3de61fa",
+    "independent_fixtures": "847a7e5",
+    "engine": "457a225",
+    "cli_reports": "f42f012e5f7f4b5c45866852661f774e117ce536",
+    "acceptance": "4df7e2fcf320d51c9067cf50344b1a13290b32b1"
+  },
+  "backlog": {
+    "P1": [
+      "Obtain permitted full ranked texts and refine source-equivalence locators",
+      "Rigorous numerical error bounds and empirical held-out validation before any forecast-horizon claim"
+    ],
+    "P2": [
+      "Global/finite-time Lyapunov estimators with independent reference",
+      "Nonlinear delay embedding and reservoir computing",
+      "Data assimilation and empirical weather-like ensembles"
+    ]
+  },
+  "scientific_limits": [
+    "All trajectories synthetic anddimensionless;no weather observations orheld-out forecast evaluation.",
+    "Binary64 RK4 isapproximate;Taylor local series stability isnot rigorous globalerror certification.",
+    "Step-refinement differences canbe large alongchaotic trajectories and areseparate frominitial-condition separation.",
+    "No originalLorenz RK2 reproduction,global Lyapunov exponent,forecast-horizon estimation,embedding,reservoir orassimilation.",
+    "Provenance/rights declarations andhashes donot certify external truth orpermittedrealdata."
+  ],
+  "next": "Afterclosurepush andcleanmain0/0,audit60only;after60closure finalall54 acceptance.No61."
+}

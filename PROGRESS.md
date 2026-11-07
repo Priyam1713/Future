@@ -1404,3 +1404,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-08 — #59 source/profile freeze
 - Frozen Lorenz63 scalar RK4,exact nominal time grid,bounded explicit initial pair,complete h/h2 integrations andseparate separation/refinement diagnostics. Independent exact stages andTaylor recurrence will freeze beforeproduction.
+
+## 2026-11-08 — #59 Core v1 closure
+- Core v1 Ready — Deterministic Lorenz Dynamics, Perturbation Sensitivity and Finite-Horizon Simulation Scope. Full2276tests,3345CLIcases,38verifiers;5050protectedfiles unchanged.23families/57newtests,4exact stagevectors andindependent Taylor80/100 reference pass.12accepted/37rejectedpairs replay98rawoutputs ineachactualcheckout. CPU/memory measured;sourcegaps/matrix/P1P2 explicit. No empiricalforecast,globalLyapunov orrigorouserror certification. Afterclosurepush/clean0/0,continue60.
