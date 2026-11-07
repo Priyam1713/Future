@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "agent-based-finite-grid-b3s23-v1",
+    "version": 1,
+    "sha256": "e6d0487cf23393a1262efb227ef912542f38ae6cb9232358a6bbc34c9053a62b",
+    "catalog_sha256": "d95cbfa701819bf23b3df2647c8ee6454963a397654588672818e8daec2ee02f"
+  },
+  "model": {
+    "rule": "B3/S23",
+    "boundary": "finite-zero-exterior",
+    "scheduler": "synchronous",
+    "neighborhood": "moore-radius-1-exclude-center"
+  },
+  "geometry": {
+    "height": 2,
+    "width": 2
+  },
+  "ticks": 2,
+  "trace_states": true,
+  "scenarios": [
+    {
+      "id": "base",
+      "initial_grid": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "reference_scenario": "base",
+  "provenance": {
+    "synthetic": true,
+    "source_ref": "agent-based-mesa-life-agents-v1",
+    "rights": "self_authored",
+    "attribution": "Future original synthetic Life fixture",
+    "snapshot": "Original explicit synthetic binary board; no observed people or assets.",
+    "snapshot_sha256": "a4e825ca4014988b83d9f049adbbdb364a382ab0fa12da872c8bdd5c962c9a7e"
+  }
+}

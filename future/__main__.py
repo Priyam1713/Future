@@ -312,7 +312,25 @@ def main():
     dt=sub.add_parser('digital-twin')
     dt.add_argument('input',help='Offline exact scalar state replay and future control scenarios JSON')
     dt.add_argument('--format',choices=['json','markdown'],default='json')
+    ab=sub.add_parser('agent-based')
+    ab.add_argument('input',help='Offline exact finite-grid synchronous B3/S23 scenarios JSON')
+    ab.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='agent-based':
+        import sys
+        from .scrying import load_input
+        from .agent_based import read,markdown
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8',newline='\n')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError,TypeError,KeyError,OverflowError) as error:
+                result=dict(status='rejected',error='Finite-grid B3/S23 request rejected',reason=str(error),result=None)
+                print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+        finally:registry.close()
+        return
     if args.command=='digital-twin':
         import sys
         from .scrying import load_input

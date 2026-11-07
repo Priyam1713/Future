@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "measured": true,
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD"
+  },
+  "profile_sha256": "e6d0487cf23393a1262efb227ef912542f38ae6cb9232358a6bbc34c9053a62b",
+  "code_sha256": "cd6d2b3efba558253ab77212b67fd2e80c1d632d8c48e8fd358b38b7b80c896c",
+  "protocol": "Five untraced complete in-process report repetitions perworkload;separate tracemalloc repetition forPythonallocations;onecompleteCLI invocation includingimports,registry andserialization. Native memory iswhole measurement-process peak includingimports,allworkloads andtracing;notisolated perworkload orCLIchild.",
+  "process_peak_working_set_bytes": 31526912,
+  "under_proposed_128_MiB": true,
+  "results": [
+    {
+      "id": "small",
+      "geometry": {
+        "height": 7,
+        "width": 7
+      },
+      "ticks": 4,
+      "scenarios": 1,
+      "initialization": "Explicitdeterministic pattern;nostochastic initialization",
+      "request_sha256": "daa34b3fd069b1ca98ce5757881a3b247547a9c060df7c151f5c190c8d1e0274",
+      "budget": {
+        "cell_ticks": 196,
+        "neighbor_cell_work": 1764,
+        "returned_state_cells": 343,
+        "returned_count_cells": 82
+      },
+      "seconds": [
+        0.002047,
+        0.0017306,
+        0.001631,
+        0.0011398,
+        0.0010523
+      ],
+      "median_seconds": 0.001631,
+      "cli_seconds": 0.9270826,
+      "python_traced_peak_bytes": 127680,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "medium",
+      "geometry": {
+        "height": 32,
+        "width": 32
+      },
+      "ticks": 64,
+      "scenarios": 1,
+      "initialization": "Explicitdeterministic pattern;nostochastic initialization",
+      "request_sha256": "ab775cc4aa25f0d0296c67606c01ade741ce9936646c9f50cbac08d043f10b11",
+      "budget": {
+        "cell_ticks": 65536,
+        "neighbor_cell_work": 589824,
+        "returned_state_cells": 2048,
+        "returned_count_cells": 682
+      },
+      "seconds": [
+        0.0398056,
+        0.0418056,
+        0.0395279,
+        0.0382954,
+        0.0398262
+      ],
+      "median_seconds": 0.0398056,
+      "cli_seconds": 1.4684596,
+      "python_traced_peak_bytes": 632060,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "dense",
+      "geometry": {
+        "height": 64,
+        "width": 64
+      },
+      "ticks": 128,
+      "scenarios": 1,
+      "initialization": "Explicitdeterministic pattern;nostochastic initialization",
+      "request_sha256": "ef80291a80efcce8b0cae9e5f51aa2466084afad22da94cb0d000b3e8ed767bb",
+      "budget": {
+        "cell_ticks": 524288,
+        "neighbor_cell_work": 4718592,
+        "returned_state_cells": 8192,
+        "returned_count_cells": 1322
+      },
+      "seconds": [
+        0.4695601,
+        0.5842855,
+        0.6232826,
+        0.5406093,
+        0.5944125
+      ],
+      "median_seconds": 0.5842855,
+      "cli_seconds": 1.1565569,
+      "python_traced_peak_bytes": 2482045,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "scenarios",
+      "geometry": {
+        "height": 32,
+        "width": 32
+      },
+      "ticks": 64,
+      "scenarios": 4,
+      "initialization": "Explicitdeterministic pattern;nostochastic initialization",
+      "request_sha256": "9dc613a23892e075d96d98134add04b5d46b61146be43e4d77b710fa56f75388",
+      "budget": {
+        "cell_ticks": 262144,
+        "neighbor_cell_work": 2359296,
+        "returned_state_cells": 8192,
+        "returned_count_cells": 2728
+      },
+      "seconds": [
+        0.3428597,
+        0.3471727,
+        0.2750712,
+        0.3025709,
+        0.2647463
+      ],
+      "median_seconds": 0.3025709,
+      "cli_seconds": 1.0258017,
+      "python_traced_peak_bytes": 1360874,
+      "under_proposed_five_seconds": true
+    }
+  ],
+  "scope": "Localrepresentative explicit syntheticboards only;notuniversal performance orreal-world predictive accuracy."
+}

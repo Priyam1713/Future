@@ -1275,3 +1275,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #54 verified engine and scenarios
 - Implemented exactfinite-byte-grid kernel,synchronous prior snapshots,zero exterior,full requestedhorizons andexactcomplete-state repeat detection. Controlledinitialstates compareper-tick counts andHammingdistance;equalcounts neverstandinforstateequality.
 - All95new unit tests and26families pass,includingall18localcases/512configurations,56birth/84survival combinatorics,block,blinker,glider,geometry,in-place negativecontrol andwork/state/count preflight refusals. No empirical/otherABM certification.
+
+## 2026-11-07 — #54 CLI reports and measured workloads
+- Saved138raw UTF8/LF CLI cases:23accepted/46rejected JSON/Markdown pairs. Workedempty/single/block/blinker/glider,controlled/identical/equal-countstate comparisons,torus/nonbinary andcombinedcaprefusals included.
+- Full1961tests pass (1866inherited+95new). Measuredsmall/medium/dense/scenario complete-report workloads onPython3.12.10 Windows;details indata/agent-based-resource-measurements.json. Dense64×64×128 median0.5843seconds,CLI1.1566seconds;whole measurement helper peak30.066MiB. Measurements arelocalrepresentative observations,notuniversal orCLI-child memory bounds. Bothcheckoutreplays andfull inheritedacceptance pending.
