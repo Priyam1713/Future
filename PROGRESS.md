@@ -1283,3 +1283,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #54 full units and actual checkout replay
 - Full1961tests pass. Both indexed core.autocrlf=false/true exports preserve208raw corpus files and3normalized commitments andeach replay138actualCLI outputs byte-for-byte,without newline normalization.
 - All26families/18localcases/512configurations andblock/blinker/glider controls pass. Full inherited CLI/verifier/source/dependency/preservation sweep remainsinprogress withnofailures observed. No55research yet.
+
+## 2026-11-07 — #54 full acceptance passed
+- Passed1961tests (1866inherited+95new),2783CLIcases (2645inherited+138new),33independentverifiers (32inherited+1new),all26families/18localcases/512configurations andbothactualcheckoutreplays. All3979protected pre-engine files unchanged.
+- Source registry idempotence,strictJSON,60IDs/54retained/six exclusions,dependency audit,pip check anddiff check pass. Finaldata:data/agent-based-acceptance-checks.json. No failingchecktreatedaspass;no55researchyet. Boundedclosure follows.
