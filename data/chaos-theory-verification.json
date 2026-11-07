@@ -1,0 +1,197 @@
+{
+  "passed": true,
+  "fixture_families": 23,
+  "families": {
+    "derivative": {
+      "passed": true,
+      "cases": [],
+      "additional_check": "exact frozen numerical stages"
+    },
+    "four-stages": {
+      "passed": true,
+      "cases": [],
+      "additional_check": "exact frozen numerical stages"
+    },
+    "exact-one-step": {
+      "passed": true,
+      "cases": [
+        "one-step"
+      ],
+      "additional_check": null
+    },
+    "origin-fixed": {
+      "passed": true,
+      "cases": [
+        "origin"
+      ],
+      "additional_check": null
+    },
+    "nonzero-equilibrium": {
+      "passed": true,
+      "cases": [
+        "equilibrium"
+      ],
+      "additional_check": null
+    },
+    "symmetry": {
+      "passed": true,
+      "cases": [
+        "symmetric"
+      ],
+      "additional_check": null
+    },
+    "zero-perturbation": {
+      "passed": true,
+      "cases": [
+        "identical"
+      ],
+      "additional_check": null
+    },
+    "explicit-perturbation": {
+      "passed": true,
+      "cases": [
+        "long-sensitive",
+        "missing-perturbation"
+      ],
+      "additional_check": null
+    },
+    "exact-time-grid": {
+      "passed": true,
+      "cases": [],
+      "additional_check": "aligned rows,independent distances,integrated counts andreport hashes"
+    },
+    "zero-horizon": {
+      "passed": true,
+      "cases": [
+        "zero-horizon"
+      ],
+      "additional_check": null
+    },
+    "matched-refinement": {
+      "passed": true,
+      "cases": [],
+      "additional_check": "aligned rows,independent distances,integrated counts andreport hashes"
+    },
+    "independent-taylor": {
+      "passed": true,
+      "cases": [],
+      "additional_check": "Taylor recurrence and local convergence witness"
+    },
+    "local-convergence": {
+      "passed": true,
+      "cases": [
+        "short-coarse",
+        "short-fine"
+      ],
+      "additional_check": null
+    },
+    "full-integration-stride": {
+      "passed": true,
+      "cases": [
+        "stride"
+      ],
+      "additional_check": null
+    },
+    "finite-state-guard": {
+      "passed": true,
+      "cases": [
+        "unstable-stage"
+      ],
+      "additional_check": null
+    },
+    "parameter-bounds": {
+      "passed": true,
+      "cases": [
+        "sigma-zero",
+        "rho-negative",
+        "beta-too-large",
+        "huge-number",
+        "negative-zero",
+        "state-too-large"
+      ],
+      "additional_check": null
+    },
+    "time-bounds": {
+      "passed": true,
+      "cases": [
+        "tiny-step",
+        "dt-zero",
+        "dt-small",
+        "dt-large",
+        "steps-negative",
+        "time-product"
+      ],
+      "additional_check": null
+    },
+    "work-caps": {
+      "passed": true,
+      "cases": [
+        "maximum-steps",
+        "steps-large"
+      ],
+      "additional_check": null
+    },
+    "strict-schema": {
+      "passed": true,
+      "cases": [
+        "parameter-float",
+        "parameter-bool",
+        "bad-fraction",
+        "nonfinite",
+        "decimal",
+        "state-size",
+        "steps-bool",
+        "stride-zero",
+        "version"
+      ],
+      "additional_check": null
+    },
+    "unsupported-modes": {
+      "passed": true,
+      "cases": [
+        "solver-rk45",
+        "solver-lyapunov",
+        "extra"
+      ],
+      "additional_check": null
+    },
+    "source-rights": {
+      "passed": true,
+      "cases": [
+        "source",
+        "rights",
+        "not-synthetic",
+        "empty-attribution"
+      ],
+      "additional_check": null
+    },
+    "snapshot-binding": {
+      "passed": true,
+      "cases": [
+        "snapshot"
+      ],
+      "additional_check": null
+    },
+    "canonical-replay": {
+      "passed": true,
+      "cases": [
+        "profile",
+        "catalog"
+      ],
+      "additional_check": "aligned rows,independent distances,integrated counts andreport hashes"
+    }
+  },
+  "numerical_vectors": 4,
+  "accepted_cases": 12,
+  "rejected_cases": 33,
+  "local_reference": {
+    "errors": [
+      1.5271759813705364e-07,
+      9.148182558336961e-09
+    ],
+    "observed_refinement_ratio": 16.693763724454577,
+    "euler_negative_control_error": 0.012662168315940405,
+    "taylor_order_difference": "172022620923112573995410148755292157938838945129319697536545632515695358809642564851229202398259813633121789315488417799623749918788598086785791239117061228292626204993437914226403285975175688431442418930478610450872512004612342057704314229804215960842172366849759452408106777551523163410822233/4809823353480148361531259745366422359873742048902707363897049636246343145342809661372422458717011910433486353469450373255857249436687372416243200019981686423530762768914591626192486400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "scope": "Deterministic synthetic finite Lorenz ODE software verification; no empirical forecast or global Lyapunov validation."
+}
