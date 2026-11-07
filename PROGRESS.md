@@ -1337,3 +1337,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-08 — #56 expanded independent graph verification
 - All50 new unit tests pass. Extended verification uses the immutable pre-engine simple-path oracle across all12 treatment/outcome pairs and4 adjustment subsets in each of64 ordered DAGs:3072 additional graph cases,alongside256 frozen cases and80 structural cases. Original fixtures and production engine unchanged.
 - Both actual checkout modes replay92 raw outputs each. Full inherited sweep is running and refreshed full2073-unit run is in progress. Closure must consume the latest unit count,not the earlier in-flight2072 expectation. After56closure/push/clean0/0,continue57–60 then final all54 acceptance under master directive; no57audityet.
+
+## 2026-11-08 — #56 full units and actual checkout verification
+- Refreshed full2073 tests pass (2023 inherited+50 new). Both indexed core.autocrlf=false/true exports preserve139 raw corpus files and3 normalized commitments,replaying92 actual CLI outputs each without newline normalization. Full inherited CLI/verifier sweep still running.
+- Independent read-only stdlib XLSX extraction confirms all6 original workbook sheets match frozen inventory cell-for-cell and SHA256,including60 IDs and six exclusions. Added as an acceptance gate without installing the absent openpyxl package. Expanded3072 graph checks preserve the original oracle/fixtures and production engine.
