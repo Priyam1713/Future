@@ -1378,3 +1378,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-08 — #58 resource audit only
 - After57closure467ee85 pushed andclean0/0,preserved2ranked sources/4variations and audited7primary references. Recommend offline binary fixed-b LMSR play-credit ledger,stable Decimal pricing,quantized total-potential charges,explicit funding/quotes/idempotence/close/settlement. No58runtime/profile/productionfixtures/trades.
 - Distinguished Hanson2007journal/2012web upload/2002draft; Chen/Vaughan2010 cost-form supplement unranked. Decimal120 literal anchors only;31fixture families planned. Rights/numerical/scientific boundaries and P1/P2 recorded; no real-money or external trading support.
+
+## 2026-11-08 — #58 source/profile freeze
+- Frozen zero-initial binary fixed-b LMSR play-credit reference;Decimal80 stable max-shift/independent120precision expectations,total-potential1e-24 quantization,conservative computedmakerreserve,long-onlycash/positions,quote-executionrevisionbinding,idempotentintentIDs andonce-only declaredauthoritysettlement. Strictcutoffdiffersfrom51/57inclusiveforecast timing. No real-money orservicesupport. Independent fixtures follow before engine.

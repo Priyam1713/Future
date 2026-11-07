@@ -1,0 +1,165 @@
+{
+  "id": "prediction-markets-binary-lmsr-play-money-v1",
+  "version": 1,
+  "technique_id": 58,
+  "scope": "Offline Binary LMSR Play-Money Market and Resolution Ledger Scope",
+  "schema": {
+    "root": [
+      "schema_version",
+      "profile",
+      "market",
+      "accounts",
+      "events",
+      "provenance"
+    ],
+    "profile": [
+      "id",
+      "version",
+      "sha256",
+      "catalog_sha256"
+    ],
+    "market": [
+      "id",
+      "version",
+      "question_id",
+      "question_version",
+      "event_id",
+      "definition",
+      "positive_rule",
+      "negative_rule",
+      "outcomes",
+      "exhaustive",
+      "created_at",
+      "close_at",
+      "resolver",
+      "liquidity",
+      "money_unit"
+    ],
+    "account": [
+      "id",
+      "initial_credit"
+    ],
+    "quote": [
+      "id",
+      "type",
+      "at",
+      "actor",
+      "quote_id",
+      "outcome",
+      "delta"
+    ],
+    "execute": [
+      "id",
+      "type",
+      "at",
+      "actor",
+      "quote_id"
+    ],
+    "close": [
+      "id",
+      "type",
+      "at",
+      "actor"
+    ],
+    "resolve": [
+      "id",
+      "type",
+      "at",
+      "actor",
+      "outcome"
+    ],
+    "provenance": [
+      "synthetic",
+      "source_ref",
+      "rights",
+      "attribution",
+      "snapshot",
+      "snapshot_sha256"
+    ]
+  },
+  "source_manifest_sha256": "e36ed82d53463ad118427a7825c22e293d6a1cec15fd587bb5f55b8de72f36b1",
+  "source_freeze_sha256": "ad9ed7d6709b65be7f17c66dc3ba59fdf625ee46e995975de671e725e61e06f9",
+  "equations": [
+    "C(q)=b*ln(exp(qYES/b)+exp(qNO/b));stable evaluation with m=max(q_i/b): b*(m+ln(sum(exp(q_i/b-m))))",
+    "p_i=exp(q_i/b-m)/sum(exp(q_j/b-m));compute each numerator separately",
+    "Cash potential Chat(q)=ROUND_HALF_EVEN(C80(q),quantum1e-24);executed charge=Chat(q_new)-Chat(q_old)",
+    "Initial quantities0,0;C(0)=b ln2;winning share pays1play_credit",
+    "Ideal worst maker loss=max(q)-[C(q)-C(0)]<=b ln2;funded reserve=CEILING_grid(b ln2+2cashquanta)",
+    "All user cash+maker cash=initial user endowments+computed maker reserve; pricing quantities=sum ofrecorded account positions",
+    "Net successful trade charges telescope to Chat(q)-Chat(0);reverse unchanged-state trade refunds exactly oncash grid"
+  ],
+  "contract": [
+    "Strict exact fields,pinned profile/catalog hashes;schema_version/profile.version/market.version/question_version exactinteger1. Opaque IDs ASCII1..64. One market,accounts1..8 distinct,events0..512. Outcomes exactly[YES,NO],exhaustive=true,money_unit=play_credit. Nonempty definition/positive_rule/negative_rule<=4000characters. No actual money or external services.",
+    "All input numeric parameters/credits/quantities are decimal STRINGS,not numbers/bools/Fractions. Canonical optional minus,integer0 or1..10digits,no exponent/leadingzero/negativezero. Liquidity/shares <=8fractional places;credits<=24places. b in[0.01,1000000];initial credits in[0,1000000000];trade delta nonzero withabs<=1000000000. Quotes constrain each projected quantity to[0,1000*b]. Initial positions andpricing quantities alwayszero.",
+    "Use an explicit independent Decimal Context precision80,ROUND_HALF_EVEN,Emin=-999999,Emax=999999;trap invalid/divzero/overflow/float operation. No global-context dependence. Transcendentals approximate; cash-grid arithmetic exact under bounded magnitudes. Numerical price/cost verification tolerance absolute1e-60 against independent Decimal120 direct-exp oracle;cash charges exactquantum equality.",
+    "Max-shift cost andbothsoftmax numerators required. Each modeled price positive;sum within1e-60 of1. Extreme dominant price mayroundto1 whilecomplement remainspositive; do not derive complement by1-dominant orclaim exact-real normalization. Allowed q_i/b<=1000 avoids Decimal exponent underflow. No naive binaryfloat exponential.",
+    "Quantize TOTAL cost potential to1e-24 HALF_EVEN before differencing;never separately round ideal incremental charges. Compute reserve CEILING_grid(b*ln(2)+2*quantum). Ideal b ln2 bound isapproximate numeric output;funded grid reserve explicitlycovers quantization/numerical margin. No realcapital provision implied.",
+    "UTC-Z created_at<close_at;all delivery times>=created_at andnondecreasing,withtiesallowed. Validate all event syntax/time ordering before any action. Trades andquotes require delivery_at<close_at,strict boundary unlike inclusive51/57forecast cutoffs. At firstevent time>=close_at,clock automatically closes anopen market before processing theaction;no reopening.",
+    "quote action hasactor,unique quote_id,outcomeYES/NO,signeddelta. It stores current economicrevision andhypothetical old/new roundedpotentials/charge andprice diagnostics. It can show infeasible budget/owned-position constraints,butdoesnot reserve cash,execute or mutate positions/financialledger. Unknown actor orprojected globalquantity outsidebounds is anaction refusal.",
+    "execute action references storedquote_id andsameactor. Reject unknown/used/stale quote,closed/resolved market,insufficient usercredit,negative ownposition ormaker funding. Recheck constraints atomically before state mutation. Successful execute updates user/maker cash,one outcome position,pricingquantity andeconomicrevision together;marksquoteused andappends one immutable hash-chained financialentry. No naked shorting,leverage,fees,deposits ortransfers.",
+    "Event ID binds canonical intent excluding delivery at only;firstresult isimmutable. Repeated same intent ID atsame/laterdeclaredtime is idempotent_noop withoriginal decision,no duplicated financialeffect. Conflicting IDreuse is rejected. Retries ofpreviousrefusals also cannot acquire neweffect;use new ID/fresh quote. Clock-driven closure canstilladvance nonfinancial marketstatus.",
+    "close action requires actor==declared resolver andtime>=close_at;otherwiseactionrefusal. Explicit close is optional becauseclock closure enforcescutoff. Resolver identity equality is a declared offline convention,not cryptographic/external authentication.",
+    "resolve action requires declared resolver,delivery>=close_at,outcomeYES/NO,andnotalreadyresolved. Settle exactlyonce:pay everyaccount itswinning recordedshares,subtracttotalpayout frommaker,andappend hash-chained settlemententry. Retain recorded positions/pricingquantities ashistory withsettled=true;remaining liability0. Any different resolution/repeated new ID refuses;identical intent retry noops.",
+    "Structural malformed root/event fields,invalid numeric types/liquidity,duplicates account IDs,unsupported modes,nonfinite strings andbadchronology reject entire request withno partialresult. Syntacticallyvalid economic/protocol failures are accepted report events withdecision=rejected/reason andunchanged financialstate. Track unsuccessful actions separately fromsuccessful trades/settlement.",
+    "After each action assert cashconservation,nonnegative balances/positions,recorded positionsum=q,netcharges=Chat(q)-Chat(0),andworst modeled liability-loss<=funded reserve. Atsettlement paidtotal=q_winner;realizedmakerprofit=netcharges-paidtotal. Quotes/rejections/idempotent attempts havezero financialeffect. Rounded ledger equality isnot a claim that ln/exp are exact.",
+    "Canonical accounts byID;events preserve declaredorder. Market/account/input/schema/source/code/snapshot/ledger/report identities retained. Successful financialentries bindprevious entrySHA;economicrevision invalidates stale quotes even if round-trip quantities/cash return toearliervalues. Original request notmutated. Final prices afterresolution arehistorical modeldiagnostics,not executable quotes.",
+    "Provenance synthetic=true,self_authored rights,source_ref infrozen catalog,nonempty attribution/snapshot<=4000characters,exact UTF8 SHA. No actual traders/transaction data consumed byrepository examples; declarations/hashes cannot certify identities,consent,truth orrealworldauthority.",
+    "Preflight work=events*(64+accounts*16)<=5000000;returned_cells=events*(64+accounts*8)+accounts*32<=100000. Bounded metadata/decimalcomponents/ratios checked beforefinancial simulation. Complete-report CPU/memory measured beforeclosure;targetsnot universalguarantees."
+  ],
+  "numeric": {
+    "precision": 80,
+    "rounding": "ROUND_HALF_EVEN",
+    "Emin": -999999,
+    "Emax": 999999,
+    "cash_quantum": "1e-24",
+    "price_absolute_tolerance": "1e-60",
+    "cost_absolute_tolerance": "1e-60",
+    "reserve_pad_quanta": 2,
+    "oracle_precision": 120
+  },
+  "bounds": {
+    "accounts": 8,
+    "events": 512,
+    "liquidity_min": "0.01",
+    "liquidity_max": "1000000",
+    "initial_credit_max": "1000000000",
+    "delta_abs_max": "1000000000",
+    "quantity_over_b": "1000",
+    "work": 5000000,
+    "returned_cells": 100000
+  },
+  "configuration_matrix": {
+    "supported": [
+      "One offline synthetic binary fixed-b LMSR play-credit market",
+      "Stable bounded Decimal pricing withnamed tolerances",
+      "Quotes,atomic long-only execution anddeclared authority cutoff/settlement",
+      "Idempotent local intent ledger andexact cash-grid accounting",
+      "Explicit funding/loss exposure andactionrefusals"
+    ],
+    "experimental_research_only": [
+      "Interpreting synthetic modeled prices as real-world forecasts"
+    ],
+    "unsupported": [
+      "Real money,deposits,wagering,external trading orsettlement",
+      "Live trader/user services orauthenticated authority",
+      "Continuous double auction",
+      "Conditional/combinatorial/multioutcome markets",
+      "Short selling,leverage,fees,fundingchanges",
+      "Empirical market efficiency orforecast accuracy"
+    ]
+  },
+  "backlog": {
+    "P1": [
+      "Full source-equivalence and independent numerical/funding proof coverage before broad parameter expansion",
+      "Real participant-data rights,consent,identity/resolution evidence and empirical price-calibration studies",
+      "Stable51event-resolution/57forecast interfaces only after explicit semantic mapping"
+    ],
+    "P2": [
+      "Continuous double auctions",
+      "Combinatorial and conditional scoring-rule markets",
+      "Advanced funding/shorting/fees/market-maker variants",
+      "Live user/trader operations and product interfaces; real-money/external trading remains outside this scope"
+    ]
+  },
+  "runtime": "Python standardlibrary offline CPU; no external trading/network,paidAPI,newframework orprior-engine changes"
+}
