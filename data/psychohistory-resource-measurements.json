@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "measured": true,
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD"
+  },
+  "profile_sha256": "b7e9f2d27994be3e89ac0bba0e2066bbc19bd89241e01e4b0989621de061988f",
+  "code_sha256": "fd187915dfca927e046800be389a1fe9b547653488d29055fcfb5cfb39445386",
+  "protocol": "Five untraced complete in-process report repetitions per workload;separate tracemalloc repetition for Python allocations;one whole CLI invocation including imports,registry,serialization. Native memory is whole measurement helper peak including all workloads/imports/tracing,not isolated per workload or CLI child.",
+  "process_peak_working_set_bytes": 27258880,
+  "under_proposed_128_MiB": true,
+  "results": [
+    {
+      "id": "sparse",
+      "nodes": 128,
+      "edges": 127,
+      "runs": 16,
+      "round_cap": 128,
+      "request_sha256": "575cbca6783ec0a34297e208098af883f8aad10b6a6406af20100c88eb6cbe27",
+      "budget": {
+        "work_units": 788448,
+        "count_cells": 4610,
+        "state_cells": 0
+      },
+      "seconds": [
+        0.0463815,
+        0.0464613,
+        0.0462638,
+        0.0466642,
+        0.0459827
+      ],
+      "median_seconds": 0.0463815,
+      "cli_seconds": 0.9869426,
+      "python_traced_peak_bytes": 577363,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "dense",
+      "nodes": 64,
+      "edges": 2016,
+      "runs": 4,
+      "round_cap": 64,
+      "request_sha256": "75bfb3602e7084bb23fafffae96a88c4e0be07e86079ae26ee9a9b5c88904816",
+      "budget": {
+        "work_units": 1064960,
+        "count_cells": 730,
+        "state_cells": 0
+      },
+      "seconds": [
+        0.00725,
+        0.0067909,
+        0.0074768,
+        0.0067198,
+        0.0074437
+      ],
+      "median_seconds": 0.00725,
+      "cli_seconds": 0.9872391,
+      "python_traced_peak_bytes": 520487,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "ensemble",
+      "nodes": 32,
+      "edges": 31,
+      "runs": 128,
+      "round_cap": 32,
+      "request_sha256": "faf874ab04dd7482ab203658da0a546e10e0592b1e60584591115621634cf26e",
+      "budget": {
+        "work_units": 397056,
+        "count_cells": 10082,
+        "state_cells": 0
+      },
+      "seconds": [
+        0.0144163,
+        0.0142951,
+        0.0141641,
+        0.0142558,
+        0.0141304
+      ],
+      "median_seconds": 0.0142558,
+      "cli_seconds": 1.0940301,
+      "python_traced_peak_bytes": 816050,
+      "under_proposed_five_seconds": true
+    }
+  ],
+  "scope": "Local representative synthetic workloads only;not universal or real-world forecast performance."
+}

@@ -1,9 +1,10 @@
 """Frozen independent model tables, strict rejection and pairing invariants."""
 import copy
+import json
 from unittest import TestCase
 from unittest.mock import patch
 from future.psychohistory import read,words
-from scripts.verify_psychohistory import fixture,verify_case
+from scripts.verify_psychohistory import fixture,verify_case,R
 
 F=fixture()
 class PsychohistoryTests(TestCase):
@@ -26,3 +27,12 @@ def make_case(name,c):
     def test(self):verify_case(name,c)
     return test
 for name,c in F['cases'].items():setattr(PsychohistoryTests,'test_fixture_'+name.replace('-','_'),make_case(name,c))
+
+def make_boundary(c):
+    def test(self):
+        if c['exit_code']:
+            with patch('future.psychohistory.words',side_effect=AssertionError('draw before cap')):
+                with self.assertRaisesRegex(ValueError,'count_cells'):read(c['input'])
+        else:self.assertEqual(read(c['input'])['scenarios'][0]['rows'][0]['initial_active'],c['initial_active'])
+    return test
+for name,c in json.loads((R/'tests/fixtures/psychohistory-boundaries-v1.json').read_text())['cases'].items():setattr(PsychohistoryTests,'test_boundary_'+name.replace('-','_'),make_boundary(c))

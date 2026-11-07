@@ -1208,3 +1208,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #52 verified engine pass
 - Implemented pure synchronous integer-comparison cascades,strict graph/schema/rights validation,preflight work/output limits,shared replicate/node xorshift32 draws,exact aggregate variances andpaired scenario/persistence differences. All68new unit tests and23independent families pass against frozen pre-engine tables. No empirical orcausal certification.
+
+## 2026-11-07 — #52 CLI and measured synthetic reports
+- Saved138exact CLI cases:23accepted/46rejected JSON/Markdown pairs,including independently frozen count-only refusal anddraw equality addenda. CLI emits explicit UTF8/LF bytes.71new tests andall23families pass.
+- Measured sparse128/dense64/ensemble128-run workloads onPython3.12.10 Windows:in-process medians0.0464/0.00725/0.0143seconds;CLI0.987/0.987/1.094seconds;whole measurement helper peak25.996MiB. These are local measurements,not universal performance claims. Full inherited gates andactual both-EOL exported CLI replay follow.

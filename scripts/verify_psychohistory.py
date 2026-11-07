@@ -49,6 +49,15 @@ def verify_case(name,c):
 def run():
     f=fixture();freeze=json.loads((R/'knowledge/psychohistory_fixture_freeze_v1.json').read_text())
     for name,h in freeze['normalized_lf_sha256'].items():assert hashlib.sha256((R/name).read_bytes().replace(b'\r\n',b'\n')).hexdigest()==h
+    boundary=json.loads((R/'knowledge/psychohistory_boundary_fixture_freeze_v1.json').read_text())
+    for name,h in boundary['normalized_lf_sha256'].items():assert hashlib.sha256((R/name).read_bytes().replace(b'\r\n',b'\n')).hexdigest()==h
+    for name,c in json.loads((R/'tests/fixtures/psychohistory-boundaries-v1.json').read_text())['cases'].items():
+        if c['exit_code']:
+            assert c['expected_budget']==dict(work_units=4980736,count_cells=102960,state_cells=0)
+            try:validate(c['input'])
+            except ValueError as e:assert 'count_cells' in str(e)
+            else:raise AssertionError('Count-only cap not rejected')
+        else:assert read(c['input'])['scenarios'][0]['rows'][0]['initial_active']==c['initial_active']
     results={name:verify_case(name,c) for name,c in f['cases'].items()}
     assert words(1,5)==f['prng_seed1_first5']
     assert results['path']['scenarios'][0]['rows'][0]['states']==f['literal_anchors']['path']
@@ -74,7 +83,7 @@ def run():
         try:validate(f['cases'][name]['input'])
         except ValueError as e:assert kind in str(e),(name,str(e))
         else:raise AssertionError('Cap not rejected')
-    out=dict(passed=True,profile_sha256=freeze['profile_sha256'],families={k:dict(passed=True,cases=v) for k,v in f['families'].items()},fixture_families=len(f['families']),accepted=freeze['accepted'],rejected=freeze['rejected'],literal_anchors=f['literal_anchors'],prng_vectors_passed=True,pairing_and_order_passed=True,pre_engine_fixture_hashes_passed=True,scientific_scope='Independent synthetic software correctness only; no empirical validation')
+    out=dict(passed=True,profile_sha256=freeze['profile_sha256'],families={k:dict(passed=True,cases=v) for k,v in f['families'].items()},fixture_families=len(f['families']),accepted=freeze['accepted'],rejected=freeze['rejected'],boundary_addendum_cases=3,literal_anchors=f['literal_anchors'],prng_vectors_passed=True,pairing_and_order_passed=True,pre_engine_fixture_hashes_passed=True,scientific_scope='Independent synthetic software correctness only; no empirical validation')
     (R/'data/psychohistory-verification.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8',newline='\n')
     print('23 independent fixture families pass;21 accepted/41 rejected cases;exact algebra,PRNG,pairing and conservation')
     return out

@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "psychohistory-synthetic-threshold-dynamics-v1",
+    "sha256": "b7e9f2d27994be3e89ac0bba0e2066bbc19bd89241e01e4b0989621de061988f",
+    "catalog_sha256": "9dbd60a7838818c8e4332caaea837b4a2e7232ec02ec1a8434415150880144db"
+  },
+  "population": {
+    "size": 4,
+    "nodes": [
+      "000",
+      "001",
+      "002",
+      "003"
+    ]
+  },
+  "runs": 8,
+  "rounds": 4,
+  "trace_states": false,
+  "rng": {
+    "algorithm": "xorshift32-v1",
+    "seed": 1
+  },
+  "scenarios": [
+    {
+      "id": "base",
+      "edges": [
+        [
+          "000",
+          "001"
+        ],
+        [
+          "001",
+          "002"
+        ],
+        [
+          "002",
+          "003"
+        ]
+      ],
+      "thresholds": [
+        {
+          "node": "000",
+          "phi": "1/2"
+        },
+        {
+          "node": "001",
+          "phi": "1/2"
+        },
+        {
+          "node": "002",
+          "phi": "1/2"
+        },
+        {
+          "node": "003",
+          "phi": "1/2"
+        }
+      ],
+      "initial": {
+        "mode": "bernoulli",
+        "probability": "1/2",
+        "fixed_seeds": [],
+        "run_seeds": [],
+        "overrides": []
+      }
+    },
+    {
+      "id": "identical",
+      "edges": [
+        [
+          "000",
+          "001"
+        ],
+        [
+          "001",
+          "002"
+        ],
+        [
+          "002",
+          "003"
+        ]
+      ],
+      "thresholds": [
+        {
+          "node": "000",
+          "phi": "1/2"
+        },
+        {
+          "node": "001",
+          "phi": "1/2"
+        },
+        {
+          "node": "002",
+          "phi": "1/2"
+        },
+        {
+          "node": "003",
+          "phi": "1/2"
+        }
+      ],
+      "initial": {
+        "mode": "bernoulli",
+        "probability": "3/4",
+        "fixed_seeds": [],
+        "run_seeds": [],
+        "overrides": [
+          {
+            "node": "000",
+            "state": 0
+          },
+          {
+            "node": "002",
+            "state": 1
+          }
+        ]
+      }
+    }
+  ],
+  "reference_scenario": "base",
+  "provenance": {
+    "synthetic": true,
+    "source_ref": "psychohistory-watts-threshold-v1",
+    "rights": "self_authored",
+    "attribution": "Future original synthetic fixture",
+    "snapshot": "Original synthetic graph; no observed people or causal claims.",
+    "snapshot_sha256": "8f263eb52465b0e892fa5463028cef8f29dd999e333165f83a9fdd664bf12abe"
+  }
+}

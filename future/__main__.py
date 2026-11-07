@@ -306,7 +306,25 @@ def main():
     sf=sub.add_parser('superforecasting')
     sf.add_argument('input',help='Offline versioned binary question,class,forecast,update,resolution orscore request JSON')
     sf.add_argument('--format',choices=['json','markdown'],default='json')
+    ph=sub.add_parser('psychohistory')
+    ph.add_argument('input',help='Offline synthetic synchronous threshold scenarios JSON')
+    ph.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='psychohistory':
+        import sys
+        from .scrying import load_input
+        from .psychohistory import read,markdown
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8',newline='\n')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError,TypeError,KeyError,OverflowError):
+                result=dict(status='rejected',error='Synthetic threshold request rejected',result=None)
+                print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+        finally:registry.close()
+        return
     if args.command=='superforecasting':
         import sys
         from .scrying import load_input

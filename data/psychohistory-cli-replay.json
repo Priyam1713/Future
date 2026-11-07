@@ -1,0 +1,698 @@
+{
+  "passed": true,
+  "cli_cases": 138,
+  "accepted_pairs": 23,
+  "rejected_pairs": 46,
+  "records": [
+    {
+      "id": "path",
+      "input": "data/psychohistory-cli/path-input.json",
+      "raw_input_sha256": "6755bbf82277da9538008452d1ff95f0eb437492fca1e4dbcec8b6a43f6e4bf1",
+      "exit_code": 0,
+      "outputs": {
+        "json": "af8c81d7be26cb2457db6980457a192e62adc9be23bce86434859ea23bf38e5e",
+        "markdown": "001d5274b76b9ac811113192b8adc06bee8027155ba5bf1b20873de546638833"
+      }
+    },
+    {
+      "id": "topology",
+      "input": "data/psychohistory-cli/topology-input.json",
+      "raw_input_sha256": "8c99f20b10a8da80596fedabdcf35e5950c6d6609f19060002dd8bad64dbf1bf",
+      "exit_code": 0,
+      "outputs": {
+        "json": "397bbca2e64bd68f76cffd73f15c87837744237095a28a06630d2246c74e9480",
+        "markdown": "ab53e743fc0c05cb3ce1688074ad18e7af55afc8471524f8da35d4dff08c1197"
+      }
+    },
+    {
+      "id": "exhaustive",
+      "input": "data/psychohistory-cli/exhaustive-input.json",
+      "raw_input_sha256": "a572be290de38ff20bb7fb525909608a18a87c48f78c6ea02fb8ce9106a6d471",
+      "exit_code": 0,
+      "outputs": {
+        "json": "65915930e7bc2e268e1c15855c4a3058608c3459e101e4ab6e4339de5237e276",
+        "markdown": "d495bf8ee1efaffca0436265e38c2603a7d82dcfa65f6a26a61a11cfe876d72f"
+      }
+    },
+    {
+      "id": "threshold-comparison",
+      "input": "data/psychohistory-cli/threshold-comparison-input.json",
+      "raw_input_sha256": "e033e03d7e7d69f0f96e817c9d785e9d050a7acd706c80ecd004c20e2274a15f",
+      "exit_code": 0,
+      "outputs": {
+        "json": "d4e9980a291e92220973743fd3e851a6377f77c193554b7a3e977cc3fcae5873",
+        "markdown": "702399570f26ed6c5e4b180f2af83ab2a37faed9ef83d1b97318084635d60031"
+      }
+    },
+    {
+      "id": "isolated",
+      "input": "data/psychohistory-cli/isolated-input.json",
+      "raw_input_sha256": "fd3969d4bd27956c7bb3defeea4b7b7311381ec4521c74900f59b31689d15907",
+      "exit_code": 0,
+      "outputs": {
+        "json": "32d840a1989b32bac18bf7ecabbdc5785ace9601965dbde5d6593abc54abc92b",
+        "markdown": "0904cfc77e64724a003a4ee28d5644fd9ed0251996060962c517e2e9d202dc67"
+      }
+    },
+    {
+      "id": "zero-threshold",
+      "input": "data/psychohistory-cli/zero-threshold-input.json",
+      "raw_input_sha256": "e8416cb5704a66ea2c7d3d33c6c33ea0063178d20144ee9828579eaf33a6198c",
+      "exit_code": 0,
+      "outputs": {
+        "json": "53ce30eb1022eaea48f2940c7727c80e017a740667f3303ba2c79be651340b67",
+        "markdown": "d22d8a116d8c28eb2db92f0f3fdc0e40286e7427bdc5b3bffab843655b810d87"
+      }
+    },
+    {
+      "id": "zero-seed",
+      "input": "data/psychohistory-cli/zero-seed-input.json",
+      "raw_input_sha256": "edc8f44e6ca155c554a68ee87176cf4cb6c66b25697e77a800be0ff711fcb92e",
+      "exit_code": 0,
+      "outputs": {
+        "json": "48a767c935132cae9dade60bd883d6cbda20d186b0df2ae025960bcbe1af33d8",
+        "markdown": "0e7fa04d9238e74f92739af6165ed24f4a6e3c2b4fba42803f62c53d773ce848"
+      }
+    },
+    {
+      "id": "all-seed",
+      "input": "data/psychohistory-cli/all-seed-input.json",
+      "raw_input_sha256": "955b1f0d1bc0d430a7ffbf27300b5b4cbe3121db07a4cd807340ef4bd07a0837",
+      "exit_code": 0,
+      "outputs": {
+        "json": "265385aaf46ce42b51eadb480a44f3159b3b8517141643ad6c81554f618d1880",
+        "markdown": "b829c3ff7ebdd2ad407b372e29775eb4f5fb9a0f323cad41466c74ca182f0298"
+      }
+    },
+    {
+      "id": "truncated",
+      "input": "data/psychohistory-cli/truncated-input.json",
+      "raw_input_sha256": "0cdef16ad8eac91f106330869db95b00df8335db61c89f5cd6c4f56f8299db0c",
+      "exit_code": 0,
+      "outputs": {
+        "json": "dfdd3805b6ed675471c8d80b64f53d4353a72786e3c3e54915fa2c15e5c493f9",
+        "markdown": "81a3125fdb9daad4617851398aa3eab772c59233118121458213312709f32ac6"
+      }
+    },
+    {
+      "id": "zero-cap",
+      "input": "data/psychohistory-cli/zero-cap-input.json",
+      "raw_input_sha256": "a1c630772b063e68ee0bf3921f162135a8b8f400f51ac192cb174ee2becdc535",
+      "exit_code": 0,
+      "outputs": {
+        "json": "df63a107a4bd8553e0793e1b519e2a535ffd59ca3b30144096cd3f6cedee4ad5",
+        "markdown": "715eea55f52061107e9279a90ec55964dd0f6e60b8cb321abf7d95df81420cbb"
+      }
+    },
+    {
+      "id": "complete-tie",
+      "input": "data/psychohistory-cli/complete-tie-input.json",
+      "raw_input_sha256": "54d02e118dd3882cadfdc442da6a36e7f885b5779339b9f75bafcd38ce20a16a",
+      "exit_code": 0,
+      "outputs": {
+        "json": "e3c76ef8db826a14803c7578bf9210ebb7ce4cef0d1f7c8052b295a811a7c373",
+        "markdown": "cbbb3b10c223f24b449d3118d12bc05c7e5c31f2374db2733bd5fda82824af1d"
+      }
+    },
+    {
+      "id": "node-thresholds",
+      "input": "data/psychohistory-cli/node-thresholds-input.json",
+      "raw_input_sha256": "616ca911484af54efa19c894af83ef200c047e27f99ba6e1432e67e66b6e7d09",
+      "exit_code": 0,
+      "outputs": {
+        "json": "9d58e54912c2de6396f6d54b1f7effcbf32111ab2d5b8ad1b19207b49a88c9b0",
+        "markdown": "d42fb2d08fab6c5d9970a9d4b7c4d7025be7ed9ad5856bd74455ab930bff067c"
+      }
+    },
+    {
+      "id": "rho-zero",
+      "input": "data/psychohistory-cli/rho-zero-input.json",
+      "raw_input_sha256": "938f14c70dab1941ffceb5017f8f72ca15991f1e73a367809249805ef458e957",
+      "exit_code": 0,
+      "outputs": {
+        "json": "45a7638cff24d326ff0d680e7041ecedcd4b443cf7dd4f6217aa34198b3539b8",
+        "markdown": "b66ecefb9fcc7de6677942b1a679ecb4f4a91215ddda0751d0582ae756b2fbe6"
+      }
+    },
+    {
+      "id": "rho-one",
+      "input": "data/psychohistory-cli/rho-one-input.json",
+      "raw_input_sha256": "b523871932a4e123d2ce75bca7825d6ccc26609a8a4191cbaaea7b6df11b84b9",
+      "exit_code": 0,
+      "outputs": {
+        "json": "d225b33fa194564e7e25f74ba7465d3fc886fae43d1bab5091958bcdddd6f4db",
+        "markdown": "a81782c7fffad4778e37c3805e9382ab0a32d3ea5a7da4f2ddadc19c755a5892"
+      }
+    },
+    {
+      "id": "bernoulli",
+      "input": "data/psychohistory-cli/bernoulli-input.json",
+      "raw_input_sha256": "09f4b61b70cc2f850e4d66fa892e3bbff96861be241f4530f1e1853be194e01b",
+      "exit_code": 0,
+      "outputs": {
+        "json": "8a5a0ba2bcd91d281dd21bdc8a29375b536304459c781537990ed139ff73a081",
+        "markdown": "51731f8c0c81ce02032d266f3179ca3188999d645a70cd218c0566cbaa9ee6d6"
+      }
+    },
+    {
+      "id": "identical",
+      "input": "data/psychohistory-cli/identical-input.json",
+      "raw_input_sha256": "f4e19b0f84c3d128803024ec19c5ee191fa5ba862e11b408a0827345ad48d7cb",
+      "exit_code": 0,
+      "outputs": {
+        "json": "6e026a3d258fd29c2a657964307db1d3aeb74b7999fe055d34ea318412c8a336",
+        "markdown": "98b7c350e634e6ff200d80cc17c2a1b1cb34ec6711fabd1b4fa596dc4202ccca"
+      }
+    },
+    {
+      "id": "paired-rho",
+      "input": "data/psychohistory-cli/paired-rho-input.json",
+      "raw_input_sha256": "da726f49ab5530b647fa6f2b98c7a8310b24c04f15f15679b399dbb958be6796",
+      "exit_code": 0,
+      "outputs": {
+        "json": "183053043b43956996f6e968d6eadc8319c8fc341fffd2a8ef0886767020b9e9",
+        "markdown": "b3a0a1c8c8b427ca8bae81206e11c2d5987cb0163ce65ea6d3f4cfaf481cb618"
+      }
+    },
+    {
+      "id": "overrides",
+      "input": "data/psychohistory-cli/overrides-input.json",
+      "raw_input_sha256": "042179a7e1fc193ffbb8cc8f2dddec6600c540c928821cd30ee822cab01ea379",
+      "exit_code": 0,
+      "outputs": {
+        "json": "ba3f31e3a558d04693e10d5b0eef8acfec93a7a428aa84f33d87fbfa89a6fc02",
+        "markdown": "3edaf9f3873152c90b64cad999a77609d74662b7382c980514ba0470bd015819"
+      }
+    },
+    {
+      "id": "singleton",
+      "input": "data/psychohistory-cli/singleton-input.json",
+      "raw_input_sha256": "4067273d7ee77e3581055f17a01aa7e3e2776709c0dc2bb37d82e052c92da9b9",
+      "exit_code": 0,
+      "outputs": {
+        "json": "0c0b5d23b8a7b8b53269582766cf81004b1760d326d2a66e8e01d60f5d91f62d",
+        "markdown": "193bafb2bc676a2bd2a9141bea39949e3511de769af5bc25dffc26bb7f93b75e"
+      }
+    },
+    {
+      "id": "unicode",
+      "input": "data/psychohistory-cli/unicode-input.json",
+      "raw_input_sha256": "21ea1113f760461a3a3c037eb3aa48b435a6a089a07c882fd8b0ecf439eb4bdb",
+      "exit_code": 0,
+      "outputs": {
+        "json": "bc93cd9be7a92d05bb3ad6ec2f95a57ac736af525fcba0430f9a1c440ca2c344",
+        "markdown": "fc5447be4adcceee99ab9d2a9a15bf5a518865a8b7a3bc34253639b0bf742e35"
+      }
+    },
+    {
+      "id": "relabelled",
+      "input": "data/psychohistory-cli/relabelled-input.json",
+      "raw_input_sha256": "0f204e9b3e0869c14374b79783a2e37f93b1e777ac74814bba4b509c391f70b5",
+      "exit_code": 0,
+      "outputs": {
+        "json": "13221fab7ee49ccc4a6da5e08178a92fddc9df3f907b7a31b372f20d98dc91b2",
+        "markdown": "8c2d44f84d00aa10948f3830103264ec9e7aedcb5e6b262260de8af20066a5b0"
+      }
+    },
+    {
+      "id": "unknown-field",
+      "input": "data/psychohistory-cli/unknown-field-input.json",
+      "raw_input_sha256": "4103d419b983f3a8ccbe8abdf56c5a8525705fff0eaa1fc8f71210c563624c1c",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "causal",
+      "input": "data/psychohistory-cli/causal-input.json",
+      "raw_input_sha256": "0c9ae2590dd0f79f950054836cca51e355b0a8e9f37057fd009ce0b93613a464",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "empirical",
+      "input": "data/psychohistory-cli/empirical-input.json",
+      "raw_input_sha256": "4b1a473dfed5829cc0e4fff50c18c587fe601b35b25172c61ebd35ed9724770b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "rights",
+      "input": "data/psychohistory-cli/rights-input.json",
+      "raw_input_sha256": "16fc1d6269d7a3142764699eaf8b0bc62af9a6014d29b5ef042e3336935fd5f0",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "source",
+      "input": "data/psychohistory-cli/source-input.json",
+      "raw_input_sha256": "e4a6f32d27b3521c50225df49aa365d752a5875548f0c3b447fda1bb0ea8f68f",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "snapshot",
+      "input": "data/psychohistory-cli/snapshot-input.json",
+      "raw_input_sha256": "52f011e8c8cc12e03f4851b9f9abfa6db029e52a48111b59ff308ff40d715f54",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "profile",
+      "input": "data/psychohistory-cli/profile-input.json",
+      "raw_input_sha256": "c85b762dbe2cec0068effce9283bd557275f8fd139625143fafe3de5f513137d",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "schema",
+      "input": "data/psychohistory-cli/schema-input.json",
+      "raw_input_sha256": "fe3a9a0800d5ffaf3cb16cbd14ab868742b1d61c78e9bf7579cd8df8f1fe6cd1",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "nodes",
+      "input": "data/psychohistory-cli/nodes-input.json",
+      "raw_input_sha256": "3382c8d0e652cd7bc5ad5c0da1fd5a0ac158ab27d8db981b0d8a6b1737436b27",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "size",
+      "input": "data/psychohistory-cli/size-input.json",
+      "raw_input_sha256": "db859435d5a25a33d63b4905203acaae63ca0db2ec8ef566c60b09504887763f",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "self-loop",
+      "input": "data/psychohistory-cli/self-loop-input.json",
+      "raw_input_sha256": "f209243cb8c83da6488ea328cb980559af138d5c471ceb003485b9a1fdc8c2a0",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "duplicate-edge",
+      "input": "data/psychohistory-cli/duplicate-edge-input.json",
+      "raw_input_sha256": "4626f2786f9717d15f2da8954c953e056071d8fb94014ee3389543373b8117bc",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "reversed-edge",
+      "input": "data/psychohistory-cli/reversed-edge-input.json",
+      "raw_input_sha256": "2ce5633a81cb4c33feb60e0c6f4004707cd11ffe9275f5ef9cd03e63529d1a8c",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "unknown-node",
+      "input": "data/psychohistory-cli/unknown-node-input.json",
+      "raw_input_sha256": "262e4c9f6953c97d79c56337f8df6f83288473347d48ba3db72d08d0be045271",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "malformed-edge",
+      "input": "data/psychohistory-cli/malformed-edge-input.json",
+      "raw_input_sha256": "c999c630a639b1668b14dd79a308a039bc8c7ee0b88de94fbc0d0a7844d50654",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "phi-float",
+      "input": "data/psychohistory-cli/phi-float-input.json",
+      "raw_input_sha256": "ced427a8c31b2bd02572a3b43b2bb2255830a1c97979571d5c105833ab53b7e8",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "phi-bool",
+      "input": "data/psychohistory-cli/phi-bool-input.json",
+      "raw_input_sha256": "287a053fbd09c47f2acbde385c847ef26fcd816587dc8cceb3190e0849d886ca",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "phi-negative",
+      "input": "data/psychohistory-cli/phi-negative-input.json",
+      "raw_input_sha256": "9b5b105d429977bc0c739d66e9ae80cac0e3a1189eda78d9db472e96302b681e",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "phi-over-one",
+      "input": "data/psychohistory-cli/phi-over-one-input.json",
+      "raw_input_sha256": "6ff8e18d87a5df356c55f0c8144aa5fd28103d51472dd11d5f2a4ac858f03b50",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "phi-zero-den",
+      "input": "data/psychohistory-cli/phi-zero-den-input.json",
+      "raw_input_sha256": "93e49c75f3fe801713c744aaa4c3af558ba1a6afc269ab37b035423e0cd3d111",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "phi-huge",
+      "input": "data/psychohistory-cli/phi-huge-input.json",
+      "raw_input_sha256": "e227ae5881b23b4cf2a78c593aa0ff8c2fef361b8b66754bde505263c6a0a86b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "threshold-order",
+      "input": "data/psychohistory-cli/threshold-order-input.json",
+      "raw_input_sha256": "ea2d8ca65533e5b6c3ac59227aa4143db373485906e055216504f3f173ee7233",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "seed-duplicate",
+      "input": "data/psychohistory-cli/seed-duplicate-input.json",
+      "raw_input_sha256": "6d7f1d50251185e73d5c28fa9a7ebfc232fef11635c1e7bd5d9cd1aff5da5669",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "seed-unknown",
+      "input": "data/psychohistory-cli/seed-unknown-input.json",
+      "raw_input_sha256": "bb3af47f0d17966988a9b55652100fb0240b96bc0566aae8056e76d5a19efe12",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "initial-mode",
+      "input": "data/psychohistory-cli/initial-mode-input.json",
+      "raw_input_sha256": "4c161be4c2d3ca63bfe59694fe58f2605e28ab072b5c6c02df4c686ce01aff85",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "probability-conflict",
+      "input": "data/psychohistory-cli/probability-conflict-input.json",
+      "raw_input_sha256": "3ccff4c5c4b6c0eeb91f07f160a7c8cbb5766472d725123403bb01b87c9f01a2",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "run-seeds-count",
+      "input": "data/psychohistory-cli/run-seeds-count-input.json",
+      "raw_input_sha256": "0602da474fa9190e372c7928a835435fa72c8f0d147f291d717565f3bac4ce6f",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "override-bool",
+      "input": "data/psychohistory-cli/override-bool-input.json",
+      "raw_input_sha256": "6c0ad32cf4cf765770b983e46e5805cec8cd7a45c5ce5ba6648289350ffb59be",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "override-duplicate",
+      "input": "data/psychohistory-cli/override-duplicate-input.json",
+      "raw_input_sha256": "b7774da8fdd8c0993b25d14c995efc4579ffcc71a926d73f3c368b6e7c5237d5",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "rng-zero",
+      "input": "data/psychohistory-cli/rng-zero-input.json",
+      "raw_input_sha256": "6c7f1853a6ec9870e212120f399ac6bb60865f3ad934c344df17453557dd5358",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "rng-type",
+      "input": "data/psychohistory-cli/rng-type-input.json",
+      "raw_input_sha256": "5509f43970b2a432ea16451bea8c3ddff7872977eeab551a17b71add344b230f",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "rng-algorithm",
+      "input": "data/psychohistory-cli/rng-algorithm-input.json",
+      "raw_input_sha256": "0714e3e13aa4703a41f73d394ec31591b94bbf6cd01d8c6e1f6966e18e75cb1c",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "rounds",
+      "input": "data/psychohistory-cli/rounds-input.json",
+      "raw_input_sha256": "4e44e122ea6c989331750f8ccf56ca00e53b522f5a618b90b7e24eb17363e0b5",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "runs",
+      "input": "data/psychohistory-cli/runs-input.json",
+      "raw_input_sha256": "d0c34cee57269acb0c194f550ce6f6eb1cecde6ac19a61d70f7c68aee5c52106",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "trace-type",
+      "input": "data/psychohistory-cli/trace-type-input.json",
+      "raw_input_sha256": "632f39f27f05bba16aeaaada4644895e03d833d3231e193760a0a4dddb320f06",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "reference",
+      "input": "data/psychohistory-cli/reference-input.json",
+      "raw_input_sha256": "fb17192e381a472a59ebe289a8548abf0d3d708321150c33dbf5095f139a2d9c",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "duplicate-scenario",
+      "input": "data/psychohistory-cli/duplicate-scenario-input.json",
+      "raw_input_sha256": "fd68a4e6d5e4f003cb879afa89dca292f1b3c1590f649c14481e4d8edc985549",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "count-cap",
+      "input": "data/psychohistory-cli/count-cap-input.json",
+      "raw_input_sha256": "381eb68286f2c4cbfd259c1d2eca99a910cb65e3e0c7b6da7022d45631068762",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "state-cap",
+      "input": "data/psychohistory-cli/state-cap-input.json",
+      "raw_input_sha256": "67d85c853bec91898dfb6801ec191f82c17aa7cdff5be8fe87e7ea90a978f0be",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "work-cap",
+      "input": "data/psychohistory-cli/work-cap-input.json",
+      "raw_input_sha256": "59c5cf5083e2ff064ddf5601a79f5338f1113d90cd02a7501238f275196e0264",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "edge-cap",
+      "input": "data/psychohistory-cli/edge-cap-input.json",
+      "raw_input_sha256": "c064d70a69aee6feb5eecb2db089aa683316c5b19c1762d45f16a1847c1cb6e1",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "count-only-cap",
+      "input": "data/psychohistory-cli/count-only-cap-input.json",
+      "raw_input_sha256": "fc1859c057a4c000cc2357cad7df429c2148c01ea8d7f76e092e4514694240f6",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "draw-exact-tie",
+      "input": "data/psychohistory-cli/draw-exact-tie-input.json",
+      "raw_input_sha256": "5c5b36b77dd639910bf171f7e2e7cfac18314140ec5ef22051e1cda17f611445",
+      "exit_code": 0,
+      "outputs": {
+        "json": "83b0a774544a96dac3131c9783ce59cf6feeceb2a7f54775c4c5564e87a76bff",
+        "markdown": "0eaa66b4b866b1a0ccee7f55be03d784c04b1e1e457c156cadcfff58a0842a40"
+      }
+    },
+    {
+      "id": "draw-above-tie",
+      "input": "data/psychohistory-cli/draw-above-tie-input.json",
+      "raw_input_sha256": "a81ee02a2fe9e6f1f3cdbe7836f8419479dd85fd24a2e17b8a0a98f81d8359ee",
+      "exit_code": 0,
+      "outputs": {
+        "json": "e5560231028d12e1e7ee6f9c0df36d9766e75ce02746ed49a1863439c5691236",
+        "markdown": "9a890107ef40cdbdead3877854606435e432d873d76146c6ae89f2127057cce8"
+      }
+    },
+    {
+      "id": "duplicate",
+      "input": "data/psychohistory-cli/duplicate-input.txt",
+      "raw_input_sha256": "dfd205aeecbcf824d6da92dcf6cfd8102bc604002f14aa2356923cbfcaae789b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "nan",
+      "input": "data/psychohistory-cli/nan-input.txt",
+      "raw_input_sha256": "2887d00241d1775bd05c75b5c9622f39dbd80f9c63c1613b6840b347bfc53a22",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "infinity",
+      "input": "data/psychohistory-cli/infinity-input.txt",
+      "raw_input_sha256": "94f91a81260a12d89a551ff943800f898feaf4afbbcb5fe8ea5237bb7e86f709",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    },
+    {
+      "id": "negative-infinity",
+      "input": "data/psychohistory-cli/negative-infinity-input.txt",
+      "raw_input_sha256": "15f3e8442dd5e26396ef55df15267fcdf755c5409dec1c027ec3ffd9fdd4783c",
+      "exit_code": 2,
+      "outputs": {
+        "json": "95db3509e65afcbb09104e261b5fd0633863cc33fcf7fb7cf05cd0d2c7e7618b",
+        "markdown": "80cd718b16d7843183b245ca4502db4d613858e21968150229c5f04944a6c901"
+      }
+    }
+  ]
+}
