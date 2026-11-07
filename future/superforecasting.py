@@ -189,3 +189,134 @@ def check_plan(p):
 def create(plan):
     check_plan(plan)
     return dict(schema_version=1,profile_sha256=PROFILE_HASH,plan=copy.deepcopy(plan),plan_sha256=digest(plan),actions=[])
+
+
+def posterior(prior,ratio):
+    p=probability(prior);L=rational(ratio)
+    if L<0:raise ValueError('Negative likelihood ratio')
+    denominator=1-p+L*p
+    if denominator==0:raise ValueError('Impossible zero-denominator evidence')
+    return L*p/denominator
+
+
+def model_ratio(b):
+    fields(b,'bayes')
+    if b['kind']=='ratio':
+        if b['likelihood_h'] is not None or b['likelihood_not_h'] is not None:raise ValueError('Ratio andconditional inputs are distinct')
+        L=rational(b['ratio'])
+    elif b['kind']=='conditional_likelihoods':
+        if b['ratio'] is not None:raise ValueError('Unexpected explicit ratio')
+        h=probability(b['likelihood_h']);nh=probability(b['likelihood_not_h'])
+        if nh==0:raise ValueError('Zero complement likelihood;infinite/undefined ratio unsupported')
+        L=h/nh
+    else:raise ValueError('Explicit likelihood model required')
+    if L<0:raise ValueError('Negative likelihood ratio')
+    for key in ('independent_given_h','independent_given_not_h'):boolean(b[key])
+    identifiers(b['conditioned_on']);nonempty(b['measurement_notes'])
+    if b['model_status'] not in ('user_assumed','declared_measured'):raise ValueError('Likelihood provenance declaration required')
+    return L
+
+
+def apply_record(kind,v,state,context,sequence_number):
+    p=context['plan'];questions=context['questions'];slots=context['slots'];book=state['sources'];fields(v,'resolution' if kind=='resolve' else 'forecast')
+    recorded=at(v['recorded_at'])
+    if recorded<at(p['created_at']):raise ValueError('Record before plan creation')
+    qid=v['question_id'];identifier(qid)
+    if qid not in questions:raise ValueError('Unplanned question')
+    q=questions[qid];integer(v['question_version'],1,1)
+    if v['question_sha256']!=digest(q):raise ValueError('Question definition hash mismatch')
+    integer(v['version'],1,2000);nonempty(v['reason'])
+    if kind=='resolve':
+        old=state['resolutions'][qid];expected=old[-1]['sha256'] if old else None
+        if v['version']!=len(old)+1 or v['parent_sha256']!=expected:raise ValueError('Resolution parent/version mismatch')
+        if v['status'] not in ('resolved','unresolved','disputed','void') or v['window_end']!=q['window_end']:raise ValueError('Resolution status/window mismatch')
+        available=source(v['source'],book,recorded)
+        if at(v['publication_at'])>available:raise ValueError('Publication after declared source availability')
+        if v['status']=='resolved':
+            integer(v['outcome'],0,1);known=at(v['outcome_known_at'])
+            if not known<=available:raise ValueError('Outcome known after resolution evidence availability')
+            if v['outcome']==1:
+                occurred=at(v['occurrence_at'])
+                if not at(q['window_start'])<=occurred<at(q['window_end']) or occurred>known:raise ValueError('Positive occurrence chronology')
+            elif v['occurrence_at'] is not None or known<at(q['window_end']):raise ValueError('Negative outcome requires closedwindow andnull occurrence')
+            if old and old[-1]['record']['status']=='resolved':raise ValueError('Resolution correction requires intervening dispute/void')
+        else:
+            if v['outcome'] is not None or v['occurrence_at'] is not None:raise ValueError('Nonresolved outcomes/occurrences remain null')
+            if v['outcome_known_at'] is not None and at(v['outcome_known_at'])>available:raise ValueError('Nonresolved knowledge chronology')
+        old.append(dict(record=copy.deepcopy(v),sha256=digest(v),action_sequence=sequence_number));return
+    fid=v['forecast_id'];identifier(fid)
+    if fid not in slots:raise ValueError('Unplanned forecast slot')
+    slot=slots[fid]
+    if slot['question_id']!=qid or slot['participant']!=v['participant']:raise ValueError('Forecast slot identity mismatch')
+    prior=state['forecasts'][fid];expected=prior[-1]['sha256'] if prior else None
+    if v['version']!=len(prior)+1 or v['parent_sha256']!=expected:raise ValueError('Forecast parent/version mismatch')
+    knowledge=at(v['knowledge_at']);prob=probability(v['probability']);boolean(v['outcome_known'])
+    if knowledge>recorded or recorded<at(q['locked_at']):raise ValueError('Forecast knowledge/lock chronology')
+    sequence(v['assumptions'],20)
+    for note in v['assumptions']:nonempty(note)
+    sequence(v['evidence'],10)
+    previous_evidence=[item for row in prior for item in row['record']['evidence']]
+    ids={x['id'] for x in previous_evidence};facts={x['original_fact_id'] for x in previous_evidence};snapshots={x['source']['snapshot_sha256'] for x in previous_evidence};groups={x['dependency_group'] for x in previous_evidence}
+    for item in v['evidence']:
+        fields(item,'evidence')
+        for key in ('id','dependency_group','original_fact_id'):identifier(item[key])
+        nonempty(item['statement'])
+        if item['id'] in ids or item['original_fact_id'] in facts:raise ValueError('Duplicate evidence ID orunderlying fact')
+        source(item['source'],book,knowledge)
+        if item['source']['snapshot_sha256'] in snapshots:raise ValueError('Duplicate evidence snapshot')
+        ids.add(item['id']);facts.add(item['original_fact_id']);snapshots.add(item['source']['snapshot_sha256'])
+    calculation=None
+    if kind=='forecast':
+        if v['mode']!='manual' or v['bayes'] is not None:raise ValueError('Manual forecasts require explicit manual mode')
+    elif kind=='update':
+        if v['mode']!='bayes' or not prior or len(v['evidence'])!=1:raise ValueError('Bayes update requires parent andone new evidence item')
+        b=v['bayes'];L=model_ratio(b);source(b['source'],book,knowledge);dep=b['dependence'];history_ids=[x['id'] for x in previous_evidence]
+        if not history_ids:
+            if dep!='first' or b['conditioned_on'] or b['independent_given_h'] or b['independent_given_not_h']:raise ValueError('First evidence dependence declaration')
+        elif dep=='conditional':
+            if b['conditioned_on']!=history_ids or b['independent_given_h'] or b['independent_given_not_h']:raise ValueError('Conditional ratio must name complete earlier evidence history')
+        elif dep=='independent':
+            if b['conditioned_on'] or not b['independent_given_h'] or not b['independent_given_not_h'] or v['evidence'][0]['dependency_group'] in groups:raise ValueError('Independent update requires both conditional independence assumptions anddistinct groups')
+        else:raise ValueError('Earlier evidence requires conditional orboth-hypothesis independence declaration')
+        before=probability(prior[-1]['record']['probability']);denominator=1-before+L*before
+        if denominator==0:raise ValueError('Impossible zero-denominator evidence')
+        after=L*before/denominator
+        if prob!=after:raise ValueError('Submitted posterior differs from exact Bayes update')
+        calculation=dict(prior_sha256=prior[-1]['sha256'],prior=number(before),likelihood_ratio=number(L),posterior=number(after),evidence_id=v['evidence'][0]['id'],dependence=dep,conditioned_on=copy.deepcopy(b['conditioned_on']),model_status=b['model_status'],empirically_validated=False)
+    else:raise ValueError('Unsupported action kind')
+    prior.append(dict(record=copy.deepcopy(v),sha256=digest(v),action_sequence=sequence_number,calculation=calculation))
+
+
+def candidate(kind,record,state,context,sequence_number,action_at):
+    out=copy.deepcopy(state)
+    try:
+        if kind not in ('forecast','update','resolve'):raise ValueError('Unsupported action kind')
+        if not isinstance(record,dict) or at(record.get('recorded_at'))!=at(action_at):raise ValueError('Record time differs from action time')
+        apply_record(kind,record,out,context,sequence_number)
+    except ValueError as error:return state,'rejected',str(error)
+    return out,'accepted',None
+
+
+def replay(l):
+    fields(l,'ledger');integer(l['schema_version'],1,1)
+    if l['profile_sha256']!=PROFILE_HASH or l['plan_sha256']!=digest(l['plan']):raise ValueError('Ledger profile/plan integrity mismatch')
+    context=check_plan(l['plan']);context['plan']=l['plan'];state=dict(forecasts={s:[] for s in context['slots']},resolutions={q:[] for q in context['questions']},sources=copy.deepcopy(context['sources']))
+    sequence(l['actions'],2000);parent=l['plan_sha256'];last=at(l['plan']['created_at'])
+    for i,a in enumerate(l['actions'],1):
+        fields(a,'action');integer(a['sequence'],i,i);when=at(a['at'])
+        if when<last or a['parent_sha256']!=parent or a['sha256']!=digest({k:v for k,v in a.items() if k!='sha256'}):raise ValueError('Action chronology/hash chain mismatch')
+        state,decision,reason=candidate(a['kind'],a['record'],state,context,i,a['at'])
+        if (a['decision'],a['reason'])!=(decision,reason):raise ValueError('Action decision replay mismatch')
+        last=when;parent=a['sha256']
+    state['context']=context
+    return state
+
+
+def append(l,kind,record,attempted_at=None,keep_rejected=False):
+    state=replay(l);context=state.pop('context');action_at=attempted_at if attempted_at is not None else record.get('recorded_at') if isinstance(record,dict) else None
+    when=at(action_at);last=at(l['actions'][-1]['at'] if l['actions'] else l['plan']['created_at'])
+    if when<last or len(l['actions'])>=2000:raise ValueError('Append chronology/bound')
+    _,decision,reason=candidate(kind,record,state,context,len(l['actions'])+1,action_at)
+    if decision=='rejected' and not keep_rejected:raise ValueError(reason)
+    a=dict(sequence=len(l['actions'])+1,kind=kind,at=action_at,record=copy.deepcopy(record),parent_sha256=l['actions'][-1]['sha256'] if l['actions'] else l['plan_sha256'],decision=decision,reason=reason);a['sha256']=digest(a)
+    out=copy.deepcopy(l);out['actions'].append(a);replay(out);return out

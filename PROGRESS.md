@@ -1145,3 +1145,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #51 question and reference-class engine
 - Implemented strict immutable question/class/partition/slot plans, exact source-snapshot integrity and rights checks, complete historical-member/status denominators and exact unweighted rates. Historical/test event and dependency-group overlap reject; reference baselines must equal the frozen class rate.
 - 22 initial tests pass, including all frozen reference-rate boundaries, ambiguous/unresolved members, class mutation, unavailable observations and duplicate-event controls. Forecast actions and scoring follow within this same technique.
+
+## 2026-11-07 — #51 forecast/update/resolution engine
+- Added hash-linked append-only actions, original/manual/Bayes version ancestry, exact odds updates and conditional likelihood inputs. Evidence IDs,underlying fact IDs andsnapshot reuse reject; subsequent likelihood updates require complete conditional history orboth-hypothesis independence with distinct groups. Assumptions remain unvalidated declarations.
+- Rejected attempts preserve payload/reason without changing accepted state. Positive occurrence andnegative nonoccurrence timing differ;resolution correction requires a visible intervening dispute. All73tests pass,including30independent Bayes anchors andsource/ancestry/chronology/dependence controls.
