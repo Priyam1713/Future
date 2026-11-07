@@ -1410,3 +1410,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-08 — #60 resource audit
 - Original three ranks/four variations preserved; full ranked-text gaps explicit. Generic finite conditional probability anddeclaredutility core only,usinginspected MITprimary probabilitynotes. No quantum-state/other-universe predictionclaim;no engineyet.
+
+## 2026-11-08 — #60 source/profile freeze
+- Frozen exactrational complete finite scenario-tree contract,localnormalization,pathmass,declaredterminalutility,conditionalqueries/canonicalordering andzero-condition handling. Editorialweights distinctfromquantumamplitudes. Independentfixtures follow beforeengine.
