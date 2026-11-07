@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "measured": true,
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD"
+  },
+  "profile_sha256": "3a16aa2f9855eae8351726f565a616dcefc3a7d1a14db0c9642dadd7df091db4",
+  "code_sha256": "baafad5ee98e365b18b168ad1500c44dc9e20718d10e137f3f6bd78dd99ab45f",
+  "protocol": "Five untraced complete in-process report repetitions per workload;separate tracemalloc run per workload;one complete CLI invocation including imports,registry andserialization. Native memory iswhole measurement-process peak includingall imports,workloads andtracing;notisolated perworkload orCLIchild.",
+  "process_peak_working_set_bytes": 30310400,
+  "under_proposed_128_MiB": true,
+  "results": [
+    {
+      "id": "short",
+      "records": 2,
+      "horizon": 0,
+      "scenarios": 0,
+      "request_sha256": "eb2893fa5690a63c804c249f897f19d1eff1163dfc1a8e6b2c390210757254b9",
+      "budget": {
+        "combined_steps": 2,
+        "scalar_cells": 224,
+        "integer_bits": 8192
+      },
+      "seconds": [
+        0.0015266,
+        0.0010093,
+        0.0009663,
+        0.0009199,
+        0.0009009
+      ],
+      "median_seconds": 0.0009663,
+      "cli_seconds": 1.1587822,
+      "python_traced_peak_bytes": 82318,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "long",
+      "records": 256,
+      "horizon": 0,
+      "scenarios": 0,
+      "request_sha256": "ec935c9c8f97cb0d34b20612895e8d186a85417a88e36d08ac1ae7a8513f6208",
+      "budget": {
+        "combined_steps": 256,
+        "scalar_cells": 12416,
+        "integer_bits": 8192
+      },
+      "seconds": [
+        0.0554178,
+        0.0553435,
+        0.0558677,
+        0.0558255,
+        0.0569054
+      ],
+      "median_seconds": 0.0558255,
+      "cli_seconds": 0.8665786,
+      "python_traced_peak_bytes": 1726522,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "missing-data",
+      "records": 256,
+      "horizon": 0,
+      "scenarios": 0,
+      "request_sha256": "1ed26f16aef254e4efe0b7cc4dbd8508d23bce9e844f4e9ae3a252984a1172e1",
+      "budget": {
+        "combined_steps": 256,
+        "scalar_cells": 12416,
+        "integer_bits": 8192
+      },
+      "seconds": [
+        0.029236,
+        0.0291933,
+        0.0286937,
+        0.0291032,
+        0.0289994
+      ],
+      "median_seconds": 0.0291032,
+      "cli_seconds": 1.2630319,
+      "python_traced_peak_bytes": 1655534,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "multi-scenario",
+      "records": 128,
+      "horizon": 128,
+      "scenarios": 8,
+      "request_sha256": "1dd20168f7a05867ee85421615fbf217c5448c929920abb73371ea497ab5242c",
+      "budget": {
+        "combined_steps": 1152,
+        "scalar_cells": 14528,
+        "integer_bits": 8192
+      },
+      "seconds": [
+        0.13389,
+        0.1116146,
+        0.1254024,
+        0.0987461,
+        0.0977419
+      ],
+      "median_seconds": 0.1116146,
+      "cli_seconds": 1.4485,
+      "python_traced_peak_bytes": 2863104,
+      "under_proposed_five_seconds": true
+    }
+  ],
+  "scope": "Representative local synthetic workloads;not universal performance or empirical accuracy."
+}

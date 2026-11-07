@@ -309,7 +309,25 @@ def main():
     ph=sub.add_parser('psychohistory')
     ph.add_argument('input',help='Offline synthetic synchronous threshold scenarios JSON')
     ph.add_argument('--format',choices=['json','markdown'],default='json')
+    dt=sub.add_parser('digital-twin')
+    dt.add_argument('input',help='Offline exact scalar state replay and future control scenarios JSON')
+    dt.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='digital-twin':
+        import sys
+        from .scrying import load_input
+        from .digital_twin import read,markdown
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8',newline='\n')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError,TypeError,KeyError,OverflowError) as error:
+                result=dict(status='rejected',error='Offline scalar replay request rejected',reason=str(error),result=None)
+                print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+        finally:registry.close()
+        return
     if args.command=='psychohistory':
         import sys
         from .scrying import load_input

@@ -1,0 +1,11 @@
+# Digital Twin — offline scalar replay
+
+```json
+{
+  "status": "rejected",
+  "error": "Offline scalar replay request rejected",
+  "reason": "Combined step/scalar-cell budget exceeded",
+  "result": null
+}
+```
+

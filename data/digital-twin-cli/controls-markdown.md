@@ -1,0 +1,495 @@
+# Digital Twin — offline scalar replay
+
+```json
+{
+  "status": "accepted",
+  "technique_id": 53,
+  "schema_version": 1,
+  "profile": {
+    "id": "digital-twin-offline-scalar-state-replay-v1",
+    "sha256": "3a16aa2f9855eae8351726f565a616dcefc3a7d1a14db0c9642dadd7df091db4",
+    "catalog_sha256": "9e25d912734ccee8c74fe1315fb668fd09196156ff38b4de6ffa066f3f31a85d"
+  },
+  "schema_sha256": "d730fcd418678eeec627ec2e1018641c3c7780c9c9d79ae55da1be8659297642",
+  "request": {
+    "schema_version": 1,
+    "profile": {
+      "id": "digital-twin-offline-scalar-state-replay-v1",
+      "sha256": "3a16aa2f9855eae8351726f565a616dcefc3a7d1a14db0c9642dadd7df091db4",
+      "catalog_sha256": "9e25d912734ccee8c74fe1315fb668fd09196156ff38b4de6ffa066f3f31a85d"
+    },
+    "mode": "synthetic",
+    "asset": {
+      "id": "asset-1",
+      "state_unit": "V",
+      "measurement_unit": "V",
+      "parameter_version": "v1"
+    },
+    "parameters": {
+      "version": "v1",
+      "A": "1/2",
+      "B": "1",
+      "H": "1",
+      "Q": "0",
+      "R": "1",
+      "m0": "4",
+      "P0": "4"
+    },
+    "timeline": {
+      "initial_at": "2020-01-01T00:00:00Z",
+      "step_seconds": 1,
+      "evaluation_at": "2020-01-01T00:00:06Z"
+    },
+    "records": [
+      {
+        "id": "r1",
+        "asset_id": "asset-1",
+        "state_unit": "V",
+        "measurement_unit": "V",
+        "tick": 1,
+        "timestamp": "2020-01-01T00:00:01Z",
+        "available_at": "2020-01-01T00:00:01Z",
+        "value": "4",
+        "control": "1"
+      }
+    ],
+    "horizon": 1,
+    "scenarios": [
+      {
+        "id": "zero",
+        "controls": [
+          "0"
+        ]
+      },
+      {
+        "id": "one",
+        "controls": [
+          "1"
+        ]
+      },
+      {
+        "id": "same",
+        "controls": [
+          "0"
+        ]
+      }
+    ],
+    "reference_scenario": "zero",
+    "provenance": {
+      "source_ref": "digital-twin-welch-bishop-2002-v1",
+      "rights": "self_authored",
+      "attribution": "Future original scalar fixture",
+      "snapshot": "Original synthetic scalar observations; no real people or devices.",
+      "snapshot_sha256": "eb2927f4cde89cdf2196bfc9c863a8491c4e65f18cf000c28fa3d7d6ea94ad4a",
+      "archive_checks": {
+        "source": false,
+        "units": false,
+        "timestamps": false,
+        "rights": false
+      }
+    }
+  },
+  "input_sha256": "fe4e278f461b8485ac5f2d69fbe3f0f2830c83c267a9f52dacf9af30578f14ca",
+  "parameters_sha256": "5d69eada3ff93d3d2a2d06bdda23907af08327cbe097500d29ce097b77b615c5",
+  "asset_sha256": "896b659ab59f466124e90cc770cfe10be83cb1b1a534924f4aa6516436a0523c",
+  "model_sha256": "6d0a235b02ec1446e44228d928e9514621af579b9f20950c4a40cf053c0fe468",
+  "source_manifest_sha256": "9e25d912734ccee8c74fe1315fb668fd09196156ff38b4de6ffa066f3f31a85d",
+  "source_freeze_sha256": "dcf761387ae33b7dc816380ef0f7af60cfcedda8c4783faa5614cf32b8c2f239",
+  "snapshot_sha256": "eb2927f4cde89cdf2196bfc9c863a8491c4e65f18cf000c28fa3d7d6ea94ad4a",
+  "code_sha256": "baafad5ee98e365b18b168ad1500c44dc9e20718d10e137f3f6bd78dd99ab45f",
+  "budget": {
+    "combined_steps": 4,
+    "scalar_cells": 224,
+    "integer_bits": 8192
+  },
+  "rows": [
+    {
+      "id": "r1",
+      "tick": 1,
+      "forecast_origin": "2020-01-01T00:00:00Z",
+      "timestamp": "2020-01-01T00:00:01Z",
+      "available_at": "2020-01-01T00:00:01Z",
+      "available_at_update": true,
+      "available_at_evaluation": true,
+      "value": "4",
+      "prior_mean": "3",
+      "prior_variance": "1",
+      "predicted_measurement": "3",
+      "innovation_variance": "2",
+      "innovation": "1",
+      "gain": "1/2",
+      "posterior_mean": "7/2",
+      "posterior_variance": "1/2",
+      "correction": "applied",
+      "open_loop_mean": "3",
+      "open_loop_variance": "1",
+      "open_loop_measurement": "3",
+      "persistence_measurement": null,
+      "persistence_source_id": null,
+      "filter_squared_error": "1",
+      "open_loop_squared_error": "1",
+      "persistence_squared_error": null
+    }
+  ],
+  "final_posterior": {
+    "mean": "7/2",
+    "variance": "1/2",
+    "timestamp": "2020-01-01T00:00:01Z"
+  },
+  "evaluation": {
+    "eligible_target_ids": [
+      "r1"
+    ],
+    "filter_all": {
+      "status": "finite",
+      "count": 1,
+      "sum_squared_error": "1",
+      "mean_squared_error": "1"
+    },
+    "open_loop_all": {
+      "status": "finite",
+      "count": 1,
+      "sum_squared_error": "1",
+      "mean_squared_error": "1"
+    },
+    "matched_target_ids": [],
+    "three_way_matched": {
+      "filter": {
+        "status": "not_estimable",
+        "count": 0,
+        "sum_squared_error": null,
+        "mean_squared_error": null
+      },
+      "open_loop": {
+        "status": "not_estimable",
+        "count": 0,
+        "sum_squared_error": null,
+        "mean_squared_error": null
+      },
+      "persistence": {
+        "status": "not_estimable",
+        "count": 0,
+        "sum_squared_error": null,
+        "mean_squared_error": null
+      }
+    },
+    "exclusions": [
+      {
+        "id": "r1",
+        "reason": "no_previous_available_observation",
+        "scope": "three_way_matched"
+      }
+    ],
+    "meaning": "Pre-update measurement-scale squared errors; no latent-state ground truth, posterior-fit score, empirical skill or uncertainty-coverage certification"
+  },
+  "scenario_fork": {
+    "timestamp": "2020-01-01T00:00:01Z",
+    "mean": "7/2",
+    "variance": "1/2",
+    "accepted_history_sha256": "abc4ea723a393abc9e92635bc7fa83483a415ac860d7392082eb4690fcba7486"
+  },
+  "scenarios": [
+    {
+      "id": "zero",
+      "controls_sha256": "a37bbbb0764cc5bf8d8c251cb1c95e3d2e142934792916ccb362ceb5902d9f0b",
+      "fork": {
+        "timestamp": "2020-01-01T00:00:01Z",
+        "mean": "7/2",
+        "variance": "1/2",
+        "accepted_history_sha256": "abc4ea723a393abc9e92635bc7fa83483a415ac860d7392082eb4690fcba7486"
+      },
+      "trajectory": [
+        {
+          "tick": 0,
+          "timestamp": "2020-01-01T00:00:01Z",
+          "mean": "7/2",
+          "variance": "1/2",
+          "measurement_mean": "7/2",
+          "measurement_variance": "3/2"
+        },
+        {
+          "tick": 1,
+          "timestamp": "2020-01-01T00:00:02Z",
+          "mean": "7/4",
+          "variance": "1/8",
+          "measurement_mean": "7/4",
+          "measurement_variance": "9/8"
+        }
+      ]
+    },
+    {
+      "id": "one",
+      "controls_sha256": "43de3a417d75f4818c5a553268b80ce3a5805109a3bbc6b605e9fb0b8f50b485",
+      "fork": {
+        "timestamp": "2020-01-01T00:00:01Z",
+        "mean": "7/2",
+        "variance": "1/2",
+        "accepted_history_sha256": "abc4ea723a393abc9e92635bc7fa83483a415ac860d7392082eb4690fcba7486"
+      },
+      "trajectory": [
+        {
+          "tick": 0,
+          "timestamp": "2020-01-01T00:00:01Z",
+          "mean": "7/2",
+          "variance": "1/2",
+          "measurement_mean": "7/2",
+          "measurement_variance": "3/2"
+        },
+        {
+          "tick": 1,
+          "timestamp": "2020-01-01T00:00:02Z",
+          "mean": "11/4",
+          "variance": "1/8",
+          "measurement_mean": "11/4",
+          "measurement_variance": "9/8"
+        }
+      ]
+    },
+    {
+      "id": "same",
+      "controls_sha256": "a37bbbb0764cc5bf8d8c251cb1c95e3d2e142934792916ccb362ceb5902d9f0b",
+      "fork": {
+        "timestamp": "2020-01-01T00:00:01Z",
+        "mean": "7/2",
+        "variance": "1/2",
+        "accepted_history_sha256": "abc4ea723a393abc9e92635bc7fa83483a415ac860d7392082eb4690fcba7486"
+      },
+      "trajectory": [
+        {
+          "tick": 0,
+          "timestamp": "2020-01-01T00:00:01Z",
+          "mean": "7/2",
+          "variance": "1/2",
+          "measurement_mean": "7/2",
+          "measurement_variance": "3/2"
+        },
+        {
+          "tick": 1,
+          "timestamp": "2020-01-01T00:00:02Z",
+          "mean": "7/4",
+          "variance": "1/8",
+          "measurement_mean": "7/4",
+          "measurement_variance": "9/8"
+        }
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "scenario": "zero",
+      "reference": "zero",
+      "identical_controls": true,
+      "differences": [
+        {
+          "tick": 0,
+          "mean_difference": "0",
+          "variance_difference": "0"
+        },
+        {
+          "tick": 1,
+          "mean_difference": "0",
+          "variance_difference": "0"
+        }
+      ],
+      "interpretation": "Conditional model differences; not causal effects or a variance of paired random outcomes"
+    },
+    {
+      "scenario": "one",
+      "reference": "zero",
+      "identical_controls": false,
+      "differences": [
+        {
+          "tick": 0,
+          "mean_difference": "0",
+          "variance_difference": "0"
+        },
+        {
+          "tick": 1,
+          "mean_difference": "1",
+          "variance_difference": "0"
+        }
+      ],
+      "interpretation": "Conditional model differences; not causal effects or a variance of paired random outcomes"
+    },
+    {
+      "scenario": "same",
+      "reference": "zero",
+      "identical_controls": true,
+      "differences": [
+        {
+          "tick": 0,
+          "mean_difference": "0",
+          "variance_difference": "0"
+        },
+        {
+          "tick": 1,
+          "mean_difference": "0",
+          "variance_difference": "0"
+        }
+      ],
+      "interpretation": "Conditional model differences; not causal effects or a variance of paired random outcomes"
+    }
+  ],
+  "sources": [
+    {
+      "id": "digital-twin-nasem-v1",
+      "technique_id": 53,
+      "rank": 1,
+      "author": "National Academies of Sciences, Engineering, and Medicine",
+      "edition": "Foundational Research Gaps and Future Directions for Digital Twins;2024;DOI10.17226/26894",
+      "url": "https://www.nationalacademies.org/read/26894",
+      "locator": "Publisher report,2024 edition andDOI",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright2024 National Academy of Sciences,all rights reserved. Online/free access does not grant redistribution;facts andoriginal short notes only,no body/figures/PDF bundled.",
+      "checked_on": "2026-11-07",
+      "access": "read",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "digital-twin-grieves-v1",
+      "technique_id": 53,
+      "rank": 2,
+      "author": "Michael W. Grieves",
+      "edition": "Digital Twin: Manufacturing Excellence through Virtual Factory Replication;2014 whitepaper;8PDF pages includingcover,7numbered body pages",
+      "url": "https://edisciplinas.usp.br/pluginfile.php/8935104/mod_resource/content/1/MichaelGrieves-white-paper-2014.pdf",
+      "locator": "Cover,numbered pp1–2 concept model;pp4–5 conceptualization/comparison/collaboration",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright Michael W. Grieves,LLC2014. Primary author paper viaUSP educational witness;no redistribution license inferred. Inventory Book label isbibliographic lead,notverified monograph/ISBN.",
+      "checked_on": "2026-11-07",
+      "access": "read",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "digital-twin-nasem-landscape-v1",
+      "technique_id": 53,
+      "rank": null,
+      "author": "National Academies of Sciences, Engineering, and Medicine",
+      "edition": "Foundational Research Gaps and Future Directions for Digital Twins;2024;DOI10.17226/26894",
+      "url": "https://www.nationalacademies.org/read/26894/chapter/4",
+      "locator": "Chapter2,pp21–22 definition;pp30–32 VVUQ",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright2024 National Academy of Sciences,all rights reserved. Online/free access does not grant redistribution;facts andoriginal short notes only,no body/figures/PDF bundled.",
+      "checked_on": "2026-11-07",
+      "access": "read",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "digital-twin-nasem-physical-v1",
+      "technique_id": 53,
+      "rank": null,
+      "author": "National Academies of Sciences, Engineering, and Medicine",
+      "edition": "Foundational Research Gaps and Future Directions for Digital Twins;2024;DOI10.17226/26894",
+      "url": "https://www.nationalacademies.org/read/26894/chapter/6",
+      "locator": "Chapter4,pp69–71 data quality,sampling,privacy",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright2024 National Academy of Sciences,all rights reserved. Online/free access does not grant redistribution;facts andoriginal short notes only,no body/figures/PDF bundled.",
+      "checked_on": "2026-11-07",
+      "access": "read",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "digital-twin-nasem-feedback-v1",
+      "technique_id": 53,
+      "rank": null,
+      "author": "National Academies of Sciences, Engineering, and Medicine",
+      "edition": "Foundational Research Gaps and Future Directions for Digital Twins;2024;DOI10.17226/26894",
+      "url": "https://www.nationalacademies.org/read/26894/chapter/7",
+      "locator": "Chapter5,pp78–83;data assimilation andcontinual model updating;Conclusion5-2",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright2024 National Academy of Sciences,all rights reserved. Online/free access does not grant redistribution;facts andoriginal short notes only,no body/figures/PDF bundled.",
+      "checked_on": "2026-11-07",
+      "access": "read",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "digital-twin-nasem-rights-v1",
+      "technique_id": 53,
+      "rank": null,
+      "author": "National Academies Press",
+      "edition": "Current rights andpermissions webpage",
+      "url": "https://www.nationalacademies.org/request-rights-and-permissions",
+      "locator": "Distributing PDFs andpermission process",
+      "ingestion": "facts_only",
+      "rights_note": "Policy facts only;no permission obtained orneeded forsource-body redistribution because none isbundled.",
+      "checked_on": "2026-11-07",
+      "access": "read",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "digital-twin-welch-bishop-2002-v1",
+      "technique_id": 53,
+      "rank": null,
+      "author": "Greg Welch andGary Bishop",
+      "edition": "An Introduction to the Kalman Filter;UNC TR95-041;updated2002-03-11;16pages",
+      "url": "https://www.mit.edu/course/16/16.070/www/project/PF_kalman_intro.pdf",
+      "locator": "Primary author technical report throughMIT course witness;Section1 p2 assumptions;Table1-1/1-2,p5,Eqs1.9–1.13",
+      "ingestion": "facts_only",
+      "rights_note": "Publicly accessible educational witness;no blanket redistribution license observed. Numerical facts andoriginal derivations only;no text/code/figures/PDF bundled.",
+      "checked_on": "2026-11-07",
+      "access": "read",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "digital-twin-welch-bishop-2006-lead-v1",
+      "technique_id": 53,
+      "rank": null,
+      "author": "Greg Welch andGary Bishop",
+      "edition": "TR95-041;indexed2006-07-24 update,notfetched orsubstituted for2002 witness",
+      "url": "https://www.cs.unc.edu/~welch/media/pdf/kalman_intro.pdf",
+      "locator": "Direct author-hosted URL returned404 byweb andurllib;metadata lead only",
+      "ingestion": "facts_only",
+      "rights_note": "No source body acquired fromthis URL;do notattribute inspected2002 equations toanunread2006version.",
+      "checked_on": "2026-11-07",
+      "access": "404;metadata_only",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "digital-twin-nasem-summary-v1",
+      "technique_id": 53,
+      "rank": null,
+      "author": "National Academies of Sciences, Engineering, and Medicine",
+      "edition": "Foundational Research Gaps and Future Directions for Digital Twins;2024;DOI10.17226/26894",
+      "url": "https://www.nationalacademies.org/read/26894/chapter/2",
+      "locator": "Summarypp1–4;definition andfit-for-purpose context",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright2024 National Academy of Sciences,all rights reserved. Online/free access does not grant redistribution;facts andoriginal short notes only,no body/figures/PDF bundled.",
+      "checked_on": "2026-11-07",
+      "access": "read",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    }
+  ],
+  "scope": {
+    "mode": "synthetic",
+    "synthetic_correctness": "Supported bounded numerical replay",
+    "archival": "Requires independent source, units, timestamp and rights review; declarations are not certification",
+    "empirical_accuracy": "Not certified without real data and held-out validation",
+    "live_synchronization": false,
+    "decision_feedback": false,
+    "actuator_control": false,
+    "complete_real_time_twin_certified": false,
+    "covariance": "Conditional model variance under declared linear/noise assumptions; not calibrated empirical uncertainty"
+  },
+  "limits": [
+    "Complete real-time digital twin certification",
+    "Live synchronization or decision feedback",
+    "Actuator control",
+    "Empirical accuracy or uncertainty coverage without held-out validation",
+    "Parameter learning",
+    "Smoothing or delayed asynchronous correction",
+    "Automatic imputation/outlier deletion",
+    "Multivariate/nonlinear models",
+    "Urban/personal/behavioral twin certification"
+  ],
+  "report_sha256": "02fbf96a43850bd8e093787dd9f6af9cf1f92de9615a116f8e889d9f8fa379ed"
+}
+```
+

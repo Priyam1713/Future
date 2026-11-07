@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "digital-twin-offline-scalar-state-replay-v1",
+    "sha256": "3a16aa2f9855eae8351726f565a616dcefc3a7d1a14db0c9642dadd7df091db4",
+    "catalog_sha256": "9e25d912734ccee8c74fe1315fb668fd09196156ff38b4de6ffa066f3f31a85d"
+  },
+  "mode": "synthetic",
+  "asset": {
+    "id": "asset-1",
+    "state_unit": "V",
+    "measurement_unit": "V",
+    "parameter_version": "v1"
+  },
+  "parameters": {
+    "version": "v1",
+    "A": "1",
+    "B": "0",
+    "H": "1",
+    "Q": "0",
+    "R": "-1",
+    "m0": "0",
+    "P0": "1"
+  },
+  "timeline": {
+    "initial_at": "2020-01-01T00:00:00Z",
+    "step_seconds": 1,
+    "evaluation_at": "2020-01-01T00:00:07Z"
+  },
+  "records": [
+    {
+      "id": "r1",
+      "asset_id": "asset-1",
+      "state_unit": "V",
+      "measurement_unit": "V",
+      "tick": 1,
+      "timestamp": "2020-01-01T00:00:01Z",
+      "available_at": "2020-01-01T00:00:01Z",
+      "value": "2",
+      "control": "0"
+    },
+    {
+      "id": "r2",
+      "asset_id": "asset-1",
+      "state_unit": "V",
+      "measurement_unit": "V",
+      "tick": 2,
+      "timestamp": "2020-01-01T00:00:02Z",
+      "available_at": "2020-01-01T00:00:02Z",
+      "value": "2",
+      "control": "0"
+    }
+  ],
+  "horizon": 0,
+  "scenarios": [],
+  "reference_scenario": null,
+  "provenance": {
+    "source_ref": "digital-twin-welch-bishop-2002-v1",
+    "rights": "self_authored",
+    "attribution": "Future original scalar fixture",
+    "snapshot": "Original synthetic scalar observations; no real people or devices.",
+    "snapshot_sha256": "eb2927f4cde89cdf2196bfc9c863a8491c4e65f18cf000c28fa3d7d6ea94ad4a",
+    "archive_checks": {
+      "source": false,
+      "units": false,
+      "timestamps": false,
+      "rights": false
+    }
+  }
+}
