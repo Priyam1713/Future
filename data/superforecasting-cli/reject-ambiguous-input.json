@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "tetlock-mellers-binary-forecast-updates-v1",
+    "sha256": "bd6d71ded4dbb2ddc1f60b230c46daff2b735793f6bfe4098899d49bfc6b9933",
+    "catalog_sha256": "7502f901d5e17b31e7e798e192473bc8ae73854e863484c2f65a6f251d841e0b"
+  },
+  "task": "question",
+  "payload": {
+    "id": "q1",
+    "version": 1,
+    "event_id": "event1",
+    "dependency_group": "test1",
+    "partition": "test",
+    "text": "Will synthetic switch 1 enter state 1 in the declared observation window?",
+    "event_definition": "Binary occurrence recorded by the synthetic switch log",
+    "window_start": "2025-01-01T00:00:00Z",
+    "window_end": "2025-01-10T00:00:00Z",
+    "cutoff": "2025-01-03T00:00:00Z",
+    "created_at": "2024-12-31T00:00:00Z",
+    "locked_at": "2024-12-31T00:00:00Z",
+    "timezone": "UTC",
+    "clarity_confirmed": false,
+    "resolution": {
+      "source_ref": "original-synthetic-switch-log",
+      "positive_rule": "First state1 observation within the half-open window",
+      "negative_rule": "No state1 observation through the complete window",
+      "dispute_policy": "Disputed questions are excluded pending a sourced correction",
+      "void_policy": "Incomplete observation logs void the question"
+    },
+    "class_id": "class1",
+    "class_sha256": "beaeee6344c02525dcbb5e6933069bb89a454a85c24893e0ffbb701a6158bae7",
+    "baseline": {
+      "kind": "constant",
+      "probability": "1/2",
+      "frozen_at": "2024-12-31T00:00:00Z",
+      "domain": "synthetic-switches",
+      "horizon": "fixed-window",
+      "source": {
+        "id": "baseline-source",
+        "locator": "original:baseline-source",
+        "rights": "self_authored",
+        "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+        "snapshot": "Original synthetic software validation evidence: baseline-source",
+        "snapshot_sha256": "ee865768d0e9b7ee132821254268aabfb5d991fbfd408ed585e6f2d4b252fc43",
+        "available_at": "2024-12-30T00:00:00Z"
+      }
+    },
+    "reasoning": {
+      "base_rate_rationale": "Documentary synthetic reasoning only",
+      "comparability": "Documentary synthetic reasoning only",
+      "assumptions": [],
+      "subquestions": [],
+      "evidence_gaps": [],
+      "alternatives": [],
+      "dependence": "Documentary synthetic reasoning only",
+      "disagreement": "Documentary synthetic reasoning only"
+    },
+    "source": {
+      "id": "question-source",
+      "locator": "original:question-source",
+      "rights": "self_authored",
+      "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+      "snapshot": "Original synthetic software validation evidence: question-source",
+      "snapshot_sha256": "7d584a19ae00f69e020e04d21268fa118b6ee1b1a046cfbee85622bf1659dacf",
+      "available_at": "2024-12-30T00:00:00Z"
+    }
+  }
+}

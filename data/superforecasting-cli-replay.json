@@ -1,0 +1,788 @@
+{
+  "passed": true,
+  "cli_cases": 156,
+  "accepted_pairs": 43,
+  "rejected_pairs": 35,
+  "records": [
+    {
+      "id": "question",
+      "input": "data/superforecasting-cli/question-input.json",
+      "raw_input_sha256": "7e1cf93910900097760786c19af657a469b7d20026fa290bcf590fb4b6b5f799",
+      "exit_code": 0,
+      "outputs": {
+        "json": "fcc242116792264f563878a6f357466b59b5ff9655eeab0f3503838d2a8c3b46",
+        "markdown": "832255265ce32a87f0f338ef003519b485afcec81576fff0ff6b17833fcc6603"
+      }
+    },
+    {
+      "id": "class-ten-three",
+      "input": "data/superforecasting-cli/class-ten-three-input.json",
+      "raw_input_sha256": "92982ecb9b9d16e4429e55924ee47287699927a75561bb1a0333bef2c2c06904",
+      "exit_code": 0,
+      "outputs": {
+        "json": "3d72f6fad9683cccd3f5892841367dc0a792ab2a867085a40df0e0f917a69bbb",
+        "markdown": "695c50abb50685d93897cc9468c42c44e8cb91c64742e9c35c453456af960844"
+      }
+    },
+    {
+      "id": "create",
+      "input": "data/superforecasting-cli/create-input.json",
+      "raw_input_sha256": "cb6c326d45e1ef4a45c4458a4e37de8e4442c9aab8c2568ad6f7ef37a351d3ea",
+      "exit_code": 0,
+      "outputs": {
+        "json": "e87bfd543a627044dd998ca912c58c9891018a3f64a9268170c9358e753a92de",
+        "markdown": "63e1e5eaeb03d36288257e13a781e9816082aea4b809a88878387ee042754d11"
+      }
+    },
+    {
+      "id": "class-empty",
+      "input": "data/superforecasting-cli/class-empty-input.json",
+      "raw_input_sha256": "5d64828f753d076066eea6fb6d616f81fd07b643cb3d4e6affa3dd03f2ea1d67",
+      "exit_code": 0,
+      "outputs": {
+        "json": "c2fd9c5ff6736ba0aec9b9adbd12cb4f7429d3288853d543e63130edb7ba24bb",
+        "markdown": "1c6a099340fb91bbecd23c9ad8dc2451a26149b2827d6beda1214c17c4517956"
+      }
+    },
+    {
+      "id": "class-zero",
+      "input": "data/superforecasting-cli/class-zero-input.json",
+      "raw_input_sha256": "b8473dadd17bacf2beae09bc2a4aa6b55550c55ab4b7476588c431537c7b879a",
+      "exit_code": 0,
+      "outputs": {
+        "json": "0f9812330aa1a678b525862014bc66d047435741f100bc3b727ffbb7a5e79154",
+        "markdown": "78aed76c5cd4f86c6ca2d98be49266993edb5fad7ede82075c572d2601832dd1"
+      }
+    },
+    {
+      "id": "class-full",
+      "input": "data/superforecasting-cli/class-full-input.json",
+      "raw_input_sha256": "3fc6ac2cb1dabdfc76e96861d1c95519343a1ab1ccb96c128b0ceb4369d8b185",
+      "exit_code": 0,
+      "outputs": {
+        "json": "455f55b12416db667a1332d84eeaa0b1f54a65758d5fd8919756f94b515a68f8",
+        "markdown": "bc219128d3c29032e0fb0c983d165be3695920cbd61bbf83ec8855ebee677b59"
+      }
+    },
+    {
+      "id": "class-missing",
+      "input": "data/superforecasting-cli/class-missing-input.json",
+      "raw_input_sha256": "c2ecc320e43ab716ef33329115e1314aa99f4d5de94aeb97bf3e36b216515915",
+      "exit_code": 0,
+      "outputs": {
+        "json": "2f3932f9e9202d95ae39add79c64efe0e113b9e4761efd3c9e8d1e8b7cc9600e",
+        "markdown": "19be779f79620ae483529ee922afcd647170d7f273ac664a8f70e288113adb61"
+      }
+    },
+    {
+      "id": "class-ambiguous-excluded",
+      "input": "data/superforecasting-cli/class-ambiguous-excluded-input.json",
+      "raw_input_sha256": "cfb7a198d419b873597a700ca0581a323d8044805d90af69ea8822f321ad93be",
+      "exit_code": 0,
+      "outputs": {
+        "json": "8a0659fe47d3f5fbb98fcb39bd869ce6bc9a79dfd12ced96345ca140f338fdd4",
+        "markdown": "34910b4dfeb19e43ab677b75d3b71fdc524ab6db3133ba82dd8591fbf49f40a9"
+      }
+    },
+    {
+      "id": "original",
+      "input": "data/superforecasting-cli/original-input.json",
+      "raw_input_sha256": "224f73688e0a283de3a819fcf8e66f2e193c18e3f7764015b3e9fb4d20732a85",
+      "exit_code": 0,
+      "outputs": {
+        "json": "a67f5594e5ab78f9c5e273dc3f7b8c8468d51d367cad6be1fc98bc9de4f52719",
+        "markdown": "1bac8255ded3b3dfb8f661b66d6ed098d600ff4d3ac061343e50fa1607868e6d"
+      }
+    },
+    {
+      "id": "manual",
+      "input": "data/superforecasting-cli/manual-input.json",
+      "raw_input_sha256": "b4815d23262374c0971279654883cd27660ee0ac34026d0e720c865516979e35",
+      "exit_code": 0,
+      "outputs": {
+        "json": "9e2956e362c635694593eb89ee4e52a84fd520190c1366d2d8a80554fc3fac7d",
+        "markdown": "b71be883af0b8ba5f5d33b734ab0cee943bec2e84afb4fd2337c1bffc8c905c7"
+      }
+    },
+    {
+      "id": "bayes-after-manual",
+      "input": "data/superforecasting-cli/bayes-after-manual-input.json",
+      "raw_input_sha256": "8ef0b0fe44a558b111048aad97cf631c4b632cf9abcc4325c675ee2f289d531d",
+      "exit_code": 0,
+      "outputs": {
+        "json": "e91808cc2d3c26b4b2ff41a222be90fc02a4978df0a371056b59d9ca309614f2",
+        "markdown": "e9186c5e606fd73d950ff7854812d2647d40fb5aed15588a6e71d9c5a8d5ffb9"
+      }
+    },
+    {
+      "id": "retained-rejected-attempt",
+      "input": "data/superforecasting-cli/retained-rejected-attempt-input.json",
+      "raw_input_sha256": "a4ab678f38eac6b9bdf6b3e079be30ada4fc12cef37db8154c593297d8afa751",
+      "exit_code": 0,
+      "outputs": {
+        "json": "51d799d4f2a525ca0aa4012249cc639bf580c8d17b996f71aaedcf08d1d49057",
+        "markdown": "962e250fdbfaf91c5a8c8ce336bdc699158d94361b0565fd2eacd9f6d571bb72"
+      }
+    },
+    {
+      "id": "late",
+      "input": "data/superforecasting-cli/late-input.json",
+      "raw_input_sha256": "3d30bf315a1db123e25c5aab0a7886a1c24d31c9f5ea80d34799445fd8caf86b",
+      "exit_code": 0,
+      "outputs": {
+        "json": "9b18f68424402dd43194f5d82e545fe82978d76d32c8ec81ef29413fe6e8b784",
+        "markdown": "829bb5d533489092c1836e7b88264af33f4dc90cea8e49af58068d94c8e7f134"
+      }
+    },
+    {
+      "id": "resolve",
+      "input": "data/superforecasting-cli/resolve-input.json",
+      "raw_input_sha256": "3b5e0fd9c60dca4f67baa1bb1b974fbd15e7dc2532373b57baa978b9dedb2174",
+      "exit_code": 0,
+      "outputs": {
+        "json": "89f09b529fd0fd383880caa4c4dd5e1cc7ecd5f64a1dcd54f54c6eb65a0cc775",
+        "markdown": "6f67c6296303fd24a9cdc943788ffad31c861715519a0f0bff1ca3c42047962b"
+      }
+    },
+    {
+      "id": "lifecycle-report",
+      "input": "data/superforecasting-cli/lifecycle-report-input.json",
+      "raw_input_sha256": "aa095a0d6737de080284467bf0f7f738e9484ad6c768e1b2cabb87e8b83e4fbe",
+      "exit_code": 0,
+      "outputs": {
+        "json": "15c60c95ff49859a5876726ad4511a038db87ec5ea3139d0405ed0d88c9f806e",
+        "markdown": "99aa271369ac5280753e2b6e34c24ffb8875ce011f841ea74943a52e0089d758"
+      }
+    },
+    {
+      "id": "lifecycle-score",
+      "input": "data/superforecasting-cli/lifecycle-score-input.json",
+      "raw_input_sha256": "7969dce8932447f71eaa70ef94b081913d2c6be6ea117350e605aea4429d2082",
+      "exit_code": 0,
+      "outputs": {
+        "json": "2489341b6a2214601cd68f5094cea43a74db5f6fb3ca43d62c4a92323dbc1c00",
+        "markdown": "28e8f80d12714b877c6200f05407988958adb51ff94c4e8453d0974f80effe1f"
+      }
+    },
+    {
+      "id": "unresolved-report",
+      "input": "data/superforecasting-cli/unresolved-report-input.json",
+      "raw_input_sha256": "90730238a3ea7512c749cddae9fd3409fc7bda5e9653daa907bb1891f81733ea",
+      "exit_code": 0,
+      "outputs": {
+        "json": "d617b16ec3aad692d227c54bbb7e8ac3e9d05b1c84cc03e8d82586d2b4413a36",
+        "markdown": "5a07fee3f166fbc5dec7719aa3e353c74352bf4ef8938f4c393716c161e42d97"
+      }
+    },
+    {
+      "id": "bayes-neutral",
+      "input": "data/superforecasting-cli/bayes-neutral-input.json",
+      "raw_input_sha256": "60d0239e83f9c648794de27c19cf9c3efbd42b6ba39dc114266190426d87713c",
+      "exit_code": 0,
+      "outputs": {
+        "json": "92f10311a7770ff437e60452510546f4efaca42c952436cc37e22db69ee3be7e",
+        "markdown": "d93f61c2276b3bac952f48ed43727cf6ed92148069f527fc69c97298c08cd2ff"
+      }
+    },
+    {
+      "id": "bayes-positive",
+      "input": "data/superforecasting-cli/bayes-positive-input.json",
+      "raw_input_sha256": "6ad7be5baafead11dfe8199d0ee67b778feaf970dafa677acb69f3b4f41c356f",
+      "exit_code": 0,
+      "outputs": {
+        "json": "38a10d9485de44bd57bc7046ffc810efb07527d3eb9efdf52d535e6a1aca3657",
+        "markdown": "d2240e739c7fbf81857ae60ce97ac059a12494c9b7af97f29cd90e605e79420a"
+      }
+    },
+    {
+      "id": "bayes-zero",
+      "input": "data/superforecasting-cli/bayes-zero-input.json",
+      "raw_input_sha256": "e644db83a59c1dd16674bfd1ce3317217fab77a15863d5e1f62a5aa5b79fd502",
+      "exit_code": 0,
+      "outputs": {
+        "json": "619cd27364f9722a5ea730a9e18775dc79a8de61e6f72e489e7abf6d2bd47791",
+        "markdown": "3e05805c9446a596dfdfa1d9dc8e92c56404af8b59c49309939068772daaf768"
+      }
+    },
+    {
+      "id": "conditional-likelihoods",
+      "input": "data/superforecasting-cli/conditional-likelihoods-input.json",
+      "raw_input_sha256": "7e83bb010ae2e2fbd062cf177b9c0b79c15edadab0c09ac23dc9f0ddd9d425cc",
+      "exit_code": 0,
+      "outputs": {
+        "json": "f3f998676f31692875638d848911b3e9d2aceb2cbc79dc178fee76b961a7bc16",
+        "markdown": "9b4ac59ebf8abc1b82e2fe0bddff8c3fbc4c062b58cf7bb1b00d3e0e1104541c"
+      }
+    },
+    {
+      "id": "certain-prior-0",
+      "input": "data/superforecasting-cli/certain-prior-0-input.json",
+      "raw_input_sha256": "d94c01c45bbea67e6c6863f0f0bb5d25b850054d55a4e5eb2b81957d6c0e0de5",
+      "exit_code": 0,
+      "outputs": {
+        "json": "ce571e6650ef7c1c4cb097eb83e698e0fc629fc6f13d748da63f100a7050dcca",
+        "markdown": "8ff23b028f31a646d08889e0ef923b0cd4117a8631da7681a263eca03334c890"
+      }
+    },
+    {
+      "id": "certain-prior-1",
+      "input": "data/superforecasting-cli/certain-prior-1-input.json",
+      "raw_input_sha256": "edb2380b71531a8447d109d12d4c0f09bda19df8ea7adb22fa72abdf3827be35",
+      "exit_code": 0,
+      "outputs": {
+        "json": "372d4ac8d625d3e6caeb815e6ad6aba7fddb481475b27a5b20594e153ffb04a3",
+        "markdown": "5b1857670f074bc31bf23bd6463c84dbe065b4ed1d15413cd813d41f91547f1e"
+      }
+    },
+    {
+      "id": "independent-new-evidence",
+      "input": "data/superforecasting-cli/independent-new-evidence-input.json",
+      "raw_input_sha256": "5b7ac41095f5a08a77579777d4a70c3b591944ce74216ce2c8f05b21ce11ebc2",
+      "exit_code": 0,
+      "outputs": {
+        "json": "79f496896702eaddf34440099d1796921e8e62c24354141068d11ca3ada00afe",
+        "markdown": "3e440713e1f260b33a2b238fe4044189a02535d7b6d22c41073004feba8f193d"
+      }
+    },
+    {
+      "id": "conditional-history",
+      "input": "data/superforecasting-cli/conditional-history-input.json",
+      "raw_input_sha256": "b9e85ab08f4c8b1cacec489e451498526b05fb11491ccacb6c9212b7c1fe8c27",
+      "exit_code": 0,
+      "outputs": {
+        "json": "cb83a0fc7dcd45c3672b85e7ee3f9af98a03aef237503152a542242241a8d244",
+        "markdown": "a4404bfc985a7d4229b0a36598aa24550a1bd453855b59fa4ea5751901230202"
+      }
+    },
+    {
+      "id": "paired",
+      "input": "data/superforecasting-cli/paired-input.json",
+      "raw_input_sha256": "a9e8ac270f5f87a5d90d2201fc4a03749818be1ee0da7f51682bd63b04bae320",
+      "exit_code": 0,
+      "outputs": {
+        "json": "01f7d03e5dcec0a69388546e4eff983989c71fc5c822e570a09cd54ecaffbcf6",
+        "markdown": "6fa4790fe35d92f690970dad677eebc601dc5f696a632aed998e249193212a79"
+      }
+    },
+    {
+      "id": "decomposition",
+      "input": "data/superforecasting-cli/decomposition-input.json",
+      "raw_input_sha256": "c18a9be10d1009e288cfd854e3c0ea80660befe14e2566ea2798fcb41fa6be2a",
+      "exit_code": 0,
+      "outputs": {
+        "json": "8fd9d4fa92a72da290f1276f487caebc855371edc37022d7218284786f69afd8",
+        "markdown": "54f98812cbe39bb054df8eb12ae9485756df842de020d8c3a7a75975a2257c89"
+      }
+    },
+    {
+      "id": "calibration",
+      "input": "data/superforecasting-cli/calibration-input.json",
+      "raw_input_sha256": "c97806673362301a7a62824393639001397a9eca984ee53d4f5d6d9a50f70f33",
+      "exit_code": 0,
+      "outputs": {
+        "json": "7c4cc5c4d6ec46484b90481d7d439fa3ef13b6eb07bc6a58b04929bc978f2fe8",
+        "markdown": "b44093ae6f8b878ba9f2cbb20b50536cf0098ec8d208e4649c939ed1bcb51795"
+      }
+    },
+    {
+      "id": "brier-one",
+      "input": "data/superforecasting-cli/brier-one-input.json",
+      "raw_input_sha256": "0c3947f3fa748f4a134e8f983587d90d09e48ba0cd5e6e7591969fe7c8895bfb",
+      "exit_code": 0,
+      "outputs": {
+        "json": "b3af5c6df728ffb49e466fc61d359864c02afaee12461637de8e14f42c1fab14",
+        "markdown": "81d70f168dfeff58ba321c31cb296670b17b0d6e0737be6765d9cead586d1f9e"
+      }
+    },
+    {
+      "id": "brier-zero",
+      "input": "data/superforecasting-cli/brier-zero-input.json",
+      "raw_input_sha256": "5fca1ce29df219c3abac466c6da16956d0a5cd17a16bc7075ff585ea6e4fb34c",
+      "exit_code": 0,
+      "outputs": {
+        "json": "13541fb3ccabe4e7231dbdf218bb59ea026750b885f4eb48590810843e40c0ae",
+        "markdown": "fe4fe40055b6a7d19d51b18a963a14112473205c87e78d06782490ddc22bc3ed"
+      }
+    },
+    {
+      "id": "log-infinite",
+      "input": "data/superforecasting-cli/log-infinite-input.json",
+      "raw_input_sha256": "970900269fdbb678bbfe9ad4362a6eac30c4b235686c758998e64de71d9ea455",
+      "exit_code": 0,
+      "outputs": {
+        "json": "95de7688d94045fa30e0f57165034728b1260d518824c2fd4d1ad1662398df49",
+        "markdown": "649939737b77084b7f4889e3aa940cf4cc35c2b21086f490375475ac04334f7d"
+      }
+    },
+    {
+      "id": "log-correct-endpoints",
+      "input": "data/superforecasting-cli/log-correct-endpoints-input.json",
+      "raw_input_sha256": "2d63bef18a6b51c3220ba23fd770c359448961ecaef7d1033da6159e5290751d",
+      "exit_code": 0,
+      "outputs": {
+        "json": "a78897164928a110a03ecac62d7ed0ed80571e4e6ff0802ef21c6b42dd707e23",
+        "markdown": "63f3919338f84160251431d4ad97cf4d47776d895b5dfecce150206b39e60ffb"
+      }
+    },
+    {
+      "id": "log-half",
+      "input": "data/superforecasting-cli/log-half-input.json",
+      "raw_input_sha256": "4f2e769b63a935234f4e44047a6f09fad4267f2efe3b82357d7c16557a099345",
+      "exit_code": 0,
+      "outputs": {
+        "json": "4c83804824749754a43c3bb66a99a64aab28feca0a09fca395306ef51ba79897",
+        "markdown": "c38d328fb43bd29c12a8127746937793533edc3a6cc59498aabc8e25ee53b3f6"
+      }
+    },
+    {
+      "id": "negative-event",
+      "input": "data/superforecasting-cli/negative-event-input.json",
+      "raw_input_sha256": "8b300f412ef1ca59b58343d97a29c63f138c529c3087fa3153c4e1ad0610e089",
+      "exit_code": 0,
+      "outputs": {
+        "json": "1a81a00a4a88f9f58be12c8d0b5ac2122541a370f79153c36cb376ceb0e0da93",
+        "markdown": "74a035e0cf169cd4469b96c482cbbc2c5cfa7e8eebc60dc6466e295d7b3dd78e"
+      }
+    },
+    {
+      "id": "statuses",
+      "input": "data/superforecasting-cli/statuses-input.json",
+      "raw_input_sha256": "e90499d65c2bdaebd9af061589ac8587d3a6f79fb8140f1df265989f67deb513",
+      "exit_code": 0,
+      "outputs": {
+        "json": "fe4310edf759a6e1dbb0b5656d69b0fa5af2f83f27fe1ad5822a7a3c2548c66e",
+        "markdown": "f25827295b9390291a1a0de2d3e10bbc83b29a3bdfbb90d7008e87528d9e6332"
+      }
+    },
+    {
+      "id": "at-cutoff",
+      "input": "data/superforecasting-cli/at-cutoff-input.json",
+      "raw_input_sha256": "bc0cf82065a628764d0c9c9234110843faad760795dfcc482654acd45e5403f6",
+      "exit_code": 0,
+      "outputs": {
+        "json": "bd97d9f637f8c7402cd0d5089621387e323364028f2e86d44f318d573aace1da",
+        "markdown": "118d4cc5bf331256c65f5038764d8be0bede0853ef6b4078e93501bc121b12eb"
+      }
+    },
+    {
+      "id": "post-outcome-retained",
+      "input": "data/superforecasting-cli/post-outcome-retained-input.json",
+      "raw_input_sha256": "a59b5fcabe9b7784bc1be797f9f413f77b378140eb9b9f605329ebc70c611141",
+      "exit_code": 0,
+      "outputs": {
+        "json": "e094372e3b50a0ff7092e540dc5f4fadef3bd89c20d9671dd99faaba0ce18c7b",
+        "markdown": "7dee0674790c4087104d1090e59ce9c1f991425779a583722a94b3f4d751c253"
+      }
+    },
+    {
+      "id": "two-people-one-event",
+      "input": "data/superforecasting-cli/two-people-one-event-input.json",
+      "raw_input_sha256": "4816da537df448c46648eab969cc5592bd5d69a0d73fa1f42a88757925ccdde7",
+      "exit_code": 0,
+      "outputs": {
+        "json": "f8ddd24eed56ad249d8f9c80f6f31ef46cb058c134d7b4c545c526c8910e98b4",
+        "markdown": "d01a8b3bb14c8ce29b767ff21f3f6331172072808bb166105cc50922a65cd9d1"
+      }
+    },
+    {
+      "id": "unicode-whitespace",
+      "input": "data/superforecasting-cli/unicode-whitespace-input.json",
+      "raw_input_sha256": "bb1b113b9338bbd23d61772d7fd3509364dee405798dcea2cf8cd418f1a84a3c",
+      "exit_code": 0,
+      "outputs": {
+        "json": "59778d259dd1b24a356fb61b1c015d6ad65fbdd7863549a528dd9030f7639aa9",
+        "markdown": "918f01949a12568c2b8b766cbcb26199475d03acb65ed7ae2e579f2d53d5ddbb"
+      }
+    },
+    {
+      "id": "reference-workflow",
+      "input": "data/superforecasting-cli/reference-workflow-input.json",
+      "raw_input_sha256": "fa95969f16f47d7d17d3f380b7ae663d88fc7368642faf06af25e278c326abbf",
+      "exit_code": 0,
+      "outputs": {
+        "json": "4b0f6b8f13807b27aef3861fb4d3c1b9f3b86531061307af4c380da15d5d98bc",
+        "markdown": "aa5d743170b8221161d3dd64b985a9858f0ecbd81c4ebb01557a8ebb7f502225"
+      }
+    },
+    {
+      "id": "reference-tournament",
+      "input": "data/superforecasting-cli/reference-tournament-input.json",
+      "raw_input_sha256": "4e2b9f657caaea07b9f049f9261116763d049445ef320261bcc6ab4d6c117c98",
+      "exit_code": 0,
+      "outputs": {
+        "json": "b8cdd47bff9ccdf7488f611b9b648962c07a54516cefea540a843a02b1255912",
+        "markdown": "6fdba4ef8021eb6856a03fae41b99472defcc302ec52f07a328b3ad75eabb4db"
+      }
+    },
+    {
+      "id": "reference-scores",
+      "input": "data/superforecasting-cli/reference-scores-input.json",
+      "raw_input_sha256": "8342515088a737cc094b251dc40d9dc4fd590210e92036eef126a0acc8b37b98",
+      "exit_code": 0,
+      "outputs": {
+        "json": "7d6f2bd6d64896a2cdf30106431e30621c76bd7c3f462cbe373159692bb52055",
+        "markdown": "89f59dfe370ebd670cd694df5b669ed0554649c1db8ba8eb88d77b8a3fd2fa8d"
+      }
+    },
+    {
+      "id": "reference-bayes",
+      "input": "data/superforecasting-cli/reference-bayes-input.json",
+      "raw_input_sha256": "a035596479a564f7bd09e1b14ec8601b9f276aa8a1d078823926d97115b8183a",
+      "exit_code": 0,
+      "outputs": {
+        "json": "84ee37826e070278c1e0a71b53360f7fa757340611b2760dbf15dc4016860935",
+        "markdown": "dbdb47ce485258c044ffc3370cdb16ce34576744da0d9e4e591698f1ba4b576d"
+      }
+    },
+    {
+      "id": "reject-ambiguous",
+      "input": "data/superforecasting-cli/reject-ambiguous-input.json",
+      "raw_input_sha256": "ab631c6bd5d0a605e505a2aa9df5c6e98af3aa625c2d099a7c4341103fe55153",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-duplicate-history",
+      "input": "data/superforecasting-cli/reject-duplicate-history-input.json",
+      "raw_input_sha256": "9032b3b34f856aec127742187242c7ed71fc0f30007e173b88ea829da2a64026",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-unknown-class",
+      "input": "data/superforecasting-cli/reject-unknown-class-input.json",
+      "raw_input_sha256": "5f8bc7052acd52a50079deb4851e83c3292cf546ac6af98bb426d826bad33e34",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-class-mutation",
+      "input": "data/superforecasting-cli/reject-class-mutation-input.json",
+      "raw_input_sha256": "3ebdc50591844b3db06c70b36f24d12bcb4f90173efb342a80c23050642a3e80",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-baseline-leak",
+      "input": "data/superforecasting-cli/reject-baseline-leak-input.json",
+      "raw_input_sha256": "25c2e8824bff8cb38f0c1230c610af1fcda8cf0a8f58b51f2f53d7c03736549f",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-reference-leak",
+      "input": "data/superforecasting-cli/reject-reference-leak-input.json",
+      "raw_input_sha256": "98924c9706dfaa29a3d55e6cab3e692cad8b9e506042bb485e636e29fbcc1c28",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-missing-rights",
+      "input": "data/superforecasting-cli/reject-missing-rights-input.json",
+      "raw_input_sha256": "92db3cbaef3d502204dfdb5475777d9fdf3e2e487def9143006cec4e4ee708ff",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-snapshot-hash",
+      "input": "data/superforecasting-cli/reject-snapshot-hash-input.json",
+      "raw_input_sha256": "0564ae47437359a93c700cc259e8d28177d6a905b1883947dbc84d9075c19ed9",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-missing-resolution-source",
+      "input": "data/superforecasting-cli/reject-missing-resolution-source-input.json",
+      "raw_input_sha256": "59c14410b26ed56afd5ce76dbf64fd594f83713b3359942c1504c3e40efd3c19",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-unknown-field",
+      "input": "data/superforecasting-cli/reject-unknown-field-input.json",
+      "raw_input_sha256": "752d9019de4391a5db91d52c0ee2edececfbb27d4c5146c1159dd24b18f97e4b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-empirical-mode",
+      "input": "data/superforecasting-cli/reject-empirical-mode-input.json",
+      "raw_input_sha256": "6c5eb5a59f7092331920782c28b26ad9610f9b8c66651da1cc3cfdf6566b04d8",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-duplicate-evidence",
+      "input": "data/superforecasting-cli/reject-duplicate-evidence-input.json",
+      "raw_input_sha256": "9695028c0765f7381e160ab07d022e3c6f017b337271054c80bc80574aa85cb1",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-same-fact",
+      "input": "data/superforecasting-cli/reject-same-fact-input.json",
+      "raw_input_sha256": "59a175ceea748abf69e8c047e3f26937b06819081c14b0814ef3a74247fd0e0a",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-same-group",
+      "input": "data/superforecasting-cli/reject-same-group-input.json",
+      "raw_input_sha256": "bd512b3b7d940f3d7f0951b53114224233f66f06802210a0816052792a501f8c",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-one-hypothesis-only",
+      "input": "data/superforecasting-cli/reject-one-hypothesis-only-input.json",
+      "raw_input_sha256": "977d25f4c32dddbf3ae90a477b5efe5763435a7cd5a63b0123bd95ed478f4a48",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-negative-ratio",
+      "input": "data/superforecasting-cli/reject-negative-ratio-input.json",
+      "raw_input_sha256": "4477e69cf0eafe0d2ca2aeb9c3cd7ab8474af75f447a7d12b6815b8693ed08a1",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-wrong-posterior",
+      "input": "data/superforecasting-cli/reject-wrong-posterior-input.json",
+      "raw_input_sha256": "0e873778335b1d04f138aadbc6805852666baa5d577c68740140af4ba508c23f",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-bad-parent",
+      "input": "data/superforecasting-cli/reject-bad-parent-input.json",
+      "raw_input_sha256": "e29180aa8610178f8ddb6b74ca3da96e050360033421d6323663278df65d14f0",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-bool-probability",
+      "input": "data/superforecasting-cli/reject-bool-probability-input.json",
+      "raw_input_sha256": "8ac154808e361e998ee561f25d79db0f6aee7f43106432cf3648ed5a8b150ea5",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-above-one",
+      "input": "data/superforecasting-cli/reject-above-one-input.json",
+      "raw_input_sha256": "c9b925af13941a00176ab33cc3fcaae9ba2edd459dcbca687e61f469728da49d",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-nonfinite-probability",
+      "input": "data/superforecasting-cli/reject-nonfinite-probability-input.json",
+      "raw_input_sha256": "91da501b725a4f3b9aa6eea0f34724932445f47f42b70d70379b1daa45035787",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-both-likelihoods-zero",
+      "input": "data/superforecasting-cli/reject-both-likelihoods-zero-input.json",
+      "raw_input_sha256": "cace7674991e30306e71ecca915cdab61243ff7ea62785a821b59f647dbc01eb",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-conditional-history",
+      "input": "data/superforecasting-cli/reject-conditional-history-input.json",
+      "raw_input_sha256": "af4d7d2ed72a413247226e5736099bbd93c6288dfaa6212da019f16e140bb502",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-certain-impossible",
+      "input": "data/superforecasting-cli/reject-certain-impossible-input.json",
+      "raw_input_sha256": "2a41010e69857c1975477a4a50625467e9a0c33f8b8c262105c1e99605d5cf27",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-amendment-parent",
+      "input": "data/superforecasting-cli/reject-amendment-parent-input.json",
+      "raw_input_sha256": "e4a9e77686ce6c1115a110e2bee555255092045771a7ddd082e99d52b052a7d0",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-negative-early",
+      "input": "data/superforecasting-cli/reject-negative-early-input.json",
+      "raw_input_sha256": "e135d897ed907d135bd27c3e3f1b39e2dcd99ad47d58334600aecf73e0c9a060",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-negative-invented-occurrence",
+      "input": "data/superforecasting-cli/reject-negative-invented-occurrence-input.json",
+      "raw_input_sha256": "768461496b720b5f45fce6f29fec07f2b1a45dd6493e9a1642d13640cbdd9d1e",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-resolution-no-source",
+      "input": "data/superforecasting-cli/reject-resolution-no-source-input.json",
+      "raw_input_sha256": "a08e2a432e115696857cde9681f3a9f70e303176edd79d89dd6e71b0302cd16a",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-chain-mutation",
+      "input": "data/superforecasting-cli/reject-chain-mutation-input.json",
+      "raw_input_sha256": "44093bdff85373dce6ff08ed7077b70678676c66ca25a4ec1b2a209377588edd",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-catalog-hash",
+      "input": "data/superforecasting-cli/reject-catalog-hash-input.json",
+      "raw_input_sha256": "74679463383bae12b9aff3b47df4252c4e3ad789c86064c2d5caf09060fd5412",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "reject-empirical-skill",
+      "input": "data/superforecasting-cli/reject-empirical-skill-input.json",
+      "raw_input_sha256": "eccf74e6ee7237fdbe75bd1d3d831917491521d32086dbe4280981ebd56898ee",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "duplicate",
+      "input": "data/superforecasting-cli/duplicate-input.txt",
+      "raw_input_sha256": "dfd205aeecbcf824d6da92dcf6cfd8102bc604002f14aa2356923cbfcaae789b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "nan",
+      "input": "data/superforecasting-cli/nan-input.txt",
+      "raw_input_sha256": "bc9de3fde4d33e012a2f8a6673f3c266bf45170616bec42d9cd18b612af003cb",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "infinity",
+      "input": "data/superforecasting-cli/infinity-input.txt",
+      "raw_input_sha256": "5eebdf3a3e2bfbcc90294a2bcfd1e950ca504951bdc2133b1eb9bc987d22da23",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    },
+    {
+      "id": "negative-infinity",
+      "input": "data/superforecasting-cli/negative-infinity-input.txt",
+      "raw_input_sha256": "9232890e7641c0010c2d67b61dfbb60de2ffe216857579242b18ea9087afc4bd",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4ba95b92a58a9ba16890e14d25d8f155dc09fd9cfcc88a5f2411e7376c73407c",
+        "markdown": "9224665df06f677a7caed1dd4d6a9d315076d3708e60bcc8f817ff32361a0f4e"
+      }
+    }
+  ]
+}

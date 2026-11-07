@@ -1,0 +1,562 @@
+# Superforecasting Workbench
+
+Status: accepted
+
+Arithmetic andledger correctness are not demonstrated human expertise,geopolitical skill orhistorical tournament replication.
+Book later chapters andGJP file-level rights/completeness remain unverified;no corpus acquired.
+Source facts andworkflow context areseparate fromeditorial schema,cutoff,binning andreport conventions.
+
+```json
+{
+  "status": "accepted",
+  "task": "reference-class",
+  "profile": {
+    "id": "tetlock-mellers-binary-forecast-updates-v1",
+    "sha256": "bd6d71ded4dbb2ddc1f60b230c46daff2b735793f6bfe4098899d49bfc6b9933",
+    "catalog_sha256": "7502f901d5e17b31e7e798e192473bc8ae73854e863484c2f65a6f251d841e0b"
+  },
+  "request": {
+    "schema_version": 1,
+    "profile": {
+      "id": "tetlock-mellers-binary-forecast-updates-v1",
+      "sha256": "bd6d71ded4dbb2ddc1f60b230c46daff2b735793f6bfe4098899d49bfc6b9933",
+      "catalog_sha256": "7502f901d5e17b31e7e798e192473bc8ae73854e863484c2f65a6f251d841e0b"
+    },
+    "task": "reference-class",
+    "payload": {
+      "id": "class1",
+      "version": 1,
+      "target_question_id": "q1",
+      "definition": "Original finite synthetic historical switch events",
+      "eligibility_rule": "All distinct synthetic switch events in the declared historical window",
+      "frozen_at": "2024-12-30T00:00:00Z",
+      "availability_cutoff": "2024-12-29T00:00:00Z",
+      "comparability": "Synthetic demonstration only;no population representativeness claimed.",
+      "members": [
+        {
+          "id": "m0",
+          "event_id": "historical-0",
+          "dependency_group": "history",
+          "eligibility": "included",
+          "reason": "Eligible under the frozen synthetic rule",
+          "status": "resolved",
+          "outcome": 1,
+          "event_at": "2024-12-01T00:00:00Z",
+          "observed_at": "2024-12-20T00:00:00Z",
+          "source": {
+            "id": "member-0",
+            "locator": "original:member-0",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: member-0",
+            "snapshot_sha256": "b2c56227f8f73938d69b8476d05b6b3db549b170d49e1ec2529994a990cd45d8",
+            "available_at": "2024-12-20T00:00:00Z"
+          }
+        },
+        {
+          "id": "m1",
+          "event_id": "historical-1",
+          "dependency_group": "history",
+          "eligibility": "included",
+          "reason": "Eligible under the frozen synthetic rule",
+          "status": "resolved",
+          "outcome": 1,
+          "event_at": "2024-12-02T00:00:00Z",
+          "observed_at": "2024-12-20T00:00:00Z",
+          "source": {
+            "id": "member-1",
+            "locator": "original:member-1",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: member-1",
+            "snapshot_sha256": "80a4c7004b3e2d93e9aa55f08b6428c23aefcac01f76ebefbb798af6d4c87443",
+            "available_at": "2024-12-20T00:00:00Z"
+          }
+        },
+        {
+          "id": "m2",
+          "event_id": "historical-2",
+          "dependency_group": "history",
+          "eligibility": "included",
+          "reason": "Eligible under the frozen synthetic rule",
+          "status": "resolved",
+          "outcome": 1,
+          "event_at": "2024-12-03T00:00:00Z",
+          "observed_at": "2024-12-20T00:00:00Z",
+          "source": {
+            "id": "member-2",
+            "locator": "original:member-2",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: member-2",
+            "snapshot_sha256": "019f9724fabd99e5cffc8e64da53e9be85e9d6984ddbebcfcf637cca5d88680b",
+            "available_at": "2024-12-20T00:00:00Z"
+          }
+        },
+        {
+          "id": "m3",
+          "event_id": "historical-3",
+          "dependency_group": "history",
+          "eligibility": "included",
+          "reason": "Eligible under the frozen synthetic rule",
+          "status": "resolved",
+          "outcome": 1,
+          "event_at": "2024-12-04T00:00:00Z",
+          "observed_at": "2024-12-20T00:00:00Z",
+          "source": {
+            "id": "member-3",
+            "locator": "original:member-3",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: member-3",
+            "snapshot_sha256": "1bbccc0692938b7c36f4e745a8cfbc084dff169af1bf68d8e9a9abc49dd86a1d",
+            "available_at": "2024-12-20T00:00:00Z"
+          }
+        },
+        {
+          "id": "m4",
+          "event_id": "historical-4",
+          "dependency_group": "history",
+          "eligibility": "included",
+          "reason": "Eligible under the frozen synthetic rule",
+          "status": "resolved",
+          "outcome": 1,
+          "event_at": "2024-12-05T00:00:00Z",
+          "observed_at": "2024-12-20T00:00:00Z",
+          "source": {
+            "id": "member-4",
+            "locator": "original:member-4",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: member-4",
+            "snapshot_sha256": "6a3969d2f67626987e4933118d5ec0702baa408e8c00f5bbe8d0e53c34fcf81c",
+            "available_at": "2024-12-20T00:00:00Z"
+          }
+        }
+      ],
+      "source": {
+        "id": "class-source",
+        "locator": "original:class-source",
+        "rights": "self_authored",
+        "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+        "snapshot": "Original synthetic software validation evidence: class-source",
+        "snapshot_sha256": "cba781691cf75ace7849c564f835eec03241068d1c0e83ffe164e9331d17aa72",
+        "available_at": "2024-12-29T00:00:00Z"
+      }
+    }
+  },
+  "request_sha256": "f370715f3af2ee82ae3adaf60c4316b60ab126865dfa0e704fc7615bfa95fe01",
+  "source_freeze_sha256": "b8c23a38db5511a2d6a73f8dddce441b22731b4e2de4d5e76b38ce1b22754563",
+  "sources": [
+    {
+      "id": "superforecasting-book-v1",
+      "technique_id": 51,
+      "rank": 1,
+      "author": "Philip E. Tetlock and Dan Gardner",
+      "edition": "Superforecasting:The Art and Science of Prediction;2016paperback;ISBN9780804136716;352pages;Crown;2016-09-13",
+      "url": "https://www.penguinrandomhouse.com/books/227815/superforecasting-by-philip-e-tetlock-and-dan-gardner/",
+      "locator": "Publisher format metadata;2015-09-29ebook separately listed",
+      "ingestion": "facts_only",
+      "rights_note": "Publisher copyright;facts-only metadata,not full book ingestion.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "superforecasting-mellers-v1",
+      "technique_id": 51,
+      "rank": 2,
+      "author": "Barbara Mellers et al.",
+      "edition": "Psychological Strategies for Winning a Geopolitical Forecasting Tournament;Psychological Science25(5),1106–1115;online2014-03-21;May2014issue;DOI10.1177/0956797614524255",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24659192/",
+      "locator": "Original rank2locator;PubMed content unavailable here;metadata/fulltext verified separately throughSAGE andauthor witness",
+      "ingestion": "facts_only",
+      "rights_note": "Facts-only;PubMed URL is preserved,not evidence of local successful fulltext access.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "superforecasting-book-excerpt-v1",
+      "technique_id": 51,
+      "rank": null,
+      "author": "Philip E. Tetlock and Dan Gardner / Penguin Random House",
+      "edition": "Publisher-authorized2016excerpt;Chapter1 An Optimistic Skeptic",
+      "url": "https://www.penguinrandomhouseretail.com/book/?isbn=9780804136716",
+      "locator": "Excerpt section;dated,recorded andindependently assessed forecasts;no detailed later-chapter coverage inferred",
+      "ingestion": "facts_only",
+      "rights_note": "All rights reserved;explicit permission required for excerpt reproduction. Read only;no excerpt retained in repository.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "superforecasting-commandments-v1",
+      "technique_id": 51,
+      "rank": null,
+      "author": "Good Judgment / Philip Tetlock and Dan Gardner",
+      "edition": "Ten Commandments for Aspiring Superforecasters;primary organization publication of book-derived guidance",
+      "url": "https://goodjudgment.com/philip-tetlocks-10-commandments-of-superforecasting/",
+      "locator": "Items2,3,4,6,7,8,9,10;separate from publisher chapter excerpt",
+      "ingestion": "facts_only",
+      "rights_note": "Facts-only original brief paraphrase;no article text redistributed.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "superforecasting-mellers-sage-v1",
+      "technique_id": 51,
+      "rank": null,
+      "author": "Barbara Mellers et al. / SAGE",
+      "edition": "2014publisher metadata,abstract andOpen Practices statement",
+      "url": "https://journals.sagepub.com/doi/pdf/10.1177/0956797614524255",
+      "locator": "Bibliographic metadata;abstract;data-sharing statement;restricted-access article",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright authors2014;SAGE reprints/permissions. Facts only;abstract is not a dataset license.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "superforecasting-mellers-author-v1",
+      "technique_id": 51,
+      "rank": null,
+      "author": "Barbara Mellers et al. / University of Pennsylvania",
+      "edition": "Author-hosted10page2014article witness,internal pages1–10;publication pages1106–1115 verified separately",
+      "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2015/07/2014---psychological-strategies-for-winning-a-tournament.pdf",
+      "locator": "Methods pp3–4,results pp4–9;Note1decomposition;do not assume byte identity withpublisher PDF",
+      "ingestion": "facts_only",
+      "rights_note": "Author copyright2014;legitimate author access,facts-only notes,no PDF/figures redistributed.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "superforecasting-proper-scores-v1",
+      "technique_id": 51,
+      "rank": null,
+      "author": "Tilmann Gneiting and Adrian E. Raftery",
+      "edition": "Strictly Proper Scoring Rules,Prediction,andEstimation;JASA102(477),359–378;2007;DOI10.1198/016214506000001437",
+      "url": "https://sites.stat.washington.edu/people/raftery/Research/PDF/Gneiting2007jasa.pdf",
+      "locator": "Section1 propriety andorientation;Section3 finite categorical/quadratic/logarithmic scores",
+      "ingestion": "facts_only",
+      "rights_note": "Copyright2007American Statistical Association;author-hosted access;math facts only,no PDF redistribution.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "superforecasting-bayes-v1",
+      "technique_id": 51,
+      "rank": null,
+      "author": "MIT OpenCourseWare18.05",
+      "edition": "Spring2022Class12 Prediction andOdds;21slide primary teaching handout",
+      "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_lec12.pdf",
+      "locator": "Slides10–14odds/Bayes factor;18sequential updating",
+      "ingestion": "facts_only",
+      "rights_note": "Facts-only mathematical identity;no slide text/images redistributed or broad third-party image license assumed.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "superforecasting-iarpa-data-v1",
+      "technique_id": 51,
+      "rank": null,
+      "author": "IARPA",
+      "edition": "IARPA Announces Publication ofData from theGood Judgment Project;2017-04-28",
+      "url": "https://www.iarpa.gov/newsroom/article/iarpa-announces-publication-of-data-from-the-good-judgment-project",
+      "locator": "Announcement links HarvardGJP archive anddescribes four-year forecast release",
+      "ingestion": "facts_only",
+      "rights_note": "Public announcement verifies existence,not file-level license/consent/completeness.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "superforecasting-dataverse-v1",
+      "technique_id": 51,
+      "rank": null,
+      "author": "Good Judgment Project / Harvard Dataverse",
+      "edition": "GJP repository access attempted2026-11-07;metadata/file rights not inspected",
+      "url": "https://dataverse.harvard.edu/dataverse/gjp",
+      "locator": "HTML human-verification response;public metadata API403;no dataset acquired",
+      "ingestion": "facts_only",
+      "rights_note": "Unknown file-level terms;no dataset redistribution or empirical certification authorized bythis audit.",
+      "checked_on": "2026-11-07",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    }
+  ],
+  "result": {
+    "input": {
+      "id": "class1",
+      "version": 1,
+      "target_question_id": "q1",
+      "definition": "Original finite synthetic historical switch events",
+      "eligibility_rule": "All distinct synthetic switch events in the declared historical window",
+      "frozen_at": "2024-12-30T00:00:00Z",
+      "availability_cutoff": "2024-12-29T00:00:00Z",
+      "comparability": "Synthetic demonstration only;no population representativeness claimed.",
+      "members": [
+        {
+          "id": "m0",
+          "event_id": "historical-0",
+          "dependency_group": "history",
+          "eligibility": "included",
+          "reason": "Eligible under the frozen synthetic rule",
+          "status": "resolved",
+          "outcome": 1,
+          "event_at": "2024-12-01T00:00:00Z",
+          "observed_at": "2024-12-20T00:00:00Z",
+          "source": {
+            "id": "member-0",
+            "locator": "original:member-0",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: member-0",
+            "snapshot_sha256": "b2c56227f8f73938d69b8476d05b6b3db549b170d49e1ec2529994a990cd45d8",
+            "available_at": "2024-12-20T00:00:00Z"
+          }
+        },
+        {
+          "id": "m1",
+          "event_id": "historical-1",
+          "dependency_group": "history",
+          "eligibility": "included",
+          "reason": "Eligible under the frozen synthetic rule",
+          "status": "resolved",
+          "outcome": 1,
+          "event_at": "2024-12-02T00:00:00Z",
+          "observed_at": "2024-12-20T00:00:00Z",
+          "source": {
+            "id": "member-1",
+            "locator": "original:member-1",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: member-1",
+            "snapshot_sha256": "80a4c7004b3e2d93e9aa55f08b6428c23aefcac01f76ebefbb798af6d4c87443",
+            "available_at": "2024-12-20T00:00:00Z"
+          }
+        },
+        {
+          "id": "m2",
+          "event_id": "historical-2",
+          "dependency_group": "history",
+          "eligibility": "included",
+          "reason": "Eligible under the frozen synthetic rule",
+          "status": "resolved",
+          "outcome": 1,
+          "event_at": "2024-12-03T00:00:00Z",
+          "observed_at": "2024-12-20T00:00:00Z",
+          "source": {
+            "id": "member-2",
+            "locator": "original:member-2",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: member-2",
+            "snapshot_sha256": "019f9724fabd99e5cffc8e64da53e9be85e9d6984ddbebcfcf637cca5d88680b",
+            "available_at": "2024-12-20T00:00:00Z"
+          }
+        },
+        {
+          "id": "m3",
+          "event_id": "historical-3",
+          "dependency_group": "history",
+          "eligibility": "included",
+          "reason": "Eligible under the frozen synthetic rule",
+          "status": "resolved",
+          "outcome": 1,
+          "event_at": "2024-12-04T00:00:00Z",
+          "observed_at": "2024-12-20T00:00:00Z",
+          "source": {
+            "id": "member-3",
+            "locator": "original:member-3",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: member-3",
+            "snapshot_sha256": "1bbccc0692938b7c36f4e745a8cfbc084dff169af1bf68d8e9a9abc49dd86a1d",
+            "available_at": "2024-12-20T00:00:00Z"
+          }
+        },
+        {
+          "id": "m4",
+          "event_id": "historical-4",
+          "dependency_group": "history",
+          "eligibility": "included",
+          "reason": "Eligible under the frozen synthetic rule",
+          "status": "resolved",
+          "outcome": 1,
+          "event_at": "2024-12-05T00:00:00Z",
+          "observed_at": "2024-12-20T00:00:00Z",
+          "source": {
+            "id": "member-4",
+            "locator": "original:member-4",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: member-4",
+            "snapshot_sha256": "6a3969d2f67626987e4933118d5ec0702baa408e8c00f5bbe8d0e53c34fcf81c",
+            "available_at": "2024-12-20T00:00:00Z"
+          }
+        }
+      ],
+      "source": {
+        "id": "class-source",
+        "locator": "original:class-source",
+        "rights": "self_authored",
+        "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+        "snapshot": "Original synthetic software validation evidence: class-source",
+        "snapshot_sha256": "cba781691cf75ace7849c564f835eec03241068d1c0e83ffe164e9331d17aa72",
+        "available_at": "2024-12-29T00:00:00Z"
+      }
+    },
+    "sha256": "15c2cfb60b0708012148c3115ba91d0b762a4ef7b43087fb126d61ce79c0903e",
+    "members": [
+      {
+        "id": "m0",
+        "event_id": "historical-0",
+        "dependency_group": "history",
+        "eligibility": "included",
+        "reason": "Eligible under the frozen synthetic rule",
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2024-12-01T00:00:00Z",
+        "observed_at": "2024-12-20T00:00:00Z",
+        "source": {
+          "id": "member-0",
+          "locator": "original:member-0",
+          "rights": "self_authored",
+          "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+          "snapshot": "Original synthetic software validation evidence: member-0",
+          "snapshot_sha256": "b2c56227f8f73938d69b8476d05b6b3db549b170d49e1ec2529994a990cd45d8",
+          "available_at": "2024-12-20T00:00:00Z"
+        }
+      },
+      {
+        "id": "m1",
+        "event_id": "historical-1",
+        "dependency_group": "history",
+        "eligibility": "included",
+        "reason": "Eligible under the frozen synthetic rule",
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2024-12-02T00:00:00Z",
+        "observed_at": "2024-12-20T00:00:00Z",
+        "source": {
+          "id": "member-1",
+          "locator": "original:member-1",
+          "rights": "self_authored",
+          "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+          "snapshot": "Original synthetic software validation evidence: member-1",
+          "snapshot_sha256": "80a4c7004b3e2d93e9aa55f08b6428c23aefcac01f76ebefbb798af6d4c87443",
+          "available_at": "2024-12-20T00:00:00Z"
+        }
+      },
+      {
+        "id": "m2",
+        "event_id": "historical-2",
+        "dependency_group": "history",
+        "eligibility": "included",
+        "reason": "Eligible under the frozen synthetic rule",
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2024-12-03T00:00:00Z",
+        "observed_at": "2024-12-20T00:00:00Z",
+        "source": {
+          "id": "member-2",
+          "locator": "original:member-2",
+          "rights": "self_authored",
+          "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+          "snapshot": "Original synthetic software validation evidence: member-2",
+          "snapshot_sha256": "019f9724fabd99e5cffc8e64da53e9be85e9d6984ddbebcfcf637cca5d88680b",
+          "available_at": "2024-12-20T00:00:00Z"
+        }
+      },
+      {
+        "id": "m3",
+        "event_id": "historical-3",
+        "dependency_group": "history",
+        "eligibility": "included",
+        "reason": "Eligible under the frozen synthetic rule",
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2024-12-04T00:00:00Z",
+        "observed_at": "2024-12-20T00:00:00Z",
+        "source": {
+          "id": "member-3",
+          "locator": "original:member-3",
+          "rights": "self_authored",
+          "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+          "snapshot": "Original synthetic software validation evidence: member-3",
+          "snapshot_sha256": "1bbccc0692938b7c36f4e745a8cfbc084dff169af1bf68d8e9a9abc49dd86a1d",
+          "available_at": "2024-12-20T00:00:00Z"
+        }
+      },
+      {
+        "id": "m4",
+        "event_id": "historical-4",
+        "dependency_group": "history",
+        "eligibility": "included",
+        "reason": "Eligible under the frozen synthetic rule",
+        "status": "resolved",
+        "outcome": 1,
+        "event_at": "2024-12-05T00:00:00Z",
+        "observed_at": "2024-12-20T00:00:00Z",
+        "source": {
+          "id": "member-4",
+          "locator": "original:member-4",
+          "rights": "self_authored",
+          "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+          "snapshot": "Original synthetic software validation evidence: member-4",
+          "snapshot_sha256": "6a3969d2f67626987e4933118d5ec0702baa408e8c00f5bbe8d0e53c34fcf81c",
+          "available_at": "2024-12-20T00:00:00Z"
+        }
+      }
+    ],
+    "included_resolved_ids": [
+      "m0",
+      "m1",
+      "m2",
+      "m3",
+      "m4"
+    ],
+    "numerator": 5,
+    "denominator": 5,
+    "base_rate": {
+      "status": "finite",
+      "exact": "1",
+      "decimal": "1.000000000000",
+      "reason": null
+    },
+    "counts": {
+      "universe": 5,
+      "eligibility": {
+        "included": 5,
+        "excluded": 0,
+        "ambiguous": 0
+      },
+      "statuses": {
+        "resolved": 5,
+        "unresolved": 0,
+        "disputed": 0,
+        "void": 0
+      },
+      "unique_events": 5,
+      "dependency_groups": 1
+    },
+    "limits": [
+      "Observed frequency is not a guarantee of future probability or population certainty.",
+      "Membership,availability andcomparability are declarations;nominal n isnot an independent effective sample size."
+    ]
+  },
+  "code_sha256": "6d5d5609717fd9ed309383fe0ea9a4935e7392397eef8dbcc33e5bc206fa9e67",
+  "limits": [
+    "Arithmetic andledger correctness are not demonstrated human expertise,geopolitical skill orhistorical tournament replication.",
+    "Book later chapters andGJP file-level rights/completeness remain unverified;no corpus acquired.",
+    "Source facts andworkflow context areseparate fromeditorial schema,cutoff,binning andreport conventions."
+  ],
+  "report_sha256": "35bba7f1038d32b128d3c51ed2c8f4dfec4774235efdcf9b3d886482a8f3a966"
+}
+```
+

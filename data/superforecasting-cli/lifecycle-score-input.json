@@ -1,0 +1,584 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "tetlock-mellers-binary-forecast-updates-v1",
+    "sha256": "bd6d71ded4dbb2ddc1f60b230c46daff2b735793f6bfe4098899d49bfc6b9933",
+    "catalog_sha256": "7502f901d5e17b31e7e798e192473bc8ae73854e863484c2f65a6f251d841e0b"
+  },
+  "task": "score",
+  "payload": {
+    "schema_version": 1,
+    "profile_sha256": "bd6d71ded4dbb2ddc1f60b230c46daff2b735793f6bfe4098899d49bfc6b9933",
+    "plan": {
+      "study_id": "synthetic-study",
+      "created_at": "2025-01-01T00:00:00Z",
+      "evidence_mode": "synthetic_software_validation",
+      "domain": "synthetic-switches",
+      "horizon": "fixed-window",
+      "partition": {
+        "frozen_at": "2024-12-31T00:00:00Z",
+        "train_groups": [
+          "history"
+        ],
+        "test_groups": [
+          "test1"
+        ]
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "version": 1,
+          "event_id": "event1",
+          "dependency_group": "test1",
+          "partition": "test",
+          "text": "Will synthetic switch 1 enter state 1 in the declared observation window?",
+          "event_definition": "Binary occurrence recorded by the synthetic switch log",
+          "window_start": "2025-01-01T00:00:00Z",
+          "window_end": "2025-01-10T00:00:00Z",
+          "cutoff": "2025-01-03T00:00:00Z",
+          "created_at": "2024-12-31T00:00:00Z",
+          "locked_at": "2024-12-31T00:00:00Z",
+          "timezone": "UTC",
+          "clarity_confirmed": true,
+          "resolution": {
+            "source_ref": "original-synthetic-switch-log",
+            "positive_rule": "First state1 observation within the half-open window",
+            "negative_rule": "No state1 observation through the complete window",
+            "dispute_policy": "Disputed questions are excluded pending a sourced correction",
+            "void_policy": "Incomplete observation logs void the question"
+          },
+          "class_id": "class1",
+          "class_sha256": "beaeee6344c02525dcbb5e6933069bb89a454a85c24893e0ffbb701a6158bae7",
+          "baseline": {
+            "kind": "reference_class",
+            "probability": "3/10",
+            "frozen_at": "2024-12-31T00:00:00Z",
+            "domain": "synthetic-switches",
+            "horizon": "fixed-window",
+            "source": {
+              "id": "baseline-source",
+              "locator": "original:baseline-source",
+              "rights": "self_authored",
+              "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+              "snapshot": "Original synthetic software validation evidence: baseline-source",
+              "snapshot_sha256": "ee865768d0e9b7ee132821254268aabfb5d991fbfd408ed585e6f2d4b252fc43",
+              "available_at": "2024-12-30T00:00:00Z"
+            }
+          },
+          "reasoning": {
+            "base_rate_rationale": "Documentary synthetic reasoning only",
+            "comparability": "Documentary synthetic reasoning only",
+            "assumptions": [],
+            "subquestions": [],
+            "evidence_gaps": [],
+            "alternatives": [],
+            "dependence": "Documentary synthetic reasoning only",
+            "disagreement": "Documentary synthetic reasoning only"
+          },
+          "source": {
+            "id": "question-source",
+            "locator": "original:question-source",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: question-source",
+            "snapshot_sha256": "7d584a19ae00f69e020e04d21268fa118b6ee1b1a046cfbee85622bf1659dacf",
+            "available_at": "2024-12-30T00:00:00Z"
+          }
+        }
+      ],
+      "classes": [
+        {
+          "id": "class1",
+          "version": 1,
+          "target_question_id": "q1",
+          "definition": "Original finite synthetic historical switch events",
+          "eligibility_rule": "All distinct synthetic switch events in the declared historical window",
+          "frozen_at": "2024-12-30T00:00:00Z",
+          "availability_cutoff": "2024-12-29T00:00:00Z",
+          "comparability": "Synthetic demonstration only;no population representativeness claimed.",
+          "members": [
+            {
+              "id": "m0",
+              "event_id": "historical-0",
+              "dependency_group": "history",
+              "eligibility": "included",
+              "reason": "Eligible under the frozen synthetic rule",
+              "status": "resolved",
+              "outcome": 1,
+              "event_at": "2024-12-01T00:00:00Z",
+              "observed_at": "2024-12-20T00:00:00Z",
+              "source": {
+                "id": "member-0",
+                "locator": "original:member-0",
+                "rights": "self_authored",
+                "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+                "snapshot": "Original synthetic software validation evidence: member-0",
+                "snapshot_sha256": "b2c56227f8f73938d69b8476d05b6b3db549b170d49e1ec2529994a990cd45d8",
+                "available_at": "2024-12-20T00:00:00Z"
+              }
+            },
+            {
+              "id": "m1",
+              "event_id": "historical-1",
+              "dependency_group": "history",
+              "eligibility": "included",
+              "reason": "Eligible under the frozen synthetic rule",
+              "status": "resolved",
+              "outcome": 1,
+              "event_at": "2024-12-02T00:00:00Z",
+              "observed_at": "2024-12-20T00:00:00Z",
+              "source": {
+                "id": "member-1",
+                "locator": "original:member-1",
+                "rights": "self_authored",
+                "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+                "snapshot": "Original synthetic software validation evidence: member-1",
+                "snapshot_sha256": "80a4c7004b3e2d93e9aa55f08b6428c23aefcac01f76ebefbb798af6d4c87443",
+                "available_at": "2024-12-20T00:00:00Z"
+              }
+            },
+            {
+              "id": "m2",
+              "event_id": "historical-2",
+              "dependency_group": "history",
+              "eligibility": "included",
+              "reason": "Eligible under the frozen synthetic rule",
+              "status": "resolved",
+              "outcome": 1,
+              "event_at": "2024-12-03T00:00:00Z",
+              "observed_at": "2024-12-20T00:00:00Z",
+              "source": {
+                "id": "member-2",
+                "locator": "original:member-2",
+                "rights": "self_authored",
+                "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+                "snapshot": "Original synthetic software validation evidence: member-2",
+                "snapshot_sha256": "019f9724fabd99e5cffc8e64da53e9be85e9d6984ddbebcfcf637cca5d88680b",
+                "available_at": "2024-12-20T00:00:00Z"
+              }
+            },
+            {
+              "id": "m3",
+              "event_id": "historical-3",
+              "dependency_group": "history",
+              "eligibility": "included",
+              "reason": "Eligible under the frozen synthetic rule",
+              "status": "resolved",
+              "outcome": 0,
+              "event_at": "2024-12-04T00:00:00Z",
+              "observed_at": "2024-12-20T00:00:00Z",
+              "source": {
+                "id": "member-3",
+                "locator": "original:member-3",
+                "rights": "self_authored",
+                "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+                "snapshot": "Original synthetic software validation evidence: member-3",
+                "snapshot_sha256": "1bbccc0692938b7c36f4e745a8cfbc084dff169af1bf68d8e9a9abc49dd86a1d",
+                "available_at": "2024-12-20T00:00:00Z"
+              }
+            },
+            {
+              "id": "m4",
+              "event_id": "historical-4",
+              "dependency_group": "history",
+              "eligibility": "included",
+              "reason": "Eligible under the frozen synthetic rule",
+              "status": "resolved",
+              "outcome": 0,
+              "event_at": "2024-12-05T00:00:00Z",
+              "observed_at": "2024-12-20T00:00:00Z",
+              "source": {
+                "id": "member-4",
+                "locator": "original:member-4",
+                "rights": "self_authored",
+                "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+                "snapshot": "Original synthetic software validation evidence: member-4",
+                "snapshot_sha256": "6a3969d2f67626987e4933118d5ec0702baa408e8c00f5bbe8d0e53c34fcf81c",
+                "available_at": "2024-12-20T00:00:00Z"
+              }
+            },
+            {
+              "id": "m5",
+              "event_id": "historical-5",
+              "dependency_group": "history",
+              "eligibility": "included",
+              "reason": "Eligible under the frozen synthetic rule",
+              "status": "resolved",
+              "outcome": 0,
+              "event_at": "2024-12-06T00:00:00Z",
+              "observed_at": "2024-12-20T00:00:00Z",
+              "source": {
+                "id": "member-5",
+                "locator": "original:member-5",
+                "rights": "self_authored",
+                "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+                "snapshot": "Original synthetic software validation evidence: member-5",
+                "snapshot_sha256": "7a132046ab2dece3d5a6e074bf672b503e41a5e6fa4a46ccc6492342a982e802",
+                "available_at": "2024-12-20T00:00:00Z"
+              }
+            },
+            {
+              "id": "m6",
+              "event_id": "historical-6",
+              "dependency_group": "history",
+              "eligibility": "included",
+              "reason": "Eligible under the frozen synthetic rule",
+              "status": "resolved",
+              "outcome": 0,
+              "event_at": "2024-12-07T00:00:00Z",
+              "observed_at": "2024-12-20T00:00:00Z",
+              "source": {
+                "id": "member-6",
+                "locator": "original:member-6",
+                "rights": "self_authored",
+                "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+                "snapshot": "Original synthetic software validation evidence: member-6",
+                "snapshot_sha256": "4fb9f6db24a04ca5191e98c461f07a2010598ff8d11fef41b929289a691ba1c7",
+                "available_at": "2024-12-20T00:00:00Z"
+              }
+            },
+            {
+              "id": "m7",
+              "event_id": "historical-7",
+              "dependency_group": "history",
+              "eligibility": "included",
+              "reason": "Eligible under the frozen synthetic rule",
+              "status": "resolved",
+              "outcome": 0,
+              "event_at": "2024-12-08T00:00:00Z",
+              "observed_at": "2024-12-20T00:00:00Z",
+              "source": {
+                "id": "member-7",
+                "locator": "original:member-7",
+                "rights": "self_authored",
+                "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+                "snapshot": "Original synthetic software validation evidence: member-7",
+                "snapshot_sha256": "b3891163980c3aaf9d38be9e161f503b1871a57c1af0199ecf683ea97bcf565e",
+                "available_at": "2024-12-20T00:00:00Z"
+              }
+            },
+            {
+              "id": "m8",
+              "event_id": "historical-8",
+              "dependency_group": "history",
+              "eligibility": "included",
+              "reason": "Eligible under the frozen synthetic rule",
+              "status": "resolved",
+              "outcome": 0,
+              "event_at": "2024-12-09T00:00:00Z",
+              "observed_at": "2024-12-20T00:00:00Z",
+              "source": {
+                "id": "member-8",
+                "locator": "original:member-8",
+                "rights": "self_authored",
+                "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+                "snapshot": "Original synthetic software validation evidence: member-8",
+                "snapshot_sha256": "f60c7a635c556c921a35312e862a7178464561ab6a4136cffc795cdd8690b07f",
+                "available_at": "2024-12-20T00:00:00Z"
+              }
+            },
+            {
+              "id": "m9",
+              "event_id": "historical-9",
+              "dependency_group": "history",
+              "eligibility": "included",
+              "reason": "Eligible under the frozen synthetic rule",
+              "status": "resolved",
+              "outcome": 0,
+              "event_at": "2024-12-10T00:00:00Z",
+              "observed_at": "2024-12-20T00:00:00Z",
+              "source": {
+                "id": "member-9",
+                "locator": "original:member-9",
+                "rights": "self_authored",
+                "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+                "snapshot": "Original synthetic software validation evidence: member-9",
+                "snapshot_sha256": "119152113fcdb397d68fb82c202cc4100cecc72e9c2f4b8cb973e293d548e8b5",
+                "available_at": "2024-12-20T00:00:00Z"
+              }
+            }
+          ],
+          "source": {
+            "id": "class-source",
+            "locator": "original:class-source",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: class-source",
+            "snapshot_sha256": "cba781691cf75ace7849c564f835eec03241068d1c0e83ffe164e9331d17aa72",
+            "available_at": "2024-12-29T00:00:00Z"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "forecast_id": "f1",
+          "question_id": "q1",
+          "participant": "person1",
+          "participant_kind": "individual"
+        }
+      ],
+      "provenance": {
+        "id": "study-source",
+        "locator": "original:study-source",
+        "rights": "self_authored",
+        "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+        "snapshot": "Original synthetic software validation evidence: study-source",
+        "snapshot_sha256": "852af0c234dfa57c63067f12e4adb05ef1d3716e1dd8584ec9808d2e88225918",
+        "available_at": "2024-12-30T00:00:00Z"
+      }
+    },
+    "plan_sha256": "208330a00ef66380ecbbdf9a9a4dd37dfe63827a6a66f16ef72354dec20a3af0",
+    "actions": [
+      {
+        "sequence": 1,
+        "kind": "forecast",
+        "at": "2025-01-01T12:00:00Z",
+        "record": {
+          "forecast_id": "f1",
+          "question_id": "q1",
+          "question_version": 1,
+          "question_sha256": "a14062b371e53d0275db7d2804522bf17fe1d739ba0cb69c1b1ab38fb28d9ee9",
+          "participant": "person1",
+          "version": 1,
+          "parent_sha256": null,
+          "recorded_at": "2025-01-01T12:00:00Z",
+          "knowledge_at": "2025-01-01T12:00:00Z",
+          "probability": "1/5",
+          "mode": "manual",
+          "reason": "Original synthetic judgment",
+          "evidence": [],
+          "assumptions": [
+            "Submitted probability is a synthetic judgment,not measured expertise"
+          ],
+          "outcome_known": false,
+          "bayes": null
+        },
+        "parent_sha256": "208330a00ef66380ecbbdf9a9a4dd37dfe63827a6a66f16ef72354dec20a3af0",
+        "decision": "accepted",
+        "reason": null,
+        "sha256": "32219adc71be56e098e12a214d71652899b01f09732cd1c24e95eebec126f36a"
+      },
+      {
+        "sequence": 2,
+        "kind": "forecast",
+        "at": "2025-01-02T12:00:00Z",
+        "record": {
+          "forecast_id": "f1",
+          "question_id": "q1",
+          "question_version": 1,
+          "question_sha256": "a14062b371e53d0275db7d2804522bf17fe1d739ba0cb69c1b1ab38fb28d9ee9",
+          "participant": "person1",
+          "version": 2,
+          "parent_sha256": "db2ab0209e8241f3d038627060979e25068828324da53cac29810222b3dd9144",
+          "recorded_at": "2025-01-02T12:00:00Z",
+          "knowledge_at": "2025-01-02T12:00:00Z",
+          "probability": "2/5",
+          "mode": "manual",
+          "reason": "Manual synthetic revision",
+          "evidence": [],
+          "assumptions": [
+            "Submitted probability is a synthetic judgment,not measured expertise"
+          ],
+          "outcome_known": false,
+          "bayes": null
+        },
+        "parent_sha256": "32219adc71be56e098e12a214d71652899b01f09732cd1c24e95eebec126f36a",
+        "decision": "accepted",
+        "reason": null,
+        "sha256": "9158eaf2b7f6914b2d9f59debd1b30d779ed1a57eaf30b2a5d8fee5db3ab09b1"
+      },
+      {
+        "sequence": 3,
+        "kind": "update",
+        "at": "2025-01-02T18:00:00Z",
+        "record": {
+          "forecast_id": "f1",
+          "question_id": "q1",
+          "question_version": 1,
+          "question_sha256": "a14062b371e53d0275db7d2804522bf17fe1d739ba0cb69c1b1ab38fb28d9ee9",
+          "participant": "person1",
+          "version": 3,
+          "parent_sha256": "29e67255741f343542207ab4d9c9aaf025d468864f51089a24e6a6e2fe9e7113",
+          "recorded_at": "2025-01-02T18:00:00Z",
+          "knowledge_at": "2025-01-02T18:00:00Z",
+          "probability": "2/3",
+          "mode": "bayes",
+          "reason": "Explicit synthetic likelihood-ratio update",
+          "evidence": [
+            {
+              "id": "evidence1",
+              "dependency_group": "evidence-group1",
+              "original_fact_id": "fact1",
+              "statement": "An original synthetic observation,not geopolitical evidence",
+              "source": {
+                "id": "source-evidence1",
+                "locator": "original:source-evidence1",
+                "rights": "self_authored",
+                "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+                "snapshot": "Original synthetic software validation evidence: source-evidence1",
+                "snapshot_sha256": "a3d7718607436ee4118c6d4108253dee5288e57a4b73bfaee47c2db7470d2726",
+                "available_at": "2025-01-02T18:00:00Z"
+              }
+            }
+          ],
+          "assumptions": [
+            "Submitted probability is a synthetic judgment,not measured expertise"
+          ],
+          "outcome_known": false,
+          "bayes": {
+            "kind": "ratio",
+            "ratio": "3",
+            "likelihood_h": null,
+            "likelihood_not_h": null,
+            "dependence": "first",
+            "conditioned_on": [],
+            "independent_given_h": false,
+            "independent_given_not_h": false,
+            "model_status": "user_assumed",
+            "measurement_notes": "Assumed illustrative likelihood model;not measured evidence",
+            "source": {
+              "id": "likelihood-evidence1",
+              "locator": "original:likelihood-evidence1",
+              "rights": "self_authored",
+              "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+              "snapshot": "Original synthetic software validation evidence: likelihood-evidence1",
+              "snapshot_sha256": "52ad6f9f37c4c6ee357d02e0c7e3e0e39e793c137fa6a1f7c631c487a8430a19",
+              "available_at": "2025-01-02T18:00:00Z"
+            }
+          }
+        },
+        "parent_sha256": "9158eaf2b7f6914b2d9f59debd1b30d779ed1a57eaf30b2a5d8fee5db3ab09b1",
+        "decision": "accepted",
+        "reason": null,
+        "sha256": "58df18a7ee8221285a0bc41dc30a1a575a851c2ab71508e52f8e40be36fb53b6"
+      },
+      {
+        "sequence": 4,
+        "kind": "update",
+        "at": "2025-01-02T19:00:00Z",
+        "record": {
+          "forecast_id": "f1",
+          "question_id": "q1",
+          "question_version": 1,
+          "question_sha256": "a14062b371e53d0275db7d2804522bf17fe1d739ba0cb69c1b1ab38fb28d9ee9",
+          "participant": "person1",
+          "version": 4,
+          "parent_sha256": "4e2287405043df24c2852f20af9d54dce45ed5a113349007ce14fd566b86c8e2",
+          "recorded_at": "2025-01-02T19:00:00Z",
+          "knowledge_at": "2025-01-02T19:00:00Z",
+          "probability": "6/7",
+          "mode": "bayes",
+          "reason": "Explicit synthetic likelihood-ratio update",
+          "evidence": [
+            {
+              "id": "evidence1",
+              "dependency_group": "evidence-group1",
+              "original_fact_id": "fact1",
+              "statement": "An original synthetic observation,not geopolitical evidence",
+              "source": {
+                "id": "source-evidence1",
+                "locator": "original:source-evidence1",
+                "rights": "self_authored",
+                "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+                "snapshot": "Original synthetic software validation evidence: source-evidence1",
+                "snapshot_sha256": "a3d7718607436ee4118c6d4108253dee5288e57a4b73bfaee47c2db7470d2726",
+                "available_at": "2025-01-02T19:00:00Z"
+              }
+            }
+          ],
+          "assumptions": [
+            "Submitted probability is a synthetic judgment,not measured expertise"
+          ],
+          "outcome_known": false,
+          "bayes": {
+            "kind": "ratio",
+            "ratio": "3",
+            "likelihood_h": null,
+            "likelihood_not_h": null,
+            "dependence": "independent",
+            "conditioned_on": [],
+            "independent_given_h": true,
+            "independent_given_not_h": true,
+            "model_status": "user_assumed",
+            "measurement_notes": "Assumed illustrative likelihood model;not measured evidence",
+            "source": {
+              "id": "likelihood-evidence1",
+              "locator": "original:likelihood-evidence1",
+              "rights": "self_authored",
+              "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+              "snapshot": "Original synthetic software validation evidence: likelihood-evidence1",
+              "snapshot_sha256": "52ad6f9f37c4c6ee357d02e0c7e3e0e39e793c137fa6a1f7c631c487a8430a19",
+              "available_at": "2025-01-02T19:00:00Z"
+            }
+          }
+        },
+        "parent_sha256": "58df18a7ee8221285a0bc41dc30a1a575a851c2ab71508e52f8e40be36fb53b6",
+        "decision": "rejected",
+        "reason": "Duplicate evidence ID orunderlying fact",
+        "sha256": "ecf57881c0b8709b2643da17a2a64c02f24603b2f675a4586dec2a73edf349fe"
+      },
+      {
+        "sequence": 5,
+        "kind": "forecast",
+        "at": "2025-01-04T00:00:00Z",
+        "record": {
+          "forecast_id": "f1",
+          "question_id": "q1",
+          "question_version": 1,
+          "question_sha256": "a14062b371e53d0275db7d2804522bf17fe1d739ba0cb69c1b1ab38fb28d9ee9",
+          "participant": "person1",
+          "version": 4,
+          "parent_sha256": "4e2287405043df24c2852f20af9d54dce45ed5a113349007ce14fd566b86c8e2",
+          "recorded_at": "2025-01-04T00:00:00Z",
+          "knowledge_at": "2025-01-04T00:00:00Z",
+          "probability": "9/10",
+          "mode": "manual",
+          "reason": "Manual synthetic revision",
+          "evidence": [],
+          "assumptions": [
+            "Submitted probability is a synthetic judgment,not measured expertise"
+          ],
+          "outcome_known": false,
+          "bayes": null
+        },
+        "parent_sha256": "ecf57881c0b8709b2643da17a2a64c02f24603b2f675a4586dec2a73edf349fe",
+        "decision": "accepted",
+        "reason": null,
+        "sha256": "eb485b3b1491fea0e1903cf95e35e4a3d0a383f827b41809b42a3e0b32376431"
+      },
+      {
+        "sequence": 6,
+        "kind": "resolve",
+        "at": "2025-01-11T00:00:00Z",
+        "record": {
+          "question_id": "q1",
+          "question_version": 1,
+          "question_sha256": "a14062b371e53d0275db7d2804522bf17fe1d739ba0cb69c1b1ab38fb28d9ee9",
+          "version": 1,
+          "parent_sha256": null,
+          "status": "resolved",
+          "outcome": 1,
+          "occurrence_at": "2025-01-05T00:00:00Z",
+          "window_end": "2025-01-10T00:00:00Z",
+          "outcome_known_at": "2025-01-05T01:00:00Z",
+          "publication_at": "2025-01-06T00:00:00Z",
+          "recorded_at": "2025-01-11T00:00:00Z",
+          "reason": "Original synthetic resolution;no real outcome represented",
+          "source": {
+            "id": "resolution-0-1",
+            "locator": "original:resolution-0-1",
+            "rights": "self_authored",
+            "attribution": "Original synthetic fixture;no actual participant or geopolitical skill.",
+            "snapshot": "Original synthetic software validation evidence: resolution-0-1",
+            "snapshot_sha256": "0472157d25ef5d7a471d1aa970350a908c0f90687e75d8be1b9b908515e82de4",
+            "available_at": "2025-01-06T00:00:00Z"
+          }
+        },
+        "parent_sha256": "eb485b3b1491fea0e1903cf95e35e4a3d0a383f827b41809b42a3e0b32376431",
+        "decision": "accepted",
+        "reason": null,
+        "sha256": "8c42f98ef770d5042fec19611347a0dc532e2486be0a9d8a445ab6437f2ef3aa"
+      }
+    ]
+  }
+}

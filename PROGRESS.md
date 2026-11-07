@@ -1158,3 +1158,9 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-07 — #51 independent verification
 - All23 frozen families pass:30independent Bayes anchors,22loss/bin/log cases,reference membership denominators,ancestry/time boundaries,evidence guards,exact-category decomposition,paired scoring andfuture-outcome isolation. 74accepted/rejected in-process scenarios match declared outcomes.
 - Full synthetic lifecycle preserves original/manual/Bayes/late versions andduplicate-evidence rejected attempt;selected version isdetermined before scoring. Source/profile tampering andreport mutation isolation checks pass. All119new tests pass. No human/empirical skill orpublished tournament replication claimed.
+
+## 2026-11-07 — #51 CLI/report corpus and checkout replay
+- Saved43accepted/35rejected JSON/Markdown pairs:156actual CLI cases spanning the full synthetic lifecycle,base rates,Bayes/dependence/ancestry,time boundaries,statuses,score scales,log endpoints,calibration/decomposition andsource/rights/skill rejection. Raw Unicode/whitespace inputs andbothoutput hashes recorded.
+- Corpus-local -text preserves raw bytes. Both autocrlf=true/false exports verify235raw corpus files plus3normalized code/oracle/fixture commitments. Compact review:data/superforecasting-synthetic-summary.md.
+- All1717tests pass (1598inherited+119new). Full inherited CLI/verifier acceptance isrunning;no readiness yet.
+- Git whitespace attributes exempt only intentional Markdown terminal blank lines andthe named raw-whitespace input fixture;all code/history checks remain active. Both checkout exports rechecked afterthis corpus-local policy.
