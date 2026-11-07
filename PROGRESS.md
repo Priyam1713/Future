@@ -1401,3 +1401,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-08 — #59 resource audit
 - Preserved three ranked sources and five variations. Official UCAR equations/solver conventions and Moler classical RK4 inspected; ranked full-text access gaps explicit. Candidate finite deterministic simulation only. No production engine yet.
+
+## 2026-11-08 — #59 source/profile freeze
+- Frozen Lorenz63 scalar RK4,exact nominal time grid,bounded explicit initial pair,complete h/h2 integrations andseparate separation/refinement diagnostics. Independent exact stages andTaylor recurrence will freeze beforeproduction.

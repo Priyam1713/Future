@@ -1,0 +1,105 @@
+{
+  "id": "chaos-theory-lorenz63-rk4-v1",
+  "version": 1,
+  "technique_id": 59,
+  "scope": "Deterministic Lorenz Dynamics, Perturbation Sensitivity and Finite-Horizon Simulation Scope",
+  "source_manifest_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1",
+  "source_freeze_sha256": "9663f768b409a7fe59d56f65415df4121d005836f705dc1207beca56b0d88695",
+  "schema": {
+    "root": [
+      "schema_version",
+      "profile",
+      "parameters",
+      "initial",
+      "perturbed_initial",
+      "integration",
+      "provenance"
+    ],
+    "profile": [
+      "id",
+      "version",
+      "sha256",
+      "catalog_sha256"
+    ],
+    "parameters": [
+      "sigma",
+      "rho",
+      "beta"
+    ],
+    "integration": [
+      "solver",
+      "dt",
+      "steps",
+      "trace_stride"
+    ],
+    "provenance": [
+      "synthetic",
+      "source_ref",
+      "rights",
+      "attribution",
+      "snapshot",
+      "snapshot_sha256"
+    ]
+  },
+  "equations": [
+    "f(x,y,z)=(sigma*(y-x),x*(rho-z)-y,x*y-beta*z)",
+    "k1=f(s); k2=f(s+h*k1/2); k3=f(s+h*k2/2); k4=f(s+h*k3)",
+    "snew[j]=s[j]+(h/6)*(k1[j]+2*k2[j]+2*k3[j]+k4[j])"
+  ],
+  "contract": [
+    "Strict exact root and nested fields; versions exactinteger1; pinned canonical profile/catalog/source hashes. Input not mutated. Only solver classical_rk4.",
+    "All numeric ODE parameters,dt andstatecomponents are rational STRINGS matching -?(0|nonzero up to9digits)(/positive up to9digits)?; no floats,integers,bools,decimalpoints,exponents or whitespace. Fraction then once converted to IEEE754 binary64. Equivalent rational spellings share mathematics but retain distinct request hashes.",
+    "sigma in(0,50],rho in(0,100],beta in(0,20]; each initial component in[-100,100]; exactly3 components. dt in[1/100000,1/20],steps exactinteger0..4096,trace_stride exactinteger1..4096,steps*dt<=50 dimensionless model units.",
+    "Explicit base andperturbed initial states; no RNG orimplicit perturbation. Four full integrations: base/perturbed at h andh/2 with N and2N steps. No skipped integration at output stride. Every RK4 intermediate state,derivative andcompleted state mustbe finite andabsolute<=1000000; otherwise reject whole request withoutpartialresult.",
+    "Frozen scalar Python binary64 operation order exactly as equations; h*k/2 at stages2/3; h*k atstage4; weighted sum left-to-right; final h/6 multiplication. No adaptive stepping,FMA,vector reassociation orSciPy RK45 substitution.",
+    "Nominal aligned times are exact Fraction i*dt strings; actual integration uses float(dt) and float(dt)/2,not rounded accumulated times. Every row has coarse/refined base/perturbed states,their Euclidean separations andeach coarse-refined state difference via math.hypot.",
+    "Return initial/final andindices divisible bytrace_stride; diagnostics maxima computed overALL N+1aligned times includingunreturned rows. T0 valid:initialstates only,refinement errors0. Initialzero separation leaves amplification undefined/null; otherwise final_refined_separation/initial_separation,explicitly not Lyapunov exponent.",
+    "Preflight work=24*steps derivative evaluations; returned numericcells=17*(numberofreturnedrows),caps100000and100000. Count includes exacttime/index,12statecomponents and4distances. Metadata bounded4000characters. No earlystop/truncation/hiddenhorizon.",
+    "Provenance synthetic=true,rights=self_authored,knownsource_ref,nonemptyattribution/snapshot<=4000characters andexactUTF8snapshotSHA. Declarations/hashes do not certify source truth or rights in real data.",
+    "Numerical verification: one-step/stages against exactFraction RK4 absolute1e-12; independent local Taylor80/100reference agreement<1e-60,short-horizon convergence observed not analytically bounded; symmetry/fixedpoints anddeterministicreplay. Long chaotic trajectories carry no accuracy certification.",
+    "Refinement differences approximate diagnostics,not rigorous errorbounds. State separation isinitial-condition sensitivity,not numericalerror. No global Lyapunov exponent,validated forecast horizon,weather skill,delay embedding,reservoir training or dataassimilation."
+  ],
+  "bounds": {
+    "steps": 4096,
+    "time_max": "50",
+    "dt_min": "1/100000",
+    "dt_max": "1/20",
+    "state_guard": 1000000,
+    "work": 100000,
+    "returned_cells": 100000
+  },
+  "numeric": {
+    "arithmetic": "IEEE754 binary64 scalar Python",
+    "oracle": "ExactFraction RK4 stages and independent Taylor coefficient recurrence",
+    "one_step_absolute_tolerance": "1e-12",
+    "model_time": "dimensionless"
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Bounded deterministic Lorenz63 classical RK4",
+      "Explicit paired initial states,aligned separation",
+      "Full h/h2 integration and matched refinement diagnostics"
+    ],
+    "experimental_research_only": [
+      "Synthetic sensitivity interpretation"
+    ],
+    "unsupported": [
+      "Certified Lyapunov exponent or forecast horizon",
+      "Nonlinear delay embedding",
+      "Reservoir computing",
+      "Empirical weather-like ensembles",
+      "Random/stochastic/data assimilation modes"
+    ]
+  },
+  "backlog": {
+    "P1": [
+      "Obtain permitted full ranked texts and refine source-equivalence locators",
+      "Rigorous numerical error bounds and empirical held-out validation before any forecast-horizon claim"
+    ],
+    "P2": [
+      "Global/finite-time Lyapunov estimators with independent reference",
+      "Nonlinear delay embedding and reservoir computing",
+      "Data assimilation and empirical weather-like ensembles"
+    ]
+  }
+}
