@@ -1,0 +1,116 @@
+{
+  "id": "causal-ai-finite-discrete-backdoor-v1",
+  "version": 1,
+  "technique_id": 56,
+  "scope": "Finite Discrete Causal DAG and Identifiable Back-Door Adjustment Scope",
+  "source_manifest_sha256": "c56f7f98dc6a48fdab97587c09e04ef711ec91792f43980596d15ac766889230",
+  "source_freeze_sha256": "912bf09650cae99e295227c6a8727229a8b71cdf3f77f07c386944e4af3ca66c",
+  "schema": {
+    "root": [
+      "schema_version",
+      "profile",
+      "nodes",
+      "edges",
+      "treatment",
+      "outcome",
+      "outcome_value",
+      "adjustment",
+      "joint",
+      "assumptions",
+      "provenance"
+    ],
+    "profile": [
+      "id",
+      "version",
+      "sha256",
+      "catalog_sha256"
+    ],
+    "node": [
+      "id",
+      "states",
+      "observed"
+    ],
+    "joint_row": [
+      "assignment",
+      "weight"
+    ],
+    "assumptions": [
+      "causal_graph",
+      "consistency",
+      "exchangeability_under_graph",
+      "selection_bias"
+    ],
+    "provenance": [
+      "synthetic",
+      "source_ref",
+      "rights",
+      "attribution",
+      "snapshot",
+      "snapshot_sha256"
+    ]
+  },
+  "equations": [
+    "No Z descendant of X in original DAG; X and Y d-separated by Z after removal of OUTGOING X edges",
+    "P(Y=y|do(X=x))=sum_z P(Y=y|X=x,Z=z)*P(Z=z)",
+    "Positive P(z) requires positive P(x,z) for every treatment level; zero-mass strata skipped explicitly",
+    "Observational P(Y=y|X=x) and first-versus-last treatment-level risk differences are distinct outputs",
+    "All-observed graph compatibility: P(v)=product_i P(v_i|parents_i) for every complete assignment,including zero cells"
+  ],
+  "contract": [
+    "Strict exact fields and pinned profile/catalog hashes. schema_version/profile.version exact integer1. Opaque IDs ASCII1..64. Nodes2..8,unique ids; states2..3 unique IDs sorted lexicographically for canonical risk/contrast order; observed exactbool. Edges distinct directed pairs,known endpoints,no self-edge,no cycle.",
+    "Treatment/outcome distinct observed nodes; outcome_value declared state. Adjustment distinct known observed nodes,excluding treatment/outcome. Descendants of treatment yield accepted unsupported_adjustment diagnostic,not an estimate. Latent nodes yield unsupported_latent_graph; no latent identification certified.",
+    "joint explicitly contains exactly one row for EVERY assignment of OBSERVED nodes,including zero weights; row.assignment exact observed keys anddeclared states. Complete observed Cartesian product<=4096. Weights exact nonnegative rationals,total exactly1; no implicit missing cells,duplicates or normalization/smoothing.",
+    "Input rationals integer (notbool) or signed integer/positive-denominator strings,each component<=18digits. No float,decimal,exponent,leadingzero,-zero or zero denominator. Output reduced Fraction strings. Guard each addition,multiplication anddivision by conservative8192-bit numerator/denominator reservations before the operation.",
+    "Assumptions exactbooleans causal_graph=true,consistency=true,exchangeability_under_graph=true,selection_bias=false are declared,not inferred from data. No causal learning,source truth or real-world adequacy certification.",
+    "Production d-separation uses a bounded active-trail direction-state traversal with ancestors of conditioning set. Independently verify through complete simple-path collider/noncollider enumeration before engine. Original sufficient criterion only,not generalized adjustment or general do-calculus.",
+    "All-observed exact factorization compatibility checked for every complete joint assignment. Conditional factor with zero parent marginal yields product0 for that assignment; any positive full-row cannot have zero parent marginal. Latent graphs report compatibility not_checked. Compatibility is necessary mathematical consistency,not proof of causal truth or faithfulness.",
+    "Diagnostic priority: unsupported_latent_graph,unsupported_adjustment,incompatible_joint_graph,not_estimable_positivity,identified_under_declared_assumptions. Each failed gate leaves interventional=null. Observational conditionals may still be reported; zero treatment mass gives null observational probability.",
+    "For valid compatible graphs, aggregate marginal P(z) and joint P(x,z),P(y,x,z). All positive P(z) require overlap for ALL declared X levels. Zero P(z) strata listed and skipped; any missing positive-mass overlap prevents ALL interventional estimates. Report exact per-stratum terms,each risk and first-minus-last contrast named explicitly.",
+    "Canonical nodes,edges,adjustment,row assignments and state labels. Model hash binds graph,assumptions and query; table hash binds sorted rows. Input/report hashes retain exact original input order. Inputs not mutated.",
+    "Synthetic provenance true,self_authored rights,source_ref in frozen catalog,nonempty attribution/snapshot<=4000characters and exact UTF8 snapshot SHA. No real dataset ingestion; declarations/hashes are not independent rights or causal validation.",
+    "Preflight complete cells<=4096,nodes<=8,states<=3,edges<=28;work reservation joint_cells*nodes*nodes*8<=5000000;returned_cells=joint_cells*nodes+strata*treatment_states*8<=100000. No exponential simple-path production search; individual maxima cannot combine freely. Actual CPU/memory measurements required before closure."
+  ],
+  "bounds": {
+    "nodes": 8,
+    "states": 3,
+    "edges": 28,
+    "joint_cells": 4096,
+    "work": 5000000,
+    "returned_cells": 100000,
+    "rational_component_digits": 18,
+    "integer_bits": 8192
+  },
+  "configuration_matrix": {
+    "supported": [
+      "Synthetic categorical assumed DAGs",
+      "All-observed exact joint/graph compatibility",
+      "Supplied-set sufficient back-door checks",
+      "Exact standardized and observational probabilities with overlap diagnostics"
+    ],
+    "experimental_research_only": [
+      "Interpreting synthetic risks as empirical causal forecasts"
+    ],
+    "unsupported": [
+      "Latent-graph effect estimation",
+      "General do-calculus/front-door/IV identification",
+      "Individual counterfactual uplift",
+      "Continuous/learned models",
+      "Causal graph discovery",
+      "Empirical clinical or policy claims"
+    ]
+  },
+  "backlog": {
+    "P1": [
+      "Lawful full-book/latest-revision source access and edition-specific equation verification",
+      "Empirical dataset-specific provenance,consent,causal assumptions,selection/measurement and sensitivity review",
+      "Latent-variable identification and separately verified front-door/IV extensions"
+    ],
+    "P2": [
+      "General do-calculus ID algorithm",
+      "Continuous estimators and statistical uncertainty",
+      "Structural-equation language and individual counterfactual uplift",
+      "Large-scale graphs and learned mechanisms"
+    ]
+  },
+  "runtime": "Python standard library offline CPU; no DoWhy/NetworkX installation or code copying"
+}

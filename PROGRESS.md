@@ -1323,3 +1323,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-07 — #56 resource audit only
 - After #55 closure9fd9c39 pushed and clean0/0, preserved3 ranked sources/5 variations and audited9 primary references. Recommend exact finite DAG/supplied-set back-door checks,positivity,graph-table compatibility and standardization; latent/general identification unsupported. Literal structural toy contrasts1/5 adjusted versus2/5 observational; no56runtime/profile/production fixtures. Source-access/rights limits and P1/P2 recorded.
+
+## 2026-11-07 — #56 source/profile freeze
+- Frozen exact finite categorical DAG/supplied-set back-door reference. Distinct graph validity,graph-table compatibility,adjustment,positivity and declared causal assumptions; failed gates return no causal estimate. Latent graphs/general identification unsupported. Independent structural/path fixtures follow before engine.
