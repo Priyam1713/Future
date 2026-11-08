@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "runtime_snapshot_commit": "2724685816fd033bb44c30a821016bbcb8d82b9a",
+  "exports": [
+    {
+      "autocrlf": "false",
+      "passed": true,
+      "actual_cli_replays": 670,
+      "by_technique": {
+        "55": 110,
+        "56": 92,
+        "57": 128,
+        "58": 134,
+        "59": 98,
+        "60": 108
+      },
+      "raw_corpus_files": 1011,
+      "normalized_commitments": 19
+    },
+    {
+      "autocrlf": "true",
+      "passed": true,
+      "actual_cli_replays": 670,
+      "by_technique": {
+        "55": 110,
+        "56": 92,
+        "57": 128,
+        "58": 134,
+        "59": 98,
+        "60": 108
+      },
+      "raw_corpus_files": 1011,
+      "normalized_commitments": 19
+    }
+  ],
+  "method": "Fresh git checkout-index exports ofstagedcurrentruntime,pinnedknowledge andall55\u201360corpora;actual subprocesses hashrawstdoutwithoutnewline normalization.",
+  "scope": "Mutablegapsstatusindex excluded;not readbytheseengines. FulllegacyCLIreplay runsseparately infinalacceptance;earliercorecheckoutreceipts retained.",
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "cli_workers": 4
+}

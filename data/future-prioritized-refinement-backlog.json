@@ -1,0 +1,1545 @@
+{
+  "version": 1,
+  "prioritization_basis": "Practicalvalue,correctnessrisk andeffort;editorial schedulingguidance,not extraimplementedfeatures.",
+  "groups": [
+    {
+      "priority": "P1",
+      "group": "Scientific/empirical validation",
+      "value": "Highest before broader accuracy claims",
+      "correctness_risk": "High if software verification ispresentedasempiricalproof",
+      "effort": "High;requiresindependentdata/protocols",
+      "actions": [
+        "Preregister held-out scoring,matched baselines andinformation-availability rules beforeclaimingskill",
+        "Keep historical/appearance/speculative cores inreference scopes;validateeach advertised empiricaluse separately"
+      ],
+      "technique_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    {
+      "priority": "P1",
+      "group": "Missing source access and rights",
+      "value": "High;unblocks defensible rules anddistribution",
+      "correctness_risk": "High",
+      "effort": "Medium/high depending onpermissions",
+      "actions": [
+        "Obtain permitted edition-specific passages andresolveprovisionalvariationlocators",
+        "Retain existinglicense/kernel/data notices anddistributionrestrictions;readingaccessisnotredistributionpermission"
+      ],
+      "technique_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    {
+      "priority": "P1",
+      "group": "Real dataset ingestion",
+      "value": "High forforecasting research",
+      "correctness_risk": "High;leakage/rights/vintage",
+      "effort": "High",
+      "actions": [
+        "Freeze lawful datasets,units,identities,timestamps andsourcevintages",
+        "Prioritizeindependentforecastdatasets onlywhenmatchedcontrols andtrain/testavailabilitycanbepreserved"
+      ],
+      "technique_ids": [
+        43,
+        44,
+        45,
+        46,
+        49,
+        51,
+        53,
+        55,
+        56,
+        57,
+        58,
+        59
+      ]
+    },
+    {
+      "priority": "P1/P2",
+      "group": "Advanced mathematical extensions",
+      "value": "Medium/high onlyafterindependentanchors",
+      "correctness_risk": "High if scopeexpanded prematurely",
+      "effort": "High",
+      "actions": [
+        "Prioritize source-boundedjudgmentidentification,numericalerror andcausalassumption gapsbeforeparameterexpansion",
+        "Keepgeneraldo-calculus,advancedEEG/quantum/Lyapunov/reservoir/marketmodels separate versionedprofiles"
+      ],
+      "technique_ids": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    {
+      "priority": "P1/P2",
+      "group": "Historical/source variation expansion",
+      "value": "Medium;selected practicaltraditions",
+      "correctness_risk": "High if conflictingconventionsaremerged",
+      "effort": "Medium/high",
+      "actions": [
+        "Resolve mostuseful directsourcecomponents andpublish workedexamples",
+        "Retain exactinventorynames,traditionseparation andunsupportedlabels;deferobscurevariations"
+      ],
+      "technique_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "priority": "P2",
+      "group": "Cross-engine integrations",
+      "value": "Medium;onlywithreal sharedusecase",
+      "correctness_risk": "High at semanticboundaries",
+      "effort": "Medium/high",
+      "actions": [
+        "Use sevencompatibilitywitnesses todesignexplicitfuturemappings",
+        "Reconcilequestionidentity,resolution/cutoff,units,availability andcausal/conditionalmeaning beforeconnectorcode"
+      ],
+      "technique_ids": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    {
+      "priority": "P2",
+      "group": "Performance/scalability",
+      "value": "Medium after practical workloademand",
+      "correctness_risk": "Medium;determinism/tolerancepreservation",
+      "effort": "Medium/high",
+      "actions": [
+        "Benchmark realworkloads beforechangingbounds",
+        "Preserveexactoracles,completehorizons,canonicalreplay andnamednumericaltolerances whenoptimizing"
+      ],
+      "technique_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    {
+      "priority": "P2",
+      "group": "Optional UI/API/product integration",
+      "value": "Lower until concreteuserflow exists",
+      "correctness_risk": "Medium;misleadingclaims/externalstate",
+      "effort": "Medium/high",
+      "actions": [
+        "Buildonlyrequestedproductflows aroundstableCLI/Pythoninterfaces",
+        "Keep source/scope/provenancevisible;avoidnewframeworkorliveexternalservice dependencies duringcoreclosure"
+      ],
+      "technique_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    }
+  ],
+  "per_technique": [
+    {
+      "technique_id": 1,
+      "name": "Western Astrology",
+      "source_record": "knowledge/western_core_v1.json",
+      "items": {
+        "technique_id": 1,
+        "policy": "Refinement after Core v1; experimental gaps do not prevent transition. Reprioritize by user value and available sources.",
+        "P1": [
+          {
+            "id": "W1",
+            "work": "Expand direct natal/progression/return interpretations and modern planetary components beyond Sun/Moon/Mercury",
+            "acceptance": "Authorized/source-located records, exact tradition selection and representative input-to-reading tests; no copied textbook text."
+          },
+          {
+            "id": "W2",
+            "work": "One source-complete election category",
+            "acceptance": "Resolve fortification, radix/world-revolution, nodes/lunation and prohibition exceptions; independently verified eligible/rejected examples. Keep experimental until then."
+          },
+          {
+            "id": "W3",
+            "work": "Published absolute L3/L4 releasing chronology",
+            "acceptance": "Match published dates and lower-level bond/parent boundaries; preserve named profile and source discrepancies."
+          },
+          {
+            "id": "W4",
+            "work": "Fresh runtime/time-data validation and packaging review before distribution",
+            "acceptance": "Revalidate any dependency/tzdata update; preserve complete notices; assess kernel and binary distribution rights for the intended package. No automatic upgrades."
+          }
+        ],
+        "P2": [
+          {
+            "id": "W5",
+            "work": "Ancient/Egyptian/historical civil calendars and extended ephemeris range",
+            "acceptance": "Named calendar/time conventions and independent historical fixtures; no silent approximations."
+          },
+          {
+            "id": "W6",
+            "work": "Obscure dignity transmissions, qualitative releasing substitutions, primary directions and wider electional categories",
+            "acceptance": "Only after source/ROI review; independently test any advertised procedure."
+          },
+          {
+            "id": "W7",
+            "work": "Formal event-search completeness, near-polar geometry and observed heliacal visibility",
+            "acceptance": "Bound domain explicitly, benchmark independent adversarial cases; preserve no-fallback errors."
+          },
+          {
+            "id": "W8",
+            "work": "Optional UI, semantic retrieval and expanded security/vulnerability automation",
+            "acceptance": "Only when it improves practical use; no prerequisite framework for the next technique."
+          }
+        ],
+        "unchanged_limits": [
+          "Symbolic historical procedures are not empirically validated personal predictions.",
+          "Hand/Arroyo/Shea/Brennan and modern Valens translations require their own ingestion/redistribution rights.",
+          "Source/local Core v1 Ready is not a binary-distribution or commercial legal certification."
+        ]
+      }
+    },
+    {
+      "technique_id": 2,
+      "name": "Vedic Astrology (Jyotish)",
+      "source_record": "knowledge/vedic_core_v1.json",
+      "items": {
+        "P1": [
+          "Direct source-backed interpretations for the core",
+          "Jaimini seven/eight karaka and Chara-dasha profiles when source-verified",
+          "Selected additional vargas by use case",
+          "Resolve published/source discrepancies when reliable evidence becomes available"
+        ],
+        "P2": [
+          "KP and Prashna as distinct schools",
+          "True nodes/additional ayanamshas with independent tests",
+          "Advanced dashas/yogas/shadbala",
+          "Historical time/calendar expansion",
+          "API/UI and packaging review"
+        ]
+      }
+    },
+    {
+      "technique_id": 3,
+      "name": "Chinese Astrology",
+      "source_record": "knowledge/chinese_core_v1.json",
+      "items": {
+        "P1": [
+          "Select and independently validate a fully named luck-pillar onset/direction/calendar-age convention.",
+          "Verify a source-complete Day Master strength/favorable-element method without inventing scores.",
+          "Add source-specific branch/stem combinations and qualified interpretations.",
+          "Add source-backed local mean/apparent solar clock profiles with independent fixtures."
+        ],
+        "P2": [
+          "Zi Wei Dou Shu engine and separate palace/leap-month schools.",
+          "Nine Star Ki primary procedures and separate profile.",
+          "Obscure lineage differences, full historical/lunar-calendar reconstruction.",
+          "Broader direct interpretation coverage, API/UI and packaging review."
+        ]
+      }
+    },
+    {
+      "technique_id": 4,
+      "name": "Numerology",
+      "source_record": "knowledge/numerology_core_v1.json",
+      "items": {
+        "P1": [
+          "Deeper number-specific interpretations and direct monthly/daily readings",
+          "More published master/name-boundary examples",
+          "Source-verified Chaldean profile"
+        ],
+        "P2": [
+          "Lo Shu",
+          "Gematria alphabets",
+          "Unicode/transliteration profiles",
+          "Obscure compound variants"
+        ]
+      }
+    },
+    {
+      "technique_id": 5,
+      "name": "Horary Astrology",
+      "source_record": "knowledge/horary_engine_v1.json",
+      "items": {
+        "P1": [
+          "Resolve operational seventh-cusp affliction and impedited/unfortunate seventh-lord clearance for advice-intent; p115 does not itself define a mandatory all-row veto or threshold",
+          "Find complete-input published advice-intent chart/judgment in supported domain and matching advice-begins protocol; bounded search documented in horary_judgment_attempt_v1.json",
+          "Verify reception-qualified translation/collection and categorical interference only where needed for selected category",
+          "Resolve Moon application/void-of-course and general caution exceptions without combining schools"
+        ],
+        "P2": [
+          "Additional question categories",
+          "Frawley/Barclay independently sourced profiles",
+          "Expanded historical ephemeris/calendar support",
+          "Source-specific contextual exceptions, terrain/observational visibility and historical fixed-star models; fixed-star-table reconstruction does not block the diagnostic release"
+        ]
+      }
+    },
+    {
+      "technique_id": 6,
+      "name": "Mundane Astrology",
+      "source_record": "knowledge/mundane_core_v1.json",
+      "items": {
+        "P1": [
+          "Additional direct planet-house/outer-planet and qualified aspect interpretations from verified Green pages",
+          "Selected further planetary-cycle pairs and independently validated refinements",
+          "Permitted,documented national/event charts with competing founding moments/source certainty preserved",
+          "Independent eclipse classification,kept separate from syzygy and local visibility",
+          "Investigate Green printed Saturn/time/cusp discrepancies without fitting source values or treating anecdotes as predictive validation"
+        ],
+        "P2": [
+          "Advanced eclipse visibility,duration and geographic doctrine",
+          "Historical calendars,local solar time and disputed founding events",
+          "Specialized financial astrology and obscure lineage procedures",
+          "Separately verified Raphael/Campion methodological profiles"
+        ]
+      }
+    },
+    {
+      "technique_id": 7,
+      "name": "Astrocartography",
+      "source_record": "knowledge/astrocartography_core_v1.json",
+      "items": {
+        "P1": [
+          "Legitimate original-title-page/procedural verification and direct Jim Lewis interpretations",
+          "Additional source-scoped relocation rules and permitted published worked examples",
+          "Further birth-time, pre1972 and near-polar precision validation; expanded date oracle fixtures",
+          "Parans if a named source/convention can be independently verified efficiently"
+        ],
+        "P2": [
+          "Local-space astrology and explicit azimuth/geodesic conventions",
+          "Complex crossings, historical geodetic variants and deeper paran configurations",
+          "Advanced visualization and separately source-reviewed location-ranking experiments"
+        ]
+      }
+    },
+    {
+      "technique_id": 8,
+      "name": "Palmistry",
+      "source_record": "knowledge/palmistry_core_v1.json",
+      "items": {
+        "P1": [
+          "More independently inspected Benham original and Saint-Germain procedures under separate profiles",
+          "Further source-verified line/shape/mount exceptions and hand-context combinations",
+          "Assisted image extraction only after consent,orientation checks,independent landmark accuracy and user correction are established"
+        ],
+        "P2": [
+          "Indian Samudrika original-source review and dermatoglyphics as separate traditions",
+          "Extensive minor marks,timing scales and obscure shape variations",
+          "Advanced vision pipelines only after practical independently validated feasibility"
+        ]
+      }
+    },
+    {
+      "technique_id": 9,
+      "name": "Face Reading / Physiognomy",
+      "source_record": "knowledge/face_reading_core_v1.json",
+      "items": {
+        "P1": [
+          "More legitimate original/permitted regional diagrams and terminology under separate traditions",
+          "Additional historical source examples and critical context,without individualized trait inference",
+          "Improved neutral observation guidance and independently checked annotation conventions"
+        ],
+        "P2": [
+          "Consent-based region localization only after independent extraction accuracy,orientation validation and user correction",
+          "More Hunter volumes and separately scoped Holcroft/Chinese historical source documentation",
+          "Additional archival diagram/edition comparisons"
+        ]
+      }
+    },
+    {
+      "technique_id": 10,
+      "name": "Phrenology",
+      "source_record": "knowledge/phrenology_core_v1.json",
+      "items": {
+        "P1": [
+          "Expand inspected descriptive passages for22 legend-only entries without harmful individualized inference",
+          "Verify Combe original diagrams/edition-specific legends separately; preserve rank2",
+          "Add further independent original-panel position cases and typographic aliases when verified"
+        ],
+        "P2": [
+          "Gall original localization comparison and other edition/translation conflicts",
+          "Optional neutral static schematic after additional source-fidelity checks; no personal assessment"
+        ]
+      }
+    },
+    {
+      "technique_id": 11,
+      "name": "Moleosophy",
+      "source_record": "knowledge/moleosophy_core_v1.json",
+      "items": {
+        "P1": [
+          "Expand selected original-source summaries and independent side/location examples where useful",
+          "Verify remaining historical overlaps/cross-references without silently harmonizing them",
+          "Resolve inventory standalone Fontaine bibliographic title; preserve actual containing work identity",
+          "Contemporary Chinese source author/edition/access/rights verification; keep inventory rank1 unchanged"
+        ],
+        "P2": [
+          "Independently verify Indian sources and lineage-specific distinctions",
+          "Other editions/translations and complex neutral region diagrams when useful"
+        ]
+      }
+    },
+    {
+      "technique_id": 12,
+      "name": "Podomancy / Foot Reading",
+      "source_record": "knowledge/podomancy_core_v1.json",
+      "items": {
+        "P1": [
+          "Legitimate complete procedural access and allowed-use review for ranked Somogyi/Sheehan profiles",
+          "Match original scan/print edition and verify typography/page markers for current anonymous source",
+          "Expand source-supported references/fixtures where useful without inventing individual toe rules"
+        ],
+        "P2": [
+          "Independent original Indian foot-sign sources and lineage separation",
+          "Other historical editions,sole-mark diagrams and source-specific named foot lines"
+        ]
+      }
+    },
+    {
+      "technique_id": 13,
+      "name": "Graphology",
+      "source_record": "knowledge/graphology_core_v1.json",
+      "items": {
+        "P1": [
+          "Verify original ABC and Saudek procedural pages as separate named profiles with rights and independent examples",
+          "Expand selected particular-sign documentary coverage and source exceptions where useful",
+          "More independent historical caption/definition fixtures without copying personal psychological diagnoses"
+        ],
+        "P2": [
+          "Other translations,German holistic terminology and other scripts after verified procedural access",
+          "Calibrated physical/dynamic measurements only if useful and independently supported;no individual-trait inference",
+          "Complex source combinations as documentary references,not personal portraits"
+        ]
+      }
+    },
+    {
+      "technique_id": 14,
+      "name": "Aura Reading",
+      "source_record": "knowledge/aura_core_v1.json",
+      "items": {
+        "P1": [
+          "Verify legitimate Brennan/Kunz procedural access and ingestion rights before adding separate author profiles",
+          "Independently inspect more source-qualified shades/mixtures and published examples only when useful",
+          "Any source-specific layer terminology needs direct source locators;never infer chakra correspondence"
+        ],
+        "P2": [
+          "Other historical editions and terminology conflicts with edition-specific fixtures",
+          "Optional explicitly synthetic creative visualization,without detection or calibrated physical claims",
+          "Optional Kirlian-inspired artistic effect kept separate from corona measurement and metaphysical claims"
+        ]
+      }
+    },
+    {
+      "technique_id": 15,
+      "name": "Iridology",
+      "source_record": "knowledge/iridology_core_v1.json",
+      "items": {
+        "P1": [
+          "Legitimate original Jensen/Deck plate/legend access and rights before separate documentary profiles",
+          "Additional useful original labels and independent transcription cases without clinical inference",
+          "Any quantitative geometry requires explicit original boundaries and separate independent verification;do not infer them from irregular fields"
+        ],
+        "P2": [
+          "Edition-specific differences,printed perimeter numbering and Fig5 documentary reconstruction",
+          "Separately verified Rayid historical terminology only;no actual-person trait classifier",
+          "Optional neutral historical schematic after label fidelity and rights checks"
+        ]
+      }
+    },
+    {
+      "technique_id": 16,
+      "name": "Tarot",
+      "source_record": "knowledge/tarot_core_v1.json",
+      "items": {
+        "P1": [
+          "More verified Waite conditional combinations,recurrence rules and procedural exceptions",
+          "Additional documented layouts and qualified contextual interpretation",
+          "Historical edition collation and source-specific correspondences"
+        ],
+        "P2": [
+          "Separate Tarot de Marseille profile",
+          "Separate Thoth profile",
+          "Etteilla deck and numbering",
+          "Licensed/verified original public-domain imagery",
+          "Optional interactive visualization"
+        ]
+      }
+    },
+    {
+      "technique_id": 17,
+      "name": "Oracle Cards",
+      "source_record": "knowledge/oracle_core_v1.json",
+      "items": {
+        "P1": [
+          "More documented conditional combinations and contextual reading procedures",
+          "Resolve near/far geometry,source perspective discrepancy and image-facing procedures",
+          "Advanced lines,nine-card box and Grand Tableau with complete source fixtures",
+          "Broader historical text collation and exact-pair source examples"
+        ],
+        "P2": [
+          "Separate licensed/source-grounded Kipper profile",
+          "Separate Belline profile",
+          "Separate Sibilla profile",
+          "Independent contemporary themed deck inventories and rights",
+          "Optional separately cleared imagery"
+        ]
+      }
+    },
+    {
+      "technique_id": 18,
+      "name": "I Ching",
+      "source_record": "knowledge/iching_core_v1.json",
+      "items": {
+        "P1": [
+          "Complete traditional physical49-stalk procedure with explicit partition assumptions",
+          "Additional source-verified moving-line selection conventions",
+          "Diplomatic collation of all Legge words/diacritics and additional independent scan fixtures",
+          "More historical transformation examples,advanced variants and separately rights-cleared translation comparisons"
+        ],
+        "P2": [
+          "Separate Mei Hua Yi Shu trigram-number/calendar/body-use profile",
+          "Separate Wen Wang Gua/Six Lines calendar,Na Jia,relations and spirits profile",
+          "Additional translation/commentary traditions",
+          "Separately cleared historical imagery and optional visualization"
+        ]
+      }
+    },
+    {
+      "technique_id": 19,
+      "name": "Rune Casting",
+      "source_record": "knowledge/runes_core_v1.json",
+      "items": {
+        "P1": [
+          "Broader separately tagged historical/comparative poem coverage and sound/name reconstruction refinements",
+          "Authenticate exact print reissue underlying frozen digital excerpt",
+          "Independently source-verify modern divination conventions,qualified combinations and additional spreads",
+          "Source-specific reversals only if legitimately verified"
+        ],
+        "P2": [
+          "Separate Younger Futhark16 profile",
+          "Separate Anglo-Saxon Futhorc profile",
+          "Separate modern Blum blank-rune profile",
+          "Physical/free-casting geometry",
+          "Optional licensed imagery/fonts"
+        ]
+      }
+    },
+    {
+      "technique_id": 20,
+      "name": "Pendulum Divination",
+      "source_record": "knowledge/pendulum_core_v1.json",
+      "items": {
+        "P1": [
+          "Complete Lonegren Kit chart/procedure inspection and exact edition/rights freeze",
+          "Separately verified Lethbridge rates",
+          "Source-grounded question charts and independent boundary geometry",
+          "Additional manual calibration methods/procedural qualifications;recheck current website access"
+        ],
+        "P2": [
+          "Dowsing map geometry",
+          "Letter wheels with finite stopping rules",
+          "Camera/mouse/sensor-based observed motion",
+          "Optional physical visualization",
+          "Additional source-specific charts"
+        ]
+      }
+    },
+    {
+      "technique_id": 21,
+      "name": "Crystal Ball Scrying",
+      "source_record": "knowledge/scrying_core_v1.json",
+      "items": {
+        "P1": [
+          "Thomas original ChIV/ChXII procedure/experimentation chapters",
+          "Additional historical session conventions",
+          "Legitimate source-specific symbol references if independently complete",
+          "More source-verified surfaces/conditions",
+          "Print-edition comparison andsource collation"
+        ],
+        "P2": [
+          "Additional historical traditions",
+          "Optional independently seeded creative scenes/visual fields",
+          "Separately licensed historical imagery",
+          "User-observed optical/sensor functionality if justified"
+        ]
+      }
+    },
+    {
+      "technique_id": 22,
+      "name": "Mirror Scrying",
+      "source_record": "knowledge/mirror_core_v1.json",
+      "items": {
+        "P1": [
+          "Complete Moody1993 book procedure/edition/rights verification",
+          "Additional original preparation/debriefing qualifications",
+          "Other independently verified mirror procedures andbroader fixtures",
+          "Further small-scale journal utility reuse only when justified"
+        ],
+        "P2": [
+          "Separate Dee historical-source profile",
+          "Distinct Dee artifact documentation",
+          "Additional black-mirror traditions",
+          "Optional creative visualization",
+          "Licensed imagery orphysical/optical observation"
+        ]
+      }
+    },
+    {
+      "technique_id": 23,
+      "name": "Dream Interpretation",
+      "source_record": "knowledge/dream_core_v1.json",
+      "items": {
+        "P1": [
+          "More verified Artemidorus contextual motifs",
+          "Separate Freud Brill1913 historical reference profile",
+          "Legitimate Faraday procedural access",
+          "Jung chapter/author-specific method verification",
+          "Automatic exact-span English matcher only after vocabulary/boundary/negation/override fixtures"
+        ],
+        "P2": [
+          "Separate cultural dictionaries",
+          "Broader original-language/translation comparison",
+          "User-consented cross-journal pattern summaries",
+          "Advanced narrative tagging oroptional local LLM assistance",
+          "Licensed imagery oroptional UI"
+        ]
+      }
+    },
+    {
+      "technique_id": 24,
+      "name": "Automatic Writing",
+      "source_record": "knowledge/automatic_writing_core_v1.json",
+      "items": {
+        "P1": [
+          "Stronger exact-print-edition/French manuscript and translation collation; current institutional quotation edition unidentified",
+          "Additional independently documented historical procedures and more detailed interruption conventions",
+          "Moses original page-image concordance and separate historical reference, not spirit verification",
+          "Distinct stream-of-consciousness and ideomotor procedural sources; no provisional mapping treated as proof"
+        ],
+        "P2": [
+          "Separate spiritualist historical profile after source and rights verification",
+          "Optional local creative generation with explicit model authorship and reproducibility limits",
+          "Separate opt-in creative prompts",
+          "Voice transcription or editor only if useful",
+          "Rights-cleared comparative literary examples"
+        ]
+      }
+    },
+    {
+      "technique_id": 26,
+      "name": "Akashic Records",
+      "source_record": "knowledge/akashic_core_v1.json",
+      "items": {
+        "P1": [
+          "Howe complete book versus public-page procedure and edition collation",
+          "More independently verified source-specific concepts and question conventions",
+          "Separate Steiner doctrine/reference profile",
+          "Separate Cayce numbered-reading documentary profile with authorized context",
+          "Broader independent source fixtures"
+        ],
+        "P2": [
+          "Original Theosophical source profile",
+          "Advanced historical comparison without cross-tradition synthesis",
+          "Optional local creative narratives explicitly fictional/model-authored",
+          "Additional rights-cleared texts/examples",
+          "Optional visual or guided creative experience"
+        ]
+      }
+    },
+    {
+      "technique_id": 28,
+      "name": "Tasseography (Tea Leaves)",
+      "source_record": "knowledge/tasseography_core_v1.json",
+      "items": {
+        "P1": [
+          "More Kent dictionary entries,verified combinations and contextual exceptions",
+          "Broader independent original worked-cup comparisons",
+          "Separate executable saucer and Nelros procedures",
+          "Inspect original White/yronwode chapters and rights",
+          "Optional fully specified synthetic seeded arrangements with independent vectors"
+        ],
+        "P2": [
+          "Additional regional tea traditions and independently sourced Turkish-tea methods",
+          "Larger source-grounded dictionaries",
+          "Original vector cup map or user photo annotations",
+          "Independently validated recognition only if useful",
+          "Physically inspired residue generation only with demonstrated benefit"
+        ]
+      }
+    },
+    {
+      "technique_id": 29,
+      "name": "Coffee Ground Reading",
+      "source_record": "knowledge/coffee_core_v1.json",
+      "items": {
+        "P1": [
+          "Legitimate full Bal method/chapter/examples and rights access",
+          "More Ministry motifs and independent original source-context checks",
+          "Further source-specific cup/saucer exception handling;current stuck/upright accounts documentary only",
+          "Regional/Balkan original procedure and chart access",
+          "Separate original Garnier/Ragıp Rıfkı table/translation verification"
+        ],
+        "P2": [
+          "Separate Balkan/regional profiles and dictionaries",
+          "Optional independently specified synthetic symbolic layouts",
+          "Original vector vessel visualization",
+          "User photo annotation;recognition only after independent evaluation",
+          "Physical residue simulation only with demonstrated value"
+        ]
+      }
+    },
+    {
+      "technique_id": 30,
+      "name": "Pyromancy",
+      "source_record": "knowledge/pyromancy_core_v1.json",
+      "items": {
+        "P1": [
+          "Legitimate full Pamita2020 book procedure/edition/chapter access andrights",
+          "Additional source-supported flame andsoot cases",
+          "Independent Betz translation/manuscript comparison forPGMIV",
+          "Better historical lamp context without operational rites",
+          "More sourced smoke/soot distinctions",
+          "Flame-color interpretations only ifverified in an independent source profile"
+        ],
+        "P2": [
+          "Separate historical lamp profile after rights/source checks",
+          "Additional modern candle traditions",
+          "Optional safe original creative visualization",
+          "Independently specified synthetic states/protocol ifuseful",
+          "Camera annotation/recognition only after credible independent evaluation",
+          "Broader historically sourced symbolism"
+        ]
+      }
+    },
+    {
+      "technique_id": 31,
+      "name": "Hydromancy",
+      "source_record": "knowledge/hydromancy_core_v1.json",
+      "items": {
+        "P1": [
+          "Full Tyson water/oil chapters,edition andrights",
+          "Betz lecanomancy passages andtranslation rights",
+          "Independent manuscript/translation comparison",
+          "Additional water-specific procedures andcontextual fixtures",
+          "Ripple/drop/color rules only ifverified"
+        ],
+        "P2": [
+          "Separate regional/historical andoil/water profiles",
+          "Larger source-grounded catalogs",
+          "Optional original creative water visuals",
+          "User-controlled photo annotation",
+          "Recognition orphysical simulation only with independent validation anddemonstrated usefulness"
+        ]
+      }
+    },
+    {
+      "technique_id": 32,
+      "name": "Aeromancy",
+      "source_record": "knowledge/aeromancy_core_v1.json",
+      "items": {
+        "P1": [
+          "More Inwards atmospheric examples andvisually inspected pages",
+          "More individual/regional attribution checks",
+          "Further cloud/wind combinations",
+          "Legitimate Tyson atmospheric chapter/rights access",
+          "Additional separate historical weather-lore profiles"
+        ],
+        "P2": [
+          "Broader regional catalogs",
+          "Voluntary historical-saying versus observed-weather studies kept separate fromforecast validation",
+          "Original labelled creative atmospheric visuals",
+          "Independently versioned synthetic states",
+          "Manual photo annotation before independently evaluated recognition",
+          "Physical atmospheric modelling only ifuseful andindependently validated"
+        ]
+      }
+    },
+    {
+      "technique_id": 33,
+      "name": "Geomancy (Western Divinatory)",
+      "source_record": "knowledge/geomancy_core_v1.json",
+      "items": {
+        "P1": [
+          "Legitimate Greer procedure and worked examples",
+          "Skinner edition/ISBN resolution and original chapters",
+          "Further Turner historical diagram collation without assuming typographical perfection",
+          "Additional independent published shield examples",
+          "Named house projections with complete source-specific fixtures",
+          "Optional separate verified super-judge",
+          "Narrow source-backed figure glosses and interpretations",
+          "Independent versioned seeded generation only if useful"
+        ],
+        "P2": [
+          "Arabic-language ilm al-raml profile with its own source conventions",
+          "Historical variant comparison matrices",
+          "Complete sourced house/aspect/dignity/perfection rules",
+          "Horary judgment frameworks with independent fixtures",
+          "Larger rights-cleared interpretive corpora",
+          "Original diagram rendering",
+          "Empirical research kept separate from symbolic mathematics"
+        ]
+      }
+    },
+    {
+      "technique_id": 34,
+      "name": "Lithomancy",
+      "source_record": "knowledge/lithomancy_core_v1.json",
+      "items": {
+        "P1": [
+          "Saint Germain actual casting/direction/marked-surface chapters",
+          "Complete Wimmer sixteen-role circle/clock/boundary procedure",
+          "Verified complete thirteen-stone profile without merging sources",
+          "Howard book/web collation",
+          "Original source-example image inspection and qualitative independent comparisons",
+          "Additional source-specific nearest/combination conventions"
+        ],
+        "P2": [
+          "Separate Wimmer and Saint Germain executable profiles",
+          "Additional independent gem/coin/stone traditions",
+          "Broader sourced spatial/cluster relations",
+          "Optional explicit synthetic placement distribution and independent vectors",
+          "Original simple spatial diagrams",
+          "User-provided photo annotations before independently evaluated recognition",
+          "Physical toss simulation only with demonstrated value"
+        ]
+      }
+    },
+    {
+      "technique_id": 35,
+      "name": "Osteomancy / Bone Casting",
+      "source_record": "knowledge/osteomancy_core_v1.json",
+      "items": {
+        "P1": [
+          "Inspect legitimate Keightley original-edition historical-procedure pages.",
+          "Better independent inscription cross-references and original-fragment/source provenance.",
+          "Inspect legitimate yronwode object-role/procedure/example chapters before any named contemporary manual charm profile.",
+          "Tsonga archival translation, item-specific licensing and historical-context work."
+        ],
+        "P2": [
+          "Additional Shang witnesses and source-specific translation comparisons.",
+          "Authenticated museum-object references and licensed images/original explanatory diagrams.",
+          "Separately documented Southern African practice profiles, preserving community and source boundaries.",
+          "Contemporary bone/charm spatial engines only with independently verified meaning/procedure.",
+          "Independent inscription/crack recognition research; optional synthetic states only after separate protocol specification."
+        ]
+      }
+    },
+    {
+      "technique_id": 36,
+      "name": "Bibliomancy",
+      "source_record": "knowledge/bibliomancy_core_v1.json",
+      "items": {
+        "P1": [
+          "Full fresh Mascaro publisher HTML witness/edition collation; direct403 versus publisher-indexed procedural evidence remains explicit.",
+          "Collate source arithmetic discrepancies and alternative procedures without silently repairing traditional rules.",
+          "Additional complete real text corpora with separately reviewed native citations, segmentation and edition-specific indices.",
+          "Full Homeric mapping from legitimate scholarly witnesses; preserve lacunae, variants and corrections.",
+          "Fine-word selection only after exact word/sentence indexing and source discrepancy resolution.",
+          "Separately versioned unbiased seeded selection with independent byte vectors, rejection transcripts, hierarchy probabilities and domain separation."
+        ],
+        "P2": [
+          "Additional Bible-lot and regional book-oracle traditions, retaining cultural/source distinctions.",
+          "Multiple translations and canons under separate immutable profiles.",
+          "Broader ancient Greek textual apparatus and witness-specific rights.",
+          "Licensed poetry and literary corpora with complete bounded units.",
+          "Reproducible physical dice variants after procedure/distribution verification.",
+          "Optional textual visualization and explicitly user-directed creative reflection."
+        ]
+      }
+    },
+    {
+      "technique_id": 37,
+      "name": "Cleromancy / Lots",
+      "source_record": "knowledge/cleromancy_core_v1.json",
+      "items": {
+        "P1": [
+          "Original Olympos inscription and Heinevetter1912 edition collation, including author-attributed Limyra correction.",
+          "Fresh complete authenticated direct author HTML snapshot and modern scholarly Greek/translation comparison; source date/version and raw HTML remain unavailable.",
+          "Verified numeric-column labels, excluded-sum semantics and worked-example corrections under a separately named numeric profile; preserve original impossible face5.",
+          "Complete56-outcome Astragalomanteion table from legitimate exact-edition source and independent examples.",
+          "Full Homeric216 key-to-verse/lacuna mappings with independent provenance and rights.",
+          "Mascaro original method chapters after legitimate publication/access; marketing is not procedural evidence.",
+          "Separately versioned seeded digital24-mark selection only with independent protocol/vectors, unbiased rejection and explicit digital-versus-physical probabilities."
+        ],
+        "P2": [
+          "Additional dated ancient lot/astragalomancy witnesses and source-specific regional profiles.",
+          "Multiple manually selected lots only with explicit draw order/replacement/population semantics.",
+          "Independent physical-bone probability research; no equiprobable-face inference.",
+          "Source-specific interpretation expansions, retaining translation/commentary/user layers.",
+          "Original diagrams or optional simple visualization.",
+          "Empirical studies separate from source authenticity, mathematical verification and software acceptance."
+        ]
+      }
+    },
+    {
+      "technique_id": 38,
+      "name": "Augury",
+      "source_record": "knowledge/augury_core_v1.json",
+      "items": {
+        "P1": [
+          "Deeper original-Latin collation and printed-edition identification; preserve Falconer-supplied flight/to wording versus the Latin side/species clause.",
+          "Historical augural technical sources beyond Cicero, including institutional/ritual qualifications.",
+          "Separately versioned Greek documentary source-case profiles;original Greek/Murray translation comparisons forIliad12 and24 and independent sequence/speaker fixtures.",
+          "Legitimate Kynes2016 chapter/preview access and explicit rights before modern bird-symbol profiles;announced2027 edition remains separate.",
+          "Historical observer-frame reconciliation and note226 contradiction,without silent directional correction.",
+          "Additional source-specific call/species/flight distinctions and independently reviewed cases."
+        ],
+        "P2": [
+          "Additional Roman and Greek traditions under independent source/edition profiles.",
+          "Modern bird symbolism and regional traditions without source blending.",
+          "Weather-bird folklore separate from operational meteorology.",
+          "Original source-labeled diagrams or optional manual visualization.",
+          "Independent species-recognition evaluation and separately specified synthetic bird events,if later useful.",
+          "Empirical research separated from historical authenticity and deterministic software acceptance."
+        ]
+      }
+    },
+    {
+      "technique_id": 39,
+      "name": "Haruspicy / Extispicy",
+      "source_record": "knowledge/haruspicy_core_v1.json",
+      "items": {
+        "P1": [
+          "Original Latin/printed-edition collation",
+          "Koch2000/2005 legitimate full translations and complete protasis/apodosis pairs",
+          "Tablet witness variants,damaged text and exceptions",
+          "Piacenza selected cell transcriptions,edition numbering,both-face orientation and disputed deity expansions",
+          "Archaeological function and modern diagram rights",
+          "Additional Roman accounts under independent source fixtures"
+        ],
+        "P2": [
+          "Independent Mesopotamian conditional profile",
+          "Independent Etruscan zone/name profile",
+          "Rights-cleared original schematics",
+          "Broader historical documentary comparison",
+          "Optional manual archaeological annotation",
+          "Empirical research separate from textual attribution"
+        ]
+      }
+    },
+    {
+      "technique_id": 40,
+      "name": "Feng Shui",
+      "source_record": "knowledge/feng_shui_core_v1.json",
+      "items": {
+        "P1": [
+          "Skinner ring chapters and exact edition reconciliation",
+          "Yap earlier book/printing access",
+          "Independent historical Chinese-character collation and additional named LuoPan rings",
+          "EightMansions source-specific solar-year/person-category/zero andrawGua5directionremap",
+          "1945/1946/2001/2002workedexamples andhouse-versus-personalGua isolation",
+          "FlyingStars full9palace generation,forward/reverse,central5 andsubstitutions",
+          "CompletePeriod8E1/W1matrix and source-facing rotation;three anchors alone insufficient",
+          "Period transitions,building construction/occupancy/renovation events andexactsource/calendar conventions"
+        ],
+        "P2": [
+          "SeparateSanHe/SanYuan computational profiles",
+          "FormSchool source-condition comparisons",
+          "SeparateBTBformaldoor orientation",
+          "Originalrights-cleareddiagrams and optionalmanualfloorplan annotation",
+          "Verifiedcalendar/building extensions",
+          "Empirical research independent of numeric software correctness"
+        ]
+      }
+    },
+    {
+      "technique_id": 43,
+      "name": "Remote Viewing",
+      "source_record": "knowledge/remote_viewing_core_v1.json",
+      "items": {
+        "P1": [
+          "McMoneagle2000 legitimate exact chapters and rights;2023edition remains separate.",
+          "More source-specific CRV formatting without proficiency claims.",
+          "Independent operational tasker/viewer/judge separation and external commitment/timestamp witnesses.",
+          "Human-judge protocol review andpreregistration;full history/selection-bias controls.",
+          "Validated nonuniform/dependent statistics andpredeclared multitrial inferential models;currently descriptive only.",
+          "Broader safely reviewed PNG filters/metadata-free formats;currently conservativeRGBfilter0 only."
+        ],
+        "P2": [
+          "ERV-specific optional adapter.",
+          "ARV precommitment/mapping research without forecasting guarantee.",
+          "Separate naturalistic/dream protocols;do not import43chance model into44.",
+          "Optional independent signatures/timestamps without mandatory cloud dependency.",
+          "Larger candidate pools andaccessible audio/sketch capture.",
+          "Independently designed empirical studies separate from software acceptance."
+        ]
+      }
+    },
+    {
+      "technique_id": 44,
+      "name": "Prophetic Dreams",
+      "source_record": "knowledge/prophetic_dreams_core_v1.json",
+      "items": {
+        "P1": [
+          "Inspectactual1927Dunnescan/collate wordingwithoutchanginglater-witnessidentity.",
+          "LegitimatecompleteWargo/Cheung-Mossbridge exerciseaccess/rights.",
+          "Independenthistoricalcaseverification,eventcollectioncompleteness,frequent-eventrates/deduplication andsamplingcontrols.",
+          "Independentjudge/privacy/consentreview andstrongeroperational/timestampwitnesses.",
+          "Separateverifiedstatisticalmodels underexplicit sampling assumptions;currentlydescriptiveonly.",
+          "Eventamendments/updates andlarger-ledger performance review underseparate immutableversions."
+        ],
+        "P2": [
+          "Separatecontrolled-targetdreamtrialprofile.",
+          "Optionalexternalsignatures/trustedtimestamps.",
+          "Source-specificsynchronicity/culturalcommentary.",
+          "Accessibleaudio/sketchcapture andheld-out-testedretrievalaids.",
+          "Independentpreregisteredhumanstudies andjustifieddependent-dataanalysis."
+        ]
+      }
+    },
+    {
+      "technique_id": 45,
+      "name": "Intuitive Prediction",
+      "source_record": "knowledge/intuitive_prediction_core_v1.json",
+      "items": {
+        "P1": [
+          "Legitimate complete2017Klein and Gut Feelings chapter inspection and1993RPDtypical/atypical diagrams/cases",
+          "Independently reproduce broader2002recognition derivations and conditional less-is-more evidence",
+          "License/transcribe/check historical or new held-out benchmark with domain-specific cue validity",
+          "Review protocol/cutoff,dependencies,small-N/rare-event warnings and legitimate empirical comparison",
+          "Verify log loss,infinity serialization,BSSzero denominator and optional exact-category decomposition before adding"
+        ],
+        "P2": [
+          "Preregistered domain-specific human expert/novice studies with independent outcomes",
+          "Separately validated statistical inference and dependent-data models",
+          "External timestamp witnesses and accessible richer elicitation",
+          "More heuristic families only with inspected algorithms and independent fixtures"
+        ]
+      }
+    },
+    {
+      "technique_id": 46,
+      "name": "Déjà Rêvé",
+      "source_record": "knowledge/deja_reve_core_v1.json",
+      "items": {
+        "P1": [
+          "Independent clinical/category review;not a consumer clinical classifier",
+          "Final journal layout and errata cross-check against inspected proof",
+          "Source-linked clinical dataset rights/access review",
+          "More independently authored mixed-category negative controls",
+          "Independent privacy/consent review",
+          "Explicit compatibility verification before importing Technique44 records",
+          "Restricted local attachment-reference records;v1 requires consented inline original text",
+          "External event byte-evidence verification;v1 preserves declared references/hashes only"
+        ],
+        "P2": [
+          "Voluntary nonclinical observational studies with consent and independent review",
+          "External timestamp witnesses/signatures",
+          "Accessible audio/sketch capture",
+          "Separately evaluated dream-record retrieval",
+          "Broader neurological phenomenology sources",
+          "No diagnostic or paranormal certification without appropriate evidence"
+        ]
+      }
+    },
+    {
+      "technique_id": 49,
+      "name": "AI Predictive Modeling",
+      "source_record": "knowledge/ai_predictive_modeling_core_v1.json",
+      "items": {
+        "P1": [
+          "Original NOAA historical publication vintages and causal release metadata",
+          "Additional independently sourced datasets/domains and station-change sensitivity",
+          "Reproducible fitted ETS/ARIMA Python library parity and license/dependency pins",
+          "Source-verified Holt/Holt-Winters with independent numeric fixtures",
+          "Boosted-tree lag features with purged label windows",
+          "Chronos2explicit offline acquisition,pinned weights/code,real inference and cost benchmarking;currently unimplemented",
+          "Model-produced quantile/interval evaluation and coverage;manual reference scoring already implemented",
+          "WIS/CRPS with independent scoring/distribution fixtures",
+          "Pretraining overlap/data-lineage review before any pretrained adapter",
+          "Broader profiling and cross-platform exact-render/source-byte replay review"
+        ],
+        "P2": [
+          "Neural families only if independently measured held-out gains justify cost",
+          "Larger multivariate/multiseries benchmarks",
+          "Probabilistic calibration and overlapping-error statistical inference",
+          "Prospective monitoring with as-of data",
+          "Drift detection and explicit retraining policy",
+          "Optional accessible UI/ingestion after numerical core"
+        ]
+      }
+    },
+    {
+      "technique_id": 50,
+      "name": "Quantum Probability Forecasting",
+      "source_record": "knowledge/quantum_probability_forecasting_core_v1.json",
+      "items": {
+        "P1": [
+          "Pinned optional Aer CPU acquisition and actual independent parity",
+          "Explicit RNG and bit-order contract comparisons",
+          "Verified coherent A/inverse/projector and phase conventions before canonical QAE",
+          "Independent IQAE/MLAE confidence/optimization fixtures",
+          "Explicit oracle queries vs primitive gates",
+          "Rare-event sampling and numerical analysis",
+          "Rights-cleared published risk toy reproduction"
+        ],
+        "P2": [
+          "Source-verified variational and quantum-inspired methods",
+          "Noise and justified larger circuits",
+          "GPU benchmark and separately scoped hardware authorization",
+          "Fair end-to-end quantum/classical comparisons",
+          "Forecast skill only with separate prospective/historical evidence"
+        ]
+      }
+    },
+    {
+      "technique_id": 51,
+      "name": "Superforecasting",
+      "source_record": "knowledge/superforecasting_core_v1.json",
+      "items": {
+        "P1": [
+          "Legitimate later-book chapter access andexact edition locators",
+          "Primary GJP metadata/codebooks/file rights/participant privacy andcomplete historical revisions",
+          "Verified empirical group/timeheldout protocol",
+          "Stronger conditional evidence/dependence verification",
+          "Additional scoring conventions anddaily/tournament comparison",
+          "Calibration uncertainty andselection-bias analysis",
+          "Independently anchored prospective timestamps"
+        ],
+        "P2": [
+          "Multinomial forecasting",
+          "Predeclared team/source-verified ensemble aggregation",
+          "Dailycarry-forward/published tournament replication",
+          "Dependence-aware uncertainty/skill comparison",
+          "Larger genuine heldout evaluation",
+          "Optional accessible interface after numerical maturity"
+        ]
+      }
+    },
+    {
+      "technique_id": 52,
+      "name": "Psychohistory",
+      "source_record": "knowledge/psychohistory_core_v1.json",
+      "items": {
+        "P1": [
+          "Legitimate detailed Pentland/Page chapter/formula inspection beforeattributing additional rules",
+          "Dataset-specific rights,consent,privacy,vintage andrepresentativeness beforeanyrealdata",
+          "Empirical threshold/network estimation,group/time held-out validation andappropriate uncertainty design",
+          "Independent Markov/mean-field comparators with explicit closure assumptions",
+          "Prospective external commitments forinput/code/source hashes"
+        ],
+        "P2": [
+          "Watts random-asynchronous source experiment/theorem reproduction",
+          "Dynamic/weighted/directed graphs andchanging thresholds",
+          "Adaptive/learning agents anddemographic birth/death/migration models",
+          "Causal identification fromappropriate empirical designs",
+          "Larger/distributed simulations onlyifjustified bymeasured demand"
+        ]
+      }
+    },
+    {
+      "technique_id": 53,
+      "name": "Digital Twin Simulation",
+      "source_record": "knowledge/digital_twin_core_v1.json",
+      "items": {
+        "P1": [
+          "Empirical calibration andtime-held-out validation before accuracy oruncertainty-coverage claims",
+          "Source access:current author-hosted Kalman2006 URL returned404;keepinspected2002 distinct",
+          "Independent timestamp/availability provenance andphysical-counterpart documentation",
+          "Dataset-specific source,license,consent,units,sampling andsensor-quality review",
+          "External commitment anchors forinputs,source/version andcode identities"
+        ],
+        "P2": [
+          "Nonlinear/multivariate/ensemble filters andsmoothing",
+          "Parameter learning andoutlier/change-point models",
+          "Delayed asynchronous observation correction",
+          "Coupled populations andurban/behavioral twins",
+          "Live physical synchronization,decision feedback andactuator control withappropriate domain/security/latency validation"
+        ]
+      }
+    },
+    {
+      "technique_id": 54,
+      "name": "Agent-Based Simulation",
+      "source_record": "knowledge/agent_based_core_v1.json",
+      "items": {
+        "P1": [
+          "FreezeSchelling source-specificfractionthreshold/equality andno-neighbor convention",
+          "Freezevacancyselection,activation/scheduling andRNG/semanticdrawcontract beforeSchelling movement",
+          "IndependentlyfreezeSchellingfixtures beforeproduction",
+          "Legitimatecompletebook/laterchapter access andper-modelsource/code/data rights",
+          "Dataset-specificconsent,privacy,calibration,held-out validation andexternalprovenance beforeempirical claims"
+        ],
+        "P2": [
+          "FullSugarscape resource/vision/metabolism/trade variants",
+          "Epidemiological/socialABM withdomain-specificvalidated designs",
+          "LLMgenerative agents withpinnedprompts/models/costs andasset rights",
+          "Stochasticinitialization/scheduling andMonteCarlo ensembles",
+          "OtherCArules,boundaryfamilies,coupledmodels andlarger/distributed simulation"
+        ]
+      }
+    },
+    {
+      "technique_id": 55,
+      "name": "Brain-Based Intention Prediction",
+      "source_record": "knowledge/brain_intention_core_v1.json",
+      "items": {
+        "P1": [
+          "Obtain Soon full methods/supplement lawfully and verify numerical protocol/data availability",
+          "Inspect rights/consent and immutable EEG file manifests; verify channels,units,missing data and grouping",
+          "Freeze real EEG preprocessing,CSP/LDA and held-out-subject/run replication separately from synthetic reference",
+          "Freeze proposed core schema,limits,tie/absent-class conventions and independent fixtures before runtime"
+        ],
+        "P2": [
+          "Readiness-potential accumulator/awareness protocol replication",
+          "fMRI decoding with suitable data and independent evaluation",
+          "Larger datasets,nested selection,correlation-aware uncertainty and deployment validation"
+        ]
+      }
+    },
+    {
+      "technique_id": 56,
+      "name": "Causal AI Forecasting",
+      "source_record": "knowledge/causal_ai_core_v1.json",
+      "items": {
+        "P1": [
+          "Lawful full-book/latest-revision source access and edition-specific equation verification",
+          "Empirical dataset-specific provenance,consent,causal assumptions,selection/measurement and sensitivity review",
+          "Latent-variable identification and separately verified front-door/IV extensions"
+        ],
+        "P2": [
+          "General do-calculus ID algorithm",
+          "Continuous estimators and statistical uncertainty",
+          "Structural-equation language and individual counterfactual uplift",
+          "Large-scale graphs and learned mechanisms"
+        ]
+      }
+    },
+    {
+      "technique_id": 57,
+      "name": "Collective Intelligence Forecasting",
+      "source_record": "knowledge/collective_intelligence_core_v1.json",
+      "items": {
+        "P1": [
+          "Detailed rights-cleared source chapters and advanced aggregation recipes",
+          "Real forecast corpus permissions,independence/selection/timing audit and out-of-sample empirical evaluation",
+          "Formal stable51ledger adapter without changing51",
+          "Separately justified pre-history learned weights and robust missingness/dependence evaluation"
+        ],
+        "P2": [
+          "Iterative Delphi facilitation",
+          "Multi-season learned weighting/extremization",
+          "LLM committee API integrations and cost/provenance contracts",
+          "Full competition platforms,large-scale calibration and statistical uncertainty"
+        ]
+      }
+    },
+    {
+      "technique_id": 58,
+      "name": "Prediction Markets",
+      "source_record": "knowledge/prediction_markets_core_v1.json",
+      "items": {
+        "P1": [
+          "Full source-equivalence and independent numerical/funding proof coverage before broad parameter expansion",
+          "Real participant-data rights,consent,identity/resolution evidence and empirical price-calibration studies",
+          "Stable51event-resolution/57forecast interfaces only after explicit semantic mapping"
+        ],
+        "P2": [
+          "Continuous double auctions",
+          "Combinatorial and conditional scoring-rule markets",
+          "Advanced funding/shorting/fees/market-maker variants",
+          "Live user/trader operations and product interfaces; real-money/external trading remains outside this scope"
+        ]
+      }
+    },
+    {
+      "technique_id": 59,
+      "name": "Chaos-Theory Forecasting",
+      "source_record": "knowledge/chaos_theory_core_v1.json",
+      "items": {
+        "P1": [
+          "Obtain permitted full ranked texts and refine source-equivalence locators",
+          "Rigorous numerical error bounds and empirical held-out validation before any forecast-horizon claim"
+        ],
+        "P2": [
+          "Global/finite-time Lyapunov estimators with independent reference",
+          "Nonlinear delay embedding and reservoir computing",
+          "Data assimilation and empirical weather-like ensembles"
+        ]
+      }
+    },
+    {
+      "technique_id": 60,
+      "name": "Multiverse / Many-Worlds Prediction",
+      "source_record": "knowledge/multiverse_core_v1.json",
+      "items": {
+        "P1": [
+          "Permitted full ranked-text access and precise interpretation locators",
+          "Keep editorial probabilities distinct from Born-rule amplitudes and physical branch ontology"
+        ],
+        "P2": [
+          "Independently verified finite quantum-state thought experiments",
+          "Advanced quantum decision-theory interpretation and larger scenario models"
+        ]
+      }
+    }
+  ]
+}
