@@ -1,0 +1,1842 @@
+{
+  "version": 1,
+  "date": "2026-11-08",
+  "status": "All54 Retained Bounded Core v1 Releases Ready — Final Acceptance Passed",
+  "total_inventory_ids": 60,
+  "retained_completed": 54,
+  "excluded_ids": [
+    25,
+    27,
+    41,
+    42,
+    47,
+    48
+  ],
+  "completion_meaning": "Boundedimplementedsoftware,source-scopedhistoricalreference andindependentnumerical/proceduralverification;notexhaustivevariationsoruniversalempiricalpredictivevalidation.",
+  "completion_matrix": "data/future-54-technique-completion-matrix.json",
+  "completion_matrix_sha256": "65d02d19d8d8c2d1af39415ebb37ee698c6bd853607b29d36a182a165bdc6afe",
+  "acceptance_record": "data/future-final-acceptance-checks.json",
+  "acceptance_counts": {
+    "tests": 2402,
+    "cli_cases": 3453,
+    "independent_verifiers": 51,
+    "smoke_commands": 54,
+    "protected_files": 5423,
+    "registry": {
+      "references_checked_twice": 590,
+      "unique": 435,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "taxonomy": {
+      "total": 60,
+      "retained": 54,
+      "excluded": [
+        25,
+        27,
+        41,
+        42,
+        47,
+        48
+      ]
+    }
+  },
+  "new_techniques": [
+    {
+      "technique_id": 55,
+      "name": "Brain-Based Intention Prediction",
+      "status": "Core v1 Ready — Offline Trial-Window Feature Classification and Leakage Diagnostic Scope",
+      "profile": "brain-intention-synthetic-offline-classification-v1",
+      "profile_sha256": "30f541e00247d4c9f78fa5218cba83e5e5caf7417868743cf4e3b4cebfa629a0",
+      "core_record": "knowledge/brain_intention_core_v1.json",
+      "scope": "Exact synthetic classification software and declared leakage checks only; no empirical neural forecasting,live BCI,clinical or unrestricted intention inference.",
+      "configuration_matrix": {
+        "supported": [
+          "Self-authored synthetic windows/features",
+          "Exact mean/population variance and TRAIN-only centroids",
+          "Subject-disjoint or within-subject held-out-run checks",
+          "Explicit interval/availability/label checks",
+          "Exact matched evaluation and deterministic JSON/Markdown"
+        ],
+        "experimental_research_only": [
+          "Interpreting toy features as neural or behavioral intention information"
+        ],
+        "unsupported": [
+          "Real EEG ingestion",
+          "CSP/LDA or signal preprocessing",
+          "fMRI and readiness potential replication",
+          "Cross-session generalization",
+          "Clinical assessment",
+          "Live BCI or unrestricted intention prediction"
+        ]
+      },
+      "fixture_families": 28,
+      "replay": {
+        "accepted_pairs": 14,
+        "rejected_pairs": 41,
+        "cli_cases": 110
+      },
+      "milestones": {
+        "audit": "5c0c1bdadac00848d57938cd081063f3481898f5",
+        "source_profile": "3ba130c878b40296e4f527d35e4d38401f8c8b78",
+        "independent_fixtures": "5103b11d32db6f2b6109604b134b346a17a80543",
+        "fixture_identity_erratum": "dd18d4357fd129e46f7157f173c6df67784dabc9",
+        "fixture_binding_correction": "98192dc4775bfee0b1c4358c4c24cf5858ff200b",
+        "engine": "28fa5fabd478d9d38f23d58562fbdc99f115514f",
+        "cli_reports": "e282443cea6e7aff75f18260f3acd370e9d930c3",
+        "verification": "1a260756dc0757a0f975c1a2705c127d3d928cd0",
+        "isolated_leakage_controls": "4cb9bb2ae79b4a2486889e2c0e929b958fd7965f",
+        "acceptance": "58ab718f189a750653115aa431720bd59cefa0bf",
+        "closure": "9fd9c3955114655d61f5b730e8e2e0b64fc6bcdb"
+      },
+      "verified_examples": [
+        "The window [-1,1,-1,1] has mean 0 and population variance 1. Sample variance is 4/3 and is a different convention.",
+        "TRAIN centroids A=(1,3), B=(5,3); (3,3) ties at squared distances 4 and 4 and selects A.",
+        "Confusion [[1,1],[0,2]] gives accuracy and balanced accuracy 3/4; the matched TRAIN-majority baseline scores 1/2.",
+        "The iid toy result 8/10 has upper tail 7/128; this is not EEG or BCI significance."
+      ],
+      "source_boundaries": {
+        "version": 1,
+        "technique_id": 55,
+        "audit_sha256": "d723065713c3706f8715e40f46af1f96864a683a884d784e509e213254d3f292",
+        "source_manifest_sha256": "3fdd4d5fd4490cc162e2f6a4aa1926a418522be894e6a6f43daae2287fd30ab1",
+        "access": "Reuse audit5c0c1bd. Wolpaw metadata/TOC/abstracts only; Soon full methods/supplement not available; no raw EEG downloaded.",
+        "rights": "Original self-authored synthetic examples and mathematical facts only; no book/article/code/data redistributed. ODC-By database rights do not establish participant consent.",
+        "algorithm": "Editorial exact unscaled uniform-prior nearest arithmetic centroid, not reproduction of MNE CSP/LDA or empirical neural performance."
+      },
+      "performance": {
+        "measured": true,
+        "environment": {
+          "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "platform": "Windows-11-10.0.26200-SP0"
+        },
+        "profile_sha256": "30f541e00247d4c9f78fa5218cba83e5e5caf7417868743cf4e3b4cebfa629a0",
+        "code_sha256": "c2c0ab880202fbaa9cb3140cdabf7962eb2d2a30e222a8dd527b52d0651f0384",
+        "protocol": "Three untraced complete-report repetitions; separate tracemalloc repetition; one full CLI including imports,registry and serialization. Native peak is whole helper process including all workloads and tracing, not CLI-child or per-workload peak.",
+        "process_peak_working_set_bytes": 80986112,
+        "under_proposed_128_MiB": true,
+        "results": [
+          {
+            "id": "small",
+            "trials": 8,
+            "channels": 1,
+            "mode": "windows",
+            "samples": 4,
+            "input_sha256": "10b2444ada8b9ead7f6653bdf15e50ecc9ca9d1d84c63ba8d03f6839cb7e2a9a",
+            "budget": {
+              "raw_cells": 32,
+              "features": 2,
+              "work": 384,
+              "returned_cells": 288
+            },
+            "seconds": [
+              0.001269300002604723,
+              0.0009146998636424541,
+              0.0008486001752316952
+            ],
+            "median_seconds": 0.0009146998636424541,
+            "cli_seconds": 1.2685348996892571,
+            "python_traced_peak_bytes": 109393,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "medium",
+            "trials": 32,
+            "channels": 4,
+            "mode": "windows",
+            "samples": 64,
+            "input_sha256": "bfe6a18a9c385428b99af35e97a624b26fe352a50a6878a9958c4a0218bb14aa",
+            "budget": {
+              "raw_cells": 8192,
+              "features": 8,
+              "work": 52224,
+              "returned_cells": 1536
+            },
+            "seconds": [
+              0.033923900220543146,
+              0.04141659988090396,
+              0.03629280021414161
+            ],
+            "median_seconds": 0.03629280021414161,
+            "cli_seconds": 1.623477099929005,
+            "python_traced_peak_bytes": 881219,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "dense",
+            "trials": 64,
+            "channels": 8,
+            "mode": "windows",
+            "samples": 512,
+            "input_sha256": "76ba4b62c100b65bacefc8a5b9ca089184bd882ce18f3e2d6fb17e827a21e930",
+            "budget": {
+              "raw_cells": 262144,
+              "features": 16,
+              "work": 1585152,
+              "returned_cells": 4096
+            },
+            "seconds": [
+              1.887665799818933,
+              1.7656272002495825,
+              1.7532930998131633
+            ],
+            "median_seconds": 1.7656272002495825,
+            "cli_seconds": 2.0475634997710586,
+            "python_traced_peak_bytes": 20681777,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "features",
+            "trials": 8,
+            "channels": 1,
+            "mode": "features",
+            "samples": 0,
+            "input_sha256": "6322e79a8f7f0abe30a1352f7f19e1f74eaa3dd7354c40c4c1e86d840ea2cf9a",
+            "budget": {
+              "raw_cells": 16,
+              "features": 2,
+              "work": 288,
+              "returned_cells": 288
+            },
+            "seconds": [
+              0.002956000156700611,
+              0.0024955999106168747,
+              0.0012122001498937607
+            ],
+            "median_seconds": 0.0024955999106168747,
+            "cli_seconds": 0.7255533002316952,
+            "python_traced_peak_bytes": 107026,
+            "under_proposed_five_seconds": true
+          }
+        ],
+        "scope": "Local synthetic examples; no empirical accuracy or universal performance bound."
+      },
+      "limitations": [
+        "All trial data are self-authored synthetic declarations; no human dataset consumed.",
+        "No CSP/LDA,signal preprocessing,readiness-potential,fMRI or original laboratory replication.",
+        "Labels/clocks/subjects/rights are declarations; hashes cannot independently certify them.",
+        "No empirical significance inferred from the exact7/128 iid arithmetic toy.",
+        "The four original inventory variations remain preserved; neural variants remain unsupported and behavioral-proxy interpretation experimental."
+      ],
+      "backlog": {
+        "P1": [
+          "Obtain Soon full methods/supplement lawfully and verify numerical protocol/data availability",
+          "Inspect rights/consent and immutable EEG file manifests; verify channels,units,missing data and grouping",
+          "Freeze real EEG preprocessing,CSP/LDA and held-out-subject/run replication separately from synthetic reference",
+          "Freeze proposed core schema,limits,tie/absent-class conventions and independent fixtures before runtime"
+        ],
+        "P2": [
+          "Readiness-potential accumulator/awareness protocol replication",
+          "fMRI decoding with suitable data and independent evaluation",
+          "Larger datasets,nested selection,correlation-aware uncertainty and deployment validation"
+        ]
+      },
+      "accepted_example": "data/brain-intention-cli/worked-input.json",
+      "cli_command": "brain-intention"
+    },
+    {
+      "technique_id": 56,
+      "name": "Causal AI Forecasting",
+      "status": "Core v1 Ready — Finite Discrete Causal DAG and Identifiable Back-Door Adjustment Scope",
+      "profile": "causal-ai-finite-discrete-backdoor-v1",
+      "profile_sha256": "872e27c27228050ad3a6714bc7549d5c29a98406bc4fec70ddccc99d6d7ace20",
+      "core_record": "knowledge/causal_ai_core_v1.json",
+      "scope": "Exact finite synthetic conditional-on-assumptions causal calculations and diagnostics; not graph discovery or empirical causal validity.",
+      "configuration_matrix": {
+        "supported": [
+          "Synthetic categorical assumed DAGs",
+          "All-observed exact joint/graph compatibility",
+          "Supplied-set sufficient back-door checks",
+          "Exact standardized and observational probabilities with overlap diagnostics"
+        ],
+        "experimental_research_only": [
+          "Interpreting synthetic risks as empirical causal forecasts"
+        ],
+        "unsupported": [
+          "Latent-graph effect estimation",
+          "General do-calculus/front-door/IV identification",
+          "Individual counterfactual uplift",
+          "Continuous/learned models",
+          "Causal graph discovery",
+          "Empirical clinical or policy claims"
+        ]
+      },
+      "fixture_families": 22,
+      "replay": {
+        "accepted_pairs": 15,
+        "rejected_pairs": 31,
+        "cli_cases": 92
+      },
+      "milestones": {
+        "audit": "15efaa524ca649ffdd060879b80efef615eee791",
+        "source_profile": "1ac1c9d682b5cec3313c1e011b210d0b8b04130c",
+        "independent_fixtures": "750435f71370216143291895833a7e36ff58934b",
+        "engine": "af4a3bdcc1a070615fc732f3647e34cd0078bb9a",
+        "cli_reports": "b84be8f859139fba75c4dae481ddae2e18dbf2b0",
+        "expanded_verification": "d8bc3fb570432195b521c125f86baf98bc012fbf",
+        "verification": "2fa1eefb383713752c7f1c88b08da7b87e52626c",
+        "acceptance": "1f37f5b594ccb506b7baaa7a5c02fde1d42db768",
+        "closure": "998b796eef8d828598171f43704015b34962692f"
+      },
+      "verified_examples": [
+        "The 80-case structural enumeration gives risks 3/10 and 1/2 under do(X), a contrast of 1/5.",
+        "Observational risks are 1/5 and 3/5, a contrast of 2/5. Conditioning is not intervention.",
+        "The 3,072 expanded graph configurations include the original 256; they are not 3,328 distinct cases."
+      ],
+      "source_boundaries": {
+        "version": 1,
+        "technique_id": 56,
+        "audit_sha256": "0805072f4f5554c42894c8583d024c415d7dd1ff1eb1c2813d2c54c9472dbb88",
+        "source_manifest_sha256": "c56f7f98dc6a48fdab97587c09e04ef711ec91792f43980596d15ac766889230",
+        "boundaries": "Pearl2nd2009/2013 corrected chapter primary witness; limited deep fetch. What If landing/indexed dated passages; latest2026 complete PDF not retrieved. DoWhy0.13 guide/0.14 graph conventions; no library installation or replication.",
+        "rights": "Original mathematical implementation and self-authored synthetic tables only; no book bodies,figures,software code or human data copied.",
+        "conventions": "Original sufficient back-door criterion; supplied-set check only. Back-door removes outgoing X arrows; intervention oracle replaces X mechanism. Failure is not a general nonidentifiability proof."
+      },
+      "performance": {
+        "measured": true,
+        "environment": {
+          "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "platform": "Windows-11-10.0.26200-SP0"
+        },
+        "profile_sha256": "872e27c27228050ad3a6714bc7549d5c29a98406bc4fec70ddccc99d6d7ace20",
+        "code_sha256": "9467ac0f236fb05ada62e7fb50a0277a1dba4dc3c41721eff528fa202861c139",
+        "protocol": "Three untraced complete in-process reports; separate tracemalloc report; one complete CLI. Native peak covers whole helper,imports,all workloads and tracing,not CLI-child/per-workload peak.",
+        "process_peak_working_set_bytes": 35864576,
+        "under_proposed_128_MiB": true,
+        "results": [
+          {
+            "id": "small",
+            "nodes": 3,
+            "joint_rows": 8,
+            "input_sha256": "b1018220be2fecb190ec8ad4303a30d027c2ff8a739100d177231279759040d9",
+            "budget": {
+              "joint_cells": 8,
+              "work": 576,
+              "returned_cells": 56
+            },
+            "identification_status": "identified_under_declared_assumptions",
+            "seconds": [
+              0.001130599994212389,
+              0.0007885000668466091,
+              0.0007440000772476196
+            ],
+            "median_seconds": 0.0007885000668466091,
+            "cli_seconds": 1.5336994002573192,
+            "python_traced_peak_bytes": 49998,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "medium",
+            "nodes": 5,
+            "joint_rows": 32,
+            "input_sha256": "bde98dfb7a4b561646114f6dd90af0cc0c937fbf8d3463a19af194c6c2ef35a5",
+            "budget": {
+              "joint_cells": 32,
+              "work": 6400,
+              "returned_cells": 288
+            },
+            "identification_status": "identified_under_declared_assumptions",
+            "seconds": [
+              0.0034352997317910194,
+              0.0022456999868154526,
+              0.0017303000204265118
+            ],
+            "median_seconds": 0.0022456999868154526,
+            "cli_seconds": 0.827320100273937,
+            "python_traced_peak_bytes": 103629,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "dense",
+            "nodes": 7,
+            "joint_rows": 2187,
+            "input_sha256": "46381d5671ca6a1c95297e9694d129a739d36b4cdea0aebdce9a2dd0cd93c996",
+            "budget": {
+              "joint_cells": 2187,
+              "work": 857304,
+              "returned_cells": 21141
+            },
+            "identification_status": "identified_under_declared_assumptions",
+            "seconds": [
+              0.10626479983329773,
+              0.11116750026121736,
+              0.11577050015330315
+            ],
+            "median_seconds": 0.11116750026121736,
+            "cli_seconds": 1.436530000064522,
+            "python_traced_peak_bytes": 4128049,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "diagnostic",
+            "nodes": 3,
+            "joint_rows": 8,
+            "input_sha256": "43c51645b6141cf763bceb986db96a7fd0f2255fd729fc2ba3f5f2946d500049",
+            "budget": {
+              "joint_cells": 8,
+              "work": 576,
+              "returned_cells": 40
+            },
+            "identification_status": "unsupported_adjustment",
+            "seconds": [
+              0.0020858999341726303,
+              0.001113200094550848,
+              0.001424499787390232
+            ],
+            "median_seconds": 0.001424499787390232,
+            "cli_seconds": 1.1543164001777768,
+            "python_traced_peak_bytes": 45512,
+            "under_proposed_five_seconds": true
+          }
+        ],
+        "scope": "Local synthetic measurements only; not universal performance or empirical causal validation."
+      },
+      "limitations": [
+        "Graph,consistency,exchangeability and selection assumptions are declared,not established from correlations.",
+        "All-observed exact factorization compatibility does not prove causal truth or faithfulness.",
+        "Supplied-set sufficient criterion failure does not prove universal nonidentifiability.",
+        "Latent graphs and general identification/individual counterfactuals unsupported.",
+        "Self-authored synthetic tables only; no clinical/policy recommendations or empirical causal accuracy.",
+        "Rights/identity/hash declarations do not independently certify facts or permissions."
+      ],
+      "backlog": {
+        "P1": [
+          "Lawful full-book/latest-revision source access and edition-specific equation verification",
+          "Empirical dataset-specific provenance,consent,causal assumptions,selection/measurement and sensitivity review",
+          "Latent-variable identification and separately verified front-door/IV extensions"
+        ],
+        "P2": [
+          "General do-calculus ID algorithm",
+          "Continuous estimators and statistical uncertainty",
+          "Structural-equation language and individual counterfactual uplift",
+          "Large-scale graphs and learned mechanisms"
+        ]
+      },
+      "accepted_example": "data/causal-ai-cli/confounding-input.json",
+      "cli_command": "causal-ai"
+    },
+    {
+      "technique_id": 57,
+      "name": "Collective Intelligence Forecasting",
+      "status": "Core v1 Ready — Versioned Binary Forecast Aggregation and Evaluation Scope",
+      "profile": "collective-intelligence-binary-linear-pool-v1",
+      "profile_sha256": "925a21d05410b91f073d50b403f17c3cf709d28194f539d5c292bf328dd8b854",
+      "core_record": "knowledge/collective_intelligence_core_v1.json",
+      "scope": "Exact declared offline pooling,eligibility andscoring software only; not independent crowd wisdom or empirical forecast superiority.",
+      "configuration_matrix": {
+        "supported": [
+          "Offline exact declared binary forecast pools",
+          "Precommitted equal or nonnegative declared weights",
+          "Immutable local revision chains and explicit eligibility",
+          "Missing/abstention/zero-weight/dependence accounting",
+          "Matched TEST/TRAIN scoring,descriptive calibration and exact decomposition"
+        ],
+        "experimental_research_only": [
+          "Real-world interpretations of synthetic/dependent/LLM consensus"
+        ],
+        "unsupported": [
+          "Automatic independence or empirical skill certification",
+          "Learned weights from current outcomes",
+          "Full51ledger adapter",
+          "Iterative Delphi orchestration",
+          "LLM/provider APIs",
+          "Complete tournament operations",
+          "Automatic statistical significance"
+        ]
+      },
+      "fixture_families": 31,
+      "replay": {
+        "accepted_pairs": 25,
+        "rejected_pairs": 39,
+        "cli_cases": 128
+      },
+      "milestones": {
+        "audit": "19d55d292a990cbbebf978994b46408cafa8c9ba",
+        "source_profile": "3e4693fa0557d7979c80d98ce3a9942340e7026f",
+        "independent_fixtures": "070f381dbf2f78ad01d0ebb94606b9489bd7462e",
+        "engine": "fdecba487d9873216cfb2423c46e27e9b911a5ae",
+        "cli_reports": "c9480573fae44dc6982255450117f200e389369a",
+        "verification": "b5b315436f2e6cb6e5f6243cde7158e59f2d195d",
+        "acceptance": "a5d5b51709e0643234bd44bc7f9b777fe1a7f2c2",
+        "closure": "467ee854355ffae9cb7ee6d7cd4d98acd2b00f71"
+      },
+      "verified_examples": [
+        "Equal pooling of 1/5 and 4/5 gives 1/2. Weights 1 and 3 give 13/20.",
+        "At 13/20, binary Brier loss is 49/400 for outcome 1 and 169/400 for outcome 0.",
+        "The four-question example has Brier 17/50 = reliability 9/100 − resolution 0 + uncertainty 1/4. The two-category scale is 17/25."
+      ],
+      "source_boundaries": {
+        "version": 1,
+        "technique_id": 57,
+        "audit_sha256": "6b079b81969472a9c580e8d256c5eef7d495835b4ff3b70a54068e505744cd80",
+        "source_manifest_sha256": "4d5b136cc95b9747c782d1c446e1a8b36d157eeeae969cf4aa2b0a90ab071d58",
+        "boundaries": "Malone2018/Surowiecki publisher/institute metadata/overviews only; no full-book numerical recipe. Mellers2014 primary methods/note1 inspected:0–2 scoring and decomposition; advanced statistical aggregation reported elsewhere. Linear pools here are named editorial definitions,not tournament replication.",
+        "rights": "Mathematical facts and original implementation/synthetic fixtures only; no book/article body,figure,third-party code or participant dataset copied.",
+        "compatibility_51": "Preserve existing51profile/CLI/contracts; reuse UTC-Z/inclusive-cutoff and binary0–1 versus two-category0–2 conventions. Full ledger adapter deferred; numerical comparison can use stable scoring outputs without modifying51."
+      },
+      "performance": {
+        "measured": true,
+        "environment": {
+          "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "platform": "Windows-11-10.0.26200-SP0"
+        },
+        "profile_sha256": "925a21d05410b91f073d50b403f17c3cf709d28194f539d5c292bf328dd8b854",
+        "code_sha256": "134412c37ea8122285d7bb8a95717a71d0fed29a2a62cd11b3f7c5e5a2c819ba",
+        "protocol": "Three untraced complete in-process reports; separate tracemalloc report; one complete CLI including imports/registry/serialization. Native peak is whole helper including imports,all workloads and tracing,not CLI-child/per-workload peak.",
+        "process_peak_working_set_bytes": 40071168,
+        "under_proposed_128_MiB": true,
+        "results": [
+          {
+            "id": "small",
+            "questions": 1,
+            "forecasters": 2,
+            "revisions": 2,
+            "input_sha256": "a216db23a99ade867a45236dc6b0c909afd2d6269b5eeda44394666f19b200fa",
+            "budget": {
+              "work": 192,
+              "returned_cells": 80
+            },
+            "seconds": [
+              0.001352400053292513,
+              0.0007670000195503235,
+              0.0008140001446008682
+            ],
+            "median_seconds": 0.0008140001446008682,
+            "cli_seconds": 1.054298299830407,
+            "python_traced_peak_bytes": 100243,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "medium",
+            "questions": 8,
+            "forecasters": 8,
+            "revisions": 64,
+            "input_sha256": "c258cfbe678f76a7fbd17f3e17c105df4c101c85174a31f7bac23f0a12214c60",
+            "budget": {
+              "work": 6144,
+              "returned_cells": 2560
+            },
+            "seconds": [
+              0.005523700267076492,
+              0.00552080012857914,
+              0.003583600278943777
+            ],
+            "median_seconds": 0.00552080012857914,
+            "cli_seconds": 0.675447600428015,
+            "python_traced_peak_bytes": 475403,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "dense",
+            "questions": 32,
+            "forecasters": 32,
+            "revisions": 2048,
+            "input_sha256": "7bcf4ee3a444effd664df9a0d96b7aabca5bb2cf68ecd1904c6a44c1a73d7f74",
+            "budget": {
+              "work": 163840,
+              "returned_cells": 57344
+            },
+            "seconds": [
+              0.07141169998794794,
+              0.06892970018088818,
+              0.06943290028721094
+            ],
+            "median_seconds": 0.06943290028721094,
+            "cli_seconds": 1.5641720001585782,
+            "python_traced_peak_bytes": 8971295,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "missing-weighted",
+            "questions": 32,
+            "forecasters": 32,
+            "revisions": 256,
+            "input_sha256": "7735923a1543125c95d55173db2c37b4e9504a9fdd6b4214d99268e3205db208",
+            "budget": {
+              "work": 49152,
+              "returned_cells": 28672
+            },
+            "seconds": [
+              0.03134169988334179,
+              0.030626200139522552,
+              0.03154690004885197
+            ],
+            "median_seconds": 0.03134169988334179,
+            "cli_seconds": 1.685386700090021,
+            "python_traced_peak_bytes": 2923906,
+            "under_proposed_five_seconds": true
+          }
+        ],
+        "scope": "Recorded local synthetic workloads,not universal performance or empirical forecast skill."
+      },
+      "limitations": [
+        "Editorial linear pools are not full Mellers advanced aggregation or daily/question-standardized tournament replication.",
+        "Outcome labels score; weights fixed before current outcomes. No weight learning from this payload.",
+        "Declared identifiers,clocks,dependency groups and permissions are not external certifications; local owner can rewrite history.",
+        "Dependent/synthetic/LLM agreement does not establish independent human expertise,effective sample size or empirical skill.",
+        "All repository corpus data self-authored synthetic; user-supplied records unvalidated.",
+        "No full51ledger import adapter,Delphi orchestration,LLM APIs or significance claims."
+      ],
+      "backlog": {
+        "P1": [
+          "Detailed rights-cleared source chapters and advanced aggregation recipes",
+          "Real forecast corpus permissions,independence/selection/timing audit and out-of-sample empirical evaluation",
+          "Formal stable51ledger adapter without changing51",
+          "Separately justified pre-history learned weights and robust missingness/dependence evaluation"
+        ],
+        "P2": [
+          "Iterative Delphi facilitation",
+          "Multi-season learned weighting/extremization",
+          "LLM committee API integrations and cost/provenance contracts",
+          "Full competition platforms,large-scale calibration and statistical uncertainty"
+        ]
+      },
+      "accepted_example": "data/collective-intelligence-cli/equal-input.json",
+      "cli_command": "collective-intelligence"
+    },
+    {
+      "technique_id": 58,
+      "name": "Prediction Markets",
+      "status": "Core v1 Ready — Offline Binary LMSR Play-Money Market and Resolution Ledger Scope",
+      "profile": "prediction-markets-binary-lmsr-play-money-v1",
+      "profile_sha256": "d36cca55bf080adabc57d6190820812802ec4386ffe5199676a6ef0b17aad000",
+      "core_record": "knowledge/prediction_markets_core_v1.json",
+      "scope": "Bounded synthetic market mechanism,numerical andexactcash-grid accounting software; no real trading or empirical market-prediction accuracy.",
+      "configuration_matrix": {
+        "supported": [
+          "One offline synthetic binary fixed-b LMSR play-credit market",
+          "Stable bounded Decimal pricing withnamed tolerances",
+          "Quotes,atomic long-only execution anddeclared authority cutoff/settlement",
+          "Idempotent local intent ledger andexact cash-grid accounting",
+          "Explicit funding/loss exposure andactionrefusals"
+        ],
+        "experimental_research_only": [
+          "Interpreting synthetic modeled prices as real-world forecasts"
+        ],
+        "unsupported": [
+          "Real money,deposits,wagering,external trading orsettlement",
+          "Live trader/user services orauthenticated authority",
+          "Continuous double auction",
+          "Conditional/combinatorial/multioutcome markets",
+          "Short selling,leverage,fees,fundingchanges",
+          "Empirical market efficiency orforecast accuracy"
+        ]
+      },
+      "fixture_families": 31,
+      "replay": {
+        "accepted_pairs": 33,
+        "rejected_pairs": 34,
+        "cli_cases": 134
+      },
+      "milestones": {
+        "audit": "e09195536476b17b24e4fa43e345b9ffcad54f19",
+        "source_profile": "9c5915715b60e62669b2669cf5cc70b4cf762c64",
+        "independent_fixtures": "11a35f5ee78176aa504df35a438db431d9e4efd3",
+        "engine": "879dcf6ec1e6521503a3c123646da61c6adec41a",
+        "cli_reports": "8708d429b2e1667c8b8c1f4f71a601393ae1d564",
+        "verification": "c5644369a390c387042963961f7e03629c8977db",
+        "acceptance": "75bba77d46169e8dc5cb00005dd97712248dbd27",
+        "closure": "7a11f4b14cf07d641d4fc79830272f8b4a07d87d"
+      },
+      "verified_examples": [
+        "With b=1 and zero initial quantities, prices start at 1/2. Buying one YES share costs 0.620114506958277524631763 play credits.",
+        "An unchanged-state reversal refunds the exact negative charge. One YES and one NO share together cost 1; payout is 1 and maker profit is 0.",
+        "145 independent Decimal120 vectors check stable Decimal80 pricing to absolute tolerance 1e-60. Differences of total potentials quantized to 1e-24 telescope exactly on the cash grid.",
+        "A 200-term exact Fraction interval for ln(2) checks the funded reserve. The ideal b·ln(2) loss bound depends on the frozen zero-initial binary contract."
+      ],
+      "source_boundaries": {
+        "version": 1,
+        "technique_id": 58,
+        "audit_sha256": "eb7cacbb68e154547ca0f2bb1ff55d06647055d79d8b27a35f0357e8a85e8818",
+        "source_manifest_sha256": "e36ed82d53463ad118427a7825c22e293d6a1cec15fd587bb5f55b8de72f36b1",
+        "boundaries": "Wolfers/Zitzewitz2004 economic context; Hanson2007journal/JPM1,3–15 distinct from2012web upload andJanuary2002draft. Chen/Vaughan2010Section2 unranked primary cost-function supplement. Decimal3.12 numerical semantics; tested runtime recorded in measurements.",
+        "rights": "Mathematical facts and original implementation/synthetic play-credit fixtures only; no copyrighted bodies,figures,third-party code or participant/trading data copied.",
+        "mechanism": "Fixed-b binary cost-function LMSR fromzero quantities; editorial long-only,funding,rounding,idempotency andevent-protocol conventions are explicit,not a replica of an exchange or empirical trader study."
+      },
+      "performance": {
+        "measured": true,
+        "environment": {
+          "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "platform": "Windows-11-10.0.26200-SP0"
+        },
+        "profile_sha256": "d36cca55bf080adabc57d6190820812802ec4386ffe5199676a6ef0b17aad000",
+        "code_sha256": "7bde9e5304e3c0f3d2b87ddae17b792d758e75c448f968f5629f3245a0daf1b5",
+        "protocol": "Three untraced complete in-process reports; separate tracemalloc report; one complete CLI including imports,registry andserialization. Native peak covers whole helper,imports,all workloads andtracing,not CLI-child/per-workload peak.",
+        "process_peak_working_set_bytes": 43933696,
+        "under_proposed_128_MiB": true,
+        "results": [
+          {
+            "id": "small",
+            "accounts": 2,
+            "events": 2,
+            "executed_trades": 1,
+            "settlements": 0,
+            "input_sha256": "ccfd9584f54d4902748965c4cc0c4664b3f33c2f9d609b0791a244905922807d",
+            "budget": {
+              "work": 192,
+              "returned_cells": 224
+            },
+            "seconds": [
+              0.0019817999564111233,
+              0.0014684000052511692,
+              0.0012564999051392078
+            ],
+            "median_seconds": 0.0014684000052511692,
+            "cli_seconds": 1.0622007003985345,
+            "python_traced_peak_bytes": 93670,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "medium",
+            "accounts": 4,
+            "events": 64,
+            "executed_trades": 32,
+            "settlements": 0,
+            "input_sha256": "a3128bea630be4ae5576920375dd3cba07734a124325f9a1b265b9e8c7bb9967",
+            "budget": {
+              "work": 8192,
+              "returned_cells": 6272
+            },
+            "seconds": [
+              0.01482510007917881,
+              0.014833499677479267,
+              0.014820999931544065
+            ],
+            "median_seconds": 0.01482510007917881,
+            "cli_seconds": 1.0327317998744547,
+            "python_traced_peak_bytes": 1225335,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "dense",
+            "accounts": 8,
+            "events": 512,
+            "executed_trades": 256,
+            "settlements": 0,
+            "input_sha256": "93e150a62f979fdecb06bed4e44eb7136d69e7b213e17b8f16eb3a709f2dc6d9",
+            "budget": {
+              "work": 98304,
+              "returned_cells": 65792
+            },
+            "seconds": [
+              0.12194379977881908,
+              0.12503249989822507,
+              0.11531009990721941
+            ],
+            "median_seconds": 0.12194379977881908,
+            "cli_seconds": 1.5394292999990284,
+            "python_traced_peak_bytes": 11338263,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "settlement",
+            "accounts": 4,
+            "events": 130,
+            "executed_trades": 64,
+            "settlements": 1,
+            "input_sha256": "cabf40c4c20c6f49c8ce0c48f278a7e809219dad6e3d02f723d0cdecdd01006a",
+            "budget": {
+              "work": 16640,
+              "returned_cells": 12608
+            },
+            "seconds": [
+              0.08637520018965006,
+              0.06405299995094538,
+              0.08105250028893352
+            ],
+            "median_seconds": 0.08105250028893352,
+            "cli_seconds": 1.1280176001600921,
+            "python_traced_peak_bytes": 2433091,
+            "under_proposed_five_seconds": true
+          }
+        ],
+        "scope": "Recorded local self-authored synthetic play-credit workloads; no real money,traders or empirical market accuracy."
+      },
+      "limitations": [
+        "Every repository record is synthetic play credit;no actualmoney,traderdata,externalexchange orsettlementservice used.",
+        "Ideal b ln2 bound is conditional onzero initialquantities,fixedb andone-credit binarypayouts;gridreserveexplicitlycoversrounding/numericalmargin.",
+        "Cash-grid equality isexact underbounded Decimal arithmetic;ln/exp prices/costs approximate withfrozen1e-60verificationtolerance.",
+        "Actor/resolver/clock/rights aredeclarations,not external authentication,truth orconsentcertification.",
+        "Local owner canrewrite allhistory;hashchainsalone are not external immutabilityproof.",
+        "Strict-before-close markettiming differsfrom51/57inclusiveforecastcutoffs;no automaticintegration.",
+        "No general MSR,combinatorialmarket,incentive/efficiency or empirical forecastaccuracycertification."
+      ],
+      "backlog": {
+        "P1": [
+          "Full source-equivalence and independent numerical/funding proof coverage before broad parameter expansion",
+          "Real participant-data rights,consent,identity/resolution evidence and empirical price-calibration studies",
+          "Stable51event-resolution/57forecast interfaces only after explicit semantic mapping"
+        ],
+        "P2": [
+          "Continuous double auctions",
+          "Combinatorial and conditional scoring-rule markets",
+          "Advanced funding/shorting/fees/market-maker variants",
+          "Live user/trader operations and product interfaces; real-money/external trading remains outside this scope"
+        ]
+      },
+      "accepted_example": "data/prediction-markets-cli/buy-one-input.json",
+      "cli_command": "prediction-markets"
+    },
+    {
+      "technique_id": 59,
+      "name": "Chaos-Theory Forecasting",
+      "status": "Core v1 Ready — Deterministic Lorenz Dynamics, Perturbation Sensitivity and Finite-Horizon Simulation Scope",
+      "profile": "chaos-theory-lorenz63-rk4-v1",
+      "profile_sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+      "core_record": "knowledge/chaos_theory_core_v1.json",
+      "scope": "Finite synthetic deterministic ODE software verification; no empirical forecast horizon,weather skill or global Lyapunov certification.",
+      "configuration_matrix": {
+        "supported": [
+          "Bounded deterministic Lorenz63 classical RK4",
+          "Explicit paired initial states,aligned separation",
+          "Full h/h2 integration and matched refinement diagnostics"
+        ],
+        "experimental_research_only": [
+          "Synthetic sensitivity interpretation"
+        ],
+        "unsupported": [
+          "Certified Lyapunov exponent or forecast horizon",
+          "Nonlinear delay embedding",
+          "Reservoir computing",
+          "Empirical weather-like ensembles",
+          "Random/stochastic/data assimilation modes"
+        ]
+      },
+      "fixture_families": 23,
+      "replay": {
+        "accepted_pairs": 12,
+        "rejected_pairs": 37,
+        "cli_cases": 98
+      },
+      "milestones": {
+        "audit": "e8113a22a7cac4c1fb83aac60aec07ba62fe385f",
+        "source_profile": "3de61fa70b0d86f7ff46c82df5c56c0e679e2ed6",
+        "independent_fixtures": "847a7e5b43541ed300c82fa13571bf3acdaf555e",
+        "engine": "457a225d6561e9e0713d54a378a2247406465296",
+        "cli_reports": "f42f012e5f7f4b5c45866852661f774e117ce536",
+        "verification": "600291a59f07faff98606162bd3d0306b8ad6085",
+        "acceptance": "4df7e2fcf320d51c9067cf50344b1a13290b32b1",
+        "closure": "4fbb6667b1286913ae09931d489545972b43dbe2"
+      },
+      "verified_examples": [
+        "At (1,1,1), the derivative is (0,26,−5/3). A classical RK4 step of 1/100 gives approximately (1.0125671910736112,1.2599177989452743,0.9848909717916053).",
+        "Independent Taylor references of orders 80 and 100 agree within 1e-60 at t=1/100. This is a local stability witness, not a rigorous remainder bound.",
+        "Errors at h=1/200 and 1/400 are about 1.52718e-7 and 9.14818e-9, ratio 16.6938. The lower-order Euler negative control has error 0.0126622."
+      ],
+      "source_boundaries": {
+        "version": 1,
+        "technique_id": 59,
+        "audit_sha256": "97cd213488d5597253c230bd658ddd20f48df1eb63604f8f64efe919b0edeb22",
+        "source_manifest_sha256": "8998ef41e7e380f546c7de331125f0fd43dba95c70a1413d7c88c549697beeb1",
+        "boundaries": "Ranked abstract/metadata only; UCAR DART10.10.1 equations/defaults and RK2 versus RK4 conventions; Moler2014 classical four-stage method inspected. No original Lorenz run reproduction.",
+        "rights": "Mathematical facts and original code/synthetic fixtures only; no third-party text,data,figures or code copied."
+      },
+      "performance": {
+        "measured": true,
+        "environment": {
+          "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "platform": "Windows-11-10.0.26200-SP0"
+        },
+        "profile_sha256": "9cefe49f10b6a149c86ee527abd16f2932e939364a1088fcc2a3fe5d26750d0f",
+        "code_sha256": "ffac2760befd1870402e7e2100a84a82b1a018d965b1440421983486fde5d1af",
+        "protocol": "Three untraced complete in-process reports; separate tracemalloc report; one full CLI withimports/registry/serialization perworkload. Native peak covers whole helper includingimports/allworkloads/tracing; not CLIchild/perworkload.",
+        "process_peak_working_set_bytes": 53301248,
+        "under_proposed_128_MiB": true,
+        "results": [
+          {
+            "id": "small",
+            "steps": 1,
+            "dt": "1/100",
+            "horizon": "1/100",
+            "returned_times": 2,
+            "budget": {
+              "work": 24,
+              "returned_cells": 34
+            },
+            "input_sha256": "4eb00fc06936df286e9a91af179aa008782685bc3f520b354069948084d6735e",
+            "seconds": [
+              0.0007675997912883759,
+              0.0004992997273802757,
+              0.0004444001242518425
+            ],
+            "median_seconds": 0.0004992997273802757,
+            "cli_seconds": 1.4160465002059937,
+            "python_traced_peak_bytes": 49887,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "medium",
+            "steps": 1000,
+            "dt": "1/1000",
+            "horizon": "1",
+            "returned_times": 101,
+            "budget": {
+              "work": 24000,
+              "returned_cells": 1717
+            },
+            "input_sha256": "5d3ad7523ead87ea135047c0846332e918e057758eb7ee29aaa1e48db88c682e",
+            "seconds": [
+              0.031254000030457973,
+              0.03063250007107854,
+              0.03000809997320175
+            ],
+            "median_seconds": 0.03063250007107854,
+            "cli_seconds": 0.924227399751544,
+            "python_traced_peak_bytes": 417020,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "dense",
+            "steps": 4096,
+            "dt": "1/1000",
+            "horizon": "512/125",
+            "returned_times": 4097,
+            "budget": {
+              "work": 98304,
+              "returned_cells": 69649
+            },
+            "input_sha256": "a8afabeb5a0b8761d48c482fd1abe8052b8cb3796bb8e3c70cf36d0b183daa93",
+            "seconds": [
+              0.16108019975945354,
+              0.2606101999990642,
+              0.2802720000036061
+            ],
+            "median_seconds": 0.2606101999990642,
+            "cli_seconds": 1.06900139991194,
+            "python_traced_peak_bytes": 15383372,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "long",
+            "steps": 4000,
+            "dt": "1/100",
+            "horizon": "40",
+            "returned_times": 41,
+            "budget": {
+              "work": 96000,
+              "returned_cells": 697
+            },
+            "input_sha256": "354faea4874c9946399299d500f2925dfbcaed801dd8b67a6675084264faa2f3",
+            "seconds": [
+              0.23720869980752468,
+              0.23877090029418468,
+              0.19677359983325005
+            ],
+            "median_seconds": 0.23720869980752468,
+            "cli_seconds": 2.013994799926877,
+            "python_traced_peak_bytes": 190121,
+            "under_proposed_five_seconds": true
+          }
+        ],
+        "scope": "Synthetic finite dimensionless trajectories;no empirical forecast accuracy."
+      },
+      "limitations": [
+        "All trajectories synthetic anddimensionless;no weather observations orheld-out forecast evaluation.",
+        "Binary64 RK4 isapproximate;Taylor local series stability isnot rigorous globalerror certification.",
+        "Step-refinement differences canbe large alongchaotic trajectories and areseparate frominitial-condition separation.",
+        "No originalLorenz RK2 reproduction,global Lyapunov exponent,forecast-horizon estimation,embedding,reservoir orassimilation.",
+        "Provenance/rights declarations andhashes donot certify external truth orpermittedrealdata."
+      ],
+      "backlog": {
+        "P1": [
+          "Obtain permitted full ranked texts and refine source-equivalence locators",
+          "Rigorous numerical error bounds and empirical held-out validation before any forecast-horizon claim"
+        ],
+        "P2": [
+          "Global/finite-time Lyapunov estimators with independent reference",
+          "Nonlinear delay embedding and reservoir computing",
+          "Data assimilation and empirical weather-like ensembles"
+        ]
+      },
+      "accepted_example": "data/chaos-theory-cli/one-step-input.json",
+      "cli_command": "chaos-theory"
+    },
+    {
+      "technique_id": 60,
+      "name": "Multiverse / Many-Worlds Prediction",
+      "status": "Core v1 Ready — Finite Probability-Weighted Branching Scenario Reference Scope",
+      "profile": "multiverse-finite-rational-scenario-tree-v1",
+      "profile_sha256": "9f1b7221a1c5aece17521729aa61e1c280c2bb39c2639ddaea716bafc06b0506",
+      "core_record": "knowledge/multiverse_core_v1.json",
+      "scope": "Exactfinite generic scenario probability/utility software;not empirical physics orother-universeprediction.",
+      "configuration_matrix": {
+        "supported": [
+          "Complete finite exactrational scenario trees",
+          "Explicit terminalutilities andexpectedutility",
+          "Nodeevent conditionalprobability queries",
+          "Canonical ordering andimpossiblecondition accounting"
+        ],
+        "experimental_research_only": [
+          "Speculative many-worlds narrative interpretation"
+        ],
+        "unsupported": [
+          "Observing/predicting otheruniverses",
+          "Bornrule/amplitude/decoherence simulation",
+          "Empirical Everettproof",
+          "General quantum decision-theory theoremreplication",
+          "MonteCarlo/stochasticservices"
+        ]
+      },
+      "fixture_families": 24,
+      "replay": {
+        "accepted_pairs": 9,
+        "rejected_pairs": 45,
+        "cli_cases": 108
+      },
+      "milestones": {
+        "audit": "cd608f620ed8977dfbccd1836b0239876d4e374f",
+        "source_profile": "87feb51fb15ae64828da9d320bdf289bde5a6853",
+        "independent_fixtures": "d94405031c12b5f4921a413a372cf88f19bf818c",
+        "engine": "1b1a583d40b29345b5f096cda214890966d11f68",
+        "cli_reports": "f00ad5f2cc9d7f9ddb3364298be861072255a93d",
+        "verification": "a9e39af35b8a6984db5b33a8f8cc7b7edb727159",
+        "acceptance": "8c9558992ffe68409e92f069d70d03cba59fe0e9",
+        "closure": "c434d012e31f7975e6f670b41c404d2324911955"
+      },
+      "verified_examples": [
+        "A branch of 1/2 followed by a conditional branch of 1/3 gives leaf mass 1/6.",
+        "Leaf masses 1/6, 1/3, 1/2 and utilities 6, −3, 2 give expected utility 1. A zero-weight leaf with utility 99 contributes 0.",
+        "P(A1|A)=1/3, P(A|A1)=1, and disjoint events give 0. An impossible conditioning event returns null/not_estimable.",
+        "64 trees and 3,136 node-pair queries agree with the independent leaf-set oracle. Six equiprobable atoms reproduce the literal example; incorrect equal-leaf weighting gives 26."
+      ],
+      "source_boundaries": {
+        "version": 1,
+        "technique_id": 60,
+        "audit_sha256": "b2f97542564eb4d214d6ee27ef2d0714c3ba34f90f0424c6118ee4327499f67b",
+        "source_manifest_sha256": "5089c43fb7f5d9bbca169a297801dccdd3c3eca36722ef2c87b31949a2769cdf",
+        "boundaries": "Ranked APS metadata/OUP abstract andcontents/Carroll authorcontents provide interpretationcontext only; no full ranked-text proofs replicated. Inspected MIT multiplication anddiscrete-expectation transcripts supply generic probabilityrules.",
+        "rights": "Mathematical facts,original implementation andself-authored synthetic fixtures only; no copyrighted bodies,figures,code orobservations copied."
+      },
+      "performance": {
+        "measured": true,
+        "environment": {
+          "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "platform": "Windows-11-10.0.26200-SP0"
+        },
+        "profile_sha256": "9f1b7221a1c5aece17521729aa61e1c280c2bb39c2639ddaea716bafc06b0506",
+        "code_sha256": "715e7b8f06dacc932758e7146cba9389a0c1fe40b998270d19ae1a5c455ddbf0",
+        "protocol": "Three untraced complete in-process reports; separate tracemalloc report; one full CLI perworkload. Native peak covers whole helper/imports/allworkloads/tracing,not CLIchild/perworkload.",
+        "process_peak_working_set_bytes": 26222592,
+        "under_proposed_128_MiB": true,
+        "results": [
+          {
+            "id": "small",
+            "nodes": 6,
+            "queries": 8,
+            "leaves": 4,
+            "budget": {
+              "work": 84,
+              "returned_cells": 160
+            },
+            "input_sha256": "2e7613734b200e197e8caa1c1043fa7fcda16077104cdf23145976d814856fe8",
+            "seconds": [
+              0.0008537000976502895,
+              0.0005604997277259827,
+              0.0004638000391423702
+            ],
+            "median_seconds": 0.0005604997277259827,
+            "cli_seconds": 0.9532072003930807,
+            "python_traced_peak_bytes": 37237,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "medium",
+            "nodes": 64,
+            "queries": 64,
+            "leaves": 63,
+            "budget": {
+              "work": 8192,
+              "returned_cells": 1536
+            },
+            "input_sha256": "d4818783891dc3bd3329c2be58edb3f10bfe66685ca3d14b5adade54a0c8869f",
+            "seconds": [
+              0.0024141003377735615,
+              0.0017714998684823513,
+              0.001623000018298626
+            ],
+            "median_seconds": 0.0017714998684823513,
+            "cli_seconds": 1.1919181998819113,
+            "python_traced_peak_bytes": 194665,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "dense",
+            "nodes": 256,
+            "queries": 256,
+            "leaves": 255,
+            "budget": {
+              "work": 131072,
+              "returned_cells": 6144
+            },
+            "input_sha256": "7caebc8c73b0f7e9f08b5a6e38a59b908ce5e27a3a05241ac947bb2e2c52c224",
+            "seconds": [
+              0.00578249990940094,
+              0.005718400236219168,
+              0.005395799875259399
+            ],
+            "median_seconds": 0.005718400236219168,
+            "cli_seconds": 1.7418316998519003,
+            "python_traced_peak_bytes": 778754,
+            "under_proposed_five_seconds": true
+          },
+          {
+            "id": "depth",
+            "nodes": 33,
+            "queries": 256,
+            "leaves": 1,
+            "budget": {
+              "work": 9537,
+              "returned_cells": 2576
+            },
+            "input_sha256": "b38e9e70c4ee922201daab0197fe558e76210a8f02baac637ddee42c096b6dec",
+            "seconds": [
+              0.002537200227379799,
+              0.0021251998841762543,
+              0.0021097999997437
+            ],
+            "median_seconds": 0.0021251998841762543,
+            "cli_seconds": 1.0254309000447392,
+            "python_traced_peak_bytes": 319269,
+            "under_proposed_five_seconds": true
+          }
+        ],
+        "scope": "Declared finite synthetic scenario probability/utility arithmetic;no empiricaluniverseobservations."
+      },
+      "limitations": [
+        "All probabilities/utilityvalues areeditorial syntheticdeclarations,notquantumamplitudes orobservations.",
+        "Completeleafmass1 verifiesonlythedeclaredfinite tree;externalmissingpossibilities cannotbe detected.",
+        "Generic expectedutilityarithmetic isnot Bornrule derivation,Everett proof oradvancedquantumdecisiontheory.",
+        "Zero-massconditioning isundefined;returnsnull/notestimable.",
+        "Rankedtexts fullaccess/methodreplication notclaimed;primarygenericprobabilitysupplements separatelyidentified.",
+        "Provenance/hash declarations donotcertify externaltruth,rights oridentities."
+      ],
+      "backlog": {
+        "P1": [
+          "Permitted full ranked-text access and precise interpretation locators",
+          "Keep editorial probabilities distinct from Born-rule amplitudes and physical branch ontology"
+        ],
+        "P2": [
+          "Independently verified finite quantum-state thought experiments",
+          "Advanced quantum decision-theory interpretation and larger scenario models"
+        ]
+      },
+      "accepted_example": "data/multiverse-cli/reference-input.json",
+      "cli_command": "multiverse"
+    }
+  ],
+  "new_fixture_families_total": 159,
+  "new_cli_pairs": {
+    "accepted": 108,
+    "rejected": 227,
+    "raw_outputs": 670
+  },
+  "fresh_final_checkout_replay": {
+    "passed": true,
+    "runtime_snapshot_commit": "2724685816fd033bb44c30a821016bbcb8d82b9a",
+    "exports": [
+      {
+        "autocrlf": "false",
+        "passed": true,
+        "actual_cli_replays": 670,
+        "by_technique": {
+          "55": 110,
+          "56": 92,
+          "57": 128,
+          "58": 134,
+          "59": 98,
+          "60": 108
+        },
+        "raw_corpus_files": 1011,
+        "normalized_commitments": 19
+      },
+      {
+        "autocrlf": "true",
+        "passed": true,
+        "actual_cli_replays": 670,
+        "by_technique": {
+          "55": 110,
+          "56": 92,
+          "57": 128,
+          "58": 134,
+          "59": 98,
+          "60": 108
+        },
+        "raw_corpus_files": 1011,
+        "normalized_commitments": 19
+      }
+    ],
+    "method": "Fresh git checkout-index exports ofstagedcurrentruntime,pinnedknowledge andall55–60corpora;actual subprocesses hashrawstdoutwithoutnewline normalization.",
+    "scope": "Mutablegapsstatusindex excluded;not readbytheseengines. FulllegacyCLIreplay runsseparately infinalacceptance;earliercorecheckoutreceipts retained.",
+    "environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "cli_workers": 4
+  },
+  "cross_engine_compatibility": {
+    "passed": true,
+    "groups": {
+      "51-to-57-scoring": {
+        "passed": true,
+        "binary_brier": "17/50",
+        "two_category_brier": "17/25",
+        "boundary": "Compatible numeric scoring conventions;question identities,weights/forecast revisions remain separate schemas. No automatic adapter."
+      },
+      "51-to-58-resolution": {
+        "passed": true,
+        "demonstrated_mapping": {
+          "1": "YES",
+          "0": "NO"
+        },
+        "mapping_scope": "Manually declared synthetic witness only; no shared identity/authentication adapter.",
+        "differences": [
+          "51allowsdispute/void andcontrolledresolutioncorrection;58settlesbinaryonce",
+          "51forecastcutoffinclusive;58quotes/tradesstrictlybeforeclose",
+          "51canresolvepositiveoccurrencebeforewindowend;58requiresmarketclose",
+          "Question/eventIDs,rule definitions,evidence anddeclaredauthority mustbe reconciled before any futureadapter."
+        ]
+      },
+      "52-synthetic-provenance": {
+        "passed": true,
+        "common_hash_fields": [
+          "input_sha256",
+          "code_sha256",
+          "source_manifest_sha256",
+          "source_freeze_sha256"
+        ],
+        "stream_sha256": "7461fb7e78801025e47dc1382046fe2771fff76647922ad72122a7c943834f79",
+        "boundary": "52finite PRNG coupled runs are correlated model samples;60exact editorial treeweights have no RNG. No empirical probability/causal transfer or stream reuse."
+      },
+      "53-measurement-availability": {
+        "passed": true,
+        "late_measurement_did_not_rewrite_filter": true,
+        "unknown_target_not_scored": true,
+        "boundary": "Common availability chronology concept;53doesnotretroactivelyassimilatedelayedrecords,51/57selecteligibleforecastrevisions underdifferentcutoffcontracts. No automaticevaluationconnector."
+      },
+      "54-to-59-simulation-boundaries": {
+        "passed": true,
+        "boundary": "54exact synchronous binary B3/S23 gridticks differ from59approximate continuous Lorenz RK4 dimensionless steps. Both finish requested horizons;neither scalarcounts nor equalclocklabels make states/units comparable. No grid-to-ODE adapter."
+      },
+      "56-causal-versus-conditional": {
+        "passed": true,
+        "observational": {
+          "0": "1/5",
+          "1": "3/5"
+        },
+        "interventional": {
+          "0": "3/10",
+          "1": "1/2"
+        },
+        "boundary": "Conditionalscenario/forecast probabilities are notinterventions.56effects dependondeclaredDAG,adjustment,compatibility andpositivity;unsupportedlatent graph hasnullinterventionalresult."
+      },
+      "60-generic-scenario-representation": {
+        "passed": true,
+        "leaf_mass": "1",
+        "expected_utility": "1",
+        "path_mass": "1/6",
+        "boundary": "Finite exact editorial probability/utility representation only;arbitraryweights distinctfrom Bornrule amplitudes. No observational,causal ormultiverse predictive certification."
+      }
+    },
+    "group_count": 7,
+    "engine_code_sha256": {
+      "future/superforecasting.py": "e4c81aa68825ada8baebab8c8e725e78a562303786ed44a7cec6b5328ec990c1",
+      "future/collective_intelligence.py": "134412c37ea8122285d7bb8a95717a71d0fed29a2a62cd11b3f7c5e5a2c819ba",
+      "future/prediction_markets.py": "7bde9e5304e3c0f3d2b87ddae17b792d758e75c448f968f5629f3245a0daf1b5",
+      "future/psychohistory.py": "fd187915dfca927e046800be389a1fe9b547653488d29055fcfb5cfb39445386",
+      "future/digital_twin.py": "baafad5ee98e365b18b168ad1500c44dc9e20718d10e137f3f6bd78dd99ab45f",
+      "future/agent_based.py": "cd6d2b3efba558253ab77212b67fd2e80c1d632d8c48e8fd358b38b7b80c896c",
+      "future/chaos_theory.py": "ffac2760befd1870402e7e2100a84a82b1a018d965b1440421983486fde5d1af",
+      "future/causal_ai.py": "9467ac0f236fb05ada62e7fb50a0277a1dba4dc3c41721eff528fa202861c139",
+      "future/multiverse.py": "715e7b8f06dacc932758e7146cba9389a0c1fe40b998270d19ae1a5c455ddbf0"
+    },
+    "scope": "Read-only compatibility/semantic-boundary witnesses; no engines changed,no production connector orneworchestrationframework."
+  },
+  "source_and_rights": {
+    "all_ranked_rows_variation_names_preserved": true,
+    "embedded_source_ids_checked": 51,
+    "registry": {
+      "references_checked_twice": 590,
+      "unique": 435,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "scope": "Source metadata/facts andpermittedreferencebehavior do notcertifyfulltextaccess,third-partyredistributionrights orscientifictruth. Per-release rights/vintage restrictions remaininforce."
+  },
+  "evidence_categories": {
+    "implemented_bounded_cores": 54,
+    "historical_reference": "Namedtraditions,editions andproceduralattribution remainexplicit;missingdirectinterpretations staycompositional/unsupported.",
+    "mathematical_verification": "Exactrational/finitegrid/probability/accounting anchors andindependentastronomical/numericalfixtures withinversionedbounds.",
+    "synthetic_results": "55–60examplesentirelysynthetic; noactualEEG,traders,money,weatherobservations orother-universe data.",
+    "empirical_evaluation": {
+      "technique_id": 49,
+      "dataset": {
+        "path": "resources/ai-predictive-modeling/noaa_mlo_2000_2023.json",
+        "sha256": "303c231dd00ba7cf6302e02dbb25525b91e226008a71b15856f25f775aa9645c",
+        "count": 288,
+        "first": "2000-01",
+        "last": "2023-12",
+        "source_sha256": "0ce4e7749217b4af2cca8e0bdf263856ad59b0a2946d4e98c7b22ccfbff21cad",
+        "rights": "NOAA government data public domain unless separately annotated;retain source/product credit,no endorsement or misrepresentation. Selected2000–2023 NOAA measurements avoid the pre1974 Scripps-sourced portion of the full file.",
+        "attribution": "Data provided by NOAA Global Monitoring Laboratory, Boulder, Colorado, USA;Carbon Cycle and Greenhouse Gases group. Original NOAA values;this selected research subset is not an official NOAA product or endorsement."
+      },
+      "primary_result": "Validation selecteddrift. Test MAE2.537249963267ppm vs seasonal-naive2.1794ppm;ratio1.164196551008. Selected model underperformed on test and is not replaced by the diagnostic test winner.",
+      "source_vintage_certified": false,
+      "limit": "One retrospectively evaluatedpinnedNOAAmonthlyCO2series;overlappingforecastcellsarenotindependentreplications;noas-ofvintageoruniversalforecastskillclaim."
+    },
+    "unsupported_claims": "No psychic/precognitive,appearance-basedpersonal,EEGintention,unidentifiedcausal,live-market,globalLyapunov/weatherhorizon orother-universepredictioncertification."
+  },
+  "refinement_backlog": "data/future-prioritized-refinement-backlog.json",
+  "refinement_policy": "P1/P2aggregatedbyscientificvalidation,source/rights,advancedmath,historicalvariation,realdatasets,interfaces,performance andoptionalproductintegration;notimplementedduringcompletion.",
+  "gap_index_reconciliation": {
+    "reconciled_ids": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "changes": [
+      {
+        "technique_id": 5,
+        "before": {
+          "technique_id": 5,
+          "name": "Horary Astrology",
+          "retained": true,
+          "status": "Researching",
+          "variation_count": 5,
+          "source_count": 3,
+          "missing_source_urls": [
+            2,
+            3
+          ],
+          "coverage_status": "unverified",
+          "gaps": [
+            "Edition and chapter coverage unverified",
+            "Ingestion rights unverified",
+            "No verified executable rule fixtures in original inventory"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": [],
+          "resource_audit": "knowledge/horary_resource_audit.json"
+        },
+        "after": {
+          "technique_id": 5,
+          "name": "Horary Astrology",
+          "retained": true,
+          "status": "Core v1 Ready — Diagnostic Scope",
+          "variation_count": 5,
+          "source_count": 3,
+          "missing_source_urls": [
+            2,
+            3
+          ],
+          "coverage_status": "Verified diagnostic scope only; Question Judgment — Experimental; judgment_certified=false",
+          "gaps": [
+            "Resolve operational seventh-cusp affliction and impedited/unfortunate seventh-lord clearance for advice-intent; p115 does not itself define a mandatory all-row veto or threshold",
+            "Find complete-input published advice-intent chart/judgment in supported domain and matching advice-begins protocol; bounded search documented in horary_judgment_attempt_v1.json",
+            "Verify reception-qualified translation/collection and categorical interference only where needed for selected category",
+            "Resolve Moon application/void-of-course and general caution exceptions without combining schools",
+            "Additional question categories",
+            "Frawley/Barclay independently sourced profiles",
+            "Expanded historical ephemeris/calendar support",
+            "Source-specific contextual exceptions, terrain/observational visibility and historical fixed-star models; fixed-star-table reconstruction does not block the diagnostic release"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": [],
+          "resource_audit": "knowledge/horary_resource_audit.json",
+          "release_matrix": "knowledge/horary_engine_v1.json"
+        },
+        "authoritative_record": "knowledge/horary_engine_v1.json"
+      },
+      {
+        "technique_id": 6,
+        "before": {
+          "technique_id": 6,
+          "name": "Mundane Astrology",
+          "retained": true,
+          "status": "Not Started",
+          "variation_count": 5,
+          "source_count": 3,
+          "missing_source_urls": [
+            1,
+            2,
+            3
+          ],
+          "coverage_status": "unverified",
+          "gaps": [
+            "Edition and chapter coverage unverified",
+            "Ingestion rights unverified",
+            "No verified executable rule fixtures in original inventory"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": []
+        },
+        "after": {
+          "technique_id": 6,
+          "name": "Mundane Astrology",
+          "retained": true,
+          "status": "Core v1 Ready",
+          "variation_count": 5,
+          "source_count": 3,
+          "missing_source_urls": [
+            1,
+            2,
+            3
+          ],
+          "coverage_status": "Bounded scope inauthoritativeexistingrelease;unsupported/experimentalclaimsunpromoted",
+          "gaps": [
+            "Additional direct planet-house/outer-planet and qualified aspect interpretations from verified Green pages",
+            "Selected further planetary-cycle pairs and independently validated refinements",
+            "Permitted,documented national/event charts with competing founding moments/source certainty preserved",
+            "Independent eclipse classification,kept separate from syzygy and local visibility",
+            "Investigate Green printed Saturn/time/cusp discrepancies without fitting source values or treating anecdotes as predictive validation",
+            "Advanced eclipse visibility,duration and geographic doctrine",
+            "Historical calendars,local solar time and disputed founding events",
+            "Specialized financial astrology and obscure lineage procedures",
+            "Separately verified Raphael/Campion methodological profiles"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": [],
+          "release_matrix": "knowledge/mundane_core_v1.json"
+        },
+        "authoritative_record": "knowledge/mundane_core_v1.json"
+      },
+      {
+        "technique_id": 7,
+        "before": {
+          "technique_id": 7,
+          "name": "Astrocartography",
+          "retained": true,
+          "status": "Not Started",
+          "variation_count": 4,
+          "source_count": 3,
+          "missing_source_urls": [
+            1,
+            2,
+            3
+          ],
+          "coverage_status": "unverified",
+          "gaps": [
+            "Edition and chapter coverage unverified",
+            "Ingestion rights unverified",
+            "No verified executable rule fixtures in original inventory"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": []
+        },
+        "after": {
+          "technique_id": 7,
+          "name": "Astrocartography",
+          "retained": true,
+          "status": "Core v1 Ready",
+          "variation_count": 4,
+          "source_count": 3,
+          "missing_source_urls": [
+            1,
+            2,
+            3
+          ],
+          "coverage_status": "Bounded scope inauthoritativeexistingrelease;unsupported/experimentalclaimsunpromoted",
+          "gaps": [
+            "Legitimate original-title-page/procedural verification and direct Jim Lewis interpretations",
+            "Additional source-scoped relocation rules and permitted published worked examples",
+            "Further birth-time, pre1972 and near-polar precision validation; expanded date oracle fixtures",
+            "Parans if a named source/convention can be independently verified efficiently",
+            "Local-space astrology and explicit azimuth/geodesic conventions",
+            "Complex crossings, historical geodetic variants and deeper paran configurations",
+            "Advanced visualization and separately source-reviewed location-ranking experiments"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": [],
+          "release_matrix": "knowledge/astrocartography_core_v1.json"
+        },
+        "authoritative_record": "knowledge/astrocartography_core_v1.json"
+      },
+      {
+        "technique_id": 8,
+        "before": {
+          "technique_id": 8,
+          "name": "Palmistry",
+          "retained": true,
+          "status": "Not Started",
+          "variation_count": 6,
+          "source_count": 3,
+          "missing_source_urls": [
+            2,
+            3
+          ],
+          "coverage_status": "unverified",
+          "gaps": [
+            "Edition and chapter coverage unverified",
+            "Ingestion rights unverified",
+            "No verified executable rule fixtures in original inventory"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": []
+        },
+        "after": {
+          "technique_id": 8,
+          "name": "Palmistry",
+          "retained": true,
+          "status": "Core v1 Ready",
+          "variation_count": 6,
+          "source_count": 3,
+          "missing_source_urls": [
+            2,
+            3
+          ],
+          "coverage_status": "Bounded scope inauthoritativeexistingrelease;unsupported/experimentalclaimsunpromoted",
+          "gaps": [
+            "More independently inspected Benham original and Saint-Germain procedures under separate profiles",
+            "Further source-verified line/shape/mount exceptions and hand-context combinations",
+            "Assisted image extraction only after consent,orientation checks,independent landmark accuracy and user correction are established",
+            "Indian Samudrika original-source review and dermatoglyphics as separate traditions",
+            "Extensive minor marks,timing scales and obscure shape variations",
+            "Advanced vision pipelines only after practical independently validated feasibility"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": [],
+          "release_matrix": "knowledge/palmistry_core_v1.json"
+        },
+        "authoritative_record": "knowledge/palmistry_core_v1.json"
+      },
+      {
+        "technique_id": 9,
+        "before": {
+          "technique_id": 9,
+          "name": "Face Reading / Physiognomy",
+          "retained": true,
+          "status": "Not Started",
+          "variation_count": 4,
+          "source_count": 3,
+          "missing_source_urls": [
+            2,
+            3
+          ],
+          "coverage_status": "unverified",
+          "gaps": [
+            "Edition and chapter coverage unverified",
+            "Ingestion rights unverified",
+            "No verified executable rule fixtures in original inventory"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": []
+        },
+        "after": {
+          "technique_id": 9,
+          "name": "Face Reading / Physiognomy",
+          "retained": true,
+          "status": "Core v1 Ready — Historical/Symbolic Reference Scope",
+          "variation_count": 4,
+          "source_count": 3,
+          "missing_source_urls": [
+            2,
+            3
+          ],
+          "coverage_status": "Bounded scope inauthoritativeexistingrelease;unsupported/experimentalclaimsunpromoted",
+          "gaps": [
+            "More legitimate original/permitted regional diagrams and terminology under separate traditions",
+            "Additional historical source examples and critical context,without individualized trait inference",
+            "Improved neutral observation guidance and independently checked annotation conventions",
+            "Consent-based region localization only after independent extraction accuracy,orientation validation and user correction",
+            "More Hunter volumes and separately scoped Holcroft/Chinese historical source documentation",
+            "Additional archival diagram/edition comparisons"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": [],
+          "release_matrix": "knowledge/face_reading_core_v1.json"
+        },
+        "authoritative_record": "knowledge/face_reading_core_v1.json"
+      },
+      {
+        "technique_id": 10,
+        "before": {
+          "technique_id": 10,
+          "name": "Phrenology",
+          "retained": true,
+          "status": "Not Started",
+          "variation_count": 3,
+          "source_count": 2,
+          "missing_source_urls": [
+            1,
+            2
+          ],
+          "coverage_status": "unverified",
+          "gaps": [
+            "Edition and chapter coverage unverified",
+            "Ingestion rights unverified",
+            "No verified executable rule fixtures in original inventory"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": []
+        },
+        "after": {
+          "technique_id": 10,
+          "name": "Phrenology",
+          "retained": true,
+          "status": "Core v1 Ready — Historical/Educational Reference Scope",
+          "variation_count": 3,
+          "source_count": 2,
+          "missing_source_urls": [
+            1,
+            2
+          ],
+          "coverage_status": "Bounded scope inauthoritativeexistingrelease;unsupported/experimentalclaimsunpromoted",
+          "gaps": [
+            "Expand inspected descriptive passages for22 legend-only entries without harmful individualized inference",
+            "Verify Combe original diagrams/edition-specific legends separately; preserve rank2",
+            "Add further independent original-panel position cases and typographic aliases when verified",
+            "Gall original localization comparison and other edition/translation conflicts",
+            "Optional neutral static schematic after additional source-fidelity checks; no personal assessment"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": [],
+          "release_matrix": "knowledge/phrenology_core_v1.json"
+        },
+        "authoritative_record": "knowledge/phrenology_core_v1.json"
+      },
+      {
+        "technique_id": 11,
+        "before": {
+          "technique_id": 11,
+          "name": "Moleosophy",
+          "retained": true,
+          "status": "Not Started",
+          "variation_count": 4,
+          "source_count": 2,
+          "missing_source_urls": [
+            2
+          ],
+          "coverage_status": "unverified",
+          "gaps": [
+            "Edition and chapter coverage unverified",
+            "Ingestion rights unverified",
+            "No verified executable rule fixtures in original inventory"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": []
+        },
+        "after": {
+          "technique_id": 11,
+          "name": "Moleosophy",
+          "retained": true,
+          "status": "Core v1 Ready — Historical/Symbolic Reference Scope",
+          "variation_count": 4,
+          "source_count": 2,
+          "missing_source_urls": [
+            2
+          ],
+          "coverage_status": "Bounded scope inauthoritativeexistingrelease;unsupported/experimentalclaimsunpromoted",
+          "gaps": [
+            "Expand selected original-source summaries and independent side/location examples where useful",
+            "Verify remaining historical overlaps/cross-references without silently harmonizing them",
+            "Resolve inventory standalone Fontaine bibliographic title; preserve actual containing work identity",
+            "Contemporary Chinese source author/edition/access/rights verification; keep inventory rank1 unchanged",
+            "Independently verify Indian sources and lineage-specific distinctions",
+            "Other editions/translations and complex neutral region diagrams when useful"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": [],
+          "release_matrix": "knowledge/moleosophy_core_v1.json"
+        },
+        "authoritative_record": "knowledge/moleosophy_core_v1.json"
+      },
+      {
+        "technique_id": 12,
+        "before": {
+          "technique_id": 12,
+          "name": "Podomancy / Foot Reading",
+          "retained": true,
+          "status": "Not Started",
+          "variation_count": 4,
+          "source_count": 2,
+          "missing_source_urls": [],
+          "coverage_status": "unverified",
+          "gaps": [
+            "Edition and chapter coverage unverified",
+            "Ingestion rights unverified",
+            "No verified executable rule fixtures in original inventory"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": []
+        },
+        "after": {
+          "technique_id": 12,
+          "name": "Podomancy / Foot Reading",
+          "retained": true,
+          "status": "Core v1 Ready — Historical/Symbolic Reference Scope",
+          "variation_count": 4,
+          "source_count": 2,
+          "missing_source_urls": [],
+          "coverage_status": "Bounded scope inauthoritativeexistingrelease;unsupported/experimentalclaimsunpromoted",
+          "gaps": [
+            "Legitimate complete procedural access and allowed-use review for ranked Somogyi/Sheehan profiles",
+            "Match original scan/print edition and verify typography/page markers for current anonymous source",
+            "Expand source-supported references/fixtures where useful without inventing individual toe rules",
+            "Independent original Indian foot-sign sources and lineage separation",
+            "Other historical editions,sole-mark diagrams and source-specific named foot lines"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": [],
+          "release_matrix": "knowledge/podomancy_core_v1.json"
+        },
+        "authoritative_record": "knowledge/podomancy_core_v1.json"
+      },
+      {
+        "technique_id": 13,
+        "before": {
+          "technique_id": 13,
+          "name": "Graphology",
+          "retained": true,
+          "status": "Not Started",
+          "variation_count": 4,
+          "source_count": 3,
+          "missing_source_urls": [
+            1,
+            2,
+            3
+          ],
+          "coverage_status": "unverified",
+          "gaps": [
+            "Edition and chapter coverage unverified",
+            "Ingestion rights unverified",
+            "No verified executable rule fixtures in original inventory"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": []
+        },
+        "after": {
+          "technique_id": 13,
+          "name": "Graphology",
+          "retained": true,
+          "status": "Core v1 Ready — Historical/Descriptive Reference Scope",
+          "variation_count": 4,
+          "source_count": 3,
+          "missing_source_urls": [
+            1,
+            2,
+            3
+          ],
+          "coverage_status": "Bounded scope inauthoritativeexistingrelease;unsupported/experimentalclaimsunpromoted",
+          "gaps": [
+            "Verify original ABC and Saudek procedural pages as separate named profiles with rights and independent examples",
+            "Expand selected particular-sign documentary coverage and source exceptions where useful",
+            "More independent historical caption/definition fixtures without copying personal psychological diagnoses",
+            "Other translations,German holistic terminology and other scripts after verified procedural access",
+            "Calibrated physical/dynamic measurements only if useful and independently supported;no individual-trait inference",
+            "Complex source combinations as documentary references,not personal portraits"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": [],
+          "release_matrix": "knowledge/graphology_core_v1.json"
+        },
+        "authoritative_record": "knowledge/graphology_core_v1.json"
+      },
+      {
+        "technique_id": 14,
+        "before": {
+          "technique_id": 14,
+          "name": "Aura Reading",
+          "retained": true,
+          "status": "Not Started",
+          "variation_count": 4,
+          "source_count": 2,
+          "missing_source_urls": [
+            1,
+            2
+          ],
+          "coverage_status": "unverified",
+          "gaps": [
+            "Edition and chapter coverage unverified",
+            "Ingestion rights unverified",
+            "No verified executable rule fixtures in original inventory"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": []
+        },
+        "after": {
+          "technique_id": 14,
+          "name": "Aura Reading",
+          "retained": true,
+          "status": "Core v1 Ready — Symbolic/Creative Reference Scope",
+          "variation_count": 4,
+          "source_count": 2,
+          "missing_source_urls": [
+            1,
+            2
+          ],
+          "coverage_status": "Bounded scope inauthoritativeexistingrelease;unsupported/experimentalclaimsunpromoted",
+          "gaps": [
+            "Verify legitimate Brennan/Kunz procedural access and ingestion rights before adding separate author profiles",
+            "Independently inspect more source-qualified shades/mixtures and published examples only when useful",
+            "Any source-specific layer terminology needs direct source locators;never infer chakra correspondence",
+            "Other historical editions and terminology conflicts with edition-specific fixtures",
+            "Optional explicitly synthetic creative visualization,without detection or calibrated physical claims",
+            "Optional Kirlian-inspired artistic effect kept separate from corona measurement and metaphysical claims"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": [],
+          "release_matrix": "knowledge/aura_core_v1.json"
+        },
+        "authoritative_record": "knowledge/aura_core_v1.json"
+      },
+      {
+        "technique_id": 15,
+        "before": {
+          "technique_id": 15,
+          "name": "Iridology",
+          "retained": true,
+          "status": "Not Started",
+          "variation_count": 3,
+          "source_count": 2,
+          "missing_source_urls": [
+            1,
+            2
+          ],
+          "coverage_status": "unverified",
+          "gaps": [
+            "Edition and chapter coverage unverified",
+            "Ingestion rights unverified",
+            "No verified executable rule fixtures in original inventory"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": []
+        },
+        "after": {
+          "technique_id": 15,
+          "name": "Iridology",
+          "retained": true,
+          "status": "Core v1 Ready — Historical/Educational Reference Scope",
+          "variation_count": 3,
+          "source_count": 2,
+          "missing_source_urls": [
+            1,
+            2
+          ],
+          "coverage_status": "Bounded scope inauthoritativeexistingrelease;unsupported/experimentalclaimsunpromoted",
+          "gaps": [
+            "Legitimate original Jensen/Deck plate/legend access and rights before separate documentary profiles",
+            "Additional useful original labels and independent transcription cases without clinical inference",
+            "Any quantitative geometry requires explicit original boundaries and separate independent verification;do not infer them from irregular fields",
+            "Edition-specific differences,printed perimeter numbering and Fig5 documentary reconstruction",
+            "Separately verified Rayid historical terminology only;no actual-person trait classifier",
+            "Optional neutral historical schematic after label fidelity and rights checks"
+          ],
+          "provisional_variation_sources_not_in_ranked_list": [],
+          "release_matrix": "knowledge/iridology_core_v1.json"
+        },
+        "authoritative_record": "knowledge/iridology_core_v1.json"
+      }
+    ],
+    "other49_entries_unchanged": true,
+    "basis": "Existingimmutableboundedrelease records supersedeoldNotStarted/Researchingindexmetadata;noengine/profile/fixture/statusscopechanges.5judgmentremainsexperimental."
+  },
+  "preservation": {
+    "baseline_commit": "c434d012e31f7975e6f670b41c404d2324911955",
+    "protected_files": 5423,
+    "changed_protected_files": [],
+    "allowed_existing_edits": [
+      "PROGRESS.md",
+      "README.md",
+      "knowledge/gaps.json"
+    ],
+    "frozen_release_profile_fixture_engine_inventory_and_resource_bytes_unchanged": true
+  },
+  "milestones": {
+    "final_interface_verification": "2724685816fd033bb44c30a821016bbcb8d82b9a",
+    "final_acceptance": "ddfd495e92671a2e45af8bbd73dedf1668f4c711",
+    "technique60_closure": "c434d012e31f7975e6f670b41c404d2324911955"
+  },
+  "completion_commit_lookup": "git log --diff-filter=A --format=%H -- knowledge/future_54_core_v1_completion.json",
+  "final_documentation_validated": true,
+  "no_technique61": true,
+  "post_documentation_strict_json_files": 3546
+}
