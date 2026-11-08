@@ -1,0 +1,175 @@
+{
+  "id": "future-lab-offline-experiments-v1",
+  "version": 1,
+  "registry_sha256": "3a3964e3e54d5c15319f42dca3fce87fdafeddf5653e69c3e690b848a2d9bfe8",
+  "admitted_techniques": [
+    49,
+    51,
+    57
+  ],
+  "schema": {
+    "plan": [
+      "schema_version",
+      "id",
+      "version",
+      "parent_ledger_sha256",
+      "mode",
+      "created_at",
+      "cutoff",
+      "technique_id",
+      "operation",
+      "registry_sha256",
+      "profile_identifiers",
+      "target_definition",
+      "target_unit",
+      "dataset",
+      "splits",
+      "selection",
+      "native_input",
+      "targets",
+      "metric",
+      "baseline"
+    ],
+    "dataset": [
+      "id",
+      "version",
+      "rights",
+      "attribution",
+      "snapshot",
+      "snapshot_sha256",
+      "available_at",
+      "source_vintage"
+    ],
+    "vintage": [
+      "status",
+      "retrieved_at",
+      "notes"
+    ],
+    "split": [
+      "id",
+      "group",
+      "partition",
+      "available_at"
+    ],
+    "selection": [
+      "frozen_at",
+      "model_id",
+      "native_input_sha256",
+      "training_ids",
+      "validation_ids"
+    ],
+    "target": [
+      "id",
+      "native_key",
+      "event_id",
+      "dependency_group",
+      "target_at"
+    ],
+    "ledger": [
+      "schema_version",
+      "plan",
+      "plan_sha256",
+      "actions"
+    ],
+    "action": [
+      "sequence",
+      "kind",
+      "at",
+      "record",
+      "parent_sha256",
+      "sha256"
+    ],
+    "outcome": [
+      "target_id",
+      "event_id",
+      "version",
+      "status",
+      "value",
+      "known_at",
+      "reason",
+      "evidence"
+    ],
+    "evidence": [
+      "id",
+      "available_at",
+      "rights",
+      "attribution",
+      "snapshot",
+      "snapshot_sha256"
+    ]
+  },
+  "metrics": {
+    "49": [
+      "mae",
+      "rmse",
+      "bias"
+    ],
+    "51": [
+      "brier",
+      "two_category_brier",
+      "calibration"
+    ],
+    "57": [
+      "brier",
+      "two_category_brier",
+      "calibration"
+    ]
+  },
+  "baselines": {
+    "49": [
+      "naive",
+      "seasonal_naive"
+    ],
+    "51": [
+      "fixed_half",
+      "native_reference"
+    ],
+    "57": [
+      "fixed_half"
+    ]
+  },
+  "contract": [
+    "Native engines and frozen release records unchanged. Registry is generated from authoritative completion records and actual CLI/Python contracts. All54 retained IDs exposed; six exclusions reject.47 JSON-request cores call native functions; seven older cores use existing argparse dispatcher in-process. No subprocess invocation in production adapters.",
+    "Invocation returns a separate envelope around unmodified native structured output, including original unsupported states. Native exception class/message or CLI stdout/stderr/exitcode preserved. Validation executes the native pure/local computation when no separate validator exists; this can cost the same as execution and is not a no-work preflight.",
+    "Registry/core/profile/source/code identities checked before invocation. Only named registered operations allowed. Legacy dispatch serialized by process-local RLock because argv/stdout are process globals; default registry in memory. No persistent database flag accepted through Lab.",
+    "Experiment plan exactfields and schema_version1. Opaque IDs safeASCII1..64. Native input canonicalSHA binds frozen selection. created_at<=selection.frozen_at<=forecastissued_at<=cutoff; datasetavailable_at<=selectionfreeze. Rights explicit self_authored/public_domain/permission_granted withattribution,UTF8snapshotSHA andsourcevintageunknown/declared_as_of. Allrights/clocks/availability/identities remain declarations,not externalcertification.",
+    "Only49forecast,51unresolvedreport/score and57unresolvedpool requests admitted. Nativefutureoutcome labels/resolutionactions,postcutoffforecast/sourceavailability orcutoffmismatches reject.49retrospective benchmark is a separate immutable reference reproduction,not new independent forecasting evidence.49future observation values mustbe null andnon-nullhistorymustnotfolloworigin; declared_as_of nativevintage requiredforcustomforecast ledger.",
+    "Splits explicitly train/validation/test; unique sampleIDs andno dependencygroup acrosspartitions. Alltraining/validationmetadata availablebyselectionfreeze. Selectiontraining/validationIDsets mustexactlymatchsplits. Labv1targets maptestIDs andnativepredictionkeys/events/groups; binarytargetendtimes matchnativeclosedwindow. No data-driven modelchoice inLab; selected49modelor51/57fixednativeconfiguration mustbe precommitted.",
+    "Experiment version1 hasnull parent; later versions require actual priorledger,parentSHA,incrementedversion andchronology. Reused prior testeventIDs are disclosed andneverindependentheldoutcertification. No Lab result is automatically anempiricalsuperioritycertificate. Nativeinputs ineachnewversion are frozen anew.",
+    "One immutable forecastaction perexperimentversion; nativeoutput,code/source/profile provenance andpredictions pinned bySHA. Changing input/model orforecast requiresnewexplicitexperimentversion,never anin-place revision. Any forecastattempt aftercutoff rejects.",
+    "Outcomeactions require existing forecast,recordedat>=cutoff,matchingtarget/event,oneversion1record pertarget. Resolvedvalue finite exactrational,knownat>=target_at andevidenceavailability>=knownat<=recordedat. Closed-window rule is aconservative Labsubset,not a rewrite of51earlypositiveresolution. Missing/excluded outcomes have nullvalue/known_at andnonemptyreason/evidence. Corrections require anexplicitnewexperimentversion.",
+    "Append-only SHA-chain withcontiguoussequence,nondecreasingdeclaredactiontimes,exactparentbinding; input objects nevermutated. Replay validates allrecords and independently reruns nativeforecast,notmerelyhashsyntax. Localowner canrewrite allfiles;retainexternalcommitmentanchors. Snapshotpersistence usesexclusivecreation,neveroverwritesexistingdifferentbytes.",
+    "ExactFraction scoring with8192bitguards. Binary Briermean(p-y)^2;two-categorytwiceBrier;calibrationtenbins withp1inbin9. Numeric MAEmeanabs(error),RMSEsqrt(meanerror²),signedbiasmean(prediction-actual). RMSE exactexpression plusDecimal80 HALF_EVEN12place display;notrationalexactclaimforsqrt. Bias/calibration arediagnostic,notordered superioritymetrics.",
+    "Primarycomparisons useidentical targetIDs withresolvedoutcome andbothmodel/baselineprediction. Report planned,missing,excluded,unsubmitted,unmatched andmatchedcounts,case-levelreasons,uniqueevents/dependencygroups. Noemptydenominator division;not_estimable/null. No inventedindependence,confidenceintervalorstatisticalsignificance. Negativepairedlossdifference favorsmodelonlyfororderedlosses.",
+    "Baselines frozen beforeforecast: fixed1/2,existing51native referenceclass,or49native naive/seasonal-naive usingidenticalhistory/origin/horizons. No retuning exposedNOAAtest; preserve selecteddrift MAE2.537249963267ppm vs seasonal-naive2.1794ppm,ratio1.164196551008,sourcevintageuncertified.",
+    "Bounds: inputJSON2MiB,targets256,splits2048,actions512,snapshot64000characters,nativeCLIargumentlist128strings each<=4096characters. Allcomputations offline,sourceassetsfromexistingrepository. No newframework,frontend,cloud,paidAPI,multi-agentframework ornewtechnique."
+  ],
+  "bounds": {
+    "input_bytes": 2097152,
+    "targets": 256,
+    "splits": 2048,
+    "actions": 512,
+    "snapshot_characters": 64000,
+    "fraction_bits": 8192
+  },
+  "numeric": {
+    "arithmetic": "Fraction with8192bitguards",
+    "sqrt_precision": 80,
+    "display_places": 12,
+    "rounding": "ROUND_HALF_EVEN"
+  },
+  "supported": [
+    "54-core discovery andthin native invocation",
+    "Versioned offline49/51/57 experiment ledger",
+    "Matched exactloss/baseline accounting withmissing/excludedoutcomes",
+    "Visiblysynthetic51demonstration andunaltered49retrospective reference"
+  ],
+  "unsupported": [
+    "Automaticempiricalskillcertification",
+    "Historical/speculativeoutput convertedtoeventprobability",
+    "Empirical53/55data ingestion withoutnewapprovedprotocol",
+    "Newmodelselection/tuning onexposedNOAAtest",
+    "Authenticatedclocks/rights/identities orremoteappend-onlystorage",
+    "Generalorchestration,frontend/cloud/APIservices"
+  ]
+}
