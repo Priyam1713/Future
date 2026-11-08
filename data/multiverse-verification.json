@@ -1,0 +1,211 @@
+{
+  "passed": true,
+  "fixture_families": 24,
+  "families": {
+    "root-normalization": {
+      "passed": true,
+      "cases": [
+        "root-weight"
+      ],
+      "additional_check": null
+    },
+    "local-normalization": {
+      "passed": true,
+      "cases": [
+        "local-sum",
+        "zero-parent-incomplete"
+      ],
+      "additional_check": null
+    },
+    "path-products": {
+      "passed": true,
+      "cases": [
+        "reference"
+      ],
+      "additional_check": null
+    },
+    "complete-leaf-mass": {
+      "passed": true,
+      "cases": [],
+      "additional_check": "All reports exactleafsum1"
+    },
+    "expected-utility": {
+      "passed": true,
+      "cases": [],
+      "additional_check": "All reports bottom-upEU equalsindependent weightedleafsum"
+    },
+    "negative-utilities": {
+      "passed": true,
+      "cases": [
+        "negative-utility"
+      ],
+      "additional_check": null
+    },
+    "zero-weight-branches": {
+      "passed": true,
+      "cases": [
+        "zero-parent-normalized"
+      ],
+      "additional_check": null
+    },
+    "conditional-nested": {
+      "passed": true,
+      "cases": [
+        "unknown-given"
+      ],
+      "additional_check": "3136expandednodepairqueries andliteralnestedqueries"
+    },
+    "conditional-disjoint": {
+      "passed": true,
+      "cases": [
+        "unknown-target"
+      ],
+      "additional_check": "3136expandednodepairqueries andliteraldisjointqueries"
+    },
+    "impossible-condition": {
+      "passed": true,
+      "cases": [],
+      "additional_check": "Zero-conditionedqueries explicitlynull;notestimable"
+    },
+    "single-root-leaf": {
+      "passed": true,
+      "cases": [
+        "single-leaf"
+      ],
+      "additional_check": null
+    },
+    "deterministic-branches": {
+      "passed": true,
+      "cases": [
+        "deterministic"
+      ],
+      "additional_check": null
+    },
+    "canonical-order": {
+      "passed": true,
+      "cases": [
+        "permuted"
+      ],
+      "additional_check": null
+    },
+    "unique-identities": {
+      "passed": true,
+      "cases": [
+        "duplicate-node",
+        "invalid-id",
+        "duplicate-query"
+      ],
+      "additional_check": null
+    },
+    "acyclic-tree": {
+      "passed": true,
+      "cases": [
+        "unknown-parent",
+        "self-parent",
+        "second-root",
+        "cycle"
+      ],
+      "additional_check": null
+    },
+    "complete-terminal-outcomes": {
+      "passed": true,
+      "cases": [
+        "utility-missing",
+        "internal-utility",
+        "not-exhaustive"
+      ],
+      "additional_check": null
+    },
+    "rational-validation": {
+      "passed": true,
+      "cases": [
+        "negative-weight",
+        "weight-above-one",
+        "float-weight",
+        "bool-weight",
+        "nonfinite-weight",
+        "zero-denominator",
+        "decimal-weight",
+        "long-weight",
+        "utility-large"
+      ],
+      "additional_check": null
+    },
+    "unsupported-physics": {
+      "passed": true,
+      "cases": [
+        "kind",
+        "synthetic",
+        "amplitudes"
+      ],
+      "additional_check": null
+    },
+    "depth-bounds": {
+      "passed": true,
+      "cases": [
+        "depth-limit",
+        "depth-over"
+      ],
+      "additional_check": null
+    },
+    "resource-bounds": {
+      "passed": true,
+      "cases": [
+        "no-queries",
+        "size-limit",
+        "no-nodes",
+        "bad-nodes",
+        "nodes-over",
+        "queries-over"
+      ],
+      "additional_check": null
+    },
+    "source-rights": {
+      "passed": true,
+      "cases": [
+        "empty-description",
+        "catalog-hash",
+        "source",
+        "rights",
+        "attribution"
+      ],
+      "additional_check": null
+    },
+    "snapshot-binding": {
+      "passed": true,
+      "cases": [
+        "snapshot"
+      ],
+      "additional_check": null
+    },
+    "immutable-report": {
+      "passed": true,
+      "cases": [
+        "scenario-version",
+        "profile-hash",
+        "schema-version"
+      ],
+      "additional_check": "Allreporthashes;callerinputunchanged"
+    },
+    "independent-atoms": {
+      "passed": true,
+      "cases": [],
+      "additional_check": "Sixequallylikelyatoms andequal-leaf negativecontrol"
+    }
+  },
+  "tree_vectors": 64,
+  "expanded_conditional_queries": 3136,
+  "equiprobable_atoms": 6,
+  "accepted_cases": 9,
+  "rejected_cases": 41,
+  "literal_anchors": {
+    "path_mass": "1/6",
+    "expected_utility": "1",
+    "conditional_A1_given_A": "1/3",
+    "conditional_A_given_A1": "1",
+    "disjoint": "0",
+    "zero_condition": null
+  },
+  "negative_control": "Equalleafutilityaverage26 disagreeswithproperweightedEU1",
+  "scope": "Exactfinite genericprobability/utility software;no quantum-amplitude dynamics or Everett empiricalproof."
+}
