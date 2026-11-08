@@ -6,9 +6,18 @@ from future.lab import capability,invoke,create,forecast,resolve,replay,evaluate
 from future.lab.common import ROOT as R,REGISTRY_HASH,digest,LabError,load_input
 from future.lab.evaluation import scores
 def fixture():
-    f=load_input(R/'tests/fixtures/future-lab-independent-v1.json');freeze=load_input(R/'knowledge/future_lab_fixture_freeze_v1.json');assert digest(f)==freeze['fixture_sha256'] and not freeze['lab_production_exists'];assert hashlib.sha256((R/'scripts/future_lab_oracle.py').read_bytes().replace(b'\r\n',b'\n')).hexdigest()==freeze['oracle_sha256'];return f
+    original=load_input(R/'tests/fixtures/future-lab-independent-v1.json');first=load_input(R/'knowledge/future_lab_fixture_freeze_v1.json');assert digest(original)==first['fixture_sha256'] and not first['lab_production_exists'];assert hashlib.sha256((R/'scripts/future_lab_oracle.py').read_bytes().replace(b'\r\n',b'\n')).hexdigest()==first['oracle_sha256']
+    f=load_input(R/'tests/fixtures/future-lab-independent-v2.json');freeze=load_input(R/'knowledge/future_lab_fixture_freeze_v2.json');assert digest(f)==freeze['fixture_sha256'] and freeze['original_fixture_sha256']==digest(original) and freeze['numeric_and_native_expectations_unchanged'];assert hashlib.sha256((R/'scripts/correct_future_lab_registry_types.py').read_bytes().replace(b'\r\n',b'\n')).hexdigest()==freeze['metadata_transform_sha256'];restored=copy.deepcopy(f);restored.pop('metadata_revision');restored.pop('supersedes_fixture_sha256');restored['demo_plan']['registry_sha256']=original['demo_plan']['registry_sha256'];assert restored==original;return f
 def native_sample(i):
     c=fixture()['native_samples'][str(i)];r=invoke(c['request']);assert r['native_error'] is None and r['native_exit_code']==0 and r['native_output_sha256']==c['native_output_sha256'];return r
+def metadata_revision():
+    from future.lab.registry import registry
+    old=load_input(R/'data/future-lab-capability-registry-v1.json');current=registry();restored=copy.deepcopy(current);restored['id']=old['id'];restored.pop('metadata_revision');restored.pop('supersedes_registry_sha256');oldtypes={x['technique_id']:x['capability_type'] for x in old['entries']}
+    for e in restored['entries']:e['capability_type']=oldtypes[e['technique_id']]
+    assert restored==old
+    p1=load_input(R/'knowledge/future_lab_profile_v1.json');p2=load_input(R/'knowledge/future_lab_profile_v2.json')
+    for key in ['id','version','registry_sha256']:p2[key]=p1[key]
+    p2.pop('supersedes_profile_sha256');p2.pop('revision_reason');assert p2==p1
 def demo():
     f=fixture();l=create(f['demo_plan']);before=copy.deepcopy(l);l=forecast(l,'2025-01-02T00:00:00Z');assert before['actions']==[]
     for outcome in f['demo_outcomes']:l=resolve(l,outcome,'2025-01-11T00:00:00Z')
@@ -98,7 +107,7 @@ def boundary_check(name):
         p.update(version=2,parent_ledger_sha256=digest(empty));v=create(p,empty);assert v['plan']['version']==2 and empty['plan']['version']==1;p['parent_ledger_sha256']='0'*64;reject(lambda:create(p,empty))
     elif name=='exclusive-snapshot':
         with tempfile.TemporaryDirectory(prefix='future-lab-boundary-') as directory:
-            assert Path(directory).resolve().is_relative_to(Path(tempfile.gettempdir()).resolve());path=Path(persist(directory,l));assert persist(directory,l)==str(path);path.write_bytes(b'conflicting bytes');reject(lambda:persist(directory,l))
+            assert Path(directory).resolve().is_relative_to(Path(tempfile.gettempdir()).resolve());path=Path(persist(directory,l));assert persist(directory,l)==str(path);different=copy.deepcopy(p);different['target_definition']='A different target definition under a conflicting ID/version';reject(lambda:persist(directory,create(different)));path.write_bytes(b'conflicting bytes');reject(lambda:persist(directory,l))
     elif name=='incompatible-comparison':
         _,r=demo();changed=copy.deepcopy(r);changed['target_unit']='different-unit';changed.pop('report_sha256');changed['report_sha256']=digest(changed);reject(lambda:compare([r,changed]))
     elif name=='different-cutoff-comparison':
@@ -121,7 +130,7 @@ def boundary_check(name):
         module=importlib.import_module('future.lab.common');original=module.load_input
         def changed(path):
             value=original(path)
-            if path.name=='future_lab_profile_v1.json':value['version']=99
+            if path.name=='future_lab_profile_v2.json':value['version']=99
             return value
         with patch.object(module,'load_input',side_effect=changed):reject(lambda:invoke(f['native_samples']['51']['request']))
     elif name=='numeric-future-leak':
@@ -130,16 +139,17 @@ def boundary_check(name):
         p=collective_plan();p['native_input']['questions'][0]['resolution'].update(status='resolved',outcome=1,event_at='2025-01-20T00:00:00Z',outcome_known_at='2025-01-20T00:00:00Z',resolved_at='2025-01-21T00:00:00Z');p['selection']['native_input_sha256']=digest(p['native_input']);reject(lambda:create(p))
     elif name=='uncertainty-disclosures':
         _,r=demo();assert r['uncertainty']['effective_sample_size'] is None and r['uncertainty']['confidence_interval'] is None and not r['source_vintage_certified']
+        p['mode']='retrospective';reject(lambda:create(p));pool=collective_plan();pool['mode']='retrospective';reject(lambda:create(pool))
     elif name=='json-markdown-replay':
         from future.lab.evaluation import markdown
-        _,r=demo();_,s=demo();assert json.dumps(r,sort_keys=True)==json.dumps(s,sort_keys=True) and markdown(r)==markdown(s) and 'SYNTHETIC' in markdown(r)
+        _,r=demo();_,s=demo();assert json.dumps(r,sort_keys=True)==json.dumps(s,sort_keys=True) and markdown(r)==markdown(s) and 'SYNTHETIC' in markdown(r) and 'SYNTHETIC' in markdown(dict(status='accepted',result=r))
     elif name=='calibration-endpoint':assert scores(['0','1'],['0','1'],'binary')['calibration'][9]['count']==1
     elif name=='native-state-preservation':
         before=copy.deepcopy(p);l=forecast(create(p),'2025-01-02T00:00:00Z');assert p==before and empty['actions']==[] and l['plan']==p
     else:raise AssertionError(name)
 BOUNDARIES=['late-forecast','early-forecast','duplicate-forecast','outcome-before-forecast','early-outcome','unavailable-evidence','wrong-outcome-event','boolean-outcome','duplicate-outcome','chain-tampering','forged-native-output','version-parent','exclusive-snapshot','incompatible-comparison','different-cutoff-comparison','native-error-preservation','source-file-tamper','profile-file-tamper','registry-file-tamper','lab-profile-tamper','numeric-future-leak','pool-outcome-leak','uncertainty-disclosures','json-markdown-replay','calibration-endpoint','native-state-preservation']
 def run():
-    f=fixture();ids=[e['technique_id'] for e in __import__('future.lab',fromlist=['registry']).registry()['entries']];assert ids==f['retained_ids']
+    f=fixture();metadata_revision();ids=[e['technique_id'] for e in __import__('future.lab',fromlist=['registry']).registry()['entries']];assert ids==f['retained_ids']
     for i in f['excluded_ids']:
         try:capability(i)
         except ValueError:pass

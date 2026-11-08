@@ -1,0 +1,478 @@
+{
+  "passed": true,
+  "cli_cases": 62,
+  "accepted_pairs": 15,
+  "rejected_pairs": 16,
+  "records": [
+    {
+      "id": "list",
+      "exit_code": 0,
+      "input_sha256": {},
+      "command": [
+        "list"
+      ],
+      "outputs": {
+        "json": "d490cf28f12fe76cd412488b4c91203d949a5f5846954cce3e84749dc6bc3462",
+        "markdown": "8466d584fd8ec726f27a1e5ff2455fe3b6021b61cdb13b0185accb7b573345f7"
+      }
+    },
+    {
+      "id": "inspect49",
+      "exit_code": 0,
+      "input_sha256": {},
+      "command": [
+        "inspect",
+        "49"
+      ],
+      "outputs": {
+        "json": "2f177727e86bbfae03940b1a09c28f6bc8de568603df8e439946ed0772ff473b",
+        "markdown": "aa604df2646eba1ccce8c0561818953beeefcfd6af6b8e015644e43687f6434b"
+      }
+    },
+    {
+      "id": "inspect60",
+      "exit_code": 0,
+      "input_sha256": {},
+      "command": [
+        "inspect",
+        "60"
+      ],
+      "outputs": {
+        "json": "95f3f4f94fe30ca89a0342d950e69062bbb4799ff602a6eb70c8c5b367961ea9",
+        "markdown": "6133dc9255cd32a823f7f7b370579ccea4bec186288036bc1b403db8319c114e"
+      }
+    },
+    {
+      "id": "run4",
+      "exit_code": 0,
+      "input_sha256": {
+        "data/future-lab-cli/run4-request.json": "863501882202d75667f1bbb708ebbe249a7f56a3f14b4a61a6afe800ba41b4fb"
+      },
+      "command": [
+        "run",
+        "{request}"
+      ],
+      "outputs": {
+        "json": "36da9155b2fa7f9914305f62ffa9e629bfd24d5c19da93f10b76bfc69c67190e",
+        "markdown": "620fc9299501275dab9e2cec53171490fe87c3d140d56d0672094e76ca8a30e5"
+      }
+    },
+    {
+      "id": "run8",
+      "exit_code": 0,
+      "input_sha256": {
+        "data/future-lab-cli/run8-request.json": "772923b9a5772ada182f0cf8aeb15f0d1e17aac3402b3e8516f49805d768e56c"
+      },
+      "command": [
+        "run",
+        "{request}"
+      ],
+      "outputs": {
+        "json": "98665551a235564711ed5ddfc55fc73f5bd60ea4806b578a00fdf7b4dc5ac07b",
+        "markdown": "a211e15a0b454d9035941e2023b36fb66b32f3b5dcf24a906e996fedf23f5e8d"
+      }
+    },
+    {
+      "id": "run51",
+      "exit_code": 0,
+      "input_sha256": {
+        "data/future-lab-cli/run51-request.json": "aa9d23e1f36a4e43a4106808156fa0041e0fda9ed3abe7bdd7838a2108ecd9a0"
+      },
+      "command": [
+        "run",
+        "{request}"
+      ],
+      "outputs": {
+        "json": "db4bc9212b248270ca2ec9674b8d8e126785d03753a08b508b17134cf1a6761f",
+        "markdown": "341863a6a4059e99d4ea575a0068170bab4b7d398c168ac4840c1fa1e04584ef"
+      }
+    },
+    {
+      "id": "run57",
+      "exit_code": 0,
+      "input_sha256": {
+        "data/future-lab-cli/run57-request.json": "6a6636613cfb0c27660b74662109db904eaeed878079f27e9f84f591f6422c68"
+      },
+      "command": [
+        "run",
+        "{request}"
+      ],
+      "outputs": {
+        "json": "d396b9df283a4b9fe525af698a93b455091764581035dde431276cb628914e03",
+        "markdown": "b2393075912e13c83a0c460a72e3ab2e845395474f4bee600b9a1024872df200"
+      }
+    },
+    {
+      "id": "run60",
+      "exit_code": 0,
+      "input_sha256": {
+        "data/future-lab-cli/run60-request.json": "f787c9088d6eaf26f4acd351ecedd2b85612b00c40ba61c1a9a7f30b906146f7"
+      },
+      "command": [
+        "run",
+        "{request}"
+      ],
+      "outputs": {
+        "json": "93e08b03f9454a0e291f862f7c2f34455c540c9c48273e9411b5b523457a3fd0",
+        "markdown": "ac816439cff511449ca90a26e5c438170816073c8ebc22981d2736384eead938"
+      }
+    },
+    {
+      "id": "validate",
+      "exit_code": 0,
+      "input_sha256": {
+        "data/future-lab-cli/validate-request.json": "8dcf2d38fbe0a2c5f127ce782b60e643bfe98a2ac9fb0fcde321e720befed0c8"
+      },
+      "command": [
+        "validate",
+        "{request}"
+      ],
+      "outputs": {
+        "json": "f23b2037019b93e008c53a6156242c9d8a81d8ec196a45ca4c37dd96b816d399",
+        "markdown": "bda9e6b1a2473d6efe2b7b274ea0d1bbf813686f2ee57bb6716c8a34439c0584"
+      }
+    },
+    {
+      "id": "native-error",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/native-error-request.json": "87aa5433a2af9e739df77d1d190a1b47d773dfa773ec07e7153c89a58413cd2a"
+      },
+      "command": [
+        "run",
+        "{request}"
+      ],
+      "outputs": {
+        "json": "2ad8de7289b8ea814d40fcdc152ebaf3961e0a712c82062e6d43f6c9a4361035",
+        "markdown": "d11181afb5fe8034986a37aa2b2e124c7970690338d21d9378b5e197694a82ab"
+      }
+    },
+    {
+      "id": "create",
+      "exit_code": 0,
+      "input_sha256": {
+        "data/future-lab-cli/create-plan.json": "01f7d6b75bb29adf02c380adfbcc9ed3c89630fe48f1f8faf972f241ad781aa9"
+      },
+      "command": [
+        "create",
+        "{plan}"
+      ],
+      "outputs": {
+        "json": "dec7eb809494c97673964b932ff46f623a3c1d2aadfcbfb0ada6dc275e4fd910",
+        "markdown": "74d08579157ae4b2020702e51fd7730bc22ec4ed020856f05bc67623552a4d99"
+      }
+    },
+    {
+      "id": "forecast",
+      "exit_code": 0,
+      "input_sha256": {
+        "data/future-lab-cli/forecast-ledger.json": "ebd1a252a4b719650d6fad463e69166c13289f1549609c6e696a87b43b265762"
+      },
+      "command": [
+        "forecast",
+        "{ledger}",
+        "--at",
+        "2025-01-02T00:00:00Z"
+      ],
+      "outputs": {
+        "json": "52c88478fea6e7868927c845af224a87604e435af63e4d097557f4309a592b9d",
+        "markdown": "fcd670143b86e134f75e9293b5f560ef24c6b0a89eb1f111efd050be2eb91644"
+      }
+    },
+    {
+      "id": "resolve",
+      "exit_code": 0,
+      "input_sha256": {
+        "data/future-lab-cli/resolve-ledger.json": "c05eb0a112ab2a169d3e772fb7feca053af915e945109da69af7f52cd430c7b8",
+        "data/future-lab-cli/resolve-outcome.json": "b5a90ff05216419a385e9498b3214edcf2d8bf21599d7f5ced044c659b090f4b"
+      },
+      "command": [
+        "resolve",
+        "{ledger}",
+        "{outcome}",
+        "--at",
+        "2025-01-11T00:00:00Z"
+      ],
+      "outputs": {
+        "json": "55ff68f651a01aba76fbb67ed3e8f4a8587408f84ca2bd1313b875837173c3e3",
+        "markdown": "857b90e58aa0d8bacddc1298e271ecd6b207bc6dbe9cbbc11941881a94a29a07"
+      }
+    },
+    {
+      "id": "evaluate",
+      "exit_code": 0,
+      "input_sha256": {
+        "data/future-lab-cli/evaluate-ledger.json": "1b964d4fb017b99470e010cea414222be12f99184bc3c5492eaab49ca25dd4a2"
+      },
+      "command": [
+        "evaluate",
+        "{ledger}"
+      ],
+      "outputs": {
+        "json": "32c6f51db28e293e3697f5557a6df657777236b7bef7a0646feb7aa76bd5c141",
+        "markdown": "c51ee62bbf9dd770fad21410bcf55c8fa94389307855a3b91b81f3c0a551054d"
+      }
+    },
+    {
+      "id": "unresolved",
+      "exit_code": 0,
+      "input_sha256": {
+        "data/future-lab-cli/unresolved-ledger.json": "ebd1a252a4b719650d6fad463e69166c13289f1549609c6e696a87b43b265762"
+      },
+      "command": [
+        "evaluate",
+        "{ledger}"
+      ],
+      "outputs": {
+        "json": "5358b7dc6bd5530da3343a077082d17afd8416a0ac3f8fb0087ec76aa33b61b3",
+        "markdown": "adddd3c9f706f853f220407cf7a7d5d095864623805109c72f58bbdb47dddef0"
+      }
+    },
+    {
+      "id": "compare",
+      "exit_code": 0,
+      "input_sha256": {
+        "data/future-lab-cli/compare-one.json": "b9a58990a4e92a2494aa7a1888754ad5056133437a310c0829d63e2aae362118",
+        "data/future-lab-cli/compare-two.json": "b9a58990a4e92a2494aa7a1888754ad5056133437a310c0829d63e2aae362118"
+      },
+      "command": [
+        "compare",
+        "{one}",
+        "{two}"
+      ],
+      "outputs": {
+        "json": "b7f891310af2c46f9c31a0b889b6621fa3a10ab0be787aea9ead03da28bfbcb3",
+        "markdown": "c8e620b96ae0d801cd6e4c0002246ed42b11a96138dfce5b3f6b8e3604c04219"
+      }
+    },
+    {
+      "id": "excluded",
+      "exit_code": 2,
+      "input_sha256": {},
+      "command": [
+        "inspect",
+        "25"
+      ],
+      "outputs": {
+        "json": "f8f00bb41e5e6bdfc584326d89c5b99313783f64a933e3864e7d063a6c1ef1ac",
+        "markdown": "e0722baf145f423536ba99df8da2f11ecd7fd3f42fcb2b4129032344107951b4"
+      }
+    },
+    {
+      "id": "unknown-id",
+      "exit_code": 2,
+      "input_sha256": {},
+      "command": [
+        "inspect",
+        "61"
+      ],
+      "outputs": {
+        "json": "d1c9cdd36e8d0a99716ff1c5b189c078c247ca3ce3d46802538205694655caed",
+        "markdown": "f2f82d3574e4ee723ebd9b41ef21b69e65865d6170d07147360c25032fbaa48c"
+      }
+    },
+    {
+      "id": "unknown-operation",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/unknown-operation-request.json": "af9516de5ec268118cb8b6d529b1b609b9874c64db88f95dbd335a7dd08f20a4"
+      },
+      "command": [
+        "run",
+        "{request}"
+      ],
+      "outputs": {
+        "json": "c1f4cde64334978bc84e1decd42b06d7633204195158ebee410f44847600c3f2",
+        "markdown": "d11b06dd2b6800c714c16029d8534ab0838c3373bef085532e59e5e1c183d794"
+      }
+    },
+    {
+      "id": "registry-hash",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/registry-hash-plan.json": "392e9b3b994049fe22e41be7e88840dba45722f9a96a60f8d740f95f3a9d4f5f"
+      },
+      "command": [
+        "create",
+        "{plan}"
+      ],
+      "outputs": {
+        "json": "ec41d24420b7fb41a0aa460188472d44e04647bc902cb9404f0df454ca38e8f9",
+        "markdown": "d98b105886453bad6942541e8dfab99094351d063cb844a7025d709aafa5b92d"
+      }
+    },
+    {
+      "id": "profile-identity",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/profile-identity-plan.json": "bfd19a6d32f0c7456e6300982da377ba90fda4f5166f8003a02d11892e39f987"
+      },
+      "command": [
+        "create",
+        "{plan}"
+      ],
+      "outputs": {
+        "json": "ec41d24420b7fb41a0aa460188472d44e04647bc902cb9404f0df454ca38e8f9",
+        "markdown": "d98b105886453bad6942541e8dfab99094351d063cb844a7025d709aafa5b92d"
+      }
+    },
+    {
+      "id": "snapshot-binding",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/snapshot-binding-plan.json": "efbc12e73255b8fba8c5dec357adcd804ed78e51c6897a2fe7903b2ae8029af1"
+      },
+      "command": [
+        "create",
+        "{plan}"
+      ],
+      "outputs": {
+        "json": "1dec44965005f952dab813cfe79e44586e1eda213d48372b9de3ec59ed16165a",
+        "markdown": "80aa5fb179d49ac826b091ab40f116704b94450e561ead5da76a5324cba531fd"
+      }
+    },
+    {
+      "id": "metric-combination",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/metric-combination-plan.json": "fc3548f9a76258842b93468d6378c69af5d1c5b91fc73a00ad90f8a83869fc18"
+      },
+      "command": [
+        "create",
+        "{plan}"
+      ],
+      "outputs": {
+        "json": "ef8465d0c34e14294d2ae38ab067fb8be5753eafc0265b0550573a3f59da3e90",
+        "markdown": "0fa1706787c9d2ce035d49243cf4d7104f8d88a4d51d84c8087e4e3c4c615270"
+      }
+    },
+    {
+      "id": "cross-split-group",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/cross-split-group-plan.json": "7744a14708a056e960f7a6af73801aa9be4dd8430efdbac97ce47d265370c72d"
+      },
+      "command": [
+        "create",
+        "{plan}"
+      ],
+      "outputs": {
+        "json": "784a995cab214d4ff32cd23b046f93494c536284ba21861e2dfecf543f0220a7",
+        "markdown": "a81e8406b0eab9907d20989b0c3f4de7c7181ef77be735e1017b7edb3052e1f7"
+      }
+    },
+    {
+      "id": "late-forecast",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/late-forecast-ledger.json": "ebd1a252a4b719650d6fad463e69166c13289f1549609c6e696a87b43b265762"
+      },
+      "command": [
+        "forecast",
+        "{ledger}",
+        "--at",
+        "2025-01-04T00:00:00Z"
+      ],
+      "outputs": {
+        "json": "e9738517075d5e91a7ece0cc7e9041459f5b8d5c8794ba6d39a1d40f94951434",
+        "markdown": "e59c72a099c15cc6e3d0839c486038e81f2c56b3ea75d51865da65d949d27485"
+      }
+    },
+    {
+      "id": "duplicate-forecast",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/duplicate-forecast-ledger.json": "c05eb0a112ab2a169d3e772fb7feca053af915e945109da69af7f52cd430c7b8"
+      },
+      "command": [
+        "forecast",
+        "{ledger}",
+        "--at",
+        "2025-01-02T00:00:00Z"
+      ],
+      "outputs": {
+        "json": "b08f2d84c7b586257a22094198623daecc921672cae5b4d62be2c329531a1431",
+        "markdown": "5aebb49d5087c3560d2585e53ff02d438808fb18028380acc574126679443775"
+      }
+    },
+    {
+      "id": "early-outcome",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/early-outcome-ledger.json": "ebd1a252a4b719650d6fad463e69166c13289f1549609c6e696a87b43b265762",
+        "data/future-lab-cli/early-outcome-outcome.json": "b5a90ff05216419a385e9498b3214edcf2d8bf21599d7f5ced044c659b090f4b"
+      },
+      "command": [
+        "resolve",
+        "{ledger}",
+        "{outcome}",
+        "--at",
+        "2025-01-11T00:00:00Z"
+      ],
+      "outputs": {
+        "json": "1eb539d6a609b59d45330e71308ec643cab3dbeb38ec31f1452877f89d231f5c",
+        "markdown": "6d373c466152855df21bd4eaec4ff8dcfb47853e667de177c9701bd1895caec0"
+      }
+    },
+    {
+      "id": "duplicate",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/duplicate-request.txt": "a21514a045ca89211154a9a26655f202f82f0b4683e0c18df92bfaf61ee84d2a"
+      },
+      "command": [
+        "run",
+        "{request}"
+      ],
+      "outputs": {
+        "json": "4d3f623055c2826536fbafb955809c8c920ca836cfa3ecbb6a1b90b4428384b6",
+        "markdown": "2b126fc00d30cc31e612f6b602ce75e585e44e2c845597f72215c730dac58e7a"
+      }
+    },
+    {
+      "id": "nan",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/nan-request.txt": "c238cb6e9ac5407491b0988102620ab9445290d2ed7713c516a2b28bd2388968"
+      },
+      "command": [
+        "run",
+        "{request}"
+      ],
+      "outputs": {
+        "json": "661e434323fb922c9e56b0a5a7878e87c9db11d5e65427b44e1ed0f4e7ba3330",
+        "markdown": "fb6ebaf652d61a8d48ed6d14b1f4670d8d6b5bf57102c007f937cc8ee69da132"
+      }
+    },
+    {
+      "id": "infinity",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/infinity-request.txt": "504a7fad8d7687a0ca0c9eace25c99c63e8e3cf1ad8f4945644c781e4605c02d"
+      },
+      "command": [
+        "run",
+        "{request}"
+      ],
+      "outputs": {
+        "json": "ff021c2559cdc2a6e955c2c98e38c63600c3557a634b11b2503ab178d9ef2eb8",
+        "markdown": "5751a73e9c8253e06841232264239bc92926e172c37689b21d9e7a206016473c"
+      }
+    },
+    {
+      "id": "negative-infinity",
+      "exit_code": 2,
+      "input_sha256": {
+        "data/future-lab-cli/negative-infinity-request.txt": "5fa9d0e838cd8f7cee5cd7583892ec63e56d7c29d1af404e3ecfc11f329f3af2"
+      },
+      "command": [
+        "run",
+        "{request}"
+      ],
+      "outputs": {
+        "json": "56a1f5e1c1df8b0a4410a4b6669d85e2ea1c1bd800cbdf3446f267839ac6ef42",
+        "markdown": "639c7ff81a2fe1b26807299494b05c3717f7d2dd59a9f45746d445d075956475"
+      }
+    }
+  ]
+}

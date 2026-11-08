@@ -6,12 +6,12 @@ from pathlib import Path
 from ..remote_viewing import digest,obj,integer,identifier
 from ..scrying import load_input
 ROOT=Path(__file__).resolve().parents[2]
-PROFILE_HASH='06bb9b8c359d67c09bc8b80327030b1cccf6dd8969ff8e31a5778e2b6f332758'
-REGISTRY_HASH='3a3964e3e54d5c15319f42dca3fce87fdafeddf5653e69c3e690b848a2d9bfe8'
+PROFILE_HASH='5b8b09b98f1f3a46a24db9fc6b334e7ea776f7e03d6646e2e05fa8907e95a3a3'
+REGISTRY_HASH='2b2c0a4f372b8861b1471b50acc2313b6cc2882293273c2924a84aac3a0ccf2d'
 class LabError(ValueError):pass
 class IntegrityError(LabError):pass
 def profile():
-    p=load_input(ROOT/'knowledge/future_lab_profile_v1.json')
+    p=load_input(ROOT/'knowledge/future_lab_profile_v2.json')
     if digest(p)!=PROFILE_HASH or p['registry_sha256']!=REGISTRY_HASH:raise IntegrityError('Lab profile identity mismatch')
     return p
 def fields(value,name):obj(value,profile()['schema'][name])

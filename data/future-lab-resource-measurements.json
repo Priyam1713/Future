@@ -1,0 +1,68 @@
+{
+  "measured": true,
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "lab_code_sha256": "74284978fb37ad9edc423588f27e0ce190d575e04b266ac2757b27417340edba",
+  "results": [
+    {
+      "id": "discovery54",
+      "seconds": [
+        0.004829599987715483,
+        0.005074799992144108,
+        0.004632300231605768
+      ],
+      "median_seconds": 0.004829599987715483,
+      "python_traced_peak_bytes": 2767859,
+      "output_sha256": "743d8574b08eb9081f0278a9e592a823dd74dedb8122bafef2f1980a8ec08218"
+    },
+    {
+      "id": "native51",
+      "seconds": [
+        0.01783910021185875,
+        0.022415700368583202,
+        0.019180799834430218
+      ],
+      "median_seconds": 0.019180799834430218,
+      "python_traced_peak_bytes": 2768268,
+      "output_sha256": "8ab7302b801be8bb6fdd654a212e5fe47ec0d49df487f6129859f9038daaf32e"
+    },
+    {
+      "id": "complete_demo_report",
+      "seconds": [
+        0.0535998004488647,
+        0.03148799994960427,
+        0.0269683999940753
+      ],
+      "median_seconds": 0.03148799994960427,
+      "python_traced_peak_bytes": 2790995,
+      "output_sha256": "51611f22e5a75fbb2ce13192a15ac46fb5f73bdd1b40c75c6a098fed5ac7ab04"
+    },
+    {
+      "id": "noaa_reference",
+      "seconds": [
+        1.423744599800557,
+        1.5211788997985423,
+        1.5291789001785219
+      ],
+      "median_seconds": 1.5211788997985423,
+      "python_traced_peak_bytes": 60519956,
+      "output_sha256": "56be75660ef41e10578edc002dcc26e6f821ce3a8391bc5826193817f81ed5ce"
+    }
+  ],
+  "cli": [
+    {
+      "id": "demo",
+      "seconds": 0.7677347003482282,
+      "raw_stdout_sha256": "32c6f51db28e293e3697f5557a6df657777236b7bef7a0646feb7aa76bd5c141"
+    },
+    {
+      "id": "noaa_reference",
+      "seconds": 4.316061999648809,
+      "raw_stdout_sha256": "1ff6ef4a9e2792e0d3ed1c4661ce213e2f0850fb979b4b0b5b61f311f78ac779"
+    }
+  ],
+  "process_peak_working_set_bytes": 115658752,
+  "protocol": "Three untraced completeoperations,then separatetracemalloc run;fullCLI calls includeimports/serialization. Nativeprocesspeak coversentirehelper/imports/allworkloads/tracing,notperworkloadorCLIchild. Observations arenotuniversalperformanceguarantees."
+}

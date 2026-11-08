@@ -1881,3 +1881,52 @@ Exact rational local weights,complete path/leaf probabilities,declared expected 
 ## All 54 retained bounded Core v1 releases complete
 
 Final acceptance: 2,402 tests, 3,453 CLI cases, 51 independent verifiers, and 5,423 protected files unchanged. Exactly 60 inventory IDs: 54 retained and six excluded (25, 27, 41, 42, 47, 48). Horary retains Diagnostic Scope; judgment remains Experimental. Software verification is not empirical predictive proof. See the [completion matrix](data/future-54-technique-completion-matrix.json), [final summary](data/future-final-summary.md), [acceptance](data/future-final-acceptance-checks.json), and [prioritized P1/P2 backlog](data/future-prioritized-refinement-backlog.json). There is no #61. No unified orchestration framework was added.
+## Future Lab v1 — offline capability and evaluation layer
+
+The 54 bounded engines remain unchanged and are tagged at `core-v1.0.0` (`685a329`). Future Lab adds discovery, in-process native invocation, versioned local experiment snapshots and matched evaluation for eligible #49/#51/#57 tasks. It does not turn historical, symbolic or speculative output into a shared prediction score. Registry/policy revision 2 corrects metadata classifications; revision 1 and its independent numeric fixtures remain preserved.
+
+Experiment modes are `synthetic`, `retrospective`, and `declared_prospective`. Prospective means a user-declared protocol with frozen cutoffs, not independently authenticated time or data vintage. Explicitly synthetic native evidence must keep the synthetic mode.
+
+```powershell
+python -m future.lab list
+python -m future.lab inspect 49
+python -m future.lab evaluate data/future-lab-demo/final-ledger.json --format markdown
+python -m future.lab noaa-reference
+```
+
+Use the Python API for a complete lifecycle and exclusive snapshot persistence:
+
+```python
+from pathlib import Path
+from future.scrying import load_input
+from future.lab import create, forecast, resolve, persist, evaluate, invoke
+
+plan = load_input(Path("data/future-lab-demo/plan.json"))
+ledger = create(plan)
+ledger = forecast(ledger, "2025-01-02T00:00:00Z")
+forecast_snapshot = persist("lab-runs", ledger)  # exclusive hash-named file
+
+for target_id in ("q1", "q2", "q3"):
+    evidence = load_input(Path(f"data/future-lab-demo/outcome-{target_id}.json"))
+    ledger = resolve(ledger, evidence, "2025-01-11T00:00:00Z")
+
+report = evaluate(ledger)
+final_snapshot = persist("lab-runs", ledger)
+print(report["model"]["brier"], report["baseline"]["brier"])
+
+examples = load_input(Path("data/future-lab-invocation-examples.json"))
+native = invoke(examples["entries"]["51"]["request"])
+# native["native_output"] is the unchanged engine result; provenance is separate.
+```
+
+This example is entirely synthetic. Two targets are matched and scored; one is missing. Model Brier is `17/50`, versus `1/4` for the fixed-half baseline, so the toy model underperforms. The [JSON demonstration](data/future-lab-experiment-demo.json) retains the native forecast, full immutable action chain and separate outcome evidence; the [research report](data/future-lab-experiment-demo.md) explains its limits.
+
+The [capability registry](data/future-lab-capability-registry.json) derives scope, contracts, operations and source/profile identities from the existing releases and actual APIs. All 54 native invocation examples are available in [the examples file](data/future-lab-invocation-examples.json). Forty-seven cores use request APIs directly; seven older cores use their existing CLI dispatcher in-process. Native errors and unsupported states are retained. Validation may execute the native computation and cost the same as a run. The legacy dispatcher serializes access to process-global argv/stdout.
+
+Lab CLI responses wrap native results under `result`; experiment commands read raw ledger snapshots, as produced by the Python persistence API. No persistent native registry database is opened through the invocation adapter. `run`, `validate`, `create`, `forecast`, `resolve`, `evaluate`, `compare`, and `persist` are available; use `--help` for arguments. CLI file inputs and experiment ledgers are bounded to 2 MiB. Actions, targets, snapshots and exact arithmetic have additional frozen bounds.
+
+Only compatible targets, units, cutoff rules, outcomes and metrics can be compared. Primary loss comparisons use the same resolved target IDs for model and baseline. Missing/excluded outcomes, unsubmitted forecasts, dependence groups and empty denominators remain explicit. Brier and numeric MAE/RMSE are distinct; calibration and bias are descriptive. Lab bias is mean(prediction minus actual); native #49 fields retain their original sign convention. No effective independent sample size, confidence interval or empirical superiority is fabricated. Rights, identity and information-vintage declarations require external evidence before real-world claims.
+
+Leave not-yet-known outcomes unrecorded until evidence becomes available. Explicit missing/excluded records are immutable within an experiment version. Historical outcome corrections and arbitrary rolling-study orchestration are not automated in v1; use separately versioned protocols and the unchanged native #49 rolling-evaluation interface. The Lab never changes an existing engine's update convention.
+
+`noaa-reference` reproduces #49's original validation-selected drift model and unfavorable test result: MAE `2.537249963267 ppm`, versus seasonal-naïve `2.1794 ppm`. The exposed test interval is not retuned or reselected; source-vintage certification remains false. Future #53/#55 empirical admission requires a separately approved rights-cleared data protocol and is not implemented here. See the [ranked next experiments](data/future-lab-next-experiments.json).

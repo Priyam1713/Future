@@ -13,6 +13,7 @@ def native_guard(p):
     if i==51:
         if q.get('task') not in ['report','score']:raise LabError('Lab51requires an unresolved report/score request')
         ledger=q['payload']
+        if str(ledger['plan']['evidence_mode']).startswith('synthetic') and p['mode']!='synthetic':raise LabError('Native synthetic records must remain visibly synthetic in Lab experiments')
         for question in ledger['plan']['questions']:
             if at(question['cutoff'])!=cutoff or question['partition']!='test':raise LabError('Native question cutoff/test partition mismatch')
         for action in ledger['actions']:
@@ -25,6 +26,7 @@ def native_guard(p):
                 latest=max(latest,t)
         if p['selection']['model_id']!='native_forecast_versions':raise LabError('Frozen51model identity mismatch')
     elif i==57:
+        if str(q['provenance']['evidence_mode']).startswith('synthetic') and p['mode']!='synthetic':raise LabError('Native synthetic records must remain visibly synthetic in Lab experiments')
         for question in q['questions']:
             d=question['definition'];r=question['resolution']
             if at(d['cutoff'])!=cutoff or d['partition']!='test':raise LabError('Native question cutoff/test partition mismatch')
@@ -51,7 +53,7 @@ def native_guard(p):
     return latest
 def validate_plan(p):
     bounded_json(p);fields(p,'plan');integer(p['schema_version'],1,1);identifier(p['id']);integer(p['version'],1,1000)
-    if p['mode'] not in ['synthetic','retrospective']:raise LabError('Explicit synthetic/retrospective research mode required')
+    if p['mode'] not in ['synthetic','retrospective','declared_prospective']:raise LabError('Explicit synthetic/retrospective/declared_prospective research mode required')
     entry=capability(p['technique_id'])
     if not entry['evaluation']['lab_v1_supported']:raise LabError('Selected technique is not an admitted Lab predictor')
     if p['registry_sha256']!=REGISTRY_HASH or p['profile_identifiers']!=entry['profile_identifiers']:raise IntegrityError('Experiment registry/profile identity mismatch')
@@ -184,7 +186,12 @@ def forecast(ledger,issued_at):
     return _append(ledger,'forecast',_forecast_record(ledger['plan']),issued_at)
 def resolve(ledger,outcome,recorded_at):return _append(ledger,'outcome',outcome,recorded_at)
 def persist(directory,ledger):
-    replay(ledger);destination=Path(directory);destination.mkdir(parents=True,exist_ok=True);name=ledger['plan']['id']+'-v'+str(ledger['plan']['version'])+'-'+digest(ledger)+'.json';path=destination/name;raw=(json.dumps(ledger,indent=2,ensure_ascii=False,allow_nan=False)+'\n').encode('utf-8')
+    replay(ledger);destination=Path(directory);destination.mkdir(parents=True,exist_ok=True);prefix=ledger['plan']['id']+'-v'+str(ledger['plan']['version']);anchor=destination/(prefix+'-plan.json');commitment=(json.dumps(dict(experiment_id=ledger['plan']['id'],version=ledger['plan']['version'],plan_sha256=ledger['plan_sha256']),sort_keys=True)+'\n').encode('utf-8')
+    try:
+        with anchor.open('xb') as stream:stream.write(commitment)
+    except FileExistsError:
+        if anchor.read_bytes()!=commitment:raise IntegrityError('Experiment ID/version already binds a different immutable plan')
+    name=prefix+'-'+digest(ledger)+'.json';path=destination/name;raw=(json.dumps(ledger,indent=2,ensure_ascii=False,allow_nan=False)+'\n').encode('utf-8')
     try:
         with path.open('xb') as stream:stream.write(raw)
     except FileExistsError:

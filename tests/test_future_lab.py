@@ -10,6 +10,12 @@ class FutureLabTests(unittest.TestCase):
             with self.subTest(i=i),self.assertRaises(ValueError):capability(i)
     def test_admission_scope(self):
         self.assertEqual([e['technique_id'] for e in registry()['entries'] if e['evaluation']['lab_v1_supported']],[49,51,57]);self.assertFalse(capability(55)['evaluation']['lab_v1_supported']);self.assertEqual(capability(60)['capability_type'],'editorial_finite_scenario_thought_experiment')
+        self.assertEqual(capability(4)['capability_type'],'deterministic_symbolic_numerology');self.assertEqual(capability(45)['capability_type'],'explicit_heuristic_decision_and_binary_scoring')
+        from future import superforecasting as native
+        from future.lab.common import digest
+        p=fixture()['demo_plan'];p['mode']='declared_prospective';old=p['native_input']['payload'];plan=old['plan'];plan['evidence_mode']='user_supplied_unvalidated';ledger=native.create(plan)
+        for action in old['actions']:ledger=native.append(ledger,action['kind'],action['record'])
+        p['native_input']['payload']=ledger;p['selection']['native_input_sha256']=digest(p['native_input']);self.assertEqual(create(p)['plan']['mode'],'declared_prospective')
     def test_complete_demo(self):demo()
     def test_unresolved_not_estimable(self):
         r=evaluate(create(fixture()['demo_plan']));self.assertEqual(r['model']['brier']['status'],'not_estimable');self.assertEqual(r['coverage']['missing_outcomes'],3)

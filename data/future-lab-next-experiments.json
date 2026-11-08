@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "date": "2026-11-09",
+  "status": "Recommendations only; no new datasets acquired or empirical superiority certified",
+  "experiments": [
+    {
+      "rank": 1,
+      "technique_ids": [49],
+      "study": "A separately sealed, untouched time-series evaluation period",
+      "value": "Directly tests the existing unfavorable baseline result without changing the released model",
+      "protocol": "Freeze target periods, data vintage, training/validation history, model-selection rule, horizons and matched seasonal-naive baseline before opening new test values. Distinguish an untouched retrospective period from a genuinely prospective study. Do not reuse the exposed 2000–2023 benchmark as independent evidence.",
+      "metrics": ["MAE", "RMSE", "matched coverage", "unique target months"],
+      "requirements": ["Rights-cleared independently pinned measurements", "Information-availability evidence or an explicit uncertified-vintage limit", "Dependency-aware interpretation of overlapping forecast cells"],
+      "effort": "Medium",
+      "correctness_risk": "High if test exposure or data revisions are ignored"
+    },
+    {
+      "rank": 2,
+      "technique_ids": [51],
+      "study": "Preregistered future binary questions with independently resolvable outcomes",
+      "value": "Provides genuine prospective records for the existing ledger and exact scoring interfaces",
+      "protocol": "Lock unambiguous event definitions, cutoff/observation windows and resolution sources. Commit each probability and a fixed-half or prior-only reference-class baseline before outcome knowledge. Record unresolved, disputed and void questions explicitly.",
+      "metrics": ["Brier", "calibration counts", "matched baseline Brier", "unique events"],
+      "requirements": ["Permitted question and outcome sources", "Independent forecast commitment and time evidence", "No model tuning on the evaluated outcomes"],
+      "effort": "Medium",
+      "correctness_risk": "High if resolution rules, missing outcomes or prior knowledge change after submission"
+    },
+    {
+      "rank": 3,
+      "technique_ids": [51, 57],
+      "study": "Matched individual and fixed-pool forecasts on the same frozen questions",
+      "value": "Tests whether aggregation helps on identical eligible targets rather than comparing different question sets",
+      "protocol": "Use the prospective question protocol above. Collect permitted offline participant records; freeze equal or predeclared weights before outcomes. Preserve revisions, abstentions, missing participants and forecaster dependency groups. Compare on the exact common resolved sample.",
+      "metrics": ["Matched Brier", "matched coverage", "calibration", "question-level dependence disclosures"],
+      "requirements": ["Participant consent and data rights", "No outcome-derived weights", "No assumption that LLMs or related forecasters are independent"],
+      "effort": "Medium/high",
+      "correctness_risk": "High if versions are double-counted or forecaster dependence is ignored"
+    },
+    {
+      "rank": 4,
+      "technique_ids": [53],
+      "study": "Rights-cleared scalar sensor replay with recorded measurement availability",
+      "value": "Can evaluate an existing state-space model against matched persistence and open-loop baselines",
+      "protocol": "Separately approve an empirical Lab admission profile, pin units and parameters, and use only observations available at each update. Evaluate later targets against identical baseline origins; do not retroactively assimilate delayed measurements.",
+      "requirements": ["A lawful dataset and timestamp/vintage evidence", "Frozen model and evaluation protocol", "New admission approval; currently deferred"],
+      "effort": "Medium/high",
+      "correctness_risk": "High if arrival time is confused with observation time"
+    },
+    {
+      "rank": 5,
+      "technique_ids": [55],
+      "study": "A separately approved held-out trial-window classification study",
+      "value": "Would test feature classification without claiming unrestricted intention prediction",
+      "protocol": "First obtain lawful consent, data rights and a distinct empirical profile; do not relabel real EEG as synthetic. Freeze feature construction, subject/run/trial groups, window overlap rules and TRAIN-only model decisions. Keep TEST labels isolated until scoring and use matched simple baselines.",
+      "requirements": ["Consented rights-cleared data", "Independent group/interval leakage audit", "New empirical ingestion/admission profile; currently deferred"],
+      "effort": "High",
+      "correctness_risk": "High for leakage, privacy, preprocessing and unsupported clinical or intention claims"
+    }
+  ]
+}

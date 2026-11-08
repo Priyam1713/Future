@@ -66,4 +66,7 @@ def compare(reports):
 def markdown(report):
     import json,re
     body=json.dumps(report,indent=2,ensure_ascii=False,allow_nan=False);fence='`'*max(3,max([len(x) for x in re.findall(r'`+',body)]+[0])+1)
-    return '# Future Lab research report\n\n'+('**SYNTHETIC DEMONSTRATION — no empirical skill claim.**' if report.get('visibly_synthetic') else '**Retrospective/user-declared research — no automatic skill certification.**')+'\n\n'+fence+'json\n'+body+'\n'+fence+'\n'
+    payload=report.get('result',report);synthetic=bool(report.get('visibly_synthetic'))
+    if isinstance(payload,dict):synthetic=synthetic or payload.get('visibly_synthetic') is True or payload.get('mode')=='synthetic' or isinstance(payload.get('plan'),dict) and payload['plan'].get('mode')=='synthetic'
+    label='**SYNTHETIC DEMONSTRATION — no empirical skill claim.**' if synthetic else '**User-declared research or native procedural output — no empirical skill certification.**'
+    return '# Future Lab research report\n\n'+label+'\n\n'+fence+'json\n'+body+'\n'+fence+'\n'
