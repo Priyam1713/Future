@@ -1,0 +1,95 @@
+{
+  "measured": true,
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "profile_sha256": "9f1b7221a1c5aece17521729aa61e1c280c2bb39c2639ddaea716bafc06b0506",
+  "code_sha256": "715e7b8f06dacc932758e7146cba9389a0c1fe40b998270d19ae1a5c455ddbf0",
+  "protocol": "Three untraced complete in-process reports; separate tracemalloc report; one full CLI perworkload. Native peak covers whole helper/imports/allworkloads/tracing,not CLIchild/perworkload.",
+  "process_peak_working_set_bytes": 26222592,
+  "under_proposed_128_MiB": true,
+  "results": [
+    {
+      "id": "small",
+      "nodes": 6,
+      "queries": 8,
+      "leaves": 4,
+      "budget": {
+        "work": 84,
+        "returned_cells": 160
+      },
+      "input_sha256": "2e7613734b200e197e8caa1c1043fa7fcda16077104cdf23145976d814856fe8",
+      "seconds": [
+        0.0008537000976502895,
+        0.0005604997277259827,
+        0.0004638000391423702
+      ],
+      "median_seconds": 0.0005604997277259827,
+      "cli_seconds": 0.9532072003930807,
+      "python_traced_peak_bytes": 37237,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "medium",
+      "nodes": 64,
+      "queries": 64,
+      "leaves": 63,
+      "budget": {
+        "work": 8192,
+        "returned_cells": 1536
+      },
+      "input_sha256": "d4818783891dc3bd3329c2be58edb3f10bfe66685ca3d14b5adade54a0c8869f",
+      "seconds": [
+        0.0024141003377735615,
+        0.0017714998684823513,
+        0.001623000018298626
+      ],
+      "median_seconds": 0.0017714998684823513,
+      "cli_seconds": 1.1919181998819113,
+      "python_traced_peak_bytes": 194665,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "dense",
+      "nodes": 256,
+      "queries": 256,
+      "leaves": 255,
+      "budget": {
+        "work": 131072,
+        "returned_cells": 6144
+      },
+      "input_sha256": "7caebc8c73b0f7e9f08b5a6e38a59b908ce5e27a3a05241ac947bb2e2c52c224",
+      "seconds": [
+        0.00578249990940094,
+        0.005718400236219168,
+        0.005395799875259399
+      ],
+      "median_seconds": 0.005718400236219168,
+      "cli_seconds": 1.7418316998519003,
+      "python_traced_peak_bytes": 778754,
+      "under_proposed_five_seconds": true
+    },
+    {
+      "id": "depth",
+      "nodes": 33,
+      "queries": 256,
+      "leaves": 1,
+      "budget": {
+        "work": 9537,
+        "returned_cells": 2576
+      },
+      "input_sha256": "b38e9e70c4ee922201daab0197fe558e76210a8f02baac637ddee42c096b6dec",
+      "seconds": [
+        0.002537200227379799,
+        0.0021251998841762543,
+        0.0021097999997437
+      ],
+      "median_seconds": 0.0021251998841762543,
+      "cli_seconds": 1.0254309000447392,
+      "python_traced_peak_bytes": 319269,
+      "under_proposed_five_seconds": true
+    }
+  ],
+  "scope": "Declared finite synthetic scenario probability/utility arithmetic;no empiricaluniverseobservations."
+}

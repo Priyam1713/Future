@@ -330,7 +330,25 @@ def main():
     ct=sub.add_parser('chaos-theory')
     ct.add_argument('input',help='Bounded synthetic Lorenz63 RK4 paired trajectories JSON')
     ct.add_argument('--format',choices=['json','markdown'],default='json')
+    mv=sub.add_parser('multiverse')
+    mv.add_argument('input',help='Educational finite exact rational editorial scenario tree JSON')
+    mv.add_argument('--format',choices=['json','markdown'],default='json')
     args = parser.parse_args()
+    if args.command=='multiverse':
+        import sys
+        from .scrying import load_input
+        from .multiverse import read,markdown
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8',newline='\n')
+        registry=load_registry(args.database)
+        try:
+            try:result=read(load_input(args.input),registry)
+            except (ValueError,OSError,TypeError,KeyError,OverflowError) as error:
+                result=dict(status='rejected',error='Finite editorial scenario request rejected',reason=str(error),result=None)
+                print(markdown(result) if args.format=='markdown' else json.dumps(result,indent=2))
+                raise SystemExit(2)
+            print(markdown(result) if args.format=='markdown' else json.dumps(result,ensure_ascii=False,indent=2))
+        finally:registry.close()
+        return
     if args.command=='chaos-theory':
         import sys
         from .scrying import load_input

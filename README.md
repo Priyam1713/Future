@@ -1871,3 +1871,9 @@ Technique #58: `python -m future prediction-markets data/prediction-markets-cli/
 `python -m future chaos-theory data/chaos-theory-cli/one-step-input.json --format markdown`
 
 Classical scalar RK4 integrates explicit synthetic initial pairs at h and h/2. Reports separate initial-condition separation from step-refinement differences. Dimensionless finite horizons; no certified Lyapunov exponent, rigorous error bound, weather skill or empirical predictability. Exact contract: `knowledge/chaos_theory_profile_v1.json`.
+
+### Technique60: educational finite scenario tree
+
+`python -m future multiverse data/multiverse-cli/reference-input.json --format markdown`
+
+Exact rational local weights,complete path/leaf probabilities,declared expected utility and node-event conditional queries. Editorial probabilities are separate from quantum amplitudes. No observing or forecasting other universes,Everett empirical proof or quantum-state dynamics. Contract: `knowledge/multiverse_profile_v1.json`.

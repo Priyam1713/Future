@@ -1,0 +1,548 @@
+{
+  "passed": true,
+  "cli_cases": 108,
+  "accepted_pairs": 9,
+  "rejected_pairs": 45,
+  "records": [
+    {
+      "id": "reference",
+      "input": "data/multiverse-cli/reference-input.json",
+      "raw_input_sha256": "f05e8fc54ddb41870b59040794fd74bdf113c88e2bd03421be35c3a9dd0d5b28",
+      "exit_code": 0,
+      "outputs": {
+        "json": "abc333cbcaaf3aa9e49f816f6eb3e6f7a4d852a0bd4948a90db766cff84bc3ea",
+        "markdown": "91427b888ed3c9e9523f03c2a076a9603ad76e6918db5b8bb5d8084138b90ac1"
+      }
+    },
+    {
+      "id": "permuted",
+      "input": "data/multiverse-cli/permuted-input.json",
+      "raw_input_sha256": "c4a8e5d6afd929b17d7aa157c670badde770683fee04eefa13e7869aae05d0e5",
+      "exit_code": 0,
+      "outputs": {
+        "json": "abc333cbcaaf3aa9e49f816f6eb3e6f7a4d852a0bd4948a90db766cff84bc3ea",
+        "markdown": "91427b888ed3c9e9523f03c2a076a9603ad76e6918db5b8bb5d8084138b90ac1"
+      }
+    },
+    {
+      "id": "no-queries",
+      "input": "data/multiverse-cli/no-queries-input.json",
+      "raw_input_sha256": "3b7ce4536aeae00af5f8602b24f213df18464ea5a1b64d97e5f55995bd4b76b5",
+      "exit_code": 0,
+      "outputs": {
+        "json": "5897aae2c37378f20af9f96e94af9f967ea7d620cc9f380c789919645f530e6f",
+        "markdown": "14efac74f9227fd008db984db008ac396b5c4657f554b7ed72e8fe3833ed4ed0"
+      }
+    },
+    {
+      "id": "single-leaf",
+      "input": "data/multiverse-cli/single-leaf-input.json",
+      "raw_input_sha256": "dde7da01b0aacad28fbd192a116fea5677330a76f4db17d1705e969b30a2e235",
+      "exit_code": 0,
+      "outputs": {
+        "json": "bd46a430623de73f341d25a9765c7d6aa2ecc7d24ea168f0dd043cdbf0ec136c",
+        "markdown": "1652d694227ec7b1c200025c7230dbca783b09ee4ba43ba1a691c9a8e79862b4"
+      }
+    },
+    {
+      "id": "deterministic",
+      "input": "data/multiverse-cli/deterministic-input.json",
+      "raw_input_sha256": "08d2aada37de3a263fb9fb6e669d4bbde26c4a588928f700732462a2c0e2ae5a",
+      "exit_code": 0,
+      "outputs": {
+        "json": "ea64d5175cb091880b2da6a0a6f05e1074526b41fd3b09708b0e71efcc7cfa62",
+        "markdown": "29137e8c8d945200ba93f0260bd4f2d414a991f022c59d0edd8c149420d90a68"
+      }
+    },
+    {
+      "id": "depth-limit",
+      "input": "data/multiverse-cli/depth-limit-input.json",
+      "raw_input_sha256": "94fa90484b389a2d8d6ef5df36b2161ef8aaad8b899f37a80e52eb1c3169fac4",
+      "exit_code": 0,
+      "outputs": {
+        "json": "784512f53052a9ff9422e3883f4a5946c352c7dfaea918bc36e2754a932e4395",
+        "markdown": "322cc543eb7e60683709fadca8999b5d9ab01bde5e2d04c53c548c6d97ae106c"
+      }
+    },
+    {
+      "id": "size-limit",
+      "input": "data/multiverse-cli/size-limit-input.json",
+      "raw_input_sha256": "bff04bb85c05c911aa70aedc36601f901193d4fff67b70ca2cf7bc92739545b0",
+      "exit_code": 0,
+      "outputs": {
+        "json": "406fb369b98c52e82e25de9d3d6ca904e6896aca4cdb757e8371cfd984bf3309",
+        "markdown": "0d60b758fd1832a7e78f51d5f9fbe0280881fdb4716ed32537b7ea282cebb0cb"
+      }
+    },
+    {
+      "id": "negative-utility",
+      "input": "data/multiverse-cli/negative-utility-input.json",
+      "raw_input_sha256": "1c127f754b0215ca6628a8175c0d96645d38205ae20280f1d23e456a78a4c93e",
+      "exit_code": 0,
+      "outputs": {
+        "json": "2998cac57da052da003b23e62dd3bf0cb7df26cb69b4c0cfd6ff8653d3c17437",
+        "markdown": "f80c1ae9c02aa7f45158c1c5de201df65fa7c417a58c6dd8909e41ba74df4819"
+      }
+    },
+    {
+      "id": "zero-parent-normalized",
+      "input": "data/multiverse-cli/zero-parent-normalized-input.json",
+      "raw_input_sha256": "0724ad4471685b0b1afc05fd94194ddc8966887510e2319b2a54bd8449481dff",
+      "exit_code": 0,
+      "outputs": {
+        "json": "868d55f23a1924f1dfd29dff67c53d7b4a3f694d4d10cc79030ba1852c582e22",
+        "markdown": "db774e665eb12d56e139b047b70fa7d4d9eeea28626823b7269c7f5938e2aaa3"
+      }
+    },
+    {
+      "id": "root-weight",
+      "input": "data/multiverse-cli/root-weight-input.json",
+      "raw_input_sha256": "523e40b10c0b0645f4e5f2da840ff50c5d43bbd7b3f96c4a6706736169a03630",
+      "exit_code": 2,
+      "outputs": {
+        "json": "f35c84f59ae52021812fffa8896cc3382fe947a1fd66a007b5db77852c5b588c",
+        "markdown": "6186e630b3e10efac3ba431f7f36622d6c320526b45fda84911d9cfa0f9f743f"
+      }
+    },
+    {
+      "id": "local-sum",
+      "input": "data/multiverse-cli/local-sum-input.json",
+      "raw_input_sha256": "f3c085c281948a47523a9a23b29141e0a5cef68b9a972f89340c14b52fb3c837",
+      "exit_code": 2,
+      "outputs": {
+        "json": "1cf4919ecfb1e69adfc7b44773b2ad3c969e5ad523b9455ed4daf94c6b0a54d9",
+        "markdown": "49feada4ac39c7cf55c4562f8a6377c1e80410a07c9f7e5947cc441cc6f11973"
+      }
+    },
+    {
+      "id": "negative-weight",
+      "input": "data/multiverse-cli/negative-weight-input.json",
+      "raw_input_sha256": "ca22d9a15fcd8305f9031eec8920652d6fa76e6b6ddf8b6a211677028be896c5",
+      "exit_code": 2,
+      "outputs": {
+        "json": "a63147335cb76b81cd731dff2183eb7be6a3eaf893c4011b5c5591919057e716",
+        "markdown": "135a8be42b0b31de4df08474575810139927a238a53c6d2848d232ed33bac73c"
+      }
+    },
+    {
+      "id": "weight-above-one",
+      "input": "data/multiverse-cli/weight-above-one-input.json",
+      "raw_input_sha256": "525c9c28e18ea380bd8f6a9a1a684ea5a22440b0b7c717ae8f0bee30bd684d1c",
+      "exit_code": 2,
+      "outputs": {
+        "json": "a63147335cb76b81cd731dff2183eb7be6a3eaf893c4011b5c5591919057e716",
+        "markdown": "135a8be42b0b31de4df08474575810139927a238a53c6d2848d232ed33bac73c"
+      }
+    },
+    {
+      "id": "float-weight",
+      "input": "data/multiverse-cli/float-weight-input.json",
+      "raw_input_sha256": "ef23e39d0a01d45cd8cabd8ec34b9ec8d76988b791823fd7319108b689f6d61a",
+      "exit_code": 2,
+      "outputs": {
+        "json": "391aa038b7947ffee3f6a894af01fba209f792816c78471494a8a021096ccd16",
+        "markdown": "cc349ca8b3588fdd118e2d2fbcfbd4472da73ddd6433711135ccd043fc611b34"
+      }
+    },
+    {
+      "id": "bool-weight",
+      "input": "data/multiverse-cli/bool-weight-input.json",
+      "raw_input_sha256": "27d7fd8667580eb18b40c6cd64e054d487e5137cd51fb1caee9c774a1e766977",
+      "exit_code": 2,
+      "outputs": {
+        "json": "391aa038b7947ffee3f6a894af01fba209f792816c78471494a8a021096ccd16",
+        "markdown": "cc349ca8b3588fdd118e2d2fbcfbd4472da73ddd6433711135ccd043fc611b34"
+      }
+    },
+    {
+      "id": "nonfinite-weight",
+      "input": "data/multiverse-cli/nonfinite-weight-input.json",
+      "raw_input_sha256": "354aa13ed0694f59fdeaa85ad271545a9650c3cda6343576529ff6b952e8a644",
+      "exit_code": 2,
+      "outputs": {
+        "json": "391aa038b7947ffee3f6a894af01fba209f792816c78471494a8a021096ccd16",
+        "markdown": "cc349ca8b3588fdd118e2d2fbcfbd4472da73ddd6433711135ccd043fc611b34"
+      }
+    },
+    {
+      "id": "zero-denominator",
+      "input": "data/multiverse-cli/zero-denominator-input.json",
+      "raw_input_sha256": "4b9dc482647ab13fa795b19dc101858d125fbdea15c7686e80faf498d3b82626",
+      "exit_code": 2,
+      "outputs": {
+        "json": "391aa038b7947ffee3f6a894af01fba209f792816c78471494a8a021096ccd16",
+        "markdown": "cc349ca8b3588fdd118e2d2fbcfbd4472da73ddd6433711135ccd043fc611b34"
+      }
+    },
+    {
+      "id": "decimal-weight",
+      "input": "data/multiverse-cli/decimal-weight-input.json",
+      "raw_input_sha256": "168fbbc0c1d2fafe28da0459385a8f32ff84fb19db71a01446b98a48dfaf9643",
+      "exit_code": 2,
+      "outputs": {
+        "json": "391aa038b7947ffee3f6a894af01fba209f792816c78471494a8a021096ccd16",
+        "markdown": "cc349ca8b3588fdd118e2d2fbcfbd4472da73ddd6433711135ccd043fc611b34"
+      }
+    },
+    {
+      "id": "long-weight",
+      "input": "data/multiverse-cli/long-weight-input.json",
+      "raw_input_sha256": "6e63eeef5bfaa39b0c9f41eda0fba7b7b127710c8e30283fe1f485c36bd4fba7",
+      "exit_code": 2,
+      "outputs": {
+        "json": "391aa038b7947ffee3f6a894af01fba209f792816c78471494a8a021096ccd16",
+        "markdown": "cc349ca8b3588fdd118e2d2fbcfbd4472da73ddd6433711135ccd043fc611b34"
+      }
+    },
+    {
+      "id": "utility-large",
+      "input": "data/multiverse-cli/utility-large-input.json",
+      "raw_input_sha256": "5bffcb09088d12ed4da8ebb8fcddbbbaeb2b99a7b7b8b59d06fdafa81a13c9b4",
+      "exit_code": 2,
+      "outputs": {
+        "json": "497cb7612dcbb811f587ed631f7b0b58cffd0eb7f11f32bce89026ef2f92ac2d",
+        "markdown": "e7cbe94155c7a503c0c50edaf1eb8b5657ee0792452cf561db492f50ae180625"
+      }
+    },
+    {
+      "id": "utility-missing",
+      "input": "data/multiverse-cli/utility-missing-input.json",
+      "raw_input_sha256": "36e133221e6bd662eaebc8933d2fc55849130114678ff2dfe9922f84c89d4b77",
+      "exit_code": 2,
+      "outputs": {
+        "json": "6b8b3e0705280cba3adaf9376c29dd8b3953f1d32a77957470ce8f0c3f45429a",
+        "markdown": "827da65780ecec7b341ef831e2bf3797e2b9fbba9acf02798f304e2e75f755ab"
+      }
+    },
+    {
+      "id": "internal-utility",
+      "input": "data/multiverse-cli/internal-utility-input.json",
+      "raw_input_sha256": "b99a68e2d262ca723c6b1f957d890d18df3ac72eb6bf2bd17f2c9e908e7fda5f",
+      "exit_code": 2,
+      "outputs": {
+        "json": "13749af5abc06c74e8d8a73b1977c460d376d15852da3d68c99491433cde868f",
+        "markdown": "8e01f0d2c308b734e4b48d21071022da7ee64046300993d658f21c90dd145fa0"
+      }
+    },
+    {
+      "id": "unknown-parent",
+      "input": "data/multiverse-cli/unknown-parent-input.json",
+      "raw_input_sha256": "ab8e302f7c8128586df8fdb8eca6255eda4b48198a722aec33179daf1f42d6c2",
+      "exit_code": 2,
+      "outputs": {
+        "json": "fb073daba79c699cd01726c3e220bb1fc3fed7c9e75286f79aafbbe9a6b20c48",
+        "markdown": "500cb6836e479addbac38bd05eace185f369222fffbcabcb69e1b093b9522d6d"
+      }
+    },
+    {
+      "id": "self-parent",
+      "input": "data/multiverse-cli/self-parent-input.json",
+      "raw_input_sha256": "459f5021fb075d336f66e128dcae9dbef148341be62daa5b5b12cb3c07e7679b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "fb073daba79c699cd01726c3e220bb1fc3fed7c9e75286f79aafbbe9a6b20c48",
+        "markdown": "500cb6836e479addbac38bd05eace185f369222fffbcabcb69e1b093b9522d6d"
+      }
+    },
+    {
+      "id": "second-root",
+      "input": "data/multiverse-cli/second-root-input.json",
+      "raw_input_sha256": "d2943b6c276872a6c25cf541e398e25129bfc31395e34fd418b6ca1558f50572",
+      "exit_code": 2,
+      "outputs": {
+        "json": "5eb7281defb89cd87e46b87dd2f4cbf3d04a4942f80af7aa50fda517956215b7",
+        "markdown": "a5351bfa7c6a03343e51854246a4bda99467490cab98a556b06ad7d15c1a15ff"
+      }
+    },
+    {
+      "id": "duplicate-node",
+      "input": "data/multiverse-cli/duplicate-node-input.json",
+      "raw_input_sha256": "487e2daed3848febde396631f6f95ac45f56ca6e87c4b5d504ce799b97a515af",
+      "exit_code": 2,
+      "outputs": {
+        "json": "bde45efaee7694cab23b2e7715b52a929a012a146f7ef8d593de51fbb64b8edd",
+        "markdown": "5ed14b1ae6f8a02c1ca3e084d3ce3b96db500b467b6334b79a3d0746cc036100"
+      }
+    },
+    {
+      "id": "invalid-id",
+      "input": "data/multiverse-cli/invalid-id-input.json",
+      "raw_input_sha256": "931b613dda097cdc68e1036a242f6aae4906c5c34a4e477806c1d44b7fa42626",
+      "exit_code": 2,
+      "outputs": {
+        "json": "7c9652cb74f8e02da5805ce25a7ac4d385d2016b5fe91562acb7c40862c03961",
+        "markdown": "ad27fcce23853127dbe19dfb5507fd0ae5add49fdbb97b3ba24ea6dc2617a84f"
+      }
+    },
+    {
+      "id": "no-nodes",
+      "input": "data/multiverse-cli/no-nodes-input.json",
+      "raw_input_sha256": "96008d1e62898359d6ae76788ad235c89fe01f0ad58f97adb74a144b286e539e",
+      "exit_code": 2,
+      "outputs": {
+        "json": "1fe22c8108d9bc66733d489814f1823453f73da95acbf80632358d4d2cccf555",
+        "markdown": "801c7d1bdcaf24f9d3eecb0973bd4418b0713bfd5ab8e5d087af8cde0e9cfa11"
+      }
+    },
+    {
+      "id": "bad-nodes",
+      "input": "data/multiverse-cli/bad-nodes-input.json",
+      "raw_input_sha256": "f920cdd959a67a5a5aad5484b11757d5cbec6d22cb10210f004897a14073dd60",
+      "exit_code": 2,
+      "outputs": {
+        "json": "ca8f3f796565a81d7eae7b1fcb6c1fea8dae7d9e841b53b2bc0cd603c37ee357",
+        "markdown": "2f671c14d4a63c37b6153d11a8c435b8433abc7420780b26bbe8ecfeb32f70a5"
+      }
+    },
+    {
+      "id": "kind",
+      "input": "data/multiverse-cli/kind-input.json",
+      "raw_input_sha256": "4f668e57659222c499aeb621f814e1eab18fcbce686172b930b7ae5046468c11",
+      "exit_code": 2,
+      "outputs": {
+        "json": "bf33f9ece1fff9820cd79b809d28441594cf87d36fcd3846e89730d2f1887040",
+        "markdown": "d56c469e0ecea949fc3326ae5b8290fa16ee47f36ae6d13ed8ec5db1dc5d2761"
+      }
+    },
+    {
+      "id": "not-exhaustive",
+      "input": "data/multiverse-cli/not-exhaustive-input.json",
+      "raw_input_sha256": "c1d616444a96332316a8efe292bf188c569962840b443d6cd985f4e05ede8b43",
+      "exit_code": 2,
+      "outputs": {
+        "json": "bf33f9ece1fff9820cd79b809d28441594cf87d36fcd3846e89730d2f1887040",
+        "markdown": "d56c469e0ecea949fc3326ae5b8290fa16ee47f36ae6d13ed8ec5db1dc5d2761"
+      }
+    },
+    {
+      "id": "scenario-version",
+      "input": "data/multiverse-cli/scenario-version-input.json",
+      "raw_input_sha256": "fc685519199e99e201e4c4888cceb3b9073934d9d9bdf43ce495397c852a24fb",
+      "exit_code": 2,
+      "outputs": {
+        "json": "c4d3efc2c49858236802f6e825ac141f834434e39088060c23668d83fb4bf803",
+        "markdown": "3fea48f1509302daa3bd70c2e6e48ee8a782011a16b79e421bc6ae57027129a7"
+      }
+    },
+    {
+      "id": "empty-description",
+      "input": "data/multiverse-cli/empty-description-input.json",
+      "raw_input_sha256": "996647c114aa3754373332949b69a3e101feb84e43c203d068b511d130d596fd",
+      "exit_code": 2,
+      "outputs": {
+        "json": "39d68ba419c7ba86e9d2e6104630a96474c3c19af1e8ac0e679f554cc6015edb",
+        "markdown": "39ab34f776c426ddae1d6dfbc60eaa6b7b365f4edf208017e2a1e820bac35b70"
+      }
+    },
+    {
+      "id": "profile-hash",
+      "input": "data/multiverse-cli/profile-hash-input.json",
+      "raw_input_sha256": "b61f1844fe2a339ae23762853a8a19fc6377dc6cbc9a55d7632a8afebdda64db",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4927769c6a41efc0ba9726839782dbe92c871ac27cbcf2703ce6fdc86e9cbb48",
+        "markdown": "763b41e72aaf32a3681a5cadfb9f5bb4a7938575766378e93e0463f1564d9de7"
+      }
+    },
+    {
+      "id": "catalog-hash",
+      "input": "data/multiverse-cli/catalog-hash-input.json",
+      "raw_input_sha256": "5b1b741280bfc2859a51a298b16206bdccfd5bf75321dfe648edd65b4814d632",
+      "exit_code": 2,
+      "outputs": {
+        "json": "4927769c6a41efc0ba9726839782dbe92c871ac27cbcf2703ce6fdc86e9cbb48",
+        "markdown": "763b41e72aaf32a3681a5cadfb9f5bb4a7938575766378e93e0463f1564d9de7"
+      }
+    },
+    {
+      "id": "source",
+      "input": "data/multiverse-cli/source-input.json",
+      "raw_input_sha256": "7d683c385bf21cb908d824d364d93d73269526d8a0bfd5addd6b90e566d25668",
+      "exit_code": 2,
+      "outputs": {
+        "json": "c7caf310d3c0e708a49885d4f62fc183d80b7dc92485dbcd2e5bb787f2501e37",
+        "markdown": "71bb38cbbaf4b388a383af8023a6f5d901f755f837d16a616227b18907eeffc3"
+      }
+    },
+    {
+      "id": "rights",
+      "input": "data/multiverse-cli/rights-input.json",
+      "raw_input_sha256": "571dd86262baefeab9e9046c26289ef3afe7211848001153d7ae3597a3dac542",
+      "exit_code": 2,
+      "outputs": {
+        "json": "7575e460a9acb2d7ad7b65ac2ee454238f5d2e7bb2e8e0e5d6d891782a80af71",
+        "markdown": "715514fc7ea4cd300c89f4a61ad8dcc62bb841590bf83b27e2a8e767ffc5ad74"
+      }
+    },
+    {
+      "id": "synthetic",
+      "input": "data/multiverse-cli/synthetic-input.json",
+      "raw_input_sha256": "1223476891d7b42861ef79fd5c5f9de0a361538da4ada50d93eb75e0fdc63d94",
+      "exit_code": 2,
+      "outputs": {
+        "json": "7575e460a9acb2d7ad7b65ac2ee454238f5d2e7bb2e8e0e5d6d891782a80af71",
+        "markdown": "715514fc7ea4cd300c89f4a61ad8dcc62bb841590bf83b27e2a8e767ffc5ad74"
+      }
+    },
+    {
+      "id": "snapshot",
+      "input": "data/multiverse-cli/snapshot-input.json",
+      "raw_input_sha256": "dbe50890364fcc2f033f373e52dc634242c0978161fc16a0a7d6f2ba1c9fee8d",
+      "exit_code": 2,
+      "outputs": {
+        "json": "98bf4877fee913a18d9b3add09f83aaa9a7debbbfa19f8de7fad88b387797ffb",
+        "markdown": "2fa95eb5a44a577b701edecdd72321b9828760055b294d81b6104daefbcae5e3"
+      }
+    },
+    {
+      "id": "attribution",
+      "input": "data/multiverse-cli/attribution-input.json",
+      "raw_input_sha256": "fa7331e4c554bf9ee018355bf144f60ca13d169ff132bbbbaf9c847521f714f3",
+      "exit_code": 2,
+      "outputs": {
+        "json": "39d68ba419c7ba86e9d2e6104630a96474c3c19af1e8ac0e679f554cc6015edb",
+        "markdown": "39ab34f776c426ddae1d6dfbc60eaa6b7b365f4edf208017e2a1e820bac35b70"
+      }
+    },
+    {
+      "id": "schema-version",
+      "input": "data/multiverse-cli/schema-version-input.json",
+      "raw_input_sha256": "3c74d32d94ac5c92770dc1327763cc598d6f2f0a943d0b0bf930fde4902dad77",
+      "exit_code": 2,
+      "outputs": {
+        "json": "c4d3efc2c49858236802f6e825ac141f834434e39088060c23668d83fb4bf803",
+        "markdown": "3fea48f1509302daa3bd70c2e6e48ee8a782011a16b79e421bc6ae57027129a7"
+      }
+    },
+    {
+      "id": "amplitudes",
+      "input": "data/multiverse-cli/amplitudes-input.json",
+      "raw_input_sha256": "5ecfb513cfdb834852633dac37eba4d53a581e488242a9702b93e06166797a36",
+      "exit_code": 2,
+      "outputs": {
+        "json": "8495b3930ae700dfa6c9e170020b9f1093c0f193214fc1f8b4ab171e89fe34c1",
+        "markdown": "4e05c56eaacd745266c8e7cd7ad2409d8902f595955833748fecb355a5707f10"
+      }
+    },
+    {
+      "id": "unknown-given",
+      "input": "data/multiverse-cli/unknown-given-input.json",
+      "raw_input_sha256": "172dc00b69d0a9e9ef42cc6ba8a1ce3d9a98fd506d389f993d65afff7165ba00",
+      "exit_code": 2,
+      "outputs": {
+        "json": "b63fd1ff4c882afa484aadaf8fa313138f66d7624517aa1383e514f458e46be1",
+        "markdown": "7b6c094e794fa0c6a69685a46f90d3c6ced92b306259f47b0a4200a7101bfba7"
+      }
+    },
+    {
+      "id": "unknown-target",
+      "input": "data/multiverse-cli/unknown-target-input.json",
+      "raw_input_sha256": "f25c34440f878086c549cd0bc868e1bc2d6abbb87fc381e6a065d64f58a9ec28",
+      "exit_code": 2,
+      "outputs": {
+        "json": "b63fd1ff4c882afa484aadaf8fa313138f66d7624517aa1383e514f458e46be1",
+        "markdown": "7b6c094e794fa0c6a69685a46f90d3c6ced92b306259f47b0a4200a7101bfba7"
+      }
+    },
+    {
+      "id": "duplicate-query",
+      "input": "data/multiverse-cli/duplicate-query-input.json",
+      "raw_input_sha256": "d9d8db4ba78f8533d6303bb4ba960860ab74fa1190b45bb8eebc20c3ebba6300",
+      "exit_code": 2,
+      "outputs": {
+        "json": "458970b71d1c685436d75e5d2826841e70bdb571b461425159fc4aff80673bd5",
+        "markdown": "2663004031acb8da32d5ddc51c0ebf5151a47fbc50f062edc8ab7291a9c3133f"
+      }
+    },
+    {
+      "id": "cycle",
+      "input": "data/multiverse-cli/cycle-input.json",
+      "raw_input_sha256": "202845ba5bdac9f2509b7e5452cad66b07745121aa9f96e17c211e1425536636",
+      "exit_code": 2,
+      "outputs": {
+        "json": "1fc19f2b0cac7ee1073e62aace603d0788130798dd951338d5bd08a4523ed47e",
+        "markdown": "1571ece3fae08a9623506ecfe5781ac727123983c908aba224d6dc7bd331cfb6"
+      }
+    },
+    {
+      "id": "zero-parent-incomplete",
+      "input": "data/multiverse-cli/zero-parent-incomplete-input.json",
+      "raw_input_sha256": "1cc9ccf2310c86e62f493b1aa8a25ae220a854e36894e3e6267481371ddf96d5",
+      "exit_code": 2,
+      "outputs": {
+        "json": "1cf4919ecfb1e69adfc7b44773b2ad3c969e5ad523b9455ed4daf94c6b0a54d9",
+        "markdown": "49feada4ac39c7cf55c4562f8a6377c1e80410a07c9f7e5947cc441cc6f11973"
+      }
+    },
+    {
+      "id": "depth-over",
+      "input": "data/multiverse-cli/depth-over-input.json",
+      "raw_input_sha256": "851657d5e4b07751a65ec33558463f8b4f3b5cd43aea545e85361cc835b7d23c",
+      "exit_code": 2,
+      "outputs": {
+        "json": "9fc677734a2487d3500f8ac8a4eb8f68ca65fe7135b23dabc2033e3187c3eb88",
+        "markdown": "3b97d3bb60c9fc79ab273cf48ac3aca6ed917d013c1144ac22a09b2221a4f650"
+      }
+    },
+    {
+      "id": "nodes-over",
+      "input": "data/multiverse-cli/nodes-over-input.json",
+      "raw_input_sha256": "42a65ff687845b738fa96c6c35b0d25e812157751da45c0aa0dab7ede2ae4390",
+      "exit_code": 2,
+      "outputs": {
+        "json": "ca8f3f796565a81d7eae7b1fcb6c1fea8dae7d9e841b53b2bc0cd603c37ee357",
+        "markdown": "2f671c14d4a63c37b6153d11a8c435b8433abc7420780b26bbe8ecfeb32f70a5"
+      }
+    },
+    {
+      "id": "queries-over",
+      "input": "data/multiverse-cli/queries-over-input.json",
+      "raw_input_sha256": "e65c2b96ca752ddc5ce66091fda31859f02aad5729a1d1aefda4a9129cc9ca06",
+      "exit_code": 2,
+      "outputs": {
+        "json": "ca8f3f796565a81d7eae7b1fcb6c1fea8dae7d9e841b53b2bc0cd603c37ee357",
+        "markdown": "2f671c14d4a63c37b6153d11a8c435b8433abc7420780b26bbe8ecfeb32f70a5"
+      }
+    },
+    {
+      "id": "duplicate",
+      "input": "data/multiverse-cli/duplicate-input.txt",
+      "raw_input_sha256": "dfd205aeecbcf824d6da92dcf6cfd8102bc604002f14aa2356923cbfcaae789b",
+      "exit_code": 2,
+      "outputs": {
+        "json": "f42b6816b7464688cdcc65b19a38ae2f614fba7730e70cb227d1ba905964fe19",
+        "markdown": "1682443b1359639ee6163231555ab2ea5d26660efc71c3923d6f700c76529288"
+      }
+    },
+    {
+      "id": "nan",
+      "input": "data/multiverse-cli/nan-input.txt",
+      "raw_input_sha256": "9f991a7e62c13c3e385c7700758024414364952d48d33f4f348a9915fead04b5",
+      "exit_code": 2,
+      "outputs": {
+        "json": "3f8c39b9cbf3a785420745cb78cf5245fa28da375790a28b5522d2db51cb14b6",
+        "markdown": "d69989f9a50b083473a3cab3a65a48fdd83067783553009a1e480aa9f843ccf1"
+      }
+    },
+    {
+      "id": "infinity",
+      "input": "data/multiverse-cli/infinity-input.txt",
+      "raw_input_sha256": "3782c077ea71fcb7241aba900b4f4083b18f1b952cf89068bb44abdf615f1f95",
+      "exit_code": 2,
+      "outputs": {
+        "json": "49db684dc4dbbed1867619a705a8688bdd26a4316755565a16a687dbd967cbd1",
+        "markdown": "1384cd2fde9bc681cc0e29aa6e31aa82881780afd220af1f78c03831ae03f692"
+      }
+    },
+    {
+      "id": "negative-infinity",
+      "input": "data/multiverse-cli/negative-infinity-input.txt",
+      "raw_input_sha256": "0236a6c7faf3825112d4cc0e0c325f92500a52bcd92c3063201a2d8c41429acd",
+      "exit_code": 2,
+      "outputs": {
+        "json": "58fc15e91b81beba64cbdff5a8672172dfb52fed7698f3b410ee08d4620125fe",
+        "markdown": "75a11e8a0127937fe227fc877c986a376d163fcd2c8257ecb17f33f740c878d3"
+      }
+    }
+  ]
+}

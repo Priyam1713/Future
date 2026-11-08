@@ -1,0 +1,1425 @@
+# Multiverse — educational finite editorial scenario tree
+
+```json
+{
+  "status": "accepted",
+  "technique_id": 60,
+  "schema_version": 1,
+  "profile": {
+    "id": "multiverse-finite-rational-scenario-tree-v1",
+    "version": 1,
+    "sha256": "9f1b7221a1c5aece17521729aa61e1c280c2bb39c2639ddaea716bafc06b0506",
+    "catalog_sha256": "5089c43fb7f5d9bbca169a297801dccdd3c3eca36722ef2c87b31949a2769cdf"
+  },
+  "request": {
+    "schema_version": 1,
+    "profile": {
+      "id": "multiverse-finite-rational-scenario-tree-v1",
+      "version": 1,
+      "sha256": "9f1b7221a1c5aece17521729aa61e1c280c2bb39c2639ddaea716bafc06b0506",
+      "catalog_sha256": "5089c43fb7f5d9bbca169a297801dccdd3c3eca36722ef2c87b31949a2769cdf"
+    },
+    "scenario": {
+      "id": "toy-scenario",
+      "version": 1,
+      "kind": "educational_editorial_weights",
+      "exhaustive": true,
+      "description": "Fictional branches with declared utilities."
+    },
+    "nodes": [
+      {
+        "id": "n0",
+        "parent": null,
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n1",
+        "parent": "n0",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n10",
+        "parent": "n9",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n11",
+        "parent": "n10",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n12",
+        "parent": "n11",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n13",
+        "parent": "n12",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n14",
+        "parent": "n13",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n15",
+        "parent": "n14",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n16",
+        "parent": "n15",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n17",
+        "parent": "n16",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n18",
+        "parent": "n17",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n19",
+        "parent": "n18",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n2",
+        "parent": "n1",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n20",
+        "parent": "n19",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n21",
+        "parent": "n20",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n22",
+        "parent": "n21",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n23",
+        "parent": "n22",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n24",
+        "parent": "n23",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n25",
+        "parent": "n24",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n26",
+        "parent": "n25",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n27",
+        "parent": "n26",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n28",
+        "parent": "n27",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n29",
+        "parent": "n28",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n3",
+        "parent": "n2",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n30",
+        "parent": "n29",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n31",
+        "parent": "n30",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n32",
+        "parent": "n31",
+        "weight": "1",
+        "utility": "-1"
+      },
+      {
+        "id": "n4",
+        "parent": "n3",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n5",
+        "parent": "n4",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n6",
+        "parent": "n5",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n7",
+        "parent": "n6",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n8",
+        "parent": "n7",
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n9",
+        "parent": "n8",
+        "weight": "1",
+        "utility": null
+      }
+    ],
+    "queries": [
+      {
+        "id": "q",
+        "given": "n32",
+        "target": "n0"
+      }
+    ],
+    "provenance": {
+      "synthetic": true,
+      "source_ref": "multiverse-mit-multiplication-v1",
+      "rights": "self_authored",
+      "attribution": "Original synthetic scenario author",
+      "snapshot": "Self-authored finite educational editorial scenario; no universe observations.",
+      "snapshot_sha256": "2bbe374959a036d5d8f98fe16e00bffccb5b3c0ecb2121060a8e52cb27a216ae"
+    }
+  },
+  "input_sha256": "f3f6a7ecf6880bd0a8c9978eaa76824e5c416b4b24ca003db7c33d634d6c26df",
+  "model_sha256": "bab6fb262c750620a9a676c693aee47e87914e68ee29b0dba3c574a25e818c82",
+  "schema_sha256": "f85fc694bf585d0a6b9c88b71755ebbe5137e456ef67929c344eff79bfec9b59",
+  "source_manifest_sha256": "5089c43fb7f5d9bbca169a297801dccdd3c3eca36722ef2c87b31949a2769cdf",
+  "source_freeze_sha256": "f960074ef48f003e362a46edff887a4a7bbff943961241fe4ba287684ae29add",
+  "code_sha256": "715e7b8f06dacc932758e7146cba9389a0c1fe40b998270d19ae1a5c455ddbf0",
+  "root": "n0",
+  "nodes": [
+    {
+      "id": "n0",
+      "parent": null,
+      "children": [
+        "n1"
+      ],
+      "path": [
+        "n0"
+      ],
+      "depth": 0,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n1",
+      "parent": "n0",
+      "children": [
+        "n2"
+      ],
+      "path": [
+        "n0",
+        "n1"
+      ],
+      "depth": 1,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n10",
+      "parent": "n9",
+      "children": [
+        "n11"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10"
+      ],
+      "depth": 10,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n11",
+      "parent": "n10",
+      "children": [
+        "n12"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11"
+      ],
+      "depth": 11,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n12",
+      "parent": "n11",
+      "children": [
+        "n13"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12"
+      ],
+      "depth": 12,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n13",
+      "parent": "n12",
+      "children": [
+        "n14"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13"
+      ],
+      "depth": 13,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n14",
+      "parent": "n13",
+      "children": [
+        "n15"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14"
+      ],
+      "depth": 14,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n15",
+      "parent": "n14",
+      "children": [
+        "n16"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15"
+      ],
+      "depth": 15,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n16",
+      "parent": "n15",
+      "children": [
+        "n17"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16"
+      ],
+      "depth": 16,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n17",
+      "parent": "n16",
+      "children": [
+        "n18"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17"
+      ],
+      "depth": 17,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n18",
+      "parent": "n17",
+      "children": [
+        "n19"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18"
+      ],
+      "depth": 18,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n19",
+      "parent": "n18",
+      "children": [
+        "n20"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19"
+      ],
+      "depth": 19,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n2",
+      "parent": "n1",
+      "children": [
+        "n3"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2"
+      ],
+      "depth": 2,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n20",
+      "parent": "n19",
+      "children": [
+        "n21"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20"
+      ],
+      "depth": 20,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n21",
+      "parent": "n20",
+      "children": [
+        "n22"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21"
+      ],
+      "depth": 21,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n22",
+      "parent": "n21",
+      "children": [
+        "n23"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22"
+      ],
+      "depth": 22,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n23",
+      "parent": "n22",
+      "children": [
+        "n24"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23"
+      ],
+      "depth": 23,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n24",
+      "parent": "n23",
+      "children": [
+        "n25"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23",
+        "n24"
+      ],
+      "depth": 24,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n25",
+      "parent": "n24",
+      "children": [
+        "n26"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23",
+        "n24",
+        "n25"
+      ],
+      "depth": 25,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n26",
+      "parent": "n25",
+      "children": [
+        "n27"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23",
+        "n24",
+        "n25",
+        "n26"
+      ],
+      "depth": 26,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n27",
+      "parent": "n26",
+      "children": [
+        "n28"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23",
+        "n24",
+        "n25",
+        "n26",
+        "n27"
+      ],
+      "depth": 27,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n28",
+      "parent": "n27",
+      "children": [
+        "n29"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23",
+        "n24",
+        "n25",
+        "n26",
+        "n27",
+        "n28"
+      ],
+      "depth": 28,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n29",
+      "parent": "n28",
+      "children": [
+        "n30"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23",
+        "n24",
+        "n25",
+        "n26",
+        "n27",
+        "n28",
+        "n29"
+      ],
+      "depth": 29,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n3",
+      "parent": "n2",
+      "children": [
+        "n4"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3"
+      ],
+      "depth": 3,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n30",
+      "parent": "n29",
+      "children": [
+        "n31"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23",
+        "n24",
+        "n25",
+        "n26",
+        "n27",
+        "n28",
+        "n29",
+        "n30"
+      ],
+      "depth": 30,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n31",
+      "parent": "n30",
+      "children": [
+        "n32"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23",
+        "n24",
+        "n25",
+        "n26",
+        "n27",
+        "n28",
+        "n29",
+        "n30",
+        "n31"
+      ],
+      "depth": 31,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n32",
+      "parent": "n31",
+      "children": [],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23",
+        "n24",
+        "n25",
+        "n26",
+        "n27",
+        "n28",
+        "n29",
+        "n30",
+        "n31",
+        "n32"
+      ],
+      "depth": 32,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": true,
+      "declared_utility": "-1",
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n4",
+      "parent": "n3",
+      "children": [
+        "n5"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "depth": 4,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n5",
+      "parent": "n4",
+      "children": [
+        "n6"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5"
+      ],
+      "depth": 5,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n6",
+      "parent": "n5",
+      "children": [
+        "n7"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6"
+      ],
+      "depth": 6,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n7",
+      "parent": "n6",
+      "children": [
+        "n8"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "depth": 7,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n8",
+      "parent": "n7",
+      "children": [
+        "n9"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "depth": 8,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n9",
+      "parent": "n8",
+      "children": [
+        "n10"
+      ],
+      "path": [
+        "n0",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "depth": 9,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "-1"
+    }
+  ],
+  "leaves": [
+    {
+      "id": "n32",
+      "mass": "1",
+      "utility": "-1",
+      "weighted_utility": "-1"
+    }
+  ],
+  "total_leaf_mass": "1",
+  "expected_utility": "-1",
+  "queries": [
+    {
+      "id": "q",
+      "given": "n32",
+      "target": "n0",
+      "condition_mass": "1",
+      "intersection_mass": "1",
+      "probability": "1",
+      "status": "estimated_exact_model"
+    }
+  ],
+  "budget": {
+    "work": 1122,
+    "returned_cells": 536
+  },
+  "numerics": {
+    "arithmetic": "Exact fractions.Fraction with8192bit guards",
+    "weight_interpretation": "Editorial conditional scenario weights;notquantumamplitudes"
+  },
+  "sources": [
+    {
+      "id": "multiverse-everett-v1",
+      "technique_id": 60,
+      "rank": 1,
+      "author": "Hugh Everett III",
+      "edition": "Relative State Formulation of Quantum Mechanics;Rev.Mod.Phys.29(3),454;1July1957;DOI10.1103/RevModPhys.29.454",
+      "url": "https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.29.454",
+      "locator": "Official metadata/copyright inspected; content authorization required. No full paper derivation claimed.",
+      "ingestion": "facts_only",
+      "rights_note": "Source copyright retained; facts only; no bodies,figures,third-party code or observed-universe data redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "multiverse-wallace-v1",
+      "technique_id": 60,
+      "rank": 2,
+      "author": "David Wallace",
+      "edition": "The Emergent Multiverse:Quantum Theory according to the Everett Interpretation;OUP;24May2012;DOI10.1093/acprof:oso/9780199546961.001.0001",
+      "url": "https://academic.oup.com/book/25622",
+      "locator": "Official publisher abstract/contents/date inspected. Probability and decision-theoretic chapter headings are leads; no chapter proofs inspected.",
+      "ingestion": "facts_only",
+      "rights_note": "Source copyright retained; facts only; no bodies,figures,third-party code or observed-universe data redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "multiverse-carroll-v1",
+      "technique_id": 60,
+      "rank": 3,
+      "author": "Sean Carroll",
+      "edition": "Something Deeply Hidden:Quantum Worlds and the Emergence of Spacetime;Dutton2019",
+      "url": "https://preposterousuniverse.com/somethingdeeplyhidden/",
+      "locator": "Author bibliography/overview/contents inspected; no full book access claimed.",
+      "ingestion": "facts_only",
+      "rights_note": "Source copyright retained; facts only; no bodies,figures,third-party code or observed-universe data redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "multiverse-mit-multiplication-v1",
+      "technique_id": 60,
+      "rank": null,
+      "author": "MIT OpenCourseWare probability instructors",
+      "edition": "RES6.012 Spring2018;L02-06 Multiplication Rule transcript",
+      "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/c22535b6cb3fad2f45dc1e4947ea2afc_ugzs7dgQ-JE.pdf",
+      "locator": "Transcript conditional definition and path-product discussion inspected. General finite probability; no independence assumption for conditional edges.",
+      "ingestion": "facts_only",
+      "rights_note": "Source copyright retained; facts only; no bodies,figures,third-party code or observed-universe data redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "multiverse-mit-expectation-v1",
+      "technique_id": 60,
+      "rank": null,
+      "author": "MIT OpenCourseWare probability instructors",
+      "edition": "6.041SC Fall2013;Lecture5 discrete expectation transcript",
+      "url": "https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/6cb4b105e1e41aa869a2d92764aea126_MIT6_041SCF13_lec05_300k.mp4.pdf",
+      "locator": "Discrete expectation weighting and linearity sections inspected; used for generic declared utilities only.",
+      "ingestion": "facts_only",
+      "rights_note": "Source copyright retained; facts only; no bodies,figures,third-party code or observed-universe data redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    }
+  ],
+  "universe_observations_used": false,
+  "everett_empirically_validated": false,
+  "empirical_forecast_accuracy_validated": false,
+  "limitations": [
+    "Observing/predicting otheruniverses",
+    "Bornrule/amplitude/decoherence simulation",
+    "Empirical Everettproof",
+    "General quantum decision-theory theoremreplication",
+    "MonteCarlo/stochasticservices",
+    "Editorial weights are declarations,not Born-rule amplitudes or observed frequencies.",
+    "Completeness applies to the declared finite tree; externally omitted possibilities cannot be detected.",
+    "Utilities and narrative are self-authored synthetic inputs,not recommendations or other-universe predictions."
+  ],
+  "report_sha256": "ddb8b6a460fc28ce050dbff74bfa77689f67e5f8f1bb747714f33628952fed93"
+}
+```
+

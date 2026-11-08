@@ -1,0 +1,10898 @@
+# Multiverse — educational finite editorial scenario tree
+
+```json
+{
+  "status": "accepted",
+  "technique_id": 60,
+  "schema_version": 1,
+  "profile": {
+    "id": "multiverse-finite-rational-scenario-tree-v1",
+    "version": 1,
+    "sha256": "9f1b7221a1c5aece17521729aa61e1c280c2bb39c2639ddaea716bafc06b0506",
+    "catalog_sha256": "5089c43fb7f5d9bbca169a297801dccdd3c3eca36722ef2c87b31949a2769cdf"
+  },
+  "request": {
+    "schema_version": 1,
+    "profile": {
+      "id": "multiverse-finite-rational-scenario-tree-v1",
+      "version": 1,
+      "sha256": "9f1b7221a1c5aece17521729aa61e1c280c2bb39c2639ddaea716bafc06b0506",
+      "catalog_sha256": "5089c43fb7f5d9bbca169a297801dccdd3c3eca36722ef2c87b31949a2769cdf"
+    },
+    "scenario": {
+      "id": "toy-scenario",
+      "version": 1,
+      "kind": "educational_editorial_weights",
+      "exhaustive": true,
+      "description": "Fictional branches with declared utilities."
+    },
+    "nodes": [
+      {
+        "id": "R",
+        "parent": null,
+        "weight": "1",
+        "utility": null
+      },
+      {
+        "id": "n0",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-127"
+      },
+      {
+        "id": "n1",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-126"
+      },
+      {
+        "id": "n10",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-117"
+      },
+      {
+        "id": "n100",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-27"
+      },
+      {
+        "id": "n101",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-26"
+      },
+      {
+        "id": "n102",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-25"
+      },
+      {
+        "id": "n103",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-24"
+      },
+      {
+        "id": "n104",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-23"
+      },
+      {
+        "id": "n105",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-22"
+      },
+      {
+        "id": "n106",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-21"
+      },
+      {
+        "id": "n107",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-20"
+      },
+      {
+        "id": "n108",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-19"
+      },
+      {
+        "id": "n109",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-18"
+      },
+      {
+        "id": "n11",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-116"
+      },
+      {
+        "id": "n110",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-17"
+      },
+      {
+        "id": "n111",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-16"
+      },
+      {
+        "id": "n112",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-15"
+      },
+      {
+        "id": "n113",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-14"
+      },
+      {
+        "id": "n114",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-13"
+      },
+      {
+        "id": "n115",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-12"
+      },
+      {
+        "id": "n116",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-11"
+      },
+      {
+        "id": "n117",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-10"
+      },
+      {
+        "id": "n118",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-9"
+      },
+      {
+        "id": "n119",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-8"
+      },
+      {
+        "id": "n12",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-115"
+      },
+      {
+        "id": "n120",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-7"
+      },
+      {
+        "id": "n121",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-6"
+      },
+      {
+        "id": "n122",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-5"
+      },
+      {
+        "id": "n123",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-4"
+      },
+      {
+        "id": "n124",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-3"
+      },
+      {
+        "id": "n125",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-2"
+      },
+      {
+        "id": "n126",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-1"
+      },
+      {
+        "id": "n127",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "0"
+      },
+      {
+        "id": "n128",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "1"
+      },
+      {
+        "id": "n129",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "2"
+      },
+      {
+        "id": "n13",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-114"
+      },
+      {
+        "id": "n130",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "3"
+      },
+      {
+        "id": "n131",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "4"
+      },
+      {
+        "id": "n132",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "5"
+      },
+      {
+        "id": "n133",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "6"
+      },
+      {
+        "id": "n134",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "7"
+      },
+      {
+        "id": "n135",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "8"
+      },
+      {
+        "id": "n136",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "9"
+      },
+      {
+        "id": "n137",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "10"
+      },
+      {
+        "id": "n138",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "11"
+      },
+      {
+        "id": "n139",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "12"
+      },
+      {
+        "id": "n14",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-113"
+      },
+      {
+        "id": "n140",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "13"
+      },
+      {
+        "id": "n141",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "14"
+      },
+      {
+        "id": "n142",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "15"
+      },
+      {
+        "id": "n143",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "16"
+      },
+      {
+        "id": "n144",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "17"
+      },
+      {
+        "id": "n145",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "18"
+      },
+      {
+        "id": "n146",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "19"
+      },
+      {
+        "id": "n147",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "20"
+      },
+      {
+        "id": "n148",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "21"
+      },
+      {
+        "id": "n149",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "22"
+      },
+      {
+        "id": "n15",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-112"
+      },
+      {
+        "id": "n150",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "23"
+      },
+      {
+        "id": "n151",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "24"
+      },
+      {
+        "id": "n152",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "25"
+      },
+      {
+        "id": "n153",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "26"
+      },
+      {
+        "id": "n154",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "27"
+      },
+      {
+        "id": "n155",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "28"
+      },
+      {
+        "id": "n156",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "29"
+      },
+      {
+        "id": "n157",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "30"
+      },
+      {
+        "id": "n158",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "31"
+      },
+      {
+        "id": "n159",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "32"
+      },
+      {
+        "id": "n16",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-111"
+      },
+      {
+        "id": "n160",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "33"
+      },
+      {
+        "id": "n161",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "34"
+      },
+      {
+        "id": "n162",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "35"
+      },
+      {
+        "id": "n163",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "36"
+      },
+      {
+        "id": "n164",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "37"
+      },
+      {
+        "id": "n165",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "38"
+      },
+      {
+        "id": "n166",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "39"
+      },
+      {
+        "id": "n167",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "40"
+      },
+      {
+        "id": "n168",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "41"
+      },
+      {
+        "id": "n169",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "42"
+      },
+      {
+        "id": "n17",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-110"
+      },
+      {
+        "id": "n170",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "43"
+      },
+      {
+        "id": "n171",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "44"
+      },
+      {
+        "id": "n172",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "45"
+      },
+      {
+        "id": "n173",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "46"
+      },
+      {
+        "id": "n174",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "47"
+      },
+      {
+        "id": "n175",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "48"
+      },
+      {
+        "id": "n176",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "49"
+      },
+      {
+        "id": "n177",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "50"
+      },
+      {
+        "id": "n178",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "51"
+      },
+      {
+        "id": "n179",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "52"
+      },
+      {
+        "id": "n18",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-109"
+      },
+      {
+        "id": "n180",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "53"
+      },
+      {
+        "id": "n181",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "54"
+      },
+      {
+        "id": "n182",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "55"
+      },
+      {
+        "id": "n183",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "56"
+      },
+      {
+        "id": "n184",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "57"
+      },
+      {
+        "id": "n185",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "58"
+      },
+      {
+        "id": "n186",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "59"
+      },
+      {
+        "id": "n187",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "60"
+      },
+      {
+        "id": "n188",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "61"
+      },
+      {
+        "id": "n189",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "62"
+      },
+      {
+        "id": "n19",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-108"
+      },
+      {
+        "id": "n190",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "63"
+      },
+      {
+        "id": "n191",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "64"
+      },
+      {
+        "id": "n192",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "65"
+      },
+      {
+        "id": "n193",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "66"
+      },
+      {
+        "id": "n194",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "67"
+      },
+      {
+        "id": "n195",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "68"
+      },
+      {
+        "id": "n196",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "69"
+      },
+      {
+        "id": "n197",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "70"
+      },
+      {
+        "id": "n198",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "71"
+      },
+      {
+        "id": "n199",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "72"
+      },
+      {
+        "id": "n2",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-125"
+      },
+      {
+        "id": "n20",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-107"
+      },
+      {
+        "id": "n200",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "73"
+      },
+      {
+        "id": "n201",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "74"
+      },
+      {
+        "id": "n202",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "75"
+      },
+      {
+        "id": "n203",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "76"
+      },
+      {
+        "id": "n204",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "77"
+      },
+      {
+        "id": "n205",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "78"
+      },
+      {
+        "id": "n206",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "79"
+      },
+      {
+        "id": "n207",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "80"
+      },
+      {
+        "id": "n208",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "81"
+      },
+      {
+        "id": "n209",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "82"
+      },
+      {
+        "id": "n21",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-106"
+      },
+      {
+        "id": "n210",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "83"
+      },
+      {
+        "id": "n211",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "84"
+      },
+      {
+        "id": "n212",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "85"
+      },
+      {
+        "id": "n213",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "86"
+      },
+      {
+        "id": "n214",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "87"
+      },
+      {
+        "id": "n215",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "88"
+      },
+      {
+        "id": "n216",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "89"
+      },
+      {
+        "id": "n217",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "90"
+      },
+      {
+        "id": "n218",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "91"
+      },
+      {
+        "id": "n219",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "92"
+      },
+      {
+        "id": "n22",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-105"
+      },
+      {
+        "id": "n220",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "93"
+      },
+      {
+        "id": "n221",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "94"
+      },
+      {
+        "id": "n222",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "95"
+      },
+      {
+        "id": "n223",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "96"
+      },
+      {
+        "id": "n224",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "97"
+      },
+      {
+        "id": "n225",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "98"
+      },
+      {
+        "id": "n226",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "99"
+      },
+      {
+        "id": "n227",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "100"
+      },
+      {
+        "id": "n228",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "101"
+      },
+      {
+        "id": "n229",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "102"
+      },
+      {
+        "id": "n23",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-104"
+      },
+      {
+        "id": "n230",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "103"
+      },
+      {
+        "id": "n231",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "104"
+      },
+      {
+        "id": "n232",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "105"
+      },
+      {
+        "id": "n233",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "106"
+      },
+      {
+        "id": "n234",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "107"
+      },
+      {
+        "id": "n235",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "108"
+      },
+      {
+        "id": "n236",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "109"
+      },
+      {
+        "id": "n237",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "110"
+      },
+      {
+        "id": "n238",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "111"
+      },
+      {
+        "id": "n239",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "112"
+      },
+      {
+        "id": "n24",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-103"
+      },
+      {
+        "id": "n240",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "113"
+      },
+      {
+        "id": "n241",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "114"
+      },
+      {
+        "id": "n242",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "115"
+      },
+      {
+        "id": "n243",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "116"
+      },
+      {
+        "id": "n244",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "117"
+      },
+      {
+        "id": "n245",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "118"
+      },
+      {
+        "id": "n246",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "119"
+      },
+      {
+        "id": "n247",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "120"
+      },
+      {
+        "id": "n248",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "121"
+      },
+      {
+        "id": "n249",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "122"
+      },
+      {
+        "id": "n25",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-102"
+      },
+      {
+        "id": "n250",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "123"
+      },
+      {
+        "id": "n251",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "124"
+      },
+      {
+        "id": "n252",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "125"
+      },
+      {
+        "id": "n253",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "126"
+      },
+      {
+        "id": "n254",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "127"
+      },
+      {
+        "id": "n26",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-101"
+      },
+      {
+        "id": "n27",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-100"
+      },
+      {
+        "id": "n28",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-99"
+      },
+      {
+        "id": "n29",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-98"
+      },
+      {
+        "id": "n3",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-124"
+      },
+      {
+        "id": "n30",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-97"
+      },
+      {
+        "id": "n31",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-96"
+      },
+      {
+        "id": "n32",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-95"
+      },
+      {
+        "id": "n33",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-94"
+      },
+      {
+        "id": "n34",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-93"
+      },
+      {
+        "id": "n35",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-92"
+      },
+      {
+        "id": "n36",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-91"
+      },
+      {
+        "id": "n37",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-90"
+      },
+      {
+        "id": "n38",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-89"
+      },
+      {
+        "id": "n39",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-88"
+      },
+      {
+        "id": "n4",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-123"
+      },
+      {
+        "id": "n40",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-87"
+      },
+      {
+        "id": "n41",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-86"
+      },
+      {
+        "id": "n42",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-85"
+      },
+      {
+        "id": "n43",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-84"
+      },
+      {
+        "id": "n44",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-83"
+      },
+      {
+        "id": "n45",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-82"
+      },
+      {
+        "id": "n46",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-81"
+      },
+      {
+        "id": "n47",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-80"
+      },
+      {
+        "id": "n48",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-79"
+      },
+      {
+        "id": "n49",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-78"
+      },
+      {
+        "id": "n5",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-122"
+      },
+      {
+        "id": "n50",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-77"
+      },
+      {
+        "id": "n51",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-76"
+      },
+      {
+        "id": "n52",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-75"
+      },
+      {
+        "id": "n53",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-74"
+      },
+      {
+        "id": "n54",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-73"
+      },
+      {
+        "id": "n55",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-72"
+      },
+      {
+        "id": "n56",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-71"
+      },
+      {
+        "id": "n57",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-70"
+      },
+      {
+        "id": "n58",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-69"
+      },
+      {
+        "id": "n59",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-68"
+      },
+      {
+        "id": "n6",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-121"
+      },
+      {
+        "id": "n60",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-67"
+      },
+      {
+        "id": "n61",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-66"
+      },
+      {
+        "id": "n62",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-65"
+      },
+      {
+        "id": "n63",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-64"
+      },
+      {
+        "id": "n64",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-63"
+      },
+      {
+        "id": "n65",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-62"
+      },
+      {
+        "id": "n66",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-61"
+      },
+      {
+        "id": "n67",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-60"
+      },
+      {
+        "id": "n68",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-59"
+      },
+      {
+        "id": "n69",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-58"
+      },
+      {
+        "id": "n7",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-120"
+      },
+      {
+        "id": "n70",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-57"
+      },
+      {
+        "id": "n71",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-56"
+      },
+      {
+        "id": "n72",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-55"
+      },
+      {
+        "id": "n73",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-54"
+      },
+      {
+        "id": "n74",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-53"
+      },
+      {
+        "id": "n75",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-52"
+      },
+      {
+        "id": "n76",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-51"
+      },
+      {
+        "id": "n77",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-50"
+      },
+      {
+        "id": "n78",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-49"
+      },
+      {
+        "id": "n79",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-48"
+      },
+      {
+        "id": "n8",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-119"
+      },
+      {
+        "id": "n80",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-47"
+      },
+      {
+        "id": "n81",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-46"
+      },
+      {
+        "id": "n82",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-45"
+      },
+      {
+        "id": "n83",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-44"
+      },
+      {
+        "id": "n84",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-43"
+      },
+      {
+        "id": "n85",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-42"
+      },
+      {
+        "id": "n86",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-41"
+      },
+      {
+        "id": "n87",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-40"
+      },
+      {
+        "id": "n88",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-39"
+      },
+      {
+        "id": "n89",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-38"
+      },
+      {
+        "id": "n9",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-118"
+      },
+      {
+        "id": "n90",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-37"
+      },
+      {
+        "id": "n91",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-36"
+      },
+      {
+        "id": "n92",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-35"
+      },
+      {
+        "id": "n93",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-34"
+      },
+      {
+        "id": "n94",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-33"
+      },
+      {
+        "id": "n95",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-32"
+      },
+      {
+        "id": "n96",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-31"
+      },
+      {
+        "id": "n97",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-30"
+      },
+      {
+        "id": "n98",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-29"
+      },
+      {
+        "id": "n99",
+        "parent": "R",
+        "weight": "1/255",
+        "utility": "-28"
+      }
+    ],
+    "queries": [
+      {
+        "id": "q0",
+        "given": "R",
+        "target": "n0"
+      },
+      {
+        "id": "q1",
+        "given": "R",
+        "target": "n1"
+      },
+      {
+        "id": "q10",
+        "given": "R",
+        "target": "n10"
+      },
+      {
+        "id": "q100",
+        "given": "R",
+        "target": "n100"
+      },
+      {
+        "id": "q101",
+        "given": "R",
+        "target": "n101"
+      },
+      {
+        "id": "q102",
+        "given": "R",
+        "target": "n102"
+      },
+      {
+        "id": "q103",
+        "given": "R",
+        "target": "n103"
+      },
+      {
+        "id": "q104",
+        "given": "R",
+        "target": "n104"
+      },
+      {
+        "id": "q105",
+        "given": "R",
+        "target": "n105"
+      },
+      {
+        "id": "q106",
+        "given": "R",
+        "target": "n106"
+      },
+      {
+        "id": "q107",
+        "given": "R",
+        "target": "n107"
+      },
+      {
+        "id": "q108",
+        "given": "R",
+        "target": "n108"
+      },
+      {
+        "id": "q109",
+        "given": "R",
+        "target": "n109"
+      },
+      {
+        "id": "q11",
+        "given": "R",
+        "target": "n11"
+      },
+      {
+        "id": "q110",
+        "given": "R",
+        "target": "n110"
+      },
+      {
+        "id": "q111",
+        "given": "R",
+        "target": "n111"
+      },
+      {
+        "id": "q112",
+        "given": "R",
+        "target": "n112"
+      },
+      {
+        "id": "q113",
+        "given": "R",
+        "target": "n113"
+      },
+      {
+        "id": "q114",
+        "given": "R",
+        "target": "n114"
+      },
+      {
+        "id": "q115",
+        "given": "R",
+        "target": "n115"
+      },
+      {
+        "id": "q116",
+        "given": "R",
+        "target": "n116"
+      },
+      {
+        "id": "q117",
+        "given": "R",
+        "target": "n117"
+      },
+      {
+        "id": "q118",
+        "given": "R",
+        "target": "n118"
+      },
+      {
+        "id": "q119",
+        "given": "R",
+        "target": "n119"
+      },
+      {
+        "id": "q12",
+        "given": "R",
+        "target": "n12"
+      },
+      {
+        "id": "q120",
+        "given": "R",
+        "target": "n120"
+      },
+      {
+        "id": "q121",
+        "given": "R",
+        "target": "n121"
+      },
+      {
+        "id": "q122",
+        "given": "R",
+        "target": "n122"
+      },
+      {
+        "id": "q123",
+        "given": "R",
+        "target": "n123"
+      },
+      {
+        "id": "q124",
+        "given": "R",
+        "target": "n124"
+      },
+      {
+        "id": "q125",
+        "given": "R",
+        "target": "n125"
+      },
+      {
+        "id": "q126",
+        "given": "R",
+        "target": "n126"
+      },
+      {
+        "id": "q127",
+        "given": "R",
+        "target": "n127"
+      },
+      {
+        "id": "q128",
+        "given": "R",
+        "target": "n128"
+      },
+      {
+        "id": "q129",
+        "given": "R",
+        "target": "n129"
+      },
+      {
+        "id": "q13",
+        "given": "R",
+        "target": "n13"
+      },
+      {
+        "id": "q130",
+        "given": "R",
+        "target": "n130"
+      },
+      {
+        "id": "q131",
+        "given": "R",
+        "target": "n131"
+      },
+      {
+        "id": "q132",
+        "given": "R",
+        "target": "n132"
+      },
+      {
+        "id": "q133",
+        "given": "R",
+        "target": "n133"
+      },
+      {
+        "id": "q134",
+        "given": "R",
+        "target": "n134"
+      },
+      {
+        "id": "q135",
+        "given": "R",
+        "target": "n135"
+      },
+      {
+        "id": "q136",
+        "given": "R",
+        "target": "n136"
+      },
+      {
+        "id": "q137",
+        "given": "R",
+        "target": "n137"
+      },
+      {
+        "id": "q138",
+        "given": "R",
+        "target": "n138"
+      },
+      {
+        "id": "q139",
+        "given": "R",
+        "target": "n139"
+      },
+      {
+        "id": "q14",
+        "given": "R",
+        "target": "n14"
+      },
+      {
+        "id": "q140",
+        "given": "R",
+        "target": "n140"
+      },
+      {
+        "id": "q141",
+        "given": "R",
+        "target": "n141"
+      },
+      {
+        "id": "q142",
+        "given": "R",
+        "target": "n142"
+      },
+      {
+        "id": "q143",
+        "given": "R",
+        "target": "n143"
+      },
+      {
+        "id": "q144",
+        "given": "R",
+        "target": "n144"
+      },
+      {
+        "id": "q145",
+        "given": "R",
+        "target": "n145"
+      },
+      {
+        "id": "q146",
+        "given": "R",
+        "target": "n146"
+      },
+      {
+        "id": "q147",
+        "given": "R",
+        "target": "n147"
+      },
+      {
+        "id": "q148",
+        "given": "R",
+        "target": "n148"
+      },
+      {
+        "id": "q149",
+        "given": "R",
+        "target": "n149"
+      },
+      {
+        "id": "q15",
+        "given": "R",
+        "target": "n15"
+      },
+      {
+        "id": "q150",
+        "given": "R",
+        "target": "n150"
+      },
+      {
+        "id": "q151",
+        "given": "R",
+        "target": "n151"
+      },
+      {
+        "id": "q152",
+        "given": "R",
+        "target": "n152"
+      },
+      {
+        "id": "q153",
+        "given": "R",
+        "target": "n153"
+      },
+      {
+        "id": "q154",
+        "given": "R",
+        "target": "n154"
+      },
+      {
+        "id": "q155",
+        "given": "R",
+        "target": "n155"
+      },
+      {
+        "id": "q156",
+        "given": "R",
+        "target": "n156"
+      },
+      {
+        "id": "q157",
+        "given": "R",
+        "target": "n157"
+      },
+      {
+        "id": "q158",
+        "given": "R",
+        "target": "n158"
+      },
+      {
+        "id": "q159",
+        "given": "R",
+        "target": "n159"
+      },
+      {
+        "id": "q16",
+        "given": "R",
+        "target": "n16"
+      },
+      {
+        "id": "q160",
+        "given": "R",
+        "target": "n160"
+      },
+      {
+        "id": "q161",
+        "given": "R",
+        "target": "n161"
+      },
+      {
+        "id": "q162",
+        "given": "R",
+        "target": "n162"
+      },
+      {
+        "id": "q163",
+        "given": "R",
+        "target": "n163"
+      },
+      {
+        "id": "q164",
+        "given": "R",
+        "target": "n164"
+      },
+      {
+        "id": "q165",
+        "given": "R",
+        "target": "n165"
+      },
+      {
+        "id": "q166",
+        "given": "R",
+        "target": "n166"
+      },
+      {
+        "id": "q167",
+        "given": "R",
+        "target": "n167"
+      },
+      {
+        "id": "q168",
+        "given": "R",
+        "target": "n168"
+      },
+      {
+        "id": "q169",
+        "given": "R",
+        "target": "n169"
+      },
+      {
+        "id": "q17",
+        "given": "R",
+        "target": "n17"
+      },
+      {
+        "id": "q170",
+        "given": "R",
+        "target": "n170"
+      },
+      {
+        "id": "q171",
+        "given": "R",
+        "target": "n171"
+      },
+      {
+        "id": "q172",
+        "given": "R",
+        "target": "n172"
+      },
+      {
+        "id": "q173",
+        "given": "R",
+        "target": "n173"
+      },
+      {
+        "id": "q174",
+        "given": "R",
+        "target": "n174"
+      },
+      {
+        "id": "q175",
+        "given": "R",
+        "target": "n175"
+      },
+      {
+        "id": "q176",
+        "given": "R",
+        "target": "n176"
+      },
+      {
+        "id": "q177",
+        "given": "R",
+        "target": "n177"
+      },
+      {
+        "id": "q178",
+        "given": "R",
+        "target": "n178"
+      },
+      {
+        "id": "q179",
+        "given": "R",
+        "target": "n179"
+      },
+      {
+        "id": "q18",
+        "given": "R",
+        "target": "n18"
+      },
+      {
+        "id": "q180",
+        "given": "R",
+        "target": "n180"
+      },
+      {
+        "id": "q181",
+        "given": "R",
+        "target": "n181"
+      },
+      {
+        "id": "q182",
+        "given": "R",
+        "target": "n182"
+      },
+      {
+        "id": "q183",
+        "given": "R",
+        "target": "n183"
+      },
+      {
+        "id": "q184",
+        "given": "R",
+        "target": "n184"
+      },
+      {
+        "id": "q185",
+        "given": "R",
+        "target": "n185"
+      },
+      {
+        "id": "q186",
+        "given": "R",
+        "target": "n186"
+      },
+      {
+        "id": "q187",
+        "given": "R",
+        "target": "n187"
+      },
+      {
+        "id": "q188",
+        "given": "R",
+        "target": "n188"
+      },
+      {
+        "id": "q189",
+        "given": "R",
+        "target": "n189"
+      },
+      {
+        "id": "q19",
+        "given": "R",
+        "target": "n19"
+      },
+      {
+        "id": "q190",
+        "given": "R",
+        "target": "n190"
+      },
+      {
+        "id": "q191",
+        "given": "R",
+        "target": "n191"
+      },
+      {
+        "id": "q192",
+        "given": "R",
+        "target": "n192"
+      },
+      {
+        "id": "q193",
+        "given": "R",
+        "target": "n193"
+      },
+      {
+        "id": "q194",
+        "given": "R",
+        "target": "n194"
+      },
+      {
+        "id": "q195",
+        "given": "R",
+        "target": "n195"
+      },
+      {
+        "id": "q196",
+        "given": "R",
+        "target": "n196"
+      },
+      {
+        "id": "q197",
+        "given": "R",
+        "target": "n197"
+      },
+      {
+        "id": "q198",
+        "given": "R",
+        "target": "n198"
+      },
+      {
+        "id": "q199",
+        "given": "R",
+        "target": "n199"
+      },
+      {
+        "id": "q2",
+        "given": "R",
+        "target": "n2"
+      },
+      {
+        "id": "q20",
+        "given": "R",
+        "target": "n20"
+      },
+      {
+        "id": "q200",
+        "given": "R",
+        "target": "n200"
+      },
+      {
+        "id": "q201",
+        "given": "R",
+        "target": "n201"
+      },
+      {
+        "id": "q202",
+        "given": "R",
+        "target": "n202"
+      },
+      {
+        "id": "q203",
+        "given": "R",
+        "target": "n203"
+      },
+      {
+        "id": "q204",
+        "given": "R",
+        "target": "n204"
+      },
+      {
+        "id": "q205",
+        "given": "R",
+        "target": "n205"
+      },
+      {
+        "id": "q206",
+        "given": "R",
+        "target": "n206"
+      },
+      {
+        "id": "q207",
+        "given": "R",
+        "target": "n207"
+      },
+      {
+        "id": "q208",
+        "given": "R",
+        "target": "n208"
+      },
+      {
+        "id": "q209",
+        "given": "R",
+        "target": "n209"
+      },
+      {
+        "id": "q21",
+        "given": "R",
+        "target": "n21"
+      },
+      {
+        "id": "q210",
+        "given": "R",
+        "target": "n210"
+      },
+      {
+        "id": "q211",
+        "given": "R",
+        "target": "n211"
+      },
+      {
+        "id": "q212",
+        "given": "R",
+        "target": "n212"
+      },
+      {
+        "id": "q213",
+        "given": "R",
+        "target": "n213"
+      },
+      {
+        "id": "q214",
+        "given": "R",
+        "target": "n214"
+      },
+      {
+        "id": "q215",
+        "given": "R",
+        "target": "n215"
+      },
+      {
+        "id": "q216",
+        "given": "R",
+        "target": "n216"
+      },
+      {
+        "id": "q217",
+        "given": "R",
+        "target": "n217"
+      },
+      {
+        "id": "q218",
+        "given": "R",
+        "target": "n218"
+      },
+      {
+        "id": "q219",
+        "given": "R",
+        "target": "n219"
+      },
+      {
+        "id": "q22",
+        "given": "R",
+        "target": "n22"
+      },
+      {
+        "id": "q220",
+        "given": "R",
+        "target": "n220"
+      },
+      {
+        "id": "q221",
+        "given": "R",
+        "target": "n221"
+      },
+      {
+        "id": "q222",
+        "given": "R",
+        "target": "n222"
+      },
+      {
+        "id": "q223",
+        "given": "R",
+        "target": "n223"
+      },
+      {
+        "id": "q224",
+        "given": "R",
+        "target": "n224"
+      },
+      {
+        "id": "q225",
+        "given": "R",
+        "target": "n225"
+      },
+      {
+        "id": "q226",
+        "given": "R",
+        "target": "n226"
+      },
+      {
+        "id": "q227",
+        "given": "R",
+        "target": "n227"
+      },
+      {
+        "id": "q228",
+        "given": "R",
+        "target": "n228"
+      },
+      {
+        "id": "q229",
+        "given": "R",
+        "target": "n229"
+      },
+      {
+        "id": "q23",
+        "given": "R",
+        "target": "n23"
+      },
+      {
+        "id": "q230",
+        "given": "R",
+        "target": "n230"
+      },
+      {
+        "id": "q231",
+        "given": "R",
+        "target": "n231"
+      },
+      {
+        "id": "q232",
+        "given": "R",
+        "target": "n232"
+      },
+      {
+        "id": "q233",
+        "given": "R",
+        "target": "n233"
+      },
+      {
+        "id": "q234",
+        "given": "R",
+        "target": "n234"
+      },
+      {
+        "id": "q235",
+        "given": "R",
+        "target": "n235"
+      },
+      {
+        "id": "q236",
+        "given": "R",
+        "target": "n236"
+      },
+      {
+        "id": "q237",
+        "given": "R",
+        "target": "n237"
+      },
+      {
+        "id": "q238",
+        "given": "R",
+        "target": "n238"
+      },
+      {
+        "id": "q239",
+        "given": "R",
+        "target": "n239"
+      },
+      {
+        "id": "q24",
+        "given": "R",
+        "target": "n24"
+      },
+      {
+        "id": "q240",
+        "given": "R",
+        "target": "n240"
+      },
+      {
+        "id": "q241",
+        "given": "R",
+        "target": "n241"
+      },
+      {
+        "id": "q242",
+        "given": "R",
+        "target": "n242"
+      },
+      {
+        "id": "q243",
+        "given": "R",
+        "target": "n243"
+      },
+      {
+        "id": "q244",
+        "given": "R",
+        "target": "n244"
+      },
+      {
+        "id": "q245",
+        "given": "R",
+        "target": "n245"
+      },
+      {
+        "id": "q246",
+        "given": "R",
+        "target": "n246"
+      },
+      {
+        "id": "q247",
+        "given": "R",
+        "target": "n247"
+      },
+      {
+        "id": "q248",
+        "given": "R",
+        "target": "n248"
+      },
+      {
+        "id": "q249",
+        "given": "R",
+        "target": "n249"
+      },
+      {
+        "id": "q25",
+        "given": "R",
+        "target": "n25"
+      },
+      {
+        "id": "q250",
+        "given": "R",
+        "target": "n250"
+      },
+      {
+        "id": "q251",
+        "given": "R",
+        "target": "n251"
+      },
+      {
+        "id": "q252",
+        "given": "R",
+        "target": "n252"
+      },
+      {
+        "id": "q253",
+        "given": "R",
+        "target": "n253"
+      },
+      {
+        "id": "q254",
+        "given": "R",
+        "target": "n254"
+      },
+      {
+        "id": "q255",
+        "given": "R",
+        "target": "n0"
+      },
+      {
+        "id": "q26",
+        "given": "R",
+        "target": "n26"
+      },
+      {
+        "id": "q27",
+        "given": "R",
+        "target": "n27"
+      },
+      {
+        "id": "q28",
+        "given": "R",
+        "target": "n28"
+      },
+      {
+        "id": "q29",
+        "given": "R",
+        "target": "n29"
+      },
+      {
+        "id": "q3",
+        "given": "R",
+        "target": "n3"
+      },
+      {
+        "id": "q30",
+        "given": "R",
+        "target": "n30"
+      },
+      {
+        "id": "q31",
+        "given": "R",
+        "target": "n31"
+      },
+      {
+        "id": "q32",
+        "given": "R",
+        "target": "n32"
+      },
+      {
+        "id": "q33",
+        "given": "R",
+        "target": "n33"
+      },
+      {
+        "id": "q34",
+        "given": "R",
+        "target": "n34"
+      },
+      {
+        "id": "q35",
+        "given": "R",
+        "target": "n35"
+      },
+      {
+        "id": "q36",
+        "given": "R",
+        "target": "n36"
+      },
+      {
+        "id": "q37",
+        "given": "R",
+        "target": "n37"
+      },
+      {
+        "id": "q38",
+        "given": "R",
+        "target": "n38"
+      },
+      {
+        "id": "q39",
+        "given": "R",
+        "target": "n39"
+      },
+      {
+        "id": "q4",
+        "given": "R",
+        "target": "n4"
+      },
+      {
+        "id": "q40",
+        "given": "R",
+        "target": "n40"
+      },
+      {
+        "id": "q41",
+        "given": "R",
+        "target": "n41"
+      },
+      {
+        "id": "q42",
+        "given": "R",
+        "target": "n42"
+      },
+      {
+        "id": "q43",
+        "given": "R",
+        "target": "n43"
+      },
+      {
+        "id": "q44",
+        "given": "R",
+        "target": "n44"
+      },
+      {
+        "id": "q45",
+        "given": "R",
+        "target": "n45"
+      },
+      {
+        "id": "q46",
+        "given": "R",
+        "target": "n46"
+      },
+      {
+        "id": "q47",
+        "given": "R",
+        "target": "n47"
+      },
+      {
+        "id": "q48",
+        "given": "R",
+        "target": "n48"
+      },
+      {
+        "id": "q49",
+        "given": "R",
+        "target": "n49"
+      },
+      {
+        "id": "q5",
+        "given": "R",
+        "target": "n5"
+      },
+      {
+        "id": "q50",
+        "given": "R",
+        "target": "n50"
+      },
+      {
+        "id": "q51",
+        "given": "R",
+        "target": "n51"
+      },
+      {
+        "id": "q52",
+        "given": "R",
+        "target": "n52"
+      },
+      {
+        "id": "q53",
+        "given": "R",
+        "target": "n53"
+      },
+      {
+        "id": "q54",
+        "given": "R",
+        "target": "n54"
+      },
+      {
+        "id": "q55",
+        "given": "R",
+        "target": "n55"
+      },
+      {
+        "id": "q56",
+        "given": "R",
+        "target": "n56"
+      },
+      {
+        "id": "q57",
+        "given": "R",
+        "target": "n57"
+      },
+      {
+        "id": "q58",
+        "given": "R",
+        "target": "n58"
+      },
+      {
+        "id": "q59",
+        "given": "R",
+        "target": "n59"
+      },
+      {
+        "id": "q6",
+        "given": "R",
+        "target": "n6"
+      },
+      {
+        "id": "q60",
+        "given": "R",
+        "target": "n60"
+      },
+      {
+        "id": "q61",
+        "given": "R",
+        "target": "n61"
+      },
+      {
+        "id": "q62",
+        "given": "R",
+        "target": "n62"
+      },
+      {
+        "id": "q63",
+        "given": "R",
+        "target": "n63"
+      },
+      {
+        "id": "q64",
+        "given": "R",
+        "target": "n64"
+      },
+      {
+        "id": "q65",
+        "given": "R",
+        "target": "n65"
+      },
+      {
+        "id": "q66",
+        "given": "R",
+        "target": "n66"
+      },
+      {
+        "id": "q67",
+        "given": "R",
+        "target": "n67"
+      },
+      {
+        "id": "q68",
+        "given": "R",
+        "target": "n68"
+      },
+      {
+        "id": "q69",
+        "given": "R",
+        "target": "n69"
+      },
+      {
+        "id": "q7",
+        "given": "R",
+        "target": "n7"
+      },
+      {
+        "id": "q70",
+        "given": "R",
+        "target": "n70"
+      },
+      {
+        "id": "q71",
+        "given": "R",
+        "target": "n71"
+      },
+      {
+        "id": "q72",
+        "given": "R",
+        "target": "n72"
+      },
+      {
+        "id": "q73",
+        "given": "R",
+        "target": "n73"
+      },
+      {
+        "id": "q74",
+        "given": "R",
+        "target": "n74"
+      },
+      {
+        "id": "q75",
+        "given": "R",
+        "target": "n75"
+      },
+      {
+        "id": "q76",
+        "given": "R",
+        "target": "n76"
+      },
+      {
+        "id": "q77",
+        "given": "R",
+        "target": "n77"
+      },
+      {
+        "id": "q78",
+        "given": "R",
+        "target": "n78"
+      },
+      {
+        "id": "q79",
+        "given": "R",
+        "target": "n79"
+      },
+      {
+        "id": "q8",
+        "given": "R",
+        "target": "n8"
+      },
+      {
+        "id": "q80",
+        "given": "R",
+        "target": "n80"
+      },
+      {
+        "id": "q81",
+        "given": "R",
+        "target": "n81"
+      },
+      {
+        "id": "q82",
+        "given": "R",
+        "target": "n82"
+      },
+      {
+        "id": "q83",
+        "given": "R",
+        "target": "n83"
+      },
+      {
+        "id": "q84",
+        "given": "R",
+        "target": "n84"
+      },
+      {
+        "id": "q85",
+        "given": "R",
+        "target": "n85"
+      },
+      {
+        "id": "q86",
+        "given": "R",
+        "target": "n86"
+      },
+      {
+        "id": "q87",
+        "given": "R",
+        "target": "n87"
+      },
+      {
+        "id": "q88",
+        "given": "R",
+        "target": "n88"
+      },
+      {
+        "id": "q89",
+        "given": "R",
+        "target": "n89"
+      },
+      {
+        "id": "q9",
+        "given": "R",
+        "target": "n9"
+      },
+      {
+        "id": "q90",
+        "given": "R",
+        "target": "n90"
+      },
+      {
+        "id": "q91",
+        "given": "R",
+        "target": "n91"
+      },
+      {
+        "id": "q92",
+        "given": "R",
+        "target": "n92"
+      },
+      {
+        "id": "q93",
+        "given": "R",
+        "target": "n93"
+      },
+      {
+        "id": "q94",
+        "given": "R",
+        "target": "n94"
+      },
+      {
+        "id": "q95",
+        "given": "R",
+        "target": "n95"
+      },
+      {
+        "id": "q96",
+        "given": "R",
+        "target": "n96"
+      },
+      {
+        "id": "q97",
+        "given": "R",
+        "target": "n97"
+      },
+      {
+        "id": "q98",
+        "given": "R",
+        "target": "n98"
+      },
+      {
+        "id": "q99",
+        "given": "R",
+        "target": "n99"
+      }
+    ],
+    "provenance": {
+      "synthetic": true,
+      "source_ref": "multiverse-mit-multiplication-v1",
+      "rights": "self_authored",
+      "attribution": "Original synthetic scenario author",
+      "snapshot": "Self-authored finite educational editorial scenario; no universe observations.",
+      "snapshot_sha256": "2bbe374959a036d5d8f98fe16e00bffccb5b3c0ecb2121060a8e52cb27a216ae"
+    }
+  },
+  "input_sha256": "6211c490259c567b86c8dd0ae26c3d08c386085755bf400aae1e6caf394efbaf",
+  "model_sha256": "fd607a6c50dfaf304c934e43114f5c54e749fe24b36133f0c444678fe7ff0a60",
+  "schema_sha256": "f85fc694bf585d0a6b9c88b71755ebbe5137e456ef67929c344eff79bfec9b59",
+  "source_manifest_sha256": "5089c43fb7f5d9bbca169a297801dccdd3c3eca36722ef2c87b31949a2769cdf",
+  "source_freeze_sha256": "f960074ef48f003e362a46edff887a4a7bbff943961241fe4ba287684ae29add",
+  "code_sha256": "715e7b8f06dacc932758e7146cba9389a0c1fe40b998270d19ae1a5c455ddbf0",
+  "root": "R",
+  "nodes": [
+    {
+      "id": "R",
+      "parent": null,
+      "children": [
+        "n0",
+        "n1",
+        "n10",
+        "n100",
+        "n101",
+        "n102",
+        "n103",
+        "n104",
+        "n105",
+        "n106",
+        "n107",
+        "n108",
+        "n109",
+        "n11",
+        "n110",
+        "n111",
+        "n112",
+        "n113",
+        "n114",
+        "n115",
+        "n116",
+        "n117",
+        "n118",
+        "n119",
+        "n12",
+        "n120",
+        "n121",
+        "n122",
+        "n123",
+        "n124",
+        "n125",
+        "n126",
+        "n127",
+        "n128",
+        "n129",
+        "n13",
+        "n130",
+        "n131",
+        "n132",
+        "n133",
+        "n134",
+        "n135",
+        "n136",
+        "n137",
+        "n138",
+        "n139",
+        "n14",
+        "n140",
+        "n141",
+        "n142",
+        "n143",
+        "n144",
+        "n145",
+        "n146",
+        "n147",
+        "n148",
+        "n149",
+        "n15",
+        "n150",
+        "n151",
+        "n152",
+        "n153",
+        "n154",
+        "n155",
+        "n156",
+        "n157",
+        "n158",
+        "n159",
+        "n16",
+        "n160",
+        "n161",
+        "n162",
+        "n163",
+        "n164",
+        "n165",
+        "n166",
+        "n167",
+        "n168",
+        "n169",
+        "n17",
+        "n170",
+        "n171",
+        "n172",
+        "n173",
+        "n174",
+        "n175",
+        "n176",
+        "n177",
+        "n178",
+        "n179",
+        "n18",
+        "n180",
+        "n181",
+        "n182",
+        "n183",
+        "n184",
+        "n185",
+        "n186",
+        "n187",
+        "n188",
+        "n189",
+        "n19",
+        "n190",
+        "n191",
+        "n192",
+        "n193",
+        "n194",
+        "n195",
+        "n196",
+        "n197",
+        "n198",
+        "n199",
+        "n2",
+        "n20",
+        "n200",
+        "n201",
+        "n202",
+        "n203",
+        "n204",
+        "n205",
+        "n206",
+        "n207",
+        "n208",
+        "n209",
+        "n21",
+        "n210",
+        "n211",
+        "n212",
+        "n213",
+        "n214",
+        "n215",
+        "n216",
+        "n217",
+        "n218",
+        "n219",
+        "n22",
+        "n220",
+        "n221",
+        "n222",
+        "n223",
+        "n224",
+        "n225",
+        "n226",
+        "n227",
+        "n228",
+        "n229",
+        "n23",
+        "n230",
+        "n231",
+        "n232",
+        "n233",
+        "n234",
+        "n235",
+        "n236",
+        "n237",
+        "n238",
+        "n239",
+        "n24",
+        "n240",
+        "n241",
+        "n242",
+        "n243",
+        "n244",
+        "n245",
+        "n246",
+        "n247",
+        "n248",
+        "n249",
+        "n25",
+        "n250",
+        "n251",
+        "n252",
+        "n253",
+        "n254",
+        "n26",
+        "n27",
+        "n28",
+        "n29",
+        "n3",
+        "n30",
+        "n31",
+        "n32",
+        "n33",
+        "n34",
+        "n35",
+        "n36",
+        "n37",
+        "n38",
+        "n39",
+        "n4",
+        "n40",
+        "n41",
+        "n42",
+        "n43",
+        "n44",
+        "n45",
+        "n46",
+        "n47",
+        "n48",
+        "n49",
+        "n5",
+        "n50",
+        "n51",
+        "n52",
+        "n53",
+        "n54",
+        "n55",
+        "n56",
+        "n57",
+        "n58",
+        "n59",
+        "n6",
+        "n60",
+        "n61",
+        "n62",
+        "n63",
+        "n64",
+        "n65",
+        "n66",
+        "n67",
+        "n68",
+        "n69",
+        "n7",
+        "n70",
+        "n71",
+        "n72",
+        "n73",
+        "n74",
+        "n75",
+        "n76",
+        "n77",
+        "n78",
+        "n79",
+        "n8",
+        "n80",
+        "n81",
+        "n82",
+        "n83",
+        "n84",
+        "n85",
+        "n86",
+        "n87",
+        "n88",
+        "n89",
+        "n9",
+        "n90",
+        "n91",
+        "n92",
+        "n93",
+        "n94",
+        "n95",
+        "n96",
+        "n97",
+        "n98",
+        "n99"
+      ],
+      "path": [
+        "R"
+      ],
+      "depth": 0,
+      "local_weight": "1",
+      "mass": "1",
+      "terminal": false,
+      "declared_utility": null,
+      "conditional_expected_utility": "0"
+    },
+    {
+      "id": "n0",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n0"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-127",
+      "conditional_expected_utility": "-127"
+    },
+    {
+      "id": "n1",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n1"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-126",
+      "conditional_expected_utility": "-126"
+    },
+    {
+      "id": "n10",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n10"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-117",
+      "conditional_expected_utility": "-117"
+    },
+    {
+      "id": "n100",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n100"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-27",
+      "conditional_expected_utility": "-27"
+    },
+    {
+      "id": "n101",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n101"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-26",
+      "conditional_expected_utility": "-26"
+    },
+    {
+      "id": "n102",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n102"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-25",
+      "conditional_expected_utility": "-25"
+    },
+    {
+      "id": "n103",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n103"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-24",
+      "conditional_expected_utility": "-24"
+    },
+    {
+      "id": "n104",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n104"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-23",
+      "conditional_expected_utility": "-23"
+    },
+    {
+      "id": "n105",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n105"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-22",
+      "conditional_expected_utility": "-22"
+    },
+    {
+      "id": "n106",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n106"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-21",
+      "conditional_expected_utility": "-21"
+    },
+    {
+      "id": "n107",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n107"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-20",
+      "conditional_expected_utility": "-20"
+    },
+    {
+      "id": "n108",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n108"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-19",
+      "conditional_expected_utility": "-19"
+    },
+    {
+      "id": "n109",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n109"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-18",
+      "conditional_expected_utility": "-18"
+    },
+    {
+      "id": "n11",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n11"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-116",
+      "conditional_expected_utility": "-116"
+    },
+    {
+      "id": "n110",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n110"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-17",
+      "conditional_expected_utility": "-17"
+    },
+    {
+      "id": "n111",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n111"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-16",
+      "conditional_expected_utility": "-16"
+    },
+    {
+      "id": "n112",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n112"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-15",
+      "conditional_expected_utility": "-15"
+    },
+    {
+      "id": "n113",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n113"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-14",
+      "conditional_expected_utility": "-14"
+    },
+    {
+      "id": "n114",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n114"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-13",
+      "conditional_expected_utility": "-13"
+    },
+    {
+      "id": "n115",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n115"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-12",
+      "conditional_expected_utility": "-12"
+    },
+    {
+      "id": "n116",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n116"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-11",
+      "conditional_expected_utility": "-11"
+    },
+    {
+      "id": "n117",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n117"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-10",
+      "conditional_expected_utility": "-10"
+    },
+    {
+      "id": "n118",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n118"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-9",
+      "conditional_expected_utility": "-9"
+    },
+    {
+      "id": "n119",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n119"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-8",
+      "conditional_expected_utility": "-8"
+    },
+    {
+      "id": "n12",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n12"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-115",
+      "conditional_expected_utility": "-115"
+    },
+    {
+      "id": "n120",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n120"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-7",
+      "conditional_expected_utility": "-7"
+    },
+    {
+      "id": "n121",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n121"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-6",
+      "conditional_expected_utility": "-6"
+    },
+    {
+      "id": "n122",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n122"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-5",
+      "conditional_expected_utility": "-5"
+    },
+    {
+      "id": "n123",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n123"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-4",
+      "conditional_expected_utility": "-4"
+    },
+    {
+      "id": "n124",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n124"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-3",
+      "conditional_expected_utility": "-3"
+    },
+    {
+      "id": "n125",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n125"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-2",
+      "conditional_expected_utility": "-2"
+    },
+    {
+      "id": "n126",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n126"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-1",
+      "conditional_expected_utility": "-1"
+    },
+    {
+      "id": "n127",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n127"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "0",
+      "conditional_expected_utility": "0"
+    },
+    {
+      "id": "n128",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n128"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "1",
+      "conditional_expected_utility": "1"
+    },
+    {
+      "id": "n129",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n129"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "2",
+      "conditional_expected_utility": "2"
+    },
+    {
+      "id": "n13",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n13"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-114",
+      "conditional_expected_utility": "-114"
+    },
+    {
+      "id": "n130",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n130"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "3",
+      "conditional_expected_utility": "3"
+    },
+    {
+      "id": "n131",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n131"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "4",
+      "conditional_expected_utility": "4"
+    },
+    {
+      "id": "n132",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n132"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "5",
+      "conditional_expected_utility": "5"
+    },
+    {
+      "id": "n133",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n133"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "6",
+      "conditional_expected_utility": "6"
+    },
+    {
+      "id": "n134",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n134"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "7",
+      "conditional_expected_utility": "7"
+    },
+    {
+      "id": "n135",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n135"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "8",
+      "conditional_expected_utility": "8"
+    },
+    {
+      "id": "n136",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n136"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "9",
+      "conditional_expected_utility": "9"
+    },
+    {
+      "id": "n137",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n137"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "10",
+      "conditional_expected_utility": "10"
+    },
+    {
+      "id": "n138",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n138"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "11",
+      "conditional_expected_utility": "11"
+    },
+    {
+      "id": "n139",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n139"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "12",
+      "conditional_expected_utility": "12"
+    },
+    {
+      "id": "n14",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n14"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-113",
+      "conditional_expected_utility": "-113"
+    },
+    {
+      "id": "n140",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n140"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "13",
+      "conditional_expected_utility": "13"
+    },
+    {
+      "id": "n141",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n141"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "14",
+      "conditional_expected_utility": "14"
+    },
+    {
+      "id": "n142",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n142"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "15",
+      "conditional_expected_utility": "15"
+    },
+    {
+      "id": "n143",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n143"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "16",
+      "conditional_expected_utility": "16"
+    },
+    {
+      "id": "n144",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n144"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "17",
+      "conditional_expected_utility": "17"
+    },
+    {
+      "id": "n145",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n145"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "18",
+      "conditional_expected_utility": "18"
+    },
+    {
+      "id": "n146",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n146"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "19",
+      "conditional_expected_utility": "19"
+    },
+    {
+      "id": "n147",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n147"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "20",
+      "conditional_expected_utility": "20"
+    },
+    {
+      "id": "n148",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n148"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "21",
+      "conditional_expected_utility": "21"
+    },
+    {
+      "id": "n149",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n149"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "22",
+      "conditional_expected_utility": "22"
+    },
+    {
+      "id": "n15",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n15"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-112",
+      "conditional_expected_utility": "-112"
+    },
+    {
+      "id": "n150",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n150"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "23",
+      "conditional_expected_utility": "23"
+    },
+    {
+      "id": "n151",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n151"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "24",
+      "conditional_expected_utility": "24"
+    },
+    {
+      "id": "n152",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n152"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "25",
+      "conditional_expected_utility": "25"
+    },
+    {
+      "id": "n153",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n153"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "26",
+      "conditional_expected_utility": "26"
+    },
+    {
+      "id": "n154",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n154"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "27",
+      "conditional_expected_utility": "27"
+    },
+    {
+      "id": "n155",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n155"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "28",
+      "conditional_expected_utility": "28"
+    },
+    {
+      "id": "n156",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n156"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "29",
+      "conditional_expected_utility": "29"
+    },
+    {
+      "id": "n157",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n157"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "30",
+      "conditional_expected_utility": "30"
+    },
+    {
+      "id": "n158",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n158"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "31",
+      "conditional_expected_utility": "31"
+    },
+    {
+      "id": "n159",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n159"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "32",
+      "conditional_expected_utility": "32"
+    },
+    {
+      "id": "n16",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n16"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-111",
+      "conditional_expected_utility": "-111"
+    },
+    {
+      "id": "n160",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n160"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "33",
+      "conditional_expected_utility": "33"
+    },
+    {
+      "id": "n161",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n161"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "34",
+      "conditional_expected_utility": "34"
+    },
+    {
+      "id": "n162",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n162"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "35",
+      "conditional_expected_utility": "35"
+    },
+    {
+      "id": "n163",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n163"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "36",
+      "conditional_expected_utility": "36"
+    },
+    {
+      "id": "n164",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n164"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "37",
+      "conditional_expected_utility": "37"
+    },
+    {
+      "id": "n165",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n165"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "38",
+      "conditional_expected_utility": "38"
+    },
+    {
+      "id": "n166",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n166"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "39",
+      "conditional_expected_utility": "39"
+    },
+    {
+      "id": "n167",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n167"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "40",
+      "conditional_expected_utility": "40"
+    },
+    {
+      "id": "n168",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n168"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "41",
+      "conditional_expected_utility": "41"
+    },
+    {
+      "id": "n169",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n169"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "42",
+      "conditional_expected_utility": "42"
+    },
+    {
+      "id": "n17",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n17"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-110",
+      "conditional_expected_utility": "-110"
+    },
+    {
+      "id": "n170",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n170"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "43",
+      "conditional_expected_utility": "43"
+    },
+    {
+      "id": "n171",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n171"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "44",
+      "conditional_expected_utility": "44"
+    },
+    {
+      "id": "n172",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n172"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "45",
+      "conditional_expected_utility": "45"
+    },
+    {
+      "id": "n173",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n173"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "46",
+      "conditional_expected_utility": "46"
+    },
+    {
+      "id": "n174",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n174"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "47",
+      "conditional_expected_utility": "47"
+    },
+    {
+      "id": "n175",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n175"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "48",
+      "conditional_expected_utility": "48"
+    },
+    {
+      "id": "n176",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n176"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "49",
+      "conditional_expected_utility": "49"
+    },
+    {
+      "id": "n177",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n177"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "50",
+      "conditional_expected_utility": "50"
+    },
+    {
+      "id": "n178",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n178"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "51",
+      "conditional_expected_utility": "51"
+    },
+    {
+      "id": "n179",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n179"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "52",
+      "conditional_expected_utility": "52"
+    },
+    {
+      "id": "n18",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n18"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-109",
+      "conditional_expected_utility": "-109"
+    },
+    {
+      "id": "n180",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n180"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "53",
+      "conditional_expected_utility": "53"
+    },
+    {
+      "id": "n181",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n181"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "54",
+      "conditional_expected_utility": "54"
+    },
+    {
+      "id": "n182",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n182"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "55",
+      "conditional_expected_utility": "55"
+    },
+    {
+      "id": "n183",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n183"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "56",
+      "conditional_expected_utility": "56"
+    },
+    {
+      "id": "n184",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n184"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "57",
+      "conditional_expected_utility": "57"
+    },
+    {
+      "id": "n185",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n185"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "58",
+      "conditional_expected_utility": "58"
+    },
+    {
+      "id": "n186",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n186"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "59",
+      "conditional_expected_utility": "59"
+    },
+    {
+      "id": "n187",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n187"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "60",
+      "conditional_expected_utility": "60"
+    },
+    {
+      "id": "n188",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n188"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "61",
+      "conditional_expected_utility": "61"
+    },
+    {
+      "id": "n189",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n189"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "62",
+      "conditional_expected_utility": "62"
+    },
+    {
+      "id": "n19",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n19"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-108",
+      "conditional_expected_utility": "-108"
+    },
+    {
+      "id": "n190",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n190"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "63",
+      "conditional_expected_utility": "63"
+    },
+    {
+      "id": "n191",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n191"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "64",
+      "conditional_expected_utility": "64"
+    },
+    {
+      "id": "n192",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n192"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "65",
+      "conditional_expected_utility": "65"
+    },
+    {
+      "id": "n193",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n193"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "66",
+      "conditional_expected_utility": "66"
+    },
+    {
+      "id": "n194",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n194"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "67",
+      "conditional_expected_utility": "67"
+    },
+    {
+      "id": "n195",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n195"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "68",
+      "conditional_expected_utility": "68"
+    },
+    {
+      "id": "n196",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n196"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "69",
+      "conditional_expected_utility": "69"
+    },
+    {
+      "id": "n197",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n197"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "70",
+      "conditional_expected_utility": "70"
+    },
+    {
+      "id": "n198",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n198"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "71",
+      "conditional_expected_utility": "71"
+    },
+    {
+      "id": "n199",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n199"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "72",
+      "conditional_expected_utility": "72"
+    },
+    {
+      "id": "n2",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n2"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-125",
+      "conditional_expected_utility": "-125"
+    },
+    {
+      "id": "n20",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n20"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-107",
+      "conditional_expected_utility": "-107"
+    },
+    {
+      "id": "n200",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n200"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "73",
+      "conditional_expected_utility": "73"
+    },
+    {
+      "id": "n201",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n201"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "74",
+      "conditional_expected_utility": "74"
+    },
+    {
+      "id": "n202",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n202"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "75",
+      "conditional_expected_utility": "75"
+    },
+    {
+      "id": "n203",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n203"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "76",
+      "conditional_expected_utility": "76"
+    },
+    {
+      "id": "n204",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n204"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "77",
+      "conditional_expected_utility": "77"
+    },
+    {
+      "id": "n205",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n205"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "78",
+      "conditional_expected_utility": "78"
+    },
+    {
+      "id": "n206",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n206"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "79",
+      "conditional_expected_utility": "79"
+    },
+    {
+      "id": "n207",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n207"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "80",
+      "conditional_expected_utility": "80"
+    },
+    {
+      "id": "n208",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n208"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "81",
+      "conditional_expected_utility": "81"
+    },
+    {
+      "id": "n209",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n209"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "82",
+      "conditional_expected_utility": "82"
+    },
+    {
+      "id": "n21",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n21"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-106",
+      "conditional_expected_utility": "-106"
+    },
+    {
+      "id": "n210",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n210"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "83",
+      "conditional_expected_utility": "83"
+    },
+    {
+      "id": "n211",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n211"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "84",
+      "conditional_expected_utility": "84"
+    },
+    {
+      "id": "n212",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n212"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "85",
+      "conditional_expected_utility": "85"
+    },
+    {
+      "id": "n213",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n213"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "86",
+      "conditional_expected_utility": "86"
+    },
+    {
+      "id": "n214",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n214"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "87",
+      "conditional_expected_utility": "87"
+    },
+    {
+      "id": "n215",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n215"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "88",
+      "conditional_expected_utility": "88"
+    },
+    {
+      "id": "n216",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n216"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "89",
+      "conditional_expected_utility": "89"
+    },
+    {
+      "id": "n217",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n217"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "90",
+      "conditional_expected_utility": "90"
+    },
+    {
+      "id": "n218",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n218"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "91",
+      "conditional_expected_utility": "91"
+    },
+    {
+      "id": "n219",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n219"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "92",
+      "conditional_expected_utility": "92"
+    },
+    {
+      "id": "n22",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n22"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-105",
+      "conditional_expected_utility": "-105"
+    },
+    {
+      "id": "n220",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n220"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "93",
+      "conditional_expected_utility": "93"
+    },
+    {
+      "id": "n221",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n221"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "94",
+      "conditional_expected_utility": "94"
+    },
+    {
+      "id": "n222",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n222"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "95",
+      "conditional_expected_utility": "95"
+    },
+    {
+      "id": "n223",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n223"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "96",
+      "conditional_expected_utility": "96"
+    },
+    {
+      "id": "n224",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n224"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "97",
+      "conditional_expected_utility": "97"
+    },
+    {
+      "id": "n225",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n225"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "98",
+      "conditional_expected_utility": "98"
+    },
+    {
+      "id": "n226",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n226"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "99",
+      "conditional_expected_utility": "99"
+    },
+    {
+      "id": "n227",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n227"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "100",
+      "conditional_expected_utility": "100"
+    },
+    {
+      "id": "n228",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n228"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "101",
+      "conditional_expected_utility": "101"
+    },
+    {
+      "id": "n229",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n229"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "102",
+      "conditional_expected_utility": "102"
+    },
+    {
+      "id": "n23",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n23"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-104",
+      "conditional_expected_utility": "-104"
+    },
+    {
+      "id": "n230",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n230"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "103",
+      "conditional_expected_utility": "103"
+    },
+    {
+      "id": "n231",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n231"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "104",
+      "conditional_expected_utility": "104"
+    },
+    {
+      "id": "n232",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n232"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "105",
+      "conditional_expected_utility": "105"
+    },
+    {
+      "id": "n233",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n233"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "106",
+      "conditional_expected_utility": "106"
+    },
+    {
+      "id": "n234",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n234"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "107",
+      "conditional_expected_utility": "107"
+    },
+    {
+      "id": "n235",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n235"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "108",
+      "conditional_expected_utility": "108"
+    },
+    {
+      "id": "n236",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n236"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "109",
+      "conditional_expected_utility": "109"
+    },
+    {
+      "id": "n237",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n237"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "110",
+      "conditional_expected_utility": "110"
+    },
+    {
+      "id": "n238",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n238"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "111",
+      "conditional_expected_utility": "111"
+    },
+    {
+      "id": "n239",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n239"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "112",
+      "conditional_expected_utility": "112"
+    },
+    {
+      "id": "n24",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n24"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-103",
+      "conditional_expected_utility": "-103"
+    },
+    {
+      "id": "n240",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n240"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "113",
+      "conditional_expected_utility": "113"
+    },
+    {
+      "id": "n241",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n241"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "114",
+      "conditional_expected_utility": "114"
+    },
+    {
+      "id": "n242",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n242"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "115",
+      "conditional_expected_utility": "115"
+    },
+    {
+      "id": "n243",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n243"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "116",
+      "conditional_expected_utility": "116"
+    },
+    {
+      "id": "n244",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n244"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "117",
+      "conditional_expected_utility": "117"
+    },
+    {
+      "id": "n245",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n245"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "118",
+      "conditional_expected_utility": "118"
+    },
+    {
+      "id": "n246",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n246"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "119",
+      "conditional_expected_utility": "119"
+    },
+    {
+      "id": "n247",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n247"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "120",
+      "conditional_expected_utility": "120"
+    },
+    {
+      "id": "n248",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n248"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "121",
+      "conditional_expected_utility": "121"
+    },
+    {
+      "id": "n249",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n249"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "122",
+      "conditional_expected_utility": "122"
+    },
+    {
+      "id": "n25",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n25"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-102",
+      "conditional_expected_utility": "-102"
+    },
+    {
+      "id": "n250",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n250"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "123",
+      "conditional_expected_utility": "123"
+    },
+    {
+      "id": "n251",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n251"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "124",
+      "conditional_expected_utility": "124"
+    },
+    {
+      "id": "n252",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n252"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "125",
+      "conditional_expected_utility": "125"
+    },
+    {
+      "id": "n253",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n253"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "126",
+      "conditional_expected_utility": "126"
+    },
+    {
+      "id": "n254",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n254"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "127",
+      "conditional_expected_utility": "127"
+    },
+    {
+      "id": "n26",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n26"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-101",
+      "conditional_expected_utility": "-101"
+    },
+    {
+      "id": "n27",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n27"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-100",
+      "conditional_expected_utility": "-100"
+    },
+    {
+      "id": "n28",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n28"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-99",
+      "conditional_expected_utility": "-99"
+    },
+    {
+      "id": "n29",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n29"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-98",
+      "conditional_expected_utility": "-98"
+    },
+    {
+      "id": "n3",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n3"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-124",
+      "conditional_expected_utility": "-124"
+    },
+    {
+      "id": "n30",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n30"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-97",
+      "conditional_expected_utility": "-97"
+    },
+    {
+      "id": "n31",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n31"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-96",
+      "conditional_expected_utility": "-96"
+    },
+    {
+      "id": "n32",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n32"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-95",
+      "conditional_expected_utility": "-95"
+    },
+    {
+      "id": "n33",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n33"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-94",
+      "conditional_expected_utility": "-94"
+    },
+    {
+      "id": "n34",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n34"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-93",
+      "conditional_expected_utility": "-93"
+    },
+    {
+      "id": "n35",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n35"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-92",
+      "conditional_expected_utility": "-92"
+    },
+    {
+      "id": "n36",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n36"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-91",
+      "conditional_expected_utility": "-91"
+    },
+    {
+      "id": "n37",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n37"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-90",
+      "conditional_expected_utility": "-90"
+    },
+    {
+      "id": "n38",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n38"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-89",
+      "conditional_expected_utility": "-89"
+    },
+    {
+      "id": "n39",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n39"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-88",
+      "conditional_expected_utility": "-88"
+    },
+    {
+      "id": "n4",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n4"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-123",
+      "conditional_expected_utility": "-123"
+    },
+    {
+      "id": "n40",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n40"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-87",
+      "conditional_expected_utility": "-87"
+    },
+    {
+      "id": "n41",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n41"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-86",
+      "conditional_expected_utility": "-86"
+    },
+    {
+      "id": "n42",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n42"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-85",
+      "conditional_expected_utility": "-85"
+    },
+    {
+      "id": "n43",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n43"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-84",
+      "conditional_expected_utility": "-84"
+    },
+    {
+      "id": "n44",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n44"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-83",
+      "conditional_expected_utility": "-83"
+    },
+    {
+      "id": "n45",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n45"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-82",
+      "conditional_expected_utility": "-82"
+    },
+    {
+      "id": "n46",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n46"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-81",
+      "conditional_expected_utility": "-81"
+    },
+    {
+      "id": "n47",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n47"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-80",
+      "conditional_expected_utility": "-80"
+    },
+    {
+      "id": "n48",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n48"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-79",
+      "conditional_expected_utility": "-79"
+    },
+    {
+      "id": "n49",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n49"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-78",
+      "conditional_expected_utility": "-78"
+    },
+    {
+      "id": "n5",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n5"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-122",
+      "conditional_expected_utility": "-122"
+    },
+    {
+      "id": "n50",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n50"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-77",
+      "conditional_expected_utility": "-77"
+    },
+    {
+      "id": "n51",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n51"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-76",
+      "conditional_expected_utility": "-76"
+    },
+    {
+      "id": "n52",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n52"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-75",
+      "conditional_expected_utility": "-75"
+    },
+    {
+      "id": "n53",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n53"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-74",
+      "conditional_expected_utility": "-74"
+    },
+    {
+      "id": "n54",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n54"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-73",
+      "conditional_expected_utility": "-73"
+    },
+    {
+      "id": "n55",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n55"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-72",
+      "conditional_expected_utility": "-72"
+    },
+    {
+      "id": "n56",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n56"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-71",
+      "conditional_expected_utility": "-71"
+    },
+    {
+      "id": "n57",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n57"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-70",
+      "conditional_expected_utility": "-70"
+    },
+    {
+      "id": "n58",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n58"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-69",
+      "conditional_expected_utility": "-69"
+    },
+    {
+      "id": "n59",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n59"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-68",
+      "conditional_expected_utility": "-68"
+    },
+    {
+      "id": "n6",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n6"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-121",
+      "conditional_expected_utility": "-121"
+    },
+    {
+      "id": "n60",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n60"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-67",
+      "conditional_expected_utility": "-67"
+    },
+    {
+      "id": "n61",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n61"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-66",
+      "conditional_expected_utility": "-66"
+    },
+    {
+      "id": "n62",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n62"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-65",
+      "conditional_expected_utility": "-65"
+    },
+    {
+      "id": "n63",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n63"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-64",
+      "conditional_expected_utility": "-64"
+    },
+    {
+      "id": "n64",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n64"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-63",
+      "conditional_expected_utility": "-63"
+    },
+    {
+      "id": "n65",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n65"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-62",
+      "conditional_expected_utility": "-62"
+    },
+    {
+      "id": "n66",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n66"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-61",
+      "conditional_expected_utility": "-61"
+    },
+    {
+      "id": "n67",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n67"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-60",
+      "conditional_expected_utility": "-60"
+    },
+    {
+      "id": "n68",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n68"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-59",
+      "conditional_expected_utility": "-59"
+    },
+    {
+      "id": "n69",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n69"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-58",
+      "conditional_expected_utility": "-58"
+    },
+    {
+      "id": "n7",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n7"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-120",
+      "conditional_expected_utility": "-120"
+    },
+    {
+      "id": "n70",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n70"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-57",
+      "conditional_expected_utility": "-57"
+    },
+    {
+      "id": "n71",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n71"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-56",
+      "conditional_expected_utility": "-56"
+    },
+    {
+      "id": "n72",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n72"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-55",
+      "conditional_expected_utility": "-55"
+    },
+    {
+      "id": "n73",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n73"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-54",
+      "conditional_expected_utility": "-54"
+    },
+    {
+      "id": "n74",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n74"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-53",
+      "conditional_expected_utility": "-53"
+    },
+    {
+      "id": "n75",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n75"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-52",
+      "conditional_expected_utility": "-52"
+    },
+    {
+      "id": "n76",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n76"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-51",
+      "conditional_expected_utility": "-51"
+    },
+    {
+      "id": "n77",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n77"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-50",
+      "conditional_expected_utility": "-50"
+    },
+    {
+      "id": "n78",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n78"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-49",
+      "conditional_expected_utility": "-49"
+    },
+    {
+      "id": "n79",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n79"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-48",
+      "conditional_expected_utility": "-48"
+    },
+    {
+      "id": "n8",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n8"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-119",
+      "conditional_expected_utility": "-119"
+    },
+    {
+      "id": "n80",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n80"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-47",
+      "conditional_expected_utility": "-47"
+    },
+    {
+      "id": "n81",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n81"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-46",
+      "conditional_expected_utility": "-46"
+    },
+    {
+      "id": "n82",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n82"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-45",
+      "conditional_expected_utility": "-45"
+    },
+    {
+      "id": "n83",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n83"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-44",
+      "conditional_expected_utility": "-44"
+    },
+    {
+      "id": "n84",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n84"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-43",
+      "conditional_expected_utility": "-43"
+    },
+    {
+      "id": "n85",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n85"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-42",
+      "conditional_expected_utility": "-42"
+    },
+    {
+      "id": "n86",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n86"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-41",
+      "conditional_expected_utility": "-41"
+    },
+    {
+      "id": "n87",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n87"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-40",
+      "conditional_expected_utility": "-40"
+    },
+    {
+      "id": "n88",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n88"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-39",
+      "conditional_expected_utility": "-39"
+    },
+    {
+      "id": "n89",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n89"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-38",
+      "conditional_expected_utility": "-38"
+    },
+    {
+      "id": "n9",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n9"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-118",
+      "conditional_expected_utility": "-118"
+    },
+    {
+      "id": "n90",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n90"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-37",
+      "conditional_expected_utility": "-37"
+    },
+    {
+      "id": "n91",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n91"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-36",
+      "conditional_expected_utility": "-36"
+    },
+    {
+      "id": "n92",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n92"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-35",
+      "conditional_expected_utility": "-35"
+    },
+    {
+      "id": "n93",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n93"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-34",
+      "conditional_expected_utility": "-34"
+    },
+    {
+      "id": "n94",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n94"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-33",
+      "conditional_expected_utility": "-33"
+    },
+    {
+      "id": "n95",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n95"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-32",
+      "conditional_expected_utility": "-32"
+    },
+    {
+      "id": "n96",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n96"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-31",
+      "conditional_expected_utility": "-31"
+    },
+    {
+      "id": "n97",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n97"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-30",
+      "conditional_expected_utility": "-30"
+    },
+    {
+      "id": "n98",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n98"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-29",
+      "conditional_expected_utility": "-29"
+    },
+    {
+      "id": "n99",
+      "parent": "R",
+      "children": [],
+      "path": [
+        "R",
+        "n99"
+      ],
+      "depth": 1,
+      "local_weight": "1/255",
+      "mass": "1/255",
+      "terminal": true,
+      "declared_utility": "-28",
+      "conditional_expected_utility": "-28"
+    }
+  ],
+  "leaves": [
+    {
+      "id": "n0",
+      "mass": "1/255",
+      "utility": "-127",
+      "weighted_utility": "-127/255"
+    },
+    {
+      "id": "n1",
+      "mass": "1/255",
+      "utility": "-126",
+      "weighted_utility": "-42/85"
+    },
+    {
+      "id": "n10",
+      "mass": "1/255",
+      "utility": "-117",
+      "weighted_utility": "-39/85"
+    },
+    {
+      "id": "n100",
+      "mass": "1/255",
+      "utility": "-27",
+      "weighted_utility": "-9/85"
+    },
+    {
+      "id": "n101",
+      "mass": "1/255",
+      "utility": "-26",
+      "weighted_utility": "-26/255"
+    },
+    {
+      "id": "n102",
+      "mass": "1/255",
+      "utility": "-25",
+      "weighted_utility": "-5/51"
+    },
+    {
+      "id": "n103",
+      "mass": "1/255",
+      "utility": "-24",
+      "weighted_utility": "-8/85"
+    },
+    {
+      "id": "n104",
+      "mass": "1/255",
+      "utility": "-23",
+      "weighted_utility": "-23/255"
+    },
+    {
+      "id": "n105",
+      "mass": "1/255",
+      "utility": "-22",
+      "weighted_utility": "-22/255"
+    },
+    {
+      "id": "n106",
+      "mass": "1/255",
+      "utility": "-21",
+      "weighted_utility": "-7/85"
+    },
+    {
+      "id": "n107",
+      "mass": "1/255",
+      "utility": "-20",
+      "weighted_utility": "-4/51"
+    },
+    {
+      "id": "n108",
+      "mass": "1/255",
+      "utility": "-19",
+      "weighted_utility": "-19/255"
+    },
+    {
+      "id": "n109",
+      "mass": "1/255",
+      "utility": "-18",
+      "weighted_utility": "-6/85"
+    },
+    {
+      "id": "n11",
+      "mass": "1/255",
+      "utility": "-116",
+      "weighted_utility": "-116/255"
+    },
+    {
+      "id": "n110",
+      "mass": "1/255",
+      "utility": "-17",
+      "weighted_utility": "-1/15"
+    },
+    {
+      "id": "n111",
+      "mass": "1/255",
+      "utility": "-16",
+      "weighted_utility": "-16/255"
+    },
+    {
+      "id": "n112",
+      "mass": "1/255",
+      "utility": "-15",
+      "weighted_utility": "-1/17"
+    },
+    {
+      "id": "n113",
+      "mass": "1/255",
+      "utility": "-14",
+      "weighted_utility": "-14/255"
+    },
+    {
+      "id": "n114",
+      "mass": "1/255",
+      "utility": "-13",
+      "weighted_utility": "-13/255"
+    },
+    {
+      "id": "n115",
+      "mass": "1/255",
+      "utility": "-12",
+      "weighted_utility": "-4/85"
+    },
+    {
+      "id": "n116",
+      "mass": "1/255",
+      "utility": "-11",
+      "weighted_utility": "-11/255"
+    },
+    {
+      "id": "n117",
+      "mass": "1/255",
+      "utility": "-10",
+      "weighted_utility": "-2/51"
+    },
+    {
+      "id": "n118",
+      "mass": "1/255",
+      "utility": "-9",
+      "weighted_utility": "-3/85"
+    },
+    {
+      "id": "n119",
+      "mass": "1/255",
+      "utility": "-8",
+      "weighted_utility": "-8/255"
+    },
+    {
+      "id": "n12",
+      "mass": "1/255",
+      "utility": "-115",
+      "weighted_utility": "-23/51"
+    },
+    {
+      "id": "n120",
+      "mass": "1/255",
+      "utility": "-7",
+      "weighted_utility": "-7/255"
+    },
+    {
+      "id": "n121",
+      "mass": "1/255",
+      "utility": "-6",
+      "weighted_utility": "-2/85"
+    },
+    {
+      "id": "n122",
+      "mass": "1/255",
+      "utility": "-5",
+      "weighted_utility": "-1/51"
+    },
+    {
+      "id": "n123",
+      "mass": "1/255",
+      "utility": "-4",
+      "weighted_utility": "-4/255"
+    },
+    {
+      "id": "n124",
+      "mass": "1/255",
+      "utility": "-3",
+      "weighted_utility": "-1/85"
+    },
+    {
+      "id": "n125",
+      "mass": "1/255",
+      "utility": "-2",
+      "weighted_utility": "-2/255"
+    },
+    {
+      "id": "n126",
+      "mass": "1/255",
+      "utility": "-1",
+      "weighted_utility": "-1/255"
+    },
+    {
+      "id": "n127",
+      "mass": "1/255",
+      "utility": "0",
+      "weighted_utility": "0"
+    },
+    {
+      "id": "n128",
+      "mass": "1/255",
+      "utility": "1",
+      "weighted_utility": "1/255"
+    },
+    {
+      "id": "n129",
+      "mass": "1/255",
+      "utility": "2",
+      "weighted_utility": "2/255"
+    },
+    {
+      "id": "n13",
+      "mass": "1/255",
+      "utility": "-114",
+      "weighted_utility": "-38/85"
+    },
+    {
+      "id": "n130",
+      "mass": "1/255",
+      "utility": "3",
+      "weighted_utility": "1/85"
+    },
+    {
+      "id": "n131",
+      "mass": "1/255",
+      "utility": "4",
+      "weighted_utility": "4/255"
+    },
+    {
+      "id": "n132",
+      "mass": "1/255",
+      "utility": "5",
+      "weighted_utility": "1/51"
+    },
+    {
+      "id": "n133",
+      "mass": "1/255",
+      "utility": "6",
+      "weighted_utility": "2/85"
+    },
+    {
+      "id": "n134",
+      "mass": "1/255",
+      "utility": "7",
+      "weighted_utility": "7/255"
+    },
+    {
+      "id": "n135",
+      "mass": "1/255",
+      "utility": "8",
+      "weighted_utility": "8/255"
+    },
+    {
+      "id": "n136",
+      "mass": "1/255",
+      "utility": "9",
+      "weighted_utility": "3/85"
+    },
+    {
+      "id": "n137",
+      "mass": "1/255",
+      "utility": "10",
+      "weighted_utility": "2/51"
+    },
+    {
+      "id": "n138",
+      "mass": "1/255",
+      "utility": "11",
+      "weighted_utility": "11/255"
+    },
+    {
+      "id": "n139",
+      "mass": "1/255",
+      "utility": "12",
+      "weighted_utility": "4/85"
+    },
+    {
+      "id": "n14",
+      "mass": "1/255",
+      "utility": "-113",
+      "weighted_utility": "-113/255"
+    },
+    {
+      "id": "n140",
+      "mass": "1/255",
+      "utility": "13",
+      "weighted_utility": "13/255"
+    },
+    {
+      "id": "n141",
+      "mass": "1/255",
+      "utility": "14",
+      "weighted_utility": "14/255"
+    },
+    {
+      "id": "n142",
+      "mass": "1/255",
+      "utility": "15",
+      "weighted_utility": "1/17"
+    },
+    {
+      "id": "n143",
+      "mass": "1/255",
+      "utility": "16",
+      "weighted_utility": "16/255"
+    },
+    {
+      "id": "n144",
+      "mass": "1/255",
+      "utility": "17",
+      "weighted_utility": "1/15"
+    },
+    {
+      "id": "n145",
+      "mass": "1/255",
+      "utility": "18",
+      "weighted_utility": "6/85"
+    },
+    {
+      "id": "n146",
+      "mass": "1/255",
+      "utility": "19",
+      "weighted_utility": "19/255"
+    },
+    {
+      "id": "n147",
+      "mass": "1/255",
+      "utility": "20",
+      "weighted_utility": "4/51"
+    },
+    {
+      "id": "n148",
+      "mass": "1/255",
+      "utility": "21",
+      "weighted_utility": "7/85"
+    },
+    {
+      "id": "n149",
+      "mass": "1/255",
+      "utility": "22",
+      "weighted_utility": "22/255"
+    },
+    {
+      "id": "n15",
+      "mass": "1/255",
+      "utility": "-112",
+      "weighted_utility": "-112/255"
+    },
+    {
+      "id": "n150",
+      "mass": "1/255",
+      "utility": "23",
+      "weighted_utility": "23/255"
+    },
+    {
+      "id": "n151",
+      "mass": "1/255",
+      "utility": "24",
+      "weighted_utility": "8/85"
+    },
+    {
+      "id": "n152",
+      "mass": "1/255",
+      "utility": "25",
+      "weighted_utility": "5/51"
+    },
+    {
+      "id": "n153",
+      "mass": "1/255",
+      "utility": "26",
+      "weighted_utility": "26/255"
+    },
+    {
+      "id": "n154",
+      "mass": "1/255",
+      "utility": "27",
+      "weighted_utility": "9/85"
+    },
+    {
+      "id": "n155",
+      "mass": "1/255",
+      "utility": "28",
+      "weighted_utility": "28/255"
+    },
+    {
+      "id": "n156",
+      "mass": "1/255",
+      "utility": "29",
+      "weighted_utility": "29/255"
+    },
+    {
+      "id": "n157",
+      "mass": "1/255",
+      "utility": "30",
+      "weighted_utility": "2/17"
+    },
+    {
+      "id": "n158",
+      "mass": "1/255",
+      "utility": "31",
+      "weighted_utility": "31/255"
+    },
+    {
+      "id": "n159",
+      "mass": "1/255",
+      "utility": "32",
+      "weighted_utility": "32/255"
+    },
+    {
+      "id": "n16",
+      "mass": "1/255",
+      "utility": "-111",
+      "weighted_utility": "-37/85"
+    },
+    {
+      "id": "n160",
+      "mass": "1/255",
+      "utility": "33",
+      "weighted_utility": "11/85"
+    },
+    {
+      "id": "n161",
+      "mass": "1/255",
+      "utility": "34",
+      "weighted_utility": "2/15"
+    },
+    {
+      "id": "n162",
+      "mass": "1/255",
+      "utility": "35",
+      "weighted_utility": "7/51"
+    },
+    {
+      "id": "n163",
+      "mass": "1/255",
+      "utility": "36",
+      "weighted_utility": "12/85"
+    },
+    {
+      "id": "n164",
+      "mass": "1/255",
+      "utility": "37",
+      "weighted_utility": "37/255"
+    },
+    {
+      "id": "n165",
+      "mass": "1/255",
+      "utility": "38",
+      "weighted_utility": "38/255"
+    },
+    {
+      "id": "n166",
+      "mass": "1/255",
+      "utility": "39",
+      "weighted_utility": "13/85"
+    },
+    {
+      "id": "n167",
+      "mass": "1/255",
+      "utility": "40",
+      "weighted_utility": "8/51"
+    },
+    {
+      "id": "n168",
+      "mass": "1/255",
+      "utility": "41",
+      "weighted_utility": "41/255"
+    },
+    {
+      "id": "n169",
+      "mass": "1/255",
+      "utility": "42",
+      "weighted_utility": "14/85"
+    },
+    {
+      "id": "n17",
+      "mass": "1/255",
+      "utility": "-110",
+      "weighted_utility": "-22/51"
+    },
+    {
+      "id": "n170",
+      "mass": "1/255",
+      "utility": "43",
+      "weighted_utility": "43/255"
+    },
+    {
+      "id": "n171",
+      "mass": "1/255",
+      "utility": "44",
+      "weighted_utility": "44/255"
+    },
+    {
+      "id": "n172",
+      "mass": "1/255",
+      "utility": "45",
+      "weighted_utility": "3/17"
+    },
+    {
+      "id": "n173",
+      "mass": "1/255",
+      "utility": "46",
+      "weighted_utility": "46/255"
+    },
+    {
+      "id": "n174",
+      "mass": "1/255",
+      "utility": "47",
+      "weighted_utility": "47/255"
+    },
+    {
+      "id": "n175",
+      "mass": "1/255",
+      "utility": "48",
+      "weighted_utility": "16/85"
+    },
+    {
+      "id": "n176",
+      "mass": "1/255",
+      "utility": "49",
+      "weighted_utility": "49/255"
+    },
+    {
+      "id": "n177",
+      "mass": "1/255",
+      "utility": "50",
+      "weighted_utility": "10/51"
+    },
+    {
+      "id": "n178",
+      "mass": "1/255",
+      "utility": "51",
+      "weighted_utility": "1/5"
+    },
+    {
+      "id": "n179",
+      "mass": "1/255",
+      "utility": "52",
+      "weighted_utility": "52/255"
+    },
+    {
+      "id": "n18",
+      "mass": "1/255",
+      "utility": "-109",
+      "weighted_utility": "-109/255"
+    },
+    {
+      "id": "n180",
+      "mass": "1/255",
+      "utility": "53",
+      "weighted_utility": "53/255"
+    },
+    {
+      "id": "n181",
+      "mass": "1/255",
+      "utility": "54",
+      "weighted_utility": "18/85"
+    },
+    {
+      "id": "n182",
+      "mass": "1/255",
+      "utility": "55",
+      "weighted_utility": "11/51"
+    },
+    {
+      "id": "n183",
+      "mass": "1/255",
+      "utility": "56",
+      "weighted_utility": "56/255"
+    },
+    {
+      "id": "n184",
+      "mass": "1/255",
+      "utility": "57",
+      "weighted_utility": "19/85"
+    },
+    {
+      "id": "n185",
+      "mass": "1/255",
+      "utility": "58",
+      "weighted_utility": "58/255"
+    },
+    {
+      "id": "n186",
+      "mass": "1/255",
+      "utility": "59",
+      "weighted_utility": "59/255"
+    },
+    {
+      "id": "n187",
+      "mass": "1/255",
+      "utility": "60",
+      "weighted_utility": "4/17"
+    },
+    {
+      "id": "n188",
+      "mass": "1/255",
+      "utility": "61",
+      "weighted_utility": "61/255"
+    },
+    {
+      "id": "n189",
+      "mass": "1/255",
+      "utility": "62",
+      "weighted_utility": "62/255"
+    },
+    {
+      "id": "n19",
+      "mass": "1/255",
+      "utility": "-108",
+      "weighted_utility": "-36/85"
+    },
+    {
+      "id": "n190",
+      "mass": "1/255",
+      "utility": "63",
+      "weighted_utility": "21/85"
+    },
+    {
+      "id": "n191",
+      "mass": "1/255",
+      "utility": "64",
+      "weighted_utility": "64/255"
+    },
+    {
+      "id": "n192",
+      "mass": "1/255",
+      "utility": "65",
+      "weighted_utility": "13/51"
+    },
+    {
+      "id": "n193",
+      "mass": "1/255",
+      "utility": "66",
+      "weighted_utility": "22/85"
+    },
+    {
+      "id": "n194",
+      "mass": "1/255",
+      "utility": "67",
+      "weighted_utility": "67/255"
+    },
+    {
+      "id": "n195",
+      "mass": "1/255",
+      "utility": "68",
+      "weighted_utility": "4/15"
+    },
+    {
+      "id": "n196",
+      "mass": "1/255",
+      "utility": "69",
+      "weighted_utility": "23/85"
+    },
+    {
+      "id": "n197",
+      "mass": "1/255",
+      "utility": "70",
+      "weighted_utility": "14/51"
+    },
+    {
+      "id": "n198",
+      "mass": "1/255",
+      "utility": "71",
+      "weighted_utility": "71/255"
+    },
+    {
+      "id": "n199",
+      "mass": "1/255",
+      "utility": "72",
+      "weighted_utility": "24/85"
+    },
+    {
+      "id": "n2",
+      "mass": "1/255",
+      "utility": "-125",
+      "weighted_utility": "-25/51"
+    },
+    {
+      "id": "n20",
+      "mass": "1/255",
+      "utility": "-107",
+      "weighted_utility": "-107/255"
+    },
+    {
+      "id": "n200",
+      "mass": "1/255",
+      "utility": "73",
+      "weighted_utility": "73/255"
+    },
+    {
+      "id": "n201",
+      "mass": "1/255",
+      "utility": "74",
+      "weighted_utility": "74/255"
+    },
+    {
+      "id": "n202",
+      "mass": "1/255",
+      "utility": "75",
+      "weighted_utility": "5/17"
+    },
+    {
+      "id": "n203",
+      "mass": "1/255",
+      "utility": "76",
+      "weighted_utility": "76/255"
+    },
+    {
+      "id": "n204",
+      "mass": "1/255",
+      "utility": "77",
+      "weighted_utility": "77/255"
+    },
+    {
+      "id": "n205",
+      "mass": "1/255",
+      "utility": "78",
+      "weighted_utility": "26/85"
+    },
+    {
+      "id": "n206",
+      "mass": "1/255",
+      "utility": "79",
+      "weighted_utility": "79/255"
+    },
+    {
+      "id": "n207",
+      "mass": "1/255",
+      "utility": "80",
+      "weighted_utility": "16/51"
+    },
+    {
+      "id": "n208",
+      "mass": "1/255",
+      "utility": "81",
+      "weighted_utility": "27/85"
+    },
+    {
+      "id": "n209",
+      "mass": "1/255",
+      "utility": "82",
+      "weighted_utility": "82/255"
+    },
+    {
+      "id": "n21",
+      "mass": "1/255",
+      "utility": "-106",
+      "weighted_utility": "-106/255"
+    },
+    {
+      "id": "n210",
+      "mass": "1/255",
+      "utility": "83",
+      "weighted_utility": "83/255"
+    },
+    {
+      "id": "n211",
+      "mass": "1/255",
+      "utility": "84",
+      "weighted_utility": "28/85"
+    },
+    {
+      "id": "n212",
+      "mass": "1/255",
+      "utility": "85",
+      "weighted_utility": "1/3"
+    },
+    {
+      "id": "n213",
+      "mass": "1/255",
+      "utility": "86",
+      "weighted_utility": "86/255"
+    },
+    {
+      "id": "n214",
+      "mass": "1/255",
+      "utility": "87",
+      "weighted_utility": "29/85"
+    },
+    {
+      "id": "n215",
+      "mass": "1/255",
+      "utility": "88",
+      "weighted_utility": "88/255"
+    },
+    {
+      "id": "n216",
+      "mass": "1/255",
+      "utility": "89",
+      "weighted_utility": "89/255"
+    },
+    {
+      "id": "n217",
+      "mass": "1/255",
+      "utility": "90",
+      "weighted_utility": "6/17"
+    },
+    {
+      "id": "n218",
+      "mass": "1/255",
+      "utility": "91",
+      "weighted_utility": "91/255"
+    },
+    {
+      "id": "n219",
+      "mass": "1/255",
+      "utility": "92",
+      "weighted_utility": "92/255"
+    },
+    {
+      "id": "n22",
+      "mass": "1/255",
+      "utility": "-105",
+      "weighted_utility": "-7/17"
+    },
+    {
+      "id": "n220",
+      "mass": "1/255",
+      "utility": "93",
+      "weighted_utility": "31/85"
+    },
+    {
+      "id": "n221",
+      "mass": "1/255",
+      "utility": "94",
+      "weighted_utility": "94/255"
+    },
+    {
+      "id": "n222",
+      "mass": "1/255",
+      "utility": "95",
+      "weighted_utility": "19/51"
+    },
+    {
+      "id": "n223",
+      "mass": "1/255",
+      "utility": "96",
+      "weighted_utility": "32/85"
+    },
+    {
+      "id": "n224",
+      "mass": "1/255",
+      "utility": "97",
+      "weighted_utility": "97/255"
+    },
+    {
+      "id": "n225",
+      "mass": "1/255",
+      "utility": "98",
+      "weighted_utility": "98/255"
+    },
+    {
+      "id": "n226",
+      "mass": "1/255",
+      "utility": "99",
+      "weighted_utility": "33/85"
+    },
+    {
+      "id": "n227",
+      "mass": "1/255",
+      "utility": "100",
+      "weighted_utility": "20/51"
+    },
+    {
+      "id": "n228",
+      "mass": "1/255",
+      "utility": "101",
+      "weighted_utility": "101/255"
+    },
+    {
+      "id": "n229",
+      "mass": "1/255",
+      "utility": "102",
+      "weighted_utility": "2/5"
+    },
+    {
+      "id": "n23",
+      "mass": "1/255",
+      "utility": "-104",
+      "weighted_utility": "-104/255"
+    },
+    {
+      "id": "n230",
+      "mass": "1/255",
+      "utility": "103",
+      "weighted_utility": "103/255"
+    },
+    {
+      "id": "n231",
+      "mass": "1/255",
+      "utility": "104",
+      "weighted_utility": "104/255"
+    },
+    {
+      "id": "n232",
+      "mass": "1/255",
+      "utility": "105",
+      "weighted_utility": "7/17"
+    },
+    {
+      "id": "n233",
+      "mass": "1/255",
+      "utility": "106",
+      "weighted_utility": "106/255"
+    },
+    {
+      "id": "n234",
+      "mass": "1/255",
+      "utility": "107",
+      "weighted_utility": "107/255"
+    },
+    {
+      "id": "n235",
+      "mass": "1/255",
+      "utility": "108",
+      "weighted_utility": "36/85"
+    },
+    {
+      "id": "n236",
+      "mass": "1/255",
+      "utility": "109",
+      "weighted_utility": "109/255"
+    },
+    {
+      "id": "n237",
+      "mass": "1/255",
+      "utility": "110",
+      "weighted_utility": "22/51"
+    },
+    {
+      "id": "n238",
+      "mass": "1/255",
+      "utility": "111",
+      "weighted_utility": "37/85"
+    },
+    {
+      "id": "n239",
+      "mass": "1/255",
+      "utility": "112",
+      "weighted_utility": "112/255"
+    },
+    {
+      "id": "n24",
+      "mass": "1/255",
+      "utility": "-103",
+      "weighted_utility": "-103/255"
+    },
+    {
+      "id": "n240",
+      "mass": "1/255",
+      "utility": "113",
+      "weighted_utility": "113/255"
+    },
+    {
+      "id": "n241",
+      "mass": "1/255",
+      "utility": "114",
+      "weighted_utility": "38/85"
+    },
+    {
+      "id": "n242",
+      "mass": "1/255",
+      "utility": "115",
+      "weighted_utility": "23/51"
+    },
+    {
+      "id": "n243",
+      "mass": "1/255",
+      "utility": "116",
+      "weighted_utility": "116/255"
+    },
+    {
+      "id": "n244",
+      "mass": "1/255",
+      "utility": "117",
+      "weighted_utility": "39/85"
+    },
+    {
+      "id": "n245",
+      "mass": "1/255",
+      "utility": "118",
+      "weighted_utility": "118/255"
+    },
+    {
+      "id": "n246",
+      "mass": "1/255",
+      "utility": "119",
+      "weighted_utility": "7/15"
+    },
+    {
+      "id": "n247",
+      "mass": "1/255",
+      "utility": "120",
+      "weighted_utility": "8/17"
+    },
+    {
+      "id": "n248",
+      "mass": "1/255",
+      "utility": "121",
+      "weighted_utility": "121/255"
+    },
+    {
+      "id": "n249",
+      "mass": "1/255",
+      "utility": "122",
+      "weighted_utility": "122/255"
+    },
+    {
+      "id": "n25",
+      "mass": "1/255",
+      "utility": "-102",
+      "weighted_utility": "-2/5"
+    },
+    {
+      "id": "n250",
+      "mass": "1/255",
+      "utility": "123",
+      "weighted_utility": "41/85"
+    },
+    {
+      "id": "n251",
+      "mass": "1/255",
+      "utility": "124",
+      "weighted_utility": "124/255"
+    },
+    {
+      "id": "n252",
+      "mass": "1/255",
+      "utility": "125",
+      "weighted_utility": "25/51"
+    },
+    {
+      "id": "n253",
+      "mass": "1/255",
+      "utility": "126",
+      "weighted_utility": "42/85"
+    },
+    {
+      "id": "n254",
+      "mass": "1/255",
+      "utility": "127",
+      "weighted_utility": "127/255"
+    },
+    {
+      "id": "n26",
+      "mass": "1/255",
+      "utility": "-101",
+      "weighted_utility": "-101/255"
+    },
+    {
+      "id": "n27",
+      "mass": "1/255",
+      "utility": "-100",
+      "weighted_utility": "-20/51"
+    },
+    {
+      "id": "n28",
+      "mass": "1/255",
+      "utility": "-99",
+      "weighted_utility": "-33/85"
+    },
+    {
+      "id": "n29",
+      "mass": "1/255",
+      "utility": "-98",
+      "weighted_utility": "-98/255"
+    },
+    {
+      "id": "n3",
+      "mass": "1/255",
+      "utility": "-124",
+      "weighted_utility": "-124/255"
+    },
+    {
+      "id": "n30",
+      "mass": "1/255",
+      "utility": "-97",
+      "weighted_utility": "-97/255"
+    },
+    {
+      "id": "n31",
+      "mass": "1/255",
+      "utility": "-96",
+      "weighted_utility": "-32/85"
+    },
+    {
+      "id": "n32",
+      "mass": "1/255",
+      "utility": "-95",
+      "weighted_utility": "-19/51"
+    },
+    {
+      "id": "n33",
+      "mass": "1/255",
+      "utility": "-94",
+      "weighted_utility": "-94/255"
+    },
+    {
+      "id": "n34",
+      "mass": "1/255",
+      "utility": "-93",
+      "weighted_utility": "-31/85"
+    },
+    {
+      "id": "n35",
+      "mass": "1/255",
+      "utility": "-92",
+      "weighted_utility": "-92/255"
+    },
+    {
+      "id": "n36",
+      "mass": "1/255",
+      "utility": "-91",
+      "weighted_utility": "-91/255"
+    },
+    {
+      "id": "n37",
+      "mass": "1/255",
+      "utility": "-90",
+      "weighted_utility": "-6/17"
+    },
+    {
+      "id": "n38",
+      "mass": "1/255",
+      "utility": "-89",
+      "weighted_utility": "-89/255"
+    },
+    {
+      "id": "n39",
+      "mass": "1/255",
+      "utility": "-88",
+      "weighted_utility": "-88/255"
+    },
+    {
+      "id": "n4",
+      "mass": "1/255",
+      "utility": "-123",
+      "weighted_utility": "-41/85"
+    },
+    {
+      "id": "n40",
+      "mass": "1/255",
+      "utility": "-87",
+      "weighted_utility": "-29/85"
+    },
+    {
+      "id": "n41",
+      "mass": "1/255",
+      "utility": "-86",
+      "weighted_utility": "-86/255"
+    },
+    {
+      "id": "n42",
+      "mass": "1/255",
+      "utility": "-85",
+      "weighted_utility": "-1/3"
+    },
+    {
+      "id": "n43",
+      "mass": "1/255",
+      "utility": "-84",
+      "weighted_utility": "-28/85"
+    },
+    {
+      "id": "n44",
+      "mass": "1/255",
+      "utility": "-83",
+      "weighted_utility": "-83/255"
+    },
+    {
+      "id": "n45",
+      "mass": "1/255",
+      "utility": "-82",
+      "weighted_utility": "-82/255"
+    },
+    {
+      "id": "n46",
+      "mass": "1/255",
+      "utility": "-81",
+      "weighted_utility": "-27/85"
+    },
+    {
+      "id": "n47",
+      "mass": "1/255",
+      "utility": "-80",
+      "weighted_utility": "-16/51"
+    },
+    {
+      "id": "n48",
+      "mass": "1/255",
+      "utility": "-79",
+      "weighted_utility": "-79/255"
+    },
+    {
+      "id": "n49",
+      "mass": "1/255",
+      "utility": "-78",
+      "weighted_utility": "-26/85"
+    },
+    {
+      "id": "n5",
+      "mass": "1/255",
+      "utility": "-122",
+      "weighted_utility": "-122/255"
+    },
+    {
+      "id": "n50",
+      "mass": "1/255",
+      "utility": "-77",
+      "weighted_utility": "-77/255"
+    },
+    {
+      "id": "n51",
+      "mass": "1/255",
+      "utility": "-76",
+      "weighted_utility": "-76/255"
+    },
+    {
+      "id": "n52",
+      "mass": "1/255",
+      "utility": "-75",
+      "weighted_utility": "-5/17"
+    },
+    {
+      "id": "n53",
+      "mass": "1/255",
+      "utility": "-74",
+      "weighted_utility": "-74/255"
+    },
+    {
+      "id": "n54",
+      "mass": "1/255",
+      "utility": "-73",
+      "weighted_utility": "-73/255"
+    },
+    {
+      "id": "n55",
+      "mass": "1/255",
+      "utility": "-72",
+      "weighted_utility": "-24/85"
+    },
+    {
+      "id": "n56",
+      "mass": "1/255",
+      "utility": "-71",
+      "weighted_utility": "-71/255"
+    },
+    {
+      "id": "n57",
+      "mass": "1/255",
+      "utility": "-70",
+      "weighted_utility": "-14/51"
+    },
+    {
+      "id": "n58",
+      "mass": "1/255",
+      "utility": "-69",
+      "weighted_utility": "-23/85"
+    },
+    {
+      "id": "n59",
+      "mass": "1/255",
+      "utility": "-68",
+      "weighted_utility": "-4/15"
+    },
+    {
+      "id": "n6",
+      "mass": "1/255",
+      "utility": "-121",
+      "weighted_utility": "-121/255"
+    },
+    {
+      "id": "n60",
+      "mass": "1/255",
+      "utility": "-67",
+      "weighted_utility": "-67/255"
+    },
+    {
+      "id": "n61",
+      "mass": "1/255",
+      "utility": "-66",
+      "weighted_utility": "-22/85"
+    },
+    {
+      "id": "n62",
+      "mass": "1/255",
+      "utility": "-65",
+      "weighted_utility": "-13/51"
+    },
+    {
+      "id": "n63",
+      "mass": "1/255",
+      "utility": "-64",
+      "weighted_utility": "-64/255"
+    },
+    {
+      "id": "n64",
+      "mass": "1/255",
+      "utility": "-63",
+      "weighted_utility": "-21/85"
+    },
+    {
+      "id": "n65",
+      "mass": "1/255",
+      "utility": "-62",
+      "weighted_utility": "-62/255"
+    },
+    {
+      "id": "n66",
+      "mass": "1/255",
+      "utility": "-61",
+      "weighted_utility": "-61/255"
+    },
+    {
+      "id": "n67",
+      "mass": "1/255",
+      "utility": "-60",
+      "weighted_utility": "-4/17"
+    },
+    {
+      "id": "n68",
+      "mass": "1/255",
+      "utility": "-59",
+      "weighted_utility": "-59/255"
+    },
+    {
+      "id": "n69",
+      "mass": "1/255",
+      "utility": "-58",
+      "weighted_utility": "-58/255"
+    },
+    {
+      "id": "n7",
+      "mass": "1/255",
+      "utility": "-120",
+      "weighted_utility": "-8/17"
+    },
+    {
+      "id": "n70",
+      "mass": "1/255",
+      "utility": "-57",
+      "weighted_utility": "-19/85"
+    },
+    {
+      "id": "n71",
+      "mass": "1/255",
+      "utility": "-56",
+      "weighted_utility": "-56/255"
+    },
+    {
+      "id": "n72",
+      "mass": "1/255",
+      "utility": "-55",
+      "weighted_utility": "-11/51"
+    },
+    {
+      "id": "n73",
+      "mass": "1/255",
+      "utility": "-54",
+      "weighted_utility": "-18/85"
+    },
+    {
+      "id": "n74",
+      "mass": "1/255",
+      "utility": "-53",
+      "weighted_utility": "-53/255"
+    },
+    {
+      "id": "n75",
+      "mass": "1/255",
+      "utility": "-52",
+      "weighted_utility": "-52/255"
+    },
+    {
+      "id": "n76",
+      "mass": "1/255",
+      "utility": "-51",
+      "weighted_utility": "-1/5"
+    },
+    {
+      "id": "n77",
+      "mass": "1/255",
+      "utility": "-50",
+      "weighted_utility": "-10/51"
+    },
+    {
+      "id": "n78",
+      "mass": "1/255",
+      "utility": "-49",
+      "weighted_utility": "-49/255"
+    },
+    {
+      "id": "n79",
+      "mass": "1/255",
+      "utility": "-48",
+      "weighted_utility": "-16/85"
+    },
+    {
+      "id": "n8",
+      "mass": "1/255",
+      "utility": "-119",
+      "weighted_utility": "-7/15"
+    },
+    {
+      "id": "n80",
+      "mass": "1/255",
+      "utility": "-47",
+      "weighted_utility": "-47/255"
+    },
+    {
+      "id": "n81",
+      "mass": "1/255",
+      "utility": "-46",
+      "weighted_utility": "-46/255"
+    },
+    {
+      "id": "n82",
+      "mass": "1/255",
+      "utility": "-45",
+      "weighted_utility": "-3/17"
+    },
+    {
+      "id": "n83",
+      "mass": "1/255",
+      "utility": "-44",
+      "weighted_utility": "-44/255"
+    },
+    {
+      "id": "n84",
+      "mass": "1/255",
+      "utility": "-43",
+      "weighted_utility": "-43/255"
+    },
+    {
+      "id": "n85",
+      "mass": "1/255",
+      "utility": "-42",
+      "weighted_utility": "-14/85"
+    },
+    {
+      "id": "n86",
+      "mass": "1/255",
+      "utility": "-41",
+      "weighted_utility": "-41/255"
+    },
+    {
+      "id": "n87",
+      "mass": "1/255",
+      "utility": "-40",
+      "weighted_utility": "-8/51"
+    },
+    {
+      "id": "n88",
+      "mass": "1/255",
+      "utility": "-39",
+      "weighted_utility": "-13/85"
+    },
+    {
+      "id": "n89",
+      "mass": "1/255",
+      "utility": "-38",
+      "weighted_utility": "-38/255"
+    },
+    {
+      "id": "n9",
+      "mass": "1/255",
+      "utility": "-118",
+      "weighted_utility": "-118/255"
+    },
+    {
+      "id": "n90",
+      "mass": "1/255",
+      "utility": "-37",
+      "weighted_utility": "-37/255"
+    },
+    {
+      "id": "n91",
+      "mass": "1/255",
+      "utility": "-36",
+      "weighted_utility": "-12/85"
+    },
+    {
+      "id": "n92",
+      "mass": "1/255",
+      "utility": "-35",
+      "weighted_utility": "-7/51"
+    },
+    {
+      "id": "n93",
+      "mass": "1/255",
+      "utility": "-34",
+      "weighted_utility": "-2/15"
+    },
+    {
+      "id": "n94",
+      "mass": "1/255",
+      "utility": "-33",
+      "weighted_utility": "-11/85"
+    },
+    {
+      "id": "n95",
+      "mass": "1/255",
+      "utility": "-32",
+      "weighted_utility": "-32/255"
+    },
+    {
+      "id": "n96",
+      "mass": "1/255",
+      "utility": "-31",
+      "weighted_utility": "-31/255"
+    },
+    {
+      "id": "n97",
+      "mass": "1/255",
+      "utility": "-30",
+      "weighted_utility": "-2/17"
+    },
+    {
+      "id": "n98",
+      "mass": "1/255",
+      "utility": "-29",
+      "weighted_utility": "-29/255"
+    },
+    {
+      "id": "n99",
+      "mass": "1/255",
+      "utility": "-28",
+      "weighted_utility": "-28/255"
+    }
+  ],
+  "total_leaf_mass": "1",
+  "expected_utility": "0",
+  "queries": [
+    {
+      "id": "q0",
+      "given": "R",
+      "target": "n0",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q1",
+      "given": "R",
+      "target": "n1",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q10",
+      "given": "R",
+      "target": "n10",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q100",
+      "given": "R",
+      "target": "n100",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q101",
+      "given": "R",
+      "target": "n101",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q102",
+      "given": "R",
+      "target": "n102",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q103",
+      "given": "R",
+      "target": "n103",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q104",
+      "given": "R",
+      "target": "n104",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q105",
+      "given": "R",
+      "target": "n105",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q106",
+      "given": "R",
+      "target": "n106",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q107",
+      "given": "R",
+      "target": "n107",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q108",
+      "given": "R",
+      "target": "n108",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q109",
+      "given": "R",
+      "target": "n109",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q11",
+      "given": "R",
+      "target": "n11",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q110",
+      "given": "R",
+      "target": "n110",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q111",
+      "given": "R",
+      "target": "n111",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q112",
+      "given": "R",
+      "target": "n112",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q113",
+      "given": "R",
+      "target": "n113",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q114",
+      "given": "R",
+      "target": "n114",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q115",
+      "given": "R",
+      "target": "n115",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q116",
+      "given": "R",
+      "target": "n116",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q117",
+      "given": "R",
+      "target": "n117",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q118",
+      "given": "R",
+      "target": "n118",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q119",
+      "given": "R",
+      "target": "n119",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q12",
+      "given": "R",
+      "target": "n12",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q120",
+      "given": "R",
+      "target": "n120",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q121",
+      "given": "R",
+      "target": "n121",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q122",
+      "given": "R",
+      "target": "n122",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q123",
+      "given": "R",
+      "target": "n123",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q124",
+      "given": "R",
+      "target": "n124",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q125",
+      "given": "R",
+      "target": "n125",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q126",
+      "given": "R",
+      "target": "n126",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q127",
+      "given": "R",
+      "target": "n127",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q128",
+      "given": "R",
+      "target": "n128",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q129",
+      "given": "R",
+      "target": "n129",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q13",
+      "given": "R",
+      "target": "n13",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q130",
+      "given": "R",
+      "target": "n130",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q131",
+      "given": "R",
+      "target": "n131",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q132",
+      "given": "R",
+      "target": "n132",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q133",
+      "given": "R",
+      "target": "n133",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q134",
+      "given": "R",
+      "target": "n134",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q135",
+      "given": "R",
+      "target": "n135",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q136",
+      "given": "R",
+      "target": "n136",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q137",
+      "given": "R",
+      "target": "n137",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q138",
+      "given": "R",
+      "target": "n138",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q139",
+      "given": "R",
+      "target": "n139",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q14",
+      "given": "R",
+      "target": "n14",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q140",
+      "given": "R",
+      "target": "n140",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q141",
+      "given": "R",
+      "target": "n141",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q142",
+      "given": "R",
+      "target": "n142",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q143",
+      "given": "R",
+      "target": "n143",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q144",
+      "given": "R",
+      "target": "n144",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q145",
+      "given": "R",
+      "target": "n145",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q146",
+      "given": "R",
+      "target": "n146",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q147",
+      "given": "R",
+      "target": "n147",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q148",
+      "given": "R",
+      "target": "n148",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q149",
+      "given": "R",
+      "target": "n149",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q15",
+      "given": "R",
+      "target": "n15",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q150",
+      "given": "R",
+      "target": "n150",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q151",
+      "given": "R",
+      "target": "n151",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q152",
+      "given": "R",
+      "target": "n152",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q153",
+      "given": "R",
+      "target": "n153",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q154",
+      "given": "R",
+      "target": "n154",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q155",
+      "given": "R",
+      "target": "n155",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q156",
+      "given": "R",
+      "target": "n156",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q157",
+      "given": "R",
+      "target": "n157",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q158",
+      "given": "R",
+      "target": "n158",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q159",
+      "given": "R",
+      "target": "n159",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q16",
+      "given": "R",
+      "target": "n16",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q160",
+      "given": "R",
+      "target": "n160",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q161",
+      "given": "R",
+      "target": "n161",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q162",
+      "given": "R",
+      "target": "n162",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q163",
+      "given": "R",
+      "target": "n163",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q164",
+      "given": "R",
+      "target": "n164",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q165",
+      "given": "R",
+      "target": "n165",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q166",
+      "given": "R",
+      "target": "n166",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q167",
+      "given": "R",
+      "target": "n167",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q168",
+      "given": "R",
+      "target": "n168",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q169",
+      "given": "R",
+      "target": "n169",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q17",
+      "given": "R",
+      "target": "n17",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q170",
+      "given": "R",
+      "target": "n170",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q171",
+      "given": "R",
+      "target": "n171",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q172",
+      "given": "R",
+      "target": "n172",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q173",
+      "given": "R",
+      "target": "n173",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q174",
+      "given": "R",
+      "target": "n174",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q175",
+      "given": "R",
+      "target": "n175",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q176",
+      "given": "R",
+      "target": "n176",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q177",
+      "given": "R",
+      "target": "n177",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q178",
+      "given": "R",
+      "target": "n178",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q179",
+      "given": "R",
+      "target": "n179",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q18",
+      "given": "R",
+      "target": "n18",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q180",
+      "given": "R",
+      "target": "n180",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q181",
+      "given": "R",
+      "target": "n181",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q182",
+      "given": "R",
+      "target": "n182",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q183",
+      "given": "R",
+      "target": "n183",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q184",
+      "given": "R",
+      "target": "n184",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q185",
+      "given": "R",
+      "target": "n185",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q186",
+      "given": "R",
+      "target": "n186",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q187",
+      "given": "R",
+      "target": "n187",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q188",
+      "given": "R",
+      "target": "n188",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q189",
+      "given": "R",
+      "target": "n189",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q19",
+      "given": "R",
+      "target": "n19",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q190",
+      "given": "R",
+      "target": "n190",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q191",
+      "given": "R",
+      "target": "n191",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q192",
+      "given": "R",
+      "target": "n192",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q193",
+      "given": "R",
+      "target": "n193",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q194",
+      "given": "R",
+      "target": "n194",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q195",
+      "given": "R",
+      "target": "n195",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q196",
+      "given": "R",
+      "target": "n196",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q197",
+      "given": "R",
+      "target": "n197",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q198",
+      "given": "R",
+      "target": "n198",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q199",
+      "given": "R",
+      "target": "n199",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q2",
+      "given": "R",
+      "target": "n2",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q20",
+      "given": "R",
+      "target": "n20",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q200",
+      "given": "R",
+      "target": "n200",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q201",
+      "given": "R",
+      "target": "n201",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q202",
+      "given": "R",
+      "target": "n202",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q203",
+      "given": "R",
+      "target": "n203",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q204",
+      "given": "R",
+      "target": "n204",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q205",
+      "given": "R",
+      "target": "n205",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q206",
+      "given": "R",
+      "target": "n206",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q207",
+      "given": "R",
+      "target": "n207",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q208",
+      "given": "R",
+      "target": "n208",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q209",
+      "given": "R",
+      "target": "n209",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q21",
+      "given": "R",
+      "target": "n21",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q210",
+      "given": "R",
+      "target": "n210",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q211",
+      "given": "R",
+      "target": "n211",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q212",
+      "given": "R",
+      "target": "n212",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q213",
+      "given": "R",
+      "target": "n213",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q214",
+      "given": "R",
+      "target": "n214",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q215",
+      "given": "R",
+      "target": "n215",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q216",
+      "given": "R",
+      "target": "n216",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q217",
+      "given": "R",
+      "target": "n217",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q218",
+      "given": "R",
+      "target": "n218",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q219",
+      "given": "R",
+      "target": "n219",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q22",
+      "given": "R",
+      "target": "n22",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q220",
+      "given": "R",
+      "target": "n220",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q221",
+      "given": "R",
+      "target": "n221",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q222",
+      "given": "R",
+      "target": "n222",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q223",
+      "given": "R",
+      "target": "n223",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q224",
+      "given": "R",
+      "target": "n224",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q225",
+      "given": "R",
+      "target": "n225",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q226",
+      "given": "R",
+      "target": "n226",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q227",
+      "given": "R",
+      "target": "n227",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q228",
+      "given": "R",
+      "target": "n228",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q229",
+      "given": "R",
+      "target": "n229",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q23",
+      "given": "R",
+      "target": "n23",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q230",
+      "given": "R",
+      "target": "n230",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q231",
+      "given": "R",
+      "target": "n231",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q232",
+      "given": "R",
+      "target": "n232",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q233",
+      "given": "R",
+      "target": "n233",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q234",
+      "given": "R",
+      "target": "n234",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q235",
+      "given": "R",
+      "target": "n235",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q236",
+      "given": "R",
+      "target": "n236",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q237",
+      "given": "R",
+      "target": "n237",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q238",
+      "given": "R",
+      "target": "n238",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q239",
+      "given": "R",
+      "target": "n239",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q24",
+      "given": "R",
+      "target": "n24",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q240",
+      "given": "R",
+      "target": "n240",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q241",
+      "given": "R",
+      "target": "n241",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q242",
+      "given": "R",
+      "target": "n242",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q243",
+      "given": "R",
+      "target": "n243",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q244",
+      "given": "R",
+      "target": "n244",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q245",
+      "given": "R",
+      "target": "n245",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q246",
+      "given": "R",
+      "target": "n246",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q247",
+      "given": "R",
+      "target": "n247",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q248",
+      "given": "R",
+      "target": "n248",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q249",
+      "given": "R",
+      "target": "n249",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q25",
+      "given": "R",
+      "target": "n25",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q250",
+      "given": "R",
+      "target": "n250",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q251",
+      "given": "R",
+      "target": "n251",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q252",
+      "given": "R",
+      "target": "n252",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q253",
+      "given": "R",
+      "target": "n253",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q254",
+      "given": "R",
+      "target": "n254",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q255",
+      "given": "R",
+      "target": "n0",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q26",
+      "given": "R",
+      "target": "n26",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q27",
+      "given": "R",
+      "target": "n27",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q28",
+      "given": "R",
+      "target": "n28",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q29",
+      "given": "R",
+      "target": "n29",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q3",
+      "given": "R",
+      "target": "n3",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q30",
+      "given": "R",
+      "target": "n30",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q31",
+      "given": "R",
+      "target": "n31",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q32",
+      "given": "R",
+      "target": "n32",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q33",
+      "given": "R",
+      "target": "n33",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q34",
+      "given": "R",
+      "target": "n34",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q35",
+      "given": "R",
+      "target": "n35",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q36",
+      "given": "R",
+      "target": "n36",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q37",
+      "given": "R",
+      "target": "n37",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q38",
+      "given": "R",
+      "target": "n38",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q39",
+      "given": "R",
+      "target": "n39",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q4",
+      "given": "R",
+      "target": "n4",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q40",
+      "given": "R",
+      "target": "n40",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q41",
+      "given": "R",
+      "target": "n41",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q42",
+      "given": "R",
+      "target": "n42",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q43",
+      "given": "R",
+      "target": "n43",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q44",
+      "given": "R",
+      "target": "n44",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q45",
+      "given": "R",
+      "target": "n45",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q46",
+      "given": "R",
+      "target": "n46",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q47",
+      "given": "R",
+      "target": "n47",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q48",
+      "given": "R",
+      "target": "n48",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q49",
+      "given": "R",
+      "target": "n49",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q5",
+      "given": "R",
+      "target": "n5",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q50",
+      "given": "R",
+      "target": "n50",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q51",
+      "given": "R",
+      "target": "n51",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q52",
+      "given": "R",
+      "target": "n52",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q53",
+      "given": "R",
+      "target": "n53",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q54",
+      "given": "R",
+      "target": "n54",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q55",
+      "given": "R",
+      "target": "n55",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q56",
+      "given": "R",
+      "target": "n56",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q57",
+      "given": "R",
+      "target": "n57",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q58",
+      "given": "R",
+      "target": "n58",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q59",
+      "given": "R",
+      "target": "n59",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q6",
+      "given": "R",
+      "target": "n6",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q60",
+      "given": "R",
+      "target": "n60",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q61",
+      "given": "R",
+      "target": "n61",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q62",
+      "given": "R",
+      "target": "n62",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q63",
+      "given": "R",
+      "target": "n63",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q64",
+      "given": "R",
+      "target": "n64",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q65",
+      "given": "R",
+      "target": "n65",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q66",
+      "given": "R",
+      "target": "n66",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q67",
+      "given": "R",
+      "target": "n67",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q68",
+      "given": "R",
+      "target": "n68",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q69",
+      "given": "R",
+      "target": "n69",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q7",
+      "given": "R",
+      "target": "n7",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q70",
+      "given": "R",
+      "target": "n70",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q71",
+      "given": "R",
+      "target": "n71",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q72",
+      "given": "R",
+      "target": "n72",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q73",
+      "given": "R",
+      "target": "n73",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q74",
+      "given": "R",
+      "target": "n74",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q75",
+      "given": "R",
+      "target": "n75",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q76",
+      "given": "R",
+      "target": "n76",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q77",
+      "given": "R",
+      "target": "n77",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q78",
+      "given": "R",
+      "target": "n78",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q79",
+      "given": "R",
+      "target": "n79",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q8",
+      "given": "R",
+      "target": "n8",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q80",
+      "given": "R",
+      "target": "n80",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q81",
+      "given": "R",
+      "target": "n81",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q82",
+      "given": "R",
+      "target": "n82",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q83",
+      "given": "R",
+      "target": "n83",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q84",
+      "given": "R",
+      "target": "n84",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q85",
+      "given": "R",
+      "target": "n85",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q86",
+      "given": "R",
+      "target": "n86",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q87",
+      "given": "R",
+      "target": "n87",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q88",
+      "given": "R",
+      "target": "n88",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q89",
+      "given": "R",
+      "target": "n89",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q9",
+      "given": "R",
+      "target": "n9",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q90",
+      "given": "R",
+      "target": "n90",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q91",
+      "given": "R",
+      "target": "n91",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q92",
+      "given": "R",
+      "target": "n92",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q93",
+      "given": "R",
+      "target": "n93",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q94",
+      "given": "R",
+      "target": "n94",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q95",
+      "given": "R",
+      "target": "n95",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q96",
+      "given": "R",
+      "target": "n96",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q97",
+      "given": "R",
+      "target": "n97",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q98",
+      "given": "R",
+      "target": "n98",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    },
+    {
+      "id": "q99",
+      "given": "R",
+      "target": "n99",
+      "condition_mass": "1",
+      "intersection_mass": "1/255",
+      "probability": "1/255",
+      "status": "estimated_exact_model"
+    }
+  ],
+  "budget": {
+    "work": 131072,
+    "returned_cells": 6144
+  },
+  "numerics": {
+    "arithmetic": "Exact fractions.Fraction with8192bit guards",
+    "weight_interpretation": "Editorial conditional scenario weights;notquantumamplitudes"
+  },
+  "sources": [
+    {
+      "id": "multiverse-everett-v1",
+      "technique_id": 60,
+      "rank": 1,
+      "author": "Hugh Everett III",
+      "edition": "Relative State Formulation of Quantum Mechanics;Rev.Mod.Phys.29(3),454;1July1957;DOI10.1103/RevModPhys.29.454",
+      "url": "https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.29.454",
+      "locator": "Official metadata/copyright inspected; content authorization required. No full paper derivation claimed.",
+      "ingestion": "facts_only",
+      "rights_note": "Source copyright retained; facts only; no bodies,figures,third-party code or observed-universe data redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "multiverse-wallace-v1",
+      "technique_id": 60,
+      "rank": 2,
+      "author": "David Wallace",
+      "edition": "The Emergent Multiverse:Quantum Theory according to the Everett Interpretation;OUP;24May2012;DOI10.1093/acprof:oso/9780199546961.001.0001",
+      "url": "https://academic.oup.com/book/25622",
+      "locator": "Official publisher abstract/contents/date inspected. Probability and decision-theoretic chapter headings are leads; no chapter proofs inspected.",
+      "ingestion": "facts_only",
+      "rights_note": "Source copyright retained; facts only; no bodies,figures,third-party code or observed-universe data redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "multiverse-carroll-v1",
+      "technique_id": 60,
+      "rank": 3,
+      "author": "Sean Carroll",
+      "edition": "Something Deeply Hidden:Quantum Worlds and the Emergence of Spacetime;Dutton2019",
+      "url": "https://preposterousuniverse.com/somethingdeeplyhidden/",
+      "locator": "Author bibliography/overview/contents inspected; no full book access claimed.",
+      "ingestion": "facts_only",
+      "rights_note": "Source copyright retained; facts only; no bodies,figures,third-party code or observed-universe data redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "multiverse-mit-multiplication-v1",
+      "technique_id": 60,
+      "rank": null,
+      "author": "MIT OpenCourseWare probability instructors",
+      "edition": "RES6.012 Spring2018;L02-06 Multiplication Rule transcript",
+      "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/c22535b6cb3fad2f45dc1e4947ea2afc_ugzs7dgQ-JE.pdf",
+      "locator": "Transcript conditional definition and path-product discussion inspected. General finite probability; no independence assumption for conditional edges.",
+      "ingestion": "facts_only",
+      "rights_note": "Source copyright retained; facts only; no bodies,figures,third-party code or observed-universe data redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    },
+    {
+      "id": "multiverse-mit-expectation-v1",
+      "technique_id": 60,
+      "rank": null,
+      "author": "MIT OpenCourseWare probability instructors",
+      "edition": "6.041SC Fall2013;Lecture5 discrete expectation transcript",
+      "url": "https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/6cb4b105e1e41aa869a2d92764aea126_MIT6_041SCF13_lec05_300k.mp4.pdf",
+      "locator": "Discrete expectation weighting and linearity sections inspected; used for generic declared utilities only.",
+      "ingestion": "facts_only",
+      "rights_note": "Source copyright retained; facts only; no bodies,figures,third-party code or observed-universe data redistributed.",
+      "checked_on": "2026-11-08",
+      "snapshot_sha256": null,
+      "snapshot_bytes": null
+    }
+  ],
+  "universe_observations_used": false,
+  "everett_empirically_validated": false,
+  "empirical_forecast_accuracy_validated": false,
+  "limitations": [
+    "Observing/predicting otheruniverses",
+    "Bornrule/amplitude/decoherence simulation",
+    "Empirical Everettproof",
+    "General quantum decision-theory theoremreplication",
+    "MonteCarlo/stochasticservices",
+    "Editorial weights are declarations,not Born-rule amplitudes or observed frequencies.",
+    "Completeness applies to the declared finite tree; externally omitted possibilities cannot be detected.",
+    "Utilities and narrative are self-authored synthetic inputs,not recommendations or other-universe predictions."
+  ],
+  "report_sha256": "c7ff8f490cfcf250fcf4f986144a0cc8fef2b0e9efd39cf4114a9c8d2606a210"
+}
+```
+

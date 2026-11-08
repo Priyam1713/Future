@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "multiverse-finite-rational-scenario-tree-v1",
+    "version": 1,
+    "sha256": "9f1b7221a1c5aece17521729aa61e1c280c2bb39c2639ddaea716bafc06b0506",
+    "catalog_sha256": "5089c43fb7f5d9bbca169a297801dccdd3c3eca36722ef2c87b31949a2769cdf"
+  },
+  "scenario": {
+    "id": "toy-scenario",
+    "version": 1,
+    "kind": "educational_editorial_weights",
+    "exhaustive": true,
+    "description": "Fictional branches with declared utilities."
+  },
+  "nodes": [
+    {
+      "id": "R",
+      "parent": null,
+      "weight": "1",
+      "utility": null
+    },
+    {
+      "id": "A",
+      "parent": "unknown",
+      "weight": "1/2",
+      "utility": null
+    },
+    {
+      "id": "B",
+      "parent": "R",
+      "weight": "1/2",
+      "utility": "2"
+    },
+    {
+      "id": "Z",
+      "parent": "R",
+      "weight": "0",
+      "utility": "99"
+    },
+    {
+      "id": "A1",
+      "parent": "A",
+      "weight": "1/3",
+      "utility": "6"
+    },
+    {
+      "id": "A2",
+      "parent": "A",
+      "weight": "2/3",
+      "utility": "-3"
+    }
+  ],
+  "queries": [
+    {
+      "id": "q0",
+      "given": "R",
+      "target": "A1"
+    },
+    {
+      "id": "q1",
+      "given": "A",
+      "target": "A1"
+    },
+    {
+      "id": "q2",
+      "given": "A1",
+      "target": "A"
+    },
+    {
+      "id": "q3",
+      "given": "A",
+      "target": "B"
+    },
+    {
+      "id": "q4",
+      "given": "Z",
+      "target": "R"
+    },
+    {
+      "id": "q5",
+      "given": "R",
+      "target": "Z"
+    },
+    {
+      "id": "q6",
+      "given": "R",
+      "target": "R"
+    },
+    {
+      "id": "q7",
+      "given": "A1",
+      "target": "A1"
+    }
+  ],
+  "provenance": {
+    "synthetic": true,
+    "source_ref": "multiverse-mit-multiplication-v1",
+    "rights": "self_authored",
+    "attribution": "Original synthetic scenario author",
+    "snapshot": "Self-authored finite educational editorial scenario; no universe observations.",
+    "snapshot_sha256": "2bbe374959a036d5d8f98fe16e00bffccb5b3c0ecb2121060a8e52cb27a216ae"
+  }
+}
