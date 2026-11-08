@@ -1413,3 +1413,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-08 — #60 source/profile freeze
 - Frozen exactrational complete finite scenario-tree contract,localnormalization,pathmass,declaredterminalutility,conditionalqueries/canonicalordering andzero-condition handling. Editorialweights distinctfromquantumamplitudes. Independentfixtures follow beforeengine.
+
+## 2026-11-08 — #60 Core v1 closure
+- Core v1 Ready — Finite Probability-Weighted Branching Scenario Reference Scope. Full2402tests,3453CLIcases,39verifiers;5231protectedfiles unchanged.24families/126newtests,64trees/3136conditionalqueries andsixatomreference pass.9accepted/45rejectedpairs replay108rawoutputs ineachactualcheckout. MeasuredCPU/memory,matrix,sourcegaps andP1P2 recorded. NoBornrule/other-universe/Everett empiricalcertification. No61;proceedfinalall54integration.
