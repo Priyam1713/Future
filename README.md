@@ -1932,3 +1932,7 @@ Leave not-yet-known outcomes unrecorded until evidence becomes available. Explic
 `noaa-reference` reproduces #49's original validation-selected drift model and unfavorable test result: MAE `2.537249963267 ppm`, versus seasonal-naïve `2.1794 ppm`. The exposed test interval is not retuned or reselected; source-vintage certification remains false. Future #53/#55 empirical admission requires a separately approved rights-cleared data protocol and is not implemented here. See the [ranked next experiments](data/future-lab-next-experiments.json).
 
 Future Lab v1 acceptance: **2,522 tests, 3,515 CLI cases, 52 verifiers**, and **5,441 protected files unchanged**. See the [Lab release record](knowledge/future_lab_v1.json), [acceptance evidence](data/future-lab-acceptance-checks.json), and [consolidated Lab report](data/future-lab-summary.md). These checks establish bounded software behavior, not empirical superiority.
+
+## Local interactive Workbench
+
+Run `python -m workbench` from this checkout, then open `http://127.0.0.1:8000` (or pass `--port 8766`). The React interface runs all 54 retained engines through unchanged Future Lab APIs, with local cases, consent, blind interpretation locking and prospective tracking. First setup downloads scoped dependencies; subsequent execution is local/offline. Data lives outside the repository in `~/.future-workbench`. See the [Workbench guide](workbench/README.md) for setup, workflow boundaries, deletion/retention, native scoring, acceptance commands and prioritized limitations.
