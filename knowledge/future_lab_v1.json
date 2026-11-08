@@ -1,0 +1,460 @@
+{
+  "version": 1,
+  "date": "2026-11-09",
+  "status": "Future Lab v1 Ready — Bounded Offline Capability and Experiment Scope",
+  "scope": "A thin Python-first capability/invocation/evaluation layer around all54 existing bounded cores; no new forecasting technique or empirical superiority claim.",
+  "core_milestone": {
+    "commit": "685a32936727e7bfd83bee94cdba00a080f0e857",
+    "tag": {
+      "name": "core-v1.0.0",
+      "kind": "annotated",
+      "object_id": "88db1176312879dff8eda99243628b43f370c184",
+      "target": "685a32936727e7bfd83bee94cdba00a080f0e857"
+    }
+  },
+  "registry": {
+    "path": "data/future-lab-capability-registry.json",
+    "sha256": "2b2c0a4f372b8861b1471b50acc2313b6cc2882293273c2924a84aac3a0ccf2d",
+    "metadata_revision": 2,
+    "entries": 54,
+    "excluded_ids": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ],
+    "native_dispatch_counts": {
+      "native_request": 47,
+      "legacy_cli_inprocess": 15
+    },
+    "generation": "Authoritative frozen releases/completion matrix plusactualnativeCLI/Python contracts; source/profile/version hashes retained.",
+    "classification_revision": "knowledge/future_lab_registry_freeze_v2.json",
+    "original_registry": "data/future-lab-capability-registry-v1.json"
+  },
+  "profile": {
+    "id": "future-lab-offline-experiments-v2",
+    "version": 2,
+    "path": "knowledge/future_lab_profile_v2.json",
+    "sha256": "5b8b09b98f1f3a46a24db9fc6b334e7ea776f7e03d6646e2e05fa8907e95a3a3"
+  },
+  "code": {
+    "package_sha256": "74284978fb37ad9edc423588f27e0ce190d575e04b266ac2757b27417340edba",
+    "files": {
+      "future/lab/__init__.py": "319070072f8613d8411dcc007b3db183fddc2d6726448a84fb35a3a8ba79b61c",
+      "future/lab/__main__.py": "a7c198091c1dd7b3a230b808f04b19ad1017fbb81ca317e2c6976c2835aad009",
+      "future/lab/common.py": "35f669207495bd86cd91ac59d28771ae151f54463d3b9e577b0823c1dde1352e",
+      "future/lab/evaluation.py": "61c87ada95718a2623457a24c2f672f86c326d5961c0c5e7585b55b82071eec0",
+      "future/lab/experiments.py": "892286618e963a51d08ad94bf50ea999e19ed234ffcf43f26fd1937d58b823b9",
+      "future/lab/invocation.py": "db5dbf3ad0af36bfab73fa0df99160fccc7dabd54050ea69103304758a324f5c",
+      "future/lab/reference.py": "a078335205f25ecd722c577c90d80bf09d25edc5c0f282779b4bd8be4e40b648",
+      "future/lab/registry.py": "c90f0233716f35f02c4dde410c5bcfc6f71fbb217486bdaa4eeffd182700eafe"
+    }
+  },
+  "interfaces": {
+    "python": [
+      "future.lab.list_techniques",
+      "future.lab.capability",
+      "future.lab.invoke",
+      "future.lab.validate_request",
+      "future.lab.create",
+      "future.lab.forecast",
+      "future.lab.resolve",
+      "future.lab.replay",
+      "future.lab.persist",
+      "future.lab.evaluate",
+      "future.lab.compare"
+    ],
+    "cli": "python -m future.lab",
+    "native_outputs": "Preserved without a common artificial prediction score; original errors/unsupported states retained.",
+    "legacy_boundary": "Seven parameterized cores use the existing CLI dispatcher in-process with argv/stdout serialization;47corescallnative request APIs directly.",
+    "validation": "Executes native offline computation when no separate validator exists; may cost as much as run."
+  },
+  "experiments": {
+    "admitted_techniques": [
+      49,
+      51,
+      57
+    ],
+    "modes": [
+      "synthetic",
+      "retrospective",
+      "declared_prospective"
+    ],
+    "rights_and_vintage": "Explicit provenance,hashes and declared chronology; not externally certified identity,rights,consent orinformation-vintage evidence.",
+    "selection": "Frozen native request/model and explicit disjoint split/group metadata; no Lab optimizer or exposed-test retuning.",
+    "forecast": "One immutable forecast perexperimentversion; original native output/provenance/hash retained and independently reexecuted during replay.",
+    "outcomes": "Separate later evidence with target/event identity; resolved,missing andexcluded accounting. Closed-window resolution is aconservativeLabsubset,not anewnative51rule.",
+    "persistence": "Exclusive plan commitment per ID/version plus append-only hash-named snapshots; conflicting plan orsnapshot bytes reject.",
+    "metrics": {
+      "49": [
+        "mae",
+        "rmse",
+        "bias"
+      ],
+      "51": [
+        "brier",
+        "two_category_brier",
+        "calibration"
+      ],
+      "57": [
+        "brier",
+        "two_category_brier",
+        "calibration"
+      ]
+    },
+    "baselines": {
+      "49": [
+        "naive",
+        "seasonal_naive"
+      ],
+      "51": [
+        "fixed_half",
+        "native_reference"
+      ],
+      "57": [
+        "fixed_half"
+      ]
+    },
+    "comparison": "Compatible declared targets,units,cutoffs,datasets,outcomes andeligible metrics only;primarymodel/baseline scores useidenticalmatchedtargetIDs.",
+    "uncertainty": "Descriptive coverage/calibration/groups; no fabricated independence,effectiveN,confidence interval orsignificance.",
+    "bias_convention": "Lab bias=mean(prediction-actual); native49signconvention remainsunchanged initsnativeoutput.",
+    "bounds": {
+      "input_bytes": 2097152,
+      "targets": 256,
+      "splits": 2048,
+      "actions": 512,
+      "snapshot_characters": 64000,
+      "fraction_bits": 8192
+    }
+  },
+  "demo": {
+    "json": "data/future-lab-experiment-demo.json",
+    "markdown": "data/future-lab-experiment-demo.md",
+    "sha256": "70c6341ad20065b77185f194c8c9e068c368c583dd5cc6bfb1811bab4eeb1d77",
+    "synthetic": true,
+    "planned": 3,
+    "matched": 2,
+    "missing": 1,
+    "model_brier": "17/50",
+    "baseline_brier": "1/4",
+    "model_minus_baseline": "9/100",
+    "empirical_skill_certified": false
+  },
+  "noaa_reference": {
+    "native_technique": 49,
+    "operation": "python -m future.lab noaa-reference",
+    "primary_result": "Validation selecteddrift. Test MAE2.537249963267ppm vs seasonal-naive2.1794ppm;ratio1.164196551008. Selected model underperformed on test and is not replaced by the diagnostic test winner.",
+    "unchanged": true,
+    "retuned": false,
+    "source_vintage_certified": false,
+    "new_held_out_result": false
+  },
+  "configuration_matrix": {
+    "supported": [
+      "54-core discovery,source-grounded contracts andnative invocation",
+      "Versioned offline49/51/57 experiments withstructuredleakage/cutoff/identity guards",
+      "Exact matchedbinary/numeric scoring andfixed/native baselines",
+      "Synthetic lifecycle andunchanged49retrospective benchmark replay",
+      "DeterministicJSON/Markdown andexclusive local snapshots"
+    ],
+    "experimental_or_declared": [
+      "User-supplied prospective/retrospective data,rights,clocks,identities andvintages remainunvalidated declarations"
+    ],
+    "unsupported": [
+      "Automaticempiricalskill orsuperiority certification",
+      "Convertinghistorical/speculative/appearance outputs intoevent probabilities",
+      "New53/55empiricalingestion/admission protocols",
+      "Retuning theexposedNOAAtest",
+      "Arbitraryrollingstudyorchestration orretrospectiveoutcomecorrection automation",
+      "Live authenticated append-only services,frontend/cloud/paidAPI/multi-agent frameworks",
+      "Additionalforecastingtechniques"
+    ]
+  },
+  "acceptance": {
+    "tests": 2522,
+    "inherited_tests": 2402,
+    "new_tests": 120,
+    "cli_cases": 3515,
+    "inherited_cli_cases": 3453,
+    "new_cli_cases": 62,
+    "independent_verifiers": 52,
+    "inherited_verifiers": 51,
+    "protected_files": 5441,
+    "changed_protected_files": [],
+    "allowed_existing_edits": [
+      "README.md",
+      "PROGRESS.md"
+    ],
+    "registry": {
+      "references_checked_twice": 590,
+      "unique": 435,
+      "skipped": [
+        "chinese-inventory-2-v1"
+      ]
+    },
+    "strict_json_files": 3631
+  },
+  "verification": {
+    "passed": true,
+    "fixture_families": 26,
+    "families": {
+      "54-registry-ids": {
+        "passed": true
+      },
+      "six-exclusions": {
+        "passed": true
+      },
+      "54-native-schema-preservation": {
+        "passed": true
+      },
+      "native-errors": {
+        "passed": true
+      },
+      "unsupported-comparison": {
+        "passed": true
+      },
+      "registry-hash": {
+        "passed": true
+      },
+      "profile-hash": {
+        "passed": true
+      },
+      "source-hash": {
+        "passed": true
+      },
+      "cutoff": {
+        "passed": true
+      },
+      "outcome-leakage": {
+        "passed": true
+      },
+      "split-separation": {
+        "passed": true
+      },
+      "selection-freeze": {
+        "passed": true
+      },
+      "missing-outcomes": {
+        "passed": true
+      },
+      "not-estimable": {
+        "passed": true
+      },
+      "binary-identities": {
+        "passed": true
+      },
+      "numeric-identities": {
+        "passed": true
+      },
+      "matched-baseline": {
+        "passed": true
+      },
+      "calibration": {
+        "passed": true
+      },
+      "deterministic-forecast": {
+        "passed": true
+      },
+      "immutable-actions": {
+        "passed": true
+      },
+      "version-parent": {
+        "passed": true
+      },
+      "exclusive-snapshot": {
+        "passed": true
+      },
+      "native-reexecution": {
+        "passed": true
+      },
+      "json-markdown-replay": {
+        "passed": true
+      },
+      "noaa-negative-reference": {
+        "passed": true
+      },
+      "scope-boundaries": {
+        "passed": true
+      }
+    },
+    "native_schema_cases": 54,
+    "excluded_ids": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ],
+    "protocol_negative_cases": 23,
+    "boundary_checks": [
+      "late-forecast",
+      "early-forecast",
+      "duplicate-forecast",
+      "outcome-before-forecast",
+      "early-outcome",
+      "unavailable-evidence",
+      "wrong-outcome-event",
+      "boolean-outcome",
+      "duplicate-outcome",
+      "chain-tampering",
+      "forged-native-output",
+      "version-parent",
+      "exclusive-snapshot",
+      "incompatible-comparison",
+      "different-cutoff-comparison",
+      "native-error-preservation",
+      "source-file-tamper",
+      "profile-file-tamper",
+      "registry-file-tamper",
+      "lab-profile-tamper",
+      "numeric-future-leak",
+      "pool-outcome-leak",
+      "uncertainty-disclosures",
+      "json-markdown-replay",
+      "calibration-endpoint",
+      "native-state-preservation"
+    ],
+    "demo_expected": {
+      "planned": 3,
+      "matched": 2,
+      "missing": 1,
+      "model_brier": "17/50",
+      "baseline_brier": "1/4",
+      "model_minus_baseline": "9/100",
+      "two_category": "17/25",
+      "empirical_skill_certified": false
+    },
+    "numeric_anchor": {
+      "predictions": [
+        "1",
+        "4"
+      ],
+      "outcomes": [
+        "2",
+        "2"
+      ],
+      "baseline": [
+        "0",
+        "0"
+      ],
+      "mae": "3/2",
+      "mse": "5/2",
+      "bias": "1/2",
+      "baseline_mae": "2",
+      "rmse_expression": "sqrt(5/2)",
+      "rmse_decimal": "1.581138830084"
+    },
+    "fixture_sha256": "697bd59c3ef3fc1ac94bbf4c1e7ae16351d8f46ba4175620f8f6fe13e01bcfd6",
+    "noaa_primary_result": "Validation selecteddrift. Test MAE2.537249963267ppm vs seasonal-naive2.1794ppm;ratio1.164196551008. Selected model underperformed on test and is not replaced by the diagnostic test winner.",
+    "scope": "Native schema,exact math andprocedural validation;noempirical superiority certification."
+  },
+  "performance": {
+    "measured": true,
+    "environment": {
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0"
+    },
+    "lab_code_sha256": "74284978fb37ad9edc423588f27e0ce190d575e04b266ac2757b27417340edba",
+    "results": [
+      {
+        "id": "discovery54",
+        "seconds": [
+          0.004829599987715483,
+          0.005074799992144108,
+          0.004632300231605768
+        ],
+        "median_seconds": 0.004829599987715483,
+        "python_traced_peak_bytes": 2767859,
+        "output_sha256": "743d8574b08eb9081f0278a9e592a823dd74dedb8122bafef2f1980a8ec08218"
+      },
+      {
+        "id": "native51",
+        "seconds": [
+          0.01783910021185875,
+          0.022415700368583202,
+          0.019180799834430218
+        ],
+        "median_seconds": 0.019180799834430218,
+        "python_traced_peak_bytes": 2768268,
+        "output_sha256": "8ab7302b801be8bb6fdd654a212e5fe47ec0d49df487f6129859f9038daaf32e"
+      },
+      {
+        "id": "complete_demo_report",
+        "seconds": [
+          0.0535998004488647,
+          0.03148799994960427,
+          0.0269683999940753
+        ],
+        "median_seconds": 0.03148799994960427,
+        "python_traced_peak_bytes": 2790995,
+        "output_sha256": "51611f22e5a75fbb2ce13192a15ac46fb5f73bdd1b40c75c6a098fed5ac7ab04"
+      },
+      {
+        "id": "noaa_reference",
+        "seconds": [
+          1.423744599800557,
+          1.5211788997985423,
+          1.5291789001785219
+        ],
+        "median_seconds": 1.5211788997985423,
+        "python_traced_peak_bytes": 60519956,
+        "output_sha256": "56be75660ef41e10578edc002dcc26e6f821ce3a8391bc5826193817f81ed5ce"
+      }
+    ],
+    "cli": [
+      {
+        "id": "demo",
+        "seconds": 0.7677347003482282,
+        "raw_stdout_sha256": "32c6f51db28e293e3697f5557a6df657777236b7bef7a0646feb7aa76bd5c141"
+      },
+      {
+        "id": "noaa_reference",
+        "seconds": 4.316061999648809,
+        "raw_stdout_sha256": "1ff6ef4a9e2792e0d3ed1c4661ce213e2f0850fb979b4b0b5b61f311f78ac779"
+      }
+    ],
+    "process_peak_working_set_bytes": 115658752,
+    "protocol": "Three untraced completeoperations,then separatetracemalloc run;fullCLI calls includeimports/serialization. Nativeprocesspeak coversentirehelper/imports/allworkloads/tracing,notperworkloadorCLIchild. Observations arenotuniversalperformanceguarantees."
+  },
+  "metadata_corrections": {
+    "registry": "knowledge/future_lab_registry_freeze_v2.json",
+    "profile": "knowledge/future_lab_profile_v2.json",
+    "fixture": "knowledge/future_lab_fixture_freeze_v2.json",
+    "originals_preserved": true,
+    "numeric_and_native_expectations_unchanged": true
+  },
+  "evidence": {
+    "acceptance": "data/future-lab-acceptance-checks.json",
+    "source_freeze": "knowledge/future_lab_source_freeze_v1.json",
+    "preservation_baseline": "data/future-lab-preservation-baseline.json",
+    "unit": "data/future-lab-unit.json",
+    "verifier": "data/future-lab-verification.json",
+    "cli_replay": "data/future-lab-cli-replay.json",
+    "examples": "data/future-lab-invocation-examples.json",
+    "next_experiments": "data/future-lab-next-experiments.json"
+  },
+  "milestones": {
+    "core_release_commit": "685a32936727e7bfd83bee94cdba00a080f0e857",
+    "source_registry_profile": "705ce84",
+    "original_independent_fixtures": "065fb02",
+    "initial_engine": "f8241eb",
+    "classification_correction": "95b38f75536b36e07f1c2ea5339a59d5d9d96edd",
+    "cli_reports": "95b38f75536b36e07f1c2ea5339a59d5d9d96edd",
+    "acceptance": "1fc048cd792f2236742bd07fd09745368e27cb97"
+  },
+  "completion_commit_lookup": "git log --diff-filter=A --format=%H -- knowledge/future_lab_v1.json",
+  "limits": [
+    "Software/procedural correctness andsyntheticdata do notcertify empirical predictiveability.",
+    "All54native engines,profiles,fixtures,releases,inventory,resource andoriginalacceptance bytes preserved; onlyREADME/PROGRESS allowed existingedits.",
+    "Localowner canrewrite files orclock declarations;use independentlyheld commitment/time evidence forprospectiveclaims.",
+    "Semantic leakage ormisdeclaredrights/identities cannotbe ruledout byhashes/schema alone.",
+    "Some native contracts are validated byexecution ratherthan a separate cheap preflight.",
+    "Legacy in-processCLI uses processglobals;Labserializes itsownlegacycalls.",
+    "No newempiricaldata acquired;53/55researchprotocols remain deferred."
+  ],
+  "final_documentation_validated": true,
+  "post_documentation_strict_json_files": 3632
+}

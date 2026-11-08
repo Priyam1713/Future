@@ -1435,3 +1435,8 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Added a guard preventing explicitly synthetic native records from being relabeled as retrospective evidence. Refreshed full unit run passes 2,522 tests (2,402 inherited plus 120 Lab tests).
 - 62 Lab CLI cases pass as exact JSON/Markdown replay: 15 accepted and 16 rejected pairs. Synthetic lifecycle, examples and measurements were regenerated against the corrected revision; rejected stale-snapshot measurement attempt was not treated as acceptance evidence.
 - README documents Python-first invocation/persistence, native schema/error preservation, score conventions and limits. Five ranked next empirical studies remain recommendations only. Full inherited CLI/verifier sweep remains in progress.
+
+## 2026-11-09 — Future Lab v1 closure
+- Full acceptance passed: 2,522 tests, 3,515 CLI cases, 52 verifiers; all 5,441 protected files unchanged. All 54 native schema hashes and six exclusion boundaries pass; 26 Lab families, structured leakage/version/identity controls, and exact matched scoring are verified.
+- Source-derived registry and thin adapters expose the unchanged cores. Versioned experiments, exclusive plan/snapshot persistence, explicit synthetic/prospective/retrospective modes, JSON/Markdown reports and an honest #49 reference replay are supported. Metadata classification revisions are preserved and disclosed.
+- Complete synthetic #51 demo: 3 planned, 2 matched, 1 missing; Brier 17/50 versus baseline 1/4. No new empirical skill or superiority is certified. Measurements, usage, limitations and five ranked next studies are recorded. No new engine, dataset, framework, frontend, cloud or paid API. Commit/push closure and confirm clean main; no new technique.
