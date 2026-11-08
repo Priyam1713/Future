@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "fixture_families": 26,
+  "families": {
+    "54-registry-ids": {
+      "passed": true
+    },
+    "six-exclusions": {
+      "passed": true
+    },
+    "54-native-schema-preservation": {
+      "passed": true
+    },
+    "native-errors": {
+      "passed": true
+    },
+    "unsupported-comparison": {
+      "passed": true
+    },
+    "registry-hash": {
+      "passed": true
+    },
+    "profile-hash": {
+      "passed": true
+    },
+    "source-hash": {
+      "passed": true
+    },
+    "cutoff": {
+      "passed": true
+    },
+    "outcome-leakage": {
+      "passed": true
+    },
+    "split-separation": {
+      "passed": true
+    },
+    "selection-freeze": {
+      "passed": true
+    },
+    "missing-outcomes": {
+      "passed": true
+    },
+    "not-estimable": {
+      "passed": true
+    },
+    "binary-identities": {
+      "passed": true
+    },
+    "numeric-identities": {
+      "passed": true
+    },
+    "matched-baseline": {
+      "passed": true
+    },
+    "calibration": {
+      "passed": true
+    },
+    "deterministic-forecast": {
+      "passed": true
+    },
+    "immutable-actions": {
+      "passed": true
+    },
+    "version-parent": {
+      "passed": true
+    },
+    "exclusive-snapshot": {
+      "passed": true
+    },
+    "native-reexecution": {
+      "passed": true
+    },
+    "json-markdown-replay": {
+      "passed": true
+    },
+    "noaa-negative-reference": {
+      "passed": true
+    },
+    "scope-boundaries": {
+      "passed": true
+    }
+  },
+  "native_schema_cases": 54,
+  "excluded_ids": [
+    25,
+    27,
+    41,
+    42,
+    47,
+    48
+  ],
+  "protocol_negative_cases": 23,
+  "boundary_checks": [
+    "late-forecast",
+    "early-forecast",
+    "duplicate-forecast",
+    "outcome-before-forecast",
+    "early-outcome",
+    "unavailable-evidence",
+    "wrong-outcome-event",
+    "boolean-outcome",
+    "duplicate-outcome",
+    "chain-tampering",
+    "forged-native-output",
+    "version-parent",
+    "exclusive-snapshot",
+    "incompatible-comparison",
+    "different-cutoff-comparison",
+    "native-error-preservation",
+    "source-file-tamper",
+    "profile-file-tamper",
+    "registry-file-tamper",
+    "lab-profile-tamper",
+    "numeric-future-leak",
+    "pool-outcome-leak",
+    "uncertainty-disclosures",
+    "json-markdown-replay",
+    "calibration-endpoint",
+    "native-state-preservation"
+  ],
+  "demo_expected": {
+    "planned": 3,
+    "matched": 2,
+    "missing": 1,
+    "model_brier": "17/50",
+    "baseline_brier": "1/4",
+    "model_minus_baseline": "9/100",
+    "two_category": "17/25",
+    "empirical_skill_certified": false
+  },
+  "numeric_anchor": {
+    "predictions": [
+      "1",
+      "4"
+    ],
+    "outcomes": [
+      "2",
+      "2"
+    ],
+    "baseline": [
+      "0",
+      "0"
+    ],
+    "mae": "3/2",
+    "mse": "5/2",
+    "bias": "1/2",
+    "baseline_mae": "2",
+    "rmse_expression": "sqrt(5/2)",
+    "rmse_decimal": "1.581138830084"
+  },
+  "fixture_sha256": "88c659f0af052ecb150e91712428f0c2fed01ace15b9019460044985152f08a4",
+  "noaa_primary_result": "Validation selecteddrift. Test MAE2.537249963267ppm vs seasonal-naive2.1794ppm;ratio1.164196551008. Selected model underperformed on test and is not replaced by the diagnostic test winner.",
+  "scope": "Native schema,exact math andprocedural validation;noempirical superiority certification."
+}
