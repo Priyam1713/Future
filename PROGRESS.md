@@ -1416,3 +1416,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-08 — #60 Core v1 closure
 - Core v1 Ready — Finite Probability-Weighted Branching Scenario Reference Scope. Full2402tests,3453CLIcases,39verifiers;5231protectedfiles unchanged.24families/126newtests,64trees/3136conditionalqueries andsixatomreference pass.9accepted/45rejectedpairs replay108rawoutputs ineachactualcheckout. MeasuredCPU/memory,matrix,sourcegaps andP1P2 recorded. NoBornrule/other-universe/Everett empiricalcertification. No61;proceedfinalall54integration.
+## 2026-11-08 — Final all54 acceptance in progress
+- Technique60 closed/pushed at c434d01 after2402tests/3453CLIcases/39inheritedverifiers; cleanmain0/0 observed. No61.
+- Seven read-only compatibility/boundary groups pass; no engines orproductionadapters changed. Final regression includesall50existingverify scripts plusnewinterfaceverifier,covering11early scripts absentfromtheinheriteddriver.
+- All60IDs/54unique boundedrelease records/sixexclusions andoriginalrank/variationrows reconcile. Staleindex5–15 willfollowexistingauthoritativeclosures;Horaryjudgment remainsExperimental. Finalacceptance/completion remainpending thefullsweep andmetadata/preservationgates.

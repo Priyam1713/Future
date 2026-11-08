@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "groups": {
+    "51-to-57-scoring": {
+      "passed": true,
+      "binary_brier": "17/50",
+      "two_category_brier": "17/25",
+      "boundary": "Compatible numeric scoring conventions;question identities,weights/forecast revisions remain separate schemas. No automatic adapter."
+    },
+    "51-to-58-resolution": {
+      "passed": true,
+      "demonstrated_mapping": {
+        "1": "YES",
+        "0": "NO"
+      },
+      "mapping_scope": "Manually declared synthetic witness only; no shared identity/authentication adapter.",
+      "differences": [
+        "51allowsdispute/void andcontrolledresolutioncorrection;58settlesbinaryonce",
+        "51forecastcutoffinclusive;58quotes/tradesstrictlybeforeclose",
+        "51canresolvepositiveoccurrencebeforewindowend;58requiresmarketclose",
+        "Question/eventIDs,rule definitions,evidence anddeclaredauthority mustbe reconciled before any futureadapter."
+      ]
+    },
+    "52-synthetic-provenance": {
+      "passed": true,
+      "common_hash_fields": [
+        "input_sha256",
+        "code_sha256",
+        "source_manifest_sha256",
+        "source_freeze_sha256"
+      ],
+      "stream_sha256": "7461fb7e78801025e47dc1382046fe2771fff76647922ad72122a7c943834f79",
+      "boundary": "52finite PRNG coupled runs are correlated model samples;60exact editorial treeweights have no RNG. No empirical probability/causal transfer or stream reuse."
+    },
+    "53-measurement-availability": {
+      "passed": true,
+      "late_measurement_did_not_rewrite_filter": true,
+      "unknown_target_not_scored": true,
+      "boundary": "Common availability chronology concept;53doesnotretroactivelyassimilatedelayedrecords,51/57selecteligibleforecastrevisions underdifferentcutoffcontracts. No automaticevaluationconnector."
+    },
+    "54-to-59-simulation-boundaries": {
+      "passed": true,
+      "boundary": "54exact synchronous binary B3/S23 gridticks differ from59approximate continuous Lorenz RK4 dimensionless steps. Both finish requested horizons;neither scalarcounts nor equalclocklabels make states/units comparable. No grid-to-ODE adapter."
+    },
+    "56-causal-versus-conditional": {
+      "passed": true,
+      "observational": {
+        "0": "1/5",
+        "1": "3/5"
+      },
+      "interventional": {
+        "0": "3/10",
+        "1": "1/2"
+      },
+      "boundary": "Conditionalscenario/forecast probabilities are notinterventions.56effects dependondeclaredDAG,adjustment,compatibility andpositivity;unsupportedlatent graph hasnullinterventionalresult."
+    },
+    "60-generic-scenario-representation": {
+      "passed": true,
+      "leaf_mass": "1",
+      "expected_utility": "1",
+      "path_mass": "1/6",
+      "boundary": "Finite exact editorial probability/utility representation only;arbitraryweights distinctfrom Bornrule amplitudes. No observational,causal ormultiverse predictive certification."
+    }
+  },
+  "group_count": 7,
+  "engine_code_sha256": {
+    "future/superforecasting.py": "e4c81aa68825ada8baebab8c8e725e78a562303786ed44a7cec6b5328ec990c1",
+    "future/collective_intelligence.py": "134412c37ea8122285d7bb8a95717a71d0fed29a2a62cd11b3f7c5e5a2c819ba",
+    "future/prediction_markets.py": "7bde9e5304e3c0f3d2b87ddae17b792d758e75c448f968f5629f3245a0daf1b5",
+    "future/psychohistory.py": "fd187915dfca927e046800be389a1fe9b547653488d29055fcfb5cfb39445386",
+    "future/digital_twin.py": "baafad5ee98e365b18b168ad1500c44dc9e20718d10e137f3f6bd78dd99ab45f",
+    "future/agent_based.py": "cd6d2b3efba558253ab77212b67fd2e80c1d632d8c48e8fd358b38b7b80c896c",
+    "future/chaos_theory.py": "ffac2760befd1870402e7e2100a84a82b1a018d965b1440421983486fde5d1af",
+    "future/causal_ai.py": "9467ac0f236fb05ada62e7fb50a0277a1dba4dc3c41721eff528fa202861c139",
+    "future/multiverse.py": "715e7b8f06dacc932758e7146cba9389a0c1fe40b998270d19ae1a5c455ddbf0"
+  },
+  "scope": "Read-only compatibility/semantic-boundary witnesses; no engines changed,no production connector orneworchestrationframework."
+}
