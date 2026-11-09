@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "workbench_tests": 19,
+  "browser_tests": 5,
+  "browser_skipped": 0,
+  "browser_failed": 0,
+  "all54_browser_invocation": true,
+  "native_sample_hashes_verified": 54,
+  "source_sha256": {
+    "workbench/__init__.py": "f47db74387cb49e14285a5092de49e358a7e45bcd55548b8e9de76f54f94ca0b",
+    "workbench/__main__.py": "eccc4f4ba918b85de8534a997e09ae64a76240070791e46b63cf63d41d7dadf9",
+    "workbench/accept.py": "dd6a376d8833affc4c019b0f732a5b244de784675bc925d14ee5b0c7153ea672",
+    "workbench/accept_inherited.py": "f182f59448f6f4b6223b50323462ec21754363a9c7a1c7ae2c257ee2fa47c488",
+    "workbench/api.py": "89a5b8418ed16c9b6142eaa688a165f2b2e85bf7732f79ae6618735a82364504",
+    "workbench/e2e_server.py": "83582a3534d0fc624e05ae206f30a8a932457346ec2d9dfe54137a7b092c62a8",
+    "workbench/prospective.py": "a631560d3da0950a28ab7c027871fba72c77f3da0a84a8e5149fea537d642ef6",
+    "workbench/requirements.txt": "2d6d8eb8662c42125d522e1e4abf5448a481cfd4d53c9751246263f4be9985a5",
+    "workbench/store.py": "7c9571e0107a2d596bad8740b50cb7adf6212b03b6322ddad04b619d08943a92",
+    "workbench/test-requirements.txt": "934fbb549ab3209320a68f549631f92ffa7dcd1372d15620c148eb5f55bd7735",
+    "workbench/tests/test_workbench.py": "eecd84fa55552755afdf775081ad86897e326acfb090d7657065993c2badce32",
+    "workbench/web/e2e/workbench.spec.ts": "2f4487902d47a08ba289589a0ba0d9a84c269890380b37f2e971500d804fc5a3",
+    "workbench/web/index.html": "0d1ec5bc0294f2a1f333e314996fb1cb60c465307b6b6d9e8a078836ebc84be5",
+    "workbench/web/package-lock.json": "3162deffcc35925e0760426bc746e0686511ded68dc725039a8229ad374476d2",
+    "workbench/web/package.json": "2c3d8bc32ee445e4ed4033d745dc939b966fdb2b4c98d2e334907c5ec86921a7",
+    "workbench/web/playwright.config.ts": "b2d374e49b90de93764074dd5684081e6784098857e232971dddfc598774af28",
+    "workbench/web/src/components/ui/button.tsx": "9d66243c4be9e76462da92b76011e7049ac2b78e9d3c1e9f75ff89637b0bb998",
+    "workbench/web/src/editor.tsx": "c70572ef21de505c7b9002f1f5bc77887119b3e00a4c14cc2238a00345b423d1",
+    "workbench/web/src/main.tsx": "574db0f24c1590d64b798d0f71d3751f29361d2eb060dca919184c7844faeb2e",
+    "workbench/web/src/style.css": "4fbc11def5c02c82f32c90bc6990d586919858ba274bb65c98d746e96518cf42",
+    "workbench/web/tsconfig.json": "ade41d177cbbd57cb3d27ee4947ee7e72bcfd49f3b560b80aee7b29725befdad",
+    "workbench/web/vite.config.ts": "e7df9352d531fbc723fc75b053c2f0daf1b6426b459c933f8c59ce36546d8e34"
+  },
+  "registry_sha256": "2b2c0a4f372b8861b1471b50acc2313b6cc2882293273c2924a84aac3a0ccf2d",
+  "profile_sha256": "5b8b09b98f1f3a46a24db9fc6b334e7ea776f7e03d6646e2e05fa8907e95a3a3",
+  "excluded_ids": [
+    25,
+    27,
+    41,
+    42,
+    47,
+    48
+  ],
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "workbench/tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "seconds": 12.266,
+      "stdout": "",
+      "stderr": "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\r\n  from starlette.testclient import TestClient as TestClient  # noqa\r\ntest_advanced_compatible_study_and_matched_comparison (test_workbench.WorkbenchTest.test_advanced_compatible_study_and_matched_comparison) ... ok\r\ntest_all54_native_hashes (test_workbench.WorkbenchTest.test_all54_native_hashes) ... ok\r\ntest_backdating_rejected (test_workbench.WorkbenchTest.test_backdating_rejected) ... ok\r\ntest_blind_lock_reveal_immutable (test_workbench.WorkbenchTest.test_blind_lock_reveal_immutable) ... ok\r\ntest_catalogue_and_six_exclusions (test_workbench.WorkbenchTest.test_catalogue_and_six_exclusions) ... ok\r\ntest_comparison_no_universal_scores (test_workbench.WorkbenchTest.test_comparison_no_universal_scores) ... ok\r\ntest_consent_required_and_enforced (test_workbench.WorkbenchTest.test_consent_required_and_enforced) ... ok\r\ntest_delete_cascades_and_erases_secrets (test_workbench.WorkbenchTest.test_delete_cascades_and_erases_secrets) ... ok\r\ntest_empty_dashboard_and_filters (test_workbench.WorkbenchTest.test_empty_dashboard_and_filters) ... ok\r\ntest_exact_text_export_import_into_fresh_workspace (test_workbench.WorkbenchTest.test_exact_text_export_import_into_fresh_workspace) ... ok\r\ntest_exports_all_formats (test_workbench.WorkbenchTest.test_exports_all_formats) ... ok\r\ntest_idempotent_session_and_conflict (test_workbench.WorkbenchTest.test_idempotent_session_and_conflict) ... ok\r\ntest_import_export_integrity_and_duplicates (test_workbench.WorkbenchTest.test_import_export_integrity_and_duplicates) ... ok\r\ntest_local_boundary_strict_json (test_workbench.WorkbenchTest.test_local_boundary_strict_json) ... ok\r\ntest_missing_disputed_correction_scoring (test_workbench.WorkbenchTest.test_missing_disputed_correction_scoring) ... ok\r\ntest_native_error_and_unsupported (test_workbench.WorkbenchTest.test_native_error_and_unsupported) ... ok\r\ntest_prospective_pending_resolve_exact_score (test_workbench.WorkbenchTest.test_prospective_pending_resolve_exact_score) ... ok\r\ntest_separately_consented_frozen_retention (test_workbench.WorkbenchTest.test_separately_consented_frozen_retention) ... ok\r\ntest_unlinked_run_deletion (test_workbench.WorkbenchTest.test_unlinked_run_deletion) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 19 tests in 11.361s\r\n\r\nOK\r\n"
+    },
+    {
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "--prefix",
+        "workbench/web",
+        "run",
+        "build"
+      ],
+      "returncode": 0,
+      "seconds": 10.203,
+      "stdout": "\n> future-workbench@1.0.0 build\n> tsc -b && vite build\n\nvite v7.3.7 building client environment for production...\ntransforming...\n✓ 1585 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.36 kB │ gzip:  0.26 kB\ndist/assets/index-BfKq4H6K.css   16.85 kB │ gzip:  4.71 kB\ndist/assets/index-DuJrD_dI.js   296.01 kB │ gzip: 92.26 kB\n✓ built in 1.59s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "--prefix",
+        "workbench/web",
+        "run",
+        "test:e2e"
+      ],
+      "returncode": 0,
+      "seconds": 48.828,
+      "stdout": "\n> future-workbench@1.0.0 test:e2e\n> playwright test\n\n\nRunning 5 tests using 1 worker\n\n  ok 1 e2e\\workbench.spec.ts:4:1 › all 54 engines run from their actual browser forms (29.7s)\n  ok 2 e2e\\workbench.spec.ts:47:1 › discovery, invalid native request, operation boundary and dark tablet layout (1.4s)\n  ok 3 e2e\\workbench.spec.ts:86:1 › consented participant, case, blind freeze/lock/reveal and local deletion (3.4s)\n  ok 4 e2e\\workbench.spec.ts:184:1 › prospective UI creates pending forecast then independent resolution and exact scoring (1.9s)\n  ok 5 e2e\\workbench.spec.ts:263:1 › portable export import, tamper rejection, idempotency and privacy boundaries (3.5s)\n\n  5 passed (44.8s)\n",
+      "stderr": "[WebServer] INFO:     Started server process [46760]\r\n[WebServer] INFO:     Waiting for application startup.\r\n[WebServer] INFO:     Application startup complete.\r\n[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)\r\n(node:49804) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "scripts.audit_dependencies"
+      ],
+      "returncode": 0,
+      "seconds": 0.75,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "seconds": 1.094,
+      "stdout": "No broken requirements found.\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "scripts.check_inventory_workbook"
+      ],
+      "returncode": 0,
+      "seconds": 0.437,
+      "stdout": "Original workbook SHA256 and all six sheets match frozen inventory cell-for-cell;60 IDs and six exclusions pass\r\n",
+      "stderr": ""
+    }
+  ],
+  "limits": [
+    "Software/workflow verification only; no empirical skill certification.",
+    "Historical numeric correction replacement is unsupported; versioned annotations suspend scoring.",
+    "No external clock authentication, encryption at rest or multi-user isolation."
+  ],
+  "inherited_complete": true,
+  "complete": true,
+  "status": "Workbench v1 Ready — bounded local research scope",
+  "inherited": {
+    "tests": 2522,
+    "cli_cases": 3515,
+    "independent_verifiers": 52,
+    "protected_count": 5584,
+    "changed_protected_files": []
+  },
+  "inherited_receipt_sha256": "5ffe2da66604c70c99723efbcd02a1281156fff7ac8e4a73e7d311cfcac03a8b"
+}

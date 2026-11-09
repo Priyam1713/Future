@@ -24,7 +24,7 @@ export function Tree({
   label?: string;
   depth?: number;
 }) {
-  const [opened,setOpened]=useState(depth<1);
+  const [opened, setOpened] = useState(depth < 1);
   if (value === null || typeof value !== "object")
     return (
       <div className="value-row">
@@ -33,7 +33,11 @@ export function Tree({
       </div>
     );
   return (
-    <details open={opened} onToggle={e=>setOpened(e.currentTarget.open)} className="tree">
+    <details
+      open={opened}
+      onToggle={(e) => setOpened(e.currentTarget.open)}
+      className="tree"
+    >
       <summary>
         {human(label)}{" "}
         <small>
@@ -43,9 +47,10 @@ export function Tree({
         </small>
       </summary>
       <div>
-        {opened && Object.entries(value).map(([k, v]) => (
-          <Tree key={k} value={v} label={k} depth={depth + 1} />
-        ))}
+        {opened &&
+          Object.entries(value).map(([k, v]) => (
+            <Tree key={k} value={v} label={k} depth={depth + 1} />
+          ))}
       </div>
     </details>
   );

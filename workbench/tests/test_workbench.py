@@ -9,7 +9,7 @@ from workbench.api import create_app
 class WorkbenchTest(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory(prefix='future-workbench-test-');self.stamp='2030-01-01T00:00:00Z'
-        self.app=create_app(self.temp.name,clock=lambda:self.stamp);self.client=TestClient(self.app)
+        self.app=create_app(self.temp.name,clock=lambda:self.stamp);self.client=TestClient(self.app,base_url='http://127.0.0.1')
         self.sample=json.loads((ROOT/'data/future-lab-invocation-examples.json').read_text(encoding='utf-8'))['entries']
     def tearDown(self):self.client.close();self.temp.cleanup()
     def post(self,path,body,key=None):return self.client.post('/api'+path,json=body,headers={'Idempotency-Key':key or str(uuid.uuid4())})
@@ -52,6 +52,7 @@ class WorkbenchTest(unittest.TestCase):
         with self.app.state.store.connect() as db:self.assertEqual(db.execute('SELECT COUNT(*) FROM secrets').fetchone()[0],0)
     def test_separately_consented_frozen_retention(self):
         p=self.participant(True);c=self.case(p);s=self.session(c,'blind');self.ok(self.post(f"/sessions/{s['id']}/lock",dict(interpretation='Retain frozen')))
+        self.assertTrue(self.ok(self.client.get('/api/records/'+c['id']+'/deletion'))['separately_consented_frozen_retention'])
         r=self.ok(self.client.delete('/api/records/'+p['id'],headers={'Idempotency-Key':str(uuid.uuid4())}));self.assertEqual(r['retained_frozen'],1)
         rows=self.ok(self.client.get('/api/records'));self.assertEqual([v['kind'] for v in rows],['archive']);self.assertIsNone(rows[0]['parent'])
     def test_prospective_pending_resolve_exact_score(self):
@@ -80,6 +81,10 @@ class WorkbenchTest(unittest.TestCase):
         for payload in ['{"a":1,"a":2}','{"a":NaN}']:
             self.assertEqual(self.client.post('/api/validate',content=payload).status_code,422)
         q=copy.deepcopy(self.sample['1']['request']);q['arguments']+=['--kernel','C:/private/file'];self.assertEqual(self.post('/validate',q).status_code,422)
+        for alias in ['--ker','--k','--kernel=C:/private/file']:
+            q=copy.deepcopy(self.sample['1']['request']);q['arguments']+=[alias,'C:/private/file'] if '=' not in alias else [alias];self.assertEqual(self.post('/validate',q).status_code,422)
+        for malformed in [[],None,'C:/private/file']:
+            self.assertEqual(self.post('/sessions',dict(request=malformed)).status_code,422)
     def test_empty_dashboard_and_filters(self):
         r=self.ok(self.client.get('/api/dashboard'));self.assertEqual(r['sessions'],0);self.assertEqual(r['eligible_scored'],0)
         self.session();r=self.ok(self.client.get('/api/dashboard?technique=51'));self.assertEqual(r['sessions'],0)
@@ -89,4 +94,18 @@ class WorkbenchTest(unittest.TestCase):
     def test_exports_all_formats(self):
         self.session()
         for f in ['json','csv','markdown']:self.assertEqual(self.client.get('/api/export?format='+f).status_code,200)
+    def test_unlinked_run_deletion(self):
+        s=self.session();r=self.client.delete('/api/records/'+s['id'],headers={'Idempotency-Key':str(uuid.uuid4())});self.assertEqual(self.ok(r)['deleted'],1);self.assertEqual(self.ok(self.client.get('/api/records')),[])
+    def test_exact_text_export_import_into_fresh_workspace(self):
+        self.ok(self.post('/sessions',dict(request=self.sample['1']['request'],origin='sample')))
+        text=self.client.get('/api/export').text
+        with tempfile.TemporaryDirectory(prefix='future-workbench-import-') as directory:
+            with TestClient(create_app(directory),base_url='http://127.0.0.1') as other:
+                r=other.post('/api/import',content=text,headers={'Content-Type':'application/json','Idempotency-Key':str(uuid.uuid4())});self.assertEqual(r.status_code,200,r.text);self.assertEqual(r.json()['imported'],1)
+                self.assertEqual(other.get('/api/export').json()['payload'],json.loads(text)['payload'])
+    def test_advanced_compatible_study_and_matched_comparison(self):
+        s=self.ok(self.post('/studies',self.forecast()));p=copy.deepcopy(s['ledger']['plan']);p['id']='second-protocol'
+        other=self.ok(self.post('/studies',dict(plan=p)));self.stamp='2030-01-04T00:00:00Z'
+        for v in [s,other]:self.ok(self.post(f"/studies/{v['id']}/outcome",dict(target_id='q1',status='resolved',value='0',known_at='2030-01-03T00:00:00Z',reason='Complete independent log',evidence='No event in complete observation log')))
+        r=self.ok(self.post('/compare',dict(ids=[s['id'],other['id']],quantitative=True)));self.assertEqual(r['matched_count'],1);self.assertEqual(r['models'][0]['scores']['brier']['exact'],'9/25')
 if __name__=='__main__':unittest.main()

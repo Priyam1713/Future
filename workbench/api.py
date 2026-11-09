@@ -25,7 +25,7 @@ def strict(text):
 def create_app(directory=None,clock=now):
     app=FastAPI(title='Future Workbench',docs_url=None,redoc_url=None,openapi_url=None)
     store=Store(directory);app.state.store=store
-    app.add_middleware(TrustedHostMiddleware,allowed_hosts=['localhost','127.0.0.1','[::1]','testserver'])
+    app.add_middleware(TrustedHostMiddleware,allowed_hosts=['localhost','127.0.0.1','[::1]'])
     @app.middleware('http')
     async def boundary(request,call_next):
         origin=request.headers.get('origin')
@@ -67,8 +67,16 @@ def create_app(directory=None,clock=now):
         r=lab.registry();return dict(registry_sha256=REGISTRY_HASH,profile_sha256=PROFILE_HASH,phases=PHASES,excluded_ids=r['excluded_ids'],entries=[dict(e,phase=phase(e['technique_id'])) for e in r['entries']])
     @app.get('/api/techniques/{id}')
     def capability(id:int):
-        e=lab.capability(id);return dict(capability=e,release=read(ROOT/e['core_record']),sample=read(ROOT/'data/future-lab-invocation-examples.json')['entries'][str(id)]['request'])
+        e=lab.capability(id);return dict(capability=e,release=read(ROOT/e['core_record']),source_catalogs=[dict(s,records=read(ROOT/s['path'])) for s in e['sources']],profiles=[dict(p,record=read(ROOT/p['path'])) for p in e['profiles']],sample=read(ROOT/'data/future-lab-invocation-examples.json')['entries'][str(id)]['request'])
     def invoke(q):
+        if not isinstance(q,dict):raise ValueError('Native invocation object required')
+        if 'input' in q and not isinstance(q['input'],dict):raise ValueError('Native request input must be an object, never a file path')
+        if 'arguments' in q and (not isinstance(q['arguments'],list) or any(not isinstance(a,str) for a in q['arguments'])):raise ValueError('Native arguments must be a list of strings')
+        if 'arguments' in q:
+            entry=lab.capability(q.get('technique_id'));op=next((o for o in entry['operations'] if o['command']==q.get('operation')),None)
+            if op is None:raise ValueError('Operation is not registered for selected technique')
+            allowed={name for field in op.get('cli_arguments',[]) for name in field['names'] if name.startswith('--')} - {'--kernel','--format','--database'}
+            if any(a.startswith('--') and a.split('=',1)[0] not in allowed for a in q['arguments']):raise ValueError('Only exact registered options are allowed; kernel, database and format overrides are owned by Workbench/Lab')
         for a in q.get('arguments',[]):
             if a=='--kernel' or a.startswith('--kernel='):raise ValueError('Workbench uses the pinned local kernel; paths cannot be overridden')
         with LOCK:return lab.invoke(q)
@@ -79,6 +87,8 @@ def create_app(directory=None,clock=now):
     def run(q:dict,request:Request):
         def action(db):
             mode=q.get('mode','explore');case=q.get('case_id')
+            if not isinstance(q.get('request'),dict):raise ValueError('Native request required')
+            if q.get('origin','manual') not in ['sample','manual']:raise ValueError('Input origin must be sample or manual')
             if mode not in ['explore','blind']:raise ValueError('Unsupported session mode')
             if case:consent(db,case,mode,q['request']['technique_id'])
             if mode=='blind' and (not case or not q.get('hidden_answer')):raise ValueError('Blind testing requires a consented case and a separate hidden answer')
@@ -93,6 +103,14 @@ def create_app(directory=None,clock=now):
     @app.get('/api/records')
     def records():
         with store.connect() as db:return store.rows(db)
+    @app.get('/api/records/{id}')
+    def record(id:str):
+        with store.connect() as db:return store.get(db,id)
+    @app.get('/api/records/{id}/markdown')
+    def record_markdown(id:str):
+        with store.connect() as db:
+            v=store.get(db,id)
+            return Response(lab.markdown(v.get('result',v.get('report',v))),media_type='text/markdown')
     @app.post('/api/participants')
     def participant(q:dict,request:Request):
         def action(db):
@@ -134,6 +152,7 @@ def create_app(directory=None,clock=now):
     def study(q:dict,request:Request):
         def action(db):
             case=q.get('case_id');stamp=clock();identity='study-'+uid()
+            if 'plan' in q and not isinstance(q['plan'],dict):raise ValueError('Advanced Lab plan must be an object')
             if case:consent(db,case,'prospective',q.get('plan',{}).get('technique_id',51))
             if 'plan' in q:
                 p=copy.deepcopy(q['plan'])
@@ -189,7 +208,9 @@ def create_app(directory=None,clock=now):
             if format=='json':return out
             if format=='csv':
                 s=io.StringIO();w=csv.writer(s);w.writerow(['id','kind','created_at','parent','mode','technique_id'])
-                for v in rows:w.writerow([v['id'],v['kind'],v['created_at'],v.get('parent'),v.get('mode'),v.get('request',{}).get('technique_id',v.get('ledger',{}).get('plan',{}).get('technique_id'))])
+                def cell(x):
+                    return "'"+x if isinstance(x,str) and x.lstrip().startswith(('=','+','-','@')) else x
+                for v in rows:w.writerow([cell(x) for x in [v['id'],v['kind'],v['created_at'],v.get('parent'),v.get('mode'),v.get('request',{}).get('technique_id',v.get('ledger',{}).get('plan',{}).get('technique_id'))]])
                 return Response(s.getvalue(),media_type='text/csv',headers={'Content-Disposition':'attachment; filename=future-records.csv'})
             if format=='markdown':return Response('# Future Workbench export\n\nLocal descriptive records; no empirical skill certification.\n\n'+ '\n'.join('- '+v['kind']+' / '+v['id']+' / '+v['created_at'] for v in rows),media_type='text/markdown')
             raise ValueError('Unknown export format')
@@ -210,9 +231,15 @@ def create_app(directory=None,clock=now):
                     if digest(v['request'])!=v['result']['request_sha256']:raise ValueError('Session input commitment mismatch')
                     r=v['result'];h=r.get('invocation_sha256')
                     if digest({k:x for k,x in r.items() if k!='invocation_sha256'})!=h:raise ValueError('Invocation commitment mismatch')
+                    if r.get('native_output_sha256')!=(digest(r['native_output']) if r['native_output'] is not None else None):raise ValueError('Native output commitment mismatch')
+                    if v['id'] not in existing:
+                        replayed=invoke(v['request'])
+                        if any(r[k]!=replayed[k] for k in ['native_output_sha256','native_error','registry_sha256','core_sha256','lab_profile_sha256','lab_code_sha256']):raise ValueError('Imported invocation differs from native replay')
                     if v.get('locked'):
                         l=v['locked']
                         if l['input_sha256']!=digest(v['request']) or l['result_sha256']!=digest(r) or digest({k:x for k,x in l.items() if k!='sha256'})!=l['sha256']:raise ValueError('Blind lock integrity mismatch')
+                        if l.get('alternatives_sha256')!=digest(v['alternatives']):raise ValueError('Blind alternatives commitment mismatch')
+                    if v.get('mode')=='blind' and not v.get('revealed') and 'answer' in v:raise ValueError('Unrevealed session cannot contain a public answer')
             for v in p['records']:
                 if v.get('parent') and v['parent'] not in ids|existing.keys():raise ValueError('Missing parent record')
                 if v['id'] not in existing:store.put(db,v)
@@ -222,14 +249,15 @@ def create_app(directory=None,clock=now):
     def deletion(id:str):
         with store.connect() as db:
             v=store.get(db,id);cs={x['id'] for x in store.rows(db) if x.get('parent')==id};affected=[x for x in store.rows(db) if x['id']==id or x.get('parent')==id or x.get('parent') in cs]
-            return dict(records=len(affected),separately_consented_frozen_retention=v.get('retain_frozen',False),notice='Deletes local active records and secrets. Previously downloaded exports and backups must be deleted separately. Frozen retention applies only when separately consented.')
+            owner=store.get(db,v['parent'],'participant') if v['kind']=='case' else v
+            return dict(records=len(affected),separately_consented_frozen_retention=owner.get('retain_frozen',False),notice='Deletes local active records and secrets. Previously downloaded exports and backups must be deleted separately. Frozen retention applies only when separately consented.')
     @app.delete('/api/records/{id}')
     def delete(id:str,request:Request):
         def action(db):
             v=store.get(db,id)
-            if v['kind'] not in ['participant','case']:raise ValueError('Delete the owning case or participant')
+            if v['kind'] not in ['participant','case'] and not (v['kind'] in ['session','study'] and v.get('parent') is None):raise ValueError('Delete the owning case or participant; unlinked sessions/studies may be deleted directly')
             rows=store.rows(db);cs={x['id'] for x in rows if x.get('parent')==id};affected=[x for x in rows if x['id']==id or x.get('parent')==id or x.get('parent') in cs]
-            owner=v if v['kind']=='participant' else store.get(db,v['parent'],'participant');retained=0
+            owner=v if v['kind']=='participant' else store.get(db,v['parent'],'participant') if v['kind']=='case' else dict(retain_frozen=False);retained=0
             for x in affected:
                 if owner['retain_frozen'] and (x['kind']=='study' or x['kind']=='session' and x.get('locked')):
                     store.new(db,'archive',dict(consented_at=owner['consent_at'],frozen_record=x,notice='Retained by separate consent; may contain original sensitive inputs'));retained+=1
@@ -242,5 +270,7 @@ def create_app(directory=None,clock=now):
     if web.exists():
         app.mount('/assets',StaticFiles(directory=web/'assets'),name='assets')
         @app.get('/{path:path}')
-        def spa(path:str):return FileResponse(web/'index.html')
+        def spa(path:str):
+            if path.startswith('api/'):return JSONResponse({'error':'Unknown API route'},404)
+            return FileResponse(web/'index.html')
     return app

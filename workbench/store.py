@@ -18,14 +18,18 @@ class Store:
         with self.connect() as db:
             db.execute('PRAGMA journal_mode=WAL')
             db.execute('CREATE TABLE IF NOT EXISTS migrations(version INTEGER PRIMARY KEY, applied_at TEXT NOT NULL)')
+            if db.execute('SELECT COALESCE(MAX(version),0) FROM migrations').fetchone()[0]>1:raise ValueError('Workspace schema is newer than this Workbench')
             if not db.execute('SELECT 1 FROM migrations WHERE version=1').fetchone():
-                db.executescript('''
+                db.execute('BEGIN IMMEDIATE')
+                statements='''
                 CREATE TABLE records(id TEXT PRIMARY KEY, kind TEXT NOT NULL, parent TEXT, created_at TEXT NOT NULL, body TEXT NOT NULL);
                 CREATE INDEX records_kind ON records(kind);
                 CREATE INDEX records_parent ON records(parent);
                 CREATE TABLE secrets(id TEXT PRIMARY KEY REFERENCES records(id) ON DELETE CASCADE, body TEXT NOT NULL);
                 CREATE TABLE receipts(key TEXT PRIMARY KEY, request_hash TEXT NOT NULL, response TEXT NOT NULL);
-                ''')
+                '''
+                for statement in statements.split(';'):
+                    if statement.strip():db.execute(statement)
                 db.execute('INSERT INTO migrations VALUES(1,?)',(now(),))
     @contextmanager
     def connect(self):

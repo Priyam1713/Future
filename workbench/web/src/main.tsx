@@ -21,6 +21,14 @@ import { Button } from "./components/ui/button";
 import { Editor, Tree, CLIEditor, human } from "./editor";
 import "./style.css";
 type Any = any;
+function scopeText(value: Any): string {
+  if (value === null) return "";
+  if (typeof value !== "object") return String(value);
+  if (Array.isArray(value)) return value.map(scopeText).join("; ");
+  return Object.entries(value)
+    .map(([k, v]) => `${human(k)}: ${scopeText(v)}`)
+    .join(" · ");
+}
 async function api(path: string, body?: Any, method?: string, key?: string) {
   const r = await fetch("/api" + path, {
     method: method || (body ? "POST" : "GET"),
@@ -31,7 +39,11 @@ async function api(path: string, body?: Any, method?: string, key?: string) {
             "Idempotency-Key": key || crypto.randomUUID(),
           }
         : undefined,
-    body: body ? JSON.stringify(body) : undefined,
+    body: body
+      ? typeof body === "string"
+        ? body
+        : JSON.stringify(body)
+      : undefined,
   });
   const data = await r.json();
   if (!r.ok) throw Error(data.error || JSON.stringify(data));
@@ -90,6 +102,41 @@ function Notice({ children }: { children: React.ReactNode }) {
       <ShieldCheck size={17} />
       <span>{children}</span>
     </div>
+  );
+}
+function MarkdownResult({ id, value }: { id?: string; value: Any }) {
+  const [text, setText] = useState("Loading Markdown…");
+  useEffect(() => {
+    let active = true;
+    if (id)
+      fetch("/api/records/" + id + "/markdown")
+        .then((r) => r.text())
+        .then((t) => {
+          if (active) setText(t);
+        })
+        .catch((e) => {
+          if (active) setText(String(e));
+        });
+    else
+      setText(
+        "# Future validation\n\n```json\n" +
+          JSON.stringify(value, null, 2) +
+          "\n```",
+      );
+    return () => {
+      active = false;
+    };
+  }, [id, value]);
+  return (
+    <>
+      <Button
+        variant="outline"
+        onClick={() => download(text, "future-result.md", "text/markdown")}
+      >
+        Export Markdown
+      </Button>
+      <pre className="code">{text}</pre>
+    </>
   );
 }
 function App() {
@@ -268,7 +315,10 @@ function App() {
           variant="outline"
           onClick={() =>
             task(async () =>
-              download(await api("/export"), "future-workbench.json"),
+              download(
+                await (await fetch("/api/export")).text(),
+                "future-workbench.json",
+              ),
             )
           }
         >
@@ -296,7 +346,7 @@ function App() {
               const file = e.target.files?.[0];
               if (file)
                 task(async () => {
-                  const v = await api("/import", JSON.parse(await file.text()));
+                  const v = await api("/import", await file.text());
                   await refresh();
                   setComparison(v);
                 });
@@ -497,14 +547,10 @@ function App() {
                         PHASE {e.phase} / {registry.phases[e.phase - 1]}
                       </span>
                       <h2>{e.name}</h2>
-                      <p>
-                        {typeof e.supported_scope === "string"
-                          ? e.supported_scope
-                          : JSON.stringify(e.supported_scope)}
-                      </p>
+                      <p>{scopeText(e.supported_scope)}</p>
                       <div className="card-foot">
                         <span className="badge">{e.release_status}</span>
-                        <small>{e.capability_type}</small>
+                        <small>{human(e.capability_type)}</small>
                       </div>
                     </button>
                   ))}
@@ -735,7 +781,18 @@ function App() {
                         <div className="actions">
                           <Button
                             variant="ghost"
-                            onClick={() => download(result, "future-run.json")}
+                            onClick={() =>
+                              task(async () =>
+                                download(
+                                  result.id
+                                    ? await (
+                                        await fetch("/api/records/" + result.id)
+                                      ).text()
+                                    : result,
+                                  "future-run.json",
+                                ),
+                              )
+                            }
                           >
                             <Download size={14} />
                             Export run
@@ -745,13 +802,35 @@ function App() {
                             onClick={() =>
                               task(async () => {
                                 await navigator.clipboard.writeText(
-                                  JSON.stringify(result, null, 2),
+                                  result.id
+                                    ? await (
+                                        await fetch("/api/records/" + result.id)
+                                      ).text()
+                                    : JSON.stringify(result, null, 2),
                                 );
                               })
                             }
                           >
                             Copy JSON
                           </Button>
+                          {result.id && !result.parent && (
+                            <Button
+                              variant="destructive"
+                              onClick={() =>
+                                task(async () => {
+                                  setDeletion({
+                                    ...(await api(
+                                      `/records/${result.id}/deletion`,
+                                    )),
+                                    id: result.id,
+                                  });
+                                  setPage("Cases");
+                                })
+                              }
+                            >
+                              Delete unlinked run
+                            </Button>
+                          )}
                           <span className="badge">
                             {result.result?.execution_status ||
                               result.validation?.status}
@@ -784,25 +863,24 @@ function App() {
                               limits: result.result?.limits,
                             }}
                           />
+                        ) : tab === "Markdown" ? (
+                          <MarkdownResult
+                            id={result.id}
+                            value={result.validation}
+                          />
                         ) : (
                           <pre className="code">
-                            {tab === "Markdown"
-                              ? "# Future native run\n\n" +
-                                (result.result?.execution_status ||
-                                  "Validation") +
-                                "\n\n```json\n" +
-                                JSON.stringify(
-                                  result.result?.native_output ??
-                                    result.validation,
-                                  null,
-                                  2,
-                                ) +
-                                "\n```"
-                              : JSON.stringify(result, null, 2)}
+                            {JSON.stringify(result, null, 2)}
                           </pre>
                         )}
                         {result.mode === "blind" && (
                           <div className="blind-box">
+                            {result.alternatives?.length > 0 && (
+                              <Tree
+                                value={result.alternatives}
+                                label="Blinded alternatives (shuffled labels)"
+                              />
+                            )}
                             <h3>
                               {result.locked
                                 ? "Interpretation locked"
@@ -900,6 +978,14 @@ function App() {
                     <details className="scope">
                       <summary>Capability, sources & limits</summary>
                       <Tree value={detail.capability} />
+                      <Tree
+                        value={detail.source_catalogs}
+                        label="Pinned source catalogs / rights & provenance"
+                      />
+                      <Tree
+                        value={detail.profiles}
+                        label="Pinned profile definitions"
+                      />
                       <Tree
                         value={detail.release}
                         label="Frozen release / configuration matrix"
@@ -1069,7 +1155,9 @@ function App() {
                         onClick={() =>
                           task(async () =>
                             download(
-                              await api("/export?participant=" + p.id),
+                              await (
+                                await fetch("/api/export?participant=" + p.id)
+                              ).text(),
                               "participant.json",
                             ),
                           )
@@ -1131,6 +1219,41 @@ function App() {
                   </div>
                 ))}
               </div>
+              <details className="panel">
+                <summary>
+                  Unlinked local runs & forecasts (
+                  {[...sessions, ...studies].filter((v) => !v.parent).length})
+                </summary>
+                {[...sessions, ...studies]
+                  .filter((v) => !v.parent)
+                  .map((v) => (
+                    <div className="record" key={v.id}>
+                      <div>
+                        <h3>
+                          {v.kind === "study"
+                            ? v.title
+                            : `#${v.request.technique_id} ${v.request.operation}`}
+                        </h3>
+                        <small>
+                          {v.created_at} · {v.origin || v.report.mode}
+                        </small>
+                      </div>
+                      <Button
+                        variant="destructive"
+                        onClick={() =>
+                          task(async () =>
+                            setDeletion({
+                              ...(await api(`/records/${v.id}/deletion`)),
+                              id: v.id,
+                            }),
+                          )
+                        }
+                      >
+                        Delete unlinked record
+                      </Button>
+                    </div>
+                  ))}
+              </details>
               {deletion && (
                 <div
                   className="panel deletion"
@@ -1156,6 +1279,20 @@ function App() {
                         );
                         setDeletion(null);
                         setCaseId("");
+                        setResult(null);
+                        setActiveStudy("");
+                        setHidden("");
+                        setInterpretation("");
+                        setNotes("");
+                        setAlternatives("");
+                        setAssessor("");
+                        setSelected([]);
+                        setComparison(undefined);
+                        if (detail) {
+                          setReq(structuredClone(detail.sample));
+                          setRaw(JSON.stringify(detail.sample, null, 2));
+                          setOrigin("sample");
+                        }
                         await refresh();
                       })
                     }

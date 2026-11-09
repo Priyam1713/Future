@@ -20,6 +20,8 @@ SQLite schema migration 1 is explicit in `store.py`. Transactions serialize writ
 
 Participant/case deletion previews affected counts. Without separate retention consent it deletes active cases, linked sessions, studies and secrets. Separate frozen-retention consent allows already-locked sessions/studies to become detached archives; these intentionally retain original inputs and may contain sensitive details. This retention is explicit, not anonymization. Downloaded exports, backups and operating-system remnants are outside the deletion operation. A local machine/DB owner can read secrets: this is workflow blinding, not protection against the database administrator. No third-party requests, image uploads, external source fetching or arbitrary kernel-file access are provided.
 
+Unlinked exploration runs and researcher forecasts can be deleted from Cases → Unlinked local runs & forecasts, or from the current unlinked Studio result. They have no participant retention consent and are removed directly. Linked runs follow the owning case/participant deletion policy.
+
 ## Supported boundaries and backlog
 
 - Supported: all 54 sample invocation paths; native operation selection; recursive fields and raw JSON; native errors/provenance; local consent/cases; blind lock/reveal; prospective #51 form; guarded advanced Lab plans for #49/#57; immutable outcome scoring; descriptive/eligible comparison; filters; import/export; active deletion and separately consented frozen retention.
@@ -31,8 +33,11 @@ Participant/case deletion previews affected counts. Without separate retention c
 ## Verification
 
 - Backend: `python -m unittest discover -s workbench/tests -v` (separate from the frozen inherited suite).
+- Install backend test dependencies with `python -m pip install -r workbench/test-requirements.txt` when needed. The measured Workbench checks can be rerun with `python -m workbench.accept`; `--finalize` verifies unchanged measured source hashes and incorporates a completed inherited receipt without rerunning tests.
 - Frontend: `cd workbench/web`, `npm ci`, `npm run build`, `npx playwright install chromium`, `npm run test:e2e`.
 - Browser tests use a temporary database and a clearly synthetic controllable clock on port 8765. That clock route exists only in `workbench.e2e_server`, never `python -m workbench`.
 - Full inherited suite: `python -m workbench.accept_inherited`; writes a new Workbench receipt and compares byte hashes of pre-existing tracked files, excluding README/PROGRESS/.gitignore integration edits. Do not run old acceptance writers to incorporate new Workbench results into frozen Lab receipts.
+
+For portable record integrity, keep the JSON file's original numeric representations. The UI downloads/uploads original server JSON text; parsing and rewriting it in another tool can change native commitments (for example, `1.0` to `1`). Newly imported native sessions are independently replayed before admission. Imports are bounded to 8 MiB; use participant exports to keep a large workspace portable.
 
 See `inherited-acceptance.json`, `browser-acceptance.json` and the final `acceptance.json` for measured results. A passing software test is not empirical validation of the methods.
