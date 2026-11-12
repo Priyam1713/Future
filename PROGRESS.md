@@ -1477,3 +1477,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 14
 - Added symbolic color/context/certainty selection with deterministic source lookup. Seven dedicated tests pass. Remaining 37 flows pending.
+
+## 2026-11-12 — Dedicated input flow 15
+- Added source-plate eye/label and certainty selection with deterministic historical iris reference. Eight dedicated tests pass. Remaining 36 flows pending.

@@ -1,10 +1,12 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology
 
 def select(key,label,choices,default='unknown'):
     return dict(key=key,label=label,type='select',choices=choices,default=default)
 
 def contract(technique):
+    if technique==15:
+        return dict(title='Inspect a historical iris-chart label',description='Select a label from the upright source plate. Results describe the historical chart and its documented limitations.',fields=[select('entry','Eye and printed label',list(iridology.DATA['entries']),''),select('certainty','Selection certainty',['selected','uncertain','unknown'])],labels={'entry':{k:v['eye']+' eye: '+v['printed_label'] for k,v in iridology.DATA['entries'].items()}})
     if technique==14:
         return dict(title='Select your symbolic colors and context',description='Enter your own symbolic selection to retrieve the documented color meaning and context.',fields=[select('color','Color',list(aura.DATA['terms']),''),select('context','Symbolic context',list(aura.DATA['contexts']),''),select('certainty','Selection certainty',['selected','uncertain','unknown'])])
     if technique==13:
@@ -28,13 +30,18 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
         value=answers.get(field['key'],field['default'])
         if value not in field['choices']:raise ValueError('Choose '+field['label'])
         a[field['key']]=value
+    if technique==15:
+        entry=iridology.DATA['entries'][a['entry']]
+        native=dict(schema_version=1,profile=iridology.PROFILE,task='historical_reference',mode='manual',diagram='frontispiece',view='source_plate_upright',selections=[dict(eye=entry['eye'],label_id=entry['label_id'],certainty=a['certainty'])])
+        iridology.validate(native)
+        return dict(technique_id=15,operation='iridology-reference',input=native)
     if technique==14:
         native=dict(schema_version=1,profile=aura.PROFILE,task='symbolic_reference',mode='manual',components=[dict(color=a['color'],context=a['context'],certainty=a['certainty'])])
         aura.validate(native)

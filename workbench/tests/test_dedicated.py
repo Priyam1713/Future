@@ -36,3 +36,7 @@ class DedicatedTests(unittest.TestCase):
   color=next(iter(aura.DATA['terms']));context=next(iter(aura.DATA['contexts']))
   request=build(14,dict(color=color,context=context,certainty='selected'))
   result=aura.reference(request['input']);self.assertIn(color,str(result));self.assertEqual(request['input']['components'][0]['color'],color)
+ def test_iris_source_label(self):
+  from future import iridology
+  request=build(15,dict(entry='right-stomach',certainty='selected'))
+  result=iridology.reference(request['input']);self.assertIn('STOMACH',str(result));self.assertEqual(request['input']['selections'][0]['eye'],'right')
