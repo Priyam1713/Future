@@ -77,3 +77,7 @@ class DedicatedTests(unittest.TestCase):
   q=build(24,a);self.assertEqual(q['input']['events'][1]['segment']['text'],a['writing'])
   a['stop']='2026-11-12T09:00:00Z'
   with self.assertRaises(ValueError):build(24,a)
+ def test_akashic_explicit_purpose(self):
+  from future import akashic
+  concept=next(iter(akashic.CONCEPTS));q=build(26,dict(question='What does this source say?',purpose='historical_research',concept=concept))
+  akashic.validate(q['input']);self.assertEqual(q['input']['question']['purpose'],'historical_research');self.assertEqual(akashic.lookup(concept)['status'],'source_reference')
