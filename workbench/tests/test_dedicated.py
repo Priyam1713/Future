@@ -81,3 +81,7 @@ class DedicatedTests(unittest.TestCase):
   from future import akashic
   concept=next(iter(akashic.CONCEPTS));q=build(26,dict(question='What does this source say?',purpose='historical_research',concept=concept))
   akashic.validate(q['input']);self.assertEqual(q['input']['question']['purpose'],'historical_research');self.assertEqual(akashic.lookup(concept)['status'],'source_reference')
+ def test_tea_adjacency(self):
+  from future import tasseography
+  q=build(28,dict(symbol='bird',motion='flying',heading='towards_handle',adjacent='postal_mark',uncertain='no'))
+  tasseography.validate(q['input']);self.assertEqual(q['input']['observations'][0]['adjacent_to'],['adjacent']);self.assertEqual(q['input']['observations'][1]['symbol_id'],'postal_mark')

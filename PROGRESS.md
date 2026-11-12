@@ -1507,3 +1507,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 26
 - Added question/purpose/source-concept/background form with explicit source reference processing. Seventeen dedicated tests pass. Remaining 27 flows pending.
+
+## 2026-11-12 — Dedicated input flow 28
+- Added observed tea symbol, position/features, uncertainty and optional adjacency inputs. Native adjacency references built and validated; eighteen dedicated tests pass. Remaining 26 flows pending.

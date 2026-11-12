@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography
 import secrets
 
 def select(key,label,choices,default='unknown'):
@@ -9,6 +9,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==28:
+        return dict(title='Record the symbols in your tea cup',description='Choose an observed symbol, its position and features, and an optional adjacent symbol. The engine applies the documented conditions to your observations.',fields=[select('symbol','Observed symbol',list(tasseography.SYMBOLS),''),*[select(k,k.replace('_',' ').capitalize(),list(v)) for k,v in tasseography.ENUMS.items()],select('adjacent','Adjacent symbol',['none',*tasseography.SYMBOLS],'none'),select('uncertain','Is the symbol uncertain?',['yes','no'],'yes')])
     if technique==26:
         return dict(title='Frame your reference or reflection question',description='Choose your purpose and source concept. The engine returns attributed source material and reflection guidance.',fields=[text('question','Your question'),select('purpose','Purpose',list(akashic.PURPOSES),''),select('form','Question form',list(akashic.FORMS),'unspecified'),select('concept','Source concept',list(akashic.CONCEPTS),''),text('background','Relevant background',False)])
     if technique==24:
@@ -53,7 +55,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -61,6 +63,13 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==28:
+        rows=[dict(id='observed',symbol_id=a['symbol'],uncertainty=a['uncertain']=='yes',**{k:a[k] for k in tasseography.ENUMS})]
+        if a['adjacent']!='none':
+            rows[0]['adjacent_to']=['adjacent'];rows.append(dict(id='adjacent',symbol_id=a['adjacent']))
+        native=dict(schema_version=1,profile=tasseography.PROFILE,task='symbolic_cup_reading',mode='manual',vessel='cup',observations=rows)
+        tasseography.validate(native)
+        return dict(technique_id=28,operation='tasseography',input=native)
     if technique==26:
         native=dict(schema_version=1,profile=akashic.PROFILE,task='reference_reflection',mode='manual',question=dict(text=a['question'],purpose=a['purpose'],form=a['form']),concept_ids=[a['concept']],background=a['background'])
         akashic.validate(native)
