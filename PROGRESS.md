@@ -1495,3 +1495,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 21
 - Added surface/setup/intention and user-authored observation inputs. Native journal preserves exact narrative and uncertainty; thirteen dedicated tests pass. Remaining 31 flows pending.
+
+## 2026-11-12 — Dedicated input flow 22
+- Added mirror setup and attributed observation form. Native journal preservation test passes; fourteen dedicated tests pass. Remaining 30 flows pending.

@@ -64,3 +64,7 @@ class DedicatedTests(unittest.TestCase):
   from future import scrying
   q=build(21,dict(surface='crystal',lighting='Daylight',intention='Observe',kind='subjective_imagery',description='  A pale circle, perhaps reflection.  ',uncertain='yes'))
   self.assertEqual(q['input']['journal'][0]['description'],'  A pale circle, perhaps reflection.  ');self.assertIn('pale circle',str(scrying.read(q['input'])))
+ def test_mirror_journal(self):
+  from future import mirror
+  q=build(22,dict(surface='ordinary_mirror',view='self_reflection_visible',lighting='Daylight',intention='Record notes',kind='subjective_imagery',description='A vague outline',uncertain='yes'))
+  r=mirror.read(q['input']);self.assertEqual(r['journal'][0]['user_record']['description'],'A vague outline');self.assertFalse(r['contact_verified'])

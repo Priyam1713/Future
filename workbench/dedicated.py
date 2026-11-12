@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror
 import secrets
 
 def select(key,label,choices,default='unknown'):
@@ -9,6 +9,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==22:
+        return dict(title='Record your mirror session',description='Describe the mirror setup and your own experience. The output preserves attribution and provides procedural source context.',fields=[select('surface','Mirror surface',list(mirror.DATA['surfaces']),''),select('view','Reflection view',list(mirror.DATA['view_options']),''),text('lighting','Lighting'),text('intention','Intention'),select('kind','Experience category',list(mirror.TYPES),''),text('description','Your observation'),select('uncertain','Is the observation uncertain?',['yes','no'],'yes')])
     if technique==21:
         return dict(title='Record your crystal-gazing session',description='Enter the setup and your own observations. The report preserves your journal and provides source-attributed procedural context.',fields=[select('surface','Surface',list(scrying.DATA['surfaces']),''),text('lighting','Lighting'),text('background','Background',False),text('intention','Intention'),select('kind','Experience category',list(scrying.TYPES),''),text('description','What did you observe?'),select('uncertain','Is this observation uncertain?',['yes','no'],'yes')])
     if technique==20:
@@ -45,7 +47,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -53,6 +55,10 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==22:
+        native=dict(schema_version=1,profile=mirror.PROFILE,task='guided_mirror_journal',mode='manual',session=dict(surface=a['surface'],view=a['view'],lighting=a['lighting'],intention=a['intention']),journal=[dict(experience_type=a['kind'],description=a['description'],uncertainty=a['uncertain']=='yes')])
+        mirror.validate(native)
+        return dict(technique_id=22,operation='mirror-scrying',input=native)
     if technique==21:
         native=dict(schema_version=1,profile=scrying.PROFILE,task='guided_journal',mode='manual',session=dict(surface=a['surface'],lighting=a['lighting'],background=a['background'],intention=a['intention']),journal=[dict(experience_type=a['kind'],description=a['description'],uncertainty=a['uncertain']=='yes')])
         scrying.validate(native)
