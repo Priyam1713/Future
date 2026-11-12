@@ -85,3 +85,7 @@ class DedicatedTests(unittest.TestCase):
   from future import tasseography
   q=build(28,dict(symbol='bird',motion='flying',heading='towards_handle',adjacent='postal_mark',uncertain='no'))
   tasseography.validate(q['input']);self.assertEqual(q['input']['observations'][0]['adjacent_to'],['adjacent']);self.assertEqual(q['input']['observations'][1]['symbol_id'],'postal_mark')
+ def test_coffee_typed_attributes(self):
+  from future import coffee
+  q=build(29,dict(vessel='cup',symbol=next(iter(coffee.SYMBOLS)),dots='3',stain='no'))
+  coffee.validate(q['input']);a=q['input']['observations'][0]['attributes'];self.assertEqual(a['dots'],3);self.assertIs(a['stain'],False);self.assertNotIn('humps',a)

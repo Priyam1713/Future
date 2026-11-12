@@ -1510,3 +1510,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 28
 - Added observed tea symbol, position/features, uncertainty and optional adjacency inputs. Native adjacency references built and validated; eighteen dedicated tests pass. Remaining 26 flows pending.
+
+## 2026-11-12 — Dedicated input flow 29
+- Added coffee vessel/symbol/cup-half and typed visible attributes; unknown values omitted rather than guessed. Nineteen dedicated tests pass. Remaining 25 flows pending.
