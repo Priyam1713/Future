@@ -1516,3 +1516,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 30
 - Added phenomenon, physical-condition and hazard declarations with exact typed conversion and unknown preservation. Twenty dedicated tests pass. Remaining 24 flows pending.
+
+## 2026-11-12 — Dedicated input flow 31
+- Added water context, phenomenon, narrative and declared observation basis. Twenty-one dedicated tests pass. Remaining 23 flows pending.

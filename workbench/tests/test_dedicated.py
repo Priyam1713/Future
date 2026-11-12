@@ -93,3 +93,7 @@ class DedicatedTests(unittest.TestCase):
   from future import pyromancy
   q=build(30,{'origin':'reported_real','phenomenon':'flame','attributes.height':'high','physical.draft':'yes','safety.active_hazard':'no'})
   pyromancy.validate(q['input']);row=q['input']['observations'][0];self.assertIs(row['physical']['draft'],True);self.assertIs(row['safety']['active_hazard'],False)
+ def test_water_observation_basis(self):
+  from future import hydromancy
+  q=build(31,dict(origin='reported_real',category='physical_ripples',basis='physical',description='Three ripples',medium='water',container='dark_bowl',rainwater='yes'))
+  hydromancy.validate(q['input']);self.assertIs(q['input']['session']['rainwater'],True);self.assertEqual(q['input']['observations'][0]['basis'],'physical')
