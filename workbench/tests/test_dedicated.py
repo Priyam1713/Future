@@ -60,3 +60,7 @@ class DedicatedTests(unittest.TestCase):
   from future.pendulum import calibration,interpret_observation
   self.assertEqual(interpret_observation(q['input']['observations'][0],calibration(q['input']['calibration']))['symbolic_response'],'yes')
 
+ def test_scrying_preserves_description(self):
+  from future import scrying
+  q=build(21,dict(surface='crystal',lighting='Daylight',intention='Observe',kind='subjective_imagery',description='  A pale circle, perhaps reflection.  ',uncertain='yes'))
+  self.assertEqual(q['input']['journal'][0]['description'],'  A pale circle, perhaps reflection.  ');self.assertIn('pale circle',str(scrying.read(q['input'])))

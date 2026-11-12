@@ -1492,3 +1492,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 20
 - Added declared pendulum calibration, observed movement and quality. Duplicate calibration rejected and native mapped response checked; twelve dedicated tests pass. Remaining 32 flows pending.
+
+## 2026-11-12 — Dedicated input flow 21
+- Added surface/setup/intention and user-authored observation inputs. Native journal preserves exact narrative and uncertainty; thirteen dedicated tests pass. Remaining 31 flows pending.

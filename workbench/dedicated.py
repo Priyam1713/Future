@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying
 import secrets
 
 def select(key,label,choices,default='unknown'):
@@ -9,6 +9,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==21:
+        return dict(title='Record your crystal-gazing session',description='Enter the setup and your own observations. The report preserves your journal and provides source-attributed procedural context.',fields=[select('surface','Surface',list(scrying.DATA['surfaces']),''),text('lighting','Lighting'),text('background','Background',False),text('intention','Intention'),select('kind','Experience category',list(scrying.TYPES),''),text('description','What did you observe?'),select('uncertain','Is this observation uncertain?',['yes','no'],'yes')])
     if technique==20:
         signals=[v for v in pendulum.DATA['calibration']['mappable_signals'] if v!='irregular']
         return dict(title='Record your pendulum observation',description='Declare your yes/no calibration, then record the movement and its quality. Unclear observations remain unresolved.',fields=[text('question','Your question'),select('yes','Movement calibrated as yes',signals,''),select('no','Movement calibrated as no',signals,''),select('signal','Observed movement',list(pendulum.DATA['signals']),''),select('quality','Observation quality',list(pendulum.DATA['observations']['quality']),'')])
@@ -43,7 +45,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -51,6 +53,10 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==21:
+        native=dict(schema_version=1,profile=scrying.PROFILE,task='guided_journal',mode='manual',session=dict(surface=a['surface'],lighting=a['lighting'],background=a['background'],intention=a['intention']),journal=[dict(experience_type=a['kind'],description=a['description'],uncertainty=a['uncertain']=='yes')])
+        scrying.validate(native)
+        return dict(technique_id=21,operation='scrying',input=native)
     if technique==20:
         native=dict(schema_version=1,profile=pendulum.PROFILE,task='symbolic_response',mode='manual',question=a['question'],calibration=[dict(signal=a['yes'],response='yes'),dict(signal=a['no'],response='no')],observations=[dict(signal=a['signal'],quality=a['quality'])])
         pendulum.validate(native)
