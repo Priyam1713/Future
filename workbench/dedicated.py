@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing
 import secrets
 
 def select(key,label,choices,default='unknown'):
@@ -9,6 +9,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==24:
+        return dict(title='Record a completed writing session',description='Supply your original writing and declared session times. The report preserves the draft and calculates descriptive text metrics.',fields=[text('intention','Writing intention'),text('writing','Your original writing'),text('start','Declared start (ISO date/time with time zone)'),text('stop','Declared stop (ISO date/time with time zone)'),select('review','Did you review this draft?',['yes','no'],'')])
     if technique==23:
         return dict(title='Describe your dream',description='Enter your narrative and choose a source motif if relevant. Unknown context remains unknown in the historical reflection.',fields=[text('narrative','Dream narrative'),select('recall','Recall quality',list(dream.RECALL),'uncertain'),select('motif','Optional historical motif',['none',*dream.MOTIFS],'none'),*[select(k,k.replace('_',' ').capitalize(),['unknown','yes','no']) for k in dream.BOOL_CONTEXT]])
     if technique==22:
@@ -49,7 +51,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -57,6 +59,13 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==24:
+        events=[dict(id='begin',type='begin',timestamp=a['start']),dict(id='writing',type='append',segment=dict(id='draft',order=1,text=a['writing'],authorship='user')),dict(id='stop',type='stop',timestamp=a['stop'])]
+        if a['review']=='yes':events.append(dict(id='review',type='review'))
+        events.append(dict(id='complete',type='complete'))
+        native=dict(schema_version=1,profile=automatic_writing.PROFILE,task='guided_writing',mode='manual',session_id=secrets.token_hex(12),state='completed',intention=a['intention'],review_policy='required' if a['review']=='yes' else 'no_review',events=events)
+        automatic_writing.validate(native)
+        return dict(technique_id=24,operation='automatic-writing',input=native)
     if technique==23:
         native=dict(schema_version=1,profile=dream.PROFILE,task='historical_reflection',mode='manual',narrative=a['narrative'],recall=a['recall'],lookups=[] if a['motif']=='none' else [a['motif']],context={k:a[k]=='yes' for k in dream.BOOL_CONTEXT if a[k]!='unknown'})
         dream.validate(native)

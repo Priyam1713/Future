@@ -72,3 +72,8 @@ class DedicatedTests(unittest.TestCase):
   from future import dream
   q=build(23,dict(narrative='I saw a serpent.',motif='serpent'))
   dream.validate(q['input']);self.assertEqual(q['input']['context'],{});self.assertEqual(q['input']['lookups'],['serpent'])
+ def test_writing_time_order_and_original(self):
+  a=dict(intention='Write freely',writing='The blue door opens.',start='2026-11-12T10:00:00Z',stop='2026-11-12T10:02:00Z',review='yes')
+  q=build(24,a);self.assertEqual(q['input']['events'][1]['segment']['text'],a['writing'])
+  a['stop']='2026-11-12T09:00:00Z'
+  with self.assertRaises(ValueError):build(24,a)
