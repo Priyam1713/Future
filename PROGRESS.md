@@ -1513,3 +1513,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 29
 - Added coffee vessel/symbol/cup-half and typed visible attributes; unknown values omitted rather than guessed. Nineteen dedicated tests pass. Remaining 25 flows pending.
+
+## 2026-11-12 — Dedicated input flow 30
+- Added phenomenon, physical-condition and hazard declarations with exact typed conversion and unknown preservation. Twenty dedicated tests pass. Remaining 24 flows pending.

@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy
 import secrets
 
 def select(key,label,choices,default='unknown'):
@@ -9,6 +9,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==30:
+        return dict(title='Record a candle observation',description='Enter what was observed and any known physical explanation. Native processing preserves unknowns and evaluates the source conditions.',fields=[select('origin','Observation origin',list(pyromancy.ORIGINS),''),select('phenomenon','Phenomenon',list(pyromancy.PHENOMENA),''),*[select(group+'.'+k,(group+' '+k).replace('_',' ').capitalize(),['unknown','yes','no'] if v=='bool' else list(v)) for group,fields in [('attributes',pyromancy.ATTRIBUTES),('physical',pyromancy.PHYSICAL),('safety',{k:'bool' for k in pyromancy.SAFETY_FIELDS})] for k,v in fields.items()]])
     if technique==29:
         return dict(title='Record your coffee-ground symbols',description='Enter the vessel, observed symbol and its visible attributes. Unknown attributes remain missing evidence.',fields=[select('vessel','Vessel',['cup','saucer'],''),select('symbol','Observed symbol',list(coffee.SYMBOLS),''),select('half','Cup half',list(coffee.HALVES)),*[select(k,k.replace('_',' ').capitalize(),(['unknown','yes','no'] if v=='bool' else ['unknown']+[str(i) for i in range(9 if v=='humps' else 65)] if isinstance(v,str) else list(v))) for k,v in coffee.ATTRIBUTES.items()]])
     if technique==28:
@@ -57,7 +59,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -65,6 +67,13 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==30:
+        row=dict(id='observed',phenomenon=a['phenomenon'],origin=a['origin'])
+        for group,fields in [('attributes',pyromancy.ATTRIBUTES),('physical',pyromancy.PHYSICAL),('safety',{k:'bool' for k in pyromancy.SAFETY_FIELDS})]:
+            row[group]={k:(a[group+'.'+k]=='yes' if v=='bool' else a[group+'.'+k]) for k,v in fields.items() if a[group+'.'+k]!='unknown'}
+        native=dict(schema_version=1,profile=pyromancy.PROFILE,task='symbolic_candle_observation',mode='manual',origin=a['origin'],observations=[row])
+        pyromancy.validate(native)
+        return dict(technique_id=30,operation='pyromancy',input=native)
     if technique==29:
         attrs={k:(a[k]=='yes' if v=='bool' else int(a[k]) if v in ('dots','humps') else a[k]) for k,v in coffee.ATTRIBUTES.items() if a[k]!='unknown'}
         native=dict(schema_version=1,profile=coffee.PROFILE,task='symbolic_coffee_reading',mode='manual',vessel=a['vessel'],observations=[dict(id='observed',symbol_id=a['symbol'],half=a['half'],attributes=attrs)])

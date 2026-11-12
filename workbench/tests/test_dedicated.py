@@ -89,3 +89,7 @@ class DedicatedTests(unittest.TestCase):
   from future import coffee
   q=build(29,dict(vessel='cup',symbol=next(iter(coffee.SYMBOLS)),dots='3',stain='no'))
   coffee.validate(q['input']);a=q['input']['observations'][0]['attributes'];self.assertEqual(a['dots'],3);self.assertIs(a['stain'],False);self.assertNotIn('humps',a)
+ def test_fire_known_physical_conditions(self):
+  from future import pyromancy
+  q=build(30,{'origin':'reported_real','phenomenon':'flame','attributes.height':'high','physical.draft':'yes','safety.active_hazard':'no'})
+  pyromancy.validate(q['input']);row=q['input']['observations'][0];self.assertIs(row['physical']['draft'],True);self.assertIs(row['safety']['active_hazard'],False)
