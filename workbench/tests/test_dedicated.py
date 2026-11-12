@@ -50,3 +50,7 @@ class DedicatedTests(unittest.TestCase):
   a=dict(question='What should I consider?',**{'line'+str(i):'9' for i in range(1,7)})
   result=iching.read(build(18,a)['input'])
   self.assertEqual(result['calculation']['initial']['number'],1);self.assertEqual(result['calculation']['resulting']['number'],2)
+ def test_rune_draw_replays(self):
+  from future import runes
+  q=build(19,dict(question='What resources can I consider?',spread='three'))['input']
+  runes.validate(q);a=runes.draw(q['seed'],3);self.assertEqual(a,runes.draw(q['seed'],3));self.assertEqual(len(set(a[0])),3)

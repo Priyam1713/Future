@@ -1486,3 +1486,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 18
 - Added question and six explicit bottom-to-top line selectors. Independent all-changing hexagram1-to2 check passes; ten dedicated tests pass. Remaining 34 flows pending.
+
+## 2026-11-12 — Dedicated input flow 19
+- Added rune question/spread and recorded replayable draws. Eleven dedicated tests pass. Remaining 33 flows pending.
