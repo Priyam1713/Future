@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum
 import secrets
 
 def select(key,label,choices,default='unknown'):
@@ -9,6 +9,9 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==20:
+        signals=[v for v in pendulum.DATA['calibration']['mappable_signals'] if v!='irregular']
+        return dict(title='Record your pendulum observation',description='Declare your yes/no calibration, then record the movement and its quality. Unclear observations remain unresolved.',fields=[text('question','Your question'),select('yes','Movement calibrated as yes',signals,''),select('no','Movement calibrated as no',signals,''),select('signal','Observed movement',list(pendulum.DATA['signals']),''),select('quality','Observation quality',list(pendulum.DATA['observations']['quality']),'')])
     if technique==19:
         return dict(title='Ask your rune-casting question',description='Choose one or three runes. The draw records a fresh seed and returns source-layered symbolic references.',fields=[text('question','Your question'),select('spread','Rune spread',list(runes.SPREADS),'three')])
     if technique==18:
@@ -40,7 +43,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -48,6 +51,10 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==20:
+        native=dict(schema_version=1,profile=pendulum.PROFILE,task='symbolic_response',mode='manual',question=a['question'],calibration=[dict(signal=a['yes'],response='yes'),dict(signal=a['no'],response='no')],observations=[dict(signal=a['signal'],quality=a['quality'])])
+        pendulum.validate(native)
+        return dict(technique_id=20,operation='pendulum',input=native)
     if technique==19:
         native=dict(schema_version=1,profile=runes.PROFILE,task='symbolic_reading',mode='seeded',spread=a['spread'],question=a['question'],seed=secrets.token_hex(16),protocol=runes.PROTOCOL,orientation_policy='upright_only')
         runes.validate(native)

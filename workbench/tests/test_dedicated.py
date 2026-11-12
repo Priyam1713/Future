@@ -54,3 +54,9 @@ class DedicatedTests(unittest.TestCase):
   from future import runes
   q=build(19,dict(question='What resources can I consider?',spread='three'))['input']
   runes.validate(q);a=runes.draw(q['seed'],3);self.assertEqual(a,runes.draw(q['seed'],3));self.assertEqual(len(set(a[0])),3)
+ def test_pendulum_rejects_duplicate_calibration(self):
+  with self.assertRaises(ValueError):build(20,dict(question='Test question',yes='clockwise',no='clockwise',signal='clockwise',quality='full'))
+  q=build(20,dict(question='Test question',yes='clockwise',no='counterclockwise',signal='clockwise',quality='full'))
+  from future.pendulum import calibration,interpret_observation
+  self.assertEqual(interpret_observation(q['input']['observations'][0],calibration(q['input']['calibration']))['symbolic_response'],'yes')
+
