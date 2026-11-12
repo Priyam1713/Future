@@ -26,3 +26,8 @@ class DedicatedTests(unittest.TestCase):
   request=build(12,dict(entry=entry,side='left',view='plantar',certainty='uncertain'))
   result=podomancy.reference(request['input'])
   self.assertEqual(request['input']['selections'][0]['certainty'],'uncertain');self.assertIn('uncertain',str(result))
+ def test_handwriting_slant(self):
+  from future import graphology
+  result=graphology.reference(build(13,dict(direction='ltr',slant='inclined'))['input'])
+  row=next(r for r in result['observations'] if r['observation']['feature']=='slant')
+  self.assertEqual(row['status'],'resolved_reference');self.assertEqual(row['observation']['category'],'inclined')

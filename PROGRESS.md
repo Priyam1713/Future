@@ -1471,3 +1471,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 12
 - Added foot/sole documentary feature, orientation and certainty form. Native reference output preserves uncertainty; five dedicated-flow tests pass. Remaining 39 flows pending.
+
+## 2026-11-12 — Dedicated input flow 13
+- Added manual handwriting feature inputs with source-supported categories and unknown preservation. Native slant/reference test passes; six dedicated tests pass. Automatic image extraction and optional vector geometry remain refinement scope. Remaining 38 flows pending.

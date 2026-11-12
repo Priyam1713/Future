@@ -1,10 +1,12 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy
+from future import face_reading, phrenology, moleosophy, podomancy, graphology
 
 def select(key,label,choices,default='unknown'):
     return dict(key=key,label=label,type='select',choices=choices,default=default)
 
 def contract(technique):
+    if technique==13:
+        return dict(title='Describe your handwriting observations',description='Select visible writing features. Unknown features remain unresolved. The engine returns descriptive terminology and historical sources.',fields=[select('direction','Writing direction',['ltr','rtl','unknown']),*[select(k,k.replace('_',' ').capitalize(),[t for t,v in graphology.DATA['terms'].items() if k in v['features']]+['unknown']) for k in graphology.FEATURES]])
     if technique==12:
         return dict(title='Choose a documented foot or sole feature',description='The selected source feature, orientation and certainty produce a documentary reference with any conflicts retained.',fields=[select('entry','Source feature',list(podomancy.DATA['entries']),''),select('side','Foot side',['left','right','both','unknown']),select('view','View',['dorsal','plantar','unknown']),select('certainty','Selection certainty',['certain','uncertain','unknown'])])
     if technique==11:
@@ -24,13 +26,17 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
         value=answers.get(field['key'],field['default'])
         if value not in field['choices']:raise ValueError('Choose '+field['label'])
         a[field['key']]=value
+    if technique==13:
+        native=dict(schema_version=1,profile=graphology.PROFILE,task='historical_reference',mode='manual',script='latin',writing_direction=a['direction'],observations=[dict(feature=k,category=a[k],scope='whole_sample',certainty='unknown' if a[k]=='unknown' else 'certain') for k in graphology.FEATURES])
+        graphology.validate(native)
+        return dict(technique_id=13,operation='graphology-reference',input=native)
     if technique==12:
         native=dict(schema_version=1,profile=podomancy.PROFILE,task='historical_reference',mode='manual',orientation=dict(frame='subject',view=a['view'],mirrored=False),selections=[dict(entry_id=a['entry'],side=a['side'],certainty=a['certainty'])])
         podomancy.validate(native)
