@@ -1,10 +1,12 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura
 
 def select(key,label,choices,default='unknown'):
     return dict(key=key,label=label,type='select',choices=choices,default=default)
 
 def contract(technique):
+    if technique==14:
+        return dict(title='Select your symbolic colors and context',description='Enter your own symbolic selection to retrieve the documented color meaning and context.',fields=[select('color','Color',list(aura.DATA['terms']),''),select('context','Symbolic context',list(aura.DATA['contexts']),''),select('certainty','Selection certainty',['selected','uncertain','unknown'])])
     if technique==13:
         return dict(title='Describe your handwriting observations',description='Select visible writing features. Unknown features remain unresolved. The engine returns descriptive terminology and historical sources.',fields=[select('direction','Writing direction',['ltr','rtl','unknown']),*[select(k,k.replace('_',' ').capitalize(),[t for t,v in graphology.DATA['terms'].items() if k in v['features']]+['unknown']) for k in graphology.FEATURES]])
     if technique==12:
@@ -26,13 +28,17 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
         value=answers.get(field['key'],field['default'])
         if value not in field['choices']:raise ValueError('Choose '+field['label'])
         a[field['key']]=value
+    if technique==14:
+        native=dict(schema_version=1,profile=aura.PROFILE,task='symbolic_reference',mode='manual',components=[dict(color=a['color'],context=a['context'],certainty=a['certainty'])])
+        aura.validate(native)
+        return dict(technique_id=14,operation='aura-reference',input=native)
     if technique==13:
         native=dict(schema_version=1,profile=graphology.PROFILE,task='historical_reference',mode='manual',script='latin',writing_direction=a['direction'],observations=[dict(feature=k,category=a[k],scope='whole_sample',certainty='unknown' if a[k]=='unknown' else 'certain') for k in graphology.FEATURES])
         graphology.validate(native)

@@ -1474,3 +1474,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 13
 - Added manual handwriting feature inputs with source-supported categories and unknown preservation. Native slant/reference test passes; six dedicated tests pass. Automatic image extraction and optional vector geometry remain refinement scope. Remaining 38 flows pending.
+
+## 2026-11-12 — Dedicated input flow 14
+- Added symbolic color/context/certainty selection with deterministic source lookup. Seven dedicated tests pass. Remaining 37 flows pending.

@@ -31,3 +31,8 @@ class DedicatedTests(unittest.TestCase):
   result=graphology.reference(build(13,dict(direction='ltr',slant='inclined'))['input'])
   row=next(r for r in result['observations'] if r['observation']['feature']=='slant')
   self.assertEqual(row['status'],'resolved_reference');self.assertEqual(row['observation']['category'],'inclined')
+ def test_aura_color_selection(self):
+  from future import aura
+  color=next(iter(aura.DATA['terms']));context=next(iter(aura.DATA['contexts']))
+  request=build(14,dict(color=color,context=context,certainty='selected'))
+  result=aura.reference(request['input']);self.assertIn(color,str(result));self.assertEqual(request['input']['components'][0]['color'],color)
