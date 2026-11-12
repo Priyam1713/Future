@@ -1498,3 +1498,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 22
 - Added mirror setup and attributed observation form. Native journal preservation test passes; fourteen dedicated tests pass. Remaining 30 flows pending.
+
+## 2026-11-12 — Dedicated input flow 23
+- Added dream narrative/recall/motif and explicit contextual questions; unknown context is not invented. Fifteen dedicated tests pass. Remaining 29 flows pending.

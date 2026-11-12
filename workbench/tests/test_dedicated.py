@@ -68,3 +68,7 @@ class DedicatedTests(unittest.TestCase):
   from future import mirror
   q=build(22,dict(surface='ordinary_mirror',view='self_reflection_visible',lighting='Daylight',intention='Record notes',kind='subjective_imagery',description='A vague outline',uncertain='yes'))
   r=mirror.read(q['input']);self.assertEqual(r['journal'][0]['user_record']['description'],'A vague outline');self.assertFalse(r['contact_verified'])
+ def test_dream_unknown_context_not_invented(self):
+  from future import dream
+  q=build(23,dict(narrative='I saw a serpent.',motif='serpent'))
+  dream.validate(q['input']);self.assertEqual(q['input']['context'],{});self.assertEqual(q['input']['lookups'],['serpent'])
