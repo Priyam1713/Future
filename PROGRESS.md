@@ -1522,3 +1522,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 32
 - Added atmospheric region/phenomenon/features and typed duration form. Twenty-two dedicated tests pass. Remaining 22 flows pending.
+
+## 2026-11-12 — Dedicated input flow 33
+- Added four explicit mother patterns and origin, producing the native fifteen-figure shield. Twenty-three dedicated tests pass. Remaining 21 flows pending.

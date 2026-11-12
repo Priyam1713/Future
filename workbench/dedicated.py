@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy
 import secrets
 
 def select(key,label,choices,default='unknown'):
@@ -9,6 +9,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==33:
+        return dict(title='Enter the four mother figures',description='For each mother enter four digits, top to bottom: 1 for one point and 2 for two points. The engine calculates the full shield.',fields=[text('question','Question or context',False),select('origin','Cast origin',['reported_real','hypothetical','synthetic','unknown'],''),*[text('mother'+str(i),'Mother '+str(i)+' (four digits, 1 or 2)') for i in range(1,5)]])
     if technique==32:
         return dict(title='Record atmospheric observations',description='Select the region, phenomenon and observed features for comparison with the source lore.',fields=[select('origin','Observation origin',list(aeromancy.ORIGINS),''),select('region','Region',list(aeromancy.REGIONS)),select('phenomenon','Phenomenon',['smoke','wind','cloud','other','unknown'],''),*[select(k,k.replace('_',' ').capitalize(),['unknown','yes','no'] if v=='bool' else ['unknown']+[str(i) for i in range(366)] if v=='days' else list(v)) for k,v in aeromancy.FEATURES.items()]])
     if technique==31:
@@ -63,7 +65,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -71,6 +73,10 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==33:
+        native=dict(schema_version=1,profile=geomancy.PROFILE,task='shield',mode='manual',input_mode='patterns',mothers=[a['mother'+str(i)].strip() for i in range(1,5)],origin=a['origin'],question=a['question'])
+        geomancy.validate(native)
+        return dict(technique_id=33,operation='geomancy',input=native)
     if technique==32:
         features={k:(a[k]=='yes' if v=='bool' else int(a[k]) if v=='days' else a[k]) for k,v in aeromancy.FEATURES.items() if a[k]!='unknown'}
         native=dict(schema_version=1,profile=aeromancy.PROFILE,task='atmospheric_lore_comparison',mode='manual',origin=a['origin'],region=a['region'],observations=[dict(id='observed',phenomenon=a['phenomenon'],features=features)])

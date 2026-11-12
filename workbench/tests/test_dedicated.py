@@ -101,3 +101,7 @@ class DedicatedTests(unittest.TestCase):
   from future import aeromancy
   q=build(32,dict(origin='reported_real',phenomenon='wind',region='scotland',named_wind_direction='north',light_wind_duration_days='3'))
   aeromancy.validate(q['input']);self.assertEqual(q['input']['observations'][0]['features']['light_wind_duration_days'],3)
+ def test_geomancy_user_mothers(self):
+  from future import geomancy
+  q=build(33,dict(origin='reported_real',mother1='1111',mother2='2222',mother3='1212',mother4='2121'))
+  self.assertEqual(q['input']['mothers'],['1111','2222','1212','2121']);self.assertEqual(len(geomancy.chart(q['input']['mothers'])),15)
