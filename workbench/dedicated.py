@@ -1,10 +1,12 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy
+from future import face_reading, phrenology, moleosophy, podomancy
 
 def select(key,label,choices,default='unknown'):
     return dict(key=key,label=label,type='select',choices=choices,default=default)
 
 def contract(technique):
+    if technique==12:
+        return dict(title='Choose a documented foot or sole feature',description='The selected source feature, orientation and certainty produce a documentary reference with any conflicts retained.',fields=[select('entry','Source feature',list(podomancy.DATA['entries']),''),select('side','Foot side',['left','right','both','unknown']),select('view','View',['dorsal','plantar','unknown']),select('certainty','Selection certainty',['certain','uncertain','unknown'])])
     if technique==11:
         return dict(title='Choose a historical body-region reference',description='Select a documented region and side to retrieve the source passage and its limits.',fields=[select('region','Body region',sorted({e['region_id'] for e in moleosophy.DATA['entries'].values()}),''),select('side','Subject-relative side',['left','right','midline','unknown']),select('view','View',['frontal','posterior','unknown'])])
     if technique==10:
@@ -22,13 +24,17 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
         value=answers.get(field['key'],field['default'])
         if value not in field['choices']:raise ValueError('Choose '+field['label'])
         a[field['key']]=value
+    if technique==12:
+        native=dict(schema_version=1,profile=podomancy.PROFILE,task='historical_reference',mode='manual',orientation=dict(frame='subject',view=a['view'],mirrored=False),selections=[dict(entry_id=a['entry'],side=a['side'],certainty=a['certainty'])])
+        podomancy.validate(native)
+        return dict(technique_id=12,operation='podomancy-reference',input=native)
     if technique==11:
         native=dict(schema_version=1,profile=moleosophy.PROFILE,task='historical_reference',mode='manual',orientation=dict(frame='subject',view=a['view'],mirrored=False),selections=[dict(region_id=a['region'],side=a['side'])])
         moleosophy.validate(native)

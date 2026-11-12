@@ -20,3 +20,9 @@ class DedicatedTests(unittest.TestCase):
   request=build(11,dict(region='ear',side='right'))
   result=reference(request['input'])
   self.assertEqual(request['input']['selections'],[{'region_id':'ear','side':'right'}]);self.assertIn('ear',str(result))
+ def test_foot_selection_preserves_uncertainty(self):
+  from future import podomancy
+  entry=next(iter(podomancy.DATA['entries']))
+  request=build(12,dict(entry=entry,side='left',view='plantar',certainty='uncertain'))
+  result=podomancy.reference(request['input'])
+  self.assertEqual(request['input']['selections'][0]['certainty'],'uncertain');self.assertIn('uncertain',str(result))

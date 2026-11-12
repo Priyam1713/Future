@@ -1468,3 +1468,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 11
 - Added region/side selection and deterministic historical moleosophy reference processing. Four dedicated-flow tests pass. Remaining 40 flows pending.
+
+## 2026-11-12 — Dedicated input flow 12
+- Added foot/sole documentary feature, orientation and certainty form. Native reference output preserves uncertainty; five dedicated-flow tests pass. Remaining 39 flows pending.
