@@ -1,10 +1,16 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle
+import secrets
 
 def select(key,label,choices,default='unknown'):
     return dict(key=key,label=label,type='select',choices=choices,default=default)
 
+def text(key,label,required=True):
+    return dict(key=key,label=label,type='text',default='',required=required)
+
 def contract(technique):
+    if technique==17:
+        return dict(title='Ask your oracle-card question',description='Choose a spread. A fresh recorded random seed produces a replayable draw and the source-supported symbolic reading.',fields=[text('question','Your question'),select('spread','Spread',list(oracle.SPREADS),'three')])
     if technique==15:
         return dict(title='Inspect a historical iris-chart label',description='Select a label from the upright source plate. Results describe the historical chart and its documented limitations.',fields=[select('entry','Eye and printed label',list(iridology.DATA['entries']),''),select('certainty','Selection certainty',['selected','uncertain','unknown'])],labels={'entry':{k:v['eye']+' eye: '+v['printed_label'] for k,v in iridology.DATA['entries'].items()}})
     if technique==14:
@@ -30,13 +36,18 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
         value=answers.get(field['key'],field['default'])
-        if value not in field['choices']:raise ValueError('Choose '+field['label'])
+        if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
+        if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==17:
+        native=dict(schema_version=1,profile=oracle.PROFILE,task='symbolic_reading',mode='seeded',spread=a['spread'],question=a['question'],seed=secrets.token_hex(16),protocol=oracle.PROTOCOL,orientation_policy='upright_only')
+        oracle.validate(native)
+        return dict(technique_id=17,operation='oracle',input=native)
     if technique==15:
         entry=iridology.DATA['entries'][a['entry']]
         native=dict(schema_version=1,profile=iridology.PROFILE,task='historical_reference',mode='manual',diagram='frontispiece',view='source_plate_upright',selections=[dict(eye=entry['eye'],label_id=entry['label_id'],certainty=a['certainty'])])

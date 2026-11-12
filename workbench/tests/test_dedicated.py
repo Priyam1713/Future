@@ -40,3 +40,8 @@ class DedicatedTests(unittest.TestCase):
   from future import iridology
   request=build(15,dict(entry='right-stomach',certainty='selected'))
   result=iridology.reference(request['input']);self.assertIn('STOMACH',str(result));self.assertEqual(request['input']['selections'][0]['eye'],'right')
+ def test_oracle_question_and_draw(self):
+  from future import oracle
+  request=build(17,dict(question='How shall I organize my project?',spread='three'))
+  oracle.validate(request['input']);cards,_,_=oracle.draw(request['input']['seed'],3)
+  self.assertEqual(len(set(cards)),3);self.assertEqual(request['input']['question'],'How shall I organize my project?')

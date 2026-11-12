@@ -1480,3 +1480,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 15
 - Added source-plate eye/label and certainty selection with deterministic historical iris reference. Eight dedicated tests pass. Remaining 36 flows pending.
+
+## 2026-11-12 — Dedicated input flow 17
+- Oracle cards now accepts a question and supported spread, generates a recorded random draw, and prepares the native symbolic reading. Nine dedicated tests and frontend build pass. Remaining 35 flows pending.
