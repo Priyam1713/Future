@@ -1,6 +1,6 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy
-import secrets
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy
+import secrets, csv, io
 
 def select(key,label,choices,default='unknown'):
     return dict(key=key,label=label,type='select',choices=choices,default=default)
@@ -9,6 +9,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==34:
+        return dict(title='Enter your stone layout',description='Use one row per stone: role, x, y (integer coordinates). Supported roles: '+', '.join(lithomancy.ROLES)+'. Choose the coordinate frame and reader anchor explicitly.',fields=[text('stones','Stone rows: role, x, y'),select('frame','Coordinate frame',list(lithomancy.FRAMES),''),select('origin','Observation origin',['reported_real','hypothetical','synthetic','unknown'],''),text('anchor_x','Reader anchor x'),text('anchor_y','Reader anchor y')])
     if technique==33:
         return dict(title='Enter the four mother figures',description='For each mother enter four digits, top to bottom: 1 for one point and 2 for two points. The engine calculates the full shield.',fields=[text('question','Question or context',False),select('origin','Cast origin',['reported_real','hypothetical','synthetic','unknown'],''),*[text('mother'+str(i),'Mother '+str(i)+' (four digits, 1 or 2)') for i in range(1,5)]])
     if technique==32:
@@ -65,7 +67,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -73,6 +75,15 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==34:
+        stones=[]
+        for row in csv.reader(io.StringIO(a['stones'])):
+            if not row:continue
+            if len(row)!=3:raise ValueError('Each stone row needs role, x, y')
+            role,x,y=[v.strip() for v in row];stones.append(dict(id='stone'+str(len(stones)+1),role_id=role,position=dict(x=int(x),y=int(y))))
+        native=dict(schema_version=1,profile=lithomancy.PROFILE,task='manual_spatial_reading',mode='manual',reading_id=secrets.token_hex(12),frame=a['frame'],coverage='full_example' if len(stones)==12 else 'subset',origin=a['origin'],stones=stones,anchor=dict(kind='reader',position=dict(x=int(a['anchor_x']),y=int(a['anchor_y']))))
+        lithomancy.validate(native)
+        return dict(technique_id=34,operation='lithomancy',input=native)
     if technique==33:
         native=dict(schema_version=1,profile=geomancy.PROFILE,task='shield',mode='manual',input_mode='patterns',mothers=[a['mother'+str(i)].strip() for i in range(1,5)],origin=a['origin'],question=a['question'])
         geomancy.validate(native)

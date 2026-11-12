@@ -1525,3 +1525,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 33
 - Added four explicit mother patterns and origin, producing the native fifteen-figure shield. Twenty-three dedicated tests pass. Remaining 21 flows pending.
+
+## 2026-11-12 — Dedicated input flow 34
+- Added multi-stone role/coordinate rows and explicit anchor/frame. Independent 3-4-5 squared-distance check passes; twenty-four dedicated tests pass. Remaining 20 flows pending.

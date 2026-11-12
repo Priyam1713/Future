@@ -105,3 +105,7 @@ class DedicatedTests(unittest.TestCase):
   from future import geomancy
   q=build(33,dict(origin='reported_real',mother1='1111',mother2='2222',mother3='1212',mother4='2121'))
   self.assertEqual(q['input']['mothers'],['1111','2222','1212','2121']);self.assertEqual(len(geomancy.chart(q['input']['mothers'])),15)
+ def test_stone_exact_geometry(self):
+  from future import lithomancy
+  q=build(34,dict(stones='lodestone, 0, 0\nonyx, 3, 4',frame='integer-centers-x-right-y-up-v1',origin='reported_real',anchor_x='0',anchor_y='0'))
+  self.assertEqual(lithomancy.distance_squared(q['input']['stones'][1]['position'],q['input']['anchor']['position']),25)
