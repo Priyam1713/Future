@@ -1465,3 +1465,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 10
 - Phrenology now offers verified printed schematics and labeled source selections, processed deterministically into historical references. Selected-label test and frontend production build pass. Remaining 41 flows pending; full aggregate acceptance will be refreshed after the input rollout.
+
+## 2026-11-12 — Dedicated input flow 11
+- Added region/side selection and deterministic historical moleosophy reference processing. Four dedicated-flow tests pass. Remaining 40 flows pending.

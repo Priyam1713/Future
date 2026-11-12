@@ -15,3 +15,8 @@ class DedicatedTests(unittest.TestCase):
   request=build(10,dict(schematic='frontis-profile',label='2'))
   result=reference(request['input'])
   self.assertIn('Amativeness',str(result));self.assertEqual(request['input']['selections'],[{'label_id':'2'}])
+ def test_moleosophy_region_filter(self):
+  from future.moleosophy import reference
+  request=build(11,dict(region='ear',side='right'))
+  result=reference(request['input'])
+  self.assertEqual(request['input']['selections'],[{'region_id':'ear','side':'right'}]);self.assertIn('ear',str(result))

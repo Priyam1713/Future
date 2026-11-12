@@ -1,10 +1,12 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology
+from future import face_reading, phrenology, moleosophy
 
 def select(key,label,choices,default='unknown'):
     return dict(key=key,label=label,type='select',choices=choices,default=default)
 
 def contract(technique):
+    if technique==11:
+        return dict(title='Choose a historical body-region reference',description='Select a documented region and side to retrieve the source passage and its limits.',fields=[select('region','Body region',sorted({e['region_id'] for e in moleosophy.DATA['entries'].values()}),''),select('side','Subject-relative side',['left','right','midline','unknown']),select('view','View',['frontal','posterior','unknown'])])
     if technique==10:
         return dict(title='Inspect a historical schematic label',description='Choose a printed view and label from the source. The output explains the historical label and its documented location.',fields=[select('schematic','Printed schematic',list(phrenology.DATA['schematics']),''),select('label','Printed label',list(phrenology.DATA['entries']), '')],labels={'label':{k:k+' - '+v['original_name'] for k,v in phrenology.DATA['entries'].items()}})
     if technique!=9:return None
@@ -20,13 +22,17 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
         value=answers.get(field['key'],field['default'])
         if value not in field['choices']:raise ValueError('Choose '+field['label'])
         a[field['key']]=value
+    if technique==11:
+        native=dict(schema_version=1,profile=moleosophy.PROFILE,task='historical_reference',mode='manual',orientation=dict(frame='subject',view=a['view'],mirrored=False),selections=[dict(region_id=a['region'],side=a['side'])])
+        moleosophy.validate(native)
+        return dict(technique_id=11,operation='moleosophy-reference',input=native)
     if technique==10:
         native=dict(schema_version=1,profile=phrenology.PROFILE,task='historical_reference',schematic=a['schematic'],selections=[dict(label_id=a['label'])])
         phrenology.validate(native)
