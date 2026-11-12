@@ -1462,3 +1462,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 ## 2026-11-12 — Dedicated input flow 9
 - Added deterministic region/orientation/visible-feature input and native historical-reference processing for face reading. The shared dedicated-form API validates entered choices and invokes the native engine without AI transcription.
 - User-input normalization and invalid region/side tests pass; complete Workbench acceptance passes (31 backend tests, seven browser groups and production build). Remaining 42 dedicated flows are pending; this pass does not claim their completion.
+
+## 2026-11-12 — Dedicated input flow 10
+- Phrenology now offers verified printed schematics and labeled source selections, processed deterministically into historical references. Selected-label test and frontend production build pass. Remaining 41 flows pending; full aggregate acceptance will be refreshed after the input rollout.

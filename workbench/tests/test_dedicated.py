@@ -10,3 +10,8 @@ class DedicatedTests(unittest.TestCase):
   self.assertFalse(result['inference_enabled'])
  def test_face_invalid_side(self):
   with self.assertRaises(ValueError):build(9,dict(region='forehead',side='left'))
+ def test_phrenology_selected_label(self):
+  from future.phrenology import reference
+  request=build(10,dict(schematic='frontis-profile',label='2'))
+  result=reference(request['input'])
+  self.assertIn('Amativeness',str(result));self.assertEqual(request['input']['selections'],[{'label_id':'2'}])
