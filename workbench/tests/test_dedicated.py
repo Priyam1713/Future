@@ -45,3 +45,8 @@ class DedicatedTests(unittest.TestCase):
   request=build(17,dict(question='How shall I organize my project?',spread='three'))
   oracle.validate(request['input']);cards,_,_=oracle.draw(request['input']['seed'],3)
   self.assertEqual(len(set(cards)),3);self.assertEqual(request['input']['question'],'How shall I organize my project?')
+ def test_iching_six_user_lines(self):
+  from future import iching
+  a=dict(question='What should I consider?',**{'line'+str(i):'9' for i in range(1,7)})
+  result=iching.read(build(18,a)['input'])
+  self.assertEqual(result['calculation']['initial']['number'],1);self.assertEqual(result['calculation']['resulting']['number'],2)

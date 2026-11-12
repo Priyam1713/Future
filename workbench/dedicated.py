@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching
 import secrets
 
 def select(key,label,choices,default='unknown'):
@@ -9,6 +9,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==18:
+        return dict(title='Enter your I Ching question and lines',description='Record six line values from the bottom upward: 6 old yin, 7 young yang, 8 young yin, 9 old yang.',fields=[text('question','Your question'),*[select('line'+str(i),'Line '+str(i)+(' (bottom)' if i==1 else ' (top)' if i==6 else ''),['6','7','8','9'],'') for i in range(1,7)]])
     if technique==17:
         return dict(title='Ask your oracle-card question',description='Choose a spread. A fresh recorded random seed produces a replayable draw and the source-supported symbolic reading.',fields=[text('question','Your question'),select('spread','Spread',list(oracle.SPREADS),'three')])
     if technique==15:
@@ -36,7 +38,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -44,6 +46,10 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==18:
+        native=dict(schema_version=1,profile=iching.PROFILE,reading_policy=iching.POLICY,task='symbolic_reading',mode='manual',method='manual',line_order='bottom_to_top',lines=[int(a['line'+str(i)]) for i in range(1,7)],question=a['question'])
+        iching.validate(native)
+        return dict(technique_id=18,operation='iching',input=native)
     if technique==17:
         native=dict(schema_version=1,profile=oracle.PROFILE,task='symbolic_reading',mode='seeded',spread=a['spread'],question=a['question'],seed=secrets.token_hex(16),protocol=oracle.PROTOCOL,orientation_policy='upright_only')
         oracle.validate(native)

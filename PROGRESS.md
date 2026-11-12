@@ -1483,3 +1483,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 17
 - Oracle cards now accepts a question and supported spread, generates a recorded random draw, and prepares the native symbolic reading. Nine dedicated tests and frontend build pass. Remaining 35 flows pending.
+
+## 2026-11-12 — Dedicated input flow 18
+- Added question and six explicit bottom-to-top line selectors. Independent all-changing hexagram1-to2 check passes; ten dedicated tests pass. Remaining 34 flows pending.
