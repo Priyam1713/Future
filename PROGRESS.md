@@ -1458,3 +1458,7 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Final checks pass: 29 backend tests, seven browser groups including all 54 native sample paths, production build, dependency/pip/workbook gates. Full inherited 2,522 tests / 3,515 CLI cases / 52 verifiers pass with all 5,584 protected files unchanged.
 - Real installed-model checks pass for a public CC0 palm fixture, blank-image rejection, reviewed native execution and preservation of supplied I Ching lines. Full photo browser workflow observed. Nested-enum runtime grammar failure was resolved using JSON output with strict adapter enum validation; uncertain features remain unknown. One fixture is not extraction-accuracy evidence.
 - Setup/testing guide, frozen v1 record, current support matrix, live receipt and P1/P2 limits are in workbench/. Temporary preview stopped; no hosted deployment. Commit and push this verified pass.
+
+## 2026-11-12 — Dedicated input flow 9
+- Added deterministic region/orientation/visible-feature input and native historical-reference processing for face reading. The shared dedicated-form API validates entered choices and invokes the native engine without AI transcription.
+- User-input normalization and invalid region/side tests pass; complete Workbench acceptance passes (31 backend tests, seven browser groups and production build). Remaining 42 dedicated flows are pending; this pass does not claim their completion.

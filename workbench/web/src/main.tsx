@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {DedicatedIntake} from './dedicated-intake';
 import {PalmPhoto} from './palm-photo';
 import {Intake} from './intake';
 import {TarotIntake} from './tarot-intake';
@@ -679,7 +680,7 @@ function App() {
                           setOrigin("manual");
                         }}
                       />
-                    ) : req.technique_id===8&&!palmManual ? <PalmPhoto key={detail.capability.technique_id} onChange={change} onReceipt={setVision}/> : req.technique_id===49&&!inputReady ? <MonthlyIntake onPrepared={r=>{change(r);setInputReady(true)}}/> : req.technique_id===16&&!inputReady ? <TarotIntake sample={detail.sample} onPrepared={r=>{change(r);setInputReady(true)}}/> : !inputReady ? <><Intake key={req.technique_id} detail={detail} onPrepared={r=>{change(r);setInputReady(true)}}/>{req.technique_id===51&&<Button variant="outline" onClick={()=>navigate('Blind & forecast')}>Create a prospective event forecast</Button>}</> : req.arguments ? (
+                    ) : req.technique_id===8&&!palmManual ? <PalmPhoto key={detail.capability.technique_id} onChange={change} onReceipt={setVision}/> : req.technique_id===49&&!inputReady ? <MonthlyIntake onPrepared={r=>{change(r);setInputReady(true)}}/> : req.technique_id===16&&!inputReady ? <TarotIntake sample={detail.sample} onPrepared={r=>{change(r);setInputReady(true)}}/> : !inputReady&&detail.dedicated ? <DedicatedIntake key={req.technique_id} id={req.technique_id} spec={detail.dedicated} onPrepared={r=>{change(r);setInputReady(true)}}/> : !inputReady ? <><Intake key={req.technique_id} detail={detail} onPrepared={r=>{change(r);setInputReady(true)}}/>{req.technique_id===51&&<Button variant="outline" onClick={()=>navigate('Blind & forecast')}>Create a prospective event forecast</Button>}</> : req.arguments ? (
                       <CLIEditor
                         op={detail.capability.operations.find(
                           (o: Any) => o.command === req.operation,

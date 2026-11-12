@@ -7,6 +7,7 @@ from fastapi.staticfiles import StaticFiles
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 from future import lab
 from future.lab.common import ROOT, REGISTRY_HASH, PROFILE_HASH, digest
+from .dedicated import contract as input_contract, build as build_input
 from .store import Store, dumps, now, uid, LOCK
 from .prospective import build, at, snapshot
 
@@ -79,7 +80,13 @@ def create_app(directory=None,clock=now):
         r=lab.registry();return dict(registry_sha256=REGISTRY_HASH,profile_sha256=PROFILE_HASH,phases=PHASES,excluded_ids=r['excluded_ids'],entries=[dict(e,phase=phase(e['technique_id'])) for e in r['entries']])
     @app.get('/api/techniques/{id}')
     def capability(id:int):
-        e=lab.capability(id);return dict(capability=e,workflow=read(ROOT/'workbench/input-workflows.json')['entries'][str(id)],release=read(ROOT/e['core_record']),source_catalogs=[dict(s,records=read(ROOT/s['path'])) for s in e['sources']],profiles=[dict(p,record=read(ROOT/p['path'])) for p in e['profiles']],sample=read(ROOT/'data/future-lab-invocation-examples.json')['entries'][str(id)]['request'])
+        e=lab.capability(id);return dict(capability=e,dedicated=input_contract(id),workflow=read(ROOT/'workbench/input-workflows.json')['entries'][str(id)],release=read(ROOT/e['core_record']),source_catalogs=[dict(s,records=read(ROOT/s['path'])) for s in e['sources']],profiles=[dict(p,record=read(ROOT/p['path'])) for p in e['profiles']],sample=read(ROOT/'data/future-lab-invocation-examples.json')['entries'][str(id)]['request'])
+    @app.post('/api/intake/dedicated')
+    def dedicated(q:dict):
+        request=build_input(q['technique_id'],q['answers'])
+        result=invoke(request)
+        if result.get('native_error'):raise ValueError(str(result['native_error']))
+        return dict(request=request)
     @app.post('/api/intake/prepare')
     def prepare(q:dict):
         from .vision import prepare_input
