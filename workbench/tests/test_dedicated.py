@@ -97,3 +97,7 @@ class DedicatedTests(unittest.TestCase):
   from future import hydromancy
   q=build(31,dict(origin='reported_real',category='physical_ripples',basis='physical',description='Three ripples',medium='water',container='dark_bowl',rainwater='yes'))
   hydromancy.validate(q['input']);self.assertIs(q['input']['session']['rainwater'],True);self.assertEqual(q['input']['observations'][0]['basis'],'physical')
+ def test_air_direction_and_duration(self):
+  from future import aeromancy
+  q=build(32,dict(origin='reported_real',phenomenon='wind',region='scotland',named_wind_direction='north',light_wind_duration_days='3'))
+  aeromancy.validate(q['input']);self.assertEqual(q['input']['observations'][0]['features']['light_wind_duration_days'],3)

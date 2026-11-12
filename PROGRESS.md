@@ -1519,3 +1519,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 31
 - Added water context, phenomenon, narrative and declared observation basis. Twenty-one dedicated tests pass. Remaining 23 flows pending.
+
+## 2026-11-12 — Dedicated input flow 32
+- Added atmospheric region/phenomenon/features and typed duration form. Twenty-two dedicated tests pass. Remaining 22 flows pending.
