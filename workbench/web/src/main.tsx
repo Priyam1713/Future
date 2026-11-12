@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from "react";
+import {PalmPhoto} from './palm-photo';
+import {Intake} from './intake';
+import {TarotIntake} from './tarot-intake';
+import {MonthlyIntake} from './monthly-intake';
 import { createRoot } from "react-dom/client";
 import {
   Compass,
@@ -155,6 +159,8 @@ function App() {
     [result, setResult] = useState<Any>(),
     [tab, setTab] = useState("Structured"),
     [origin, setOrigin] = useState("sample");
+  const [vision,setVision]=useState<any>(null),[palmManual,setPalmManual]=useState(false);
+  const [inputReady,setInputReady]=useState(false);
   const [records, setRecords] = useState<Any[]>([]),
     [dashboard, setDashboard] = useState<Any>(),
     [caseId, setCaseId] = useState(""),
@@ -243,10 +249,14 @@ function App() {
     await task(async () => {
       const d = await api("/techniques/" + id);
       setDetail(d);
-      setReq(d.sample);
-      setRaw(JSON.stringify(d.sample, null, 2));
+      setVision(null);setPalmManual(false);
+      setInputReady(!!d.sample.arguments);
+      const initial=structuredClone(d.sample);
+      if(initial.arguments){const op=d.capability.operations.find((o:any)=>o.command===initial.operation);const count=op.cli_arguments.filter((f:any)=>!f.names[0].startsWith('--')).length;initial.arguments=initial.arguments.map((v:string,i:number)=>i<count?'':v)}
+      setReq(initial);
+      setRaw(JSON.stringify(initial, null, 2));
       setResult(null);
-      setOrigin("sample");
+      setOrigin("manual");
       setAdvanced(false);
       setPage("Studio");
     });
@@ -258,6 +268,8 @@ function App() {
   }
   async function execute(validate = false) {
     await task(async () => {
+      if(req.technique_id===8&&!palmManual&&!advanced&&!vision?.reviewed)throw Error('Analyze your palm photo and confirm the observations first, or explicitly load a demonstration sample.');
+      if(req.technique_id!==8&&!inputReady&&!advanced)throw Error('Prepare and review your inputs first, or explicitly load a demonstration sample.');
       const r = advanced ? JSON.parse(raw) : req;
       if (validate) {
         setResult({ validation: await api("/validate", r) });
@@ -271,6 +283,7 @@ function App() {
         hidden_answer: hidden || null,
         alternatives: alternatives.split("\n").filter(Boolean),
         notes,
+        vision: req.technique_id===8&&!palmManual&&!advanced?vision:null,
       });
       setHidden("");
       setResult(v);
@@ -593,7 +606,7 @@ function App() {
                 <div className="studio-layout">
                   <section className="panel">
                     <div className="panel-head">
-                      <h2>Configure a run</h2>
+                      <h2>{req.technique_id===8?'Your palm reading':'Your inputs'}</h2>
                       <span className="step">01 / INPUT</span>
                     </div>
                     <label className="field">
@@ -634,6 +647,8 @@ function App() {
                         variant="outline"
                         onClick={() => {
                           setReq(structuredClone(detail.sample));
+                          setPalmManual(true);setVision(null);
+                          setInputReady(true);
                           setRaw(JSON.stringify(detail.sample, null, 2));
                           setOrigin("sample");
                           setResult(null);
@@ -652,9 +667,7 @@ function App() {
                       </label>
                     </div>
                     <p className="hint">
-                      Fields start from a verified native example; they are not
-                      a complete schema. Pinned profile/hash fields stay
-                      visible. Native validation checks dependent commitments.
+                      Enter your own information below. Demonstration data is used only when you choose Load verified sample. Advanced JSON remains available for native protocols.
                     </p>
                     {advanced ? (
                       <textarea
@@ -666,7 +679,7 @@ function App() {
                           setOrigin("manual");
                         }}
                       />
-                    ) : req.arguments ? (
+                    ) : req.technique_id===8&&!palmManual ? <PalmPhoto key={detail.capability.technique_id} onChange={change} onReceipt={setVision}/> : req.technique_id===49&&!inputReady ? <MonthlyIntake onPrepared={r=>{change(r);setInputReady(true)}}/> : req.technique_id===16&&!inputReady ? <TarotIntake sample={detail.sample} onPrepared={r=>{change(r);setInputReady(true)}}/> : !inputReady ? <><Intake key={req.technique_id} detail={detail} onPrepared={r=>{change(r);setInputReady(true)}}/>{req.technique_id===51&&<Button variant="outline" onClick={()=>navigate('Blind & forecast')}>Create a prospective event forecast</Button>}</> : req.arguments ? (
                       <CLIEditor
                         op={detail.capability.operations.find(
                           (o: Any) => o.command === req.operation,
@@ -743,9 +756,10 @@ function App() {
                           setResult(null);
                           setHidden("");
                           setOrigin("sample");
+                          setInputReady(true);setPalmManual(true);setVision(null);
                         }}
                       >
-                        Reset
+                        Reset to sample
                       </Button>
                     </div>
                   </section>
@@ -857,6 +871,7 @@ function App() {
                             value={{
                               request: result.request,
                               provenance: result.result?.provenance,
+                              local_photo_analysis:result.vision,
                               request_sha256: result.result?.request_sha256,
                               output_sha256:
                                 result.result?.native_output_sha256,
@@ -1349,6 +1364,7 @@ function App() {
                               );
                               setDetail(d);
                               setReq(s.request);
+                              setInputReady(true);setPalmManual(true);setVision(null);setAdvanced(false);setOrigin(s.origin);
                               setRaw(JSON.stringify(s.request, null, 2));
                               setResult(s);
                               setPage("Studio");

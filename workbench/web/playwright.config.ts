@@ -5,6 +5,7 @@ export default defineConfig({
   workers: 1,
   retries: 0,
   use: {
+    channel: process.env.FUTURE_TEST_BROWSER || undefined,
     baseURL: "http://127.0.0.1:8765",
     viewport: { width: 1440, height: 1000 },
     launchOptions: { args: ["--disable-gpu"] },

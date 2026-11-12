@@ -1,16 +1,15 @@
 {
-  "id": "future-workbench-v1",
-  "date": "2026-11-09",
-  "status": "Workbench v1 Ready — bounded local research scope",
-  "baseline_commit": "e8d2e4d18ffb73d0ef13534ef2cfe888b18f806f",
-  "implementation_milestone": "6849da4cca1daf840d1cafa32c8d87cb9f94f52b",
+  "id": "future-workbench-v1.1",
+  "date": "2026-11-12",
+  "status": "Workbench v1.1 Ready - experimental local intake",
+  "baseline_commit": "f81eacd72e4863242a1736c45d44cccb9bcb3faa",
   "acceptance": "workbench/acceptance.json",
   "inherited_acceptance": "workbench/inherited-acceptance.json",
   "browser_acceptance": "workbench/browser-acceptance.json",
   "supported": {
     "discovery": "54 retained techniques, six original inventory phases; frozen capability/release/profile/source catalogs, rights and limitations inspectable",
     "invocation": "All 54 native sample paths verified through backend hashes and real browser form execution; registered native operations remain subject to their original support boundaries",
-    "forms": "Native legacy CLI descriptors, typed nested sample fields, repeatable lists, sample/reset/validation/run and advanced JSON; examples do not define complete schemas",
+    "forms": "Personal inputs first; native birth/name descriptors, direct tarot question/draw and monthly observation builders; source-derived intake prompts for all 54; explicit demonstration loading and advanced native requests",
     "records": "Pseudonymous consent scopes and technique allowlists, cases, linked sessions/notes, local SQLite migration/transactions/stable IDs and idempotency",
     "blind": "Server-hidden separate answers, frozen inputs/results, immutable interpretations, reveal after lock, shuffled alternative labels and descriptive assessor feedback",
     "prospective": "Server-issued future #51 binary event form, fixed-half baseline, unchanged Lab chronology/admission/replay and independent outcome evidence",
@@ -20,11 +19,13 @@
     "dashboard": "Actual local case/session/sample/submission/outcome/eligibility/missing/abstention/rejection counts and per-study native baseline/calibration reports; technique/study/participant/creation-time filters",
     "portability": "Exact-text JSON public-record export/import with commitments, independent native replay for newly imported sessions, conflict/duplicate rejection; CSV/Markdown summaries and Markdown result export",
     "deletion": "Participant/case cascading deletion, secrets removal, separately consented frozen retention, explicit preview; direct deletion of unlinked runs/forecasts",
-    "locality": "Loopback-only FastAPI/static UI, trusted-host/origin guards, no analytics, external data fetches, photo uploads, remote inference or arbitrary kernel/file overrides"
+    "locality": "Loopback Workbench and optional local model; runtime/model setup requires network downloads; no remote inference, analytics or arbitrary kernel/file overrides"
   },
   "experimental": {
     "human_studies": "User declarations and locally recorded outcomes are not independently authenticated or empirical skill certification",
-    "blinding": "Workflow concealment only; operator must prevent semantic leakage from native inputs/results; database owner can inspect secrets"
+    "blinding": "Workflow concealment only; operator must prevent semantic leakage from native inputs/results; database owner can inspect secrets",
+    "local_intake": "Qwen3-VL visible palm crease suggestions with signed human review and model/prompt/image hashes; local answer transcription with native validation; not extraction accuracy certification",
+    "coverage": "Complex ledgers, provenance commitments and simulations can still require native protocol expertise. All 54 do not have complete bespoke real-data builders."
   },
   "unsupported": [
     "Numeric historical outcome replacement/recomputed corrected scores; annotations preserve originals and suspend scoring",
@@ -41,13 +42,15 @@
     "inherited_cli_cases": 3515,
     "inherited_independent_verifiers": 52,
     "preexisting_protected_files_unchanged": 5584,
-    "workbench_backend_tests": 19,
-    "browser_groups": 5,
+    "workbench_backend_tests": 29,
+    "browser_groups": 7,
     "browser_skips_failures_flakes": 0,
     "native_hashes_and_browser_engine_paths": 54,
     "frontend_production_build": "passed",
     "one_command_build_and_localhost_startup": "observed successful; isolated preview at localhost:8766, production test-clock POST unavailable",
-    "dependency_pip_workbook_gates": "passed"
+    "dependency_pip_workbook_gates": "passed",
+    "live_local_model": "Public CC0 palm fixture, blank-image rejection, reviewed native execution, I Ching lines preserved; full live browser palm workflow observed"
   },
-  "empirical_skill_certified": false
+  "empirical_skill_certified": false,
+  "live_model_acceptance": "workbench/live-vision-acceptance.json"
 }

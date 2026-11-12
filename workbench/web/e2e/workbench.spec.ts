@@ -1,6 +1,9 @@
 import { test, expect } from "@playwright/test";
 import { mkdirSync } from "node:fs";
 const key = () => ({ "Idempotency-Key": crypto.randomUUID() });
+test('palmistry starts with photo intake and no silent sample run',async({page})=>{
+ await page.goto('/');await page.getByLabel('Search techniques').fill('Palmistry');await page.locator('.engine-card').filter({has:page.getByRole('heading',{name:'Palmistry',exact:true})}).click();await expect(page.getByRole('heading',{name:'Start with your palm photo'})).toBeVisible();await page.getByRole('button',{name:'Run technique',exact:true}).click();await expect(page.getByRole('alert')).toContainText('Analyze your palm photo');await expect(page.getByRole('button',{name:'Analyze palm photo'})).toBeDisabled();
+});
 test("all 54 engines run from their actual browser forms", async ({
   page,
   request,
@@ -23,6 +26,7 @@ test("all 54 engines run from their actual browser forms", async ({
     await expect(
       page.getByRole("heading", { name: engine.name, exact: true }),
     ).toBeVisible();
+    await page.getByRole('button',{name:'Load verified sample'}).click();
     const response = page.waitForResponse(
       (r) =>
         r.url().endsWith("/api/sessions") && r.request().method() === "POST",
@@ -63,6 +67,7 @@ test("discovery, invalid native request, operation boundary and dark tablet layo
       has: page.getByRole("heading", { name: "Numerology", exact: true }),
     })
     .click();
+  await page.getByRole('button',{name:'Load verified sample'}).click();
   await page.getByLabel("birth", { exact: true }).fill("not-a-date");
   await page
     .getByRole("button", { name: "Validate input", exact: true })
@@ -128,6 +133,7 @@ test("consented participant, case, blind freeze/lock/reveal and local deletion",
       has: page.getByRole("heading", { name: "Numerology", exact: true }),
     })
     .click();
+  await page.getByRole('button',{name:'Load verified sample'}).click();
   await page.getByText("Session context & mode", { exact: true }).click();
   await page
     .getByText("Testing mode", { exact: true })
@@ -335,4 +341,9 @@ test("portable export import, tamper rejection, idempotency and privacy boundari
       })
     ).status(),
   ).toBe(422);
+});
+
+test('personal tarot question and monthly observations run without demonstration data',async({page})=>{
+ await page.goto('/');await page.getByLabel('Search techniques').fill('Tarot');await page.locator('.engine-card').first().click();await page.getByLabel('Your question',{exact:true}).fill('How can I organize my study time?');await page.getByRole('button',{name:'Prepare my card draw'}).click();let response=page.waitForResponse(r=>r.url().endsWith('/api/sessions')&&r.request().method()==='POST');await page.getByRole('button',{name:'Run technique',exact:true}).click();let result=await(await response).json();expect(result.result.native_error).toBeNull();expect(result.origin).toBe('manual');
+ await page.locator('nav').getByRole('button',{name:'Explore',exact:true}).click();await page.getByLabel('Search techniques').fill('AI Predictive');await page.locator('.engine-card').first().click();await page.getByLabel('Monthly observations: YYYY-MM, value').fill('2026-01, 10\n2026-02, 12\n2026-03, 14');await page.getByLabel('Measurement units').fill('counts');await page.getByLabel('Where did these observations come from?').fill('My test measurements');await page.getByLabel('Forecast method').selectOption('drift');await page.getByText('These are my own observations and I have permission to use them').click();await page.getByRole('button',{name:'Prepare monthly forecast'}).click();await expect(page.getByRole('heading',{name:'Forecast your monthly measurements'})).toHaveCount(0);response=page.waitForResponse(r=>r.url().endsWith('/api/sessions')&&r.request().method()==='POST');await page.getByRole('button',{name:'Run technique',exact:true}).click();result=await(await response).json();expect(result.result.native_error).toBeNull();expect(result.result.native_output.result.cells[0].prediction.exact).toBe('16');
 });

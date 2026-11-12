@@ -1,6 +1,8 @@
 # Third-party components
 
-Frontend uses React, Vite, Tailwind CSS, Lucide, Radix Slot, class-variance-authority, clsx, tailwind-merge and the shadcn/ui Button pattern. Package versions, sources and integrity records are pinned in `web/package-lock.json`; installed packages retain their license files. No external images/fonts or new research datasets are bundled. Existing engine/source rights remain unchanged.
+Frontend uses React, Vite, Tailwind CSS, Lucide, Radix Slot, class-variance-authority, clsx, tailwind-merge and the shadcn/ui Button pattern. Package versions, sources and integrity records are pinned in `web/package-lock.json`; installed packages retain their license files. A CC0 palm image is bundled solely as a software fixture; attribution is in tests/assets/README.md. Existing engine/source rights remain unchanged.
+
+Optional local intake uses [Ollama 0.40.16](https://github.com/ollama/ollama/releases/tag/v0.40.16), MIT licensed, and [Qwen3-VL-4B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct), Apache-2.0 licensed, through its [Ollama quantization](https://ollama.com/library/qwen3-vl:4b-instruct-q4_K_M). Runtime and weights are downloaded separately, with runtime checksum and installed model digest recorded. Binaries are not distributed in this repository. Bundled runtime/model notices remain with their packages. Pillow 12.3.0 retains its HPND license notices in its installed package.
 
 The Button implementation is adapted from [shadcn/ui](https://github.com/shadcn-ui/ui), MIT, Copyright (c) 2023 shadcn.
 

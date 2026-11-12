@@ -1,5 +1,5 @@
 """Local-only HTTP boundary. All computation/evaluation delegates to Future Lab."""
-import copy, csv, io, json, os, threading, secrets
+import copy, csv, io, json, os, threading, secrets, hmac, hashlib, base64
 from pathlib import Path
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse, Response, FileResponse
@@ -25,6 +25,18 @@ def strict(text):
 def create_app(directory=None,clock=now):
     app=FastAPI(title='Future Workbench',docs_url=None,redoc_url=None,openapi_url=None)
     store=Store(directory);app.state.store=store
+    vision_key=secrets.token_bytes(32)
+    @app.get('/api/vision/status')
+    def vision_status():
+        from .setup_vision import HOME,MODEL,VERSION
+        return dict(installed=(HOME/'installation.json').exists(),model=MODEL,runtime=VERSION,local_only=True,experimental=True)
+    @app.post('/api/vision/palm')
+    def palm_photo(q:dict):
+        from .vision import analyze
+        result=analyze(q)
+        payload=dumps(dict(provenance=result['provenance'],suggested_input_sha256=digest(result['request']))).encode()
+        result['review_token']=base64.b64encode(payload).decode()+'.'+hmac.new(vision_key,payload,hashlib.sha256).hexdigest()
+        return result
     app.add_middleware(TrustedHostMiddleware,allowed_hosts=['localhost','127.0.0.1','[::1]'])
     @app.middleware('http')
     async def boundary(request,call_next):
@@ -67,7 +79,32 @@ def create_app(directory=None,clock=now):
         r=lab.registry();return dict(registry_sha256=REGISTRY_HASH,profile_sha256=PROFILE_HASH,phases=PHASES,excluded_ids=r['excluded_ids'],entries=[dict(e,phase=phase(e['technique_id'])) for e in r['entries']])
     @app.get('/api/techniques/{id}')
     def capability(id:int):
-        e=lab.capability(id);return dict(capability=e,release=read(ROOT/e['core_record']),source_catalogs=[dict(s,records=read(ROOT/s['path'])) for s in e['sources']],profiles=[dict(p,record=read(ROOT/p['path'])) for p in e['profiles']],sample=read(ROOT/'data/future-lab-invocation-examples.json')['entries'][str(id)]['request'])
+        e=lab.capability(id);return dict(capability=e,workflow=read(ROOT/'workbench/input-workflows.json')['entries'][str(id)],release=read(ROOT/e['core_record']),source_catalogs=[dict(s,records=read(ROOT/s['path'])) for s in e['sources']],profiles=[dict(p,record=read(ROOT/p['path'])) for p in e['profiles']],sample=read(ROOT/'data/future-lab-invocation-examples.json')['entries'][str(id)]['request'])
+    @app.post('/api/intake/prepare')
+    def prepare(q:dict):
+        from .vision import prepare_input
+        d=capability(q['technique_id']);r=prepare_input(d,q['answers'])
+        if not r['missing_information']:
+            r['validation']=invoke(r['request'])
+        return r
+    @app.post('/api/intake/monthly')
+    def monthly(q:dict):
+        if q.get('self_authored') is not True or not q.get('source') or not q.get('units'):raise ValueError('Source, units and permission for self-authored observations required')
+        observations=[]
+        for line in q['rows'].splitlines():
+            if not line.strip():continue
+            cells=line.split(',')
+            if len(cells)!=2:raise ValueError('Each row must contain YYYY-MM, value')
+            observations.append(dict(period=cells[0].strip(),value=cells[1].strip()))
+        if not observations:raise ValueError('Supply monthly observations')
+        if type(q.get('horizon')) is not int or not 1<=q['horizon']<=120:raise ValueError('Horizon must be 1–120 months')
+        if q.get('model') not in ['naive','drift','seasonal_naive_m12']:raise ValueError('Unsupported forecast method')
+        native=copy.deepcopy(read(ROOT/'data/future-lab-invocation-examples.json')['entries']['49']['request'])
+        dataset=dict(id='user-observations',version=1,frequency='monthly',units=q['units'],provenance=dict(source_ref='user-declared',snapshot_sha256=None,rights='self_authored',attribution=q['source'],notes='User-entered observations; no information-vintage certification'),series=[dict(id='user-series',availability=dict(status='unknown',vintage=None,notes='Availability not independently witnessed'),observations=observations)])
+        native['input'].update(dataset=dataset,dataset_sha256=digest(dataset),model=q['model'],origin=observations[-1]['period'],horizons=[q['horizon']],seasonal_period=12)
+        result=invoke(native)
+        if result['native_error']:raise ValueError(result['native_error']['message'])
+        return dict(request=native)
     def invoke(q):
         if not isinstance(q,dict):raise ValueError('Native invocation object required')
         if 'input' in q and not isinstance(q['input'],dict):raise ValueError('Native request input must be an object, never a file path')
@@ -87,6 +124,15 @@ def create_app(directory=None,clock=now):
     def run(q:dict,request:Request):
         def action(db):
             mode=q.get('mode','explore');case=q.get('case_id')
+            vision=None
+            if q.get('vision'):
+                if not isinstance(q['vision'],dict) or not isinstance(q.get('request'),dict):raise ValueError('Invalid photo review request')
+                if q['vision'].get('reviewed') is not True or q['request'].get('technique_id')!=8:raise ValueError('Review the suggested palm observations before running')
+                try:
+                    encoded,signature=q['vision']['token'].split('.');payload=base64.b64decode(encoded,validate=True)
+                    if not hmac.compare_digest(signature,hmac.new(vision_key,payload,hashlib.sha256).hexdigest()):raise ValueError('Photo review expired or altered; analyze the photo again')
+                    vision=json.loads(payload);vision.update(reviewed=True,reviewed_input_sha256=digest(q['request']))
+                except (KeyError,TypeError):raise ValueError('Invalid photo review receipt')
             if not isinstance(q.get('request'),dict):raise ValueError('Native request required')
             if q.get('origin','manual') not in ['sample','manual']:raise ValueError('Input origin must be sample or manual')
             if mode not in ['explore','blind']:raise ValueError('Unsupported session mode')
@@ -97,6 +143,7 @@ def create_app(directory=None,clock=now):
             alternatives=list(alternatives);secrets.SystemRandom().shuffle(alternatives)
             alternatives=[dict(label=chr(65+i),text=a) for i,a in enumerate(alternatives)]
             r=invoke(q['request']);v=store.new(db,'session',dict(mode=mode,request=q['request'],result=r,origin=q.get('origin','manual'),notes=q.get('notes',''),locked=None,revealed=False,feedback=[],alternatives=alternatives),case)
+            if vision:v['vision']=vision;store.put(db,v)
             if mode=='blind':db.execute('INSERT INTO secrets VALUES(?,?)',(v['id'],dumps(dict(answer=q['hidden_answer']))))
             return {'record_id':v['id']}
         return write(request,q,action)

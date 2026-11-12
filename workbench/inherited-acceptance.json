@@ -17,20 +17,9 @@
         "tests"
       ],
       "returncode": 0,
-      "seconds": 200.328,
+      "seconds": 93.375,
       "stdout": "",
-      "stderr": "..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\r\n----------------------------------------------------------------------\r\nRan 2522 tests in 197.596s\r\n\r\nOK\r\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\r\n"
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.smoke_astrocartography_core"
-      ],
-      "returncode": 0,
-      "seconds": 22.063,
-      "stdout": "12 Astrocartography CLI cases passed\r\n",
-      "stderr": ""
+      "stderr": "..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\r\n----------------------------------------------------------------------\r\nRan 2522 tests in 91.299s\r\n\r\nOK\r\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\r\n"
     },
     {
       "command": [
@@ -39,8 +28,19 @@
         "scripts.smoke_aura_core"
       ],
       "returncode": 0,
-      "seconds": 25.0,
+      "seconds": 3.328,
       "stdout": "14 Aura CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_astrocartography_core"
+      ],
+      "returncode": 0,
+      "seconds": 3.688,
+      "stdout": "12 Astrocartography CLI cases passed\r\n",
       "stderr": ""
     },
     {
@@ -50,7 +50,7 @@
         "scripts.smoke_akashic_core"
       ],
       "returncode": 0,
-      "seconds": 46.172,
+      "seconds": 7.047,
       "stdout": "28 Akashic CLI cases passed\r\n",
       "stderr": ""
     },
@@ -61,19 +61,8 @@
         "scripts.smoke_automatic_writing_core"
       ],
       "returncode": 0,
-      "seconds": 35.89,
+      "seconds": 6.422,
       "stdout": "24 Automatic Writing CLI cases passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.smoke_chinese_core"
-      ],
-      "returncode": 0,
-      "seconds": 39.0,
-      "stdout": "15 Chinese CLI cases passed\r\n",
       "stderr": ""
     },
     {
@@ -83,7 +72,7 @@
         "scripts.smoke_aeromancy_core"
       ],
       "returncode": 0,
-      "seconds": 116.985,
+      "seconds": 18.422,
       "stdout": "72 Aeromancy CLI cases passed;21 JSON/21 Markdown saved replays verified\r\n",
       "stderr": ""
     },
@@ -94,7 +83,7 @@
         "scripts.smoke_bibliomancy_core"
       ],
       "returncode": 0,
-      "seconds": 127.328,
+      "seconds": 20.562,
       "stdout": "80 Bibliomancy CLI cases passed;16 JSON/16 Markdown saved replays;10 saved rejection pairs verified\r\n",
       "stderr": ""
     },
@@ -102,11 +91,22 @@
       "command": [
         "python",
         "-m",
-        "scripts.smoke_dream_core"
+        "scripts.smoke_cleromancy_core"
       ],
       "returncode": 0,
-      "seconds": 46.562,
-      "stdout": "30 Dream CLI cases passed\r\n",
+      "seconds": 20.203,
+      "stdout": "80 Cleromancy CLI cases passed;16 valid JSON/Markdown saved replays and16 saved rejection pairs verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_chinese_core"
+      ],
+      "returncode": 0,
+      "seconds": 23.797,
+      "stdout": "15 Chinese CLI cases passed\r\n",
       "stderr": ""
     },
     {
@@ -116,8 +116,19 @@
         "scripts.smoke_coffee_core"
       ],
       "returncode": 0,
-      "seconds": 89.141,
+      "seconds": 12.672,
       "stdout": "54 Coffee CLI cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_dream_core"
+      ],
+      "returncode": 0,
+      "seconds": 6.984,
+      "stdout": "30 Dream CLI cases passed\r\n",
       "stderr": ""
     },
     {
@@ -127,7 +138,7 @@
         "scripts.smoke_face_reading_core"
       ],
       "returncode": 0,
-      "seconds": 26.391,
+      "seconds": 2.844,
       "stdout": "12 Face Reference CLI cases passed\r\n",
       "stderr": ""
     },
@@ -138,19 +149,8 @@
         "scripts.smoke_horary"
       ],
       "returncode": 0,
-      "seconds": 9.531,
+      "seconds": 2.391,
       "stdout": "5 Horary CLI cases passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.smoke_cleromancy_core"
-      ],
-      "returncode": 0,
-      "seconds": 132.704,
-      "stdout": "80 Cleromancy CLI cases passed;16 valid JSON/Markdown saved replays and16 saved rejection pairs verified\r\n",
       "stderr": ""
     },
     {
@@ -160,7 +160,7 @@
         "scripts.smoke_graphology_core"
       ],
       "returncode": 0,
-      "seconds": 26.844,
+      "seconds": 3.437,
       "stdout": "14 Graphology CLI cases passed\r\n",
       "stderr": ""
     },
@@ -171,7 +171,7 @@
         "scripts.smoke_iridology_core"
       ],
       "returncode": 0,
-      "seconds": 31.89,
+      "seconds": 3.469,
       "stdout": "14 Iridology CLI cases passed\r\n",
       "stderr": ""
     },
@@ -182,7 +182,7 @@
         "scripts.smoke_iching_core"
       ],
       "returncode": 0,
-      "seconds": 63.812,
+      "seconds": 7.766,
       "stdout": "30 I Ching CLI cases passed\r\n",
       "stderr": ""
     },
@@ -193,7 +193,7 @@
         "scripts.smoke_geomancy_core"
       ],
       "returncode": 0,
-      "seconds": 112.203,
+      "seconds": 13.344,
       "stdout": "55 Geomancy CLI cases passed; 13 JSON/13 Markdown saved replays verified\r\n",
       "stderr": ""
     },
@@ -204,19 +204,8 @@
         "scripts.smoke_moleosophy_core"
       ],
       "returncode": 0,
-      "seconds": 26.25,
+      "seconds": 3.125,
       "stdout": "12 Moleosophy CLI cases passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.smoke_mirror_core"
-      ],
-      "returncode": 0,
-      "seconds": 57.297,
-      "stdout": "28 Mirror CLI cases passed\r\n",
       "stderr": ""
     },
     {
@@ -226,8 +215,19 @@
         "scripts.smoke_hydromancy_core"
       ],
       "returncode": 0,
-      "seconds": 130.922,
+      "seconds": 15.594,
       "stdout": "63 Hydromancy CLI cases passed;18 JSON/18 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_mirror_core"
+      ],
+      "returncode": 0,
+      "seconds": 7.031,
+      "stdout": "28 Mirror CLI cases passed\r\n",
       "stderr": ""
     },
     {
@@ -237,7 +237,7 @@
         "scripts.smoke_numerology_core"
       ],
       "returncode": 0,
-      "seconds": 9.281,
+      "seconds": 1.125,
       "stdout": "4 Numerology CLI cases passed\r\n",
       "stderr": ""
     },
@@ -248,19 +248,8 @@
         "scripts.smoke_mundane_core"
       ],
       "returncode": 0,
-      "seconds": 24.532,
+      "seconds": 5.125,
       "stdout": "12 Mundane CLI cases passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.smoke_palmistry_core"
-      ],
-      "returncode": 0,
-      "seconds": 22.468,
-      "stdout": "10 Palmistry CLI cases passed\r\n",
       "stderr": ""
     },
     {
@@ -270,7 +259,7 @@
         "scripts.smoke_oracle_core"
       ],
       "returncode": 0,
-      "seconds": 36.047,
+      "seconds": 5.531,
       "stdout": "20 Oracle CLI cases passed\r\n",
       "stderr": ""
     },
@@ -281,8 +270,19 @@
         "scripts.smoke_lithomancy_core"
       ],
       "returncode": 0,
-      "seconds": 127.0,
+      "seconds": 16.594,
       "stdout": "64 Lithomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_palmistry_core"
+      ],
+      "returncode": 0,
+      "seconds": 2.734,
+      "stdout": "10 Palmistry CLI cases passed\r\n",
       "stderr": ""
     },
     {
@@ -292,7 +292,7 @@
         "scripts.smoke_phrenology_core"
       ],
       "returncode": 0,
-      "seconds": 22.063,
+      "seconds": 3.406,
       "stdout": "12 Phrenology CLI cases passed\r\n",
       "stderr": ""
     },
@@ -303,7 +303,7 @@
         "scripts.smoke_podomancy_core"
       ],
       "returncode": 0,
-      "seconds": 21.61,
+      "seconds": 3.5,
       "stdout": "12 Podomancy CLI cases passed\r\n",
       "stderr": ""
     },
@@ -314,7 +314,7 @@
         "scripts.smoke_pendulum_core"
       ],
       "returncode": 0,
-      "seconds": 46.063,
+      "seconds": 8.063,
       "stdout": "28 Pendulum CLI cases passed\r\n",
       "stderr": ""
     },
@@ -325,7 +325,7 @@
         "scripts.smoke_runes_core"
       ],
       "returncode": 0,
-      "seconds": 40.406,
+      "seconds": 6.922,
       "stdout": "24 Rune CLI cases passed\r\n",
       "stderr": ""
     },
@@ -336,7 +336,7 @@
         "scripts.smoke_osteomancy_core"
       ],
       "returncode": 0,
-      "seconds": 106.781,
+      "seconds": 17.656,
       "stdout": "64 Osteomancy CLI cases passed;16 JSON/16 Markdown saved replays verified\r\n",
       "stderr": ""
     },
@@ -347,7 +347,7 @@
         "scripts.smoke_scrying_core"
       ],
       "returncode": 0,
-      "seconds": 46.172,
+      "seconds": 7.109,
       "stdout": "28 Scrying CLI cases passed\r\n",
       "stderr": ""
     },
@@ -358,7 +358,7 @@
         "scripts.smoke_tarot_core"
       ],
       "returncode": 0,
-      "seconds": 39.875,
+      "seconds": 5.219,
       "stdout": "22 Tarot CLI cases passed\r\n",
       "stderr": ""
     },
@@ -369,7 +369,7 @@
         "scripts.smoke_vedic_core"
       ],
       "returncode": 0,
-      "seconds": 28.547,
+      "seconds": 3.422,
       "stdout": "12 Vedic CLI cases passed\r\n",
       "stderr": ""
     },
@@ -380,7 +380,7 @@
         "scripts.smoke_pyromancy_core"
       ],
       "returncode": 0,
-      "seconds": 109.75,
+      "seconds": 15.734,
       "stdout": "60 Pyromancy CLI cases passed\r\n",
       "stderr": ""
     },
@@ -391,7 +391,7 @@
         "scripts.smoke_tasseography_core"
       ],
       "returncode": 0,
-      "seconds": 71.625,
+      "seconds": 8.594,
       "stdout": "34 Tasseography CLI cases passed\r\n",
       "stderr": ""
     },
@@ -402,7 +402,7 @@
         "scripts.smoke_western_core"
       ],
       "returncode": 0,
-      "seconds": 50.594,
+      "seconds": 8.781,
       "stdout": "23 CLI smoke cases passed\r\n",
       "stderr": ""
     },
@@ -413,7 +413,7 @@
         "scripts.smoke_augury_core"
       ],
       "returncode": 0,
-      "seconds": 137.328,
+      "seconds": 21.625,
       "stdout": "80 Augury CLI cases passed;20 valid JSON/Markdown saved replays and10 saved rejection pairs verified\r\n",
       "stderr": ""
     },
@@ -424,7 +424,7 @@
         "scripts.smoke_haruspicy_core"
       ],
       "returncode": 0,
-      "seconds": 136.515,
+      "seconds": 22.735,
       "stdout": "84 Haruspicy CLI cases passed;20 valid JSON/Markdown saved replays and12 saved rejection pairs verified\r\n",
       "stderr": ""
     },
@@ -435,7 +435,7 @@
         "scripts.smoke_feng_shui_core"
       ],
       "returncode": 0,
-      "seconds": 167.907,
+      "seconds": 27.437,
       "stdout": "104 Feng Shui CLI cases passed;24 accepted JSON/Markdown replay pairs and16 rejection pairs verified\r\n",
       "stderr": ""
     },
@@ -446,7 +446,7 @@
         "scripts.smoke_remote_viewing_core"
       ],
       "returncode": 0,
-      "seconds": 200.265,
+      "seconds": 36.265,
       "stdout": "125 Remote Viewing CLI cases passed;23 accepted/21 rejected JSON/Markdown pairs;3 exact blind directory exports\r\n",
       "stderr": ""
     },
@@ -457,7 +457,7 @@
         "scripts.smoke_intuitive_prediction_core"
       ],
       "returncode": 0,
-      "seconds": 194.531,
+      "seconds": 33.89,
       "stdout": "121CLI cases;35accepted/18rejected JSON/Markdown pairs;complete linked lifecycle passed\r\n",
       "stderr": ""
     },
@@ -468,7 +468,7 @@
         "scripts.smoke_prophetic_dreams_core"
       ],
       "returncode": 0,
-      "seconds": 216.031,
+      "seconds": 39.687,
       "stdout": "136 Prophetic Dreams CLI cases passed;29accepted/15rejected JSON/Markdown replay pairs;complete lifecycle andexport\r\n",
       "stderr": ""
     },
@@ -479,7 +479,7 @@
         "scripts.smoke_deja_reve_core"
       ],
       "returncode": 0,
-      "seconds": 205.859,
+      "seconds": 38.86,
       "stdout": "146 Deja Reve CLI cases passed;34accepted/37rejected JSON/Markdown pairs replayed\r\n",
       "stderr": ""
     },
@@ -490,30 +490,8 @@
         "scripts.smoke_ai_predictive_modeling_core"
       ],
       "returncode": 0,
-      "seconds": 215.188,
+      "seconds": 47.407,
       "stdout": "162 AI Predictive Modeling CLI cases passed;30accepted/49rejected JSON/Markdown pairs;full NOAA ledger replayed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.smoke_superforecasting_core"
-      ],
-      "returncode": 0,
-      "seconds": 194.328,
-      "stdout": "162 CLI cases pass;44accepted/37rejected exact JSON/Markdown pairs\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.smoke_digital_twin_core"
-      ],
-      "returncode": 0,
-      "seconds": 93.843,
-      "stdout": "138 CLI cases pass;22accepted/47rejected exact JSON/Markdown pairs\r\n",
       "stderr": ""
     },
     {
@@ -523,8 +501,19 @@
         "scripts.smoke_quantum_probability_forecasting_core"
       ],
       "returncode": 0,
-      "seconds": 213.61,
+      "seconds": 44.36,
       "stdout": "178 CLI cases pass;exact accepted/rejected JSON and Markdown replay\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_superforecasting_core"
+      ],
+      "returncode": 0,
+      "seconds": 41.954,
+      "stdout": "162 CLI cases pass;44accepted/37rejected exact JSON/Markdown pairs\r\n",
       "stderr": ""
     },
     {
@@ -534,8 +523,19 @@
         "scripts.smoke_psychohistory_core"
       ],
       "returncode": 0,
-      "seconds": 180.594,
+      "seconds": 36.062,
       "stdout": "138 CLI cases pass;23accepted/46rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.smoke_digital_twin_core"
+      ],
+      "returncode": 0,
+      "seconds": 21.39,
+      "stdout": "138 CLI cases pass;22accepted/47rejected exact JSON/Markdown pairs\r\n",
       "stderr": ""
     },
     {
@@ -545,7 +545,7 @@
         "scripts.smoke_causal_ai_core"
       ],
       "returncode": 0,
-      "seconds": 98.765,
+      "seconds": 15.344,
       "stdout": "92 CLI cases pass;15accepted/31rejected exact JSON/Markdown pairs\r\n",
       "stderr": ""
     },
@@ -556,7 +556,7 @@
         "scripts.smoke_brain_intention_core"
       ],
       "returncode": 0,
-      "seconds": 112.688,
+      "seconds": 18.625,
       "stdout": "110 CLI cases pass;14accepted/41rejected exact JSON/Markdown pairs\r\n",
       "stderr": ""
     },
@@ -567,7 +567,7 @@
         "scripts.smoke_agent_based_core"
       ],
       "returncode": 0,
-      "seconds": 145.422,
+      "seconds": 23.094,
       "stdout": "138 CLI cases pass;23accepted/46rejected exact JSON/Markdown pairs\r\n",
       "stderr": ""
     },
@@ -578,7 +578,7 @@
         "scripts.smoke_collective_intelligence_core"
       ],
       "returncode": 0,
-      "seconds": 145.0,
+      "seconds": 20.407,
       "stdout": "128 CLI cases pass;25accepted/39rejected exact JSON/Markdown pairs\r\n",
       "stderr": ""
     },
@@ -589,7 +589,7 @@
         "scripts.verify_aeromancy"
       ],
       "returncode": 0,
-      "seconds": 1.297,
+      "seconds": 0.14,
       "stdout": "53 Aeromancy independent reference checks passed\r\n",
       "stderr": ""
     },
@@ -600,7 +600,7 @@
         "scripts.verify_agent_based"
       ],
       "returncode": 0,
-      "seconds": 2.39,
+      "seconds": 0.266,
       "stdout": "26 independent families pass;18local cases;512configurations=56birth+84survival=140alive/372dead;block,blinker,glider andgeometry\r\n",
       "stderr": ""
     },
@@ -611,7 +611,7 @@
         "scripts.verify_ai_predictive_modeling"
       ],
       "returncode": 0,
-      "seconds": 4.719,
+      "seconds": 3.031,
       "stdout": "21 forecasting families;4200 independent cells;672 sentinel predictions;source metrics and complete candidate ledger passed\r\n",
       "stderr": ""
     },
@@ -622,7 +622,7 @@
         "scripts.verify_akashic"
       ],
       "returncode": 0,
-      "seconds": 1.703,
+      "seconds": 0.125,
       "stdout": "47 Akashic independent reference checks passed\r\n",
       "stderr": ""
     },
@@ -630,11 +630,11 @@
       "command": [
         "python",
         "-m",
-        "scripts.verify_astrocartography"
+        "scripts.smoke_chaos_theory_core"
       ],
       "returncode": 0,
-      "seconds": 5.469,
-      "stdout": "{\r\n  \"oracle\": \"pyswisseph 2.10.3.2 / Swiss 2.10.03\",\r\n  \"fixture_id\": \"astrocartography-swiss-v1\",\r\n  \"profile\": \"geocentric-apparent-geometric-v1\",\r\n  \"counts\": {\r\n    \"epochs\": 4,\r\n    \"planet_positions\": 40,\r\n    \"horizon_roots\": 452,\r\n    \"circumpolar_cases\": 54,\r\n    \"map_vertices\": 9548,\r\n    \"rendered_probes\": 56568,\r\n    \"relocated_charts\": 96\r\n  },\r\n  \"maximum_measured_errors\": {\r\n    \"ra_degrees\": 0.00014452498643890976,\r\n    \"declination_degrees\": 9.182268603069588e-05,\r\n    \"gast_degrees\": 0.0010831338421724013,\r\n    \"meridian_degrees\": 0.0012276588286397327,\r\n    \"reference_horizon_root_altitude_degrees\": 0.0012004384420375512,\r\n    \"mapped_vertex_independent_altitude_degrees\": 0.001200438666719361,\r\n    \"rendered_probe_independent_altitude_degrees\": 0.008515287618003957,\r\n    \"relocated_cusp_degrees\": 0.004633729603028769,\r\n    \"relocated_angle_degrees\": 0.0046337296029719255\r\n  },\r\n  \"acceptance_bounds\": {\r\n    \"ra_degrees\": 0.001,\r\n    \"declination_degrees\": 0.001,\r\n    \"gast_degrees\": 0.012,\r\n    \"meridian_degrees\": 0.012,\r\n    \"reference_horizon_root_altitude_degrees\": 0.012,\r\n    \"mapped_vertex_independent_altitude_degrees\": 0.012,\r\n    \"rendered_probe_independent_altitude_degrees\": 0.021,\r\n    \"relocated_cusp_degrees\": 0.02,\r\n    \"relocated_angle_degrees\": 0.012\r\n  },\r\n  \"passed\": true,\r\n  \"limits\": [\r\n    \"Four modern epochs, not exhaustive date-range validation.\",\r\n    \"Swiss and Skyfield use separately modeled UT1; coordinate/time-model differences are included.\",\r\n    \"Map rendering error is separate from exact-vertex astronomical error.\",\r\n    \"Numerical agreement does not validate locational symbolism.\"\r\n  ]\r\n}\r\n",
+      "seconds": 15.89,
+      "stdout": "98 CLI cases pass;12accepted/37rejected exact JSON/Markdown pairs\r\n",
       "stderr": ""
     },
     {
@@ -644,7 +644,7 @@
         "scripts.verify_augury"
       ],
       "returncode": 0,
-      "seconds": 1.594,
+      "seconds": 0.5,
       "stdout": "14 Augury source records;864 finite observations;4320 condition checks;4 known answers;5 uncertain-field and1 structured conflict cases passed\r\n",
       "stderr": ""
     },
@@ -655,7 +655,7 @@
         "scripts.verify_aura"
       ],
       "returncode": 0,
-      "seconds": 2.468,
+      "seconds": 0.11,
       "stdout": "21 original-source documentary checks passed\r\n",
       "stderr": ""
     },
@@ -666,7 +666,7 @@
         "scripts.verify_automatic_writing"
       ],
       "returncode": 0,
-      "seconds": 1.86,
+      "seconds": 0.14,
       "stdout": "27 Automatic Writing reference checks passed\r\n",
       "stderr": ""
     },
@@ -674,11 +674,11 @@
       "command": [
         "python",
         "-m",
-        "scripts.verify_bibliomancy"
+        "scripts.verify_astrocartography"
       ],
       "returncode": 0,
-      "seconds": 1.672,
-      "stdout": "141 Bibliomancy selections;85 independently parsed verses;423 context cases;216 historical indices;100 literal dice sums passed\r\n",
+      "seconds": 3.281,
+      "stdout": "{\r\n  \"oracle\": \"pyswisseph 2.10.3.2 / Swiss 2.10.03\",\r\n  \"fixture_id\": \"astrocartography-swiss-v1\",\r\n  \"profile\": \"geocentric-apparent-geometric-v1\",\r\n  \"counts\": {\r\n    \"epochs\": 4,\r\n    \"planet_positions\": 40,\r\n    \"horizon_roots\": 452,\r\n    \"circumpolar_cases\": 54,\r\n    \"map_vertices\": 9548,\r\n    \"rendered_probes\": 56568,\r\n    \"relocated_charts\": 96\r\n  },\r\n  \"maximum_measured_errors\": {\r\n    \"ra_degrees\": 0.00014452498643890976,\r\n    \"declination_degrees\": 9.182268603069588e-05,\r\n    \"gast_degrees\": 0.0010831338421724013,\r\n    \"meridian_degrees\": 0.0012276588286397327,\r\n    \"reference_horizon_root_altitude_degrees\": 0.0012004384420375512,\r\n    \"mapped_vertex_independent_altitude_degrees\": 0.001200438666719361,\r\n    \"rendered_probe_independent_altitude_degrees\": 0.008515287618003957,\r\n    \"relocated_cusp_degrees\": 0.004633729603028769,\r\n    \"relocated_angle_degrees\": 0.0046337296029719255\r\n  },\r\n  \"acceptance_bounds\": {\r\n    \"ra_degrees\": 0.001,\r\n    \"declination_degrees\": 0.001,\r\n    \"gast_degrees\": 0.012,\r\n    \"meridian_degrees\": 0.012,\r\n    \"reference_horizon_root_altitude_degrees\": 0.012,\r\n    \"mapped_vertex_independent_altitude_degrees\": 0.012,\r\n    \"rendered_probe_independent_altitude_degrees\": 0.021,\r\n    \"relocated_cusp_degrees\": 0.02,\r\n    \"relocated_angle_degrees\": 0.012\r\n  },\r\n  \"passed\": true,\r\n  \"limits\": [\r\n    \"Four modern epochs, not exhaustive date-range validation.\",\r\n    \"Swiss and Skyfield use separately modeled UT1; coordinate/time-model differences are included.\",\r\n    \"Map rendering error is separate from exact-vertex astronomical error.\",\r\n    \"Numerical agreement does not validate locational symbolism.\"\r\n  ]\r\n}\r\n",
       "stderr": ""
     },
     {
@@ -688,7 +688,7 @@
         "scripts.verify_brain_intention"
       ],
       "returncode": 0,
-      "seconds": 1.5,
+      "seconds": 0.157,
       "stdout": "28 independent fixture families pass;14 accepted/37 rejected\r\n",
       "stderr": ""
     },
@@ -699,7 +699,7 @@
         "scripts.verify_causal_ai"
       ],
       "returncode": 0,
-      "seconds": 1.422,
+      "seconds": 0.156,
       "stdout": "22 independent fixture families pass;256 frozen and3072 expanded graph cases;80 structural oracle cases\r\n",
       "stderr": ""
     },
@@ -710,7 +710,7 @@
         "scripts.verify_chaos_theory"
       ],
       "returncode": 0,
-      "seconds": 2.156,
+      "seconds": 0.437,
       "stdout": "23 independent families pass;4 exact stage vectors;Taylor/local convergence andEuler negative control pass\r\n",
       "stderr": ""
     },
@@ -718,11 +718,11 @@
       "command": [
         "python",
         "-m",
-        "scripts.verify_cleromancy"
+        "scripts.verify_bibliomancy"
       ],
       "returncode": 0,
-      "seconds": 1.969,
-      "stdout": "24 Cleromancy source accounts;98 alias keys;9016 numerical research tuples;source discrepancies and exact replay passed\r\n",
+      "seconds": 1.688,
+      "stdout": "141 Bibliomancy selections;85 independently parsed verses;423 context cases;216 historical indices;100 literal dice sums passed\r\n",
       "stderr": ""
     },
     {
@@ -732,8 +732,19 @@
         "scripts.verify_coffee"
       ],
       "returncode": 0,
-      "seconds": 2.046,
+      "seconds": 0.14,
       "stdout": "65 Coffee independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_cleromancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.407,
+      "stdout": "24 Cleromancy source accounts;98 alias keys;9016 numerical research tuples;source discrepancies and exact replay passed\r\n",
       "stderr": ""
     },
     {
@@ -743,7 +754,7 @@
         "scripts.verify_collective_intelligence"
       ],
       "returncode": 0,
-      "seconds": 1.907,
+      "seconds": 0.188,
       "stdout": "31 independent fixture families pass;25 accepted/35 rejected;51 scoring conventions match\r\n",
       "stderr": ""
     },
@@ -754,19 +765,8 @@
         "scripts.verify_deja_reve"
       ],
       "returncode": 0,
-      "seconds": 1.703,
+      "seconds": 0.125,
       "stdout": "{\r\n  \"passed\": true,\r\n  \"fixture_sha256\": \"742061f3a6f89f8ef0720214e5d1feee870818aaac36494b4a8ec744c15e9c8d\",\r\n  \"profile_sha256\": \"fdfe3074e23b10deb96928d85b3440d2a3122acdcffc5270af3596a854c3698a\",\r\n  \"fixture_commit\": \"2ee614e\",\r\n  \"families\": [\r\n    {\r\n      \"id\": \"source-category-episodic\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-category-familiarity\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-category-dreamy\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"source-unclassifiable\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"mixed-uncertain\",\r\n      \"passed\": true,\r\n      \"checks\": 648\r\n    },\r\n    {\r\n      \"id\": \"original-prior-record\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"no-prior-record\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"conflicting-chronology\",\r\n      \"passed\": true,\r\n      \"checks\": 13\r\n    },\r\n    {\r\n      \"id\": \"original-versus-amendment\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"generic-familiarity-negative-control\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"specific-versus-vague\",\r\n      \"passed\": true,\r\n      \"checks\": 2\r\n    },\r\n    {\r\n      \"id\": \"manual-nonmatch\",\r\n      \"passed\": true,\r\n      \"checks\": 1\r\n    },\r\n    {\r\n      \"id\": \"multiple-candidates\",\r\n      \"passed\": true,\r\n      \"checks\": 10\r\n    },\r\n    {\r\n      \"id\": \"missing-original-time\",\r\n      \"passed\": true,\r\n      \"checks\": 3\r\n    },\r\n    {\r\n      \"id\": \"no-diagnosis-prediction\",\r\n      \"passed\": true,\r\n      \"checks\": 5\r\n    },\r\n    {\r\n      \"id\": \"source-edition-rights-replay\",\r\n      \"passed\": true,\r\n      \"checks\": 7\r\n    }\r\n  ],\r\n  \"category_cases\": 648,\r\n  \"chronology_constants\": 11,\r\n  \"source_case_checks\": 4,\r\n  \"source_counts_verified\": true,\r\n  \"empirical_or_clinical_validation\": false,\r\n  \"method\": \"Pre-engine known-answer tables and constants;independent canonical SHA256;no expected values generated by production.\"\r\n}\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_digital_twin"
-      ],
-      "returncode": 0,
-      "seconds": 1.25,
-      "stdout": "27 independent fixture families pass;22 accepted/43 rejected cases;batch,chronology,baselines,scenarios andbit bounds\r\n",
       "stderr": ""
     },
     {
@@ -776,8 +776,19 @@
         "scripts.verify_dream"
       ],
       "returncode": 0,
-      "seconds": 1.0,
+      "seconds": 0.093,
       "stdout": "26 Dream reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_digital_twin"
+      ],
+      "returncode": 0,
+      "seconds": 0.265,
+      "stdout": "27 independent fixture families pass;22 accepted/43 rejected cases;batch,chronology,baselines,scenarios andbit bounds\r\n",
       "stderr": ""
     },
     {
@@ -787,7 +798,7 @@
         "scripts.verify_face_reading"
       ],
       "returncode": 0,
-      "seconds": 1.812,
+      "seconds": 0.094,
       "stdout": "9 independently transcribed region/illustration cases passed\r\n",
       "stderr": ""
     },
@@ -798,7 +809,7 @@
         "scripts.verify_feng_shui"
       ],
       "returncode": 0,
-      "seconds": 1.078,
+      "seconds": 0.235,
       "stdout": "24 source rows;3600 ID/name/Chinese headings;3600 uncertainty ranges;144 boundary/neighbor/central checks;9 extra ranges;3 anchors passed\r\n",
       "stderr": ""
     },
@@ -809,19 +820,8 @@
         "scripts.verify_future_interfaces"
       ],
       "returncode": 0,
-      "seconds": 1.235,
+      "seconds": 0.234,
       "stdout": "7 cross-engine compatibility/boundary groups pass;no productionadapters\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_geomancy"
-      ],
-      "returncode": 0,
-      "seconds": 5.14,
-      "stdout": "65536 independent Geomancy charts, 256 addition pairs, 4096 associative triples, 16 identities and 6 fixtures passed\r\n",
       "stderr": ""
     },
     {
@@ -831,272 +831,8 @@
         "scripts.verify_graphology"
       ],
       "returncode": 0,
-      "seconds": 0.532,
+      "seconds": 0.094,
       "stdout": "30 independent source cases and 7 separate Euclidean geometry cases passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.smoke_chaos_theory_core"
-      ],
-      "returncode": 0,
-      "seconds": 114.609,
-      "stdout": "98 CLI cases pass;12accepted/37rejected exact JSON/Markdown pairs\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_haruspicy"
-      ],
-      "returncode": 0,
-      "seconds": 4.797,
-      "stdout": "9 Haruspicy source records;8100 finite observations;32400 condition checks;14 known answers passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_horary"
-      ],
-      "returncode": 0,
-      "seconds": 2.875,
-      "stdout": "{\r\n  \"technique_id\": 5,\r\n  \"oracle\": \"Swiss Ephemeris 2.10.03, Moshier apparent tropical geocentric; Regiomontanus; own UTC-to-TT/UT conversion\",\r\n  \"fixture\": \"tests/fixtures/horary_reference.json\",\r\n  \"cases\": [\r\n    {\r\n      \"utc\": \"2026-11-03T06:30:00+00:00\",\r\n      \"latitude\": 28.6139,\r\n      \"longitude\": 77.209,\r\n      \"errors\": {\r\n        \"max_planet_longitude_error_degrees\": 4.8524851365527866e-05,\r\n        \"max_cusp_error_degrees\": 0.00151950651968491,\r\n        \"max_motion_event_error_seconds\": 7.103944739152212,\r\n        \"max_rise_set_error_seconds\": 1.6312799651641399,\r\n        \"mean_node_error_degrees\": 0.0022903228900190697\r\n      },\r\n      \"motion_events\": 7,\r\n      \"classification\": \"indeterminate\"\r\n    },\r\n    {\r\n      \"utc\": \"2024-04-01T00:00:00+00:00\",\r\n      \"latitude\": -33.8688,\r\n      \"longitude\": 151.2093,\r\n      \"errors\": {\r\n        \"max_planet_longitude_error_degrees\": 0.00034949465356248766,\r\n        \"max_cusp_error_degrees\": 0.000543951043709967,\r\n        \"max_motion_event_error_seconds\": 3.8927102917223237,\r\n        \"max_rise_set_error_seconds\": 2.0552835542730463,\r\n        \"mean_node_error_degrees\": 0.0014377651262122981\r\n      },\r\n      \"motion_events\": 11,\r\n      \"classification\": \"indeterminate\"\r\n    },\r\n    {\r\n      \"utc\": \"2000-02-28T00:00:00+00:00\",\r\n      \"latitude\": 51.5074,\r\n      \"longitude\": -0.1278,\r\n      \"errors\": {\r\n        \"max_planet_longitude_error_degrees\": 0.00014927194081337802,\r\n        \"max_cusp_error_degrees\": 1.7011539284794708e-05,\r\n        \"max_motion_event_error_seconds\": 0.6937073162116576,\r\n        \"max_rise_set_error_seconds\": 1.6893096686108038,\r\n        \"mean_node_error_degrees\": 0.003843958538880088\r\n      },\r\n      \"motion_events\": 12,\r\n      \"classification\": \"indeterminate\"\r\n    }\r\n  ],\r\n  \"numerical_result\": \"pass within declared tolerances; convergence is not absolute timing uncertainty\",\r\n  \"source_examples\": \"Lilly p107 moiety,p112 reception,pp483\\u2013485 unequal hours; Cambridge pp200\\u2013201 documentary only\",\r\n  \"historical_fidelity\": \"partial: source-specific p194 testimonies calculated, full caution clearance and same-category published validation unresolved\",\r\n  \"core_v1_acceptance\": \"Core v1 Ready \\u2014 Diagnostic Scope\",\r\n  \"judgment_certification\": \"not met; Question Judgment \\u2014 Experimental; no certified positive/negative judgments\",\r\n  \"predictive_validity\": \"not established or quantified\"\r\n}\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_hydromancy"
-      ],
-      "returncode": 0,
-      "seconds": 1.265,
-      "stdout": "44 Hydromancy independent reference checks passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_iching"
-      ],
-      "returncode": 0,
-      "seconds": 0.907,
-      "stdout": "8759 I Ching verification checks passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_iridology"
-      ],
-      "returncode": 0,
-      "seconds": 1.484,
-      "stdout": "27 original-source Iridology checks passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_intuitive_prediction"
-      ],
-      "returncode": 0,
-      "seconds": 1.985,
-      "stdout": "15independent families;9cue pairs;729three-cue traces;42actual-ledger rational scores;chronology and baseline known answers passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_lithomancy"
-      ],
-      "returncode": 0,
-      "seconds": 0.828,
-      "stdout": "12 Lithomancy source roles; 1225 independent distance pairs;25 grid rankings;4 authored cases;10 transforms;9 viewpoint checks;2 unknown cases passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_mirror"
-      ],
-      "returncode": 0,
-      "seconds": 1.281,
-      "stdout": "22 Mirror reference checks passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_moleosophy"
-      ],
-      "returncode": 0,
-      "seconds": 1.078,
-      "stdout": "27 independent original-page entry/side/locator cases passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_multiverse"
-      ],
-      "returncode": 0,
-      "seconds": 3.375,
-      "stdout": "24 independent families pass;64trees/3136conditionalqueries;6equiprobableatoms;canonicalorder andnegativecontrol pass\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_oracle"
-      ],
-      "returncode": 0,
-      "seconds": 0.812,
-      "stdout": "49 Oracle verification checks passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_osteomancy"
-      ],
-      "returncode": 0,
-      "seconds": 0.828,
-      "stdout": "13 Osteomancy source records;5 named relationships;169 ordered pair checks;26 omitted-outcome checks;52 original-evidence checks passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_palmistry"
-      ],
-      "returncode": 0,
-      "seconds": 0.75,
-      "stdout": "6 independently transcribed illustrated source cases passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_pendulum"
-      ],
-      "returncode": 0,
-      "seconds": 0.641,
-      "stdout": "207 Pendulum reference checks passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_phrenology"
-      ],
-      "returncode": 0,
-      "seconds": 1.765,
-      "stdout": "48 independent original legend/panel/absence cases passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_podomancy"
-      ],
-      "returncode": 0,
-      "seconds": 1.5,
-      "stdout": "6 independent primary-text reference cases passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_prediction_markets"
-      ],
-      "returncode": 0,
-      "seconds": 0.735,
-      "stdout": "31 independent fixture families pass;145 numerical vectors;200-term rational ln2 reference;33 accepted/30 rejected\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_mundane"
-      ],
-      "returncode": 0,
-      "seconds": 13.422,
-      "stdout": "Verified 24 Swiss ingress/site charts, 4 published USNO instants, 10 cycle/motion events\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_prophetic_dreams"
-      ],
-      "returncode": 0,
-      "seconds": 4.797,
-      "stdout": "600 independent interval/chronology checks;2timezone cases;8hand-enumerated pairs;18procedural families passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_psychohistory"
-      ],
-      "returncode": 0,
-      "seconds": 1.781,
-      "stdout": "23 independent fixture families pass;21 accepted/41 rejected cases;exact algebra,PRNG,pairing and conservation\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_pyromancy"
-      ],
-      "returncode": 0,
-      "seconds": 1.625,
-      "stdout": "59 Pyromancy independent source/condition checks passed\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_quantum_probability_forecasting"
-      ],
-      "returncode": 0,
-      "seconds": 1.61,
-      "stdout": "20 independent fixture families pass;79 circuits;300 PRNG words;max amplitude error 1.7763568394002505e-15\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_runes"
-      ],
-      "returncode": 0,
-      "seconds": 1.297,
-      "stdout": "84 rune reference checks passed\r\n",
       "stderr": ""
     },
     {
@@ -1106,7 +842,7 @@
         "scripts.smoke_multiverse_core"
       ],
       "returncode": 0,
-      "seconds": 112.25,
+      "seconds": 16.234,
       "stdout": "108 CLI cases pass;9accepted/45rejected exact JSON/Markdown pairs\r\n",
       "stderr": ""
     },
@@ -1117,8 +853,250 @@
         "scripts.smoke_prediction_markets_core"
       ],
       "returncode": 0,
-      "seconds": 144.782,
+      "seconds": 20.812,
       "stdout": "134 CLI cases pass;33accepted/34rejected exact JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_hydromancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.125,
+      "stdout": "44 Hydromancy independent reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_iching"
+      ],
+      "returncode": 0,
+      "seconds": 0.203,
+      "stdout": "8759 I Ching verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_intuitive_prediction"
+      ],
+      "returncode": 0,
+      "seconds": 0.5,
+      "stdout": "15independent families;9cue pairs;729three-cue traces;42actual-ledger rational scores;chronology and baseline known answers passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_iridology"
+      ],
+      "returncode": 0,
+      "seconds": 0.094,
+      "stdout": "27 original-source Iridology checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_lithomancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.11,
+      "stdout": "12 Lithomancy source roles; 1225 independent distance pairs;25 grid rankings;4 authored cases;10 transforms;9 viewpoint checks;2 unknown cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_mirror"
+      ],
+      "returncode": 0,
+      "seconds": 0.093,
+      "stdout": "22 Mirror reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_moleosophy"
+      ],
+      "returncode": 0,
+      "seconds": 0.078,
+      "stdout": "27 independent original-page entry/side/locator cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_horary"
+      ],
+      "returncode": 0,
+      "seconds": 2.297,
+      "stdout": "{\r\n  \"technique_id\": 5,\r\n  \"oracle\": \"Swiss Ephemeris 2.10.03, Moshier apparent tropical geocentric; Regiomontanus; own UTC-to-TT/UT conversion\",\r\n  \"fixture\": \"tests/fixtures/horary_reference.json\",\r\n  \"cases\": [\r\n    {\r\n      \"utc\": \"2026-11-03T06:30:00+00:00\",\r\n      \"latitude\": 28.6139,\r\n      \"longitude\": 77.209,\r\n      \"errors\": {\r\n        \"max_planet_longitude_error_degrees\": 4.8524851365527866e-05,\r\n        \"max_cusp_error_degrees\": 0.00151950651968491,\r\n        \"max_motion_event_error_seconds\": 7.103944739152212,\r\n        \"max_rise_set_error_seconds\": 1.6312799651641399,\r\n        \"mean_node_error_degrees\": 0.0022903228900190697\r\n      },\r\n      \"motion_events\": 7,\r\n      \"classification\": \"indeterminate\"\r\n    },\r\n    {\r\n      \"utc\": \"2024-04-01T00:00:00+00:00\",\r\n      \"latitude\": -33.8688,\r\n      \"longitude\": 151.2093,\r\n      \"errors\": {\r\n        \"max_planet_longitude_error_degrees\": 0.00034949465356248766,\r\n        \"max_cusp_error_degrees\": 0.000543951043709967,\r\n        \"max_motion_event_error_seconds\": 3.8927102917223237,\r\n        \"max_rise_set_error_seconds\": 2.0552835542730463,\r\n        \"mean_node_error_degrees\": 0.0014377651262122981\r\n      },\r\n      \"motion_events\": 11,\r\n      \"classification\": \"indeterminate\"\r\n    },\r\n    {\r\n      \"utc\": \"2000-02-28T00:00:00+00:00\",\r\n      \"latitude\": 51.5074,\r\n      \"longitude\": -0.1278,\r\n      \"errors\": {\r\n        \"max_planet_longitude_error_degrees\": 0.00014927194081337802,\r\n        \"max_cusp_error_degrees\": 1.7011539284794708e-05,\r\n        \"max_motion_event_error_seconds\": 0.6937073162116576,\r\n        \"max_rise_set_error_seconds\": 1.6893096686108038,\r\n        \"mean_node_error_degrees\": 0.003843958538880088\r\n      },\r\n      \"motion_events\": 12,\r\n      \"classification\": \"indeterminate\"\r\n    }\r\n  ],\r\n  \"numerical_result\": \"pass within declared tolerances; convergence is not absolute timing uncertainty\",\r\n  \"source_examples\": \"Lilly p107 moiety,p112 reception,pp483\\u2013485 unequal hours; Cambridge pp200\\u2013201 documentary only\",\r\n  \"historical_fidelity\": \"partial: source-specific p194 testimonies calculated, full caution clearance and same-category published validation unresolved\",\r\n  \"core_v1_acceptance\": \"Core v1 Ready \\u2014 Diagnostic Scope\",\r\n  \"judgment_certification\": \"not met; Question Judgment \\u2014 Experimental; no certified positive/negative judgments\",\r\n  \"predictive_validity\": \"not established or quantified\"\r\n}\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_haruspicy"
+      ],
+      "returncode": 0,
+      "seconds": 3.235,
+      "stdout": "9 Haruspicy source records;8100 finite observations;32400 condition checks;14 known answers passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_geomancy"
+      ],
+      "returncode": 0,
+      "seconds": 3.406,
+      "stdout": "65536 independent Geomancy charts, 256 addition pairs, 4096 associative triples, 16 identities and 6 fixtures passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_oracle"
+      ],
+      "returncode": 0,
+      "seconds": 0.093,
+      "stdout": "49 Oracle verification checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_palmistry"
+      ],
+      "returncode": 0,
+      "seconds": 0.078,
+      "stdout": "6 independently transcribed illustrated source cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_osteomancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.109,
+      "stdout": "13 Osteomancy source records;5 named relationships;169 ordered pair checks;26 omitted-outcome checks;52 original-evidence checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_phrenology"
+      ],
+      "returncode": 0,
+      "seconds": 0.079,
+      "stdout": "48 independent original legend/panel/absence cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pendulum"
+      ],
+      "returncode": 0,
+      "seconds": 0.094,
+      "stdout": "207 Pendulum reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_multiverse"
+      ],
+      "returncode": 0,
+      "seconds": 1.735,
+      "stdout": "24 independent families pass;64trees/3136conditionalqueries;6equiprobableatoms;canonicalorder andnegativecontrol pass\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_podomancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.093,
+      "stdout": "6 independent primary-text reference cases passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_prediction_markets"
+      ],
+      "returncode": 0,
+      "seconds": 0.172,
+      "stdout": "31 independent fixture families pass;145 numerical vectors;200-term rational ln2 reference;33 accepted/30 rejected\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_psychohistory"
+      ],
+      "returncode": 0,
+      "seconds": 0.219,
+      "stdout": "23 independent fixture families pass;21 accepted/41 rejected cases;exact algebra,PRNG,pairing and conservation\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_pyromancy"
+      ],
+      "returncode": 0,
+      "seconds": 0.125,
+      "stdout": "59 Pyromancy independent source/condition checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_quantum_probability_forecasting"
+      ],
+      "returncode": 0,
+      "seconds": 0.203,
+      "stdout": "20 independent fixture families pass;79 circuits;300 PRNG words;max amplitude error 1.7763568394002505e-15\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_runes"
+      ],
+      "returncode": 0,
+      "seconds": 0.094,
+      "stdout": "84 rune reference checks passed\r\n",
       "stderr": ""
     },
     {
@@ -1128,8 +1106,19 @@
         "scripts.verify_scrying"
       ],
       "returncode": 0,
-      "seconds": 0.937,
+      "seconds": 0.094,
       "stdout": "23 Scrying reference checks passed\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_superforecasting"
+      ],
+      "returncode": 0,
+      "seconds": 0.734,
+      "stdout": "23 independent fixture families pass;30Bayes anchors;22loss/bin/log anchors;77scenarios\r\n",
       "stderr": ""
     },
     {
@@ -1139,7 +1128,7 @@
         "scripts.verify_tarot"
       ],
       "returncode": 0,
-      "seconds": 0.64,
+      "seconds": 0.094,
       "stdout": "30 Tarot source/layout/independent protocol checks passed\r\n",
       "stderr": ""
     },
@@ -1150,7 +1139,7 @@
         "scripts.verify_tasseography"
       ],
       "returncode": 0,
-      "seconds": 0.656,
+      "seconds": 0.109,
       "stdout": "68 Tasseography independent reference checks passed\r\n",
       "stderr": ""
     },
@@ -1161,7 +1150,7 @@
         "scripts.verify_remote_viewing"
       ],
       "returncode": 0,
-      "seconds": 3.359,
+      "seconds": 2.375,
       "stdout": "72000 independent target/ranking/display checks;600-case uniform null;16 procedural fixture families passed\r\n",
       "stderr": ""
     },
@@ -1169,22 +1158,11 @@
       "command": [
         "python",
         "-m",
-        "scripts.verify_superforecasting"
+        "scripts.verify_prophetic_dreams"
       ],
       "returncode": 0,
-      "seconds": 1.469,
-      "stdout": "23 independent fixture families pass;30Bayes anchors;22loss/bin/log anchors;77scenarios\r\n",
-      "stderr": ""
-    },
-    {
-      "command": [
-        "python",
-        "-m",
-        "scripts.verify_future_lab"
-      ],
-      "returncode": 0,
-      "seconds": 20.594,
-      "stdout": "26 independent Lab families pass;54native schemas;23protocolnegativecontrols;exactscore/baseline andNOAAreference pass\r\n",
+      "seconds": 3.64,
+      "stdout": "600 independent interval/chronology checks;2timezone cases;8hand-enumerated pairs;18procedural families passed\r\n",
       "stderr": ""
     },
     {
@@ -1194,8 +1172,30 @@
         "scripts.smoke_future_lab_core"
       ],
       "returncode": 0,
-      "seconds": 25.86,
+      "seconds": 4.125,
       "stdout": "62 Lab CLI cases pass;15accepted/16rejected JSON/Markdown pairs\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_mundane"
+      ],
+      "returncode": 0,
+      "seconds": 7.422,
+      "stdout": "Verified 24 Swiss ingress/site charts, 4 published USNO instants, 10 cycle/motion events\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify_future_lab"
+      ],
+      "returncode": 0,
+      "seconds": 10.563,
+      "stdout": "26 independent Lab families pass;54native schemas;23protocolnegativecontrols;exactscore/baseline andNOAAreference pass\r\n",
       "stderr": ""
     }
   ]

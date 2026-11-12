@@ -5,7 +5,7 @@ from pathlib import Path
 def main():
     p=argparse.ArgumentParser();p.add_argument('--no-build',action='store_true');p.add_argument('--port',type=int,default=8000);args=p.parse_args()
     root=Path(__file__).resolve().parents[1];web=root/'workbench/web'
-    for mod in ['fastapi','uvicorn']:
+    for mod in ['fastapi','uvicorn','PIL']:
         if importlib.util.find_spec(mod) is None:
             subprocess.run([sys.executable,'-m','pip','install','-r',str(root/'workbench/requirements.txt')],check=True);break
     if not args.no_build:
