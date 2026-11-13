@@ -1577,3 +1577,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 56
 - Added variables/states, directed graph, complete joint probability CSV, adjustment/query and explicit synthetic causal assumptions. Exact intervention risks and invalid mass rejection verified; 40 dedicated tests pass. Four flows remain.
+
+## 2026-11-13 — Dedicated input flow 57
+- Added human forecast rows/revisions, dependency groups, frozen weights, question rules/timeline and optional resolution. Native exact pooling and invalid probabilities verified; 41 dedicated tests pass. Three flows remain.

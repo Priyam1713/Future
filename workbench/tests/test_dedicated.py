@@ -209,3 +209,10 @@ class DedicatedTests(unittest.TestCase):
   r=causal_ai.read(build(56,a)['input']);self.assertEqual(r['interventional']['risks'],{'no':'1/4','yes':'3/4'})
   a['joint']=a['joint'].replace('3/8','1/8')
   with self.assertRaises(ValueError):build(56,a)
+
+ def test_user_forecast_pool(self):
+  from future import collective_intelligence as c
+  a=dict(question='Will the delivery arrive?',positive='Delivered by deadline',negative='Not delivered by deadline',created='2026-01-01T00:00:00Z',locked='2026-01-01T01:00:00Z',frozen='2026-01-01T02:00:00Z',weights_at='2026-01-01T01:00:00Z',cutoff='2026-01-02T00:00:00Z',end='2026-01-03T00:00:00Z',forecasts='a,g1,1,1/4,2026-01-01T03:00:00Z,2026-01-01T03:00:00Z\nb,g2,1,3/4,2026-01-01T03:00:00Z,2026-01-01T03:00:00Z',snapshot='My elicited forecasts',attribution='Participants with permission',clarity='yes')
+  r=c.read(build(57,a)['input']);self.assertIn("'probability': '1/2'",str(r['questions']))
+  a['forecasts']=a['forecasts'].replace('1/4','5/4')
+  with self.assertRaises(ValueError):build(57,a)

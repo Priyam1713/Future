@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory, digital_twin, agent_based, brain_intention, causal_ai
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory, digital_twin, agent_based, brain_intention, causal_ai, collective_intelligence as collective
 import secrets, csv, io, hashlib
 from fractions import Fraction
 from . import remote_intake, dream_intake
@@ -11,6 +11,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==57:
+        return dict(title='Pool forecasts for your binary question',description='Enter forecast rows: forecaster ID, dependency group, weight, probability (blank to abstain), issued UTC time, knowledge UTC time. Probabilities and weights use integers or fractions. Repeated forecasters create revisions in row order; group/weight must stay fixed. All times end in Z. These are user-supplied human declarations, not certified independent forecasts.',fields=[text(k,label) for k,label in [('question','Binary question'),('positive','Positive resolution rule'),('negative','Negative resolution rule'),('created','Question creation time'),('locked','Question lock time'),('frozen','Pool freeze time'),('weights_at','Weights available time'),('cutoff','Forecast cutoff time'),('end','Event end time'),('forecasts','Forecast rows'),('snapshot','Forecast source description'),('attribution','Attribution')]]+[select('pool','Pooling method',['equal','declared_weight'],'equal'),select('clarity','Confirm the question and resolution rules are unambiguous',['yes','no'],''),select('resolution','Resolution',['unresolved','resolved'],'unresolved'),select('outcome','Resolved outcome',['0','1'],'1')]+[text(k,label,False) for k,label in [('event_at','Actual event time (if resolved)'),('known_at','Outcome known time (if resolved)'),('resolved_at','Resolution time (if resolved)')]]+[select('rights','Input rights',['self_authored','permission_granted','public_domain','cc_by'],'self_authored')])
     if technique==56:
         return dict(title='Evaluate your declared causal model',description='Enter observed variable rows: ID, state1, state2 (optional third state). Edge rows: parent, child. Joint CSV must have variable IDs as its header followed by weight; include every state combination with exact fraction weights summing to one. Core scope is synthetic tables under declared assumptions.',fields=[text('nodes','Observed variables and states'),text('edges','Directed edges',False),text('joint','Complete joint probability CSV with header'),text('treatment','Treatment variable ID'),text('outcome','Outcome variable ID'),text('value','Outcome state of interest'),text('adjustment','Adjustment variable IDs, comma separated',False),text('snapshot','Synthetic model description'),text('attribution','Attribution'),select('assumptions','Declare causal graph, consistency, exchangeability and no selection bias',['yes','no'],''),select('synthetic','Confirm self-authored synthetic table',['yes','no'],'')])
     if technique==55:
@@ -108,7 +110,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52,53,54,55,56]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52,53,54,55,56,57]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -116,6 +118,22 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==57:
+        if a['clarity']!='yes':raise ValueError('Explicit binary clarity confirmation required')
+        definition=dict(id='user-question',version=1,event_id='user-event',dependency_group='user-event',partition='test',text=a['question'],positive_rule=a['positive'],negative_rule=a['negative'],clarity_confirmed=True,created_at=a['created'],locked_at=a['locked'],cutoff=a['cutoff'],event_end=a['end'])
+        resolution=dict(status=a['resolution'],outcome=int(a['outcome']) if a['resolution']=='resolved' else None,event_at=a['event_at'] if a['resolution']=='resolved' else None,outcome_known_at=a['known_at'] if a['resolution']=='resolved' else None,resolved_at=a['resolved_at'] if a['resolution']=='resolved' else None)
+        roster={};forecasts=[];last={}
+        for row in csv.reader(io.StringIO(a['forecasts'])):
+            if not row:continue
+            if len(row)!=6:raise ValueError('Each forecast needs ID, group, weight, probability, issue time, knowledge time')
+            fid,group,weight,prob,issued,known=[x.strip() for x in row];f=dict(id=fid,kind='human_declared',dependency_group=group,weight=weight)
+            if fid in roster and roster[fid]!=f:raise ValueError('Forecaster group and weight cannot change across revisions')
+            roster[fid]=f;previous=last.get(fid)
+            record=dict(question_id=definition['id'],question_sha256=collective.digest(definition),forecaster=fid,revision=previous['revision']+1 if previous else 1,parent_sha256=collective.digest(previous) if previous else None,issued_at=issued,knowledge_at=known,probability=prob or None)
+            forecasts.append(record);last[fid]=record
+        q=dict(schema_version=1,profile=dict(id=collective.DATA['id'],version=1,sha256=collective.PROFILE_HASH,catalog_sha256=collective.DATA['source_manifest_sha256']),pool=dict(kind=a['pool'],frozen_at=a['frozen'],weights_available_at=a['weights_at']),forecasters=list(roster.values()),questions=[dict(definition=definition,resolution=resolution)],forecasts=forecasts,provenance=dict(evidence_mode='user_supplied_unvalidated',source_ref='collective-intelligence-mellers-v1',rights=a['rights'],attribution=a['attribution'],snapshot=a['snapshot'],snapshot_sha256=hashlib.sha256(a['snapshot'].encode()).hexdigest()))
+        collective.validate(q)
+        return dict(technique_id=57,operation='collective-intelligence',input=q)
     if technique==56:
         if a['synthetic']!='yes' or a['assumptions']!='yes':raise ValueError('Synthetic table and explicit causal assumptions required')
         nodes=[];edges=[];joint=[]
