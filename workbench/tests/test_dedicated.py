@@ -160,3 +160,13 @@ class DedicatedTests(unittest.TestCase):
   from future import deja_reve
   a=dict(pseudonym='p1',source='My journal',narrative='A familiar dream scene',start='2026-11-13T10:00:00Z',end='2026-11-13T10:01:00Z',recorded='2026-11-13T10:02:00Z',locked='2026-11-13T10:03:00Z',reviewer='r1',confidence='Unsure',permission='yes')
   q=build(46,a);r=deja_reve.read(q['input']);self.assertEqual(r['result']['compatibility']['status'],'review_required');self.assertEqual(q['input']['record']['original']['narrative'],a['narrative'])
+
+ def test_quantum_bell_user_circuit(self):
+  from future import quantum_probability_forecasting as quantum
+  a=dict(qubits='2',gates='h,0\ncx,1,0',event_kind='bitstring',event_value='11',attribution='My circuit')
+  q=build(50,a)['input'];r=quantum.read(q)
+  self.assertAlmostEqual(r['result']['event']['ideal_model_probability'],0.5)
+  a.update(task='sample',shots='1000',seed='123')
+  q=build(50,a)['input'];self.assertEqual(quantum.read(q),quantum.read(q))
+  a['gates']='cx,0,0'
+  with self.assertRaises(ValueError):build(50,a)

@@ -1559,3 +1559,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 46
 - Added narrative/timing/provenance/consent and human recollection attributes with deterministic hashes and compatibility report. Thirty-four dedicated tests pass. Remaining10 flows pending.
+
+## 2026-11-13 — Dedicated input flow 50
+- Added editable circuit gates, qubits, event predicate, sampling count/seed and attribution. Bell-state probability, deterministic sampling replay and invalid control checks pass; 35 dedicated tests pass. CPU circuit scope only. Remaining nine flows pending.

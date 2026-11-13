@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum
 import secrets, csv, io
 from fractions import Fraction
 from . import remote_intake, dream_intake
@@ -11,6 +11,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==50:
+        return dict(title='Simulate your quantum circuit',description='Enter up to 64 gate rows: id/x/h, target; ry, target, angle in radians; cx, target, control. Qubits start at zero and q0 is the least significant bit. Outputs are ideal circuit probabilities, not forecasts of external events.',fields=[select('qubits','Number of qubits',['1','2','3','4'],'1'),text('gates','Gate rows (blank means the initial zero state)',False),select('event_kind','Event to measure',['qubit_one','bitstring'],'qubit_one'),text('event_value','Qubit index or complete bitstring'),select('task','Calculation',['simulate','sample'],'simulate'),text('shots','Number of samples (required for sample)',False),text('seed','Replay seed, integer 1 to 4294967295 (required for sample)',False),text('attribution','Circuit source and attribution'),select('rights','Circuit rights',['self_authored','permission_granted'],'self_authored')])
     if technique==46:
         return dict(title='Record your deja reve experience',description='Describe the experience, its timing and your own recollection attributes. The output reports compatibility of these declarations and preserves narrative provenance.',fields=[text(k,label) for k,label in [('pseudonym','Pseudonym'),('source','Original record source'),('narrative','Experience narrative'),('start','Occurrence start (ISO time)'),('end','Occurrence end (ISO time)'),('recorded','First-record time (ISO time)'),('locked','Original lock time (ISO time)'),('reviewer','Reviewer ID'),('confidence','Subjective confidence')]]+[select(k,k.replace('_',' ').capitalize(),['unknown','yes','no']) for k in ['dream_association','specific_recollection','familiarity','present_dreamy_state']]+[select('temporal','Temporal context',['specific','vague','none','unknown']),select('uncertain','Are these declarations uncertain?',['yes','no'],'yes'),select('permission','Permission for local processing of your self-authored record',['yes','no'],'')])
     if technique==45:
@@ -96,7 +98,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -104,6 +106,21 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==50:
+        gates=[]
+        for row in csv.reader(io.StringIO(a['gates'])):
+            if not row:continue
+            row=[x.strip() for x in row];op=row[0]
+            if op not in ('id','x','h','ry','cx') or len(row)!=(3 if op in ('ry','cx') else 2):raise ValueError('Use gate, target; ry, target, radians; or cx, target, control')
+            gate=dict(op=op,target=int(row[1]))
+            if op=='ry':gate['angle']=float(row[2])
+            if op=='cx':gate['control']=int(row[2])
+            gates.append(gate)
+        event=dict(kind=a['event_kind'],value=int(a['event_value']) if a['event_kind']=='qubit_one' else a['event_value'].strip())
+        q=quantum.request(task=a['task'],qubits=int(a['qubits']),gates=gates,event=event,shots=int(a['shots']) if a['task']=='sample' else None,seed=int(a['seed']) if a['task']=='sample' else 1)
+        q['provenance'].update(rights=a['rights'],attribution=a['attribution'])
+        quantum.validate(q,quantum.assets())
+        return dict(technique_id=50,operation='quantum-probability-forecasting',input=q)
     if technique==46:
         if a['permission']!='yes':raise ValueError('Local processing permission required')
         attributes={k:None if a[k]=='unknown' else a[k]=='yes' for k in ['dream_association','specific_recollection','familiarity','present_dreamy_state']}
