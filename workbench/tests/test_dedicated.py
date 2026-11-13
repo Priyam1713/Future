@@ -223,3 +223,10 @@ class DedicatedTests(unittest.TestCase):
   r=m.read(build(58,a)['input']);self.assertEqual(r['counters']['executed_trades'],1);self.assertTrue(r['invariants']['cash_conservation'])
   a['trades']=a['trades'].replace('YES,2','YES,200')
   r=m.read(build(58,a)['input']);self.assertEqual(r['counters']['executed_trades'],0);self.assertGreater(r['counters']['rejected_actions'],0)
+
+ def test_user_lorenz_initial_states(self):
+  from future import chaos_theory as c
+  a=dict(sigma='10',rho='28',beta='8/3',initial='0,0,0',perturbed='0,0,0',dt='1/100',steps='10',stride='1',snapshot='Equilibrium check',attribution='My conditions')
+  r=c.read(build(59,a)['input']);self.assertEqual(r['rows'][-1]['coarse_base'],[0,0,0]);self.assertIsNone(r['diagnostics']['final_refined_amplification'])
+  a['dt']='1'
+  with self.assertRaises(ValueError):build(59,a)
