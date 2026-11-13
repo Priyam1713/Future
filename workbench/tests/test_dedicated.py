@@ -195,3 +195,10 @@ class DedicatedTests(unittest.TestCase):
   self.assertEqual(r['period'],2);self.assertEqual(r['initial_grid'],r['final_grid'])
   a['grid']='01\n1'
   with self.assertRaises(ValueError):build(54,a)
+
+ def test_user_feature_classifier(self):
+  from future import brain_intention
+  a=dict(channels='c1',fit='5',snapshot='Synthetic feature comparison',attribution='My data',synthetic='yes',trials='a,s1,r1,f1,t1,0,1,1,2,2,TRAIN,A,0,0\nb,s1,r1,f1,t2,2,3,3,4,4,TRAIN,B,10,0\nc,s2,r2,f2,t3,6,7,7,8,9,TEST,B,9,0')
+  r=brain_intention.read(build(55,a)['input']);self.assertEqual(r['predictions'][0]['prediction'],'B');self.assertEqual(r['evaluation']['accuracy'],'1')
+  a['trials']=a['trials'].replace('c,s2,r2','c,s1,r2')
+  with self.assertRaises(ValueError):build(55,a)

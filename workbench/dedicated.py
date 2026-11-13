@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory, digital_twin, agent_based
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory, digital_twin, agent_based, brain_intention
 import secrets, csv, io, hashlib
 from fractions import Fraction
 from . import remote_intake, dream_intake
@@ -11,6 +11,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==55:
+        return dict(title='Test a synthetic feature classifier',description='This core accepts synthetic features, not raw EEG or real intention decoding. Each trial CSV row: ID, subject, run, source ID, trial ID, start, end, available at, predict at, label available at, partition (TRAIN/TEST/VALIDATION), label (A/B), then mean and variance for each channel. Times are integer ticks; values are integers or fractions. TRAIN must contain both classes.',fields=[text('channels','Channel IDs in feature order, comma separated'),select('protocol','Held-out protocol',['subject_disjoint','within_subject_heldout_run'],'subject_disjoint'),text('fit','Model fitting tick'),text('trials','Trial and feature rows'),text('snapshot','Synthetic data description'),text('attribution','Attribution'),select('synthetic','Confirm self-authored synthetic inputs',['yes','no'],'')])
     if technique==54:
         return dict(title='Run your cellular-agent grid',description='Enter equal-length rows of 0 (dead) and 1 (alive), up to 64 by 64. The supported model is synchronous Conway B3/S23 with a finite zero exterior; ticks are model steps, not calendar predictions.',fields=[text('grid','Initial binary grid'),text('ticks','Number of ticks (0 to 256)'),text('snapshot','Describe the synthetic configuration'),text('attribution','Configuration attribution'),select('rights','Configuration rights',['self_authored','permission_granted','public_domain','cc_by'],'self_authored')])
     if technique==53:
@@ -104,7 +106,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52,53,54]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52,53,54,55]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -112,6 +114,19 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==55:
+        if a['synthetic']!='yes':raise ValueError('Only self-authored synthetic features are supported')
+        channels=[dict(id=x.strip(),unit='arbitrary_units') for x in a['channels'].split(',')];trials=[]
+        for row in csv.reader(io.StringIO(a['trials'])):
+            if not row:continue
+            row=[x.strip() for x in row]
+            if len(row)!=12+2*len(channels):raise ValueError('Each trial needs 12 metadata columns and mean/variance per channel')
+            t=dict(zip(['id','subject','run','source_id','trial_id','start','end','available_at','predict_at','label_available_at','partition','label'],row[:12]))
+            for key in ['start','end','available_at','predict_at','label_available_at']:t[key]=int(t[key])
+            t.update(session=None,annotation=None,values=row[12:]);trials.append(t)
+        q=dict(schema_version=1,profile=dict(id=brain_intention.DATA['id'],version=1,sha256=brain_intention.PROFILE_HASH,catalog_sha256=brain_intention.DATA['source_manifest_sha256']),mode='features',channels=channels,task='editorial_binary',protocol=a['protocol'],fit_at=int(a['fit']),filter='none',trials=trials,provenance=dict(synthetic=True,source_ref='brain-intention-centroid-v1',rights='self_authored',attribution=a['attribution'],snapshot=a['snapshot'],snapshot_sha256=hashlib.sha256(a['snapshot'].encode()).hexdigest()))
+        brain_intention.validate(q)
+        return dict(technique_id=55,operation='brain-intention',input=q)
     if technique==54:
         lines=[line.strip() for line in a['grid'].splitlines() if line.strip()]
         if not lines or any(set(line)-{'0','1'} for line in lines):raise ValueError('Grid rows must contain only 0 and 1')

@@ -1571,3 +1571,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 54
 - Added binary initial grid, tick count and configuration provenance for native finite-boundary B3/S23. Period-two oscillator and ragged-grid rejection verified; 38 dedicated tests pass. Six flows remain.
+
+## 2026-11-13 — Dedicated input flow 55
+- Added synthetic channel features, trial partitions/identities/availability clocks and fit time with native leakage checks. Classification and subject leakage rejection verified; 39 dedicated tests pass. Raw EEG and empirical intention decoding remain unsupported. Five flows remain.
