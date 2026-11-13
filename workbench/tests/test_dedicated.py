@@ -202,3 +202,10 @@ class DedicatedTests(unittest.TestCase):
   r=brain_intention.read(build(55,a)['input']);self.assertEqual(r['predictions'][0]['prediction'],'B');self.assertEqual(r['evaluation']['accuracy'],'1')
   a['trials']=a['trials'].replace('c,s2,r2','c,s1,r2')
   with self.assertRaises(ValueError):build(55,a)
+
+ def test_user_causal_table(self):
+  from future import causal_ai
+  a=dict(nodes='X,no,yes\nY,no,yes',edges='X,Y',joint='X,Y,weight\nno,no,3/8\nno,yes,1/8\nyes,no,1/8\nyes,yes,3/8',treatment='X',outcome='Y',value='yes',snapshot='Synthetic intervention model',attribution='My table',assumptions='yes',synthetic='yes')
+  r=causal_ai.read(build(56,a)['input']);self.assertEqual(r['interventional']['risks'],{'no':'1/4','yes':'3/4'})
+  a['joint']=a['joint'].replace('3/8','1/8')
+  with self.assertRaises(ValueError):build(56,a)

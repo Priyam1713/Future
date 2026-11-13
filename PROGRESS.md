@@ -1574,3 +1574,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 55
 - Added synthetic channel features, trial partitions/identities/availability clocks and fit time with native leakage checks. Classification and subject leakage rejection verified; 39 dedicated tests pass. Raw EEG and empirical intention decoding remain unsupported. Five flows remain.
+
+## 2026-11-13 — Dedicated input flow 56
+- Added variables/states, directed graph, complete joint probability CSV, adjustment/query and explicit synthetic causal assumptions. Exact intervention risks and invalid mass rejection verified; 40 dedicated tests pass. Four flows remain.

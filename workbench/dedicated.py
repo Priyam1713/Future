@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory, digital_twin, agent_based, brain_intention
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory, digital_twin, agent_based, brain_intention, causal_ai
 import secrets, csv, io, hashlib
 from fractions import Fraction
 from . import remote_intake, dream_intake
@@ -11,6 +11,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==56:
+        return dict(title='Evaluate your declared causal model',description='Enter observed variable rows: ID, state1, state2 (optional third state). Edge rows: parent, child. Joint CSV must have variable IDs as its header followed by weight; include every state combination with exact fraction weights summing to one. Core scope is synthetic tables under declared assumptions.',fields=[text('nodes','Observed variables and states'),text('edges','Directed edges',False),text('joint','Complete joint probability CSV with header'),text('treatment','Treatment variable ID'),text('outcome','Outcome variable ID'),text('value','Outcome state of interest'),text('adjustment','Adjustment variable IDs, comma separated',False),text('snapshot','Synthetic model description'),text('attribution','Attribution'),select('assumptions','Declare causal graph, consistency, exchangeability and no selection bias',['yes','no'],''),select('synthetic','Confirm self-authored synthetic table',['yes','no'],'')])
     if technique==55:
         return dict(title='Test a synthetic feature classifier',description='This core accepts synthetic features, not raw EEG or real intention decoding. Each trial CSV row: ID, subject, run, source ID, trial ID, start, end, available at, predict at, label available at, partition (TRAIN/TEST/VALIDATION), label (A/B), then mean and variance for each channel. Times are integer ticks; values are integers or fractions. TRAIN must contain both classes.',fields=[text('channels','Channel IDs in feature order, comma separated'),select('protocol','Held-out protocol',['subject_disjoint','within_subject_heldout_run'],'subject_disjoint'),text('fit','Model fitting tick'),text('trials','Trial and feature rows'),text('snapshot','Synthetic data description'),text('attribution','Attribution'),select('synthetic','Confirm self-authored synthetic inputs',['yes','no'],'')])
     if technique==54:
@@ -106,7 +108,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52,53,54,55]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52,53,54,55,56]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -114,6 +116,27 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==56:
+        if a['synthetic']!='yes' or a['assumptions']!='yes':raise ValueError('Synthetic table and explicit causal assumptions required')
+        nodes=[];edges=[];joint=[]
+        for row in csv.reader(io.StringIO(a['nodes'])):
+            if not row:continue
+            row=[x.strip() for x in row]
+            if len(row) not in (3,4):raise ValueError('Each variable needs ID and two or three states')
+            nodes.append(dict(id=row[0],states=row[1:],observed=True))
+        for row in csv.reader(io.StringIO(a['edges'])):
+            if row:edges.append([x.strip() for x in row])
+        rows=list(csv.reader(io.StringIO(a['joint'])))
+        if not rows:raise ValueError('Joint table required')
+        header=[x.strip() for x in rows[0]]
+        if len(header)!=len(nodes)+1 or header[-1]!='weight' or set(header[:-1])!={n['id'] for n in nodes}:raise ValueError('Joint header must name every variable followed by weight')
+        for row in rows[1:]:
+            if not row:continue
+            if len(row)!=len(header):raise ValueError('Joint row length differs from header')
+            row=[x.strip() for x in row];joint.append(dict(assignment=dict(zip(header[:-1],row[:-1])),weight=row[-1]))
+        q=dict(schema_version=1,profile=dict(id=causal_ai.DATA['id'],version=1,sha256=causal_ai.PROFILE_HASH,catalog_sha256=causal_ai.DATA['source_manifest_sha256']),nodes=nodes,edges=edges,joint=joint,treatment=a['treatment'],outcome=a['outcome'],outcome_value=a['value'],adjustment=[x.strip() for x in a['adjustment'].split(',') if x.strip()],assumptions=dict(causal_graph=True,consistency=True,exchangeability_under_graph=True,selection_bias=False),provenance=dict(synthetic=True,rights='self_authored',source_ref='causal-ai-pearl-chapter3-v1',attribution=a['attribution'],snapshot=a['snapshot'],snapshot_sha256=hashlib.sha256(a['snapshot'].encode()).hexdigest()))
+        causal_ai.validate(q)
+        return dict(technique_id=56,operation='causal-ai',input=q)
     if technique==55:
         if a['synthetic']!='yes':raise ValueError('Only self-authored synthetic features are supported')
         channels=[dict(id=x.strip(),unit='arbitrary_units') for x in a['channels'].split(',')];trials=[]
