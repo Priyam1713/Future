@@ -2,6 +2,7 @@
 from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui
 import secrets, csv, io
 from fractions import Fraction
+from . import remote_intake
 
 def select(key,label,choices,default='unknown'):
     return dict(key=key,label=label,type='select',choices=choices,default=default)
@@ -10,6 +11,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==43:
+        return dict(title='Review a recorded five-target viewing trial',description='Enter a completed training record. This shared-workspace review is not certified blind testing. Five images are center-cropped to 256 square pixels and retained locally for native replay. Use ISO timestamps with time zones for each declared event.',fields=[text(k,label) for k,label in [('study','Study ID'),('trial','Trial ID'),('tasker','Tasker ID'),('viewer','Viewer ID'),('judge','Judge ID'),('holder','Image rights holder'),('source','Image source and attribution')]]+[dict(key='images',label='Five target images, in candidate order (under 1 MB each)',type='images',default=[]),select('permission','Permission to retain and process these target images',['yes','no'],''),select('target','Actual target number',['1','2','3','4','5'],'')]+[select('rank'+str(i),'Rank for candidate '+str(i)+' (1 closest)',list('12345'),'') for i in range(1,6)]+[text('transcript','Original viewer transcript'),text('report','Judge reasoning'),text('created','Plan creation time')]+[text(k+'_at',k.replace('_',' ').capitalize()+' time') for k in remote_intake.ACTIONS])
     if technique==40:
         return dict(title='Enter your measured compass bearing',description='Enter degrees to at most one decimal place. Select the north reference and what the bearing represents; no automatic magnetic correction is applied.',fields=[text('degrees','Bearing in degrees (0 to 359.9)'),select('north','North reference',list(feng_shui.DATA['north_references']),''),select('role','Bearing role',list(feng_shui.DATA['bearing_roles']),''),text('uncertainty','Uncertainty in degrees',False),text('alternates','Alternate readings in degrees, comma separated',False)])
     if technique==39:
@@ -87,7 +90,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -95,6 +98,7 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==43:return remote_intake.build(a)
     if technique==40:
         def tenths(value):
             n=Fraction(value)*10

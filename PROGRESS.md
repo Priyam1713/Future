@@ -1547,3 +1547,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 40
 - Added compass degrees, north convention, bearing role, uncertainty and alternatives. Exact tenths conversion rejects rounding; thirty dedicated tests pass. Remaining 14 flows pending.
+
+## 2026-11-13 — Dedicated input flow 43
+- Added five-image upload, rights permission, participant roles, transcript, strict rankings and explicit event timestamps for declared training-record review. Normalized target PNGs retained in ignored tmp/workbench-targets for native replay; not blind certification or portable image export. Native locks/commitment/report built without invented observations or event times. Target rank1 test and31 dedicated tests/build pass. Remaining13 flows pending.

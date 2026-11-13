@@ -136,3 +136,12 @@ class DedicatedTests(unittest.TestCase):
   q=build(40,a);self.assertEqual(q['input']['bearing_tenths'],75);self.assertEqual(q['input']['alternate_readings'],[76])
   a['degrees']='7.55'
   with self.assertRaises(ValueError):build(40,a)
+ def test_remote_training_record_and_rank(self):
+  import base64
+  from pathlib import Path
+  from workbench.remote_intake import ACTIONS
+  from future import remote_viewing as rv
+  a=dict(study='user-study',trial='user-trial',tasker='tasker',viewer='viewer',judge='judge',holder='Test author',source='Repository-authored test fixtures',permission='yes',target='3',transcript='A shape with lines',report='Candidate three is closest',created='2026-11-13T10:00:00Z',images=[base64.b64encode(Path(f'data/remote-viewing-assets/t{i}.png').read_bytes()).decode() for i in range(1,6)])
+  a.update({f'rank{i}':str(v) for i,v in enumerate([2,3,1,4,5],1)})
+  a.update({action+'_at':f'2026-11-13T10:{i:02d}:00Z' for i,action in enumerate(ACTIONS,1)})
+  q=build(43,a);r=rv.report(q['input']['trial']);self.assertEqual(r['judge_results'][0]['actual_target_rank'],1);self.assertFalse(r['eligible_blinded_scoring'])
