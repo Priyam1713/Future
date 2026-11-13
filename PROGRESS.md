@@ -1553,3 +1553,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 44
 - Added declared single-dream/event study review with roles, source evidence, windows, explicit action times and human rating. Native original/judge locks and chronological ledger constructed; evidence retained in ignored tmp/workbench-evidence. Unblinded descriptive scope, not prospective certification. Thirty-two dedicated tests pass. Remaining12 flows pending.
+
+## 2026-11-13 — Dedicated input flow 45
+- Added two alternatives, recognition, ordered cue table, validity provenance and context declarations. Native decisive-cue result checked; thirty-three dedicated tests pass. Remaining11 flows pending.

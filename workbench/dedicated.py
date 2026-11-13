@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction
 import secrets, csv, io
 from fractions import Fraction
 from . import remote_intake, dream_intake
@@ -11,6 +11,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==45:
+        return dict(title='Compare two alternatives using your ordered cues',description='Enter cue rows in descending validity order: cue ID, first value, second value, validity. Values are positive, negative or unknown; validity is a documented decimal from 0.5 to 1. This core uses the higher-criterion, positive-orientation convention.',fields=[text(k,label) for k,label in [('first','First alternative ID'),('second','Second alternative ID'),('criterion','Criterion to maximize'),('domain','Decision domain'),('observed','Observation time (ISO with time zone)'),('provenance','Cue and direction provenance'),('training','Training period for cue validity'),('cues','Ordered cue rows'),('practice','Practice history')]]+[select(k,label,['recognized','unrecognized','unknown']) for k,label in [('recognition1','Recognition of first alternative'),('recognition2','Recognition of second alternative')]]+[select(k,k.replace('_',' ').capitalize(),['adequate','inadequate','unknown']) for k in ['regularity','cue_validity','feedback_quality','feedback_latency']]+[select('changed','Has the environment changed?',['yes','no'],'')])
     if technique==44:
         return dict(title='Review a dream and independently recorded event',description='Enter a declared single-slot study record and evidence. Native checks preserve chronology, locks and human ratings. This is an unblinded descriptive review, not prospective certification. All times use ISO format with a time zone; evidence is retained locally.',fields=[text(k,label) for k,label in [('study','Study ID'),('participant','Participant ID'),('coordinator','Coordinator ID'),('collector','Event collector ID'),('judge','Judge ID'),('rule','Prespecified event collection rule'),('feature','Prespecified comparison feature'),('narrative','Original dream narrative'),('detail','Dream detail for this feature'),('event_text','Independent event description'),('evidence','Evidence text'),('holder','Evidence rights holder'),('source','Evidence source reference'),('reason','Judge reasoning')]]+[select('permission','Permission to retain this dream and evidence',['yes','no'],''),select('known','Was the outcome known when recording the dream?',['yes','no'],''),select('common','Is this a common event?',['yes','no'],''),select('coverage','Event collection coverage',['complete','known_omissions','unknown'],'unknown'),select('rating','Human comparison rating',list(dream_intake.engine.DATA['ratings']),'')]+[text(k,label) for k,label in [('created','Original plan creation time'),('slot_open','Dream recording slot opens'),('slot_due','Dream recording deadline'),('collection_start','Event collection window starts'),('collection_end','Event collection window ends'),('window_start','Comparison window starts'),('window_end','Comparison window ends'),('event_start','Event occurrence starts'),('event_end','Event occurrence ends'),('discovery','Event discovery time')]]+[text(k+'_at',k.replace('_',' ').capitalize()+' time') for k in dream_intake.ACTIONS])
     if technique==43:
@@ -92,7 +94,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -100,6 +102,15 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==45:
+        cues=[]
+        for row in csv.reader(io.StringIO(a['cues'])):
+            if not row:continue
+            if len(row)!=4:raise ValueError('Each cue needs ID, first value, second value, validity')
+            cue,x,y,v=[x.strip() for x in row];cues.append(dict(cue_id=cue,values=[x,y],validity=v,rank=len(cues)+1,provenance=a['provenance'],orientation='positive',training_period=a['training']))
+        decision=dict(decision_id=secrets.token_hex(12),profile=intuitive_prediction.PROFILES['take-the-best'],alternatives=[a['first'],a['second']],criterion=a['criterion'],criterion_direction='higher',domain=a['domain'],observed_at=a['observed'],recognition=[a['recognition1'],a['recognition2']],ecological_direction='positive',direction_provenance=a['provenance'],training_period=a['training'],cues=cues,tie_policy='abstain',context=dict(**{k:a[k] for k in ['regularity','cue_validity','feedback_quality','feedback_latency']},practice_history=a['practice'],environment_changed=a['changed']=='yes'),confidence='',notes='')
+        intuitive_prediction.decision(decision)
+        return dict(technique_id=45,operation='intuitive-prediction',input=dict(schema_version=1,task='take-the-best',decision=decision))
     if technique==44:return dream_intake.build(a)
     if technique==43:return remote_intake.build(a)
     if technique==40:

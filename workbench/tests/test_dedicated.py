@@ -152,3 +152,7 @@ class DedicatedTests(unittest.TestCase):
   a.update({k:f'2026-11-13T10:{v:02d}:00Z' for k,v in times.items()})
   a.update({k+'_at':f'2026-11-13T10:{v:02d}:00Z' for k,v in zip(ACTIONS,[2,4,6,7,8,9,10,11,12])})
   q=build(44,a);r=engine.report(q['input']['ledger']);self.assertEqual(r['state'],'reported');self.assertEqual(r['pair_counts']['total'],1);self.assertFalse(r['declared_blind_judging'])
+ def test_ordered_cue_decision(self):
+  from future import intuitive_prediction as engine
+  a=dict(first='a',second='b',criterion='Magnitude',domain='User test',observed='2026-11-13T10:00:00Z',provenance='Declared prior measurements',training='Prior period',cues='cue1, positive, negative, 0.8',practice='User declaration',recognition1='recognized',recognition2='recognized',changed='no')
+  q=build(45,a);self.assertEqual(engine.decision(q['input']['decision'])['selected'],'a')
