@@ -1538,3 +1538,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 37
 - Added named Greek lot selection and observation origin with pinned catalog identities. Twenty-seven dedicated tests pass. Remaining 17 flows pending.
+
+## 2026-11-13 — Dedicated input flow 38
+- Added bird label, phenomenon, side and reference frame with native source-condition evaluation. Twenty-eight dedicated tests pass. Remaining 16 flows pending.

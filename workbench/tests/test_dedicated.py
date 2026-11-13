@@ -123,3 +123,7 @@ class DedicatedTests(unittest.TestCase):
   from future import cleromancy
   q=build(37,dict(mark='gao-alpha',origin='reported_real'))
   r=cleromancy.read(q['input']);self.assertEqual(r['selection']['canonical_id'],'gao-alpha');self.assertFalse(r['selection']['generated'])
+ def test_bird_unknowns_preserved(self):
+  from future import augury
+  q=build(38,dict(bird_label='raven',phenomenon='call'))
+  augury.validate(q['input']);r=augury.evaluate(q['input']['observations'][0]);self.assertIsNone(r['empirical_prediction']);self.assertEqual(r['effective_fields']['relative_side'],'unknown')
