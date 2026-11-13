@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy
 import secrets, csv, io
 
 def select(key,label,choices,default='unknown'):
@@ -9,6 +9,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==39:
+        return dict(title='Compare a documentary organ-feature account',description='Enter the tradition and source-described conditions. The result compares these declarations with the inspected historical records.',fields=[select('origin','Account origin',list(haruspicy.DATA['origins']),'unknown'),*[select(k,k.replace('_',' ').capitalize(),list(v)) for k,v in haruspicy.DATA['domains'].items()]])
     if technique==38:
         return dict(title='Record your bird observation',description='Enter the source bird label, call or flight, side and reference frame. Conflicting traditions and unknown evidence remain explicit.',fields=[text('bird_label','Bird label (crow, raven, or your observed label)'),*[select(k,k.replace('_',' ').capitalize(),list(augury.DATA[d]),'unresolved' if k=='relation' else 'unknown') for k,d in [('origin','origins'),('phenomenon','phenomena'),('relative_side','sides'),('relation','relations'),('reference_frame','frames'),('observer_facing','facings')]]])
     if technique==37:
@@ -82,7 +84,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -90,6 +92,10 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==39:
+        native=dict(schema_version=1,profile=haruspicy.PROFILE,mode='manual',task='compare',catalog_id=haruspicy.DATA['catalog_id'],catalog_version=1,catalog_sha256=haruspicy.CATALOG_HASH,observations=[dict(observation_id='observed',**a)])
+        haruspicy.validate(native)
+        return dict(technique_id=39,operation='haruspicy',input=native)
     if technique==38:
         native=dict(schema_version=1,profile=augury.PROFILE,mode='manual',task='observe',catalog_id=augury.DATA['catalog_id'],catalog_version=1,catalog_sha256=augury.CATALOG_HASH,observations=[dict(observation_id='observed',**a)])
         augury.validate(native)

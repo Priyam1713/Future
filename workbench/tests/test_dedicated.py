@@ -127,3 +127,7 @@ class DedicatedTests(unittest.TestCase):
   from future import augury
   q=build(38,dict(bird_label='raven',phenomenon='call'))
   augury.validate(q['input']);r=augury.evaluate(q['input']['observations'][0]);self.assertIsNone(r['empirical_prediction']);self.assertEqual(r['effective_fields']['relative_side'],'unknown')
+ def test_organ_source_conditions(self):
+  from future import haruspicy
+  q=build(39,dict(tradition='roman',organ='liver',feature='liver_head',presence='absent',other_vitals='sound'))
+  haruspicy.validate(q['input']);self.assertEqual(q['input']['observations'][0]['presence'],'absent');self.assertTrue(haruspicy.evaluate_all(q['input']['observations']))

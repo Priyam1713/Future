@@ -1541,3 +1541,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 38
 - Added bird label, phenomenon, side and reference frame with native source-condition evaluation. Twenty-eight dedicated tests pass. Remaining 16 flows pending.
+
+## 2026-11-13 — Dedicated input flow 39
+- Added documentary tradition/organ/feature/condition form with native comparison. Twenty-nine dedicated tests pass. Remaining 15 flows pending.
