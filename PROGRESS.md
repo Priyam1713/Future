@@ -1531,3 +1531,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 35
 - Added documentary case selection and optional comparison with research question. Duplicate cases rejected; twenty-five dedicated tests pass. Remaining 19 flows pending.
+
+## 2026-11-13 — Dedicated input flow 36
+- Added named passage selection from the verified Ruth corpus, context radius and reflection question. Pinned hashes built automatically; twenty-six dedicated tests pass. Remaining 18 flows pending.
