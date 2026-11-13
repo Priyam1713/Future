@@ -187,3 +187,11 @@ class DedicatedTests(unittest.TestCase):
   self.assertIn("'posterior_mean': '1'",str(r))
   a['mode']='archival'
   with self.assertRaises(ValueError):build(53,a)
+
+ def test_agent_grid_blinker(self):
+  from future import agent_based
+  a=dict(grid='00000\n00100\n00100\n00100\n00000',ticks='2',snapshot='My synthetic blinker',attribution='My configuration')
+  r=agent_based.read(build(54,a)['input'])['scenarios'][0]
+  self.assertEqual(r['period'],2);self.assertEqual(r['initial_grid'],r['final_grid'])
+  a['grid']='01\n1'
+  with self.assertRaises(ValueError):build(54,a)

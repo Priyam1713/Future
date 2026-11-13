@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory, digital_twin
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory, digital_twin, agent_based
 import secrets, csv, io, hashlib
 from fractions import Fraction
 from . import remote_intake, dream_intake
@@ -11,6 +11,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==54:
+        return dict(title='Run your cellular-agent grid',description='Enter equal-length rows of 0 (dead) and 1 (alive), up to 64 by 64. The supported model is synchronous Conway B3/S23 with a finite zero exterior; ticks are model steps, not calendar predictions.',fields=[text('grid','Initial binary grid'),text('ticks','Number of ticks (0 to 256)'),text('snapshot','Describe the synthetic configuration'),text('attribution','Configuration attribution'),select('rights','Configuration rights',['self_authored','permission_granted','public_domain','cc_by'],'self_authored')])
     if technique==53:
         return dict(title='Replay your scalar digital-twin measurements',description='Enter scalar model parameters as integers or fractions. Measurement rows: UTC timestamp, value (blank if missing), control, availability timestamp (blank if missing). Times use YYYY-MM-DDTHH:MM:SSZ and a contiguous grid. Archival mode requires independent review declarations.',fields=[select('mode','Data mode',['synthetic','archival'],'archival')]+[text(k,label) for k,label in [('asset','Asset ID'),('state_unit','State unit ID'),('measurement_unit','Measurement unit ID'),('version','Parameter version ID'),('A','State transition A'),('B','Control coefficient B'),('H','Measurement coefficient H'),('Q','Process variance Q'),('R','Measurement variance R'),('m0','Initial state mean'),('P0','Initial state variance'),('initial','Initial UTC time'),('step','Step length in seconds'),('evaluation','Evaluation cutoff UTC time'),('records','Measurement rows'),('snapshot','Data source and snapshot description'),('attribution','Attribution')]]+[text('controls','Future scenario controls, comma separated (optional)',False),select('rights','Data rights',['self_authored','permission_granted','public_domain','cc_by'],'self_authored')]+[select('checked_'+k,'Independently reviewed '+k,['yes','no'],'no') for k in digital_twin.DATA['schema']['archive_checks']])
     if technique==52:
@@ -102,7 +104,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52,53]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52,53,54]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -110,6 +112,13 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==54:
+        lines=[line.strip() for line in a['grid'].splitlines() if line.strip()]
+        if not lines or any(set(line)-{'0','1'} for line in lines):raise ValueError('Grid rows must contain only 0 and 1')
+        grid=[[int(c) for c in line] for line in lines]
+        q=dict(schema_version=1,profile=dict(id=agent_based.DATA['id'],version=1,sha256=agent_based.PROFILE_HASH,catalog_sha256=agent_based.DATA['source_manifest_sha256']),model=dict(agent_based.DATA['model']),geometry=dict(height=len(grid),width=len(grid[0])),ticks=int(a['ticks']),trace_states=True,scenarios=[dict(id='user-grid',initial_grid=grid)],reference_scenario='user-grid',provenance=dict(synthetic=True,source_ref='agent-based-mesa-life-agents-v1',rights=a['rights'],attribution=a['attribution'],snapshot=a['snapshot'],snapshot_sha256=hashlib.sha256(a['snapshot'].encode()).hexdigest()))
+        agent_based.validate(q)
+        return dict(technique_id=54,operation='agent-based',input=q)
     if technique==53:
         asset=dict(id=a['asset'],state_unit=a['state_unit'],measurement_unit=a['measurement_unit'],parameter_version=a['version']);records=[]
         for row in csv.reader(io.StringIO(a['records'])):

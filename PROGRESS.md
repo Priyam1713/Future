@@ -1568,3 +1568,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 53
 - Added scalar model parameters, measurement/control/availability rows, units, replay timeline, future controls and archival review declarations. Native posterior update and unreviewed archive rejection verified; 37 dedicated tests pass. Seven flows remain.
+
+## 2026-11-13 — Dedicated input flow 54
+- Added binary initial grid, tick count and configuration provenance for native finite-boundary B3/S23. Period-two oscillator and ragged-grid rejection verified; 38 dedicated tests pass. Six flows remain.
