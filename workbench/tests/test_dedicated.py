@@ -119,3 +119,7 @@ class DedicatedTests(unittest.TestCase):
   q=build(36,dict(path='1,1,2,1',radius='0'))
   r=bibliomancy.read(q['input']);self.assertEqual(r['selections'][0]['path'],[1,1,2,1]);self.assertTrue(r['selections'][0]['text']);self.assertEqual(r['selections'][0]['context_after'],[])
 
+ def test_lot_selection(self):
+  from future import cleromancy
+  q=build(37,dict(mark='gao-alpha',origin='reported_real'))
+  r=cleromancy.read(q['input']);self.assertEqual(r['selection']['canonical_id'],'gao-alpha');self.assertFalse(r['selection']['generated'])

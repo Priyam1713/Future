@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy
 import secrets, csv, io
 
 def select(key,label,choices,default='unknown'):
@@ -9,6 +9,9 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==37:
+        records=cleromancy.catalog()
+        return dict(title='Record the mark on your selected lot',description='Choose the actual observed Greek-letter lot and its origin. The engine returns its exact catalog reference.',fields=[select('mark','Observed lot mark',[r['id'] for r in records],''),select('origin','Observation origin',list(cleromancy.DATA['observation_origins']),''),text('question','Your question',False)],labels={'mark':{r['id']:r['glyph']+' - '+r['name'] for r in records}})
     if technique==36:
         _,_,index=bibliomancy._assets();choices=[];labels={}
         for si,shelf in enumerate(index['shelves'],1):
@@ -77,7 +80,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -85,6 +88,10 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==37:
+        native=dict(schema_version=1,profile=cleromancy.PROFILE,mode='manual',task='reading',catalog_id=cleromancy.DATA['catalog_id'],catalog_version=1,catalog_sha256=cleromancy.CATALOG_HASH,mark=a['mark'],observation_origin=a['origin'],question=a['question'])
+        cleromancy.validate(native)
+        return dict(technique_id=37,operation='cleromancy',input=native)
     if technique==36:
         native=dict(schema_version=1,profile=bibliomancy.PROFILE,mode='manual_coarse',corpus_version=1,index_version=1,**{k:bibliomancy.DATA[k] for k in ['corpus_id','corpus_sha256','index_id','index_sha256']},selections=[dict(path=[int(x) for x in a['path'].split(',')])],question=a['question'],context=int(a['radius']))
         bibliomancy.validate(native,bibliomancy._assets()[2])
