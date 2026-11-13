@@ -178,3 +178,12 @@ class DedicatedTests(unittest.TestCase):
   self.assertEqual(r['scenarios'][0]['rows'][0]['active_counts'],[1,2,3])
   a['edges']='a,a'
   with self.assertRaises(ValueError):build(52,a)
+
+ def test_twin_user_measurement(self):
+  from future import digital_twin
+  a=dict(mode='synthetic',asset='motor',state_unit='rpm',measurement_unit='rpm',version='v1',A='1',B='0',H='1',Q='0',R='1',m0='0',P0='1',initial='2026-01-01T00:00:00Z',step='1',evaluation='2026-01-01T00:00:01Z',records='2026-01-01T00:00:01Z,2,0,2026-01-01T00:00:01Z',snapshot='Synthetic test',attribution='My model')
+  q=build(53,a)['input'];r=digital_twin.read(q)
+  self.assertIn('posterior_mean',str(r));self.assertEqual(digital_twin.predict(0,1,1,0,0,0),(0,1))
+  self.assertIn("'posterior_mean': '1'",str(r))
+  a['mode']='archival'
+  with self.assertRaises(ValueError):build(53,a)

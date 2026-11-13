@@ -1565,3 +1565,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 52
 - Added synthetic node thresholds, undirected edges, initial activation, round cap and provenance. Native cascade progression and self-loop rejection verified; 36 dedicated tests pass. Fixed single-scenario core; empirical social forecasting unsupported. Eight flows remain.
+
+## 2026-11-13 — Dedicated input flow 53
+- Added scalar model parameters, measurement/control/availability rows, units, replay timeline, future controls and archival review declarations. Native posterior update and unreviewed archive rejection verified; 37 dedicated tests pass. Seven flows remain.

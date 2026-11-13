@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory, digital_twin
 import secrets, csv, io, hashlib
 from fractions import Fraction
 from . import remote_intake, dream_intake
@@ -11,6 +11,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==53:
+        return dict(title='Replay your scalar digital-twin measurements',description='Enter scalar model parameters as integers or fractions. Measurement rows: UTC timestamp, value (blank if missing), control, availability timestamp (blank if missing). Times use YYYY-MM-DDTHH:MM:SSZ and a contiguous grid. Archival mode requires independent review declarations.',fields=[select('mode','Data mode',['synthetic','archival'],'archival')]+[text(k,label) for k,label in [('asset','Asset ID'),('state_unit','State unit ID'),('measurement_unit','Measurement unit ID'),('version','Parameter version ID'),('A','State transition A'),('B','Control coefficient B'),('H','Measurement coefficient H'),('Q','Process variance Q'),('R','Measurement variance R'),('m0','Initial state mean'),('P0','Initial state variance'),('initial','Initial UTC time'),('step','Step length in seconds'),('evaluation','Evaluation cutoff UTC time'),('records','Measurement rows'),('snapshot','Data source and snapshot description'),('attribution','Attribution')]]+[text('controls','Future scenario controls, comma separated (optional)',False),select('rights','Data rights',['self_authored','permission_granted','public_domain','cc_by'],'self_authored')]+[select('checked_'+k,'Independently reviewed '+k,['yes','no'],'no') for k in digital_twin.DATA['schema']['archive_checks']])
     if technique==52:
         return dict(title='Simulate a hypothetical threshold network',description='Enter one node and activation threshold per row (node, fraction such as 1/2), and undirected edge rows (node, node). This is a synthetic scenario simulation, not a calibrated social forecast.',fields=[text('nodes','Node and threshold rows'),text('edges','Edge rows',False),text('active','Initially active node IDs, comma separated',False),text('rounds','Maximum rounds (0 to number of nodes)'),text('snapshot','Describe your synthetic scenario'),text('attribution','Scenario attribution'),select('synthetic','Confirm these inputs describe a synthetic scenario',['yes','no'],'')])
     if technique==50:
@@ -100,7 +102,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52,53]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -108,6 +110,17 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==53:
+        asset=dict(id=a['asset'],state_unit=a['state_unit'],measurement_unit=a['measurement_unit'],parameter_version=a['version']);records=[]
+        for row in csv.reader(io.StringIO(a['records'])):
+            if not row:continue
+            if len(row)!=4:raise ValueError('Each measurement needs timestamp, value, control, availability timestamp')
+            at,value,control,available=[x.strip() for x in row];tick=len(records)+1
+            records.append(dict(id='observation-'+str(tick),asset_id=asset['id'],state_unit=asset['state_unit'],measurement_unit=asset['measurement_unit'],tick=tick,timestamp=at,value=value or None,control=control,available_at=available or None))
+        controls=[x.strip() for x in a['controls'].split(',')] if a['controls'].strip() else []
+        q=dict(schema_version=1,profile=dict(id=digital_twin.DATA['id'],sha256=digital_twin.PROFILE_HASH,catalog_sha256=digital_twin.DATA['source_manifest_sha256']),mode=a['mode'],asset=asset,parameters=dict(version=a['version'],**{k:a[k].strip() for k in ('A','B','H','Q','R','m0','P0')}),timeline=dict(initial_at=a['initial'],step_seconds=int(a['step']),evaluation_at=a['evaluation']),records=records,horizon=len(controls),scenarios=[dict(id='user-scenario',controls=controls)] if controls else [],reference_scenario='user-scenario' if controls else None,provenance=dict(source_ref='digital-twin-welch-bishop-2002-v1',rights=a['rights'],attribution=a['attribution'],snapshot=a['snapshot'],snapshot_sha256=hashlib.sha256(a['snapshot'].encode()).hexdigest(),archive_checks={k:a['checked_'+k]=='yes' for k in digital_twin.DATA['schema']['archive_checks']}))
+        digital_twin.validate(q)
+        return dict(technique_id=53,operation='digital-twin',input=q)
     if technique==52:
         if a['synthetic']!='yes':raise ValueError('Only synthetic scenarios are supported')
         thresholds=[];edges=[]
