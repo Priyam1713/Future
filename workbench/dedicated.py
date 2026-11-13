@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve
 import secrets, csv, io
 from fractions import Fraction
 from . import remote_intake, dream_intake
@@ -11,6 +11,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==46:
+        return dict(title='Record your deja reve experience',description='Describe the experience, its timing and your own recollection attributes. The output reports compatibility of these declarations and preserves narrative provenance.',fields=[text(k,label) for k,label in [('pseudonym','Pseudonym'),('source','Original record source'),('narrative','Experience narrative'),('start','Occurrence start (ISO time)'),('end','Occurrence end (ISO time)'),('recorded','First-record time (ISO time)'),('locked','Original lock time (ISO time)'),('reviewer','Reviewer ID'),('confidence','Subjective confidence')]]+[select(k,k.replace('_',' ').capitalize(),['unknown','yes','no']) for k in ['dream_association','specific_recollection','familiarity','present_dreamy_state']]+[select('temporal','Temporal context',['specific','vague','none','unknown']),select('uncertain','Are these declarations uncertain?',['yes','no'],'yes'),select('permission','Permission for local processing of your self-authored record',['yes','no'],'')])
     if technique==45:
         return dict(title='Compare two alternatives using your ordered cues',description='Enter cue rows in descending validity order: cue ID, first value, second value, validity. Values are positive, negative or unknown; validity is a documented decimal from 0.5 to 1. This core uses the higher-criterion, positive-orientation convention.',fields=[text(k,label) for k,label in [('first','First alternative ID'),('second','Second alternative ID'),('criterion','Criterion to maximize'),('domain','Decision domain'),('observed','Observation time (ISO with time zone)'),('provenance','Cue and direction provenance'),('training','Training period for cue validity'),('cues','Ordered cue rows'),('practice','Practice history')]]+[select(k,label,['recognized','unrecognized','unknown']) for k,label in [('recognition1','Recognition of first alternative'),('recognition2','Recognition of second alternative')]]+[select(k,k.replace('_',' ').capitalize(),['adequate','inadequate','unknown']) for k in ['regularity','cue_validity','feedback_quality','feedback_latency']]+[select('changed','Has the environment changed?',['yes','no'],'')])
     if technique==44:
@@ -94,7 +96,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -102,6 +104,14 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==46:
+        if a['permission']!='yes':raise ValueError('Local processing permission required')
+        attributes={k:None if a[k]=='unknown' else a[k]=='yes' for k in ['dream_association','specific_recollection','familiarity','present_dreamy_state']}
+        attributes.update(temporal_context=a['temporal'],subjective_confidence=a['confidence'],reviewer=a['reviewer'],proposal=None,uncertain=a['uncertain']=='yes')
+        original=dict(profile=deja_reve.DATA['id'],profile_version=1,kind='observation',id=secrets.token_hex(12),pseudonym=a['pseudonym'],source_ref=a['source'],occurrence=dict(start=a['start'],end=a['end']),first_record_at=a['recorded'],lock_at=a['locked'],narrative=a['narrative'],narrative_sha256=deja_reve.bytes_hash(a['narrative'].encode('utf-8')),context='ordinary_nonclinical',attributes=attributes,consent=dict(local_processing=True,rights='self_authored',export=False))
+        record=dict(original=original,original_sha256=deja_reve.digest(original),amendments=[])
+        deja_reve.validate_record(record)
+        return dict(technique_id=46,operation='deja-reve',input=dict(schema_version=1,task='annotate',record=record))
     if technique==45:
         cues=[]
         for row in csv.reader(io.StringIO(a['cues'])):

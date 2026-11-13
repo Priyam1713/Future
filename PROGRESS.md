@@ -1556,3 +1556,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 45
 - Added two alternatives, recognition, ordered cue table, validity provenance and context declarations. Native decisive-cue result checked; thirty-three dedicated tests pass. Remaining11 flows pending.
+
+## 2026-11-13 — Dedicated input flow 46
+- Added narrative/timing/provenance/consent and human recollection attributes with deterministic hashes and compatibility report. Thirty-four dedicated tests pass. Remaining10 flows pending.

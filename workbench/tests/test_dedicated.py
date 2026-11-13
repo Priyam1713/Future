@@ -156,3 +156,7 @@ class DedicatedTests(unittest.TestCase):
   from future import intuitive_prediction as engine
   a=dict(first='a',second='b',criterion='Magnitude',domain='User test',observed='2026-11-13T10:00:00Z',provenance='Declared prior measurements',training='Prior period',cues='cue1, positive, negative, 0.8',practice='User declaration',recognition1='recognized',recognition2='recognized',changed='no')
   q=build(45,a);self.assertEqual(engine.decision(q['input']['decision'])['selected'],'a')
+ def test_deja_reve_record_hash_and_compatibility(self):
+  from future import deja_reve
+  a=dict(pseudonym='p1',source='My journal',narrative='A familiar dream scene',start='2026-11-13T10:00:00Z',end='2026-11-13T10:01:00Z',recorded='2026-11-13T10:02:00Z',locked='2026-11-13T10:03:00Z',reviewer='r1',confidence='Unsure',permission='yes')
+  q=build(46,a);r=deja_reve.read(q['input']);self.assertEqual(r['result']['compatibility']['status'],'review_required');self.assertEqual(q['input']['record']['original']['narrative'],a['narrative'])
