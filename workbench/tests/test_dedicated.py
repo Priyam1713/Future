@@ -109,3 +109,8 @@ class DedicatedTests(unittest.TestCase):
   from future import lithomancy
   q=build(34,dict(stones='lodestone, 0, 0\nonyx, 3, 4',frame='integer-centers-x-right-y-up-v1',origin='reported_real',anchor_x='0',anchor_y='0'))
   self.assertEqual(lithomancy.distance_squared(q['input']['stones'][1]['position'],q['input']['anchor']['position']),25)
+ def test_bone_comparison_selection(self):
+  from future import osteomancy
+  q=build(35,dict(case='9A',second='9B'))
+  self.assertEqual(q['input']['task'],'compare');self.assertEqual(osteomancy.compare('9A','9B')['requested_order'],['9A','9B'])
+  with self.assertRaises(ValueError):build(35,dict(case='9A',second='9A'))

@@ -1528,3 +1528,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-12 — Dedicated input flow 34
 - Added multi-stone role/coordinate rows and explicit anchor/frame. Independent 3-4-5 squared-distance check passes; twenty-four dedicated tests pass. Remaining 20 flows pending.
+
+## 2026-11-13 — Dedicated input flow 35
+- Added documentary case selection and optional comparison with research question. Duplicate cases rejected; twenty-five dedicated tests pass. Remaining 19 flows pending.
