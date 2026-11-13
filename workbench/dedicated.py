@@ -1,6 +1,6 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum
-import secrets, csv, io
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory
+import secrets, csv, io, hashlib
 from fractions import Fraction
 from . import remote_intake, dream_intake
 
@@ -11,6 +11,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==52:
+        return dict(title='Simulate a hypothetical threshold network',description='Enter one node and activation threshold per row (node, fraction such as 1/2), and undirected edge rows (node, node). This is a synthetic scenario simulation, not a calibrated social forecast.',fields=[text('nodes','Node and threshold rows'),text('edges','Edge rows',False),text('active','Initially active node IDs, comma separated',False),text('rounds','Maximum rounds (0 to number of nodes)'),text('snapshot','Describe your synthetic scenario'),text('attribution','Scenario attribution'),select('synthetic','Confirm these inputs describe a synthetic scenario',['yes','no'],'')])
     if technique==50:
         return dict(title='Simulate your quantum circuit',description='Enter up to 64 gate rows: id/x/h, target; ry, target, angle in radians; cx, target, control. Qubits start at zero and q0 is the least significant bit. Outputs are ideal circuit probabilities, not forecasts of external events.',fields=[select('qubits','Number of qubits',['1','2','3','4'],'1'),text('gates','Gate rows (blank means the initial zero state)',False),select('event_kind','Event to measure',['qubit_one','bitstring'],'qubit_one'),text('event_value','Qubit index or complete bitstring'),select('task','Calculation',['simulate','sample'],'simulate'),text('shots','Number of samples (required for sample)',False),text('seed','Replay seed, integer 1 to 4294967295 (required for sample)',False),text('attribution','Circuit source and attribution'),select('rights','Circuit rights',['self_authored','permission_granted'],'self_authored')])
     if technique==46:
@@ -98,7 +100,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -106,6 +108,22 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==52:
+        if a['synthetic']!='yes':raise ValueError('Only synthetic scenarios are supported')
+        thresholds=[];edges=[]
+        for row in csv.reader(io.StringIO(a['nodes'])):
+            if not row:continue
+            if len(row)!=2:raise ValueError('Each node row needs ID and exact threshold')
+            node,phi=[x.strip() for x in row];thresholds.append(dict(node=node,phi=phi))
+        thresholds.sort(key=lambda t:t['node']);nodes=[t['node'] for t in thresholds]
+        for row in csv.reader(io.StringIO(a['edges'])):
+            if not row:continue
+            if len(row)!=2:raise ValueError('Each edge needs two node IDs')
+            edges.append(sorted(x.strip() for x in row))
+        scenario=dict(id='user-scenario',edges=sorted(edges),thresholds=thresholds,initial=dict(mode='fixed',fixed_seeds=sorted(x.strip() for x in a['active'].split(',') if x.strip()),probability=None,run_seeds=[],overrides=[]))
+        q=dict(schema_version=1,profile=dict(id=psychohistory.DATA['id'],sha256=psychohistory.PROFILE_HASH,catalog_sha256=psychohistory.DATA['source_manifest_sha256']),population=dict(size=len(nodes),nodes=nodes),runs=1,rounds=int(a['rounds']),trace_states=True,rng=dict(algorithm='xorshift32-v1',seed=1),scenarios=[scenario],reference_scenario='user-scenario',provenance=dict(synthetic=True,source_ref='psychohistory-pentland-v1',rights='self_authored',attribution=a['attribution'],snapshot=a['snapshot'],snapshot_sha256=hashlib.sha256(a['snapshot'].encode()).hexdigest()))
+        psychohistory.validate(q)
+        return dict(technique_id=52,operation='psychohistory',input=q)
     if technique==50:
         gates=[]
         for row in csv.reader(io.StringIO(a['gates'])):

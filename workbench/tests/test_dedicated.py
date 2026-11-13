@@ -170,3 +170,11 @@ class DedicatedTests(unittest.TestCase):
   q=build(50,a)['input'];self.assertEqual(quantum.read(q),quantum.read(q))
   a['gates']='cx,0,0'
   with self.assertRaises(ValueError):build(50,a)
+
+ def test_network_user_thresholds(self):
+  from future import psychohistory
+  a=dict(nodes='a,1/2\nb,1/2\nc,1/2',edges='a,b\nb,c',active='a',rounds='3',snapshot='Hypothetical chain',attribution='My model',synthetic='yes')
+  q=build(52,a)['input'];r=psychohistory.read(q)
+  self.assertEqual(r['scenarios'][0]['rows'][0]['active_counts'],[1,2,3])
+  a['edges']='a,a'
+  with self.assertRaises(ValueError):build(52,a)

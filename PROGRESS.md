@@ -1562,3 +1562,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 50
 - Added editable circuit gates, qubits, event predicate, sampling count/seed and attribution. Bell-state probability, deterministic sampling replay and invalid control checks pass; 35 dedicated tests pass. CPU circuit scope only. Remaining nine flows pending.
+
+## 2026-11-13 — Dedicated input flow 52
+- Added synthetic node thresholds, undirected edges, initial activation, round cap and provenance. Native cascade progression and self-loop rejection verified; 36 dedicated tests pass. Fixed single-scenario core; empirical social forecasting unsupported. Eight flows remain.
