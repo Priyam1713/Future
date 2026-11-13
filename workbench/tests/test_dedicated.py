@@ -216,3 +216,10 @@ class DedicatedTests(unittest.TestCase):
   r=c.read(build(57,a)['input']);self.assertIn("'probability': '1/2'",str(r['questions']))
   a['forecasts']=a['forecasts'].replace('1/4','5/4')
   with self.assertRaises(ValueError):build(57,a)
+
+ def test_user_play_market(self):
+  from future import prediction_markets as m
+  a=dict(question='Will the synthetic event happen?',positive='Event occurs',negative='Event absent',created='2026-01-01T00:00:00Z',close='2026-01-03T00:00:00Z',resolver='judge',liquidity='10',accounts='alice,100',trades='2026-01-02T00:00:00Z,alice,YES,2',snapshot='My play market',attribution='My simulation',synthetic='yes')
+  r=m.read(build(58,a)['input']);self.assertEqual(r['counters']['executed_trades'],1);self.assertTrue(r['invariants']['cash_conservation'])
+  a['trades']=a['trades'].replace('YES,2','YES,200')
+  r=m.read(build(58,a)['input']);self.assertEqual(r['counters']['executed_trades'],0);self.assertGreater(r['counters']['rejected_actions'],0)

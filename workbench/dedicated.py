@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory, digital_twin, agent_based, brain_intention, causal_ai, collective_intelligence as collective
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory, digital_twin, agent_based, brain_intention, causal_ai, collective_intelligence as collective, prediction_markets as markets
 import secrets, csv, io, hashlib
 from fractions import Fraction
 from . import remote_intake, dream_intake
@@ -11,6 +11,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==58:
+        return dict(title='Simulate a play-credit prediction market',description='Account rows: account ID, initial play credits. Trade rows: UTC time, account ID, YES/NO, share change (negative to sell owned shares). Each row requests a quote and immediate execution; the native report shows rejected trades. No real money or external orders are used.',fields=[text(k,label) for k,label in [('question','Binary question'),('positive','YES resolution rule'),('negative','NO resolution rule'),('created','Creation time (UTC Z)'),('close','Closing time (UTC Z)'),('resolver','Resolver ID'),('liquidity','Liquidity parameter (0.01 to 1000000)'),('accounts','Account rows'),('snapshot','Synthetic market description'),('attribution','Attribution')]]+[text('trades','Trade rows',False),select('winner','Optional settlement outcome',['unresolved','YES','NO'],'unresolved'),text('resolved_at','Settlement time (UTC Z, if resolved)',False),select('synthetic','Confirm self-authored synthetic play-credit simulation',['yes','no'],'')])
     if technique==57:
         return dict(title='Pool forecasts for your binary question',description='Enter forecast rows: forecaster ID, dependency group, weight, probability (blank to abstain), issued UTC time, knowledge UTC time. Probabilities and weights use integers or fractions. Repeated forecasters create revisions in row order; group/weight must stay fixed. All times end in Z. These are user-supplied human declarations, not certified independent forecasts.',fields=[text(k,label) for k,label in [('question','Binary question'),('positive','Positive resolution rule'),('negative','Negative resolution rule'),('created','Question creation time'),('locked','Question lock time'),('frozen','Pool freeze time'),('weights_at','Weights available time'),('cutoff','Forecast cutoff time'),('end','Event end time'),('forecasts','Forecast rows'),('snapshot','Forecast source description'),('attribution','Attribution')]]+[select('pool','Pooling method',['equal','declared_weight'],'equal'),select('clarity','Confirm the question and resolution rules are unambiguous',['yes','no'],''),select('resolution','Resolution',['unresolved','resolved'],'unresolved'),select('outcome','Resolved outcome',['0','1'],'1')]+[text(k,label,False) for k,label in [('event_at','Actual event time (if resolved)'),('known_at','Outcome known time (if resolved)'),('resolved_at','Resolution time (if resolved)')]]+[select('rights','Input rights',['self_authored','permission_granted','public_domain','cc_by'],'self_authored')])
     if technique==56:
@@ -110,7 +112,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52,53,54,55,56,57]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52,53,54,55,56,57,58]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -118,6 +120,23 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==58:
+        if a['synthetic']!='yes':raise ValueError('Only synthetic play-credit simulations are supported')
+        accounts=[];events=[]
+        for row in csv.reader(io.StringIO(a['accounts'])):
+            if not row:continue
+            if len(row)!=2:raise ValueError('Account rows need ID and initial credit')
+            accounts.append(dict(id=row[0].strip(),initial_credit=row[1].strip()))
+        for row in csv.reader(io.StringIO(a['trades'])):
+            if not row:continue
+            if len(row)!=4:raise ValueError('Trade rows need time, account ID, YES/NO and share change')
+            at,actor,outcome,delta=[x.strip() for x in row];qid='quote-'+str(len(events)+1)
+            events.extend([dict(id=qid,type='quote',at=at,actor=actor,quote_id=qid,outcome=outcome,delta=delta),dict(id='execute-'+qid,type='execute',at=at,actor=actor,quote_id=qid)])
+        if a['winner']!='unresolved':events.append(dict(id='settle',type='resolve',at=a['resolved_at'],actor=a['resolver'],outcome=a['winner']))
+        market=dict(id='user-market',version=1,question_id='user-question',question_version=1,event_id='user-event',definition=a['question'],positive_rule=a['positive'],negative_rule=a['negative'],outcomes=['YES','NO'],exhaustive=True,created_at=a['created'],close_at=a['close'],resolver=a['resolver'],liquidity=a['liquidity'],money_unit='play_credit')
+        q=dict(schema_version=1,profile=dict(id=markets.DATA['id'],version=1,sha256=markets.PROFILE_HASH,catalog_sha256=markets.DATA['source_manifest_sha256']),market=market,accounts=accounts,events=events,provenance=dict(synthetic=True,rights='self_authored',source_ref='prediction-markets-cost-function-v1',attribution=a['attribution'],snapshot=a['snapshot'],snapshot_sha256=hashlib.sha256(a['snapshot'].encode()).hexdigest()))
+        markets.validate(q)
+        return dict(technique_id=58,operation='prediction-markets',input=q)
     if technique==57:
         if a['clarity']!='yes':raise ValueError('Explicit binary clarity confirmation required')
         definition=dict(id='user-question',version=1,event_id='user-event',dependency_group='user-event',partition='test',text=a['question'],positive_rule=a['positive'],negative_rule=a['negative'],clarity_confirmed=True,created_at=a['created'],locked_at=a['locked'],cutoff=a['cutoff'],event_end=a['end'])

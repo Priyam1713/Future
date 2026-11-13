@@ -1580,3 +1580,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 57
 - Added human forecast rows/revisions, dependency groups, frozen weights, question rules/timeline and optional resolution. Native exact pooling and invalid probabilities verified; 41 dedicated tests pass. Three flows remain.
+
+## 2026-11-13 — Dedicated input flow 58
+- Added play-credit accounts, liquidity, binary rules, trade rows and optional settlement. Native execution/cash conservation and insufficient-credit rejection verified; 42 dedicated tests pass. Two flows remain.
