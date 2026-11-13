@@ -1544,3 +1544,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 39
 - Added documentary tradition/organ/feature/condition form with native comparison. Twenty-nine dedicated tests pass. Remaining 15 flows pending.
+
+## 2026-11-13 — Dedicated input flow 40
+- Added compass degrees, north convention, bearing role, uncertainty and alternatives. Exact tenths conversion rejects rounding; thirty dedicated tests pass. Remaining 14 flows pending.

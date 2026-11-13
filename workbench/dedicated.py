@@ -1,6 +1,7 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui
 import secrets, csv, io
+from fractions import Fraction
 
 def select(key,label,choices,default='unknown'):
     return dict(key=key,label=label,type='select',choices=choices,default=default)
@@ -9,6 +10,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==40:
+        return dict(title='Enter your measured compass bearing',description='Enter degrees to at most one decimal place. Select the north reference and what the bearing represents; no automatic magnetic correction is applied.',fields=[text('degrees','Bearing in degrees (0 to 359.9)'),select('north','North reference',list(feng_shui.DATA['north_references']),''),select('role','Bearing role',list(feng_shui.DATA['bearing_roles']),''),text('uncertainty','Uncertainty in degrees',False),text('alternates','Alternate readings in degrees, comma separated',False)])
     if technique==39:
         return dict(title='Compare a documentary organ-feature account',description='Enter the tradition and source-described conditions. The result compares these declarations with the inspected historical records.',fields=[select('origin','Account origin',list(haruspicy.DATA['origins']),'unknown'),*[select(k,k.replace('_',' ').capitalize(),list(v)) for k,v in haruspicy.DATA['domains'].items()]])
     if technique==38:
@@ -84,7 +87,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -92,6 +95,14 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==40:
+        def tenths(value):
+            n=Fraction(value)*10
+            if n.denominator!=1:raise ValueError('Bearings require exact tenths of a degree; no rounding')
+            return int(n)
+        native=dict(schema_version=1,profile=feng_shui.PROFILE,mode='manual',task='classify',catalog_id=feng_shui.DATA['catalog_id'],catalog_version=1,catalog_sha256=feng_shui.CATALOG_HASH,bearing_tenths=tenths(a['degrees']),north_reference=a['north'],bearing_role=a['role'],uncertainty_tenths=tenths(a['uncertainty'] or '0'),alternate_readings=[tenths(x.strip()) for x in a['alternates'].split(',') if x.strip()])
+        feng_shui.validate(native)
+        return dict(technique_id=40,operation='feng-shui',input=native)
     if technique==39:
         native=dict(schema_version=1,profile=haruspicy.PROFILE,mode='manual',task='compare',catalog_id=haruspicy.DATA['catalog_id'],catalog_version=1,catalog_sha256=haruspicy.CATALOG_HASH,observations=[dict(observation_id='observed',**a)])
         haruspicy.validate(native)

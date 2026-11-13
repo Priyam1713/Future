@@ -131,3 +131,8 @@ class DedicatedTests(unittest.TestCase):
   from future import haruspicy
   q=build(39,dict(tradition='roman',organ='liver',feature='liver_head',presence='absent',other_vitals='sound'))
   haruspicy.validate(q['input']);self.assertEqual(q['input']['observations'][0]['presence'],'absent');self.assertTrue(haruspicy.evaluate_all(q['input']['observations']))
+ def test_bearing_exact_tenths(self):
+  a=dict(degrees='7.5',north='source_diagram',role='source_heading',alternates='7.6')
+  q=build(40,a);self.assertEqual(q['input']['bearing_tenths'],75);self.assertEqual(q['input']['alternate_readings'],[76])
+  a['degrees']='7.55'
+  with self.assertRaises(ValueError):build(40,a)
