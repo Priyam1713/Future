@@ -116,5 +116,6 @@ class DedicatedTests(unittest.TestCase):
   with self.assertRaises(ValueError):build(35,dict(case='9A',second='9A'))
  def test_bibliomancy_pinned_passage(self):
   from future import bibliomancy
-  q=build(36,dict(path='1,1,1,1',radius='0'))
-  r=bibliomancy.read(q['input']);self.assertEqual(r['selections'][0]['path'],[1,1,1,1]);self.assertTrue(r['selections'][0]['text']);self.assertEqual(r['selections'][0]['context_after'],[])
+  q=build(36,dict(path='1,1,2,1',radius='0'))
+  r=bibliomancy.read(q['input']);self.assertEqual(r['selections'][0]['path'],[1,1,2,1]);self.assertTrue(r['selections'][0]['text']);self.assertEqual(r['selections'][0]['context_after'],[])
+

@@ -1534,3 +1534,4 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 36
 - Added named passage selection from the verified Ruth corpus, context radius and reflection question. Pinned hashes built automatically; twenty-six dedicated tests pass. Remaining 18 flows pending.
+- Follow-up verification corrected the fixture path: logical page1 is heading-only and intentionally absent from selectable passages. The first selectable sentence is on logical page2. All26 tests now pass.
