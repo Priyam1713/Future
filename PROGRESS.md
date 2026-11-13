@@ -1586,3 +1586,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 59
 - Added Lorenz parameters, paired initial states, integration step/count and output stride. Equilibrium and invalid step checks verified; 43 dedicated tests pass. One flow remains.
+
+## 2026-11-13 — Dedicated input flow 60
+- Added explicit scenario nodes, conditional weights, terminal utilities and conditional queries. Exact expected utility/conditional mass and invalid sibling mass verified; 44 dedicated tests pass. All 43 requested builders now implemented; cross-flow API/browser and full regression acceptance still pending.

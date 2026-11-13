@@ -1,5 +1,5 @@
 """Deterministic, engine-specific personal-input builders."""
-from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory, digital_twin, agent_based, brain_intention, causal_ai, collective_intelligence as collective, prediction_markets as markets, chaos_theory as chaos
+from future import face_reading, phrenology, moleosophy, podomancy, graphology, aura, iridology, oracle, iching, runes, pendulum, scrying, mirror, dream, automatic_writing, akashic, tasseography, coffee, pyromancy, hydromancy, aeromancy, geomancy, lithomancy, osteomancy, bibliomancy, cleromancy, augury, haruspicy, feng_shui, intuitive_prediction, deja_reve, quantum_probability_forecasting as quantum, psychohistory, digital_twin, agent_based, brain_intention, causal_ai, collective_intelligence as collective, prediction_markets as markets, chaos_theory as chaos, multiverse
 import secrets, csv, io, hashlib
 from fractions import Fraction
 from . import remote_intake, dream_intake
@@ -11,6 +11,8 @@ def text(key,label,required=True):
     return dict(key=key,label=label,type='text',default='',required=required)
 
 def contract(technique):
+    if technique==60:
+        return dict(title='Calculate your branching scenario tree',description='Node rows: ID, parent ID (blank for root), conditional weight, terminal utility (blank for internal nodes). Use integers or fractions; root weight is 1 and each sibling group sums to 1. Optional query rows: condition node, target node. These are declared hypothetical weights, not observations of other universes.',fields=[text('description','Scenario description'),text('nodes','Scenario node rows'),text('queries','Conditional query rows',False),text('attribution','Attribution'),select('exhaustive','Confirm the declared branches exhaust this synthetic model',['yes','no'],'')])
     if technique==59:
         return dict(title='Explore your Lorenz initial conditions',description='Enter integers or exact fractions (for example 8/3 or 1/100). The engine compares two initial states and half-step refinement using classical RK4. This is a mathematical simulation, not a validated weather or real-world forecast.',fields=[text(k,label) for k,label in [('sigma','Sigma (positive, at most 50)'),('rho','Rho (positive, at most 100)'),('beta','Beta (positive, at most 20)'),('initial','Initial x, y, z (comma separated)'),('perturbed','Comparison x, y, z (comma separated)'),('dt','Step size (1/100000 to 1/20)'),('steps','Number of steps (0 to 4096)'),('stride','Output every N steps'),('snapshot','Simulation description'),('attribution','Attribution')]])
     if technique==58:
@@ -114,7 +116,7 @@ def contract(technique):
         select('marking','Visible marking',['unknown','none','line','spot','crease'])])
 
 def build(technique,answers):
-    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52,53,54,55,56,57,58,59]:raise ValueError('Dedicated builder is not implemented for this technique')
+    if technique not in [9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,26,28,29,30,31,32,33,34,35,36,37,38,39,40,43,44,45,46,50,52,53,54,55,56,57,58,59,60]:raise ValueError('Dedicated builder is not implemented for this technique')
     if not isinstance(answers,dict):raise ValueError('Input answers must be an object')
     spec=contract(technique);a={}
     for field in spec['fields']:
@@ -122,6 +124,20 @@ def build(technique,answers):
         if field['type']=='select' and value not in field['choices']:raise ValueError('Choose '+field['label'])
         if field['type']=='text' and (not isinstance(value,str) or len(value)>10000 or (field.get('required') and not value.strip())):raise ValueError('Enter '+field['label'])
         a[field['key']]=value
+    if technique==60:
+        if a['exhaustive']!='yes':raise ValueError('Declared exhaustive scenario required')
+        nodes=[];queries=[]
+        for row in csv.reader(io.StringIO(a['nodes'])):
+            if not row:continue
+            if len(row)!=4:raise ValueError('Each node needs ID, parent, conditional weight, terminal utility')
+            name,parent,weight,utility=[x.strip() for x in row];nodes.append(dict(id=name,parent=parent or None,weight=weight,utility=utility or None))
+        for row in csv.reader(io.StringIO(a['queries'])):
+            if not row:continue
+            if len(row)!=2:raise ValueError('Each query needs condition node and target node')
+            queries.append(dict(id='query-'+str(len(queries)+1),given=row[0].strip(),target=row[1].strip()))
+        q=dict(schema_version=1,profile=dict(id=multiverse.DATA['id'],version=1,sha256=multiverse.PROFILE_HASH,catalog_sha256=multiverse.DATA['source_manifest_sha256']),scenario=dict(id='user-tree',version=1,description=a['description'],kind='educational_editorial_weights',exhaustive=True),nodes=nodes,queries=queries,provenance=dict(synthetic=True,rights='self_authored',source_ref='multiverse-mit-expectation-v1',snapshot=a['description'],attribution=a['attribution'],snapshot_sha256=hashlib.sha256(a['description'].encode()).hexdigest()))
+        multiverse.validate(q)
+        return dict(technique_id=60,operation='multiverse',input=q)
     if technique==59:
         q=dict(schema_version=1,profile=dict(id=chaos.DATA['id'],version=1,sha256=chaos.PROFILE_HASH,catalog_sha256=chaos.DATA['source_manifest_sha256']),parameters={k:a[k].strip() for k in ('sigma','rho','beta')},initial=[x.strip() for x in a['initial'].split(',')],perturbed_initial=[x.strip() for x in a['perturbed'].split(',')],integration=dict(solver='classical_rk4',dt=a['dt'].strip(),steps=int(a['steps']),trace_stride=int(a['stride'])),provenance=dict(synthetic=True,rights='self_authored',source_ref='chaos-theory-lorenz-v1',snapshot=a['snapshot'],attribution=a['attribution'],snapshot_sha256=hashlib.sha256(a['snapshot'].encode()).hexdigest()))
         chaos.validate(q)

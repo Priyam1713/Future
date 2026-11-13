@@ -230,3 +230,10 @@ class DedicatedTests(unittest.TestCase):
   r=c.read(build(59,a)['input']);self.assertEqual(r['rows'][-1]['coarse_base'],[0,0,0]);self.assertIsNone(r['diagnostics']['final_refined_amplification'])
   a['dt']='1'
   with self.assertRaises(ValueError):build(59,a)
+
+ def test_user_scenario_tree(self):
+  from future import multiverse
+  a=dict(description='Hypothetical two-branch decision',nodes='root,,1,\na,root,1/4,10\nb,root,3/4,2',queries='root,a',attribution='My scenario',exhaustive='yes')
+  r=multiverse.read(build(60,a)['input']);self.assertEqual(r['expected_utility'],'4');self.assertEqual(r['queries'][0]['probability'],'1/4')
+  a['nodes']=a['nodes'].replace('3/4','1/4')
+  with self.assertRaises(ValueError):build(60,a)
