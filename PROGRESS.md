@@ -1550,3 +1550,6 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 43
 - Added five-image upload, rights permission, participant roles, transcript, strict rankings and explicit event timestamps for declared training-record review. Normalized target PNGs retained in ignored tmp/workbench-targets for native replay; not blind certification or portable image export. Native locks/commitment/report built without invented observations or event times. Target rank1 test and31 dedicated tests/build pass. Remaining13 flows pending.
+
+## 2026-11-13 — Dedicated input flow 44
+- Added declared single-dream/event study review with roles, source evidence, windows, explicit action times and human rating. Native original/judge locks and chronological ledger constructed; evidence retained in ignored tmp/workbench-evidence. Unblinded descriptive scope, not prospective certification. Thirty-two dedicated tests pass. Remaining12 flows pending.

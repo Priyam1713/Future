@@ -145,3 +145,10 @@ class DedicatedTests(unittest.TestCase):
   a.update({f'rank{i}':str(v) for i,v in enumerate([2,3,1,4,5],1)})
   a.update({action+'_at':f'2026-11-13T10:{i:02d}:00Z' for i,action in enumerate(ACTIONS,1)})
   q=build(43,a);r=rv.report(q['input']['trial']);self.assertEqual(r['judge_results'][0]['actual_target_rank'],1);self.assertFalse(r['eligible_blinded_scoring'])
+ def test_dream_event_ledger(self):
+  from workbench.dream_intake import ACTIONS,engine
+  a=dict(study='study',participant='person',coordinator='coord',collector='collector',judge='judge',rule='One predefined event record',feature='Observed object',narrative='A red object',detail='red object',event_text='A red sign was reported',evidence='Independent test evidence',holder='Test author',source='Self-authored fixture',reason='Shared color only',permission='yes',known='no',common='no',coverage='complete',rating='match')
+  times={'created':0,'slot_open':1,'slot_due':3,'collection_start':0,'collection_end':59,'window_start':4,'window_end':59,'event_start':5,'event_end':5,'discovery':5}
+  a.update({k:f'2026-11-13T10:{v:02d}:00Z' for k,v in times.items()})
+  a.update({k+'_at':f'2026-11-13T10:{v:02d}:00Z' for k,v in zip(ACTIONS,[2,4,6,7,8,9,10,11,12])})
+  q=build(44,a);r=engine.report(q['input']['ledger']);self.assertEqual(r['state'],'reported');self.assertEqual(r['pair_counts']['total'],1);self.assertFalse(r['declared_blind_judging'])
