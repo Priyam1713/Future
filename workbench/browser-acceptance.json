@@ -106,6 +106,48 @@
   },
   "suites": [
     {
+      "title": "dedicated.spec.ts",
+      "file": "dedicated.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "all 43 dedicated forms prepare and run user inputs without sample loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 26234,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T12:35:22.790Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "74e4a988c8a78faf36ff-dfbbc940b6a3d8f0afd7",
+          "file": "dedicated.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    },
+    {
       "title": "workbench.spec.ts",
       "file": "workbench.spec.ts",
       "column": 0,
@@ -127,12 +169,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1234,
+                  "duration": 623,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-12T07:22:55.729Z",
+                  "startTime": "2026-11-13T12:35:49.347Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -146,7 +188,7 @@
           "column": 1
         },
         {
-          "title": "all 54 engines run from their actual browser forms",
+          "title": "all 54 verified samples run through the browser",
           "ok": true,
           "tags": [],
           "tests": [
@@ -161,12 +203,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 26745,
+                  "duration": 37441,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-12T07:22:57.230Z",
+                  "startTime": "2026-11-13T12:35:49.982Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -174,7 +216,7 @@
               "status": "expected"
             }
           ],
-          "id": "921e070f285a8b470d11-172a52c391803f8b2a8e",
+          "id": "921e070f285a8b470d11-c77cca1d0c6984ee3acb",
           "file": "workbench.spec.ts",
           "line": 7,
           "column": 1
@@ -195,12 +237,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1064,
+                  "duration": 1303,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-12T07:23:23.986Z",
+                  "startTime": "2026-11-13T12:36:27.435Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -229,12 +271,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3238,
+                  "duration": 4894,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-12T07:23:25.060Z",
+                  "startTime": "2026-11-13T12:36:28.751Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -263,12 +305,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1554,
+                  "duration": 2428,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-12T07:23:28.307Z",
+                  "startTime": "2026-11-13T12:36:33.657Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -297,12 +339,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2647,
+                  "duration": 4372,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-12T07:23:29.871Z",
+                  "startTime": "2026-11-13T12:36:36.099Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -331,12 +373,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1187,
+                  "duration": 1408,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-12T07:23:32.528Z",
+                  "startTime": "2026-11-13T12:36:40.485Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -354,9 +396,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-12T07:22:53.751Z",
-    "duration": 41485.902,
-    "expected": 7,
+    "startTime": "2026-11-13T12:35:20.867Z",
+    "duration": 81609.541,
+    "expected": 8,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

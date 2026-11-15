@@ -4,7 +4,7 @@ const key = () => ({ "Idempotency-Key": crypto.randomUUID() });
 test('palmistry starts with photo intake and no silent sample run',async({page})=>{
  await page.goto('/');await page.getByLabel('Search techniques').fill('Palmistry');await page.locator('.engine-card').filter({has:page.getByRole('heading',{name:'Palmistry',exact:true})}).click();await expect(page.getByRole('heading',{name:'Start with your palm photo'})).toBeVisible();await page.getByRole('button',{name:'Run technique',exact:true}).click();await expect(page.getByRole('alert')).toContainText('Analyze your palm photo');await expect(page.getByRole('button',{name:'Analyze palm photo'})).toBeDisabled();
 });
-test("all 54 engines run from their actual browser forms", async ({
+test("all 54 verified samples run through the browser", async ({
   page,
   request,
 }) => {

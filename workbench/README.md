@@ -1,4 +1,4 @@
-# Future Workbench v1.1
+# Future Workbench v1.2
 
 From `D:\Future`, run **`python -m workbench`**, then open **http://127.0.0.1:8000**. If that port is occupied, use `python -m workbench --port 8766`. Initial setup needs Node/npm, the root Python requirements, and network access for the pinned frontend/backend packages. Subsequent launches and engine execution work offline. Use `--no-build` to reuse an existing frontend build. Stop with Ctrl+C.
 
@@ -20,13 +20,15 @@ SQLite schema migration 1 is explicit in `store.py`. Transactions serialize writ
 
 Participant/case deletion previews affected counts. Without separate retention consent it deletes active cases, linked sessions, studies and secrets. Separate frozen-retention consent allows already-locked sessions/studies to become detached archives; these intentionally retain original inputs and may contain sensitive details. This retention is explicit, not anonymization. Downloaded exports, backups and operating-system remnants are outside the deletion operation. A local machine/DB owner can read secrets: this is workflow blinding, not protection against the database administrator. Photo processing is local. Installation downloads the optional runtime and model; normal inference stays on loopback. No arbitrary kernel-file access is provided.
 
+Target images from #43 and evidence from #44 are retained separately under `tmp/workbench-targets` and `tmp/workbench-evidence` for native replay. Session/case deletion does not remove these shared content-addressed files; JSON export does not bundle them. See [input/storage limits](INPUTS.md).
+
 Unlinked exploration runs and researcher forecasts can be deleted from Cases → Unlinked local runs & forecasts, or from the current unlinked Studio result. They have no participant retention consent and are removed directly. Linked runs follow the owning case/participant deletion policy.
 
 ## Supported boundaries and backlog
 
-- Supported: all 54 sample invocation paths; native operation selection; recursive fields and raw JSON; native errors/provenance; local consent/cases; blind lock/reveal; prospective #51 form; guarded advanced Lab plans for #49/#57; immutable outcome scoring; descriptive/eligible comparison; filters; import/export; active deletion and separately consented frozen retention.
+- Supported: 43 dedicated deterministic core input builders, the existing 11 entry paths and all 54 sample invocation paths; native operation selection; recursive fields and raw JSON; native errors/provenance; local consent/cases; blind lock/reveal; prospective #51 form; guarded advanced Lab plans for #49/#57; immutable outcome scoring; descriptive/eligible comparison; filters; import/export; active deletion and separately consented frozen retention.
 - **Versioned corrections are annotations only.** Void/disputed/correction dispositions are append-only, suspend scoring and preserve the original Lab ledger/report for inspection. They never overwrite a numeric outcome or falsely claim a corrected score. Historical numeric replacement requires a later legitimate native protocol/version and is deferred. New future studies can be created; past forecasts cannot be backdated. The app does not provide an external timestamp authority.
-- Advanced #49/#57 plans require native protocol expertise; bespoke prospective forms for them are P1. Full schema coverage beyond verified sample fields and commitment-aware native ledger builders are P1. Native unknown/unsupported states are preserved and may require reading the structured output.
+- Advanced #49/#57 plans require native protocol expertise; bespoke prospective forms for them are P1. Full variation coverage remains P1; #43/#44 now have bounded declared-record ledger builders. Native unknown/unsupported states are preserved and may require reading the structured output.
 - P1: per-target disposition retraction/adjudication with a new explicit version; richer case/session follow-up editing with version history; archive selection/deletion UI; better controlled vocabulary and field help per native variation.
 - P2: encrypted-at-rest workspace integration; independently authenticated commitments; multi-assessor access isolation; additional accessible result tables. No multi-user/server deployment is claimed.
 

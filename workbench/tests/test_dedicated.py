@@ -237,3 +237,14 @@ class DedicatedTests(unittest.TestCase):
   r=multiverse.read(build(60,a)['input']);self.assertEqual(r['expected_utility'],'4');self.assertEqual(r['queries'][0]['probability'],'1/4')
   a['nodes']=a['nodes'].replace('3/4','1/4')
   with self.assertRaises(ValueError):build(60,a)
+
+ def test_all_dedicated_native_routes_and_replay(self):
+  import json
+  from pathlib import Path
+  from workbench.invocation import invoke
+  cases=json.loads(Path(__file__).with_name('dedicated-inputs.json').read_text())
+  self.assertEqual(len(cases),43)
+  for key,answers in cases.items():
+   with self.subTest(technique=key):
+    request=build(int(key),answers);result=invoke(request)
+    self.assertIsNone(result['native_error']);self.assertEqual(result['native_output_sha256'],invoke(request)['native_output_sha256'])

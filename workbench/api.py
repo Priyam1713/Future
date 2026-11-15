@@ -7,6 +7,7 @@ from fastapi.staticfiles import StaticFiles
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 from future import lab
 from future.lab.common import ROOT, REGISTRY_HASH, PROFILE_HASH, digest
+from .invocation import invoke as invoke_native
 from .dedicated import contract as input_contract, build as build_input
 from .store import Store, dumps, now, uid, LOCK
 from .prospective import build, at, snapshot
@@ -123,7 +124,7 @@ def create_app(directory=None,clock=now):
             if any(a.startswith('--') and a.split('=',1)[0] not in allowed for a in q['arguments']):raise ValueError('Only exact registered options are allowed; kernel, database and format overrides are owned by Workbench/Lab')
         for a in q.get('arguments',[]):
             if a=='--kernel' or a.startswith('--kernel='):raise ValueError('Workbench uses the pinned local kernel; paths cannot be overridden')
-        with LOCK:return lab.invoke(q)
+        with LOCK:return invoke_native(q)
     @app.post('/api/validate')
     def validate(q:dict):
         r=invoke(q);return dict(status='native_rejected' if r['native_error'] else 'native_completed',invocation=r,method='Native offline execution; may cost the same as a run')

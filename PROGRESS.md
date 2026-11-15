@@ -1589,3 +1589,9 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 
 ## 2026-11-13 — Dedicated input flow 60
 - Added explicit scenario nodes, conditional weights, terminal utilities and conditional queries. Exact expected utility/conditional mass and invalid sibling mass verified; 44 dedicated tests pass. All 43 requested builders now implemented; cross-flow API/browser and full regression acceptance still pending.
+
+## 2026-11-15 — Workbench v1.2 dedicated input acceptance
+- All 43 requested dedicated core builders implemented and browser-tested with entered inputs, without sample loading. Existing 11 entry paths retained; all 54 verified sample browser runs pass.
+- Fixed #43/#44 file-backed native reader integration using a Workbench-only keyword-registry adapter, preserving frozen Lab. Added deterministic request/replay checks across all 43 builders and explicit accessible field names/image-read waiting.
+- Acceptance: 74 backend tests, eight browser groups (zero failures/skips/flakes), production build and dependency/pip/workbook gates pass. Full inherited 2522 tests, 3515 CLI cases and 52 independent verifiers pass; 5584 protected files unchanged. Measured source hashes finalized.
+- Bounded core scope: source-reference and journal outputs remain descriptive; synthetic-only engines remain synthetic. #43/#44 are declared completed-record review, not prospective certification. Separate retained assets, export/deletion limits and P1 variation/table/asset work documented in INPUTS.md and release.json. Ready for manual core-flow testing.

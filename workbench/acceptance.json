@@ -1,37 +1,44 @@
 {
   "schema_version": 1,
-  "workbench_tests": 31,
-  "browser_tests": 7,
+  "workbench_tests": 74,
+  "browser_tests": 8,
   "browser_skipped": 0,
   "browser_failed": 0,
   "all54_browser_invocation": true,
+  "dedicated_core_builders": 43,
+  "all43_dedicated_browser_invocation": true,
   "native_sample_hashes_verified": 54,
   "source_sha256": {
     "workbench/__init__.py": "f47db74387cb49e14285a5092de49e358a7e45bcd55548b8e9de76f54f94ca0b",
     "workbench/__main__.py": "94e5bd1f19017397a7b7b977c817db162478f99e02f869729cc4c574b317d640",
-    "workbench/accept.py": "2b9bf9c11ef936fd598817a60106d5bb7362fd25327341f85fce8e03faff0b7e",
+    "workbench/accept.py": "17f26e43e9e44eb061887676d05b336f0468209854eef1504af73dd71dc3addb",
     "workbench/accept_inherited.py": "f182f59448f6f4b6223b50323462ec21754363a9c7a1c7ae2c257ee2fa47c488",
-    "workbench/api.py": "81212b07ba1c5596c3159f328d024cd54d22b88129f3de53b6bce92fbcebabc6",
-    "workbench/dedicated.py": "dd619161dd0a5a67259d4e8cb63192a984dce7bc573fd54dded12756f1da0cee",
+    "workbench/api.py": "f792222f4dc646603ac34998b825c952416da0e57285b291a31522398c2f1e50",
+    "workbench/dedicated.py": "114dc2c1878cb1e43f872d622bf87a5e670c0ae84e11de001d1391e903b5f31e",
+    "workbench/dream_intake.py": "a4eb730d1ad4cf20cab507911ef414d7e089913673ecf4aa02c47a135c38b5a7",
     "workbench/e2e_server.py": "83582a3534d0fc624e05ae206f30a8a932457346ec2d9dfe54137a7b092c62a8",
     "workbench/input-workflows.json": "b428a5dde26c2cdbcbc70fde7da2f2bae3523219871734e9229b5efaa12a7a26",
+    "workbench/invocation.py": "5e6b0807749a70977b436981e628724518577db4e41d8650ef910a434fd83a4a",
     "workbench/live_vision_smoke.py": "81c8978895f5e4d2269bac0747c703831cc915d3d037cb5a83f9e25645c404ca",
     "workbench/prospective.py": "a631560d3da0950a28ab7c027871fba72c77f3da0a84a8e5149fea537d642ef6",
+    "workbench/remote_intake.py": "33066306b5ad7394766fdff16bd060601c7d3bd1bb844ef6516e0d397977ba52",
     "workbench/requirements.txt": "1c26f58fe10894651699fecbfcaa2c6f03dc6b0059a54e71c73bf3c9d4613d55",
     "workbench/setup_vision.py": "9bbe4eef4766f7a6a2d4ce1c3001ae1872d7f08ca462d11bfdcf21de466be685",
     "workbench/store.py": "7c9571e0107a2d596bad8740b50cb7adf6212b03b6322ddad04b619d08943a92",
     "workbench/test-requirements.txt": "934fbb549ab3209320a68f549631f92ffa7dcd1372d15620c148eb5f55bd7735",
-    "workbench/tests/test_dedicated.py": "dabe5f6e33960ad394d32a86a78987044017919d1054275db371b7887d7ec95c",
+    "workbench/tests/dedicated-inputs.json": "c79ceaca68f89095c1b36f606182d5b35613d7365e12c730f7e39b7cebcca830",
+    "workbench/tests/test_dedicated.py": "7d80383f0deff17e8f4f4f409391f96f32852651656a77840986f66362cb5a0f",
     "workbench/tests/test_vision.py": "4a8224ee5548b11da0fd61b8ef6c7688f76cd7e971d6fc84ebc0e4a86b01923e",
     "workbench/tests/test_workbench.py": "eecd84fa55552755afdf775081ad86897e326acfb090d7657065993c2badce32",
     "workbench/vision.py": "a58134fc3cb632a9f1191140e549c9d2e3f0aa1e752049276968c508f169ba2c",
-    "workbench/web/e2e/workbench.spec.ts": "f1bcfc10c05317002bb7860ba009c72b692ab971a99241c6a5db13ad409dd21e",
+    "workbench/web/e2e/dedicated.spec.ts": "0d6ad798155148951205da3024e832ff14840467bc6a4e35da3446d94b5ba32e",
+    "workbench/web/e2e/workbench.spec.ts": "4538302ab713922eeb4182562e72f3c99e4a3b60464334d10b7fd703928270b4",
     "workbench/web/index.html": "0d1ec5bc0294f2a1f333e314996fb1cb60c465307b6b6d9e8a078836ebc84be5",
     "workbench/web/package-lock.json": "3162deffcc35925e0760426bc746e0686511ded68dc725039a8229ad374476d2",
     "workbench/web/package.json": "2c3d8bc32ee445e4ed4033d745dc939b966fdb2b4c98d2e334907c5ec86921a7",
     "workbench/web/playwright.config.ts": "748cf646ad7fd33a8cee066f04e1ad018d2e67790163e19e2d75a266cb0273b5",
     "workbench/web/src/components/ui/button.tsx": "9d66243c4be9e76462da92b76011e7049ac2b78e9d3c1e9f75ff89637b0bb998",
-    "workbench/web/src/dedicated-intake.tsx": "da6ce12d2907f009fbe164b41a104179a320a407d2ec8c6cb3047780ff17f0e8",
+    "workbench/web/src/dedicated-intake.tsx": "95eec309072c705c9fd925b7652919c8fc2ba6a9c25a4e4bb0cac6f1a9fc095b",
     "workbench/web/src/editor.tsx": "c70572ef21de505c7b9002f1f5bc77887119b3e00a4c14cc2238a00345b423d1",
     "workbench/web/src/intake.tsx": "b8b7b5ba98bf2942322a5191b84070df52f600e92c7746cfdaf228a880027fc6",
     "workbench/web/src/main.tsx": "9bd75b35d6bf446d0ed21c873020b8ae33b0ce51ef1828e0e6a2883c2cd7dd99",
@@ -64,9 +71,9 @@
         "-v"
       ],
       "returncode": 0,
-      "seconds": 11.265,
+      "seconds": 14.328,
       "stdout": "",
-      "stderr": "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\r\n  from starlette.testclient import TestClient as TestClient  # noqa\r\ntest_face_invalid_side (test_dedicated.DedicatedTests.test_face_invalid_side) ... ok\r\ntest_face_user_observation (test_dedicated.DedicatedTests.test_face_user_observation) ... ok\r\ntest_all54_intake_profiles (test_vision.VisionBoundaryTests.test_all54_intake_profiles) ... ok\r\ntest_intake_cannot_change_engine (test_vision.VisionBoundaryTests.test_intake_cannot_change_engine) ... ok\r\ntest_monthly_real_input_builder_exact_drift (test_vision.VisionBoundaryTests.test_monthly_real_input_builder_exact_drift) ... ok\r\ntest_nested_model_fields_are_validated_without_fabrication (test_vision.VisionBoundaryTests.test_nested_model_fields_are_validated_without_fabrication) ... ok\r\ntest_no_image_in_public_receipt (test_vision.VisionBoundaryTests.test_no_image_in_public_receipt) ... ok\r\ntest_non_palm_rejects (test_vision.VisionBoundaryTests.test_non_palm_rejects) ... ok\r\ntest_permission_before_inference (test_vision.VisionBoundaryTests.test_permission_before_inference) ... ok\r\ntest_unknowns_stay_unknown_and_no_measurements (test_vision.VisionBoundaryTests.test_unknowns_stay_unknown_and_no_measurements) ... ok\r\ntest_unreadable_photo_rejects (test_vision.VisionBoundaryTests.test_unreadable_photo_rejects) ... ok\r\ntest_unsupported_observations_reject (test_vision.VisionBoundaryTests.test_unsupported_observations_reject) ... ok\r\ntest_advanced_compatible_study_and_matched_comparison (test_workbench.WorkbenchTest.test_advanced_compatible_study_and_matched_comparison) ... ok\r\ntest_all54_native_hashes (test_workbench.WorkbenchTest.test_all54_native_hashes) ... ok\r\ntest_backdating_rejected (test_workbench.WorkbenchTest.test_backdating_rejected) ... ok\r\ntest_blind_lock_reveal_immutable (test_workbench.WorkbenchTest.test_blind_lock_reveal_immutable) ... ok\r\ntest_catalogue_and_six_exclusions (test_workbench.WorkbenchTest.test_catalogue_and_six_exclusions) ... ok\r\ntest_comparison_no_universal_scores (test_workbench.WorkbenchTest.test_comparison_no_universal_scores) ... ok\r\ntest_consent_required_and_enforced (test_workbench.WorkbenchTest.test_consent_required_and_enforced) ... ok\r\ntest_delete_cascades_and_erases_secrets (test_workbench.WorkbenchTest.test_delete_cascades_and_erases_secrets) ... ok\r\ntest_empty_dashboard_and_filters (test_workbench.WorkbenchTest.test_empty_dashboard_and_filters) ... ok\r\ntest_exact_text_export_import_into_fresh_workspace (test_workbench.WorkbenchTest.test_exact_text_export_import_into_fresh_workspace) ... ok\r\ntest_exports_all_formats (test_workbench.WorkbenchTest.test_exports_all_formats) ... ok\r\ntest_idempotent_session_and_conflict (test_workbench.WorkbenchTest.test_idempotent_session_and_conflict) ... ok\r\ntest_import_export_integrity_and_duplicates (test_workbench.WorkbenchTest.test_import_export_integrity_and_duplicates) ... ok\r\ntest_local_boundary_strict_json (test_workbench.WorkbenchTest.test_local_boundary_strict_json) ... ok\r\ntest_missing_disputed_correction_scoring (test_workbench.WorkbenchTest.test_missing_disputed_correction_scoring) ... ok\r\ntest_native_error_and_unsupported (test_workbench.WorkbenchTest.test_native_error_and_unsupported) ... ok\r\ntest_prospective_pending_resolve_exact_score (test_workbench.WorkbenchTest.test_prospective_pending_resolve_exact_score) ... ok\r\ntest_separately_consented_frozen_retention (test_workbench.WorkbenchTest.test_separately_consented_frozen_retention) ... ok\r\ntest_unlinked_run_deletion (test_workbench.WorkbenchTest.test_unlinked_run_deletion) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 31 tests in 10.583s\r\n\r\nOK\r\n"
+      "stderr": "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\r\n  from starlette.testclient import TestClient as TestClient  # noqa\r\ntest_agent_grid_blinker (test_dedicated.DedicatedTests.test_agent_grid_blinker) ... ok\r\ntest_air_direction_and_duration (test_dedicated.DedicatedTests.test_air_direction_and_duration) ... ok\r\ntest_akashic_explicit_purpose (test_dedicated.DedicatedTests.test_akashic_explicit_purpose) ... ok\r\ntest_all_dedicated_native_routes_and_replay (test_dedicated.DedicatedTests.test_all_dedicated_native_routes_and_replay) ... ok\r\ntest_aura_color_selection (test_dedicated.DedicatedTests.test_aura_color_selection) ... ok\r\ntest_bearing_exact_tenths (test_dedicated.DedicatedTests.test_bearing_exact_tenths) ... ok\r\ntest_bibliomancy_pinned_passage (test_dedicated.DedicatedTests.test_bibliomancy_pinned_passage) ... ok\r\ntest_bird_unknowns_preserved (test_dedicated.DedicatedTests.test_bird_unknowns_preserved) ... ok\r\ntest_bone_comparison_selection (test_dedicated.DedicatedTests.test_bone_comparison_selection) ... ok\r\ntest_coffee_typed_attributes (test_dedicated.DedicatedTests.test_coffee_typed_attributes) ... ok\r\ntest_deja_reve_record_hash_and_compatibility (test_dedicated.DedicatedTests.test_deja_reve_record_hash_and_compatibility) ... ok\r\ntest_dream_event_ledger (test_dedicated.DedicatedTests.test_dream_event_ledger) ... ok\r\ntest_dream_unknown_context_not_invented (test_dedicated.DedicatedTests.test_dream_unknown_context_not_invented) ... ok\r\ntest_face_invalid_side (test_dedicated.DedicatedTests.test_face_invalid_side) ... ok\r\ntest_face_user_observation (test_dedicated.DedicatedTests.test_face_user_observation) ... ok\r\ntest_fire_known_physical_conditions (test_dedicated.DedicatedTests.test_fire_known_physical_conditions) ... ok\r\ntest_foot_selection_preserves_uncertainty (test_dedicated.DedicatedTests.test_foot_selection_preserves_uncertainty) ... ok\r\ntest_geomancy_user_mothers (test_dedicated.DedicatedTests.test_geomancy_user_mothers) ... ok\r\ntest_handwriting_slant (test_dedicated.DedicatedTests.test_handwriting_slant) ... ok\r\ntest_iching_six_user_lines (test_dedicated.DedicatedTests.test_iching_six_user_lines) ... ok\r\ntest_iris_source_label (test_dedicated.DedicatedTests.test_iris_source_label) ... ok\r\ntest_lot_selection (test_dedicated.DedicatedTests.test_lot_selection) ... ok\r\ntest_mirror_journal (test_dedicated.DedicatedTests.test_mirror_journal) ... ok\r\ntest_moleosophy_region_filter (test_dedicated.DedicatedTests.test_moleosophy_region_filter) ... ok\r\ntest_network_user_thresholds (test_dedicated.DedicatedTests.test_network_user_thresholds) ... ok\r\ntest_oracle_question_and_draw (test_dedicated.DedicatedTests.test_oracle_question_and_draw) ... ok\r\ntest_ordered_cue_decision (test_dedicated.DedicatedTests.test_ordered_cue_decision) ... ok\r\ntest_organ_source_conditions (test_dedicated.DedicatedTests.test_organ_source_conditions) ... ok\r\ntest_pendulum_rejects_duplicate_calibration (test_dedicated.DedicatedTests.test_pendulum_rejects_duplicate_calibration) ... ok\r\ntest_phrenology_selected_label (test_dedicated.DedicatedTests.test_phrenology_selected_label) ... ok\r\ntest_quantum_bell_user_circuit (test_dedicated.DedicatedTests.test_quantum_bell_user_circuit) ... ok\r\ntest_remote_training_record_and_rank (test_dedicated.DedicatedTests.test_remote_training_record_and_rank) ... ok\r\ntest_rune_draw_replays (test_dedicated.DedicatedTests.test_rune_draw_replays) ... ok\r\ntest_scrying_preserves_description (test_dedicated.DedicatedTests.test_scrying_preserves_description) ... ok\r\ntest_stone_exact_geometry (test_dedicated.DedicatedTests.test_stone_exact_geometry) ... ok\r\ntest_tea_adjacency (test_dedicated.DedicatedTests.test_tea_adjacency) ... ok\r\ntest_twin_user_measurement (test_dedicated.DedicatedTests.test_twin_user_measurement) ... ok\r\ntest_user_causal_table (test_dedicated.DedicatedTests.test_user_causal_table) ... ok\r\ntest_user_feature_classifier (test_dedicated.DedicatedTests.test_user_feature_classifier) ... ok\r\ntest_user_forecast_pool (test_dedicated.DedicatedTests.test_user_forecast_pool) ... ok\r\ntest_user_lorenz_initial_states (test_dedicated.DedicatedTests.test_user_lorenz_initial_states) ... ok\r\ntest_user_play_market (test_dedicated.DedicatedTests.test_user_play_market) ... ok\r\ntest_user_scenario_tree (test_dedicated.DedicatedTests.test_user_scenario_tree) ... ok\r\ntest_water_observation_basis (test_dedicated.DedicatedTests.test_water_observation_basis) ... ok\r\ntest_writing_time_order_and_original (test_dedicated.DedicatedTests.test_writing_time_order_and_original) ... ok\r\ntest_all54_intake_profiles (test_vision.VisionBoundaryTests.test_all54_intake_profiles) ... ok\r\ntest_intake_cannot_change_engine (test_vision.VisionBoundaryTests.test_intake_cannot_change_engine) ... ok\r\ntest_monthly_real_input_builder_exact_drift (test_vision.VisionBoundaryTests.test_monthly_real_input_builder_exact_drift) ... ok\r\ntest_nested_model_fields_are_validated_without_fabrication (test_vision.VisionBoundaryTests.test_nested_model_fields_are_validated_without_fabrication) ... ok\r\ntest_no_image_in_public_receipt (test_vision.VisionBoundaryTests.test_no_image_in_public_receipt) ... ok\r\ntest_non_palm_rejects (test_vision.VisionBoundaryTests.test_non_palm_rejects) ... ok\r\ntest_permission_before_inference (test_vision.VisionBoundaryTests.test_permission_before_inference) ... ok\r\ntest_unknowns_stay_unknown_and_no_measurements (test_vision.VisionBoundaryTests.test_unknowns_stay_unknown_and_no_measurements) ... ok\r\ntest_unreadable_photo_rejects (test_vision.VisionBoundaryTests.test_unreadable_photo_rejects) ... ok\r\ntest_unsupported_observations_reject (test_vision.VisionBoundaryTests.test_unsupported_observations_reject) ... ok\r\ntest_advanced_compatible_study_and_matched_comparison (test_workbench.WorkbenchTest.test_advanced_compatible_study_and_matched_comparison) ... ok\r\ntest_all54_native_hashes (test_workbench.WorkbenchTest.test_all54_native_hashes) ... ok\r\ntest_backdating_rejected (test_workbench.WorkbenchTest.test_backdating_rejected) ... ok\r\ntest_blind_lock_reveal_immutable (test_workbench.WorkbenchTest.test_blind_lock_reveal_immutable) ... ok\r\ntest_catalogue_and_six_exclusions (test_workbench.WorkbenchTest.test_catalogue_and_six_exclusions) ... ok\r\ntest_comparison_no_universal_scores (test_workbench.WorkbenchTest.test_comparison_no_universal_scores) ... ok\r\ntest_consent_required_and_enforced (test_workbench.WorkbenchTest.test_consent_required_and_enforced) ... ok\r\ntest_delete_cascades_and_erases_secrets (test_workbench.WorkbenchTest.test_delete_cascades_and_erases_secrets) ... ok\r\ntest_empty_dashboard_and_filters (test_workbench.WorkbenchTest.test_empty_dashboard_and_filters) ... ok\r\ntest_exact_text_export_import_into_fresh_workspace (test_workbench.WorkbenchTest.test_exact_text_export_import_into_fresh_workspace) ... ok\r\ntest_exports_all_formats (test_workbench.WorkbenchTest.test_exports_all_formats) ... ok\r\ntest_idempotent_session_and_conflict (test_workbench.WorkbenchTest.test_idempotent_session_and_conflict) ... ok\r\ntest_import_export_integrity_and_duplicates (test_workbench.WorkbenchTest.test_import_export_integrity_and_duplicates) ... ok\r\ntest_local_boundary_strict_json (test_workbench.WorkbenchTest.test_local_boundary_strict_json) ... ok\r\ntest_missing_disputed_correction_scoring (test_workbench.WorkbenchTest.test_missing_disputed_correction_scoring) ... ok\r\ntest_native_error_and_unsupported (test_workbench.WorkbenchTest.test_native_error_and_unsupported) ... ok\r\ntest_prospective_pending_resolve_exact_score (test_workbench.WorkbenchTest.test_prospective_pending_resolve_exact_score) ... ok\r\ntest_separately_consented_frozen_retention (test_workbench.WorkbenchTest.test_separately_consented_frozen_retention) ... ok\r\ntest_unlinked_run_deletion (test_workbench.WorkbenchTest.test_unlinked_run_deletion) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 74 tests in 13.671s\r\n\r\nOK\r\n"
     },
     {
       "command": [
@@ -77,8 +84,8 @@
         "build"
       ],
       "returncode": 0,
-      "seconds": 7.485,
-      "stdout": "\n> future-workbench@1.0.0 build\n> tsc -b && vite build\n\nvite v7.3.7 building client environment for production...\ntransforming...\n✓ 1590 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.36 kB │ gzip:  0.26 kB\ndist/assets/index-DpQs53xp.css   16.88 kB │ gzip:  4.72 kB\ndist/assets/index-zDhnPTyw.js   308.10 kB │ gzip: 96.56 kB\n✓ built in 1.80s\n",
+      "seconds": 6.391,
+      "stdout": "\n> future-workbench@1.0.0 build\n> tsc -b && vite build\n\nvite v7.3.7 building client environment for production...\ntransforming...\n✓ 1590 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.36 kB │ gzip:  0.26 kB\ndist/assets/index-DpQs53xp.css   16.88 kB │ gzip:  4.72 kB\ndist/assets/index-CBn09HeY.js   308.86 kB │ gzip: 96.80 kB\n✓ built in 1.53s\n",
       "stderr": ""
     },
     {
@@ -90,9 +97,9 @@
         "test:e2e"
       ],
       "returncode": 0,
-      "seconds": 44.406,
-      "stdout": "\n> future-workbench@1.0.0 test:e2e\n> playwright test\n\n\nRunning 7 tests using 1 worker\n\n  ok 1 e2e\\workbench.spec.ts:4:1 › palmistry starts with photo intake and no silent sample run (1.2s)\n  ok 2 e2e\\workbench.spec.ts:7:1 › all 54 engines run from their actual browser forms (26.7s)\n  ok 3 e2e\\workbench.spec.ts:51:1 › discovery, invalid native request, operation boundary and dark tablet layout (1.1s)\n  ok 4 e2e\\workbench.spec.ts:91:1 › consented participant, case, blind freeze/lock/reveal and local deletion (3.2s)\n  ok 5 e2e\\workbench.spec.ts:190:1 › prospective UI creates pending forecast then independent resolution and exact scoring (1.6s)\n  ok 6 e2e\\workbench.spec.ts:269:1 › portable export import, tamper rejection, idempotency and privacy boundaries (2.6s)\n  ok 7 e2e\\workbench.spec.ts:346:1 › personal tarot question and monthly observations run without demonstration data (1.2s)\n\n  7 passed (41.5s)\n",
-      "stderr": "[WebServer] INFO:     Started server process [28704]\r\n[WebServer] INFO:     Waiting for application startup.\r\n[WebServer] INFO:     Application startup complete.\r\n[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)\r\n(node:31724) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+      "seconds": 84.031,
+      "stdout": "\n> future-workbench@1.0.0 test:e2e\n> playwright test\n\n\nRunning 8 tests using 1 worker\n\n  ok 1 e2e\\dedicated.spec.ts:4:1 › all 43 dedicated forms prepare and run user inputs without sample loading (26.2s)\n  ok 2 e2e\\workbench.spec.ts:4:1 › palmistry starts with photo intake and no silent sample run (623ms)\n  ok 3 e2e\\workbench.spec.ts:7:1 › all 54 verified samples run through the browser (37.4s)\n  ok 4 e2e\\workbench.spec.ts:51:1 › discovery, invalid native request, operation boundary and dark tablet layout (1.3s)\n  ok 5 e2e\\workbench.spec.ts:91:1 › consented participant, case, blind freeze/lock/reveal and local deletion (4.9s)\n  ok 6 e2e\\workbench.spec.ts:190:1 › prospective UI creates pending forecast then independent resolution and exact scoring (2.4s)\n  ok 7 e2e\\workbench.spec.ts:269:1 › portable export import, tamper rejection, idempotency and privacy boundaries (4.4s)\n  ok 8 e2e\\workbench.spec.ts:346:1 › personal tarot question and monthly observations run without demonstration data (1.4s)\n\n  8 passed (1.4m)\n",
+      "stderr": "[WebServer] INFO:     Started server process [39984]\r\n[WebServer] INFO:     Waiting for application startup.\r\n[WebServer] INFO:     Application startup complete.\r\n[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)\r\n(node:32496) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
     },
     {
       "command": [
@@ -101,7 +108,7 @@
         "scripts.audit_dependencies"
       ],
       "returncode": 0,
-      "seconds": 0.203,
+      "seconds": 0.172,
       "stdout": "",
       "stderr": ""
     },
@@ -113,7 +120,7 @@
         "check"
       ],
       "returncode": 0,
-      "seconds": 0.563,
+      "seconds": 0.562,
       "stdout": "No broken requirements found.\r\n",
       "stderr": ""
     },
@@ -124,7 +131,7 @@
         "scripts.check_inventory_workbook"
       ],
       "returncode": 0,
-      "seconds": 0.109,
+      "seconds": 0.094,
       "stdout": "Original workbook SHA256 and all six sheets match frozen inventory cell-for-cell;60 IDs and six exclusions pass\r\n",
       "stderr": ""
     }
@@ -136,7 +143,7 @@
   ],
   "inherited_complete": true,
   "complete": true,
-  "status": "Workbench v1.1 Ready - experimental local intake",
+  "status": "Workbench v1.2 Ready - dedicated core input flows",
   "inherited": {
     "tests": 2522,
     "cli_cases": 3515,
@@ -144,5 +151,5 @@
     "protected_count": 5584,
     "changed_protected_files": []
   },
-  "inherited_receipt_sha256": "25751cb5b872d7a29b1801703469ed44a19b4fb51e60543e2cb824e9ae877dbc"
+  "inherited_receipt_sha256": "6f894a3dbc838c02369905680c397d9f419ff6ce9510876c105f13535ba2136a"
 }
