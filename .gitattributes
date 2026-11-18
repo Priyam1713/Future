@@ -1,2 +1,5 @@
 # Preserve downloaded public-domain witness bytes independently of platform.
 resources/corpora/webclassic-ruth-v1/*.html binary
+
+# Retain the upstream font license texts verbatim, including their whitespace.
+fate/web/public/fonts/*-OFL.txt -whitespace

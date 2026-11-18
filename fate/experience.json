@@ -1,0 +1,34 @@
+{
+  "id": "fate-tarot-v1",
+  "block": "01 · The Living Oracle",
+  "technique_id": 16,
+  "capability": "symbolic_reading",
+  "engine": "future.tarot.read",
+  "text_profile": "waite-1922-text-v1",
+  "art_profile": "fate-celestial-original-v1",
+  "journey": ["explore", "intention", "progressive_reveal", "reading"],
+  "supported": {
+    "spreads": ["one", "three"],
+    "orientation_policies": ["upright_only", "seeded_reversals"],
+    "three_card_positions": ["What you carry", "Where you stand", "What to consider"],
+    "seed_protocol": "future-cards-sha256-fy-v1",
+    "seed_generation": "Browser crypto.getRandomValues, 32 bytes, hex-encoded; retained for retry",
+    "required_inputs": ["spread", "seed", "reversals"],
+    "optional_inputs": ["question"],
+    "question_normalization": "Trim outer whitespace; replace line breaks with spaces for native plain-text context. No use in card selection.",
+    "reading": ["source-derived motifs", "native compositional reflection", "direct historical source wording", "reversal references", "separate additional source accounts", "ambiguities", "limitations", "JSON export with full native replay"],
+    "presentation": ["React DOM UI", "PixiJS WebGL fog/refraction", "independent celestial orbits", "touch parallax/pulse", "card flips", "immediate result option", "reduced motion", "manual atmosphere pause", "opt-in audio with separate ambient/effect volumes", "static original artwork fallback"],
+    "persistence": "In-memory visit only; explicit JSON download; no account, database, localStorage or analytics"
+  },
+  "experimental": {
+    "gemini": "Server-side, separately opt-in per reading; signed native request recomputed; exact card/rule references and bounded output shape checked; semantic faithfulness is not guaranteed. Native output never replaced.",
+    "performance": "Local Chromium mobile emulation measurements only; no real-device CWV, INP or GPU certification"
+  },
+  "unsupported": ["factual forecasts", "probabilities or confidence scores", "other Tarot traditions", "Celtic/manual consumer flows", "other techniques", "Fate Atlas or accounts", "automatic reading storage", "multiplayer", "Arcade", "monetization"],
+  "art_rights": {
+    "pack": "User supplied Downloads/FATE-asset-pack-01.zip; original procedural artwork and synthesized audio per included README",
+    "cards": "Original code-authored FATE celestial SVG designs. Not historical deck reproductions or historical symbolism certification.",
+    "fonts": "Self-hosted Cormorant Garamond and Inter; SIL OFL licenses and source URLs bundled"
+  },
+  "scope": "Consumer vertical slice over the existing supported symbolic engine, not empirical prediction certification or a new technique closure"
+}

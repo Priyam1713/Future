@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-19",
+  "block": "01 \u00b7 The Living Oracle",
+  "status": "Implemented and verified consumer vertical slice; physical-device/public-deployment acceptance remains P1",
+  "units": {
+    "native": {
+      "tests": 2522,
+      "passed": true,
+      "output": "----------------------------------------------------------------------\nRan 2522 tests in 95.620s\n\nOK\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\n"
+    },
+    "workbench": {
+      "tests": 77,
+      "passed": true,
+      "output": "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\n----------------------------------------------------------------------\nRan 77 tests in 13.315s\n\nOK\n"
+    },
+    "fate": {
+      "tests": 13,
+      "passed": true,
+      "output": "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\ntest_commentary_requires_true_consent_and_valid_signed_request (test_api.ConsumerTests.test_commentary_requires_true_consent_and_valid_signed_request) ... ok\ntest_foreign_origin_and_body_boundary (test_api.ConsumerTests.test_foreign_origin_and_body_boundary) ... ok\ntest_invalid_provider_references_are_never_displayed (test_api.ConsumerTests.test_invalid_provider_references_are_never_displayed) ... ok\ntest_multiline_question_is_plain_text_context (test_api.ConsumerTests.test_multiline_question_is_plain_text_context) ... ok\ntest_native_no_ai_dependency (test_api.ConsumerTests.test_native_no_ai_dependency) ... ok\ntest_no_workbench_or_private_files (test_api.ConsumerTests.test_no_workbench_or_private_files) ... ok\ntest_one_card_upright (test_api.ConsumerTests.test_one_card_upright) ... ok\ntest_profile_source_orientation_and_all_catalog_cards (test_api.ConsumerTests.test_profile_source_orientation_and_all_catalog_cards) ... ok\ntest_rate_limit (test_api.ConsumerTests.test_rate_limit) ... ok\ntest_real_engine_exact_match_and_replay (test_api.ConsumerTests.test_real_engine_exact_match_and_replay) ... ok\ntest_schema_rejects_extra_invalid_and_unbounded_inputs (test_api.ConsumerTests.test_schema_rejects_extra_invalid_and_unbounded_inputs) ... ok\ntest_security_headers (test_api.ConsumerTests.test_security_headers) ... ok\ntest_tampered_expired_and_restarted_receipt (test_api.ConsumerTests.test_tampered_expired_and_restarted_receipt) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.215s\n\nOK\n"
+    }
+  },
+  "fate_browser": {
+    "startTime": "2026-11-18T20:30:20.037Z",
+    "duration": 58147.270000000004,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "workbench_browser": {
+    "startTime": "2026-11-18T20:10:09.984Z",
+    "duration": 96309.325,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cli_cases": 3515,
+  "independent_verifiers": 52,
+  "protected_source_files": 576,
+  "changed_protected_source_files": [],
+  "npm_vulnerabilities": 0,
+  "live_gemini": "One synthetic developer question; references/shape verified, not semantic or predictive validation",
+  "gates": [
+    {
+      "command": [
+        "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "stdout": "No broken requirements found.\r\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "scripts.audit_dependencies"
+      ],
+      "returncode": 0,
+      "stdout": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "scripts.check_inventory_workbook"
+      ],
+      "returncode": 0,
+      "stdout": "Original workbook SHA256 and all six sheets match frozen inventory cell-for-cell;60 IDs and six exclusions pass\r\n"
+    },
+    {
+      "command": [
+        "git",
+        "-c",
+        "core.safecrlf=false",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "stdout": ""
+    },
+    {
+      "command": [
+        "git",
+        "-c",
+        "core.safecrlf=false",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "returncode": 0,
+      "stdout": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "--",
+        "future",
+        "knowledge",
+        "resources",
+        "tests",
+        "workbench"
+      ],
+      "returncode": 0,
+      "stdout": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--exit-code",
+        "--",
+        "future",
+        "knowledge",
+        "resources",
+        "tests",
+        "workbench"
+      ],
+      "returncode": 0,
+      "stdout": ""
+    }
+  ],
+  "performance": {
+    "environment": "Local Chromium mobile emulation, 390\u00d7844 DPR2; SwiftShader software WebGL, warm server, no network throttling. Not real-device CWV certification or INP.",
+    "lcp": 636,
+    "cls": 0,
+    "longTasks": [
+      331,
+      76
+    ],
+    "rafMedianMs": 16.699999999999818,
+    "heapObservation": {
+      "usedBytes": 10000000,
+      "totalBytes": 13400000,
+      "note": "Chromium coarse heap observation, not peak-memory profiling"
+    },
+    "navigation": [
+      {
+        "name": "http://127.0.0.1:8010/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 29.899999976158142,
+        "navigationId": 9829,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.10000002384185791,
+        "domainLookupStart": 0.8999999761581421,
+        "domainLookupEnd": 1.3000000715255737,
+        "connectStart": 1.3000000715255737,
+        "secureConnectionStart": 0,
+        "connectEnd": 1.8000000715255737,
+        "requestStart": 1.899999976158142,
+        "responseStart": 2.899999976158142,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 2.899999976158142,
+        "responseEnd": 3.5,
+        "transferSize": 937,
+        "encodedBodySize": 637,
+        "decodedBodySize": 637,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 9.200000047683716,
+        "domContentLoadedEventStart": 29.800000071525574,
+        "domContentLoadedEventEnd": 29.800000071525574,
+        "domComplete": 29.899999976158142,
+        "loadEventStart": 29.899999976158142,
+        "loadEventEnd": 29.899999976158142,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://127.0.0.1:8010/assets/index-DicXBSFb.js",
+        "transferSize": 229968,
+        "duration": 8
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/index-DVkVPZCm.css",
+        "transferSize": 24877,
+        "duration": 6.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:8010/art/fate_sigil.svg",
+        "transferSize": 1174,
+        "duration": 5.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:8010/art/fate_orb_core.png",
+        "transferSize": 742462,
+        "duration": 8.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/Orb-CZPGtEcP.js",
+        "transferSize": 5840,
+        "duration": 4.5
+      },
+      {
+        "name": "http://127.0.0.1:8010/art/fate_orrery.svg",
+        "transferSize": 1425,
+        "duration": 6
+      },
+      {
+        "name": "http://127.0.0.1:8010/art/fate_atmosphere.webp",
+        "transferSize": 15154,
+        "duration": 4.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:8010/fonts/inter-latin.woff2",
+        "transferSize": 48556,
+        "duration": 32.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:8010/fonts/cormorant-italic-latin.woff2",
+        "transferSize": 39560,
+        "duration": 32.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:8010/fonts/cormorant-latin.woff2",
+        "transferSize": 37940,
+        "duration": 33
+      },
+      {
+        "name": "http://127.0.0.1:8010/api/health",
+        "transferSize": 370,
+        "duration": 1.9000000953674316
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/lib-DoX23L1N.js",
+        "transferSize": 434156,
+        "duration": 9.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/ParticleBuffer-iVVc4csL.js",
+        "transferSize": 116861,
+        "duration": 6
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/init-Bziemf4x.js",
+        "transferSize": 10340,
+        "duration": 3.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/browserAll-BrB1zNqL.js",
+        "transferSize": 608,
+        "duration": 4.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/webworkerAll-BHTCfunQ.js",
+        "transferSize": 482,
+        "duration": 5
+      },
+      {
+        "name": "http://127.0.0.1:8010/art/fate_orrery.svg",
+        "transferSize": 0,
+        "duration": 1
+      },
+      {
+        "name": "http://127.0.0.1:8010/art/fate_orb_core.png",
+        "transferSize": 0,
+        "duration": 0.8000000715255737
+      }
+    ]
+  },
+  "source_sha256": {
+    "fate/__init__.py": "6d44f20984a5e7e9705460845c0b60d6ef22ea9278be27e50c7a69eac8a36346",
+    "fate/__main__.py": "f79d4cca3b093aa18f7d5fb7d1eced5c557f081a49db354eb364b7d1eb017324",
+    "fate/api.py": "00b1f048f9ce4df35f0dc56ac4d187765bf5f0d9a0b2fe54832ed3e15448f2e5",
+    "fate/experience.json": "e152e8901b7936cc5474d5fe0671c5891225737c6afd03273fe984971f3ee73b",
+    "fate/fetch_fonts.py": "81f3e99c55cdc140937924a032873a2a6de105b3c7f823aa87793e71c2a7a4b6",
+    "fate/live_gemini_smoke.py": "f6180c49913bd10d6ff8b3276138e8a1ebb7b8428416615f83af53c1d5b32b3a",
+    "fate/record_acceptance.py": "a80915786263e0a0fe99e62f7286fa03ab145e2c699b7290273c84b944af00ae",
+    "fate/requirements.txt": "2d6d8eb8662c42125d522e1e4abf5448a481cfd4d53c9751246263f4be9985a5",
+    "fate/tests/test_api.py": "09b223d9b7621094a783f641709482e6d9c452b58a3164a5b54cc85a39dcc20f",
+    "fate/verify_inherited.py": "8e6de0c370b0bf6273d649613d9b309016930084acd96189e3689a07095639f2",
+    "fate/web/e2e/oracle.spec.ts": "a3ec1b43106f08851406898a4faa81498cbc03e1a69dfbf37d4d481ce6fef801",
+    "fate/web/package-lock.json": "851ecc9f88c70e481ea1619ed8295a282f0b3f04bf4fc6b9511a8bd345c544f1",
+    "fate/web/package.json": "390a8ebe203d40258706b250a0b16a2197a5d809f82fd34efc390f7e0bf6ca57",
+    "fate/web/playwright.config.ts": "85c33fe22538976c283b18c29bdd5941f44e821846c2eb556cf6f2362563e372",
+    "fate/web/src/CardArt.tsx": "94501443c22fa35e401808f8990ab92069de49cea91d81bf41729d4e1ecce6c4",
+    "fate/web/src/main.tsx": "99682bc7b04509d5645bf5ba9f6ed31d3de484551a089a5cef9679b544c51fc0",
+    "fate/web/src/Orb.tsx": "e7c23ef8fe803e912bbf60dfd6b03530f341e03c0cd14ec6e8bb8cb82c2ecabc",
+    "fate/web/src/pixi-csp.d.ts": "44d77461dd27031fa66e70ad7c193d3220af5f4e513f2f841e47bbc2e190e886",
+    "fate/web/src/style.css": "756827756b6557b06471fb38ed5da81f07f2ad73d77fe243def6e9c1f667854e",
+    "fate/web/src/types.ts": "833da52eba14ffd27e6fbe881cecc4d49a0458e5e555dbe6d0c8055c704a1a6d",
+    "fate/web/src/useSound.ts": "27c4d12690058520800948d3995dd5261efd1979e96d84cad4c85ecfa61ae395",
+    "fate/web/tsconfig.json": "131b1c1a4cc626474b22f60c7a5ff602c0e18784905e7c48806fc048dd6973e4",
+    "fate/web/vite.config.ts": "3fd2f6d452662fc18af3e3e42f01f15c1a1aebe407a34dbe434e38936cc25ceb"
+  },
+  "built_files_sha256": {
+    "art/fate_ambient_loop.wav": "3165cd0bfe22825d3c3b1f70d53008bd73013d1e5904d64f0acd1a8f38e53561",
+    "art/fate_atmosphere.webp": "c18a51340fdef6c8973dabc94952010849b3b742552b8b2588e8f75e818b2993",
+    "art/fate_card_reveal.wav": "2f75bc2c9d974a9d6c74cc00155db8984967086af7219d7ebdd49c98cf83737d",
+    "art/fate_oracle_select.wav": "b13b5d78d062caf296567c9c5255e580f02830ad3c7d78dd2564e5bcfaf118d0",
+    "art/fate_orb_core.png": "95509848d048de5000fb232bf288b8915be272e5088d73a8c50c9d384e825985",
+    "art/fate_orrery.png": "95c599b818b310cda2c172033f4f06c3092b53989bc23b45cb884541c2b4d581",
+    "art/fate_orrery.svg": "67c9c88473793056aec53e3ec4692b653ee92a27dda2dbfb21fe72f161804a6a",
+    "art/fate_sigil.png": "54f8ee96b9e36a57abeaaafbe80b124a9ef214041b1f1943e5611fd47ea89f1b",
+    "art/fate_sigil.svg": "735220e8536089da7c6c1c4bc14d8bc6f536d5e25fbe1833948158379bb53f25",
+    "art/preview.jpg": "5b4d125c902d102be38ed5b4a073203590b03b359796a48b727299666f8a6641",
+    "art/README.md": "2fb1f42bf4dfac7b55d7dfc2a5d6e9d9817d6a10202e6131722f9a4741c92e64",
+    "assets/browserAll-BrB1zNqL.js": "bc451f430a624d45a851302e15031a65ca380fd7074a9bfbc9d55312d797a4b8",
+    "assets/index-DicXBSFb.js": "bfdba3b7a54e51cbb82176cf6c44162fe45719c3fc8654237a85a30baa10a582",
+    "assets/index-DVkVPZCm.css": "f808762e2cd15f9cb2ac95ea51acdc7766ead84810c591793ff2ed99b2d663a1",
+    "assets/init-Bziemf4x.js": "e20d7b7a528df7da7a906b609b746d4bb1a2a4619fcda205160b7f5ef3dfae59",
+    "assets/lib-DoX23L1N.js": "1ada06da767486e9cc27a128d709bba83ad163ea11070d51cc6070befdc46829",
+    "assets/Orb-CZPGtEcP.js": "633ef1908a6d156e03befdcc1c21e2487aee38f0aba51086d735138d68a3f423",
+    "assets/ParticleBuffer-iVVc4csL.js": "cf623e384c20bfa9e5e6c1de9eefbae155a5c86f9b9916a92c7e104b8c087347",
+    "assets/webworkerAll-BHTCfunQ.js": "0495b8789dccd447ebd3e4d10f6fa228f710d5d348b956562876e5d1eb1ed20d",
+    "fonts/cormorant-italic-latin.woff2": "6f2f5c3b1abc3d0bb035a927f66a90ca873f94fc31c4966c8d024142c2036e55",
+    "fonts/cormorant-latin.woff2": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235",
+    "fonts/cormorantgaramond-OFL.txt": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956",
+    "fonts/inter-latin.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "fonts/inter-OFL.txt": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+    "fonts/sources.json": "3f7fd5f5a838eb7d036e9ff6bc6209a5f7bef08e353b80b926520f324754c235",
+    "index.html": "835e7f90e6382664577cd18856b0518a0f8cac9d2882ef218f4a90f7b590d523"
+  },
+  "screenshot_sha256": {
+    "01-explore-mobile.png": "65be98d46590381c41a0d58940761a7de73be61295c89f3ca4ccc2fba4c8b8a7",
+    "01-explore-viewport.png": "b984a4771067e3ca7f38fd8fd68932da5216138261427fc2c8a1c337452c4e31",
+    "02-intention-mobile.png": "14d080bee34e145d70ddadac90f8f9ed1edd6a1ecd23c5f82fc24ffaab296729",
+    "03-reveal-mobile.png": "8ed0001b579c8cb0a282b6ea6fa94422c87db1c0b5d586232f3d6d68ad1546f0",
+    "04-reading-mobile.png": "f37055d07bf41efb56d9543938cd9112527743219cfdd3fbd8db7c3ab703c8d0",
+    "05-one-card-mobile.png": "6469d515c71abe51758ed2f103f5c0f33cfcf9d024822492fba1cfbd4bf70a8f",
+    "06-reduced-motion-mobile.png": "b61b2f662785d9b2a57057120ed4fe82bac7a543b605b912ab90c287bdccdaa8",
+    "07-explore-desktop.png": "32a43e66e8874b1062c51be3913f9b203afbdf7cd33281c43ebb1cb4f318a6f4",
+    "08-reading-small-mobile.png": "825c80e7b238169fa07b1152a39b9981032fcfb7c06e1210f669fa5c68d06fd0",
+    "09-enlarged-text-mobile.png": "c09bb581c1207ed905289d5db5ec2fc35b397cd3c5e66e1a74b14034436441bf"
+  },
+  "acceptance_criteria": [
+    "Native result equals replay through unchanged future.tarot.read",
+    "One/three cards, reversals and source references preserved",
+    "Progressive reveal and skip path; duplicates blocked and retry seed retained",
+    "No automatic cloud transmission or persistence",
+    "Pixi renders without console errors, animates, and stops on pause/reduced motion",
+    "Complete journey and export in mobile browser; accessibility scans and keyboard dialog pass",
+    "Small/tablet/desktop and doubled-text control geometry checks pass",
+    "No-WebGL fallback completes a native reading",
+    "Existing native/Workbench tests, full CLI/verifier gates, production builds and inventory/dependency gates pass"
+  ],
+  "limitations": [
+    "Local Chromium mobile emulation only; no physical iOS/Android, field CWV or actual INP certification",
+    "No public deployment, distributed limiter, accounts or persistence",
+    "Original celestial deck and supplied starter art/audio; no historical illustrated deck claim",
+    "Gemini semantic faithfulness is not guaranteed",
+    "Software acceptance is not empirical prediction validation"
+  ]
+}

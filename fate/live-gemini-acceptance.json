@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "scope": "One live Gemini response to a synthetic developer question with explicit cloud consent. No user information. Reference/shape checks, not semantic or predictive validation.",
+  "draw": {
+    "spread": "one",
+    "seed": "FATE-live-provider-acceptance-v1",
+    "question": "What symbolic themes invite reflection on a creative project?",
+    "reversals": true
+  },
+  "native_card": {
+    "card": {
+      "id": "cups-four",
+      "name": "Four of Cups",
+      "source_name": "Four",
+      "arcana": "minor",
+      "number": null,
+      "suit": "cups",
+      "rank": "four",
+      "rank_number": 4
+    },
+    "orientation": "upright",
+    "position": {
+      "id": "position-1",
+      "order": 1,
+      "label": "Focus",
+      "role": "A single symbolic focus for reflection.",
+      "placement": "ordered_1",
+      "coverage": "editorial_application_layout",
+      "source_id": null,
+      "locator": null,
+      "rule_id": null,
+      "version": 1
+    },
+    "direct_component": {
+      "text": "Weariness, disgust, aversion, imaginary vexations, as if the wine of this world had caused satiety only; another wine, as if a fairy gift, is now offered the wastrel, but he sees no consolation therein. This is also a card of blended pleasure.",
+      "symbolic_focus": "weariness;aversion;blended pleasure",
+      "coverage": "direct_source_text",
+      "gloss_coverage": "source_derived_editorial_keywords",
+      "source_id": "tarot-waite-1922-inspected-v1",
+      "locator": "PartIII section2,p218,Four of Cups,upright",
+      "page": 218,
+      "page_url": "https://en.wikisource.org/wiki/Page:The_Pictorial_Key_to_the_Tarot.pdf/231",
+      "rule_id": "tarot.waite1922.cups-four.upright",
+      "version": 1,
+      "flags": [
+        "alternative_or_conflicting_source_readings",
+        "source_conditions_not_automatically_evaluated"
+      ]
+    },
+    "upright_reference": null,
+    "additional_source_account": {
+      "text": "Contrarieties. Reversed: Presentiment.",
+      "locator": "PartIII section4,p290",
+      "page": 290
+    },
+    "additional_account_applied": false,
+    "composition": {
+      "coverage": "compositional",
+      "text": "At Focus, read the source-derived motifs (weariness;aversion;blended pleasure) through this role: A single symbolic focus for reflection.",
+      "reflection": "How could weariness;aversion;blended pleasure illuminate or complicate the role Focus in a symbolic reading? Which source alternative remains unresolved?"
+    },
+    "ambiguity": [
+      "alternative_or_conflicting_source_readings",
+      "source_conditions_not_automatically_evaluated",
+      "Additional section4 account retained separately;not automatically merged."
+    ],
+    "qualifications": [
+      "Historical vocabulary can include illness,death,gender and appearance claims;quoted as doctrine,never a diagnosis or certain event.",
+      "Card symbolism does not establish anyone's actual traits,health,motives or future."
+    ]
+  },
+  "commentary": {
+    "cards": [
+      {
+        "card_id": "cups-four",
+        "rule_id": "tarot.waite1922.cups-four.upright",
+        "reflection": "This card suggests themes of weariness or disinterest, perhaps stemming from a sense of satiety with current experiences. It points to a potential aversion or even 'imaginary vexations.' While a new offering or 'fairy gift' may be present, it might not be perceived as a source of consolation. The motif of 'blended pleasure' also indicates that feelings may be complex, encompassing both satisfaction and discontent."
+      }
+    ],
+    "provenance": {
+      "provider": "gemini",
+      "model": "gemini-2.5-flash",
+      "prompt_sha256": "a04930c12da86bf38b92bf72b985abd571ddcf4fe1652f35b74539b607e2a20d",
+      "experimental": true
+    },
+    "coverage": "experimental_ai_commentary"
+  }
+}

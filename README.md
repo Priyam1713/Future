@@ -1,5 +1,9 @@
 # Future
 
+## FATE · The Living Oracle
+
+The isolated consumer experience is in [fate/](fate/README.md): Explore → Tarot Ritual → Reading, with a living PixiJS orb, original celestial cards and the existing source-linked Python Tarot engine. Run `python -m fate` and open `http://127.0.0.1:8010`. Setup, verification, screenshots and bounded scope are documented there. Existing engine and Workbench interfaces remain independent.
+
 ## Feng Shui:24 Mountains source reference
 
 `python -m future feng-shui data/feng-shui-input.json --format markdown`
