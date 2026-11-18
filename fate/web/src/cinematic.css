@@ -1,0 +1,700 @@
+/* Block 01.5: material, motion and composition. The native result has no visual
+   dependency. Tokens and effects apply to the same artifacts on every screen. */
+:root {
+  --void: #080d13;
+  --panel: #10191f;
+  --gold: #d8bc85;
+  --gold-light: #eedbb2;
+  --muted: #b7bec3;
+  --subtle: #969fa9;
+  --line: #bca16c35;
+}
+.app {
+  background:
+    radial-gradient(ellipse at 65% 21%, #17474522, transparent 43%),
+    radial-gradient(ellipse at 20% 55%, #39314c12, transparent 40%),
+    linear-gradient(#080d13d9, #080d13f5),
+    url("/art/fate_atmosphere.webp") center top/1200px auto no-repeat,
+    var(--void);
+}
+.masthead {
+  border-bottom-color: #bca16c20;
+}
+.wordmark {
+  gap: 13px;
+}
+.wordmark span {
+  font-weight: 500;
+  letter-spacing: 7px;
+}
+.hero {
+  min-height: 650px;
+}
+.hero-copy .eyebrow {
+  color: #c5b692;
+}
+.hero-copy h1 {
+  line-height: 1.02;
+  font-weight: 400;
+  letter-spacing: -1.6px;
+}
+.hero-description {
+  font-size: 14px;
+  line-height: 1.95;
+  color: #b6bfc2;
+}
+.hero-art {
+  isolation: isolate;
+}
+.orb-wrap {
+  filter: drop-shadow(0 20px 60px #326b6925);
+}
+.orb canvas {
+  transition: opacity 1.1s ease;
+}
+.orb-fallback {
+  transition: opacity 1.1s ease;
+}
+.orb-caption {
+  letter-spacing: 2.8px;
+}
+.motion-control {
+  color: #9eaaa9;
+}
+.oracle-tile {
+  min-height: 214px;
+  background:
+    radial-gradient(ellipse at 16% 90%, #584b3030, transparent 50%),
+    linear-gradient(115deg, #172126c7, #10191dcc);
+  box-shadow:
+    0 15px 50px #0002,
+    inset 0 1px #d9c79a08;
+}
+.tile-art {
+  width: 35%;
+}
+.mini-card {
+  width: 111px;
+  top: 29px;
+}
+.back-preview {
+  left: calc(50% - 91px);
+  transform: rotate(-15deg);
+}
+.front-preview {
+  left: calc(50% - 3px);
+  transform: rotate(10deg);
+}
+.tile-copy h2 {
+  font-size: 45px;
+}
+.tile-meta {
+  letter-spacing: 1.8px;
+}
+.explore-invitation p {
+  color: #b6b8b8;
+}
+.primary {
+  border-color: #d2b378;
+  background: linear-gradient(115deg, #ebd7ae, #c7a26a);
+  box-shadow:
+    0 7px 25px #0003,
+    inset 0 1px #fff5;
+  letter-spacing: 0.15px;
+  border-radius: 4px;
+}
+.primary:hover {
+  background: linear-gradient(115deg, #f5e3bf, #d4b17b);
+}
+.secondary {
+  background: #c9b48c06;
+  box-shadow: inset 0 1px #fff02;
+}
+.primary:active,
+.secondary:active {
+  transform: translateY(1px) scale(0.987);
+}
+.page-enter {
+  animation: chapter-enter 0.5s ease both;
+}
+@keyframes chapter-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+::view-transition-old(root) {
+  animation: chapter-out 0.24s ease both;
+}
+::view-transition-new(root) {
+  animation: chapter-enter 0.42s ease 0.04s both;
+}
+@keyframes chapter-out {
+  to {
+    opacity: 0;
+  }
+}
+.page-heading .eyebrow {
+  letter-spacing: 2.6px;
+}
+.page-heading h1 {
+  line-height: 1.06;
+}
+.question-echo {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #d6c4a2;
+  max-width: 530px;
+}
+.ritual-deck {
+  height: 252px;
+  margin-top: 28px;
+  margin-bottom: 24px;
+}
+.ritual-deck > div {
+  width: 133px;
+  filter: drop-shadow(0 17px 19px #0009);
+}
+.spread-options label {
+  background: #101a207a;
+}
+.spread-options label.selected {
+  background: linear-gradient(130deg, #67533424, #1a30312a);
+}
+textarea {
+  background: #091116db;
+}
+.illustrated-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 200/320;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #10191b;
+  border: 1px solid #ac905a;
+  box-shadow:
+    inset 0 0 0 2px #172124,
+    0 2px 2px #0007;
+  isolation: isolate;
+}
+.illustrated-card > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 7px;
+  filter: saturate(0.78) contrast(1.015);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.card-back-art > img {
+  object-fit: cover;
+  padding: 0;
+  filter: none;
+}
+.card-back-art {
+  border-color: #c4a370;
+}
+.card-bevel {
+  position: absolute;
+  inset: 3px;
+  border: 1px solid #e5c88a61;
+  border-radius: 4px;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 3px #0b111a40;
+}
+.card-foil {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  background: linear-gradient(
+    115deg,
+    transparent 22%,
+    #f3ddae00 34%,
+    #fff7dd44 48%,
+    #fff9e51c 51%,
+    transparent 65%
+  );
+  background-position: var(--foil-x, 50%) center;
+  mix-blend-mode: screen;
+  transition:
+    opacity 0.35s,
+    background-position 0.35s;
+}
+.artwork-unavailable {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px;
+  text-align: center;
+}
+.artwork-unavailable strong {
+  font: 22px var(--serif);
+  color: var(--gold-light);
+}
+.artwork-unavailable small {
+  font: 10px var(--sans);
+  color: var(--muted);
+}
+.physical-card {
+  position: relative;
+  perspective: 1000px;
+  transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transform-style: preserve-3d;
+  touch-action: pan-y;
+}
+.physical-card:hover .card-foil {
+  opacity: 0.35;
+}
+.flip-card {
+  box-shadow:
+    2px 5px 0 -1px #8d794333,
+    0 19px 27px #0005,
+    0 3px 6px #0005;
+}
+.flip-inner {
+  transition: transform 0.82s cubic-bezier(0.18, 0.7, 0.22, 1);
+}
+.flip-card:not(.flipped):hover .flip-inner {
+  transform: translateY(-5px) rotateY(5deg);
+}
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+.card-face,
+.card-front > span {
+  border-radius: 8px;
+}
+.card-caption {
+  padding-top: 21px;
+  min-height: 90px;
+  transition: opacity 0.45s 0.45s;
+}
+.card-caption h2 {
+  font-size: 26px;
+}
+.card-caption p {
+  letter-spacing: 1.5px;
+  color: #c8b487;
+}
+.reveal-spread {
+  gap: 28px;
+  margin-top: 32px;
+}
+.position-label {
+  color: #c7b58e;
+  letter-spacing: 0.3px;
+}
+.ritual-status {
+  color: #b4bcbf;
+  margin-top: 23px;
+}
+.reveal-insight {
+  background: radial-gradient(ellipse at 50% 50%, #3f514618, transparent 80%);
+  padding: 25px 10px;
+}
+.reveal-insight p {
+  font-size: 32px;
+  line-height: 1.4;
+}
+.ritual-actions {
+  margin-top: 28px;
+}
+.reading-art {
+  gap: 22px;
+  max-width: 510px;
+  margin-top: 35px;
+  margin-bottom: 42px;
+}
+.reading-art > div {
+  width: 143px;
+  filter: drop-shadow(0 15px 15px #0005);
+}
+.reading-art > div:nth-child(2) {
+  translate: 0 -12px;
+}
+.reading-summary {
+  background:
+    radial-gradient(ellipse at 15% 0, #85683b12, transparent 70%), #121b20a6;
+  border-color: #bca16c40;
+  padding: 32px 34px;
+}
+.reading-summary h2 {
+  font-size: 38px;
+}
+.theme-row {
+  padding: 19px 0;
+}
+.theme-row strong {
+  font-size: 24px;
+  line-height: 1.35;
+}
+.reflection {
+  font-size: 14px;
+  line-height: 1.95;
+  color: #c6cdcf;
+}
+.interpretation {
+  padding: 29px 0;
+}
+.interpretation-heading h2 {
+  font-size: 35px;
+}
+.detail-body blockquote {
+  line-height: 1.65;
+}
+.ai-section {
+  background: linear-gradient(140deg, #33424722, #10191d66);
+  border-color: #a2a58f35;
+}
+.ai-section > p {
+  font-size: 13px;
+}
+.provenance {
+  padding-top: 8px;
+}
+.scope-note {
+  color: #a2aab2;
+  font-size: 11px;
+}
+.settings-dialog {
+  background:
+    radial-gradient(ellipse at 0 0, #233b372b, transparent 75%), #10191f;
+}
+@media (max-width: 760px) {
+  .masthead {
+    height: 74px;
+    padding: 0 23px;
+  }
+  .wordmark span {
+    font-size: 25px;
+  }
+  .hero {
+    min-height: 0;
+    padding-top: 30px;
+  }
+  .hero-copy h1 {
+    font-size: 50px;
+    margin: 17px 0 18px;
+    line-height: 1.04;
+  }
+  .hero-description {
+    font-size: 12px;
+    line-height: 1.9;
+  }
+  .hero-art {
+    width: min(100% + 24px, 430px);
+    margin-top: 0;
+  }
+  .orb-caption {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+  .oracle-section {
+    padding-top: 17px;
+  }
+  .oracle-tile {
+    min-height: 196px;
+  }
+  .tile-art {
+    width: 39%;
+  }
+  .mini-card {
+    width: 98px;
+    top: 23px;
+  }
+  .back-preview {
+    left: calc(50% - 71px);
+  }
+  .front-preview {
+    left: calc(50% - 17px);
+  }
+  .tile-copy h2 {
+    font-size: 35px;
+  }
+  .tile-copy > p:not(.eyebrow) {
+    font-size: 12px;
+  }
+  .tile-meta {
+    font-size: 7px;
+    letter-spacing: 1.2px;
+    line-height: 1.9;
+  }
+  .explore-invitation {
+    margin-bottom: 28px;
+  }
+  .explore {
+    padding-bottom: 95px;
+  }
+  .mobile-cta {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 28px 24px max(13px, env(safe-area-inset-bottom));
+    gap: 8px;
+    background: linear-gradient(transparent, #080d13f5 29%, #080d13);
+    pointer-events: none;
+  }
+  .mobile-cta > * {
+    pointer-events: auto;
+  }
+  .mobile-cta .primary {
+    min-height: 53px;
+    box-shadow: 0 4px 26px #0006;
+  }
+  .mobile-cta > span {
+    font-size: 9px;
+  }
+  .app:has(.explore) footer {
+    padding-bottom: 140px;
+  }
+  .narrow {
+    padding: 0 24px;
+  }
+  .journey-top {
+    margin-top: 14px;
+  }
+  .page-heading {
+    margin-top: 25px;
+  }
+  .page-heading h1 {
+    font-size: 44px;
+    line-height: 1.05;
+    margin: 17px 0;
+  }
+  .page-heading > p:last-child {
+    font-size: 12px;
+  }
+  .ritual-deck {
+    height: 219px;
+    margin: 25px auto 27px;
+  }
+  .ritual-deck > div {
+    width: 117px;
+    left: 62px;
+  }
+  .spread-options strong {
+    font-size: 25px;
+  }
+  .spread-options small {
+    font-size: 10px;
+  }
+  .question-label {
+    font-size: 12px;
+  }
+  textarea {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .privacy-note {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+  .scope-note {
+    font-size: 10px;
+    line-height: 1.9;
+  }
+  .reveal-spread {
+    gap: 12px;
+    margin-top: 30px;
+  }
+  .position-label {
+    font-size: 9px;
+    line-height: 1.8;
+    min-height: 35px;
+  }
+  .position-label span {
+    width: 8px;
+  }
+  .card-caption {
+    min-height: 92px;
+    padding-top: 17px;
+  }
+  .card-caption h2 {
+    font-size: 21px;
+    line-height: 1.14;
+  }
+  .card-caption p {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+    margin-top: 9px;
+  }
+  .ritual-status {
+    font-size: 11px;
+    margin-top: 14px;
+  }
+  .question-echo {
+    font-size: 23px;
+    margin: 21px auto 30px;
+  }
+  .reveal-insight p {
+    font-size: 28px;
+  }
+  .reveal-insight small {
+    font-size: 10px;
+  }
+  .reading-art {
+    gap: 16px;
+    margin: 33px 4px 34px;
+  }
+  .reading-art > div {
+    width: calc((100% - 32px) / 3);
+  }
+  .reading-art.count-1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .reading-summary {
+    padding: 26px 24px;
+  }
+  .reading-summary h2 {
+    font-size: 35px;
+  }
+  .theme-row {
+    padding: 16px 0;
+    gap: 8px;
+  }
+  .theme-row > span {
+    font-size: 10px;
+    letter-spacing: 0.2px;
+  }
+  .theme-row strong {
+    font-size: 25px;
+    line-height: 1.3;
+  }
+  .summary-footnote {
+    font-size: 10px;
+    line-height: 1.9;
+  }
+  .interpretation {
+    padding: 26px 0;
+  }
+  .interpretation-heading h2 {
+    font-size: 32px;
+  }
+  .interpretation-heading .eyebrow {
+    font-size: 9px;
+  }
+  .orientation-pill {
+    font-size: 9px;
+  }
+  .reflection {
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 20px 0 14px;
+  }
+  summary {
+    font-size: 12px;
+  }
+  .detail-body blockquote {
+    font-size: 24px;
+    line-height: 1.6;
+  }
+  .detail-body > a {
+    font-size: 11px;
+  }
+  .source-caution {
+    font-size: 11px;
+    line-height: 1.9;
+  }
+  .ai-section {
+    padding: 25px 23px;
+  }
+  .ai-section > p {
+    font-size: 12px;
+  }
+  .ai-section .check-label {
+    font-size: 11px;
+  }
+  .ai-heading .eyebrow {
+    font-size: 7px;
+  }
+  .experimental {
+    font-size: 6px;
+  }
+  .reading-actions .primary,
+  .reading-actions .secondary {
+    font-size: 13px;
+  }
+  .settings-dialog > p:not(.eyebrow) {
+    font-size: 13px;
+  }
+  .volume-label {
+    font-size: 11px;
+  }
+}
+@media (max-width: 360px) {
+  .hero-copy h1 {
+    font-size: 44px;
+  }
+  .narrow {
+    padding: 0 18px;
+  }
+  .hero {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .mobile-cta {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .tile-copy {
+    padding-left: 11px;
+  }
+  .tile-copy h2 {
+    font-size: 31px;
+  }
+  .tile-meta {
+    font-size: 6px;
+  }
+  .card-caption h2 {
+    font-size: 19px;
+  }
+  .reveal-spread {
+    gap: 8px;
+  }
+  .page-heading h1 {
+    font-size: 40px;
+  }
+  .theme-row strong {
+    font-size: 23px;
+  }
+  .reading-summary {
+    padding: 23px 20px;
+  }
+  .interpretation-heading h2 {
+    font-size: 30px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+  .physical-card {
+    transform: none !important;
+  }
+}
+.still .physical-card {
+  transform: none !important;
+}
+.orb-fallback img.orb-poster {
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  object-fit: contain;
+}

@@ -15,6 +15,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 from starlette.middleware.trustedhost import TrustedHostMiddleware
+from starlette.middleware.gzip import GZipMiddleware
 from future.tarot import read
 from future.tarot_catalog import PROFILE
 from future.card_random import PROTOCOL
@@ -58,6 +59,7 @@ def native(q: Draw):
 
 def create_app(provider=None, signing_key=None, clock=time.time):
     app = FastAPI(title='FATE · Living Oracle', docs_url=None, redoc_url=None, openapi_url=None)
+    app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
     key = signing_key or secrets.token_bytes(32)
     # Bounded, per-process guest protection; no questions, cards or identities stored.
     buckets = OrderedDict()

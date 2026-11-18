@@ -1,34 +1,103 @@
 {
-  "id": "fate-tarot-v1",
-  "block": "01 · The Living Oracle",
+  "id": "fate-tarot-v1.5",
+  "block": "01.5 · Cinematic Polish & Visual Foundation",
   "technique_id": 16,
   "capability": "symbolic_reading",
   "engine": "future.tarot.read",
   "text_profile": "waite-1922-text-v1",
-  "art_profile": "fate-celestial-original-v1",
-  "journey": ["explore", "intention", "progressive_reveal", "reading"],
+  "art_profile": "fate-pam-a-archive-v1+fate-observatory-back-v1",
+  "journey": [
+    "explore",
+    "intention",
+    "progressive_reveal",
+    "reading"
+  ],
   "supported": {
-    "spreads": ["one", "three"],
-    "orientation_policies": ["upright_only", "seeded_reversals"],
-    "three_card_positions": ["What you carry", "Where you stand", "What to consider"],
+    "spreads": [
+      "one",
+      "three"
+    ],
+    "orientation_policies": [
+      "upright_only",
+      "seeded_reversals"
+    ],
+    "three_card_positions": [
+      "What you carry",
+      "Where you stand",
+      "What to consider"
+    ],
     "seed_protocol": "future-cards-sha256-fy-v1",
     "seed_generation": "Browser crypto.getRandomValues, 32 bytes, hex-encoded; retained for retry",
-    "required_inputs": ["spread", "seed", "reversals"],
-    "optional_inputs": ["question"],
+    "required_inputs": [
+      "spread",
+      "seed",
+      "reversals"
+    ],
+    "optional_inputs": [
+      "question"
+    ],
     "question_normalization": "Trim outer whitespace; replace line breaks with spaces for native plain-text context. No use in card selection.",
-    "reading": ["source-derived motifs", "native compositional reflection", "direct historical source wording", "reversal references", "separate additional source accounts", "ambiguities", "limitations", "JSON export with full native replay"],
-    "presentation": ["React DOM UI", "PixiJS WebGL fog/refraction", "independent celestial orbits", "touch parallax/pulse", "card flips", "immediate result option", "reduced motion", "manual atmosphere pause", "opt-in audio with separate ambient/effect volumes", "static original artwork fallback"],
-    "persistence": "In-memory visit only; explicit JSON download; no account, database, localStorage or analytics"
+    "reading": [
+      "source-derived motifs",
+      "native compositional reflection",
+      "direct historical source wording",
+      "reversal references",
+      "separate additional source accounts",
+      "ambiguities",
+      "limitations",
+      "JSON export with full native replay"
+    ],
+    "presentation": [
+      "React DOM UI in modular screens/components",
+      "PixiJS layered illustrated nebula with procedural depth and spherical refraction",
+      "Moving internal illumination, Fresnel rim/specular glass",
+      "Independent near/far celestial rings and particles",
+      "Touch-responsive internal light and parallax",
+      "Complete 78-card verified historical Archive Edition",
+      "Original illustrated FATE observatory back",
+      "Versioned asset registry, responsive variants and source hashes",
+      "Material card frame, foil, physical tilt and progressive flip",
+      "Interruptible route transitions with keyboard skip intent preserved",
+      "Immediate-result option",
+      "Initial reduced motion skips Pixi; event-driven pause/visibility/resize",
+      "Renderer-derived static poster without UI text",
+      "Opt-in audio, quieter defaults and independent levels"
+    ],
+    "persistence": "In-memory visit only; explicit JSON download; no account, database, localStorage or analytics",
+    "rendering": {
+      "normal_target_hz": 60,
+      "tiers": [
+        "cinematic",
+        "balanced",
+        "economy",
+        "low"
+      ],
+      "low_power_target_hz": 30,
+      "pixel_allocation": "Displayed-size bounded DPR; adaptive sustained-miss reductions",
+      "measurement": "Renderer callback intervals separate from RAF; explicit host/driver/emulation conditions"
+    }
   },
   "experimental": {
     "gemini": "Server-side, separately opt-in per reading; signed native request recomputed; exact card/rule references and bounded output shape checked; semantic faithfulness is not guaranteed. Native output never replaced.",
     "performance": "Local Chromium mobile emulation measurements only; no real-device CWV, INP or GPU certification"
   },
-  "unsupported": ["factual forecasts", "probabilities or confidence scores", "other Tarot traditions", "Celtic/manual consumer flows", "other techniques", "Fate Atlas or accounts", "automatic reading storage", "multiplayer", "Arcade", "monetization"],
+  "unsupported": [
+    "factual forecasts",
+    "probabilities or confidence scores",
+    "other Tarot traditions",
+    "Celtic/manual consumer flows",
+    "other techniques",
+    "Fate Atlas or accounts",
+    "automatic reading storage",
+    "multiplayer",
+    "Arcade",
+    "monetization"
+  ],
   "art_rights": {
     "pack": "User supplied Downloads/FATE-asset-pack-01.zip; original procedural artwork and synthesized audio per included README",
-    "cards": "Original code-authored FATE celestial SVG designs. Not historical deck reproductions or historical symbolism certification.",
-    "fonts": "Self-hosted Cormorant Garamond and Inter; SIL OFL licenses and source URLs bundled"
+    "cards": "Historical Pamela Colman Smith Pam-A illustrations, 1910; all 78 per-file public-domain records pinned in artwork-sources.json; no modern recoloring or mixed replacement",
+    "fonts": "Self-hosted Cormorant Garamond and Inter; SIL OFL licenses and source URLs bundled",
+    "generated": "Original back and nebula made with built-in image_gen; prompts and source PNGs retained under design/. Poster extracted from actual renderer."
   },
-  "scope": "Consumer vertical slice over the existing supported symbolic engine, not empirical prediction certification or a new technique closure"
+  "scope": "Consumer visual foundation over the unchanged supported symbolic engine; no new technique, factual forecast or predictive certification"
 }

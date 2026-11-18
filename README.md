@@ -2,7 +2,7 @@
 
 ## FATE · The Living Oracle
 
-The isolated consumer experience is in [fate/](fate/README.md): Explore → Tarot Ritual → Reading, with a living PixiJS orb, original celestial cards and the existing source-linked Python Tarot engine. Run `python -m fate` and open `http://127.0.0.1:8010`. Setup, verification, screenshots and bounded scope are documented there. Existing engine and Workbench interfaces remain independent.
+The isolated consumer experience is in [fate/](fate/README.md): Explore → Tarot Ritual → Reading, with a living glass PixiJS orb, a complete illustrated Archive Edition, an original FATE observatory back and the existing source-linked Python Tarot engine. Block 01.5 adds cinematic motion, reusable artwork modules and adaptive rendering. Run `python -m fate` and open `http://127.0.0.1:8010`. Setup, verification, screenshots, recording and bounded scope are documented there. Existing engine and Workbench interfaces remain independent.
 
 ## Feng Shui:24 Mountains source reference
 

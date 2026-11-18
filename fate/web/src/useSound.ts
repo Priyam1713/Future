@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 export function useSound() {
   const [on, setOn] = useState(false),
-    [music, setMusic] = useState(0.16),
-    [effects, setEffects] = useState(0.35);
+    [music, setMusic] = useState(0.1),
+    [effects, setEffects] = useState(0.22);
   const ambient = useRef<HTMLAudioElement | null>(null),
     cues = useRef<HTMLAudioElement[]>([]);
   const enabled = useRef(false);

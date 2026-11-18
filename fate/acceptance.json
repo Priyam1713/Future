@@ -1,36 +1,36 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "date": "2026-11-19",
-  "block": "01 \u00b7 The Living Oracle",
-  "status": "Implemented and verified consumer vertical slice; physical-device/public-deployment acceptance remains P1",
+  "block": "01.5 \u00b7 Cinematic Polish & Visual Foundation",
+  "status": "Verified visual foundation; physical-device/public-deployment acceptance remains P1",
   "units": {
     "native": {
       "tests": 2522,
       "passed": true,
-      "output": "----------------------------------------------------------------------\nRan 2522 tests in 95.620s\n\nOK\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\n"
+      "output": "----------------------------------------------------------------------\nRan 2522 tests in 164.633s\n\nOK\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\n"
     },
     "workbench": {
       "tests": 77,
       "passed": true,
-      "output": "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\n----------------------------------------------------------------------\nRan 77 tests in 13.315s\n\nOK\n"
+      "output": "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\n----------------------------------------------------------------------\nRan 77 tests in 19.419s\n\nOK\n"
     },
     "fate": {
-      "tests": 13,
+      "tests": 16,
       "passed": true,
-      "output": "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\ntest_commentary_requires_true_consent_and_valid_signed_request (test_api.ConsumerTests.test_commentary_requires_true_consent_and_valid_signed_request) ... ok\ntest_foreign_origin_and_body_boundary (test_api.ConsumerTests.test_foreign_origin_and_body_boundary) ... ok\ntest_invalid_provider_references_are_never_displayed (test_api.ConsumerTests.test_invalid_provider_references_are_never_displayed) ... ok\ntest_multiline_question_is_plain_text_context (test_api.ConsumerTests.test_multiline_question_is_plain_text_context) ... ok\ntest_native_no_ai_dependency (test_api.ConsumerTests.test_native_no_ai_dependency) ... ok\ntest_no_workbench_or_private_files (test_api.ConsumerTests.test_no_workbench_or_private_files) ... ok\ntest_one_card_upright (test_api.ConsumerTests.test_one_card_upright) ... ok\ntest_profile_source_orientation_and_all_catalog_cards (test_api.ConsumerTests.test_profile_source_orientation_and_all_catalog_cards) ... ok\ntest_rate_limit (test_api.ConsumerTests.test_rate_limit) ... ok\ntest_real_engine_exact_match_and_replay (test_api.ConsumerTests.test_real_engine_exact_match_and_replay) ... ok\ntest_schema_rejects_extra_invalid_and_unbounded_inputs (test_api.ConsumerTests.test_schema_rejects_extra_invalid_and_unbounded_inputs) ... ok\ntest_security_headers (test_api.ConsumerTests.test_security_headers) ... ok\ntest_tampered_expired_and_restarted_receipt (test_api.ConsumerTests.test_tampered_expired_and_restarted_receipt) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.215s\n\nOK\n"
+      "output": "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\ntest_commentary_requires_true_consent_and_valid_signed_request (test_api.ConsumerTests.test_commentary_requires_true_consent_and_valid_signed_request) ... ok\ntest_foreign_origin_and_body_boundary (test_api.ConsumerTests.test_foreign_origin_and_body_boundary) ... ok\ntest_invalid_provider_references_are_never_displayed (test_api.ConsumerTests.test_invalid_provider_references_are_never_displayed) ... ok\ntest_multiline_question_is_plain_text_context (test_api.ConsumerTests.test_multiline_question_is_plain_text_context) ... ok\ntest_native_no_ai_dependency (test_api.ConsumerTests.test_native_no_ai_dependency) ... ok\ntest_no_workbench_or_private_files (test_api.ConsumerTests.test_no_workbench_or_private_files) ... ok\ntest_one_card_upright (test_api.ConsumerTests.test_one_card_upright) ... ok\ntest_profile_source_orientation_and_all_catalog_cards (test_api.ConsumerTests.test_profile_source_orientation_and_all_catalog_cards) ... ok\ntest_rate_limit (test_api.ConsumerTests.test_rate_limit) ... ok\ntest_real_engine_exact_match_and_replay (test_api.ConsumerTests.test_real_engine_exact_match_and_replay) ... ok\ntest_schema_rejects_extra_invalid_and_unbounded_inputs (test_api.ConsumerTests.test_schema_rejects_extra_invalid_and_unbounded_inputs) ... ok\ntest_security_headers (test_api.ConsumerTests.test_security_headers) ... ok\ntest_tampered_expired_and_restarted_receipt (test_api.ConsumerTests.test_tampered_expired_and_restarted_receipt) ... ok\ntest_complete_identity_registry_and_rights (test_artwork.ArtworkAcceptance.test_complete_identity_registry_and_rights) ... ok\ntest_every_delivery_file_matches_its_immutable_hash (test_artwork.ArtworkAcceptance.test_every_delivery_file_matches_its_immutable_hash) ... ok\ntest_independent_major_numbering_and_court_images (test_artwork.ArtworkAcceptance.test_independent_major_numbering_and_court_images) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.311s\n\nOK\n"
     }
   },
   "fate_browser": {
-    "startTime": "2026-11-18T20:30:20.037Z",
-    "duration": 58147.270000000004,
-    "expected": 9,
+    "startTime": "2026-11-18T23:18:22.605Z",
+    "duration": 167847.193,
+    "expected": 13,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
   },
   "workbench_browser": {
-    "startTime": "2026-11-18T20:10:09.984Z",
-    "duration": 96309.325,
+    "startTime": "2026-11-18T22:57:49.129Z",
+    "duration": 129854.501,
     "expected": 9,
     "skipped": 0,
     "unexpected": 0,
@@ -41,7 +41,7 @@
   "protected_source_files": 576,
   "changed_protected_source_files": [],
   "npm_vulnerabilities": 0,
-  "live_gemini": "One synthetic developer question; references/shape verified, not semantic or predictive validation",
+  "live_gemini": "Retained Block 01 synthetic live-provider check; cloud behavior unchanged. No new live call for this visual pass.",
   "gates": [
     {
       "command": [
@@ -128,16 +128,17 @@
   ],
   "performance": {
     "environment": "Local Chromium mobile emulation, 390\u00d7844 DPR2; SwiftShader software WebGL, warm server, no network throttling. Not real-device CWV certification or INP.",
-    "lcp": 636,
+    "lcp": 156,
     "cls": 0,
     "longTasks": [
-      331,
-      76
+      239,
+      93,
+      66
     ],
     "rafMedianMs": 16.699999999999818,
     "heapObservation": {
       "usedBytes": 10000000,
-      "totalBytes": 13400000,
+      "totalBytes": 12700000,
       "note": "Chromium coarse heap observation, not peak-memory profiling"
     },
     "navigation": [
@@ -145,14 +146,14 @@
         "name": "http://127.0.0.1:8010/",
         "entryType": "navigation",
         "startTime": 0,
-        "duration": 29.899999976158142,
-        "navigationId": 9829,
+        "duration": 35.199999928474426,
+        "navigationId": 4373,
         "initiatorType": "navigation",
         "deliveryType": "",
         "nextHopProtocol": "http/1.1",
         "renderBlockingStatus": "non-blocking",
         "contentType": "text/html",
-        "contentEncoding": "",
+        "contentEncoding": "gzip",
         "workerStart": 0,
         "workerRouterEvaluationStart": 0,
         "workerCacheLookupStart": 0,
@@ -160,30 +161,30 @@
         "workerFinalSourceType": "",
         "redirectStart": 0,
         "redirectEnd": 0,
-        "fetchStart": 0.10000002384185791,
+        "fetchStart": 0.19999992847442627,
         "domainLookupStart": 0.8999999761581421,
-        "domainLookupEnd": 1.3000000715255737,
-        "connectStart": 1.3000000715255737,
+        "domainLookupEnd": 1.2999999523162842,
+        "connectStart": 1.2999999523162842,
         "secureConnectionStart": 0,
-        "connectEnd": 1.8000000715255737,
-        "requestStart": 1.899999976158142,
-        "responseStart": 2.899999976158142,
+        "connectEnd": 1.6999999284744263,
+        "requestStart": 1.6999999284744263,
+        "responseStart": 3.799999952316284,
         "firstInterimResponseStart": 0,
-        "finalResponseHeadersStart": 2.899999976158142,
-        "responseEnd": 3.5,
-        "transferSize": 937,
-        "encodedBodySize": 637,
-        "decodedBodySize": 637,
+        "finalResponseHeadersStart": 3.799999952316284,
+        "responseEnd": 4.199999928474426,
+        "transferSize": 819,
+        "encodedBodySize": 519,
+        "decodedBodySize": 1125,
         "responseStatus": 200,
         "serverTiming": [],
         "unloadEventStart": 0,
         "unloadEventEnd": 0,
-        "domInteractive": 9.200000047683716,
-        "domContentLoadedEventStart": 29.800000071525574,
-        "domContentLoadedEventEnd": 29.800000071525574,
-        "domComplete": 29.899999976158142,
-        "loadEventStart": 29.899999976158142,
-        "loadEventEnd": 29.899999976158142,
+        "domInteractive": 9.899999976158142,
+        "domContentLoadedEventStart": 34.5,
+        "domContentLoadedEventEnd": 34.60000002384186,
+        "domComplete": 35.199999928474426,
+        "loadEventStart": 35.199999928474426,
+        "loadEventEnd": 35.199999928474426,
         "type": "navigate",
         "redirectCount": 0,
         "activationStart": 0,
@@ -191,129 +192,1883 @@
         "notRestoredReasons": null,
         "confidence": {
           "randomizedTriggerRate": 0.4994798,
-          "value": "low"
+          "value": "high"
         }
       }
     ],
     "resources": [
       {
-        "name": "http://127.0.0.1:8010/assets/index-DicXBSFb.js",
-        "transferSize": 229968,
-        "duration": 8
+        "name": "http://127.0.0.1:8010/art/orb-poster-v2.webp",
+        "transferSize": 98476,
+        "duration": 6.400000095367432
       },
       {
-        "name": "http://127.0.0.1:8010/assets/index-DVkVPZCm.css",
-        "transferSize": 24877,
-        "duration": 6.399999976158142
+        "name": "http://127.0.0.1:8010/fonts/cormorant-latin.woff2",
+        "transferSize": 37973,
+        "duration": 11.800000071525574
+      },
+      {
+        "name": "http://127.0.0.1:8010/fonts/cormorant-italic-latin.woff2",
+        "transferSize": 39593,
+        "duration": 13.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/index-CE-yL4qh.js",
+        "transferSize": 74546,
+        "duration": 16.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/index-Co30Rqry.css",
+        "transferSize": 8646,
+        "duration": 11.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:8010/art/fate_atmosphere.webp",
+        "transferSize": 15056,
+        "duration": 2.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:8010/fonts/inter-latin.woff2",
+        "transferSize": 48549,
+        "duration": 31.09999990463257
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/Orb-mwdLWlAy.js",
+        "transferSize": 1111,
+        "duration": 11.300000071525574
       },
       {
         "name": "http://127.0.0.1:8010/art/fate_sigil.svg",
         "transferSize": 1174,
-        "duration": 5.700000047683716
+        "duration": 9.700000047683716
       },
       {
-        "name": "http://127.0.0.1:8010/art/fate_orb_core.png",
-        "transferSize": 742462,
-        "duration": 8.700000047683716
+        "name": "http://127.0.0.1:8010/art/deck/pam-a-v1/major-18-360.webp",
+        "transferSize": 80272,
+        "duration": 11.700000047683716
       },
       {
-        "name": "http://127.0.0.1:8010/assets/Orb-CZPGtEcP.js",
-        "transferSize": 5840,
-        "duration": 4.5
-      },
-      {
-        "name": "http://127.0.0.1:8010/art/fate_orrery.svg",
-        "transferSize": 1425,
-        "duration": 6
-      },
-      {
-        "name": "http://127.0.0.1:8010/art/fate_atmosphere.webp",
-        "transferSize": 15154,
-        "duration": 4.600000023841858
-      },
-      {
-        "name": "http://127.0.0.1:8010/fonts/inter-latin.woff2",
-        "transferSize": 48556,
-        "duration": 32.60000002384186
-      },
-      {
-        "name": "http://127.0.0.1:8010/fonts/cormorant-italic-latin.woff2",
-        "transferSize": 39560,
-        "duration": 32.89999997615814
-      },
-      {
-        "name": "http://127.0.0.1:8010/fonts/cormorant-latin.woff2",
-        "transferSize": 37940,
-        "duration": 33
+        "name": "http://127.0.0.1:8010/art/deck/pam-a-v1/major-17-360.webp",
+        "transferSize": 76864,
+        "duration": 12.600000023841858
       },
       {
         "name": "http://127.0.0.1:8010/api/health",
         "transferSize": 370,
-        "duration": 1.9000000953674316
+        "duration": 6.600000023841858
       },
       {
-        "name": "http://127.0.0.1:8010/assets/lib-DoX23L1N.js",
-        "transferSize": 434156,
-        "duration": 9.799999952316284
+        "name": "http://127.0.0.1:8010/assets/createOrbScene-BqCh3WCc.js",
+        "transferSize": 94007,
+        "duration": 15.699999928474426
       },
       {
-        "name": "http://127.0.0.1:8010/assets/ParticleBuffer-iVVc4csL.js",
-        "transferSize": 116861,
-        "duration": 6
+        "name": "http://127.0.0.1:8010/assets/WebGLRenderer-BFvwUOWM.js",
+        "transferSize": 14857,
+        "duration": 9.200000047683716
       },
       {
-        "name": "http://127.0.0.1:8010/assets/init-Bziemf4x.js",
-        "transferSize": 10340,
-        "duration": 3.700000047683716
+        "name": "http://127.0.0.1:8010/assets/GpuStencilModesToPixi-CVQ9pqZm.js",
+        "transferSize": 1369,
+        "duration": 8.799999952316284
       },
       {
-        "name": "http://127.0.0.1:8010/assets/browserAll-BrB1zNqL.js",
-        "transferSize": 608,
-        "duration": 4.799999952316284
-      },
-      {
-        "name": "http://127.0.0.1:8010/assets/webworkerAll-BHTCfunQ.js",
-        "transferSize": 482,
-        "duration": 5
+        "name": "http://127.0.0.1:8010/assets/RenderTargetSystem-BkdUowcZ.js",
+        "transferSize": 13197,
+        "duration": 9.100000023841858
       },
       {
         "name": "http://127.0.0.1:8010/art/fate_orrery.svg",
-        "transferSize": 0,
-        "duration": 1
+        "transferSize": 825,
+        "duration": 20.100000023841858
       },
       {
-        "name": "http://127.0.0.1:8010/art/fate_orb_core.png",
-        "transferSize": 0,
-        "duration": 0.8000000715255737
+        "name": "http://127.0.0.1:8010/art/nebula-v1.webp",
+        "transferSize": 25484,
+        "duration": 21.300000071525574
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/browserAll-DgrVqBKU.js",
+        "transferSize": 11719,
+        "duration": 15.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/webworkerAll-Be6pxZZ0.js",
+        "transferSize": 5373,
+        "duration": 16.800000071525574
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/canvasUtils-DdhQvE1o.js",
+        "transferSize": 2094,
+        "duration": 16.5
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/CanvasPool-DnlM-N_W.js",
+        "transferSize": 1091,
+        "duration": 16.700000047683716
       }
     ]
+  },
+  "rendering": {
+    "environment": "Local Chromium 60 Hz mobile/desktop emulation, DPR2, SwiftShader software WebGL; renderer callbacks measured, not physical-device or field certification. Actual device quality starts from capabilities and may reduce during sustained missed budgets.",
+    "profiles": [
+      {
+        "name": "mobile",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "windows": [
+          {
+            "frames": 43,
+            "fps": 42.8,
+            "p50FrameMs": 19,
+            "p95FrameMs": 58.2,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 90,
+            "fps": 46.5,
+            "p50FrameMs": 18.4,
+            "p95FrameMs": 53.6,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 141,
+            "fps": 50.7,
+            "p50FrameMs": 18.1,
+            "p95FrameMs": 32.7,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 198,
+            "fps": 56.8,
+            "p50FrameMs": 16.7,
+            "p95FrameMs": 17.7,
+            "quality": "balanced",
+            "resolution": 0.7625,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 458
+          },
+          {
+            "frames": 258,
+            "fps": 59,
+            "p50FrameMs": 16.8,
+            "p95FrameMs": 17.9,
+            "quality": "balanced",
+            "resolution": 0.7625,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 458
+          },
+          {
+            "frames": 317,
+            "fps": 58.1,
+            "p50FrameMs": 16.7,
+            "p95FrameMs": 18.4,
+            "quality": "balanced",
+            "resolution": 0.7625,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 458
+          }
+        ],
+        "resources": [
+          {
+            "name": "orb-poster-v2.webp",
+            "bytes": 98476,
+            "durationMs": 4.800000071525574
+          },
+          {
+            "name": "cormorant-latin.woff2",
+            "bytes": 37973,
+            "durationMs": 10
+          },
+          {
+            "name": "cormorant-italic-latin.woff2",
+            "bytes": 39593,
+            "durationMs": 12.800000071525574
+          },
+          {
+            "name": "index-Co30Rqry.css",
+            "bytes": 8646,
+            "durationMs": 12.5
+          },
+          {
+            "name": "index-CE-yL4qh.js",
+            "bytes": 74546,
+            "durationMs": 15.799999952316284
+          },
+          {
+            "name": "fate_atmosphere.webp",
+            "bytes": 15056,
+            "durationMs": 3.399999976158142
+          },
+          {
+            "name": "inter-latin.woff2",
+            "bytes": 48549,
+            "durationMs": 37.40000009536743
+          },
+          {
+            "name": "major-18-360.webp",
+            "bytes": 80272,
+            "durationMs": 15
+          },
+          {
+            "name": "fate_sigil.svg",
+            "bytes": 1174,
+            "durationMs": 11.600000023841858
+          },
+          {
+            "name": "Orb-mwdLWlAy.js",
+            "bytes": 1111,
+            "durationMs": 11.100000023841858
+          },
+          {
+            "name": "major-17-360.webp",
+            "bytes": 76864,
+            "durationMs": 14.299999952316284
+          },
+          {
+            "name": "health",
+            "bytes": 370,
+            "durationMs": 10.700000047683716
+          },
+          {
+            "name": "createOrbScene-BqCh3WCc.js",
+            "bytes": 94007,
+            "durationMs": 16.799999952316284
+          },
+          {
+            "name": "WebGLRenderer-BFvwUOWM.js",
+            "bytes": 14857,
+            "durationMs": 16.399999976158142
+          },
+          {
+            "name": "GpuStencilModesToPixi-CVQ9pqZm.js",
+            "bytes": 1369,
+            "durationMs": 16
+          },
+          {
+            "name": "RenderTargetSystem-BkdUowcZ.js",
+            "bytes": 13197,
+            "durationMs": 16.200000047683716
+          },
+          {
+            "name": "fate_orrery.svg",
+            "bytes": 825,
+            "durationMs": 15.600000023841858
+          },
+          {
+            "name": "nebula-v1.webp",
+            "bytes": 25484,
+            "durationMs": 15.400000095367432
+          },
+          {
+            "name": "browserAll-DgrVqBKU.js",
+            "bytes": 11719,
+            "durationMs": 11.399999976158142
+          },
+          {
+            "name": "webworkerAll-Be6pxZZ0.js",
+            "bytes": 5373,
+            "durationMs": 10.700000047683716
+          },
+          {
+            "name": "canvasUtils-DdhQvE1o.js",
+            "bytes": 2094,
+            "durationMs": 8.899999976158142
+          },
+          {
+            "name": "CanvasPool-DnlM-N_W.js",
+            "bytes": 1091,
+            "durationMs": 11.899999976158142
+          }
+        ]
+      },
+      {
+        "name": "desktop",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "windows": [
+          {
+            "frames": 18,
+            "fps": 17.3,
+            "p50FrameMs": 36.6,
+            "p95FrameMs": 186.7,
+            "quality": "cinematic",
+            "resolution": 1.6,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 960
+          },
+          {
+            "frames": 18,
+            "fps": 17.3,
+            "p50FrameMs": 36.6,
+            "p95FrameMs": 186.7,
+            "quality": "cinematic",
+            "resolution": 1.6,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 960
+          },
+          {
+            "frames": 44,
+            "fps": 19.7,
+            "p50FrameMs": 37.1,
+            "p95FrameMs": 56.3,
+            "quality": "cinematic",
+            "resolution": 1.6,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 960
+          },
+          {
+            "frames": 66,
+            "fps": 21.9,
+            "p50FrameMs": 35.2,
+            "p95FrameMs": 68.5,
+            "quality": "cinematic",
+            "resolution": 1.6,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 960
+          },
+          {
+            "frames": 91,
+            "fps": 24.3,
+            "p50FrameMs": 27,
+            "p95FrameMs": 105.8,
+            "quality": "balanced",
+            "resolution": 1.25,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 750
+          },
+          {
+            "frames": 119,
+            "fps": 22.3,
+            "p50FrameMs": 24.5,
+            "p95FrameMs": 32.3,
+            "quality": "balanced",
+            "resolution": 1.25,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 750
+          }
+        ],
+        "resources": [
+          {
+            "name": "orb-poster-v2.webp",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "cormorant-latin.woff2",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "cormorant-italic-latin.woff2",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "index-CE-yL4qh.js",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "index-Co30Rqry.css",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "inter-latin.woff2",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "fate_sigil.svg",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "major-18-720.webp",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "major-17-720.webp",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "fate_atmosphere.webp",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "Orb-mwdLWlAy.js",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "health",
+            "bytes": 370,
+            "durationMs": 3.399999976158142
+          },
+          {
+            "name": "createOrbScene-BqCh3WCc.js",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "WebGLRenderer-BFvwUOWM.js",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "GpuStencilModesToPixi-CVQ9pqZm.js",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "RenderTargetSystem-BkdUowcZ.js",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "fate_orrery.svg",
+            "bytes": 0,
+            "durationMs": 0.8999999761581421
+          },
+          {
+            "name": "browserAll-DgrVqBKU.js",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "webworkerAll-Be6pxZZ0.js",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "canvasUtils-DdhQvE1o.js",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "CanvasPool-DnlM-N_W.js",
+            "bytes": 0,
+            "durationMs": 0
+          },
+          {
+            "name": "nebula-v1.webp",
+            "bytes": 0,
+            "durationMs": 0.5999999046325684
+          }
+        ]
+      }
+    ]
+  },
+  "host_performance": {
+    "scope": "Local Chromium host-renderer emulation. Driver identity recorded. CPU/network and low-power profiles are simulations, not physical-device, field CWV, battery/thermal or INP certification. Event durations are synthetic developer gestures; renderer callback intervals are distinct from presentation timing.",
+    "profiles": [
+      {
+        "profile": {
+          "name": "mobile-host-renderer",
+          "width": 390,
+          "height": 844,
+          "dpr": 2,
+          "mobile": true,
+          "windows": 10
+        },
+        "driver": {
+          "vendor": "Google Inc. (Google)",
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+        },
+        "windows": [
+          {
+            "frames": 51,
+            "fps": 54.6,
+            "p50FrameMs": 18,
+            "p95FrameMs": 20.6,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 108,
+            "fps": 56.3,
+            "p50FrameMs": 17.8,
+            "p95FrameMs": 18.9,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 165,
+            "fps": 56.5,
+            "p50FrameMs": 17.8,
+            "p95FrameMs": 19.2,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 222,
+            "fps": 56.3,
+            "p50FrameMs": 17.7,
+            "p95FrameMs": 19.1,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 280,
+            "fps": 57.1,
+            "p50FrameMs": 17.7,
+            "p95FrameMs": 18.7,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 337,
+            "fps": 56.2,
+            "p50FrameMs": 18,
+            "p95FrameMs": 19,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 395,
+            "fps": 57.3,
+            "p50FrameMs": 17.7,
+            "p95FrameMs": 19,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 453,
+            "fps": 57,
+            "p50FrameMs": 17.7,
+            "p95FrameMs": 19.2,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 510,
+            "fps": 56.5,
+            "p50FrameMs": 17.8,
+            "p95FrameMs": 19,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 567,
+            "fps": 56.3,
+            "p50FrameMs": 17.8,
+            "p95FrameMs": 19.5,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          }
+        ],
+        "observation": {
+          "lcpMs": 408,
+          "cls": 0,
+          "longTasks": [
+            65,
+            98
+          ],
+          "events": [
+            {
+              "name": "pointerdown",
+              "durationMs": 80,
+              "processingDelayMs": 54.39999997615814
+            },
+            {
+              "name": "pointerup",
+              "durationMs": 80,
+              "processingDelayMs": 55
+            },
+            {
+              "name": "click",
+              "durationMs": 96,
+              "processingDelayMs": 73.89999997615814
+            },
+            {
+              "name": "pointerdown",
+              "durationMs": 48,
+              "processingDelayMs": 17.199999928474426
+            },
+            {
+              "name": "pointerup",
+              "durationMs": 48,
+              "processingDelayMs": 17.799999952316284
+            },
+            {
+              "name": "click",
+              "durationMs": 48,
+              "processingDelayMs": 18.199999928474426
+            }
+          ],
+          "resources": [
+            {
+              "name": "orb-poster-v2.webp",
+              "transferBytes": 98476,
+              "decodedBytes": 98378,
+              "durationMs": 7.799999952316284
+            },
+            {
+              "name": "index-CE-yL4qh.js",
+              "transferBytes": 74546,
+              "decodedBytes": 252076,
+              "durationMs": 16
+            },
+            {
+              "name": "cormorant-latin.woff2",
+              "transferBytes": 37973,
+              "decodedBytes": 37640,
+              "durationMs": 12.300000071525574
+            },
+            {
+              "name": "cormorant-italic-latin.woff2",
+              "transferBytes": 39593,
+              "decodedBytes": 39260,
+              "durationMs": 12.399999976158142
+            },
+            {
+              "name": "index-Co30Rqry.css",
+              "transferBytes": 8646,
+              "decodedBytes": 34082,
+              "durationMs": 11.799999952316284
+            },
+            {
+              "name": "fate_atmosphere.webp",
+              "transferBytes": 15056,
+              "decodedBytes": 14854,
+              "durationMs": 2.399999976158142
+            },
+            {
+              "name": "inter-latin.woff2",
+              "transferBytes": 48549,
+              "decodedBytes": 48256,
+              "durationMs": 56.89999997615814
+            },
+            {
+              "name": "fate_sigil.svg",
+              "transferBytes": 1174,
+              "decodedBytes": 874,
+              "durationMs": 24.300000071525574
+            },
+            {
+              "name": "Orb-mwdLWlAy.js",
+              "transferBytes": 1111,
+              "decodedBytes": 1586,
+              "durationMs": 30.300000071525574
+            },
+            {
+              "name": "major-17-360.webp",
+              "transferBytes": 76864,
+              "decodedBytes": 76516,
+              "durationMs": 32.5
+            },
+            {
+              "name": "major-18-360.webp",
+              "transferBytes": 80272,
+              "decodedBytes": 79924,
+              "durationMs": 33.300000071525574
+            },
+            {
+              "name": "health",
+              "transferBytes": 370,
+              "decodedBytes": 70,
+              "durationMs": 24.200000047683716
+            },
+            {
+              "name": "createOrbScene-BqCh3WCc.js",
+              "transferBytes": 94007,
+              "decodedBytes": 303725,
+              "durationMs": 10
+            },
+            {
+              "name": "WebGLRenderer-BFvwUOWM.js",
+              "transferBytes": 14857,
+              "decodedBytes": 52609,
+              "durationMs": 6.399999976158142
+            },
+            {
+              "name": "GpuStencilModesToPixi-CVQ9pqZm.js",
+              "transferBytes": 1369,
+              "decodedBytes": 3293,
+              "durationMs": 5.299999952316284
+            },
+            {
+              "name": "RenderTargetSystem-BkdUowcZ.js",
+              "transferBytes": 13197,
+              "decodedBytes": 46728,
+              "durationMs": 5.100000023841858
+            },
+            {
+              "name": "fate_orrery.svg",
+              "transferBytes": 825,
+              "decodedBytes": 1125,
+              "durationMs": 4.5
+            },
+            {
+              "name": "nebula-v1.webp",
+              "transferBytes": 25484,
+              "decodedBytes": 25156,
+              "durationMs": 4.100000023841858
+            },
+            {
+              "name": "browserAll-DgrVqBKU.js",
+              "transferBytes": 11719,
+              "decodedBytes": 43093,
+              "durationMs": 5.400000095367432
+            },
+            {
+              "name": "webworkerAll-Be6pxZZ0.js",
+              "transferBytes": 5373,
+              "decodedBytes": 15813,
+              "durationMs": 5.399999976158142
+            },
+            {
+              "name": "canvasUtils-DdhQvE1o.js",
+              "transferBytes": 2094,
+              "decodedBytes": 5686,
+              "durationMs": 5.200000047683716
+            },
+            {
+              "name": "CanvasPool-DnlM-N_W.js",
+              "transferBytes": 1091,
+              "decodedBytes": 791,
+              "durationMs": 4.899999976158142
+            },
+            {
+              "name": "card-back-360.webp",
+              "transferBytes": 64336,
+              "decodedBytes": 63998,
+              "durationMs": 5
+            }
+          ],
+          "heap": {
+            "usedBytes": 10000000,
+            "totalBytes": 10000000
+          }
+        }
+      },
+      {
+        "profile": {
+          "name": "desktop-host-renderer",
+          "width": 1440,
+          "height": 1000,
+          "dpr": 1,
+          "mobile": false,
+          "windows": 10
+        },
+        "driver": {
+          "vendor": "Google Inc. (Google)",
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+        },
+        "windows": [
+          {
+            "frames": 44,
+            "fps": 48.3,
+            "p50FrameMs": 19.9,
+            "p95FrameMs": 22.9,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          },
+          {
+            "frames": 100,
+            "fps": 55.4,
+            "p50FrameMs": 17.7,
+            "p95FrameMs": 20.4,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          },
+          {
+            "frames": 157,
+            "fps": 56.8,
+            "p50FrameMs": 17.3,
+            "p95FrameMs": 18.3,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          },
+          {
+            "frames": 216,
+            "fps": 58,
+            "p50FrameMs": 17.2,
+            "p95FrameMs": 17.7,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          },
+          {
+            "frames": 273,
+            "fps": 56.8,
+            "p50FrameMs": 17.4,
+            "p95FrameMs": 18.5,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          },
+          {
+            "frames": 330,
+            "fps": 56.5,
+            "p50FrameMs": 17.4,
+            "p95FrameMs": 18.4,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          },
+          {
+            "frames": 388,
+            "fps": 57.7,
+            "p50FrameMs": 17.2,
+            "p95FrameMs": 18.1,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          },
+          {
+            "frames": 446,
+            "fps": 57.2,
+            "p50FrameMs": 17.3,
+            "p95FrameMs": 18.4,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          },
+          {
+            "frames": 503,
+            "fps": 56.5,
+            "p50FrameMs": 17.3,
+            "p95FrameMs": 18,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          },
+          {
+            "frames": 560,
+            "fps": 56.2,
+            "p50FrameMs": 17.5,
+            "p95FrameMs": 18.6,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          }
+        ],
+        "observation": {
+          "lcpMs": 120,
+          "cls": 0,
+          "longTasks": [
+            105
+          ],
+          "events": [
+            {
+              "name": "pointerdown",
+              "durationMs": 56,
+              "processingDelayMs": 18.40000009536743
+            },
+            {
+              "name": "pointerup",
+              "durationMs": 56,
+              "processingDelayMs": 18.800000071525574
+            },
+            {
+              "name": "click",
+              "durationMs": 56,
+              "processingDelayMs": 19.100000023841858
+            },
+            {
+              "name": "pointerdown",
+              "durationMs": 64,
+              "processingDelayMs": 17
+            },
+            {
+              "name": "pointerup",
+              "durationMs": 64,
+              "processingDelayMs": 17.799999952316284
+            },
+            {
+              "name": "click",
+              "durationMs": 64,
+              "processingDelayMs": 18.299999952316284
+            }
+          ],
+          "resources": [
+            {
+              "name": "orb-poster-v2.webp",
+              "transferBytes": 98476,
+              "decodedBytes": 98378,
+              "durationMs": 5.200000047683716
+            },
+            {
+              "name": "index-Co30Rqry.css",
+              "transferBytes": 8646,
+              "decodedBytes": 34082,
+              "durationMs": 13.5
+            },
+            {
+              "name": "cormorant-latin.woff2",
+              "transferBytes": 37973,
+              "decodedBytes": 37640,
+              "durationMs": 12.100000023841858
+            },
+            {
+              "name": "index-CE-yL4qh.js",
+              "transferBytes": 74546,
+              "decodedBytes": 252076,
+              "durationMs": 17.899999976158142
+            },
+            {
+              "name": "cormorant-italic-latin.woff2",
+              "transferBytes": 39593,
+              "decodedBytes": 39260,
+              "durationMs": 12.699999928474426
+            },
+            {
+              "name": "fate_atmosphere.webp",
+              "transferBytes": 15056,
+              "decodedBytes": 14854,
+              "durationMs": 2.5
+            },
+            {
+              "name": "inter-latin.woff2",
+              "transferBytes": 48549,
+              "decodedBytes": 48256,
+              "durationMs": 36.39999997615814
+            },
+            {
+              "name": "Orb-mwdLWlAy.js",
+              "transferBytes": 1111,
+              "decodedBytes": 1586,
+              "durationMs": 4.600000023841858
+            },
+            {
+              "name": "fate_sigil.svg",
+              "transferBytes": 1174,
+              "decodedBytes": 874,
+              "durationMs": 7.300000071525574
+            },
+            {
+              "name": "major-17-360.webp",
+              "transferBytes": 76864,
+              "decodedBytes": 76516,
+              "durationMs": 10.300000071525574
+            },
+            {
+              "name": "major-18-360.webp",
+              "transferBytes": 80272,
+              "decodedBytes": 79924,
+              "durationMs": 12.399999976158142
+            },
+            {
+              "name": "health",
+              "transferBytes": 370,
+              "decodedBytes": 70,
+              "durationMs": 4.699999928474426
+            },
+            {
+              "name": "createOrbScene-BqCh3WCc.js",
+              "transferBytes": 94007,
+              "decodedBytes": 303725,
+              "durationMs": 10.5
+            },
+            {
+              "name": "GpuStencilModesToPixi-CVQ9pqZm.js",
+              "transferBytes": 1369,
+              "decodedBytes": 3293,
+              "durationMs": 6.200000047683716
+            },
+            {
+              "name": "RenderTargetSystem-BkdUowcZ.js",
+              "transferBytes": 13197,
+              "decodedBytes": 46728,
+              "durationMs": 6.5
+            },
+            {
+              "name": "WebGLRenderer-BFvwUOWM.js",
+              "transferBytes": 14857,
+              "decodedBytes": 52609,
+              "durationMs": 6.300000071525574
+            },
+            {
+              "name": "fate_orrery.svg",
+              "transferBytes": 825,
+              "decodedBytes": 1125,
+              "durationMs": 4.899999976158142
+            },
+            {
+              "name": "nebula-v1.webp",
+              "transferBytes": 25484,
+              "decodedBytes": 25156,
+              "durationMs": 4.5
+            },
+            {
+              "name": "browserAll-DgrVqBKU.js",
+              "transferBytes": 11719,
+              "decodedBytes": 43093,
+              "durationMs": 5.200000047683716
+            },
+            {
+              "name": "webworkerAll-Be6pxZZ0.js",
+              "transferBytes": 5373,
+              "decodedBytes": 15813,
+              "durationMs": 5
+            },
+            {
+              "name": "canvasUtils-DdhQvE1o.js",
+              "transferBytes": 2094,
+              "decodedBytes": 5686,
+              "durationMs": 5.200000047683716
+            },
+            {
+              "name": "CanvasPool-DnlM-N_W.js",
+              "transferBytes": 1091,
+              "decodedBytes": 791,
+              "durationMs": 5
+            },
+            {
+              "name": "card-back-360.webp",
+              "transferBytes": 64336,
+              "decodedBytes": 63998,
+              "durationMs": 12.5
+            }
+          ],
+          "heap": {
+            "usedBytes": 10000000,
+            "totalBytes": 10000000
+          }
+        }
+      },
+      {
+        "profile": {
+          "name": "low-power-capability-simulation",
+          "width": 390,
+          "height": 844,
+          "dpr": 2,
+          "mobile": true,
+          "low": true,
+          "windows": 6
+        },
+        "driver": {
+          "vendor": "Google Inc. (Google)",
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+        },
+        "windows": [
+          {
+            "frames": 29,
+            "fps": 30,
+            "p50FrameMs": 33.6,
+            "p95FrameMs": 35,
+            "quality": "low",
+            "resolution": 0.61,
+            "targetFps": 30,
+            "logicalSize": 600,
+            "bufferWidth": 366
+          },
+          {
+            "frames": 59,
+            "fps": 29.1,
+            "p50FrameMs": 33.6,
+            "p95FrameMs": 48.7,
+            "quality": "low",
+            "resolution": 0.61,
+            "targetFps": 30,
+            "logicalSize": 600,
+            "bufferWidth": 366
+          },
+          {
+            "frames": 89,
+            "fps": 29.5,
+            "p50FrameMs": 33.4,
+            "p95FrameMs": 35.3,
+            "quality": "low",
+            "resolution": 0.61,
+            "targetFps": 30,
+            "logicalSize": 600,
+            "bufferWidth": 366
+          },
+          {
+            "frames": 119,
+            "fps": 29.5,
+            "p50FrameMs": 33.3,
+            "p95FrameMs": 34.4,
+            "quality": "low",
+            "resolution": 0.61,
+            "targetFps": 30,
+            "logicalSize": 600,
+            "bufferWidth": 366
+          },
+          {
+            "frames": 149,
+            "fps": 29.5,
+            "p50FrameMs": 33.4,
+            "p95FrameMs": 34.3,
+            "quality": "low",
+            "resolution": 0.61,
+            "targetFps": 30,
+            "logicalSize": 600,
+            "bufferWidth": 366
+          },
+          {
+            "frames": 179,
+            "fps": 29.5,
+            "p50FrameMs": 33.3,
+            "p95FrameMs": 34.5,
+            "quality": "low",
+            "resolution": 0.61,
+            "targetFps": 30,
+            "logicalSize": 600,
+            "bufferWidth": 366
+          }
+        ],
+        "observation": {
+          "lcpMs": 316,
+          "cls": 0,
+          "longTasks": [
+            79
+          ],
+          "events": [
+            {
+              "name": "pointerdown",
+              "durationMs": 32,
+              "processingDelayMs": 23.899999976158142
+            },
+            {
+              "name": "pointerup",
+              "durationMs": 32,
+              "processingDelayMs": 24.399999976158142
+            },
+            {
+              "name": "click",
+              "durationMs": 32,
+              "processingDelayMs": 25.199999928474426
+            },
+            {
+              "name": "pointerdown",
+              "durationMs": 32,
+              "processingDelayMs": 0.8999999761581421
+            },
+            {
+              "name": "pointerup",
+              "durationMs": 32,
+              "processingDelayMs": 1.2999999523162842
+            },
+            {
+              "name": "click",
+              "durationMs": 32,
+              "processingDelayMs": 1.5
+            }
+          ],
+          "resources": [
+            {
+              "name": "orb-poster-v2.webp",
+              "transferBytes": 98476,
+              "decodedBytes": 98378,
+              "durationMs": 4.799999952316284
+            },
+            {
+              "name": "cormorant-latin.woff2",
+              "transferBytes": 37973,
+              "decodedBytes": 37640,
+              "durationMs": 8.700000047683716
+            },
+            {
+              "name": "index-Co30Rqry.css",
+              "transferBytes": 8646,
+              "decodedBytes": 34082,
+              "durationMs": 12.899999976158142
+            },
+            {
+              "name": "cormorant-italic-latin.woff2",
+              "transferBytes": 39593,
+              "decodedBytes": 39260,
+              "durationMs": 11
+            },
+            {
+              "name": "index-CE-yL4qh.js",
+              "transferBytes": 74546,
+              "decodedBytes": 252076,
+              "durationMs": 15.899999976158142
+            },
+            {
+              "name": "fate_atmosphere.webp",
+              "transferBytes": 15056,
+              "decodedBytes": 14854,
+              "durationMs": 2.399999976158142
+            },
+            {
+              "name": "inter-latin.woff2",
+              "transferBytes": 48549,
+              "decodedBytes": 48256,
+              "durationMs": 33.90000009536743
+            },
+            {
+              "name": "fate_sigil.svg",
+              "transferBytes": 1174,
+              "decodedBytes": 874,
+              "durationMs": 6.100000023841858
+            },
+            {
+              "name": "major-18-360.webp",
+              "transferBytes": 80272,
+              "decodedBytes": 79924,
+              "durationMs": 11
+            },
+            {
+              "name": "Orb-mwdLWlAy.js",
+              "transferBytes": 1111,
+              "decodedBytes": 1586,
+              "durationMs": 7.800000071525574
+            },
+            {
+              "name": "major-17-360.webp",
+              "transferBytes": 76864,
+              "decodedBytes": 76516,
+              "durationMs": 8.600000023841858
+            },
+            {
+              "name": "health",
+              "transferBytes": 370,
+              "decodedBytes": 70,
+              "durationMs": 2.8000000715255737
+            },
+            {
+              "name": "createOrbScene-BqCh3WCc.js",
+              "transferBytes": 94007,
+              "decodedBytes": 303725,
+              "durationMs": 11.199999928474426
+            },
+            {
+              "name": "WebGLRenderer-BFvwUOWM.js",
+              "transferBytes": 14857,
+              "decodedBytes": 52609,
+              "durationMs": 5.600000023841858
+            },
+            {
+              "name": "GpuStencilModesToPixi-CVQ9pqZm.js",
+              "transferBytes": 1369,
+              "decodedBytes": 3293,
+              "durationMs": 7
+            },
+            {
+              "name": "RenderTargetSystem-BkdUowcZ.js",
+              "transferBytes": 13197,
+              "decodedBytes": 46728,
+              "durationMs": 7
+            },
+            {
+              "name": "fate_orrery.svg",
+              "transferBytes": 825,
+              "decodedBytes": 1125,
+              "durationMs": 5.399999976158142
+            },
+            {
+              "name": "nebula-v1.webp",
+              "transferBytes": 25484,
+              "decodedBytes": 25156,
+              "durationMs": 4.5
+            },
+            {
+              "name": "browserAll-DgrVqBKU.js",
+              "transferBytes": 11719,
+              "decodedBytes": 43093,
+              "durationMs": 4.699999928474426
+            },
+            {
+              "name": "CanvasPool-DnlM-N_W.js",
+              "transferBytes": 1091,
+              "decodedBytes": 791,
+              "durationMs": 4.700000047683716
+            },
+            {
+              "name": "canvasUtils-DdhQvE1o.js",
+              "transferBytes": 2094,
+              "decodedBytes": 5686,
+              "durationMs": 4.700000047683716
+            },
+            {
+              "name": "webworkerAll-Be6pxZZ0.js",
+              "transferBytes": 5373,
+              "decodedBytes": 15813,
+              "durationMs": 4.800000071525574
+            },
+            {
+              "name": "card-back-360.webp",
+              "transferBytes": 64336,
+              "decodedBytes": 63998,
+              "durationMs": 3.799999952316284
+            }
+          ],
+          "heap": {
+            "usedBytes": 10000000,
+            "totalBytes": 10000000
+          }
+        }
+      },
+      {
+        "profile": {
+          "name": "mobile-4x-cpu-1.6Mbps-150ms",
+          "width": 390,
+          "height": 844,
+          "dpr": 2,
+          "mobile": true,
+          "throttle": true,
+          "windows": 6
+        },
+        "driver": {
+          "vendor": "Google Inc. (Google)",
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+        },
+        "windows": [
+          {
+            "frames": 39,
+            "fps": 42.1,
+            "p50FrameMs": 23.2,
+            "p95FrameMs": 28,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 85,
+            "fps": 45.9,
+            "p50FrameMs": 21.5,
+            "p95FrameMs": 24.5,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 132,
+            "fps": 46.9,
+            "p50FrameMs": 21.2,
+            "p95FrameMs": 22.3,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 192,
+            "fps": 59.3,
+            "p50FrameMs": 16.6,
+            "p95FrameMs": 19.4,
+            "quality": "balanced",
+            "resolution": 0.7625,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 458
+          },
+          {
+            "frames": 251,
+            "fps": 58,
+            "p50FrameMs": 16.7,
+            "p95FrameMs": 18.9,
+            "quality": "balanced",
+            "resolution": 0.7625,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 458
+          },
+          {
+            "frames": 310,
+            "fps": 59,
+            "p50FrameMs": 16.7,
+            "p95FrameMs": 18.6,
+            "quality": "balanced",
+            "resolution": 0.7625,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 458
+          }
+        ],
+        "observation": {
+          "lcpMs": 1892,
+          "cls": 0,
+          "longTasks": [
+            138,
+            134,
+            86,
+            57
+          ],
+          "events": [
+            {
+              "name": "pointerdown",
+              "durationMs": 96,
+              "processingDelayMs": 66
+            },
+            {
+              "name": "pointerup",
+              "durationMs": 96,
+              "processingDelayMs": 68.29999995231628
+            },
+            {
+              "name": "click",
+              "durationMs": 96,
+              "processingDelayMs": 72.29999995231628
+            },
+            {
+              "name": "pointerdown",
+              "durationMs": 56,
+              "processingDelayMs": 21.300000071525574
+            },
+            {
+              "name": "pointerup",
+              "durationMs": 56,
+              "processingDelayMs": 24.200000047683716
+            },
+            {
+              "name": "click",
+              "durationMs": 56,
+              "processingDelayMs": 25.799999952316284
+            }
+          ],
+          "resources": [
+            {
+              "name": "orb-poster-v2.webp",
+              "transferBytes": 98476,
+              "decodedBytes": 98378,
+              "durationMs": 1434.5
+            },
+            {
+              "name": "cormorant-latin.woff2",
+              "transferBytes": 37973,
+              "decodedBytes": 37640,
+              "durationMs": 947
+            },
+            {
+              "name": "cormorant-italic-latin.woff2",
+              "transferBytes": 39593,
+              "decodedBytes": 39260,
+              "durationMs": 977.6000000238419
+            },
+            {
+              "name": "index-CE-yL4qh.js",
+              "transferBytes": 74546,
+              "decodedBytes": 252076,
+              "durationMs": 1309
+            },
+            {
+              "name": "index-Co30Rqry.css",
+              "transferBytes": 8646,
+              "decodedBytes": 34082,
+              "durationMs": 409.89999997615814
+            },
+            {
+              "name": "fate_atmosphere.webp",
+              "transferBytes": 15056,
+              "decodedBytes": 14854,
+              "durationMs": 252.10000002384186
+            },
+            {
+              "name": "inter-latin.woff2",
+              "transferBytes": 48549,
+              "decodedBytes": 48256,
+              "durationMs": 1178.3000000715256
+            },
+            {
+              "name": "Orb-mwdLWlAy.js",
+              "transferBytes": 1111,
+              "decodedBytes": 1586,
+              "durationMs": 194
+            },
+            {
+              "name": "fate_sigil.svg",
+              "transferBytes": 1174,
+              "decodedBytes": 874,
+              "durationMs": 171.60000002384186
+            },
+            {
+              "name": "major-18-360.webp",
+              "transferBytes": 80272,
+              "decodedBytes": 79924,
+              "durationMs": 1497.3000000715256
+            },
+            {
+              "name": "major-17-360.webp",
+              "transferBytes": 76864,
+              "decodedBytes": 76516,
+              "durationMs": 1470.3000000715256
+            },
+            {
+              "name": "health",
+              "transferBytes": 370,
+              "decodedBytes": 70,
+              "durationMs": 280.8000000715256
+            },
+            {
+              "name": "createOrbScene-BqCh3WCc.js",
+              "transferBytes": 94007,
+              "decodedBytes": 303725,
+              "durationMs": 1409.7999999523163
+            },
+            {
+              "name": "WebGLRenderer-BFvwUOWM.js",
+              "transferBytes": 14857,
+              "decodedBytes": 52609,
+              "durationMs": 404.1999999284744
+            },
+            {
+              "name": "GpuStencilModesToPixi-CVQ9pqZm.js",
+              "transferBytes": 1369,
+              "decodedBytes": 3293,
+              "durationMs": 208.10000002384186
+            },
+            {
+              "name": "RenderTargetSystem-BkdUowcZ.js",
+              "transferBytes": 13197,
+              "decodedBytes": 46728,
+              "durationMs": 386.3000000715256
+            },
+            {
+              "name": "fate_orrery.svg",
+              "transferBytes": 825,
+              "decodedBytes": 1125,
+              "durationMs": 180.20000004768372
+            },
+            {
+              "name": "nebula-v1.webp",
+              "transferBytes": 25484,
+              "decodedBytes": 25156,
+              "durationMs": 441.2999999523163
+            },
+            {
+              "name": "browserAll-DgrVqBKU.js",
+              "transferBytes": 11719,
+              "decodedBytes": 43093,
+              "durationMs": 275.7000000476837
+            },
+            {
+              "name": "webworkerAll-Be6pxZZ0.js",
+              "transferBytes": 5373,
+              "decodedBytes": 15813,
+              "durationMs": 242.60000002384186
+            },
+            {
+              "name": "canvasUtils-DdhQvE1o.js",
+              "transferBytes": 2094,
+              "decodedBytes": 5686,
+              "durationMs": 209.5
+            },
+            {
+              "name": "CanvasPool-DnlM-N_W.js",
+              "transferBytes": 1091,
+              "decodedBytes": 791,
+              "durationMs": 177.5
+            },
+            {
+              "name": "card-back-360.webp",
+              "transferBytes": 64336,
+              "decodedBytes": 63998,
+              "durationMs": 469.90000009536743
+            }
+          ],
+          "heap": {
+            "usedBytes": 10000000,
+            "totalBytes": 10600000
+          }
+        }
+      }
+    ]
+  },
+  "cleanup_recheck": {
+    "scope": "Final early-abort resource-release refinement: initial reduced motion / rapid navigation and low-power / pause groups rechecked after the complete 13-group pass",
+    "passed": true,
+    "groups": 2,
+    "output": "\n> fate-living-oracle@1.0.0 test:e2e\n> playwright test --grep initial reduced motion|low-power policy --reporter=line\n\n\n[WebServer] INFO:     Started server process [33636]\n[WebServer] INFO:     Waiting for application startup.\n[WebServer] INFO:     Application startup complete.\n[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8010 (Press CTRL+C to quit)\n\n\nRunning 2 tests using 1 worker\n\n(node:7148) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n\n[1/2] e2e\\polish.spec.ts:4:1 \u203a initial reduced motion avoids Pixi, preference can resume, rapid navigation cleans up\n[2/2] e2e\\polish.spec.ts:40:1 \u203a low-power policy, pixel allocation and pause actually stop the rendered frames\n  2 passed (15.9s)\n"
+  },
+  "artwork_registry_sha256": "8e4c6e5a1b464969fdcb9e8d90aee7cab11e1c511d60226dadf542464616cc6c",
+  "generated_art_provenance_sha256": "eb605bd6425c016a16cdd15304593e8d4e21fd5b8bdaa9bedcbf910a5bcc0cfb",
+  "original_artwork_sha256": {
+    "card-back-v1.png": "5fc8ac9e5a174c773f4c93847f6e9f33136d6f9275b7dfaa0a879e5a2fbb4fbd",
+    "nebula-v1.png": "372b2d742181e924a602335011cf2be41f5684e06e1c6721a8b270c402d0024c",
+    "orb-poster-v2.png": "745e04ebdf48e20568a74284b320e9feda82aa7ade7c6984b9c4ec2daac2b824"
   },
   "source_sha256": {
     "fate/__init__.py": "6d44f20984a5e7e9705460845c0b60d6ef22ea9278be27e50c7a69eac8a36346",
     "fate/__main__.py": "f79d4cca3b093aa18f7d5fb7d1eced5c557f081a49db354eb364b7d1eb017324",
-    "fate/api.py": "00b1f048f9ce4df35f0dc56ac4d187765bf5f0d9a0b2fe54832ed3e15448f2e5",
-    "fate/experience.json": "e152e8901b7936cc5474d5fe0671c5891225737c6afd03273fe984971f3ee73b",
+    "fate/api.py": "e1aa56411637968c8d956edd7f83c8b4e35227df1b2975df3456bd993e57bf4f",
+    "fate/build_visual_assets.py": "1d23150372e99e1c1f41e5b328307fa053cab35cb00f9f1b2daf46c7ed9a8d69",
+    "fate/experience.json": "5889112c012b2c1cc2f70f83e925a23087250e8a7622249b728fab289260f0fb",
+    "fate/fetch_deck.py": "82e0e85eadf017a4086c4b19ea45dbff7e2a99496fd713ac8720db32b79d188b",
     "fate/fetch_fonts.py": "81f3e99c55cdc140937924a032873a2a6de105b3c7f823aa87793e71c2a7a4b6",
     "fate/live_gemini_smoke.py": "f6180c49913bd10d6ff8b3276138e8a1ebb7b8428416615f83af53c1d5b32b3a",
-    "fate/record_acceptance.py": "a80915786263e0a0fe99e62f7286fa03ab145e2c699b7290273c84b944af00ae",
+    "fate/record_acceptance.py": "13176249999887286bef3163ab306405ba24b4ae99680533c4930d55c19274e0",
     "fate/requirements.txt": "2d6d8eb8662c42125d522e1e4abf5448a481cfd4d53c9751246263f4be9985a5",
     "fate/tests/test_api.py": "09b223d9b7621094a783f641709482e6d9c452b58a3164a5b54cc85a39dcc20f",
+    "fate/tests/test_artwork.py": "98bcc74b12993dcca0c3821139307408945db587d7f55371958299c1704e9061",
     "fate/verify_inherited.py": "8e6de0c370b0bf6273d649613d9b309016930084acd96189e3689a07095639f2",
     "fate/web/e2e/oracle.spec.ts": "a3ec1b43106f08851406898a4faa81498cbc03e1a69dfbf37d4d481ce6fef801",
+    "fate/web/e2e/polish.spec.ts": "fcddf10f08ffd6d2bbd7dc6e8e927aa5ef66d3ff2851b991e7ab761edb34e1f2",
     "fate/web/package-lock.json": "851ecc9f88c70e481ea1619ed8295a282f0b3f04bf4fc6b9511a8bd345c544f1",
     "fate/web/package.json": "390a8ebe203d40258706b250a0b16a2197a5d809f82fd34efc390f7e0bf6ca57",
     "fate/web/playwright.config.ts": "85c33fe22538976c283b18c29bdd5941f44e821846c2eb556cf6f2362563e372",
-    "fate/web/src/CardArt.tsx": "94501443c22fa35e401808f8990ab92069de49cea91d81bf41729d4e1ecce6c4",
-    "fate/web/src/main.tsx": "99682bc7b04509d5645bf5ba9f6ed31d3de484551a089a5cef9679b544c51fc0",
-    "fate/web/src/Orb.tsx": "e7c23ef8fe803e912bbf60dfd6b03530f341e03c0cd14ec6e8bb8cb82c2ecabc",
+    "fate/web/scripts/capture-evidence.mjs": "907756272b6904be1a52560dc3bf6e33538f35a349228a2037aee7b79f33b7e4",
+    "fate/web/scripts/capture-poster.mjs": "c749974f558c6147d2aba49a94e9000f90ee8abbc2cee98da23337aff72e2863",
+    "fate/web/scripts/measure-performance.mjs": "8fd799f75599e959544943575e056ed99edea5abd1c5b792b833835fce40bfd5",
+    "fate/web/src/artwork/CardArtwork.tsx": "70093a2444adf17be5a6d1ba4559fb21b5d19cc9b6670dc826ad8e1a6f04535d",
+    "fate/web/src/artwork/deck-manifest.json": "b5c9b86baaa09012596afc288c972d8c07ed721932739a6e59e5e5385e9f9384",
+    "fate/web/src/artwork/registry.ts": "b0a769821840205be3f0410ddbbb6086e2562249930e04fe369e2c25395019e5",
+    "fate/web/src/CardArt.tsx": "bfe41b035af9e0fadb1484a2a37038d7176bf61fcfbeccd065848e35d56d31f3",
+    "fate/web/src/cinematic.css": "f3094813df4757a549efcc70934ca937392666566165a5f76258c56af8e9e388",
+    "fate/web/src/components/CardReveal.tsx": "cb55e500b6874999d8a786995400ffae0bbc00396fa85e7101d129b484187969",
+    "fate/web/src/components/GeminiCommentary.tsx": "1fa64f373a3577e68bb4a96c65ef18a00d09665e52506f6c60fb8de525fc64ad",
+    "fate/web/src/components/Intention.tsx": "c0fa22cff671d4cbfb7ad25b9cc24a3901e8adeb0c1c27393d747690987bcb2a",
+    "fate/web/src/components/PhysicalCard.tsx": "a0aca2d1d6d45396faf417599a2d151cb3621e6552cc85df443e1123539b1dbd",
+    "fate/web/src/components/ReadingDetails.tsx": "8cd1337d2663846d51d041ce10985716a054ac2a1765b96e063df77fd12c0576",
+    "fate/web/src/components/SettingsDialog.tsx": "68d9abbc639b4a986308d52a03153da8c5b17af64e69d051cf078d791c5ad637",
+    "fate/web/src/hooks/useOracle.ts": "0931608d94a80204c7af5672983bb586af8e24d30e7eaaf18e104e47b1cbef89",
+    "fate/web/src/main.tsx": "6866f9ff43e54b38f990f946cceee86eb1e9ad48afadcbd81c156793d98a9540",
+    "fate/web/src/orb/createOrbScene.ts": "9a666c45be8bdcfb9f6690566a4edaaf8e418e44b24cecff48aebd7076c617a8",
+    "fate/web/src/orb/OrbPoster.tsx": "0443977ae100bb0709bb8cf81704b0dc487421f4fae206a3e3b1991169b9866d",
+    "fate/web/src/orb/policy.ts": "a4c92c89faa9ff14714d9675657156d6d7c0c11bafbe58998af6e6df42a3987f",
+    "fate/web/src/orb/shaders.ts": "301333513a9adc811f3e7c58c49b125636f41e5c03f117566d4fd33a663e3e1b",
+    "fate/web/src/Orb.tsx": "0a5205f49fbb5b74f590a1451bea2be2a554e7583548e261413ec627814be73c",
     "fate/web/src/pixi-csp.d.ts": "44d77461dd27031fa66e70ad7c193d3220af5f4e513f2f841e47bbc2e190e886",
+    "fate/web/src/screens/ExploreScreen.tsx": "e3398db908930b9c6487e7ba3c6b0bda697446623c16811ab57ab95a4e38c540",
+    "fate/web/src/screens/ReadingScreen.tsx": "95e95f50818e56f2788adddde2bc62dcbda2c2d8d1b8b9b3d9628902973a74d9",
+    "fate/web/src/screens/RitualScreen.tsx": "2a7be88e39a98f99a39eceadb2faa2cf1e142d379681d5b7ff49470bcc9939b4",
     "fate/web/src/style.css": "756827756b6557b06471fb38ed5da81f07f2ad73d77fe243def6e9c1f667854e",
     "fate/web/src/types.ts": "833da52eba14ffd27e6fbe881cecc4d49a0458e5e555dbe6d0c8055c704a1a6d",
-    "fate/web/src/useSound.ts": "27c4d12690058520800948d3995dd5261efd1979e96d84cad4c85ecfa61ae395",
-    "fate/web/tsconfig.json": "131b1c1a4cc626474b22f60c7a5ff602c0e18784905e7c48806fc048dd6973e4",
+    "fate/web/src/useSound.ts": "212b12d8d7ec88fbc45d428ee8bd4b9f49dd599b39e120d7c4b7a61d78494d85",
+    "fate/web/tsconfig.json": "d53a9dfdda158b12e1eab677f14632fe98220da415bbc45426d375d4f2780213",
     "fate/web/vite.config.ts": "3fd2f6d452662fc18af3e3e42f01f15c1a1aebe407a34dbe434e38936cc25ceb"
   },
   "built_files_sha256": {
+    "art/deck/fate-back-v1/card-back-360.webp": "5748751ece0455c860bb47ffe85b088af8eaa939fc3e50ea3c3a5a999a403dd9",
+    "art/deck/fate-back-v1/card-back.webp": "8a96985343b8c331ee1df48d8638384445f61cb622467da30cd4d27edde9dc2a",
+    "art/deck/pam-a-v1/cups-ace-360.webp": "16a4e44f06b5b96b0224407e1675b20d724fbec2c54c5e7e898411b9e85ece88",
+    "art/deck/pam-a-v1/cups-ace-720.webp": "2b9db2632a5d8fd12d00f0e17003e05f92fed1fcc784c18fb0f10bc3f821f44d",
+    "art/deck/pam-a-v1/cups-eight-360.webp": "a723d8a733dbf6e6228fe7bcb6121e818ac2cf68cd9a3a867b1f52a722ae9d38",
+    "art/deck/pam-a-v1/cups-eight-720.webp": "d6a702276cb6a3eafe59c6e2682c2529b7747b24a015cc4aae9058dfc52b8ceb",
+    "art/deck/pam-a-v1/cups-five-360.webp": "e28889a624ce9d3b96a807e84fed998915f9483f8c9ddbe35cae288e090d004a",
+    "art/deck/pam-a-v1/cups-five-720.webp": "5b4256eb83b964de48af7e6d2210c8b97ada05bc40aee7b99d3650fcb77f7065",
+    "art/deck/pam-a-v1/cups-four-360.webp": "218e648c6d98a202232e7d8aab7d198100ad61922bc0ca6e2d5700c92ec175a9",
+    "art/deck/pam-a-v1/cups-four-720.webp": "6168056f6341c7e37ddef3586af6e0e9c610972b362ab57ac39ed134cc356769",
+    "art/deck/pam-a-v1/cups-king-360.webp": "3f87f995d702c1c5ec140b10f617ee730ab84a6fb38960fba9cbc26ccf023e00",
+    "art/deck/pam-a-v1/cups-king-720.webp": "4b7c9451b735415c60af866d5a185558d3fe56780e100f0b051696dd5fa151c3",
+    "art/deck/pam-a-v1/cups-knight-360.webp": "a31489df48b3560df988ecd1b946367df7c56b08b3d843906fda983e96e6c6c3",
+    "art/deck/pam-a-v1/cups-knight-720.webp": "8ab0706f4e9c6193d486d535f7a77675fade7da3749632eaaec077aeba970ce5",
+    "art/deck/pam-a-v1/cups-nine-360.webp": "38fbe88a51dab10793a134938bafc09f7682f9ea9360f35abc2a5d1472c58c6c",
+    "art/deck/pam-a-v1/cups-nine-720.webp": "df2d49cf096f39778e4489e71575b6349d966914c254de72cf411710ee0860fc",
+    "art/deck/pam-a-v1/cups-page-360.webp": "9b3c8e62838903b054280550c7673061f6c6ee6a0155aa0b0185d66d7a1c76a2",
+    "art/deck/pam-a-v1/cups-page-720.webp": "d5d149ba82e35144b225bd1050543e602af839e4946e70b1bc9f54b2c949b9e9",
+    "art/deck/pam-a-v1/cups-queen-360.webp": "2848fdd139dd03a62461db3ef925f9f358d962f70e4f15c7970e976185b7be63",
+    "art/deck/pam-a-v1/cups-queen-720.webp": "d22882690c1f4f40ef642658ab33ec727dbe6e6cf801a3e7c4c768ecbcbc438d",
+    "art/deck/pam-a-v1/cups-seven-360.webp": "dde403061b7df3b37d5f94473e044c886e2f1197965fed16a6d5bbc61c4a9465",
+    "art/deck/pam-a-v1/cups-seven-720.webp": "2a98643c7a3001d334a6fba56fa0e824a57fe5b6376caafce77f498f9bff76b0",
+    "art/deck/pam-a-v1/cups-six-360.webp": "8ffd4318f8b59c83aa91489ae80e411d9166e676ea1368c073baa521dbca33e6",
+    "art/deck/pam-a-v1/cups-six-720.webp": "249471b11447c093163e7f851970d0a331b2a6e2e60ecc6f7fbb7aa0364164d9",
+    "art/deck/pam-a-v1/cups-ten-360.webp": "3e215e823e1b863c5cab902d38d0ab77742fa954ee8cc18caed54cd3bf58bb4f",
+    "art/deck/pam-a-v1/cups-ten-720.webp": "390c188bf660e319a5c2746a381e20036caf499dd4070ca1eef1be7de23079e2",
+    "art/deck/pam-a-v1/cups-three-360.webp": "d6d8740b76d34bcc2ca677658b4a5d4665bf43ae804301617d07c32f140e1706",
+    "art/deck/pam-a-v1/cups-three-720.webp": "2dbe74de67a6bf40a5f9b1e49584075aec2c51768dd6851f30d4cb0eb8f48cce",
+    "art/deck/pam-a-v1/cups-two-360.webp": "e66e71899250a50f4eefa7b76f3997f9412caf6740d0fdf4be9f7e5d4d47f509",
+    "art/deck/pam-a-v1/cups-two-720.webp": "58e3b36489f2e02f7ac65d856c91425b52db5e4466f913afae7f400bef92bcf3",
+    "art/deck/pam-a-v1/major-00-360.webp": "647c87f851f7f1902f95087504e9f61b7b9e719ec73e7f743da51c23f4333bb1",
+    "art/deck/pam-a-v1/major-00-720.webp": "5d14bf810e9a259f8dd7676bb12afc1997556938fe81a171cd299e234ce480a3",
+    "art/deck/pam-a-v1/major-01-360.webp": "8f81fa1836faf067be4411e9394b2b941aa32d87d36fabacf2baa5b079528bb8",
+    "art/deck/pam-a-v1/major-01-720.webp": "4da4b516d04c818d22e5accfe675f3264ec4ccc9279cf1c32bf7b150742d2866",
+    "art/deck/pam-a-v1/major-02-360.webp": "fd3eb6574140ca6d072e43a69d24b28ef1e2c1bee903d7fd52c9ff370626874e",
+    "art/deck/pam-a-v1/major-02-720.webp": "55b0d3307e777b8af411aeb611cc4c3644597d71e13393a17ff3397b92685011",
+    "art/deck/pam-a-v1/major-03-360.webp": "a0c8505a5ec896343766dd4b58fe9bd62da0085a558765d5a1c221219b73801f",
+    "art/deck/pam-a-v1/major-03-720.webp": "00abedab890343a81e00dd231b943ca368fd5cadc9457719c1740dbc05fb236b",
+    "art/deck/pam-a-v1/major-04-360.webp": "dd24ba7b81b5dc45f80a709695c913ecaf0d95ef5723bf08c993cc399a8db15b",
+    "art/deck/pam-a-v1/major-04-720.webp": "d247731a4b72161a48c03e0289ed1089af711f18707ec6073d645e06a5e50784",
+    "art/deck/pam-a-v1/major-05-360.webp": "d4fbb7868c9da174c0217e09c268f66702c643cf93e7c0d5928838334a107e74",
+    "art/deck/pam-a-v1/major-05-720.webp": "40f2dbfe18736eaacb5a85cc3a6f666a85f3dd8d1f1ea0e9ac68f8b59efa5b01",
+    "art/deck/pam-a-v1/major-06-360.webp": "63d384f78d307405dc0893d8e57fabd3bd50d8ce53b131a32912118b07ee70a3",
+    "art/deck/pam-a-v1/major-06-720.webp": "ed9f318f8d234f3882463b146e7105d25037886c550efb2d00e90344c6e95e93",
+    "art/deck/pam-a-v1/major-07-360.webp": "e5919b8729fbfc60104ab4da6b69d65f46314f0089ea54b1d5936b17f43b4b5a",
+    "art/deck/pam-a-v1/major-07-720.webp": "df655a186195ec63f96bd5294f28248cf21bdf84603f9401844fdfb750f1642f",
+    "art/deck/pam-a-v1/major-08-360.webp": "489a7c9aab444d68724f76780e5b087e01e691a4fa0b37a311c4deebceb7ecb2",
+    "art/deck/pam-a-v1/major-08-720.webp": "9c81596081eea06cd654f3ad14077a024b8d5b89911272cb818dc028dfc7f7bf",
+    "art/deck/pam-a-v1/major-09-360.webp": "c5f6b4ff1d5288d2534980c6cab7cfd0363b7268d25b79555e98cb7ccb927c9a",
+    "art/deck/pam-a-v1/major-09-720.webp": "fa0d1f118dd644ca1ce1428a587d88cb482b3f967d69ca546e11e027069263c4",
+    "art/deck/pam-a-v1/major-10-360.webp": "973fb08b2c0784d309f71676a5d7b43acbbccc0eddb2ae472fcf75bc2826522a",
+    "art/deck/pam-a-v1/major-10-720.webp": "d35825128227e68bed8bcec1448361a771ddc80449e52ace38f4276159eda24a",
+    "art/deck/pam-a-v1/major-11-360.webp": "51a80ee5556fb47a1c23a8c69c79669f29eaf08c2042224bc58b1dadbb1e6284",
+    "art/deck/pam-a-v1/major-11-720.webp": "f8326ffed63fbcc7a90bb891d6f4bc198cef4b0a3de6b842858fb26faf47a1ad",
+    "art/deck/pam-a-v1/major-12-360.webp": "4290e7be300d18f5baf637a5dacea7b46989f3865d68ed5abe72a9354afb0c42",
+    "art/deck/pam-a-v1/major-12-720.webp": "161a6783e20b308d4e233cc27c69c3a04ef0ea1d35de1c2ea425138acc5a6935",
+    "art/deck/pam-a-v1/major-13-360.webp": "52d26ea3348ad19696171e01209ec7cf7c3da27e6f8c9163d20345fb20d3152c",
+    "art/deck/pam-a-v1/major-13-720.webp": "2844a18381faec79646f1ff8739b4683d782d74b4d40fea7540d2800c960e3ff",
+    "art/deck/pam-a-v1/major-14-360.webp": "6083dd3b28c7b7e214c37bc37244521541e91f7016b827f1f35aed82815b76e4",
+    "art/deck/pam-a-v1/major-14-720.webp": "d1dc8f5c0733aee9e44caae2f40953dc465177fdfb1c8be20c8e2ea9c0439485",
+    "art/deck/pam-a-v1/major-15-360.webp": "d5b71a62d47048bdba275f351b8e0f149db96075a42313a51f9d55e3c541ce72",
+    "art/deck/pam-a-v1/major-15-720.webp": "64de00e7ff2785a3a77fa5bcd1c4d96c61d9598764b5bd234a4a10a4559ed351",
+    "art/deck/pam-a-v1/major-16-360.webp": "ae7271e385194591a970e8b2859b40d1485815c78003d5955ee7b03282772cc5",
+    "art/deck/pam-a-v1/major-16-720.webp": "09c5225fcb6bba1341e0a21fbf7975debe22bc2d0afc8db88678cd531d676c0b",
+    "art/deck/pam-a-v1/major-17-360.webp": "c4fcdefb5f099c5e8d1d1678aa00c9e918e1a7dd8b70fde826b80cbf24f0460e",
+    "art/deck/pam-a-v1/major-17-720.webp": "c5bd1c717b52c3b428a77b042124dcb414a16840d49dcc1a41092d2b319a72ff",
+    "art/deck/pam-a-v1/major-18-360.webp": "fb1d7a969a14d497dfcd4d2dadf92ce59782b8490a595eedb193ffb98a942604",
+    "art/deck/pam-a-v1/major-18-720.webp": "966079f6c32c03565bc49cc98f89dc83fb8aa5381dc6ee182cb364d45d24bf4d",
+    "art/deck/pam-a-v1/major-19-360.webp": "688d866e89face85167696a5b75988b361a9a9abe1c70dc61eb0c8cd66b77f69",
+    "art/deck/pam-a-v1/major-19-720.webp": "8efeca5cd22081667d13a743873ef99ff2525f201c0021309f87c2535f30ca71",
+    "art/deck/pam-a-v1/major-20-360.webp": "13a189930e6e7beee1d3ed8819ab2f78321d198120c2b608f2c12df4e50a9047",
+    "art/deck/pam-a-v1/major-20-720.webp": "816005465a94c14c3a0e98fc2a263b8cd9a401dee4136959287ec4445253454c",
+    "art/deck/pam-a-v1/major-21-360.webp": "1b8b1bb9647255b0e9ea614fce8a8b485a59bfe67f317f7ddf4ad2d3e6d8c6c1",
+    "art/deck/pam-a-v1/major-21-720.webp": "f554eaf227d9fa4506600341eac0769c522d4ddba22afbc52b4e2aaf4d1bafef",
+    "art/deck/pam-a-v1/pentacles-ace-360.webp": "9cb3ce676f7e0b3551b8c801dc2ec3ef84e4397f62ad03ca56763fddcf4bac35",
+    "art/deck/pam-a-v1/pentacles-ace-720.webp": "893429bebea5895b893ce493955e7b5c072cea0e050c6ec7d882bc64ab676cf7",
+    "art/deck/pam-a-v1/pentacles-eight-360.webp": "527bab2cce58e361305cbcbea95ccfe3939b6c4245b16bd59f2a0bb829d92025",
+    "art/deck/pam-a-v1/pentacles-eight-720.webp": "c14276da2429cb9fba6f7c757d6c518f42dae4b933d7d87043bff3ad226d4f28",
+    "art/deck/pam-a-v1/pentacles-five-360.webp": "de3d42ed661546c9d77c6a85d683e34a635937cbffa0d038418bd6cf908ff8ca",
+    "art/deck/pam-a-v1/pentacles-five-720.webp": "e4d5adeea9bc15382f1d6021bd4baa419081bd6c3ec294bb8035c8537b43b03f",
+    "art/deck/pam-a-v1/pentacles-four-360.webp": "447f5e76a6d22301066064c0494c44581d8ecbd3b57e5607bd6fb597b0bc64a9",
+    "art/deck/pam-a-v1/pentacles-four-720.webp": "aa813364b34c1bd73b9c884aba50623d7be8bebe52687f7c899a979a0190938a",
+    "art/deck/pam-a-v1/pentacles-king-360.webp": "4fb9470ab6690c3f2e4d740af24c2f6d2913a7a624c03b0e5a014c81b594fe6a",
+    "art/deck/pam-a-v1/pentacles-king-720.webp": "3c044e0ff6daa3d42bad032499efd0f879b5c037b7ffc5d2de2d72eaa3aa2060",
+    "art/deck/pam-a-v1/pentacles-knight-360.webp": "cf377832b276746ff8a79f5bfe357ca917b81f281ee4c05509c92b00a1ea0910",
+    "art/deck/pam-a-v1/pentacles-knight-720.webp": "8fd13ed309a43c9d19d237c40a27b6930eaf5929017a3616b59b20eafbab44c1",
+    "art/deck/pam-a-v1/pentacles-nine-360.webp": "096d45a1b68ef1ec0f9292455737312af01a3db5e5bb25ec6fa2b452db340f77",
+    "art/deck/pam-a-v1/pentacles-nine-720.webp": "ed4c21a10147a1cf2c0caeda8da9484c7ae8244b7b0ab828eb9652dad4db833e",
+    "art/deck/pam-a-v1/pentacles-page-360.webp": "ed122e85ca677abbf5a4981fe1711530c74b9149e8ff1966baa2e406ffba154d",
+    "art/deck/pam-a-v1/pentacles-page-720.webp": "ae19cf21140b70bad2360ebdcadd4e28024d9b9fe542bff26210f1432891231b",
+    "art/deck/pam-a-v1/pentacles-queen-360.webp": "e1efc0f1de17a1be99c7f6a7ee04034cebe13dc20a6ac5f121e997aded983e90",
+    "art/deck/pam-a-v1/pentacles-queen-720.webp": "5771e1319cf5baf65104a32241effc3c409a9fe27f0ef91648e7f0c9c6669668",
+    "art/deck/pam-a-v1/pentacles-seven-360.webp": "e177192c3495ad971603ebc592281eda67bbc68d279c5874a0dfa4cec7d0e28d",
+    "art/deck/pam-a-v1/pentacles-seven-720.webp": "4a98cd77fe28fef139bed31956a2559c2177a9d55885ffb69c17db62d31f2829",
+    "art/deck/pam-a-v1/pentacles-six-360.webp": "e079dded1ffb90dbbe5eabd0cfd5cbd8718d1513b79ae2e67d33a06a92be76d7",
+    "art/deck/pam-a-v1/pentacles-six-720.webp": "cb6a6883c5668e0ef0d7a8b76bea278c86bf6f0320db87a2c824f46b9de4b489",
+    "art/deck/pam-a-v1/pentacles-ten-360.webp": "33c566b6f8a08e79110644de1b9db129a3a6eb0ad7d3ce79118842dd63e1830a",
+    "art/deck/pam-a-v1/pentacles-ten-720.webp": "be9dd6defc01a71edfe52667cfdbecfda11bb5d899112bcc0c89949930c0dedc",
+    "art/deck/pam-a-v1/pentacles-three-360.webp": "1d2ae981bea576fa1df804422da8ba9f9d6425ee97e41029d5f481a48cc16ae7",
+    "art/deck/pam-a-v1/pentacles-three-720.webp": "dd9b065f028dc7461c89041dbdd7f672c0697510daa988d42bf7de284caae95c",
+    "art/deck/pam-a-v1/pentacles-two-360.webp": "e17acbaae6fb44f4bc17b944057a4e0b5e4587af9bf8ee93f891474dbb6d361d",
+    "art/deck/pam-a-v1/pentacles-two-720.webp": "3f5b0132d2efe425d89f4a8104dc1c11ef76ea843cffad208ad3f4416bbb39a3",
+    "art/deck/pam-a-v1/swords-ace-360.webp": "2b18c28b8bca94152804fc5a857e9177a7b73e89e70dcd5c791ce34f808a0f9d",
+    "art/deck/pam-a-v1/swords-ace-720.webp": "d84e386f898822443cd6f766c7c21d3953755c71a3f17c6e308c0f7a36c47e55",
+    "art/deck/pam-a-v1/swords-eight-360.webp": "f7a2712acbd2cd0182420aaad2fc938f171f4e26e48994a89f0b6501e7a9b966",
+    "art/deck/pam-a-v1/swords-eight-720.webp": "0d8ba159ace37dffd422c478513457964e2b9e82044626747fdff423cd2287d0",
+    "art/deck/pam-a-v1/swords-five-360.webp": "2dab4ee3f049ef8ce6c73486c5a6296e7928bac6e4f23bebf6527b35f55bbcab",
+    "art/deck/pam-a-v1/swords-five-720.webp": "ae6db53601b5723e1c7c6139da474d55abbb065c9ac2504ed1c3ddb220680a14",
+    "art/deck/pam-a-v1/swords-four-360.webp": "e2293b4d9bf1333e58e8936d75b73882eb0a113783a360dd245509b112de8195",
+    "art/deck/pam-a-v1/swords-four-720.webp": "375c37ad6777268764875034040a437af5c08b5e414d349332a9b3123e74e4a5",
+    "art/deck/pam-a-v1/swords-king-360.webp": "0aa47f54290ecb77882f1c5bcf5b36112a7ae5949b47b72baf652e8588261bbd",
+    "art/deck/pam-a-v1/swords-king-720.webp": "a658fc8d4a9a2ce86e9d136e96d30d590985776118c81b27ae354d546978f4ad",
+    "art/deck/pam-a-v1/swords-knight-360.webp": "b464bb18c039beb58e06a3fdd53cd604d4dea7b92936324a42d014dce4e1fff5",
+    "art/deck/pam-a-v1/swords-knight-720.webp": "7b0e8e5317ef1624e44f62bd4e3a14c57ece602153c86480f2823bbd4b85f93a",
+    "art/deck/pam-a-v1/swords-nine-360.webp": "b8a1aa91ba2f1ba02f9538d9a2d1bdc9f7e5ca5c20ca98c9381e10ea5572aa20",
+    "art/deck/pam-a-v1/swords-nine-720.webp": "d39b4ba2b104a333a1d413b32bf52d41d24c6c2ac41e44eb003c154179d5af74",
+    "art/deck/pam-a-v1/swords-page-360.webp": "52d075fb542f4027223e5018d19c061065e1dd4739b74aec0bb15b12527f75f8",
+    "art/deck/pam-a-v1/swords-page-720.webp": "cedb661270b7765fc8d1cfa4284e2f7d955166d446207bab2fa3917860e69977",
+    "art/deck/pam-a-v1/swords-queen-360.webp": "37ce596577c221e4c8b872738beac08553f38dfbb917cb5440c7520d18efa1cf",
+    "art/deck/pam-a-v1/swords-queen-720.webp": "a6eb75887af0605daaf58cfc0e85ffe893a351371f0b6d05e99ed48c669ecd93",
+    "art/deck/pam-a-v1/swords-seven-360.webp": "e944b95bdabe18be3536cbfe2297fdfcebff518c9134069391aa346936086462",
+    "art/deck/pam-a-v1/swords-seven-720.webp": "cb62deba0f25d84ea24fbcbf9e9fb796aaaa9e2750b15026f57187a4419a6a54",
+    "art/deck/pam-a-v1/swords-six-360.webp": "d4532e3fe1efb1a5e778001fc56b33f5cf76f164f25af04448948615b4afb93c",
+    "art/deck/pam-a-v1/swords-six-720.webp": "f5b2b402b4d50528b7f71c7b400715eec9ab6cd9bce95c6e1abfe968a9afd2c3",
+    "art/deck/pam-a-v1/swords-ten-360.webp": "e0fc132a641a05a715273c44f20eb752f4c9e027327e2853611fa4aac2cea816",
+    "art/deck/pam-a-v1/swords-ten-720.webp": "923dd2fc94c8cd15320cad35dc24761bb7716f28fdab91ffbce85ac40b866d2a",
+    "art/deck/pam-a-v1/swords-three-360.webp": "f43af42e666d9ea755b330d19ab22b44b91569f01b45f92791551c16a8fb1ae9",
+    "art/deck/pam-a-v1/swords-three-720.webp": "eeb9ba99365f0f1d3fa436ff9946b4611923736d5810836a64e435bf92489d10",
+    "art/deck/pam-a-v1/swords-two-360.webp": "b6c42921f836743df57a8339fe4177b8b9f4bcf5d7e58f7719e482d08c0b9fd0",
+    "art/deck/pam-a-v1/swords-two-720.webp": "1aea07edd41f4bfe759d693bc338f015e944f079106869c5cffe25e9c4e3e50c",
+    "art/deck/pam-a-v1/wands-ace-360.webp": "295f19f0d8847f393851f4caf8245f6118ac493ef098b9e83a3c7ec4e9fc8e01",
+    "art/deck/pam-a-v1/wands-ace-720.webp": "9bd4e5ae1ca507fd8a55055062d048b1b2009a5034c3f6b4b39499c3911a97fe",
+    "art/deck/pam-a-v1/wands-eight-360.webp": "3a080c6f68fbc37adb11b5f0b47e02dc7273a8903058421acbed1760980a1a1f",
+    "art/deck/pam-a-v1/wands-eight-720.webp": "4a53febf7a7432ada6c60cebe9898575da3d38b31faf273a62acb0c7913e8913",
+    "art/deck/pam-a-v1/wands-five-360.webp": "384e0b36d9fa377e4dfbd34ed1c4703caf68334748327059ebb32c41917ebed5",
+    "art/deck/pam-a-v1/wands-five-720.webp": "620f4953acdb8424e43c5aa57b7661b2eb9a7016e1d49b706435688c4aeba304",
+    "art/deck/pam-a-v1/wands-four-360.webp": "2740d938e7f063a273488334a2d3ce1a223e8328164079e5dc8b000afd759689",
+    "art/deck/pam-a-v1/wands-four-720.webp": "9ab25ccae6742bc4222f639585aeba16d90f0961d20576f76400a8f80bd3d170",
+    "art/deck/pam-a-v1/wands-king-360.webp": "119d4d2bea69625d181485e9d9c759c934fc0e25ce89b8fe95677d6ed35bda68",
+    "art/deck/pam-a-v1/wands-king-720.webp": "bf9283dc1c82d7dd4aa899cf62cfdc0e7e25e99bbc5d0cae9885d17c22e17f96",
+    "art/deck/pam-a-v1/wands-knight-360.webp": "05f4deaaf792be531e478d55ed383ee8c832aedf9c107a43b0e27255dd9ac395",
+    "art/deck/pam-a-v1/wands-knight-720.webp": "e6f4594edeaa65a880f21a238fb98668effba3cf971755f8a289e0a548a414aa",
+    "art/deck/pam-a-v1/wands-nine-360.webp": "b3dc6ea17b97c181b95adf7e1197a602efebbc98975fbd61b8bc34ef4d99531c",
+    "art/deck/pam-a-v1/wands-nine-720.webp": "d5b445455aec04e6500f6c4c7e422346abb0d30754df9e1db9a432b3ccbb536a",
+    "art/deck/pam-a-v1/wands-page-360.webp": "dee066afedede74ac465b2706bcb7124c0405b7f6c151283a59436a0e40d8fa3",
+    "art/deck/pam-a-v1/wands-page-720.webp": "64a1827951b02ec61489a3ea9515788e6088bbb8652c7d2fc6545ba3f31eeeef",
+    "art/deck/pam-a-v1/wands-queen-360.webp": "00085b7daab0d24f955f63e1bf09d9238452215933212a7d373b6ffdd95ec4d6",
+    "art/deck/pam-a-v1/wands-queen-720.webp": "a4d73ac6ff52185e09bb434eeccbad3a75d07f58f884758f1955c26f4f26f67e",
+    "art/deck/pam-a-v1/wands-seven-360.webp": "bede0761062a5dd006a2845507e0100abf91d41c5061f9f0ac71695497c6bc52",
+    "art/deck/pam-a-v1/wands-seven-720.webp": "f93abee9e15de554f2125194f985ecb0fd75e1de8e4cf7b6bda26cc0d7b46e77",
+    "art/deck/pam-a-v1/wands-six-360.webp": "f1003924d9437554d5a75e3cfc5719a28f00093c28dedd17e8bdc98e7e90ffdb",
+    "art/deck/pam-a-v1/wands-six-720.webp": "fdefc95859dcf00f60d42e74ad2266b25af2ca0d4f8352610562376f46323005",
+    "art/deck/pam-a-v1/wands-ten-360.webp": "1d2aac4a105aff7527779dba9f754740f4966a3ea57dcad69bac19fb65bcd1cf",
+    "art/deck/pam-a-v1/wands-ten-720.webp": "7fd6f35a8cbc5b9119c89bef0cdf274b0d96ec9fb94013b434e12d57e04ae605",
+    "art/deck/pam-a-v1/wands-three-360.webp": "7eef66ea2eeb234a540839e4bacc93a8dbba7d6075244f75bb17944c0e178f43",
+    "art/deck/pam-a-v1/wands-three-720.webp": "3578ebf341ed6ebf64f9b71be3a4a61c295d69b671b5bdf9bca6d9409f4fb3c4",
+    "art/deck/pam-a-v1/wands-two-360.webp": "917e95468282cfef0805f0d8a09ce8c52eec6417dfc2d6c9ec2d90535d040ec6",
+    "art/deck/pam-a-v1/wands-two-720.webp": "ad701881aec772940cd41fe905f8ac300f652ca1e7e9b3c9946893e9806a36df",
     "art/fate_ambient_loop.wav": "3165cd0bfe22825d3c3b1f70d53008bd73013d1e5904d64f0acd1a8f38e53561",
     "art/fate_atmosphere.webp": "c18a51340fdef6c8973dabc94952010849b3b742552b8b2588e8f75e818b2993",
     "art/fate_card_reveal.wav": "2f75bc2c9d974a9d6c74cc00155db8984967086af7219d7ebdd49c98cf83737d",
@@ -323,35 +2078,50 @@
     "art/fate_orrery.svg": "67c9c88473793056aec53e3ec4692b653ee92a27dda2dbfb21fe72f161804a6a",
     "art/fate_sigil.png": "54f8ee96b9e36a57abeaaafbe80b124a9ef214041b1f1943e5611fd47ea89f1b",
     "art/fate_sigil.svg": "735220e8536089da7c6c1c4bc14d8bc6f536d5e25fbe1833948158379bb53f25",
+    "art/nebula-v1.webp": "4fa7812ce2e03340c0c17129f6f66f35f38830453a9b4752a256bb86ed65124d",
+    "art/orb-poster-v2.webp": "e575a7d778154692e51235774e4c808038ebb9bb9471ebdb3b01038cfc38e7f2",
     "art/preview.jpg": "5b4d125c902d102be38ed5b4a073203590b03b359796a48b727299666f8a6641",
     "art/README.md": "2fb1f42bf4dfac7b55d7dfc2a5d6e9d9817d6a10202e6131722f9a4741c92e64",
-    "assets/browserAll-BrB1zNqL.js": "bc451f430a624d45a851302e15031a65ca380fd7074a9bfbc9d55312d797a4b8",
-    "assets/index-DicXBSFb.js": "bfdba3b7a54e51cbb82176cf6c44162fe45719c3fc8654237a85a30baa10a582",
-    "assets/index-DVkVPZCm.css": "f808762e2cd15f9cb2ac95ea51acdc7766ead84810c591793ff2ed99b2d663a1",
-    "assets/init-Bziemf4x.js": "e20d7b7a528df7da7a906b609b746d4bb1a2a4619fcda205160b7f5ef3dfae59",
-    "assets/lib-DoX23L1N.js": "1ada06da767486e9cc27a128d709bba83ad163ea11070d51cc6070befdc46829",
-    "assets/Orb-CZPGtEcP.js": "633ef1908a6d156e03befdcc1c21e2487aee38f0aba51086d735138d68a3f423",
-    "assets/ParticleBuffer-iVVc4csL.js": "cf623e384c20bfa9e5e6c1de9eefbae155a5c86f9b9916a92c7e104b8c087347",
-    "assets/webworkerAll-BHTCfunQ.js": "0495b8789dccd447ebd3e4d10f6fa228f710d5d348b956562876e5d1eb1ed20d",
+    "assets/BitmapFont-DRrWwTxB.js": "9aee1667722452f9244d46aa6f565f28f81f46e9f3032e965780a975d75ec3cb",
+    "assets/browserAll-otSdVbUH.js": "9f8e5cc28916645fc16a4cda5494688b7704a713e0d6fa14a973790b6ad8d43e",
+    "assets/CanvasPool-DciSo37G.js": "0691580fa02e754e4267ca521e80bb50a4dc28345b205de0ab62c36734efa8ac",
+    "assets/CanvasRenderer-DWp3GyvK.js": "daa46c916a550e6475377747cea2b07d96ddb8b0ae8b17904dacd8a23c9ed5a3",
+    "assets/canvasUtils-D5IMlmBT.js": "ec4013bc6748ac4f9f695be4c4ec993ad5c27a8a0e4e582f001f7814460608db",
+    "assets/createOrbScene-CCO52A2w.js": "79dc7ecb2e5d44f6c9aecde0ad8ff982df388479f9f8c8ad19d10b1cf4ce1121",
+    "assets/GpuStencilModesToPixi-DlA_7EUS.js": "c9b45b9c8c813a40bb407a61e60568c06976c2310366bff2ef23c9736976982d",
+    "assets/index-Co30Rqry.css": "040c5d7b397ef9e21a82efa3f6edfae66ef39d403a634cf7cb9a36fafa10952d",
+    "assets/index-CX3EZYjz.js": "e1630e99405d095209b74f224a1c13605172e3e510f8831f47bea05778d8cfe9",
+    "assets/Orb-C4ISywn1.js": "b2656121879ae342708117c0e44a4332716f51d42f919b591b5e0caf37cd6f5b",
+    "assets/RenderTargetSystem-BJWXKnUZ.js": "a98cfc7fb2487b0df733bc4144cbffe5bf0de8348e7be149dce77662c0d6cc59",
+    "assets/WebGLRenderer-C4xWqiYR.js": "0684963b72b3f12d81ad1999e84c4bbd6c62f5749b2bdebb5d5ed5540c4b170f",
+    "assets/WebGPURenderer-Cu_9p2nJ.js": "784156896049f7e6e30b3bad0edcf0588ebabee518c8437d4f2d58930d20ff48",
+    "assets/webworkerAll-DVDF2UEH.js": "c99909670111591f876ab258c9481cfbbe235f27a91d7be5f9c0e95300848d07",
     "fonts/cormorant-italic-latin.woff2": "6f2f5c3b1abc3d0bb035a927f66a90ca873f94fc31c4966c8d024142c2036e55",
     "fonts/cormorant-latin.woff2": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235",
     "fonts/cormorantgaramond-OFL.txt": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956",
     "fonts/inter-latin.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
     "fonts/inter-OFL.txt": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
     "fonts/sources.json": "3f7fd5f5a838eb7d036e9ff6bc6209a5f7bef08e353b80b926520f324754c235",
-    "index.html": "835e7f90e6382664577cd18856b0518a0f8cac9d2882ef218f4a90f7b590d523"
+    "index.html": "29f65b352f9faf7ef9c1911d82c70d6107b6a5b785df28be2e0f49eccc80f9b2"
   },
   "screenshot_sha256": {
-    "01-explore-mobile.png": "65be98d46590381c41a0d58940761a7de73be61295c89f3ca4ccc2fba4c8b8a7",
-    "01-explore-viewport.png": "b984a4771067e3ca7f38fd8fd68932da5216138261427fc2c8a1c337452c4e31",
-    "02-intention-mobile.png": "14d080bee34e145d70ddadac90f8f9ed1edd6a1ecd23c5f82fc24ffaab296729",
-    "03-reveal-mobile.png": "8ed0001b579c8cb0a282b6ea6fa94422c87db1c0b5d586232f3d6d68ad1546f0",
-    "04-reading-mobile.png": "f37055d07bf41efb56d9543938cd9112527743219cfdd3fbd8db7c3ab703c8d0",
-    "05-one-card-mobile.png": "6469d515c71abe51758ed2f103f5c0f33cfcf9d024822492fba1cfbd4bf70a8f",
-    "06-reduced-motion-mobile.png": "b61b2f662785d9b2a57057120ed4fe82bac7a543b605b912ab90c287bdccdaa8",
-    "07-explore-desktop.png": "32a43e66e8874b1062c51be3913f9b203afbdf7cd33281c43ebb1cb4f318a6f4",
-    "08-reading-small-mobile.png": "825c80e7b238169fa07b1152a39b9981032fcfb7c06e1210f669fa5c68d06fd0",
-    "09-enlarged-text-mobile.png": "c09bb581c1207ed905289d5db5ec2fc35b397cd3c5e66e1a74b14034436441bf"
+    "01-explore-mobile.png": "ff4625c1d56056643dd5b26acea090c492699beb1107d465ee366307021c4475",
+    "01-explore-viewport.png": "06a3fbcff40e32db8218192f42c9bf0153d8526a36ac7284ae53be716d6f11c5",
+    "02-intention-mobile.png": "02254b681851f0a2afe8bf7cdbf9d57a7c10edb931e82faa3b8f2483ea791c49",
+    "03-reveal-mobile.png": "14e58049b536e86a431afd0d454392d7a3d0e623b45854f080723f25fdf2ffb0",
+    "04-reading-mobile.png": "3c5a615a406db2cccdc211f4b053a10cb80bd268acfb7b80e6de7731ab3c4063",
+    "05-one-card-mobile.png": "52aab898a0ac5b48fb48849919407374c3e5a85a047b0bb3ffefcc68ecfa1c56",
+    "06-reduced-motion-mobile.png": "fdcb92d110ebe7dc73121c3f8e0355d591d95c6bbfc8d206e3ec86c745862370",
+    "07-explore-desktop.png": "31a8af8c385ab01bc3767f085c86e12e6e6fabaa5ec625e7640c55dada771f6d",
+    "08-reading-small-mobile.png": "a6cdfab8b2d4b5925bf9d167e58b1759d5cfc46b416959f1ba56ecbf593b74b1",
+    "09-enlarged-text-mobile.png": "10e654ea32d7db21f68a09d92a6804fc95bacf621b7ab3cb5156610adee4933c",
+    "10-ritual-desktop.png": "e806fe8c7172810681cf267a22ce88849386f985da58e04020d20603cb13c0ed",
+    "11-reveal-desktop.png": "09dfd34761ad7bac3f1c9e3c6e98644f4e6c61c4edb823e4b831b23f7609ef65",
+    "12-reading-desktop.png": "f2e55e7b1146f4bda924a1da2e7e623942ad9b44ac8cd31d517cf0a3f98480dc"
+  },
+  "recording_sha256": {
+    "orb-and-card-reveal.mp4": "ff81491e7556c4eca53eee33e0129cb20e9007992098070786e8d5188adaa76f",
+    "orb-and-card-reveal.webm": "a2deda645979ee784cef9e3b879def3692c5b7bd66eb80301b1af3e3fbfe99a2"
   },
   "acceptance_criteria": [
     "Native result equals replay through unchanged future.tarot.read",
@@ -365,9 +2135,10 @@
     "Existing native/Workbench tests, full CLI/verifier gates, production builds and inventory/dependency gates pass"
   ],
   "limitations": [
-    "Local Chromium mobile emulation only; no physical iOS/Android, field CWV or actual INP certification",
+    "Local Chromium mobile/desktop emulation and software WebGL only; no physical iOS/Android, field CWV or actual INP certification",
+    "60 Hz is a target; sustained missed budgets reduce resolution and can select a 30 Hz low-power mode",
     "No public deployment, distributed limiter, accounts or persistence",
-    "Original celestial deck and supplied starter art/audio; no historical illustrated deck claim",
+    "Complete verified historical Archive Edition; a fully bespoke figurative FATE deck remains future artwork, never mixed into draws as placeholders",
     "Gemini semantic faithfulness is not guaranteed",
     "Software acceptance is not empirical prediction validation"
   ]
