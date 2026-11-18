@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {GeminiAssistant} from './gemini-assistant';
 import {DedicatedIntake} from './dedicated-intake';
 import {PalmPhoto} from './palm-photo';
 import {Intake} from './intake';
@@ -670,6 +671,7 @@ function App() {
                     <p className="hint">
                       Enter your own information below. Demonstration data is used only when you choose Load verified sample. Advanced JSON remains available for native protocols.
                     </p>
+                    <GeminiAssistant key={'input-'+req.technique_id} id={req.technique_id} onPrepared={r=>{change(r);setInputReady(true);setPalmManual(true);setVision(null)}}/>
                     {advanced ? (
                       <textarea
                         className="code raw"
@@ -780,6 +782,7 @@ function App() {
                       </div>
                     ) : (
                       <>
+                        {result.id&&<GeminiAssistant key={result.id} id={req.technique_id} session={result}/>}
                         <div className="tabs">
                           {["Structured", "Markdown", "JSON", "Provenance"].map(
                             (t) => (

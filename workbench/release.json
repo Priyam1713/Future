@@ -1,7 +1,7 @@
 {
-  "id": "future-workbench-v1.2",
-  "date": "2026-11-15",
-  "status": "Workbench v1.2 Ready - dedicated core input flows",
+  "id": "future-workbench-v1.3",
+  "date": "2026-11-19",
+  "status": "Workbench v1.3 Ready - optional Gemini assistance",
   "baseline_commit": "f81eacd72e4863242a1736c45d44cccb9bcb3faa",
   "acceptance": "workbench/acceptance.json",
   "inherited_acceptance": "workbench/inherited-acceptance.json",
@@ -9,7 +9,7 @@
   "supported": {
     "discovery": "54 retained techniques, six original inventory phases; frozen capability/release/profile/source catalogs, rights and limitations inspectable",
     "invocation": "All 54 verified sample paths and all 43 new dedicated core input paths pass browser execution; native support limits remain authoritative. Workbench keyword adapter handles file-backed #43/#44 readers without changing frozen Lab.",
-    "forms": "43 dedicated deterministic core input builders plus the existing 11 entry paths; browser-tested user inputs prepare and execute without loading demonstration samples. Full native variation coverage is not claimed.",
+    "forms": "43 dedicated deterministic core input builders plus the existing 11 entry paths; browser-tested user inputs prepare and execute without loading demonstration samples. Full native variation coverage is not claimed. Optional Gemini input assistance on all 54 Studio flows with follow-ups, native draft validation and mandatory review; local/Gemini palm selector.",
     "records": "Pseudonymous consent scopes and technique allowlists, cases, linked sessions/notes, local SQLite migration/transactions/stable IDs and idempotency",
     "blind": "Server-hidden separate answers, frozen inputs/results, immutable interpretations, reveal after lock, shuffled alternative labels and descriptive assessor feedback",
     "prospective": "Server-issued future #51 binary event form, fixed-half baseline, unchanged Lab chronology/admission/replay and independent outcome evidence",
@@ -19,13 +19,14 @@
     "dashboard": "Actual local case/session/sample/submission/outcome/eligibility/missing/abstention/rejection counts and per-study native baseline/calibration reports; technique/study/participant/creation-time filters",
     "portability": "Exact-text JSON public-record export/import with commitments, independent native replay for newly imported sessions, conflict/duplicate rejection; CSV/Markdown summaries and Markdown result export",
     "deletion": "Participant/case cascading deletion, secrets removal, separately consented frozen retention, explicit preview; direct deletion of unlinked runs/forecasts",
-    "locality": "Loopback Workbench and optional local model; runtime/model setup requires network downloads; no remote inference, analytics or arbitrary kernel/file overrides"
+    "locality": "Loopback Workbench; local model remains optional. Explicitly consented Gemini calls send selected input/files or saved native output to Google; credentials stay in ignored .env on the server."
   },
   "experimental": {
     "human_studies": "User declarations and locally recorded outcomes are not independently authenticated or empirical skill certification",
     "blinding": "Workflow concealment only; operator must prevent semantic leakage from native inputs/results; database owner can inspect secrets",
     "local_intake": "Qwen3-VL visible palm crease suggestions with signed human review and model/prompt/image hashes; local answer transcription with native validation; not extraction accuracy certification",
-    "coverage": "Dedicated forms cover the bounded core of each engine. Historical reference, descriptive journal, synthetic simulation and user-declared evidence scopes remain explicit; no new empirical prediction certification."
+    "coverage": "Dedicated forms cover the bounded core of each engine. Historical reference, descriptive journal, synthetic simulation and user-declared evidence scopes remain explicit; no new empirical prediction certification.",
+    "gemini": "Cloud extraction and explanation require explicit per-action permission. Explanations use saved native results and block unrevealed blind runs; no predictive/extraction accuracy certified. AI commentary is not persisted as separate study evidence."
   },
   "unsupported": [
     "Numeric historical outcome replacement/recomputed corrected scores; annotations preserve originals and suspend scoring",
@@ -43,8 +44,8 @@
     "inherited_cli_cases": 3515,
     "inherited_independent_verifiers": 52,
     "preexisting_protected_files_unchanged": 5584,
-    "workbench_backend_tests": 74,
-    "browser_groups": 8,
+    "workbench_backend_tests": 77,
+    "browser_groups": 9,
     "browser_skips_failures_flakes": 0,
     "native_hashes_and_browser_engine_paths": 54,
     "frontend_production_build": "passed",
@@ -52,7 +53,9 @@
     "dependency_pip_workbook_gates": "passed",
     "live_local_model": "Public CC0 palm fixture, blank-image rejection, reviewed native execution, I Ching lines preserved; full live browser palm workflow observed",
     "dedicated_core_input_paths": 43,
-    "all43_browser_user_input_execution": "passed"
+    "all43_browser_user_input_execution": "passed",
+    "gemini_live": "Connection and missing-information follow-up checked with configured gemini-2.5-flash; no personal data in connection test",
+    "gemini_all54": "Mocked provider/native route validation and browser availability/review controls pass; all54 live extraction quality not measured"
   },
   "empirical_skill_certified": false,
   "live_model_acceptance": "workbench/live-vision-acceptance.json"

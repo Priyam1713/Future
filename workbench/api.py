@@ -82,6 +82,24 @@ def create_app(directory=None,clock=now):
     @app.get('/api/techniques/{id}')
     def capability(id:int):
         e=lab.capability(id);return dict(capability=e,dedicated=input_contract(id),workflow=read(ROOT/'workbench/input-workflows.json')['entries'][str(id)],release=read(ROOT/e['core_record']),source_catalogs=[dict(s,records=read(ROOT/s['path'])) for s in e['sources']],profiles=[dict(p,record=read(ROOT/p['path'])) for p in e['profiles']],sample=read(ROOT/'data/future-lab-invocation-examples.json')['entries'][str(id)]['request'])
+    @app.get('/api/ai/status')
+    def ai_status():
+        from .gemini import config
+        key,model=config();return dict(configured=bool(key),model=model)
+    @app.post('/api/ai/assist')
+    def ai_assist(q:dict):
+        from .gemini import assist
+        detail=capability(q['technique_id'])
+        if q.get('mode')=='explain':
+            with store.connect() as db:
+                session=store.get(db,q['session_id'],'session')
+            if session.get('mode')=='blind' and not session.get('revealed'):raise ValueError('Reveal the blind session before requesting a cloud explanation')
+            if session['request']['technique_id']!=q['technique_id']:raise ValueError('Session technique differs')
+            q=dict(q,native_output=session['result']['native_output'])
+        result=assist(detail,q)
+        if q.get('mode','input')=='input' and not result['missing_information']:
+            result['validation']=invoke(result['request'])
+        return result
     @app.post('/api/intake/dedicated')
     def dedicated(q:dict):
         request=build_input(q['technique_id'],q['answers'])

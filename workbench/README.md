@@ -2,7 +2,7 @@
 
 From `D:\Future`, run **`python -m workbench`**, then open **http://127.0.0.1:8000**. If that port is occupied, use `python -m workbench --port 8766`. Initial setup needs Node/npm, the root Python requirements, and network access for the pinned frontend/backend packages. Subsequent launches and engine execution work offline. Use `--no-build` to reuse an existing frontend build. Stop with Ctrl+C.
 
-The app is a localhost research tool around the unchanged 54 Core v1 engines and Future Lab. It offers optional local model input assistance without remote inference or authentication. It does not certify empirical validity. The API and built UI share one loopback server. For frontend development run the backend and `npm run dev` inside `workbench/web`; Vite forwards `/api` to localhost:8000.
+The app is a localhost research tool around the unchanged 54 Core v1 engines and Future Lab. It offers local model assistance and opt-in Gemini cloud assistance; cloud requests require explicit permission. It does not certify empirical validity. The API and built UI share one loopback server. For frontend development run the backend and `npm run dev` inside `workbench/web`; Vite forwards `/api` to localhost:8000.
 
 ## Using the application
 
@@ -43,3 +43,13 @@ Unlinked exploration runs and researcher forecasts can be deleted from Cases →
 For portable record integrity, keep the JSON file's original numeric representations. The UI downloads/uploads original server JSON text; parsing and rewriting it in another tool can change native commitments (for example, `1.0` to `1`). Newly imported native sessions are independently replayed before admission. Imports are bounded to 8 MiB; use participant exports to keep a large workspace portable.
 
 See `inherited-acceptance.json`, `browser-acceptance.json` and the final `acceptance.json` for measured results. A passing software test is not empirical validation of the methods.
+
+## Optional Gemini assistance (all 54 flows)
+
+Set `GEMINI_API_KEY` in `D:\Future\.env` and restart Workbench. The file is ignored by Git; the key remains on the backend. Optional `GEMINI_MODEL=gemini-2.5-flash` selects a model. The live connection was checked without personal data.
+
+Every Studio flow includes **Get input help from Gemini**. Enter facts and optionally attach images, PDF, text or CSV; confirm cloud permission and click **Prepare with Gemini**. Answer any follow-up questions, inspect the draft and native validation, then confirm review and use the inputs. Execution remains a separate action. The manual forms remain available. Complex source commitments may still require the dedicated builder; the assistant must ask rather than fabricate missing records.
+
+Palmistry also offers **Photo processing provider → Gemini** with separate cloud consent and the existing visible-feature review. Completed saved results offer **Explain this result with Gemini**. Explanations are experimental commentary, separate from native calculations; unrevealed blind runs cannot request cloud explanations. The explanation endpoint reads the saved native output, not a client-substituted result.
+
+Only explicitly submitted content is sent to Google; there is no automatic cloud fallback. API charges, internet access and Google's processing policies apply. AI drafts/explanations appear in the current UI and are not separate persisted study evidence; reviewed native requests are stored with runs. Native values, historical/synthetic scope and unknown observations remain authoritative. Keep API keys out of uploaded documents and exports.

@@ -87,3 +87,13 @@ On another Windows machine, run `python -m workbench.setup_vision` once. It down
 Run `python -m unittest discover -s workbench/tests -v` for backend checks. For the complete Workbench checks with installed Google Chrome, set `$env:FUTURE_TEST_BROWSER='chrome'`, then run `python -m workbench.accept`. Browser tests use synthetic inputs and temporary storage. These are software checks, not prediction-validation evidence.
 
 After installing test dependencies, run `python -m workbench.live_vision_smoke` for an opt-in real local model check. It uses a public CC0 palm fixture and temporary storage; it is separate from deterministic regression tests.
+
+## Optional Gemini assistance (all 54 flows)
+
+Set `GEMINI_API_KEY` in `D:\Future\.env` and restart Workbench. The file is ignored by Git; the key remains on the backend. Optional `GEMINI_MODEL=gemini-2.5-flash` selects a model. The live connection was checked without personal data.
+
+Every Studio flow includes **Get input help from Gemini**. Enter facts and optionally attach images, PDF, text or CSV; confirm cloud permission and click **Prepare with Gemini**. Answer any follow-up questions, inspect the draft and native validation, then confirm review and use the inputs. Execution remains a separate action. The manual forms remain available. Complex source commitments may still require the dedicated builder; the assistant must ask rather than fabricate missing records.
+
+Palmistry also offers **Photo processing provider → Gemini** with separate cloud consent and the existing visible-feature review. Completed saved results offer **Explain this result with Gemini**. Explanations are experimental commentary, separate from native calculations; unrevealed blind runs cannot request cloud explanations. The explanation endpoint reads the saved native output, not a client-substituted result.
+
+Only explicitly submitted content is sent to Google; there is no automatic cloud fallback. API charges, internet access and Google's processing policies apply. AI drafts/explanations appear in the current UI and are not separate persisted study evidence; reviewed native requests are stored with runs. Native values, historical/synthetic scope and unknown observations remain authoritative. Keep API keys out of uploaded documents and exports.
