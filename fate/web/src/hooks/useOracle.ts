@@ -2,8 +2,15 @@ import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { flushSync } from "react-dom";
 import { useSound } from "../useSound";
 import { api, type Draw, type Envelope, type Commentary } from "../types";
-export type Screen = "explore" | "ritual" | "reading";
+import { EXPERIENCES } from "../experiences/contracts";
+export type Screen = "explore" | "ritual" | "reading" | "numerology";
 export function useOracle() {
+  const [explored, setExplored] = useState<number[]>([]);
+  function markExplored(id: number) {
+    setExplored((previous) =>
+      previous.includes(id) ? previous : [...previous, id],
+    );
+  }
   const [screen, setScreen] = useState<Screen>("explore");
   const [spread, setSpread] = useState<"one" | "three">("three");
   const [question, setQuestion] = useState(""),
@@ -59,9 +66,11 @@ export function useOracle() {
       setScreen(
         name === "ritual"
           ? "ritual"
-          : name === "reading" && envelope
-            ? "reading"
-            : "explore",
+          : name === "numerology"
+            ? "numerology"
+            : name === "reading" && envelope
+              ? "reading"
+              : "explore",
       );
     };
     window.addEventListener("popstate", fn);
@@ -124,7 +133,7 @@ export function useOracle() {
     const timeout = setTimeout(() => abort.abort(), 20000);
     try {
       const response = await api<Envelope>(
-        "/api/readings",
+        EXPERIENCES[16].endpoint,
         request,
         abort.signal,
       );
@@ -150,6 +159,7 @@ export function useOracle() {
     sound.cue("reveal");
   }
   function readAll() {
+    if (result) markExplored(16);
     if (result) setRevealed(result.readings.map((_, i) => i));
     navigate("reading");
   }
@@ -209,6 +219,8 @@ export function useOracle() {
   const allRevealed = !!result && revealed.length === result.readings.length;
 
   return {
+    explored,
+    markExplored,
     screen,
     spread,
     setSpread,

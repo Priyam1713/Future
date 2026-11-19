@@ -27,9 +27,17 @@ export function SettingsDialog({ oracle }: { oracle: Oracle }) {
         back.
       </p>
       <p>
-        No account or automatic storage. Your question is processed by this
-        server to draw a reading. It reaches Google only if you explicitly
-        request Gemini commentary.
+        Numerology uses the existing Future Decoz component-reduction profile.
+        Its direct interpretations cover Expression and Personal Year; other
+        numbers are calculated context. The Gallery distinguishes open consumer
+        rooms from upcoming experiences and historical references.
+      </p>
+      <p>
+        No account or automatic personal-data storage. Your question, name or
+        dates are processed by this server for your reading. Gemini is optional
+        and requires explicit consent. Numerology commentary sends only
+        source-grounded themes to Google, without your name or dates.
+        Explored-room markers last only until you reload this page.
       </p>
       <div className="settings-row">
         <span>Atmosphere</span>

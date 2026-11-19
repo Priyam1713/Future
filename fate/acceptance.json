@@ -1,36 +1,36 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "date": "2026-11-19",
-  "block": "01.5 \u00b7 Cinematic Polish & Visual Foundation",
-  "status": "Verified visual foundation; physical-device/public-deployment acceptance remains P1",
+  "block": "02 \u00b7 The Oracle Gallery & Second Door",
+  "status": "Verified two-room consumer slice; physical-device/public-deployment acceptance remains P1",
   "units": {
     "native": {
       "tests": 2522,
       "passed": true,
-      "output": "----------------------------------------------------------------------\nRan 2522 tests in 164.633s\n\nOK\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\n"
+      "output": "----------------------------------------------------------------------\nRan 2522 tests in 129.270s\n\nOK\nsys:1: ResourceWarning: unclosed file <_io.BufferedReader name='data\\\\de440s.bsp'>\n"
     },
     "workbench": {
       "tests": 77,
       "passed": true,
-      "output": "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\n----------------------------------------------------------------------\nRan 77 tests in 19.419s\n\nOK\n"
+      "output": "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\n----------------------------------------------------------------------\nRan 77 tests in 23.297s\n\nOK\n"
     },
     "fate": {
-      "tests": 16,
+      "tests": 21,
       "passed": true,
-      "output": "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\ntest_commentary_requires_true_consent_and_valid_signed_request (test_api.ConsumerTests.test_commentary_requires_true_consent_and_valid_signed_request) ... ok\ntest_foreign_origin_and_body_boundary (test_api.ConsumerTests.test_foreign_origin_and_body_boundary) ... ok\ntest_invalid_provider_references_are_never_displayed (test_api.ConsumerTests.test_invalid_provider_references_are_never_displayed) ... ok\ntest_multiline_question_is_plain_text_context (test_api.ConsumerTests.test_multiline_question_is_plain_text_context) ... ok\ntest_native_no_ai_dependency (test_api.ConsumerTests.test_native_no_ai_dependency) ... ok\ntest_no_workbench_or_private_files (test_api.ConsumerTests.test_no_workbench_or_private_files) ... ok\ntest_one_card_upright (test_api.ConsumerTests.test_one_card_upright) ... ok\ntest_profile_source_orientation_and_all_catalog_cards (test_api.ConsumerTests.test_profile_source_orientation_and_all_catalog_cards) ... ok\ntest_rate_limit (test_api.ConsumerTests.test_rate_limit) ... ok\ntest_real_engine_exact_match_and_replay (test_api.ConsumerTests.test_real_engine_exact_match_and_replay) ... ok\ntest_schema_rejects_extra_invalid_and_unbounded_inputs (test_api.ConsumerTests.test_schema_rejects_extra_invalid_and_unbounded_inputs) ... ok\ntest_security_headers (test_api.ConsumerTests.test_security_headers) ... ok\ntest_tampered_expired_and_restarted_receipt (test_api.ConsumerTests.test_tampered_expired_and_restarted_receipt) ... ok\ntest_complete_identity_registry_and_rights (test_artwork.ArtworkAcceptance.test_complete_identity_registry_and_rights) ... ok\ntest_every_delivery_file_matches_its_immutable_hash (test_artwork.ArtworkAcceptance.test_every_delivery_file_matches_its_immutable_hash) ... ok\ntest_independent_major_numbering_and_court_images (test_artwork.ArtworkAcceptance.test_independent_major_numbering_and_court_images) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.311s\n\nOK\n"
+      "output": "C:\\Users\\priya\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\ntest_commentary_requires_true_consent_and_valid_signed_request (test_api.ConsumerTests.test_commentary_requires_true_consent_and_valid_signed_request) ... ok\ntest_foreign_origin_and_body_boundary (test_api.ConsumerTests.test_foreign_origin_and_body_boundary) ... ok\ntest_invalid_provider_references_are_never_displayed (test_api.ConsumerTests.test_invalid_provider_references_are_never_displayed) ... ok\ntest_multiline_question_is_plain_text_context (test_api.ConsumerTests.test_multiline_question_is_plain_text_context) ... ok\ntest_native_no_ai_dependency (test_api.ConsumerTests.test_native_no_ai_dependency) ... ok\ntest_no_workbench_or_private_files (test_api.ConsumerTests.test_no_workbench_or_private_files) ... ok\ntest_one_card_upright (test_api.ConsumerTests.test_one_card_upright) ... ok\ntest_profile_source_orientation_and_all_catalog_cards (test_api.ConsumerTests.test_profile_source_orientation_and_all_catalog_cards) ... ok\ntest_rate_limit (test_api.ConsumerTests.test_rate_limit) ... ok\ntest_real_engine_exact_match_and_replay (test_api.ConsumerTests.test_real_engine_exact_match_and_replay) ... ok\ntest_schema_rejects_extra_invalid_and_unbounded_inputs (test_api.ConsumerTests.test_schema_rejects_extra_invalid_and_unbounded_inputs) ... ok\ntest_security_headers (test_api.ConsumerTests.test_security_headers) ... ok\ntest_tampered_expired_and_restarted_receipt (test_api.ConsumerTests.test_tampered_expired_and_restarted_receipt) ... ok\ntest_complete_identity_registry_and_rights (test_artwork.ArtworkAcceptance.test_complete_identity_registry_and_rights) ... ok\ntest_every_delivery_file_matches_its_immutable_hash (test_artwork.ArtworkAcceptance.test_every_delivery_file_matches_its_immutable_hash) ... ok\ntest_independent_major_numbering_and_court_images (test_artwork.ArtworkAcceptance.test_independent_major_numbering_and_court_images) ... ok\ntest_commentary_receipt_consent_and_privacy (test_numerology.NumberBoundaryTests.test_commentary_receipt_consent_and_privacy) ... ok\ntest_gallery_exact_retained_projection (test_numerology.NumberBoundaryTests.test_gallery_exact_retained_projection) ... ok\ntest_input_rejection_and_explicit_y_roles (test_numerology.NumberBoundaryTests.test_input_rejection_and_explicit_y_roles) ... ok\ntest_native_exact_and_independently_summed_example (test_numerology.NumberBoundaryTests.test_native_exact_and_independently_summed_example) ... ok\ntest_provider_mismatch_is_rejected (test_numerology.NumberBoundaryTests.test_provider_mismatch_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.696s\n\nOK\n"
     }
   },
   "fate_browser": {
-    "startTime": "2026-11-18T23:18:22.605Z",
-    "duration": 167847.193,
-    "expected": 13,
+    "startTime": "2026-11-19T00:52:16.559Z",
+    "duration": 289834.445,
+    "expected": 18,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
   },
   "workbench_browser": {
-    "startTime": "2026-11-18T22:57:49.129Z",
-    "duration": 129854.501,
+    "startTime": "2026-11-19T00:58:05.065Z",
+    "duration": 70475.354,
     "expected": 9,
     "skipped": 0,
     "unexpected": 0,
@@ -41,7 +41,7 @@
   "protected_source_files": 576,
   "changed_protected_source_files": [],
   "npm_vulnerabilities": 0,
-  "live_gemini": "Retained Block 01 synthetic live-provider check; cloud behavior unchanged. No new live call for this visual pass.",
+  "live_gemini": "Retained Block 01 Tarot synthetic live-provider check. New Numerology boundary has provider-shape/reference/privacy tests and separate browser consent checks; no new live-provider claim.",
   "gates": [
     {
       "command": [
@@ -128,17 +128,18 @@
   ],
   "performance": {
     "environment": "Local Chromium mobile emulation, 390\u00d7844 DPR2; SwiftShader software WebGL, warm server, no network throttling. Not real-device CWV certification or INP.",
-    "lcp": 156,
+    "lcp": 196,
     "cls": 0,
     "longTasks": [
-      239,
-      93,
-      66
+      54,
+      1366,
+      122,
+      52
     ],
     "rafMedianMs": 16.699999999999818,
     "heapObservation": {
       "usedBytes": 10000000,
-      "totalBytes": 12700000,
+      "totalBytes": 18200000,
       "note": "Chromium coarse heap observation, not peak-memory profiling"
     },
     "navigation": [
@@ -146,8 +147,8 @@
         "name": "http://127.0.0.1:8010/",
         "entryType": "navigation",
         "startTime": 0,
-        "duration": 35.199999928474426,
-        "navigationId": 4373,
+        "duration": 36.699999928474426,
+        "navigationId": 8571,
         "initiatorType": "navigation",
         "deliveryType": "",
         "nextHopProtocol": "http/1.1",
@@ -161,30 +162,30 @@
         "workerFinalSourceType": "",
         "redirectStart": 0,
         "redirectEnd": 0,
-        "fetchStart": 0.19999992847442627,
-        "domainLookupStart": 0.8999999761581421,
-        "domainLookupEnd": 1.2999999523162842,
-        "connectStart": 1.2999999523162842,
+        "fetchStart": 0,
+        "domainLookupStart": 0.6999999284744263,
+        "domainLookupEnd": 1,
+        "connectStart": 1,
         "secureConnectionStart": 0,
-        "connectEnd": 1.6999999284744263,
-        "requestStart": 1.6999999284744263,
+        "connectEnd": 1.399999976158142,
+        "requestStart": 1.5,
         "responseStart": 3.799999952316284,
         "firstInterimResponseStart": 0,
         "finalResponseHeadersStart": 3.799999952316284,
         "responseEnd": 4.199999928474426,
-        "transferSize": 819,
-        "encodedBodySize": 519,
+        "transferSize": 818,
+        "encodedBodySize": 518,
         "decodedBodySize": 1125,
         "responseStatus": 200,
         "serverTiming": [],
         "unloadEventStart": 0,
         "unloadEventEnd": 0,
-        "domInteractive": 9.899999976158142,
-        "domContentLoadedEventStart": 34.5,
-        "domContentLoadedEventEnd": 34.60000002384186,
-        "domComplete": 35.199999928474426,
-        "loadEventStart": 35.199999928474426,
-        "loadEventEnd": 35.199999928474426,
+        "domInteractive": 9.299999952316284,
+        "domContentLoadedEventStart": 36.09999990463257,
+        "domContentLoadedEventEnd": 36.09999990463257,
+        "domComplete": 36.699999928474426,
+        "loadEventStart": 36.699999928474426,
+        "loadEventEnd": 36.699999928474426,
         "type": "navigate",
         "redirectCount": 0,
         "activationStart": 0,
@@ -200,42 +201,52 @@
       {
         "name": "http://127.0.0.1:8010/art/orb-poster-v2.webp",
         "transferSize": 98476,
-        "duration": 6.400000095367432
-      },
-      {
-        "name": "http://127.0.0.1:8010/fonts/cormorant-latin.woff2",
-        "transferSize": 37973,
-        "duration": 11.800000071525574
+        "duration": 5.800000071525574
       },
       {
         "name": "http://127.0.0.1:8010/fonts/cormorant-italic-latin.woff2",
         "transferSize": 39593,
-        "duration": 13.899999976158142
+        "duration": 11
       },
       {
-        "name": "http://127.0.0.1:8010/assets/index-CE-yL4qh.js",
-        "transferSize": 74546,
-        "duration": 16.100000023841858
+        "name": "http://127.0.0.1:8010/fonts/cormorant-latin.woff2",
+        "transferSize": 37973,
+        "duration": 12
       },
       {
-        "name": "http://127.0.0.1:8010/assets/index-Co30Rqry.css",
-        "transferSize": 8646,
-        "duration": 11.299999952316284
+        "name": "http://127.0.0.1:8010/assets/index-7BgBCdmm.js",
+        "transferSize": 88033,
+        "duration": 18.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:8010/assets/index-WsksXsgl.css",
+        "transferSize": 12795,
+        "duration": 11.600000023841858
       },
       {
         "name": "http://127.0.0.1:8010/art/fate_atmosphere.webp",
         "transferSize": 15056,
-        "duration": 2.600000023841858
+        "duration": 3
+      },
+      {
+        "name": "http://127.0.0.1:8010/art/nebula-v1.webp",
+        "transferSize": 25484,
+        "duration": 3
       },
       {
         "name": "http://127.0.0.1:8010/fonts/inter-latin.woff2",
         "transferSize": 48549,
-        "duration": 31.09999990463257
+        "duration": 50.300000071525574
       },
       {
-        "name": "http://127.0.0.1:8010/assets/Orb-mwdLWlAy.js",
+        "name": "http://127.0.0.1:8010/assets/Orb-3FEr689F.js",
         "transferSize": 1111,
-        "duration": 11.300000071525574
+        "duration": 9
+      },
+      {
+        "name": "http://127.0.0.1:8010/art/deck/pam-a-v1/major-18-360.webp",
+        "transferSize": 80272,
+        "duration": 12.5
       },
       {
         "name": "http://127.0.0.1:8010/art/fate_sigil.svg",
@@ -243,69 +254,74 @@
         "duration": 9.700000047683716
       },
       {
-        "name": "http://127.0.0.1:8010/art/deck/pam-a-v1/major-18-360.webp",
-        "transferSize": 80272,
-        "duration": 11.700000047683716
-      },
-      {
         "name": "http://127.0.0.1:8010/art/deck/pam-a-v1/major-17-360.webp",
         "transferSize": 76864,
-        "duration": 12.600000023841858
+        "duration": 12.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:8010/art/number-dial-v1.webp",
+        "transferSize": 287137,
+        "duration": 22.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:8010/art/gallery-hall-v1.webp",
+        "transferSize": 179297,
+        "duration": 21.399999976158142
       },
       {
         "name": "http://127.0.0.1:8010/api/health",
         "transferSize": 370,
-        "duration": 6.600000023841858
+        "duration": 3
       },
       {
-        "name": "http://127.0.0.1:8010/assets/createOrbScene-BqCh3WCc.js",
-        "transferSize": 94007,
-        "duration": 15.699999928474426
+        "name": "http://127.0.0.1:8010/assets/createOrbScene-Cy1UFdLG.js",
+        "transferSize": 93822,
+        "duration": 13.399999976158142
       },
       {
-        "name": "http://127.0.0.1:8010/assets/WebGLRenderer-BFvwUOWM.js",
+        "name": "http://127.0.0.1:8010/assets/WebGLRenderer-At76Ybob.js",
         "transferSize": 14857,
-        "duration": 9.200000047683716
+        "duration": 14.100000023841858
       },
       {
-        "name": "http://127.0.0.1:8010/assets/GpuStencilModesToPixi-CVQ9pqZm.js",
+        "name": "http://127.0.0.1:8010/assets/GpuStencilModesToPixi-q6dqNCwr.js",
         "transferSize": 1369,
-        "duration": 8.799999952316284
+        "duration": 13.399999976158142
       },
       {
-        "name": "http://127.0.0.1:8010/assets/RenderTargetSystem-BkdUowcZ.js",
-        "transferSize": 13197,
-        "duration": 9.100000023841858
+        "name": "http://127.0.0.1:8010/assets/RenderTargetSystem-CBBfzvc2.js",
+        "transferSize": 13196,
+        "duration": 13.699999928474426
       },
       {
         "name": "http://127.0.0.1:8010/art/fate_orrery.svg",
         "transferSize": 825,
-        "duration": 20.100000023841858
+        "duration": 10
       },
       {
         "name": "http://127.0.0.1:8010/art/nebula-v1.webp",
-        "transferSize": 25484,
-        "duration": 21.300000071525574
+        "transferSize": 0,
+        "duration": 1.5
       },
       {
-        "name": "http://127.0.0.1:8010/assets/browserAll-DgrVqBKU.js",
+        "name": "http://127.0.0.1:8010/assets/browserAll-ClcoW9_T.js",
         "transferSize": 11719,
-        "duration": 15.399999976158142
+        "duration": 7.600000023841858
       },
       {
-        "name": "http://127.0.0.1:8010/assets/webworkerAll-Be6pxZZ0.js",
-        "transferSize": 5373,
-        "duration": 16.800000071525574
+        "name": "http://127.0.0.1:8010/assets/webworkerAll-DgWZUo7Z.js",
+        "transferSize": 5374,
+        "duration": 7.5
       },
       {
-        "name": "http://127.0.0.1:8010/assets/canvasUtils-DdhQvE1o.js",
-        "transferSize": 2094,
-        "duration": 16.5
+        "name": "http://127.0.0.1:8010/assets/canvasUtils-DKsjOgSM.js",
+        "transferSize": 2096,
+        "duration": 7.200000047683716
       },
       {
-        "name": "http://127.0.0.1:8010/assets/CanvasPool-DnlM-N_W.js",
+        "name": "http://127.0.0.1:8010/assets/CanvasPool-D6C-kmRU.js",
         "transferSize": 1091,
-        "duration": 16.700000047683716
+        "duration": 7
       }
     ]
   },
@@ -320,10 +336,10 @@
         },
         "windows": [
           {
-            "frames": 43,
-            "fps": 42.8,
-            "p50FrameMs": 19,
-            "p95FrameMs": 58.2,
+            "frames": 44,
+            "fps": 43.2,
+            "p50FrameMs": 18.9,
+            "p95FrameMs": 39.7,
             "quality": "cinematic",
             "resolution": 1.0675,
             "targetFps": 60,
@@ -331,10 +347,10 @@
             "bufferWidth": 640
           },
           {
-            "frames": 90,
-            "fps": 46.5,
-            "p50FrameMs": 18.4,
-            "p95FrameMs": 53.6,
+            "frames": 96,
+            "fps": 51.7,
+            "p50FrameMs": 18.2,
+            "p95FrameMs": 29.9,
             "quality": "cinematic",
             "resolution": 1.0675,
             "targetFps": 60,
@@ -342,10 +358,10 @@
             "bufferWidth": 640
           },
           {
-            "frames": 141,
-            "fps": 50.7,
+            "frames": 144,
+            "fps": 47.2,
             "p50FrameMs": 18.1,
-            "p95FrameMs": 32.7,
+            "p95FrameMs": 42,
             "quality": "cinematic",
             "resolution": 1.0675,
             "targetFps": 60,
@@ -353,20 +369,9 @@
             "bufferWidth": 640
           },
           {
-            "frames": 198,
-            "fps": 56.8,
-            "p50FrameMs": 16.7,
-            "p95FrameMs": 17.7,
-            "quality": "balanced",
-            "resolution": 0.7625,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 458
-          },
-          {
-            "frames": 258,
-            "fps": 59,
-            "p50FrameMs": 16.8,
+            "frames": 201,
+            "fps": 56.1,
+            "p50FrameMs": 16.6,
             "p95FrameMs": 17.9,
             "quality": "balanced",
             "resolution": 0.7625,
@@ -375,10 +380,21 @@
             "bufferWidth": 458
           },
           {
-            "frames": 317,
-            "fps": 58.1,
+            "frames": 260,
+            "fps": 59,
             "p50FrameMs": 16.7,
             "p95FrameMs": 18.4,
+            "quality": "balanced",
+            "resolution": 0.7625,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 458
+          },
+          {
+            "frames": 318,
+            "fps": 58,
+            "p50FrameMs": 16.7,
+            "p95FrameMs": 17.8,
             "quality": "balanced",
             "resolution": 0.7625,
             "targetFps": 60,
@@ -390,112 +406,127 @@
           {
             "name": "orb-poster-v2.webp",
             "bytes": 98476,
-            "durationMs": 4.800000071525574
+            "durationMs": 6.299999952316284
           },
           {
             "name": "cormorant-latin.woff2",
             "bytes": 37973,
-            "durationMs": 10
+            "durationMs": 13
           },
           {
             "name": "cormorant-italic-latin.woff2",
             "bytes": 39593,
-            "durationMs": 12.800000071525574
+            "durationMs": 13.200000047683716
           },
           {
-            "name": "index-Co30Rqry.css",
-            "bytes": 8646,
-            "durationMs": 12.5
+            "name": "index-7BgBCdmm.js",
+            "bytes": 88033,
+            "durationMs": 21.90000009536743
           },
           {
-            "name": "index-CE-yL4qh.js",
-            "bytes": 74546,
-            "durationMs": 15.799999952316284
+            "name": "index-WsksXsgl.css",
+            "bytes": 12795,
+            "durationMs": 12.600000023841858
           },
           {
             "name": "fate_atmosphere.webp",
             "bytes": 15056,
-            "durationMs": 3.399999976158142
-          },
-          {
-            "name": "inter-latin.woff2",
-            "bytes": 48549,
-            "durationMs": 37.40000009536743
-          },
-          {
-            "name": "major-18-360.webp",
-            "bytes": 80272,
-            "durationMs": 15
-          },
-          {
-            "name": "fate_sigil.svg",
-            "bytes": 1174,
-            "durationMs": 11.600000023841858
-          },
-          {
-            "name": "Orb-mwdLWlAy.js",
-            "bytes": 1111,
-            "durationMs": 11.100000023841858
-          },
-          {
-            "name": "major-17-360.webp",
-            "bytes": 76864,
-            "durationMs": 14.299999952316284
-          },
-          {
-            "name": "health",
-            "bytes": 370,
-            "durationMs": 10.700000047683716
-          },
-          {
-            "name": "createOrbScene-BqCh3WCc.js",
-            "bytes": 94007,
-            "durationMs": 16.799999952316284
-          },
-          {
-            "name": "WebGLRenderer-BFvwUOWM.js",
-            "bytes": 14857,
-            "durationMs": 16.399999976158142
-          },
-          {
-            "name": "GpuStencilModesToPixi-CVQ9pqZm.js",
-            "bytes": 1369,
-            "durationMs": 16
-          },
-          {
-            "name": "RenderTargetSystem-BkdUowcZ.js",
-            "bytes": 13197,
-            "durationMs": 16.200000047683716
-          },
-          {
-            "name": "fate_orrery.svg",
-            "bytes": 825,
-            "durationMs": 15.600000023841858
+            "durationMs": 3
           },
           {
             "name": "nebula-v1.webp",
             "bytes": 25484,
-            "durationMs": 15.400000095367432
+            "durationMs": 2.899999976158142
           },
           {
-            "name": "browserAll-DgrVqBKU.js",
+            "name": "inter-latin.woff2",
+            "bytes": 48549,
+            "durationMs": 51.60000002384186
+          },
+          {
+            "name": "Orb-3FEr689F.js",
+            "bytes": 1111,
+            "durationMs": 10.600000023841858
+          },
+          {
+            "name": "fate_sigil.svg",
+            "bytes": 1174,
+            "durationMs": 6.600000023841858
+          },
+          {
+            "name": "major-18-360.webp",
+            "bytes": 80272,
+            "durationMs": 11.200000047683716
+          },
+          {
+            "name": "major-17-360.webp",
+            "bytes": 76864,
+            "durationMs": 12.700000047683716
+          },
+          {
+            "name": "number-dial-v1.webp",
+            "bytes": 287137,
+            "durationMs": 23.799999952316284
+          },
+          {
+            "name": "gallery-hall-v1.webp",
+            "bytes": 179297,
+            "durationMs": 22.299999952316284
+          },
+          {
+            "name": "health",
+            "bytes": 370,
+            "durationMs": 3.1999999284744263
+          },
+          {
+            "name": "createOrbScene-Cy1UFdLG.js",
+            "bytes": 93822,
+            "durationMs": 12.5
+          },
+          {
+            "name": "WebGLRenderer-At76Ybob.js",
+            "bytes": 14857,
+            "durationMs": 9.700000047683716
+          },
+          {
+            "name": "GpuStencilModesToPixi-q6dqNCwr.js",
+            "bytes": 1369,
+            "durationMs": 9.599999904632568
+          },
+          {
+            "name": "RenderTargetSystem-CBBfzvc2.js",
+            "bytes": 13196,
+            "durationMs": 7.200000047683716
+          },
+          {
+            "name": "fate_orrery.svg",
+            "bytes": 825,
+            "durationMs": 6
+          },
+          {
+            "name": "nebula-v1.webp",
+            "bytes": 0,
+            "durationMs": 1.399999976158142
+          },
+          {
+            "name": "browserAll-ClcoW9_T.js",
             "bytes": 11719,
-            "durationMs": 11.399999976158142
-          },
-          {
-            "name": "webworkerAll-Be6pxZZ0.js",
-            "bytes": 5373,
-            "durationMs": 10.700000047683716
-          },
-          {
-            "name": "canvasUtils-DdhQvE1o.js",
-            "bytes": 2094,
             "durationMs": 8.899999976158142
           },
           {
-            "name": "CanvasPool-DnlM-N_W.js",
+            "name": "webworkerAll-DgWZUo7Z.js",
+            "bytes": 5374,
+            "durationMs": 8.600000023841858
+          },
+          {
+            "name": "CanvasPool-D6C-kmRU.js",
             "bytes": 1091,
-            "durationMs": 11.899999976158142
+            "durationMs": 8.199999928474426
+          },
+          {
+            "name": "canvasUtils-DKsjOgSM.js",
+            "bytes": 2096,
+            "durationMs": 8.299999952316284
           }
         ]
       },
@@ -508,9 +539,9 @@
         "windows": [
           {
             "frames": 18,
-            "fps": 17.3,
-            "p50FrameMs": 36.6,
-            "p95FrameMs": 186.7,
+            "fps": 17.4,
+            "p50FrameMs": 31.1,
+            "p95FrameMs": 184.9,
             "quality": "cinematic",
             "resolution": 1.6,
             "targetFps": 60,
@@ -518,10 +549,10 @@
             "bufferWidth": 960
           },
           {
-            "frames": 18,
-            "fps": 17.3,
-            "p50FrameMs": 36.6,
-            "p95FrameMs": 186.7,
+            "frames": 38,
+            "fps": 20,
+            "p50FrameMs": 38.4,
+            "p95FrameMs": 153.4,
             "quality": "cinematic",
             "resolution": 1.6,
             "targetFps": 60,
@@ -529,32 +560,21 @@
             "bufferWidth": 960
           },
           {
-            "frames": 44,
+            "frames": 60,
+            "fps": 21.2,
+            "p50FrameMs": 38.8,
+            "p95FrameMs": 124.6,
+            "quality": "cinematic",
+            "resolution": 1.6,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 960
+          },
+          {
+            "frames": 80,
             "fps": 19.7,
-            "p50FrameMs": 37.1,
-            "p95FrameMs": 56.3,
-            "quality": "cinematic",
-            "resolution": 1.6,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 960
-          },
-          {
-            "frames": 66,
-            "fps": 21.9,
-            "p50FrameMs": 35.2,
-            "p95FrameMs": 68.5,
-            "quality": "cinematic",
-            "resolution": 1.6,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 960
-          },
-          {
-            "frames": 91,
-            "fps": 24.3,
-            "p50FrameMs": 27,
-            "p95FrameMs": 105.8,
+            "p50FrameMs": 29.2,
+            "p95FrameMs": 262.5,
             "quality": "balanced",
             "resolution": 1.25,
             "targetFps": 60,
@@ -562,10 +582,21 @@
             "bufferWidth": 750
           },
           {
-            "frames": 119,
-            "fps": 22.3,
-            "p50FrameMs": 24.5,
-            "p95FrameMs": 32.3,
+            "frames": 103,
+            "fps": 21.4,
+            "p50FrameMs": 27.6,
+            "p95FrameMs": 128,
+            "quality": "balanced",
+            "resolution": 1.25,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 750
+          },
+          {
+            "frames": 131,
+            "fps": 24.3,
+            "p50FrameMs": 25.7,
+            "p95FrameMs": 44.5,
             "quality": "balanced",
             "resolution": 1.25,
             "targetFps": 60,
@@ -590,12 +621,12 @@
             "durationMs": 0
           },
           {
-            "name": "index-CE-yL4qh.js",
+            "name": "index-7BgBCdmm.js",
             "bytes": 0,
             "durationMs": 0
           },
           {
-            "name": "index-Co30Rqry.css",
+            "name": "index-WsksXsgl.css",
             "bytes": 0,
             "durationMs": 0
           },
@@ -610,12 +641,12 @@
             "durationMs": 0
           },
           {
-            "name": "major-18-720.webp",
+            "name": "number-dial-v1.webp",
             "bytes": 0,
             "durationMs": 0
           },
           {
-            "name": "major-17-720.webp",
+            "name": "gallery-hall-v1.webp",
             "bytes": 0,
             "durationMs": 0
           },
@@ -625,32 +656,47 @@
             "durationMs": 0
           },
           {
-            "name": "Orb-mwdLWlAy.js",
+            "name": "nebula-v1.webp",
+            "bytes": 0,
+            "durationMs": 0.8000000715255737
+          },
+          {
+            "name": "Orb-3FEr689F.js",
             "bytes": 0,
             "durationMs": 0
+          },
+          {
+            "name": "major-18-720.webp",
+            "bytes": 278203,
+            "durationMs": 26.799999952316284
+          },
+          {
+            "name": "major-17-720.webp",
+            "bytes": 269409,
+            "durationMs": 26.600000023841858
           },
           {
             "name": "health",
             "bytes": 370,
-            "durationMs": 3.399999976158142
+            "durationMs": 4.5
           },
           {
-            "name": "createOrbScene-BqCh3WCc.js",
+            "name": "createOrbScene-Cy1UFdLG.js",
             "bytes": 0,
             "durationMs": 0
           },
           {
-            "name": "WebGLRenderer-BFvwUOWM.js",
+            "name": "WebGLRenderer-At76Ybob.js",
             "bytes": 0,
             "durationMs": 0
           },
           {
-            "name": "GpuStencilModesToPixi-CVQ9pqZm.js",
+            "name": "GpuStencilModesToPixi-q6dqNCwr.js",
             "bytes": 0,
             "durationMs": 0
           },
           {
-            "name": "RenderTargetSystem-BkdUowcZ.js",
+            "name": "RenderTargetSystem-CBBfzvc2.js",
             "bytes": 0,
             "durationMs": 0
           },
@@ -660,29 +706,29 @@
             "durationMs": 0.8999999761581421
           },
           {
-            "name": "browserAll-DgrVqBKU.js",
+            "name": "browserAll-ClcoW9_T.js",
             "bytes": 0,
             "durationMs": 0
           },
           {
-            "name": "webworkerAll-Be6pxZZ0.js",
+            "name": "webworkerAll-DgWZUo7Z.js",
             "bytes": 0,
             "durationMs": 0
           },
           {
-            "name": "canvasUtils-DdhQvE1o.js",
+            "name": "canvasUtils-DKsjOgSM.js",
             "bytes": 0,
             "durationMs": 0
           },
           {
-            "name": "CanvasPool-DnlM-N_W.js",
+            "name": "CanvasPool-D6C-kmRU.js",
             "bytes": 0,
             "durationMs": 0
           },
           {
             "name": "nebula-v1.webp",
             "bytes": 0,
-            "durationMs": 0.5999999046325684
+            "durationMs": 0.8999999761581421
           }
         ]
       }
@@ -706,10 +752,10 @@
         },
         "windows": [
           {
-            "frames": 51,
-            "fps": 54.6,
+            "frames": 52,
+            "fps": 55.9,
             "p50FrameMs": 18,
-            "p95FrameMs": 20.6,
+            "p95FrameMs": 19.7,
             "quality": "cinematic",
             "resolution": 1.0675,
             "targetFps": 60,
@@ -717,10 +763,10 @@
             "bufferWidth": 640
           },
           {
-            "frames": 108,
-            "fps": 56.3,
+            "frames": 109,
+            "fps": 56.4,
             "p50FrameMs": 17.8,
-            "p95FrameMs": 18.9,
+            "p95FrameMs": 19.5,
             "quality": "cinematic",
             "resolution": 1.0675,
             "targetFps": 60,
@@ -728,9 +774,53 @@
             "bufferWidth": 640
           },
           {
-            "frames": 165,
+            "frames": 167,
+            "fps": 56.4,
+            "p50FrameMs": 17.7,
+            "p95FrameMs": 19.4,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 224,
+            "fps": 56.2,
+            "p50FrameMs": 17.8,
+            "p95FrameMs": 19.3,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 281,
             "fps": 56.5,
-            "p50FrameMs": 17.8,
+            "p50FrameMs": 17.7,
+            "p95FrameMs": 19,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 338,
+            "fps": 56.6,
+            "p50FrameMs": 17.7,
+            "p95FrameMs": 18.6,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 396,
+            "fps": 57.2,
+            "p50FrameMs": 17.7,
             "p95FrameMs": 19.2,
             "quality": "cinematic",
             "resolution": 1.0675,
@@ -739,8 +829,19 @@
             "bufferWidth": 640
           },
           {
-            "frames": 222,
-            "fps": 56.3,
+            "frames": 454,
+            "fps": 57.2,
+            "p50FrameMs": 17.7,
+            "p95FrameMs": 19,
+            "quality": "cinematic",
+            "resolution": 1.0675,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 640
+          },
+          {
+            "frames": 510,
+            "fps": 55.6,
             "p50FrameMs": 17.7,
             "p95FrameMs": 19.1,
             "quality": "cinematic",
@@ -750,65 +851,10 @@
             "bufferWidth": 640
           },
           {
-            "frames": 280,
-            "fps": 57.1,
-            "p50FrameMs": 17.7,
-            "p95FrameMs": 18.7,
-            "quality": "cinematic",
-            "resolution": 1.0675,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 640
-          },
-          {
-            "frames": 337,
-            "fps": 56.2,
-            "p50FrameMs": 18,
-            "p95FrameMs": 19,
-            "quality": "cinematic",
-            "resolution": 1.0675,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 640
-          },
-          {
-            "frames": 395,
-            "fps": 57.3,
-            "p50FrameMs": 17.7,
-            "p95FrameMs": 19,
-            "quality": "cinematic",
-            "resolution": 1.0675,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 640
-          },
-          {
-            "frames": 453,
-            "fps": 57,
-            "p50FrameMs": 17.7,
-            "p95FrameMs": 19.2,
-            "quality": "cinematic",
-            "resolution": 1.0675,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 640
-          },
-          {
-            "frames": 510,
-            "fps": 56.5,
-            "p50FrameMs": 17.8,
-            "p95FrameMs": 19,
-            "quality": "cinematic",
-            "resolution": 1.0675,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 640
-          },
-          {
             "frames": 567,
-            "fps": 56.3,
+            "fps": 56.4,
             "p50FrameMs": 17.8,
-            "p95FrameMs": 19.5,
+            "p95FrameMs": 20.5,
             "quality": "cinematic",
             "resolution": 1.0675,
             "targetFps": 60,
@@ -817,32 +863,33 @@
           }
         ],
         "observation": {
-          "lcpMs": 408,
+          "lcpMs": 396,
           "cls": 0,
           "longTasks": [
-            65,
-            98
+            54,
+            64,
+            95
           ],
           "events": [
             {
               "name": "pointerdown",
-              "durationMs": 80,
-              "processingDelayMs": 54.39999997615814
+              "durationMs": 96,
+              "processingDelayMs": 71
             },
             {
               "name": "pointerup",
-              "durationMs": 80,
-              "processingDelayMs": 55
+              "durationMs": 96,
+              "processingDelayMs": 71.39999997615814
             },
             {
               "name": "click",
-              "durationMs": 96,
-              "processingDelayMs": 73.89999997615814
+              "durationMs": 112,
+              "processingDelayMs": 89.79999995231628
             },
             {
               "name": "pointerdown",
               "durationMs": 48,
-              "processingDelayMs": 17.199999928474426
+              "processingDelayMs": 17.100000023841858
             },
             {
               "name": "pointerup",
@@ -852,7 +899,7 @@
             {
               "name": "click",
               "durationMs": 48,
-              "processingDelayMs": 18.199999928474426
+              "processingDelayMs": 18.100000023841858
             }
           ],
           "resources": [
@@ -860,144 +907,162 @@
               "name": "orb-poster-v2.webp",
               "transferBytes": 98476,
               "decodedBytes": 98378,
-              "durationMs": 7.799999952316284
-            },
-            {
-              "name": "index-CE-yL4qh.js",
-              "transferBytes": 74546,
-              "decodedBytes": 252076,
-              "durationMs": 16
-            },
-            {
-              "name": "cormorant-latin.woff2",
-              "transferBytes": 37973,
-              "decodedBytes": 37640,
-              "durationMs": 12.300000071525574
+              "durationMs": 6
             },
             {
               "name": "cormorant-italic-latin.woff2",
               "transferBytes": 39593,
               "decodedBytes": 39260,
-              "durationMs": 12.399999976158142
+              "durationMs": 11.700000047683716
             },
             {
-              "name": "index-Co30Rqry.css",
-              "transferBytes": 8646,
-              "decodedBytes": 34082,
-              "durationMs": 11.799999952316284
+              "name": "cormorant-latin.woff2",
+              "transferBytes": 37973,
+              "decodedBytes": 37640,
+              "durationMs": 13.600000023841858
+            },
+            {
+              "name": "index-BpIeQWXP.css",
+              "transferBytes": 12810,
+              "decodedBytes": 53699,
+              "durationMs": 13.199999928474426
+            },
+            {
+              "name": "index-CP8YX0YK.js",
+              "transferBytes": 88033,
+              "decodedBytes": 291866,
+              "durationMs": 17.399999976158142
             },
             {
               "name": "fate_atmosphere.webp",
               "transferBytes": 15056,
               "decodedBytes": 14854,
-              "durationMs": 2.399999976158142
-            },
-            {
-              "name": "inter-latin.woff2",
-              "transferBytes": 48549,
-              "decodedBytes": 48256,
-              "durationMs": 56.89999997615814
-            },
-            {
-              "name": "fate_sigil.svg",
-              "transferBytes": 1174,
-              "decodedBytes": 874,
-              "durationMs": 24.300000071525574
-            },
-            {
-              "name": "Orb-mwdLWlAy.js",
-              "transferBytes": 1111,
-              "decodedBytes": 1586,
-              "durationMs": 30.300000071525574
-            },
-            {
-              "name": "major-17-360.webp",
-              "transferBytes": 76864,
-              "decodedBytes": 76516,
-              "durationMs": 32.5
-            },
-            {
-              "name": "major-18-360.webp",
-              "transferBytes": 80272,
-              "decodedBytes": 79924,
-              "durationMs": 33.300000071525574
-            },
-            {
-              "name": "health",
-              "transferBytes": 370,
-              "decodedBytes": 70,
-              "durationMs": 24.200000047683716
-            },
-            {
-              "name": "createOrbScene-BqCh3WCc.js",
-              "transferBytes": 94007,
-              "decodedBytes": 303725,
-              "durationMs": 10
-            },
-            {
-              "name": "WebGLRenderer-BFvwUOWM.js",
-              "transferBytes": 14857,
-              "decodedBytes": 52609,
-              "durationMs": 6.399999976158142
-            },
-            {
-              "name": "GpuStencilModesToPixi-CVQ9pqZm.js",
-              "transferBytes": 1369,
-              "decodedBytes": 3293,
-              "durationMs": 5.299999952316284
-            },
-            {
-              "name": "RenderTargetSystem-BkdUowcZ.js",
-              "transferBytes": 13197,
-              "decodedBytes": 46728,
-              "durationMs": 5.100000023841858
-            },
-            {
-              "name": "fate_orrery.svg",
-              "transferBytes": 825,
-              "decodedBytes": 1125,
-              "durationMs": 4.5
+              "durationMs": 3.399999976158142
             },
             {
               "name": "nebula-v1.webp",
               "transferBytes": 25484,
               "decodedBytes": 25156,
+              "durationMs": 3.100000023841858
+            },
+            {
+              "name": "inter-latin.woff2",
+              "transferBytes": 48549,
+              "decodedBytes": 48256,
+              "durationMs": 47.89999997615814
+            },
+            {
+              "name": "fate_sigil.svg",
+              "transferBytes": 1174,
+              "decodedBytes": 874,
+              "durationMs": 9
+            },
+            {
+              "name": "major-18-360.webp",
+              "transferBytes": 80272,
+              "decodedBytes": 79924,
+              "durationMs": 10.5
+            },
+            {
+              "name": "Orb-Ci_HxnCY.js",
+              "transferBytes": 1115,
+              "decodedBytes": 1586,
+              "durationMs": 8.900000095367432
+            },
+            {
+              "name": "major-17-360.webp",
+              "transferBytes": 76864,
+              "decodedBytes": 76516,
+              "durationMs": 10.600000023841858
+            },
+            {
+              "name": "number-dial-v1.webp",
+              "transferBytes": 287137,
+              "decodedBytes": 287020,
+              "durationMs": 19.800000071525574
+            },
+            {
+              "name": "gallery-hall-v1.webp",
+              "transferBytes": 179297,
+              "decodedBytes": 178914,
+              "durationMs": 15.800000071525574
+            },
+            {
+              "name": "health",
+              "transferBytes": 370,
+              "decodedBytes": 70,
               "durationMs": 4.100000023841858
             },
             {
-              "name": "browserAll-DgrVqBKU.js",
-              "transferBytes": 11719,
-              "decodedBytes": 43093,
-              "durationMs": 5.400000095367432
+              "name": "createOrbScene-CFgH4Kqn.js",
+              "transferBytes": 93826,
+              "decodedBytes": 303189,
+              "durationMs": 10.700000047683716
             },
             {
-              "name": "webworkerAll-Be6pxZZ0.js",
-              "transferBytes": 5373,
-              "decodedBytes": 15813,
+              "name": "GpuStencilModesToPixi-CYUrSN58.js",
+              "transferBytes": 1369,
+              "decodedBytes": 3293,
+              "durationMs": 7.700000047683716
+            },
+            {
+              "name": "WebGLRenderer-BDwcwLIN.js",
+              "transferBytes": 14857,
+              "decodedBytes": 52609,
+              "durationMs": 7.800000071525574
+            },
+            {
+              "name": "RenderTargetSystem-DjucKCAH.js",
+              "transferBytes": 13196,
+              "decodedBytes": 46728,
               "durationMs": 5.399999976158142
             },
             {
-              "name": "canvasUtils-DdhQvE1o.js",
-              "transferBytes": 2094,
-              "decodedBytes": 5686,
-              "durationMs": 5.200000047683716
+              "name": "fate_orrery.svg",
+              "transferBytes": 825,
+              "decodedBytes": 1125,
+              "durationMs": 6
             },
             {
-              "name": "CanvasPool-DnlM-N_W.js",
+              "name": "nebula-v1.webp",
+              "transferBytes": 0,
+              "decodedBytes": 25156,
+              "durationMs": 0.3999999761581421
+            },
+            {
+              "name": "browserAll-0Rzuu9VJ.js",
+              "transferBytes": 11719,
+              "decodedBytes": 43093,
+              "durationMs": 4.800000071525574
+            },
+            {
+              "name": "webworkerAll-CNqJM0Vf.js",
+              "transferBytes": 5374,
+              "decodedBytes": 15813,
+              "durationMs": 3.600000023841858
+            },
+            {
+              "name": "CanvasPool-BnaeflFk.js",
               "transferBytes": 1091,
               "decodedBytes": 791,
-              "durationMs": 4.899999976158142
+              "durationMs": 3.700000047683716
+            },
+            {
+              "name": "canvasUtils-DkTgjLbS.js",
+              "transferBytes": 2096,
+              "decodedBytes": 5686,
+              "durationMs": 3.700000047683716
             },
             {
               "name": "card-back-360.webp",
               "transferBytes": 64336,
               "decodedBytes": 63998,
-              "durationMs": 5
+              "durationMs": 5.100000023841858
             }
           ],
           "heap": {
             "usedBytes": 10000000,
-            "totalBytes": 10000000
+            "totalBytes": 12700000
           }
         }
       },
@@ -1016,10 +1081,10 @@
         },
         "windows": [
           {
-            "frames": 44,
-            "fps": 48.3,
-            "p50FrameMs": 19.9,
-            "p95FrameMs": 22.9,
+            "frames": 46,
+            "fps": 49.9,
+            "p50FrameMs": 19.6,
+            "p95FrameMs": 21.8,
             "quality": "cinematic",
             "resolution": 1,
             "targetFps": 60,
@@ -1027,9 +1092,9 @@
             "bufferWidth": 600
           },
           {
-            "frames": 100,
-            "fps": 55.4,
-            "p50FrameMs": 17.7,
+            "frames": 103,
+            "fps": 56.2,
+            "p50FrameMs": 17.3,
             "p95FrameMs": 20.4,
             "quality": "cinematic",
             "resolution": 1,
@@ -1038,53 +1103,9 @@
             "bufferWidth": 600
           },
           {
-            "frames": 157,
-            "fps": 56.8,
-            "p50FrameMs": 17.3,
-            "p95FrameMs": 18.3,
-            "quality": "cinematic",
-            "resolution": 1,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 600
-          },
-          {
-            "frames": 216,
-            "fps": 58,
-            "p50FrameMs": 17.2,
-            "p95FrameMs": 17.7,
-            "quality": "cinematic",
-            "resolution": 1,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 600
-          },
-          {
-            "frames": 273,
-            "fps": 56.8,
+            "frames": 160,
+            "fps": 57,
             "p50FrameMs": 17.4,
-            "p95FrameMs": 18.5,
-            "quality": "cinematic",
-            "resolution": 1,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 600
-          },
-          {
-            "frames": 330,
-            "fps": 56.5,
-            "p50FrameMs": 17.4,
-            "p95FrameMs": 18.4,
-            "quality": "cinematic",
-            "resolution": 1,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 600
-          },
-          {
-            "frames": 388,
-            "fps": 57.7,
-            "p50FrameMs": 17.2,
             "p95FrameMs": 18.1,
             "quality": "cinematic",
             "resolution": 1,
@@ -1093,9 +1114,31 @@
             "bufferWidth": 600
           },
           {
-            "frames": 446,
-            "fps": 57.2,
-            "p50FrameMs": 17.3,
+            "frames": 218,
+            "fps": 57.5,
+            "p50FrameMs": 17.2,
+            "p95FrameMs": 18.3,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          },
+          {
+            "frames": 276,
+            "fps": 57.6,
+            "p50FrameMs": 17.1,
+            "p95FrameMs": 17.9,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          },
+          {
+            "frames": 333,
+            "fps": 56.6,
+            "p50FrameMs": 17.2,
             "p95FrameMs": 18.4,
             "quality": "cinematic",
             "resolution": 1,
@@ -1104,9 +1147,20 @@
             "bufferWidth": 600
           },
           {
-            "frames": 503,
-            "fps": 56.5,
+            "frames": 391,
+            "fps": 57.1,
             "p50FrameMs": 17.3,
+            "p95FrameMs": 18.2,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          },
+          {
+            "frames": 449,
+            "fps": 57.5,
+            "p50FrameMs": 17.2,
             "p95FrameMs": 18,
             "quality": "cinematic",
             "resolution": 1,
@@ -1115,10 +1169,21 @@
             "bufferWidth": 600
           },
           {
-            "frames": 560,
-            "fps": 56.2,
-            "p50FrameMs": 17.5,
-            "p95FrameMs": 18.6,
+            "frames": 507,
+            "fps": 57.9,
+            "p50FrameMs": 17,
+            "p95FrameMs": 19.1,
+            "quality": "cinematic",
+            "resolution": 1,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 600
+          },
+          {
+            "frames": 565,
+            "fps": 57.2,
+            "p50FrameMs": 17.1,
+            "p95FrameMs": 19.1,
             "quality": "cinematic",
             "resolution": 1,
             "targetFps": 60,
@@ -1127,41 +1192,42 @@
           }
         ],
         "observation": {
-          "lcpMs": 120,
+          "lcpMs": 144,
           "cls": 0,
           "longTasks": [
-            105
+            52,
+            94
           ],
           "events": [
             {
               "name": "pointerdown",
-              "durationMs": 56,
-              "processingDelayMs": 18.40000009536743
+              "durationMs": 48,
+              "processingDelayMs": 16.399999976158142
             },
             {
               "name": "pointerup",
-              "durationMs": 56,
-              "processingDelayMs": 18.800000071525574
+              "durationMs": 48,
+              "processingDelayMs": 17
             },
             {
               "name": "click",
-              "durationMs": 56,
-              "processingDelayMs": 19.100000023841858
+              "durationMs": 48,
+              "processingDelayMs": 17.199999928474426
             },
             {
               "name": "pointerdown",
               "durationMs": 64,
-              "processingDelayMs": 17
+              "processingDelayMs": 19.899999976158142
             },
             {
               "name": "pointerup",
               "durationMs": 64,
-              "processingDelayMs": 17.799999952316284
+              "processingDelayMs": 20.899999976158142
             },
             {
               "name": "click",
               "durationMs": 64,
-              "processingDelayMs": 18.299999952316284
+              "processingDelayMs": 21.299999952316284
             }
           ],
           "resources": [
@@ -1169,144 +1235,162 @@
               "name": "orb-poster-v2.webp",
               "transferBytes": 98476,
               "decodedBytes": 98378,
-              "durationMs": 5.200000047683716
-            },
-            {
-              "name": "index-Co30Rqry.css",
-              "transferBytes": 8646,
-              "decodedBytes": 34082,
-              "durationMs": 13.5
+              "durationMs": 6.5
             },
             {
               "name": "cormorant-latin.woff2",
               "transferBytes": 37973,
               "decodedBytes": 37640,
-              "durationMs": 12.100000023841858
+              "durationMs": 10.5
             },
             {
-              "name": "index-CE-yL4qh.js",
-              "transferBytes": 74546,
-              "decodedBytes": 252076,
-              "durationMs": 17.899999976158142
+              "name": "index-BpIeQWXP.css",
+              "transferBytes": 12810,
+              "decodedBytes": 53699,
+              "durationMs": 12.5
             },
             {
               "name": "cormorant-italic-latin.woff2",
               "transferBytes": 39593,
               "decodedBytes": 39260,
-              "durationMs": 12.699999928474426
+              "durationMs": 10.299999952316284
+            },
+            {
+              "name": "index-CP8YX0YK.js",
+              "transferBytes": 88033,
+              "decodedBytes": 291866,
+              "durationMs": 16.899999976158142
             },
             {
               "name": "fate_atmosphere.webp",
               "transferBytes": 15056,
               "decodedBytes": 14854,
-              "durationMs": 2.5
-            },
-            {
-              "name": "inter-latin.woff2",
-              "transferBytes": 48549,
-              "decodedBytes": 48256,
-              "durationMs": 36.39999997615814
-            },
-            {
-              "name": "Orb-mwdLWlAy.js",
-              "transferBytes": 1111,
-              "decodedBytes": 1586,
-              "durationMs": 4.600000023841858
-            },
-            {
-              "name": "fate_sigil.svg",
-              "transferBytes": 1174,
-              "decodedBytes": 874,
-              "durationMs": 7.300000071525574
-            },
-            {
-              "name": "major-17-360.webp",
-              "transferBytes": 76864,
-              "decodedBytes": 76516,
-              "durationMs": 10.300000071525574
-            },
-            {
-              "name": "major-18-360.webp",
-              "transferBytes": 80272,
-              "decodedBytes": 79924,
-              "durationMs": 12.399999976158142
-            },
-            {
-              "name": "health",
-              "transferBytes": 370,
-              "decodedBytes": 70,
-              "durationMs": 4.699999928474426
-            },
-            {
-              "name": "createOrbScene-BqCh3WCc.js",
-              "transferBytes": 94007,
-              "decodedBytes": 303725,
-              "durationMs": 10.5
-            },
-            {
-              "name": "GpuStencilModesToPixi-CVQ9pqZm.js",
-              "transferBytes": 1369,
-              "decodedBytes": 3293,
-              "durationMs": 6.200000047683716
-            },
-            {
-              "name": "RenderTargetSystem-BkdUowcZ.js",
-              "transferBytes": 13197,
-              "decodedBytes": 46728,
-              "durationMs": 6.5
-            },
-            {
-              "name": "WebGLRenderer-BFvwUOWM.js",
-              "transferBytes": 14857,
-              "decodedBytes": 52609,
-              "durationMs": 6.300000071525574
-            },
-            {
-              "name": "fate_orrery.svg",
-              "transferBytes": 825,
-              "decodedBytes": 1125,
-              "durationMs": 4.899999976158142
+              "durationMs": 3.100000023841858
             },
             {
               "name": "nebula-v1.webp",
               "transferBytes": 25484,
               "decodedBytes": 25156,
-              "durationMs": 4.5
+              "durationMs": 3
             },
             {
-              "name": "browserAll-DgrVqBKU.js",
+              "name": "inter-latin.woff2",
+              "transferBytes": 48549,
+              "decodedBytes": 48256,
+              "durationMs": 47.700000047683716
+            },
+            {
+              "name": "Orb-Ci_HxnCY.js",
+              "transferBytes": 1115,
+              "decodedBytes": 1586,
+              "durationMs": 9.300000071525574
+            },
+            {
+              "name": "fate_sigil.svg",
+              "transferBytes": 1174,
+              "decodedBytes": 874,
+              "durationMs": 4.399999976158142
+            },
+            {
+              "name": "major-18-360.webp",
+              "transferBytes": 80272,
+              "decodedBytes": 79924,
+              "durationMs": 9.399999976158142
+            },
+            {
+              "name": "major-17-360.webp",
+              "transferBytes": 76864,
+              "decodedBytes": 76516,
+              "durationMs": 10.600000023841858
+            },
+            {
+              "name": "health",
+              "transferBytes": 370,
+              "decodedBytes": 70,
+              "durationMs": 3.700000047683716
+            },
+            {
+              "name": "number-dial-480.webp",
+              "transferBytes": 72394,
+              "decodedBytes": 72046,
+              "durationMs": 7.799999952316284
+            },
+            {
+              "name": "gallery-hall-v1.webp",
+              "transferBytes": 179297,
+              "decodedBytes": 178914,
+              "durationMs": 13.299999952316284
+            },
+            {
+              "name": "createOrbScene-CFgH4Kqn.js",
+              "transferBytes": 93826,
+              "decodedBytes": 303189,
+              "durationMs": 12
+            },
+            {
+              "name": "GpuStencilModesToPixi-CYUrSN58.js",
+              "transferBytes": 1369,
+              "decodedBytes": 3293,
+              "durationMs": 5.199999928474426
+            },
+            {
+              "name": "WebGLRenderer-BDwcwLIN.js",
+              "transferBytes": 14857,
+              "decodedBytes": 52609,
+              "durationMs": 5.299999952316284
+            },
+            {
+              "name": "RenderTargetSystem-DjucKCAH.js",
+              "transferBytes": 13196,
+              "decodedBytes": 46728,
+              "durationMs": 6.399999976158142
+            },
+            {
+              "name": "fate_orrery.svg",
+              "transferBytes": 825,
+              "decodedBytes": 1125,
+              "durationMs": 5.299999952316284
+            },
+            {
+              "name": "nebula-v1.webp",
+              "transferBytes": 0,
+              "decodedBytes": 25156,
+              "durationMs": 0.7000000476837158
+            },
+            {
+              "name": "browserAll-0Rzuu9VJ.js",
               "transferBytes": 11719,
               "decodedBytes": 43093,
-              "durationMs": 5.200000047683716
+              "durationMs": 5.199999928474426
             },
             {
-              "name": "webworkerAll-Be6pxZZ0.js",
-              "transferBytes": 5373,
+              "name": "webworkerAll-CNqJM0Vf.js",
+              "transferBytes": 5374,
               "decodedBytes": 15813,
-              "durationMs": 5
+              "durationMs": 5.299999952316284
             },
             {
-              "name": "canvasUtils-DdhQvE1o.js",
-              "transferBytes": 2094,
+              "name": "canvasUtils-DkTgjLbS.js",
+              "transferBytes": 2096,
               "decodedBytes": 5686,
-              "durationMs": 5.200000047683716
+              "durationMs": 3.600000023841858
             },
             {
-              "name": "CanvasPool-DnlM-N_W.js",
+              "name": "CanvasPool-BnaeflFk.js",
               "transferBytes": 1091,
               "decodedBytes": 791,
-              "durationMs": 5
+              "durationMs": 5.300000071525574
             },
             {
               "name": "card-back-360.webp",
               "transferBytes": 64336,
               "decodedBytes": 63998,
-              "durationMs": 12.5
+              "durationMs": 33.60000002384186
             }
           ],
           "heap": {
-            "usedBytes": 10000000,
-            "totalBytes": 10000000
+            "usedBytes": 11900000,
+            "totalBytes": 15200000
           }
         }
       },
@@ -1327,9 +1411,9 @@
         "windows": [
           {
             "frames": 29,
-            "fps": 30,
-            "p50FrameMs": 33.6,
-            "p95FrameMs": 35,
+            "fps": 29.7,
+            "p50FrameMs": 33.3,
+            "p95FrameMs": 35.1,
             "quality": "low",
             "resolution": 0.61,
             "targetFps": 30,
@@ -1338,9 +1422,9 @@
           },
           {
             "frames": 59,
-            "fps": 29.1,
-            "p50FrameMs": 33.6,
-            "p95FrameMs": 48.7,
+            "fps": 29.5,
+            "p50FrameMs": 33.4,
+            "p95FrameMs": 34.6,
             "quality": "low",
             "resolution": 0.61,
             "targetFps": 30,
@@ -1350,8 +1434,8 @@
           {
             "frames": 89,
             "fps": 29.5,
-            "p50FrameMs": 33.4,
-            "p95FrameMs": 35.3,
+            "p50FrameMs": 33.2,
+            "p95FrameMs": 35,
             "quality": "low",
             "resolution": 0.61,
             "targetFps": 30,
@@ -1361,7 +1445,7 @@
           {
             "frames": 119,
             "fps": 29.5,
-            "p50FrameMs": 33.3,
+            "p50FrameMs": 33.4,
             "p95FrameMs": 34.4,
             "quality": "low",
             "resolution": 0.61,
@@ -1370,10 +1454,10 @@
             "bufferWidth": 366
           },
           {
-            "frames": 149,
-            "fps": 29.5,
+            "frames": 148,
+            "fps": 29,
             "p50FrameMs": 33.4,
-            "p95FrameMs": 34.3,
+            "p95FrameMs": 49.8,
             "quality": "low",
             "resolution": 0.61,
             "targetFps": 30,
@@ -1381,10 +1465,10 @@
             "bufferWidth": 366
           },
           {
-            "frames": 179,
+            "frames": 178,
             "fps": 29.5,
-            "p50FrameMs": 33.3,
-            "p95FrameMs": 34.5,
+            "p50FrameMs": 33.5,
+            "p95FrameMs": 35.1,
             "quality": "low",
             "resolution": 0.61,
             "targetFps": 30,
@@ -1393,41 +1477,42 @@
           }
         ],
         "observation": {
-          "lcpMs": 316,
+          "lcpMs": 380,
           "cls": 0,
           "longTasks": [
-            79
+            53,
+            83
           ],
           "events": [
             {
               "name": "pointerdown",
               "durationMs": 32,
-              "processingDelayMs": 23.899999976158142
+              "processingDelayMs": 25.600000023841858
             },
             {
               "name": "pointerup",
               "durationMs": 32,
-              "processingDelayMs": 24.399999976158142
+              "processingDelayMs": 26.100000023841858
             },
             {
               "name": "click",
               "durationMs": 32,
-              "processingDelayMs": 25.199999928474426
+              "processingDelayMs": 27
             },
             {
               "name": "pointerdown",
               "durationMs": 32,
-              "processingDelayMs": 0.8999999761581421
+              "processingDelayMs": 1
             },
             {
               "name": "pointerup",
               "durationMs": 32,
-              "processingDelayMs": 1.2999999523162842
+              "processingDelayMs": 1.4000000953674316
             },
             {
               "name": "click",
               "durationMs": 32,
-              "processingDelayMs": 1.5
+              "processingDelayMs": 1.600000023841858
             }
           ],
           "resources": [
@@ -1435,144 +1520,156 @@
               "name": "orb-poster-v2.webp",
               "transferBytes": 98476,
               "decodedBytes": 98378,
-              "durationMs": 4.799999952316284
+              "durationMs": 7.100000023841858
             },
             {
               "name": "cormorant-latin.woff2",
               "transferBytes": 37973,
               "decodedBytes": 37640,
-              "durationMs": 8.700000047683716
+              "durationMs": 11.5
             },
             {
-              "name": "index-Co30Rqry.css",
-              "transferBytes": 8646,
-              "decodedBytes": 34082,
-              "durationMs": 12.899999976158142
+              "name": "index-BpIeQWXP.css",
+              "transferBytes": 12810,
+              "decodedBytes": 53699,
+              "durationMs": 11
             },
             {
               "name": "cormorant-italic-latin.woff2",
               "transferBytes": 39593,
               "decodedBytes": 39260,
-              "durationMs": 11
+              "durationMs": 11.399999976158142
             },
             {
-              "name": "index-CE-yL4qh.js",
-              "transferBytes": 74546,
-              "decodedBytes": 252076,
-              "durationMs": 15.899999976158142
+              "name": "index-CP8YX0YK.js",
+              "transferBytes": 88033,
+              "decodedBytes": 291866,
+              "durationMs": 17.299999952316284
             },
             {
               "name": "fate_atmosphere.webp",
               "transferBytes": 15056,
               "decodedBytes": 14854,
-              "durationMs": 2.399999976158142
+              "durationMs": 2.5
             },
             {
               "name": "inter-latin.woff2",
               "transferBytes": 48549,
               "decodedBytes": 48256,
-              "durationMs": 33.90000009536743
+              "durationMs": 48.299999952316284
             },
             {
               "name": "fate_sigil.svg",
               "transferBytes": 1174,
               "decodedBytes": 874,
-              "durationMs": 6.100000023841858
+              "durationMs": 7.5
             },
             {
-              "name": "major-18-360.webp",
-              "transferBytes": 80272,
-              "decodedBytes": 79924,
-              "durationMs": 11
-            },
-            {
-              "name": "Orb-mwdLWlAy.js",
-              "transferBytes": 1111,
+              "name": "Orb-Ci_HxnCY.js",
+              "transferBytes": 1115,
               "decodedBytes": 1586,
-              "durationMs": 7.800000071525574
+              "durationMs": 9.700000047683716
             },
             {
               "name": "major-17-360.webp",
               "transferBytes": 76864,
               "decodedBytes": 76516,
-              "durationMs": 8.600000023841858
+              "durationMs": 12.200000047683716
+            },
+            {
+              "name": "major-18-360.webp",
+              "transferBytes": 80272,
+              "decodedBytes": 79924,
+              "durationMs": 12.600000023841858
+            },
+            {
+              "name": "gallery-hall-v1.webp",
+              "transferBytes": 179297,
+              "decodedBytes": 178914,
+              "durationMs": 24.100000023841858
+            },
+            {
+              "name": "number-dial-v1.webp",
+              "transferBytes": 287137,
+              "decodedBytes": 287020,
+              "durationMs": 25.200000047683716
             },
             {
               "name": "health",
               "transferBytes": 370,
               "decodedBytes": 70,
-              "durationMs": 2.8000000715255737
+              "durationMs": 4.399999976158142
             },
             {
-              "name": "createOrbScene-BqCh3WCc.js",
-              "transferBytes": 94007,
-              "decodedBytes": 303725,
-              "durationMs": 11.199999928474426
+              "name": "createOrbScene-CFgH4Kqn.js",
+              "transferBytes": 93826,
+              "decodedBytes": 303189,
+              "durationMs": 9.099999904632568
             },
             {
-              "name": "WebGLRenderer-BFvwUOWM.js",
+              "name": "RenderTargetSystem-DjucKCAH.js",
+              "transferBytes": 13196,
+              "decodedBytes": 46728,
+              "durationMs": 7.700000047683716
+            },
+            {
+              "name": "WebGLRenderer-BDwcwLIN.js",
               "transferBytes": 14857,
               "decodedBytes": 52609,
-              "durationMs": 5.600000023841858
+              "durationMs": 7.5
             },
             {
-              "name": "GpuStencilModesToPixi-CVQ9pqZm.js",
+              "name": "GpuStencilModesToPixi-CYUrSN58.js",
               "transferBytes": 1369,
               "decodedBytes": 3293,
-              "durationMs": 7
-            },
-            {
-              "name": "RenderTargetSystem-BkdUowcZ.js",
-              "transferBytes": 13197,
-              "decodedBytes": 46728,
-              "durationMs": 7
+              "durationMs": 8.600000023841858
             },
             {
               "name": "fate_orrery.svg",
               "transferBytes": 825,
               "decodedBytes": 1125,
-              "durationMs": 5.399999976158142
+              "durationMs": 6.899999976158142
             },
             {
               "name": "nebula-v1.webp",
               "transferBytes": 25484,
               "decodedBytes": 25156,
-              "durationMs": 4.5
+              "durationMs": 6.5
             },
             {
-              "name": "browserAll-DgrVqBKU.js",
+              "name": "browserAll-0Rzuu9VJ.js",
               "transferBytes": 11719,
               "decodedBytes": 43093,
-              "durationMs": 4.699999928474426
+              "durationMs": 4.799999952316284
             },
             {
-              "name": "CanvasPool-DnlM-N_W.js",
+              "name": "CanvasPool-BnaeflFk.js",
               "transferBytes": 1091,
               "decodedBytes": 791,
-              "durationMs": 4.700000047683716
+              "durationMs": 3.8000000715255737
             },
             {
-              "name": "canvasUtils-DdhQvE1o.js",
-              "transferBytes": 2094,
+              "name": "canvasUtils-DkTgjLbS.js",
+              "transferBytes": 2096,
               "decodedBytes": 5686,
-              "durationMs": 4.700000047683716
+              "durationMs": 4.600000023841858
             },
             {
-              "name": "webworkerAll-Be6pxZZ0.js",
-              "transferBytes": 5373,
+              "name": "webworkerAll-CNqJM0Vf.js",
+              "transferBytes": 5374,
               "decodedBytes": 15813,
-              "durationMs": 4.800000071525574
+              "durationMs": 4.700000047683716
             },
             {
               "name": "card-back-360.webp",
               "transferBytes": 64336,
               "decodedBytes": 63998,
-              "durationMs": 3.799999952316284
+              "durationMs": 4
             }
           ],
           "heap": {
             "usedBytes": 10000000,
-            "totalBytes": 10000000
+            "totalBytes": 14300000
           }
         }
       },
@@ -1592,10 +1689,10 @@
         },
         "windows": [
           {
-            "frames": 39,
-            "fps": 42.1,
-            "p50FrameMs": 23.2,
-            "p95FrameMs": 28,
+            "frames": 36,
+            "fps": 38.5,
+            "p50FrameMs": 25.6,
+            "p95FrameMs": 29.9,
             "quality": "cinematic",
             "resolution": 1.0675,
             "targetFps": 60,
@@ -1603,10 +1700,10 @@
             "bufferWidth": 640
           },
           {
-            "frames": 85,
-            "fps": 45.9,
-            "p50FrameMs": 21.5,
-            "p95FrameMs": 24.5,
+            "frames": 79,
+            "fps": 42.2,
+            "p50FrameMs": 23.6,
+            "p95FrameMs": 26.6,
             "quality": "cinematic",
             "resolution": 1.0675,
             "targetFps": 60,
@@ -1614,10 +1711,10 @@
             "bufferWidth": 640
           },
           {
-            "frames": 132,
-            "fps": 46.9,
-            "p50FrameMs": 21.2,
-            "p95FrameMs": 22.3,
+            "frames": 123,
+            "fps": 43.1,
+            "p50FrameMs": 23.3,
+            "p95FrameMs": 24.7,
             "quality": "cinematic",
             "resolution": 1.0675,
             "targetFps": 60,
@@ -1625,32 +1722,32 @@
             "bufferWidth": 640
           },
           {
-            "frames": 192,
-            "fps": 59.3,
+            "frames": 183,
+            "fps": 59.2,
+            "p50FrameMs": 16.7,
+            "p95FrameMs": 17.9,
+            "quality": "balanced",
+            "resolution": 0.7625,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 458
+          },
+          {
+            "frames": 241,
+            "fps": 57.9,
+            "p50FrameMs": 16.7,
+            "p95FrameMs": 20.3,
+            "quality": "balanced",
+            "resolution": 0.7625,
+            "targetFps": 60,
+            "logicalSize": 600,
+            "bufferWidth": 458
+          },
+          {
+            "frames": 301,
+            "fps": 59.1,
             "p50FrameMs": 16.6,
-            "p95FrameMs": 19.4,
-            "quality": "balanced",
-            "resolution": 0.7625,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 458
-          },
-          {
-            "frames": 251,
-            "fps": 58,
-            "p50FrameMs": 16.7,
-            "p95FrameMs": 18.9,
-            "quality": "balanced",
-            "resolution": 0.7625,
-            "targetFps": 60,
-            "logicalSize": 600,
-            "bufferWidth": 458
-          },
-          {
-            "frames": 310,
-            "fps": 59,
-            "p50FrameMs": 16.7,
-            "p95FrameMs": 18.6,
+            "p95FrameMs": 20.9,
             "quality": "balanced",
             "resolution": 0.7625,
             "targetFps": 60,
@@ -1659,44 +1756,44 @@
           }
         ],
         "observation": {
-          "lcpMs": 1892,
+          "lcpMs": 2196,
           "cls": 0,
           "longTasks": [
-            138,
-            134,
-            86,
-            57
+            290,
+            124,
+            93,
+            59
           ],
           "events": [
             {
               "name": "pointerdown",
-              "durationMs": 96,
-              "processingDelayMs": 66
+              "durationMs": 104,
+              "processingDelayMs": 78.29999995231628
             },
             {
               "name": "pointerup",
-              "durationMs": 96,
-              "processingDelayMs": 68.29999995231628
+              "durationMs": 104,
+              "processingDelayMs": 80.5
             },
             {
               "name": "click",
-              "durationMs": 96,
-              "processingDelayMs": 72.29999995231628
+              "durationMs": 104,
+              "processingDelayMs": 85.39999997615814
             },
             {
               "name": "pointerdown",
-              "durationMs": 56,
-              "processingDelayMs": 21.300000071525574
+              "durationMs": 64,
+              "processingDelayMs": 22.899999976158142
             },
             {
               "name": "pointerup",
-              "durationMs": 56,
-              "processingDelayMs": 24.200000047683716
+              "durationMs": 64,
+              "processingDelayMs": 28.09999990463257
             },
             {
               "name": "click",
-              "durationMs": 56,
-              "processingDelayMs": 25.799999952316284
+              "durationMs": 64,
+              "processingDelayMs": 30.09999990463257
             }
           ],
           "resources": [
@@ -1704,183 +1801,1839 @@
               "name": "orb-poster-v2.webp",
               "transferBytes": 98476,
               "decodedBytes": 98378,
-              "durationMs": 1434.5
+              "durationMs": 1495.6999999284744
             },
             {
               "name": "cormorant-latin.woff2",
               "transferBytes": 37973,
               "decodedBytes": 37640,
-              "durationMs": 947
+              "durationMs": 939.6000000238419
             },
             {
               "name": "cormorant-italic-latin.woff2",
               "transferBytes": 39593,
               "decodedBytes": 39260,
-              "durationMs": 977.6000000238419
+              "durationMs": 977
             },
             {
-              "name": "index-CE-yL4qh.js",
-              "transferBytes": 74546,
-              "decodedBytes": 252076,
-              "durationMs": 1309
+              "name": "index-CP8YX0YK.js",
+              "transferBytes": 88033,
+              "decodedBytes": 291866,
+              "durationMs": 1448.5
             },
             {
-              "name": "index-Co30Rqry.css",
-              "transferBytes": 8646,
-              "decodedBytes": 34082,
-              "durationMs": 409.89999997615814
+              "name": "index-BpIeQWXP.css",
+              "transferBytes": 12810,
+              "decodedBytes": 53699,
+              "durationMs": 462.89999997615814
             },
             {
               "name": "fate_atmosphere.webp",
               "transferBytes": 15056,
               "decodedBytes": 14854,
-              "durationMs": 252.10000002384186
-            },
-            {
-              "name": "inter-latin.woff2",
-              "transferBytes": 48549,
-              "decodedBytes": 48256,
-              "durationMs": 1178.3000000715256
-            },
-            {
-              "name": "Orb-mwdLWlAy.js",
-              "transferBytes": 1111,
-              "decodedBytes": 1586,
-              "durationMs": 194
-            },
-            {
-              "name": "fate_sigil.svg",
-              "transferBytes": 1174,
-              "decodedBytes": 874,
-              "durationMs": 171.60000002384186
-            },
-            {
-              "name": "major-18-360.webp",
-              "transferBytes": 80272,
-              "decodedBytes": 79924,
-              "durationMs": 1497.3000000715256
-            },
-            {
-              "name": "major-17-360.webp",
-              "transferBytes": 76864,
-              "decodedBytes": 76516,
-              "durationMs": 1470.3000000715256
-            },
-            {
-              "name": "health",
-              "transferBytes": 370,
-              "decodedBytes": 70,
-              "durationMs": 280.8000000715256
-            },
-            {
-              "name": "createOrbScene-BqCh3WCc.js",
-              "transferBytes": 94007,
-              "decodedBytes": 303725,
-              "durationMs": 1409.7999999523163
-            },
-            {
-              "name": "WebGLRenderer-BFvwUOWM.js",
-              "transferBytes": 14857,
-              "decodedBytes": 52609,
-              "durationMs": 404.1999999284744
-            },
-            {
-              "name": "GpuStencilModesToPixi-CVQ9pqZm.js",
-              "transferBytes": 1369,
-              "decodedBytes": 3293,
-              "durationMs": 208.10000002384186
-            },
-            {
-              "name": "RenderTargetSystem-BkdUowcZ.js",
-              "transferBytes": 13197,
-              "decodedBytes": 46728,
-              "durationMs": 386.3000000715256
-            },
-            {
-              "name": "fate_orrery.svg",
-              "transferBytes": 825,
-              "decodedBytes": 1125,
-              "durationMs": 180.20000004768372
+              "durationMs": 325.6999999284744
             },
             {
               "name": "nebula-v1.webp",
               "transferBytes": 25484,
               "decodedBytes": 25156,
-              "durationMs": 441.2999999523163
+              "durationMs": 371.10000002384186
             },
             {
-              "name": "browserAll-DgrVqBKU.js",
+              "name": "inter-latin.woff2",
+              "transferBytes": 48549,
+              "decodedBytes": 48256,
+              "durationMs": 1740.7999999523163
+            },
+            {
+              "name": "Orb-Ci_HxnCY.js",
+              "transferBytes": 1115,
+              "decodedBytes": 1586,
+              "durationMs": 182.20000004768372
+            },
+            {
+              "name": "fate_sigil.svg",
+              "transferBytes": 1174,
+              "decodedBytes": 874,
+              "durationMs": 166.79999995231628
+            },
+            {
+              "name": "major-18-360.webp",
+              "transferBytes": 80272,
+              "decodedBytes": 79924,
+              "durationMs": 2070.600000023842
+            },
+            {
+              "name": "major-17-360.webp",
+              "transferBytes": 76864,
+              "decodedBytes": 76516,
+              "durationMs": 2063.899999976158
+            },
+            {
+              "name": "number-dial-v1.webp",
+              "transferBytes": 287137,
+              "decodedBytes": 287020,
+              "durationMs": 4129.099999904633
+            },
+            {
+              "name": "gallery-hall-v1.webp",
+              "transferBytes": 179297,
+              "decodedBytes": 178914,
+              "durationMs": 3602.100000023842
+            },
+            {
+              "name": "health",
+              "transferBytes": 370,
+              "decodedBytes": 70,
+              "durationMs": 275
+            },
+            {
+              "name": "createOrbScene-CFgH4Kqn.js",
+              "transferBytes": 93826,
+              "decodedBytes": 303189,
+              "durationMs": 2356.899999976158
+            },
+            {
+              "name": "WebGLRenderer-BDwcwLIN.js",
+              "transferBytes": 14857,
+              "decodedBytes": 52609,
+              "durationMs": 480.1999999284744
+            },
+            {
+              "name": "GpuStencilModesToPixi-CYUrSN58.js",
+              "transferBytes": 1369,
+              "decodedBytes": 3293,
+              "durationMs": 209.29999995231628
+            },
+            {
+              "name": "RenderTargetSystem-DjucKCAH.js",
+              "transferBytes": 13196,
+              "decodedBytes": 46728,
+              "durationMs": 463.5
+            },
+            {
+              "name": "fate_orrery.svg",
+              "transferBytes": 825,
+              "decodedBytes": 1125,
+              "durationMs": 183.20000004768372
+            },
+            {
+              "name": "nebula-v1.webp",
+              "transferBytes": 0,
+              "decodedBytes": 25156,
+              "durationMs": 0.7999999523162842
+            },
+            {
+              "name": "browserAll-0Rzuu9VJ.js",
               "transferBytes": 11719,
               "decodedBytes": 43093,
-              "durationMs": 275.7000000476837
+              "durationMs": 379.7000000476837
             },
             {
-              "name": "webworkerAll-Be6pxZZ0.js",
-              "transferBytes": 5373,
+              "name": "webworkerAll-CNqJM0Vf.js",
+              "transferBytes": 5374,
               "decodedBytes": 15813,
-              "durationMs": 242.60000002384186
+              "durationMs": 263.2999999523163
             },
             {
-              "name": "canvasUtils-DdhQvE1o.js",
-              "transferBytes": 2094,
+              "name": "canvasUtils-DkTgjLbS.js",
+              "transferBytes": 2096,
               "decodedBytes": 5686,
-              "durationMs": 209.5
+              "durationMs": 214.5
             },
             {
-              "name": "CanvasPool-DnlM-N_W.js",
+              "name": "CanvasPool-BnaeflFk.js",
               "transferBytes": 1091,
               "decodedBytes": 791,
-              "durationMs": 177.5
+              "durationMs": 198
             },
             {
               "name": "card-back-360.webp",
               "transferBytes": 64336,
               "decodedBytes": 63998,
-              "durationMs": 469.90000009536743
+              "durationMs": 494.3000000715256
             }
           ],
           "heap": {
-            "usedBytes": 10000000,
-            "totalBytes": 10600000
+            "usedBytes": 10600000,
+            "totalBytes": 16100000
           }
         }
       }
     ]
   },
-  "cleanup_recheck": {
-    "scope": "Final early-abort resource-release refinement: initial reduced motion / rapid navigation and low-power / pause groups rechecked after the complete 13-group pass",
-    "passed": true,
-    "groups": 2,
-    "output": "\n> fate-living-oracle@1.0.0 test:e2e\n> playwright test --grep initial reduced motion|low-power policy --reporter=line\n\n\n[WebServer] INFO:     Started server process [33636]\n[WebServer] INFO:     Waiting for application startup.\n[WebServer] INFO:     Application startup complete.\n[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8010 (Press CTRL+C to quit)\n\n\nRunning 2 tests using 1 worker\n\n(node:7148) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n\n[1/2] e2e\\polish.spec.ts:4:1 \u203a initial reduced motion avoids Pixi, preference can resume, rapid navigation cleans up\n[2/2] e2e\\polish.spec.ts:40:1 \u203a low-power policy, pixel allocation and pause actually stop the rendered frames\n  2 passed (15.9s)\n"
+  "numerology_performance": {
+    "date": "2026-11-19",
+    "browserVersion": "158.0.8127.18",
+    "timingDefinitions": {
+      "roomReadyMs": "Start of automated room click to visible input form, including actionability/route work",
+      "responseMs": "Start of automated submit click to response headers, including scrolling/actionability/network; not isolated engine CPU time"
+    },
+    "scope": "Local Chromium emulation. RAF callback cadence observes main-thread scheduling, not hardware-presented compositor FPS or field INP. No physical-device or battery certification.",
+    "profiles": [
+      {
+        "profile": {
+          "name": "mobile",
+          "width": 390,
+          "height": 844,
+          "dpr": 2
+        },
+        "roomReadyMs": 971,
+        "responseMs": 52,
+        "actualExpression": 9,
+        "metrics": {
+          "cls": 0,
+          "longTasks": [
+            55
+          ],
+          "lcp": 140,
+          "raf": {
+            "frames": 358,
+            "meanFps": 60.00167602446988,
+            "p50Ms": 16.699999999999818,
+            "p95Ms": 16.700000000000728,
+            "maxMs": 16.800000000000182
+          },
+          "dial": {
+            "renderer": "layered-compositor",
+            "quality": "cinematic",
+            "renderState": "running",
+            "targetFps": "60",
+            "width": 265,
+            "layers": 84
+          },
+          "heap": {
+            "usedBytes": 10000000,
+            "totalBytes": 11900000
+          },
+          "resources": [
+            {
+              "name": "/art/orb-poster-v2.webp",
+              "transferBytes": 98476,
+              "durationMs": 7.700000047683716
+            },
+            {
+              "name": "/assets/index-BpIeQWXP.css",
+              "transferBytes": 12810,
+              "durationMs": 11.600000023841858
+            },
+            {
+              "name": "/fonts/cormorant-italic-latin.woff2",
+              "transferBytes": 39593,
+              "durationMs": 11.899999976158142
+            },
+            {
+              "name": "/assets/index-CP8YX0YK.js",
+              "transferBytes": 88033,
+              "durationMs": 17.299999952316284
+            },
+            {
+              "name": "/fonts/cormorant-latin.woff2",
+              "transferBytes": 37973,
+              "durationMs": 12.100000023841858
+            },
+            {
+              "name": "/art/fate_atmosphere.webp",
+              "transferBytes": 15056,
+              "durationMs": 3
+            },
+            {
+              "name": "/art/nebula-v1.webp",
+              "transferBytes": 25484,
+              "durationMs": 2.799999952316284
+            },
+            {
+              "name": "/fonts/inter-latin.woff2",
+              "transferBytes": 48549,
+              "durationMs": 48.89999997615814
+            },
+            {
+              "name": "/art/deck/pam-a-v1/major-17-360.webp",
+              "transferBytes": 76864,
+              "durationMs": 10.5
+            },
+            {
+              "name": "/art/fate_sigil.svg",
+              "transferBytes": 1174,
+              "durationMs": 9.200000047683716
+            },
+            {
+              "name": "/art/deck/pam-a-v1/major-18-360.webp",
+              "transferBytes": 80272,
+              "durationMs": 12.5
+            },
+            {
+              "name": "/assets/Orb-Ci_HxnCY.js",
+              "transferBytes": 1115,
+              "durationMs": 6.800000071525574
+            },
+            {
+              "name": "/api/health",
+              "transferBytes": 370,
+              "durationMs": 6.599999904632568
+            },
+            {
+              "name": "/art/number-dial-v1.webp",
+              "transferBytes": 287137,
+              "durationMs": 20
+            },
+            {
+              "name": "/art/gallery-hall-v1.webp",
+              "transferBytes": 179297,
+              "durationMs": 16
+            },
+            {
+              "name": "/assets/createOrbScene-CFgH4Kqn.js",
+              "transferBytes": 93826,
+              "durationMs": 11.299999952316284
+            },
+            {
+              "name": "/assets/WebGLRenderer-BDwcwLIN.js",
+              "transferBytes": 14857,
+              "durationMs": 6.5
+            },
+            {
+              "name": "/assets/GpuStencilModesToPixi-CYUrSN58.js",
+              "transferBytes": 1369,
+              "durationMs": 6.5
+            },
+            {
+              "name": "/assets/RenderTargetSystem-DjucKCAH.js",
+              "transferBytes": 13196,
+              "durationMs": 6.899999976158142
+            },
+            {
+              "name": "/art/fate_orrery.svg",
+              "transferBytes": 825,
+              "durationMs": 6.399999976158142
+            },
+            {
+              "name": "/art/nebula-v1.webp",
+              "transferBytes": 0,
+              "durationMs": 0.6000000238418579
+            },
+            {
+              "name": "/assets/NumerologyScreen-DaHElBbo.js",
+              "transferBytes": 5518,
+              "durationMs": 5.5
+            },
+            {
+              "name": "/assets/browserAll-0Rzuu9VJ.js",
+              "transferBytes": 11719,
+              "durationMs": 6.700000047683716
+            },
+            {
+              "name": "/assets/webworkerAll-CNqJM0Vf.js",
+              "transferBytes": 5374,
+              "durationMs": 6.699999928474426
+            },
+            {
+              "name": "/assets/canvasUtils-DkTgjLbS.js",
+              "transferBytes": 2096,
+              "durationMs": 7.5
+            },
+            {
+              "name": "/assets/CanvasPool-BnaeflFk.js",
+              "transferBytes": 1091,
+              "durationMs": 5.399999976158142
+            },
+            {
+              "name": "/api/numerology",
+              "transferBytes": 2381,
+              "durationMs": 2.700000047683716
+            }
+          ],
+          "canvases": 0,
+          "capabilities": {
+            "cores": 24,
+            "memoryGiB": 32,
+            "dpr": 2,
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36"
+          }
+        }
+      },
+      {
+        "profile": {
+          "name": "desktop",
+          "width": 1440,
+          "height": 1000,
+          "dpr": 1
+        },
+        "roomReadyMs": 940,
+        "responseMs": 55,
+        "actualExpression": 9,
+        "metrics": {
+          "cls": 0,
+          "longTasks": [
+            54
+          ],
+          "lcp": 140,
+          "raf": {
+            "frames": 358,
+            "meanFps": 60.0016760244698,
+            "p50Ms": 16.699999999999818,
+            "p95Ms": 16.800000000000182,
+            "maxMs": 16.800000000000182
+          },
+          "dial": {
+            "renderer": "layered-compositor",
+            "quality": "cinematic",
+            "renderState": "running",
+            "targetFps": "60",
+            "width": 520,
+            "layers": 84
+          },
+          "heap": {
+            "usedBytes": 10000000,
+            "totalBytes": 11900000
+          },
+          "resources": [
+            {
+              "name": "/art/orb-poster-v2.webp",
+              "transferBytes": 98476,
+              "durationMs": 4.800000071525574
+            },
+            {
+              "name": "/fonts/cormorant-latin.woff2",
+              "transferBytes": 37973,
+              "durationMs": 9.399999976158142
+            },
+            {
+              "name": "/assets/index-BpIeQWXP.css",
+              "transferBytes": 12810,
+              "durationMs": 9.399999976158142
+            },
+            {
+              "name": "/fonts/cormorant-italic-latin.woff2",
+              "transferBytes": 39593,
+              "durationMs": 7.799999952316284
+            },
+            {
+              "name": "/assets/index-CP8YX0YK.js",
+              "transferBytes": 88033,
+              "durationMs": 16
+            },
+            {
+              "name": "/art/fate_atmosphere.webp",
+              "transferBytes": 15056,
+              "durationMs": 3.100000023841858
+            },
+            {
+              "name": "/art/nebula-v1.webp",
+              "transferBytes": 25484,
+              "durationMs": 2.8000000715255737
+            },
+            {
+              "name": "/fonts/inter-latin.woff2",
+              "transferBytes": 48549,
+              "durationMs": 53.799999952316284
+            },
+            {
+              "name": "/assets/Orb-Ci_HxnCY.js",
+              "transferBytes": 1115,
+              "durationMs": 10.5
+            },
+            {
+              "name": "/art/fate_sigil.svg",
+              "transferBytes": 1174,
+              "durationMs": 10.5
+            },
+            {
+              "name": "/art/deck/pam-a-v1/major-17-360.webp",
+              "transferBytes": 76864,
+              "durationMs": 15.699999928474426
+            },
+            {
+              "name": "/art/deck/pam-a-v1/major-18-360.webp",
+              "transferBytes": 80272,
+              "durationMs": 15.899999976158142
+            },
+            {
+              "name": "/art/number-dial-480.webp",
+              "transferBytes": 72394,
+              "durationMs": 16.300000071525574
+            },
+            {
+              "name": "/art/gallery-hall-v1.webp",
+              "transferBytes": 179297,
+              "durationMs": 20.600000023841858
+            },
+            {
+              "name": "/api/health",
+              "transferBytes": 370,
+              "durationMs": 8.100000023841858
+            },
+            {
+              "name": "/assets/createOrbScene-CFgH4Kqn.js",
+              "transferBytes": 93826,
+              "durationMs": 10.100000023841858
+            },
+            {
+              "name": "/assets/NumerologyScreen-DaHElBbo.js",
+              "transferBytes": 5518,
+              "durationMs": 3.899999976158142
+            },
+            {
+              "name": "/assets/WebGLRenderer-BDwcwLIN.js",
+              "transferBytes": 14857,
+              "durationMs": 8.5
+            },
+            {
+              "name": "/assets/RenderTargetSystem-DjucKCAH.js",
+              "transferBytes": 13196,
+              "durationMs": 5.399999976158142
+            },
+            {
+              "name": "/assets/GpuStencilModesToPixi-CYUrSN58.js",
+              "transferBytes": 1369,
+              "durationMs": 8.5
+            },
+            {
+              "name": "/art/fate_orrery.svg",
+              "transferBytes": 825,
+              "durationMs": 5.399999976158142
+            },
+            {
+              "name": "/art/nebula-v1.webp",
+              "transferBytes": 0,
+              "durationMs": 0.5999999046325684
+            },
+            {
+              "name": "/assets/browserAll-0Rzuu9VJ.js",
+              "transferBytes": 11719,
+              "durationMs": 5.800000071525574
+            },
+            {
+              "name": "/assets/webworkerAll-CNqJM0Vf.js",
+              "transferBytes": 5374,
+              "durationMs": 4.600000023841858
+            },
+            {
+              "name": "/assets/canvasUtils-DkTgjLbS.js",
+              "transferBytes": 2096,
+              "durationMs": 5.399999976158142
+            },
+            {
+              "name": "/assets/CanvasPool-BnaeflFk.js",
+              "transferBytes": 1091,
+              "durationMs": 4.5
+            },
+            {
+              "name": "/api/numerology",
+              "transferBytes": 2382,
+              "durationMs": 3.5
+            }
+          ],
+          "canvases": 0,
+          "capabilities": {
+            "cores": 24,
+            "memoryGiB": 32,
+            "dpr": 1,
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36"
+          }
+        }
+      },
+      {
+        "profile": {
+          "name": "low-capability",
+          "width": 390,
+          "height": 844,
+          "dpr": 2,
+          "low": true
+        },
+        "roomReadyMs": 930,
+        "responseMs": 57,
+        "actualExpression": 9,
+        "metrics": {
+          "cls": 0,
+          "longTasks": [
+            53
+          ],
+          "lcp": 164,
+          "raf": {
+            "frames": 358,
+            "meanFps": 60.00268168409754,
+            "p50Ms": 16.699999999999818,
+            "p95Ms": 16.799999999999272,
+            "maxMs": 16.800000000000182
+          },
+          "dial": {
+            "renderer": "layered-compositor",
+            "quality": "low",
+            "renderState": "running",
+            "targetFps": "30",
+            "width": 265,
+            "layers": 84
+          },
+          "heap": {
+            "usedBytes": 10000000,
+            "totalBytes": 10000000
+          },
+          "resources": [
+            {
+              "name": "/art/orb-poster-v2.webp",
+              "transferBytes": 98476,
+              "durationMs": 7.200000047683716
+            },
+            {
+              "name": "/fonts/cormorant-italic-latin.woff2",
+              "transferBytes": 39593,
+              "durationMs": 10.399999976158142
+            },
+            {
+              "name": "/fonts/cormorant-latin.woff2",
+              "transferBytes": 37973,
+              "durationMs": 12.100000023841858
+            },
+            {
+              "name": "/assets/index-CP8YX0YK.js",
+              "transferBytes": 88033,
+              "durationMs": 16.800000071525574
+            },
+            {
+              "name": "/assets/index-BpIeQWXP.css",
+              "transferBytes": 12810,
+              "durationMs": 11.899999976158142
+            },
+            {
+              "name": "/art/fate_atmosphere.webp",
+              "transferBytes": 15056,
+              "durationMs": 2.799999952316284
+            },
+            {
+              "name": "/fonts/inter-latin.woff2",
+              "transferBytes": 48549,
+              "durationMs": 69.10000002384186
+            },
+            {
+              "name": "/assets/Orb-Ci_HxnCY.js",
+              "transferBytes": 1115,
+              "durationMs": 28.5
+            },
+            {
+              "name": "/art/deck/pam-a-v1/major-18-360.webp",
+              "transferBytes": 80272,
+              "durationMs": 30.200000047683716
+            },
+            {
+              "name": "/art/deck/pam-a-v1/major-17-360.webp",
+              "transferBytes": 76864,
+              "durationMs": 31.100000023841858
+            },
+            {
+              "name": "/art/fate_sigil.svg",
+              "transferBytes": 1174,
+              "durationMs": 31.200000047683716
+            },
+            {
+              "name": "/art/number-dial-v1.webp",
+              "transferBytes": 287137,
+              "durationMs": 35.300000071525574
+            },
+            {
+              "name": "/art/gallery-hall-v1.webp",
+              "transferBytes": 179297,
+              "durationMs": 36.39999997615814
+            },
+            {
+              "name": "/api/health",
+              "transferBytes": 370,
+              "durationMs": 23
+            },
+            {
+              "name": "/assets/NumerologyScreen-DaHElBbo.js",
+              "transferBytes": 5518,
+              "durationMs": 2.6999999284744263
+            },
+            {
+              "name": "/api/numerology",
+              "transferBytes": 2381,
+              "durationMs": 2.9000000953674316
+            }
+          ],
+          "canvases": 0,
+          "capabilities": {
+            "cores": 4,
+            "memoryGiB": 4,
+            "dpr": 2,
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36"
+          }
+        }
+      },
+      {
+        "profile": {
+          "name": "mobile-4x-1.6Mbps",
+          "width": 390,
+          "height": 844,
+          "dpr": 2,
+          "throttle": true
+        },
+        "roomReadyMs": 1254,
+        "responseMs": 290,
+        "actualExpression": 9,
+        "metrics": {
+          "cls": 0,
+          "longTasks": [
+            269
+          ],
+          "lcp": 2120,
+          "raf": {
+            "frames": 358,
+            "meanFps": 60.00268168409762,
+            "p50Ms": 16.699999999999818,
+            "p95Ms": 16.700000000000728,
+            "maxMs": 16.80000000000109
+          },
+          "dial": {
+            "renderer": "layered-compositor",
+            "quality": "cinematic",
+            "renderState": "running",
+            "targetFps": "60",
+            "width": 265,
+            "layers": 84
+          },
+          "heap": {
+            "usedBytes": 10000000,
+            "totalBytes": 10000000
+          },
+          "resources": [
+            {
+              "name": "/art/orb-poster-v2.webp",
+              "transferBytes": 98476,
+              "durationMs": 1564.6999999284744
+            },
+            {
+              "name": "/fonts/cormorant-latin.woff2",
+              "transferBytes": 37973,
+              "durationMs": 1013.1000000238419
+            },
+            {
+              "name": "/fonts/cormorant-italic-latin.woff2",
+              "transferBytes": 39593,
+              "durationMs": 1028.6000000238419
+            },
+            {
+              "name": "/assets/index-CP8YX0YK.js",
+              "transferBytes": 88033,
+              "durationMs": 1512.6000000238419
+            },
+            {
+              "name": "/assets/index-BpIeQWXP.css",
+              "transferBytes": 12810,
+              "durationMs": 482.7000000476837
+            },
+            {
+              "name": "/art/fate_atmosphere.webp",
+              "transferBytes": 15056,
+              "durationMs": 311.89999997615814
+            },
+            {
+              "name": "/art/nebula-v1.webp",
+              "transferBytes": 25484,
+              "durationMs": 370.89999997615814
+            },
+            {
+              "name": "/fonts/inter-latin.woff2",
+              "transferBytes": 48549,
+              "durationMs": 1609.5
+            },
+            {
+              "name": "/assets/Orb-Ci_HxnCY.js",
+              "transferBytes": 1115,
+              "durationMs": 220.59999990463257
+            },
+            {
+              "name": "/art/fate_sigil.svg",
+              "transferBytes": 1174,
+              "durationMs": 186.29999995231628
+            },
+            {
+              "name": "/art/deck/pam-a-v1/major-18-360.webp",
+              "transferBytes": 80272,
+              "durationMs": 1917.8999999761581
+            },
+            {
+              "name": "/art/deck/pam-a-v1/major-17-360.webp",
+              "transferBytes": 76864,
+              "durationMs": 1886.2999999523163
+            },
+            {
+              "name": "/art/number-dial-v1.webp",
+              "transferBytes": 287137,
+              "durationMs": 3598
+            },
+            {
+              "name": "/art/gallery-hall-v1.webp",
+              "transferBytes": 179297,
+              "durationMs": 3079.899999976158
+            },
+            {
+              "name": "/api/health",
+              "transferBytes": 370,
+              "durationMs": 276.60000002384186
+            },
+            {
+              "name": "/assets/NumerologyScreen-DaHElBbo.js",
+              "transferBytes": 5518,
+              "durationMs": 305.7999999523163
+            },
+            {
+              "name": "/api/numerology",
+              "transferBytes": 2383,
+              "durationMs": 266.10000002384186
+            }
+          ],
+          "canvases": 0,
+          "capabilities": {
+            "cores": 24,
+            "memoryGiB": 32,
+            "dpr": 2,
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36"
+          }
+        }
+      },
+      {
+        "profile": {
+          "name": "reduced-motion",
+          "width": 390,
+          "height": 844,
+          "dpr": 2,
+          "reduced": true
+        },
+        "roomReadyMs": 436,
+        "responseMs": 49,
+        "actualExpression": 9,
+        "metrics": {
+          "cls": 0,
+          "longTasks": [
+            51
+          ],
+          "lcp": 160,
+          "raf": {
+            "frames": 358,
+            "meanFps": 60.002681684097574,
+            "p50Ms": 16.699999999999818,
+            "p95Ms": 16.700000000000728,
+            "maxMs": 16.800000000000182
+          },
+          "dial": {
+            "renderer": "layered-compositor",
+            "quality": "cinematic",
+            "renderState": "paused",
+            "targetFps": "60",
+            "width": 265,
+            "layers": 84
+          },
+          "heap": {
+            "usedBytes": 10000000,
+            "totalBytes": 10000000
+          },
+          "resources": [
+            {
+              "name": "/art/orb-poster-v2.webp",
+              "transferBytes": 98476,
+              "durationMs": 6.700000047683716
+            },
+            {
+              "name": "/fonts/cormorant-italic-latin.woff2",
+              "transferBytes": 39593,
+              "durationMs": 11.399999976158142
+            },
+            {
+              "name": "/fonts/cormorant-latin.woff2",
+              "transferBytes": 37973,
+              "durationMs": 11.5
+            },
+            {
+              "name": "/assets/index-BpIeQWXP.css",
+              "transferBytes": 12810,
+              "durationMs": 11
+            },
+            {
+              "name": "/assets/index-CP8YX0YK.js",
+              "transferBytes": 88033,
+              "durationMs": 16
+            },
+            {
+              "name": "/art/fate_atmosphere.webp",
+              "transferBytes": 15056,
+              "durationMs": 2.9000000953674316
+            },
+            {
+              "name": "/art/nebula-v1.webp",
+              "transferBytes": 25484,
+              "durationMs": 2.700000047683716
+            },
+            {
+              "name": "/fonts/inter-latin.woff2",
+              "transferBytes": 48549,
+              "durationMs": 43.89999997615814
+            },
+            {
+              "name": "/assets/Orb-Ci_HxnCY.js",
+              "transferBytes": 1115,
+              "durationMs": 6.199999928474426
+            },
+            {
+              "name": "/art/fate_sigil.svg",
+              "transferBytes": 1174,
+              "durationMs": 6.299999952316284
+            },
+            {
+              "name": "/art/deck/pam-a-v1/major-18-360.webp",
+              "transferBytes": 80272,
+              "durationMs": 10.5
+            },
+            {
+              "name": "/art/deck/pam-a-v1/major-17-360.webp",
+              "transferBytes": 76864,
+              "durationMs": 10.699999928474426
+            },
+            {
+              "name": "/api/health",
+              "transferBytes": 370,
+              "durationMs": 4.800000071525574
+            },
+            {
+              "name": "/art/number-dial-v1.webp",
+              "transferBytes": 287137,
+              "durationMs": 15.5
+            },
+            {
+              "name": "/art/gallery-hall-v1.webp",
+              "transferBytes": 179297,
+              "durationMs": 15.600000023841858
+            },
+            {
+              "name": "/assets/NumerologyScreen-DaHElBbo.js",
+              "transferBytes": 5518,
+              "durationMs": 2.5
+            },
+            {
+              "name": "/api/numerology",
+              "transferBytes": 2383,
+              "durationMs": 2.899999976158142
+            }
+          ],
+          "canvases": 0,
+          "capabilities": {
+            "cores": 24,
+            "memoryGiB": 32,
+            "dpr": 2,
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36"
+          }
+        }
+      }
+    ]
   },
+  "numerology_native_evidence": {
+    "scope": "Real browser request and exact native export; public historical example, no private visitor data",
+    "input": {
+      "name": "Ada Lovelace",
+      "birth": "1815-12-10",
+      "target": "2026-11-19",
+      "basis": "birth",
+      "y_roles": ""
+    },
+    "result": {
+      "technique_id": 4,
+      "profile": "decoz-component-reduction",
+      "birth": "1815-12-10",
+      "target": "2026-11-19",
+      "name": {
+        "original": "Ada Lovelace",
+        "basis": "birth",
+        "y_roles": "",
+        "tokens": [
+          {
+            "part": "ADA",
+            "letters": [
+              {
+                "letter": "A",
+                "value": 1,
+                "vowel": true
+              },
+              {
+                "letter": "D",
+                "value": 4,
+                "vowel": false
+              },
+              {
+                "letter": "A",
+                "value": 1,
+                "vowel": true
+              }
+            ]
+          },
+          {
+            "part": "LOVELACE",
+            "letters": [
+              {
+                "letter": "L",
+                "value": 3,
+                "vowel": false
+              },
+              {
+                "letter": "O",
+                "value": 6,
+                "vowel": true
+              },
+              {
+                "letter": "V",
+                "value": 4,
+                "vowel": false
+              },
+              {
+                "letter": "E",
+                "value": 5,
+                "vowel": true
+              },
+              {
+                "letter": "L",
+                "value": 3,
+                "vowel": false
+              },
+              {
+                "letter": "A",
+                "value": 1,
+                "vowel": true
+              },
+              {
+                "letter": "C",
+                "value": 3,
+                "vowel": false
+              },
+              {
+                "letter": "E",
+                "value": 5,
+                "vowel": true
+              }
+            ]
+          }
+        ]
+      },
+      "life_path": {
+        "input": 10,
+        "steps": [
+          10,
+          1
+        ],
+        "result": 1,
+        "components": [
+          {
+            "input": 12,
+            "steps": [
+              12,
+              3
+            ],
+            "result": 3
+          },
+          {
+            "input": 10,
+            "steps": [
+              10,
+              1
+            ],
+            "result": 1
+          },
+          {
+            "input": 1815,
+            "steps": [
+              1815,
+              15,
+              6
+            ],
+            "result": 6
+          }
+        ]
+      },
+      "birthday": {
+        "original_day": 10,
+        "companion": {
+          "input": 10,
+          "steps": [
+            10,
+            1
+          ],
+          "result": 1
+        }
+      },
+      "expression": {
+        "input": 9,
+        "steps": [
+          9
+        ],
+        "result": 9,
+        "components": [
+          {
+            "input": 6,
+            "steps": [
+              6
+            ],
+            "result": 6
+          },
+          {
+            "input": 30,
+            "steps": [
+              30,
+              3
+            ],
+            "result": 3
+          }
+        ]
+      },
+      "soul_urge": {
+        "input": 10,
+        "steps": [
+          10,
+          1
+        ],
+        "result": 1,
+        "components": [
+          {
+            "input": 2,
+            "steps": [
+              2
+            ],
+            "result": 2
+          },
+          {
+            "input": 17,
+            "steps": [
+              17,
+              8
+            ],
+            "result": 8
+          }
+        ]
+      },
+      "personality": {
+        "input": 8,
+        "steps": [
+          8
+        ],
+        "result": 8,
+        "components": [
+          {
+            "input": 4,
+            "steps": [
+              4
+            ],
+            "result": 4
+          },
+          {
+            "input": 13,
+            "steps": [
+              13,
+              4
+            ],
+            "result": 4
+          }
+        ]
+      },
+      "cycles": {
+        "sun": {
+          "input": 22,
+          "steps": [
+            22,
+            4
+          ],
+          "result": 4
+        },
+        "year": {
+          "input": 2030,
+          "steps": [
+            2030,
+            5
+          ],
+          "result": 5
+        },
+        "month": {
+          "input": 16,
+          "steps": [
+            16,
+            7
+          ],
+          "result": 7
+        },
+        "day": {
+          "input": 26,
+          "steps": [
+            26,
+            8
+          ],
+          "result": 8
+        },
+        "year_interval": [
+          "2026-01-01",
+          "2027-01-01"
+        ]
+      },
+      "sources": [
+        {
+          "id": "numerology-decoz-life-path-v1",
+          "url": "https://www.worldnumerology.com/numerology-life-path/",
+          "locator": "Calculation steps; October15,1998 example"
+        },
+        {
+          "id": "numerology-decoz-expression-v1",
+          "url": "https://www.worldnumerology.com/numerology-expression/",
+          "locator": "Thomas Cruise Mapother example; name selection"
+        },
+        {
+          "id": "numerology-decoz-guide-v1",
+          "url": "https://www.worldnumerology.com/do-your-own-reading/",
+          "locator": "Birthday, Heart's Desire, Personality and personal-cycle sections"
+        },
+        {
+          "id": "numerology-decoz-daily-v1",
+          "url": "https://www.worldnumerology.com/free-forecasts/daily-number-forecast/",
+          "locator": "Steps1\u20134, September12/October12,2026 example"
+        },
+        {
+          "id": "numerology-decoz-vowels-v1",
+          "url": "https://www.worldnumerology.com/numerology-soul-urge/",
+          "locator": "Vowel and pronunciation-dependent Y calculation"
+        }
+      ],
+      "conventions": {
+        "technique_id": 4,
+        "profile": "decoz-component-reduction",
+        "version": 1,
+        "core": "Reduce date components/name parts separately, retaining11/22/33 at every core reduction stage. Keep original totals and digit-sum steps.",
+        "birthday": "Retain actual day1\u201331 as Birthday number; show reduced/master companion separately, never replace original day.",
+        "cycles": "Calendar Jan1 year transition; reduce cycles to1\u20139 without masters. Use sequential Sun/birth-month-day \u2192 year \u2192 month \u2192 day method from daily guide; compounds belong to that method, not aggregate formula.",
+        "name_policy": "Explicit birth/current basis. ASCII A\u2013Z case-insensitive only; ASCII space separates name parts. Hyphen/apostrophe join letters inside a part and are recorded as zero-value separators. This token policy is an explicit implementation convention, not claimed universal Decoz doctrine. Reject other characters/diacritics rather than transliterate. Every Y occurrence requires caller-specified vowel/consonant role, ordered left-to-right. No vowels/consonants in entire name yields unsupported null for that number.",
+        "sources": [
+          {
+            "id": "numerology-decoz-life-path-v1",
+            "url": "https://www.worldnumerology.com/numerology-life-path/",
+            "locator": "Calculation steps; October15,1998 example"
+          },
+          {
+            "id": "numerology-decoz-expression-v1",
+            "url": "https://www.worldnumerology.com/numerology-expression/",
+            "locator": "Thomas Cruise Mapother example; name selection"
+          },
+          {
+            "id": "numerology-decoz-guide-v1",
+            "url": "https://www.worldnumerology.com/do-your-own-reading/",
+            "locator": "Birthday, Heart's Desire, Personality and personal-cycle sections"
+          },
+          {
+            "id": "numerology-decoz-daily-v1",
+            "url": "https://www.worldnumerology.com/free-forecasts/daily-number-forecast/",
+            "locator": "Steps1\u20134, September12/October12,2026 example"
+          },
+          {
+            "id": "numerology-decoz-vowels-v1",
+            "url": "https://www.worldnumerology.com/numerology-soul-urge/",
+            "locator": "Vowel and pronunciation-dependent Y calculation"
+          }
+        ],
+        "unsupported": [
+          "Chaldean",
+          "Lo Shu",
+          "gematria",
+          "automatic pronunciation/transliteration",
+          "birthday-based personal-year transition",
+          "aggregate-method compound interpretations"
+        ],
+        "rights": "Factual procedures and short original summaries only; no copyrighted corpus ingested."
+      },
+      "limitations": [
+        "Symbolic calculations, not validated personality diagnoses or event probabilities.",
+        "Current-name results are overlays, not silently substituted birth-name numbers."
+      ],
+      "readings": [
+        {
+          "scope": "expression",
+          "number": 9,
+          "coverage": "direct",
+          "text": "Humanitarian concern.",
+          "source_id": "numerology-decoz-expression-v1",
+          "url": "https://www.worldnumerology.com/numerology-expression/",
+          "locator": "The Meaning of Your Expression Numbers"
+        },
+        {
+          "scope": "personal_year",
+          "number": 5,
+          "coverage": "direct",
+          "text": "Change and flexibility.",
+          "source_id": "numerology-decoz-year-symbols-v1",
+          "url": "https://www.worldnumerology.com/personal-numerology-forecast/",
+          "locator": "Meaning of Your Personal Year Cycles, numbered year sections; timeless themes only, not2026 event claims"
+        },
+        {
+          "scope": "life_path",
+          "coverage": "compositional",
+          "text": "Birth-date framework; no direct number-specific delineation in this core.",
+          "source_id": "numerology-decoz-guide-v1",
+          "url": "https://www.worldnumerology.com/do-your-own-reading/",
+          "locator": "Birthday, Heart's Desire, Personality and personal-cycle sections"
+        },
+        {
+          "scope": "soul_urge",
+          "coverage": "compositional",
+          "text": "Vowel-based motivation context.",
+          "source_id": "numerology-decoz-guide-v1",
+          "url": "https://www.worldnumerology.com/do-your-own-reading/",
+          "locator": "Birthday, Heart's Desire, Personality and personal-cycle sections"
+        },
+        {
+          "scope": "personality",
+          "coverage": "compositional",
+          "text": "Consonant-based outward presentation context.",
+          "source_id": "numerology-decoz-guide-v1",
+          "url": "https://www.worldnumerology.com/do-your-own-reading/",
+          "locator": "Birthday, Heart's Desire, Personality and personal-cycle sections"
+        },
+        {
+          "scope": "birthday",
+          "coverage": "compositional",
+          "text": "Actual day retained alongside its reduced companion.",
+          "source_id": "numerology-decoz-guide-v1",
+          "url": "https://www.worldnumerology.com/do-your-own-reading/",
+          "locator": "Birthday, Heart's Desire, Personality and personal-cycle sections"
+        }
+      ],
+      "interpretation_limits": "Short original source summaries, symbolic themes only. No empirical personality/outcome validation. Core numbers other than Expression are not assigned Expression meanings; cycle Month/Day-specific delineations remain unsupported."
+    }
+  },
+  "numerology_recording": {
+    "kind": "Silent real-browser capture; initial form setup trimmed, no composited UI or fabricated engine output",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "events": [
+      {
+        "event": "Expression seal, source theme and living dial",
+        "seconds": 5.49
+      },
+      {
+        "event": "Tactile turn",
+        "seconds": 7.958
+      },
+      {
+        "event": "Personal Year seal",
+        "seconds": 9.794
+      },
+      {
+        "event": "Birth-date framework seal",
+        "seconds": 12.444
+      },
+      {
+        "event": "Reading",
+        "seconds": 15.003
+      },
+      {
+        "event": "Source-grounded payoff",
+        "seconds": 18.679
+      }
+    ],
+    "input": {
+      "name": "Ada Lovelace",
+      "birth": "1815-12-10",
+      "target": "2026-11-19",
+      "basis": "birth",
+      "y_roles": ""
+    },
+    "nativeReading": {
+      "technique_id": 4,
+      "profile": "decoz-component-reduction",
+      "birth": "1815-12-10",
+      "target": "2026-11-19",
+      "name": {
+        "original": "Ada Lovelace",
+        "basis": "birth",
+        "y_roles": "",
+        "tokens": [
+          {
+            "part": "ADA",
+            "letters": [
+              {
+                "letter": "A",
+                "value": 1,
+                "vowel": true
+              },
+              {
+                "letter": "D",
+                "value": 4,
+                "vowel": false
+              },
+              {
+                "letter": "A",
+                "value": 1,
+                "vowel": true
+              }
+            ]
+          },
+          {
+            "part": "LOVELACE",
+            "letters": [
+              {
+                "letter": "L",
+                "value": 3,
+                "vowel": false
+              },
+              {
+                "letter": "O",
+                "value": 6,
+                "vowel": true
+              },
+              {
+                "letter": "V",
+                "value": 4,
+                "vowel": false
+              },
+              {
+                "letter": "E",
+                "value": 5,
+                "vowel": true
+              },
+              {
+                "letter": "L",
+                "value": 3,
+                "vowel": false
+              },
+              {
+                "letter": "A",
+                "value": 1,
+                "vowel": true
+              },
+              {
+                "letter": "C",
+                "value": 3,
+                "vowel": false
+              },
+              {
+                "letter": "E",
+                "value": 5,
+                "vowel": true
+              }
+            ]
+          }
+        ]
+      },
+      "life_path": {
+        "input": 10,
+        "steps": [
+          10,
+          1
+        ],
+        "result": 1,
+        "components": [
+          {
+            "input": 12,
+            "steps": [
+              12,
+              3
+            ],
+            "result": 3
+          },
+          {
+            "input": 10,
+            "steps": [
+              10,
+              1
+            ],
+            "result": 1
+          },
+          {
+            "input": 1815,
+            "steps": [
+              1815,
+              15,
+              6
+            ],
+            "result": 6
+          }
+        ]
+      },
+      "birthday": {
+        "original_day": 10,
+        "companion": {
+          "input": 10,
+          "steps": [
+            10,
+            1
+          ],
+          "result": 1
+        }
+      },
+      "expression": {
+        "input": 9,
+        "steps": [
+          9
+        ],
+        "result": 9,
+        "components": [
+          {
+            "input": 6,
+            "steps": [
+              6
+            ],
+            "result": 6
+          },
+          {
+            "input": 30,
+            "steps": [
+              30,
+              3
+            ],
+            "result": 3
+          }
+        ]
+      },
+      "soul_urge": {
+        "input": 10,
+        "steps": [
+          10,
+          1
+        ],
+        "result": 1,
+        "components": [
+          {
+            "input": 2,
+            "steps": [
+              2
+            ],
+            "result": 2
+          },
+          {
+            "input": 17,
+            "steps": [
+              17,
+              8
+            ],
+            "result": 8
+          }
+        ]
+      },
+      "personality": {
+        "input": 8,
+        "steps": [
+          8
+        ],
+        "result": 8,
+        "components": [
+          {
+            "input": 4,
+            "steps": [
+              4
+            ],
+            "result": 4
+          },
+          {
+            "input": 13,
+            "steps": [
+              13,
+              4
+            ],
+            "result": 4
+          }
+        ]
+      },
+      "cycles": {
+        "sun": {
+          "input": 22,
+          "steps": [
+            22,
+            4
+          ],
+          "result": 4
+        },
+        "year": {
+          "input": 2030,
+          "steps": [
+            2030,
+            5
+          ],
+          "result": 5
+        },
+        "month": {
+          "input": 16,
+          "steps": [
+            16,
+            7
+          ],
+          "result": 7
+        },
+        "day": {
+          "input": 26,
+          "steps": [
+            26,
+            8
+          ],
+          "result": 8
+        },
+        "year_interval": [
+          "2026-01-01",
+          "2027-01-01"
+        ]
+      },
+      "sources": [
+        {
+          "id": "numerology-decoz-life-path-v1",
+          "url": "https://www.worldnumerology.com/numerology-life-path/",
+          "locator": "Calculation steps; October15,1998 example"
+        },
+        {
+          "id": "numerology-decoz-expression-v1",
+          "url": "https://www.worldnumerology.com/numerology-expression/",
+          "locator": "Thomas Cruise Mapother example; name selection"
+        },
+        {
+          "id": "numerology-decoz-guide-v1",
+          "url": "https://www.worldnumerology.com/do-your-own-reading/",
+          "locator": "Birthday, Heart's Desire, Personality and personal-cycle sections"
+        },
+        {
+          "id": "numerology-decoz-daily-v1",
+          "url": "https://www.worldnumerology.com/free-forecasts/daily-number-forecast/",
+          "locator": "Steps1\u20134, September12/October12,2026 example"
+        },
+        {
+          "id": "numerology-decoz-vowels-v1",
+          "url": "https://www.worldnumerology.com/numerology-soul-urge/",
+          "locator": "Vowel and pronunciation-dependent Y calculation"
+        }
+      ],
+      "conventions": {
+        "technique_id": 4,
+        "profile": "decoz-component-reduction",
+        "version": 1,
+        "core": "Reduce date components/name parts separately, retaining11/22/33 at every core reduction stage. Keep original totals and digit-sum steps.",
+        "birthday": "Retain actual day1\u201331 as Birthday number; show reduced/master companion separately, never replace original day.",
+        "cycles": "Calendar Jan1 year transition; reduce cycles to1\u20139 without masters. Use sequential Sun/birth-month-day \u2192 year \u2192 month \u2192 day method from daily guide; compounds belong to that method, not aggregate formula.",
+        "name_policy": "Explicit birth/current basis. ASCII A\u2013Z case-insensitive only; ASCII space separates name parts. Hyphen/apostrophe join letters inside a part and are recorded as zero-value separators. This token policy is an explicit implementation convention, not claimed universal Decoz doctrine. Reject other characters/diacritics rather than transliterate. Every Y occurrence requires caller-specified vowel/consonant role, ordered left-to-right. No vowels/consonants in entire name yields unsupported null for that number.",
+        "sources": [
+          {
+            "id": "numerology-decoz-life-path-v1",
+            "url": "https://www.worldnumerology.com/numerology-life-path/",
+            "locator": "Calculation steps; October15,1998 example"
+          },
+          {
+            "id": "numerology-decoz-expression-v1",
+            "url": "https://www.worldnumerology.com/numerology-expression/",
+            "locator": "Thomas Cruise Mapother example; name selection"
+          },
+          {
+            "id": "numerology-decoz-guide-v1",
+            "url": "https://www.worldnumerology.com/do-your-own-reading/",
+            "locator": "Birthday, Heart's Desire, Personality and personal-cycle sections"
+          },
+          {
+            "id": "numerology-decoz-daily-v1",
+            "url": "https://www.worldnumerology.com/free-forecasts/daily-number-forecast/",
+            "locator": "Steps1\u20134, September12/October12,2026 example"
+          },
+          {
+            "id": "numerology-decoz-vowels-v1",
+            "url": "https://www.worldnumerology.com/numerology-soul-urge/",
+            "locator": "Vowel and pronunciation-dependent Y calculation"
+          }
+        ],
+        "unsupported": [
+          "Chaldean",
+          "Lo Shu",
+          "gematria",
+          "automatic pronunciation/transliteration",
+          "birthday-based personal-year transition",
+          "aggregate-method compound interpretations"
+        ],
+        "rights": "Factual procedures and short original summaries only; no copyrighted corpus ingested."
+      },
+      "limitations": [
+        "Symbolic calculations, not validated personality diagnoses or event probabilities.",
+        "Current-name results are overlays, not silently substituted birth-name numbers."
+      ],
+      "readings": [
+        {
+          "scope": "expression",
+          "number": 9,
+          "coverage": "direct",
+          "text": "Humanitarian concern.",
+          "source_id": "numerology-decoz-expression-v1",
+          "url": "https://www.worldnumerology.com/numerology-expression/",
+          "locator": "The Meaning of Your Expression Numbers"
+        },
+        {
+          "scope": "personal_year",
+          "number": 5,
+          "coverage": "direct",
+          "text": "Change and flexibility.",
+          "source_id": "numerology-decoz-year-symbols-v1",
+          "url": "https://www.worldnumerology.com/personal-numerology-forecast/",
+          "locator": "Meaning of Your Personal Year Cycles, numbered year sections; timeless themes only, not2026 event claims"
+        },
+        {
+          "scope": "life_path",
+          "coverage": "compositional",
+          "text": "Birth-date framework; no direct number-specific delineation in this core.",
+          "source_id": "numerology-decoz-guide-v1",
+          "url": "https://www.worldnumerology.com/do-your-own-reading/",
+          "locator": "Birthday, Heart's Desire, Personality and personal-cycle sections"
+        },
+        {
+          "scope": "soul_urge",
+          "coverage": "compositional",
+          "text": "Vowel-based motivation context.",
+          "source_id": "numerology-decoz-guide-v1",
+          "url": "https://www.worldnumerology.com/do-your-own-reading/",
+          "locator": "Birthday, Heart's Desire, Personality and personal-cycle sections"
+        },
+        {
+          "scope": "personality",
+          "coverage": "compositional",
+          "text": "Consonant-based outward presentation context.",
+          "source_id": "numerology-decoz-guide-v1",
+          "url": "https://www.worldnumerology.com/do-your-own-reading/",
+          "locator": "Birthday, Heart's Desire, Personality and personal-cycle sections"
+        },
+        {
+          "scope": "birthday",
+          "coverage": "compositional",
+          "text": "Actual day retained alongside its reduced companion.",
+          "source_id": "numerology-decoz-guide-v1",
+          "url": "https://www.worldnumerology.com/do-your-own-reading/",
+          "locator": "Birthday, Heart's Desire, Personality and personal-cycle sections"
+        }
+      ],
+      "interpretation_limits": "Short original source summaries, symbolic themes only. No empirical personality/outcome validation. Core numbers other than Expression are not assigned Expression meanings; cycle Month/Day-specific delineations remain unsupported."
+    },
+    "trimStartSeconds": 5.49,
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.64001e",
+          "width": 390,
+          "height": 844,
+          "coded_width": 390,
+          "coded_height": 844,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "195:422",
+          "pix_fmt": "yuv420p",
+          "level": 30,
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "time_base": "1/12800",
+          "start_pts": 512,
+          "start_time": "0.040000",
+          "duration_ts": 179200,
+          "duration": "14.000000",
+          "bit_rate": "884082",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "350",
+          "extradata_size": 48,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "eng",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc63.1.101 libx264"
+          }
+        }
+      ],
+      "format": {
+        "filename": "../evidence/numerology-ritual.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.040000",
+        "duration": "14.000000",
+        "size": "1550745",
+        "bit_rate": "886140",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101"
+        }
+      }
+    }
+  },
+  "execution_note": "One earlier browser run overlapping the CLI verifiers missed the existing 20-second orb-start expectation; the final full browser gate was run without that competing workload. Performance and media collected separately.",
+  "final_motion_recheck": {
+    "groups": 2,
+    "passed": true,
+    "scope": "Static manual dial turn retained under reduced motion, without restarting continuous animation; original initial-reduced/rapid-orb-cleanup group rechecked after this small CSS refinement",
+    "output": "\n> fate-living-oracle@1.0.0 test:e2e\n> playwright test --grep dial live transforms|initial reduced motion --reporter=line\n\n\n[WebServer] INFO:     Started server process [21964]\n[WebServer] INFO:     Waiting for application startup.\n[WebServer] INFO:     Application startup complete.\n[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8010 (Press CTRL+C to quit)\n\n\nRunning 2 tests using 1 worker\n\n\n(node:41608) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n[1/2] e2e\\gallery.spec.ts:247:1 \u203a dial live transforms, tactile keyboard turn, pause, initial reduced motion and low-power policy\n[2/2] e2e\\polish.spec.ts:4:1 \u203a initial reduced motion avoids Pixi, preference can resume, rapid navigation cleans up\n  2 passed (24.5s)\n"
+  },
+  "gallery_projection_sha256": "d84f5c12b1ca91339877fc66ed1114b5a72c70a370d8bff855c1e010f68285ce",
   "artwork_registry_sha256": "8e4c6e5a1b464969fdcb9e8d90aee7cab11e1c511d60226dadf542464616cc6c",
   "generated_art_provenance_sha256": "eb605bd6425c016a16cdd15304593e8d4e21fd5b8bdaa9bedcbf910a5bcc0cfb",
+  "block02_art_provenance_sha256": "8967c5b1271256921acba59bf4e75b74123a7a333f1d6a2bd159bc5bf262b55b",
   "original_artwork_sha256": {
     "card-back-v1.png": "5fc8ac9e5a174c773f4c93847f6e9f33136d6f9275b7dfaa0a879e5a2fbb4fbd",
+    "gallery-hall-v1.png": "2cc2bc7d7952ebac15657d559ef14aa9fa0666c7c9a0c4da21f2f2807443e287",
     "nebula-v1.png": "372b2d742181e924a602335011cf2be41f5684e06e1c6721a8b270c402d0024c",
+    "number-dial-v1.png": "336d603c25f138b15da00c10aa8b28b95bcec4bb989dc66cace70427f41eb012",
     "orb-poster-v2.png": "745e04ebdf48e20568a74284b320e9feda82aa7ade7c6984b9c4ec2daac2b824"
   },
   "source_sha256": {
     "fate/__init__.py": "6d44f20984a5e7e9705460845c0b60d6ef22ea9278be27e50c7a69eac8a36346",
     "fate/__main__.py": "f79d4cca3b093aa18f7d5fb7d1eced5c557f081a49db354eb364b7d1eb017324",
-    "fate/api.py": "e1aa56411637968c8d956edd7f83c8b4e35227df1b2975df3456bd993e57bf4f",
-    "fate/build_visual_assets.py": "1d23150372e99e1c1f41e5b328307fa053cab35cb00f9f1b2daf46c7ed9a8d69",
-    "fate/experience.json": "5889112c012b2c1cc2f70f83e925a23087250e8a7622249b728fab289260f0fb",
+    "fate/api.py": "9a6154469f68a4a282f84c35d722b7f3bd931d059a0bec7b4e4a62eda8d47391",
+    "fate/build_gallery.py": "323941f4d02655b4ce7db7616bda3c048673da60e9a70628fec1d5c750cb83a3",
+    "fate/build_visual_assets.py": "8f6a2fe978b739bb828677593900b628cceb77480a47e7d3d8998903fce88bcd",
+    "fate/experience.json": "c6a06eca00f7f768ed6b548faaeb030608b0c3082e5347bb510de9e1473e4d7b",
     "fate/fetch_deck.py": "82e0e85eadf017a4086c4b19ea45dbff7e2a99496fd713ac8720db32b79d188b",
     "fate/fetch_fonts.py": "81f3e99c55cdc140937924a032873a2a6de105b3c7f823aa87793e71c2a7a4b6",
     "fate/live_gemini_smoke.py": "f6180c49913bd10d6ff8b3276138e8a1ebb7b8428416615f83af53c1d5b32b3a",
-    "fate/record_acceptance.py": "13176249999887286bef3163ab306405ba24b4ae99680533c4930d55c19274e0",
+    "fate/record_acceptance.py": "ec0771dd482d57787595fcbdf44bfe59c3744df2dec6b003552f9a704bfbf073",
     "fate/requirements.txt": "2d6d8eb8662c42125d522e1e4abf5448a481cfd4d53c9751246263f4be9985a5",
     "fate/tests/test_api.py": "09b223d9b7621094a783f641709482e6d9c452b58a3164a5b54cc85a39dcc20f",
     "fate/tests/test_artwork.py": "98bcc74b12993dcca0c3821139307408945db587d7f55371958299c1704e9061",
+    "fate/tests/test_numerology.py": "4a212341c6ea97867b07f8ee4192998d721753d44f8e930ed592d54eeb5be410",
     "fate/verify_inherited.py": "8e6de0c370b0bf6273d649613d9b309016930084acd96189e3689a07095639f2",
+    "fate/web/e2e/gallery.spec.ts": "8dc16a08d305126f65ee9299fa409ef7dd011f6692bb4eb10e1af2136951aad0",
     "fate/web/e2e/oracle.spec.ts": "a3ec1b43106f08851406898a4faa81498cbc03e1a69dfbf37d4d481ce6fef801",
     "fate/web/e2e/polish.spec.ts": "fcddf10f08ffd6d2bbd7dc6e8e927aa5ef66d3ff2851b991e7ab761edb34e1f2",
     "fate/web/package-lock.json": "851ecc9f88c70e481ea1619ed8295a282f0b3f04bf4fc6b9511a8bd345c544f1",
     "fate/web/package.json": "390a8ebe203d40258706b250a0b16a2197a5d809f82fd34efc390f7e0bf6ca57",
     "fate/web/playwright.config.ts": "85c33fe22538976c283b18c29bdd5941f44e821846c2eb556cf6f2362563e372",
     "fate/web/scripts/capture-evidence.mjs": "907756272b6904be1a52560dc3bf6e33538f35a349228a2037aee7b79f33b7e4",
+    "fate/web/scripts/capture-gallery.mjs": "1b0f4dc4d292c12f716df79c4ad5a142ccdc2aad6dff73fc3f5fd5d80546aa76",
+    "fate/web/scripts/capture-numerology.mjs": "819df3410be08569d216df55b5b2e1b2db525065645efbe25b9910c548473abf",
     "fate/web/scripts/capture-poster.mjs": "c749974f558c6147d2aba49a94e9000f90ee8abbc2cee98da23337aff72e2863",
+    "fate/web/scripts/measure-numerology.mjs": "34c50f51d0b819485971c0b7485f3b75744ae203be968b0987a74866bfbd442d",
     "fate/web/scripts/measure-performance.mjs": "8fd799f75599e959544943575e056ed99edea5abd1c5b792b833835fce40bfd5",
     "fate/web/src/artwork/CardArtwork.tsx": "70093a2444adf17be5a6d1ba4559fb21b5d19cc9b6670dc826ad8e1a6f04535d",
     "fate/web/src/artwork/deck-manifest.json": "b5c9b86baaa09012596afc288c972d8c07ed721932739a6e59e5e5385e9f9384",
@@ -1891,18 +3644,28 @@
     "fate/web/src/components/GeminiCommentary.tsx": "1fa64f373a3577e68bb4a96c65ef18a00d09665e52506f6c60fb8de525fc64ad",
     "fate/web/src/components/Intention.tsx": "c0fa22cff671d4cbfb7ad25b9cc24a3901e8adeb0c1c27393d747690987bcb2a",
     "fate/web/src/components/PhysicalCard.tsx": "a0aca2d1d6d45396faf417599a2d151cb3621e6552cc85df443e1123539b1dbd",
-    "fate/web/src/components/ReadingDetails.tsx": "8cd1337d2663846d51d041ce10985716a054ac2a1765b96e063df77fd12c0576",
-    "fate/web/src/components/SettingsDialog.tsx": "68d9abbc639b4a986308d52a03153da8c5b17af64e69d051cf078d791c5ad637",
-    "fate/web/src/hooks/useOracle.ts": "0931608d94a80204c7af5672983bb586af8e24d30e7eaaf18e104e47b1cbef89",
-    "fate/web/src/main.tsx": "6866f9ff43e54b38f990f946cceee86eb1e9ad48afadcbd81c156793d98a9540",
+    "fate/web/src/components/ReadingDetails.tsx": "b72098b75c929a68e0aabbda8c83e0768db95e3a897832ccd140c8c1076d64a8",
+    "fate/web/src/components/SettingsDialog.tsx": "88c28ec8b9b3c7b885fe3c83a92c81b926b4e4db8f466646b41e14e85e481ac7",
+    "fate/web/src/experiences/contracts.ts": "3c9f7a0e3da8d0d4f88e5a2194c02c3dacfda825726571e1b90a46af1e96a24d",
+    "fate/web/src/experiences/tarotPresentation.ts": "fd0ab61d4235a5b0512adcb0f43343da0091948dcca7139c827460558e49cb06",
+    "fate/web/src/gallery/inventory.json": "d84f5c12b1ca91339877fc66ed1114b5a72c70a370d8bff855c1e010f68285ce",
+    "fate/web/src/gallery/OracleGallery.tsx": "58d055f92ff539d7faf4662f229be857b1039bb08d822f622c1a90c125dbc71f",
+    "fate/web/src/gallery.css": "79a58b7d02036c1404a2eeb3237d30e521cb8794debb22fdd101c0715f5b9291",
+    "fate/web/src/hooks/useOracle.ts": "65a0e74c7e57c985541e4fdeeefc6e58778219ba6bec243338f309131eb5c9f7",
+    "fate/web/src/main.tsx": "237066ba5445e24b4d0c474c573f9e9dd002af199266027cf292a948a57f28e1",
+    "fate/web/src/numerology/NumberDial.tsx": "211ffeefff22d30eefbba411839ec72949d7cbedcb8c91395fc0a95000ea9f0e",
+    "fate/web/src/numerology/NumberInputForm.tsx": "3d2d2b77ffadb86f0f4d757df8a22ba51faf5410c5bc42f5d82b64ed46bcd807",
+    "fate/web/src/numerology/NumberReading.tsx": "463f1d5138ed151876a4c3b408a249a891e8fb5b5607ef1685c0d12b625e7e03",
+    "fate/web/src/numerology/useNumerology.ts": "4ffdd9d6aab259102b0dc0e921bc4cf8064d188def5ca7c101fba2ae4d7aa86e",
     "fate/web/src/orb/createOrbScene.ts": "9a666c45be8bdcfb9f6690566a4edaaf8e418e44b24cecff48aebd7076c617a8",
     "fate/web/src/orb/OrbPoster.tsx": "0443977ae100bb0709bb8cf81704b0dc487421f4fae206a3e3b1991169b9866d",
     "fate/web/src/orb/policy.ts": "a4c92c89faa9ff14714d9675657156d6d7c0c11bafbe58998af6e6df42a3987f",
     "fate/web/src/orb/shaders.ts": "301333513a9adc811f3e7c58c49b125636f41e5c03f117566d4fd33a663e3e1b",
     "fate/web/src/Orb.tsx": "0a5205f49fbb5b74f590a1451bea2be2a554e7583548e261413ec627814be73c",
     "fate/web/src/pixi-csp.d.ts": "44d77461dd27031fa66e70ad7c193d3220af5f4e513f2f841e47bbc2e190e886",
-    "fate/web/src/screens/ExploreScreen.tsx": "e3398db908930b9c6487e7ba3c6b0bda697446623c16811ab57ab95a4e38c540",
-    "fate/web/src/screens/ReadingScreen.tsx": "95e95f50818e56f2788adddde2bc62dcbda2c2d8d1b8b9b3d9628902973a74d9",
+    "fate/web/src/screens/ExploreScreen.tsx": "b9b9a426a194212b7962c95800ef25dd5e0249dd6b387cf7ca447bfb0480b5bc",
+    "fate/web/src/screens/NumerologyScreen.tsx": "c26a796e6194511b96bf4b44415bb3777453470f8126c5291b20fedf955a21a4",
+    "fate/web/src/screens/ReadingScreen.tsx": "c79c3de70076de05e6992ee784caadc3844be282872f21d996fc8e36d9d204ad",
     "fate/web/src/screens/RitualScreen.tsx": "2a7be88e39a98f99a39eceadb2faa2cf1e142d379681d5b7ff49470bcc9939b4",
     "fate/web/src/style.css": "756827756b6557b06471fb38ed5da81f07f2ad73d77fe243def6e9c1f667854e",
     "fate/web/src/types.ts": "833da52eba14ffd27e6fbe881cecc4d49a0458e5e555dbe6d0c8055c704a1a6d",
@@ -2078,48 +3841,68 @@
     "art/fate_orrery.svg": "67c9c88473793056aec53e3ec4692b653ee92a27dda2dbfb21fe72f161804a6a",
     "art/fate_sigil.png": "54f8ee96b9e36a57abeaaafbe80b124a9ef214041b1f1943e5611fd47ea89f1b",
     "art/fate_sigil.svg": "735220e8536089da7c6c1c4bc14d8bc6f536d5e25fbe1833948158379bb53f25",
+    "art/gallery-hall-768.webp": "f2a09d8cb9b656f22ef249082599d9b6ebc8d41a3adda5c9d17cbe8db3c882db",
+    "art/gallery-hall-v1.webp": "d76d31c1d1f1f0b3cf98c92abf6ffddbe2c95333572ce4674c60582ffb18bf55",
     "art/nebula-v1.webp": "4fa7812ce2e03340c0c17129f6f66f35f38830453a9b4752a256bb86ed65124d",
+    "art/number-dial-480.webp": "8f9bafa3d09a76a986dd374426dfe3847c57f09e233ac2afc9d0e225c44df0f3",
+    "art/number-dial-v1.webp": "b9c665156d51d525a54ad29d7739b3b5f63679ab0c428121a2c12a84d225f0e5",
     "art/orb-poster-v2.webp": "e575a7d778154692e51235774e4c808038ebb9bb9471ebdb3b01038cfc38e7f2",
     "art/preview.jpg": "5b4d125c902d102be38ed5b4a073203590b03b359796a48b727299666f8a6641",
     "art/README.md": "2fb1f42bf4dfac7b55d7dfc2a5d6e9d9817d6a10202e6131722f9a4741c92e64",
-    "assets/BitmapFont-DRrWwTxB.js": "9aee1667722452f9244d46aa6f565f28f81f46e9f3032e965780a975d75ec3cb",
-    "assets/browserAll-otSdVbUH.js": "9f8e5cc28916645fc16a4cda5494688b7704a713e0d6fa14a973790b6ad8d43e",
-    "assets/CanvasPool-DciSo37G.js": "0691580fa02e754e4267ca521e80bb50a4dc28345b205de0ab62c36734efa8ac",
-    "assets/CanvasRenderer-DWp3GyvK.js": "daa46c916a550e6475377747cea2b07d96ddb8b0ae8b17904dacd8a23c9ed5a3",
-    "assets/canvasUtils-D5IMlmBT.js": "ec4013bc6748ac4f9f695be4c4ec993ad5c27a8a0e4e582f001f7814460608db",
-    "assets/createOrbScene-CCO52A2w.js": "79dc7ecb2e5d44f6c9aecde0ad8ff982df388479f9f8c8ad19d10b1cf4ce1121",
-    "assets/GpuStencilModesToPixi-DlA_7EUS.js": "c9b45b9c8c813a40bb407a61e60568c06976c2310366bff2ef23c9736976982d",
-    "assets/index-Co30Rqry.css": "040c5d7b397ef9e21a82efa3f6edfae66ef39d403a634cf7cb9a36fafa10952d",
-    "assets/index-CX3EZYjz.js": "e1630e99405d095209b74f224a1c13605172e3e510f8831f47bea05778d8cfe9",
-    "assets/Orb-C4ISywn1.js": "b2656121879ae342708117c0e44a4332716f51d42f919b591b5e0caf37cd6f5b",
-    "assets/RenderTargetSystem-BJWXKnUZ.js": "a98cfc7fb2487b0df733bc4144cbffe5bf0de8348e7be149dce77662c0d6cc59",
-    "assets/WebGLRenderer-C4xWqiYR.js": "0684963b72b3f12d81ad1999e84c4bbd6c62f5749b2bdebb5d5ed5540c4b170f",
-    "assets/WebGPURenderer-Cu_9p2nJ.js": "784156896049f7e6e30b3bad0edcf0588ebabee518c8437d4f2d58930d20ff48",
-    "assets/webworkerAll-DVDF2UEH.js": "c99909670111591f876ab258c9481cfbbe235f27a91d7be5f9c0e95300848d07",
+    "assets/BitmapFont-C9bEEw-8.js": "d9bc332b9026e4def57ba641590d8485d35627b0cc530924155811698c02c144",
+    "assets/browserAll-0Rzuu9VJ.js": "dad98b871a51b1e0f138954e450921cca079efc850493d4a6d48f82d6a0604d9",
+    "assets/CanvasPool-BnaeflFk.js": "c57bebf1ad07e379ef2ce9d55f47bb1a3cfc0c96cb249e49e807d6fac19439d5",
+    "assets/CanvasRenderer-BHWKwp6C.js": "8e5b4ae041b9d2a0553d6f75046ad70b3992e584bef4d07798793838ed8b1853",
+    "assets/canvasUtils-DkTgjLbS.js": "783c17c0eedf858bf699a12e0ab20fafea4811f815eb59c2d940ac14c6dfb257",
+    "assets/createOrbScene-CFgH4Kqn.js": "4cf98955253ce9575065338bc47cec6a365d01ab5884d904a13d42d5b33b2cf5",
+    "assets/GpuStencilModesToPixi-CYUrSN58.js": "faeb45313248eff5d35dc9a65f8b63940ebb4c69982f273967492e7de15e9f41",
+    "assets/index-BpIeQWXP.css": "0cb72daedb614063cbbba44faae52f2e91ef34b1773bae85c84347800934cd27",
+    "assets/index-CP8YX0YK.js": "3b13e7bfd3fbce5aa6b24e901bff67b39e47392e3ba76e4ee8bd95e05e9407a4",
+    "assets/NumerologyScreen-DaHElBbo.js": "7e065d73f8cb6b07597211069d32ad03a56d8520ee1541ed233b469fe424e7cf",
+    "assets/Orb-Ci_HxnCY.js": "20e10f0b7c567740c9c1191d49f3328e699e719168e8534e35e991b56a454c1d",
+    "assets/RenderTargetSystem-DjucKCAH.js": "04c84c1353ea57b330e0fb54b451a50236204264346fc3f6d22b6507f5f8b59c",
+    "assets/WebGLRenderer-BDwcwLIN.js": "68100a75a184b94f2048f0c790ad198902eb9f186fbfb43e34714ad25b285376",
+    "assets/WebGPURenderer-DVjtGbbx.js": "35f5d5e893fcd7c3176fe87b5093cca8e0e6654f7ed5bde6df770e8ddf6310fe",
+    "assets/webworkerAll-CNqJM0Vf.js": "bc4f12605643ae092ce70ea5b1293c290b6df2ef63943e0e3fa066c2d373baa8",
     "fonts/cormorant-italic-latin.woff2": "6f2f5c3b1abc3d0bb035a927f66a90ca873f94fc31c4966c8d024142c2036e55",
     "fonts/cormorant-latin.woff2": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235",
     "fonts/cormorantgaramond-OFL.txt": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956",
     "fonts/inter-latin.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
     "fonts/inter-OFL.txt": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
     "fonts/sources.json": "3f7fd5f5a838eb7d036e9ff6bc6209a5f7bef08e353b80b926520f324754c235",
-    "index.html": "29f65b352f9faf7ef9c1911d82c70d6107b6a5b785df28be2e0f49eccc80f9b2"
+    "index.html": "4c4e5c1d5e1a396d24c36ec0d979694a18b1cb8b5d648dad6b3b8ac5980c605b"
   },
   "screenshot_sha256": {
-    "01-explore-mobile.png": "ff4625c1d56056643dd5b26acea090c492699beb1107d465ee366307021c4475",
-    "01-explore-viewport.png": "06a3fbcff40e32db8218192f42c9bf0153d8526a36ac7284ae53be716d6f11c5",
-    "02-intention-mobile.png": "02254b681851f0a2afe8bf7cdbf9d57a7c10edb931e82faa3b8f2483ea791c49",
-    "03-reveal-mobile.png": "14e58049b536e86a431afd0d454392d7a3d0e623b45854f080723f25fdf2ffb0",
-    "04-reading-mobile.png": "3c5a615a406db2cccdc211f4b053a10cb80bd268acfb7b80e6de7731ab3c4063",
-    "05-one-card-mobile.png": "52aab898a0ac5b48fb48849919407374c3e5a85a047b0bb3ffefcc68ecfa1c56",
-    "06-reduced-motion-mobile.png": "fdcb92d110ebe7dc73121c3f8e0355d591d95c6bbfc8d206e3ec86c745862370",
-    "07-explore-desktop.png": "31a8af8c385ab01bc3767f085c86e12e6e6fabaa5ec625e7640c55dada771f6d",
-    "08-reading-small-mobile.png": "a6cdfab8b2d4b5925bf9d167e58b1759d5cfc46b416959f1ba56ecbf593b74b1",
-    "09-enlarged-text-mobile.png": "10e654ea32d7db21f68a09d92a6804fc95bacf621b7ab3cb5156610adee4933c",
-    "10-ritual-desktop.png": "e806fe8c7172810681cf267a22ce88849386f985da58e04020d20603cb13c0ed",
-    "11-reveal-desktop.png": "09dfd34761ad7bac3f1c9e3c6e98644f4e6c61c4edb823e4b831b23f7609ef65",
-    "12-reading-desktop.png": "f2e55e7b1146f4bda924a1da2e7e623942ad9b44ac8cd31d517cf0a3f98480dc"
+    "01-explore-mobile.png": "2f8ae1568f813dec364a44593337bde268f48ec8816470e176943f37630125d2",
+    "01-explore-viewport.png": "9901600eed63ed3c4c5849b2b9b0e8baebdee6d26c069ddec0b3b2a6f4077822",
+    "02-intention-mobile.png": "946c8de2ce9283301340ddb70de44933589ec8823fcd8b20eee039e8f12eed21",
+    "03-reveal-mobile.png": "b1a1b04bae3800776c2ef16610e8d1fb2afdcd90a4c98fcee5fa78af1ebdc4ba",
+    "04-reading-mobile.png": "522fadf54fe07ce6ebb4f40981e574d1d2743a017a2da20d5eb181956626c62d",
+    "05-one-card-mobile.png": "8be133deee044449bd92e9f557d2b6e9f7aac105bdae8ab09f0ee258e00bcff5",
+    "06-reduced-motion-mobile.png": "7928401c0159525c627454db5f86f793fa1c9714f4e5ccc8f2d3fd32bee50b76",
+    "07-explore-desktop.png": "ae4925bd3ec0b62d9fe1922e9b4b359ef50b5f22c5abb91b47c1251752b9fded",
+    "08-reading-small-mobile.png": "751f118ce672f541b7e3c06de14d8d25067431ee812281723c51a9c122bc6397",
+    "09-enlarged-text-mobile.png": "ba0a143c5daf9d83c3d725cfc9b1c4312431655d199b8e516a1b368a8fbdc16f",
+    "10-ritual-desktop.png": "9aad4b5aacdd606d983446a11ad3e6a1b13c96c557698fda3c52fbacb9c31b7e",
+    "11-reveal-desktop.png": "3188f6bc51fe38031218ef07f33f3540bd5db0e50ef4672d05371d504fa1c959",
+    "12-reading-desktop.png": "b1bffb1f00ffa01e5566a39c3378a0d444f55686e5f472b324bacd203bd3abd1",
+    "20-gallery-mobile.png": "3182b08d575c287705b5abd8c83abab5fa1769e87760e4231b46c33f42073ce1",
+    "21-numerology-input-mobile.png": "2a06cc0a24ab1318934a0e659e874d4e32f9b97729df5a64722c3c6c32e35ccd",
+    "22-numerology-ritual-mobile.png": "ada392095b45ad31f5bc889e458d3024187a6152a9317eb9b0ef4819ca0cd453",
+    "22-numerology-ritual-viewport.png": "9afec8bc81a41965bdede167e9d8de2e63bc373f868628d01f0bef52131a26eb",
+    "23-numerology-reading-mobile.png": "b6edb9080e09f92e7bb4743c6d5348cd41baf0e538f8efc6acdb0283589de72a",
+    "24-gallery-desktop.png": "5569f2e9883723b863eb8d4475c5a2a0c7a7b31e97a916c9a7b6d9fc0f593926",
+    "25-numerology-input-desktop.png": "4a52e3ee1be50cb8e9200246f3f0578780cf6697e45c667b5938cf76cc4dc66b",
+    "26-numerology-ritual-desktop.png": "57d4b1b8c4da71747f2bce9e07ab6a58b7e8b44b4276169c720b89f6431659b3",
+    "27-numerology-reading-desktop.png": "12958fb806597ea1d965a21bed2c1284048231a4946ee109505827799e627da6",
+    "28-gallery-viewport-desktop.png": "81b4b4f5502dae0efae4813bd48cb11f73ec9e3d999a201560b6afb21e16405e",
+    "28-gallery-viewport-mobile.png": "1c3615f430fabbfd8a82b8cc61ab68d5b0823055800e4226ef8db3a915dd99c9",
+    "29-numerology-ritual-viewport-desktop.png": "d53b68ad3e69e80d7651806a8bb771803b1dc55a8c09d914cfb9ec1bfc21ed03",
+    "29-numerology-ritual-viewport-mobile.png": "b2a6894db00c55d17177e762c00af81a2520991c0f3e0320bc17cdea6c8e1bf1"
   },
   "recording_sha256": {
+    "numerology-ritual-source.webm": "f790a1f878d962a45771a65fc8d26cf96ef63ea47bdc55d3d2f39d33fd45bab9",
+    "numerology-ritual.mp4": "bfadecd96f928c87cde2d7d8bfbed62215270f9421787e6df3d6bd1a63276019",
     "orb-and-card-reveal.mp4": "ff81491e7556c4eca53eee33e0129cb20e9007992098070786e8d5188adaa76f",
     "orb-and-card-reveal.webm": "a2deda645979ee784cef9e3b879def3692c5b7bd66eb80301b1af3e3fbfe99a2"
   },
@@ -2132,7 +3915,12 @@
     "Complete journey and export in mobile browser; accessibility scans and keyboard dialog pass",
     "Small/tablet/desktop and doubled-text control geometry checks pass",
     "No-WebGL fallback completes a native reading",
-    "Existing native/Workbench tests, full CLI/verifier gates, production builds and inventory/dependency gates pass"
+    "Existing native/Workbench tests, full CLI/verifier gates, production builds and inventory/dependency gates pass",
+    "All 54 retained inventory IDs, six exclusions and availability categories match frozen projection",
+    "Real native Numerology parity, independent arithmetic, explicit Y/name basis and unsupported context preserved",
+    "Complete three-seal ritual, immediate reading path, exact export, retry/duplicate guards and session-only continuity",
+    "Numerology live material transforms, keyboard touch, reduced motion and low-power pause checks",
+    "Separate signed Numerology consent; provider prompt excludes names and dates; no automatic cloud or browser storage"
   ],
   "limitations": [
     "Local Chromium mobile/desktop emulation and software WebGL only; no physical iOS/Android, field CWV or actual INP certification",
@@ -2140,6 +3928,9 @@
     "No public deployment, distributed limiter, accounts or persistence",
     "Complete verified historical Archive Edition; a fully bespoke figurative FATE deck remains future artwork, never mixed into draws as placeholders",
     "Gemini semantic faithfulness is not guaranteed",
-    "Software acceptance is not empirical prediction validation"
+    "Software acceptance is not empirical prediction validation",
+    "Numerology direct themes cover Expression and Personal Year only; other numbers are context, never assigned unsupported meanings",
+    "Gallery upcoming status describes consumer availability only; no new engine or launch commitment",
+    "Numerology RAF cadence is main-thread scheduling evidence, not hardware compositor FPS; live provider semantic quality remains unverified"
   ]
 }

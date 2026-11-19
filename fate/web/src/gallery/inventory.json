@@ -1,0 +1,825 @@
+{
+  "version": 1,
+  "source": "knowledge/inventory.json",
+  "source_sha256": "90c444d39d692558520c308cc55c7f328e8b4a65b891bcdbaeb601b9fca650b1",
+  "excluded_ids": [
+    25,
+    27,
+    41,
+    42,
+    47,
+    48
+  ],
+  "methods": [
+    {
+      "id": 1,
+      "phase": 1,
+      "name": "Western Astrology",
+      "status": "upcoming",
+      "variations": "Hellenistic; medieval/traditional; modern psychological; natal; transits/progressions; electional",
+      "mechanism": "Ephemerides, chart houses/aspects, timing rules and interpretive synthesis",
+      "limits": "Birth-time uncertainty; divergent schools",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Christian Astrology",
+        "author": "William Lilly",
+        "url": "https://wellcomecollection.org/works/w67xnbfy"
+      }
+    },
+    {
+      "id": 2,
+      "phase": 1,
+      "name": "Vedic Astrology (Jyotish)",
+      "status": "upcoming",
+      "variations": "Parashari; Jaimini; Nakshatra; Vimshottari dasha; divisional vargas; prashna; KP",
+      "mechanism": "Sidereal chart, ayanamsha, divisional charts, yogas and dasha timing",
+      "limits": "Text variants; rectification risk; competing lineages",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Brihat Parashara Hora Shastra",
+        "author": "Traditionally attributed to Parashara",
+        "url": null
+      }
+    },
+    {
+      "id": 3,
+      "phase": 1,
+      "name": "Chinese Astrology",
+      "status": "upcoming",
+      "variations": "BaZi / Four Pillars; Zi Wei Dou Shu; 12-animal zodiac; Nine Star Ki; 10 gods / luck pillars",
+      "mechanism": "Sexagenary calendar and solar-term conversion; pillar/palace computation",
+      "limits": "BaZi and Zi Wei require distinct schools/engines",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "BaZi: The Destiny Code (Book 1)",
+        "author": "Joey Yap",
+        "url": "https://store.joeyyap.com/products/bazi-destiny-code-book-1"
+      }
+    },
+    {
+      "id": 4,
+      "phase": 1,
+      "name": "Numerology",
+      "status": "available",
+      "variations": "Pythagorean; Chaldean; Lo Shu grid; personal-year cycles; name and date systems; gematria-adjacent",
+      "mechanism": "String normalization, letter-value mapping, digital roots and cycle arithmetic",
+      "limits": "Tradition-specific alphabets and letter maps",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "The Book of Numbers",
+        "author": "Cheiro",
+        "url": null
+      }
+    },
+    {
+      "id": 5,
+      "phase": 1,
+      "name": "Horary Astrology",
+      "status": "upcoming",
+      "variations": "Lilly traditional; contemporary traditional; lost-objects; relationship; event questions",
+      "mechanism": "Question-moment chart, significators, receptions and applying aspects",
+      "limits": "Judgment rules school-specific; strict question protocols",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Christian Astrology (Book II)",
+        "author": "William Lilly",
+        "url": "https://wellcomecollection.org/works/w67xnbfy"
+      }
+    },
+    {
+      "id": 6,
+      "phase": 1,
+      "name": "Mundane Astrology",
+      "status": "upcoming",
+      "variations": "Ingress charts; eclipses; planetary cycles; national founding charts; financial/collective astrology",
+      "mechanism": "Event and ingress charts linked to geopolitical time series",
+      "limits": "Founding charts contentious; avoid claiming geopolitical accuracy",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "The Book of World Horoscopes",
+        "author": "Nicholas Campion",
+        "url": null
+      }
+    },
+    {
+      "id": 7,
+      "phase": 1,
+      "name": "Astrocartography",
+      "status": "upcoming",
+      "variations": "A*C*G angular lines; relocation chart; parans; local-space lines",
+      "mechanism": "Map planetary angularity and relocations from birth chart",
+      "limits": "Minutes of birth time can move lines materially",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "The Astro*Carto*Graphy Book of Maps",
+        "author": "Jim Lewis and Kenneth Irving",
+        "url": null
+      }
+    },
+    {
+      "id": 8,
+      "phase": 2,
+      "name": "Palmistry",
+      "status": "upcoming",
+      "variations": "Western chiromancy; Indian Samudrika; major lines; mounts; hand shapes; dermatoglyphics",
+      "mechanism": "Hand feature extraction + school-specific symbolic rule sets",
+      "limits": "Palm marks not scientifically predictive; privacy/consent",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "The Laws of Scientific Hand Reading",
+        "author": "William G. Benham",
+        "url": "https://books.google.com/books?id=tsTlrHkJgiUC"
+      }
+    },
+    {
+      "id": 9,
+      "phase": 2,
+      "name": "Face Reading / Physiognomy",
+      "status": "historical",
+      "variations": "Chinese Mian Xiang; five elements; 12 palaces; Western historical physiognomy",
+      "mechanism": "Face landmarks + tradition-specific feature mappings",
+      "limits": "No valid personality/criminality/health inference from face",
+      "evidence": "Physiognomy is scientifically discredited; symbolic/historical only",
+      "source": {
+        "title": "Face Reading Essentials (series)",
+        "author": "Joey Yap",
+        "url": "https://www.joeyyap.com/book/book.asp"
+      }
+    },
+    {
+      "id": 10,
+      "phase": 2,
+      "name": "Phrenology",
+      "status": "historical",
+      "variations": "Gall localization; Spurzheim 35 faculties; Combe organ charts",
+      "mechanism": "Digital 3D head map / historical rule demonstration",
+      "limits": "DISCRE­DITED; never infer intellect, traits, or illness",
+      "evidence": "Discredited pseudoscience; educational/historical simulation only",
+      "source": {
+        "title": "Phrenology, or the Doctrine of the Mental Phenomena",
+        "author": "J. G. Spurzheim",
+        "url": null
+      }
+    },
+    {
+      "id": 11,
+      "phase": 2,
+      "name": "Moleosophy",
+      "status": "upcoming",
+      "variations": "Indian mole reading; Chinese mole maps; Western moleomancy; left/right polarity",
+      "mechanism": "Body-region + mole-position symbolic lookup",
+      "limits": "No medical mole assessment; skin-cancer concern refer to clinicians",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Face Reading Essentials (series)",
+        "author": "Joey Yap",
+        "url": "https://www.joeyyap.com/book/book.asp"
+      }
+    },
+    {
+      "id": 12,
+      "phase": 2,
+      "name": "Podomancy / Foot Reading",
+      "status": "upcoming",
+      "variations": "Toe shape and order; foot lines; sole marks; Indian foot signs",
+      "mechanism": "Foot/toe landmarks + symbolic mapping",
+      "limits": "Foot-based character/health claims unsupported",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Reading Toes",
+        "author": "Imre Somogyi",
+        "url": "https://www.penguin.co.uk/books/346962/reading-toes-by-imre-somogyi/9780852073100"
+      }
+    },
+    {
+      "id": 13,
+      "phase": 2,
+      "name": "Graphology",
+      "status": "historical",
+      "variations": "French analytic; German holistic; American applied; slant/spacing/pressure",
+      "mechanism": "Handwriting feature recognition + historical rule lookup",
+      "limits": "Graphology not reliable for personality/employment screening",
+      "evidence": "Discredited for personality assessment; creative simulation only",
+      "source": {
+        "title": "ABC of Graphology",
+        "author": "Jules Crépieux-Jamin",
+        "url": null
+      }
+    },
+    {
+      "id": 14,
+      "phase": 2,
+      "name": "Aura Reading",
+      "status": "upcoming",
+      "variations": "Theosophical color layers; energy-body chakras; clairvoyant description; Kirlian-inspired aesthetics",
+      "mechanism": "User-report + symbolic color mapper; optionally creative image effect",
+      "limits": "No physical aura detection with phone or photography",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Hands of Light",
+        "author": "Barbara Ann Brennan",
+        "url": null
+      }
+    },
+    {
+      "id": 15,
+      "phase": 2,
+      "name": "Iridology",
+      "status": "historical",
+      "variations": "Jensen iris map; German Deck method; Rayid eye archetypes",
+      "mechanism": "Iris-sector schematic + non-medical symbolic display",
+      "limits": "DISCRE­DITED as disease detection; ban health diagnosis",
+      "evidence": "Discredited diagnostic method; education/history only",
+      "source": {
+        "title": "The Science and Practice of Iridology",
+        "author": "Bernard Jensen",
+        "url": null
+      }
+    },
+    {
+      "id": 16,
+      "phase": 3,
+      "name": "Tarot",
+      "status": "available",
+      "variations": "Rider–Waite–Smith; Tarot de Marseille; Thoth; Etteilla; spreads; reversals",
+      "mechanism": "Seeded card deck, spread positions, correspondence lookup and synthesis",
+      "limits": "Keep deck copyrights/licensing separate from rules",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "The Pictorial Key to the Tarot",
+        "author": "A. E. Waite",
+        "url": "https://en.wikisource.org/wiki/Pictorial_Key_to_the_Tarot"
+      }
+    },
+    {
+      "id": 17,
+      "phase": 3,
+      "name": "Oracle Cards",
+      "status": "upcoming",
+      "variations": "Lenormand 36; Kipper; Belline; Sibilla; contemporary themed oracle decks",
+      "mechanism": "Deck-specific table + draw/spread; no universal semantics",
+      "limits": "Every deck needs its own symbol dictionary; art rights",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "The Essential Lenormand",
+        "author": "Rana George",
+        "url": null
+      }
+    },
+    {
+      "id": 18,
+      "phase": 3,
+      "name": "I Ching",
+      "status": "upcoming",
+      "variations": "Three-coin; yarrow-stalk; King Wen hexagrams; Mei Hua Yi Shu; Wen Wang Gua / Six Lines",
+      "mechanism": "Generate 6-line hexagram with changing lines and rule-set interpretations",
+      "limits": "Coin vs yarrow distributions differ; text translations rights",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "The I Ching or Book of Changes",
+        "author": "Richard Wilhelm / Cary F. Baynes",
+        "url": null
+      }
+    },
+    {
+      "id": 19,
+      "phase": 3,
+      "name": "Rune Casting",
+      "status": "upcoming",
+      "variations": "Elder Futhark (24); Younger (16); Anglo-Saxon Futhorc; modern blank rune; spreads",
+      "mechanism": "Select rune system, casting or structured draws, map meanings",
+      "limits": "Modern divinatory meanings differ from historical rune poems",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Taking Up the Runes",
+        "author": "Diana L. Paxson",
+        "url": null
+      }
+    },
+    {
+      "id": 20,
+      "phase": 3,
+      "name": "Pendulum Divination",
+      "status": "upcoming",
+      "variations": "Yes/no ideomotor; question charts; dowsing maps; letter wheels",
+      "mechanism": "Simulated pendulum oscillation, weighted answer modes, optional actual mouse motion",
+      "limits": "No evidence oscillation accesses hidden facts; ideomotor explanation",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "The Pendulum Kit",
+        "author": "Sig Lonegren",
+        "url": null
+      }
+    },
+    {
+      "id": 21,
+      "phase": 3,
+      "name": "Crystal Ball Scrying",
+      "status": "upcoming",
+      "variations": "Crystal gazing; dark reflective scrying; vision journaling; interpretive symbol tables",
+      "mechanism": "Animated visual field + free-association prompts + symbolic lexicon",
+      "limits": "Generated imagery is inspiration, not clairvoyant access",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Practical Psychomancy and Crystal Gazing",
+        "author": "William Walker Atkinson",
+        "url": "https://www.gutenberg.org/ebooks/43954"
+      }
+    },
+    {
+      "id": 22,
+      "phase": 3,
+      "name": "Mirror Scrying",
+      "status": "upcoming",
+      "variations": "Black mirror; psychomanteum; Dee-style obsidian; contemplative gazing",
+      "mechanism": "Digital black mirror / guided symbolic scene and journaling",
+      "limits": "No authenticated supernatural vision; psychological framing",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Reunions: Visionary Encounters with Departed Loved Ones",
+        "author": "Raymond Moody",
+        "url": null
+      }
+    },
+    {
+      "id": 23,
+      "phase": 3,
+      "name": "Dream Interpretation",
+      "status": "upcoming",
+      "variations": "Artemidorus omens; Freudian; Jungian; modern journaling; cultural symbol dictionaries",
+      "mechanism": "Dream NLP, symbol lexicons, narrative tagging and user feedback",
+      "limits": "Interpretations subjective; no clinical diagnosis",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Oneirocritica",
+        "author": "Artemidorus",
+        "url": "https://www.attalus.org/translate/artemidorus.html"
+      }
+    },
+    {
+      "id": 24,
+      "phase": 3,
+      "name": "Automatic Writing",
+      "status": "upcoming",
+      "variations": "Surrealist free writing; spiritualist trance writing; ideomotor journaling; stream-of-consciousness",
+      "mechanism": "Constrained LLM free-association + timestamped user writing; styles kept separate",
+      "limits": "LLM-generated text is not spirit communication",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Manifesto of Surrealism",
+        "author": "André Breton",
+        "url": null
+      }
+    },
+    {
+      "id": 26,
+      "phase": 3,
+      "name": "Akashic Records",
+      "status": "upcoming",
+      "variations": "Theosophical cosmology; Steiner etheric chronicle; Linda Howe Pathway Prayer; Cayce readings",
+      "mechanism": "Literature-grounded themed Q&A, guided imagination and record-style narrative",
+      "limits": "No access to metaphysical records is substantiated",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "How to Read the Akashic Records",
+        "author": "Linda Howe",
+        "url": "https://lindahowe.com/how-to-read-the-akashic-records-by-linda-howe/"
+      }
+    },
+    {
+      "id": 28,
+      "phase": 4,
+      "name": "Tasseography (Tea Leaves)",
+      "status": "upcoming",
+      "variations": "British tea-leaf reading; cup-section timing; symbolic shape dictionaries; Turkish tea variants",
+      "mechanism": "PRNG/physics-inspired residue patterns + symbol recognition and cup zones",
+      "limits": "Image synthesis simulates patterns, not future outcomes",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Telling Fortunes by Tea Leaves",
+        "author": "Cicely Kent",
+        "url": "https://www.gutenberg.org/ebooks/6964"
+      }
+    },
+    {
+      "id": 29,
+      "phase": 4,
+      "name": "Coffee Ground Reading",
+      "status": "upcoming",
+      "variations": "Turkish kahve falı; Balkan variants; cup + saucer; regional symbol charts",
+      "mechanism": "Sludge pattern generation, cup-sector and saucer interpretation",
+      "limits": "Keep regional customs distinct; interpretive only",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "The Secret of Coffee Grinds",
+        "author": "Sema Bal",
+        "url": null
+      }
+    },
+    {
+      "id": 30,
+      "phase": 4,
+      "name": "Pyromancy",
+      "status": "upcoming",
+      "variations": "Flame shapes; candle flame; smoke/embers; lamp divination; flame color",
+      "mechanism": "Animated stochastic flame + tagged observations",
+      "limits": "Physical flame effects require real heat; no forecast evidence",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "The Book of Candle Magic",
+        "author": "Madame Pamita",
+        "url": null
+      }
+    },
+    {
+      "id": 31,
+      "phase": 4,
+      "name": "Hydromancy",
+      "status": "upcoming",
+      "variations": "Water-bowl scrying; ripples; oil/water drops; reflective water",
+      "mechanism": "Fluid shader / ripple simulation + visual pattern labels",
+      "limits": "Symbolic scrying only; no special hardware needed",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Scrying for Beginners",
+        "author": "Donald Tyson",
+        "url": null
+      }
+    },
+    {
+      "id": 32,
+      "phase": 4,
+      "name": "Aeromancy",
+      "status": "upcoming",
+      "variations": "Cloud omens; wind direction; smoke drift; weather lore; atmospheric shapes",
+      "mechanism": "Procedural wind/cloud renderer; optionally real weather API",
+      "limits": "Actual meteorological forecasting is separate from omens",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Weather Lore",
+        "author": "Richard Inwards",
+        "url": "https://commons.wikimedia.org/wiki/File:Weather_lore;_a_collection_of_proverbs,_sayings,_and_rules_concerning_the_weather_(IA_weatherlorecolle00inwa).pdf"
+      }
+    },
+    {
+      "id": 33,
+      "phase": 4,
+      "name": "Geomancy (Western Divinatory)",
+      "status": "upcoming",
+      "variations": "Arabic ilm al-raml; European shield chart; house chart; 16 figures; horary geomancy",
+      "mechanism": "Generate 16 binary figures and shield/house charts; judge via figure relations",
+      "limits": "Distinguish divinatory geomancy from Feng Shui",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "The Art and Practice of Geomancy",
+        "author": "John Michael Greer",
+        "url": null
+      }
+    },
+    {
+      "id": 34,
+      "phase": 4,
+      "name": "Lithomancy",
+      "status": "upcoming",
+      "variations": "Traditional stone casting; 13-stone method; symbolic gem sets; positional readings",
+      "mechanism": "Random placement of labelled stones + distance/cluster interpretation",
+      "limits": "Different books prescribe incompatible sets/meanings",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Lithomancy",
+        "author": "Jon Saint Germain",
+        "url": "https://www.luckymojo.com/lithomancy.html"
+      }
+    },
+    {
+      "id": 35,
+      "phase": 4,
+      "name": "Osteomancy / Bone Casting",
+      "status": "upcoming",
+      "variations": "Shang oracle bones; Southern African bone throws; contemporary bone charm sets",
+      "mechanism": "Simulated bone/charm toss + positions; separately model oracle-crack inscriptions",
+      "limits": "Human sacrifice/animal harm never required; avoid flattening living traditions",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Sources of Shang History: The Oracle-Bone Inscriptions of Bronze Age China",
+        "author": "David N. Keightley",
+        "url": null
+      }
+    },
+    {
+      "id": 36,
+      "phase": 4,
+      "name": "Bibliomancy",
+      "status": "upcoming",
+      "variations": "Bible lots; Homeromanteion; page/line randomization; poem/book oracle",
+      "mechanism": "Random passage selection plus context and citation",
+      "limits": "Cannot ingest proprietary books without permission",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Homeromanteia in Context",
+        "author": "Harvard Center for Hellenic Studies",
+        "url": "https://research-bulletin.chs.harvard.edu/2014/03/28/using-homer-for-divination-homeromanteia-in-context/"
+      }
+    },
+    {
+      "id": 37,
+      "phase": 4,
+      "name": "Cleromancy / Lots",
+      "status": "upcoming",
+      "variations": "Dice oracle; astragalomancy; casting marked lots; Homeric three-dice oracle",
+      "mechanism": "PRNG for exact dice/permutation distributions + keyed outcome table",
+      "limits": "Extremely feasible; check ordered outcomes (e.g. 6³ = 216)",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "The Oracles of Homer and the Bones",
+        "author": "John Opsopaus",
+        "url": "https://opsopaus.com/homer-bones.html"
+      }
+    },
+    {
+      "id": 38,
+      "phase": 4,
+      "name": "Augury",
+      "status": "upcoming",
+      "variations": "Roman auspices; Greek bird omens; flight direction; species/call; weather birds",
+      "mechanism": "Bird-event simulation + cultural omen rule tables",
+      "limits": "Roman and Greek sign directions differ; not validated",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "De Divinatione",
+        "author": "Cicero",
+        "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cicero/de_Divinatione/home.html"
+      }
+    },
+    {
+      "id": 39,
+      "phase": 4,
+      "name": "Haruspicy / Extispicy",
+      "status": "upcoming",
+      "variations": "Mesopotamian liver omens; Etruscan hepatoscopy; Roman entrail reading",
+      "mechanism": "Virtual liver-zone chart and omen-table lookup",
+      "limits": "No sacrifice; archaeological reconstruction, not prophecy",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Babylonian Liver Omens",
+        "author": "Ulla Susanne Koch",
+        "url": null
+      }
+    },
+    {
+      "id": 40,
+      "phase": 4,
+      "name": "Feng Shui",
+      "status": "upcoming",
+      "variations": "Form School; Compass / Luo Pan; Eight Mansions; Flying Stars; San He/San Yuan; BTB",
+      "mechanism": "Building plan + compass headings + school-specific spatial/time overlays",
+      "limits": "Schools conflict; compass accuracy optional/manual entry",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Guide to the Feng Shui Compass",
+        "author": "Stephen Skinner",
+        "url": null
+      }
+    },
+    {
+      "id": 43,
+      "phase": 5,
+      "name": "Remote Viewing",
+      "status": "upcoming",
+      "variations": "Coordinate RV (CRV); extended RV (ERV); associative RV (ARV); naturalistic/dream RV",
+      "mechanism": "Blinded target prompt, structured session transcript and after-the-fact scoring",
+      "limits": "Real ESP unestablished; blinded scoring only evaluates procedures",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "Coordinate Remote Viewing Manual (1986)",
+        "author": "U.S. Army / CRV trainers",
+        "url": "https://centerlane-rv.org/manual"
+      }
+    },
+    {
+      "id": 44,
+      "phase": 5,
+      "name": "Prophetic Dreams",
+      "status": "upcoming",
+      "variations": "Precognitive dream diary; reciprocal time theory; synchronicity reports; controlled target dream",
+      "mechanism": "Prospective dream ledger, timestamped target events, matching/blind rating",
+      "limits": "Look-ahead and multiple-comparison bias; no confirmed prophecy",
+      "evidence": "Traditional / not scientifically validated",
+      "source": {
+        "title": "An Experiment with Time",
+        "author": "J. W. Dunne",
+        "url": "https://en.wikisource.org/wiki/File:Dunne_-_An_Experiment_with_Time.pdf"
+      }
+    },
+    {
+      "id": 45,
+      "phase": 5,
+      "name": "Intuitive Prediction",
+      "status": "upcoming",
+      "variations": "Recognition-primed judgment; fast-and-frugal heuristics; expert intuition; gut feeling",
+      "mechanism": "Elicit probabilistic judgments, track expertise and calibrate with outcomes",
+      "limits": "Expert intuition useful only in learnable, feedback-rich environments",
+      "evidence": "Empirical decision science, domain-dependent; not paranormal detection",
+      "source": {
+        "title": "Sources of Power",
+        "author": "Gary Klein",
+        "url": "https://mitpress.mit.edu/9780262534291/sources-of-power/"
+      }
+    },
+    {
+      "id": 46,
+      "phase": 5,
+      "name": "Déjà Rêvé",
+      "status": "upcoming",
+      "variations": "Episodic déjà-rêvé; familiarity-only; dream-reminiscence; dream-event matching",
+      "mechanism": "Dream log retrieval + semantic event-match UI; prospective timestamp controls",
+      "limits": "Neurological phenomenon not a technique for verified forecasting",
+      "evidence": "Neurological experiential reports; predictive claim not validated",
+      "source": {
+        "title": "Déjà-rêvé: Prior Dreams Induced by Direct Electrical Brain Stimulation",
+        "author": "Jonathan Curot et al.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6028740/"
+      }
+    },
+    {
+      "id": 49,
+      "phase": 6,
+      "name": "AI Predictive Modeling",
+      "status": "upcoming",
+      "variations": "Classical ARIMA/ETS; boosted trees; neural time-series; probabilistic transformers; foundation models",
+      "mechanism": "Train/validate statistical and ML forecasts; calibrated distributions",
+      "limits": "Data drift, leakage, and base-rate errors; measurable accuracy required",
+      "evidence": "Empirical, testable when historical data exists",
+      "source": {
+        "title": "Forecasting: Principles and Practice (3rd ed.)",
+        "author": "Rob J. Hyndman and George Athanasopoulos",
+        "url": "https://otexts.com/fpp3/"
+      }
+    },
+    {
+      "id": 50,
+      "phase": 6,
+      "name": "Quantum Probability Forecasting",
+      "status": "upcoming",
+      "variations": "Quantum Monte Carlo amplitude estimation; variational simulators; quantum-inspired sampling",
+      "mechanism": "Classically emulate small quantum circuits and compare probabilistic estimates",
+      "limits": "No quantum speedup claimed on classical hardware; tiny tractable circuits",
+      "evidence": "Research method; software simulation has no demonstrated speedup",
+      "source": {
+        "title": "Quantum Speedup of Monte Carlo Methods",
+        "author": "Ashley Montanaro",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4614442/"
+      }
+    },
+    {
+      "id": 51,
+      "phase": 6,
+      "name": "Superforecasting",
+      "status": "upcoming",
+      "variations": "Outside view; reference classes; decomposition; Bayesian updates; Brier/log scoring; calibration",
+      "mechanism": "Structured question definition, probabilistic update and backtest",
+      "limits": "Depends on auditable truth and resolvable question wording",
+      "evidence": "Empirically measurable forecasting skill",
+      "source": {
+        "title": "Superforecasting: The Art and Science of Prediction",
+        "author": "Philip E. Tetlock and Dan Gardner",
+        "url": null
+      }
+    },
+    {
+      "id": 52,
+      "phase": 6,
+      "name": "Psychohistory",
+      "status": "upcoming",
+      "variations": "Asimovian fictional psychohistory; social physics; population forecasting; complex adaptive models",
+      "mechanism": "Population-level stochastic simulation and macro-scenario forecasts",
+      "limits": "Asimov’s version fiction; plausible proxies not civilization-scale deterministic laws",
+      "evidence": "Fiction-inspired model; empirical proxies possible",
+      "source": {
+        "title": "Foundation",
+        "author": "Isaac Asimov",
+        "url": null
+      }
+    },
+    {
+      "id": 53,
+      "phase": 6,
+      "name": "Digital Twin Simulation",
+      "status": "upcoming",
+      "variations": "Physical asset twins; urban twins; individual/behavioral proxy twins; synthetic populations",
+      "mechanism": "State-space model updated from observed data; intervention scenarios",
+      "limits": "Without live telemetry, label as static scenario model, not real-time twin",
+      "evidence": "Empirical twin only to degree real-world state is measured",
+      "source": {
+        "title": "Foundational Research Gaps and Future Directions for Digital Twins",
+        "author": "National Academies of Sciences, Engineering, and Medicine",
+        "url": "https://www.nationalacademies.org/read/26894"
+      }
+    },
+    {
+      "id": 54,
+      "phase": 6,
+      "name": "Agent-Based Simulation",
+      "status": "upcoming",
+      "variations": "Cellular automata; Schelling segregation; Sugarscape; epidemiological/social ABM; LLM generative agents",
+      "mechanism": "Agent rules, environment, interactions, Monte Carlo ensembles and sensitivity tests",
+      "limits": "Emergent outputs parameter-sensitive; simulate scenarios, not fate",
+      "evidence": "Empirical/synthetic scenario testing possible",
+      "source": {
+        "title": "Generative Social Science",
+        "author": "Joshua M. Epstein",
+        "url": null
+      }
+    },
+    {
+      "id": 55,
+      "phase": 6,
+      "name": "Brain-Based Intention Prediction",
+      "status": "upcoming",
+      "variations": "Readiness potential; EEG motor imagery; fMRI decision decoding; behavioral intention proxy",
+      "mechanism": "Reproduce published offline signal-classification tasks; optional behavioral surrogate",
+      "limits": "Cannot directly read a user’s intentions without electrodes/scanner; do not extrapolate lab tasks",
+      "evidence": "Experimental neuroscience; narrow task, no mind reading",
+      "source": {
+        "title": "Brain–Computer Interfaces: Principles and Practice",
+        "author": "Jonathan Wolpaw and Elizabeth Wolpaw (eds.)",
+        "url": null
+      }
+    },
+    {
+      "id": 56,
+      "phase": 6,
+      "name": "Causal AI Forecasting",
+      "status": "upcoming",
+      "variations": "Causal DAG; back-door adjustment; structural causal models; do-calculus; counterfactual uplift",
+      "mechanism": "Causal graph + assumptions + intervention estimates and sensitivity analysis",
+      "limits": "Causality not identified from correlations alone",
+      "evidence": "Empirical under explicit identification assumptions",
+      "source": {
+        "title": "Causality",
+        "author": "Judea Pearl",
+        "url": "https://www.cambridge.org/core/books/causality/B0046844FAE10CBF274D4ACBDAEB5F5B"
+      }
+    },
+    {
+      "id": 57,
+      "phase": 6,
+      "name": "Collective Intelligence Forecasting",
+      "status": "upcoming",
+      "variations": "Delphi; weighted expert pools; crowd aggregation; LLM committee simulation; prediction tournaments",
+      "mechanism": "Aggregate independent probability estimates and learn forecaster weights",
+      "limits": "Synthetic LLM consensus is not independent human wisdom",
+      "evidence": "Testable when independent forecasts and outcomes exist",
+      "source": {
+        "title": "Superminds",
+        "author": "Thomas W. Malone",
+        "url": "https://cci.mit.edu/superminds-by-thomas-w-malone/"
+      }
+    },
+    {
+      "id": 58,
+      "phase": 6,
+      "name": "Prediction Markets",
+      "status": "upcoming",
+      "variations": "Continuous double auction; market scoring rules; LMSR; play-money internal market",
+      "mechanism": "Virtual shares, automated market maker, resolution and probability extraction",
+      "limits": "Avoid regulated real-money trading unless legal compliance resolved",
+      "evidence": "Empirical with genuine traders and verifiable resolution",
+      "source": {
+        "title": "Prediction Markets",
+        "author": "Justin Wolfers and Eric Zitzewitz",
+        "url": "https://www.aeaweb.org/articles?id=10.1257%2F0895330041371321"
+      }
+    },
+    {
+      "id": 59,
+      "phase": 6,
+      "name": "Chaos-Theory Forecasting",
+      "status": "upcoming",
+      "variations": "Lorenz systems; Lyapunov horizon; nonlinear delay embedding; reservoir computing; ensemble weather-like models",
+      "mechanism": "Reconstruct state, perturb initial conditions, quantify forecast horizon",
+      "limits": "Sensitive initial conditions bound accurate long-horizon forecasts",
+      "evidence": "Scientifically grounded but forecast horizons limited",
+      "source": {
+        "title": "Deterministic Nonperiodic Flow",
+        "author": "Edward N. Lorenz",
+        "url": "https://journals.ametsoc.org/view/journals/atsc/20/2/1520-0469_1963_020_0130_dnf_2_0_co_2.xml"
+      }
+    },
+    {
+      "id": 60,
+      "phase": 6,
+      "name": "Multiverse / Many-Worlds Prediction",
+      "status": "upcoming",
+      "variations": "Everett relative-state theory; branch-weight thought experiments; decision-theory scenarios; multiverse narrative",
+      "mechanism": "Probability-weighted scenario tree / Monte Carlo alternate-history paths",
+      "limits": "Cannot observe or forecast other universes; explicitly speculative",
+      "evidence": "Physics interpretation + creative scenario simulator, not a predictive oracle",
+      "source": {
+        "title": "Relative State Formulation of Quantum Mechanics",
+        "author": "Hugh Everett III",
+        "url": "https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.29.454"
+      }
+    }
+  ]
+}

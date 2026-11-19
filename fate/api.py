@@ -19,6 +19,7 @@ from starlette.middleware.gzip import GZipMiddleware
 from future.tarot import read
 from future.tarot_catalog import PROFILE
 from future.card_random import PROTOCOL
+from future.numerology import calculate, readings as number_readings
 
 WEB = Path(__file__).parent / 'web' / 'dist'
 POSITIONS = ['What you carry', 'Where you stand', 'What to consider']
@@ -44,6 +45,24 @@ class Explain(BaseModel):
         if value is not True:
             raise ValueError('Explicit boolean cloud consent is required.')
         return value
+
+
+class NumberInput(BaseModel):
+    model_config = ConfigDict(extra='forbid', strict=True)
+    name: str = Field(min_length=1, max_length=160)
+    birth: str = Field(pattern=r'^\d{4}-\d{2}-\d{2}$')
+    target: str = Field(pattern=r'^\d{4}-\d{2}-\d{2}$')
+    basis: Literal['birth', 'current'] = 'birth'
+    y_roles: str = Field(default='', max_length=160)
+
+
+def native_numbers(q: NumberInput):
+    # The native engine owns all arithmetic, conventions and interpretation.
+    return number_readings(calculate(q.birth, q.name, q.basis, q.target, q.y_roles))
+
+
+class NumberExplain(Explain):
+    draw: NumberInput
 
 
 def native(q: Draw):
@@ -134,6 +153,42 @@ def create_app(provider=None, signing_key=None, clock=time.time):
         result = native(q)
         expiry = int(clock()) + 86400
         return dict(result=result, receipt=f'{expiry}.{signature(q, expiry)}')
+
+    @app.post('/api/numerology')
+    def numbers(q: NumberInput):
+        expiry = int(clock()) + 86400
+        return dict(result=native_numbers(q), oracle_id=4, receipt=f'{expiry}.{signature(q, expiry)}')
+
+    @app.post('/api/numerology/explain')
+    def explain_numbers(q: NumberExplain):
+        try:
+            expiry, signed = q.receipt.split('.')
+            valid = clock() <= int(expiry) <= clock() + 86400 and hmac.compare_digest(signed, signature(q.draw, expiry))
+        except (ValueError, TypeError):
+            valid = False
+        if not valid:
+            raise HTTPException(403, 'This reading receipt expired or changed. Calculate again to request commentary.')
+        if not cloud_slots.acquire(blocking=False):
+            raise HTTPException(429, 'Commentary is busy. Your native reading is still available.')
+        try:
+            result = native_numbers(q.draw)
+            # No personal identifiers leave the server: direct themes alone suffice.
+            themes = [r for r in result['readings'] if r['coverage'] == 'direct']
+            prompt = ('Gently explain these supplied symbolic Numerology themes, not personality facts or forecasts. '
+                      'No new meanings, diagnosis, inferred personal facts or event predictions. '
+                      'Return JSON {"themes":[{"scope":"exact supplied scope","source_id":"exact supplied source_id",'
+                      '"reflection":"1 to 500 characters"}]}, one per supplied theme, in order. DATA: ' + json.dumps(themes))
+            from workbench.gemini import generate
+            output, provenance = (provider or generate)(prompt)
+            rows = output.get('themes') if isinstance(output, dict) else None
+            if not isinstance(rows, list) or len(rows) != len(themes):
+                raise ValueError('Commentary did not match this reading. Please retry.')
+            for row, source in zip(rows, themes):
+                if not isinstance(row, dict) or any(row.get(k) != source[k] for k in ('scope', 'source_id')) or not isinstance(row.get('reflection'), str) or not 1 <= len(row['reflection']) <= 500:
+                    raise ValueError('Commentary references did not match this reading. Please retry.')
+            return dict(themes=rows, provenance=provenance, coverage='experimental_ai_commentary')
+        finally:
+            cloud_slots.release()
 
     @app.post('/api/explain')
     def explain(q: Explain):

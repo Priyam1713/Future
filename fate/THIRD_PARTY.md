@@ -10,3 +10,6 @@
 - The published `@pixi/colord` package declares MIT but omits a standalone license file. Its declared upstream's [LICENSE.md](https://github.com/omgovich/colord/blob/master/LICENSE.md) is retained with its source URL in the collected notices.
 
 The original vision documents' web references were treated as art direction, not as reusable image assets.
+# FATE Block 02 original artwork
+
+The celestial brass dial and observatory hall were created for this project with the built-in imagegen tool. Exact prompts, methods and source/delivery paths are recorded in `fate/design/block02-artwork.json`; source PNGs are retained in `fate/design/sources/`. Delivery conversion resizes/encodes only. Numerology numbers, interpretations and source identity are native engine output, independent of decorative artwork. The complete historical Tarot edition and its per-file rights records are unchanged.

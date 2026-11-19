@@ -7,6 +7,9 @@ import ReadingScreen from "./screens/ReadingScreen";
 import { SettingsDialog } from "./components/SettingsDialog";
 import "./style.css";
 import "./cinematic.css";
+import "./gallery.css";
+import { lazy, Suspense } from "react";
+const NumerologyScreen = lazy(() => import("./screens/NumerologyScreen"));
 function App() {
   const oracle = useOracle();
   const { screen, reduced, paused, dialog, sound, navigate, skipToContent } =
@@ -58,6 +61,16 @@ function App() {
       <main id="main" tabIndex={-1}>
         {screen === "explore" ? (
           <ExploreScreen oracle={oracle} />
+        ) : screen === "numerology" ? (
+          <Suspense
+            fallback={
+              <p className="scope-note" role="status">
+                Opening the observatory…
+              </p>
+            }
+          >
+            <NumerologyScreen oracle={oracle} />
+          </Suspense>
         ) : screen === "ritual" ? (
           <RitualScreen oracle={oracle} />
         ) : (

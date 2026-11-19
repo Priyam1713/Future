@@ -1,16 +1,17 @@
 {
   "environment": "Local Chromium mobile emulation, 390×844 DPR2; SwiftShader software WebGL, warm server, no network throttling. Not real-device CWV certification or INP.",
-  "lcp": 156,
+  "lcp": 196,
   "cls": 0,
   "longTasks": [
-    239,
-    93,
-    66
+    54,
+    1366,
+    122,
+    52
   ],
   "rafMedianMs": 16.699999999999818,
   "heapObservation": {
     "usedBytes": 10000000,
-    "totalBytes": 12700000,
+    "totalBytes": 18200000,
     "note": "Chromium coarse heap observation, not peak-memory profiling"
   },
   "navigation": [
@@ -18,8 +19,8 @@
       "name": "http://127.0.0.1:8010/",
       "entryType": "navigation",
       "startTime": 0,
-      "duration": 35.199999928474426,
-      "navigationId": 4373,
+      "duration": 36.699999928474426,
+      "navigationId": 8571,
       "initiatorType": "navigation",
       "deliveryType": "",
       "nextHopProtocol": "http/1.1",
@@ -33,30 +34,30 @@
       "workerFinalSourceType": "",
       "redirectStart": 0,
       "redirectEnd": 0,
-      "fetchStart": 0.19999992847442627,
-      "domainLookupStart": 0.8999999761581421,
-      "domainLookupEnd": 1.2999999523162842,
-      "connectStart": 1.2999999523162842,
+      "fetchStart": 0,
+      "domainLookupStart": 0.6999999284744263,
+      "domainLookupEnd": 1,
+      "connectStart": 1,
       "secureConnectionStart": 0,
-      "connectEnd": 1.6999999284744263,
-      "requestStart": 1.6999999284744263,
+      "connectEnd": 1.399999976158142,
+      "requestStart": 1.5,
       "responseStart": 3.799999952316284,
       "firstInterimResponseStart": 0,
       "finalResponseHeadersStart": 3.799999952316284,
       "responseEnd": 4.199999928474426,
-      "transferSize": 819,
-      "encodedBodySize": 519,
+      "transferSize": 818,
+      "encodedBodySize": 518,
       "decodedBodySize": 1125,
       "responseStatus": 200,
       "serverTiming": [],
       "unloadEventStart": 0,
       "unloadEventEnd": 0,
-      "domInteractive": 9.899999976158142,
-      "domContentLoadedEventStart": 34.5,
-      "domContentLoadedEventEnd": 34.60000002384186,
-      "domComplete": 35.199999928474426,
-      "loadEventStart": 35.199999928474426,
-      "loadEventEnd": 35.199999928474426,
+      "domInteractive": 9.299999952316284,
+      "domContentLoadedEventStart": 36.09999990463257,
+      "domContentLoadedEventEnd": 36.09999990463257,
+      "domComplete": 36.699999928474426,
+      "loadEventStart": 36.699999928474426,
+      "loadEventEnd": 36.699999928474426,
       "type": "navigate",
       "redirectCount": 0,
       "activationStart": 0,
@@ -72,42 +73,52 @@
     {
       "name": "http://127.0.0.1:8010/art/orb-poster-v2.webp",
       "transferSize": 98476,
-      "duration": 6.400000095367432
-    },
-    {
-      "name": "http://127.0.0.1:8010/fonts/cormorant-latin.woff2",
-      "transferSize": 37973,
-      "duration": 11.800000071525574
+      "duration": 5.800000071525574
     },
     {
       "name": "http://127.0.0.1:8010/fonts/cormorant-italic-latin.woff2",
       "transferSize": 39593,
-      "duration": 13.899999976158142
+      "duration": 11
     },
     {
-      "name": "http://127.0.0.1:8010/assets/index-CE-yL4qh.js",
-      "transferSize": 74546,
-      "duration": 16.100000023841858
+      "name": "http://127.0.0.1:8010/fonts/cormorant-latin.woff2",
+      "transferSize": 37973,
+      "duration": 12
     },
     {
-      "name": "http://127.0.0.1:8010/assets/index-Co30Rqry.css",
-      "transferSize": 8646,
-      "duration": 11.299999952316284
+      "name": "http://127.0.0.1:8010/assets/index-7BgBCdmm.js",
+      "transferSize": 88033,
+      "duration": 18.100000023841858
+    },
+    {
+      "name": "http://127.0.0.1:8010/assets/index-WsksXsgl.css",
+      "transferSize": 12795,
+      "duration": 11.600000023841858
     },
     {
       "name": "http://127.0.0.1:8010/art/fate_atmosphere.webp",
       "transferSize": 15056,
-      "duration": 2.600000023841858
+      "duration": 3
+    },
+    {
+      "name": "http://127.0.0.1:8010/art/nebula-v1.webp",
+      "transferSize": 25484,
+      "duration": 3
     },
     {
       "name": "http://127.0.0.1:8010/fonts/inter-latin.woff2",
       "transferSize": 48549,
-      "duration": 31.09999990463257
+      "duration": 50.300000071525574
     },
     {
-      "name": "http://127.0.0.1:8010/assets/Orb-mwdLWlAy.js",
+      "name": "http://127.0.0.1:8010/assets/Orb-3FEr689F.js",
       "transferSize": 1111,
-      "duration": 11.300000071525574
+      "duration": 9
+    },
+    {
+      "name": "http://127.0.0.1:8010/art/deck/pam-a-v1/major-18-360.webp",
+      "transferSize": 80272,
+      "duration": 12.5
     },
     {
       "name": "http://127.0.0.1:8010/art/fate_sigil.svg",
@@ -115,69 +126,74 @@
       "duration": 9.700000047683716
     },
     {
-      "name": "http://127.0.0.1:8010/art/deck/pam-a-v1/major-18-360.webp",
-      "transferSize": 80272,
-      "duration": 11.700000047683716
-    },
-    {
       "name": "http://127.0.0.1:8010/art/deck/pam-a-v1/major-17-360.webp",
       "transferSize": 76864,
-      "duration": 12.600000023841858
+      "duration": 12.299999952316284
+    },
+    {
+      "name": "http://127.0.0.1:8010/art/number-dial-v1.webp",
+      "transferSize": 287137,
+      "duration": 22.100000023841858
+    },
+    {
+      "name": "http://127.0.0.1:8010/art/gallery-hall-v1.webp",
+      "transferSize": 179297,
+      "duration": 21.399999976158142
     },
     {
       "name": "http://127.0.0.1:8010/api/health",
       "transferSize": 370,
-      "duration": 6.600000023841858
+      "duration": 3
     },
     {
-      "name": "http://127.0.0.1:8010/assets/createOrbScene-BqCh3WCc.js",
-      "transferSize": 94007,
-      "duration": 15.699999928474426
+      "name": "http://127.0.0.1:8010/assets/createOrbScene-Cy1UFdLG.js",
+      "transferSize": 93822,
+      "duration": 13.399999976158142
     },
     {
-      "name": "http://127.0.0.1:8010/assets/WebGLRenderer-BFvwUOWM.js",
+      "name": "http://127.0.0.1:8010/assets/WebGLRenderer-At76Ybob.js",
       "transferSize": 14857,
-      "duration": 9.200000047683716
+      "duration": 14.100000023841858
     },
     {
-      "name": "http://127.0.0.1:8010/assets/GpuStencilModesToPixi-CVQ9pqZm.js",
+      "name": "http://127.0.0.1:8010/assets/GpuStencilModesToPixi-q6dqNCwr.js",
       "transferSize": 1369,
-      "duration": 8.799999952316284
+      "duration": 13.399999976158142
     },
     {
-      "name": "http://127.0.0.1:8010/assets/RenderTargetSystem-BkdUowcZ.js",
-      "transferSize": 13197,
-      "duration": 9.100000023841858
+      "name": "http://127.0.0.1:8010/assets/RenderTargetSystem-CBBfzvc2.js",
+      "transferSize": 13196,
+      "duration": 13.699999928474426
     },
     {
       "name": "http://127.0.0.1:8010/art/fate_orrery.svg",
       "transferSize": 825,
-      "duration": 20.100000023841858
+      "duration": 10
     },
     {
       "name": "http://127.0.0.1:8010/art/nebula-v1.webp",
-      "transferSize": 25484,
-      "duration": 21.300000071525574
+      "transferSize": 0,
+      "duration": 1.5
     },
     {
-      "name": "http://127.0.0.1:8010/assets/browserAll-DgrVqBKU.js",
+      "name": "http://127.0.0.1:8010/assets/browserAll-ClcoW9_T.js",
       "transferSize": 11719,
-      "duration": 15.399999976158142
+      "duration": 7.600000023841858
     },
     {
-      "name": "http://127.0.0.1:8010/assets/webworkerAll-Be6pxZZ0.js",
-      "transferSize": 5373,
-      "duration": 16.800000071525574
+      "name": "http://127.0.0.1:8010/assets/webworkerAll-DgWZUo7Z.js",
+      "transferSize": 5374,
+      "duration": 7.5
     },
     {
-      "name": "http://127.0.0.1:8010/assets/canvasUtils-DdhQvE1o.js",
-      "transferSize": 2094,
-      "duration": 16.5
+      "name": "http://127.0.0.1:8010/assets/canvasUtils-DKsjOgSM.js",
+      "transferSize": 2096,
+      "duration": 7.200000047683716
     },
     {
-      "name": "http://127.0.0.1:8010/assets/CanvasPool-DnlM-N_W.js",
+      "name": "http://127.0.0.1:8010/assets/CanvasPool-D6C-kmRU.js",
       "transferSize": 1091,
-      "duration": 16.700000047683716
+      "duration": 7
     }
   ]
 }

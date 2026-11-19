@@ -3,6 +3,7 @@ import CardArt from "../CardArt";
 import type { Oracle } from "../hooks/useOracle";
 import { ReadingDetails } from "../components/ReadingDetails";
 import { GeminiCommentary } from "../components/GeminiCommentary";
+import { plainThemes } from "../experiences/tarotPresentation";
 export default function ReadingScreen({ oracle }: { oracle: Oracle }) {
   const { heading, navigate, result, download, fresh } = oracle;
   if (!result) return null;
@@ -40,17 +41,29 @@ export default function ReadingScreen({ oracle }: { oracle: Oracle }) {
       <section className="reading-summary" aria-labelledby="themes-title">
         <p className="eyebrow">YOUR READING AT A GLANCE</p>
         <h2 id="themes-title">Threads to follow</h2>
-        {result.readings.map((r) => (
-          <div className="theme-row" key={r.card.id}>
-            <span>{r.position.label}</span>
-            <strong>
-              {r.direct_component.symbolic_focus.split(";").join(" · ")}
-            </strong>
-          </div>
-        ))}
+        <div className="tarot-payoff">
+          {result.readings.map((r) => (
+            <div key={r.card.id}>
+              <span>{r.position.label}</span>
+              <h3>{r.card.name}</h3>
+              <p>{plainThemes(r)}</p>
+            </div>
+          ))}
+        </div>
+        <details className="native-motifs">
+          <summary>Original source motifs</summary>
+          {result.readings.map((r) => (
+            <div className="theme-row" key={r.card.id}>
+              <span>{r.position.label}</span>
+              <strong>
+                {r.direct_component.symbolic_focus.split(";").join(" · ")}
+              </strong>
+            </div>
+          ))}
+        </details>
         <p className="summary-footnote">
-          Source-derived motifs, arranged as a reflection. These positions are
-          an editorial frame, not evidence of events.
+          Source themes, edited for clarity. These are reflection prompts, not
+          findings about your life. Alternative source accounts remain separate.
         </p>
       </section>
       <div className="section-label depth-label">
@@ -105,6 +118,27 @@ export default function ReadingScreen({ oracle }: { oracle: Oracle }) {
         This visit only. Export to keep your reading; nothing is saved
         automatically.
       </p>
+      <div className="next-room">
+        <p className="eyebrow">YOUR NEXT DOOR · NUMEROLOGY</p>
+        <h2>
+          A different kind
+          <br />
+          of <em>pattern.</em>
+        </h2>
+        <p>
+          Leave the cards for a moment. Explore the symbolic themes in a name
+          and a date.
+        </p>
+        <button
+          className="primary"
+          onClick={() => oracle.navigate("numerology")}
+        >
+          Explore Numerology <span aria-hidden="true">↗</span>
+        </button>
+        <button className="text-button" onClick={() => navigate("explore")}>
+          Return to the Gallery
+        </button>
+      </div>
     </div>
   );
 }

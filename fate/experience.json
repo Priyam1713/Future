@@ -1,7 +1,6 @@
 {
-  "id": "fate-tarot-v1.5",
-  "block": "01.5 · Cinematic Polish & Visual Foundation",
-  "technique_id": 16,
+  "id": "fate-oracle-gallery-v2",
+  "block": "02 · The Oracle Gallery & Second Door",
   "capability": "symbolic_reading",
   "engine": "future.tarot.read",
   "text_profile": "waite-1922-text-v1",
@@ -86,18 +85,87 @@
     "probabilities or confidence scores",
     "other Tarot traditions",
     "Celtic/manual consumer flows",
-    "other techniques",
     "Fate Atlas or accounts",
     "automatic reading storage",
     "multiplayer",
     "Arcade",
-    "monetization"
+    "monetization",
+    "consumer journeys beyond Tarot and Numerology"
   ],
   "art_rights": {
     "pack": "User supplied Downloads/FATE-asset-pack-01.zip; original procedural artwork and synthesized audio per included README",
     "cards": "Historical Pamela Colman Smith Pam-A illustrations, 1910; all 78 per-file public-domain records pinned in artwork-sources.json; no modern recoloring or mixed replacement",
     "fonts": "Self-hosted Cormorant Garamond and Inter; SIL OFL licenses and source URLs bundled",
-    "generated": "Original back and nebula made with built-in image_gen; prompts and source PNGs retained under design/. Poster extracted from actual renderer."
+    "generated": "Original FATE back, nebula, brass dial and observatory hall made with built-in image_gen; exact prompts and source PNGs retained under design/. No baked UI. Orb poster extracted from actual renderer."
   },
-  "scope": "Consumer visual foundation over the unchanged supported symbolic engine; no new technique, factual forecast or predictive certification"
+  "scope": "Two consumer rooms over unchanged native engines; consumer availability remains separate from native engine readiness. No empirical prediction certification.",
+  "technique_ids": [
+    4,
+    16
+  ],
+  "supported_scope": "The existing supported object describes Tarot; Numerology and Gallery have separate scopes below.",
+  "gallery": {
+    "inventory": "knowledge/inventory.json",
+    "projection": "web/src/gallery/inventory.json",
+    "retained": 54,
+    "excluded": [
+      25,
+      27,
+      41,
+      42,
+      47,
+      48
+    ],
+    "available": [
+      4,
+      16
+    ],
+    "historical_references": [
+      9,
+      10,
+      13,
+      15
+    ],
+    "upcoming": "All other retained IDs; no launch dates or consumer-engine readiness claims",
+    "continuity": "React memory only; completed-reading markers contain technique IDs, no personal inputs; cleared on reload",
+    "taxonomy": "Six original inventory phases, editorial collection names; IDs, variations, evidence and rank-one source retained. Master inventory, resource rankings and variation records unchanged."
+  },
+  "numerology": {
+    "engine": "future.numerology.readings(calculate(...))",
+    "profile": "decoz-component-reduction",
+    "endpoint": "POST /api/numerology",
+    "required_inputs": [
+      "name",
+      "birth",
+      "target",
+      "basis",
+      "y_roles per Y occurrence"
+    ],
+    "supported": [
+      "Life Path and Birthday with original traces",
+      "Expression, Soul Urge and Personality; explicit birth/current name basis",
+      "Master numbers 11/22/33 at core component stages",
+      "Calendar-year personal cycles; single digit year/month/day",
+      "Caller-classified Y; explicit ASCII alphabet and separators",
+      "Direct source summaries for Expression and Personal Year only",
+      "Three progressive seals over a completed native calculation; immediate reading path",
+      "Full native JSON export",
+      "Original brass material, live teal glass, independent geometry, light, numerical constellation and pointer/keyboard touch transforms",
+      "Shared opt-in audio; reduced-motion, offscreen/hidden pause; low-capability transform steps and fewer layers"
+    ],
+    "experimental": [
+      "Gemini theme commentary with fresh per-reading consent, signed request replay, bounded exact source/scope reference validation; semantic faithfulness not guaranteed",
+      "Hyphen/apostrophe token joining follows the native implementation convention"
+    ],
+    "unsupported": [
+      "Chaldean, Lo Shu or gematria",
+      "Automatic transliteration or pronunciation",
+      "Direct number-specific Life Path, Soul Urge, Personality or Birthday meanings",
+      "Monthly/day-specific readings",
+      "Birthday-transition personal years",
+      "Empirical personality diagnosis or event forecasts"
+    ],
+    "privacy": "Input and result in current React component only, cleared on leaving the Numerology room. API no-store; no server persistence. Explicitly consented Gemini provider prompt contains direct theme/source rows only, omitting name and dates.",
+    "rendering": "Composited material layers share quality policy with the orb; no additional WebGL context, no per-frame React state or JS animation loop. Low-capability mode reduces layers and quantizes continuous transform steps to 30/second."
+  }
 }

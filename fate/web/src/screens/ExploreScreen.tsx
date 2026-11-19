@@ -4,6 +4,7 @@ import type { Oracle } from "../hooks/useOracle";
 import { lazy, Suspense } from "react";
 import type { Card } from "../types";
 import { OrbPoster } from "../orb/OrbPoster";
+import { OracleGallery } from "../gallery/OracleGallery";
 const Orb = lazy(() => import("../Orb"));
 const previewCard: Card = {
   id: "major-17",
@@ -27,7 +28,7 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
       <div className="hero">
         <div className="hero-copy">
           <p className="eyebrow">
-            <span className="tiny-star">✧</span> THE LIVING ORACLE
+            <span className="tiny-star">✧</span> THE ORACLE GALLERY
           </p>
           <h1 ref={heading} tabIndex={-1}>
             Some answers
@@ -35,9 +36,19 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
             begin with <em>wonder.</em>
           </h1>
           <p className="hero-description">
-            A quiet moment. An ancient tradition.
-            <br />A different way to see what lies ahead.
+            Ancient symbols. Quiet patterns.
+            <br />
+            Two open rooms in a universe of discovery.
           </p>
+          <nav className="room-index" aria-label="Open oracle rooms">
+            <button onClick={begin}>
+              <span>01</span> Tarot
+            </button>
+            <span aria-hidden="true">/</span>
+            <button onClick={() => oracle.navigate("numerology")}>
+              <span>02</span> Numerology
+            </button>
+          </nav>
           <a
             className="primary desktop-cta"
             href="#ritual"
@@ -78,7 +89,17 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
           </button>
         </div>
       </div>
-      <section className="oracle-section" aria-labelledby="oracle-title">
+      <div className="mobile-cta">
+        <button className="primary" onClick={begin}>
+          Begin a reading <ArrowRight size={17} />
+        </button>
+        <a href="#open-rooms">Choose your room ↓</a>
+      </div>
+      <section
+        id="open-rooms"
+        className="oracle-section"
+        aria-labelledby="oracle-title"
+      >
         <div className="section-label">
           <span>01 / YOUR FIRST CHAPTER</span>
           <span>AN ANCIENT ART, REIMAGINED</span>
@@ -108,7 +129,10 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
               <br className="mobile-break" /> a new perspective.
             </p>
             <span className="tile-meta">
-              ARCHIVE EDITION <span>·</span> 78 ILLUSTRATED CARDS
+              {oracle.explored.includes(16)
+                ? "EXPLORED THIS VISIT"
+                : "ARCHIVE EDITION"}{" "}
+              <span>·</span> 78 ILLUSTRATED CARDS
             </span>
           </div>
           <span className="tile-arrow">
@@ -116,6 +140,7 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
           </span>
         </a>
       </section>
+      <OracleGallery oracle={oracle} />
       <div className="explore-invitation">
         <span className="gold-star">✦</span>
         <p>
@@ -123,12 +148,6 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
           <br />
           Sometimes, curiosity is enough.
         </p>
-      </div>
-      <div className="mobile-cta">
-        <button className="primary" onClick={begin}>
-          Begin a reading <ArrowRight size={17} />
-        </button>
-        <span>No account. Just your curiosity.</span>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import CardArt from "../CardArt";
 import type { Oracle } from "../hooks/useOracle";
+import { reflectionPrompt } from "../experiences/tarotPresentation";
 export function ReadingDetails({ oracle }: { oracle: Oracle }) {
   const { result } = oracle;
   if (!result) return null;
@@ -17,13 +18,17 @@ export function ReadingDetails({ oracle }: { oracle: Oracle }) {
             <span className="orientation-pill">{r.orientation}</span>
           </div>
           <p className="reflection">
-            {r.composition.reflection.replaceAll(";", ", ")}
+            {reflectionPrompt(r, i, result.readings.length)}
           </p>
           <details>
             <summary>
               The traditional meaning <ChevronDown size={16} />
             </summary>
             <div className="detail-body">
+              <p className="source-label">
+                NATIVE COMPOSITION · SYMBOLIC CONTEXT
+              </p>
+              <p>{r.composition.reflection}</p>
               <p className="source-label">HISTORICAL WORDING · WAITE, 1922</p>
               <blockquote>{r.direct_component.text}</blockquote>
               <a

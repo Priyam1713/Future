@@ -8,6 +8,10 @@ SPECS=[
  ('card-back-v1.png','art/deck/fate-back-v1/card-back-360.webp',360,540,88),
  ('nebula-v1.png','art/nebula-v1.webp',768,768,90),
  ('orb-poster-v2.png','art/orb-poster-v2.webp',960,960,92),
+ ('number-dial-v1.png','art/number-dial-v1.webp',960,960,90),
+ ('number-dial-v1.png','art/number-dial-480.webp',480,480,88),
+ ('gallery-hall-v1.png','art/gallery-hall-v1.webp',1536,1024,88),
+ ('gallery-hall-v1.png','art/gallery-hall-768.webp',768,512,85),
 ]
 
 def main():
