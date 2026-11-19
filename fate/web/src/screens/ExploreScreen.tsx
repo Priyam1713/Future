@@ -49,6 +49,7 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
               <span>02</span> Numerology
             </button>
           </nav>
+          <button className="collection-shortcut text-button" onClick={()=>oracle.navigate("gallery")}>Browse all 54 techniques <span aria-hidden="true">↗</span></button>
           <a
             className="primary desktop-cta"
             href="#ritual"

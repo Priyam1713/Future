@@ -1,6 +1,6 @@
 {
-  "id": "fate-oracle-gallery-v2",
-  "block": "02 · The Oracle Gallery & Second Door",
+  "id": "fate-living-codex-v3",
+  "block": "03 · The Living Codex",
   "capability": "symbolic_reading",
   "engine": "future.tarot.read",
   "text_profile": "waite-1922-text-v1",
@@ -62,7 +62,7 @@
       "Renderer-derived static poster without UI text",
       "Opt-in audio, quieter defaults and independent levels"
     ],
-    "persistence": "In-memory visit only; explicit JSON download; no account, database, localStorage or analytics",
+    "persistence": "Native inputs/results remain in memory unless the visitor explicitly exports them. Save to this device persists only allowlisted card selections or core numbers, source edition, random chapter ID and save time. No names, entered dates, questions, traces, seeds or Gemini commentary in Codex storage.",
     "rendering": {
       "normal_target_hz": 60,
       "tiers": [
@@ -85,7 +85,7 @@
     "probabilities or confidence scores",
     "other Tarot traditions",
     "Celtic/manual consumer flows",
-    "Fate Atlas or accounts",
+    "accounts or cloud sync",
     "automatic reading storage",
     "multiplayer",
     "Arcade",
@@ -96,9 +96,9 @@
     "pack": "User supplied Downloads/FATE-asset-pack-01.zip; original procedural artwork and synthesized audio per included README",
     "cards": "Historical Pamela Colman Smith Pam-A illustrations, 1910; all 78 per-file public-domain records pinned in artwork-sources.json; no modern recoloring or mixed replacement",
     "fonts": "Self-hosted Cormorant Garamond and Inter; SIL OFL licenses and source URLs bundled",
-    "generated": "Original FATE back, nebula, brass dial and observatory hall made with built-in image_gen; exact prompts and source PNGs retained under design/. No baked UI. Orb poster extracted from actual renderer."
+    "generated": "Original FATE back, nebula, brass dial and observatory hall made with built-in image_gen; exact prompts and source PNGs retained under design/. No baked UI. Orb poster extracted from actual renderer. Block 03 original illustrated Codex cover has a separately recorded source PNG and exact prompt; binding, runtime title, counts, paper, source chapters, moving light and turns are independent layers."
   },
-  "scope": "Two consumer rooms over unchanged native engines; consumer availability remains separate from native engine readiness. No empirical prediction certification.",
+  "scope": "Two unchanged native oracle engines, a 54-technique consumer Gallery, and an explicitly saved local personal Codex. Source-based comparison is editorial, with no empirical prediction or agreement certification.",
   "technique_ids": [
     4,
     16
@@ -165,7 +165,74 @@
       "Birthday-transition personal years",
       "Empirical personality diagnosis or event forecasts"
     ],
-    "privacy": "Input and result in current React component only, cleared on leaving the Numerology room. API no-store; no server persistence. Explicitly consented Gemini provider prompt contains direct theme/source rows only, omitting name and dates.",
+    "privacy": "Input and result in current React component only, cleared on leaving the Numerology room. API no-store; no server persistence. Explicitly consented Gemini provider prompt contains direct theme/source rows only, omitting name and dates. Explicit saving retains only Expression, Personal Year and Life Path numeric results plus chapter metadata; all original inputs and arithmetic traces are excluded.",
     "rendering": "Composited material layers share quality policy with the orb; no additional WebGL context, no per-frame React state or JS animation loop. Low-capability mode reduces layers and quantizes continuous transform steps to 30/second."
+  },
+  "codex": {
+    "supported": [
+      "Explicit save from completed Tarot/Numerology readings",
+      "Reopen saved source chapters after refresh at the same site/browser profile",
+      "Individual deletion and all-Codex deletion with in-product confirmation",
+      "JSON export of one/all chapters with source references",
+      "Source-based comparison of two saved chapters",
+      "Cover opening, real chapter turning/swipe/keyboard controls, bounded scrollable folios",
+      "Reduced-motion, shared pause and low-capability light reduction",
+      "Storage-event refresh between tabs, latest-document read before mutations",
+      "Unknown schema/reference/fields/corruption fail closed without automatic overwrite"
+    ],
+    "schema_version": 1,
+    "reference": "fate-codex-reference-v1",
+    "storage_key": "fate.codex.v1",
+    "maximum_chapters": 50,
+    "maximum_record_characters": 65536,
+    "tarot_fields": [
+      "oracle",
+      "profile",
+      "spread",
+      "card IDs and orientations"
+    ],
+    "numerology_fields": [
+      "oracle",
+      "profile",
+      "Expression",
+      "Personal Year",
+      "Life Path"
+    ],
+    "metadata": [
+      "random chapter UUID",
+      "UTC save time",
+      "source-reference version"
+    ],
+    "excluded": [
+      "names",
+      "birth dates",
+      "target dates",
+      "questions",
+      "calculation traces",
+      "letter tokens",
+      "replay seeds",
+      "Gemini commentary",
+      "comparison selections"
+    ],
+    "privacy_limits": [
+      "Unencrypted browser-profile storage; other profile users can read/edit it",
+      "Private browsing, clearing data, quota or policy can erase/block records",
+      "No accounts, sync, automatic backup or import UI",
+      "App and artwork must be available to reopen; resource requests still reach the host",
+      "Simultaneous writes from separate tabs can conflict; export is the independent backup"
+    ],
+    "comparison": {
+      "vocabulary": "fate-source-language-v1",
+      "method": "Explicit lexical editorial categories over immutable source glosses and direct Numerology summaries. Display exact cited source phrases, common wording and separate emphases. OR alternatives excluded from automatic matching.",
+      "unsupported": [
+        "agreement/confidence scores",
+        "cross-engine probabilities",
+        "combined predictions",
+        "new source meanings",
+        "independent corroboration claims",
+        "automatic LLM synthesis"
+      ]
+    },
+    "art_provenance": "design/block03-artwork.json"
   }
 }

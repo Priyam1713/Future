@@ -37,7 +37,7 @@ export function SettingsDialog({ oracle }: { oracle: Oracle }) {
         dates are processed by this server for your reading. Gemini is optional
         and requires explicit consent. Numerology commentary sends only
         source-grounded themes to Google, without your name or dates.
-        Explored-room markers last only until you reload this page.
+        Explored-room markers last only until you reload this page. Save to this device explicitly keeps a minimal Codex chapter in this browser, excluding original inputs and Gemini commentary. Local chapters are unencrypted, can be cleared by browser policies, and have no automatic backup or sync. Manage and export them in My Fate.
       </p>
       <div className="settings-row">
         <span>Atmosphere</span>

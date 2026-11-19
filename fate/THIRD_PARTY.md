@@ -13,3 +13,6 @@ The original vision documents' web references were treated as art direction, not
 # FATE Block 02 original artwork
 
 The celestial brass dial and observatory hall were created for this project with the built-in imagegen tool. Exact prompts, methods and source/delivery paths are recorded in `fate/design/block02-artwork.json`; source PNGs are retained in `fate/design/sources/`. Delivery conversion resizes/encodes only. Numerology numbers, interpretations and source identity are native engine output, independent of decorative artwork. The complete historical Tarot edition and its per-file rights records are unchanged.
+# FATE Block 03 original artwork and source reference
+
+The celestial Codex cover is original project artwork generated with the built-in imagegen tool; exact prompt, source PNG and responsive delivery paths are in `fate/design/block03-artwork.json`. Runtime title, binding, pages, light and interactions are independent programmatic layers. The frozen Codex reference reuses the already recorded Waite text/catalog and short original Numerology source summaries, without a new copyrighted corpus or interpretation engine. Existing Tarot illustrations, source/rights metadata and font licenses are unchanged.

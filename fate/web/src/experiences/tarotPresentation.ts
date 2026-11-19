@@ -25,7 +25,10 @@ const plain: Record<string, string> = {
   presumption: "overconfidence",
 };
 export function plainThemes(reading: Reading) {
-  return reading.direct_component.symbolic_focus
+  return plainGloss(reading.direct_component.symbolic_focus);
+}
+export function plainGloss(focus: string) {
+  return focus
     .split(" OR ")
     .map((alternative) =>
       alternative

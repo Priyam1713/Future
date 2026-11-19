@@ -12,6 +12,8 @@ SPECS=[
  ('number-dial-v1.png','art/number-dial-480.webp',480,480,88),
  ('gallery-hall-v1.png','art/gallery-hall-v1.webp',1536,1024,88),
  ('gallery-hall-v1.png','art/gallery-hall-768.webp',768,512,85),
+ ('codex-cover-v1.png','art/codex-cover-v1.webp',768,1152,90),
+ ('codex-cover-v1.png','art/codex-cover-400.webp',400,600,88),
 ]
 
 def main():

@@ -107,6 +107,8 @@ test("complete mobile native Numerology ritual, exact export, session continuity
   await enter(page);
   await accessible(page);
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: "../screenshots/21-numerology-input-mobile.png",
     fullPage: true,
   });
@@ -119,10 +121,14 @@ test("complete mobile native Numerology ritual, exact export, session continuity
   await expect(page.locator(".seal-theme")).toHaveText(result.readings[0].text);
   await page.waitForTimeout(900);
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: "../screenshots/22-numerology-ritual-mobile.png",
     fullPage: true,
   });
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: "../screenshots/22-numerology-ritual-viewport.png",
   });
   await page.getByRole("button", { name: "Reveal the next seal" }).click();
@@ -143,6 +149,8 @@ test("complete mobile native Numerology ritual, exact export, session continuity
   await accessible(page);
   await geometry(page);
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: "../screenshots/23-numerology-reading-mobile.png",
     fullPage: true,
   });
@@ -265,9 +273,12 @@ test("dial live transforms, tactile keyboard turn, pause, initial reduced motion
   await page.getByRole("button", { name: "Turn the celestial dial" }).focus();
   await page.keyboard.press("Enter");
   await expect(dial).toHaveCSS("--dial-turn", "23deg");
+  await page.getByRole("button", { name: "About FATE and settings" }).click();
   await page
-    .getByRole("button", { name: "Pause atmosphere", exact: true })
+    .getByRole("dialog")
+    .getByRole("button", { name: "Pause motion", exact: true })
     .click();
+  await page.keyboard.press("Escape");
   await expect(dial).toHaveAttribute("data-render-state", "paused");
   await page.waitForTimeout(200);
   const stopped = await ring.evaluate((el) => getComputedStyle(el).transform);
@@ -276,9 +287,12 @@ test("dial live transforms, tactile keyboard turn, pause, initial reduced motion
     stopped,
   );
   await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.getByRole("button", { name: "About FATE and settings" }).click();
   await page
-    .getByRole("button", { name: "Resume atmosphere", exact: true })
+    .getByRole("dialog")
+    .getByRole("button", { name: "Resume motion", exact: true })
     .click();
+  await page.keyboard.press("Escape");
   await expect(dial).toHaveAttribute("data-render-state", "paused");
   const reducedBefore = await ring.evaluate(
     (el) => getComputedStyle(el).transform,
@@ -305,6 +319,8 @@ test("Numerology desktop composition, responsive geometry and separately consent
   await page.goto("/");
   await page.waitForTimeout(1000);
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: "../screenshots/24-gallery-desktop.png",
     fullPage: true,
   });
@@ -313,12 +329,16 @@ test("Numerology desktop composition, responsive geometry and separately consent
     .click();
   await expect(page.locator(".number-form")).toBeVisible();
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: "../screenshots/25-numerology-input-desktop.png",
     fullPage: true,
   });
   await cast(page);
   await page.waitForTimeout(600);
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: "../screenshots/26-numerology-ritual-desktop.png",
     fullPage: true,
   });
@@ -358,6 +378,8 @@ test("Numerology desktop composition, responsive geometry and separately consent
   );
   expect(cloud).toBe(1);
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: "../screenshots/27-numerology-reading-desktop.png",
     fullPage: true,
   });

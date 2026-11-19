@@ -71,10 +71,16 @@ test("mobile complete real three-card journey, progressive reveal, source detail
   });
   await page.evaluate(() => document.fonts.ready);
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: `${shots}/01-explore-mobile.png`,
     fullPage: true,
   });
-  await page.screenshot({ path: `${shots}/01-explore-viewport.png` });
+  await page.screenshot({
+    animations: "disabled",
+    scale: "css",
+    path: `${shots}/01-explore-viewport.png`,
+  });
   await noOverflow(page);
   await accessible(page);
   await page.locator("h1").focus();
@@ -82,6 +88,8 @@ test("mobile complete real three-card journey, progressive reveal, source detail
     .getByRole("button", { name: "Begin a reading", exact: true })
     .click();
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: `${shots}/02-intention-mobile.png`,
     fullPage: true,
   });
@@ -109,6 +117,8 @@ test("mobile complete real three-card journey, progressive reveal, source detail
   await page.waitForTimeout(850);
   await page.evaluate(() => (document.activeElement as HTMLElement)?.blur());
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: `${shots}/03-reveal-mobile.png`,
     fullPage: true,
   });
@@ -140,6 +150,8 @@ test("mobile complete real three-card journey, progressive reveal, source detail
     );
   await page.evaluate(() => (document.activeElement as HTMLElement)?.blur());
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: `${shots}/04-reading-mobile.png`,
     fullPage: true,
   });
@@ -195,6 +207,8 @@ test("one card, immediate result, upright-only, back navigation and no automatic
     page.getByRole("heading", { name: "The story in your cards." }),
   ).toBeVisible();
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: `${shots}/05-one-card-mobile.png`,
     fullPage: true,
   });
@@ -286,6 +300,8 @@ test("living Pixi fog moves, responds to touch, and pauses for reduced motion", 
   await page.waitForTimeout(550);
   expect(await orb.screenshot()).toEqual(d);
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: `${shots}/06-reduced-motion-mobile.png`,
     fullPage: true,
   });
@@ -390,6 +406,8 @@ test("320px, 430px, tablet, desktop and 200% text layouts", async ({
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     if (width === 1440)
       await page.screenshot({
+        animations: "disabled",
+        scale: "css",
         path: `${shots}/07-explore-desktop.png`,
         fullPage: true,
       });
@@ -405,6 +423,8 @@ test("320px, 430px, tablet, desktop and 200% text layouts", async ({
   await page.getByRole("button", { name: "Skip reveal & read now" }).click();
   await noOverflow(page);
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: `${shots}/08-reading-small-mobile.png`,
     fullPage: true,
   });
@@ -419,6 +439,8 @@ test("320px, 430px, tablet, desktop and 200% text layouts", async ({
   });
   await noOverflow(page);
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: `${shots}/09-enlarged-text-mobile.png`,
     fullPage: true,
   });

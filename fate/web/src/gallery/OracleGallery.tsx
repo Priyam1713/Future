@@ -36,7 +36,13 @@ const collections = [
     tone: "future",
   },
 ];
-export function OracleGallery({ oracle }: { oracle: Oracle }) {
+export function OracleGallery({
+  oracle,
+  libraryOnly = false,
+}: {
+  oracle: Oracle;
+  libraryOnly?: boolean;
+}) {
   const [query, setQuery] = useState("");
   const matches = inventory.methods.filter((m) =>
     `${m.name} ${m.variations}`
@@ -45,67 +51,71 @@ export function OracleGallery({ oracle }: { oracle: Oracle }) {
   );
   return (
     <>
-      <section className="number-door" aria-labelledby="number-door-title">
-        <div className="number-door-art">
-          <NumberDial
-            reduced={oracle.reduced}
-            paused={oracle.paused}
-            decorative
-          />
-        </div>
-        <div className="number-door-copy">
-          <p className="eyebrow">02 / THE SECOND DOOR · OPEN NOW</p>
-          <h2 id="number-door-title">
-            There is a rhythm
-            <br />
-            in <em>your name.</em>
-          </h2>
-          <p>
-            A name. A date. A constellation of numbers.
-            <br />
-            Enter the observatory and meet your patterns.
-          </p>
-          <button
-            className="primary"
-            onClick={() => {
-              oracle.sound.cue("select");
-              oracle.navigate("numerology");
-            }}
-          >
-            Explore Numerology <span aria-hidden="true">↗</span>
-          </button>
-          <span className="door-note">
-            {EXPERIENCES[4].room} ·{" "}
-            {oracle.explored.includes(4)
-              ? "Explored this visit"
-              : "A new room awaits"}
-          </span>
-        </div>
-      </section>
-      <section className="gallery-library" aria-labelledby="gallery-title">
-        <div className="gallery-intro">
-          <img
-            src="/art/gallery-hall-768.webp"
-            srcSet="/art/gallery-hall-768.webp 768w, /art/gallery-hall-v1.webp 1536w"
-            sizes="(max-width: 700px) 100vw, 1100px"
-            width="1536"
-            height="1024"
-            loading="lazy"
-            alt="An original FATE observatory: six shadowed alcoves beneath a celestial oculus"
-          />
-          <div>
-            <p className="eyebrow">THE COLLECTION · 54 RETAINED TECHNIQUES</p>
-            <h2 id="gallery-title">
-              A universe,
+      {!libraryOnly && (
+        <section className="number-door" aria-labelledby="number-door-title">
+          <div className="number-door-art">
+            <NumberDial
+              reduced={oracle.reduced}
+              paused={oracle.paused}
+              decorative
+            />
+          </div>
+          <div className="number-door-copy">
+            <p className="eyebrow">02 / THE SECOND DOOR · OPEN NOW</p>
+            <h2 id="number-door-title">
+              There is a rhythm
               <br />
-              <em>still unfolding.</em>
+              in <em>your name.</em>
             </h2>
             <p>
-              Two rooms are open. Beyond them, a library of traditions and
-              possible futures waits to be discovered.
+              A name. A date. A constellation of numbers.
+              <br />
+              Enter the observatory and meet your patterns.
             </p>
+            <button
+              className="primary"
+              onClick={() => {
+                oracle.sound.cue("select");
+                oracle.navigate("numerology");
+              }}
+            >
+              Explore Numerology <span aria-hidden="true">↗</span>
+            </button>
+            <span className="door-note">
+              {EXPERIENCES[4].room} ·{" "}
+              {oracle.explored.includes(4)
+                ? "Explored this visit"
+                : "A new room awaits"}
+            </span>
           </div>
-        </div>
+        </section>
+      )}
+      <section className="gallery-library" aria-labelledby="gallery-title">
+        {!libraryOnly && (
+          <div className="gallery-intro">
+            <img
+              src="/art/gallery-hall-768.webp"
+              srcSet="/art/gallery-hall-768.webp 768w, /art/gallery-hall-v1.webp 1536w"
+              sizes="(max-width: 700px) 100vw, 1100px"
+              width="1536"
+              height="1024"
+              loading="lazy"
+              alt="An original FATE observatory: six shadowed alcoves beneath a celestial oculus"
+            />
+            <div>
+              <p className="eyebrow">THE COLLECTION · 54 RETAINED TECHNIQUES</p>
+              <h2 id="gallery-title">
+                A universe,
+                <br />
+                <em>still unfolding.</em>
+              </h2>
+              <p>
+                Two rooms are open. Beyond them, a library of traditions and
+                possible futures waits to be discovered.
+              </p>
+            </div>
+          </div>
+        )}
         <div className="gallery-tools">
           <label>
             Find a tradition

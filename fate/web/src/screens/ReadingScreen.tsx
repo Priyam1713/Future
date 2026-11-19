@@ -4,6 +4,8 @@ import type { Oracle } from "../hooks/useOracle";
 import { ReadingDetails } from "../components/ReadingDetails";
 import { GeminiCommentary } from "../components/GeminiCommentary";
 import { plainThemes } from "../experiences/tarotPresentation";
+import { SaveChapter } from "../codex/SaveChapter";
+import { ReadingConclusion } from "../components/ReadingConclusion";
 export default function ReadingScreen({ oracle }: { oracle: Oracle }) {
   const { heading, navigate, result, download, fresh } = oracle;
   if (!result) return null;
@@ -66,6 +68,10 @@ export default function ReadingScreen({ oracle }: { oracle: Oracle }) {
           findings about your life. Alternative source accounts remain separate.
         </p>
       </section>
+      <ReadingConclusion
+        kind="tarot"
+        themes={result.readings.map(plainThemes)}
+      />
       <div className="section-label depth-label">
         <span>LOOK A LITTLE DEEPER</span>
         <ChevronDown size={15} />
@@ -106,6 +112,7 @@ export default function ReadingScreen({ oracle }: { oracle: Oracle }) {
           </p>
         </div>
       </details>
+      <SaveChapter oracle={oracle} result={result} kind="tarot" />
       <div className="reading-actions">
         <button className="secondary" onClick={download}>
           <Download size={16} /> Export native reading
@@ -115,8 +122,9 @@ export default function ReadingScreen({ oracle }: { oracle: Oracle }) {
         </button>
       </div>
       <p className="scope-note">
-        This visit only. Export to keep your reading; nothing is saved
-        automatically.
+        Nothing is saved automatically. Native export includes your original
+        question and replay data; saving a Codex chapter keeps only the symbols
+        and source version.
       </p>
       <div className="next-room">
         <p className="eyebrow">YOUR NEXT DOOR · NUMEROLOGY</p>

@@ -1,0 +1,1090 @@
+{
+  "date": "2026-11-19",
+  "browserVersion": "158.0.8127.18",
+  "scope": "Isolated local Chromium emulation. Seeded local records are the actual saved native snapshots from codex-recording.json; the 50-chapter stress profile repeats these snapshots with unique test IDs, not additional claimed native readings. RAF measures main-thread scheduling rather than hardware-presented compositor FPS or field INP.",
+  "timingDefinitions": {
+    "coverReadyMs": "Navigation start to cover image decoded and available",
+    "openReadyMs": "Automated cover click start to visible source content and two animation frames",
+    "turnReadyMs": "Automated Next click start to completed 720 ms intentional leaf transition; includes automation/actionability"
+  },
+  "profiles": [
+    {
+      "profile": {
+        "name": "mobile-two-chapters",
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "count": 2
+      },
+      "coverReadyMs": 435,
+      "openReadyMs": 101,
+      "turnReadyMs": 893,
+      "raf": {
+        "frames": 358,
+        "meanHz": 60.00268168409762,
+        "p50Ms": 16.699999999999818,
+        "p95Ms": 16.700000000000728,
+        "maxMs": 16.800000000000182
+      },
+      "metrics": {
+        "cls": 0,
+        "lcp": 92,
+        "longTasks": [],
+        "shifts": [
+          {
+            "value": 0.000030884301790166436,
+            "at": 83.20000004768372,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "SPAN",
+                "className": "",
+                "previous": {
+                  "x": 296.078125,
+                  "y": 807.5,
+                  "width": 41.84375,
+                  "height": 12,
+                  "top": 807.5,
+                  "right": 337.921875,
+                  "bottom": 819.5,
+                  "left": 296.078125
+                },
+                "current": {
+                  "x": 283.078125,
+                  "y": 807.5,
+                  "width": 41.84375,
+                  "height": 12,
+                  "top": 807.5,
+                  "right": 324.921875,
+                  "bottom": 819.5,
+                  "left": 283.078125
+                }
+              }
+            ]
+          },
+          {
+            "value": 0.1862745497814975,
+            "at": 494.2000000476837,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "DIV",
+                "className": "celestial-book book-open book-moving ",
+                "previous": {
+                  "x": 35,
+                  "y": 18.265625,
+                  "width": 320,
+                  "height": 455,
+                  "top": 18.265625,
+                  "right": 355,
+                  "bottom": 473.265625,
+                  "left": 35
+                },
+                "current": {
+                  "x": 18,
+                  "y": 18.265625,
+                  "width": 354,
+                  "height": 748,
+                  "top": 18.265625,
+                  "right": 372,
+                  "bottom": 766.265625,
+                  "left": 18
+                }
+              },
+              {
+                "tag": "BUTTON",
+                "className": "codex-cover",
+                "previous": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 390,
+                  "height": 567.8441772460938,
+                  "top": 0,
+                  "right": 390,
+                  "bottom": 567.8441772460938,
+                  "left": 0
+                },
+                "current": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 320.7356872558594,
+                  "height": 685.4373168945312,
+                  "top": 0,
+                  "right": 320.7356872558594,
+                  "bottom": 685.4373168945312,
+                  "left": 0
+                }
+              }
+            ]
+          }
+        ],
+        "canvases": 0,
+        "book": {
+          "renderer": "layered-codex",
+          "renderState": "running"
+        },
+        "heap": {
+          "usedBytes": 10000000,
+          "totalBytes": 10000000
+        },
+        "resources": [
+          {
+            "name": "/art/orb-poster-v2.webp",
+            "transferBytes": 98476,
+            "durationMs": 10.899999976158142
+          },
+          {
+            "name": "/fonts/cormorant-latin.woff2",
+            "transferBytes": 37973,
+            "durationMs": 18.899999976158142
+          },
+          {
+            "name": "/assets/index-C3xiFxoe.css",
+            "transferBytes": 17745,
+            "durationMs": 22.100000023841858
+          },
+          {
+            "name": "/fonts/cormorant-italic-latin.woff2",
+            "transferBytes": 39593,
+            "durationMs": 18.199999928474426
+          },
+          {
+            "name": "/assets/index-DInoiPGx.js",
+            "transferBytes": 90875,
+            "durationMs": 29.199999928474426
+          },
+          {
+            "name": "/art/fate_atmosphere.webp",
+            "transferBytes": 15056,
+            "durationMs": 4.5
+          },
+          {
+            "name": "/fonts/inter-latin.woff2",
+            "transferBytes": 48549,
+            "durationMs": 16.299999952316284
+          },
+          {
+            "name": "/art/fate_sigil.svg",
+            "transferBytes": 1174,
+            "durationMs": 9.100000023841858
+          },
+          {
+            "name": "/assets/CodexScreen-D--sJtQ2.js",
+            "transferBytes": 26143,
+            "durationMs": 13.399999976158142
+          },
+          {
+            "name": "/api/health",
+            "transferBytes": 370,
+            "durationMs": 4.600000023841858
+          },
+          {
+            "name": "/art/codex-cover-v1.webp",
+            "transferBytes": 273827,
+            "durationMs": 13.700000047683716
+          },
+          {
+            "name": "/art/deck/pam-a-v1/wands-seven-360.webp",
+            "transferBytes": 63604,
+            "durationMs": 11.299999952316284
+          },
+          {
+            "name": "/art/deck/pam-a-v1/swords-knight-360.webp",
+            "transferBytes": 82405,
+            "durationMs": 13.399999976158142
+          },
+          {
+            "name": "/art/deck/pam-a-v1/pentacles-eight-360.webp",
+            "transferBytes": 79126,
+            "durationMs": 13.100000023841858
+          }
+        ],
+        "recordBytes": 606
+      },
+      "posts": []
+    },
+    {
+      "profile": {
+        "name": "desktop-50-chapters",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1,
+        "count": 50
+      },
+      "coverReadyMs": 132,
+      "openReadyMs": 196,
+      "turnReadyMs": 879,
+      "raf": {
+        "frames": 358,
+        "meanHz": 58.851572389077916,
+        "p50Ms": 16.699999999999818,
+        "p95Ms": 16.700000000000728,
+        "maxMs": 83.29999999999998
+      },
+      "metrics": {
+        "cls": 0.00010028865861304012,
+        "lcp": 92,
+        "longTasks": [],
+        "shifts": [
+          {
+            "value": 0.00008166666666666667,
+            "at": 75.5,
+            "recent": false,
+            "sources": [
+              {
+                "tag": "A",
+                "className": "",
+                "previous": {
+                  "x": 674.046875,
+                  "y": 102.5,
+                  "width": 89.234375,
+                  "height": 48,
+                  "top": 102.5,
+                  "right": 763.28125,
+                  "bottom": 150.5,
+                  "left": 674.046875
+                },
+                "current": {
+                  "x": 660.046875,
+                  "y": 102.5,
+                  "width": 89.234375,
+                  "height": 48,
+                  "top": 102.5,
+                  "right": 749.28125,
+                  "bottom": 150.5,
+                  "left": 660.046875
+                }
+              },
+              {
+                "tag": "A",
+                "className": "",
+                "previous": {
+                  "x": 809.28125,
+                  "y": 102.5,
+                  "width": 54.84375,
+                  "height": 48,
+                  "top": 102.5,
+                  "right": 864.125,
+                  "bottom": 150.5,
+                  "left": 809.28125
+                },
+                "current": {
+                  "x": 795.28125,
+                  "y": 102.5,
+                  "width": 82.84375,
+                  "height": 48,
+                  "top": 102.5,
+                  "right": 878.125,
+                  "bottom": 150.5,
+                  "left": 795.28125
+                }
+              },
+              {
+                "tag": "A",
+                "className": "",
+                "previous": {
+                  "x": 575.859375,
+                  "y": 102.5,
+                  "width": 52.1875,
+                  "height": 48,
+                  "top": 102.5,
+                  "right": 628.046875,
+                  "bottom": 150.5,
+                  "left": 575.859375
+                },
+                "current": {
+                  "x": 561.859375,
+                  "y": 102.5,
+                  "width": 52.1875,
+                  "height": 48,
+                  "top": 102.5,
+                  "right": 614.046875,
+                  "bottom": 150.5,
+                  "left": 561.859375
+                }
+              }
+            ]
+          },
+          {
+            "value": 0.000018621991946373457,
+            "at": 107.60000002384186,
+            "recent": false,
+            "sources": [
+              {
+                "tag": "A",
+                "className": "",
+                "previous": {
+                  "x": 660.046875,
+                  "y": 102.5,
+                  "width": 89.234375,
+                  "height": 48,
+                  "top": 102.5,
+                  "right": 749.28125,
+                  "bottom": 150.5,
+                  "left": 660.046875
+                },
+                "current": {
+                  "x": 656.9375,
+                  "y": 102.5,
+                  "width": 95.28125,
+                  "height": 48,
+                  "top": 102.5,
+                  "right": 752.21875,
+                  "bottom": 150.5,
+                  "left": 656.9375
+                }
+              },
+              {
+                "tag": "A",
+                "className": "",
+                "previous": {
+                  "x": 561.859375,
+                  "y": 102.5,
+                  "width": 52.1875,
+                  "height": 48,
+                  "top": 102.5,
+                  "right": 614.046875,
+                  "bottom": 150.5,
+                  "left": 561.859375
+                },
+                "current": {
+                  "x": 556.90625,
+                  "y": 102.5,
+                  "width": 54.03125,
+                  "height": 48,
+                  "top": 102.5,
+                  "right": 610.9375,
+                  "bottom": 150.5,
+                  "left": 556.90625
+                }
+              },
+              {
+                "tag": "SMALL",
+                "className": "",
+                "previous": {
+                  "x": 854.125,
+                  "y": 116,
+                  "width": 20,
+                  "height": 20,
+                  "top": 116,
+                  "right": 874.125,
+                  "bottom": 136,
+                  "left": 854.125
+                },
+                "current": {
+                  "x": 859.078125,
+                  "y": 116,
+                  "width": 20,
+                  "height": 20,
+                  "top": 116,
+                  "right": 879.078125,
+                  "bottom": 136,
+                  "left": 859.078125
+                }
+              }
+            ]
+          },
+          {
+            "value": 0.00008975694444444444,
+            "at": 1334.2000000476837,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "P",
+                "className": "folio-plate",
+                "previous": {
+                  "x": 298.90625,
+                  "y": 624.6875,
+                  "width": 220,
+                  "height": 30.375,
+                  "top": 624.6875,
+                  "right": 518.90625,
+                  "bottom": 655.0625,
+                  "left": 298.90625
+                },
+                "current": {
+                  "x": 298.90625,
+                  "y": 642.3125,
+                  "width": 220,
+                  "height": 30.375,
+                  "top": 642.3125,
+                  "right": 518.90625,
+                  "bottom": 672.6875,
+                  "left": 298.90625
+                }
+              }
+            ]
+          },
+          {
+            "value": 0.00008975694444444444,
+            "at": 2216.100000023842,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "P",
+                "className": "folio-plate",
+                "previous": {
+                  "x": 298.90625,
+                  "y": 642.3125,
+                  "width": 220,
+                  "height": 30.375,
+                  "top": 642.3125,
+                  "right": 518.90625,
+                  "bottom": 672.6875,
+                  "left": 298.90625
+                },
+                "current": {
+                  "x": 298.90625,
+                  "y": 624.6875,
+                  "width": 220,
+                  "height": 30.375,
+                  "top": 624.6875,
+                  "right": 518.90625,
+                  "bottom": 655.0625,
+                  "left": 298.90625
+                }
+              }
+            ]
+          }
+        ],
+        "canvases": 0,
+        "book": {
+          "renderer": "layered-codex",
+          "renderState": "running"
+        },
+        "heap": {
+          "usedBytes": 10000000,
+          "totalBytes": 11200000
+        },
+        "resources": [
+          {
+            "name": "/art/orb-poster-v2.webp",
+            "transferBytes": 98476,
+            "durationMs": 8.5
+          },
+          {
+            "name": "/fonts/cormorant-italic-latin.woff2",
+            "transferBytes": 39593,
+            "durationMs": 20.299999952316284
+          },
+          {
+            "name": "/fonts/cormorant-latin.woff2",
+            "transferBytes": 37973,
+            "durationMs": 21.5
+          },
+          {
+            "name": "/assets/index-DInoiPGx.js",
+            "transferBytes": 90875,
+            "durationMs": 30.299999952316284
+          },
+          {
+            "name": "/assets/index-C3xiFxoe.css",
+            "transferBytes": 17745,
+            "durationMs": 21.199999928474426
+          },
+          {
+            "name": "/art/fate_atmosphere.webp",
+            "transferBytes": 15056,
+            "durationMs": 5.300000071525574
+          },
+          {
+            "name": "/fonts/inter-latin.woff2",
+            "transferBytes": 48549,
+            "durationMs": 16.100000023841858
+          },
+          {
+            "name": "/assets/CodexScreen-D--sJtQ2.js",
+            "transferBytes": 26143,
+            "durationMs": 12.299999952316284
+          },
+          {
+            "name": "/art/fate_sigil.svg",
+            "transferBytes": 1174,
+            "durationMs": 7.5
+          },
+          {
+            "name": "/api/health",
+            "transferBytes": 370,
+            "durationMs": 5.399999976158142
+          },
+          {
+            "name": "/art/codex-cover-400.webp",
+            "transferBytes": 60608,
+            "durationMs": 5
+          },
+          {
+            "name": "/art/deck/pam-a-v1/wands-seven-360.webp",
+            "transferBytes": 63604,
+            "durationMs": 12.5
+          },
+          {
+            "name": "/art/deck/pam-a-v1/swords-knight-360.webp",
+            "transferBytes": 82405,
+            "durationMs": 13.800000071525574
+          },
+          {
+            "name": "/art/deck/pam-a-v1/pentacles-eight-360.webp",
+            "transferBytes": 79126,
+            "durationMs": 15.200000047683716
+          }
+        ],
+        "recordBytes": 14382
+      },
+      "posts": []
+    },
+    {
+      "profile": {
+        "name": "mobile-low-capability",
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "count": 50,
+        "low": true
+      },
+      "coverReadyMs": 409,
+      "openReadyMs": 101,
+      "turnReadyMs": 882,
+      "raf": {
+        "frames": 358,
+        "meanHz": 60.001676024469994,
+        "p50Ms": 16.699999999999818,
+        "p95Ms": 16.700000000000728,
+        "maxMs": 16.800000000000182
+      },
+      "metrics": {
+        "cls": 0,
+        "lcp": 84,
+        "longTasks": [],
+        "shifts": [],
+        "canvases": 0,
+        "book": {
+          "renderer": "layered-codex",
+          "renderState": "running"
+        },
+        "heap": {
+          "usedBytes": 10000000,
+          "totalBytes": 10600000
+        },
+        "resources": [
+          {
+            "name": "/art/orb-poster-v2.webp",
+            "transferBytes": 98476,
+            "durationMs": 7.299999952316284
+          },
+          {
+            "name": "/assets/index-C3xiFxoe.css",
+            "transferBytes": 17745,
+            "durationMs": 20.09999990463257
+          },
+          {
+            "name": "/fonts/cormorant-italic-latin.woff2",
+            "transferBytes": 39593,
+            "durationMs": 17
+          },
+          {
+            "name": "/fonts/cormorant-latin.woff2",
+            "transferBytes": 37973,
+            "durationMs": 17.199999928474426
+          },
+          {
+            "name": "/assets/index-DInoiPGx.js",
+            "transferBytes": 90875,
+            "durationMs": 28.799999952316284
+          },
+          {
+            "name": "/art/fate_atmosphere.webp",
+            "transferBytes": 15056,
+            "durationMs": 4
+          },
+          {
+            "name": "/fonts/inter-latin.woff2",
+            "transferBytes": 48549,
+            "durationMs": 17.600000023841858
+          },
+          {
+            "name": "/art/fate_sigil.svg",
+            "transferBytes": 1174,
+            "durationMs": 10.199999928474426
+          },
+          {
+            "name": "/assets/CodexScreen-D--sJtQ2.js",
+            "transferBytes": 26143,
+            "durationMs": 13.100000023841858
+          },
+          {
+            "name": "/api/health",
+            "transferBytes": 370,
+            "durationMs": 6.199999928474426
+          },
+          {
+            "name": "/art/codex-cover-v1.webp",
+            "transferBytes": 273827,
+            "durationMs": 14.399999976158142
+          },
+          {
+            "name": "/art/deck/pam-a-v1/wands-seven-360.webp",
+            "transferBytes": 63604,
+            "durationMs": 13.699999928474426
+          },
+          {
+            "name": "/art/deck/pam-a-v1/pentacles-eight-360.webp",
+            "transferBytes": 79126,
+            "durationMs": 14.399999976158142
+          },
+          {
+            "name": "/art/deck/pam-a-v1/swords-knight-360.webp",
+            "transferBytes": 82405,
+            "durationMs": 16
+          }
+        ],
+        "recordBytes": 14382
+      },
+      "posts": []
+    },
+    {
+      "profile": {
+        "name": "mobile-4x-1.6Mbps",
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "count": 50,
+        "throttle": true
+      },
+      "coverReadyMs": 3985,
+      "openReadyMs": 401,
+      "turnReadyMs": 1006,
+      "raf": {
+        "frames": 358,
+        "meanHz": 57.13009064215498,
+        "p50Ms": 16.699999999999818,
+        "p95Ms": 16.799999999999272,
+        "maxMs": 233.39999999999964
+      },
+      "metrics": {
+        "cls": 0.000030884301790166436,
+        "lcp": 4000,
+        "longTasks": [
+          66,
+          52,
+          216,
+          61
+        ],
+        "shifts": [
+          {
+            "value": 0.000030884301790166436,
+            "at": 1950.7999999523163,
+            "recent": false,
+            "sources": [
+              {
+                "tag": "SPAN",
+                "className": "",
+                "previous": {
+                  "x": 296.078125,
+                  "y": 807.5,
+                  "width": 41.84375,
+                  "height": 12,
+                  "top": 807.5,
+                  "right": 337.921875,
+                  "bottom": 819.5,
+                  "left": 296.078125
+                },
+                "current": {
+                  "x": 283.078125,
+                  "y": 807.5,
+                  "width": 41.84375,
+                  "height": 12,
+                  "top": 807.5,
+                  "right": 324.921875,
+                  "bottom": 819.5,
+                  "left": 283.078125
+                }
+              }
+            ]
+          },
+          {
+            "value": 0.1862745497814975,
+            "at": 4289.599999904633,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "DIV",
+                "className": "celestial-book book-open book-moving ",
+                "previous": {
+                  "x": 35,
+                  "y": 18.265625,
+                  "width": 320,
+                  "height": 455,
+                  "top": 18.265625,
+                  "right": 355,
+                  "bottom": 473.265625,
+                  "left": 35
+                },
+                "current": {
+                  "x": 18,
+                  "y": 18.265625,
+                  "width": 354,
+                  "height": 748,
+                  "top": 18.265625,
+                  "right": 372,
+                  "bottom": 766.265625,
+                  "left": 18
+                }
+              },
+              {
+                "tag": "BUTTON",
+                "className": "codex-cover",
+                "previous": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 390,
+                  "height": 567.8441772460938,
+                  "top": 0,
+                  "right": 390,
+                  "bottom": 567.8441772460938,
+                  "left": 0
+                },
+                "current": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 320.7356872558594,
+                  "height": 685.4373168945312,
+                  "top": 0,
+                  "right": 320.7356872558594,
+                  "bottom": 685.4373168945312,
+                  "left": 0
+                }
+              }
+            ]
+          }
+        ],
+        "canvases": 0,
+        "book": {
+          "renderer": "layered-codex",
+          "renderState": "running"
+        },
+        "heap": {
+          "usedBytes": 10000000,
+          "totalBytes": 10000000
+        },
+        "resources": [
+          {
+            "name": "/art/orb-poster-v2.webp",
+            "transferBytes": 98476,
+            "durationMs": 1611.4000000953674
+          },
+          {
+            "name": "/fonts/cormorant-latin.woff2",
+            "transferBytes": 37973,
+            "durationMs": 1029
+          },
+          {
+            "name": "/fonts/cormorant-italic-latin.woff2",
+            "transferBytes": 39593,
+            "durationMs": 1059.8000000715256
+          },
+          {
+            "name": "/assets/index-C3xiFxoe.css",
+            "transferBytes": 17745,
+            "durationMs": 651.3999999761581
+          },
+          {
+            "name": "/assets/index-DInoiPGx.js",
+            "transferBytes": 90875,
+            "durationMs": 1578.6000000238419
+          },
+          {
+            "name": "/art/fate_atmosphere.webp",
+            "transferBytes": 15056,
+            "durationMs": 395.09999990463257
+          },
+          {
+            "name": "/fonts/inter-latin.woff2",
+            "transferBytes": 48549,
+            "durationMs": 650.1000000238419
+          },
+          {
+            "name": "/assets/CodexScreen-D--sJtQ2.js",
+            "transferBytes": 26143,
+            "durationMs": 506.7999999523163
+          },
+          {
+            "name": "/art/fate_sigil.svg",
+            "transferBytes": 1174,
+            "durationMs": 169
+          },
+          {
+            "name": "/api/health",
+            "transferBytes": 370,
+            "durationMs": 177.60000002384186
+          },
+          {
+            "name": "/art/codex-cover-v1.webp",
+            "transferBytes": 273827,
+            "durationMs": 1547.2999999523163
+          },
+          {
+            "name": "/art/deck/pam-a-v1/wands-seven-360.webp",
+            "transferBytes": 63604,
+            "durationMs": 1125.7999999523163
+          },
+          {
+            "name": "/art/deck/pam-a-v1/swords-knight-360.webp",
+            "transferBytes": 82405,
+            "durationMs": 1309.3999999761581
+          },
+          {
+            "name": "/art/deck/pam-a-v1/pentacles-eight-360.webp",
+            "transferBytes": 79126,
+            "durationMs": 1293
+          }
+        ],
+        "recordBytes": 14382
+      },
+      "posts": []
+    },
+    {
+      "profile": {
+        "name": "mobile-reduced-motion",
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "count": 2,
+        "reduced": true
+      },
+      "coverReadyMs": 132,
+      "openReadyMs": 105,
+      "turnReadyMs": 40,
+      "raf": {
+        "frames": 358,
+        "meanHz": 60.00167602446995,
+        "p50Ms": 16.699999999999818,
+        "p95Ms": 16.799999999999727,
+        "maxMs": 16.800000000000182
+      },
+      "metrics": {
+        "cls": 0,
+        "lcp": 124,
+        "longTasks": [],
+        "shifts": [
+          {
+            "value": 0.000030884301790166436,
+            "at": 70,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "SPAN",
+                "className": "",
+                "previous": {
+                  "x": 296.078125,
+                  "y": 807.5,
+                  "width": 41.84375,
+                  "height": 12,
+                  "top": 807.5,
+                  "right": 337.921875,
+                  "bottom": 819.5,
+                  "left": 296.078125
+                },
+                "current": {
+                  "x": 283.078125,
+                  "y": 807.5,
+                  "width": 41.84375,
+                  "height": 12,
+                  "top": 807.5,
+                  "right": 324.921875,
+                  "bottom": 819.5,
+                  "left": 283.078125
+                }
+              }
+            ]
+          },
+          {
+            "value": 0.3457515727236758,
+            "at": 194.5,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "DIV",
+                "className": "book-binding",
+                "previous": {
+                  "x": 167.37709045410156,
+                  "y": 0,
+                  "width": 222.62290954589844,
+                  "height": 495.11224365234375,
+                  "top": 0,
+                  "right": 390,
+                  "bottom": 495.11224365234375,
+                  "left": 167.37709045410156
+                },
+                "current": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 390,
+                  "height": 807.0343017578125,
+                  "top": 0,
+                  "right": 390,
+                  "bottom": 807.0343017578125,
+                  "left": 0
+                }
+              },
+              {
+                "tag": "DIV",
+                "className": "celestial-book book-open book-still ",
+                "previous": {
+                  "x": 35,
+                  "y": 18.265625,
+                  "width": 320,
+                  "height": 455,
+                  "top": 18.265625,
+                  "right": 355,
+                  "bottom": 473.265625,
+                  "left": 35
+                },
+                "current": {
+                  "x": 18,
+                  "y": 18.265625,
+                  "width": 354,
+                  "height": 748,
+                  "top": 18.265625,
+                  "right": 372,
+                  "bottom": 766.265625,
+                  "left": 18
+                }
+              },
+              {
+                "tag": "SECTION",
+                "className": "codex-tools",
+                "previous": {
+                  "x": 18,
+                  "y": 513.265625,
+                  "width": 354,
+                  "height": 166.890625,
+                  "top": 513.265625,
+                  "right": 372,
+                  "bottom": 680.15625,
+                  "left": 18
+                },
+                "current": {
+                  "x": 18,
+                  "y": 806.265625,
+                  "width": 354,
+                  "height": 37.734375,
+                  "top": 806.265625,
+                  "right": 372,
+                  "bottom": 844,
+                  "left": 18
+                }
+              },
+              {
+                "tag": "SECTION",
+                "className": "perspective-picker",
+                "previous": {
+                  "x": 18,
+                  "y": 725.15625,
+                  "width": 354,
+                  "height": 118.84375,
+                  "top": 725.15625,
+                  "right": 372,
+                  "bottom": 844,
+                  "left": 18
+                },
+                "current": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0,
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                }
+              }
+            ]
+          }
+        ],
+        "canvases": 0,
+        "book": {
+          "renderer": "layered-codex",
+          "renderState": "paused"
+        },
+        "heap": {
+          "usedBytes": 10000000,
+          "totalBytes": 10000000
+        },
+        "resources": [
+          {
+            "name": "/art/orb-poster-v2.webp",
+            "transferBytes": 98476,
+            "durationMs": 7.600000023841858
+          },
+          {
+            "name": "/assets/index-C3xiFxoe.css",
+            "transferBytes": 17745,
+            "durationMs": 22.600000023841858
+          },
+          {
+            "name": "/fonts/cormorant-italic-latin.woff2",
+            "transferBytes": 39593,
+            "durationMs": 19.200000047683716
+          },
+          {
+            "name": "/fonts/cormorant-latin.woff2",
+            "transferBytes": 37973,
+            "durationMs": 19.5
+          },
+          {
+            "name": "/assets/index-DInoiPGx.js",
+            "transferBytes": 90875,
+            "durationMs": 29.899999976158142
+          },
+          {
+            "name": "/art/fate_atmosphere.webp",
+            "transferBytes": 15056,
+            "durationMs": 3.700000047683716
+          },
+          {
+            "name": "/fonts/inter-latin.woff2",
+            "transferBytes": 48549,
+            "durationMs": 15.899999976158142
+          },
+          {
+            "name": "/art/fate_sigil.svg",
+            "transferBytes": 1174,
+            "durationMs": 9.399999976158142
+          },
+          {
+            "name": "/assets/CodexScreen-D--sJtQ2.js",
+            "transferBytes": 26143,
+            "durationMs": 13
+          },
+          {
+            "name": "/api/health",
+            "transferBytes": 370,
+            "durationMs": 6.700000047683716
+          },
+          {
+            "name": "/art/codex-cover-v1.webp",
+            "transferBytes": 273827,
+            "durationMs": 14.600000023841858
+          },
+          {
+            "name": "/art/deck/pam-a-v1/wands-seven-360.webp",
+            "transferBytes": 63604,
+            "durationMs": 11.699999928474426
+          },
+          {
+            "name": "/art/deck/pam-a-v1/swords-knight-360.webp",
+            "transferBytes": 82405,
+            "durationMs": 13.699999928474426
+          },
+          {
+            "name": "/art/deck/pam-a-v1/pentacles-eight-360.webp",
+            "transferBytes": 79126,
+            "durationMs": 13.900000095367432
+          }
+        ],
+        "recordBytes": 606
+      },
+      "posts": []
+    }
+  ]
+}

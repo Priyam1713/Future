@@ -8,8 +8,11 @@ import { SettingsDialog } from "./components/SettingsDialog";
 import "./style.css";
 import "./cinematic.css";
 import "./gallery.css";
+import "./codex.css";
 import { lazy, Suspense } from "react";
 const NumerologyScreen = lazy(() => import("./screens/NumerologyScreen"));
+const CodexScreen = lazy(() => import("./screens/CodexScreen"));
+const GalleryScreen = lazy(() => import("./screens/GalleryScreen"));
 function App() {
   const oracle = useOracle();
   const { screen, reduced, paused, dialog, sound, navigate, skipToContent } =
@@ -58,9 +61,57 @@ function App() {
           </button>
         </div>
       </header>
+      <nav className="fate-navigation" aria-label="FATE navigation">
+        {(
+          [
+            { screen: "explore", href: "#explore", label: "Explore" },
+            { screen: "gallery", href: "#gallery", label: "54 techniques" },
+            { screen: "codex", href: "#my-fate", label: "My Fate" },
+          ] as const
+        ).map((item) => (
+          <a
+            key={item.screen}
+            href={item.href}
+            aria-current={screen === item.screen ? "page" : undefined}
+            onClick={(e) => {
+              e.preventDefault();
+              navigate(item.screen);
+            }}
+          >
+            <span>{item.label}</span>
+            {item.screen === "codex" && oracle.codex.chapters.length > 0 && (
+              <small
+                aria-label={`${oracle.codex.chapters.length} saved chapters`}
+              >
+                {oracle.codex.chapters.length}
+              </small>
+            )}
+          </a>
+        ))}
+      </nav>
       <main id="main" tabIndex={-1}>
         {screen === "explore" ? (
           <ExploreScreen oracle={oracle} />
+        ) : screen === "codex" ? (
+          <Suspense
+            fallback={
+              <p className="scope-note" role="status">
+                Opening your Codex…
+              </p>
+            }
+          >
+            <CodexScreen oracle={oracle} />
+          </Suspense>
+        ) : screen === "gallery" ? (
+          <Suspense
+            fallback={
+              <p className="scope-note" role="status">
+                Opening the collection…
+              </p>
+            }
+          >
+            <GalleryScreen oracle={oracle} />
+          </Suspense>
         ) : screen === "numerology" ? (
           <Suspense
             fallback={

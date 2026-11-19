@@ -3,15 +3,29 @@ import { flushSync } from "react-dom";
 import { useSound } from "../useSound";
 import { api, type Draw, type Envelope, type Commentary } from "../types";
 import { EXPERIENCES } from "../experiences/contracts";
-export type Screen = "explore" | "ritual" | "reading" | "numerology";
+import { useCodex } from "../codex/useCodex";
+export type Screen =
+  | "explore"
+  | "ritual"
+  | "reading"
+  | "numerology"
+  | "codex"
+  | "gallery";
 export function useOracle() {
+  const codex = useCodex();
   const [explored, setExplored] = useState<number[]>([]);
   function markExplored(id: number) {
     setExplored((previous) =>
       previous.includes(id) ? previous : [...previous, id],
     );
   }
-  const [screen, setScreen] = useState<Screen>("explore");
+  const [screen, setScreen] = useState<Screen>(() =>
+    location.hash === "#my-fate"
+      ? "codex"
+      : location.hash === "#gallery"
+        ? "gallery"
+        : "explore",
+  );
   const [spread, setSpread] = useState<"one" | "three">("three");
   const [question, setQuestion] = useState(""),
     [reversals, setReversals] = useState(true);
@@ -46,7 +60,7 @@ export function useOracle() {
   function navigate(next: Screen) {
     preferMainFocus.current = false;
     const update = () => {
-      history.pushState(null, "", next === "explore" ? "#explore" : `#${next}`);
+      history.pushState(null, "", next === "codex" ? "#my-fate" : `#${next}`);
       setScreen(next);
       setError("");
     };
@@ -66,11 +80,15 @@ export function useOracle() {
       setScreen(
         name === "ritual"
           ? "ritual"
-          : name === "numerology"
-            ? "numerology"
-            : name === "reading" && envelope
-              ? "reading"
-              : "explore",
+          : name === "my-fate"
+            ? "codex"
+            : name === "gallery"
+              ? "gallery"
+              : name === "numerology"
+                ? "numerology"
+                : name === "reading" && envelope
+                  ? "reading"
+                  : "explore",
       );
     };
     window.addEventListener("popstate", fn);
@@ -219,6 +237,7 @@ export function useOracle() {
   const allRevealed = !!result && revealed.length === result.readings.length;
 
   return {
+    codex,
     explored,
     markExplored,
     screen,

@@ -1,6 +1,8 @@
 import type { Numerology } from "./useNumerology";
 import type { Oracle } from "../hooks/useOracle";
 import type { NumberTrace } from "../experiences/contracts";
+import { SaveChapter } from "../codex/SaveChapter";
+import { ReadingConclusion } from "../components/ReadingConclusion";
 function trace(t: NumberTrace): string {
   return t.result === null
     ? "No qualifying letters"
@@ -71,6 +73,10 @@ export function NumberReading({
           </article>
         ))}
       </section>
+      <ReadingConclusion
+        kind="numerology"
+        themes={themes.map((t) => t.text.replace(/\.$/, ""))}
+      />
       <p className="number-reflection">
         Which of these themes feels useful to carry into your next small
         decision?
@@ -194,6 +200,7 @@ export function NumberReading({
           </div>
         )}
       </section>
+      <SaveChapter oracle={oracle} result={result} kind="numerology" />
       <div className="reading-actions">
         <button className="secondary" onClick={download}>
           Export native reading

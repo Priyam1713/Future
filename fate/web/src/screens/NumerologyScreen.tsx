@@ -21,7 +21,7 @@ export default function NumerologyScreen({ oracle }: { oracle: Oracle }) {
         {
           value: result.life_path.result,
           label: "Birth-date pattern",
-          text: "Your date, reduced through the native calculation. A framework for reflection, without a number-specific interpretation.",
+          text: "Your birth-date pattern.",
         },
       ]
     : [];
@@ -82,13 +82,6 @@ export default function NumerologyScreen({ oracle }: { oracle: Oracle }) {
               ? "A MOMENT OF STILLNESS"
               : "TOUCH TO TURN · MOVE TO CATCH THE LIGHT"}
           </p>
-          <button
-            className="text-button"
-            aria-pressed={oracle.paused}
-            onClick={() => oracle.setPaused((p) => !p)}
-          >
-            {oracle.paused ? "Resume atmosphere" : "Pause atmosphere"}
-          </button>
         </div>
         {stage === "input" ? (
           <NumberInputForm state={state} />
@@ -102,7 +95,7 @@ export default function NumerologyScreen({ oracle }: { oracle: Oracle }) {
             <p className="scope-note">
               {step < 2
                 ? "A direct source summary, not a prediction."
-                : "Calculated context · Life Path"}
+                : "Calculated context · no direct meaning supplied"}
             </p>
             <div className="seal-progress" aria-hidden="true">
               {seals.map((_, i) => (

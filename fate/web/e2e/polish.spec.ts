@@ -74,6 +74,8 @@ test("desktop journey and matched illustrated faces remain source-backed", async
   await page.getByRole("link", { name: "Enter the oracle" }).click();
   await page.waitForTimeout(650);
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: "../screenshots/10-ritual-desktop.png",
     fullPage: true,
   });
@@ -96,12 +98,16 @@ test("desktop journey and matched illustrated faces remain source-backed", async
   }
   await page.waitForTimeout(1000);
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: "../screenshots/11-reveal-desktop.png",
     fullPage: true,
   });
   await page.getByRole("button", { name: "Open my reading" }).click();
   await page.waitForTimeout(650);
   await page.screenshot({
+    animations: "disabled",
+    scale: "css",
     path: "../screenshots/12-reading-desktop.png",
     fullPage: true,
   });
@@ -128,13 +134,11 @@ test("render cadence and local mobile/desktop performance profiles", async ({
       if (value) windows.push(JSON.parse(value));
     }
     const resources = await page.evaluate(() =>
-      performance
-        .getEntriesByType("resource")
-        .map((e) => ({
-          name: e.name.split("/").pop(),
-          bytes: (e as PerformanceResourceTiming).transferSize,
-          durationMs: e.duration,
-        })),
+      performance.getEntriesByType("resource").map((e) => ({
+        name: e.name.split("/").pop(),
+        bytes: (e as PerformanceResourceTiming).transferSize,
+        durationMs: e.duration,
+      })),
     );
     profiles.push({ name, viewport: { width, height }, windows, resources });
   }
