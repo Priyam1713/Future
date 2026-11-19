@@ -53,20 +53,43 @@ export function BirthChart({
     };
   }, []);
   const origin = chart.angles.ascendant;
-  // Exact longitudes stay on the ecliptic. Crowded glyphs move to radial lanes,
-  // with leaders to their true coordinate; selection never changes the chart.
-  const locations = BODY_NAMES.map((name, i) => {
-    const p = chart.planets[name];
-    let neighbours = 0;
-    for (let j = 0; j < i; j++) {
-      const d = Math.abs(
-        ((p.longitude - chart.planets[BODY_NAMES[j]].longitude + 540) % 360) -
-          180,
-      );
-      if (d < 13) neighbours++;
-    }
-    return { name, p, i, r: 201 - (neighbours % 3) * 25 };
-  });
+  // Resolve label collisions in display space, retaining a leader to the exact
+  // native coordinate. Selected glyphs own the front lane; no modulo overlap.
+  const locations = useMemo(() => {
+    const used: { x: number; y: number }[] = [];
+    const ordered = BODY_NAMES.map((name, i) => ({
+      name,
+      p: chart.planets[name],
+      i,
+    })).sort(
+      (a, b) => Number(b.name === selected) - Number(a.name === selected),
+    );
+    return ordered
+      .map((item) => {
+        const lon = item.p.longitude;
+        let best = { r: 200, angle: lon, x: 0, y: 0 },
+          clearance = -1;
+        search: for (const r of [200, 173, 146])
+          for (const shift of [0, -7, 7, -14, 14, -21, 21]) {
+            const p = point(lon + shift, r, origin),
+              gap = used.length
+                ? Math.min(...used.map((q) => Math.hypot(q.x - p.x, q.y - p.y)))
+                : 999;
+            if (gap > clearance) {
+              clearance = gap;
+              best = { r, angle: lon + shift, ...p };
+            }
+            if (gap >= 34) {
+              best = { r, angle: lon + shift, ...p };
+              clearance = gap;
+              break search;
+            }
+          }
+        used.push(best);
+        return { ...item, ...best };
+      })
+      .sort((a, b) => a.i - b.i);
+  }, [chart, origin, selected]);
   const drawing = useMemo(
     () => (
       <svg
@@ -241,9 +264,9 @@ export function BirthChart({
           stroke="#9dbaac"
           opacity=".2"
         />
-        {locations.map(({ name, p, i, r }) => {
+        {locations.map(({ name, p, i, r, angle }) => {
           const a = point(p.longitude, 224, origin),
-            b = point(p.longitude, r, origin);
+            b = point(angle, r, origin);
           return (
             <g
               key={name}
@@ -360,6 +383,17 @@ export function BirthChart({
       <div className="chart-light" aria-hidden="true" />
       {!compact && (
         <>
+          <p className="chart-current">
+            {selected in chart.planets ? (
+              <>
+                <strong>{selected}</strong> ·{" "}
+                {degree(chart.planets[selected].longitude)} · House{" "}
+                {chart.planets[selected].house}
+              </>
+            ) : (
+              <>Ascendant · {degree(chart.angles.ascendant)}</>
+            )}
+          </p>
           <div className="chart-touch" aria-label="Choose a planet">
             {BODY_NAMES.map((n, i) => (
               <button

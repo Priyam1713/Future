@@ -3,6 +3,8 @@ import type { Card } from "../types";
 import type { Chapter, Snapshot } from "./records";
 import { snapshotGeometry, signAt } from "../astrology/contracts";
 import { sourcePlacements } from "../astrology/source";
+import { dateLabel } from "../turning/contracts";
+import { transitRule } from "../turning/snapshot";
 interface SourceMeaning {
   symbolic_focus: string;
   text: string;
@@ -29,6 +31,12 @@ export function cardReference(id: string) {
   return cards[id];
 }
 export function chapterTitle(chapter: Chapter) {
+  if (chapter.snapshot.profile === "turning-sky-v1") {
+    const [a, b] = chapter.snapshot.window,
+      first = new Date(a).getUTCFullYear(),
+      last = new Date(b).getUTCFullYear();
+    return `The Turning Sky · ${dateLabel(a)}${first !== last ? `, ${first}` : ""}–${dateLabel(b)}, ${last}`;
+  }
   if (chapter.snapshot.oracle === 1)
     return `${signAt(chapter.snapshot.planets[0][0])} Sun · ${signAt(chapter.snapshot.planets[1][0])} Moon`;
   return chapter.snapshot.oracle === 16
@@ -36,6 +44,37 @@ export function chapterTitle(chapter: Chapter) {
     : `A ${chapter.snapshot.expression} / ${chapter.snapshot.personalYear} constellation`;
 }
 export function evidenceFor(snapshot: Snapshot): Evidence[] {
+  if (snapshot.profile === "turning-sky-v1") {
+    const matched = new Map<number, string>();
+    snapshot.configs.forEach((c) => {
+      c[6].forEach((i) =>
+        matched.set(i, "Documented symbolic pair under matched conditions"),
+      );
+      c[7].forEach((i) => {
+        if (!matched.has(i)) matched.set(i, "Separate symbolic component");
+      });
+    });
+    snapshot.events.forEach((e) => {
+      e[9].forEach((i) =>
+        matched.set(i, "Documented symbolic pair under matched conditions"),
+      );
+      e[10].forEach((i) => {
+        if (!matched.has(i)) matched.set(i, "Separate symbolic component");
+      });
+    });
+    return [...matched].map(([i, label]) => {
+      const r = transitRule(i);
+      return {
+        label: `Turning Sky · ${label}`,
+        quote: r.text,
+        wording: r.text,
+        sourceId: r.rule_id,
+        url: r.source,
+        locator: r.locator,
+        alternative: false,
+      };
+    });
+  }
   if (snapshot.oracle === 1)
     return sourcePlacements(snapshotGeometry(snapshot))
       .slice(0, 3)

@@ -140,7 +140,9 @@ test("Western Codex explicitly saves only geometry, reopens without POST and exp
   await page
     .getByRole("button", { name: "Open in My Fate", exact: false })
     .click();
-  await expect(page.locator(".book-open")).toBeVisible();
+  // This test deliberately delays the lazy Codex module; allow its dependency
+  // graph to finish loading on the software-rendered regression runner.
+  await expect(page.locator(".book-open")).toBeVisible({ timeout: 15000 });
   const posts: string[] = [];
   page.on("request", (r) => {
     if (r.method() === "POST") posts.push(r.url());

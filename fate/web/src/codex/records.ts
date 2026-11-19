@@ -1,6 +1,8 @@
 import type { Result } from "../types";
 import type { NumberResult } from "../experiences/contracts";
 import { DECK } from "../artwork/registry";
+import { TRANSIT_REFERENCE, type TransitSnapshot } from "../turning/contracts";
+import { validTransit } from "../turning/validation";
 import {
   BODY_NAMES,
   WESTERN_REFERENCE,
@@ -12,6 +14,7 @@ export const REFERENCE = "fate-codex-reference-v1";
 export const MAX_CHAPTERS = 50;
 const MAX_LENGTH = 65536;
 export type Snapshot =
+  | TransitSnapshot
   | WesternSnapshot
   | {
       oracle: 16;
@@ -29,7 +32,10 @@ export type Snapshot =
 export interface Chapter {
   id: string;
   savedAt: string;
-  reference: typeof REFERENCE | typeof WESTERN_REFERENCE;
+  reference:
+    | typeof REFERENCE
+    | typeof WESTERN_REFERENCE
+    | typeof TRANSIT_REFERENCE;
   snapshot: Snapshot;
 }
 export interface CodexDocument {
@@ -58,6 +64,7 @@ function core(value: unknown) {
 }
 export function validSnapshot(s: unknown): s is Snapshot {
   if (!object(s)) return false;
+  if (s.oracle === 1 && s.profile === "turning-sky-v1") return validTransit(s);
   if (s.oracle === 1) {
     const longitude = (v: unknown) =>
       typeof v === "number" && Number.isFinite(v) && v >= 0 && v < 360;
@@ -177,7 +184,12 @@ export function validChapter(c: unknown): c is Chapter {
     /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/.test(c.savedAt) &&
     Number.isFinite(Date.parse(c.savedAt)) &&
     validSnapshot(c.snapshot) &&
-    c.reference === (c.snapshot.oracle === 1 ? WESTERN_REFERENCE : REFERENCE)
+    c.reference ===
+      (c.snapshot.profile === "turning-sky-v1"
+        ? TRANSIT_REFERENCE
+        : c.snapshot.oracle === 1
+          ? WESTERN_REFERENCE
+          : REFERENCE)
   );
 }
 export function parseDocument(raw: string | null): CodexDocument {
@@ -277,7 +289,12 @@ export function chapterFor(native: object, snapshot: Snapshot): Chapter {
   return {
     id,
     savedAt: new Date().toISOString(),
-    reference: snapshot.oracle === 1 ? WESTERN_REFERENCE : REFERENCE,
+    reference:
+      snapshot.profile === "turning-sky-v1"
+        ? TRANSIT_REFERENCE
+        : snapshot.oracle === 1
+          ? WESTERN_REFERENCE
+          : REFERENCE,
     snapshot,
   };
 }

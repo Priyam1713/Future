@@ -161,9 +161,11 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
         <p>
           Only Save to this device writes a chapter. It keeps the selected Tarot
           cards and orientations, Numerology’s Expression, Personal Year and
-          Life Path numbers, or Western Astrology's chart geometry, plus the
-          source edition, chapter identifier and save time. Names, entered
-          dates/times, coordinates, timezone, place labels, original questions,
+          Life Path numbers, or Western Astrology's chart geometry or dated
+          transit contacts/native samples, plus the source edition, chapter
+          identifier and save time. Transit window dates are retained by
+          explicit choice. Names, birth dates/times, Numerology target dates,
+          birthplace coordinates/timezone/place labels, original questions,
           calculation traces, replay seeds and Gemini commentary are excluded.
           Chart geometry remains personal and can reveal information about a
           birth moment. Exported Codex copies use this same minimal scope with

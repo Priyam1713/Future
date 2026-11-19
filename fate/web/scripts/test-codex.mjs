@@ -13,6 +13,8 @@ await build({
     "src/astrology/contracts.ts",
     "src/astrology/geometry.ts",
     "src/astrology/source.ts",
+    "src/turning/snapshot.ts",
+    "src/turning/validation.ts",
   ],
   outdir: "../../tmp/codex-tests",
   entryNames: "[name]",
@@ -351,7 +353,11 @@ test("Chart projection aligns the actual Ascendant and preserves relative eclipt
   assert(Math.abs(geometry.point(213, 200, 123).x - 300) < 1e-9);
   assert(Math.abs(geometry.point(213, 200, 123).y - 500) < 1e-9);
   // For this independently defined near-meridian fixture, MC is above ASC.
-  const mc = geometry.point(nativeWestern.angles.midheaven, 200, nativeWestern.angles.ascendant);
+  const mc = geometry.point(
+    nativeWestern.angles.midheaven,
+    200,
+    nativeWestern.angles.ascendant,
+  );
   assert(mc.y < 300);
   const a = geometry.point(359, 180, 100),
     b = geometry.point(-1, 180, 100);
@@ -367,4 +373,173 @@ test("Cross-oracle comparisons cite Western components without adding unsupporte
   assert(
     !result.leftEvidence.some((e) => /Venus|Uranus|Neptune/.test(e.label)),
   );
+});
+
+const transit = await import(
+  pathToFileURL(resolve("../../tmp/codex-tests/snapshot.mjs"))
+);
+const validateTransit = await import(
+  pathToFileURL(resolve("../../tmp/codex-tests/validation.mjs"))
+);
+const turningNative = JSON.parse(
+  readFileSync("../evidence/turning-engine.json", "utf8"),
+).result;
+test("Transit snapshots preserve exact contacts, native phase samples and duration values", () => {
+  const s = transit.transitSnapshot(turningNative);
+  assert(validateTransit.validTransit(s));
+  assert(r.validSnapshot(s));
+  const restored = transit.restoreTransit(s);
+  assert.equal(
+    restored.report.exact_events.length,
+    turningNative.report.exact_events.length,
+  );
+  for (let i = 0; i < s.events.length; i++) {
+    const a = restored.report.exact_events[i],
+      b = turningNative.report.exact_events[i];
+    for (const k of [
+      "transiting",
+      "natal_target",
+      "aspect_degrees",
+      "branch_degrees",
+      "exact_utc",
+      "longitude",
+      "retrograde",
+      "near_station",
+      "pass_in_window",
+      "passes_in_window",
+      "transit_natal_house",
+      "angular_residual_degrees",
+    ])
+      assert.deepEqual(a[k], b[k], k);
+    for (const kind of ["direct", "components"])
+      assert.deepEqual(
+        a.interpretations[kind].map((r) => [
+          r.rule_id,
+          r.version,
+          r.text,
+          r.source,
+          r.locator,
+        ]),
+        b.interpretations[kind].map((r) => [
+          r.rule_id,
+          r.version,
+          r.text,
+          r.source,
+          r.locator,
+        ]),
+      );
+  }
+  for (let i = 0; i < s.configs.length; i++) {
+    assert.deepEqual(
+      restored.report.configurations[i].intervals,
+      turningNative.report.configurations[i].intervals,
+    );
+    assert.equal(
+      restored.report.configurations[i].hours_in_window,
+      turningNative.report.configurations[i].hours_in_window,
+    );
+  }
+  for (let i = 0; i < s.frames.length; i++) {
+    const a = restored.sky_samples[i],
+      b = turningNative.sky_samples[i];
+    assert.equal(a.utc, b.utc);
+    for (const name of astro.BODY_NAMES) {
+      assert.equal(a.planets[name].longitude, b.planets[name].longitude);
+      assert.equal(a.planets[name].retrograde, b.planets[name].retrograde);
+    }
+    assert.deepEqual(
+      a.contacts.map((x) => x.phase),
+      b.contacts.map((x) => x.phase),
+    );
+  }
+});
+test("Transit storage excludes natal inputs, request proofs, raw report and commentary", () => {
+  const s = transit.transitSnapshot({
+      ...turningNative,
+      birth: "PRIVATE_BIRTH",
+      origin: "PRIVATE_PROOF",
+      gemini: "PRIVATE_AI",
+    }),
+    c = r.chapterFor(turningNative, s),
+    memory = new Memory();
+  assert.equal(c.reference, "fate-transit-reference-v1");
+  assert(r.validChapter(c));
+  r.saveChapter(memory, c);
+  const raw = memory.getItem(r.STORAGE_KEY);
+  for (const word of [
+    "PRIVATE",
+    "birth",
+    "latitude",
+    "longitude",
+    "proof",
+    "receipt",
+    "gemini",
+    "natal_summary",
+  ])
+    assert(!raw.includes(word));
+  assert.deepEqual(r.readDocument(memory).chapters, [c]);
+  assert.equal(r.validChapter({ ...c, reference: r.REFERENCE }), false);
+  assert.equal(
+    r.validChapter({ ...c, reference: "fate-western-reference-v1" }),
+    false,
+  );
+});
+test("Malformed or private-extra-key transit records fail closed without overwrite", () => {
+  const valid = transit.transitSnapshot(turningNative);
+  for (const mutate of [
+    (s) => (s.birth = "private"),
+    (s) => (s.window[1] = s.window[0]),
+    (s) => (s.targets[0] = 360),
+    (s) => (s.configs[0][6] = [999]),
+    (s) => (s.events[0][0] = 999),
+    (s) => (s.events[0][5] = "2"),
+    (s) => s.frames[0][1].pop(),
+    (s) => (s.frames[0][3][0][1] = 9),
+    (s) => (s.frames[0][2][0] = "false"),
+    (s) => (s.configs[0][5][0][4] = -1),
+  ]) {
+    const bad = structuredClone(valid);
+    mutate(bad);
+    assert.equal(validateTransit.validTransit(bad), false);
+  }
+  const c = r.chapterFor(turningNative, valid);
+  const store = new Memory();
+  const broken = JSON.stringify({
+    schemaVersion: 1,
+    chapters: [{ ...c, snapshot: { ...valid, proof: "private" } }],
+  });
+  store.data.set(r.STORAGE_KEY, broken);
+  assert.throws(() => r.readDocument(store));
+  assert.equal(store.getItem(r.STORAGE_KEY), broken);
+  assert.equal(store.writes, 0);
+});
+test("Transit export and comparison cite only actual matched archived rules", () => {
+  const s = transit.transitSnapshot(turningNative),
+    c = r.chapterFor(turningNative, s),
+    evidence = ref.evidenceFor(s),
+    ids = new Set();
+  for (const e of turningNative.report.exact_events)
+    for (const kind of ["direct", "components"])
+      for (const x of e.interpretations[kind]) ids.add(x.rule_id);
+  for (const x of turningNative.report.configurations)
+    for (const kind of ["direct", "components"])
+      for (const z of x.interpretations[kind]) ids.add(z.rule_id);
+  assert(evidence.length > 0);
+  assert(evidence.every((e) => ids.has(e.sourceId) && e.url && e.locator));
+  assert.deepEqual(ref.exportChapters([c]).chapters[0].snapshot, s);
+  const match = compare.compareChapters(c, chapter(number));
+  assert(!("score" in match));
+  assert(!("probability" in match));
+});
+test("Old Codex editions remain readable beside the new dated chapter", () => {
+  const store = new Memory();
+  const a = chapter(tarot),
+    b = chapter(number),
+    c = r.chapterFor(turningNative, transit.transitSnapshot(turningNative));
+  r.saveChapter(store, a);
+  r.saveChapter(store, b);
+  r.saveChapter(store, c);
+  assert.deepEqual(r.readDocument(store).chapters, [a, b, c]);
+  r.deleteChapter(store, c.id);
+  assert.deepEqual(r.readDocument(store).chapters, [a, b]);
 });

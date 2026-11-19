@@ -5,8 +5,25 @@ import { ReadingConclusion } from "../components/ReadingConclusion";
 import { plainGloss } from "../experiences/tarotPresentation";
 import { BirthChart } from "../astrology/BirthChart";
 import { snapshotGeometry, degree } from "../astrology/contracts";
+import { restoreTransit } from "../turning/snapshot";
+import { TimeInstrument } from "../turning/TimeInstrument";
+import { TransitChapter } from "../turning/TransitChapter";
 export function ChapterIllustration({ chapter }: { chapter: Chapter }) {
   const s = chapter.snapshot;
+  if (s.profile === "turning-sky-v1")
+    return (
+      <div className="codex-chart-study">
+        <TimeInstrument
+          result={restoreTransit(s)}
+          index={0}
+          onDay={() => {}}
+          selectedEvent={null}
+          reduced
+          paused
+          compact
+        />
+      </div>
+    );
   if (s.oracle === 1)
     return (
       <div className="codex-chart-study">
@@ -45,6 +62,13 @@ export function ChapterContent({
   index: number;
 }) {
   const rows = evidenceFor(chapter.snapshot);
+  if (chapter.snapshot.profile === "turning-sky-v1")
+    return (
+      <TransitChapter
+        chapter={{ ...chapter, snapshot: chapter.snapshot }}
+        index={index}
+      />
+    );
   return (
     <>
       <header className="folio-heading">
@@ -70,21 +94,24 @@ export function ChapterContent({
         <ChapterIllustration chapter={chapter} />
       </div>
       <div className="folio-themes">
-        {chapter.snapshot.oracle === 1 && (
-          <div className="folio-chart-context">
-            <p>Ascendant {degree(chapter.snapshot.angles[0])}</p>
-            <p>
-              Tropical · {chapter.snapshot.houses} houses. These are separate
-              source components, not a combined placement interpretation. Planet symbols are supplied for Sun, Moon and Mercury only; no other planet-specific or direct aspect-pair meanings are added.
-            </p>
-            <details>
-              <summary>The saved chart geometry</summary>
-              <pre>
-                {JSON.stringify(snapshotGeometry(chapter.snapshot), null, 2)}
-              </pre>
-            </details>
-          </div>
-        )}
+        {chapter.snapshot.oracle === 1 &&
+          chapter.snapshot.profile === "modern-tropical-v1" && (
+            <div className="folio-chart-context">
+              <p>Ascendant {degree(chapter.snapshot.angles[0])}</p>
+              <p>
+                Tropical · {chapter.snapshot.houses} houses. These are separate
+                source components, not a combined placement interpretation.
+                Planet symbols are supplied for Sun, Moon and Mercury only; no
+                other planet-specific or direct aspect-pair meanings are added.
+              </p>
+              <details>
+                <summary>The saved chart geometry</summary>
+                <pre>
+                  {JSON.stringify(snapshotGeometry(chapter.snapshot), null, 2)}
+                </pre>
+              </details>
+            </div>
+          )}
         {rows.map((row, i) => (
           <section key={i}>
             <p className="eyebrow">{row.label}</p>

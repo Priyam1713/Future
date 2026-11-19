@@ -10,6 +10,7 @@ import "./cinematic.css";
 import "./gallery.css";
 import "./codex.css";
 import "./astrology.css";
+import "./turning.css";
 import { lazy, Suspense } from "react";
 const WesternScreen = lazy(() => import("./screens/WesternScreen"));
 const NumerologyScreen = lazy(() => import("./screens/NumerologyScreen"));

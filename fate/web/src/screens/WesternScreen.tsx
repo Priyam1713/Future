@@ -1,3 +1,5 @@
+import { lazy, Suspense, useState } from "react";
+const TurningSky = lazy(() => import("../turning/TurningSky"));
 import type { Oracle } from "../hooks/useOracle";
 import { useWestern } from "../astrology/useWestern";
 import { BirthForm } from "../astrology/BirthForm";
@@ -16,6 +18,7 @@ function exportNative(result: unknown) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 export default function WesternScreen({ oracle }: { oracle: Oracle }) {
+  const [turning, setTurning] = useState(false);
   const s = useWestern(oracle),
     r = s.result;
   const names = ["Sun", "Moon", "Ascendant"];
@@ -25,6 +28,16 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
         ? r.angles.ascendant
         : r.planets[name].longitude
       : 0;
+  if (turning && r)
+    return (
+      <Suspense fallback={<p role="status">Opening The Turning Sky...</p>}>
+        <TurningSky
+          origin={s.envelope?.transit_origin}
+          oracle={oracle}
+          onBack={() => setTurning(false)}
+        />
+      </Suspense>
+    );
   return (
     <div className={`western-room page-enter western-${s.stage}`}>
       <div className="western-environment" aria-hidden="true">
@@ -163,6 +176,28 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
             </div>
             {s.stage === "reading" && (
               <>
+                <section className="turning-door">
+                  <div>
+                    <p className="eyebrow">
+                      THE SAME NATAL SKY / A NEW DIMENSION
+                    </p>
+                    <h2>
+                      The sky
+                      <br />
+                      <em>keeps turning.</em>
+                    </h2>
+                    <p>
+                      Explore the next 1–30 days through actual transit
+                      contacts. Your current natal calculation is already here.
+                    </p>
+                    <button
+                      className="primary"
+                      onClick={() => setTurning(true)}
+                    >
+                      Enter The Turning Sky ↗
+                    </button>
+                  </div>
+                </section>
                 <ChartReading result={r} />
                 <SaveChapter kind="western" result={r} oracle={oracle} />
                 <section className="western-commentary">

@@ -1,6 +1,6 @@
 {
-  "id": "fate-astral-observatory-v4",
-  "block": "04 · The Astral Observatory",
+  "id": "fate-turning-sky-v5",
+  "block": "05 · The Turning Sky",
   "capability": "symbolic_reading",
   "engine": "future.tarot.read",
   "text_profile": "waite-1922-text-v1",
@@ -180,7 +180,8 @@
       "Cover opening, real chapter turning/swipe/keyboard controls, bounded scrollable folios",
       "Reduced-motion, shared pause and low-capability light reduction",
       "Storage-event refresh between tabs, latest-document read before mutations",
-      "Unknown schema/reference/fields/corruption fail closed without automatic overwrite"
+      "Unknown schema/reference/fields/corruption fail closed without automatic overwrite",
+      "Reopen dated transit chapters without new ephemeris/provider requests; older editions preserved"
     ],
     "schema_version": 1,
     "reference": "fate-codex-reference-v1",
@@ -239,7 +240,8 @@
         "new source meanings",
         "independent corroboration claims",
         "automatic LLM synthesis"
-      ]
+      ],
+      "presentation": "Native source-based matching unchanged; three shared families initially, one representative exact passage per side, other passages and full citations on demand. Original alternatives never merged."
     },
     "art_provenance": "design/block03-artwork.json",
     "western_fields": [
@@ -250,6 +252,14 @@
       "Ascendant/Midheaven",
       "twelve cusps",
       "major aspects"
+    ],
+    "transit_fields": [
+      "explicit UTC window",
+      "native target longitudes",
+      "native configurations/intervals and exact hours",
+      "native exact contacts/repetitions",
+      "native daily planetary samples and phase identities",
+      "matched frozen source indices"
     ]
   },
   "western": {
@@ -300,5 +310,45 @@
     ],
     "saved_source_edition": "fate-western-reference-v1",
     "art": "Owner-supplied FATE Western Observatory Art 01; independent calculated SVG geometry"
+  },
+  "turning_sky": {
+    "oracle_id": 1,
+    "application": "transits",
+    "engine": [
+      "future.transits.forecast",
+      "future.forecast_report.present",
+      "future.western.interpreter"
+    ],
+    "status": "Supported bounded consumer transit window over a current-session natal calculation",
+    "supported": {
+      "days": "strict integer 1–30",
+      "origin": "HMAC-verified current native natal basis; raw birth/clock/location and commentary excluded. One-hour process-key lease, no server session store. Saved chapters carry no origin proof and cannot recreate missing birth information.",
+      "time": "Explicit offset-aware start, UI UTC; native half-open start-inclusive/end-exclusive window",
+      "positions": "One native ephemeris sample per day; exact-focus longitude comes from the root event. No client interpolation or decorative planet coordinates.",
+      "orbs": "Native DEFAULT_ORBS; native applying/exact/separating/stationary phases and clipped interval hours",
+      "sources": "62 immutable modern source records, direct pair rules only under native matched conditions; components stay separate",
+      "ordering": "Native chronological events; duration groups in interval-start order, not importance ranking",
+      "storage": "Explicit minimal indexed dated chapter in the existing v1 document; native intervals/hours, matched source IDs, daily longitudes/retrograde/phase states, exact contacts and natal target geometry. No birth inputs, token, raw report or AI.",
+      "limits": {
+        "hard_compute_seconds": 60,
+        "concurrent_workers": 1,
+        "queue": false,
+        "client_timeout_seconds": 65,
+        "saved_document_characters": 65536
+      }
+    },
+    "unsupported": [
+      "new oracle or calculation engine",
+      "unknown/missing natal reconstruction",
+      "saved-chapter birth reconstruction or auto-recalculation",
+      "interpolated ephemeris positions",
+      "life-event predictions, certainty, significance or confidence scores",
+      "automatic birth-input storage",
+      "transit Gemini commentary",
+      "accounts, cloud sync, monetization or Arcade"
+    ],
+    "source_edition": "fate-transit-reference-v1",
+    "art_provenance": "design/block05-artwork.json",
+    "benchmark": "evidence/turning-computation.json"
   }
 }

@@ -22,6 +22,7 @@ from future.tarot_catalog import PROFILE
 from future.card_random import PROTOCOL
 from future.numerology import calculate, readings as number_readings
 from .western import WesternInput, WesternService, search_places
+from .turning import TransitInput, TransitRunner, natal_basis
 
 WEB = Path(__file__).parent / 'web' / 'dist'
 POSITIONS = ['What you carry', 'Where you stand', 'What to consider']
@@ -84,6 +85,7 @@ def native(q: Draw):
 
 def create_app(provider=None, signing_key=None, clock=time.time):
     western = WesternService()
+    turning = TransitRunner()
     @asynccontextmanager
     async def lifespan(app):
         try:
@@ -103,6 +105,14 @@ def create_app(provider=None, signing_key=None, clock=time.time):
     def signature(draw, expiry):
         raw = json.dumps(draw.model_dump(), sort_keys=True, ensure_ascii=True).encode()
         return hmac.new(key, str(expiry).encode() + b'.' + raw, hashlib.sha256).hexdigest()
+
+    def basis_signature(natal, expiry):
+        def numbers(v):
+            if isinstance(v,dict):return {k:numbers(x) for k,x in v.items()}
+            if isinstance(v,list):return [numbers(x) for x in v]
+            return int(v) if type(v) is float and v.is_integer() else v
+        raw=json.dumps(numbers(natal),sort_keys=True,ensure_ascii=True,separators=(',',':')).encode()
+        return hmac.new(key,b'fate-natal-basis-v1.'+str(expiry).encode()+b'.'+raw,hashlib.sha256).hexdigest()
 
     @app.middleware('http')
     async def boundary(request: Request, call_next):
@@ -182,7 +192,19 @@ def create_app(provider=None, signing_key=None, clock=time.time):
     def western_chart(q: WesternInput):
         result = western.read(q)
         expiry = int(clock()) + 86400
-        return dict(result=result, oracle_id=1, receipt=f'{expiry}.{signature(q, expiry)}')
+        basis=natal_basis(result)
+        basis_expiry=int(clock())+3600
+        return dict(result=result, oracle_id=1, receipt=f'{expiry}.{signature(q, expiry)}',transit_origin=dict(natal=basis,proof=f'{basis_expiry}.{basis_signature(basis,basis_expiry)}'))
+
+    @app.post('/api/western/transits')
+    async def transit_window(q: TransitInput, request: Request):
+        try:
+            expiry,signed=q.origin.proof.split('.')
+            valid=clock()<=int(expiry)<=clock()+3600 and hmac.compare_digest(signed,basis_signature(q.origin.natal,expiry))
+        except (ValueError,TypeError):valid=False
+        if not valid:
+            raise HTTPException(403,'This natal-session proof expired or changed. Calculate a fresh natal chart; saved chapters cannot recreate birth information.')
+        return await turning.run(q.origin.natal,q.start,q.days,request.is_disconnected)
 
     @app.post('/api/western/explain')
     def explain_western(q: WesternExplain):

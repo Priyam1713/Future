@@ -53,3 +53,7 @@ The evidence script records actual browser frames, an actual native draw and rea
 ## Block 04 · Astral Observatory
 
 The supplied Western Observatory Art 01 is an environmental illustration, not a chart. Source PNG, exact original prompt and package README are retained; the manifest records all delivered WebP SHA-256 values and the original archive hash. The 4:5 mobile crop preserves the armillary; landscape variants preserve negative space. No new generated raster art is needed for this milestone. Live native geometry, glyphs, twelve houses, aspect paths, physical rim, selected light and all readable labels/controls are separate React/SVG layers. Pointer parallax and engraved-ring/material-light animations never change the calculated chart. The small ritual instrument expands into a full touch-explorable reading instrument. Codex and comparison use the same saved geometry, with no zodiac template or invented sky.
+
+## Block 05 · The Turning Sky
+
+Verified supplied Turning Sky source PNG and four WebP variants. The art remains environment-only; independent native ecliptic positions, exact-contact geometry, date text, brass gear, thin orbit engraving, glass/light and controls are live layers. Mechanical gear angle encodes the selected day index, never a fabricated astronomical longitude. Daily sky samples and exact-event positions are separate modes. Source prompt/checksums: block05-artwork.json and block05-package-README.md.

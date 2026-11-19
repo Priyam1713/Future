@@ -125,6 +125,7 @@ export interface WesternResult extends Geometry {
   reproducibility: unknown;
 }
 export interface WesternEnvelope {
+  transit_origin?: import("../turning/contracts").TransitOrigin;
   oracle_id: 1;
   result: WesternResult;
   receipt: string;

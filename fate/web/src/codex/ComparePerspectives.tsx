@@ -2,16 +2,23 @@ import { compareChapters } from "./compare";
 import { chapterTitle, type Evidence } from "./reference";
 import type { Chapter } from "./records";
 import { ChapterIllustration } from "./ChapterContent";
+import { useState } from "react";
 function Quotation({ evidence }: { evidence: Evidence }) {
   return (
     <blockquote className="comparison-quote">
       <p>“{evidence.quote}”</p>
-      <cite>
-        {evidence.label} ·{" "}
-        <a href={evidence.url} target="_blank" rel="noreferrer">
-          Source
-        </a>
-      </cite>
+      <details className="comparison-citation">
+        <summary>Source & context</summary>
+        <cite>
+          {evidence.label} ·{" "}
+          <a href={evidence.url} target="_blank" rel="noreferrer">
+            Source
+          </a>
+        </cite>
+        <p>{evidence.locator}</p>
+        <small>{evidence.sourceId}</small>
+        <p>{evidence.wording}</p>
+      </details>
     </blockquote>
   );
 }
@@ -25,6 +32,7 @@ export function ComparePerspectives({
   onClose: () => void;
 }) {
   const comparison = compareChapters(left, right);
+  const [allEchoes, setAllEchoes] = useState(false);
   return (
     <section
       className="perspectives page-enter"
@@ -84,15 +92,23 @@ export function ComparePerspectives({
       )}
       <h3>Echoes in the wording</h3>
       {comparison.echoes.length ? (
-        comparison.echoes.map((group) => (
+        comparison.echoes.slice(0, allEchoes ? undefined : 3).map((group) => (
           <article className="comparison-echo" key={group.label}>
             <h4>{group.label}</h4>
             <div>
               {[group.left, group.right].map((side, i) => (
                 <div key={i}>
-                  {side.map((e, j) => (
+                  {side.slice(0, 1).map((e, j) => (
                     <Quotation evidence={e} key={j} />
                   ))}
+                  {side.length > 1 && (
+                    <details className="comparison-more">
+                      <summary>{side.length - 1} more cited passages</summary>
+                      {side.slice(1).map((e, j) => (
+                        <Quotation key={j} evidence={e} />
+                      ))}
+                    </details>
+                  )}
                 </div>
               ))}
             </div>
@@ -105,16 +121,28 @@ export function ComparePerspectives({
           stand on its own.
         </p>
       )}
+      {comparison.echoes.length > 3 && (
+        <button
+          className="text-button"
+          onClick={() => setAllEchoes(!allEchoes)}
+        >
+          {allEchoes
+            ? "Show fewer source families"
+            : `Explore ${comparison.echoes.length - 3} other shared source families`}
+        </button>
+      )}
       <h3>Different emphases</h3>
       <div className="comparison-differences">
         {[
           {
             groups: comparison.leftOnly,
+            lead: comparison.leftOnly[0]?.left[0],
             rows: comparison.leftEvidence,
             chapter: left,
           },
           {
             groups: comparison.rightOnly,
+            lead: comparison.rightOnly[0]?.right[0],
             rows: comparison.rightEvidence,
             chapter: right,
           },
@@ -132,9 +160,17 @@ export function ComparePerspectives({
                 ? side.groups.map((g) => g.label).join(" · ")
                 : "Read this chapter’s source language in its own context."}
             </p>
-            {side.rows.map((e, j) => (
-              <Quotation key={j} evidence={e} />
-            ))}
+            {side.lead && <Quotation evidence={side.lead} />}
+            {side.rows.length > 0 && (
+              <details className="comparison-more">
+                <summary>
+                  Explore all {side.rows.length} source passages
+                </summary>
+                {side.rows.map((e, j) => (
+                  <Quotation key={j} evidence={e} />
+                ))}
+              </details>
+            )}
           </div>
         ))}
       </div>
