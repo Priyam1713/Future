@@ -165,8 +165,8 @@ export function ComparePerspectives({
       </div>
       {comparison.alternatives.length > 0 && (
         <aside className="comparison-note">
-          A source offers alternatives within a Tarot gloss. Those passages are
-          displayed in full above and excluded from automatic theme matching.
+          Alternative readings and procedural references remain available in the
+          source passages. Automatic theme matching skips them.
         </aside>
       )}
       <details className="comparison-method">

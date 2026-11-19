@@ -573,3 +573,56 @@ test("Four Chambers snapshots reject private extras, false hexagram transformati
     false,
   );
 });
+test("Ritual Wing saves only a recognized public edition and verified figure values", () => {
+  const guide = {
+    oracle: 21,
+    profile: "atkinson-pg43954-guided-journal-v1",
+    values: [],
+  };
+  const book = {
+    oracle: 36,
+    profile: "mascaro2022-manual-coarse-webclassic-ruth-v1",
+    values: ["2", "RUT.1.s001"],
+  };
+  const geomancy = {
+    oracle: 33,
+    profile: "turner1655-common-shield-v1",
+    values: [
+      "1111",
+      "1111",
+      "1111",
+      "1111",
+      "1111",
+      "1111",
+      "1111",
+      "1111",
+      "2222",
+      "2222",
+      "2222",
+      "2222",
+      "2222",
+      "2222",
+      "2222",
+    ],
+  };
+  for (const value of [guide, book, geomancy]) {
+    assert.equal(r.validSnapshot(value), true);
+    assert.equal(r.validSnapshot({ ...value, notes: "private" }), false);
+    assert.equal(r.chapterFor({}, value).reference, "fate-ritual-wing-v1");
+  }
+  assert.equal(
+    r.validSnapshot({ ...guide, values: ["imagined_imagery"] }),
+    false,
+  );
+  assert.equal(
+    r.validSnapshot({ ...book, values: ["3", "RUT.1.s001"] }),
+    false,
+  );
+  assert.equal(
+    r.validSnapshot({
+      ...geomancy,
+      values: [...geomancy.values.slice(0, 14), "1111"],
+    }),
+    false,
+  );
+});

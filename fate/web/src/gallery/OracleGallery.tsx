@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { Oracle } from "../hooks/useOracle";
 import inventory from "./inventory.json";
 import { isChamberId, ROOMS } from "../chambers/contracts";
+import { isRitualId, RITUAL_ROOMS } from "../ritual/contracts";
 import { EXPERIENCES } from "../experiences/contracts";
 import { NumberDial } from "../numerology/NumberDial";
 
@@ -161,6 +162,22 @@ export function OracleGallery({
             </div>
           </div>
         )}
+        <details className="ritual-wing-discovery">
+          <summary>
+            The Ritual Wing <span>Seven hands-on rooms</span>
+          </summary>
+          <nav aria-label="The Ritual Wing rooms">
+            {Object.values(RITUAL_ROOMS).map((room) => (
+              <button
+                key={room.slug}
+                className="text-button ritual-wing-link"
+                onClick={() => oracle.navigate(room.slug)}
+              >
+                {room.name} <span aria-hidden="true">↗</span>
+              </button>
+            ))}
+          </nav>
+        </details>
         <div className="gallery-tools">
           <label>
             Find a tradition
@@ -174,7 +191,7 @@ export function OracleGallery({
           <p aria-live="polite">
             {query
               ? `${matches.length} matching techniques`
-              : `${oracle.explored.length} of 3 rooms explored this visit`}
+              : `${oracle.explored.length} of ${inventory.methods.filter((method) => method.status === "available").length} rooms explored this visit`}
           </p>
         </div>
         <div className="gallery-legend">
@@ -263,11 +280,13 @@ export function OracleGallery({
                             m.id === 16
                               ? oracle.begin()
                               : oracle.navigate(
-                                  isChamberId(m.id)
-                                    ? ROOMS[m.id].slug
-                                    : m.id === 1
-                                      ? "western"
-                                      : "numerology",
+                                  isRitualId(m.id)
+                                    ? RITUAL_ROOMS[m.id].slug
+                                    : isChamberId(m.id)
+                                      ? ROOMS[m.id].slug
+                                      : m.id === 1
+                                        ? "western"
+                                        : "numerology",
                                 )
                           }
                         >

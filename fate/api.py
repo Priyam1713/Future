@@ -24,6 +24,7 @@ from future.numerology import calculate, readings as number_readings
 from .western import WesternInput, WesternService, search_places
 from .turning import TransitInput, TransitRunner, natal_basis
 from . import chambers
+from . import ritual
 
 WEB = Path(__file__).parent / 'web' / 'dist'
 POSITIONS = ['What you carry', 'Where you stand', 'What to consider']
@@ -193,6 +194,10 @@ def create_app(provider=None, signing_key=None, clock=time.time):
         expiry = int(clock()) + 86400
         return dict(result=result, snapshot=chambers.snapshot(result),
                     receipt=f'{expiry}.{signature(q, expiry)}')
+
+    @app.post('/api/ritual-wing')
+    def ritual_wing(q: ritual.RitualInput):
+        return ritual.read(q)
 
     @app.post('/api/chambers/explain')
     def chamber_explain(q: ChamberExplain):

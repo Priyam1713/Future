@@ -7,6 +7,8 @@ import { dateLabel } from "../turning/contracts";
 import { transitRule } from "../turning/snapshot";
 import { isChamberSnapshot } from "../chambers/contracts";
 import { chamberEvidence, chapterName } from "../chambers/reference";
+import { isRitualSnapshot } from "../ritual/contracts";
+import { ritualEvidence, ritualTitle } from "../ritual/reference";
 interface SourceMeaning {
   symbolic_focus: string;
   text: string;
@@ -33,6 +35,7 @@ export function cardReference(id: string) {
   return cards[id];
 }
 export function chapterTitle(chapter: Chapter) {
+  if (isRitualSnapshot(chapter.snapshot)) return ritualTitle(chapter.snapshot);
   if (isChamberSnapshot(chapter.snapshot)) return chapterName(chapter.snapshot);
   if (chapter.snapshot.profile === "turning-sky-v1") {
     const [a, b] = chapter.snapshot.window,
@@ -47,6 +50,7 @@ export function chapterTitle(chapter: Chapter) {
     : `A ${chapter.snapshot.expression} / ${chapter.snapshot.personalYear} constellation`;
 }
 export function evidenceFor(snapshot: Snapshot): Evidence[] {
+  if (isRitualSnapshot(snapshot)) return ritualEvidence(snapshot);
   if (isChamberSnapshot(snapshot)) return chamberEvidence(snapshot);
   if (snapshot.profile === "turning-sky-v1") {
     const matched = new Map<number, string>();

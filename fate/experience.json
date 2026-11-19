@@ -1,6 +1,6 @@
 {
-  "id": "fate-four-chambers-v6",
-  "block": "06 · The Four New Chambers",
+  "id": "fate-ritual-wing-v7",
+  "block": "07 · The Ritual Wing",
   "capability": "symbolic_reading",
   "engine": "future.tarot.read",
   "text_profile": "waite-1922-text-v1",
@@ -98,15 +98,22 @@
     "fonts": "Self-hosted Cormorant Garamond and Inter; SIL OFL licenses and source URLs bundled",
     "generated": "Original FATE back, nebula, brass dial and observatory hall made with built-in image_gen; exact prompts and source PNGs retained under design/. No baked UI. Orb poster extracted from actual renderer. Block 03 original illustrated Codex cover has a separately recorded source PNG and exact prompt; binding, runtime title, counts, paper, source chapters, moving light and turns are independent layers."
   },
-  "scope": "Seven consumer oracle rooms using existing native engines, a 54-technique Gallery and an explicit local Codex.",
+  "scope": "Fourteen consumer oracle rooms using existing native engines, a 54-technique Gallery and explicitly saved local chapters.",
   "technique_ids": [
     1,
     2,
     3,
     4,
     16,
+    17,
     18,
-    19
+    19,
+    20,
+    21,
+    22,
+    23,
+    33,
+    36
   ],
   "supported_scope": "The supported object describes Tarot. Separate sections describe the other rooms and the Gallery.",
   "gallery": {
@@ -127,8 +134,15 @@
       3,
       4,
       16,
+      17,
       18,
-      19
+      19,
+      20,
+      21,
+      22,
+      23,
+      33,
+      36
     ],
     "historical_references": [
       9,
@@ -378,5 +392,27 @@
       "Event forecasts or empirical predictive claims"
     ],
     "persistence": "Opt-in local saves of positions and UTC boundary days, pillar IDs, native hexagram values, or rune IDs. No original birth arguments, target date, replay seeds or AI."
+  },
+  "ritual_wing": {
+    "endpoint": "POST /api/ritual-wing",
+    "codex_edition": "fate-ritual-wing-v1",
+    "art_provenance": "design/block07-artwork.json",
+    "supported": {
+      "17": "Seeded upright one/three/five-card Lenormand lines and 36 original illustrations. Historical meanings remain scoped by source conditions.",
+      "20": "Seeded editorial category or manually selected calibrated observation. The display model supplies no measurements.",
+      "21": "Atkinson guided journal. User-authored observations or no entry. Volumetric crystal visualization.",
+      "22": "Moody 1992 subset guided journal. User-authored observations or no entry. Distinct reflective mirror visualization.",
+      "23": "Artemidorus explicit historical motif lookups and declared context. No automatic narrative matching.",
+      "33": "Four manual Mother dot patterns and the fifteen Turner shield positions, with native parity and transposition.",
+      "36": "Manual sentence selection from the pinned World English Bible Classic Ruth edition. Same-page context radius zero through two."
+    },
+    "privacy": "Journal notes and context remain in request and visit memory unless the visitor downloads the full native result. Saved records contain public guide and motif references, card IDs, response categories, figures or passage references. No AI provider integration for this wing.",
+    "unsupported": [
+      "Generated visions or observations",
+      "Automated dream analysis",
+      "Geomancy random casting, house or horary judgment",
+      "Bibliomancy random selection, unsupported editions or fabricated passages",
+      "Outcome predictions"
+    ]
   }
 }

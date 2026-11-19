@@ -1,6 +1,14 @@
-# FATE · Block 06 — The Four New Chambers
+# FATE · Block 07 — The Ritual Wing
 
-FATE brings seven existing Future engines into one consumer Gallery. Each chamber leads from its own instrument or ritual to a source-grounded reading and an optional local chapter. The app uses React and TypeScript, with the signature PixiJS orb and a stateless FastAPI boundary.
+FATE brings fourteen existing Future engines into one consumer Gallery. Each chamber leads from its own instrument or ritual to a source-grounded reading and an optional local chapter. The app uses React and TypeScript, with the signature PixiJS orb and a stateless FastAPI boundary.
+
+## Block 07: The Ritual Wing
+
+Seven rooms use the existing Lenormand, Pendulum, Crystal Ball, Mirror Scrying, Dream, Geomancy and Bibliomancy profiles. The two glass rooms share a journal interface and each retains its own native source profile. The dream room runs only explicitly chosen lookups. The sand table starts from hand-set Mother patterns, and the library requires a deliberate sentence choice from the pinned Ruth edition.
+
+My Fate saves selected card IDs, the pendulum protocol and response category, journal guide bookmarks, public dream motif references, shield figures, or pinned passage IDs and context radius. Private notes, observed movement, calibration, dream context and seeds stay outside saved chapters. The full native download is separate and can include original inputs.
+
+`design/block07-artwork.json` records art sources, prompts and hashes for seven environments, material layers and 36 original cards. Verify the local source archive with `python -m fate.build_ritual`. Run `node scripts/capture-ritual-wing.mjs` and then `node scripts/capture-ritual-wing.mjs --performance` from `fate/web` against the built server. Evidence is indexed in `evidence/block07-acceptance.json`.
 
 ## Block 06: The Four New Chambers
 

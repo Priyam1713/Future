@@ -1,0 +1,817 @@
+{
+  "block": 7,
+  "baseline": "668333f",
+  "unit_tests": {
+    "native": 2522,
+    "workbench": 77,
+    "fate": 60,
+    "codex_node": 26
+  },
+  "browser": {
+    "fate": {
+      "startTime": "2026-11-19T21:31:43.672Z",
+      "duration": 452202.293,
+      "expected": 49,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "workbench": {
+      "startTime": "2026-11-19T21:18:08.440Z",
+      "duration": 86759.855,
+      "expected": 9,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "cli": {
+    "cli_cases": 3515,
+    "independent_verifiers": 52,
+    "protected_count": 576
+  },
+  "npm_reported_vulnerabilities": 0,
+  "pip_check": true,
+  "inventory_check": true,
+  "rooms": {
+    "oracle": {
+      "oracle": 17,
+      "native_parity": true,
+      "recording_parity": true,
+      "recorded_seconds": 6.76,
+      "chapter_bytes": 309,
+      "artifact_hashes": {
+        "evidence/block07-oracle.mp4": "ef1b9c08390674764bdbe4f9c1c3eaf39abb96b26d8faf69bd43c98a744398a9",
+        "evidence/block07-privacy-17.json": "4b13eb6058027ef6a514d056e91bed972e68a9dbd6dc0348e04c9451ea9d2029",
+        "screenshots/07-oracle-desktop.png": "798702b06e55101df6915e71ebd38954a186610e9274096ed4c483604af618a3",
+        "screenshots/07-oracle-entrance.png": "b01218e366377b0e03e4e8ecaad57a53199e7cc72b9b40ad4f65c44ca52d878c",
+        "screenshots/07-oracle-mobile.png": "54b3d0a9874500d070f184bfbf258a4a82198b28fa437eca6dcbfcaadc9e7e13"
+      }
+    },
+    "pendulum": {
+      "oracle": 20,
+      "native_parity": true,
+      "recording_parity": true,
+      "recorded_seconds": 4.76,
+      "chapter_bytes": 253,
+      "artifact_hashes": {
+        "evidence/block07-pendulum.mp4": "d37ec7cc301a2199dbc4ca718a7ea54eb58d2f6fc7c5cdbb430c1cb860f7fa8c",
+        "evidence/block07-privacy-20.json": "108d0c024513e4a6ca66ee20a78c9e9e60ca9a5d1d864a816bad8f065268d6d6",
+        "screenshots/07-pendulum-desktop.png": "263e527f4ef07cc38b0ab6d0980e6c42959550298b5f2f571a485cf5b208142c",
+        "screenshots/07-pendulum-entrance.png": "9394c8d986f4d6dec67fcf513f123059a59bdea82ee5d79fa8e74a4c1f2a1c6a",
+        "screenshots/07-pendulum-mobile.png": "794d6d21ff39bc8810f5328ace0c6a5a539c84a6b3ca4e25230063d2c1425b35",
+        "screenshots/07-pendulum-reading-mobile.png": "492ad880961c8a57eaafa07d1fddd08c585490554b8d1786f565e8f4a7ef82db"
+      }
+    },
+    "crystal": {
+      "oracle": 21,
+      "native_parity": true,
+      "recording_parity": true,
+      "recorded_seconds": 5.0,
+      "chapter_bytes": 233,
+      "artifact_hashes": {
+        "evidence/block07-crystal.mp4": "efc4b634e2fffd40b66100573459382a50ca36bb2379ca29374e09500ed2cfb3",
+        "evidence/block07-privacy-21.json": "d256add22103a9a8662a66bf7ec7de1a008305bc228ab966582ec916aa49d34d",
+        "screenshots/07-crystal-desktop.png": "fec42b562347dc90e84a2d34e603651903b18d47519005064a748fc9ab03e056",
+        "screenshots/07-crystal-entrance.png": "2666a71c0fe6aa5806bc4ec1fd4bc8001baccc3db8d28af5c44df344525c673a",
+        "screenshots/07-crystal-mobile.png": "ead0614497049df9d7fff02b5e3e047d33571c19be79a5cd0d7e02f3f28ce5e1",
+        "screenshots/07-crystal-reading-mobile.png": "5dff616f0e805fa16861d5e9d5a48ed0069e23a704de6e8fe14e012f9c18a627"
+      }
+    },
+    "mirror": {
+      "oracle": 22,
+      "native_parity": true,
+      "recording_parity": true,
+      "recorded_seconds": 4.92,
+      "chapter_bytes": 233,
+      "artifact_hashes": {
+        "evidence/block07-mirror.mp4": "96c557b9aaffef1c01495861d75bc698b2406777d0dca42b7fff7e668beb9600",
+        "evidence/block07-privacy-22.json": "fd629671fa156916c714d7459f1883c21659438ba1d0849b0cd650abb06c0e19",
+        "screenshots/07-mirror-desktop.png": "55b299159a7a3d762bd5ab8fd20cbca8205f7b6ca5ea0f747a0c5ba5517efdeb",
+        "screenshots/07-mirror-entrance.png": "82a1ee4abdbceb38c0f9e917341ff857deda34b5c581fe25b5cca34b0ce5dec4",
+        "screenshots/07-mirror-mobile.png": "5efb5c4de65dec945c43b7b08b5052daa4a8d3b9d3f65a9440d142810f567ae9",
+        "screenshots/07-mirror-reading-mobile.png": "a74bd0dac5a09f3aa6a8775af2d604421d8c7b2a1e1eae51e9c5dc08c7b21c4d"
+      }
+    },
+    "dream": {
+      "oracle": 23,
+      "native_parity": true,
+      "recording_parity": true,
+      "recorded_seconds": 4.0,
+      "chapter_bytes": 237,
+      "artifact_hashes": {
+        "evidence/block07-dream.mp4": "1e69275b070b1ede81f5000d93087dd72dfcb4a1a4247a3232f271a172de78e7",
+        "evidence/block07-privacy-23.json": "fe4dfa5b41e47ece068231feb131fbc187f5393a1b37c915e245e857b939f117",
+        "screenshots/07-dream-desktop.png": "d0b3f105c852bffc548d62206969d84a61feaef1380a682591ff4352d01be67e",
+        "screenshots/07-dream-entrance.png": "cc97d153e0d30256a9f0e29ed83e9bdf10330eee18e64c530efd0eb00bfe2175",
+        "screenshots/07-dream-mobile.png": "ac289b9624b1c95aed7b84c21e56b4290faf499fcfac534d2991496bea9d1672"
+      }
+    },
+    "geomancy": {
+      "oracle": 33,
+      "native_parity": true,
+      "recording_parity": true,
+      "recorded_seconds": 6.4,
+      "chapter_bytes": 330,
+      "artifact_hashes": {
+        "evidence/block07-geomancy.mp4": "a8108caebacf0bfce390a500e80f890d29fd94435927f36f77428b3a7c22f8ba",
+        "evidence/block07-privacy-33.json": "78984e22d05ee6fd7f5209adbc8762b9011a5721c11033a67bbd69dec32f3120",
+        "screenshots/07-geomancy-desktop.png": "24e531e0aaa2b976d3c9b618105f81290585272ee0266935be0c53a72f5a6808",
+        "screenshots/07-geomancy-entrance.png": "7cda289bfe527840f29e318e4cedc6090cc75cdcd4f20e2850727dc382b18077",
+        "screenshots/07-geomancy-mobile.png": "8ea9e55c219977f528335ba22aee525b99fa3c0d3d9a794308427740267e7089"
+      }
+    },
+    "bibliomancy": {
+      "oracle": 36,
+      "native_parity": true,
+      "recording_parity": true,
+      "recorded_seconds": 5.84,
+      "chapter_bytes": 259,
+      "artifact_hashes": {
+        "evidence/block07-bibliomancy.mp4": "e8e89bf694342c123a77b28d2471521171b1bee2c29d7369d0d7cdb745644f3f",
+        "evidence/block07-privacy-36.json": "a910ec89cc1ba60587a6145f454a45d4d156723d33183b9da0be3e5a4b4c9488",
+        "screenshots/07-bibliomancy-desktop.png": "0157d4c0c25a2e11ab2392b7cea71e68e7d2bc3610b86a44db5b440723f14a61",
+        "screenshots/07-bibliomancy-entrance.png": "7a2c7d37d38848b8738036e477b76c6af37c43d3343f9fcab0f6674086e0d981",
+        "screenshots/07-bibliomancy-mobile.png": "09928febe341f7c23584a4259e2e544208d0301f980b8f2065ba048cd105a73f",
+        "screenshots/07-bibliomancy-reading-mobile.png": "46a382e8f4d18a217825af6e3f839e207e2fcbff4c2e10941830f51d710d3ca0"
+      }
+    }
+  },
+  "performance": [
+    {
+      "room": "oracle",
+      "profile": "mobile",
+      "entranceMs": 131,
+      "interactionMs": 348,
+      "frames": {
+        "p95Ms": 16.700000000000273,
+        "maxMs": 133.29999999999995
+      },
+      "metrics": {
+        "cls": 0,
+        "longTasks": [],
+        "renderer": "dom",
+        "canvases": 0,
+        "resources": [
+          {
+            "name": "ritual-oracle-720.webp",
+            "bytes": 96041
+          }
+        ]
+      },
+      "nativeActionMs": 61
+    },
+    {
+      "room": "oracle",
+      "profile": "desktop",
+      "entranceMs": 119,
+      "interactionMs": 77,
+      "frames": {
+        "p95Ms": 16.700000000000273,
+        "maxMs": 16.799999999999955
+      },
+      "metrics": {
+        "cls": 1.7427662037037036e-05,
+        "longTasks": [],
+        "renderer": "dom",
+        "canvases": 0,
+        "resources": [
+          {
+            "name": "ritual-oracle-1440.webp",
+            "bytes": 231796
+          }
+        ]
+      },
+      "nativeActionMs": 58
+    },
+    {
+      "room": "pendulum",
+      "profile": "mobile",
+      "entranceMs": 134,
+      "interactionMs": 112,
+      "frames": {
+        "p95Ms": 16.799999999999272,
+        "maxMs": 4366.4
+      },
+      "metrics": {
+        "cls": 0,
+        "longTasks": [],
+        "renderer": "dom",
+        "canvases": 0,
+        "resources": [
+          {
+            "name": "ritual-pendulum-720.webp",
+            "bytes": 109294
+          },
+          {
+            "name": "ritual-pendulum-object.webp",
+            "bytes": 68996
+          }
+        ]
+      },
+      "nativeActionMs": 66
+    },
+    {
+      "room": "pendulum",
+      "profile": "desktop",
+      "entranceMs": 115,
+      "interactionMs": 64,
+      "frames": {
+        "p95Ms": 16.799999999999727,
+        "maxMs": 150.0000000000001
+      },
+      "metrics": {
+        "cls": 1.7427662037037036e-05,
+        "longTasks": [],
+        "renderer": "dom",
+        "canvases": 0,
+        "resources": [
+          {
+            "name": "ritual-pendulum-1440.webp",
+            "bytes": 217613
+          },
+          {
+            "name": "ritual-pendulum-object.webp",
+            "bytes": 68996
+          }
+        ]
+      },
+      "nativeActionMs": 49
+    },
+    {
+      "room": "dream",
+      "profile": "mobile",
+      "entranceMs": 133,
+      "interactionMs": 76,
+      "frames": {
+        "p95Ms": 16.799999999999272,
+        "maxMs": 3033.2000000000003
+      },
+      "metrics": {
+        "cls": 0,
+        "longTasks": [],
+        "renderer": "dom",
+        "canvases": 0,
+        "resources": [
+          {
+            "name": "ritual-dream-720.webp",
+            "bytes": 83113
+          }
+        ]
+      },
+      "nativeActionMs": 57
+    },
+    {
+      "room": "dream",
+      "profile": "desktop",
+      "entranceMs": 129,
+      "interactionMs": 69,
+      "frames": {
+        "p95Ms": 16.799999999999955,
+        "maxMs": 16.800000000000182
+      },
+      "metrics": {
+        "cls": 1.7427662037037036e-05,
+        "longTasks": [],
+        "renderer": "dom",
+        "canvases": 0,
+        "resources": [
+          {
+            "name": "ritual-dream-1440.webp",
+            "bytes": 168655
+          }
+        ]
+      },
+      "nativeActionMs": 50
+    },
+    {
+      "room": "geomancy",
+      "profile": "mobile",
+      "entranceMs": 133,
+      "interactionMs": 68,
+      "frames": {
+        "p95Ms": 16.700000000000273,
+        "maxMs": 1149.9
+      },
+      "metrics": {
+        "cls": 0,
+        "longTasks": [],
+        "renderer": "dom",
+        "canvases": 0,
+        "resources": [
+          {
+            "name": "ritual-geomancy-720.webp",
+            "bytes": 80454
+          },
+          {
+            "name": "ritual-geomancy-object.webp",
+            "bytes": 247445
+          }
+        ]
+      },
+      "nativeActionMs": 50
+    },
+    {
+      "room": "geomancy",
+      "profile": "desktop",
+      "entranceMs": 105,
+      "interactionMs": 73,
+      "frames": {
+        "p95Ms": 16.700000000000273,
+        "maxMs": 16.800000000000182
+      },
+      "metrics": {
+        "cls": 1.7427662037037036e-05,
+        "longTasks": [],
+        "renderer": "dom",
+        "canvases": 0,
+        "resources": [
+          {
+            "name": "ritual-geomancy-1440.webp",
+            "bytes": 196162
+          },
+          {
+            "name": "ritual-geomancy-object.webp",
+            "bytes": 247445
+          }
+        ]
+      },
+      "nativeActionMs": 51
+    },
+    {
+      "room": "crystal",
+      "profile": "mobile",
+      "entranceMs": 759,
+      "interactionMs": 438,
+      "frames": {
+        "p95Ms": 16.799999999999955,
+        "maxMs": 33.299999999999955
+      },
+      "metrics": {
+        "cls": 0,
+        "longTasks": [
+          670
+        ],
+        "renderer": "volumetric",
+        "canvases": 1,
+        "glassQuality": "economy",
+        "glassBuffer": 208,
+        "resources": [
+          {
+            "name": "ritual-crystal-720.webp",
+            "bytes": 73836
+          }
+        ]
+      },
+      "nativeActionMs": 54
+    },
+    {
+      "room": "crystal",
+      "profile": "desktop",
+      "entranceMs": 410,
+      "interactionMs": 1938,
+      "frames": {
+        "p95Ms": 16.800000000000182,
+        "maxMs": 516.5999999999999
+      },
+      "metrics": {
+        "cls": 1.7427662037037036e-05,
+        "longTasks": [
+          319
+        ],
+        "renderer": "volumetric",
+        "canvases": 1,
+        "glassQuality": "economy",
+        "glassBuffer": 208,
+        "resources": [
+          {
+            "name": "ritual-crystal-1440.webp",
+            "bytes": 163532
+          }
+        ]
+      },
+      "nativeActionMs": 56
+    },
+    {
+      "room": "mirror",
+      "profile": "mobile",
+      "entranceMs": 4538,
+      "interactionMs": 168,
+      "frames": {
+        "p95Ms": 16.799999999999272,
+        "maxMs": 33.30000000000018
+      },
+      "metrics": {
+        "cls": 0,
+        "longTasks": [
+          4341
+        ],
+        "renderer": "volumetric",
+        "canvases": 1,
+        "glassQuality": "economy",
+        "glassBuffer": 208,
+        "resources": [
+          {
+            "name": "ritual-mirror-720.webp",
+            "bytes": 69586
+          },
+          {
+            "name": "ritual-mirror-object.webp",
+            "bytes": 68493
+          }
+        ]
+      },
+      "nativeActionMs": 48
+    },
+    {
+      "room": "mirror",
+      "profile": "desktop",
+      "entranceMs": 1793,
+      "interactionMs": 629,
+      "frames": {
+        "p95Ms": 16.799999999999727,
+        "maxMs": 500
+      },
+      "metrics": {
+        "cls": 1.7427662037037036e-05,
+        "longTasks": [
+          1686
+        ],
+        "renderer": "volumetric",
+        "canvases": 1,
+        "glassQuality": "economy",
+        "glassBuffer": 208,
+        "resources": [
+          {
+            "name": "ritual-mirror-1440.webp",
+            "bytes": 159418
+          },
+          {
+            "name": "ritual-mirror-object.webp",
+            "bytes": 68493
+          }
+        ]
+      },
+      "nativeActionMs": 58
+    },
+    {
+      "room": "bibliomancy",
+      "profile": "mobile",
+      "entranceMs": 139,
+      "interactionMs": 74,
+      "frames": {
+        "p95Ms": 16.800000000000182,
+        "maxMs": 4216.400000000001
+      },
+      "metrics": {
+        "cls": 0,
+        "longTasks": [],
+        "renderer": "dom",
+        "canvases": 0,
+        "glassQuality": null,
+        "glassBuffer": null,
+        "resources": [
+          {
+            "name": "ritual-bibliomancy-720.webp",
+            "bytes": 131093
+          },
+          {
+            "name": "ritual-bibliomancy-object.webp",
+            "bytes": 200195
+          }
+        ]
+      },
+      "nativeActionMs": 46
+    },
+    {
+      "room": "bibliomancy",
+      "profile": "desktop",
+      "entranceMs": 114,
+      "interactionMs": 76,
+      "frames": {
+        "p95Ms": 16.700000000000728,
+        "maxMs": 3516.5
+      },
+      "metrics": {
+        "cls": 1.7427662037037036e-05,
+        "longTasks": [],
+        "renderer": "dom",
+        "canvases": 0,
+        "glassQuality": null,
+        "glassBuffer": null,
+        "resources": [
+          {
+            "name": "ritual-bibliomancy-1440.webp",
+            "bytes": 282788
+          },
+          {
+            "name": "ritual-bibliomancy-object.webp",
+            "bytes": 200195
+          }
+        ]
+      },
+      "nativeActionMs": 3287
+    }
+  ],
+  "evidence": {
+    "design/block07-artwork.json": "f0c404e258e4eef6fb50392c23c63a88d282053220f6292009a51d2429c1895e",
+    "evidence/block07-native.json": "732a901dc081cc2e388be8cefd61e12fec3feb93058189386b1f1bf66d6f0924",
+    "evidence/block07-recordings.json": "98f32705cf902947aa17e2db25d07adfd48f5155ef42fab954abec04cc702964",
+    "evidence/block07-performance.json": "974bec57a9c1496c38b4ef43611ce5a9a49bd971fc152538eb5e8906da5ac52d",
+    "browser-acceptance.json": "49398d24359e589590f1429a646943d309e9d41140e0bbf6d81edb9d45b7a976",
+    "workbench-browser-acceptance.json": "d7e307edff207205b65c7dd62250ee436bfa7f041165a05ca540c715853ed9af",
+    "inherited-cli-acceptance.json": "a30c305c348eab8e1105639727263daebe792b8b3d458798339a464d1a0cd375",
+    "web/src/ritual/edition-v1.json": "6d22aa4709bf7aa2f3d233978849242881482873289b440068e4e878fd67701c",
+    "web/src/ritual/reference-v1.json": "4af848308558301f4e164c9297bd3925643eeda74acefdbbb116f4aae75866b1"
+  },
+  "production": {
+    "art/chamber-bazi-1440.webp": "99f9d3423ea4559a06be93148c242952c1dc72fe302bb6bf588a2c284e672dac",
+    "art/chamber-bazi-720.webp": "f5cf18170c67fa8302f2a38237228054dbb99930101f2bbf730a013fcd7096e2",
+    "art/chamber-bazi-object.webp": "785351356f97b0c4a3273627844932193af681376110d906ed84d596e8f2a91a",
+    "art/chamber-iching-1440.webp": "af667ddf7d17ad5b25cf2258f5e7747f7b43eede5061ed29babc3c2854b6897f",
+    "art/chamber-iching-720.webp": "650b7e1876a5cb79151231454fc8e616c36f04a918f93aaac62aace9301728f8",
+    "art/chamber-iching-object.webp": "e9abcabe8d15c33aa46c9dfd4f3dbed6d7f82c6b5ac6b4ce1cd2a2189b27039a",
+    "art/chamber-runes-1440.webp": "850041e7afb1eeca05fceaf699959193e761ddce77f072d7629c326148624b27",
+    "art/chamber-runes-720.webp": "6114b7cd231b311de216bb9947ca5ee49ae377905c0db07956cf5bdb373ab1de",
+    "art/chamber-runes-object.webp": "447efe4c68cc5e2cb408fc96c5079c161481f277814ce75f781c64f106bf9c31",
+    "art/chamber-vedic-1440.webp": "b39f1e196c5e84fbc5e0b3a57a634c9063b2fd2652d7eb6d0d0792511f9ab70e",
+    "art/chamber-vedic-720.webp": "ba9c4b845559d5bf5fa34ddc9525024636e7e1be8e2012e196e7e5c5e62a1c96",
+    "art/chamber-vedic-object.webp": "89f06e55811edf9c6cc2586de8795fcbd042ac617db684c837129a927d6f9bf9",
+    "art/codex-cover-400.webp": "2681b43447e21d559e1bfcc96d9b29f7e88403b3a8b98e00d2c88a23cea85d8c",
+    "art/codex-cover-v1.webp": "57dd41f6e4c3588849d4dac452ac1a9e98ad8d716113180ad2095134cf8fe504",
+    "art/deck/fate-back-v1/card-back-360.webp": "5748751ece0455c860bb47ffe85b088af8eaa939fc3e50ea3c3a5a999a403dd9",
+    "art/deck/fate-back-v1/card-back.webp": "8a96985343b8c331ee1df48d8638384445f61cb622467da30cd4d27edde9dc2a",
+    "art/deck/pam-a-v1/cups-ace-360.webp": "16a4e44f06b5b96b0224407e1675b20d724fbec2c54c5e7e898411b9e85ece88",
+    "art/deck/pam-a-v1/cups-ace-720.webp": "2b9db2632a5d8fd12d00f0e17003e05f92fed1fcc784c18fb0f10bc3f821f44d",
+    "art/deck/pam-a-v1/cups-eight-360.webp": "a723d8a733dbf6e6228fe7bcb6121e818ac2cf68cd9a3a867b1f52a722ae9d38",
+    "art/deck/pam-a-v1/cups-eight-720.webp": "d6a702276cb6a3eafe59c6e2682c2529b7747b24a015cc4aae9058dfc52b8ceb",
+    "art/deck/pam-a-v1/cups-five-360.webp": "e28889a624ce9d3b96a807e84fed998915f9483f8c9ddbe35cae288e090d004a",
+    "art/deck/pam-a-v1/cups-five-720.webp": "5b4256eb83b964de48af7e6d2210c8b97ada05bc40aee7b99d3650fcb77f7065",
+    "art/deck/pam-a-v1/cups-four-360.webp": "218e648c6d98a202232e7d8aab7d198100ad61922bc0ca6e2d5700c92ec175a9",
+    "art/deck/pam-a-v1/cups-four-720.webp": "6168056f6341c7e37ddef3586af6e0e9c610972b362ab57ac39ed134cc356769",
+    "art/deck/pam-a-v1/cups-king-360.webp": "3f87f995d702c1c5ec140b10f617ee730ab84a6fb38960fba9cbc26ccf023e00",
+    "art/deck/pam-a-v1/cups-king-720.webp": "4b7c9451b735415c60af866d5a185558d3fe56780e100f0b051696dd5fa151c3",
+    "art/deck/pam-a-v1/cups-knight-360.webp": "a31489df48b3560df988ecd1b946367df7c56b08b3d843906fda983e96e6c6c3",
+    "art/deck/pam-a-v1/cups-knight-720.webp": "8ab0706f4e9c6193d486d535f7a77675fade7da3749632eaaec077aeba970ce5",
+    "art/deck/pam-a-v1/cups-nine-360.webp": "38fbe88a51dab10793a134938bafc09f7682f9ea9360f35abc2a5d1472c58c6c",
+    "art/deck/pam-a-v1/cups-nine-720.webp": "df2d49cf096f39778e4489e71575b6349d966914c254de72cf411710ee0860fc",
+    "art/deck/pam-a-v1/cups-page-360.webp": "9b3c8e62838903b054280550c7673061f6c6ee6a0155aa0b0185d66d7a1c76a2",
+    "art/deck/pam-a-v1/cups-page-720.webp": "d5d149ba82e35144b225bd1050543e602af839e4946e70b1bc9f54b2c949b9e9",
+    "art/deck/pam-a-v1/cups-queen-360.webp": "2848fdd139dd03a62461db3ef925f9f358d962f70e4f15c7970e976185b7be63",
+    "art/deck/pam-a-v1/cups-queen-720.webp": "d22882690c1f4f40ef642658ab33ec727dbe6e6cf801a3e7c4c768ecbcbc438d",
+    "art/deck/pam-a-v1/cups-seven-360.webp": "dde403061b7df3b37d5f94473e044c886e2f1197965fed16a6d5bbc61c4a9465",
+    "art/deck/pam-a-v1/cups-seven-720.webp": "2a98643c7a3001d334a6fba56fa0e824a57fe5b6376caafce77f498f9bff76b0",
+    "art/deck/pam-a-v1/cups-six-360.webp": "8ffd4318f8b59c83aa91489ae80e411d9166e676ea1368c073baa521dbca33e6",
+    "art/deck/pam-a-v1/cups-six-720.webp": "249471b11447c093163e7f851970d0a331b2a6e2e60ecc6f7fbb7aa0364164d9",
+    "art/deck/pam-a-v1/cups-ten-360.webp": "3e215e823e1b863c5cab902d38d0ab77742fa954ee8cc18caed54cd3bf58bb4f",
+    "art/deck/pam-a-v1/cups-ten-720.webp": "390c188bf660e319a5c2746a381e20036caf499dd4070ca1eef1be7de23079e2",
+    "art/deck/pam-a-v1/cups-three-360.webp": "d6d8740b76d34bcc2ca677658b4a5d4665bf43ae804301617d07c32f140e1706",
+    "art/deck/pam-a-v1/cups-three-720.webp": "2dbe74de67a6bf40a5f9b1e49584075aec2c51768dd6851f30d4cb0eb8f48cce",
+    "art/deck/pam-a-v1/cups-two-360.webp": "e66e71899250a50f4eefa7b76f3997f9412caf6740d0fdf4be9f7e5d4d47f509",
+    "art/deck/pam-a-v1/cups-two-720.webp": "58e3b36489f2e02f7ac65d856c91425b52db5e4466f913afae7f400bef92bcf3",
+    "art/deck/pam-a-v1/major-00-360.webp": "647c87f851f7f1902f95087504e9f61b7b9e719ec73e7f743da51c23f4333bb1",
+    "art/deck/pam-a-v1/major-00-720.webp": "5d14bf810e9a259f8dd7676bb12afc1997556938fe81a171cd299e234ce480a3",
+    "art/deck/pam-a-v1/major-01-360.webp": "8f81fa1836faf067be4411e9394b2b941aa32d87d36fabacf2baa5b079528bb8",
+    "art/deck/pam-a-v1/major-01-720.webp": "4da4b516d04c818d22e5accfe675f3264ec4ccc9279cf1c32bf7b150742d2866",
+    "art/deck/pam-a-v1/major-02-360.webp": "fd3eb6574140ca6d072e43a69d24b28ef1e2c1bee903d7fd52c9ff370626874e",
+    "art/deck/pam-a-v1/major-02-720.webp": "55b0d3307e777b8af411aeb611cc4c3644597d71e13393a17ff3397b92685011",
+    "art/deck/pam-a-v1/major-03-360.webp": "a0c8505a5ec896343766dd4b58fe9bd62da0085a558765d5a1c221219b73801f",
+    "art/deck/pam-a-v1/major-03-720.webp": "00abedab890343a81e00dd231b943ca368fd5cadc9457719c1740dbc05fb236b",
+    "art/deck/pam-a-v1/major-04-360.webp": "dd24ba7b81b5dc45f80a709695c913ecaf0d95ef5723bf08c993cc399a8db15b",
+    "art/deck/pam-a-v1/major-04-720.webp": "d247731a4b72161a48c03e0289ed1089af711f18707ec6073d645e06a5e50784",
+    "art/deck/pam-a-v1/major-05-360.webp": "d4fbb7868c9da174c0217e09c268f66702c643cf93e7c0d5928838334a107e74",
+    "art/deck/pam-a-v1/major-05-720.webp": "40f2dbfe18736eaacb5a85cc3a6f666a85f3dd8d1f1ea0e9ac68f8b59efa5b01",
+    "art/deck/pam-a-v1/major-06-360.webp": "63d384f78d307405dc0893d8e57fabd3bd50d8ce53b131a32912118b07ee70a3",
+    "art/deck/pam-a-v1/major-06-720.webp": "ed9f318f8d234f3882463b146e7105d25037886c550efb2d00e90344c6e95e93",
+    "art/deck/pam-a-v1/major-07-360.webp": "e5919b8729fbfc60104ab4da6b69d65f46314f0089ea54b1d5936b17f43b4b5a",
+    "art/deck/pam-a-v1/major-07-720.webp": "df655a186195ec63f96bd5294f28248cf21bdf84603f9401844fdfb750f1642f",
+    "art/deck/pam-a-v1/major-08-360.webp": "489a7c9aab444d68724f76780e5b087e01e691a4fa0b37a311c4deebceb7ecb2",
+    "art/deck/pam-a-v1/major-08-720.webp": "9c81596081eea06cd654f3ad14077a024b8d5b89911272cb818dc028dfc7f7bf",
+    "art/deck/pam-a-v1/major-09-360.webp": "c5f6b4ff1d5288d2534980c6cab7cfd0363b7268d25b79555e98cb7ccb927c9a",
+    "art/deck/pam-a-v1/major-09-720.webp": "fa0d1f118dd644ca1ce1428a587d88cb482b3f967d69ca546e11e027069263c4",
+    "art/deck/pam-a-v1/major-10-360.webp": "973fb08b2c0784d309f71676a5d7b43acbbccc0eddb2ae472fcf75bc2826522a",
+    "art/deck/pam-a-v1/major-10-720.webp": "d35825128227e68bed8bcec1448361a771ddc80449e52ace38f4276159eda24a",
+    "art/deck/pam-a-v1/major-11-360.webp": "51a80ee5556fb47a1c23a8c69c79669f29eaf08c2042224bc58b1dadbb1e6284",
+    "art/deck/pam-a-v1/major-11-720.webp": "f8326ffed63fbcc7a90bb891d6f4bc198cef4b0a3de6b842858fb26faf47a1ad",
+    "art/deck/pam-a-v1/major-12-360.webp": "4290e7be300d18f5baf637a5dacea7b46989f3865d68ed5abe72a9354afb0c42",
+    "art/deck/pam-a-v1/major-12-720.webp": "161a6783e20b308d4e233cc27c69c3a04ef0ea1d35de1c2ea425138acc5a6935",
+    "art/deck/pam-a-v1/major-13-360.webp": "52d26ea3348ad19696171e01209ec7cf7c3da27e6f8c9163d20345fb20d3152c",
+    "art/deck/pam-a-v1/major-13-720.webp": "2844a18381faec79646f1ff8739b4683d782d74b4d40fea7540d2800c960e3ff",
+    "art/deck/pam-a-v1/major-14-360.webp": "6083dd3b28c7b7e214c37bc37244521541e91f7016b827f1f35aed82815b76e4",
+    "art/deck/pam-a-v1/major-14-720.webp": "d1dc8f5c0733aee9e44caae2f40953dc465177fdfb1c8be20c8e2ea9c0439485",
+    "art/deck/pam-a-v1/major-15-360.webp": "d5b71a62d47048bdba275f351b8e0f149db96075a42313a51f9d55e3c541ce72",
+    "art/deck/pam-a-v1/major-15-720.webp": "64de00e7ff2785a3a77fa5bcd1c4d96c61d9598764b5bd234a4a10a4559ed351",
+    "art/deck/pam-a-v1/major-16-360.webp": "ae7271e385194591a970e8b2859b40d1485815c78003d5955ee7b03282772cc5",
+    "art/deck/pam-a-v1/major-16-720.webp": "09c5225fcb6bba1341e0a21fbf7975debe22bc2d0afc8db88678cd531d676c0b",
+    "art/deck/pam-a-v1/major-17-360.webp": "c4fcdefb5f099c5e8d1d1678aa00c9e918e1a7dd8b70fde826b80cbf24f0460e",
+    "art/deck/pam-a-v1/major-17-720.webp": "c5bd1c717b52c3b428a77b042124dcb414a16840d49dcc1a41092d2b319a72ff",
+    "art/deck/pam-a-v1/major-18-360.webp": "fb1d7a969a14d497dfcd4d2dadf92ce59782b8490a595eedb193ffb98a942604",
+    "art/deck/pam-a-v1/major-18-720.webp": "966079f6c32c03565bc49cc98f89dc83fb8aa5381dc6ee182cb364d45d24bf4d",
+    "art/deck/pam-a-v1/major-19-360.webp": "688d866e89face85167696a5b75988b361a9a9abe1c70dc61eb0c8cd66b77f69",
+    "art/deck/pam-a-v1/major-19-720.webp": "8efeca5cd22081667d13a743873ef99ff2525f201c0021309f87c2535f30ca71",
+    "art/deck/pam-a-v1/major-20-360.webp": "13a189930e6e7beee1d3ed8819ab2f78321d198120c2b608f2c12df4e50a9047",
+    "art/deck/pam-a-v1/major-20-720.webp": "816005465a94c14c3a0e98fc2a263b8cd9a401dee4136959287ec4445253454c",
+    "art/deck/pam-a-v1/major-21-360.webp": "1b8b1bb9647255b0e9ea614fce8a8b485a59bfe67f317f7ddf4ad2d3e6d8c6c1",
+    "art/deck/pam-a-v1/major-21-720.webp": "f554eaf227d9fa4506600341eac0769c522d4ddba22afbc52b4e2aaf4d1bafef",
+    "art/deck/pam-a-v1/pentacles-ace-360.webp": "9cb3ce676f7e0b3551b8c801dc2ec3ef84e4397f62ad03ca56763fddcf4bac35",
+    "art/deck/pam-a-v1/pentacles-ace-720.webp": "893429bebea5895b893ce493955e7b5c072cea0e050c6ec7d882bc64ab676cf7",
+    "art/deck/pam-a-v1/pentacles-eight-360.webp": "527bab2cce58e361305cbcbea95ccfe3939b6c4245b16bd59f2a0bb829d92025",
+    "art/deck/pam-a-v1/pentacles-eight-720.webp": "c14276da2429cb9fba6f7c757d6c518f42dae4b933d7d87043bff3ad226d4f28",
+    "art/deck/pam-a-v1/pentacles-five-360.webp": "de3d42ed661546c9d77c6a85d683e34a635937cbffa0d038418bd6cf908ff8ca",
+    "art/deck/pam-a-v1/pentacles-five-720.webp": "e4d5adeea9bc15382f1d6021bd4baa419081bd6c3ec294bb8035c8537b43b03f",
+    "art/deck/pam-a-v1/pentacles-four-360.webp": "447f5e76a6d22301066064c0494c44581d8ecbd3b57e5607bd6fb597b0bc64a9",
+    "art/deck/pam-a-v1/pentacles-four-720.webp": "aa813364b34c1bd73b9c884aba50623d7be8bebe52687f7c899a979a0190938a",
+    "art/deck/pam-a-v1/pentacles-king-360.webp": "4fb9470ab6690c3f2e4d740af24c2f6d2913a7a624c03b0e5a014c81b594fe6a",
+    "art/deck/pam-a-v1/pentacles-king-720.webp": "3c044e0ff6daa3d42bad032499efd0f879b5c037b7ffc5d2de2d72eaa3aa2060",
+    "art/deck/pam-a-v1/pentacles-knight-360.webp": "cf377832b276746ff8a79f5bfe357ca917b81f281ee4c05509c92b00a1ea0910",
+    "art/deck/pam-a-v1/pentacles-knight-720.webp": "8fd13ed309a43c9d19d237c40a27b6930eaf5929017a3616b59b20eafbab44c1",
+    "art/deck/pam-a-v1/pentacles-nine-360.webp": "096d45a1b68ef1ec0f9292455737312af01a3db5e5bb25ec6fa2b452db340f77",
+    "art/deck/pam-a-v1/pentacles-nine-720.webp": "ed4c21a10147a1cf2c0caeda8da9484c7ae8244b7b0ab828eb9652dad4db833e",
+    "art/deck/pam-a-v1/pentacles-page-360.webp": "ed122e85ca677abbf5a4981fe1711530c74b9149e8ff1966baa2e406ffba154d",
+    "art/deck/pam-a-v1/pentacles-page-720.webp": "ae19cf21140b70bad2360ebdcadd4e28024d9b9fe542bff26210f1432891231b",
+    "art/deck/pam-a-v1/pentacles-queen-360.webp": "e1efc0f1de17a1be99c7f6a7ee04034cebe13dc20a6ac5f121e997aded983e90",
+    "art/deck/pam-a-v1/pentacles-queen-720.webp": "5771e1319cf5baf65104a32241effc3c409a9fe27f0ef91648e7f0c9c6669668",
+    "art/deck/pam-a-v1/pentacles-seven-360.webp": "e177192c3495ad971603ebc592281eda67bbc68d279c5874a0dfa4cec7d0e28d",
+    "art/deck/pam-a-v1/pentacles-seven-720.webp": "4a98cd77fe28fef139bed31956a2559c2177a9d55885ffb69c17db62d31f2829",
+    "art/deck/pam-a-v1/pentacles-six-360.webp": "e079dded1ffb90dbbe5eabd0cfd5cbd8718d1513b79ae2e67d33a06a92be76d7",
+    "art/deck/pam-a-v1/pentacles-six-720.webp": "cb6a6883c5668e0ef0d7a8b76bea278c86bf6f0320db87a2c824f46b9de4b489",
+    "art/deck/pam-a-v1/pentacles-ten-360.webp": "33c566b6f8a08e79110644de1b9db129a3a6eb0ad7d3ce79118842dd63e1830a",
+    "art/deck/pam-a-v1/pentacles-ten-720.webp": "be9dd6defc01a71edfe52667cfdbecfda11bb5d899112bcc0c89949930c0dedc",
+    "art/deck/pam-a-v1/pentacles-three-360.webp": "1d2ae981bea576fa1df804422da8ba9f9d6425ee97e41029d5f481a48cc16ae7",
+    "art/deck/pam-a-v1/pentacles-three-720.webp": "dd9b065f028dc7461c89041dbdd7f672c0697510daa988d42bf7de284caae95c",
+    "art/deck/pam-a-v1/pentacles-two-360.webp": "e17acbaae6fb44f4bc17b944057a4e0b5e4587af9bf8ee93f891474dbb6d361d",
+    "art/deck/pam-a-v1/pentacles-two-720.webp": "3f5b0132d2efe425d89f4a8104dc1c11ef76ea843cffad208ad3f4416bbb39a3",
+    "art/deck/pam-a-v1/swords-ace-360.webp": "2b18c28b8bca94152804fc5a857e9177a7b73e89e70dcd5c791ce34f808a0f9d",
+    "art/deck/pam-a-v1/swords-ace-720.webp": "d84e386f898822443cd6f766c7c21d3953755c71a3f17c6e308c0f7a36c47e55",
+    "art/deck/pam-a-v1/swords-eight-360.webp": "f7a2712acbd2cd0182420aaad2fc938f171f4e26e48994a89f0b6501e7a9b966",
+    "art/deck/pam-a-v1/swords-eight-720.webp": "0d8ba159ace37dffd422c478513457964e2b9e82044626747fdff423cd2287d0",
+    "art/deck/pam-a-v1/swords-five-360.webp": "2dab4ee3f049ef8ce6c73486c5a6296e7928bac6e4f23bebf6527b35f55bbcab",
+    "art/deck/pam-a-v1/swords-five-720.webp": "ae6db53601b5723e1c7c6139da474d55abbb065c9ac2504ed1c3ddb220680a14",
+    "art/deck/pam-a-v1/swords-four-360.webp": "e2293b4d9bf1333e58e8936d75b73882eb0a113783a360dd245509b112de8195",
+    "art/deck/pam-a-v1/swords-four-720.webp": "375c37ad6777268764875034040a437af5c08b5e414d349332a9b3123e74e4a5",
+    "art/deck/pam-a-v1/swords-king-360.webp": "0aa47f54290ecb77882f1c5bcf5b36112a7ae5949b47b72baf652e8588261bbd",
+    "art/deck/pam-a-v1/swords-king-720.webp": "a658fc8d4a9a2ce86e9d136e96d30d590985776118c81b27ae354d546978f4ad",
+    "art/deck/pam-a-v1/swords-knight-360.webp": "b464bb18c039beb58e06a3fdd53cd604d4dea7b92936324a42d014dce4e1fff5",
+    "art/deck/pam-a-v1/swords-knight-720.webp": "7b0e8e5317ef1624e44f62bd4e3a14c57ece602153c86480f2823bbd4b85f93a",
+    "art/deck/pam-a-v1/swords-nine-360.webp": "b8a1aa91ba2f1ba02f9538d9a2d1bdc9f7e5ca5c20ca98c9381e10ea5572aa20",
+    "art/deck/pam-a-v1/swords-nine-720.webp": "d39b4ba2b104a333a1d413b32bf52d41d24c6c2ac41e44eb003c154179d5af74",
+    "art/deck/pam-a-v1/swords-page-360.webp": "52d075fb542f4027223e5018d19c061065e1dd4739b74aec0bb15b12527f75f8",
+    "art/deck/pam-a-v1/swords-page-720.webp": "cedb661270b7765fc8d1cfa4284e2f7d955166d446207bab2fa3917860e69977",
+    "art/deck/pam-a-v1/swords-queen-360.webp": "37ce596577c221e4c8b872738beac08553f38dfbb917cb5440c7520d18efa1cf",
+    "art/deck/pam-a-v1/swords-queen-720.webp": "a6eb75887af0605daaf58cfc0e85ffe893a351371f0b6d05e99ed48c669ecd93",
+    "art/deck/pam-a-v1/swords-seven-360.webp": "e944b95bdabe18be3536cbfe2297fdfcebff518c9134069391aa346936086462",
+    "art/deck/pam-a-v1/swords-seven-720.webp": "cb62deba0f25d84ea24fbcbf9e9fb796aaaa9e2750b15026f57187a4419a6a54",
+    "art/deck/pam-a-v1/swords-six-360.webp": "d4532e3fe1efb1a5e778001fc56b33f5cf76f164f25af04448948615b4afb93c",
+    "art/deck/pam-a-v1/swords-six-720.webp": "f5b2b402b4d50528b7f71c7b400715eec9ab6cd9bce95c6e1abfe968a9afd2c3",
+    "art/deck/pam-a-v1/swords-ten-360.webp": "e0fc132a641a05a715273c44f20eb752f4c9e027327e2853611fa4aac2cea816",
+    "art/deck/pam-a-v1/swords-ten-720.webp": "923dd2fc94c8cd15320cad35dc24761bb7716f28fdab91ffbce85ac40b866d2a",
+    "art/deck/pam-a-v1/swords-three-360.webp": "f43af42e666d9ea755b330d19ab22b44b91569f01b45f92791551c16a8fb1ae9",
+    "art/deck/pam-a-v1/swords-three-720.webp": "eeb9ba99365f0f1d3fa436ff9946b4611923736d5810836a64e435bf92489d10",
+    "art/deck/pam-a-v1/swords-two-360.webp": "b6c42921f836743df57a8339fe4177b8b9f4bcf5d7e58f7719e482d08c0b9fd0",
+    "art/deck/pam-a-v1/swords-two-720.webp": "1aea07edd41f4bfe759d693bc338f015e944f079106869c5cffe25e9c4e3e50c",
+    "art/deck/pam-a-v1/wands-ace-360.webp": "295f19f0d8847f393851f4caf8245f6118ac493ef098b9e83a3c7ec4e9fc8e01",
+    "art/deck/pam-a-v1/wands-ace-720.webp": "9bd4e5ae1ca507fd8a55055062d048b1b2009a5034c3f6b4b39499c3911a97fe",
+    "art/deck/pam-a-v1/wands-eight-360.webp": "3a080c6f68fbc37adb11b5f0b47e02dc7273a8903058421acbed1760980a1a1f",
+    "art/deck/pam-a-v1/wands-eight-720.webp": "4a53febf7a7432ada6c60cebe9898575da3d38b31faf273a62acb0c7913e8913",
+    "art/deck/pam-a-v1/wands-five-360.webp": "384e0b36d9fa377e4dfbd34ed1c4703caf68334748327059ebb32c41917ebed5",
+    "art/deck/pam-a-v1/wands-five-720.webp": "620f4953acdb8424e43c5aa57b7661b2eb9a7016e1d49b706435688c4aeba304",
+    "art/deck/pam-a-v1/wands-four-360.webp": "2740d938e7f063a273488334a2d3ce1a223e8328164079e5dc8b000afd759689",
+    "art/deck/pam-a-v1/wands-four-720.webp": "9ab25ccae6742bc4222f639585aeba16d90f0961d20576f76400a8f80bd3d170",
+    "art/deck/pam-a-v1/wands-king-360.webp": "119d4d2bea69625d181485e9d9c759c934fc0e25ce89b8fe95677d6ed35bda68",
+    "art/deck/pam-a-v1/wands-king-720.webp": "bf9283dc1c82d7dd4aa899cf62cfdc0e7e25e99bbc5d0cae9885d17c22e17f96",
+    "art/deck/pam-a-v1/wands-knight-360.webp": "05f4deaaf792be531e478d55ed383ee8c832aedf9c107a43b0e27255dd9ac395",
+    "art/deck/pam-a-v1/wands-knight-720.webp": "e6f4594edeaa65a880f21a238fb98668effba3cf971755f8a289e0a548a414aa",
+    "art/deck/pam-a-v1/wands-nine-360.webp": "b3dc6ea17b97c181b95adf7e1197a602efebbc98975fbd61b8bc34ef4d99531c",
+    "art/deck/pam-a-v1/wands-nine-720.webp": "d5b445455aec04e6500f6c4c7e422346abb0d30754df9e1db9a432b3ccbb536a",
+    "art/deck/pam-a-v1/wands-page-360.webp": "dee066afedede74ac465b2706bcb7124c0405b7f6c151283a59436a0e40d8fa3",
+    "art/deck/pam-a-v1/wands-page-720.webp": "64a1827951b02ec61489a3ea9515788e6088bbb8652c7d2fc6545ba3f31eeeef",
+    "art/deck/pam-a-v1/wands-queen-360.webp": "00085b7daab0d24f955f63e1bf09d9238452215933212a7d373b6ffdd95ec4d6",
+    "art/deck/pam-a-v1/wands-queen-720.webp": "a4d73ac6ff52185e09bb434eeccbad3a75d07f58f884758f1955c26f4f26f67e",
+    "art/deck/pam-a-v1/wands-seven-360.webp": "bede0761062a5dd006a2845507e0100abf91d41c5061f9f0ac71695497c6bc52",
+    "art/deck/pam-a-v1/wands-seven-720.webp": "f93abee9e15de554f2125194f985ecb0fd75e1de8e4cf7b6bda26cc0d7b46e77",
+    "art/deck/pam-a-v1/wands-six-360.webp": "f1003924d9437554d5a75e3cfc5719a28f00093c28dedd17e8bdc98e7e90ffdb",
+    "art/deck/pam-a-v1/wands-six-720.webp": "fdefc95859dcf00f60d42e74ad2266b25af2ca0d4f8352610562376f46323005",
+    "art/deck/pam-a-v1/wands-ten-360.webp": "1d2aac4a105aff7527779dba9f754740f4966a3ea57dcad69bac19fb65bcd1cf",
+    "art/deck/pam-a-v1/wands-ten-720.webp": "7fd6f35a8cbc5b9119c89bef0cdf274b0d96ec9fb94013b434e12d57e04ae605",
+    "art/deck/pam-a-v1/wands-three-360.webp": "7eef66ea2eeb234a540839e4bacc93a8dbba7d6075244f75bb17944c0e178f43",
+    "art/deck/pam-a-v1/wands-three-720.webp": "3578ebf341ed6ebf64f9b71be3a4a61c295d69b671b5bdf9bca6d9409f4fb3c4",
+    "art/deck/pam-a-v1/wands-two-360.webp": "917e95468282cfef0805f0d8a09ce8c52eec6417dfc2d6c9ec2d90535d040ec6",
+    "art/deck/pam-a-v1/wands-two-720.webp": "ad701881aec772940cd41fe905f8ac300f652ca1e7e9b3c9946893e9806a36df",
+    "art/fate_ambient_loop.wav": "3165cd0bfe22825d3c3b1f70d53008bd73013d1e5904d64f0acd1a8f38e53561",
+    "art/fate_atmosphere.webp": "c18a51340fdef6c8973dabc94952010849b3b742552b8b2588e8f75e818b2993",
+    "art/fate_card_reveal.wav": "2f75bc2c9d974a9d6c74cc00155db8984967086af7219d7ebdd49c98cf83737d",
+    "art/fate_oracle_select.wav": "b13b5d78d062caf296567c9c5255e580f02830ad3c7d78dd2564e5bcfaf118d0",
+    "art/fate_orb_core.png": "95509848d048de5000fb232bf288b8915be272e5088d73a8c50c9d384e825985",
+    "art/fate_orrery.png": "95c599b818b310cda2c172033f4f06c3092b53989bc23b45cb884541c2b4d581",
+    "art/fate_orrery.svg": "67c9c88473793056aec53e3ec4692b653ee92a27dda2dbfb21fe72f161804a6a",
+    "art/fate_sigil.png": "54f8ee96b9e36a57abeaaafbe80b124a9ef214041b1f1943e5611fd47ea89f1b",
+    "art/fate_sigil.svg": "735220e8536089da7c6c1c4bc14d8bc6f536d5e25fbe1833948158379bb53f25",
+    "art/gallery-hall-768.webp": "f2a09d8cb9b656f22ef249082599d9b6ebc8d41a3adda5c9d17cbe8db3c882db",
+    "art/gallery-hall-v1.webp": "d76d31c1d1f1f0b3cf98c92abf6ffddbe2c95333572ce4674c60582ffb18bf55",
+    "art/nebula-v1.webp": "4fa7812ce2e03340c0c17129f6f66f35f38830453a9b4752a256bb86ed65124d",
+    "art/number-dial-480.webp": "8f9bafa3d09a76a986dd374426dfe3847c57f09e233ac2afc9d0e225c44df0f3",
+    "art/number-dial-v1.webp": "b9c665156d51d525a54ad29d7739b3b5f63679ab0c428121a2c12a84d225f0e5",
+    "art/orb-poster-v2.webp": "e575a7d778154692e51235774e4c808038ebb9bb9471ebdb3b01038cfc38e7f2",
+    "art/preview.jpg": "5b4d125c902d102be38ed5b4a073203590b03b359796a48b727299666f8a6641",
+    "art/README.md": "2fb1f42bf4dfac7b55d7dfc2a5d6e9d9817d6a10202e6131722f9a4741c92e64",
+    "art/ritual-bibliomancy-1440.webp": "3a0ad5fe9bee9f2065f17a9c84b9dc68a0157d24601e17a74f51968acf71362d",
+    "art/ritual-bibliomancy-720.webp": "b3351a3cdecb237d5057e95f27d99a121b9c722fe9e9098bf7b0f4bec9a20737",
+    "art/ritual-bibliomancy-object.webp": "de74bb134a240388034ac7848054f12a0ea0fa1a99f99ae369c5e4a69793edd4",
+    "art/ritual-crystal-1440.webp": "7e3d063fc4d6200c089e9e8e8ec80d7234f08b5e27b6a23b780e93b18a5782ec",
+    "art/ritual-crystal-720.webp": "7714b2ea765a427664528b4eb2a47ddf5ad85995b1bdb09b23637ba8acccf74a",
+    "art/ritual-deck/lenormand-01.webp": "ddbd30492b6db084635bd0163c173850841a4df48c08cd96d145eb016ddb6dc3",
+    "art/ritual-deck/lenormand-02.webp": "47821928a390cf289e4c929260945b104f5ba10385f7ecf95bed65b714c3afac",
+    "art/ritual-deck/lenormand-03.webp": "57d16854883a23beb425f2686f3ec0eed584b2ae0ee10d641121dd214eceeded",
+    "art/ritual-deck/lenormand-04.webp": "440f848de9c9f2e49adac4f7907b0309ddc5dfc2070328bd9173190ee43c28da",
+    "art/ritual-deck/lenormand-05.webp": "1cb2678acb72904b39bc70e10c0eea6f589ee0a6615c1e6f62a225a79da0ad6f",
+    "art/ritual-deck/lenormand-06.webp": "40118e3a007d28cd200962ac0ccd5ee9fed6edaeba3bd7760822f0910e2a87a1",
+    "art/ritual-deck/lenormand-07.webp": "fe6e8a591f3121a10745dc1ac6fe7dd59d62104e1d7dc97a2ce90fe517f3902a",
+    "art/ritual-deck/lenormand-08.webp": "0405b8a8b7c30caa21bb074f06d9caf68ec1374ea3ecd17d28c28b096636b1cc",
+    "art/ritual-deck/lenormand-09.webp": "4a53f4d9875f73a866fe6b2aaa494d4b637af6cf6ee413072f7d751cdca720bd",
+    "art/ritual-deck/lenormand-10.webp": "5f8a6fc80100c94901cb8f05bd5e0987941bcf0878dd90873a6d975be9b2d837",
+    "art/ritual-deck/lenormand-11.webp": "44b35178bbf5c16c73e131996cab740ebeaa3a3aa52f4743b7aceec318b12de2",
+    "art/ritual-deck/lenormand-12.webp": "67691e535e15626ba57ea46c8e9fe50e352e89a58f305a5c9d2ee19025f02486",
+    "art/ritual-deck/lenormand-13.webp": "38b7a37a1c6dfcf0425c3246508ffcb335dcf5610675c25e5b7902ee31e38b15",
+    "art/ritual-deck/lenormand-14.webp": "44be598e44cc84c04ab59387139feca7e7ea91f025e72c181c24cd65e4bb90ea",
+    "art/ritual-deck/lenormand-15.webp": "fec484b0b3f207b81fc2cf40521276abab4617896ce0e436fd80fd6ba4add8fd",
+    "art/ritual-deck/lenormand-16.webp": "3f24aabb4dcc7f8e5e4d93fa455005c8dceb2b74a89a1c2ea587314dd1ac42b1",
+    "art/ritual-deck/lenormand-17.webp": "1c6a8b14ea19e8a1c1875d7e858d68e2ef2a4dbae721e09f0d795839f8a8e98e",
+    "art/ritual-deck/lenormand-18.webp": "38beee388fa60adf9060231b619132c891789a8d883ff0cab56c1bcbe1b9e2f6",
+    "art/ritual-deck/lenormand-19.webp": "e35f311e4a6ade9a4aeac2b7bc9f7615b7d0cd831843dfc79ee60da244f2fecd",
+    "art/ritual-deck/lenormand-20.webp": "ff7c12161a37564b2123986b17920ae22e283b541f539e7ebb919f793b8727a5",
+    "art/ritual-deck/lenormand-21.webp": "6758231185d96454085e9b6cbe5a8d81c677c0731c26b306f5b9a643eda9088c",
+    "art/ritual-deck/lenormand-22.webp": "bed9acf13b5ca6f69dfcb6d0ada71664d78b871da51f9c0eae31415412a408fb",
+    "art/ritual-deck/lenormand-23.webp": "dd33f27999720c08dd9778681cbdb010bd18aed1908eaa2df0f2b10a14e4cc7e",
+    "art/ritual-deck/lenormand-24.webp": "e307fe1e78f479b085bb7c81713102abe1340676162645647994d07eabd08965",
+    "art/ritual-deck/lenormand-25.webp": "6deb090ef0327532cb6eecd820de1b45f9b5186ec1416c0bf85ec9d0c3b3de97",
+    "art/ritual-deck/lenormand-26.webp": "78a447448b3f306ad58726068e34b94fe448d245531423b964249a7a2617098d",
+    "art/ritual-deck/lenormand-27.webp": "fdfe830f08ae905c56f168662faa7ee7db79be1eb3591bbb3d855753016820f5",
+    "art/ritual-deck/lenormand-28.webp": "dbc36793583d0e4c8c06996edb1402eb7f8ef6ff31c05cf11700c7df8238374b",
+    "art/ritual-deck/lenormand-29.webp": "cc0afaf80b43c9aeabd8495c640ea5b20fed1b1bb686991091cd38778d80f99b",
+    "art/ritual-deck/lenormand-30.webp": "e617aeb80bc9180c384d26b54e2229eaa202a81e2a9c452b66714318da20ab71",
+    "art/ritual-deck/lenormand-31.webp": "cfdbca11a77ad0d9a329b14dacd5f56c3a50e4cf904aa29e79096669d57f55ac",
+    "art/ritual-deck/lenormand-32.webp": "022bc2c2c265f6f9f182799168cec9d3e58ceff2b434586fb4c4b3388a9e3026",
+    "art/ritual-deck/lenormand-33.webp": "21d272607ef85d1f5da3020edc6190319077c5954730ae77860470a6ac7e3a9f",
+    "art/ritual-deck/lenormand-34.webp": "0d12e742b2e48e5d72c9f21181768c2e6ad6140b02300ee344c92e5fc23a22e7",
+    "art/ritual-deck/lenormand-35.webp": "1290d887a7457ec237be29d3c2a9e880498cc3d693a4326f8edc2890955ad6bd",
+    "art/ritual-deck/lenormand-36.webp": "c055552f7bc5e1bfba758ea02451728d99ff98dd5d2857f62658a5f94376726f",
+    "art/ritual-dream-1440.webp": "91938fcf35e3d2d182e4343e2efc11646f93adb0a403e2bcf496894db545ef5c",
+    "art/ritual-dream-720.webp": "b0137a0ee60c66d7058385068e01e0f3b8cc9b73d6ceb598ec1dfca9234cf89f",
+    "art/ritual-geomancy-1440.webp": "8f7fe7758406b230850429822af2f911b248c66fec42039f626e002053bfd613",
+    "art/ritual-geomancy-720.webp": "3e263b945773c5f13b4a1625f09b80c7d2410a6a75d0b7c4a0ed45162f15b0e7",
+    "art/ritual-geomancy-object.webp": "1ed578973b1d75884ba95e4bd115c60247e9ceb735aa1f53309dc8f28cea4962",
+    "art/ritual-mirror-1440.webp": "a28d8d600e7b0e72c5c81596189845ecdf0ecde642e580d8b9a7602820bc8b67",
+    "art/ritual-mirror-720.webp": "328c4f77106126fa457c81700e6d6c076f0accd3445a64145ee363287e772d29",
+    "art/ritual-mirror-object.webp": "37f15b6ffa46484720e9594f3bd521115b1a0ef55822b6b1f57e6f039f382871",
+    "art/ritual-oracle-1440.webp": "771661343a112d10d8f16cd0fdac68b4ec29f25ee15bf580fb61a3b7971b4b04",
+    "art/ritual-oracle-720.webp": "0b390b14c73ed13807ad94dbb78494e614dce9d9e5fdf46bcdb5705330171835",
+    "art/ritual-pendulum-1440.webp": "58a3794d5a61a63e9026af6bbb65a1a5444ad8c0288cea40e8ab461a5374f5ff",
+    "art/ritual-pendulum-720.webp": "3a841d7c23b29375f7af3cd8c59c915858f9e72526aec3fa1cc520c74c17f921",
+    "art/ritual-pendulum-object.webp": "ae892cf38131fab8d0c0298bcd4b0b53663d421c9f782493917b74a6cd4ba393",
+    "art/turning-sky-observatory-1536.webp": "b162881059d9b3f70076b680dd05155c04c473d97b47b3248a72adaf9edc5039",
+    "art/turning-sky-observatory-640.webp": "3c71c0ca355458b8997676753b4abf785ea7d58151e907d5bc2240c7eda3c136",
+    "art/turning-sky-observatory-960.webp": "3703cfca7176931005ff50c7159a91c3c3b7eebca40507557e4285922e61bd5a",
+    "art/turning-sky-observatory-mobile-720.webp": "06cbfb31772a1848998b7c1024e156c28f40d922afd0e2f64b08391851854bb4",
+    "art/western-observatory-1536.webp": "f8e2c626dfdfb908caad596cb3ce8ed954cbd4ba9193fc960ad84ccd5868d1c5",
+    "art/western-observatory-640.webp": "466e84732e48dcac4b8aaa4e510bdcb6aca28971375977af3211355561d977b7",
+    "art/western-observatory-960.webp": "05d97de6c94ca05291f97773ba1ad1310dd0464f912b06f083d92ba9199f57eb",
+    "art/western-observatory-portrait-450.webp": "aac2aec4e78fae82ea95eb1e44c4e01739c3fcaa16dde7d8b9a1564c66a7a534",
+    "art/western-observatory-portrait-750.webp": "acffb800b89132dfe8c8dcfcdc0d7c9095b33fc519c2784564280378bb6486c3",
+    "assets/BirthForm-CYUyk0O_.js": "77bdb95e14ae7210095d0a53b322da1b5e694010f70e805843a6da19d1e5306c",
+    "assets/BitmapFont-NSA1Xwt9.js": "3dfbfe9d65012aea05d4302057b8ae1356b9b47ee69b283afa4103dcae507999",
+    "assets/browserAll-BWhwV4mb.js": "5ea4534713ecfb370f8da2386d77fb58f6a3d4956cd2257a5cdb97d252ac66b7",
+    "assets/CanvasPool-Bh7jCa8k.js": "559d516619f84d56ebfd6f81134d5b46d930c1b95d7f8f1a23194015c3379f55",
+    "assets/CanvasRenderer-H27xAJeK.js": "71f293417f0f3c49fbf9fc49c5ac0ae0025322c63f93a06cfa07e56031d9b6c8",
+    "assets/canvasUtils-BeKwyxYk.js": "86a116a99d0502e9ddbf19216abcd78f242cf5e97e16fefea2c04d2a1c435405",
+    "assets/ChamberScreen-Dj4u5d5e.js": "5b3d471fa2751e89a9fb38b166622a4315691a584a0cce33aef1d19611596743",
+    "assets/CodexScreen-C0Ozg-Xw.js": "602da0ed51ac3759b68d01df8d629c006b526231a4e9dee3237055ff054d3fea",
+    "assets/createOrbScene-CNfFBnT4.js": "b52f94e01f9fb95356f4ec135f6f5c5712491f6bcceaa08732d723c667f5e790",
+    "assets/GalleryScreen--gsiTdsw.js": "607593fdad6a36b370716e812d03c989f0dea5edec7f1cbc6896500a1438902f",
+    "assets/GpuStencilModesToPixi-CAOI2O-l.js": "83bdfa025fef78ac4304b0dcc97e66815471cff05746916713fb867617bc0b39",
+    "assets/index-BA9pslWW.js": "2466d6f830f95ffb8a6dfb7bc97054ed581e36e88ea928cc6ac021dcdd35cff8",
+    "assets/index-kz9jy7qQ.css": "88b199098d9e749896238debc5ee7a8e79d8aae27287bf9c47a24c9445c03621",
+    "assets/NumerologyScreen-BAoiehM6.js": "872ac7ea3a03c64643f772c1a690619476f65bf4ea37f604d1ce97425a94085d",
+    "assets/Orb-BNtvKXfa.js": "6cbdbb5b4ee3323708383d685218f7e554c06840cd8342c79c8337ffa5242c1b",
+    "assets/Readings-Yd-DHdlu.js": "5af21578eb26708406689ce6ee8c3b7387ecb88bd5753f98e17721a87dfcac8c",
+    "assets/RenderTargetSystem-BWbaUjTj.js": "39902b5ee3cafe0ea4354c25d3456d9cae324a116df576c0a5aa0e314835977a",
+    "assets/RitualWingScreen-9m2HrhlT.js": "0e56d5f3bead0a88c0d119d9cc918ee37ede7a5bfe3de33ec013beac3c49fd56",
+    "assets/source-CQNG62zr.js": "f7e5d6081cb846212bc30344ba9f5c0e2a48b256c3564d0818772f81dff46fca",
+    "assets/TurningSky-CylTcizI.js": "69edc1270a77307ef879cb04b89ce2aff28187b81152fed8b4bed702adaadfa7",
+    "assets/WebGLRenderer-B_zW_IXn.js": "2bff28b4afb154882f2bb6ed3f09cc031518d0826882d8d10254b821750f0d4a",
+    "assets/WebGPURenderer-BqGM7Krv.js": "2d1da9c4da6ea658c2ab5b9c3930d3feb90fd23277d6c96f10c8133c8e60f691",
+    "assets/webworkerAll-DI25ESbI.js": "8494ce4221b9ae149067271934f746c24b4f87938f1e53cfc4410beb20a322b6",
+    "assets/WesternScreen-fuzJxO6L.js": "0d39c4a082a06a6927238f02422f386ab71122d5fa7ebc272497652acf85071c",
+    "fonts/cormorant-italic-latin.woff2": "6f2f5c3b1abc3d0bb035a927f66a90ca873f94fc31c4966c8d024142c2036e55",
+    "fonts/cormorant-latin.woff2": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235",
+    "fonts/cormorantgaramond-OFL.txt": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956",
+    "fonts/inter-latin.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "fonts/inter-OFL.txt": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+    "fonts/sources.json": "3f7fd5f5a838eb7d036e9ff6bc6209a5f7bef08e353b80b926520f324754c235",
+    "index.html": "600bf35d8a66aa04f353462c46587bf507cb32b0b750cf9264d6a13727a66ec8"
+  },
+  "limits": [
+    "Local Chromium emulation. No physical phone or compositor frame certification.",
+    "Saved journals reopen public guide bookmarks. Dream bookmarks keep motif IDs without private context.",
+    "The manual geomancy consumer accepts row patterns. The bibliomancy consumer selects from Ruth only."
+  ]
+}

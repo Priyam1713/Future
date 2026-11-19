@@ -4,7 +4,9 @@ import { api, type Draw, type Envelope, type Commentary } from "../types";
 import { EXPERIENCES } from "../experiences/contracts";
 import { useCodex } from "../codex/useCodex";
 import { chamberId, ROOMS, type ChamberSlug } from "../chambers/contracts";
+import { ritualId, RITUAL_ROOMS, type RitualSlug } from "../ritual/contracts";
 export type Screen =
+  | RitualSlug
   | ChamberSlug
   | "explore"
   | "ritual"
@@ -22,6 +24,8 @@ export function useOracle() {
     );
   }
   const [screen, setScreen] = useState<Screen>(() => {
+    const wing = ritualId(location.hash.slice(1));
+    if (wing) return RITUAL_ROOMS[wing].slug;
     const chamber = chamberId(location.hash.slice(1));
     if (chamber) return ROOMS[chamber].slug;
     return location.hash === "#western"
@@ -75,6 +79,11 @@ export function useOracle() {
     const fn = () => {
       preferMainFocus.current = false;
       const name = location.hash.slice(1);
+      const wing = ritualId(name);
+      if (wing) {
+        setScreen(RITUAL_ROOMS[wing].slug);
+        return;
+      }
       const chamber = chamberId(name);
       if (chamber) {
         setScreen(ROOMS[chamber].slug);

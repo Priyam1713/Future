@@ -10,6 +10,12 @@ import {
 import { TRANSIT_REFERENCE, type TransitSnapshot } from "../turning/contracts";
 import { validTransit } from "../turning/validation";
 import {
+  RITUAL_REFERENCE,
+  isRitualSnapshot,
+  validateRitual,
+  type RitualSnapshot,
+} from "../ritual/contracts";
+import {
   BODY_NAMES,
   WESTERN_REFERENCE,
   type WesternSnapshot,
@@ -20,6 +26,7 @@ export const REFERENCE = "fate-codex-reference-v1";
 export const MAX_CHAPTERS = 50;
 const MAX_LENGTH = 65536;
 export type Snapshot =
+  | RitualSnapshot
   | ChamberSnapshot
   | TransitSnapshot
   | WesternSnapshot
@@ -43,6 +50,7 @@ export interface Chapter {
     | typeof REFERENCE
     | typeof WESTERN_REFERENCE
     | typeof CHAMBER_REFERENCE
+    | typeof RITUAL_REFERENCE
     | typeof TRANSIT_REFERENCE;
   snapshot: Snapshot;
 }
@@ -72,6 +80,8 @@ function core(value: unknown) {
 }
 export function validSnapshot(s: unknown): s is Snapshot {
   if (!object(s)) return false;
+  if (typeof s.oracle === "number" && isRitualSnapshot({ oracle: s.oracle }))
+    return validateRitual(s);
   if (s.oracle === 2 || s.oracle === 3 || s.oracle === 18 || s.oracle === 19)
     return validChamber(s);
   if (s.oracle === 1 && s.profile === "turning-sky-v1") return validTransit(s);
@@ -184,6 +194,12 @@ export function validSnapshot(s: unknown): s is Snapshot {
     Number(s.personalYear) <= 9
   );
 }
+function editionFor(snapshot: Snapshot): Chapter["reference"] {
+  if (isRitualSnapshot(snapshot)) return RITUAL_REFERENCE;
+  if (snapshot.profile === "turning-sky-v1") return TRANSIT_REFERENCE;
+  if (snapshot.oracle === 1) return WESTERN_REFERENCE;
+  return isChamberSnapshot(snapshot) ? CHAMBER_REFERENCE : REFERENCE;
+}
 export function validChapter(c: unknown): c is Chapter {
   return (
     object(c) &&
@@ -194,14 +210,7 @@ export function validChapter(c: unknown): c is Chapter {
     /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/.test(c.savedAt) &&
     Number.isFinite(Date.parse(c.savedAt)) &&
     validSnapshot(c.snapshot) &&
-    c.reference ===
-      (c.snapshot.profile === "turning-sky-v1"
-        ? TRANSIT_REFERENCE
-        : c.snapshot.oracle === 1
-          ? WESTERN_REFERENCE
-          : isChamberSnapshot(c.snapshot)
-            ? CHAMBER_REFERENCE
-            : REFERENCE)
+    c.reference === editionFor(c.snapshot)
   );
 }
 export function parseDocument(raw: string | null): CodexDocument {
@@ -301,14 +310,7 @@ export function chapterFor(native: object, snapshot: Snapshot): Chapter {
   return {
     id,
     savedAt: new Date().toISOString(),
-    reference:
-      snapshot.profile === "turning-sky-v1"
-        ? TRANSIT_REFERENCE
-        : snapshot.oracle === 1
-          ? WESTERN_REFERENCE
-          : isChamberSnapshot(snapshot)
-            ? CHAMBER_REFERENCE
-            : REFERENCE,
+    reference: editionFor(snapshot),
     snapshot,
   };
 }

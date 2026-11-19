@@ -107,8 +107,7 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
           </p>
           {codex.chapters.length < 2 ? (
             <p className="scope-note">
-              Save two readings to begin. Bring Tarot, Numerology or Western
-              Astrology into a conversation of perspectives.
+              Save two chapters to compare their source perspectives.
             </p>
           ) : (
             <>
@@ -161,14 +160,17 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
           Life Path numbers, or Western Astrology's chart geometry or dated
           transit contacts/native samples, or the four chamber snapshots
           (sidereal geometry and UTC period days, pillar IDs, hexagram lines, or
-          rune IDs), plus the source edition, chapter identifier and save time.
-          Transit window dates are retained by explicit choice. Names, birth
-          dates/times, Numerology target dates, birthplace
-          coordinates/timezone/place labels, original questions, calculation
-          traces, replay seeds and Gemini commentary are excluded. Chart
-          geometry remains personal and can reveal information about a birth
-          moment. Exported Codex copies use this same minimal scope with source
-          references.
+          rune IDs). Ritual Wing chapters keep selected cards, response
+          categories, public guides or references, shield figures, or pinned
+          passages. Each record has a source edition, chapter identifier, and
+          save time. Journal and dream text, personal context, and pendulum
+          calibration stay outside My Fate. Transit window dates are retained by
+          explicit choice. Names, birth dates/times, Numerology target dates,
+          birthplace coordinates/timezone/place labels, original questions,
+          calculation traces, replay seeds and Gemini commentary are excluded.
+          Chart geometry remains personal and can reveal information about a
+          birth moment. Exported Codex copies use this same minimal scope with
+          source references.
         </p>
         <p>
           Records are unencrypted in this browser profile at this site address.
