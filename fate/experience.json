@@ -1,6 +1,6 @@
 {
-  "id": "fate-turning-sky-v5",
-  "block": "05 · The Turning Sky",
+  "id": "fate-four-chambers-v6",
+  "block": "06 · The Four New Chambers",
   "capability": "symbolic_reading",
   "engine": "future.tarot.read",
   "text_profile": "waite-1922-text-v1",
@@ -98,13 +98,17 @@
     "fonts": "Self-hosted Cormorant Garamond and Inter; SIL OFL licenses and source URLs bundled",
     "generated": "Original FATE back, nebula, brass dial and observatory hall made with built-in image_gen; exact prompts and source PNGs retained under design/. No baked UI. Orb poster extracted from actual renderer. Block 03 original illustrated Codex cover has a separately recorded source PNG and exact prompt; binding, runtime title, counts, paper, source chapters, moving light and turns are independent layers."
   },
-  "scope": "Three unchanged native oracle engines, a 54-technique consumer Gallery and an explicitly saved local personal Codex. Source-based comparison is editorial, with no empirical prediction or agreement certification.",
+  "scope": "Seven consumer oracle rooms using existing native engines, a 54-technique Gallery and an explicit local Codex.",
   "technique_ids": [
     1,
+    2,
+    3,
     4,
-    16
+    16,
+    18,
+    19
   ],
-  "supported_scope": "The existing supported object describes Tarot; Numerology, Western Astrology and Gallery have separate scopes below.",
+  "supported_scope": "The supported object describes Tarot. Separate sections describe the other rooms and the Gallery.",
   "gallery": {
     "inventory": "knowledge/inventory.json",
     "projection": "web/src/gallery/inventory.json",
@@ -119,8 +123,12 @@
     ],
     "available": [
       1,
+      2,
+      3,
       4,
-      16
+      16,
+      18,
+      19
     ],
     "historical_references": [
       9,
@@ -350,5 +358,25 @@
     "source_edition": "fate-transit-reference-v1",
     "art_provenance": "design/block05-artwork.json",
     "benchmark": "evidence/turning-computation.json"
+  },
+  "chambers": {
+    "endpoint": "POST /api/chambers",
+    "codex_edition": "fate-four-chambers-v1",
+    "art_provenance": "design/block06-artwork.json",
+    "supported": {
+      "2": "Recorded civil birth time and IANA place. Native Lahiri 1956 D1 and symbolic D9, mean nodes, whole-sign houses, latitude strictly within ±66°. Vimshottari in either named year convention, selected UTC midnight within birth through 120 selected years.",
+      "3": "Native BaZi 1901–2100, civil-zi23, civil-split-zi or standard-zi23. Four Pillars, Day Master and documented component relationships.",
+      "18": "Seeded three-coin, bottom-to-top, Legge 1882 archive, all moving lines and the resulting figure.",
+      "19": "Seeded Elder Futhark one/three distinct upright runes, source-layered history and modern editorial reflection."
+    },
+    "experimental": "Separately consented Gemini reflection over source excerpts only.",
+    "unsupported": [
+      "Missing birth-time substitution",
+      "Unverified timing or tradition variants",
+      "BaZi luck cycles, useful gods and strengths",
+      "Rune reversals and blank runes",
+      "Event forecasts or empirical predictive claims"
+    ],
+    "persistence": "Opt-in local saves of positions and UTC boundary days, pillar IDs, native hexagram values, or rune IDs. No original birth arguments, target date, replay seeds or AI."
   }
 }

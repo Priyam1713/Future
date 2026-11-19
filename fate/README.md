@@ -1,6 +1,16 @@
-# FATE · Block 05 — The Turning Sky
+# FATE · Block 06 — The Four New Chambers
 
-An isolated consumer application over the unchanged Future Tarot, Numerology and Western Astrology engines: **Explore → a distinct oracle ritual → source-grounded reading → explicitly saved local chapter**. React / TypeScript / Vite, the signature PixiJS orb and a stateless FastAPI boundary. Workbench, native calculations, source profiles and the master inventory remain independent.
+FATE brings seven existing Future engines into one consumer Gallery. Each chamber leads from its own instrument or ritual to a source-grounded reading and an optional local chapter. The app uses React and TypeScript, with the signature PixiJS orb and a stateless FastAPI boundary.
+
+## Block 06: The Four New Chambers
+
+Vedic Astrology opens native Lahiri D1, symbolic D9, the Moon’s nakshatra and Vimshottari periods. BaZi opens the native Four Pillars and documented Day Master and stem relationships. I Ching uses six seeded three-coin casts and Legge’s 1882 source edition. Runes uses native one- or three-rune Elder Futhark draws, with modern prompts alongside historical and linguistic evidence. See `experience.json` for supported conventions and limits.
+
+Each room has an original environment and a transparent material layer. The UI draws the calculated positions and symbols at runtime. `design/block06-artwork.json` records the original prompts, source PNGs, runtime WebPs and hashes.
+
+My Fate restores explicit saves from `fate-four-chambers-v1` and the bundled source archive. Vedic chapters retain calculated geometry and UTC period boundary days. The other chambers retain pillar IDs, native line values and figures, or rune IDs. Birth inputs, target dates, seeds and Gemini commentary stay outside saved records. A full native export is a separate action and can contain the original request.
+
+Run `python -m fate.build_chambers` to verify the frozen edition. With the built server running, use `node scripts/capture-chambers.mjs` and separately `node scripts/capture-chambers.mjs --performance` from `fate/web`. The final evidence index is `evidence/block06-acceptance.json`.
 
 ## Block 05: The Turning Sky
 

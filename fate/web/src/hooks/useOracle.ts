@@ -3,7 +3,9 @@ import { useSound } from "../useSound";
 import { api, type Draw, type Envelope, type Commentary } from "../types";
 import { EXPERIENCES } from "../experiences/contracts";
 import { useCodex } from "../codex/useCodex";
+import { chamberId, ROOMS, type ChamberSlug } from "../chambers/contracts";
 export type Screen =
+  | ChamberSlug
   | "explore"
   | "ritual"
   | "reading"
@@ -19,15 +21,17 @@ export function useOracle() {
       previous.includes(id) ? previous : [...previous, id],
     );
   }
-  const [screen, setScreen] = useState<Screen>(() =>
-    location.hash === "#western"
+  const [screen, setScreen] = useState<Screen>(() => {
+    const chamber = chamberId(location.hash.slice(1));
+    if (chamber) return ROOMS[chamber].slug;
+    return location.hash === "#western"
       ? "western"
       : location.hash === "#my-fate"
         ? "codex"
         : location.hash === "#gallery"
           ? "gallery"
-          : "explore",
-  );
+          : "explore";
+  });
   const [spread, setSpread] = useState<"one" | "three">("three");
   const [question, setQuestion] = useState(""),
     [reversals, setReversals] = useState(true);
@@ -71,6 +75,11 @@ export function useOracle() {
     const fn = () => {
       preferMainFocus.current = false;
       const name = location.hash.slice(1);
+      const chamber = chamberId(name);
+      if (chamber) {
+        setScreen(ROOMS[chamber].slug);
+        return;
+      }
       setScreen(
         name === "western"
           ? "western"

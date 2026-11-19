@@ -1,6 +1,12 @@
 import type { Result } from "../types";
 import type { NumberResult } from "../experiences/contracts";
 import { DECK } from "../artwork/registry";
+import {
+  CHAMBER_REFERENCE,
+  isChamberSnapshot,
+  validChamber,
+  type ChamberSnapshot,
+} from "../chambers/contracts";
 import { TRANSIT_REFERENCE, type TransitSnapshot } from "../turning/contracts";
 import { validTransit } from "../turning/validation";
 import {
@@ -14,6 +20,7 @@ export const REFERENCE = "fate-codex-reference-v1";
 export const MAX_CHAPTERS = 50;
 const MAX_LENGTH = 65536;
 export type Snapshot =
+  | ChamberSnapshot
   | TransitSnapshot
   | WesternSnapshot
   | {
@@ -35,6 +42,7 @@ export interface Chapter {
   reference:
     | typeof REFERENCE
     | typeof WESTERN_REFERENCE
+    | typeof CHAMBER_REFERENCE
     | typeof TRANSIT_REFERENCE;
   snapshot: Snapshot;
 }
@@ -64,6 +72,8 @@ function core(value: unknown) {
 }
 export function validSnapshot(s: unknown): s is Snapshot {
   if (!object(s)) return false;
+  if (s.oracle === 2 || s.oracle === 3 || s.oracle === 18 || s.oracle === 19)
+    return validChamber(s);
   if (s.oracle === 1 && s.profile === "turning-sky-v1") return validTransit(s);
   if (s.oracle === 1) {
     const longitude = (v: unknown) =>
@@ -189,7 +199,9 @@ export function validChapter(c: unknown): c is Chapter {
         ? TRANSIT_REFERENCE
         : c.snapshot.oracle === 1
           ? WESTERN_REFERENCE
-          : REFERENCE)
+          : isChamberSnapshot(c.snapshot)
+            ? CHAMBER_REFERENCE
+            : REFERENCE)
   );
 }
 export function parseDocument(raw: string | null): CodexDocument {
@@ -294,7 +306,9 @@ export function chapterFor(native: object, snapshot: Snapshot): Chapter {
         ? TRANSIT_REFERENCE
         : snapshot.oracle === 1
           ? WESTERN_REFERENCE
-          : REFERENCE,
+          : isChamberSnapshot(snapshot)
+            ? CHAMBER_REFERENCE
+            : REFERENCE,
     snapshot,
   };
 }

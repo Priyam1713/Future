@@ -1,0 +1,422 @@
+{
+  "block": 6,
+  "baseline": "551dda5",
+  "unit_tests": {
+    "native": 2522,
+    "workbench": 77,
+    "fate": 52,
+    "codex_node": 25
+  },
+  "browser": {
+    "fate": {
+      "startTime": "2026-11-19T18:57:56.582Z",
+      "duration": 456215.512,
+      "expected": 41,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "workbench": {
+      "startTime": "2026-11-19T18:53:01.154Z",
+      "duration": 108023.27,
+      "expected": 9,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "cli": {
+    "cli_cases": 3515,
+    "independent_verifiers": 52,
+    "protected_count": 576
+  },
+  "npm_reported_vulnerabilities": 0,
+  "pip_check": true,
+  "inventory_check": true,
+  "rooms": {
+    "vedic": {
+      "oracle": 2,
+      "native_parity": true,
+      "recording_snapshot_parity": true,
+      "recorded_seconds": 3.92,
+      "local_reopen_without_post": true,
+      "chapter_bytes": 1476,
+      "artifacts": {
+        "screenshots/06-vedic-desktop.png": "4c32ca68c7752c77e83c9c1b0d3eff15d0ab89c1cc3e5246afa6504247cee539",
+        "screenshots/06-vedic-entrance.png": "5986cd2ab1a4a302cae08724027451a3e3a789d3a437036b5152bfaa7e89030c",
+        "screenshots/06-vedic-mobile.png": "2561e86cb4e63ec7da1a40fea5d9dc12b36e2f3dbd99626647063c32aab044d6",
+        "evidence/block06-vedic.mp4": "94827e49db9ed59a93d402088638624bdbd7539818d34f89b5dba1823988bb84",
+        "evidence/block06-privacy-2.json": "1466f61e5d2badf1003c325c4d560e2aaaa27d27ee4a701f6d96bd43c587887d"
+      }
+    },
+    "bazi": {
+      "oracle": 3,
+      "native_parity": true,
+      "recording_snapshot_parity": true,
+      "recorded_seconds": 4.08,
+      "local_reopen_without_post": true,
+      "chapter_bytes": 219,
+      "artifacts": {
+        "screenshots/06-bazi-desktop.png": "2cb34527f6f50dfb22165fbc15dcfa64a4890b3ca490886ac8d1fa97c3e08c01",
+        "screenshots/06-bazi-entrance.png": "7e1b6e5521637f87550c30d6eaa5b4c674834728cbc04241806944a3ba49bff7",
+        "screenshots/06-bazi-mobile.png": "e35c6eeb770639c7f227f03661b299e975c4a3b3f1d7ead46dec3c6d2ea4a53b",
+        "evidence/block06-bazi.mp4": "a06d23316708b4ed5ec7e346af06cd63f9cced2f755d0bf4ba25fbf08606cd21",
+        "evidence/block06-privacy-3.json": "0e2daf9a4db7a19f7b2bd956bbc3828930b533ce0fd51f260926dbeee2ecde09"
+      }
+    },
+    "iching": {
+      "oracle": 18,
+      "native_parity": true,
+      "recording_snapshot_parity": true,
+      "recorded_seconds": 6.32,
+      "local_reopen_without_post": true,
+      "chapter_bytes": 253,
+      "artifacts": {
+        "screenshots/06-iching-desktop.png": "e4f207de3e96e72a8e6b101c7c8ce50aff253cee49ca682dfa93bdeafc8015e1",
+        "screenshots/06-iching-entrance.png": "3ab7e661532ebf7e7ec4dcbfb1308a75bb18c954e4552ceec5d68945baf9937c",
+        "screenshots/06-iching-mobile.png": "45aa805cce1b0ed9448120760c9b002579fa120240ac13b0e22819af979960c3",
+        "evidence/block06-iching.mp4": "5863bf59b410ed96096f81f1ae245ec6870dfdb58daaa91f2890cc2a5c19097e",
+        "evidence/block06-privacy-18.json": "e3962ad5965d9bd4dbd0d906c38b1b4e5ebc6ac7e18a1f39692db977abc30d0b"
+      }
+    },
+    "runes": {
+      "oracle": 19,
+      "native_parity": true,
+      "recording_snapshot_parity": true,
+      "recorded_seconds": 4.04,
+      "local_reopen_without_post": true,
+      "chapter_bytes": 259,
+      "artifacts": {
+        "screenshots/06-runes-desktop.png": "d9d0db1b54485993d1b689bf4093a88d7bcea0995d3f8751d6d9c559652eb4f2",
+        "screenshots/06-runes-entrance.png": "9b0b13ab43ff71fa0abc420cf66553aef21a45b01c4eb47e166cfd3077751fa6",
+        "screenshots/06-runes-mobile.png": "30e527c84810ccd4fee7e212ee61de3dd0ea6c0cbf69fa5c2e26762cc07d3b22",
+        "evidence/block06-runes.mp4": "c828d32fd8d082bdfd1eb5ce7075db28a379a39f4615bfb1cad663319d028584",
+        "evidence/block06-privacy-19.json": "bc95cb6d291efc3a0932d766a6512c4640c3fb1383cfcd933cb8ad752c4d33d4"
+      }
+    }
+  },
+  "performance": [
+    {
+      "room": "vedic",
+      "profile": "mobile",
+      "entranceMs": 142,
+      "nativeActionMs": 98,
+      "interactionMs": 56,
+      "frames": {
+        "samples": 122,
+        "p95Ms": 16.700000000000273,
+        "maxMs": 16.800000000000182
+      },
+      "metrics": {
+        "cls": 0,
+        "longTasks": [],
+        "canvases": 0,
+        "assets": [
+          {
+            "asset": "ChamberScreen-CymOeLnO.js",
+            "bytes": 57767
+          },
+          {
+            "asset": "chamber-vedic-720.webp",
+            "bytes": 87921
+          },
+          {
+            "asset": "chambers",
+            "bytes": 7111
+          },
+          {
+            "asset": "chamber-vedic-object.webp",
+            "bytes": 118520
+          }
+        ]
+      }
+    },
+    {
+      "room": "vedic",
+      "profile": "desktop",
+      "entranceMs": 139,
+      "nativeActionMs": 109,
+      "interactionMs": 62,
+      "frames": {
+        "samples": 122,
+        "p95Ms": 16.799999999999955,
+        "maxMs": 16.800000000000182
+      },
+      "metrics": {
+        "cls": 1.7427662037037036e-05,
+        "longTasks": [],
+        "canvases": 0,
+        "assets": [
+          {
+            "asset": "ChamberScreen-CymOeLnO.js",
+            "bytes": 57767
+          },
+          {
+            "asset": "chamber-vedic-1440.webp",
+            "bytes": 225499
+          },
+          {
+            "asset": "chambers",
+            "bytes": 7112
+          },
+          {
+            "asset": "chamber-vedic-object.webp",
+            "bytes": 118520
+          }
+        ]
+      }
+    },
+    {
+      "room": "bazi",
+      "profile": "mobile",
+      "entranceMs": 137,
+      "nativeActionMs": 57,
+      "interactionMs": 69,
+      "frames": {
+        "samples": 122,
+        "p95Ms": 16.700000000000273,
+        "maxMs": 16.800000000000182
+      },
+      "metrics": {
+        "cls": 0,
+        "longTasks": [],
+        "canvases": 0,
+        "assets": [
+          {
+            "asset": "ChamberScreen-CymOeLnO.js",
+            "bytes": 57767
+          },
+          {
+            "asset": "chamber-bazi-720.webp",
+            "bytes": 39713
+          },
+          {
+            "asset": "chambers",
+            "bytes": 7863
+          },
+          {
+            "asset": "chamber-bazi-object.webp",
+            "bytes": 33681
+          }
+        ]
+      }
+    },
+    {
+      "room": "bazi",
+      "profile": "desktop",
+      "entranceMs": 177,
+      "nativeActionMs": 78,
+      "interactionMs": 55,
+      "frames": {
+        "samples": 122,
+        "p95Ms": 16.700000000000273,
+        "maxMs": 16.799999999999955
+      },
+      "metrics": {
+        "cls": 1.7427662037037036e-05,
+        "longTasks": [],
+        "canvases": 0,
+        "assets": [
+          {
+            "asset": "ChamberScreen-CymOeLnO.js",
+            "bytes": 57767
+          },
+          {
+            "asset": "chamber-bazi-1440.webp",
+            "bytes": 144413
+          },
+          {
+            "asset": "chambers",
+            "bytes": 7863
+          },
+          {
+            "asset": "chamber-bazi-object.webp",
+            "bytes": 33681
+          }
+        ]
+      }
+    },
+    {
+      "room": "iching",
+      "profile": "mobile",
+      "entranceMs": 98,
+      "nativeActionMs": 68,
+      "interactionMs": 65,
+      "frames": {
+        "samples": 122,
+        "p95Ms": 16.700000000000273,
+        "maxMs": 16.800000000000182
+      },
+      "metrics": {
+        "cls": 0,
+        "longTasks": [],
+        "canvases": 0,
+        "assets": [
+          {
+            "asset": "ChamberScreen-CymOeLnO.js",
+            "bytes": 57767
+          },
+          {
+            "asset": "chamber-iching-720.webp",
+            "bytes": 19958
+          },
+          {
+            "asset": "chamber-iching-object.webp",
+            "bytes": 186340
+          },
+          {
+            "asset": "chambers",
+            "bytes": 3481
+          }
+        ]
+      }
+    },
+    {
+      "room": "iching",
+      "profile": "desktop",
+      "entranceMs": 391,
+      "nativeActionMs": 62,
+      "interactionMs": 63,
+      "frames": {
+        "samples": 122,
+        "p95Ms": 16.799999999999727,
+        "maxMs": 16.799999999999955
+      },
+      "metrics": {
+        "cls": 1.7427662037037036e-05,
+        "longTasks": [],
+        "canvases": 0,
+        "assets": [
+          {
+            "asset": "ChamberScreen-CymOeLnO.js",
+            "bytes": 57767
+          },
+          {
+            "asset": "chamber-iching-1440.webp",
+            "bytes": 81800
+          },
+          {
+            "asset": "chamber-iching-object.webp",
+            "bytes": 186340
+          },
+          {
+            "asset": "chambers",
+            "bytes": 3182
+          }
+        ]
+      }
+    },
+    {
+      "room": "runes",
+      "profile": "mobile",
+      "entranceMs": 437,
+      "nativeActionMs": 151,
+      "interactionMs": 58,
+      "frames": {
+        "samples": 122,
+        "p95Ms": 16.700000000000273,
+        "maxMs": 16.800000000000182
+      },
+      "metrics": {
+        "cls": 0,
+        "longTasks": [],
+        "canvases": 0,
+        "assets": [
+          {
+            "asset": "ChamberScreen-CymOeLnO.js",
+            "bytes": 57767
+          },
+          {
+            "asset": "chamber-runes-720.webp",
+            "bytes": 99270
+          },
+          {
+            "asset": "chamber-runes-object.webp",
+            "bytes": 104088
+          },
+          {
+            "asset": "chambers",
+            "bytes": 4663
+          }
+        ]
+      }
+    },
+    {
+      "room": "runes",
+      "profile": "desktop",
+      "entranceMs": 108,
+      "nativeActionMs": 67,
+      "interactionMs": 70,
+      "frames": {
+        "samples": 122,
+        "p95Ms": 16.700000000000273,
+        "maxMs": 16.800000000000182
+      },
+      "metrics": {
+        "cls": 1.7427662037037036e-05,
+        "longTasks": [],
+        "canvases": 0,
+        "assets": [
+          {
+            "asset": "ChamberScreen-CymOeLnO.js",
+            "bytes": 57767
+          },
+          {
+            "asset": "chamber-runes-1440.webp",
+            "bytes": 213833
+          },
+          {
+            "asset": "chamber-runes-object.webp",
+            "bytes": 104088
+          },
+          {
+            "asset": "chambers",
+            "bytes": 4407
+          }
+        ]
+      }
+    }
+  ],
+  "evidence": {
+    "web/src/chambers/edition-v1.json": "2798977aac5f44da603a1cdf324180e253a80778c20e8e947bb2b47df12fb3db",
+    "web/src/chambers/reference-v1.json": "9e585cedf4fc7c894364ee87d6e2d3b09f7256c214b4e7668e08b9bb3523fe02",
+    "design/block06-artwork.json": "2a4856140f67e9cea4f3e2101a9cc73f7021f39162d74395e830e9f6841aa730",
+    "evidence/block06-native.json": "742473f36d3a8d8bad8936c324dc6847054bb99ec8a915da64324864ca5a7ed2",
+    "evidence/block06-recordings.json": "d2e4eade74f0718c09d8caeddfa1b1394ddf49f27763478c0dbdabfd17fbb0ef",
+    "evidence/block06-performance.json": "09ecced6b1765461b4c99c472403f064625fc0797891fe77a5730924d04d8a74",
+    "browser-acceptance.json": "39d97d9dda9e276ccb555056285c2988fd5f559417a6f7af6b0db58ff570b361",
+    "workbench-browser-acceptance.json": "adf8146ec50c6de7fe566606de150223dcdb0dca75aec38cbfb4e26ff5efe563",
+    "inherited-cli-acceptance.json": "9b4210b55c0fb1c96f578636c25f36463cdc538eb59e284966a3f452ef1a8fbf"
+  },
+  "limits": [
+    "Local Chromium emulation with a warmed service process. Physical devices and field performance remain unverified.",
+    "Vedic saved dasha views use UTC boundary days. The full live native export includes the exact timing data.",
+    "Saved calculated geometry and pillars remain personal in unencrypted local storage.",
+    "Optional Gemini was checked with a controlled provider. The native playback and media contain no provider output."
+  ],
+  "production_entry_sha256": "955393e2e6a15fd6a30b5477b1bc03d72cccd1eff33ec3684353bab1b3a44e2e",
+  "production_assets_sha256": {
+    "BirthForm-BPDwGSvN.js": "2459696ad58c00dd21fe3e50bdd8d1addf3b897dd410400ac516eabdf42e7c19",
+    "BitmapFont-BSKLYOst.js": "5a85d1b9979b4427aed56ebdcd9c4cd8260d1a266dca277ffa62fef1666f251b",
+    "browserAll-DAzX4Z76.js": "ccd29762ca61e4448d3439f5086e2a055767e2f6cdf417bea1a126648994a63f",
+    "CanvasPool-CfathvLh.js": "6cde8be12780ba59064a6984b6f80ead40b83d271c5d67ca06f9f2b26745f0a2",
+    "CanvasRenderer-DvvdF8Yf.js": "498d7eeeabddedad19c4ee218ece4152a57804f68866929d36482cdcc97322e9",
+    "canvasUtils-hg62cS8d.js": "36b884f7143fbc275d48b58d9bc4cb215867e07ddc91c52868d5bd30569f8aa7",
+    "ChamberScreen-CymOeLnO.js": "4616e356a00feb91ac1d3b562789e383aad12090bb8f2a54577b418c9c37c7b1",
+    "CodexScreen-CVAz-xJ9.js": "5403b2f7bfd7dde54cfb7bc6d031ede81310b6e9e3316b47a43083711a7917fa",
+    "createOrbScene-C2l53AmT.js": "5bf9501063e2c6f1b660e2be8cdd9e7ffb9bc3fde74c01fe8db90ec9a51e108d",
+    "GalleryScreen-G-xBd92X.js": "ca4ca4f43eb651f6b18a47fdc0de4222245dee38f6d7cabad8b510d67a1ebfd3",
+    "GpuStencilModesToPixi-Dl0UhtGz.js": "b0e6cfd4be2a343313da55f3b0b8bd0d40ccc9cd6dbd7fb48d0032f32308392a",
+    "index-Cfeiywdp.js": "0e6e32e0a56d45940c1fb58e75b9b4ba17992be655985b062335525f952fd64a",
+    "index-CxoJFVmM.css": "4b22a1abc29794a574c2b5dba62aeed15f5e72ff9fc4f2d67c68455e4b013d88",
+    "NumerologyScreen-C88Xh6qQ.js": "934810ed4a291d556e1a431782836529c76523fed86520e7dc53fa279751e6ab",
+    "Orb-Dxmbcpd_.js": "2bb400c88a204f8cad99f1f5c2b6ff901710e86aedc133028b96eaa035280e8f",
+    "RenderTargetSystem-2q8U_OCx.js": "c3e71b0d511a002bfb92ef6f1cf643a33e2983f3201215da85eadbf2eb5d2a40",
+    "source-DxUWpYz1.js": "e5ba55d5c2e189ebfbc9b6f89f01a3c32e819aea9e24cf98095ef9108663380e",
+    "TurningSky-B3F8aijR.js": "08af780ef67fc05bf00b11584acd2cfc475411a822a48e96ba438746814ac2db",
+    "WebGLRenderer-BoO3XkQv.js": "40d77460be44e877718bdcec8f53448dd8784c778ecfa87129277e12535abc08",
+    "WebGPURenderer-BEl7f39G.js": "0911d1995e48f58ee7636a2b5a31dffcfc4c2c06ef07fd0235b65378e7d8189e",
+    "webworkerAll-B1T5OJHi.js": "5629ecf7833fc519daee131fb965658c429415ce6dcfcf21af3e8a8813caedd4",
+    "WesternScreen-F6x6SCPa.js": "196b563b4d8080ed54594367009cdde65c7c203180317fc04c0890e9784b955c"
+  }
+}

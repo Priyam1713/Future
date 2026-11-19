@@ -14,10 +14,14 @@ export function BirthForm({
   onSubmit,
   busy,
   error,
+  chamber,
+  children,
 }: {
   onSubmit: (q: WesternInput) => void;
   busy: boolean;
   error: string;
+  chamber?: "vedic" | "bazi";
+  children?: React.ReactNode;
 }) {
   const [date, setDate] = useState(""),
     [time, setTime] = useState(""),
@@ -136,9 +140,9 @@ export function BirthForm({
       </label>
       {!known && (
         <p className="birth-warning" role="status">
-          This complete chart needs a known birth time. We won’t substitute noon
-          or invent an Ascendant or houses. You can return when you have a
-          recorded time.
+          {chamber
+            ? "A recorded birth time is required for this calculation."
+            : "This complete chart needs a known birth time. We won’t substitute noon or invent an Ascendant or houses. You can return when you have a recorded time."}
         </p>
       )}
       <div className="place-search">
@@ -274,35 +278,46 @@ export function BirthForm({
           </label>
         </div>
       )}
+      {children}
       <details className="birth-conventions">
         <summary>Chart conventions & repeated clock times</summary>
-        <p>
-          Tropical zodiac · modern psychological source components · traditional
-          rulership · ten apparent geocentric bodies. No direct placement or
-          aspect-pair predictions.
-        </p>
-        <label>
-          House system
-          <select
-            value={houses}
-            onChange={(e) => setHouses(e.target.value as Houses)}
-          >
-            {[
-              "whole-sign",
-              "equal",
-              "porphyry",
-              "placidus",
-              "regiomontanus",
-              "campanus",
-            ].map((h) => (
-              <option key={h}>{h}</option>
-            ))}
-          </select>
-        </label>
-        <p>
-          Whole-sign is the default. Quadrant systems reject the polar domain
-          without silently switching systems.
-        </p>
+        {chamber ? (
+          <p>
+            {chamber === "vedic"
+              ? "Lahiri 1956 sidereal convention, mean nodes and whole-sign houses. Latitude must be strictly within 66° north or south."
+              : "Li Chun sets the year, and solar terms set the months. Supported local years are 1901–2100."}
+          </p>
+        ) : (
+          <>
+            <p>
+              Tropical zodiac · modern psychological source components ·
+              traditional rulership · ten apparent geocentric bodies. No direct
+              placement or aspect-pair predictions.
+            </p>
+            <label>
+              House system
+              <select
+                value={houses}
+                onChange={(e) => setHouses(e.target.value as Houses)}
+              >
+                {[
+                  "whole-sign",
+                  "equal",
+                  "porphyry",
+                  "placidus",
+                  "regiomontanus",
+                  "campanus",
+                ].map((h) => (
+                  <option key={h}>{h}</option>
+                ))}
+              </select>
+            </label>
+            <p>
+              Whole-sign is the default. Quadrant systems reject the polar
+              domain without silently switching systems.
+            </p>
+          </>
+        )}
         <label>
           Repeated local time at a clock change
           <select value={fold} onChange={(e) => setFold(e.target.value)}>
@@ -316,7 +331,8 @@ export function BirthForm({
           </select>
         </label>
         <p>
-          Nonexistent times are rejected. Supported ephemeris epochs: 1850–2149.
+          Nonexistent times are rejected.{" "}
+          {chamber !== "bazi" && "Supported ephemeris epochs: 1850–2149."}
           Pinned IANA tzdata 2025.2.
         </p>
       </details>
@@ -338,7 +354,13 @@ export function BirthForm({
         type="submit"
         disabled={busy || !known || !confirmed}
       >
-        {busy ? "Calculating your sky…" : "Open my celestial chart"}{" "}
+        {busy
+          ? "Calculating…"
+          : chamber === "vedic"
+            ? "Open my sidereal charts"
+            : chamber === "bazi"
+              ? "Open my Four Pillars"
+              : "Open my celestial chart"}{" "}
         <span aria-hidden="true">✧</span>
       </button>
       <p className="birth-attribution">

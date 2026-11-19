@@ -23,6 +23,7 @@ from future.card_random import PROTOCOL
 from future.numerology import calculate, readings as number_readings
 from .western import WesternInput, WesternService, search_places
 from .turning import TransitInput, TransitRunner, natal_basis
+from . import chambers
 
 WEB = Path(__file__).parent / 'web' / 'dist'
 POSITIONS = ['What you carry', 'Where you stand', 'What to consider']
@@ -70,6 +71,10 @@ class NumberExplain(Explain):
 
 class WesternExplain(Explain):
     draw: WesternInput
+
+
+class ChamberExplain(Explain):
+    draw: chambers.Input
 
 
 def native(q: Draw):
@@ -181,6 +186,43 @@ def create_app(provider=None, signing_key=None, clock=time.time):
     def numbers(q: NumberInput):
         expiry = int(clock()) + 86400
         return dict(result=native_numbers(q), oracle_id=4, receipt=f'{expiry}.{signature(q, expiry)}')
+
+    @app.post('/api/chambers')
+    def chamber(q: chambers.Input):
+        result = chambers.read(q, western)
+        expiry = int(clock()) + 86400
+        return dict(result=result, snapshot=chambers.snapshot(result),
+                    receipt=f'{expiry}.{signature(q, expiry)}')
+
+    @app.post('/api/chambers/explain')
+    def chamber_explain(q: ChamberExplain):
+        try:
+            expiry, signed = q.receipt.split('.')
+            valid = clock() <= int(expiry) <= clock() + 86400 and hmac.compare_digest(signed, signature(q.draw, expiry))
+        except (ValueError, TypeError):
+            valid = False
+        if not valid:
+            raise HTTPException(403, 'This chamber receipt expired or changed. Start a fresh reading.')
+        if not cloud_slots.acquire(blocking=False):
+            raise HTTPException(429, 'Commentary is busy. Your native reading is still available.')
+        try:
+            sources = chambers.commentary_sources(chambers.read(q.draw, western))
+            prompt = ('Explain these supplied symbolic source excerpts gently. Keep their separate scopes. '
+                      'Use no new meanings, inferred personal facts, event forecasts or confidence scores. '
+                      'Return JSON {"themes":[{"id":"exact supplied ID","reflection":"up to 500 characters"}]} '
+                      'in supplied order. DATA: ' + json.dumps([dict(id=id_, text=text) for id_, text in sources]))
+            from workbench.gemini import generate
+            output, provenance = (provider or generate)(prompt)
+            rows = output.get('themes') if isinstance(output, dict) else None
+            if not isinstance(rows, list) or len(rows) != len(sources):
+                raise ValueError('Commentary did not match these source excerpts.')
+            for row, (source_id, _) in zip(rows, sources):
+                if (not isinstance(row, dict) or set(row) != {'id', 'reflection'} or row['id'] != source_id
+                        or not isinstance(row['reflection'], str) or not 1 <= len(row['reflection']) <= 500):
+                    raise ValueError('Commentary did not match these source excerpts.')
+            return dict(themes=rows, provenance=provenance, coverage='experimental_ai_commentary')
+        finally:
+            cloud_slots.release()
 
     @app.post('/api/western/places')
     def place_search(q: dict):

@@ -4,6 +4,7 @@ import type { Oracle } from "../hooks/useOracle";
 import { lazy, Suspense } from "react";
 import type { Card } from "../types";
 import { OrbPoster } from "../orb/OrbPoster";
+import { ROOMS } from "../chambers/contracts";
 import { OracleGallery } from "../gallery/OracleGallery";
 const Orb = lazy(() => import("../Orb"));
 const previewCard: Card = {
@@ -38,7 +39,7 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
           <p className="hero-description">
             Ancient symbols. Quiet patterns.
             <br />
-            Three open rooms in a universe of discovery.
+            Seven open rooms in a universe of discovery.
           </p>
           <nav className="room-index" aria-label="Open oracle rooms">
             <button onClick={begin}>
@@ -53,6 +54,17 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
               <span>03</span> Astrology
             </button>
           </nav>
+          <div className="new-room-links" aria-label="Four new chambers">
+            {Object.values(ROOMS).map((room) => (
+              <button
+                key={room.slug}
+                className="text-button"
+                onClick={() => oracle.navigate(room.slug)}
+              >
+                {room.name} <span aria-hidden="true">↗</span>
+              </button>
+            ))}
+          </div>
           <button
             className="collection-shortcut text-button"
             onClick={() => oracle.navigate("gallery")}

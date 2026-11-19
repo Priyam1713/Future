@@ -1,3 +1,4 @@
+import { oracleLabel } from "../chambers/contracts";
 import { useEffect, useRef, useState } from "react";
 import type { Oracle } from "../hooks/useOracle";
 import type { Chapter } from "./records";
@@ -188,7 +189,7 @@ export function CelestialBook({
                       <div>
                         {chapterTitle(c)}
                         <small>
-                          {c.snapshot.oracle === 1 ? "ASTROLOGY" : c.snapshot.oracle === 16 ? "TAROT" : "NUMEROLOGY"}
+                          {oracleLabel(c.snapshot.oracle).toUpperCase()}
                         </small>
                       </div>
                     </button>

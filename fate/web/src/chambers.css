@@ -1,0 +1,777 @@
+.chamber-vedic {
+  --chamber-ink: #101222;
+  --chamber-accent: #efcea0;
+  --chamber-soft: #b8b9d5;
+  --chamber-material: #24243d;
+  --object: url("/art/chamber-vedic-object.webp");
+}
+.chamber-bazi {
+  --chamber-ink: #101f19;
+  --chamber-accent: #f2d3af;
+  --chamber-soft: #bccebd;
+  --chamber-material: #1c382d;
+  --object: url("/art/chamber-bazi-object.webp");
+}
+.chamber-iching {
+  --chamber-ink: #241a12;
+  --chamber-accent: #ecd09c;
+  --chamber-soft: #e1cbb6;
+  --chamber-material: #3f2c1e;
+  --object: url("/art/chamber-iching-object.webp");
+}
+.chamber-runes {
+  --chamber-ink: #101b20;
+  --chamber-accent: #c4e6d9;
+  --chamber-soft: #b8c9c9;
+  --chamber-material: #253137;
+  --object: url("/art/chamber-runes-object.webp");
+}
+
+.chamber-room,
+.chamber-folio,
+.chamber-miniature {
+  background: var(--chamber-ink);
+  color: #f1e9db;
+}
+.chamber-room {
+  padding-bottom: 5rem;
+  overflow: clip;
+}
+.chamber-room h1,
+.chamber-room h2,
+.chamber-result h3 {
+  font-family: var(--serif, Georgia, serif);
+  font-weight: 400;
+}
+.chamber-room .eyebrow,
+.chamber-result .eyebrow {
+  color: var(--chamber-accent);
+}
+.chamber-hero {
+  position: relative;
+  min-height: clamp(25rem, 50vw, 43rem);
+  isolation: isolate;
+  display: grid;
+  align-items: end;
+}
+.chamber-hero picture,
+.chamber-hero img,
+.chamber-hero::after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.chamber-hero img {
+  object-fit: cover;
+  object-position: center 48%;
+}
+.chamber-hero picture {
+  z-index: -2;
+}
+.chamber-hero::after {
+  content: "";
+  z-index: -1;
+  background:
+    linear-gradient(90deg, #08090ad6, #08090a36 72%),
+    linear-gradient(0deg, var(--chamber-ink), transparent 84%);
+}
+.chamber-intro {
+  width: min(80rem, 100%);
+  margin: 0 auto;
+  padding: clamp(1.25rem, 5vw, 6rem);
+}
+.chamber-intro h1 {
+  margin: 0.3em 0 0.2em;
+  font-size: clamp(3rem, 8vw, 7.8rem);
+  max-width: 12ch;
+  line-height: 0.92;
+  color: var(--chamber-accent);
+}
+.chamber-intro p:not(.eyebrow) {
+  color: #f2e9dc;
+  max-width: 43ch;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+.chamber-intro .text-button {
+  color: #f3d9a9;
+  margin-bottom: 1.75rem;
+  min-height: 44px;
+}
+.chamber-room .birth-form {
+  width: min(46rem, 92%);
+  margin: 0 auto;
+  background: color-mix(
+    in srgb,
+    var(--chamber-material) 40%,
+    var(--chamber-ink)
+  );
+  border-color: #cab5874d;
+}
+.chamber-options {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #cfba8247;
+}
+.chamber-options legend {
+  color: var(--chamber-accent);
+  padding: 0 0.5rem;
+}
+.chamber-options p {
+  font-size: 0.85rem;
+  margin: 0;
+  color: var(--chamber-soft);
+}
+.chamber-start,
+.chamber-result {
+  width: min(68rem, calc(100% - 2.5rem));
+  margin: auto;
+}
+.chamber-start {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: clamp(1rem, 5vw, 4rem);
+  padding: 2rem 0;
+}
+.chamber-start h2,
+.chamber-result h3 {
+  font-size: clamp(2rem, 5vw, 3.45rem);
+  line-height: 1;
+  margin: 0.3em 0;
+  color: var(--chamber-accent);
+}
+.chamber-start p,
+.chamber-result p {
+  color: var(--chamber-soft);
+}
+.artifact-preview {
+  min-height: clamp(12rem, 29vw, 24rem);
+  background: var(--object) center / contain no-repeat;
+  filter: drop-shadow(0 15px 24px #0007);
+}
+.chamber-result {
+  scroll-margin-top: 1rem;
+  padding: 1.5rem 0 0;
+}
+.chamber-result:focus {
+  outline: none;
+}
+.chamber-switch,
+.graha-keys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1rem 0;
+}
+.chamber-switch button,
+.graha-keys button {
+  border: 1px solid #d1b88e48;
+  min-height: 44px;
+  border-radius: 2px;
+  background: var(--chamber-material);
+  color: #f3ebdd;
+  padding: 0.42rem 0.72rem;
+  font: inherit;
+  font-size: 0.81rem;
+}
+.chamber-switch button[aria-pressed="true"],
+.graha-keys button[aria-pressed="true"] {
+  border-color: var(--chamber-accent);
+  color: var(--chamber-accent);
+  box-shadow: inset 0 0 15px #e9d49824;
+}
+.chamber-switch button:disabled {
+  opacity: 0.55;
+}
+.chamber-depth {
+  margin-top: 1.1rem;
+  border-block-start: 1px solid #d1b88e55;
+  padding: 0.6rem 0;
+  text-align: left;
+}
+.chamber-depth summary {
+  color: var(--chamber-accent);
+  min-height: 44px;
+  cursor: pointer;
+  align-content: center;
+}
+.chamber-depth blockquote {
+  margin: 0 0 1rem;
+  padding: 0.45rem 1rem;
+  border-inline-start: 1px solid #cfb78c77;
+}
+.chamber-depth cite {
+  color: var(--chamber-soft);
+  font-size: 0.8rem;
+  font-style: normal;
+}
+.chamber-depth a {
+  color: var(--chamber-accent);
+  text-decoration: underline;
+}
+.chamber-depth label {
+  display: block;
+  margin: 1rem 0;
+}
+.chamber-depth input[type="checkbox"] {
+  accent-color: #d5b480;
+}
+.chamber-measure {
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  min-height: 1.5rem;
+}
+.chamber-save {
+  border-block: 1px solid #d1b88e56;
+  margin: 2.5rem 0 1rem;
+  padding: 1.2rem 0;
+}
+.chamber-save h3 {
+  font-size: 2rem;
+}
+.chamber-save button {
+  margin: 0.25rem 0.55rem 0.25rem 0;
+}
+.chamber-reset {
+  margin-top: 1.5rem;
+  min-height: 44px;
+  color: var(--chamber-accent);
+}
+.new-room-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.1rem;
+}
+.new-room-links button {
+  min-height: 44px;
+  color: #dfc58d;
+}
+
+.vedic-experience {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: 0 2.25rem;
+  align-items: center;
+}
+.vedic-dial {
+  position: relative;
+  aspect-ratio: 1;
+  isolation: isolate;
+  grid-column: 1;
+  grid-row: span 4;
+  max-width: 560px;
+  margin: auto;
+  width: 100%;
+  color: #e3bf7c;
+}
+.vedic-dial svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.vedic-dial text {
+  fill: #e8c884;
+  font-size: 16px;
+}
+.vedic-dial .dial-center {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  fill: #fae7bc;
+}
+.vedic-dial .dial-caption {
+  font-size: 13px;
+}
+.vedic-inlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 50%;
+  background:
+    var(--object) center / contain no-repeat,
+    radial-gradient(
+      circle,
+      #242041 0 37%,
+      #130f28 53%,
+      #a28047 61%,
+      #22223c 67%,
+      transparent 70%
+    );
+  filter: drop-shadow(0 15px 30px #0008);
+}
+[data-motion="active"] .vedic-inlay {
+  animation: chamber-orbit 100s linear infinite;
+}
+@keyframes chamber-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.graha-keys button span {
+  color: var(--gem);
+  display: block;
+  font-size: 1.15rem;
+}
+.moon-mansion {
+  padding: 1.1rem 0;
+  align-self: end;
+}
+.mansion-petals {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+.mansion-petals i {
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 1px solid #c7a66d;
+  transform: rotate(45deg);
+  background: #222344;
+}
+.mansion-petals .lit {
+  background: #ead09e;
+  box-shadow: 0 0 12px #e5b576aa;
+}
+.dasha-rail {
+  grid-column: 1/-1;
+  margin-top: 1.3rem;
+  border-block: 1px solid #b2966658;
+  padding: 1.4rem clamp(0.5rem, 3vw, 2rem);
+  background: linear-gradient(122deg, #201923, #17162e);
+}
+.dasha-rail ol {
+  padding-left: 1.55rem;
+  color: var(--chamber-soft);
+  line-height: 1.8;
+}
+
+.bazi-experience {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  gap: 2rem;
+  align-items: center;
+}
+.jade-rack {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(0.25rem, 1vw, 1rem);
+  padding: 0.8rem 0.35rem;
+  border-block: 1px solid #708e68aa;
+  background: linear-gradient(180deg, #101613, #281512 95%);
+  box-shadow: 0 14px 24px #0005;
+}
+.jade-rack button {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 0.35rem;
+  width: 100%;
+  height: clamp(11rem, 26vw, 19rem);
+  color: #dcebd1;
+  position: relative;
+  border: 1px solid #78966d75;
+  border-radius: 0.25rem;
+  background:
+    var(--object) center / 100% 100% no-repeat,
+    #1e3f34;
+  padding: 0.25rem;
+  box-shadow:
+    inset 0 0 16px #10181088,
+    0 10px 13px #0008;
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+.jade-rack button[aria-pressed="true"] {
+  border-color: #f2be91;
+  transform: translateY(-0.45rem);
+  box-shadow: 0 0 15px #b85a3777;
+}
+.jade-rack button[aria-pressed="true"]::after {
+  content: "";
+  position: absolute;
+  inset: 0.4rem;
+  pointer-events: none;
+  border: 1px solid #8f503c;
+  border-radius: 0.1rem;
+}
+.jade-rack button span {
+  font-size: clamp(0.6rem, 0.9vw, 0.78rem);
+  line-height: 1.15;
+  text-shadow: 0 2px 4px #07130b;
+}
+.jade-rack .pillar-label {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #f6d6ac;
+}
+.jade-rack .pillar-stem,
+.jade-rack .pillar-branch {
+  font-family: "Microsoft JhengHei", "Noto Serif CJK SC", "SimSun", serif;
+  font-size: clamp(1.85rem, 4vw, 3.5rem);
+}
+.jade-rack .pillar-branch {
+  opacity: 0.82;
+  color: #c9ddb5;
+}
+[data-motion="active"] .jade-rack button[aria-pressed="true"] .pillar-stem {
+  animation: jade-light 4.5s ease-in-out infinite;
+}
+@keyframes jade-light {
+  50% {
+    text-shadow: 0 0 11px #b7e1a9a0;
+  }
+}
+.jade-reading {
+  background: linear-gradient(120deg, #1a2b23, #13241d);
+  padding: 1.25rem;
+  border-inline-start: 2px solid #9a5a45;
+}
+
+.coin-experience {
+  margin: auto;
+  max-width: 46rem;
+}
+.ink-board {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: clamp(0.75rem, 4vw, 3rem);
+  align-items: center;
+  padding: clamp(1rem, 4vw, 2.8rem);
+  background: radial-gradient(
+    ellipse at 45% 35%,
+    #f4dfaf,
+    #d8b780 70%,
+    #a78255
+  );
+  color: #342317;
+  border: 1px solid #bc9761;
+  box-shadow:
+    inset 0 0 30px #8c58274d,
+    0 20px 32px #07040280;
+}
+.ink-caption .eyebrow,
+.ink-caption h3 {
+  color: #3b2518;
+}
+.hexagram {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: clamp(0.35rem, 1.3vw, 0.65rem);
+  min-width: 0;
+}
+.hex-line {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  height: clamp(0.58rem, 1.7vw, 1rem);
+  align-items: stretch;
+  transition: gap 0.34s ease;
+  gap: 0;
+}
+.hex-line span {
+  background: linear-gradient(#493226, #211711);
+  box-shadow: 0 2px 1px #69492766;
+}
+.hex-line[data-state="yin"] {
+  gap: 16%;
+}
+.hex-line[data-state="hidden"] {
+  gap: 10%;
+  opacity: 0.21;
+}
+.hex-line[data-state="hidden"] span {
+  background: transparent;
+  border: 1px solid #634e3b;
+  box-shadow: none;
+}
+.hex-line[data-moving="true"] span {
+  background: linear-gradient(#963d26, #64271c);
+}
+.hex-line i {
+  position: absolute;
+  right: -1.1rem;
+  top: -0.25rem;
+  font-size: 0.8rem;
+  color: #842a15;
+}
+.three-coins {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+  margin: 1rem auto;
+  perspective: 650px;
+}
+.coin {
+  display: grid;
+  place-items: center;
+  width: clamp(3.4rem, 10vw, 5.4rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    var(--object) center / contain no-repeat,
+    radial-gradient(circle, #987341, #5f4026 70%, transparent 72%);
+  color: #fff0c6;
+  font:
+    1.15rem Georgia,
+    serif;
+  text-shadow: 0 2px 3px #332215;
+}
+.coin-ritual-area {
+  text-align: center;
+}
+[data-motion="active"] .coin.tossed {
+  animation: coin-toss 0.5s var(--coin-delay) both
+    cubic-bezier(0.15, 0.72, 0.3, 1);
+}
+@keyframes coin-toss {
+  0% {
+    transform: translateY(0) rotateY(0);
+  }
+  35% {
+    transform: translateY(-30%) rotateY(135deg);
+  }
+  72% {
+    transform: translateY(-7%) rotateY(300deg);
+  }
+  100% {
+    transform: translateY(0) rotateY(360deg);
+  }
+}
+.chamber-quote {
+  font-family: var(--serif, Georgia, serif);
+  font-size: clamp(1.35rem, 3vw, 2.3rem);
+  color: var(--chamber-accent);
+  padding: 1rem 0;
+  border-block: 1px solid #c7a3776c;
+  margin: 1.3rem 0;
+}
+
+.rune-experience {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: 1rem 2rem;
+  align-items: center;
+}
+.rune-bed {
+  isolation: isolate;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: clamp(13rem, 26vw, 24rem);
+  background: radial-gradient(ellipse, #2f493e, #102426 65%, #111a21 81%);
+  border-bottom: 1px solid #668d80aa;
+  perspective: 900px;
+}
+.rune-mist {
+  position: absolute;
+  z-index: -1;
+  inset: 20% 0 0;
+  background:
+    radial-gradient(ellipse at 37% 42%, #9bcab02d, transparent 60%),
+    radial-gradient(ellipse at 68% 62%, #8aabc62a, transparent 63%);
+}
+[data-motion="active"] .rune-mist {
+  animation: stone-mist 8s ease-in-out infinite alternate;
+}
+@keyframes stone-mist {
+  to {
+    transform: translate3d(4%, -12%, 0) scale(1.06);
+    opacity: 0.45;
+  }
+}
+.rune-stone {
+  display: grid;
+  place-content: center;
+  gap: 0.3rem;
+  flex: 1 1 0;
+  max-width: 10rem;
+  aspect-ratio: 0.91;
+  color: #e2f0e3;
+  text-align: center;
+  border: 0;
+  padding: 0.2rem;
+  background:
+    var(--object) center / contain no-repeat,
+    radial-gradient(ellipse, #45574f, #232929 60%, transparent 70%);
+  filter: drop-shadow(0 8px 7px #000a);
+}
+.rune-stone span:last-child {
+  font: inherit;
+  font-size: 0.69rem;
+  text-shadow: 0 2px 3px #010c09;
+}
+.rune-incision {
+  font-family: "Segoe UI Historic", "Noto Sans Runic", serif;
+  font-size: clamp(1.6rem, 4.5vw, 3.6rem);
+  text-shadow:
+    0 2px 1px #092320,
+    0 0 14px #8eebc479;
+}
+.rune-stone[aria-pressed="true"] {
+  filter: drop-shadow(0 0 8px #7eccad7a);
+}
+[data-motion="active"] .rune-stone.revealed {
+  animation: stone-open 0.55s ease-out both;
+}
+@keyframes stone-open {
+  from {
+    transform: rotateX(70deg) translateY(-0.8rem);
+  }
+  to {
+    transform: rotateX(0);
+  }
+}
+.runic-theme {
+  color: var(--chamber-accent) !important;
+  font-size: 1.2rem;
+}
+.rune-reading {
+  padding: 0.9rem 1rem;
+  border-inline-start: 1px solid #6d9f8c98;
+}
+
+.chamber-folio {
+  padding: 0.9rem;
+  margin: 0;
+}
+.chamber-folio .folio-heading h2 {
+  color: var(--chamber-accent);
+}
+.chamber-folio .chamber-result {
+  width: 100%;
+}
+.chamber-folio .vedic-experience,
+.chamber-folio .bazi-experience,
+.chamber-folio .rune-experience,
+.chamber-miniature .vedic-experience,
+.chamber-miniature .bazi-experience,
+.chamber-miniature .rune-experience {
+  display: block;
+}
+.chamber-miniature {
+  display: grid;
+  min-height: 7rem;
+  place-items: center;
+  width: min(19rem, 100%);
+  margin: auto;
+  padding: 0.65rem;
+}
+.chamber-miniature > div {
+  width: 100%;
+}
+.chamber-miniature .jade-rack button {
+  height: 8rem;
+}
+.chamber-miniature .jade-rack button span {
+  font-size: 1rem;
+}
+.chamber-miniature .jade-rack button .pillar-label,
+.chamber-miniature .jade-rack button span:last-child {
+  font-size: 0.5rem;
+}
+.chamber-miniature .ink-board {
+  display: block;
+}
+.chamber-miniature .rune-bed {
+  min-height: 7rem;
+}
+.chamber-miniature .rune-incision {
+  font-size: 1.65rem;
+}
+
+@media (max-width: 740px) {
+  .chamber-hero {
+    min-height: 26rem;
+  }
+  .chamber-hero::after {
+    background: linear-gradient(0deg, var(--chamber-ink) 3%, #07080a55 92%);
+  }
+  .chamber-intro {
+    padding: 1.1rem 1.25rem 2rem;
+  }
+  .chamber-start,
+  .vedic-experience,
+  .bazi-experience,
+  .rune-experience {
+    display: block;
+  }
+  .chamber-start {
+    padding: 0.25rem 0 2rem;
+  }
+  .artifact-preview {
+    min-height: 9rem;
+  }
+  .chamber-result {
+    padding-top: 0.65rem;
+  }
+  .vedic-dial {
+    margin: auto;
+  }
+  .moon-mansion,
+  .jade-reading,
+  .rune-reading {
+    margin-top: 1.15rem;
+  }
+  .ink-board {
+    grid-template-columns: 1fr 0.72fr;
+    padding: 1rem 1.4rem;
+  }
+  .ink-caption h3 {
+    font-size: 1.65rem;
+  }
+  .chamber-room {
+    padding-bottom: 6rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chamber-room *,
+  .chamber-folio * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+[data-motion="still"] .chamber-result * {
+  animation: none !important;
+  transition: none !important;
+}
+
+[data-motion="active"] .mansion-reveal {
+  animation: mansion-appear 0.45s ease-out both;
+}
+@keyframes mansion-appear {
+  from {
+    opacity: 0.45;
+    transform: translateY(0.35rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rune-stone:active {
+  transform: translateY(2px) scale(0.98);
+}
+[data-motion="active"] .hex-line[data-value] span {
+  animation: ink-settle 0.5s ease-out both;
+}
+@keyframes ink-settle {
+  from {
+    opacity: 0.35;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.judgment-credit {
+  margin-top: 1.6rem;
+}
+.judgment-credit + .chamber-quote {
+  margin-top: 0.45rem;
+}

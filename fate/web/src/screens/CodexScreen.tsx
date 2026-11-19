@@ -1,3 +1,4 @@
+import { oracleLabel } from "../chambers/contracts";
 import { useEffect, useRef, useState } from "react";
 import type { Oracle } from "../hooks/useOracle";
 import { CelestialBook } from "../codex/CelestialBook";
@@ -132,12 +133,8 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
                     />
                     <span>
                       {String(i + 1).padStart(2, "0")} ·{" "}
-                      {chapter.snapshot.oracle === 1
-                        ? "Astrology"
-                        : chapter.snapshot.oracle === 16
-                          ? "Tarot"
-                          : "Numerology"}{" "}
-                      — {chapterTitle(chapter)}
+                      {oracleLabel(chapter.snapshot.oracle)} —{" "}
+                      {chapterTitle(chapter)}
                     </span>
                   </label>
                 ))}
@@ -162,14 +159,16 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
           Only Save to this device writes a chapter. It keeps the selected Tarot
           cards and orientations, Numerology’s Expression, Personal Year and
           Life Path numbers, or Western Astrology's chart geometry or dated
-          transit contacts/native samples, plus the source edition, chapter
-          identifier and save time. Transit window dates are retained by
-          explicit choice. Names, birth dates/times, Numerology target dates,
-          birthplace coordinates/timezone/place labels, original questions,
-          calculation traces, replay seeds and Gemini commentary are excluded.
-          Chart geometry remains personal and can reveal information about a
-          birth moment. Exported Codex copies use this same minimal scope with
-          source references.
+          transit contacts/native samples, or the four chamber snapshots
+          (sidereal geometry and UTC period days, pillar IDs, hexagram lines, or
+          rune IDs), plus the source edition, chapter identifier and save time.
+          Transit window dates are retained by explicit choice. Names, birth
+          dates/times, Numerology target dates, birthplace
+          coordinates/timezone/place labels, original questions, calculation
+          traces, replay seeds and Gemini commentary are excluded. Chart
+          geometry remains personal and can reveal information about a birth
+          moment. Exported Codex copies use this same minimal scope with source
+          references.
         </p>
         <p>
           Records are unencrypted in this browser profile at this site address.

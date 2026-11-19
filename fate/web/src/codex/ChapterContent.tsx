@@ -8,8 +8,19 @@ import { snapshotGeometry, degree } from "../astrology/contracts";
 import { restoreTransit } from "../turning/snapshot";
 import { TimeInstrument } from "../turning/TimeInstrument";
 import { TransitChapter } from "../turning/TransitChapter";
+import { isChamberSnapshot, ROOMS } from "../chambers/contracts";
+import { ChamberChapter, Instrument } from "../chambers/ChamberScreen";
 export function ChapterIllustration({ chapter }: { chapter: Chapter }) {
   const s = chapter.snapshot;
+  if (isChamberSnapshot(s))
+    return (
+      <div
+        className={"chamber-miniature chamber-" + ROOMS[s.oracle].slug}
+        data-motion="still"
+      >
+        <Instrument snapshot={s} compact />
+      </div>
+    );
   if (s.profile === "turning-sky-v1")
     return (
       <div className="codex-chart-study">
@@ -61,6 +72,10 @@ export function ChapterContent({
   chapter: Chapter;
   index: number;
 }) {
+  if (isChamberSnapshot(chapter.snapshot))
+    return (
+      <ChamberChapter key={chapter.id} s={chapter.snapshot} index={index} />
+    );
   const rows = evidenceFor(chapter.snapshot);
   if (chapter.snapshot.profile === "turning-sky-v1")
     return (

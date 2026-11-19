@@ -11,15 +11,19 @@ import "./gallery.css";
 import "./codex.css";
 import "./astrology.css";
 import "./turning.css";
+import "./chambers.css";
+import { chamberId } from "./chambers/contracts";
 import { lazy, Suspense } from "react";
 const WesternScreen = lazy(() => import("./screens/WesternScreen"));
 const NumerologyScreen = lazy(() => import("./screens/NumerologyScreen"));
 const CodexScreen = lazy(() => import("./screens/CodexScreen"));
 const GalleryScreen = lazy(() => import("./screens/GalleryScreen"));
+const ChamberScreen = lazy(() => import("./chambers/ChamberScreen"));
 function App() {
   const oracle = useOracle();
   const { screen, reduced, paused, dialog, sound, navigate, skipToContent } =
     oracle;
+  const chamber = chamberId(screen);
   return (
     <div className={`app ${reduced || paused ? "still" : ""}`}>
       <a
@@ -93,7 +97,17 @@ function App() {
         ))}
       </nav>
       <main id="main" tabIndex={-1}>
-        {screen === "explore" ? (
+        {chamber ? (
+          <Suspense
+            fallback={
+              <p className="scope-note" role="status">
+                Opening the chamber…
+              </p>
+            }
+          >
+            <ChamberScreen key={chamber} id={chamber} oracle={oracle} />
+          </Suspense>
+        ) : screen === "explore" ? (
           <ExploreScreen oracle={oracle} />
         ) : screen === "codex" ? (
           <Suspense

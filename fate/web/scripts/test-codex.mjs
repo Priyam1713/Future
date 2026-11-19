@@ -543,3 +543,33 @@ test("Old Codex editions remain readable beside the new dated chapter", () => {
   r.deleteChapter(store, c.id);
   assert.deepEqual(r.readDocument(store).chapters, [a, b]);
 });
+test("Four Chambers snapshots reject private extras, false hexagram transformations and unsupported values", () => {
+  const bazi = { oracle: 3, profile: "civil-zi23", pairs: [0, 1, 2, 3] };
+  const coins = {
+    oracle: 18,
+    profile: "legge-1882-scan-text-v1",
+    values: [7, 7, 7, 7, 7, 7],
+    figures: [1, 1],
+  };
+  const rune = {
+    oracle: 19,
+    profile: "elder24-page-facts-snapshot-v1",
+    runes: ["rune-01"],
+  };
+  for (const record of [bazi, coins, rune]) {
+    assert.equal(r.validSnapshot(record), true);
+    assert.equal(
+      r.validSnapshot({ ...record, birth: "1990-07-15T14:30:00" }),
+      false,
+    );
+    const chapter = r.chapterFor({}, record);
+    assert.equal(chapter.reference, "fate-four-chambers-v1");
+  }
+  assert.equal(r.validSnapshot({ ...bazi, profile: ["civil-zi23"] }), false);
+  assert.equal(r.validSnapshot({ ...bazi, pairs: [0, 1, 2, 60] }), false);
+  assert.equal(r.validSnapshot({ ...coins, figures: [1, 2] }), false);
+  assert.equal(
+    r.validSnapshot({ ...rune, runes: ["rune-01", "rune-01", "rune-01"] }),
+    false,
+  );
+});

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { Oracle } from "../hooks/useOracle";
 import inventory from "./inventory.json";
+import { isChamberId, ROOMS } from "../chambers/contracts";
 import { EXPERIENCES } from "../experiences/contracts";
 import { NumberDial } from "../numerology/NumberDial";
 
@@ -262,7 +263,11 @@ export function OracleGallery({
                             m.id === 16
                               ? oracle.begin()
                               : oracle.navigate(
-                                  m.id === 1 ? "western" : "numerology",
+                                  isChamberId(m.id)
+                                    ? ROOMS[m.id].slug
+                                    : m.id === 1
+                                      ? "western"
+                                      : "numerology",
                                 )
                           }
                         >

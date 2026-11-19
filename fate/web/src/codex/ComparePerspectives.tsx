@@ -1,3 +1,4 @@
+import { oracleLabel } from "../chambers/contracts";
 import { compareChapters } from "./compare";
 import { chapterTitle, type Evidence } from "./reference";
 import type { Chapter } from "./records";
@@ -52,20 +53,12 @@ export function ComparePerspectives({
       </p>
       <div className="comparison-titles">
         <span>
-          {left.snapshot.oracle === 1
-            ? "ASTROLOGY"
-            : left.snapshot.oracle === 16
-              ? "TAROT"
-              : "NUMEROLOGY"}{" "}
-          · {chapterTitle(left)}
+          {oracleLabel(left.snapshot.oracle).toUpperCase()} ·{" "}
+          {chapterTitle(left)}
         </span>
         <span>
-          {right.snapshot.oracle === 1
-            ? "ASTROLOGY"
-            : right.snapshot.oracle === 16
-              ? "TAROT"
-              : "NUMEROLOGY"}{" "}
-          · {chapterTitle(right)}
+          {oracleLabel(right.snapshot.oracle).toUpperCase()} ·{" "}
+          {chapterTitle(right)}
         </span>
       </div>
       <div
@@ -149,11 +142,7 @@ export function ComparePerspectives({
         ].map((side, i) => (
           <div key={i}>
             <p className="eyebrow">
-              {side.chapter.snapshot.oracle === 1
-                ? "ASTROLOGY"
-                : side.chapter.snapshot.oracle === 16
-                  ? "TAROT"
-                  : "NUMEROLOGY"}
+              {oracleLabel(side.chapter.snapshot.oracle).toUpperCase()}
             </p>
             <p>
               {side.groups.length
