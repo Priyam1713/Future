@@ -10,8 +10,12 @@ await build({
     "src/codex/records.ts",
     "src/codex/reference.ts",
     "src/codex/compare.ts",
+    "src/astrology/contracts.ts",
+    "src/astrology/geometry.ts",
+    "src/astrology/source.ts",
   ],
   outdir: "../../tmp/codex-tests",
+  entryNames: "[name]",
   outExtension: { ".js": ".mjs" },
   bundle: true,
   platform: "node",
@@ -257,4 +261,110 @@ test("source alternatives are retained and excluded from automatic matching", ()
   assert(result.alternatives[0].quote.includes(" OR "));
   assert.equal(result.echoes.length, 0);
   assert(compare.compareChapters(chapter(number), chapter(number)).samePattern);
+});
+
+const astro = await import(
+  pathToFileURL(resolve("../../tmp/codex-tests/contracts.mjs"))
+);
+const sources = await import(
+  pathToFileURL(resolve("../../tmp/codex-tests/source.mjs"))
+);
+const geometry = await import(
+  pathToFileURL(resolve("../../tmp/codex-tests/geometry.mjs"))
+);
+const nativeWestern = JSON.parse(
+  readFileSync("../evidence/western-engine.json", "utf8"),
+).native;
+test("Western snapshots preserve exact geometry while excluding all raw birth and provider fields", () => {
+  const s = astro.westernSnapshot({
+    ...nativeWestern,
+    gemini: "PRIVATE_SENTINEL",
+  });
+  assert(r.validSnapshot(s));
+  const c = r.chapterFor(nativeWestern, s);
+  assert(r.validChapter(c));
+  assert.equal(c.reference, "fate-western-reference-v1");
+  const g = astro.snapshotGeometry(s);
+  assert.deepEqual(g.angles, nativeWestern.angles);
+  assert.deepEqual(g.house_cusps, nativeWestern.house_cusps);
+  assert.deepEqual(g.aspects, nativeWestern.aspects);
+  for (const n of astro.BODY_NAMES)
+    assert.deepEqual(g.planets[n], {
+      longitude: nativeWestern.planets[n].longitude,
+      retrograde: nativeWestern.planets[n].retrograde,
+      house: nativeWestern.planets[n].house,
+    });
+  const encoded = JSON.stringify(c);
+  for (const v of [
+    "local",
+    "utc",
+    "birth",
+    "latitude",
+    "longitude",
+    "zone",
+    "receipt",
+    "gemini",
+    "PRIVATE_SENTINEL",
+  ])
+    assert(!encoded.includes('"' + v + '"'));
+  const store = new Memory();
+  assert.equal(store.writes, 0);
+  r.saveChapter(store, c);
+  assert.deepEqual(r.readDocument(store).chapters, [c]);
+});
+test("Western archived source components equal native composition and cannot leak into old chapter editions", () => {
+  const s = astro.westernSnapshot(nativeWestern);
+  const rows = sources.sourcePlacements(astro.snapshotGeometry(s));
+  for (const row of rows)
+    assert.deepEqual(
+      row.components,
+      nativeWestern.reading.placements.find((p) => p.planet === row.planet)
+        .components,
+    );
+  assert.deepEqual(rows, nativeWestern.reading.placements);
+  const c = r.chapterFor(nativeWestern, s);
+  const exported = ref.exportChapters([c]);
+  assert(
+    exported.chapters[0].source_readings.every(
+      (r) => r.sourceId && r.wording && r.locator,
+    ),
+  );
+  assert.equal(r.validChapter({ ...c, reference: r.REFERENCE }), false);
+  assert.equal(r.validSnapshot({ ...s, birth: nativeWestern.birth }), false);
+  for (const mutate of [
+    (x) => (x.planets[0][0] = 360),
+    (x) => (x.planets[1][2] = 13),
+    (x) => (x.planets[0][1] = "true"),
+    (x) => x.angles.push(0),
+    (x) => x.cusps.pop(),
+    (x) => (x.aspects[0].bodies[0] = "Invented"),
+    (x) => (x.aspects[0].private = "birth"),
+  ]) {
+    const bad = structuredClone(s);
+    mutate(bad);
+    assert.equal(r.validSnapshot(bad), false);
+  }
+});
+test("Chart projection aligns the actual Ascendant and preserves relative ecliptic longitudes", () => {
+  assert(Math.abs(geometry.point(123, 200, 123).x - 100) < 1e-9);
+  assert(Math.abs(geometry.point(123, 200, 123).y - 300) < 1e-9);
+  assert(Math.abs(geometry.point(213, 200, 123).x - 300) < 1e-9);
+  assert(Math.abs(geometry.point(213, 200, 123).y - 500) < 1e-9);
+  // For this independently defined near-meridian fixture, MC is above ASC.
+  const mc = geometry.point(nativeWestern.angles.midheaven, 200, nativeWestern.angles.ascendant);
+  assert(mc.y < 300);
+  const a = geometry.point(359, 180, 100),
+    b = geometry.point(-1, 180, 100);
+  assert(Math.hypot(a.x - b.x, a.y - b.y) < 1e-9);
+});
+test("Cross-oracle comparisons cite Western components without adding unsupported planet meanings", () => {
+  const s = astro.westernSnapshot(nativeWestern),
+    c = r.chapterFor(nativeWestern, s),
+    result = compare.compareChapters(c, chapter(number));
+  assert(result.leftEvidence.every((e) => e.sourceId && e.wording));
+  assert(!("score" in result));
+  assert(!("probability" in result));
+  assert(
+    !result.leftEvidence.some((e) => /Venus|Uranus|Neptune/.test(e.label)),
+  );
 });

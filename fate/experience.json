@@ -1,6 +1,6 @@
 {
-  "id": "fate-living-codex-v3",
-  "block": "03 · The Living Codex",
+  "id": "fate-astral-observatory-v4",
+  "block": "04 · The Astral Observatory",
   "capability": "symbolic_reading",
   "engine": "future.tarot.read",
   "text_profile": "waite-1922-text-v1",
@@ -62,7 +62,7 @@
       "Renderer-derived static poster without UI text",
       "Opt-in audio, quieter defaults and independent levels"
     ],
-    "persistence": "Native inputs/results remain in memory unless the visitor explicitly exports them. Save to this device persists only allowlisted card selections or core numbers, source edition, random chapter ID and save time. No names, entered dates, questions, traces, seeds or Gemini commentary in Codex storage.",
+    "persistence": "Explicit local saves only: versioned card selections, core numbers or Western chart geometry; no raw birth datetime, coordinates, timezone, names, questions, traces, replay seeds or Gemini commentary. Geometry itself remains personal.",
     "rendering": {
       "normal_target_hz": 60,
       "tiers": [
@@ -90,7 +90,7 @@
     "multiplayer",
     "Arcade",
     "monetization",
-    "consumer journeys beyond Tarot and Numerology"
+    "consumer journeys beyond Tarot, Numerology and Western Astrology"
   ],
   "art_rights": {
     "pack": "User supplied Downloads/FATE-asset-pack-01.zip; original procedural artwork and synthesized audio per included README",
@@ -98,12 +98,13 @@
     "fonts": "Self-hosted Cormorant Garamond and Inter; SIL OFL licenses and source URLs bundled",
     "generated": "Original FATE back, nebula, brass dial and observatory hall made with built-in image_gen; exact prompts and source PNGs retained under design/. No baked UI. Orb poster extracted from actual renderer. Block 03 original illustrated Codex cover has a separately recorded source PNG and exact prompt; binding, runtime title, counts, paper, source chapters, moving light and turns are independent layers."
   },
-  "scope": "Two unchanged native oracle engines, a 54-technique consumer Gallery, and an explicitly saved local personal Codex. Source-based comparison is editorial, with no empirical prediction or agreement certification.",
+  "scope": "Three unchanged native oracle engines, a 54-technique consumer Gallery and an explicitly saved local personal Codex. Source-based comparison is editorial, with no empirical prediction or agreement certification.",
   "technique_ids": [
+    1,
     4,
     16
   ],
-  "supported_scope": "The existing supported object describes Tarot; Numerology and Gallery have separate scopes below.",
+  "supported_scope": "The existing supported object describes Tarot; Numerology, Western Astrology and Gallery have separate scopes below.",
   "gallery": {
     "inventory": "knowledge/inventory.json",
     "projection": "web/src/gallery/inventory.json",
@@ -117,6 +118,7 @@
       48
     ],
     "available": [
+      1,
       4,
       16
     ],
@@ -170,7 +172,7 @@
   },
   "codex": {
     "supported": [
-      "Explicit save from completed Tarot/Numerology readings",
+      "Explicit save from completed Tarot/Numerology/Western Astrology readings",
       "Reopen saved source chapters after refresh at the same site/browser profile",
       "Individual deletion and all-Codex deletion with in-product confirmation",
       "JSON export of one/all chapters with source references",
@@ -212,18 +214,24 @@
       "letter tokens",
       "replay seeds",
       "Gemini commentary",
-      "comparison selections"
+      "comparison selections",
+      "birth time",
+      "coordinates",
+      "timezone",
+      "place labels",
+      "signed receipts"
     ],
     "privacy_limits": [
       "Unencrypted browser-profile storage; other profile users can read/edit it",
       "Private browsing, clearing data, quota or policy can erase/block records",
       "No accounts, sync, automatic backup or import UI",
       "App and artwork must be available to reopen; resource requests still reach the host",
-      "Simultaneous writes from separate tabs can conflict; export is the independent backup"
+      "Simultaneous writes from separate tabs can conflict; export is the independent backup",
+      "Derived chart geometry can reveal information about a birth moment; saving still requires explicit choice. Larger chart records may reach the size cap before 50 chapters."
     ],
     "comparison": {
       "vocabulary": "fate-source-language-v1",
-      "method": "Explicit lexical editorial categories over immutable source glosses and direct Numerology summaries. Display exact cited source phrases, common wording and separate emphases. OR alternatives excluded from automatic matching.",
+      "method": "Explicit lexical editorial categories over immutable Tarot glosses, direct Numerology summaries and separately documented Western source components; no combined placement synthesis. Exact citations and source alternatives preserved.",
       "unsupported": [
         "agreement/confidence scores",
         "cross-engine probabilities",
@@ -233,6 +241,64 @@
         "automatic LLM synthesis"
       ]
     },
-    "art_provenance": "design/block03-artwork.json"
+    "art_provenance": "design/block03-artwork.json",
+    "western_fields": [
+      "oracle",
+      "profile",
+      "house system",
+      "ten planetary longitudes/retrograde flags/houses",
+      "Ascendant/Midheaven",
+      "twelve cusps",
+      "major aspects"
+    ]
+  },
+  "western": {
+    "technique_id": 1,
+    "engine": "future.natal.chart + future.core_readings.placements",
+    "supported": {
+      "dates": "1850–2149, native UTC/TT boundaries enforced",
+      "required_inputs": [
+        "recorded local birth datetime",
+        "explicit latitude/longitude",
+        "IANA timezone",
+        "checked birthplace"
+      ],
+      "zodiac": "tropical",
+      "tradition": "modern psychological",
+      "rulership": "traditional",
+      "houses": [
+        "whole-sign",
+        "equal",
+        "porphyry",
+        "placidus",
+        "regiomontanus",
+        "campanus"
+      ],
+      "bodies": 10,
+      "aspects": [
+        0,
+        60,
+        90,
+        120,
+        180
+      ],
+      "source_scope": "32 frozen source records: separate Sun/Moon/Mercury symbols, 12 sign themes, 12 house topics and five general aspect themes. No documented combined placement or direct aspect-pair readings. Ascendant is calculated geometry with a separately labeled sign theme.",
+      "timezone": "native pinned tzdata 2025.2; DST gaps rejected; ambiguous times require explicit first/second occurrence",
+      "places": "Bundled GeoNames cities15000 projection (CC BY 4.0); explicit selection/inspection; manual exact coordinates and IANA zone supported"
+    },
+    "experimental": [
+      "Separate consent-controlled Gemini source-component commentary, original birth details excluded from prompt",
+      "Local browser performance emulation, not physical-device certification"
+    ],
+    "unsupported": [
+      "unknown or invented birth time",
+      "automatic geolocation or city selection",
+      "sidereal zodiac",
+      "polar quadrant fallback",
+      "events, confidence scores, unsupported outer-planet meanings",
+      "automatic personal data persistence"
+    ],
+    "saved_source_edition": "fate-western-reference-v1",
+    "art": "Owner-supplied FATE Western Observatory Art 01; independent calculated SVG geometry"
   }
 }

@@ -1,12 +1,18 @@
 import type { Result } from "../types";
 import type { NumberResult } from "../experiences/contracts";
 import { DECK } from "../artwork/registry";
+import {
+  BODY_NAMES,
+  WESTERN_REFERENCE,
+  type WesternSnapshot,
+} from "../astrology/contracts";
 
 export const STORAGE_KEY = "fate.codex.v1";
 export const REFERENCE = "fate-codex-reference-v1";
 export const MAX_CHAPTERS = 50;
 const MAX_LENGTH = 65536;
 export type Snapshot =
+  | WesternSnapshot
   | {
       oracle: 16;
       profile: "waite-1922-text-v1";
@@ -23,7 +29,7 @@ export type Snapshot =
 export interface Chapter {
   id: string;
   savedAt: string;
-  reference: typeof REFERENCE;
+  reference: typeof REFERENCE | typeof WESTERN_REFERENCE;
   snapshot: Snapshot;
 }
 export interface CodexDocument {
@@ -52,6 +58,82 @@ function core(value: unknown) {
 }
 export function validSnapshot(s: unknown): s is Snapshot {
   if (!object(s)) return false;
+  if (s.oracle === 1) {
+    const longitude = (v: unknown) =>
+      typeof v === "number" && Number.isFinite(v) && v >= 0 && v < 360;
+    if (
+      !keys(s, [
+        "oracle",
+        "profile",
+        "houses",
+        "planets",
+        "angles",
+        "cusps",
+        "aspects",
+      ]) ||
+      s.profile !== "modern-tropical-v1" ||
+      ![
+        "whole-sign",
+        "equal",
+        "porphyry",
+        "placidus",
+        "regiomontanus",
+        "campanus",
+      ].includes(String(s.houses))
+    )
+      return false;
+    if (
+      !Array.isArray(s.planets) ||
+      s.planets.length !== 10 ||
+      !s.planets.every(
+        (p) =>
+          Array.isArray(p) &&
+          p.length === 3 &&
+          longitude(p[0]) &&
+          typeof p[1] === "boolean" &&
+          Number.isInteger(p[2]) &&
+          p[2] >= 1 &&
+          p[2] <= 12,
+      )
+    )
+      return false;
+    if (
+      !Array.isArray(s.angles) ||
+      s.angles.length !== 2 ||
+      !s.angles.every(longitude) ||
+      !Array.isArray(s.cusps) ||
+      s.cusps.length !== 12 ||
+      !s.cusps.every(longitude)
+    )
+      return false;
+    return (
+      Array.isArray(s.aspects) &&
+      s.aspects.length <= 45 &&
+      s.aspects.every(
+        (a) =>
+          object(a) &&
+          keys(a, ["bodies", "angle", "separation", "orb"]) &&
+          Array.isArray(a.bodies) &&
+          a.bodies.length === 2 &&
+          a.bodies.every(
+            (n) =>
+              typeof n === "string" &&
+              (BODY_NAMES as readonly string[]).includes(n),
+          ) &&
+          a.bodies[0] !== a.bodies[1] &&
+          [0, 60, 90, 120, 180].includes(Number(a.angle)) &&
+          typeof a.angle === "number" &&
+          typeof a.separation === "number" &&
+          Number.isFinite(a.separation) &&
+          a.separation >= 0 &&
+          a.separation <= 180 &&
+          typeof a.orb === "number" &&
+          Number.isFinite(a.orb) &&
+          a.orb >= 0 &&
+          a.orb <= 8,
+      )
+    );
+  }
   if (s.oracle === 16) {
     if (
       !keys(s, ["oracle", "profile", "spread", "cards"]) ||
@@ -94,8 +176,8 @@ export function validChapter(c: unknown): c is Chapter {
     typeof c.savedAt === "string" &&
     /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/.test(c.savedAt) &&
     Number.isFinite(Date.parse(c.savedAt)) &&
-    c.reference === REFERENCE &&
-    validSnapshot(c.snapshot)
+    validSnapshot(c.snapshot) &&
+    c.reference === (c.snapshot.oracle === 1 ? WESTERN_REFERENCE : REFERENCE)
   );
 }
 export function parseDocument(raw: string | null): CodexDocument {
@@ -195,7 +277,7 @@ export function chapterFor(native: object, snapshot: Snapshot): Chapter {
   return {
     id,
     savedAt: new Date().toISOString(),
-    reference: REFERENCE,
+    reference: snapshot.oracle === 1 ? WESTERN_REFERENCE : REFERENCE,
     snapshot,
   };
 }

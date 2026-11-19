@@ -1,5 +1,15 @@
 # FATE evidence
 
+## Block 04 · The Astral Observatory
+
+- `western-engine.json` and `western-browser-native.json` contain the actual native result observed through the real birth form and live chart. The 1990 London moment is an explicitly synthetic QA fixture, not an assertion of a person's birth. Direct native chart/composition equality, exact SVG longitudes/cusps/aspects, all six house systems, historical IANA offsets, DST gap/fold handling and polar rejection are tested. No native chart response is mocked in these captures.
+- `western-comparison.json` records both native results used in the cross-oracle comparison stills. `western-privacy.json` records explicit save and refresh/reopen without engine/provider POSTs. Minimal saved geometry excludes raw birth datetime, location, coordinates, timezone, names, request receipts and Gemini commentary. Node tests compare recovered archived components to every native source row, including missing-component labels. Derived chart geometry remains personal and can reveal information about a birth moment; the save disclosure says so.
+- `western-chart.mp4` and `western-chart-source.webm` show the real Sun/Moon/Ascendant reveal, planet selection, instrument turn and source-scope exploration. `western-recording.json` binds native output and event timing to the recording. Only initial form setup is trimmed; no composited UI, fake chart values or added soundtrack.
+- `western-performance.json` contains five isolated profiles: mobile, desktop, low capability, 4x CPU/1.6 Mbps/150 ms and reduced motion. It measures room/chart readiness, selection, RAF scheduling, layout shifts, long tasks, heap, resources and explicit snapshot size. No Pixi canvas or orb chunk is allocated on this room. These are local scheduling/action timings, not physical-device compositor FPS or field INP. Regression workloads and recording are kept separate from these profiles.
+- Screenshots 40–46 show fresh actual input, ritual, source reading, live chart, saved geometry in the Codex and actual Western/Numerology source comparison on mobile/desktop. Stills disable CSS animation only during capture. Engraving, geometry, labels and controls remain separate from the owner-supplied environment; its manifest/source/prompt are in `../design/block04-artwork.json` and `../design/block04-package-README.md`. The live recording retains motion.
+- Current full acceptance is 2,522 native + 77 Workbench + 36 FATE Python + 19 Node tests, 30 FATE + 9 Workbench browser groups, 3,515 CLI cases and 52 independent verifiers. Final source/build/media hashes and execution details are in `../acceptance.json`. No new live-Gemini semantic-quality claim.
+
+
 ## Block 03 · The Living Codex
 
 - `codex-privacy.json` records a real native browser save/reopen/export check. Private question and mocked Gemini sentinel text, names, entered dates, tokens, traces and replay fields are excluded from persisted chapters. Reopening/exporting makes no reading/provider POST requests. Separate browser groups cover individual/all deletion, unrelated storage, quota/unknown versions and cross-tab updates.

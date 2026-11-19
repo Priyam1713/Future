@@ -1,6 +1,7 @@
 import { compareChapters } from "./compare";
 import { chapterTitle, type Evidence } from "./reference";
 import type { Chapter } from "./records";
+import { ChapterIllustration } from "./ChapterContent";
 function Quotation({ evidence }: { evidence: Evidence }) {
   return (
     <blockquote className="comparison-quote">
@@ -43,13 +44,37 @@ export function ComparePerspectives({
       </p>
       <div className="comparison-titles">
         <span>
-          {left.snapshot.oracle === 16 ? "TAROT" : "NUMEROLOGY"} ·{" "}
-          {chapterTitle(left)}
+          {left.snapshot.oracle === 1
+            ? "ASTROLOGY"
+            : left.snapshot.oracle === 16
+              ? "TAROT"
+              : "NUMEROLOGY"}{" "}
+          · {chapterTitle(left)}
         </span>
         <span>
-          {right.snapshot.oracle === 16 ? "TAROT" : "NUMEROLOGY"} ·{" "}
-          {chapterTitle(right)}
+          {right.snapshot.oracle === 1
+            ? "ASTROLOGY"
+            : right.snapshot.oracle === 16
+              ? "TAROT"
+              : "NUMEROLOGY"}{" "}
+          · {chapterTitle(right)}
         </span>
+      </div>
+      <div
+        className="perspective-constellation"
+        aria-label="The two selected source chapters"
+      >
+        <figure>
+          <ChapterIllustration chapter={left} />
+          <figcaption>{chapterTitle(left)}</figcaption>
+        </figure>
+        <div className="perspective-bridge" aria-hidden="true">
+          <span />✧<span />
+        </div>
+        <figure>
+          <ChapterIllustration chapter={right} />
+          <figcaption>{chapterTitle(right)}</figcaption>
+        </figure>
       </div>
       {comparison.samePattern && (
         <p className="comparison-note">
@@ -96,7 +121,11 @@ export function ComparePerspectives({
         ].map((side, i) => (
           <div key={i}>
             <p className="eyebrow">
-              {side.chapter.snapshot.oracle === 16 ? "TAROT" : "NUMEROLOGY"}
+              {side.chapter.snapshot.oracle === 1
+                ? "ASTROLOGY"
+                : side.chapter.snapshot.oracle === 16
+                  ? "TAROT"
+                  : "NUMEROLOGY"}
             </p>
             <p>
               {side.groups.length
@@ -119,15 +148,17 @@ export function ComparePerspectives({
         <summary>How this comparison works</summary>
         <p>
           A small versioned editorial vocabulary groups explicitly present words
-          in the saved source glosses and direct Numerology summaries. It uses
-          no LLM, scores, probabilities or new meanings. Vocabulary coverage is
-          limited; a shared heading describes language, rather than evidence
-          about your life. Alternative accounts remain separate. Tarot positions
-          are editorial prompts; Numerology’s two direct themes concern
-          Expression and Personal Year only.
+          in saved Tarot glosses, direct Numerology summaries and separate
+          Western Astrology source components. It uses no LLM, scores,
+          probabilities or new meanings. Vocabulary coverage is limited; a
+          shared heading describes language, rather than evidence about your
+          life. Alternative accounts remain separate. Tarot positions are
+          editorial prompts; Numerology’s two direct themes concern Expression
+          and Personal Year only.
         </p>
         <p>
-          {comparison.vocabulary} · Saved source edition {left.reference}
+          {comparison.vocabulary} · Saved source editions {left.reference} /{" "}
+          {right.reference}
         </p>
       </details>
       <p className="comparison-closing">

@@ -1,5 +1,5 @@
 /** Consumer availability is independent of Workbench/core engine status. */
-export type OracleId = 4 | 16;
+export type OracleId = 1 | 4 | 16;
 export interface ExperienceContract {
   id: OracleId;
   title: string;
@@ -9,6 +9,15 @@ export interface ExperienceContract {
   privacy: string;
 }
 export const EXPERIENCES: Record<OracleId, ExperienceContract> = {
+  1: {
+    id: 1,
+    title: "Western Astrology",
+    room: "The Astral Observatory",
+    invitation: "Enter the geometry of your arrival.",
+    endpoint: "/api/western",
+    privacy:
+      "Birth time and coordinates are processed for this visit; no raw birth details enter saved chapters.",
+  },
   16: {
     id: 16,
     title: "Tarot",

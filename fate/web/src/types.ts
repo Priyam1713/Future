@@ -79,7 +79,7 @@ export async function api<T>(
       typeof value.detail === "string"
         ? value.detail
         : response.status === 422
-          ? "Please check your question and try again."
+          ? "Please check your entries and try again."
           : "The connection faded. Please try again.",
     );
   return value;

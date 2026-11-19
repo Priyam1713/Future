@@ -9,7 +9,9 @@ import "./style.css";
 import "./cinematic.css";
 import "./gallery.css";
 import "./codex.css";
+import "./astrology.css";
 import { lazy, Suspense } from "react";
+const WesternScreen = lazy(() => import("./screens/WesternScreen"));
 const NumerologyScreen = lazy(() => import("./screens/NumerologyScreen"));
 const CodexScreen = lazy(() => import("./screens/CodexScreen"));
 const GalleryScreen = lazy(() => import("./screens/GalleryScreen"));
@@ -111,6 +113,16 @@ function App() {
             }
           >
             <GalleryScreen oracle={oracle} />
+          </Suspense>
+        ) : screen === "western" ? (
+          <Suspense
+            fallback={
+              <p className="scope-note" role="status">
+                Opening the Astral Observatory...
+              </p>
+            }
+          >
+            <WesternScreen oracle={oracle} />
           </Suspense>
         ) : screen === "numerology" ? (
           <Suspense

@@ -38,7 +38,7 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
           <p className="hero-description">
             Ancient symbols. Quiet patterns.
             <br />
-            Two open rooms in a universe of discovery.
+            Three open rooms in a universe of discovery.
           </p>
           <nav className="room-index" aria-label="Open oracle rooms">
             <button onClick={begin}>
@@ -48,8 +48,17 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
             <button onClick={() => oracle.navigate("numerology")}>
               <span>02</span> Numerology
             </button>
+            <span aria-hidden="true">/</span>
+            <button onClick={() => oracle.navigate("western")}>
+              <span>03</span> Astrology
+            </button>
           </nav>
-          <button className="collection-shortcut text-button" onClick={()=>oracle.navigate("gallery")}>Browse all 54 techniques <span aria-hidden="true">↗</span></button>
+          <button
+            className="collection-shortcut text-button"
+            onClick={() => oracle.navigate("gallery")}
+          >
+            Browse all 54 techniques <span aria-hidden="true">↗</span>
+          </button>
           <a
             className="primary desktop-cta"
             href="#ritual"

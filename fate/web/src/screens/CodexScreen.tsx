@@ -106,8 +106,8 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
           </p>
           {codex.chapters.length < 2 ? (
             <p className="scope-note">
-              Save two readings to begin. A Tarot reading and a Numerology
-              reading can make an interesting pair.
+              Save two readings to begin. Bring Tarot, Numerology or Western
+              Astrology into a conversation of perspectives.
             </p>
           ) : (
             <>
@@ -132,7 +132,11 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
                     />
                     <span>
                       {String(i + 1).padStart(2, "0")} ·{" "}
-                      {chapter.snapshot.oracle === 16 ? "Tarot" : "Numerology"}{" "}
+                      {chapter.snapshot.oracle === 1
+                        ? "Astrology"
+                        : chapter.snapshot.oracle === 16
+                          ? "Tarot"
+                          : "Numerology"}{" "}
                       — {chapterTitle(chapter)}
                     </span>
                   </label>
@@ -156,12 +160,14 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
         <summary>About saving on this device</summary>
         <p>
           Only Save to this device writes a chapter. It keeps the selected Tarot
-          cards and orientations, or Numerology’s Expression, Personal Year and
-          Life Path numbers, plus the source edition, chapter identifier and
-          save time. Names, dates entered into Numerology, original questions,
+          cards and orientations, Numerology’s Expression, Personal Year and
+          Life Path numbers, or Western Astrology's chart geometry, plus the
+          source edition, chapter identifier and save time. Names, entered
+          dates/times, coordinates, timezone, place labels, original questions,
           calculation traces, replay seeds and Gemini commentary are excluded.
-          Exported Codex copies use this same minimal scope with source
-          references.
+          Chart geometry remains personal and can reveal information about a
+          birth moment. Exported Codex copies use this same minimal scope with
+          source references.
         </p>
         <p>
           Records are unencrypted in this browser profile at this site address.
@@ -170,7 +176,8 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
           browser policies or storage limits can erase or block them. The app
           and its artwork must be available to reopen chapters. Export before
           changing browser, device or site address. This edition holds up to 50
-          chapters.
+          chapters within a 65,536-character record. Larger chart snapshots can
+          reach the size limit sooner.
         </p>
         <p>
           Comparison selections stay in memory. Chapter records are not uploaded

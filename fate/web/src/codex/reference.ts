@@ -1,6 +1,8 @@
 import reference from "./reference-v1.json";
 import type { Card } from "../types";
 import type { Chapter, Snapshot } from "./records";
+import { snapshotGeometry, signAt } from "../astrology/contracts";
+import { sourcePlacements } from "../astrology/source";
 interface SourceMeaning {
   symbolic_focus: string;
   text: string;
@@ -27,11 +29,27 @@ export function cardReference(id: string) {
   return cards[id];
 }
 export function chapterTitle(chapter: Chapter) {
+  if (chapter.snapshot.oracle === 1)
+    return `${signAt(chapter.snapshot.planets[0][0])} Sun · ${signAt(chapter.snapshot.planets[1][0])} Moon`;
   return chapter.snapshot.oracle === 16
     ? chapter.snapshot.cards.map((p) => cards[p.id].name).join(" · ")
     : `A ${chapter.snapshot.expression} / ${chapter.snapshot.personalYear} constellation`;
 }
 export function evidenceFor(snapshot: Snapshot): Evidence[] {
+  if (snapshot.oracle === 1)
+    return sourcePlacements(snapshotGeometry(snapshot))
+      .slice(0, 3)
+      .flatMap((row) =>
+        row.components.map((r) => ({
+          label: `${row.planet} · ${row.sign} · House ${row.house} · separate component`,
+          quote: r.text,
+          wording: r.text,
+          sourceId: r.id,
+          url: r.url,
+          locator: r.locator,
+          alternative: false,
+        })),
+      );
   if (snapshot.oracle === 16)
     return snapshot.cards.map((pick, i) => {
       const card = cards[pick.id],

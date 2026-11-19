@@ -90,6 +90,50 @@ export function OracleGallery({
           </div>
         </section>
       )}
+      {!libraryOnly && (
+        <section
+          className="western-gateway"
+          aria-labelledby="western-gateway-title"
+        >
+          <picture>
+            <source
+              media="(max-width:700px)"
+              srcSet="/art/western-observatory-portrait-450.webp 450w, /art/western-observatory-portrait-750.webp 750w"
+              sizes="100vw"
+            />
+            <img
+              src="/art/western-observatory-960.webp"
+              width="1672"
+              height="941"
+              loading="lazy"
+              alt="Original brass armillary within FATE's Western Observatory"
+            />
+          </picture>
+          <div>
+            <p className="eyebrow">03 / THE THIRD DOOR · OPEN NOW</p>
+            <h2 id="western-gateway-title">
+              A moment,
+              <br />
+              <em>written in light.</em>
+            </h2>
+            <p>
+              Your actual sky becomes an instrument to explore. Enter with a
+              known birth time and place.
+            </p>
+            <button
+              className="primary"
+              onClick={() => oracle.navigate("western")}
+            >
+              Explore Western Astrology ↗
+            </button>
+            <span className="door-note">
+              {oracle.explored.includes(1)
+                ? "Explored this visit"
+                : "The Astral Observatory"}
+            </span>
+          </div>
+        </section>
+      )}
       <section className="gallery-library" aria-labelledby="gallery-title">
         {!libraryOnly && (
           <div className="gallery-intro">
@@ -110,7 +154,7 @@ export function OracleGallery({
                 <em>still unfolding.</em>
               </h2>
               <p>
-                Two rooms are open. Beyond them, a library of traditions and
+                Three rooms are open. Beyond them, a library of traditions and
                 possible futures waits to be discovered.
               </p>
             </div>
@@ -129,7 +173,7 @@ export function OracleGallery({
           <p aria-live="polite">
             {query
               ? `${matches.length} matching techniques`
-              : `${oracle.explored.length} of 2 rooms explored this visit`}
+              : `${oracle.explored.length} of 3 rooms explored this visit`}
           </p>
         </div>
         <div className="gallery-legend">
@@ -217,7 +261,9 @@ export function OracleGallery({
                           onClick={() =>
                             m.id === 16
                               ? oracle.begin()
-                              : oracle.navigate("numerology")
+                              : oracle.navigate(
+                                  m.id === 1 ? "western" : "numerology",
+                                )
                           }
                         >
                           Enter {m.name}

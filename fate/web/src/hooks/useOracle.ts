@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
-import { flushSync } from "react-dom";
 import { useSound } from "../useSound";
 import { api, type Draw, type Envelope, type Commentary } from "../types";
 import { EXPERIENCES } from "../experiences/contracts";
@@ -8,6 +7,7 @@ export type Screen =
   | "explore"
   | "ritual"
   | "reading"
+  | "western"
   | "numerology"
   | "codex"
   | "gallery";
@@ -20,11 +20,13 @@ export function useOracle() {
     );
   }
   const [screen, setScreen] = useState<Screen>(() =>
-    location.hash === "#my-fate"
-      ? "codex"
-      : location.hash === "#gallery"
-        ? "gallery"
-        : "explore",
+    location.hash === "#western"
+      ? "western"
+      : location.hash === "#my-fate"
+        ? "codex"
+        : location.hash === "#gallery"
+          ? "gallery"
+          : "explore",
   );
   const [spread, setSpread] = useState<"one" | "three">("three");
   const [question, setQuestion] = useState(""),
@@ -50,7 +52,6 @@ export function useOracle() {
     controller = useRef<AbortController | null>(null),
     aiController = useRef<AbortController | null>(null);
   const sound = useSound();
-  const transition = useRef<{ skipTransition: () => void } | null>(null);
   const preferMainFocus = useRef(false);
   function skipToContent() {
     preferMainFocus.current = true;
@@ -59,36 +60,31 @@ export function useOracle() {
   const result = envelope?.result;
   function navigate(next: Screen) {
     preferMainFocus.current = false;
-    const update = () => {
-      history.pushState(null, "", next === "codex" ? "#my-fate" : `#${next}`);
-      setScreen(next);
-      setError("");
-    };
-    if (!reduced && !paused && document.startViewTransition) {
-      transition.current?.skipTransition();
-      const nextTransition = document.startViewTransition(() =>
-        flushSync(update),
-      );
-      nextTransition.ready.catch(() => {});
-      transition.current = nextTransition;
-    } else update();
+    // Each room keeps its existing CSS entrance. Avoid root screenshot
+    // transitions around asynchronous screens and keyboard focus changes.
+    history.pushState(null, "", next === "codex" ? "#my-fate" : `#${next}`);
+    setScreen(next);
+    setError("");
   }
+
   useEffect(() => {
     const fn = () => {
       preferMainFocus.current = false;
       const name = location.hash.slice(1);
       setScreen(
-        name === "ritual"
-          ? "ritual"
-          : name === "my-fate"
-            ? "codex"
-            : name === "gallery"
-              ? "gallery"
-              : name === "numerology"
-                ? "numerology"
-                : name === "reading" && envelope
-                  ? "reading"
-                  : "explore",
+        name === "western"
+          ? "western"
+          : name === "ritual"
+            ? "ritual"
+            : name === "my-fate"
+              ? "codex"
+              : name === "gallery"
+                ? "gallery"
+                : name === "numerology"
+                  ? "numerology"
+                  : name === "reading" && envelope
+                    ? "reading"
+                    : "explore",
       );
     };
     window.addEventListener("popstate", fn);
@@ -98,7 +94,6 @@ export function useOracle() {
     window.scrollTo({ top: 0, behavior: "instant" });
     if (preferMainFocus.current) {
       document.getElementById("main")?.focus({ preventScroll: true });
-      preferMainFocus.current = false;
     } else heading.current?.focus({ preventScroll: true });
   }, [screen, Boolean(result)]);
   useEffect(() => {

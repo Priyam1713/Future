@@ -3,8 +3,16 @@ import type { Chapter } from "./records";
 import { cardReference, chapterTitle, evidenceFor } from "./reference";
 import { ReadingConclusion } from "../components/ReadingConclusion";
 import { plainGloss } from "../experiences/tarotPresentation";
+import { BirthChart } from "../astrology/BirthChart";
+import { snapshotGeometry, degree } from "../astrology/contracts";
 export function ChapterIllustration({ chapter }: { chapter: Chapter }) {
   const s = chapter.snapshot;
+  if (s.oracle === 1)
+    return (
+      <div className="codex-chart-study">
+        <BirthChart chart={snapshotGeometry(s)} compact reduced paused />
+      </div>
+    );
   return s.oracle === 16 ? (
     <div className={`codex-card-study count-${s.cards.length}`}>
       {s.cards.map((p) => (
@@ -42,7 +50,11 @@ export function ChapterContent({
       <header className="folio-heading">
         <p className="eyebrow">
           CHAPTER {String(index + 1).padStart(2, "0")} ·{" "}
-          {chapter.snapshot.oracle === 16 ? "TAROT" : "NUMEROLOGY"}
+          {chapter.snapshot.oracle === 1
+            ? "WESTERN ASTROLOGY"
+            : chapter.snapshot.oracle === 16
+              ? "TAROT"
+              : "NUMEROLOGY"}
         </p>
         <h2 tabIndex={-1}>{chapterTitle(chapter)}</h2>
         <p>
@@ -58,6 +70,21 @@ export function ChapterContent({
         <ChapterIllustration chapter={chapter} />
       </div>
       <div className="folio-themes">
+        {chapter.snapshot.oracle === 1 && (
+          <div className="folio-chart-context">
+            <p>Ascendant {degree(chapter.snapshot.angles[0])}</p>
+            <p>
+              Tropical · {chapter.snapshot.houses} houses. These are separate
+              source components, not a combined placement interpretation. Planet symbols are supplied for Sun, Moon and Mercury only; no other planet-specific or direct aspect-pair meanings are added.
+            </p>
+            <details>
+              <summary>The saved chart geometry</summary>
+              <pre>
+                {JSON.stringify(snapshotGeometry(chapter.snapshot), null, 2)}
+              </pre>
+            </details>
+          </div>
+        )}
         {rows.map((row, i) => (
           <section key={i}>
             <p className="eyebrow">{row.label}</p>
@@ -101,12 +128,22 @@ export function ChapterContent({
           </p>
         </details>
       )}
-      <ReadingConclusion
-        themes={rows.map((r) =>
-          chapter.snapshot.oracle === 16 ? plainGloss(r.quote) : r.quote,
-        )}
-        kind={chapter.snapshot.oracle === 16 ? "tarot" : "numerology"}
-      />
+      {chapter.snapshot.oracle !== 1 && (
+        <ReadingConclusion
+          themes={rows.map((r) =>
+            chapter.snapshot.oracle === 16 ? plainGloss(r.quote) : r.quote,
+          )}
+          kind={chapter.snapshot.oracle === 16 ? "tarot" : "numerology"}
+        />
+      )}
+      {chapter.snapshot.oracle === 1 && (
+        <p className="folio-scope">
+          Your sky offers documented themes to reflect on, rather than a
+          verdict. Birth details and Gemini commentary are excluded; the
+          celestial geometry itself remains personal and can reveal information
+          about the birth moment.
+        </p>
+      )}
       <p className="folio-scope">
         Saved chapter · {chapter.reference}. Original inputs, entered dates,
         questions, replay seeds and Gemini commentary are excluded. This is a

@@ -1,0 +1,1062 @@
+{
+  "date": "2026-11-19",
+  "browser": "158.0.8127.18",
+  "scope": "Isolated local Chromium emulation; RAF scheduling is not compositor FPS, physical-device performance or field INP. Synthetic QA moment. No native-response mocks.",
+  "definitions": {
+    "roomReadyMs": "Navigation to visible date input, decoded background and fonts, including automation",
+    "chartReadyMs": "Submit action start to native chart present and two animation frames, including automation and local server",
+    "selectionMs": "Planet button action to two animation frames; not field INP"
+  },
+  "profiles": [
+    {
+      "profile": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "roomReadyMs": 216,
+      "chartReadyMs": 190,
+      "selectionMs": 76,
+      "cadence": {
+        "samples": 238,
+        "meanHz": 59.25557077057152,
+        "p95Ms": 16.799999999999727,
+        "maxMs": 50
+      },
+      "liveRenderState": "running",
+      "snapshotBytes": 1797,
+      "planets": 10,
+      "aspects": 12,
+      "metrics": {
+        "cls": 0,
+        "lcp": 148,
+        "longTasks": [],
+        "shifts": [
+          {
+            "value": 0.00009552637378989691,
+            "recent": true,
+            "sources": [
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.00032443365101689263,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "BUTTON",
+                "className": "secondary"
+              }
+            ]
+          },
+          {
+            "value": 0.03660833749623485,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "BUTTON",
+                "className": "text-button coordinate-toggle"
+              },
+              {
+                "tag": "DETAILS",
+                "className": "birth-conventions"
+              },
+              {
+                "tag": "BUTTON",
+                "className": "primary"
+              },
+              {
+                "tag": "LABEL",
+                "className": "birth-check coordinate-confirm"
+              }
+            ]
+          },
+          {
+            "value": 0.2418209243952292,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "FOOTER",
+                "className": ""
+              }
+            ]
+          },
+          {
+            "value": 0.1795530554221737,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "DIV",
+                "className": "western-chart-layout"
+              },
+              {
+                "tag": "DIV",
+                "className": "chart-light"
+              },
+              {
+                "tag": "DIV",
+                "className": "chart-instrument"
+              },
+              {
+                "tag": "H1",
+                "className": ""
+              },
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.0041324626623909545,
+            "recent": true,
+            "sources": [
+              {
+                "className": "undefined"
+              },
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.021296691448979135,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "SECTION",
+                "className": "western-commentary"
+              }
+            ]
+          }
+        ],
+        "canvases": 0,
+        "heap": 10000000,
+        "renderState": "paused",
+        "resources": [
+          {
+            "name": "orb-poster-v2.webp",
+            "bytes": 98476,
+            "duration": 12.399999976158142
+          },
+          {
+            "name": "cormorant-italic-latin.woff2",
+            "bytes": 39593,
+            "duration": 19.899999976158142
+          },
+          {
+            "name": "cormorant-latin.woff2",
+            "bytes": 37973,
+            "duration": 23
+          },
+          {
+            "name": "index-C0nan9Pl.css",
+            "bytes": 21901,
+            "duration": 23.699999928474426
+          },
+          {
+            "name": "index-Wnwz_pk2.js",
+            "bytes": 92592,
+            "duration": 34.89999997615814
+          },
+          {
+            "name": "WesternScreen-DeHYJyx7.js",
+            "bytes": 7713,
+            "duration": 7.899999976158142
+          },
+          {
+            "name": "source-XHAELMC4.js",
+            "bytes": 5285,
+            "duration": 6.600000023841858
+          },
+          {
+            "name": "fate_atmosphere.webp",
+            "bytes": 15056,
+            "duration": 5.900000095367432
+          },
+          {
+            "name": "inter-latin.woff2",
+            "bytes": 48549,
+            "duration": 18.800000071525574
+          },
+          {
+            "name": "fate_sigil.svg",
+            "bytes": 1174,
+            "duration": 7.600000023841858
+          },
+          {
+            "name": "health",
+            "bytes": 370,
+            "duration": 2.799999952316284
+          },
+          {
+            "name": "western-observatory-portrait-750.webp",
+            "bytes": 143857,
+            "duration": 9.399999976158142
+          },
+          {
+            "name": "places",
+            "bytes": 669,
+            "duration": 41.39999997615814
+          },
+          {
+            "name": "western",
+            "bytes": 3653,
+            "duration": 88.70000004768372
+          }
+        ]
+      },
+      "posts": [
+        "http://127.0.0.1:8010/api/western/places",
+        "http://127.0.0.1:8010/api/western"
+      ]
+    },
+    {
+      "profile": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "roomReadyMs": 221,
+      "chartReadyMs": 251,
+      "selectionMs": 116,
+      "cadence": {
+        "samples": 238,
+        "meanHz": 40.570025910268676,
+        "p95Ms": 33.400000000000546,
+        "maxMs": 66.70000000000027
+      },
+      "liveRenderState": "running",
+      "snapshotBytes": 1797,
+      "planets": 10,
+      "aspects": 12,
+      "metrics": {
+        "cls": 0.000017427662037037036,
+        "lcp": 164,
+        "longTasks": [],
+        "shifts": [
+          {
+            "value": 0.000017427662037037036,
+            "recent": false,
+            "sources": [
+              {
+                "tag": "A",
+                "className": ""
+              },
+              {
+                "tag": "A",
+                "className": ""
+              }
+            ]
+          },
+          {
+            "value": 0.00005651542757764274,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "BUTTON",
+                "className": "secondary"
+              }
+            ]
+          },
+          {
+            "value": 0.0116179717791522,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "BUTTON",
+                "className": "primary"
+              },
+              {
+                "tag": "DETAILS",
+                "className": "birth-conventions"
+              },
+              {
+                "tag": "BUTTON",
+                "className": "text-button coordinate-toggle"
+              },
+              {
+                "tag": "P",
+                "className": "birth-attribution"
+              }
+            ]
+          },
+          {
+            "value": 0.02881069519042969,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "SECTION",
+                "className": "placement-focus"
+              }
+            ]
+          }
+        ],
+        "canvases": 0,
+        "heap": 10000000,
+        "renderState": "running",
+        "resources": [
+          {
+            "name": "orb-poster-v2.webp",
+            "bytes": 98476,
+            "duration": 13
+          },
+          {
+            "name": "cormorant-latin.woff2",
+            "bytes": 37973,
+            "duration": 10.5
+          },
+          {
+            "name": "cormorant-italic-latin.woff2",
+            "bytes": 39593,
+            "duration": 21.100000023841858
+          },
+          {
+            "name": "index-Wnwz_pk2.js",
+            "bytes": 92592,
+            "duration": 41.299999952316284
+          },
+          {
+            "name": "index-C0nan9Pl.css",
+            "bytes": 21901,
+            "duration": 26.100000023841858
+          },
+          {
+            "name": "WesternScreen-DeHYJyx7.js",
+            "bytes": 7713,
+            "duration": 12.600000023841858
+          },
+          {
+            "name": "source-XHAELMC4.js",
+            "bytes": 5285,
+            "duration": 12.299999952316284
+          },
+          {
+            "name": "fate_atmosphere.webp",
+            "bytes": 15056,
+            "duration": 9.899999976158142
+          },
+          {
+            "name": "inter-latin.woff2",
+            "bytes": 48549,
+            "duration": 21.100000023841858
+          },
+          {
+            "name": "fate_sigil.svg",
+            "bytes": 1174,
+            "duration": 10.199999928474426
+          },
+          {
+            "name": "health",
+            "bytes": 370,
+            "duration": 3.899999976158142
+          },
+          {
+            "name": "western-observatory-1536.webp",
+            "bytes": 154056,
+            "duration": 10.299999952316284
+          },
+          {
+            "name": "places",
+            "bytes": 669,
+            "duration": 45.39999997615814
+          },
+          {
+            "name": "western",
+            "bytes": 3653,
+            "duration": 102.89999997615814
+          }
+        ]
+      },
+      "posts": [
+        "http://127.0.0.1:8010/api/western/places",
+        "http://127.0.0.1:8010/api/western"
+      ]
+    },
+    {
+      "profile": {
+        "name": "mobile-low-capability",
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "low": true
+      },
+      "roomReadyMs": 183,
+      "chartReadyMs": 177,
+      "selectionMs": 76,
+      "cadence": {
+        "samples": 238,
+        "meanHz": 60.00252111433264,
+        "p95Ms": 16.700000000000728,
+        "maxMs": 16.800000000000182
+      },
+      "liveRenderState": "running",
+      "snapshotBytes": 1797,
+      "planets": 10,
+      "aspects": 12,
+      "metrics": {
+        "cls": 0,
+        "lcp": 140,
+        "longTasks": [],
+        "shifts": [
+          {
+            "value": 0.00032443365101689263,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "BUTTON",
+                "className": "secondary"
+              }
+            ]
+          },
+          {
+            "value": 0.03660833749623485,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "BUTTON",
+                "className": "text-button coordinate-toggle"
+              },
+              {
+                "tag": "DETAILS",
+                "className": "birth-conventions"
+              },
+              {
+                "tag": "BUTTON",
+                "className": "primary"
+              },
+              {
+                "tag": "LABEL",
+                "className": "birth-check coordinate-confirm"
+              }
+            ]
+          },
+          {
+            "value": 0.2418209243952292,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "FOOTER",
+                "className": ""
+              }
+            ]
+          },
+          {
+            "value": 0.1652750530540471,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "DIV",
+                "className": "western-chart-layout"
+              },
+              {
+                "tag": "DIV",
+                "className": "chart-instrument"
+              },
+              {
+                "tag": "H1",
+                "className": ""
+              },
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.0041324626623909545,
+            "recent": true,
+            "sources": [
+              {
+                "className": "undefined"
+              },
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.021296691448979135,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "SECTION",
+                "className": "western-commentary"
+              }
+            ]
+          }
+        ],
+        "canvases": 0,
+        "heap": 10000000,
+        "renderState": "paused",
+        "resources": [
+          {
+            "name": "orb-poster-v2.webp",
+            "bytes": 98476,
+            "duration": 8.600000023841858
+          },
+          {
+            "name": "cormorant-latin.woff2",
+            "bytes": 37973,
+            "duration": 26.5
+          },
+          {
+            "name": "cormorant-italic-latin.woff2",
+            "bytes": 39593,
+            "duration": 26.600000023841858
+          },
+          {
+            "name": "index-Wnwz_pk2.js",
+            "bytes": 92592,
+            "duration": 36.199999928474426
+          },
+          {
+            "name": "index-C0nan9Pl.css",
+            "bytes": 21901,
+            "duration": 30.09999990463257
+          },
+          {
+            "name": "WesternScreen-DeHYJyx7.js",
+            "bytes": 7713,
+            "duration": 5.900000095367432
+          },
+          {
+            "name": "source-XHAELMC4.js",
+            "bytes": 5285,
+            "duration": 6.100000023841858
+          },
+          {
+            "name": "fate_atmosphere.webp",
+            "bytes": 15056,
+            "duration": 5
+          },
+          {
+            "name": "inter-latin.woff2",
+            "bytes": 48549,
+            "duration": 15.5
+          },
+          {
+            "name": "fate_sigil.svg",
+            "bytes": 1174,
+            "duration": 5.899999976158142
+          },
+          {
+            "name": "health",
+            "bytes": 370,
+            "duration": 2.299999952316284
+          },
+          {
+            "name": "western-observatory-portrait-750.webp",
+            "bytes": 143857,
+            "duration": 7.799999952316284
+          },
+          {
+            "name": "places",
+            "bytes": 669,
+            "duration": 41
+          },
+          {
+            "name": "western",
+            "bytes": 3652,
+            "duration": 84.79999995231628
+          }
+        ]
+      },
+      "posts": [
+        "http://127.0.0.1:8010/api/western/places",
+        "http://127.0.0.1:8010/api/western"
+      ]
+    },
+    {
+      "profile": {
+        "name": "mobile-4x-1.6Mbps",
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "throttle": true
+      },
+      "roomReadyMs": 3296,
+      "chartReadyMs": 858,
+      "selectionMs": 235,
+      "cadence": {
+        "samples": 238,
+        "meanHz": 56.67014783289069,
+        "p95Ms": 16.80000000000109,
+        "maxMs": 66.60000000000036
+      },
+      "liveRenderState": "running",
+      "snapshotBytes": 1797,
+      "planets": 10,
+      "aspects": 12,
+      "metrics": {
+        "cls": 0,
+        "lcp": 3332,
+        "longTasks": [
+          61,
+          104,
+          66,
+          82,
+          119,
+          50,
+          141,
+          312,
+          739,
+          59,
+          50,
+          66,
+          50,
+          87,
+          145
+        ],
+        "shifts": [
+          {
+            "value": 0.00006307052268333181,
+            "recent": true,
+            "sources": [
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.00002527257376092757,
+            "recent": true,
+            "sources": [
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.07066362805452224,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "BUTTON",
+                "className": "primary"
+              },
+              {
+                "tag": "DETAILS",
+                "className": "birth-conventions"
+              },
+              {
+                "tag": "LABEL",
+                "className": "birth-check coordinate-confirm"
+              },
+              {
+                "tag": "BUTTON",
+                "className": "text-button coordinate-toggle"
+              },
+              {
+                "tag": "P",
+                "className": "birth-attribution"
+              }
+            ]
+          },
+          {
+            "value": 0.03660833749623485,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "BUTTON",
+                "className": "text-button coordinate-toggle"
+              },
+              {
+                "tag": "DETAILS",
+                "className": "birth-conventions"
+              },
+              {
+                "tag": "BUTTON",
+                "className": "primary"
+              },
+              {
+                "tag": "LABEL",
+                "className": "birth-check coordinate-confirm"
+              }
+            ]
+          },
+          {
+            "value": 0.2418209243952292,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "FOOTER",
+                "className": ""
+              }
+            ]
+          },
+          {
+            "value": 0.17955113204530881,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "DIV",
+                "className": "western-chart-layout"
+              },
+              {
+                "tag": "DIV",
+                "className": "chart-light"
+              },
+              {
+                "tag": "DIV",
+                "className": "chart-instrument"
+              },
+              {
+                "tag": "H1",
+                "className": ""
+              },
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.0041324626623909545,
+            "recent": true,
+            "sources": [
+              {
+                "className": "undefined"
+              },
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.021296691448979135,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "SECTION",
+                "className": "western-commentary"
+              }
+            ]
+          }
+        ],
+        "canvases": 0,
+        "heap": 10000000,
+        "renderState": "paused",
+        "resources": [
+          {
+            "name": "orb-poster-v2.webp",
+            "bytes": 98476,
+            "duration": 1649.5
+          },
+          {
+            "name": "cormorant-latin.woff2",
+            "bytes": 37973,
+            "duration": 1040.3999999761581
+          },
+          {
+            "name": "cormorant-italic-latin.woff2",
+            "bytes": 39593,
+            "duration": 1081.8999999761581
+          },
+          {
+            "name": "index-Wnwz_pk2.js",
+            "bytes": 92592,
+            "duration": 1606.2999999523163
+          },
+          {
+            "name": "index-C0nan9Pl.css",
+            "bytes": 21901,
+            "duration": 714.7000000476837
+          },
+          {
+            "name": "WesternScreen-DeHYJyx7.js",
+            "bytes": 7713,
+            "duration": 320.60000002384186
+          },
+          {
+            "name": "source-XHAELMC4.js",
+            "bytes": 5285,
+            "duration": 251.80000007152557
+          },
+          {
+            "name": "fate_atmosphere.webp",
+            "bytes": 15056,
+            "duration": 396.7999999523163
+          },
+          {
+            "name": "inter-latin.woff2",
+            "bytes": 48549,
+            "duration": 671.7000000476837
+          },
+          {
+            "name": "fate_sigil.svg",
+            "bytes": 1174,
+            "duration": 180
+          },
+          {
+            "name": "health",
+            "bytes": 370,
+            "duration": 184.39999997615814
+          },
+          {
+            "name": "western-observatory-portrait-750.webp",
+            "bytes": 143857,
+            "duration": 999.1999999284744
+          },
+          {
+            "name": "places",
+            "bytes": 669,
+            "duration": 195.39999997615814
+          },
+          {
+            "name": "western",
+            "bytes": 3655,
+            "duration": 190.70000004768372
+          }
+        ]
+      },
+      "posts": [
+        "http://127.0.0.1:8010/api/western/places",
+        "http://127.0.0.1:8010/api/western"
+      ]
+    },
+    {
+      "profile": {
+        "name": "mobile-reduced-motion",
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "reduced": true
+      },
+      "roomReadyMs": 160,
+      "chartReadyMs": 213,
+      "selectionMs": 76,
+      "cadence": {
+        "samples": 238,
+        "meanHz": 60.00252111433265,
+        "p95Ms": 16.700000000000273,
+        "maxMs": 16.800000000000182
+      },
+      "liveRenderState": "paused",
+      "snapshotBytes": 1797,
+      "planets": 10,
+      "aspects": 12,
+      "metrics": {
+        "cls": 0,
+        "lcp": 176,
+        "longTasks": [
+          71
+        ],
+        "shifts": [
+          {
+            "value": 0.00009552637378989691,
+            "recent": true,
+            "sources": [
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.00006307052268333181,
+            "recent": true,
+            "sources": [
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.00002527257376092757,
+            "recent": true,
+            "sources": [
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.07066362805452224,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "BUTTON",
+                "className": "primary"
+              },
+              {
+                "tag": "DETAILS",
+                "className": "birth-conventions"
+              },
+              {
+                "tag": "LABEL",
+                "className": "birth-check coordinate-confirm"
+              },
+              {
+                "tag": "BUTTON",
+                "className": "text-button coordinate-toggle"
+              },
+              {
+                "tag": "P",
+                "className": "birth-attribution"
+              }
+            ]
+          },
+          {
+            "value": 0.03660833749623485,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "BUTTON",
+                "className": "text-button coordinate-toggle"
+              },
+              {
+                "tag": "DETAILS",
+                "className": "birth-conventions"
+              },
+              {
+                "tag": "BUTTON",
+                "className": "primary"
+              },
+              {
+                "tag": "LABEL",
+                "className": "birth-check coordinate-confirm"
+              }
+            ]
+          },
+          {
+            "value": 0.25473870881805133,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "FOOTER",
+                "className": ""
+              },
+              {
+                "tag": "H1",
+                "className": ""
+              }
+            ]
+          },
+          {
+            "value": 0.1652750530540471,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "DIV",
+                "className": "western-chart-layout"
+              },
+              {
+                "tag": "DIV",
+                "className": "chart-instrument"
+              },
+              {
+                "tag": "H1",
+                "className": ""
+              },
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.0041324626623909545,
+            "recent": true,
+            "sources": [
+              {
+                "className": "undefined"
+              },
+              {
+                "className": "undefined"
+              }
+            ]
+          },
+          {
+            "value": 0.021296691448979135,
+            "recent": true,
+            "sources": [
+              {
+                "tag": "SECTION",
+                "className": "western-commentary"
+              }
+            ]
+          }
+        ],
+        "canvases": 0,
+        "heap": 10000000,
+        "renderState": "paused",
+        "resources": [
+          {
+            "name": "orb-poster-v2.webp",
+            "bytes": 98476,
+            "duration": 8.699999928474426
+          },
+          {
+            "name": "cormorant-latin.woff2",
+            "bytes": 37973,
+            "duration": 13.800000071525574
+          },
+          {
+            "name": "cormorant-italic-latin.woff2",
+            "bytes": 39593,
+            "duration": 15.5
+          },
+          {
+            "name": "index-C0nan9Pl.css",
+            "bytes": 21901,
+            "duration": 26.300000071525574
+          },
+          {
+            "name": "index-Wnwz_pk2.js",
+            "bytes": 92592,
+            "duration": 33.300000071525574
+          },
+          {
+            "name": "WesternScreen-DeHYJyx7.js",
+            "bytes": 7713,
+            "duration": 6.5
+          },
+          {
+            "name": "source-XHAELMC4.js",
+            "bytes": 5285,
+            "duration": 6.100000023841858
+          },
+          {
+            "name": "fate_atmosphere.webp",
+            "bytes": 15056,
+            "duration": 4.899999976158142
+          },
+          {
+            "name": "inter-latin.woff2",
+            "bytes": 48549,
+            "duration": 14.899999976158142
+          },
+          {
+            "name": "fate_sigil.svg",
+            "bytes": 1174,
+            "duration": 3.899999976158142
+          },
+          {
+            "name": "health",
+            "bytes": 370,
+            "duration": 3.100000023841858
+          },
+          {
+            "name": "western-observatory-portrait-750.webp",
+            "bytes": 143857,
+            "duration": 9.299999952316284
+          },
+          {
+            "name": "places",
+            "bytes": 669,
+            "duration": 40.800000071525574
+          },
+          {
+            "name": "western",
+            "bytes": 3653,
+            "duration": 102.89999997615814
+          }
+        ]
+      },
+      "posts": [
+        "http://127.0.0.1:8010/api/western/places",
+        "http://127.0.0.1:8010/api/western"
+      ]
+    }
+  ]
+}

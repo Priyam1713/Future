@@ -33,11 +33,23 @@ export function SettingsDialog({ oracle }: { oracle: Oracle }) {
         rooms from upcoming experiences and historical references.
       </p>
       <p>
+        Western Astrology uses the native tropical natal engine, pinned IANA
+        timezone data and explicit house systems. Its source components are
+        symbolic, not documented combined placement readings or event
+        predictions. Unknown birth times are never substituted. Saved charts
+        exclude entered birth details, but celestial geometry can reveal
+        information about the birth moment.
+      </p>
+      <p>
         No account or automatic personal-data storage. Your question, name or
         dates are processed by this server for your reading. Gemini is optional
         and requires explicit consent. Numerology commentary sends only
         source-grounded themes to Google, without your name or dates.
-        Explored-room markers last only until you reload this page. Save to this device explicitly keeps a minimal Codex chapter in this browser, excluding original inputs and Gemini commentary. Local chapters are unencrypted, can be cleared by browser policies, and have no automatic backup or sync. Manage and export them in My Fate.
+        Explored-room markers last only until you reload this page. Save to this
+        device explicitly keeps a minimal Codex chapter in this browser,
+        excluding original inputs and Gemini commentary. Local chapters are
+        unencrypted, can be cleared by browser policies, and have no automatic
+        backup or sync. Manage and export them in My Fate.
       </p>
       <div className="settings-row">
         <span>Atmosphere</span>

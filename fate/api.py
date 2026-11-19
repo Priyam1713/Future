@@ -6,6 +6,7 @@ import os
 import secrets
 import threading
 import time
+from contextlib import asynccontextmanager
 from collections import OrderedDict
 from pathlib import Path
 from typing import Literal
@@ -20,6 +21,7 @@ from future.tarot import read
 from future.tarot_catalog import PROFILE
 from future.card_random import PROTOCOL
 from future.numerology import calculate, readings as number_readings
+from .western import WesternInput, WesternService, search_places
 
 WEB = Path(__file__).parent / 'web' / 'dist'
 POSITIONS = ['What you carry', 'Where you stand', 'What to consider']
@@ -65,6 +67,10 @@ class NumberExplain(Explain):
     draw: NumberInput
 
 
+class WesternExplain(Explain):
+    draw: WesternInput
+
+
 def native(q: Draw):
     request = dict(schema_version=1, profile=PROFILE, task='symbolic_reading',
                    mode='seeded', spread=q.spread, seed=q.seed, protocol=PROTOCOL,
@@ -77,7 +83,14 @@ def native(q: Draw):
 
 
 def create_app(provider=None, signing_key=None, clock=time.time):
-    app = FastAPI(title='FATE · Living Oracle', docs_url=None, redoc_url=None, openapi_url=None)
+    western = WesternService()
+    @asynccontextmanager
+    async def lifespan(app):
+        try:
+            yield
+        finally:
+            western.close()
+    app = FastAPI(title='FATE · Living Oracle', docs_url=None, redoc_url=None, openapi_url=None, lifespan=lifespan)
     app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
     key = signing_key or secrets.token_bytes(32)
     # Bounded, per-process guest protection; no questions, cards or identities stored.
@@ -158,6 +171,50 @@ def create_app(provider=None, signing_key=None, clock=time.time):
     def numbers(q: NumberInput):
         expiry = int(clock()) + 86400
         return dict(result=native_numbers(q), oracle_id=4, receipt=f'{expiry}.{signature(q, expiry)}')
+
+    @app.post('/api/western/places')
+    def place_search(q: dict):
+        if set(q) != {'query'} or not isinstance(q['query'], str) or len(q['query']) > 80:
+            raise ValueError('Supply a place search of up to 80 characters.')
+        return dict(places=search_places(q['query']), source='GeoNames · CC BY 4.0')
+
+    @app.post('/api/western')
+    def western_chart(q: WesternInput):
+        result = western.read(q)
+        expiry = int(clock()) + 86400
+        return dict(result=result, oracle_id=1, receipt=f'{expiry}.{signature(q, expiry)}')
+
+    @app.post('/api/western/explain')
+    def explain_western(q: WesternExplain):
+        try:
+            expiry, signed = q.receipt.split('.')
+            valid = clock() <= int(expiry) <= clock() + 86400 and hmac.compare_digest(signed, signature(q.draw, expiry))
+        except (ValueError, TypeError):
+            valid = False
+        if not valid:
+            raise HTTPException(403, 'This chart receipt expired or changed. Calculate again to request commentary.')
+        if not cloud_slots.acquire(blocking=False):
+            raise HTTPException(429, 'Commentary is busy. Your chart is still available.')
+        try:
+            result = western.read(q.draw)
+            # Source components only: no birth datetime, coordinates, timezone or full chart.
+            parts = {r['id']: r for row in result['reading']['placements'][:3] for r in row['components']}
+            payload = [dict(id=r['id'], text=r['text'], locator=r['locator']) for r in parts.values()]
+            prompt = ('Offer a short reflective explanation of each supplied symbolic source component. '
+                      'No personality facts, new meanings, event predictions, scores or direct placement synthesis. '
+                      'Return JSON {"themes":[{"id":"exact supplied ID","reflection":"1 to 500 characters"}]} '
+                      'in supplied order. These are separate traditional components, not facts about a person. DATA: ' + json.dumps(payload))
+            from workbench.gemini import generate
+            output, provenance = (provider or generate)(prompt)
+            rows = output.get('themes') if isinstance(output, dict) else None
+            if not isinstance(rows, list) or len(rows) != len(payload):
+                raise ValueError('Commentary did not match the source components.')
+            for row, source in zip(rows, payload):
+                if not isinstance(row, dict) or set(row) != {'id', 'reflection'} or row['id'] != source['id'] or not isinstance(row['reflection'], str) or not 1 <= len(row['reflection']) <= 500:
+                    raise ValueError('Commentary references did not match the source components.')
+            return dict(themes=rows, provenance=provenance, coverage='experimental_ai_commentary')
+        finally:
+            cloud_slots.release()
 
     @app.post('/api/numerology/explain')
     def explain_numbers(q: NumberExplain):

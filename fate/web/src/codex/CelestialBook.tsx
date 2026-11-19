@@ -175,7 +175,7 @@ export function CelestialBook({
           <aside className="codex-verso">
             <details className="codex-contents" open={wide}>
               <summary>
-                Contents <span>{codex.chapters.length} chapters</span>
+                Contents <span>{codex.chapters.length} {codex.chapters.length===1?'chapter':'chapters'}</span>
               </summary>
               <ol>
                 {codex.chapters.map((c, i) => (
@@ -188,7 +188,7 @@ export function CelestialBook({
                       <div>
                         {chapterTitle(c)}
                         <small>
-                          {c.snapshot.oracle === 16 ? "TAROT" : "NUMEROLOGY"}
+                          {c.snapshot.oracle === 1 ? "ASTROLOGY" : c.snapshot.oracle === 16 ? "TAROT" : "NUMEROLOGY"}
                         </small>
                       </div>
                     </button>
