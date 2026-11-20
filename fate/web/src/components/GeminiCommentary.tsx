@@ -1,5 +1,4 @@
-import { ArrowUpRight, LoaderCircle, Sparkles, X } from "lucide-react";
-import CardArt from "../CardArt";
+import { ArrowUpRight, LoaderCircle, X } from "lucide-react";
 import type { Oracle } from "../hooks/useOracle";
 export function GeminiCommentary({ oracle }: { oracle: Oracle }) {
   const {
@@ -17,28 +16,28 @@ export function GeminiCommentary({ oracle }: { oracle: Oracle }) {
   return (
     <section className="ai-section">
       <div className="ai-heading">
-        <Sparkles size={20} />
-        <span className="eyebrow">AN OPTIONAL SECOND VOICE</span>
-        <span className="experimental">EXPERIMENTAL</span>
+        <span className="eyebrow">Optional commentary</span>
       </div>
       <h2>A gentler way into the symbols.</h2>
-      <p>
-        Ask Gemini to put these source-linked themes into everyday language.
-        Your cards and their meanings stay the source of truth.
-      </p>
+      <p>Explore the card themes in everyday language.</p>
       {ai ? (
         <div className="commentary" aria-live="polite">
           {ai.cards.map((c, i) => (
             <div key={c.card_id}>
               <h3>{result.readings[i].card.name}</h3>
               <p>{c.reflection}</p>
-              <small>Grounding: {c.rule_id}</small>
             </div>
           ))}
-          <p className="source-caution">
-            AI commentary may be mistaken. Refer to the traditional meanings
-            above. {ai.provenance.provider} · {ai.provenance.model}
-          </p>
+          <details className="source-caution">
+            <summary>Commentary details</summary>
+            <p>
+              AI commentary may be mistaken. {ai.provenance.provider} ·{" "}
+              {ai.provenance.model}
+            </p>
+            {ai.cards.map((c) => (
+              <p key={c.card_id}>{c.rule_id}</p>
+            ))}
+          </details>
           <button
             className="text-button"
             onClick={() => {
@@ -86,10 +85,7 @@ export function GeminiCommentary({ oracle }: { oracle: Oracle }) {
           )}
         </>
       ) : (
-        <p className="availability">
-          Gemini isn’t configured on this instance. Your complete reading is
-          available above.
-        </p>
+        <p className="availability">Optional commentary is unavailable.</p>
       )}
     </section>
   );

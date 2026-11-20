@@ -307,7 +307,7 @@ test("living Pixi fog moves, responds to touch, and pauses for reduced motion", 
   });
 });
 
-test("sound off by default, independent levels, settings focus trap and keyboard dismissal", async ({
+test("sound starts on interaction, settings preserve focus and explicit mute survives reload", async ({
   page,
 }) => {
   await page.goto("/");
@@ -330,7 +330,6 @@ test("sound off by default, independent levels, settings focus trap and keyboard
   await accessible(page);
   await page.getByLabel("Ambient volume").fill("0.1");
   await page.getByLabel("Card & selection volume").fill("0.2");
-  await page.getByRole("button", { name: "Turn on", exact: true }).click();
   await expect(
     page.getByRole("button", { name: "Mute sound" }),
   ).toHaveAttribute("aria-pressed", "true");
@@ -344,6 +343,9 @@ test("sound off by default, independent levels, settings focus trap and keyboard
   await expect(
     page.getByRole("button", { name: "Enable sound" }),
   ).toHaveAttribute("aria-pressed", "false");
+  await page.reload();
+  await page.getByRole("button", { name: "About FATE and settings" }).click();
+  await expect(page.getByRole("button", { name: "Turn on", exact: true })).toBeVisible();
 });
 
 test("Gemini opt-in, native result retained after cloud failure, commentary visibly separate", async ({

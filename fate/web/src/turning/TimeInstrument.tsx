@@ -227,7 +227,7 @@ export function TimeInstrument({
           <small>{selectedEvent ? "EXACT CONTACT" : "NATIVE DAILY SKY"}</small>
           <strong>{dateLabel(selectedEvent?.exact_utc ?? frame.utc)}</strong>
           <span>{timeLabel(selectedEvent?.exact_utc ?? frame.utc)} UTC</span>
-          <i aria-hidden="true">✧</i>
+          <i aria-hidden="true">○</i>
         </div>
         <div className="time-caustic" aria-hidden="true" />
       </div>

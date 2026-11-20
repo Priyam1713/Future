@@ -97,7 +97,7 @@ export function OracleReading({
             >
               <span className="oracle-card-casing">
                 <span className="oracle-card-back" aria-hidden="true">
-                  <span>✦</span>
+                  <span>●</span>
                 </span>
                 {revealed && (
                   <span className="oracle-card-face">
@@ -162,7 +162,7 @@ function PendulumReading({
     <article className="pendulum-answer ritual-finding">
       <div className="pendulum-medal" aria-hidden="true">
         <span>
-          {response === "unresolved" ? "◇" : response === "yes" ? "✦" : "◈"}
+          {response === "unresolved" ? "◇" : response === "yes" ? "●" : "◈"}
         </span>
       </div>
       <div>

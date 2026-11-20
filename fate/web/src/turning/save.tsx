@@ -59,7 +59,7 @@ export function SaveTransit({
           {saved
             ? "Saved to this device"
             : "Save transit chapter to this device"}{" "}
-          ✧
+          ○
         </button>
         {saved && (
           <button

@@ -361,7 +361,7 @@ export function BirthForm({
             : chamber === "bazi"
               ? "Open my Four Pillars"
               : "Open my celestial chart"}{" "}
-        <span aria-hidden="true">✧</span>
+        <span aria-hidden="true">○</span>
       </button>
       <p className="birth-attribution">
         City search:{" "}

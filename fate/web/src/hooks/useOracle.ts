@@ -92,7 +92,7 @@ export function useOracle() {
     inflight = useRef(false),
     controller = useRef<AbortController | null>(null),
     aiController = useRef<AbortController | null>(null);
-  const sound = useSound();
+  const sound = useSound(screen);
   const preferMainFocus = useRef(false);
   function skipToContent() {
     preferMainFocus.current = true;

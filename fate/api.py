@@ -25,7 +25,7 @@ from .western import WesternInput, WesternService, search_places
 from .turning import TransitInput, TransitRunner, natal_basis
 from . import chambers
 from . import ritual
-from . import futures, manuscript, signs
+from . import futures, manuscript, signs, palm_reading
 from .archive_sessions import ArchiveSessions, COOKIE as ARCHIVE_COOKIE, PATH as ARCHIVE_PATH, VaultInput
 
 WEB = Path(__file__).parent / 'web' / 'dist'
@@ -222,6 +222,10 @@ def create_app(provider=None, signing_key=None, clock=time.time):
             response.set_cookie(ARCHIVE_COOKIE,owner,httponly=True,secure=request.url.scheme=='https',
                                 samesite='strict',path=ARCHIVE_PATH)
         return response
+
+    @app.post('/api/palm-reading')
+    def palm_consumer_reading(q: palm_reading.PalmInput):
+        return palm_reading.read(q)
 
     @app.post('/api/sky-manuscript')
     def sky_manuscript(q: manuscript.Request):

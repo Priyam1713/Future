@@ -76,7 +76,7 @@ export function ChapterIllustration({ chapter }: { chapter: Chapter }) {
     >
       <span className="number-study-ring" />
       <strong>{s.expression}</strong>
-      <i>✧</i>
+      <i>○</i>
       <strong>{s.personalYear}</strong>
       <small>EXPRESSION / PERSONAL YEAR</small>
     </div>

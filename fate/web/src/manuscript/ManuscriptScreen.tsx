@@ -2,6 +2,7 @@ import type { Oracle } from "../hooks/useOracle";
 import { ArchiveRoom } from "./ArchiveRoom";
 import { CompassRoom } from "./CompassRoom";
 import { SkyRoom } from "./SkyRoom";
+import { PalmPhoto } from "./PalmPhoto";
 import { ENVIRONMENTS, ROOMS, type ArchiveId, type Id } from "./contracts";
 
 export default function ManuscriptScreen({
@@ -46,6 +47,7 @@ export default function ManuscriptScreen({
         </div>
       </header>
       <div className="folio-stage">
+        {id === 8 && <PalmPhoto onRead={() => oracle.markExplored(8)} />}
         {id === 40 ? (
           <CompassRoom oracle={oracle} />
         ) : id === 5 || id === 6 || id === 7 ? (

@@ -246,7 +246,7 @@ export function TurningExperience({
                 }}
               >
                 <span>{dateLabel(f.utc)}</span>
-                <i aria-hidden="true">{count ? "✦" : "·"}</i>
+                <i aria-hidden="true">{count ? "●" : "·"}</i>
                 <small>{count} exact</small>
               </button>
             );
@@ -286,7 +286,7 @@ export function TurningExperience({
                     <span>{timeLabel(e.exact_utc)} UTC</span>
                   </time>
                   <span className="event-track-line" aria-hidden="true">
-                    ✧
+                    ○
                   </span>
                   <div>
                     <h3>
@@ -594,7 +594,7 @@ export default function TurningSky({
             : result
               ? "Calculate this window"
               : "Turn my sky"}{" "}
-          <span aria-hidden="true">✧</span>
+          <span aria-hidden="true">○</span>
         </button>
         {busy && (
           <button
@@ -630,7 +630,7 @@ export default function TurningSky({
         />
       ) : (
         <section className="turning-threshold">
-          <span aria-hidden="true">✧</span>
+          <span aria-hidden="true">○</span>
           <h2>
             Dates become <em>discoveries.</em>
           </h2>

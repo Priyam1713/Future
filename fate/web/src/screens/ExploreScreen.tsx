@@ -27,9 +27,7 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
     <div className="explore page-enter">
       <div className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">
-            <span className="tiny-star">✧</span> THE ORACLE GALLERY
-          </p>
+          <p className="eyebrow">THE ORACLE GALLERY</p>
           <h1 ref={heading} tabIndex={-1}>
             Some answers
             <br />
@@ -161,7 +159,6 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
       </section>
       <OracleGallery oracle={oracle} embedded />
       <div className="explore-invitation">
-        <span className="gold-star">✦</span>
         <p>
           You don’t need to know the question.
           <br />

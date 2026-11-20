@@ -67,7 +67,7 @@ function App() {
           }}
           aria-label="FATE home"
         >
-          <img src="/art/fate_sigil.svg" alt="" width="34" height="34" />
+          <img src="/art/fate-seal.svg" alt="" width="34" height="34" />
           <span>FATE</span>
         </a>
         <span className="masthead-caption">THE FUTURE IS YOURS TO EXPLORE</span>
@@ -75,6 +75,7 @@ function App() {
           <button
             className="icon-button"
             aria-label={sound.on ? "Mute sound" : "Enable sound"}
+            data-sound-toggle
             aria-pressed={sound.on}
             onClick={() => void sound.toggle()}
           >
@@ -225,7 +226,7 @@ function App() {
         )}
       </main>
       <footer>
-        <img src="/art/fate_sigil.svg" alt="" width="22" height="22" />
+        <img src="/art/fate-seal.svg" alt="" width="22" height="22" />
         <p>A little mystery. A new perspective.</p>
         <span>SYMBOLIC REFLECTION · NOT A CERTAIN FORECAST</span>
         <button

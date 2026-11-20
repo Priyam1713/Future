@@ -1706,3 +1706,10 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Added a separate Play Hall with the Living Loom, Signal Switch and Forecast Station. All three reuse the existing native study boundary, with virtual points, explanations and replay.
 - Fixed the intermittent Gallery-to-instrument loading stall. Rooms preload on link intent, and the Arcade loads source citations independently of the Codex study bundle.
 - Passed 2,703 unit and boundary tests, 115 FATE browser tests, nine Workbench browser tests, 3,515 CLI cases and 52 independent verifiers. The six viewport profiles, browser zoom, Firefox checks and native replay of recorded games are indexed in `fate/evidence/block12-acceptance.json`.
+
+## 2026-11-21 — FATE Block 13
+
+- Documented a consumer gap for every retained room, linked to the frozen core and source records. This audit does not certify full readings or independent re-review of every primary source.
+- Added consent-based local photo review for Palmistry, visitor-confirmed features, manual overlays, and an observation-linked narrative with four new Cheiro combinations. The original illustrated reference and frozen native engine are preserved.
+- Replaced the main seal and sparkle motifs, moved Tarot commentary provenance into detail, and remastered ambience with automatic activation, fades and explicit persistent mute. Automatic palm feature recognition remains gated on independent photo evidence.
+- Passed 2,708 unit and boundary tests, 118 FATE browser tests, nine Workbench browser tests, 3,515 CLI cases and 52 independent verifiers. Privacy, native replay, and desktop and emulated mobile captures are indexed in `fate/evidence/block13-acceptance.json`.

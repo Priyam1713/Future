@@ -263,7 +263,7 @@ export function ChartReading({ result }: { result: WesternResult }) {
         </pre>
       </details>
       <div className="chart-takeaway">
-        <span aria-hidden="true">✧</span>
+        <span aria-hidden="true">○</span>
         <h2>
           Hold a question,
           <br />

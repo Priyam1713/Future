@@ -64,7 +64,11 @@ export function SettingsDialog({ oracle }: { oracle: Oracle }) {
       </p>
       <div className="settings-row">
         <span>Sound</span>
-        <button className="secondary" onClick={() => void sound.toggle()}>
+        <button
+          className="secondary"
+          data-sound-toggle
+          onClick={() => void sound.toggle()}
+        >
           {sound.on ? "Turn off" : "Turn on"}
         </button>
       </div>

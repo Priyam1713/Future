@@ -661,3 +661,20 @@
     transition: none !important;
   }
 }
+.palm-studio { margin-block: 0 2rem; border-block: 1px solid #b5976873; padding: clamp(1rem,3vw,2rem) 0; }
+.palm-studio h2 { margin-top: .25rem; }
+.palm-studio label { display: block; margin-block: .7rem; }
+.palm-studio select { display: block; width: 100%; min-height: 44px; margin-top: .3em; color: #f3e1c9; background: #25212a; border: 1px solid #aa987c; padding-inline: .4em; }
+.palm-studio input[type="file"] { display: block; max-width: 100%; min-height: 44px; padding-top: .4rem; }
+.palm-layout { display: grid; gap: 24px; grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+.palm-questions { display: grid; gap: 0 1rem; grid-template-columns: repeat(auto-fit,minmax(min(100%,200px),1fr)); }
+.palm-photo-frame { display: grid; width: fit-content; position: relative; max-width: 100%; }
+.palm-photo-frame img { display: block; width: auto; max-width: 100%; max-height: 64vh; cursor: crosshair; }
+.palm-photo-frame svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.palm-photo-frame [data-line] { stroke: #f6d498; stroke-width: .55; fill: none; }
+.palm-photo-frame [data-line="heart"] { stroke: #ffaac5; }
+.palm-photo-frame [data-line="life"] { stroke: #95e5d7; }
+.palm-report { max-width: 65ch; padding-block: 1rem; }
+.palm-report h3 { font: 400 clamp(2rem,4vw,4rem)/1 var(--serif); margin-block: .4em; }
+.palm-report h4 { color: #eed4ac; margin-block: 1em .35em; }
+@media(max-width: 760px) { .palm-layout { grid-template-columns: 1fr; } }

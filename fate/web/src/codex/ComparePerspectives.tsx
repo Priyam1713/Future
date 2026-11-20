@@ -70,7 +70,7 @@ export function ComparePerspectives({
           <figcaption>{chapterTitle(left)}</figcaption>
         </figure>
         <div className="perspective-bridge" aria-hidden="true">
-          <span />✧<span />
+          <span />○<span />
         </div>
         <figure>
           <ChapterIllustration chapter={right} />

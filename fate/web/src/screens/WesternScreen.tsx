@@ -100,7 +100,7 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
         <div className="western-entry">
           <aside className="observatory-invitation">
             <span className="observatory-seal" aria-hidden="true">
-              ✧
+              ○
             </span>
             <p>
               A moment, precisely placed.

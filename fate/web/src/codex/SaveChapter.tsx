@@ -54,7 +54,7 @@ export function SaveChapter(props: Props) {
           }
         >
           {saved ? "Saved to this device" : "Save to this device"}
-          <span aria-hidden="true">✧</span>
+          <span aria-hidden="true">○</span>
         </button>
         {saved && (
           <button

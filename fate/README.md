@@ -2,6 +2,14 @@
 
 FATE opens all 54 retained Future techniques in a consumer Gallery. Each room leads from its own instrument or source workflow to a native result. Eligible public studies and bounded chapters can be saved locally.
 
+## Block 13
+
+The [consumer gap audit](consumer-gap-audit.md) classifies all 54 retained rooms against what people can actually input and receive. Its judgments are separate from native verification and source coverage.
+
+Palmistry now starts with a private photo review. The browser checks basic image quality and keeps the image and manual trace in the tab. Confirmed descriptors drive a source-linked reading. The unverified Workbench vision adapter remains separate. The [source, privacy and acceptance record](evidence/block13-foundation.md) specifies the recognition evidence still required.
+
+Ambience starts on the first permitted interaction. The sound control saves an explicit mute preference for this browser.
+
 ## Block 12
 
 The Gallery keeps its search or world selection when a visitor returns from a room. Desktop adds a spatial world rail and side-by-side instruments and interpretations. The Western chart supports a dedicated drag grip and Shift-wheel, with a native range control for keyboard and touch.
