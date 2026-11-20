@@ -1,0 +1,48 @@
+{
+  "request": {
+    "oracle": 49,
+    "option": 4
+  },
+  "reportHash": "119f064190e6c381b32edfc5ddfac67d82b0768f9b8db8e7939e5224c9cff0f8",
+  "view": {
+    "status": "Retrospective NOAA evaluation",
+    "title": "Drift selected",
+    "lead": "The native benchmark selects on validation error and reports the held-out test separately.",
+    "instrument": {
+      "bars": [
+        {
+          "label": "seasonal_naive_m12",
+          "value": 2.619466666666667
+        },
+        {
+          "label": "naive",
+          "value": 2.9380333333333333
+        },
+        {
+          "label": "drift",
+          "value": 2.5989695590896966
+        },
+        {
+          "label": "mean",
+          "value": 23.11599556094262
+        },
+        {
+          "label": "ses_alpha0.2_initial_y1",
+          "value": 2.9536978508518414
+        },
+        {
+          "label": "ses_alpha0.5_initial_y1",
+          "value": 2.9258104052017724
+        },
+        {
+          "label": "ses_alpha0.8_initial_y1",
+          "value": 2.942001317646533
+        }
+      ],
+      "notes": [
+        "Retrospective evaluation on a fixed revised data snapshot;historical publication vintages are unverified. Software prefix isolation does not prove as-of historical data availability."
+      ]
+    }
+  },
+  "actionMs": 7057
+}

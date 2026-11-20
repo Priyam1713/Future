@@ -1,4 +1,9 @@
 import { useState } from "react";
+import {
+  isFuture,
+  ROOMS as FUTURES,
+  roomIds as futureIds,
+} from "../futures/contracts";
 import type { Oracle } from "../hooks/useOracle";
 import inventory from "./inventory.json";
 import { isChamberId, ROOMS } from "../chambers/contracts";
@@ -162,8 +167,8 @@ export function OracleGallery({
                 <em>still unfolding.</em>
               </h2>
               <p>
-                Thirty-six rooms are open. The wider library holds traditions
-                you can discover through their historical sources.
+                All 54 retained rooms are open, from historical source archives
+                to hands-on simulations.
               </p>
             </div>
           </div>
@@ -231,6 +236,37 @@ export function OracleGallery({
             ))}
           </nav>
         </details>
+        {[
+          ["The Dream Archive", false],
+          ["The Tomorrow Machine", true],
+        ].map(([label, lab]) => (
+          <details
+            key={String(label)}
+            className="ritual-wing-discovery sign-gallery-wing future-gallery"
+          >
+            <summary>
+              {label}{" "}
+              <span>
+                {lab ? "Twelve laboratory instruments" : "Six archive rooms"}
+              </span>
+            </summary>
+            <nav aria-label={String(label)}>
+              <div>
+                {futureIds
+                  .filter((id) => id >= 49 === lab)
+                  .map((id) => (
+                    <button
+                      className="text-button ritual-wing-link"
+                      key={id}
+                      onClick={() => oracle.navigate(FUTURES[id][0])}
+                    >
+                      {FUTURES[id][1]}
+                    </button>
+                  ))}
+              </div>
+            </nav>
+          </details>
+        ))}
         <div className="gallery-tools">
           <label>
             Find a tradition
@@ -249,7 +285,6 @@ export function OracleGallery({
         </div>
         <div className="gallery-legend">
           <span>✦ Open now</span>
-          <span>◌ Upcoming experience</span>
           <span>◇ Historical reference</span>
         </div>
         {collections.map((collection, i) => {
@@ -334,17 +369,19 @@ export function OracleGallery({
                             m.id === 16
                               ? oracle.begin()
                               : oracle.navigate(
-                                  isRoom(m.id)
-                                    ? FOLIOS[m.id][0]
-                                    : isSignId(m.id)
-                                      ? SIGNS[m.id].slug
-                                      : isRitualId(m.id)
-                                        ? RITUAL_ROOMS[m.id].slug
-                                        : isChamberId(m.id)
-                                          ? ROOMS[m.id].slug
-                                          : m.id === 1
-                                            ? "western"
-                                            : "numerology",
+                                  isFuture(m.id)
+                                    ? FUTURES[m.id][0]
+                                    : isRoom(m.id)
+                                      ? FOLIOS[m.id][0]
+                                      : isSignId(m.id)
+                                        ? SIGNS[m.id].slug
+                                        : isRitualId(m.id)
+                                          ? RITUAL_ROOMS[m.id].slug
+                                          : isChamberId(m.id)
+                                            ? ROOMS[m.id].slug
+                                            : m.id === 1
+                                              ? "western"
+                                              : "numerology",
                                 )
                           }
                         >

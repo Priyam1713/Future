@@ -1,3 +1,5 @@
+import { isFutureBookmark } from "../futures/contracts";
+import { FutureChapter } from "../futures/StudyPage";
 import { isBookmark } from "../manuscript/contracts";
 import { BookmarkPage } from "../manuscript/Result";
 import CardArt from "../CardArt";
@@ -18,6 +20,7 @@ import { isRitualSnapshot, RITUAL_ROOMS } from "../ritual/contracts";
 import { RitualChapter, RitualReading } from "../ritual/Readings";
 export function ChapterIllustration({ chapter }: { chapter: Chapter }) {
   const s = chapter.snapshot;
+  if (isFutureBookmark(s)) return <FutureChapter s={s} compact />;
   if (isBookmark(s)) return <BookmarkPage snapshot={s} compact />;
   if (isSign(s)) return <SavedSign s={s} compact />;
   if (isRitualSnapshot(s))
@@ -86,6 +89,8 @@ export function ChapterContent({
   chapter: Chapter;
   index: number;
 }) {
+  if (isFutureBookmark(chapter.snapshot))
+    return <FutureChapter key={chapter.id} s={chapter.snapshot} />;
   if (isBookmark(chapter.snapshot))
     return <BookmarkPage key={chapter.id} snapshot={chapter.snapshot} />;
   if (isSign(chapter.snapshot))

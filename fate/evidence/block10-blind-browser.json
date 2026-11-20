@@ -1,0 +1,358 @@
+{
+  "packetFields": [
+    "schema_version",
+    "visibility",
+    "profile",
+    "profile_sha256",
+    "cue",
+    "origin",
+    "instructions",
+    "stages",
+    "template",
+    "commitment"
+  ],
+  "judgePacketFields": [
+    "schema_version",
+    "visibility",
+    "profile",
+    "profile_sha256",
+    "cue",
+    "origin",
+    "instructions",
+    "judge_id",
+    "transcript",
+    "transcript_lock",
+    "candidates"
+  ],
+  "phases": [
+    "viewing",
+    "judging",
+    "judging",
+    "revealed"
+  ],
+  "report": {
+    "schema_version": 1,
+    "visibility": "private_report",
+    "profile": "rv-air1995-five-choice-blind-trial-v1",
+    "profile_sha256": "bb08a51d84d03ad858d65c1530fd763de8bbee686488ce512e54154877d2a60b",
+    "origin": "human",
+    "state": "reported",
+    "plan_sha256": "dd8886a3e608d98643de7f2e1e42a3e6ca55d8f4af584675243feeabdc3400ec",
+    "pool_sha256": "454d4db248f4778b9e7d68ab07231925b51b375999b2f1e5d0decab18d3de4ae",
+    "commitment": "31d0e3dc0c23c9919eb975bd948ed294942ac70068213a8ad04397a202d2da96",
+    "commitment_verified": true,
+    "revealed": true,
+    "viewer_lock": "85c4719bd667170872ea5ba5b9a2559236208bb3f2bdb1f7425ad15842a43c41",
+    "judge_lock": "364d677dcf031f48824eaabe5d8255c72be59274e55408f25a56a266c78d44c2",
+    "procedurally_validated_from_files": true,
+    "declared_participant_blinded": true,
+    "independently_witnessed": false,
+    "eligible_blinded_scoring": true,
+    "randomization": {
+      "policy": "os_uniform",
+      "declared_uniform_os": true,
+      "entropy_origin_independently_verified": false,
+      "chance_qualified": true,
+      "synthetic_reference": false
+    },
+    "actual_target_id": "plate-4",
+    "judge_results": [
+      {
+        "judge_id": "judge",
+        "actual_target_rank": 5,
+        "rank1": false,
+        "ranks": {
+          "c1": 1,
+          "c2": 2,
+          "c3": 3,
+          "c4": 4,
+          "c5": 5
+        },
+        "raw_report": "Judge submitted one strict rank order."
+      }
+    ],
+    "judge_disagreement": false,
+    "chance_reference": {
+      "expected_rank": 3,
+      "top_rank": {
+        "numerator": 1,
+        "denominator": 5
+      },
+      "assumptions": "Uniform target selection independent of fixed pre-reveal rankings;not established by file validation",
+      "applicable": true
+    },
+    "attempts_rejected": 0,
+    "leakage_flags": [],
+    "source_attribution": {
+      "manual": "1986stage labels only;optional software fields are editorial",
+      "air": "1995Utts five-choice ranking reference;Hyman judging/replication concerns",
+      "engineering": "Future versioned editorial cryptographic/state policies;not historical certification"
+    },
+    "rights": "Declared permissions required and exact bytes verified;ownership/legal clearance not independently attested.",
+    "trial": {
+      "schema_version": 1,
+      "visibility": "private_tasker",
+      "plan": {
+        "schema_version": 1,
+        "profile": "rv-air1995-five-choice-blind-trial-v1",
+        "profile_sha256": "bb08a51d84d03ad858d65c1530fd763de8bbee686488ce512e54154877d2a60b",
+        "experiment_id": "experiment-ef747c56e497d821",
+        "trial_ids": [
+          "cue-27ea399733c7388a"
+        ],
+        "trial_id": "cue-27ea399733c7388a",
+        "origin": "human",
+        "mode": "blind_evaluation",
+        "tasker": "server",
+        "viewer": "viewer",
+        "monitor": null,
+        "judges": [
+          "judge"
+        ],
+        "knowledge": {
+          "tasker": "aware",
+          "viewer": "unaware",
+          "monitor": "absent",
+          "judges": "unaware"
+        },
+        "separation": "transferred_packets",
+        "assignment_policy": "os_uniform",
+        "presentation_order": [
+          0,
+          2,
+          4,
+          1,
+          3
+        ],
+        "primary_endpoint": "actual_target_rank",
+        "tie_policy": "reject",
+        "stopping_rule": "fixed_trial_ids",
+        "exclusion_rule": "retain_all_attempts",
+        "reuse_policy": "declare_dependence",
+        "created_at": "2026-11-20T11:14:27.651945+00:00",
+        "pool": {
+          "id": "fate-plates-v1",
+          "version": 1,
+          "candidates": [
+            {
+              "id": "plate-1",
+              "path": "fate/data/sealed-targets-v1/plate-1.png",
+              "sha256": "808a6da9aa9c3add9e9396353fceb0daa2b758af6582af21f3247c8351ee6202",
+              "provenance": "Original FATE geometric teaching plate v1",
+              "rights": {
+                "basis": "permission",
+                "holder": "FATE project",
+                "permission": "Use and include in this blind study",
+                "attribution": "FATE original procedural art"
+              }
+            },
+            {
+              "id": "plate-2",
+              "path": "fate/data/sealed-targets-v1/plate-2.png",
+              "sha256": "974b8f42a34c78690a08debc3076a3628382c3d7a5d3e5e402c7db419a34755a",
+              "provenance": "Original FATE geometric teaching plate v1",
+              "rights": {
+                "basis": "permission",
+                "holder": "FATE project",
+                "permission": "Use and include in this blind study",
+                "attribution": "FATE original procedural art"
+              }
+            },
+            {
+              "id": "plate-3",
+              "path": "fate/data/sealed-targets-v1/plate-3.png",
+              "sha256": "e2a3cc0d8784848f78fd6c5bd5f94e6d498dbacce62542878e6f4eb9fda8f3d0",
+              "provenance": "Original FATE geometric teaching plate v1",
+              "rights": {
+                "basis": "permission",
+                "holder": "FATE project",
+                "permission": "Use and include in this blind study",
+                "attribution": "FATE original procedural art"
+              }
+            },
+            {
+              "id": "plate-4",
+              "path": "fate/data/sealed-targets-v1/plate-4.png",
+              "sha256": "5f6b7195ec14a22302794758dd7a9e206569b742cd38f7da526800c4f1a54607",
+              "provenance": "Original FATE geometric teaching plate v1",
+              "rights": {
+                "basis": "permission",
+                "holder": "FATE project",
+                "permission": "Use and include in this blind study",
+                "attribution": "FATE original procedural art"
+              }
+            },
+            {
+              "id": "plate-5",
+              "path": "fate/data/sealed-targets-v1/plate-5.png",
+              "sha256": "f81b29fa14d457b551d8e814560e06f57e1e43ec5d76cb17d7e02842cb177fef",
+              "provenance": "Original FATE geometric teaching plate v1",
+              "rights": {
+                "basis": "permission",
+                "holder": "FATE project",
+                "permission": "Use and include in this blind study",
+                "attribution": "FATE original procedural art"
+              }
+            }
+          ]
+        }
+      },
+      "plan_sha256": "dd8886a3e608d98643de7f2e1e42a3e6ca55d8f4af584675243feeabdc3400ec",
+      "pool_sha256": "454d4db248f4778b9e7d68ab07231925b51b375999b2f1e5d0decab18d3de4ae",
+      "selection": {
+        "policy": "os_uniform",
+        "draws": [
+          63
+        ],
+        "index": 3
+      },
+      "nonce": "2646425ea7b97a4e1e3bc2126bdb78f8372471a7e9eea3077f27c61b6c1b5992",
+      "commitment": "31d0e3dc0c23c9919eb975bd948ed294942ac70068213a8ad04397a202d2da96",
+      "events": [
+        {
+          "seq": 1,
+          "previous": "d5b7d465e87d318a69f1295f3459684eba1cb2d3e0a17acbe8bfff0db4bf9624",
+          "action": "commit",
+          "actor": "server",
+          "at": "2026-11-20T11:14:27.657953+00:00",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "32829b0079f4923c24dbd782b27d854539e9a09a1acc29e023d2ebeaf16a1e94"
+        },
+        {
+          "seq": 2,
+          "previous": "32829b0079f4923c24dbd782b27d854539e9a09a1acc29e023d2ebeaf16a1e94",
+          "action": "start",
+          "actor": "viewer",
+          "at": "2026-11-20T11:14:27.715177+00:00",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "81da4b4c27768d051b385262d03158f25839b6043569e27749637f0fcea31614"
+        },
+        {
+          "seq": 3,
+          "previous": "81da4b4c27768d051b385262d03158f25839b6043569e27749637f0fcea31614",
+          "action": "entry",
+          "actor": "viewer",
+          "at": "2026-11-20T11:14:27.961428+00:00",
+          "payload": {
+            "text": "Public QA impression: sharp corners and a dark field.",
+            "stage": null,
+            "attachments": []
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "e7f30f5ed21c662c6a30ddf7ed1849300ce4375e5dd74d098f75b055184f7249"
+        },
+        {
+          "seq": 4,
+          "previous": "e7f30f5ed21c662c6a30ddf7ed1849300ce4375e5dd74d098f75b055184f7249",
+          "action": "lock_viewer",
+          "actor": "viewer",
+          "at": "2026-11-20T11:14:28.109111+00:00",
+          "payload": {
+            "digest": "85c4719bd667170872ea5ba5b9a2559236208bb3f2bdb1f7425ad15842a43c41"
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "94384697ed8c849b6afdb27996e74d317bd94a6b286f1a735c296d3b7f262b1e"
+        },
+        {
+          "seq": 5,
+          "previous": "94384697ed8c849b6afdb27996e74d317bd94a6b286f1a735c296d3b7f262b1e",
+          "action": "start_judge",
+          "actor": "server",
+          "at": "2026-11-20T11:14:28.134059+00:00",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "408ef05026bf36c3900391de4d8c023ba45c5e6df30956c4d069ff8137dca80b"
+        },
+        {
+          "seq": 6,
+          "previous": "408ef05026bf36c3900391de4d8c023ba45c5e6df30956c4d069ff8137dca80b",
+          "action": "rank",
+          "actor": "judge",
+          "at": "2026-11-20T11:14:29.798181+00:00",
+          "payload": {
+            "ranks": {
+              "c1": 1,
+              "c2": 2,
+              "c3": 3,
+              "c4": 4,
+              "c5": 5
+            },
+            "report": "Judge submitted one strict rank order."
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "4696758c2f0372e56b0ddd930281daf8d8abcba8fbc52aca509e8c272cf9be5a"
+        },
+        {
+          "seq": 7,
+          "previous": "4696758c2f0372e56b0ddd930281daf8d8abcba8fbc52aca509e8c272cf9be5a",
+          "action": "lock_judge",
+          "actor": "server",
+          "at": "2026-11-20T11:14:29.819220+00:00",
+          "payload": {
+            "digest": "364d677dcf031f48824eaabe5d8255c72be59274e55408f25a56a266c78d44c2"
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "3e60a9da48a342c43c9d15f47554c6360dc7913c67c65388f6a14b1fbf4fcf9e"
+        },
+        {
+          "seq": 8,
+          "previous": "3e60a9da48a342c43c9d15f47554c6360dc7913c67c65388f6a14b1fbf4fcf9e",
+          "action": "reveal",
+          "actor": "server",
+          "at": "2026-11-20T11:14:29.832736+00:00",
+          "payload": {
+            "preimage": {
+              "domain": "future.remote-viewing.assignment.v1",
+              "profile": "rv-air1995-five-choice-blind-trial-v1",
+              "profile_sha256": "bb08a51d84d03ad858d65c1530fd763de8bbee686488ce512e54154877d2a60b",
+              "trial_id": "cue-27ea399733c7388a",
+              "plan_sha256": "dd8886a3e608d98643de7f2e1e42a3e6ca55d8f4af584675243feeabdc3400ec",
+              "pool_sha256": "454d4db248f4778b9e7d68ab07231925b51b375999b2f1e5d0decab18d3de4ae",
+              "target_id": "plate-4",
+              "asset_sha256": "5f6b7195ec14a22302794758dd7a9e206569b742cd38f7da526800c4f1a54607",
+              "selection": {
+                "policy": "os_uniform",
+                "draws": [
+                  63
+                ],
+                "index": 3
+              },
+              "nonce": "2646425ea7b97a4e1e3bc2126bdb78f8372471a7e9eea3077f27c61b6c1b5992"
+            }
+          },
+          "accepted": true,
+          "error": null,
+          "sha256": "5c6b47e0486bc92d80f19c0921b0abcc2d1f385148cdb4d21f882dc470c01dc8"
+        },
+        {
+          "seq": 9,
+          "previous": "5c6b47e0486bc92d80f19c0921b0abcc2d1f385148cdb4d21f882dc470c01dc8",
+          "action": "report",
+          "actor": "server",
+          "at": "2026-11-20T11:14:29.845251+00:00",
+          "payload": {},
+          "accepted": true,
+          "error": null,
+          "sha256": "70b0b5bab8417df135704756ed67ec84ddf794b21cf4c96b9e7c707f5d77af04"
+        }
+      ]
+    },
+    "limitations": [
+      "Procedural file validation is not evidence of extrasensory perception or prediction.",
+      "File owner can rewrite all history; retain an independently held commitment anchor.",
+      "Clocks, identities, rights, knowledge and operational separation are declarations.",
+      "Packet allowlists cannot establish absence of semantic clues, collusion or prior knowledge.",
+      "No independently witnessed status or inferential p-value is certified."
+    ],
+    "report_sha256": "de1fc94ac36cbcf684cfb02961f242f2d3b05377d8fc9d9db53ba49473f40360"
+  }
+}

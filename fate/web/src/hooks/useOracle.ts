@@ -1,4 +1,9 @@
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import {
+  futureId,
+  ROOMS as FUTURES,
+  type Slug as FutureSlug,
+} from "../futures/contracts";
 import { useSound } from "../useSound";
 import { api, type Draw, type Envelope, type Commentary } from "../types";
 import { EXPERIENCES } from "../experiences/contracts";
@@ -12,6 +17,7 @@ import {
   type Slug as FolioSlug,
 } from "../manuscript/contracts";
 export type Screen =
+  | FutureSlug
   | FolioSlug
   | SignSlug
   | RitualSlug
@@ -32,6 +38,8 @@ export function useOracle() {
     );
   }
   const [screen, setScreen] = useState<Screen>(() => {
+    const future = futureId(location.hash.slice(1));
+    if (future) return FUTURES[future][0];
     const folio = roomId(location.hash.slice(1));
     if (folio) return FOLIOS[folio][0];
     const sign = signId(location.hash.slice(1));
@@ -91,6 +99,11 @@ export function useOracle() {
     const fn = () => {
       preferMainFocus.current = false;
       const name = location.hash.slice(1);
+      const future = futureId(name);
+      if (future) {
+        setScreen(FUTURES[future][0]);
+        return;
+      }
       const folio = roomId(name);
       if (folio) {
         setScreen(FOLIOS[folio][0]);

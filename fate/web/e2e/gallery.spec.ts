@@ -184,7 +184,7 @@ test("complete mobile native Numerology ritual, exact export, session continuity
     .getByRole("button", { name: "Return to the Gallery", exact: true })
     .click();
   await expect(
-    page.getByText("1 of 36 rooms explored this visit"),
+    page.getByText("1 of 54 rooms explored this visit"),
   ).toBeVisible();
   await page
     .getByRole("button", { name: "Explore Numerology", exact: true })
@@ -193,7 +193,7 @@ test("complete mobile native Numerology ritual, exact export, session continuity
   await page.getByRole("button", { name: "The Gallery", exact: false }).click();
   await page.reload();
   await expect(
-    page.getByText("0 of 36 rooms explored this visit"),
+    page.getByText("0 of 54 rooms explored this visit"),
   ).toBeVisible();
   expect(
     await page.evaluate(() => ({

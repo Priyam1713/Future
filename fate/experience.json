@@ -1,6 +1,6 @@
 {
-  "id": "fate-sky-manuscript-v9",
-  "block": "09 · The Sky & The Human Manuscript",
+  "id": "fate-complete-retained-v10",
+  "block": "10 · The Dream Archive and Tomorrow Machine",
   "capability": "symbolic_reading",
   "engine": "future.tarot.read",
   "text_profile": "waite-1922-text-v1",
@@ -98,7 +98,7 @@
     "fonts": "Self-hosted Cormorant Garamond and Inter; SIL OFL licenses and source URLs bundled",
     "generated": "Original FATE back, nebula, brass dial and observatory hall made with built-in image_gen; exact prompts and source PNGs retained under design/. No baked UI. Orb poster extracted from actual renderer. Block 03 original illustrated Codex cover has a separately recorded source PNG and exact prompt; binding, runtime title, counts, paper, source chapters, moving light and turns are independent layers."
   },
-  "scope": "36 consumer oracle rooms, a 54-technique Gallery and explicitly saved local chapters.",
+  "scope": "All 54 retained techniques have a consumer room with bounded native inputs or source workflows.",
   "technique_ids": [
     1,
     2,
@@ -123,6 +123,8 @@
     21,
     22,
     23,
+    24,
+    26,
     28,
     29,
     30,
@@ -135,7 +137,23 @@
     37,
     38,
     39,
-    40
+    40,
+    43,
+    44,
+    45,
+    46,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
   ],
   "supported_scope": "The supported object describes Tarot. Separate sections describe the other rooms and the Gallery.",
   "gallery": {
@@ -174,6 +192,8 @@
       21,
       22,
       23,
+      24,
+      26,
       28,
       29,
       30,
@@ -186,7 +206,23 @@
       37,
       38,
       39,
-      40
+      40,
+      43,
+      44,
+      45,
+      46,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
     ],
     "historical_references": [
       9,
@@ -197,7 +233,7 @@
       14,
       15
     ],
-    "upcoming": "All other retained IDs; no launch dates or consumer-engine readiness claims",
+    "upcoming": "All retained techniques have bounded consumer rooms.",
     "continuity": "React memory only; completed-reading markers contain technique IDs, no personal inputs; cleared on reload",
     "taxonomy": "Six original inventory phases, editorial collection names; IDs, variations, evidence and rank-one source retained. Master inventory, resource rankings and variation records unchanged."
   },
@@ -550,5 +586,63 @@
     ],
     "sources": "design/block09-artwork.json",
     "evidence": "evidence/block09-acceptance.json"
+  },
+  "future_worlds": {
+    "endpoints": [
+      "POST /api/future-study",
+      "POST /api/archive-session"
+    ],
+    "environments": {
+      "Dream Archive": [
+        24,
+        26,
+        43,
+        44,
+        45,
+        46
+      ],
+      "Tomorrow Machine": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    "supported": {
+      "24": "Voluntary plain-text writing, exact native draft and metrics, plus a pinned teaching excerpt.",
+      "26": "Explicit source concept lookup with optional participant-authored open reflection.",
+      "43": "One OS-uniform target from five original plates, native commitment and transcript lock, transferred judge packet and strict ranking from a distinct browser profile, then native reveal.",
+      "44": "Predeclared single slot, one actual visitor-declared later observation, chronology verification and an unblinded descriptive self-rating. Independent simulated example.",
+      "45": "Native Take-the-Best walkthrough with a selectable decisive cue and abstention.",
+      "46": "Manual ordinary recollection annotations and a synthetic case. Raw private record omitted from the web projection and export.",
+      "49": "Four native monthly forecast baselines on synthetic data. Separate pinned retrospective NOAA evaluation.",
+      "50": "Four two-wire statevector circuit configurations with direct terminal probabilities.",
+      "51": "Native likelihood-ratio update over a synthetic versioned prior.",
+      "52": "Native threshold network with three selectable seed nodes and round playback.",
+      "53": "Scalar synthetic sensor update with available or missing observation.",
+      "54": "Editable 7 by 7 initial grid, native synchronous B3/S23 and generation scrubber.",
+      "55": "Offline nearest centroid against synthetic features, with a selectable held-out vector and native class distances.",
+      "56": "Native finite synthetic causal graph with optional back-door adjustment.",
+      "57": "Equal pooling of two synthetic probabilities with a configurable second contribution.",
+      "58": "Synthetic Yes share quantity in a native cost-function market using play credit.",
+      "59": "Native Lorenz RK4 trajectories and refinement with adjustable integration windows and scrubber.",
+      "60": "Native exact probabilities in a finite hypothetical scenario tree with selectable branch weight."
+    },
+    "storage": "Explicit Codex bookmarks store public setting IDs only. Private studies and sessions stay out of Codex; live ledgers use bounded memory and expire.",
+    "limits": [
+      "Synthetic results do not certify empirical forecast skill.",
+      "Blind viewing requires a second browser profile and cannot independently verify the identity or independence of people.",
+      "The live dream diary depends on the current server process; browser evidence retains a real pending state."
+    ],
+    "artwork": "design/block10-artwork.json",
+    "acceptance": "evidence/block10-acceptance.json"
   }
 }

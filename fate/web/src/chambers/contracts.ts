@@ -1,4 +1,5 @@
 import { isRoom, ROOMS as FOLIOS } from "../manuscript/contracts";
+import { isFuture, ROOMS as FUTURES } from "../futures/contracts";
 import edition from "./edition-v1.json";
 import { isSignId, SIGNS } from "../signs/contracts";
 import { isRitualId, RITUAL_ROOMS } from "../ritual/contracts";
@@ -85,6 +86,7 @@ export function isChamberSnapshot(s: { oracle: number }): s is ChamberSnapshot {
   return isChamberId(s.oracle);
 }
 export function oracleLabel(id: number) {
+  if (isFuture(id)) return FUTURES[id][1];
   if (isRoom(id)) return FOLIOS[id][1];
   if (isSignId(id)) return SIGNS[id].name;
   if (isRitualId(id)) return RITUAL_ROOMS[id].name;

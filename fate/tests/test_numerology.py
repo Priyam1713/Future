@@ -72,7 +72,8 @@ class NumberBoundaryTests(unittest.TestCase):
         snapshot=json.loads((root/'fate/web/src/gallery/inventory.json').read_text(encoding='utf-8'))
         self.assertEqual(snapshot,build())
         self.assertEqual(len(snapshot['methods']),54)
-        self.assertEqual([m['id'] for m in snapshot['methods'] if m['status']=='available'],[*range(1,24),*range(28,41)])
+        self.assertEqual([m['id'] for m in snapshot['methods'] if m['status']=='available'],
+                         [i for i in range(1,61) if i not in {25,27,41,42,47,48}])
         self.assertTrue(set(snapshot['excluded_ids']).isdisjoint(m['id'] for m in snapshot['methods']))
 
 

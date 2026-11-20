@@ -172,7 +172,9 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
             calibration, replay seeds and Gemini commentary stay outside the
             Codex. Chart geometry can reveal information about a birth moment.
             Saved transit chapters keep the dates you choose. Manuscript and
-            compass bookmarks keep source IDs only.
+            compass bookmarks keep source IDs only. Dream Archive and Tomorrow
+            Machine bookmarks keep the public study setting. Personal writing
+            and live archive sessions stay outside My Fate.
           </p>
           <p>
             Comparison choices stay in memory. The app and artwork must be

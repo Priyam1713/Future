@@ -1685,3 +1685,10 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Added explicit palm line selection, seven archival indexes, and a 24-mountain compass that reports printed intervals, declared bearing frame and uncertainty. Manuscript and compass bookmarks retain public source IDs. Court inputs stay in the open visit.
 - Introduced a shorter result layout for Tarot, Numerology and the World of Signs and moved detailed storage disclosures into My Fate's expandable depth. Media, exact browser-to-native replays, and art provenance are indexed in `fate/evidence/block09-acceptance.json`.
 - Passed 2,697 unit and boundary tests, 86 browser tests, 3,515 CLI cases and 52 verifiers. Build, dependency and inventory checks passed. Native engines, source records and Workbench match `f444fc0`.
+
+## 2026-11-20 — FATE Block 10
+
+- Opened #24, #26, #43–46 and #49–60 in the Dream Archive and Tomorrow Machine, bringing the Gallery to all 54 retained techniques.
+- Added a two-profile blind target workflow with native commitments and a prospective diary that locks the original before accepting real observations. Public studies have direct native readouts. Private text and live ledgers stay out of My Fate.
+- Added two illustrated environments, original target plates, editable lab instruments and source-linked study bookmarks. Native replay, privacy, performance, and media are indexed in `fate/evidence/block10-acceptance.json`.
+- Passed 2,703 unit and boundary tests, 107 browser tests, 3,515 CLI cases and 52 independent verifiers. The build, dependency and inventory checks passed. The protected native engines, source data and Workbench match `0461d9a`.

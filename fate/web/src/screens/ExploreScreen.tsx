@@ -39,7 +39,7 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
           <p className="hero-description">
             Ancient symbols. Quiet patterns.
             <br />
-            Thirty-six open rooms in a universe of discovery.
+            Fifty-four open rooms in a universe of discovery.
           </p>
           <nav className="room-index" aria-label="Open oracle rooms">
             <button onClick={begin}>

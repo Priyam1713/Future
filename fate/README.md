@@ -1,6 +1,14 @@
-# FATE · Block 09 — The Sky & The Human Manuscript
+# FATE · Block 10 — The Dream Archive and Tomorrow Machine
 
-FATE brings 36 existing Future engines into one consumer Gallery. Each chamber leads from its own instrument or ritual to a source-grounded result. Eligible chapters can be saved locally. The app uses React and TypeScript, with the signature PixiJS orb and a stateless FastAPI boundary.
+FATE opens all 54 retained Future techniques in a consumer Gallery. Each room leads from its own instrument or source workflow to a native result. Eligible public studies and bounded chapters can be saved locally.
+
+## Block 10
+
+The Dream Archive opens six rooms for personal writing, practitioner references, blinded target ranking, a prospective dream diary, cue ordering, and memory annotation. The blind trial separates viewer and judge browser profiles, locks both submissions, and reveals the committed target with the native report. The prospective diary accepts observations only after the original lock and requires a declared observation before descriptive review. Both private workflows use bounded server memory. A restart ends active sessions.
+
+The Tomorrow Machine contains twelve adjustable simulations, model studies and forecasting instruments. Public studies name their synthetic or hypothetical scope. The NOAA option separately displays a pinned historical benchmark. My Fate keeps public settings and source references. Private drafts and active ledgers have no saved chapters.
+
+See [supported methods](experience.json), [artwork provenance](design/block10-artwork.json), and [acceptance evidence](evidence/block10-acceptance.json). Run `python -m fate.build_futures` to verify the public study edition, or run `node scripts/capture-futures.mjs` from `fate/web` against the built app to capture the rooms.
 
 ## Block 09
 

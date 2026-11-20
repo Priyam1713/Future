@@ -1,3 +1,5 @@
+import { isFutureBookmark } from "../futures/contracts";
+import { savedStudy, futureEvidence } from "../futures/reference";
 import { isBookmark } from "../manuscript/contracts";
 import { bookmarkEvidence, bookmarkTitle } from "../manuscript/reference";
 import reference from "./reference-v1.json";
@@ -39,6 +41,8 @@ export function cardReference(id: string) {
   return cards[id];
 }
 export function chapterTitle(chapter: Chapter) {
+  if (isFutureBookmark(chapter.snapshot))
+    return savedStudy(chapter.snapshot).view.title;
   if (isBookmark(chapter.snapshot)) return bookmarkTitle(chapter.snapshot);
   if (isSign(chapter.snapshot)) return signTitle(chapter.snapshot);
   if (isRitualSnapshot(chapter.snapshot)) return ritualTitle(chapter.snapshot);
@@ -56,6 +60,7 @@ export function chapterTitle(chapter: Chapter) {
     : `A ${chapter.snapshot.expression} / ${chapter.snapshot.personalYear} constellation`;
 }
 export function evidenceFor(snapshot: Snapshot): Evidence[] {
+  if (isFutureBookmark(snapshot)) return futureEvidence(snapshot);
   if (isBookmark(snapshot)) return bookmarkEvidence(snapshot);
   if (isSign(snapshot)) return signEvidence(snapshot);
   if (isRitualSnapshot(snapshot)) return ritualEvidence(snapshot);

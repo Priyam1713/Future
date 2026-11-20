@@ -25,7 +25,8 @@ from .western import WesternInput, WesternService, search_places
 from .turning import TransitInput, TransitRunner, natal_basis
 from . import chambers
 from . import ritual
-from . import manuscript, signs
+from . import futures, manuscript, signs
+from .archive_sessions import ArchiveSessions, COOKIE as ARCHIVE_COOKIE, PATH as ARCHIVE_PATH, VaultInput
 
 WEB = Path(__file__).parent / 'web' / 'dist'
 POSITIONS = ['What you carry', 'Where you stand', 'What to consider']
@@ -94,6 +95,7 @@ def create_app(provider=None, signing_key=None, clock=time.time):
     western = WesternService()
     celestial = WesternService()
     sky_slot = threading.BoundedSemaphore(1)
+    archive = ArchiveSessions(clock)
     turning = TransitRunner()
     @asynccontextmanager
     async def lifespan(app):
@@ -206,6 +208,20 @@ def create_app(provider=None, signing_key=None, clock=time.time):
     @app.post('/api/world-of-signs')
     def world_of_signs(q: signs.SignInput):
         return signs.read_sign(q)
+
+    @app.post('/api/future-study')
+    def future_study(q: futures.StudyInput):
+        return futures.read(q, clock)
+
+    @app.post(ARCHIVE_PATH)
+    def archive_session(q: VaultInput, request: Request):
+        supplied = request.cookies.get(ARCHIVE_COOKIE, '')
+        owner = supplied if len(supplied)==43 and all(c.isascii() and (c.isalnum() or c in '_-') for c in supplied) else secrets.token_urlsafe(32)
+        response = JSONResponse(archive.handle(q,owner))
+        if owner != supplied:
+            response.set_cookie(ARCHIVE_COOKIE,owner,httponly=True,secure=request.url.scheme=='https',
+                                samesite='strict',path=ARCHIVE_PATH)
+        return response
 
     @app.post('/api/sky-manuscript')
     def sky_manuscript(q: manuscript.Request):
