@@ -17,6 +17,9 @@ import "./signs.css";
 import "./manuscript.css";
 import "./futures.css";
 import "./living.css";
+import "./platform.css";
+import { isGame } from "./arcade/games";
+import { FutureRoute } from "./futures/FutureRoute";
 import { futureId } from "./futures/contracts";
 import { roomId } from "./manuscript/contracts";
 import { signId } from "./signs/contracts";
@@ -31,7 +34,7 @@ const ChamberScreen = lazy(() => import("./chambers/ChamberScreen"));
 const RitualWing = lazy(() => import("./ritual/RitualWingScreen"));
 const SignsScreen = lazy(() => import("./signs/SignsScreen"));
 const Manuscript = lazy(() => import("./manuscript/ManuscriptScreen"));
-const FutureWorld = lazy(() => import("./futures/FutureScreen"));
+const PlayScreen = lazy(() => import("./arcade/PlayScreen"));
 function App() {
   const oracle = useOracle();
   const { screen, reduced, paused, dialog, sound, navigate, skipToContent } =
@@ -41,6 +44,7 @@ function App() {
   const sign = signId(screen);
   const folio = roomId(screen);
   const future = futureId(screen);
+  const playing = screen === "play" || isGame(screen);
   return (
     <div className={`app ${reduced || paused ? "still" : ""}`}>
       <a
@@ -90,14 +94,20 @@ function App() {
           [
             { screen: "explore", href: "#explore", label: "Explore" },
             { screen: "gallery", href: "#gallery", label: "54 techniques" },
+            { screen: "play", href: "#play", label: "Play" },
             { screen: "codex", href: "#my-fate", label: "My Fate" },
           ] as const
         ).map((item) => (
           <a
             key={item.screen}
             href={item.href}
-            aria-current={screen === item.screen ? "page" : undefined}
+            aria-current={
+              screen === item.screen || (item.screen === "play" && playing)
+                ? "page"
+                : undefined
+            }
             onClick={(e) => {
+              if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
               e.preventDefault();
               navigate(item.screen);
             }}
@@ -114,16 +124,18 @@ function App() {
         ))}
       </nav>
       <main id="main" tabIndex={-1}>
-        {future ? (
+        {playing ? (
           <Suspense
             fallback={
               <p className="scope-note" role="status">
-                Opening the instrument…
+                Opening the Play Hall…
               </p>
             }
           >
-            <FutureWorld key={future} id={future} oracle={oracle} />
+            <PlayScreen oracle={oracle} />
           </Suspense>
+        ) : future ? (
+          <FutureRoute key={future} id={future} oracle={oracle} />
         ) : folio ? (
           <Suspense
             fallback={

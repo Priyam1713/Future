@@ -2,6 +2,12 @@
 
 FATE opens all 54 retained Future techniques in a consumer Gallery. Each room leads from its own instrument or source workflow to a native result. Eligible public studies and bounded chapters can be saved locally.
 
+## Block 12
+
+The Gallery keeps its search or world selection when a visitor returns from a room. Desktop adds a spatial world rail and side-by-side instruments and interpretations. The Western chart supports a dedicated drag grip and Shift-wheel, with a native range control for keyboard and touch.
+
+Play offers the Living Loom, Signal Switch and Forecast Station. They use the existing cellular automaton, quantum circuit and probability update profiles. Arcade scoring and the virtual signal draw are presentation rules. Rounds use no accounts, real stakes or saved readings. Reproduce the screenshots, browser checks and timing profiles from `fate/web` with `node scripts/capture-block12.mjs media`, `engines` or `benchmark` against a build on port 8011. [Block 12 evidence](evidence/block12-acceptance.json)
+
 ## Block 11
 
 Six illustrated entrances group the open rooms by experience. Search still uses the original inventory and variation names. World doors preserve keyboard focus on return, while direct links open their rooms without a search or an accordion.

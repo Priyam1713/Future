@@ -172,7 +172,7 @@ export function Scrubber({
   );
 }
 
-function Circuit({ data }: { data: InstrumentData }) {
+export function Circuit({ data }: { data: InstrumentData }) {
   const chance = likelyOutcomes(data.bars ?? []);
   return (
     <div className="circuit-board">

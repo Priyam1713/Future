@@ -1699,3 +1699,10 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Polished Tarot, Numerology, Western Astrology, Remote Viewing, Quantum Simulation, Prediction Markets and Lorenz Chaos. Touch lighting, reveal timing and pressure feedback share a small set of primitives. The instruments retain their distinct materials and native results.
 - Preserved the original geometric plates, native engines, inventory, privacy and Codex contracts. Captures, comparisons against Block 10 and artwork provenance are indexed in `fate/evidence/block11-acceptance.json`.
 - Passed 2,703 unit and boundary tests, 3,515 CLI cases and 52 independent verifiers. The full browser runs passed 102 FATE and nine Workbench scenarios. One Gallery route timed out during the FATE run and passed three separate rechecks.
+
+## 2026-11-21 — FATE Block 12
+
+- Added a desktop Gallery rail, widescreen instrument layouts, a scoped chart drag grip and Shift-wheel, and in-visit Gallery restoration. Mobile keeps dedicated touch sizing and keyboard equivalents.
+- Added a separate Play Hall with the Living Loom, Signal Switch and Forecast Station. All three reuse the existing native study boundary, with virtual points, explanations and replay.
+- Fixed the intermittent Gallery-to-instrument loading stall. Rooms preload on link intent, and the Arcade loads source citations independently of the Codex study bundle.
+- Passed 2,703 unit and boundary tests, 115 FATE browser tests, nine Workbench browser tests, 3,515 CLI cases and 52 independent verifiers. The six viewport profiles, browser zoom, Firefox checks and native replay of recorded games are indexed in `fate/evidence/block12-acceptance.json`.

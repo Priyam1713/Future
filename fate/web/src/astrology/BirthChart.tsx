@@ -9,6 +9,7 @@ import {
 } from "./contracts";
 import { initialQuality } from "../orb/policy";
 import { point } from "./geometry";
+import { ChartTurn } from "./ChartTurn";
 function between(a: number, b: number) {
   return (a + ((b - a + 360) % 360) / 2) % 360;
 }
@@ -415,20 +416,7 @@ export function BirthChart({
                 ),
             )}
           </div>
-          <label className="chart-turn">
-            Turn the instrument{" "}
-            <input
-              type="range"
-              min="-180"
-              max="180"
-              step="1"
-              value={rotation}
-              onChange={(e) => setRotation(Number(e.target.value))}
-            />
-            <button className="text-button" onClick={() => setRotation(0)}>
-              Align Ascendant
-            </button>
-          </label>
+          <ChartTurn rotation={rotation} setRotation={setRotation} />
         </>
       )}
     </div>

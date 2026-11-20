@@ -2,6 +2,8 @@ import { useId, useLayoutEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Search } from "lucide-react";
 import type { Oracle } from "../hooks/useOracle";
 import { rooms, worlds, type GalleryRoom, type GalleryWorld } from "./worlds";
+import { futureId } from "../futures/contracts";
+import { warmFutureRoom } from "../futures/FutureRoute";
 
 const tokens: Partial<Record<GalleryWorld["id"], string>> = {
   sky: "/art/fate_orrery.svg",
@@ -9,7 +11,15 @@ const tokens: Partial<Record<GalleryWorld["id"], string>> = {
   earth: "/art/folio-compass-720.webp",
 };
 
-function RoomLink({ room, oracle }: { room: GalleryRoom; oracle: Oracle }) {
+function RoomLink({
+  room,
+  oracle,
+  remember,
+}: {
+  room: GalleryRoom;
+  oracle: Oracle;
+  remember: (id: number) => void;
+}) {
   const { method, name, screen, description, historical } = room;
   const descriptionId = useId();
   return (
@@ -18,10 +28,13 @@ function RoomLink({ room, oracle }: { room: GalleryRoom; oracle: Oracle }) {
         href={`#${screen}`}
         aria-label={`Enter ${name}`}
         aria-describedby={descriptionId}
+        onFocus={futureId(screen) ? warmFutureRoom : undefined}
+        onPointerEnter={futureId(screen) ? warmFutureRoom : undefined}
         onClick={(event) => {
           if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
             return;
           event.preventDefault();
+          remember(method.id);
           if (method.id === 16) oracle.begin();
           else {
             oracle.sound.cue("select");
@@ -89,10 +102,13 @@ export function OracleGallery({
   oracle: Oracle;
   embedded?: boolean;
 }) {
-  const [query, setQuery] = useState("");
-  const [world, setWorld] = useState<GalleryWorld | null>(null);
-  const [all, setAll] = useState(false);
-  const entrance = useRef<HTMLButtonElement | null>(null);
+  const saved = oracle.galleryVisit.current;
+  const [query, setQuery] = useState(saved.query);
+  const [world, setWorld] = useState<GalleryWorld | null>(
+    () => worlds.find(({ id }) => id === saved.world) ?? null,
+  );
+  const [all, setAll] = useState(saved.all);
+  const root = useRef<HTMLElement>(null);
   const destination = useRef<HTMLHeadingElement>(null);
   const focusDestination = useRef(false);
   const headingId = useId();
@@ -113,14 +129,34 @@ export function OracleGallery({
   const title = text ? "Search results" : all ? "All rooms" : world?.title;
 
   useLayoutEffect(() => {
+    const next = { query, world: world?.id ?? "", all };
+    const previous = oracle.galleryVisit.current;
+    if (
+      query !== previous.query ||
+      next.world !== previous.world ||
+      all !== previous.all
+    )
+      oracle.galleryVisit.current = { ...next, room: 0 };
+  }, [query, world, all]);
+  useLayoutEffect(() => {
+    const id = oracle.galleryVisit.current.room;
+    if (!id || embedded) return;
+    const frame = requestAnimationFrame(() => {
+      if (document.activeElement?.id === "main") return;
+      root.current
+        ?.querySelector<HTMLAnchorElement>(`[data-technique-id="${id}"] a`)
+        ?.focus();
+    });
+    return () => cancelAnimationFrame(frame);
+  }, []);
+  useLayoutEffect(() => {
     if (focusDestination.current) {
       destination.current?.focus();
       focusDestination.current = false;
     }
   }, [world, all]);
 
-  function open(next: GalleryWorld | null, from: HTMLButtonElement) {
-    entrance.current = from;
+  function open(next: GalleryWorld | null) {
     focusDestination.current = true;
     oracle.sound.cue("select");
     setQuery("");
@@ -129,19 +165,20 @@ export function OracleGallery({
   }
 
   function returnToDoors() {
-    const trigger = entrance.current;
+    const id = `${headingId}-${world?.id ?? "all"}`;
     setQuery("");
     setWorld(null);
     setAll(false);
     requestAnimationFrame(() => {
-      const id = trigger?.dataset.door;
-      const target = id && document.getElementById(id);
-      if (target) target.focus();
+      document.getElementById(id)?.focus();
     });
+  }
+  function remember(room: number) {
+    oracle.galleryVisit.current = { query, world: world?.id ?? "", all, room };
   }
 
   return (
-    <section className="living-gallery" aria-labelledby={headingId}>
+    <section ref={root} className="living-gallery" aria-labelledby={headingId}>
       {embedded ? (
         <h2 id={headingId}>Six worlds to explore</h2>
       ) : (
@@ -169,64 +206,96 @@ export function OracleGallery({
         </p>
       </div>
       {listed ? (
-        <section className="world-interior" aria-label={title}>
-          <div
-            className={
-              world && !text
-                ? `interior-heading interior-${world.id}`
-                : "interior-heading"
-            }
-          >
-            {world && !text && <WorldArt world={world} eager expanded />}
-            {!text && (
-              <button
-                className="text-button world-return"
-                onClick={returnToDoors}
-              >
-                <ArrowLeft size={15} aria-hidden="true" /> All worlds
-              </button>
-            )}
-            <h3 tabIndex={-1} ref={destination}>
-              {title}
-            </h3>
-            {world && !text && <p>{world.description}</p>}
-          </div>
-          {world && !text && featured && (
-            <div className={`world-feature world-feature-${world.id}`}>
-              <div className="world-token" aria-hidden="true">
-                {tokens[world.id] ? (
-                  <img src={tokens[world.id]} alt="" width="104" height="104" />
-                ) : (
-                  <span />
-                )}
-              </div>
-              <div>
-                <p className="eyebrow">Start here</p>
-                <ul>
-                  <RoomLink room={featured} oracle={oracle} />
-                </ul>
-              </div>
+        <div className="gallery-map">
+          {world && !text && (
+            <nav className="world-rail" aria-label="Switch worlds">
+              {worlds.map((item) => (
+                <button
+                  key={item.id}
+                  className="text-button"
+                  aria-current={item.id === world.id ? "true" : undefined}
+                  aria-label={`View ${item.title}`}
+                  onClick={() => open(item)}
+                >
+                  <WorldArt world={item} />
+                  <span>{item.title}</span>
+                </button>
+              ))}
+            </nav>
+          )}
+          <section className="world-interior" aria-label={title}>
+            <div
+              className={
+                world && !text
+                  ? `interior-heading interior-${world.id}`
+                  : "interior-heading"
+              }
+            >
+              {world && !text && <WorldArt world={world} eager expanded />}
+              {!text && (
+                <button
+                  className="text-button world-return"
+                  onClick={returnToDoors}
+                >
+                  <ArrowLeft size={15} aria-hidden="true" /> All worlds
+                </button>
+              )}
+              <h3 tabIndex={-1} ref={destination}>
+                {title}
+              </h3>
+              {world && !text && <p>{world.description}</p>}
             </div>
-          )}
-          <nav
-            aria-label={
-              text ? "Matching rooms" : all ? "All rooms" : `${title} rooms`
-            }
-          >
-            <ul className="gallery-room-list">
-              {listed
-                .filter((room) => text || room !== featured)
-                .map((room) => (
-                  <RoomLink key={room.method.id} room={room} oracle={oracle} />
-                ))}
-            </ul>
-          </nav>
-          {listed.length === 0 && (
-            <p className="gallery-empty">
-              No tradition matches that search. Try another name.
-            </p>
-          )}
-        </section>
+            {world && !text && featured && (
+              <div className={`world-feature world-feature-${world.id}`}>
+                <div className="world-token" aria-hidden="true">
+                  {tokens[world.id] ? (
+                    <img
+                      src={tokens[world.id]}
+                      alt=""
+                      width="104"
+                      height="104"
+                    />
+                  ) : (
+                    <span />
+                  )}
+                </div>
+                <div>
+                  <p className="eyebrow">Start here</p>
+                  <ul>
+                    <RoomLink
+                      room={featured}
+                      oracle={oracle}
+                      remember={remember}
+                    />
+                  </ul>
+                </div>
+              </div>
+            )}
+            <nav
+              aria-label={
+                text ? "Matching rooms" : all ? "All rooms" : `${title} rooms`
+              }
+            >
+              <ul className="gallery-room-list">
+                {listed
+                  .filter((room) => text || room !== featured)
+                  .map((room) => (
+                    <RoomLink
+                      key={room.method.id}
+                      room={room}
+                      oracle={oracle}
+                      remember={remember}
+                    />
+                  ))}
+              </ul>
+            </nav>
+            {listed.length === 0 && (
+              <p className="gallery-empty">
+                No tradition matches that search. Try another name.
+              </p>
+            )}
+          </section>
+        </div>
       ) : (
         <>
           <div className="world-entrances">
@@ -238,7 +307,7 @@ export function OracleGallery({
                 id={`${headingId}-${item.id}`}
                 data-door={`${headingId}-${item.id}`}
                 aria-label={item.title}
-                onClick={(event) => open(item, event.currentTarget)}
+                onClick={() => open(item)}
               >
                 <WorldArt world={item} eager={!embedded && index < 3} />
                 <span className="world-door-copy">
@@ -255,7 +324,7 @@ export function OracleGallery({
             className="text-button all-rooms"
             id={`${headingId}-all`}
             data-door={`${headingId}-all`}
-            onClick={(event) => open(null, event.currentTarget)}
+            onClick={() => open(null)}
           >
             View all 54 rooms <ArrowRight size={17} aria-hidden="true" />
           </button>

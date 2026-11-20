@@ -1,0 +1,216 @@
+/* The Gallery and instrument rooms share one responsive shell. */
+.fate-navigation a {
+  white-space: nowrap;
+}
+.world-rail {
+  display: none;
+}
+.gallery-map {
+  min-width: 0;
+}
+.chart-grip {
+  display: none;
+}
+.chart-turn label {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex: 1;
+  min-width: 0;
+}
+.chart-turn label input {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+}
+.chart-turn > button {
+  min-height: 44px;
+}
+.western-ritual .chart-turn-controls {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .fate-navigation {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-inline: max(4px, env(safe-area-inset-left))
+      max(4px, env(safe-area-inset-right));
+  }
+  .fate-navigation a {
+    min-width: 0;
+    min-height: 48px;
+    font-size: clamp(10px, 2.85vw, 12px);
+    letter-spacing: 0;
+  }
+  .fate-navigation small {
+    min-width: 13px;
+    height: 15px;
+    font-size: 8px;
+  }
+  .chart-turn {
+    flex-wrap: wrap;
+  }
+  .chart-turn label {
+    flex-basis: 100%;
+  }
+  .chart-turn > button {
+    margin-inline: auto;
+  }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  .future-work {
+    gap: 1.4rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.86fr);
+  }
+}
+@media (min-width: 1000px) {
+  .gallery-map:has(.world-rail) {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.28fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(20px, 3vw, 50px);
+  }
+  .world-rail {
+    display: grid;
+    position: sticky;
+    top: 22px;
+    gap: 10px;
+  }
+  .world-rail > button {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: end;
+    min-height: 73px;
+    padding: 0.75rem;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #acb4ad55;
+    background: #17232d;
+    color: #fff0d3;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .world-rail > button[aria-current="true"] {
+    border-color: #e2c695;
+  }
+  .world-rail picture,
+  .world-rail img,
+  .world-rail > button::after {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  .world-rail > button::after {
+    content: "";
+    z-index: -1;
+    background: linear-gradient(0deg, #090e15ed 12%, #0b11153b);
+  }
+  .world-rail button:hover {
+    border-color: #edd8b4;
+  }
+  .chart-grip {
+    display: block;
+    min-height: 44px;
+    padding: 11px 18px;
+    margin: 8px 0 2px;
+    text-align: center;
+    color: #e6d8b5;
+    border: 1px solid #b7ae8973;
+    border-radius: 4px;
+    background:
+      repeating-linear-gradient(90deg, #6a6a4b22 0 1px, transparent 1px 6px),
+      #172b2e;
+    cursor: grab;
+    user-select: none;
+    touch-action: pan-y;
+    font-size: 12px;
+  }
+  .chart-grip[data-dragging="true"] {
+    cursor: grabbing;
+    border-color: #f0d5a0;
+  }
+  .chart-turn {
+    gap: 14px;
+  }
+  .western-reading .placement-focus {
+    position: sticky;
+    top: 32px;
+    align-self: start;
+    margin-top: clamp(16px, 8vh, 90px);
+  }
+}
+@media (min-width: 1350px) {
+  .living-gallery-page {
+    max-width: min(94vw, 1720px);
+  }
+  .living-gallery-page .living-gallery {
+    max-width: none;
+  }
+  .living-gallery-page .world-entrances {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .living-gallery-page .world-entrances .world-door {
+    grid-column: auto;
+    min-height: clamp(250px, 17vw, 380px);
+  }
+  .living-gallery-page .world-door-copy strong {
+    font-size: clamp(34px, 3vw, 62px);
+  }
+  .living-gallery-page .world-door-copy > span {
+    font-size: 14px;
+  }
+  .gallery-map:has(.world-rail) {
+    grid-template-columns: clamp(230px, 20vw, 350px) minmax(0, 1fr);
+  }
+  .living-gallery-page .world-interior .interior-heading:has(picture) {
+    min-height: clamp(255px, 24vh, 385px);
+  }
+  .future-entrance > div,
+  .future-stage,
+  .western-chart-layout {
+    width: min(88%, 96rem);
+  }
+  .future-work {
+    grid-template-columns: minmax(0, 1.25fr) minmax(370px, 0.84fr);
+  }
+  .future-work > .future-reading {
+    max-width: 55ch;
+  }
+  .future-entrance img {
+    object-position: center 54%;
+  }
+  .western-chart-layout {
+    grid-template-columns: minmax(0, 1.1fr) minmax(350px, 0.82fr);
+  }
+  .western-instrument {
+    max-width: min(780px, 100%);
+  }
+  .explore .hero {
+    width: min(89%, 92rem);
+    max-width: none;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+  }
+}
+@media (min-width: 1900px) {
+  .explore .hero {
+    min-height: min(81vh, 850px);
+  }
+  .world-door img {
+    transition-duration: 540ms;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .fate-navigation a:hover {
+    color: #fff1cf;
+    border-bottom-color: #e4c59482;
+  }
+  .chart-touch button:hover {
+    border-color: #e7d2a9;
+  }
+}

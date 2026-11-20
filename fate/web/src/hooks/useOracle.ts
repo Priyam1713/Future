@@ -5,6 +5,7 @@ import {
   type Slug as FutureSlug,
 } from "../futures/contracts";
 import { useSound } from "../useSound";
+import { isGame, type GameId } from "../arcade/games";
 import { api, type Draw, type Envelope, type Commentary } from "../types";
 import { EXPERIENCES } from "../experiences/contracts";
 import { useCodex } from "../codex/useCodex";
@@ -22,13 +23,39 @@ export type Screen =
   | SignSlug
   | RitualSlug
   | ChamberSlug
+  | GameId
   | "explore"
   | "ritual"
   | "reading"
   | "western"
   | "numerology"
   | "codex"
-  | "gallery";
+  | "gallery"
+  | "play";
+
+function screenFor(name: string, hasReading = false): Screen {
+  if (isGame(name)) return name;
+  const future = futureId(name);
+  if (future) return FUTURES[future][0];
+  const folio = roomId(name);
+  if (folio) return FOLIOS[folio][0];
+  const sign = signId(name);
+  if (sign) return SIGNS[sign].slug;
+  const wing = ritualId(name);
+  if (wing) return RITUAL_ROOMS[wing].slug;
+  const chamber = chamberId(name);
+  if (chamber) return ROOMS[chamber].slug;
+  if (name === "my-fate") return "codex";
+  if (
+    name === "western" ||
+    name === "numerology" ||
+    name === "ritual" ||
+    name === "gallery" ||
+    name === "play"
+  )
+    return name;
+  return name === "reading" && hasReading ? "reading" : "explore";
+}
 export function useOracle() {
   const codex = useCodex();
   const [explored, setExplored] = useState<number[]>([]);
@@ -37,29 +64,11 @@ export function useOracle() {
       previous.includes(id) ? previous : [...previous, id],
     );
   }
-  const [screen, setScreen] = useState<Screen>(() => {
-    const future = futureId(location.hash.slice(1));
-    if (future) return FUTURES[future][0];
-    const folio = roomId(location.hash.slice(1));
-    if (folio) return FOLIOS[folio][0];
-    const sign = signId(location.hash.slice(1));
-    if (sign) return SIGNS[sign].slug;
-    const wing = ritualId(location.hash.slice(1));
-    if (wing) return RITUAL_ROOMS[wing].slug;
-    const chamber = chamberId(location.hash.slice(1));
-    if (chamber) return ROOMS[chamber].slug;
-    return location.hash === "#western"
-      ? "western"
-      : location.hash === "#numerology"
-        ? "numerology"
-        : location.hash === "#ritual"
-          ? "ritual"
-          : location.hash === "#my-fate"
-            ? "codex"
-            : location.hash === "#gallery"
-              ? "gallery"
-              : "explore";
-  });
+  const [screen, setScreen] = useState<Screen>(() =>
+    screenFor(location.hash.slice(1)),
+  );
+  const galleryVisit = useRef({ query: "", world: "", all: false, room: 0 });
+  const playReturn = useRef<GameId | null>(null);
   const [spread, setSpread] = useState<"one" | "three">("three");
   const [question, setQuestion] = useState(""),
     [reversals, setReversals] = useState(true);
@@ -102,47 +111,7 @@ export function useOracle() {
   useEffect(() => {
     const fn = () => {
       preferMainFocus.current = false;
-      const name = location.hash.slice(1);
-      const future = futureId(name);
-      if (future) {
-        setScreen(FUTURES[future][0]);
-        return;
-      }
-      const folio = roomId(name);
-      if (folio) {
-        setScreen(FOLIOS[folio][0]);
-        return;
-      }
-      const sign = signId(name);
-      if (sign) {
-        setScreen(SIGNS[sign].slug);
-        return;
-      }
-      const wing = ritualId(name);
-      if (wing) {
-        setScreen(RITUAL_ROOMS[wing].slug);
-        return;
-      }
-      const chamber = chamberId(name);
-      if (chamber) {
-        setScreen(ROOMS[chamber].slug);
-        return;
-      }
-      setScreen(
-        name === "western"
-          ? "western"
-          : name === "ritual"
-            ? "ritual"
-            : name === "my-fate"
-              ? "codex"
-              : name === "gallery"
-                ? "gallery"
-                : name === "numerology"
-                  ? "numerology"
-                  : name === "reading" && envelope
-                    ? "reading"
-                    : "explore",
-      );
+      setScreen(screenFor(location.hash.slice(1), Boolean(envelope)));
     };
     window.addEventListener("popstate", fn);
     return () => window.removeEventListener("popstate", fn);
@@ -289,6 +258,8 @@ export function useOracle() {
   const allRevealed = !!result && revealed.length === result.readings.length;
 
   return {
+    galleryVisit,
+    playReturn,
     codex,
     explored,
     markExplored,

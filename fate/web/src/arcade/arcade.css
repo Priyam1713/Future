@@ -1,0 +1,390 @@
+.arcade {
+  --arcade-ink: #f1d9ad;
+  --future-ink: #f1d9ad;
+  --future-copy: #d2e2dc;
+  --future-bg: #142527;
+  --future-edge: #a8a081;
+  color: #d9e4df;
+  padding-bottom: clamp(35px, 5vw, 84px);
+}
+.arcade-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: end;
+  min-height: clamp(215px, 30vw, 485px);
+}
+.arcade[data-game] .arcade-hero {
+  min-height: clamp(175px, 22vw, 340px);
+}
+.arcade-hero :is(picture, img),
+.arcade-hero::after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.arcade-hero img {
+  object-position: 67% 48%;
+}
+.arcade-hero::after {
+  content: "";
+  z-index: -1;
+  background:
+    linear-gradient(0deg, #0b141b 1%, #101a23a0 36%, transparent 75%),
+    linear-gradient(90deg, #09141ae6, transparent 87%);
+}
+.arcade-hero > div,
+.arcade-layout,
+.arcade-doors,
+.arcade-scope {
+  width: min(calc(100% - 36px), 92rem);
+  margin-inline: auto;
+}
+.arcade-hero > div {
+  padding-block: 22px;
+}
+.arcade-hero h1 {
+  max-width: 13ch;
+  color: #f7e6c6;
+  font: 400 clamp(44px, 8vw, 114px)/0.9 var(--serif);
+  letter-spacing: -0.035em;
+  margin: 8px 0 12px;
+  text-wrap: balance;
+}
+.arcade-hero p:not(.eyebrow) {
+  margin: 0;
+  color: #d6e2d9;
+}
+.arcade-return {
+  min-height: 44px;
+  margin-bottom: 10px;
+}
+.arcade-doors {
+  display: grid;
+  gap: 12px;
+}
+.arcade-doors > a {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 22px;
+  align-items: center;
+  gap: 12px;
+  min-height: 115px;
+  padding: 1rem;
+  color: #efdfc0;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid #a1ac9460;
+  background:
+    radial-gradient(ellipse at 15% 70%, #234b41, transparent 75%),
+    linear-gradient(123deg, #152d2d, #131e24);
+}
+.arcade-doors > a:nth-child(2) {
+  background:
+    radial-gradient(ellipse at 15% 70%, #244164, transparent 75%), #142331;
+}
+.arcade-doors > a:nth-child(3) {
+  background:
+    radial-gradient(ellipse at 15% 70%, #62412b, transparent 75%), #272320;
+}
+.arcade-doors :is(small, strong) {
+  display: block;
+}
+.arcade-doors small {
+  font-size: 12px;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+.arcade-doors strong {
+  font: 400 clamp(23px, 3vw, 46px)/1 var(--serif);
+}
+.arcade-layout {
+  display: grid;
+  gap: clamp(16px, 4vw, 58px);
+  align-items: start;
+  margin-top: clamp(13px, 3vw, 30px);
+}
+.arcade-instrument {
+  min-width: 0;
+  padding: clamp(11px, 2.5vw, 26px);
+  border: 1px solid #a4b49478;
+  border-radius: 10px;
+  background: radial-gradient(
+    ellipse at 30% 10%,
+    #294d3d 0%,
+    #152b29 60%,
+    #102028 95%
+  );
+  box-shadow:
+    inset 0 1px #efefbf37,
+    0 18px 36px #060c115d;
+}
+.play-switch .arcade-instrument {
+  background: linear-gradient(145deg, #223752, #101e2a 75%);
+}
+.play-signal .arcade-instrument {
+  background: radial-gradient(ellipse at 49% 41%, #594333, #211f24 74%);
+}
+.arcade-instrument-preview {
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  color: #d9c7a8;
+}
+.arcade-instrument-preview .arcade-loom {
+  width: min(80%, 340px);
+}
+.arcade-console {
+  min-width: 0;
+  background: linear-gradient(160deg, #1b272c, #0e1820 90%);
+  border-block: 1px solid #a8a18a61;
+  padding: clamp(16px, 3vw, 35px);
+}
+.arcade-console h2 {
+  font: 400 clamp(30px, 4.1vw, 60px)/0.97 var(--serif);
+  color: #f4e2bd;
+  margin: 8px 0 14px;
+}
+.arcade-console p:not(.eyebrow, .arcade-score) {
+  max-width: 49ch;
+  line-height: 1.55;
+}
+.arcade-console .primary {
+  margin: 10px 0 0;
+  min-height: 48px;
+  justify-content: center;
+}
+.arcade-score {
+  font: 400 clamp(38px, 6vw, 76px)/0.9 var(--serif);
+  color: #f2d6a2;
+  margin: 16px 0;
+}
+.arcade-score small {
+  font-size: 0.46em;
+  color: #c4d6c9;
+}
+.arcade-loom {
+  display: grid;
+  width: min(100%, 30rem);
+  margin: auto;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: clamp(3px, 0.4vw, 6px);
+}
+.arcade-loom > :is(span, button) {
+  display: block;
+  aspect-ratio: 1;
+  width: 100%;
+  border: 1px solid #8baf9d64;
+  border-radius: 3px;
+  padding: 0;
+  background: #163332;
+  touch-action: manipulation;
+}
+.arcade-loom [data-alive="true"] {
+  background: #b4cb91;
+  box-shadow: inset 0 0 12px #527e55;
+  border-color: #d4e5ab;
+}
+.arcade-loom [data-changed="true"] {
+  outline: 1px dashed #f0c68d;
+  outline-offset: -4px;
+}
+.arcade-loom button:focus-visible {
+  z-index: 1;
+  outline: 2px solid #fff0be;
+  outline-offset: 1px;
+}
+.arcade-ports {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 15px;
+}
+.arcade-ports span {
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+  padding: 4px;
+  color: #bdcbea;
+  border: 1px solid #8ea4b86e;
+  border-radius: 5px;
+  background: #142333;
+  font-variant-numeric: tabular-nums;
+}
+.arcade-ports [data-target="true"] {
+  color: #13222f;
+  border-color: #ede3b8;
+  background: #dfcea4;
+  font-weight: 650;
+}
+.arcade-cartridges {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.arcade-cartridges button {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 7px;
+  min-height: 100px;
+  padding: clamp(7px, 2vw, 20px);
+  border: 1px solid #829bad91;
+  border-radius: 5px;
+  background: #152638;
+  color: #e6e4db;
+  text-align: left;
+}
+.arcade-cartridges button[aria-pressed="true"] {
+  background: #dfc9a3;
+  color: #142530;
+  border-color: #f8e0ad;
+}
+.arcade-switchboard .circuit-board > svg {
+  width: 100%;
+}
+.arcade-receiver {
+  display: grid;
+  justify-items: center;
+  padding: min(2vw, 16px) 0;
+}
+.arcade-dial {
+  width: min(100%, 360px);
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.arcade-dial svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.arcade-dial .dial-scale {
+  fill: #242c29;
+  stroke: #ddb484;
+  stroke-width: 2;
+  stroke-dasharray: 2 4;
+}
+.arcade-dial .dial-glass {
+  fill: #213534;
+  stroke: #b8986d;
+}
+.arcade-dial .forecast-needle {
+  stroke: #f3cf98;
+  stroke-width: 2;
+  transform-origin: 90px 90px;
+  transform: rotate(calc(-130deg + var(--forecast) * 2.6deg));
+  transition: transform 120ms var(--settle);
+}
+.arcade-dial strong {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 38%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #1b2d2d;
+  font: 400 clamp(34px, 5vw, 70px)/1 var(--serif);
+  color: #f1d9ad;
+}
+.arcade-tuner {
+  display: grid;
+  width: 100%;
+  gap: 2px;
+  padding-top: 12px;
+  color: #eee4cc;
+}
+.arcade-tuner input {
+  width: 100%;
+  min-height: 44px;
+  accent-color: #eac28e;
+}
+.arcade-reception {
+  margin: 10px 0 0;
+  color: #eee2c7;
+}
+.arcade-receiver[data-detected="true"] .dial-glass {
+  fill: #427064;
+}
+.arcade-scope {
+  padding-top: 22px;
+  color: #b3c5bf;
+  font-size: 13px;
+}
+.still .forecast-needle {
+  transition: none;
+}
+@media (min-width: 780px) {
+  .arcade-layout {
+    grid-template-columns: minmax(0, 1.17fr) minmax(0, 0.9fr);
+  }
+  .arcade-doors {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .arcade-doors > a {
+    min-height: 150px;
+  }
+  .arcade-console {
+    position: sticky;
+    top: 22px;
+  }
+}
+@media (max-width: 550px) {
+  .arcade-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+  .arcade-layout > * {
+    width: 100%;
+  }
+  .arcade-instrument:has(.arcade-instrument-preview) {
+    display: none;
+  }
+  .arcade-console:has(.arcade-score) {
+    padding-bottom: 22px;
+  }
+  .arcade-console .primary {
+    width: 100%;
+  }
+  .arcade-dial {
+    width: min(100%, 210px);
+  }
+  .arcade-console .eyebrow {
+    margin: 0 0 6px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .arcade-doors > a:hover,
+  .arcade-cartridges button:hover,
+  .arcade-loom button:hover {
+    border-color: #e9d1a5;
+  }
+  .arcade-doors > a:hover strong {
+    color: #fff1d2;
+  }
+  .arcade-loom button:hover {
+    box-shadow: inset 0 0 0 1px #e9d1a587;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .arcade-dial .forecast-needle {
+    transition: none;
+  }
+}
+.arcade-instrument-wrap {
+  min-width: 0;
+}
+.arcade-instrument-brief {
+  margin: 0 0 12px;
+  color: #ecdec4;
+  font-size: 14px;
+  line-height: 1.35;
+}
+@media (max-width: 550px) {
+  .arcade-instrument-wrap:has(.arcade-instrument-preview) {
+    display: none;
+  }
+}
