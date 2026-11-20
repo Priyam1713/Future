@@ -1678,3 +1678,10 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Added concise results with expandable source conditions, full native exports and explicit categorical My Fate chapters. All ten browser journeys match direct engine outputs and reopen after refresh without submitting a new request. The frozen edition covers 639 saveable combinations. Active candle hazards pause symbolic reading and saving.
 - Reworked Crystal Ball and Mirror optics, increased phone legibility for Geomancy figures and separated Bibliomancy's printed page from its controls. The artwork, mobile and desktop captures, four recordings, privacy proof and performance evidence are indexed in `fate/evidence/block08-acceptance.json`.
 - Passed 2,691 unit and boundary tests, 70 browser tests, 3,515 CLI cases and 52 independent verifiers. Build, dependency and inventory checks passed. The protected native engine, source and Workbench trees match `5227490`.
+
+## 2026-11-20 — FATE Block 09
+
+- Opened #5–15 and #40 in the Celestial Court, Human Manuscript and Compass Chamber. The Gallery now has 36 open rooms across 54 retained techniques. The Court renders Lilly's indeterminate diagnostics, Green's native ingress and conjunction charts, and 40 geocentric angular lines over public-domain Natural Earth coastlines.
+- Added explicit palm line selection, seven archival indexes, and a 24-mountain compass that reports printed intervals, declared bearing frame and uncertainty. Manuscript and compass bookmarks retain public source IDs. Court inputs stay in the open visit.
+- Introduced a shorter result layout for Tarot, Numerology and the World of Signs and moved detailed storage disclosures into My Fate's expandable depth. Media, exact browser-to-native replays, and art provenance are indexed in `fate/evidence/block09-acceptance.json`.
+- Passed 2,697 unit and boundary tests, 86 browser tests, 3,515 CLI cases and 52 verifiers. Build, dependency and inventory checks passed. Native engines, source records and Workbench match `f444fc0`.

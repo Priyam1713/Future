@@ -82,9 +82,11 @@ test("gallery projects all 54 retained methods, separates availability and searc
     "Historical reference",
   );
   await expect(page.locator('[data-technique-id="10"]')).toContainText(
-    "Discredited",
+    "discredited",
   );
-  expect(await page.locator('[data-technique-id="10"] button').count()).toBe(0);
+  await expect(page.locator('[data-technique-id="10"] button')).toHaveText(
+    "Enter Phrenology",
+  );
   await page.getByRole("searchbox").fill("yarrow");
   await expect(page.locator('[data-technique-id="18"]')).toBeVisible();
   await page.getByRole("searchbox").fill("zzzzz");
@@ -182,7 +184,7 @@ test("complete mobile native Numerology ritual, exact export, session continuity
     .getByRole("button", { name: "Return to the Gallery", exact: true })
     .click();
   await expect(
-    page.getByText("1 of 24 rooms explored this visit"),
+    page.getByText("1 of 36 rooms explored this visit"),
   ).toBeVisible();
   await page
     .getByRole("button", { name: "Explore Numerology", exact: true })
@@ -191,7 +193,7 @@ test("complete mobile native Numerology ritual, exact export, session continuity
   await page.getByRole("button", { name: "The Gallery", exact: false }).click();
   await page.reload();
   await expect(
-    page.getByText("0 of 24 rooms explored this visit"),
+    page.getByText("0 of 36 rooms explored this visit"),
   ).toBeVisible();
   expect(
     await page.evaluate(() => ({

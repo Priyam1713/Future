@@ -155,39 +155,32 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
       <details className="codex-privacy">
         <summary>About saving on this device</summary>
         <p>
-          Only Save to this device writes a chapter. It keeps the selected Tarot
-          cards and orientations, Numerology’s Expression, Personal Year and
-          Life Path numbers, or Western Astrology's chart geometry or dated
-          transit contacts/native samples, or the four chamber snapshots
-          (sidereal geometry and UTC period days, pillar IDs, hexagram lines, or
-          rune IDs). Ritual Wing chapters keep selected cards, response
-          categories, public guides or references, shield figures, or pinned
-          passages. World of Signs chapters keep the categorical choices you
-          save. Each record has a source edition, chapter identifier, and
-          save time. Journal and dream text, personal context, and pendulum
-          calibration stay outside My Fate. Transit window dates are retained by
-          explicit choice. Names, birth dates/times, Numerology target dates,
-          birthplace coordinates/timezone/place labels, original questions,
-          calculation traces, replay seeds and Gemini commentary are excluded.
-          Chart geometry remains personal and can reveal information about a
-          birth moment. Exported Codex copies use this same minimal scope with
-          source references.
+          Saving keeps a small chapter in this browser profile. Chapters contain
+          selected results, chart geometry, dated transit snapshots, or source
+          bookmarks. They include the edition and save time. Codex exports use
+          the same scope and include source references.
         </p>
         <p>
-          Records are unencrypted in this browser profile at this site address.
-          Other people using this profile can read them. There is no account,
-          cloud sync or automatic backup. Private browsing, clearing site data,
-          browser policies or storage limits can erase or block them. The app
-          and its artwork must be available to reopen chapters. Export before
-          changing browser, device or site address. This edition holds up to 50
-          chapters within a 65,536-character record. Larger chart snapshots can
-          reach the size limit sooner.
+          Local records are unencrypted. Anyone using the profile can read them,
+          and clearing site data can erase them. Export to keep a copy across
+          devices or site addresses.
         </p>
-        <p>
-          Comparison selections stay in memory. Chapter records are not uploaded
-          to the server or Gemini. Loading the app and its artwork still makes
-          normal resource requests to the host.
-        </p>
+        <details>
+          <summary>Exact retention and limits</summary>
+          <p>
+            Names, birth details, questions, journal and dream notes,
+            calibration, replay seeds and Gemini commentary stay outside the
+            Codex. Chart geometry can reveal information about a birth moment.
+            Saved transit chapters keep the dates you choose. Manuscript and
+            compass bookmarks keep source IDs only.
+          </p>
+          <p>
+            Comparison choices stay in memory. The app and artwork must be
+            available to reopen chapters. This edition holds 50 chapters up to
+            65,536 characters in total. Private mode and browser policies can
+            restrict local saving.
+          </p>
+        </details>
         <button className="text-button" onClick={() => requestDelete(null)}>
           Delete all local Codex data
         </button>

@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'knowledge/inventory.json'
-HISTORICAL = {9, 10, 13, 15}
+AVAILABLE = {*range(1, 24), *range(28, 41)}
 
 
 def build():
@@ -15,7 +15,7 @@ def build():
         if row[0] in (25, 27, 41, 42, 47, 48):
             continue
         methods.append(dict(id=row[0], phase=int(row[1][0]), name=row[2],
-                            status='available' if row[0] in (1, 2, 3, 4, 16, 17, 18, 19, 20, 21, 22, 23, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39) else 'historical' if row[0] in HISTORICAL else 'upcoming',
+                            status='available' if row[0] in AVAILABLE else 'upcoming',
                             variations=row[5], mechanism=row[6], limits=row[8], evidence=row[9],
                             source=dict(title=row[10], author=row[11], url=row[12])))
     # Git may check text out with CRLF; hash the same UTF-8/LF source on every OS.

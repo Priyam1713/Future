@@ -6,7 +6,13 @@ import { useCodex } from "../codex/useCodex";
 import { chamberId, ROOMS, type ChamberSlug } from "../chambers/contracts";
 import { signId, SIGNS, type SignSlug } from "../signs/contracts";
 import { ritualId, RITUAL_ROOMS, type RitualSlug } from "../ritual/contracts";
+import {
+  roomId,
+  ROOMS as FOLIOS,
+  type Slug as FolioSlug,
+} from "../manuscript/contracts";
 export type Screen =
+  | FolioSlug
   | SignSlug
   | RitualSlug
   | ChamberSlug
@@ -26,6 +32,8 @@ export function useOracle() {
     );
   }
   const [screen, setScreen] = useState<Screen>(() => {
+    const folio = roomId(location.hash.slice(1));
+    if (folio) return FOLIOS[folio][0];
     const sign = signId(location.hash.slice(1));
     if (sign) return SIGNS[sign].slug;
     const wing = ritualId(location.hash.slice(1));
@@ -83,6 +91,11 @@ export function useOracle() {
     const fn = () => {
       preferMainFocus.current = false;
       const name = location.hash.slice(1);
+      const folio = roomId(name);
+      if (folio) {
+        setScreen(FOLIOS[folio][0]);
+        return;
+      }
       const sign = signId(name);
       if (sign) {
         setScreen(SIGNS[sign].slug);

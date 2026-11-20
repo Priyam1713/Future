@@ -1,3 +1,4 @@
+import { ResultLeaf } from "../components/ResultLeaf";
 import { useEffect, useRef, useState } from "react";
 import { chapterFor } from "../codex/records";
 import type { Oracle } from "../hooks/useOracle";
@@ -66,21 +67,26 @@ function Reading({
       </div>
       {!compact && (
         <div className="sign-interpretation">
-          <p className="eyebrow">{view.status}</p>
-          <h2>{choicesTitle({ oracle: id, values })}</h2>
-          <p className="sign-lead">
-            {view.lead.replace(/([,;])(?=[A-Za-z])/g, "$1 ")}
-          </p>
-          {view.metric && (
-            <p
-              className="sign-metric"
-              data-distance={view.metric.distanceSquared}
-            >
-              {view.metric.direction.map((d) => directionLabels[d]).join(" · ")}{" "}
-              · distance squared {view.metric.distanceSquared}
+          <ResultLeaf
+            title={choicesTitle({ oracle: id, values })}
+            status={view.status}
+            evidence={<SourceDepth view={view} />}
+          >
+            <p className="sign-lead">
+              {view.lead.replace(/([,;])(?=[A-Za-z])/g, "$1 ")}
             </p>
-          )}
-          <SourceDepth view={view} />
+            {view.metric && (
+              <p
+                className="sign-metric"
+                data-distance={view.metric.distanceSquared}
+              >
+                {view.metric.direction
+                  .map((d) => directionLabels[d])
+                  .join(" · ")}{" "}
+                · distance squared {view.metric.distanceSquared}
+              </p>
+            )}
+          </ResultLeaf>
           <details className="ritual-depth sign-selections">
             <summary>Your selections</summary>
             <dl className="sign-declaration">
@@ -155,10 +161,7 @@ function Save({ data, oracle }: { data: SignEnvelope; oracle: Oracle }) {
     <section className="ritual-save">
       <div>
         <h3>Keep this chapter</h3>
-        <p>
-          Keep these selections and the source edition in this browser. The
-          chapter is stored unencrypted.
-        </p>
+        <p>Save the selections and source edition in this browser.</p>
       </div>
       <div>
         <button

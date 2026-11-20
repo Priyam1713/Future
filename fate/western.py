@@ -37,14 +37,18 @@ class WesternService:
         self.lock = RLock()
         self.ephemeris = None
 
+    def get_ephemeris(self):
+        with self.lock:
+            if self.ephemeris is None:
+                self.ephemeris = SkyfieldEphemeris(ROOT / 'data/de440s.bsp')
+            return self.ephemeris
+
     def read(self, q):
         if q.zone not in available_timezones():
             raise ValueError('Choose a recognized IANA timezone, such as Asia/Kolkata.')
         with self.lock:
-            if self.ephemeris is None:
-                self.ephemeris = SkyfieldEphemeris(ROOT / 'data/de440s.bsp')
             try:
-                result = chart(self.ephemeris, q.local, q.zone, q.latitude, q.longitude,
+                result = chart(self.get_ephemeris(), q.local, q.zone, q.latitude, q.longitude,
                                Settings(houses=q.houses), q.fold)
             except ZoneInfoNotFoundError as exc:
                 raise ValueError('The IANA timezone is unavailable.') from exc

@@ -1,6 +1,12 @@
-# FATE · Block 08 — The World of Signs
+# FATE · Block 09 — The Sky & The Human Manuscript
 
-FATE brings 24 existing Future engines into one consumer Gallery. Each chamber leads from its own instrument or ritual to a source-grounded reading and an optional local chapter. The app uses React and TypeScript, with the signature PixiJS orb and a stateless FastAPI boundary.
+FATE brings 36 existing Future engines into one consumer Gallery. Each chamber leads from its own instrument or ritual to a source-grounded result. Eligible chapters can be saved locally. The app uses React and TypeScript, with the signature PixiJS orb and a stateless FastAPI boundary.
+
+## Block 09
+
+The Celestial Court opens native Lilly advice diagnostics, Green’s four ingresses and Jupiter–Saturn search, and all 40 native geographic angular lines. The Human Manuscript pairs a manually declared palm line with historical source lookups. The Compass Chamber classifies declared tenths of a degree inside the 24 pinned intervals and retains the visitor’s reference frame and uncertainty.
+
+My Fate keeps explicit source bookmarks for the Manuscript and Compass. The Court keeps recorded moments and questions in the open visit. Native exports are separate. See [supported scope](experience.json), [art and basemap provenance](design/block09-artwork.json), and [acceptance evidence](evidence/block09-acceptance.json). Run `python -m fate.build_manuscript` to verify the archived source edition and `node scripts/capture-manuscript.mjs` from `fate/web` against the built app to reproduce the media.
 
 ## Block 08: The World of Signs
 

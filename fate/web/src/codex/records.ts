@@ -1,4 +1,10 @@
 import {
+  EDITION,
+  isBookmark,
+  validateBookmark,
+  type Bookmark,
+} from "../manuscript/contracts";
+import {
   SIGN_REFERENCE,
   isSign,
   validateSign,
@@ -32,6 +38,7 @@ export const REFERENCE = "fate-codex-reference-v1";
 export const MAX_CHAPTERS = 50;
 const MAX_LENGTH = 65536;
 export type Snapshot =
+  | Bookmark
   | SignSnapshot
   | RitualSnapshot
   | ChamberSnapshot
@@ -54,6 +61,7 @@ export interface Chapter {
   id: string;
   savedAt: string;
   reference:
+    | typeof EDITION
     | typeof REFERENCE
     | typeof WESTERN_REFERENCE
     | typeof CHAMBER_REFERENCE
@@ -88,6 +96,8 @@ function core(value: unknown) {
 }
 export function validSnapshot(s: unknown): s is Snapshot {
   if (!object(s)) return false;
+  if (typeof s.oracle === "number" && isBookmark({ oracle: s.oracle }))
+    return validateBookmark(s);
   if (typeof s.oracle === "number" && isSign({ oracle: s.oracle }))
     return validateSign(s);
   if (typeof s.oracle === "number" && isRitualSnapshot({ oracle: s.oracle }))
@@ -205,6 +215,7 @@ export function validSnapshot(s: unknown): s is Snapshot {
   );
 }
 function editionFor(snapshot: Snapshot): Chapter["reference"] {
+  if (isBookmark(snapshot)) return EDITION;
   if (isSign(snapshot)) return SIGN_REFERENCE;
   if (isRitualSnapshot(snapshot)) return RITUAL_REFERENCE;
   if (snapshot.profile === "turning-sky-v1") return TRANSIT_REFERENCE;

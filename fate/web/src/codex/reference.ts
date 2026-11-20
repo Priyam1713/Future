@@ -1,3 +1,5 @@
+import { isBookmark } from "../manuscript/contracts";
+import { bookmarkEvidence, bookmarkTitle } from "../manuscript/reference";
 import reference from "./reference-v1.json";
 import type { Card } from "../types";
 import type { Chapter, Snapshot } from "./records";
@@ -37,6 +39,7 @@ export function cardReference(id: string) {
   return cards[id];
 }
 export function chapterTitle(chapter: Chapter) {
+  if (isBookmark(chapter.snapshot)) return bookmarkTitle(chapter.snapshot);
   if (isSign(chapter.snapshot)) return signTitle(chapter.snapshot);
   if (isRitualSnapshot(chapter.snapshot)) return ritualTitle(chapter.snapshot);
   if (isChamberSnapshot(chapter.snapshot)) return chapterName(chapter.snapshot);
@@ -53,6 +56,7 @@ export function chapterTitle(chapter: Chapter) {
     : `A ${chapter.snapshot.expression} / ${chapter.snapshot.personalYear} constellation`;
 }
 export function evidenceFor(snapshot: Snapshot): Evidence[] {
+  if (isBookmark(snapshot)) return bookmarkEvidence(snapshot);
   if (isSign(snapshot)) return signEvidence(snapshot);
   if (isRitualSnapshot(snapshot)) return ritualEvidence(snapshot);
   if (isChamberSnapshot(snapshot)) return chamberEvidence(snapshot);

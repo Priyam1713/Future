@@ -1,6 +1,6 @@
 {
-  "id": "fate-world-of-signs-v8",
-  "block": "08 · The World of Signs",
+  "id": "fate-sky-manuscript-v9",
+  "block": "09 · The Sky & The Human Manuscript",
   "capability": "symbolic_reading",
   "engine": "future.tarot.read",
   "text_profile": "waite-1922-text-v1",
@@ -98,12 +98,23 @@
     "fonts": "Self-hosted Cormorant Garamond and Inter; SIL OFL licenses and source URLs bundled",
     "generated": "Original FATE back, nebula, brass dial and observatory hall made with built-in image_gen; exact prompts and source PNGs retained under design/. No baked UI. Orb poster extracted from actual renderer. Block 03 original illustrated Codex cover has a separately recorded source PNG and exact prompt; binding, runtime title, counts, paper, source chapters, moving light and turns are independent layers."
   },
-  "scope": "24 consumer oracle rooms using existing native engines, a 54-technique Gallery and explicitly saved local chapters.",
+  "scope": "36 consumer oracle rooms, a 54-technique Gallery and explicitly saved local chapters.",
   "technique_ids": [
     1,
     2,
     3,
     4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
     16,
     17,
     18,
@@ -123,7 +134,8 @@
     36,
     37,
     38,
-    39
+    39,
+    40
   ],
   "supported_scope": "The supported object describes Tarot. Separate sections describe the other rooms and the Gallery.",
   "gallery": {
@@ -143,6 +155,17 @@
       2,
       3,
       4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
       16,
       17,
       18,
@@ -162,12 +185,16 @@
       36,
       37,
       38,
-      39
+      39,
+      40
     ],
     "historical_references": [
       9,
       10,
+      11,
+      12,
       13,
+      14,
       15
     ],
     "upcoming": "All other retained IDs; no launch dates or consumer-engine readiness claims",
@@ -477,5 +504,51 @@
       "Animal procedures",
       "Personal outcome or weather predictions"
     ]
+  },
+  "sky_manuscript": {
+    "endpoint": "POST /api/sky-manuscript",
+    "environments": {
+      "Celestial Court": [
+        5,
+        6,
+        7
+      ],
+      "Human Manuscript": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "Compass Chamber": [
+        40
+      ]
+    },
+    "supported": {
+      "5": "Lilly advice-intent diagnostics for the manually supplied moment and place where advice begins. Judgment remains indeterminate.",
+      "6": "Green’s four cardinal ingresses and a bounded UTC-year Jupiter–Saturn search. Native sites, charts, stations, and separate source components.",
+      "7": "All 40 native geocentric angular lines across ten bodies. Planet and axis selection and map pan/zoom. Source-linked compositional symbolism.",
+      "8": "Explicit hand and one head, heart or life line feature. Cheiro Ninth Edition source association where matched.",
+      "9": "Lavater’s labelled regions, frontal source index.",
+      "10": "Printed Spurzheim label lookups across the three verified panels.",
+      "11": "Fontaine’s historical regional text index.",
+      "12": "Six source examples from the anonymous Booksellers edition.",
+      "13": "Schooling’s Latin left-to-right terms and definitions.",
+      "14": "Besant/Leadbeater’s colour vocabulary and four published teaching figures.",
+      "15": "Lindlahr’s inspected printed iris labels without geometric inference.",
+      "40": "24 exact native mountain intervals at 0.1 degree precision, bounded uncertainty, declared north reference and role."
+    },
+    "persistence": "Explicit locally saved source IDs for Manuscript and Compass. Celestial Court inputs and results are session-only, with separate explicit native export.",
+    "unsupported": [
+      "Individual assessment using anatomical or handwriting sources",
+      "Photo-derived or medical inference",
+      "Horary binary judgment",
+      "Compass declination conversion or physical building outcome"
+    ],
+    "sources": "design/block09-artwork.json",
+    "evidence": "evidence/block09-acceptance.json"
   }
 }

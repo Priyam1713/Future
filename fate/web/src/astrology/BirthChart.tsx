@@ -27,6 +27,7 @@ export function BirthChart({
   onSelect,
   selected = "Sun",
   compact = false,
+  label = "Calculated tropical birth chart: planetary longitudes, house cusps and major aspects",
 }: {
   chart: Geometry;
   reduced?: boolean;
@@ -34,6 +35,7 @@ export function BirthChart({
   onSelect?: (body: string) => void;
   selected?: string;
   compact?: boolean;
+  label?: string;
 }) {
   const host = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false),
@@ -61,9 +63,11 @@ export function BirthChart({
       name,
       p: chart.planets[name],
       i,
-    })).sort(
-      (a, b) => Number(b.name === selected) - Number(a.name === selected),
-    );
+    }))
+      .filter(({ p }) => p)
+      .sort(
+        (a, b) => Number(b.name === selected) - Number(a.name === selected),
+      );
     return ordered
       .map((item) => {
         const lon = item.p.longitude;
@@ -95,7 +99,7 @@ export function BirthChart({
       <svg
         viewBox="0 0 600 600"
         role="img"
-        aria-label="Calculated tropical birth chart: planetary longitudes, house cusps and major aspects"
+        aria-label={label}
         data-chart-origin={origin}
       >
         <defs>
@@ -230,6 +234,7 @@ export function BirthChart({
         })}
         <g className="chart-aspects">
           {chart.aspects.map((a, i) => {
+            if (a.bodies.some((name) => !chart.planets[name])) return null;
             const p = point(chart.planets[a.bodies[0]].longitude, 112, origin),
               q = point(chart.planets[a.bodies[1]].longitude, 112, origin),
               active = a.bodies.includes(selected);
@@ -345,7 +350,7 @@ export function BirthChart({
         <path d="M300 282v36m-18-18h36" stroke="#d5c18d" opacity=".4" />
       </svg>
     ),
-    [chart, origin, id, onSelect, selected],
+    [chart, origin, id, onSelect, selected, label, locations],
   );
   return (
     <div
@@ -395,17 +400,20 @@ export function BirthChart({
             )}
           </p>
           <div className="chart-touch" aria-label="Choose a planet">
-            {BODY_NAMES.map((n, i) => (
-              <button
-                key={n}
-                aria-pressed={selected === n}
-                aria-label={`Explore ${n}`}
-                onClick={() => onSelect?.(n)}
-              >
-                <span aria-hidden="true">{GLYPHS[i]}</span>
-                <small>{n}</small>
-              </button>
-            ))}
+            {BODY_NAMES.map(
+              (n, i) =>
+                chart.planets[n] && (
+                  <button
+                    key={n}
+                    aria-pressed={selected === n}
+                    aria-label={`Explore ${n}`}
+                    onClick={() => onSelect?.(n)}
+                  >
+                    <span aria-hidden="true">{GLYPHS[i]}</span>
+                    <small>{n}</small>
+                  </button>
+                ),
+            )}
           </div>
           <label className="chart-turn">
             Turn the instrument{" "}

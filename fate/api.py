@@ -25,7 +25,7 @@ from .western import WesternInput, WesternService, search_places
 from .turning import TransitInput, TransitRunner, natal_basis
 from . import chambers
 from . import ritual
-from . import signs
+from . import manuscript, signs
 
 WEB = Path(__file__).parent / 'web' / 'dist'
 POSITIONS = ['What you carry', 'Where you stand', 'What to consider']
@@ -92,6 +92,8 @@ def native(q: Draw):
 
 def create_app(provider=None, signing_key=None, clock=time.time):
     western = WesternService()
+    celestial = WesternService()
+    sky_slot = threading.BoundedSemaphore(1)
     turning = TransitRunner()
     @asynccontextmanager
     async def lifespan(app):
@@ -99,6 +101,7 @@ def create_app(provider=None, signing_key=None, clock=time.time):
             yield
         finally:
             western.close()
+            celestial.close()
     app = FastAPI(title='FATE · Living Oracle', docs_url=None, redoc_url=None, openapi_url=None, lifespan=lifespan)
     app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
     key = signing_key or secrets.token_bytes(32)
@@ -203,6 +206,17 @@ def create_app(provider=None, signing_key=None, clock=time.time):
     @app.post('/api/world-of-signs')
     def world_of_signs(q: signs.SignInput):
         return signs.read_sign(q)
+
+    @app.post('/api/sky-manuscript')
+    def sky_manuscript(q: manuscript.Request):
+        if isinstance(q, (manuscript.ArchiveInput, manuscript.CompassInput)):
+            return manuscript.read(q, celestial)
+        if not sky_slot.acquire(blocking=False):
+            raise HTTPException(429, 'The sky instrument is computing another chart. Try again shortly.')
+        try:
+            return manuscript.read(q, celestial)
+        finally:
+            sky_slot.release()
 
     @app.post('/api/chambers/explain')
     def chamber_explain(q: ChamberExplain):

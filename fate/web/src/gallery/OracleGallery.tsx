@@ -6,6 +6,11 @@ import { isSignId, SIGNS, ENVIRONMENTS } from "../signs/contracts";
 import { isRitualId, RITUAL_ROOMS } from "../ritual/contracts";
 import { EXPERIENCES } from "../experiences/contracts";
 import { NumberDial } from "../numerology/NumberDial";
+import {
+  ENVIRONMENTS as FOLIO_ENVIRONMENTS,
+  isRoom,
+  ROOMS as FOLIOS,
+} from "../manuscript/contracts";
 
 const collections = [
   {
@@ -157,7 +162,7 @@ export function OracleGallery({
                 <em>still unfolding.</em>
               </h2>
               <p>
-                Twenty-four rooms are open. The wider library holds traditions
+                Thirty-six rooms are open. The wider library holds traditions
                 you can discover through their historical sources.
               </p>
             </div>
@@ -196,6 +201,30 @@ export function OracleGallery({
                       onClick={() => oracle.navigate(room.slug)}
                     >
                       {room.name}
+                    </button>
+                  ))}
+              </div>
+            ))}
+          </nav>
+        </details>
+        <details className="ritual-wing-discovery sign-gallery-wing manuscript-gallery">
+          <summary>
+            The Sky &amp; The Human Manuscript{" "}
+            <span>Twelve rooms in three environments</span>
+          </summary>
+          <nav aria-label="Sky and Human Manuscript rooms">
+            {Object.entries(FOLIO_ENVIRONMENTS).map(([stage, label]) => (
+              <div key={stage}>
+                <strong>{label}</strong>
+                {Object.values(FOLIOS)
+                  .filter(([, , , environment]) => environment === stage)
+                  .map(([slug, name]) => (
+                    <button
+                      className="text-button ritual-wing-link"
+                      key={slug}
+                      onClick={() => oracle.navigate(slug)}
+                    >
+                      {name}
                     </button>
                   ))}
               </div>
@@ -267,12 +296,13 @@ export function OracleGallery({
                           : m.status === "historical"
                             ? "Historical reference"
                             : "Upcoming experience"}
+                        {m.id >= 9 && m.id <= 15 && " · Historical reference"}
                       </span>
                     </summary>
                     <div className="inventory-depth">
                       <p>
-                        {m.status === "historical"
-                          ? "A historical reference, never a personal assessment. "
+                        {m.id >= 9 && m.id <= 15
+                          ? "This room studies historical sources, including discredited systems, in their original context. "
                           : ""}
                         {m.mechanism}.
                       </p>
@@ -304,15 +334,17 @@ export function OracleGallery({
                             m.id === 16
                               ? oracle.begin()
                               : oracle.navigate(
-                                  isSignId(m.id)
-                                    ? SIGNS[m.id].slug
-                                    : isRitualId(m.id)
-                                      ? RITUAL_ROOMS[m.id].slug
-                                      : isChamberId(m.id)
-                                        ? ROOMS[m.id].slug
-                                        : m.id === 1
-                                          ? "western"
-                                          : "numerology",
+                                  isRoom(m.id)
+                                    ? FOLIOS[m.id][0]
+                                    : isSignId(m.id)
+                                      ? SIGNS[m.id].slug
+                                      : isRitualId(m.id)
+                                        ? RITUAL_ROOMS[m.id].slug
+                                        : isChamberId(m.id)
+                                          ? ROOMS[m.id].slug
+                                          : m.id === 1
+                                            ? "western"
+                                            : "numerology",
                                 )
                           }
                         >

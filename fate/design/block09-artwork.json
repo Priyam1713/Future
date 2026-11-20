@@ -1,0 +1,45 @@
+{
+  "environments": [
+    {
+      "id": "court",
+      "prompt": "Landscape environment for the FATE Celestial Court. Cinematic matte painting, deep indigo medieval astronomical chamber, layered stone arches and a wide moonlit view through the open dome, close tarnished silver and engraved brass rails, dim celestial lighting, reserved dark left space for separately rendered accessible interface. Architectural realism, no people, text, charts, marks or interface.",
+      "tool": "Built-in ImageGen",
+      "source": "fate/design/sources/folio-court.png",
+      "files": {
+        "fate/design/sources/folio-court.png": "1457e3efd5eccb3ebfba28a968921a7060036e916b29b4b4fc3e23644b87fb2f",
+        "fate/web/public/art/folio-court-1440.webp": "ee532eec6724d7de1606051536b95b204b252aeee457f5abb6efcad0a8c6dda6",
+        "fate/web/public/art/folio-court-720.webp": "8a1d4f3a8a08a026eb2f7cc1846deeac7fd082b42bb43f667dc040c855a609fb"
+      }
+    },
+    {
+      "id": "manuscript",
+      "prompt": "Wide landscape matte painting of an empty antique bookbinder's workshop at evening, for an original fantasy game archival room. An oak writing table with a few CLOSED blank linen folios and a brass reading lamp in the foreground, walls of unlettered archival boxes and curtained tall windows far behind. Warm umber, distressed ochre, muted aubergine; textured parchment and wood grain, soft window shafts and premium cinematic layered architectural depth. Depict only furnishings and building interior, no characters, no visible pages, no text or signage.",
+      "tool": "Built-in ImageGen",
+      "source": "fate/design/sources/folio-manuscript.png",
+      "files": {
+        "fate/design/sources/folio-manuscript.png": "93f21fe4aa837cb0e13af2c9320da34dd9cfeaf2e3e2b249cb2bab9e56610a73",
+        "fate/web/public/art/folio-manuscript-1440.webp": "2056de8347b083c2c7774132cbfead357317ebd4dc3539594cc0d1c51890e085",
+        "fate/web/public/art/folio-manuscript-720.webp": "8340aee6c51b51ed6b0a246fe18d8e81b2eb754786d1d6281cb7af8c8d07b299"
+      }
+    },
+    {
+      "id": "compass",
+      "prompt": "Landscape environment for FATE Compass Chamber. Premium cinematic interior of a secluded East Asian timber and stone observatory, dark lacquered archive, layers of carved partitions and an open misty mountain horizon, muted vermilion, brass and jade, empty instrument dais, late amber light. No people, glyphs, writing, instruments, charts, or interface. Dark left area.",
+      "tool": "Built-in ImageGen",
+      "source": "fate/design/sources/folio-compass.png",
+      "files": {
+        "fate/design/sources/folio-compass.png": "dd9309ecf548e88c98007965250202e2b8b16a667a30f88f4f9a488df2834c93",
+        "fate/web/public/art/folio-compass-1440.webp": "5cd50b6a976dcae7ff52edc8c193510de08af1aaf70689af917e491d99164678",
+        "fate/web/public/art/folio-compass-720.webp": "55a4231ef5db95139ce5bdb045f50b4a5b693d65baab49b9c378c4c5ee714853"
+      }
+    }
+  ],
+  "instruments": "Original layered SVG, CSS, and React illustrations; live sky geometry and compass intervals from the native reports. Human plates are illustrative indexes, not source facsimiles.",
+  "map": {
+    "source": "https://www.naturalearthdata.com/downloads/110m-physical-vectors/110m-land/",
+    "terms": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "origin": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_110m_land.geojson",
+    "source_sha256": "9e0729ee253ca7d7a5c4ae9395fb1902264c5377c52e224d13dd85010e2835d9",
+    "projection": "Equirectangular, longitude right, latitude up, rounded to 0.01 degrees for coastline only"
+  }
+}

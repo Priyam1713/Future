@@ -14,6 +14,8 @@ import "./turning.css";
 import "./chambers.css";
 import "./ritual.css";
 import "./signs.css";
+import "./manuscript.css";
+import { roomId } from "./manuscript/contracts";
 import { signId } from "./signs/contracts";
 import { ritualId } from "./ritual/contracts";
 import { chamberId } from "./chambers/contracts";
@@ -25,6 +27,7 @@ const GalleryScreen = lazy(() => import("./screens/GalleryScreen"));
 const ChamberScreen = lazy(() => import("./chambers/ChamberScreen"));
 const RitualWing = lazy(() => import("./ritual/RitualWingScreen"));
 const SignsScreen = lazy(() => import("./signs/SignsScreen"));
+const Manuscript = lazy(() => import("./manuscript/ManuscriptScreen"));
 function App() {
   const oracle = useOracle();
   const { screen, reduced, paused, dialog, sound, navigate, skipToContent } =
@@ -32,6 +35,7 @@ function App() {
   const chamber = chamberId(screen);
   const wing = ritualId(screen);
   const sign = signId(screen);
+  const folio = roomId(screen);
   return (
     <div className={`app ${reduced || paused ? "still" : ""}`}>
       <a
@@ -105,7 +109,17 @@ function App() {
         ))}
       </nav>
       <main id="main" tabIndex={-1}>
-        {sign ? (
+        {folio ? (
+          <Suspense
+            fallback={
+              <p className="scope-note" role="status">
+                Opening the instrument…
+              </p>
+            }
+          >
+            <Manuscript key={folio} id={folio} oracle={oracle} />
+          </Suspense>
+        ) : sign ? (
           <Suspense
             fallback={
               <p className="scope-note" role="status">

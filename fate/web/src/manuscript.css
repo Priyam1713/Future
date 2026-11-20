@@ -1,0 +1,667 @@
+.folio-court {
+  --folio-ground: #101a29;
+  --folio-material: #172639;
+  --folio-light: #e9dbb8;
+  --folio-copy: #d8deea;
+  --folio-line: #a6b3c1;
+}
+.folio-manuscript {
+  --folio-ground: #221923;
+  --folio-material: #372634;
+  --folio-light: #f6d8ba;
+  --folio-copy: #eadad9;
+  --folio-line: #d4a890;
+}
+.folio-compass {
+  --folio-ground: #1c241e;
+  --folio-material: #2a3a2a;
+  --folio-light: #eedaa5;
+  --folio-copy: #dae4cd;
+  --folio-line: #c6ae77;
+}
+.folio-room {
+  background: var(--folio-ground);
+  color: var(--folio-copy);
+  padding-bottom: 4rem;
+}
+.folio-room .eyebrow,
+.folio-bookmark .eyebrow {
+  color: var(--folio-light);
+}
+.folio-room :is(h1, h2),
+.folio-bookmark h2 {
+  font: 400 clamp(2.15rem, 5vw, 4.65rem) / 0.98 var(--serif);
+  margin: 0.24em 0 0.31em;
+  color: var(--folio-light);
+}
+.folio-entrance {
+  display: grid;
+  align-items: end;
+  min-height: clamp(16rem, 27vw, 27rem);
+  position: relative;
+  isolation: isolate;
+}
+.folio-entrance :is(picture, img),
+.folio-entrance::after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.folio-entrance picture {
+  z-index: -2;
+}
+.folio-entrance img {
+  object-fit: cover;
+}
+.folio-entrance::after {
+  z-index: -1;
+  content: "";
+  background:
+    linear-gradient(0deg, var(--folio-ground), transparent 88%),
+    linear-gradient(85deg, #090812e5, #0b0e170f 79%);
+}
+.folio-entrance > div {
+  width: min(73rem, calc(100% - 3rem));
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.folio-entrance h1 {
+  font-size: clamp(3rem, 7vw, 7rem);
+  max-width: 16ch;
+}
+.folio-entrance button {
+  min-height: 44px;
+  margin-bottom: 0.75rem;
+}
+.folio-stage {
+  width: min(74rem, calc(100% - 3rem));
+  margin: auto;
+  padding-block: clamp(1.3rem, 4vw, 3.2rem);
+}
+.folio-work {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  align-items: center;
+  gap: clamp(1.2rem, 5vw, 4.5rem);
+}
+.folio-desk,
+.folio-form,
+.folio-result {
+  min-width: 0;
+}
+.folio-desk p {
+  line-height: 1.52;
+}
+.folio-room a,
+.folio-bookmark a {
+  color: var(--folio-light);
+}
+.folio-room label {
+  display: grid;
+  gap: 0.3rem;
+  color: var(--folio-copy);
+  font-size: 0.87rem;
+}
+.folio-room :is(input, select, textarea) {
+  min-width: 0;
+  max-width: 100%;
+  min-height: 44px;
+  border: 1px solid color-mix(in srgb, var(--folio-line), transparent 52%);
+  background: var(--folio-ground);
+  color: var(--folio-light);
+  border-radius: 3px;
+  font: inherit;
+  padding: 0.55em 0.7em;
+}
+.folio-room :is(button, input, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--folio-light);
+  outline-offset: 3px;
+}
+.folio-room input[type="range"] {
+  accent-color: var(--folio-light);
+  background: transparent;
+}
+.folio-room form {
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+}
+.folio-picks {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.85rem 0;
+}
+.folio-picks > button,
+.sky-site-search > button,
+.map-tools > button,
+.hand-markers > button {
+  min-height: 44px;
+  border: 1px solid color-mix(in srgb, var(--folio-line), transparent 43%);
+  border-radius: 3px;
+  color: var(--folio-light);
+  background: var(--folio-material);
+  padding: 0.52rem 0.72rem;
+  font: inherit;
+  font-size: 0.85rem;
+  text-align: left;
+}
+.folio-picks > button.primary,
+.folio-picks > button[aria-pressed="true"],
+.hand-markers > button[aria-pressed="true"] {
+  color: #251820;
+  background: var(--folio-light);
+}
+.folio-picks > button:hover:not(:disabled),
+.map-tools > button:hover:not(:disabled) {
+  border-color: var(--folio-light);
+}
+.folio-index,
+.folio-pair,
+.sky-site-search {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+.folio-index label:only-child {
+  grid-column: 1 / -1;
+}
+.archive-entries {
+  max-height: 18rem;
+  overflow: auto;
+  border-block: 1px solid color-mix(in srgb, var(--folio-line), transparent 66%);
+  padding: 0.55rem 0.15rem;
+}
+.archive-instrument {
+  position: relative;
+  aspect-ratio: 1.03;
+  display: grid;
+  place-items: center;
+  overflow: clip;
+  background:
+    radial-gradient(ellipse at 40% 17%, #67455166, transparent 72%),
+    repeating-linear-gradient(98deg, #e8bd9320 0 1px, transparent 1px 7px),
+    linear-gradient(135deg, #352231, #191319);
+  border: double 4px #a77b685c;
+  border-radius: 4px 14px 14px 4px;
+  box-shadow:
+    inset 0 0 3rem #120b12a0,
+    0.5rem 0.6rem 1.9rem #0a070e55;
+}
+.archive-instrument::after {
+  position: absolute;
+  inset: 0.58rem;
+  border: 1px solid #cbb08537;
+  border-radius: 3px 8px 8px 3px;
+  content: "";
+  pointer-events: none;
+}
+.archive-instrument svg {
+  width: auto;
+  height: 95%;
+  max-width: 100%;
+  stroke: #e6b590;
+  fill: none;
+  stroke-width: 1.3;
+}
+.archive-engraving {
+  stroke-width: 1.8;
+}
+.archive-instrument .active-ink {
+  stroke: #fff0ad;
+  stroke-width: 3;
+}
+.hand-left {
+  transform-origin: center;
+  transform: scaleX(-1);
+}
+.hand-markers {
+  position: absolute;
+  inset: 0;
+}
+.hand-markers button {
+  position: absolute;
+  right: 4%;
+  font-size: 0.76rem;
+  box-shadow: 0 0.24rem 0.9rem #1b101aab;
+}
+.hand-markers .heart {
+  top: 42%;
+}
+.hand-markers .head {
+  top: 58%;
+}
+.hand-markers .life {
+  top: 74%;
+}
+.archive-number {
+  text-anchor: middle;
+  font: 2.5rem var(--serif);
+  letter-spacing: 0.08em;
+  stroke: none;
+  fill: #edcaab;
+}
+.archive-face-reading {
+  background-color: #452d30;
+  border-radius: 45% 45% 8px 8px;
+}
+.archive-phrenology {
+  border-radius: 2px;
+  background: radial-gradient(circle at 48% 35%, #5d4a37, #261e25 71%);
+}
+.archive-moleosophy {
+  transform: rotate(-0.4deg);
+  background: linear-gradient(119deg, #442d32, #221318);
+}
+.archive-podomancy {
+  background:
+    repeating-linear-gradient(110deg, #b47e6c14 0 2px, transparent 2px 9px),
+    #38262a;
+}
+.archive-graphology {
+  background: radial-gradient(ellipse at 42% 40%, #614735, #2c2233 79%);
+}
+.archive-aura {
+  background: radial-gradient(ellipse, #462c53, #201a33 74%);
+  border-radius: 50% 50% 12px 12px;
+}
+.archive-iridology {
+  background: radial-gradient(ellipse at center, #503849, #211926 74%);
+}
+.lantern-pigment {
+  fill: var(--pigment);
+  fill-opacity: 0.56;
+  transform-origin: center;
+  animation: lantern-breath 7s ease-in-out infinite alternate;
+}
+@keyframes lantern-breath {
+  from {
+    transform: scale(0.94);
+  }
+  to {
+    transform: scale(1.04);
+  }
+}
+.result-leaf {
+  --leaf-accent: var(--folio-light, var(--sign-mark, #e9d2a6));
+  border-top: 1px solid color-mix(in srgb, var(--leaf-accent), transparent 64%);
+  padding: 1.1rem 0 0.65rem;
+}
+.result-leaf-main {
+  padding-inline-start: 0.9rem;
+  border-inline-start: 2px solid
+    color-mix(in srgb, var(--leaf-accent), transparent 45%);
+}
+.result-leaf :is(h2, p) {
+  max-width: 42ch;
+}
+.folio-lead {
+  font: 400 clamp(1.45rem, 3.3vw, 2.5rem) / 1.17 var(--serif);
+  margin: 0.28em 0 0.54em;
+  color: var(--folio-light);
+}
+.folio-depth {
+  margin: 0.7rem 0;
+  font-size: 0.84rem;
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--folio-line, #e1bd8b), transparent 65%);
+}
+.folio-depth summary {
+  padding: 0.65rem 0.1rem;
+  min-height: 44px;
+  cursor: pointer;
+  color: var(--folio-light, #ead4aa);
+}
+.folio-depth figure {
+  margin: 0.9rem 0;
+}
+.folio-depth blockquote {
+  margin: 0 0 0.2rem;
+}
+.folio-depth figcaption {
+  font-size: 0.77rem;
+}
+.folio-actions {
+  margin: 0.95rem 0;
+}
+.folio-room .text-button,
+.folio-bookmark .text-button {
+  min-height: 44px;
+}
+.folio-bookmark {
+  background: var(--folio-ground);
+  color: var(--folio-copy);
+  padding: 1rem 1.2rem;
+}
+.folio-bookmark .folio-heading h2 {
+  font-size: clamp(1.85rem, 4vw, 3.15rem);
+}
+.folio-bookmark .result-leaf h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+.folio-bookmark-mark {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  min-height: 8rem;
+}
+.folio-bookmark-mark span {
+  color: var(--folio-light);
+  font-size: 2rem;
+}
+.folio-bookmark-mark strong {
+  font: 1.35rem var(--serif);
+}
+.court-cover {
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  position: relative;
+  aspect-ratio: 1.17;
+  background: radial-gradient(ellipse, #294158 5%, #162637 52%, #111928 77%);
+  border-block: 1px solid #aebfc557;
+  border-radius: 48% 48% 3px 3px;
+}
+.court-cover svg {
+  width: 78%;
+  max-height: 94%;
+  fill: none;
+  stroke: #ccbc99;
+}
+.court-cover svg > * {
+  opacity: 0.55;
+}
+.court-cover .court-ticks {
+  stroke-dasharray: 1 3.3;
+}
+.court-cover .court-mark {
+  opacity: 1;
+  stroke-width: 1.8;
+}
+.court-cover span {
+  position: absolute;
+  bottom: 1.1rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.19em;
+  color: #e9dbb8;
+}
+.sky-6 .court-cover {
+  background: radial-gradient(
+    ellipse at 50% 46%,
+    #514132,
+    #23263a 57%,
+    #111928 77%
+  );
+}
+.sky-7 {
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.85fr);
+}
+.sky-start,
+.cycle-tabs {
+  margin-top: 1.15rem;
+}
+.sky-form {
+  border-top: 1px solid #b7b7b566;
+  padding-top: 0.8rem;
+  margin-top: 0.8rem;
+}
+.sky-site {
+  display: grid;
+  gap: 0.45rem;
+}
+.sky-site-search {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+}
+.sky-confirmed {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+.sky-results:focus,
+.folio-desk > section:focus {
+  outline: none;
+}
+.sky-example {
+  display: inline-block;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid #e0c39160;
+  color: var(--folio-light);
+  border-radius: 2px;
+  font-size: 0.78rem;
+  margin-bottom: 0.9rem;
+}
+.sky-glance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.35rem;
+}
+.sky-glance dt,
+.cycle-tabs time {
+  color: var(--folio-copy);
+  font-size: 0.72rem;
+}
+.sky-glance dd {
+  margin: 0.24em 0 0;
+  font: 1.28rem var(--serif);
+}
+.cycle-tabs button {
+  padding: 0.6rem 0.9rem;
+}
+.cycle-tabs time {
+  display: block;
+  color: inherit;
+  margin-bottom: 0.22em;
+}
+.diagnostic-list {
+  padding-left: 1.2rem;
+  max-height: 22rem;
+  overflow: auto;
+}
+.diagnostic-list li {
+  margin: 0.5rem 0;
+}
+.diagnostic-list p {
+  margin: 0.15rem 0;
+}
+.meridian-map {
+  position: relative;
+  background: linear-gradient(172deg, #1f3b52, #0e1d2d);
+  border: 1px solid #809eac;
+}
+.meridian-map svg {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2;
+  fill: none;
+}
+.meridian-map .map-zoomed {
+  touch-action: none;
+  cursor: grab;
+}
+.map-grid {
+  stroke: #a4b1aa56;
+  stroke-width: 0.35;
+}
+.map-land {
+  fill: #42605b;
+  stroke: #a7bda3;
+  stroke-width: 0.38;
+  fill-rule: evenodd;
+}
+.map-line {
+  fill: none;
+  stroke-width: 1.3;
+  opacity: 0.73;
+  vector-effect: non-scaling-stroke;
+  cursor: pointer;
+}
+.map-line[data-selected="true"] {
+  stroke-width: 2.6;
+  opacity: 1;
+}
+.map-tools {
+  position: absolute;
+  display: flex;
+  gap: 0.2rem;
+  right: 0.3rem;
+  bottom: 0.3rem;
+}
+.map-credit {
+  color: var(--folio-copy);
+  font-size: 0.72rem;
+  margin: 0.5rem 0;
+}
+.map-selectors {
+  display: flex;
+  gap: 0.6rem 1.25rem;
+  flex-wrap: wrap;
+  align-items: end;
+  margin: 0.75rem 0;
+}
+.map-selectors .folio-picks {
+  margin: 0;
+}
+.compass-instrument {
+  display: grid;
+  place-items: center;
+  padding: 0.6rem;
+  background: radial-gradient(ellipse at 48% 45%, #384b31, #19241b 71%);
+  border: 1px solid #ab99635c;
+}
+.compass-instrument svg {
+  display: block;
+  width: min(100%, 29rem);
+  touch-action: none;
+  cursor: grab;
+  filter: drop-shadow(0 9px 10px #111710b0);
+}
+.compass-case {
+  fill: #602f26;
+  stroke: #dbba72;
+  stroke-width: 4;
+}
+.compass-brass {
+  fill: #273425;
+  stroke: #ae945f;
+  stroke-width: 1.1;
+}
+.compass-well {
+  fill: #12251e;
+  stroke: #d7bf88;
+  stroke-width: 2;
+}
+.compass-instrument text {
+  text-anchor: middle;
+  fill: #f1ddad;
+  font: 9px var(--sans, sans-serif);
+}
+.compass-instrument line {
+  stroke: #b28c57;
+  stroke-width: 0.7;
+}
+.compass-instrument g[data-active="true"] text {
+  fill: #fff29b;
+  font-weight: bold;
+}
+.compass-instrument .compass-cardinal {
+  font: 12px var(--serif);
+}
+.compass-needle path:first-child {
+  fill: #ad654e;
+  stroke: #eac987;
+  stroke-width: 1;
+}
+.compass-needle path:last-child {
+  fill: #f6d798;
+}
+.compass-pin {
+  fill: #e3be72;
+  stroke: #4b3527;
+}
+.compass-uncertainty {
+  fill: none;
+  stroke: #e9b889;
+  stroke-width: 4;
+  pointer-events: none;
+}
+.compass-instrument strong {
+  font: clamp(1.65rem, 4vw, 2.45rem) var(--serif);
+  color: var(--folio-light);
+}
+.compass-instrument input {
+  width: 80%;
+}
+.compass-work .folio-desk > section {
+  max-height: 44rem;
+  overflow-y: auto;
+  padding-right: 0.4rem;
+}
+.compass-work .folio-desk .result-leaf:not(:first-child) h2 {
+  font-size: clamp(1.6rem, 3vw, 2.45rem);
+}
+.manuscript-gallery nav {
+  border-inline-start: 1px solid #dcb47677;
+  padding-inline-start: 0.9rem;
+}
+.folio-room[data-still="true"] *,
+.folio-bookmark * {
+  animation: none !important;
+  transition: none !important;
+}
+@media (max-width: 760px) {
+  .folio-entrance {
+    min-height: 16rem;
+  }
+  .folio-entrance > div,
+  .folio-stage {
+    width: calc(100% - 2rem);
+  }
+  .folio-work,
+  .sky-7 {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+  .folio-room {
+    padding-bottom: 5rem;
+  }
+  .archive-instrument {
+    max-height: 17rem;
+    width: 100%;
+  }
+  .archive-entries {
+    max-height: 13.4rem;
+  }
+  .court-cover {
+    max-height: 17rem;
+  }
+  .court-cover svg {
+    width: auto;
+    height: 85%;
+    max-width: 100%;
+  }
+  .compass-instrument svg {
+    width: min(100%, 18rem);
+  }
+  .compass-work .folio-desk > section {
+    max-height: none;
+    padding: 0;
+  }
+  .cycle-tabs {
+    gap: 0.35rem;
+  }
+  .cycle-tabs button {
+    padding: 0.45rem 0.6rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .folio-room *,
+  .folio-bookmark * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
