@@ -626,3 +626,22 @@ test("Ritual Wing saves only a recognized public edition and verified figure val
     false,
   );
 });
+test("World of Signs Codex only accepts named, valid declarations and keeps hazards out of storage", () => {
+  const sign = {
+    oracle: 34,
+    profile: "howard-cottage-web-general-set-v1",
+    values: ["onyx", "2:-1"],
+  };
+  assert.equal(r.validSnapshot(sign), true);
+  assert.equal(r.chapterFor({}, sign).reference, "fate-world-of-signs-v1");
+  assert.equal(r.validSnapshot({ ...sign, values: ["onyx", "100:3"] }), false);
+  assert.equal(r.validSnapshot({ ...sign, observation: "private" }), false);
+  assert.equal(
+    r.validSnapshot({
+      oracle: 30,
+      profile: "pamita-public2026-candle-observation-v1",
+      values: ["high", "persistent", "hazard", "reported_real"],
+    }),
+    false,
+  );
+});

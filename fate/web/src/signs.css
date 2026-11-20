@@ -1,0 +1,649 @@
+.sign-table {
+  --sign-bg: #1a211d;
+  --sign-panel: #2a362c;
+  --sign-mark: #ebc995;
+  --sign-copy: #dbd0ba;
+}
+.sign-elemental {
+  --sign-bg: #121e29;
+  --sign-panel: #202f3b;
+  --sign-mark: #d9d5b4;
+  --sign-copy: #d1dbe1;
+}
+.sign-omens {
+  --sign-bg: #26191f;
+  --sign-panel: #3b2730;
+  --sign-mark: #f1c6a6;
+  --sign-copy: #e2cbd1;
+}
+.sign-coffee-grounds {
+  --sign-bg: #231813;
+  --sign-panel: #392821;
+  --sign-mark: #f5ca9c;
+}
+.sign-candle-lore {
+  --sign-bg: #211a1a;
+  --sign-panel: #392725;
+  --sign-mark: #f5c29a;
+}
+.sign-water-signs {
+  --sign-bg: #102329;
+  --sign-panel: #213439;
+  --sign-mark: #c1e2dc;
+}
+.sign-stone-table {
+  --sign-bg: #141f23;
+  --sign-panel: #253a3d;
+  --sign-mark: #d3e5c5;
+}
+.sign-letter-lot {
+  --sign-bg: #242319;
+  --sign-panel: #3c3626;
+  --sign-mark: #f3dbab;
+}
+.sign-bird-signs {
+  --sign-bg: #1d2434;
+  --sign-panel: #29354a;
+  --sign-mark: #e5d7ae;
+}
+.sign-room,
+.sign-folio {
+  background: var(--sign-bg);
+  color: #f4eadd;
+}
+.sign-room {
+  overflow: clip;
+  padding-bottom: 4rem;
+}
+.sign-room .eyebrow,
+.sign-folio .eyebrow {
+  color: var(--sign-mark);
+}
+.sign-room h1,
+.sign-room h2,
+.sign-folio h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  color: var(--sign-mark);
+}
+.sign-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: end;
+  min-height: clamp(25rem, 48vw, 40rem);
+}
+.sign-hero picture,
+.sign-hero img,
+.sign-hero::after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.sign-hero picture {
+  z-index: -2;
+}
+.sign-hero img {
+  object-fit: cover;
+}
+.sign-hero::after {
+  content: "";
+  z-index: -1;
+  background:
+    linear-gradient(90deg, #09090bea, transparent 88%),
+    linear-gradient(0deg, var(--sign-bg), transparent 85%);
+}
+.sign-intro {
+  width: min(86rem, 100%);
+  margin: 0 auto;
+  padding: clamp(1.15rem, 5vw, 5rem);
+}
+.sign-intro h1 {
+  font-size: clamp(3rem, 8vw, 7.2rem);
+  line-height: 0.93;
+  max-width: 14ch;
+  margin: 0.2em 0;
+}
+.sign-intro p:not(.eyebrow) {
+  color: #f5e9db;
+  max-width: 43ch;
+  line-height: 1.5;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+}
+.sign-intro button {
+  margin-bottom: 1.05rem;
+}
+.sign-room .text-button,
+.sign-folio .text-button {
+  min-height: 44px;
+  color: var(--sign-mark);
+}
+.sign-stage {
+  width: min(70rem, calc(100% - 2.5rem));
+  margin: auto;
+  padding: clamp(1.2rem, 4vw, 3.7rem) 0;
+  scroll-margin-top: 1rem;
+}
+.sign-stage:focus {
+  outline: none;
+}
+.sign-station,
+.sign-reading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  gap: clamp(1.1rem, 4vw, 3.5rem);
+  align-items: center;
+}
+.sign-display {
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  padding: clamp(0.7rem, 2vw, 1.4rem);
+  background: linear-gradient(150deg, var(--sign-panel), var(--sign-bg));
+  border: 1px solid #d4b98742;
+}
+.sign-step h2,
+.sign-interpretation h2 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  margin: 0.23em 0;
+  line-height: 0.97;
+}
+.sign-options,
+.vessel-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.6rem 0;
+}
+.sign-options button,
+.vessel-choices button,
+.sign-lots button,
+.sign-stone-board button {
+  min-height: 44px;
+  border: 1px solid #e1ba875f;
+  padding: 0.4rem 0.66rem;
+  background: var(--sign-panel);
+  color: #fff0dd;
+  font: inherit;
+  font-size: 0.85rem;
+  border-radius: 2px;
+}
+.sign-options button:hover,
+.vessel-choices button:hover,
+.sign-lots button:hover,
+.sign-stone-board button:hover {
+  border-color: var(--sign-mark);
+  background: var(--sign-bg);
+}
+.case-options button {
+  border-left: 2px solid #bc9366;
+}
+.sign-selection {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 1.2rem;
+  display: grid;
+  gap: 0.25rem;
+}
+.sign-selection li {
+  border-bottom: 1px solid #e4c5994d;
+  padding: 0.46rem 0;
+  color: var(--sign-mark);
+}
+.sign-selection small {
+  display: block;
+  color: var(--sign-copy);
+  font-size: 0.7rem;
+}
+.sign-step .text-button {
+  display: block;
+  margin: 1rem 0 0;
+}
+.sign-hint,
+.sign-caption,
+.sign-metric {
+  font-size: 0.86rem;
+  color: var(--sign-copy);
+  margin: 0.75rem 0;
+}
+.sign-caption {
+  text-align: center;
+}
+.sign-lead {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  line-height: 1.18;
+  max-width: 36ch;
+  color: #f0dac0;
+}
+.sign-depth {
+  --ritual-ink: var(--sign-mark);
+  --ritual-soft: var(--sign-copy);
+}
+.sign-stage .ritual-depth {
+  --ritual-ink: var(--sign-mark);
+  --ritual-soft: var(--sign-copy);
+}
+.sign-depth p,
+.sign-folio p,
+.sign-stage .ritual-save p {
+  color: var(--sign-copy);
+}
+.sign-stage .ritual-save h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  color: var(--sign-mark);
+}
+.sign-stone-board {
+  width: min(20rem, 100%);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 3px;
+  padding: 3px;
+  background: repeating-linear-gradient(45deg, #212e2f 0 4px, #273538 4px 8px);
+  border: 1px solid #78998f;
+}
+.sign-stone-board :is(button, span:not(.sr-only)) {
+  min-height: 0;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #a5beb347;
+  color: #d4e8cc;
+  background: #17242bab;
+  font-size: 1.1rem;
+}
+.sign-stone-board [data-stone="center"] {
+  color: #e8bb78 !important;
+}
+.sign-stone-board [data-stone="selected"] {
+  color: #f5edc6 !important;
+  background: #395f50 !important;
+}
+.sign-stone-board .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.sign-cup,
+.sign-saucer,
+.sign-water,
+.sign-wind,
+.sign-bird,
+.sign-candle {
+  width: min(21rem, 100%);
+  position: relative;
+  text-align: center;
+}
+.sign-cup svg,
+.sign-wind svg,
+.sign-bird svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.sign-cup .vessel-choices,
+.sign-candle .vessel-choices,
+.sign-saucer .vessel-choices,
+.sign-bird .vessel-choices {
+  justify-content: center;
+}
+.sign-saucer {
+  --bezel: #d0ae82;
+  min-height: 14rem;
+}
+.coffee-well {
+  width: 72%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  margin: 1rem auto;
+  border-radius: 50%;
+  border: 8px solid var(--bezel);
+  position: relative;
+  background: radial-gradient(circle, #6a3e30 14%, #321a12 66%, #a07555 80%);
+  box-shadow:
+    0 15px 24px #0007,
+    inset 0 5px 20px #0008;
+  transition: transform 0.48s;
+}
+.coffee-well span {
+  font: 2.75rem var(--serif);
+  color: #e8c796;
+}
+.coffee-handle {
+  position: absolute;
+  border: 8px solid #b9916b;
+  border-radius: 50%;
+  width: 28%;
+  height: 25%;
+  top: 28%;
+  right: 4%;
+}
+.saucer-active .coffee-handle {
+  opacity: 0;
+}
+.saucer-active .coffee-well {
+  transform: perspective(600px) rotateX(36deg) scale(1.12);
+  border-width: 14px;
+}
+.sign-candle {
+  min-height: 15rem;
+  padding: 0 0.2rem;
+}
+.candle-ruler {
+  position: absolute;
+  top: 8%;
+  left: 21%;
+  width: 8px;
+  height: 51%;
+  background: repeating-linear-gradient(
+    0deg,
+    #dab788 0 1px,
+    transparent 1px 14px
+  );
+}
+.candle-flame {
+  height: 67px;
+  width: 32px;
+  margin: 1.4rem auto 0.15rem;
+  background: radial-gradient(
+    ellipse at 50% 76%,
+    #fef2be,
+    #e7984d 35%,
+    #9f4331 71%,
+    transparent 73%
+  );
+  border-radius: 80% 16% 70% 18%;
+  transform-origin: 50% 100%;
+  transform: rotate(19deg);
+  transition: height 0.4s;
+}
+.sign-candle[data-height="high"] .candle-flame {
+  height: 107px;
+}
+.sign-candle[data-height="low"] .candle-flame {
+  height: 42px;
+}
+.sign-candle[data-persistent="true"] .candle-flame {
+  animation: sign-flicker 2.3s infinite alternate ease-in-out;
+}
+@keyframes sign-flicker {
+  to {
+    transform: rotate(13deg) scaleX(0.91);
+  }
+}
+.candle-wax {
+  width: 19%;
+  height: 76px;
+  background: linear-gradient(90deg, #a57551, #ecd5a4 42%, #ad7951);
+  margin: auto;
+  border-radius: 8px 8px 2px 2px;
+  box-shadow: 0 14px 19px #100909;
+}
+.water-lens {
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  width: 88%;
+  aspect-ratio: 1;
+  margin: 1.05rem auto;
+  background: radial-gradient(
+    ellipse at 32% 27%,
+    #699692,
+    #244950 42%,
+    #17373e 68%,
+    #0f232a
+  );
+  border: 8px solid #85928a;
+  box-shadow:
+    inset 0 0 26px #091f23,
+    0 9px 24px #0008;
+  display: grid;
+  place-items: center;
+}
+.water-lens i {
+  position: absolute;
+  inset: 22%;
+  border: 1px solid #bde6db50;
+  border-radius: 50%;
+}
+.water-lens i:nth-child(2) {
+  inset: 30%;
+}
+.water-lens i:nth-child(3) {
+  inset: 38%;
+}
+.sign-water[data-category="physical_ripples"] i {
+  animation: ripple-sign 4s ease-out infinite;
+}
+.sign-water[data-category="physical_ripples"] i:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.sign-water[data-category="physical_ripples"] i:nth-child(3) {
+  animation-delay: 1.3s;
+}
+@keyframes ripple-sign {
+  from {
+    transform: scale(0.54);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.45);
+    opacity: 0.04;
+  }
+}
+.water-lens span {
+  font: 2.2rem var(--serif);
+  color: #d4e9df;
+}
+.wind-pointer {
+  transform: rotate(var(--bearing));
+  transform-origin: 100px 100px;
+  transition: transform 0.55s cubic-bezier(0.14, 0.8, 0.28, 1);
+}
+.artifact-tag {
+  display: block;
+  color: var(--sign-mark);
+  font-size: 0.78rem;
+  margin: 0.4rem 0;
+  text-align: center;
+}
+.sign-inscription,
+.letter-tile,
+.sign-casebook > div {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 0.35rem;
+  min-height: 13rem;
+  padding: 1rem;
+  width: min(18rem, 100%);
+  color: #f2dcac;
+  text-align: center;
+}
+.sign-inscription {
+  border: 1px solid #bda17e;
+  border-radius: 42% 18% 29% 15% / 33% 20% 30% 19%;
+  background: linear-gradient(148deg, #a78255, #4f332b 70%);
+  box-shadow:
+    inset 4px 4px 24px #ad93705b,
+    0 12px 18px #0c0407;
+}
+.sign-inscription strong,
+.sign-casebook strong {
+  font: 2.75rem var(--serif);
+  line-height: 0.9;
+}
+.sign-inscription span,
+.sign-casebook span {
+  font-size: 2rem;
+}
+.sign-lots {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 4px;
+  width: 100%;
+}
+.sign-lots button {
+  aspect-ratio: 1;
+  font: clamp(1.1rem, 3vw, 2rem) var(--serif);
+  background: linear-gradient(130deg, #584328, #30281e);
+  padding: 0;
+}
+.letter-tile {
+  aspect-ratio: 1;
+  border: 3px double #dbc18b;
+  background: linear-gradient(137deg, #725237, #322819);
+  box-shadow: 6px 8px 0 #171613;
+  color: #ffe4ab;
+}
+.letter-tile span {
+  font: 5.45rem var(--serif);
+}
+.sign-bird svg {
+  background: linear-gradient(#25374e, #734b4b);
+  border: 1px solid #ba9772;
+}
+.bird-mark {
+  transition: transform 0.56s;
+}
+.sign-bird[data-side="left"] .bird-mark {
+  transform: translateX(-52px);
+}
+.sign-bird[data-side="right"] .bird-mark {
+  transform: translateX(52px);
+}
+.sign-casebook {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.sign-casebook > div {
+  border: 3px double #b2997e;
+  background: linear-gradient(120deg, #74503b, #442c2a);
+  box-shadow: 7px 8px 0 #170e12;
+  border-radius: 2px 11px 11px 2px;
+}
+.sign-reading {
+  animation: sign-arrive 0.45s ease-out both;
+}
+@keyframes sign-arrive {
+  from {
+    opacity: 0.55;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.sign-folio {
+  padding: 0.85rem;
+}
+.sign-folio .sign-reading {
+  display: block;
+}
+.sign-folio .sign-display {
+  padding: 0.65rem;
+}
+.sign-folio .sign-interpretation {
+  padding: 0.55rem 0.15rem;
+}
+.sign-compact .sign-display {
+  max-width: 13rem;
+  margin: auto;
+  min-height: 0;
+}
+.sign-compact :is(.letter-tile, .sign-inscription, .sign-casebook > div) {
+  min-height: 4rem;
+  aspect-ratio: auto;
+}
+.sign-compact .letter-tile span {
+  font-size: 2rem;
+}
+.sign-compact .sign-inscription strong,
+.sign-compact .sign-casebook strong {
+  font-size: 1.45rem;
+}
+.sign-gallery-wing nav {
+  display: grid;
+  gap: 0.7rem;
+}
+.sign-gallery-wing nav > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.7rem;
+  align-items: center;
+}
+.sign-gallery-wing strong {
+  color: #e3c68f;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  width: 100%;
+}
+.sign-room[data-sign-still="true"] *,
+.sign-folio * {
+  animation: none !important;
+  transition: none !important;
+}
+@media (max-width: 740px) {
+  .sign-hero {
+    min-height: 24rem;
+  }
+  .sign-hero::after {
+    background: linear-gradient(0deg, var(--sign-bg), #09090c55);
+  }
+  .sign-room {
+    padding-bottom: 5.2rem;
+  }
+  .sign-stage {
+    width: calc(100% - 2rem);
+    padding: 1rem 0;
+  }
+  .sign-station,
+  .sign-reading {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sign-display {
+    padding: 0.7rem;
+  }
+  .sign-cup,
+  .sign-saucer,
+  .sign-wind,
+  .sign-water,
+  .sign-bird {
+    width: min(15.5rem, 100%);
+  }
+  .sign-inscription,
+  .letter-tile,
+  .sign-casebook > div {
+    min-height: 10rem;
+    width: min(13rem, 100%);
+  }
+  .sign-stone-board {
+    width: min(100%, 17rem);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sign-room * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+.archive-display{display:grid;justify-items:center;gap:1rem;width:100%}
+.archive-tray{display:flex;flex-wrap:wrap;justify-content:center;gap:.35rem;max-height:12rem;overflow:auto;padding:.1rem .3rem}
+.archive-tray button{min-height:44px;border:1px solid #a9835f;background:#42302d;color:#f0cfad;padding:.3rem .6rem;font:inherit;font-size:.78rem}
+.water-choices button{border-radius:16px}
+.wind-choices button{border-bottom:2px solid #c9ab7a}
+.roman-tabs button{border-radius:2px 11px 2px 2px}
+.sign-casebook .roman-tabs{border:none;min-height:0;background:none;box-shadow:none;padding:.5rem 0;display:flex;width:100%;justify-content:center}
+.sign-declaration{display:grid;gap:.45rem;margin:0}
+.sign-declaration dt{font-size:.73rem;color:var(--sign-copy)}
+.sign-declaration dd{margin:0;color:var(--sign-mark)}
+.sign-study *{animation:none!important;transition:none!important}

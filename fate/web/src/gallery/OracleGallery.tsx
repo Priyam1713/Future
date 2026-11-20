@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { Oracle } from "../hooks/useOracle";
 import inventory from "./inventory.json";
 import { isChamberId, ROOMS } from "../chambers/contracts";
+import { isSignId, SIGNS, ENVIRONMENTS } from "../signs/contracts";
 import { isRitualId, RITUAL_ROOMS } from "../ritual/contracts";
 import { EXPERIENCES } from "../experiences/contracts";
 import { NumberDial } from "../numerology/NumberDial";
@@ -156,8 +157,8 @@ export function OracleGallery({
                 <em>still unfolding.</em>
               </h2>
               <p>
-                Three rooms are open. Beyond them, a library of traditions and
-                possible futures waits to be discovered.
+                Twenty-four rooms are open. The wider library holds traditions
+                you can discover through their historical sources.
               </p>
             </div>
           </div>
@@ -175,6 +176,29 @@ export function OracleGallery({
               >
                 {room.name} <span aria-hidden="true">↗</span>
               </button>
+            ))}
+          </nav>
+        </details>
+        <details className="ritual-wing-discovery sign-gallery-wing">
+          <summary>
+            The World of Signs <span>Ten rooms in three environments</span>
+          </summary>
+          <nav aria-label="World of Signs rooms">
+            {Object.entries(ENVIRONMENTS).map(([stage, label]) => (
+              <div key={stage}>
+                <strong>{label}</strong>
+                {Object.values(SIGNS)
+                  .filter((room) => room.stage === stage)
+                  .map((room) => (
+                    <button
+                      key={room.slug}
+                      className="text-button ritual-wing-link"
+                      onClick={() => oracle.navigate(room.slug)}
+                    >
+                      {room.name}
+                    </button>
+                  ))}
+              </div>
             ))}
           </nav>
         </details>
@@ -280,13 +304,15 @@ export function OracleGallery({
                             m.id === 16
                               ? oracle.begin()
                               : oracle.navigate(
-                                  isRitualId(m.id)
-                                    ? RITUAL_ROOMS[m.id].slug
-                                    : isChamberId(m.id)
-                                      ? ROOMS[m.id].slug
-                                      : m.id === 1
-                                        ? "western"
-                                        : "numerology",
+                                  isSignId(m.id)
+                                    ? SIGNS[m.id].slug
+                                    : isRitualId(m.id)
+                                      ? RITUAL_ROOMS[m.id].slug
+                                      : isChamberId(m.id)
+                                        ? ROOMS[m.id].slug
+                                        : m.id === 1
+                                          ? "western"
+                                          : "numerology",
                                 )
                           }
                         >

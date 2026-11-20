@@ -13,6 +13,8 @@ import "./astrology.css";
 import "./turning.css";
 import "./chambers.css";
 import "./ritual.css";
+import "./signs.css";
+import { signId } from "./signs/contracts";
 import { ritualId } from "./ritual/contracts";
 import { chamberId } from "./chambers/contracts";
 import { lazy, Suspense } from "react";
@@ -22,12 +24,14 @@ const CodexScreen = lazy(() => import("./screens/CodexScreen"));
 const GalleryScreen = lazy(() => import("./screens/GalleryScreen"));
 const ChamberScreen = lazy(() => import("./chambers/ChamberScreen"));
 const RitualWing = lazy(() => import("./ritual/RitualWingScreen"));
+const SignsScreen = lazy(() => import("./signs/SignsScreen"));
 function App() {
   const oracle = useOracle();
   const { screen, reduced, paused, dialog, sound, navigate, skipToContent } =
     oracle;
   const chamber = chamberId(screen);
   const wing = ritualId(screen);
+  const sign = signId(screen);
   return (
     <div className={`app ${reduced || paused ? "still" : ""}`}>
       <a
@@ -101,7 +105,17 @@ function App() {
         ))}
       </nav>
       <main id="main" tabIndex={-1}>
-        {wing ? (
+        {sign ? (
+          <Suspense
+            fallback={
+              <p className="scope-note" role="status">
+                Opening the observatory…
+              </p>
+            }
+          >
+            <SignsScreen key={sign} id={sign} oracle={oracle} />
+          </Suspense>
+        ) : wing ? (
           <Suspense
             fallback={
               <p className="scope-note" role="status">

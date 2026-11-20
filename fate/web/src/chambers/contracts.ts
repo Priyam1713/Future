@@ -1,4 +1,5 @@
 import edition from "./edition-v1.json";
+import { isSignId, SIGNS } from "../signs/contracts";
 import { isRitualId, RITUAL_ROOMS } from "../ritual/contracts";
 
 export const CHAMBER_REFERENCE = "fate-four-chambers-v1";
@@ -83,6 +84,7 @@ export function isChamberSnapshot(s: { oracle: number }): s is ChamberSnapshot {
   return isChamberId(s.oracle);
 }
 export function oracleLabel(id: number) {
+  if (isSignId(id)) return SIGNS[id].name;
   if (isRitualId(id)) return RITUAL_ROOMS[id].name;
   return isChamberId(id)
     ? ROOMS[id].name

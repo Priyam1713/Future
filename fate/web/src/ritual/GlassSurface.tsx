@@ -23,7 +23,9 @@ void main(){
   float mask=1.-smoothstep(.94,.99,r);
   if(mask<.001){gl_FragColor=vec4(0.);return;}
   float z=sqrt(max(0.,1.-r*r));
-  vec2 ray=p*(1.+.41*z*(1.-mirror))+.13*touch*z;
+  vec3 normal=normalize(vec3(p,z));
+  vec3 transmitted=refract(vec3(0.,0.,-1.),normal,.72);
+  vec2 ray=mix(p-transmitted.xy*(.34+.25*z),p+vec2(p.y*p.y*.07,-p.x*.04),mirror)+.10*touch*z;
   float fog=0.;
   for(int i=0;i<8;i++){
     float t=float(i)/8.;
@@ -35,12 +37,16 @@ void main(){
   vec3 base=mix(vec3(.033,.038,.095),vec3(.044,.021,.041),mirror);
   vec3 lights=mix(vec3(.56,.54,.91),vec3(.59,.31,.34),mirror);
   float edge=pow(1.-z,3.5);
-  float facing=max(0.,dot(normalize(vec3(p,z)),normalize(vec3(-.49,.61,.62)+vec3(touch*.19,0.))));
+  float facing=max(0.,dot(normal,normalize(vec3(-.49,.61,.62)+vec3(touch*.19,0.))));
   float gloss=pow(facing,25.)*.21+pow(facing,100.)*.51;
   float curtain=pow(.5+.5*cos(p.x*9.+p.y*2.+sin(p.y*5.+time*.28)*.7+time*.3),12.)*z;
   float band=(r-.93)*44.;
   float bevel=exp(-band*band)*(.27+.23*sin(atan(p.y,p.x)+1.2));
-  vec3 color=base+lights*(fog*.74+edge*.42+bevel)+vec3(.77,.74,.96)*gloss+mirror*lights*curtain*.19;
+  vec2 bounced=reflect(vec3(0.,0.,-1.),normal).xy;
+  float pane=smoothstep(.80,.99,1.-abs(bounced.x+.31+touch.x*.14))*smoothstep(-.2,.47,bounced.y);
+  float silver=mirror*pow(max(0.,1.-abs(ray.x+.24+ray.y*.11)*4.8),6.)*(.63+.21*sin(time*.24));
+  vec3 color=base+lights*(fog*(.61+.09*z)+edge*.36+bevel)+vec3(.77,.74,.96)*gloss
+    + (1.-mirror)*vec3(.18,.20,.31)*pane + mirror*lights*(curtain*.14+silver*.16);
   gl_FragColor=vec4(color,mask);
 }`;
 

@@ -1093,3 +1093,51 @@
     transform: none;
   }
 }
+
+/* Keep the physical page separate from its controls on a phone. */
+@media (max-width: 740px) {
+  .ritual-geomancy .shield-tier:first-child {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.38rem;
+    max-width: 18rem;
+    margin: 0.35rem auto 0.65rem;
+  }
+  .ritual-geomancy .shield-tier:first-child button {
+    width: 100%;
+    min-height: 54px;
+  }
+  .ritual-geomancy .shield-figure small {
+    font-size: 0.69rem;
+  }
+  .ritual-geomancy .shield-figure span {
+    font-size: 0.64rem;
+  }
+  .ritual-bibliomancy .book-spread {
+    background: none;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    gap: 0.95rem;
+    min-height: 0;
+  }
+  .ritual-bibliomancy .book-selection {
+    padding: 1.2rem 0.9rem 1.1rem;
+    max-height: 18rem;
+    background: #d6c398 url("/art/ritual-bibliomancy-object.webp") center / 100%
+      100% no-repeat;
+    border: 1px solid #bfa171;
+    box-shadow: 0 11px 17px #0008;
+  }
+  .ritual-bibliomancy .book-selection button {
+    background: #ead9b5ed;
+  }
+  .ritual-bibliomancy .book-selection button[aria-pressed="true"] {
+    background: #ffe8ab;
+  }
+  .ritual-bibliomancy .book-picker {
+    background: #dbc79d;
+    border-left: 3px solid #9f7545;
+    padding: 0.95rem 1rem;
+  }
+}

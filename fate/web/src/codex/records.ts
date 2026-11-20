@@ -1,3 +1,9 @@
+import {
+  SIGN_REFERENCE,
+  isSign,
+  validateSign,
+  type SignSnapshot,
+} from "../signs/contracts";
 import type { Result } from "../types";
 import type { NumberResult } from "../experiences/contracts";
 import { DECK } from "../artwork/registry";
@@ -26,6 +32,7 @@ export const REFERENCE = "fate-codex-reference-v1";
 export const MAX_CHAPTERS = 50;
 const MAX_LENGTH = 65536;
 export type Snapshot =
+  | SignSnapshot
   | RitualSnapshot
   | ChamberSnapshot
   | TransitSnapshot
@@ -50,6 +57,7 @@ export interface Chapter {
     | typeof REFERENCE
     | typeof WESTERN_REFERENCE
     | typeof CHAMBER_REFERENCE
+    | typeof SIGN_REFERENCE
     | typeof RITUAL_REFERENCE
     | typeof TRANSIT_REFERENCE;
   snapshot: Snapshot;
@@ -80,6 +88,8 @@ function core(value: unknown) {
 }
 export function validSnapshot(s: unknown): s is Snapshot {
   if (!object(s)) return false;
+  if (typeof s.oracle === "number" && isSign({ oracle: s.oracle }))
+    return validateSign(s);
   if (typeof s.oracle === "number" && isRitualSnapshot({ oracle: s.oracle }))
     return validateRitual(s);
   if (s.oracle === 2 || s.oracle === 3 || s.oracle === 18 || s.oracle === 19)
@@ -195,6 +205,7 @@ export function validSnapshot(s: unknown): s is Snapshot {
   );
 }
 function editionFor(snapshot: Snapshot): Chapter["reference"] {
+  if (isSign(snapshot)) return SIGN_REFERENCE;
   if (isRitualSnapshot(snapshot)) return RITUAL_REFERENCE;
   if (snapshot.profile === "turning-sky-v1") return TRANSIT_REFERENCE;
   if (snapshot.oracle === 1) return WESTERN_REFERENCE;

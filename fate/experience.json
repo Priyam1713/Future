@@ -1,6 +1,6 @@
 {
-  "id": "fate-ritual-wing-v7",
-  "block": "07 · The Ritual Wing",
+  "id": "fate-world-of-signs-v8",
+  "block": "08 · The World of Signs",
   "capability": "symbolic_reading",
   "engine": "future.tarot.read",
   "text_profile": "waite-1922-text-v1",
@@ -98,7 +98,7 @@
     "fonts": "Self-hosted Cormorant Garamond and Inter; SIL OFL licenses and source URLs bundled",
     "generated": "Original FATE back, nebula, brass dial and observatory hall made with built-in image_gen; exact prompts and source PNGs retained under design/. No baked UI. Orb poster extracted from actual renderer. Block 03 original illustrated Codex cover has a separately recorded source PNG and exact prompt; binding, runtime title, counts, paper, source chapters, moving light and turns are independent layers."
   },
-  "scope": "Fourteen consumer oracle rooms using existing native engines, a 54-technique Gallery and explicitly saved local chapters.",
+  "scope": "24 consumer oracle rooms using existing native engines, a 54-technique Gallery and explicitly saved local chapters.",
   "technique_ids": [
     1,
     2,
@@ -112,8 +112,18 @@
     21,
     22,
     23,
+    28,
+    29,
+    30,
+    31,
+    32,
     33,
-    36
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
   ],
   "supported_scope": "The supported object describes Tarot. Separate sections describe the other rooms and the Gallery.",
   "gallery": {
@@ -141,8 +151,18 @@
       21,
       22,
       23,
+      28,
+      29,
+      30,
+      31,
+      32,
       33,
-      36
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
     ],
     "historical_references": [
       9,
@@ -413,6 +433,49 @@
       "Geomancy random casting, house or horary judgment",
       "Bibliomancy random selection, unsupported editions or fabricated passages",
       "Outcome predictions"
+    ]
+  },
+  "world_of_signs": {
+    "endpoint": "POST /api/world-of-signs",
+    "codex_edition": "fate-world-of-signs-v1",
+    "art_provenance": "design/block08-artwork.json",
+    "acceptance": "evidence/block08-acceptance.json",
+    "environments": {
+      "Divination Table": [
+        28,
+        29,
+        34,
+        37
+      ],
+      "Elemental Observatory": [
+        30,
+        31,
+        32
+      ],
+      "Chamber of Omens": [
+        35,
+        38,
+        39
+      ]
+    },
+    "supported": {
+      "28": "Declared cup region and motif.",
+      "29": "Declared cup or saucer ground pattern.",
+      "30": "Past or hypothetical flame height, persistence and safety review. Active hazard holds symbolic reading and local saving.",
+      "31": "Declared water observation and classification, with optional source context.",
+      "32": "Declared cloud axis, smoke drift or wind origin with the corresponding historical region.",
+      "34": "One declared stone on a 5 × 5 grid relative to centered lodestone.",
+      "35": "Documentary lookup of 13 Shang cases and five sourced comparisons.",
+      "37": "Manually declared mark from a pinned 24-letter lot edition.",
+      "38": "Declared crow, raven or unknown, with call or flight and observer-relative side.",
+      "39": "Documentary native comparison for declared written liver, lung or heart accounts."
+    },
+    "privacy": "Explicit saves keep supported categorical selections, profile and chapter metadata. No notes, media, replay, or generated commentary. Reopening and chapter export use immutable local reference data.",
+    "unsupported": [
+      "Automatic observations or casting",
+      "Image recognition",
+      "Animal procedures",
+      "Personal outcome or weather predictions"
     ]
   }
 }

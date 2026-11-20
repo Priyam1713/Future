@@ -10,10 +10,13 @@ import { TimeInstrument } from "../turning/TimeInstrument";
 import { TransitChapter } from "../turning/TransitChapter";
 import { isChamberSnapshot, ROOMS } from "../chambers/contracts";
 import { ChamberChapter, Instrument } from "../chambers/ChamberScreen";
+import { isSign } from "../signs/contracts";
+import { SavedSign } from "../signs/SignsScreen";
 import { isRitualSnapshot, RITUAL_ROOMS } from "../ritual/contracts";
 import { RitualChapter, RitualReading } from "../ritual/Readings";
 export function ChapterIllustration({ chapter }: { chapter: Chapter }) {
   const s = chapter.snapshot;
+  if (isSign(s)) return <SavedSign s={s} compact />;
   if (isRitualSnapshot(s))
     return (
       <div className={"ritual-miniature ritual-" + RITUAL_ROOMS[s.oracle].slug}>
@@ -80,6 +83,8 @@ export function ChapterContent({
   chapter: Chapter;
   index: number;
 }) {
+  if (isSign(chapter.snapshot))
+    return <SavedSign key={chapter.id} s={chapter.snapshot} index={index} />;
   if (isRitualSnapshot(chapter.snapshot))
     return (
       <RitualChapter key={chapter.id} s={chapter.snapshot} index={index} />

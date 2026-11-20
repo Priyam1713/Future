@@ -1,0 +1,45 @@
+{
+  "environments": [
+    {
+      "id": "table",
+      "prompt": "Landscape premium cinematic environment for FATE Divination Table, dark antique walnut worktable in a tea merchant's archive, pools of warm window light, tarnished brass, green glaze and indigo linen, open uncluttered tabletop, angled layered background and tangible materials, no people, letters, divination symbols or interface.",
+      "tool": "Built-in ImageGen",
+      "source": "fate/design/sources/signs-table.png",
+      "files": {
+        "fate/design/sources/signs-table.png": "782b17361208ff01373c4a67d1d0df1e8c92ab0c04d5f5e21842e30704758160",
+        "fate/web/public/art/signs-table-1440.webp": "7b85f83f4b1eca0e181ea89fff029b30e6c6a405ee5006ffec34fe1913e64b28",
+        "fate/web/public/art/signs-table-720.webp": "28fd87598cc7f50ff9b116f3bf1e1880d3552d7b1d36d3100b8e0099cfe7eac3"
+      }
+    },
+    {
+      "id": "elemental",
+      "prompt": "Landscape premium cinematic environment for FATE Elemental Observatory, black basalt and old brushed brass observatory opening onto a storm-lit horizon, blue slate, oxidized copper, pale glints from still water, layered arches, open vacant center, no flame apparatus, people, signs, lettering or interfaces.",
+      "tool": "Built-in ImageGen",
+      "source": "fate/design/sources/signs-elemental.png",
+      "files": {
+        "fate/design/sources/signs-elemental.png": "12cca70e630303607b91a0d929dfb2bd1b3483ba99ddf69cb88c2af9bfd7b458",
+        "fate/web/public/art/signs-elemental-1440.webp": "0877f6a8f8755e3aa8ffd7ef0dd16c8319b4c498d494e1a205b5b6b5066c0008",
+        "fate/web/public/art/signs-elemental-720.webp": "8ba2cf54648317cdd1b71e09ee1974d540eda5b8b032c3ac8d503123caa72fdf"
+      }
+    },
+    {
+      "id": "omens",
+      "prompt": "Landscape premium cinematic environment for FATE Chamber of Omens, secluded museum study with dim burgundy wall textiles, amber vitrines and carved aged stone, empty central display space, translucent mist near windows, layered architectural realism, no animals or remains, no people, no glyphs, text or user interface.",
+      "tool": "Built-in ImageGen",
+      "source": "fate/design/sources/signs-omens.png",
+      "files": {
+        "fate/design/sources/signs-omens.png": "ec9a55308b2b0af4918a1bf986573dab18ddc28d816cccd3393427f18735c5db",
+        "fate/web/public/art/signs-omens-1440.webp": "875f1798983c99c740a9a62a976c378dec7132ab20c1b98ad42ba3109c52b82a",
+        "fate/web/public/art/signs-omens-720.webp": "f09c570fc91b230e1a960d930fc346592ca2dbedbc2a502e2a22c434f533e8ed"
+      }
+    }
+  ],
+  "live_artifacts": {
+    "source": "Author-created React/SVG/CSS diagrams. All positions and statuses respond only to declared selections or native output.",
+    "runtime": [
+      "fate/web/src/signs/Artifact.tsx",
+      "fate/web/src/signs.css",
+      "fate/web/src/ritual/GlassSurface.tsx"
+    ]
+  }
+}

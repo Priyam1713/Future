@@ -162,7 +162,8 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
           (sidereal geometry and UTC period days, pillar IDs, hexagram lines, or
           rune IDs). Ritual Wing chapters keep selected cards, response
           categories, public guides or references, shield figures, or pinned
-          passages. Each record has a source edition, chapter identifier, and
+          passages. World of Signs chapters keep the categorical choices you
+          save. Each record has a source edition, chapter identifier, and
           save time. Journal and dream text, personal context, and pendulum
           calibration stay outside My Fate. Transit window dates are retained by
           explicit choice. Names, birth dates/times, Numerology target dates,

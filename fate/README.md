@@ -1,6 +1,12 @@
-# FATE · Block 07 — The Ritual Wing
+# FATE · Block 08 — The World of Signs
 
-FATE brings fourteen existing Future engines into one consumer Gallery. Each chamber leads from its own instrument or ritual to a source-grounded reading and an optional local chapter. The app uses React and TypeScript, with the signature PixiJS orb and a stateless FastAPI boundary.
+FATE brings 24 existing Future engines into one consumer Gallery. Each chamber leads from its own instrument or ritual to a source-grounded reading and an optional local chapter. The app uses React and TypeScript, with the signature PixiJS orb and a stateless FastAPI boundary.
+
+## Block 08: The World of Signs
+
+The Divination Table, Elemental Observatory and Chamber of Omens open ten rooms for declared observations, declared lots and documentary cases. Instruments visualize choices already made by the visitor. Each room offers a concise native result, expandable source passages, a full native download and an optional local chapter with its categorical choices and frozen reference edition. An active candle hazard pauses symbolic reading and saving.
+
+See [supported methods](experience.json), [art provenance](design/block08-artwork.json) and [acceptance evidence](evidence/block08-acceptance.json). `python -m fate.build_signs` verifies the frozen reference edition against the native engines. Run `node scripts/capture-signs.mjs` from `fate/web` against the built app to reproduce the captures.
 
 ## Block 07: The Ritual Wing
 
