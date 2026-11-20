@@ -55,6 +55,16 @@ export interface Commentary {
   provenance: { provider: string; model: string };
   coverage: string;
 }
+
+function detailCopy(detail: unknown): string | undefined {
+  if (typeof detail !== "string") return undefined;
+  if (/^protocol[_ -]invalid[.!]?$/i.test(detail.trim()))
+    return "The recorded steps could not be verified. Review the session before trying again.";
+  if (/^[a-z]+(?:_[a-z]+)+$/i.test(detail.trim()))
+    return "This step couldn’t be completed. Check your entries and try again.";
+  return detail;
+}
+
 export async function api<T>(
   path: string,
   body?: unknown,
@@ -76,11 +86,10 @@ export async function api<T>(
   }
   if (!response.ok)
     throw new Error(
-      typeof value.detail === "string"
-        ? value.detail
-        : response.status === 422
+      detailCopy(value.detail) ??
+        (response.status === 422
           ? "Please check your entries and try again."
-          : "The connection faded. Please try again.",
+          : "The connection faded. Please try again."),
     );
   return value;
 }

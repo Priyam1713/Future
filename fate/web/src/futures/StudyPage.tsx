@@ -3,6 +3,8 @@ import { api } from "../types";
 import { chapterFor } from "../codex/records";
 import type { Oracle } from "../hooks/useOracle";
 import { ResultLeaf } from "../components/ResultLeaf";
+import { ArtifactSurface } from "../components/ArtifactSurface";
+import { labReadout } from "./labPresentation";
 import { CONTROLS } from "./controls";
 import { Instrument, Scrubber } from "./Instruments";
 import {
@@ -194,6 +196,7 @@ export function StudyPage({
   const canWrite = id === 24 || id === 26 || id === 46;
   const control = CONTROLS[id];
   const kind = ROOMS[id][3];
+  const polished = id === 50 || id === 58 || id === 59;
   async function run(selected: number, personal = false) {
     if (controller.current) return;
     const c = new AbortController();
@@ -240,13 +243,19 @@ export function StudyPage({
         aria-label={ROOMS[id][2] + " instrument"}
         aria-busy={busy}
       >
-        <Instrument
-          key={data ? data.view.title + "-" + shownOption : "loading"}
-          kind={kind}
-          data={data?.view.instrument}
-          seed={seed}
-          setSeed={setSeed}
-        />
+        <ArtifactSurface
+          still={!polished || oracle.reduced || oracle.paused}
+          className={polished ? "laboratory-surface" : ""}
+        >
+          <Instrument
+            key={data && !polished ? data.view.title + "-" + shownOption : kind}
+            kind={kind}
+            data={data?.view.instrument}
+            seed={seed}
+            setSeed={setSeed}
+            setting={shownOption}
+          />
+        </ArtifactSurface>
         {control && (
           <div className="apparatus-controls">
             {control.choices ? (
@@ -259,9 +268,11 @@ export function StudyPage({
                   <button
                     type="button"
                     key={choice}
+                    className="tactile"
                     disabled={busy}
                     aria-pressed={option === n}
                     onClick={() => {
+                      if (polished) oracle.sound.cue("select");
                       setOption(n);
                       if (id !== 26 || !journal) void run(n);
                     }}
@@ -281,11 +292,14 @@ export function StudyPage({
             )}
             {control.max !== undefined && (
               <button
-                className="primary"
+                className="primary tactile"
                 disabled={busy}
-                onClick={() => void run(option)}
+                onClick={() => {
+                  if (polished) oracle.sound.cue("select");
+                  void run(option);
+                }}
               >
-                Run model
+                {control.commit}
               </button>
             )}
           </div>
@@ -308,10 +322,23 @@ export function StudyPage({
       <div className="future-reading" aria-live="polite">
         {data ? (
           <>
-            <Payoff view={data.view} />
+            <div
+              className={
+                polished
+                  ? `lab-payoff lab-payoff-${kind} artifact-arrival`
+                  : undefined
+              }
+              key={polished ? shownOption : undefined}
+            >
+              <Payoff view={labReadout(data)} />
+            </div>
             <Sources
               sources={data.sources}
-              notes={data.view.instrument.notes}
+              notes={
+                polished
+                  ? [data.view.lead, ...(data.view.instrument.notes ?? [])]
+                  : data.view.instrument.notes
+              }
             />
             <StudyActions
               key={`${shownOption}-${data.private}-${customSeed}`}

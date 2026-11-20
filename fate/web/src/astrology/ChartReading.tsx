@@ -141,12 +141,11 @@ export function ChartReading({ result }: { result: WesternResult }) {
       <header className="chart-reading-heading">
         <p className="eyebrow">THREE LIGHTS / ONE SKY</p>
         <h2>
-          A sky to <em>return to.</em>
+          The Sun, Moon and <em>Ascendant.</em>
         </h2>
         <p>
-          Your Sun, Moon and rising degree offer three different points of
-          attention. Explore the symbolic language alongside the exact
-          positions; there is no single score or predicted destiny.
+          Your three calculated placements, with their separate source themes
+          where available.
         </p>
       </header>
       <CoreLights result={result} />

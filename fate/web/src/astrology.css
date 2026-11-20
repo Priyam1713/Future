@@ -465,20 +465,6 @@
   color: #c0cdc7;
   max-width: 380px;
 }
-.chart-reveal-progress {
-  display: flex;
-  gap: 10px;
-  margin: 28px 0;
-}
-.chart-reveal-progress span {
-  width: 42px;
-  height: 2px;
-  background: #84918438;
-}
-.chart-reveal-progress span.lit {
-  background: #d5c28f;
-  box-shadow: 0 0 12px #ceb98255;
-}
 .chart-reveal > button {
   display: block;
   margin: 18px 0;
@@ -760,55 +746,6 @@
   max-width: 1160px !important;
   margin-top: 22px;
 }
-.western-gateway {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  min-height: 500px;
-  border-block: 1px solid #bfa77340;
-  margin: 65px auto;
-  width: min(1160px, calc(100% - 96px));
-  display: flex;
-  align-items: center;
-  padding: 55px;
-  box-sizing: border-box;
-}
-.western-gateway picture {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-}
-.western-gateway img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 70%;
-}
-.western-gateway:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(90deg, #041019e8, #0410197a 55%, #04101900);
-}
-.western-gateway h2 {
-  font-size: 57px;
-  line-height: 1.05;
-  margin: 20px 0;
-}
-.western-gateway p {
-  font-size: 13px;
-  line-height: 1.8;
-  max-width: 310px;
-  color: #c4ccc0;
-}
-.western-gateway button {
-  margin-top: 20px;
-}
-.western-gateway .door-note {
-  display: block;
-  margin-top: 20px;
-}
 @keyframes chart-caustic {
   from {
     transform: translateX(-3%) rotate(-12deg);
@@ -969,10 +906,6 @@
     margin-right: auto;
     font-size: 13px;
   }
-  .chart-reveal-progress {
-    justify-content: center;
-    margin: 22px 0;
-  }
   .chart-reveal > button {
     margin: 15px auto;
   }
@@ -1009,9 +942,6 @@
     font-size: 12px;
     line-height: 1.7;
     max-width: 300px;
-  }
-  .western-ritual .chart-reveal-progress {
-    margin: 8px 0;
   }
   .western-ritual .chart-reveal > button {
     margin: 8px auto;
@@ -1076,26 +1006,6 @@
   }
   .western-actions {
     gap: 18px;
-  }
-  .western-gateway {
-    width: calc(100% - 40px);
-    padding: 32px 24px;
-    min-height: 510px;
-    margin: 40px auto;
-    align-items: end;
-  }
-  .western-gateway h2 {
-    font-size: 43px;
-  }
-  .western-gateway:after {
-    background: linear-gradient(0deg, #041019f0, #041019b0 55%, #04101911);
-  }
-  .western-gateway img {
-    object-position: center;
-  }
-  .western-gateway p {
-    font-size: 12px;
-    max-width: 270px;
   }
   .room-index {
     flex-wrap: wrap;

@@ -84,7 +84,7 @@ test("desktop journey and matched illustrated faces remain source-backed", async
   );
   await page.getByRole("button", { name: "Draw my three cards" }).click();
   const native = (await (await pending).json()).result;
-  await expect(page.locator("h1")).toHaveText("A moment of revelation.");
+  await expect(page.locator("h1")).toHaveText("Turn your cards.");
   for (let i = 0; i < 3; i++) {
     await expect(
       page.locator(`[data-artwork-id="${native.readings[i].card.id}"] img`),

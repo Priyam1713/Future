@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { initialQuality } from "../orb/policy";
+import { useArtifactLight } from "../components/ArtifactSurface";
 
 interface Props {
   reduced: boolean;
@@ -25,6 +26,7 @@ export function NumberDial({
   const [quality] = useState(initialQuality);
   const turn = useRef(0);
   const motion = !reduced && !paused && visible && !hidden;
+  const light = useArtifactLight(!motion || decorative);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setVisible(entry.isIntersecting),
@@ -109,28 +111,13 @@ export function NumberDial({
       data-render-state={motion ? "running" : "paused"}
       data-target-fps={quality === "low" ? 30 : 60}
       aria-hidden={decorative || undefined}
-      onPointerMove={(e) => {
-        if (reduced || paused) return;
-        const r = e.currentTarget.getBoundingClientRect();
-        e.currentTarget.style.setProperty(
-          "--dial-x",
-          `${((e.clientX - r.left) / r.width - 0.5) * 9}deg`,
-        );
-        e.currentTarget.style.setProperty(
-          "--dial-y",
-          `${-((e.clientY - r.top) / r.height - 0.5) * 9}deg`,
-        );
-      }}
-      onPointerLeave={(e) => {
-        e.currentTarget.style.setProperty("--dial-x", "0deg");
-        e.currentTarget.style.setProperty("--dial-y", "0deg");
-      }}
+      {...light}
     >
       {decorative ? (
         <div className="dial-touch">{material}</div>
       ) : (
         <button
-          className="dial-touch"
+          className="dial-touch tactile"
           aria-label="Turn the celestial dial"
           onClick={rotate}
         >

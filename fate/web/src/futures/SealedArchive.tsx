@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { api } from "../types";
 import type { Oracle } from "../hooks/useOracle";
 import { download, Payoff, StudyPage } from "./StudyPage";
+import { ArtifactSurface } from "../components/ArtifactSurface";
 
 type ViewerPacket = {
   visibility: "blind_viewer";
@@ -90,9 +91,9 @@ function useVault() {
   return { data, code, busy, error, send };
 }
 
-function Seal({ open = false, label }: { open?: boolean; label: string }) {
+function Seal({ phase, label }: { phase: string; label: string }) {
   return (
-    <div className="sealed-display" data-unsealed={open}>
+    <div className="sealed-display" data-phase={phase}>
       <svg viewBox="0 0 340 340" role="img" aria-label={label}>
         <circle cx="170" cy="170" r="138" />
         <circle cx="170" cy="170" r="123" className="seal-hash" />
@@ -104,6 +105,13 @@ function Seal({ open = false, label }: { open?: boolean; label: string }) {
           <circle cx="170" cy="170" r="10" />
         </g>
       </svg>
+      <span aria-hidden="true" className="seal-material-caption">
+        {phase === "judging"
+          ? "Transcript locked"
+          : phase === "viewing"
+            ? "Target committed"
+            : "Blind target"}
+      </span>
     </div>
   );
 }
@@ -158,7 +166,9 @@ export function RemoteRoom({ oracle }: { oracle: Oracle }) {
   const judge = packet?.visibility === "blind_judge" ? packet : undefined;
   const outcome =
     data?.phase === "revealed" ? (data.result as RemoteReport) : undefined;
+  const nativeRank = outcome?.judge_results[0]?.actual_target_rank;
   function chooseRank(alias: string) {
+    oracle.sound.cue("select");
     setRank((prev) =>
       prev.includes(alias) ? prev.filter((c) => c !== alias) : [...prev, alias],
     );
@@ -177,43 +187,67 @@ export function RemoteRoom({ oracle }: { oracle: Oracle }) {
     <div
       className={`future-work future-work-sealed ${judge ? "vault-judging" : ""}`}
     >
-      <div className="future-apparatus" aria-label="Sealed target instrument">
-        {outcome && data?.image ? (
-          <img
-            className="target-open"
-            src={`data:image/png;base64,${data.image}`}
-            alt="The committed geometric target, revealed after both locks"
-          />
-        ) : judge ? (
-          <div
-            className="judge-candidates"
-            role="group"
-            aria-label="Blind candidate ordering"
+      <div
+        className="future-apparatus sealed-instrument"
+        aria-label="Sealed target instrument"
+      >
+        <ArtifactSurface
+          still={oracle.reduced || oracle.paused}
+          className="sealed-surface"
+        >
+          {outcome && data?.image ? (
+            <img
+              className="target-open artifact-arrival"
+              src={`data:image/png;base64,${data.image}`}
+              alt="The committed geometric target, revealed after both locks"
+            />
+          ) : judge ? (
+            <div
+              className="judge-candidates"
+              role="group"
+              aria-label="Blind candidate ordering"
+            >
+              {judge.candidates.map(({ alias, bytes_base64 }) => (
+                <button
+                  key={alias}
+                  className="tactile"
+                  type="button"
+                  aria-pressed={rank.includes(alias)}
+                  onClick={() => chooseRank(alias)}
+                  disabled={busy}
+                  aria-label={`Candidate ${alias}${rank.includes(alias) ? ", rank " + (rank.indexOf(alias) + 1) : ""}`}
+                >
+                  <img
+                    src={`data:image/png;base64,${bytes_base64}`}
+                    alt="Original geometric candidate plate"
+                  />
+                  <span className="candidate-order" aria-hidden="true">
+                    {rank.includes(alias) ? rank.indexOf(alias) + 1 : "–"}
+                  </span>
+                  <span>{alias.toUpperCase()}</span>
+                </button>
+              ))}
+            </div>
+          ) : (
+            <Seal label="Sealed blind target" phase={data?.phase ?? "ready"} />
+          )}
+        </ArtifactSurface>
+        {judge && !outcome && (
+          <p className="rank-count" aria-live="polite">
+            {rank.length} of 5 plates ranked
+          </p>
+        )}
+        {nativeRank !== undefined && (
+          <ol
+            className="rank-track"
+            aria-label={`Revealed target rank: ${nativeRank} of 5`}
           >
-            {judge.candidates.map(({ alias, bytes_base64 }) => (
-              <button
-                key={alias}
-                type="button"
-                aria-pressed={rank.includes(alias)}
-                onClick={() => chooseRank(alias)}
-                disabled={busy}
-                aria-label={`Candidate ${alias}${rank.includes(alias) ? ", rank " + (rank.indexOf(alias) + 1) : ""}`}
-              >
-                <img
-                  src={`data:image/png;base64,${bytes_base64}`}
-                  alt="Original geometric candidate plate"
-                />
-                <span>
-                  {alias.toUpperCase()} ·{" "}
-                  {rank.includes(alias)
-                    ? "Rank " + (rank.indexOf(alias) + 1)
-                    : "Unranked"}
-                </span>
-              </button>
+            {[1, 2, 3, 4, 5].map((n) => (
+              <li key={n} data-target={n === nativeRank}>
+                {n}
+              </li>
             ))}
-          </div>
-        ) : (
-          <Seal label="Sealed blind target" />
+          </ol>
         )}
       </div>
       <div className="future-reading">
@@ -256,7 +290,7 @@ export function RemoteRoom({ oracle }: { oracle: Oracle }) {
         )}
         {data?.phase === "viewing" && (
           <>
-            <p className="eyebrow">Viewer packet · {packet?.cue ?? data.cue}</p>
+            <p className="eyebrow">Target committed</p>
             <h2>Record your impressions</h2>
             <label>
               Viewer transcript
@@ -282,6 +316,7 @@ export function RemoteRoom({ oracle }: { oracle: Oracle }) {
             </button>
             <details className="lab-depth">
               <summary>Target commitment</summary>
+              <p>Trial cue · {packet?.cue ?? data.cue}</p>
               <code>
                 {packet?.visibility === "blind_viewer"
                   ? packet.commitment
@@ -342,8 +377,13 @@ export function RemoteRoom({ oracle }: { oracle: Oracle }) {
             <Payoff
               view={{
                 status: "Both packets locked",
-                title: `Target ranked ${outcome.judge_results[0]?.actual_target_rank} of 5`,
-                lead: "The native engine verified the target commitment and the two pre-reveal locks.",
+                title:
+                  nativeRank === undefined
+                    ? "The target is open"
+                    : `Target ranked ${nativeRank} of 5`,
+                lead: outcome.commitment_verified
+                  ? "This is the plate the server sealed at the start. The engine verified the commitment and both locks."
+                  : "The target is visible. Its original commitment could not be verified.",
               }}
             />
             <details className="lab-depth">

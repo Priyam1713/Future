@@ -7,6 +7,7 @@ import { BirthChart } from "../astrology/BirthChart";
 import { ChartReading, PlacementFocus } from "../astrology/ChartReading";
 import { degree, signAt } from "../astrology/contracts";
 import { SaveChapter } from "../codex/SaveChapter";
+import { ArtifactSurface, SequenceMarks } from "../components/ArtifactSurface";
 function exportNative(result: unknown) {
   const url = URL.createObjectURL(
     new Blob([JSON.stringify(result, null, 2)], { type: "application/json" }),
@@ -39,7 +40,9 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
       </Suspense>
     );
   return (
-    <div className={`western-room page-enter western-${s.stage}`}>
+    <div
+      className={`western-room page-enter western-${s.stage} finished-material`}
+    >
       <div className="western-environment" aria-hidden="true">
         <picture>
           <source
@@ -60,11 +63,11 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
       <div className="journey-top">
         <button
           className="text-button"
-          onClick={() => oracle.navigate("explore")}
+          onClick={() => oracle.navigate("gallery")}
         >
           ← The Gallery
         </button>
-        <span className="eyebrow">ROOM 03 / WESTERN ASTROLOGY</span>
+        <span className="eyebrow">Western Astrology</span>
       </div>
       <header className="western-heading">
         <p className="eyebrow">THE ASTRAL OBSERVATORY</p>
@@ -77,9 +80,7 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
             </>
           ) : s.stage === "ritual" ? (
             <>
-              Your sky,
-              <br />
-              <em>coming into focus.</em>
+              Three lights <em>in your sky.</em>
             </>
           ) : (
             <>
@@ -92,7 +93,7 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
         <p>
           {s.stage === "input"
             ? "Trace the real celestial geometry of your arrival."
-            : "Calculated positions. Documented symbols. Space for your own meaning."}
+            : "Explore the Sun, Moon and Ascendant before looking closer."}
         </p>
       </header>
       {s.stage === "input" ? (
@@ -121,46 +122,44 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
           <>
             <div className="western-chart-layout">
               <div className="western-instrument">
-                <BirthChart
-                  chart={r}
-                  reduced={oracle.reduced}
-                  paused={oracle.paused}
-                  selected={s.selected}
-                  onSelect={(n) => {
-                    s.setSelected(n);
-                    oracle.sound.cue("select");
-                  }}
-                />
+                <ArtifactSurface
+                  still={oracle.reduced || oracle.paused}
+                  className="western-surface"
+                >
+                  <BirthChart
+                    chart={r}
+                    reduced={oracle.reduced}
+                    paused={oracle.paused}
+                    selected={s.selected}
+                    onSelect={(n) => {
+                      s.setSelected(n);
+                      oracle.sound.cue("select");
+                    }}
+                  />
+                </ArtifactSurface>
                 <p className="chart-caption">
-                  TROPICAL ECLIPTIC · {r.settings.houses.toUpperCase()} HOUSES
-                  <br />
-                  ASCENDANT ALIGNED LEFT · EXPLORE EACH PLANET
+                  Tropical chart · {r.settings.houses.replaceAll("_", " ")}{" "}
+                  houses
                 </p>
               </div>
               {s.stage === "ritual" ? (
                 <section className="chart-reveal" aria-live="polite">
-                  <p className="eyebrow">
-                    LIGHT {s.step + 1} / 3 · THE CALCULATION IS COMPLETE
-                  </p>
-                  <span className="reveal-coordinate">{degree(lon)}</span>
-                  <h2>
-                    {name}
-                    <br />
-                    <em>in {signAt(lon)}.</em>
-                  </h2>
-                  <p>
-                    {s.step === 0
-                      ? "Begin with the Sun, the source tradition’s symbol of identity, purpose and creative agency."
-                      : s.step === 1
-                        ? "Meet the Moon, associated in this source with emotional needs, habits and instinctive responses."
-                        : "Your Ascendant is the calculated rising degree on the eastern horizon. It depends on the entered time and coordinates."}
-                  </p>
-                  <div className="chart-reveal-progress" aria-hidden="true">
-                    {names.map((n, i) => (
-                      <span key={n} className={i <= s.step ? "lit" : ""} />
-                    ))}
+                  <div key={s.step} className="artifact-arrival">
+                    <p className="eyebrow">Light {s.step + 1} of 3</p>
+                    <h2>
+                      {name} <em>in {signAt(lon)}.</em>
+                    </h2>
+                    <span className="reveal-coordinate">{degree(lon)}</span>
+                    <p>
+                      {s.step === 0
+                        ? "Begin with the Sun, the source tradition’s symbol of identity, purpose and creative agency."
+                        : s.step === 1
+                          ? "Meet the Moon, associated in this source with emotional needs, habits and instinctive responses."
+                          : "Your Ascendant is the calculated rising degree on the eastern horizon. It depends on the entered time and coordinates."}
+                    </p>
                   </div>
-                  <button className="primary" onClick={s.reveal}>
+                  <SequenceMarks step={s.step} total={names.length} />
+                  <button className="primary tactile" onClick={s.reveal}>
                     {s.step === 2
                       ? "Enter my reading"
                       : "Reveal the next light"}{" "}
@@ -176,6 +175,7 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
             </div>
             {s.stage === "reading" && (
               <>
+                <ChartReading result={r} />
                 <section className="turning-door">
                   <div>
                     <p className="eyebrow">
@@ -198,7 +198,6 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
                     </button>
                   </div>
                 </section>
-                <ChartReading result={r} />
                 <SaveChapter kind="western" result={r} oracle={oracle} />
                 <section className="western-commentary">
                   <p className="eyebrow">AN OPTIONAL SECOND VOICE</p>

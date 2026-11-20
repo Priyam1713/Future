@@ -10,7 +10,7 @@ export default function ReadingScreen({ oracle }: { oracle: Oracle }) {
   const { heading, navigate, result, download, fresh } = oracle;
   if (!result) return null;
   return (
-    <div className="reading page-enter narrow">
+    <div className="reading page-enter narrow tarot-folio finished-material">
       <div className="journey-top">
         <button className="text-button" onClick={() => navigate("ritual")}>
           <ArrowLeft size={15} /> Your cards
@@ -20,35 +20,32 @@ export default function ReadingScreen({ oracle }: { oracle: Oracle }) {
         </span>
       </div>
       <div className="page-heading">
-        <p className="eyebrow">A NEW PERSPECTIVE</p>
         <h1 ref={heading} tabIndex={-1}>
           The story in <em>your cards.</em>
         </h1>
-        <p>Symbols to sit with. Possibilities to consider.</p>
       </div>
       {result.question && <p className="question-echo">“{result.question}”</p>}
-      <div
-        className={`reading-art count-${result.readings.length}`}
-        aria-hidden="true"
+      <section
+        className="reading-summary artifact-arrival"
+        aria-labelledby="themes-title"
       >
-        {result.readings.map((r) => (
-          <div
-            key={r.card.id}
-            className={r.orientation === "reversed" ? "reversed-art" : ""}
-          >
-            <CardArt card={r.card} />
-          </div>
-        ))}
-      </div>
-      <section className="reading-summary" aria-labelledby="themes-title">
-        <p className="eyebrow">YOUR READING AT A GLANCE</p>
         <h2 id="themes-title">Threads to follow</h2>
         <div className="tarot-payoff">
           {result.readings.map((r) => (
             <div key={r.card.id}>
-              <span>{r.position.label}</span>
-              <h3>{r.card.name}</h3>
-              <p>{plainThemes(r)}</p>
+              <div
+                className={`tarot-thumb ${r.orientation === "reversed" ? "reversed-art" : ""}`}
+                aria-hidden="true"
+              >
+                <CardArt card={r.card} />
+              </div>
+              <div>
+                <span>
+                  {r.position.label} · {r.orientation}
+                </span>
+                <h3>{r.card.name}</h3>
+                <p>{plainThemes(r)}</p>
+              </div>
             </div>
           ))}
         </div>

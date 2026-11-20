@@ -294,7 +294,7 @@ async function recordings() {
       await button(page, "Cell 1,1").click();
       await pause(page);
       record = await exchange(page, "/api/future-study", () =>
-        button(page, "Run model").click(),
+        button(page, "Advance the cells").click(),
       );
       await page.locator(".cell-loom").waitFor();
       await page.locator(".cell-instrument").getByRole("slider").press("End");

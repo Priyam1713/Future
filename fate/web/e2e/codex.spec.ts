@@ -515,7 +515,8 @@ test("Codex mobile/desktop accessibility, bounded folios, real sourced compariso
   await expect(
     page.getByRole("searchbox", { name: "Find a tradition" }),
   ).toBeInViewport();
-  expect(await page.locator("[data-technique-id]").count()).toBe(54);
+  await page.getByRole("button", { name: "View all 54 rooms" }).click();
+  await expect(page.locator("[data-technique-id]")).toHaveCount(54);
   await page.setViewportSize({ width: 390, height: 844 });
   await page.getByRole("link", { name: "Explore", exact: true }).click();
   await page.getByRole("link", { name: "54 techniques", exact: true }).click();

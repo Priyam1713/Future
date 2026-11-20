@@ -16,6 +16,7 @@ import "./ritual.css";
 import "./signs.css";
 import "./manuscript.css";
 import "./futures.css";
+import "./living.css";
 import { futureId } from "./futures/contracts";
 import { roomId } from "./manuscript/contracts";
 import { signId } from "./signs/contracts";

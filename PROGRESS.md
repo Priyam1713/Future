@@ -1692,3 +1692,10 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Added a two-profile blind target workflow with native commitments and a prospective diary that locks the original before accepting real observations. Public studies have direct native readouts. Private text and live ledgers stay out of My Fate.
 - Added two illustrated environments, original target plates, editable lab instruments and source-linked study bookmarks. Native replay, privacy, performance, and media are indexed in `fate/evidence/block10-acceptance.json`.
 - Passed 2,703 unit and boundary tests, 107 browser tests, 3,515 CLI cases and 52 independent verifiers. The build, dependency and inventory checks passed. The protected native engines, source data and Workbench match `0461d9a`.
+
+## 2026-11-20 — FATE Block 11
+
+- Replaced the accordion Gallery with six illustrated worlds. Search covers the entire retained inventory and room links open directly. Keyboard focus returns to the door that opened a world.
+- Polished Tarot, Numerology, Western Astrology, Remote Viewing, Quantum Simulation, Prediction Markets and Lorenz Chaos. Touch lighting, reveal timing and pressure feedback share a small set of primitives. The instruments retain their distinct materials and native results.
+- Preserved the original geometric plates, native engines, inventory, privacy and Codex contracts. Captures, comparisons against Block 10 and artwork provenance are indexed in `fate/evidence/block11-acceptance.json`.
+- Passed 2,703 unit and boundary tests, 3,515 CLI cases and 52 independent verifiers. The full browser runs passed 102 FATE and nine Workbench scenarios. One Gallery route timed out during the FATE run and passed three separate rechecks.

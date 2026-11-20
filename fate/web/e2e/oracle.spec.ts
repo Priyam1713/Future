@@ -112,7 +112,7 @@ test("mobile complete real three-card journey, progressive reveal, source detail
     ).toHaveAttribute("aria-pressed", "true");
   }
   await expect(page.getByRole("status")).toHaveText(
-    "Your cards are here. Take a breath.",
+    "Your cards are open.",
   );
   await page.waitForTimeout(850);
   await page.evaluate(() => (document.activeElement as HTMLElement)?.blur());

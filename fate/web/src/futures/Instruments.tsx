@@ -1,10 +1,11 @@
-import { useId, useState, type CSSProperties } from "react";
+import { useId, useMemo, useState, type CSSProperties } from "react";
 import type {
   InstrumentData,
   Mark,
   Node as TreeNode,
   Track,
 } from "./contracts";
+import { likelyOutcomes, probability, simulationTime } from "./labPresentation";
 
 const paints = ["#ffe0a3", "#87dfcb", "#b6aadd", "#eaa7a7"];
 
@@ -60,20 +61,28 @@ function Viewport({
   sequence?: boolean;
   frame?: number;
 }) {
-  const scale = (min: number, max: number, t: number, size: number) =>
-    t +
-    (max === min ? 0.5 : (size - min) / (max - min)) * (t === 32 ? 476 : 210);
-  const source = tracks.flatMap((row) => row.points);
-  const dx = source.map(([x]) => x),
-    dy = source.map(([, y]) => y);
-  const loX = Math.min(...dx),
-    hiX = Math.max(...dx),
-    loY = Math.min(...dy),
-    hiY = Math.max(...dy);
-  const location = ([x, y]: [number, number]) => [
-    scale(loX, hiX, 32, x),
-    238 - scale(loY, hiY, 14, y),
-  ];
+  const geometry = useMemo(() => {
+    const scale = (min: number, max: number, value: number, size: number) =>
+      (max === min ? 0.5 : (value - min) / (max - min)) * size;
+    const points = tracks.flatMap((row) => row.points);
+    const dx = points.map(([x]) => x),
+      dy = points.map(([, y]) => y);
+    const loX = Math.min(...dx),
+      hiX = Math.max(...dx);
+    const loY = Math.min(...dy),
+      hiY = Math.max(...dy);
+    return tracks.map((row) => {
+      const coordinates = row.points.map(
+        ([x, y]) =>
+          [
+            32 + scale(loX, hiX, x, 476),
+            224 - scale(loY, hiY, y, 210),
+          ] as const,
+      );
+      const strings = coordinates.map((p) => p.join(","));
+      return { coordinates, strings, path: strings.join(" ") };
+    });
+  }, [tracks]);
   return (
     <svg
       viewBox="0 0 540 264"
@@ -93,27 +102,37 @@ function Viewport({
         {sequence ? "X / Z PHASE PLANE" : "OBSERVATION AXIS"}
       </text>
       {tracks.map((row, i) => {
-        const used =
-          sequence && frame !== undefined
-            ? row.points.slice(0, frame + 1)
-            : row.points;
-        const coordinates = used.map(location);
+        const line = geometry[i];
+        const end =
+          sequence && frame !== undefined ? frame + 1 : line.coordinates.length;
+        const coords = markers
+          ? line.coordinates
+          : line.coordinates.slice(end - 1, end);
         const color = paints[i % paints.length];
         return (
           <g key={row.label} stroke={color} fill={color}>
-            {coordinates.length > 1 && (
+            {sequence && end < line.coordinates.length && (
               <polyline
-                points={coordinates.map((p) => p.join(",")).join(" ")}
+                className="orbit-reference"
+                points={line.path}
+                fill="none"
+              />
+            )}
+            {end > 1 && (
+              <polyline
+                points={
+                  end < line.coordinates.length
+                    ? line.strings.slice(0, end).join(" ")
+                    : line.path
+                }
                 fill="none"
                 strokeWidth={sequence ? 1.4 : 2.4}
                 strokeDasharray={i === 1 && !sequence ? "7 5" : undefined}
               />
             )}
-            {(markers ? coordinates : coordinates.slice(-1)).map(
-              ([x, y], k) => (
-                <circle key={k} cx={x} cy={y} r={4} />
-              ),
-            )}
+            {coords.map(([x, y], k) => (
+              <circle key={k} cx={x} cy={y} r={4} />
+            ))}
           </g>
         );
       })}
@@ -154,6 +173,7 @@ export function Scrubber({
 }
 
 function Circuit({ data }: { data: InstrumentData }) {
+  const chance = likelyOutcomes(data.bars ?? []);
   return (
     <div className="circuit-board">
       <svg
@@ -174,7 +194,7 @@ function Circuit({ data }: { data: InstrumentData }) {
           const x = 125 + i * 88,
             y = 58 + target * 63;
           return (
-            <g key={i} className="gate">
+            <g key={`${i}-${op}-${target}-${control}`} className="gate">
               {control === undefined ? (
                 <>
                   <rect x={x - 19} y={y - 18} width="38" height="36" rx="3" />
@@ -196,7 +216,43 @@ function Circuit({ data }: { data: InstrumentData }) {
           );
         })}
       </svg>
-      <Bars rows={data.bars ?? []} proportional />
+      <div className="circuit-outcomes">
+        <span className="eyebrow">Measured bitstrings</span>
+        <Bars rows={data.bars ?? []} proportional />
+        <p>
+          {chance.length} of {data.bars?.length ?? 0} bitstrings can appear.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function Market({ data, shares }: { data: InstrumentData; shares: number }) {
+  const yes = data.bars?.find(({ label }) => label === "YES");
+  const no = data.bars?.find(({ label }) => label === "NO");
+  if (!yes || !no) return null;
+  return (
+    <div className="market-register">
+      <div className="market-prices">
+        <div>
+          <span>YES</span>
+          <strong>{probability(yes.value)}</strong>
+        </div>
+        <div>
+          <span>NO</span>
+          <strong>{probability(no.value)}</strong>
+        </div>
+      </div>
+      <div
+        className="market-price-rail"
+        aria-hidden="true"
+        style={{ "--market-quote": `${yes.value * 100}%` } as CSSProperties}
+      >
+        <span />
+      </div>
+      <p>
+        {shares} {shares === 1 ? "share" : "shares"} held · simulated quote
+      </p>
     </div>
   );
 }
@@ -411,13 +467,20 @@ export function Instrument({
   data,
   seed,
   setSeed,
+  setting,
 }: {
   kind: string;
   data?: InstrumentData;
   seed: number[] | null;
   setSeed: (grid: number[] | null) => void;
+  setting: number;
 }) {
-  const [step, setStep] = useState(kind === "orbit" ? 999 : 0);
+  const [cursor, setCursor] = useState({
+    setting,
+    step: kind === "orbit" ? Infinity : 0,
+  });
+  const step = cursor.setting === setting ? cursor.step : Infinity;
+  const setStep = (next: number) => setCursor({ setting, step: next });
   if (!data)
     return (
       <div className={`lab-spinner lab-${kind}-waiting`} aria-hidden="true">
@@ -492,7 +555,8 @@ export function Instrument({
         {data.bars && <Bars rows={data.bars} proportional />}
       </>
     );
-  if (kind === "posterior" || kind === "market")
+  if (kind === "market") return <Market data={data} shares={setting} />;
+  if (kind === "posterior")
     return (
       <div className="dial-pair">
         {data.bars?.map((m) => (
@@ -555,18 +619,20 @@ export function Instrument({
           }
           markers={kind !== "orbit"}
           sequence={kind === "orbit"}
-          frame={kind === "orbit" ? Math.max(1, tick) : undefined}
+          frame={kind === "orbit" ? tick : undefined}
         />
-        <p className="instrument-note">
-          {data.series.map(({ label }) => label).join(" · ")}
+        <p className={kind === "orbit" ? "orbit-legend" : "instrument-note"}>
+          {data.series.map(({ label }) => (
+            <span key={label}>{label}</span>
+          ))}
         </p>
         {kind === "orbit" && (
           <Scrubber
             value={tick}
             max={count - 1}
             onChange={setStep}
-            label="Native sample"
-            caption={`t=${data.labels?.[tick]} · distance ${data.counts?.[tick]?.toFixed(3)}`}
+            label="Explore simulation time"
+            caption={`${simulationTime(data.labels?.[tick] ?? "0")} units · gap ${data.counts?.[tick]?.toFixed(3)}`}
           />
         )}
       </>

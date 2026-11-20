@@ -65,6 +65,7 @@ test("gallery projects all 54 retained methods, separates availability and searc
   page,
 }) => {
   await page.goto("/");
+  await page.getByRole("button", { name: "View all 54 rooms" }).click();
   const ids = await page
     .locator("[data-technique-id]")
     .evaluateAll((nodes) =>
@@ -77,16 +78,13 @@ test("gallery projects all 54 retained methods, separates availability and searc
   await page
     .getByRole("searchbox", { name: "Find a tradition" })
     .fill("phrenology");
-  await page.locator('[data-technique-id="10"]>summary').click();
   await expect(page.locator('[data-technique-id="10"]')).toContainText(
     "Historical reference",
   );
   await expect(page.locator('[data-technique-id="10"]')).toContainText(
     "discredited",
   );
-  await expect(page.locator('[data-technique-id="10"] button')).toHaveText(
-    "Enter Phrenology",
-  );
+  await expect(page.getByRole("link", { name: "Enter Phrenology" })).toHaveAttribute("href", "#phrenology");
   await page.getByRole("searchbox").fill("yarrow");
   await expect(page.locator('[data-technique-id="18"]')).toBeVisible();
   await page.getByRole("searchbox").fill("zzzzz");

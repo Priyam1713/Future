@@ -223,13 +223,13 @@ test("the three environments fit 320px and honor reduced motion", async ({
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/#gallery");
   await page
-    .getByText("The Sky & The Human Manuscript", { exact: false })
+    .getByRole("button", { name: "The Human Manuscript", exact: true })
     .click();
   await expect(
     page
-      .getByRole("navigation", { name: "Sky and Human Manuscript rooms" })
-      .locator("button"),
-  ).toHaveCount(12);
+      .getByRole("region", { name: "The Human Manuscript", exact: true })
+      .locator("[data-technique-id]"),
+  ).toHaveCount(8);
   for (const journey of journeys) {
     await openRoom(page, journey);
     await expect(page.locator(".folio-room")).toHaveAttribute(

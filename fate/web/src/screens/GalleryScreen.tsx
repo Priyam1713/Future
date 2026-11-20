@@ -2,15 +2,15 @@ import type { Oracle } from "../hooks/useOracle";
 import { OracleGallery } from "../gallery/OracleGallery";
 export default function GalleryScreen({ oracle }: { oracle: Oracle }) {
   return (
-    <div className="gallery-room page-enter">
-      <p className="eyebrow">54 TRADITIONS · SIX COLLECTIONS</p>
+    <div className="gallery-room living-gallery-page">
+      <p className="eyebrow">FATE · SIX WORLDS</p>
       <h1 id="gallery-title" ref={oracle.heading} tabIndex={-1}>
-        Follow your <em>curiosity.</em>
+        The Oracle <em>Gallery.</em>
       </h1>
       <p className="gallery-room-note">
-        Two rooms open. A whole universe to discover.
+        Follow a world that draws you in, or find any of the 54 open rooms.
       </p>
-      <OracleGallery oracle={oracle} libraryOnly />
+      <OracleGallery oracle={oracle} />
     </div>
   );
 }

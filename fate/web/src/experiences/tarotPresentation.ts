@@ -29,6 +29,7 @@ export function plainThemes(reading: Reading) {
 }
 export function plainGloss(focus: string) {
   return focus
+    .replace(/^(?:unchanged|varying accounts):\s*/, "")
     .split(" OR ")
     .map((alternative) =>
       alternative

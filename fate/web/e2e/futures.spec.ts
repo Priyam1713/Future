@@ -18,9 +18,11 @@ for (const room of rooms.filter(({ id }) => id !== 43)) {
     expect(proof.oracle).toBe(room.id);
     expect(proof.request).toBeTruthy();
     expect(proof.private).toBe(false);
-    await expect(page.locator(".future-reading h2")).toHaveText(
-      proof.view.title,
-    );
+    const heading = page.locator(".future-reading h2");
+    if (room.id === 50) await expect(heading).toHaveText(/likely outcomes|every time|Unequal outcomes/);
+    else if (room.id === 58) await expect(heading).toHaveText(/^Yes trades at \d/);
+    else if (room.id === 59) await expect(heading).toHaveText(/^\d+\.\d+ apart at the final sample$/);
+    else await expect(heading).toHaveText(proof.view.title);
     expect(proof.sources.length).toBeGreaterThan(0);
     expect(
       await page.evaluate(() => localStorage.getItem("fate.codex.v1")),
@@ -134,7 +136,7 @@ test("grid edits recalculate native generations and only the public preset can r
   await runPublic(page, room);
   await button(page, "Cell 1,1").click();
   const custom = await exchange(page, "/api/future-study", () =>
-    button(page, "Run model").click(),
+    button(page, "Advance the cells").click(),
   );
   expect(custom.wire.cells[0]).toBe(1);
   expect(custom.response.view.instrument.frames[0][0]).toBe(1);
@@ -183,23 +185,11 @@ test("all retained rooms are searchable and representative instruments fit 320px
   await page.setViewportSize({ width: 320, height: 744 });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/#gallery");
-  await page.getByText("The Dream Archive", { exact: false }).first().click();
-  await page
-    .getByText("The Tomorrow Machine", { exact: false })
-    .first()
-    .click();
-  expect(
-    await page
-      .getByRole("navigation", { name: "The Dream Archive" })
-      .locator("button")
-      .count(),
-  ).toBe(6);
-  expect(
-    await page
-      .getByRole("navigation", { name: "The Tomorrow Machine" })
-      .locator("button")
-      .count(),
-  ).toBe(12);
+  for (const [name, count] of [["The Dream Archive", 7], ["The Tomorrow Machine", 12]] as const) {
+    await button(page, name).click();
+    await expect(page.getByRole("region", { name, exact: true }).locator("[data-technique-id]")).toHaveCount(count);
+    await button(page, "All worlds").click();
+  }
   for (const id of [24, 43, 44, 50, 54, 59, 60]) {
     const room = rooms.find((r) => r.id === id)!;
     await open(page, room);

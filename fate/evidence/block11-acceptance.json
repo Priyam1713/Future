@@ -1,0 +1,431 @@
+{
+  "block": 11,
+  "baseline": "7d15354a2bcff1b84eea12f4150a0f3ccfee6e85",
+  "rooms": 54,
+  "worlds": 6,
+  "protected_paths_match_baseline": [
+    "future",
+    "workbench",
+    "knowledge",
+    "resources",
+    "tests",
+    "data",
+    "fate/api.py",
+    "fate/archive_sessions.py",
+    "fate/futures.py",
+    "fate/future_views.py",
+    "fate/data",
+    "fate/web/src/gallery/inventory.json"
+  ],
+  "validation": {
+    "native_unit": 2522,
+    "fate_boundary": 77,
+    "workbench_unit": 77,
+    "codex_node": 27,
+    "browser": {
+      "FATE": {
+        "startTime": "2026-11-20T17:31:33.158Z",
+        "duration": 584855.544,
+        "expected": 102,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "Workbench": {
+        "startTime": "2026-11-20T17:27:22.491Z",
+        "duration": 95885.41,
+        "expected": 9,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "cli_cases": 3515,
+    "independent_verifiers": 52,
+    "gallery_recheck": {
+      "startTime": "2026-11-20T17:39:39.910Z",
+      "duration": 32015.737999999998,
+      "expected": 3,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "direct_mobile_search_result_samples_ms": [
+      772,
+      664,
+      623,
+      744,
+      460,
+      557
+    ],
+    "receipt_files": [
+      {
+        "path": "fate/evidence/block11-browser.json",
+        "bytes": 117824,
+        "sha256": "6c8a5771bcb040b23145acf37e9284e3b665d8f070036e47e5aa033b34cc56a5"
+      },
+      {
+        "path": "fate/evidence/block11-workbench.json",
+        "bytes": 12719,
+        "sha256": "ab2192fe78ba7737499edaa11540021f25701ebb56ee79418ef17b9037ab9b1e"
+      },
+      {
+        "path": "fate/evidence/block11-cli.json",
+        "bytes": 36839,
+        "sha256": "e9280b924390cb93327d27a182ed57e1bb5330c0faed1309a803fc2e92610659"
+      },
+      {
+        "path": "fate/evidence/block11-gallery-recheck.json",
+        "bytes": 5508,
+        "sha256": "3db3b5b0b57c0415533c4c69e3fb29291c61e8d9cd8dc3dcd748bfec30ea4d5d"
+      }
+    ],
+    "full_run_timeout": "One Gallery route assertion exceeded five seconds during the full browser run. The unchanged assertion passed in all three separate Playwright rechecks.",
+    "scope": "Keyboard return focus, 320px reduced motion, WCAG 2.0/2.1 AA axe scans, native result, saved Codex, exports and no early target payload."
+  },
+  "screenshots": {
+    "gallery": {
+      "mobile": {
+        "path": "fate/screenshots/11-gallery-mobile.png",
+        "bytes": 286408,
+        "sha256": "93d629f602f7d65d533876b0ad644aaed8178c71d484695dcdebf65da060883e"
+      },
+      "desktop": {
+        "path": "fate/screenshots/11-gallery-desktop.png",
+        "bytes": 953686,
+        "sha256": "3a20675a2d97725e46853bfb8c751f50246ce1b0d005a9450d7bff25d732eac2"
+      }
+    },
+    "gallery-doors": {
+      "mobile": {
+        "path": "fate/screenshots/11-gallery-doors-mobile.png",
+        "bytes": 464878,
+        "sha256": "5d26d0a27c948ff91aa70982a9eeae354e87814d92372a808c3f8fa416636f5d"
+      },
+      "desktop": {
+        "path": "fate/screenshots/11-gallery-doors-desktop.png",
+        "bytes": 1560914,
+        "sha256": "eb6770d08f016d11b5b5683258c8bc114fe85d0df6009c5469ae623d8f9d564c"
+      }
+    },
+    "world": {
+      "mobile": {
+        "path": "fate/screenshots/11-world-mobile.png",
+        "bytes": 277266,
+        "sha256": "00a46ad7208dda22af99ef1424c9c99383f0d398b5ab3147ec74ed2f9f9f44fb"
+      },
+      "desktop": {
+        "path": "fate/screenshots/11-world-desktop.png",
+        "bytes": 792683,
+        "sha256": "2b2efbaf1b152d8aa9503d84474a59667eb671a33dff29ca5fd5e40eda6f0302"
+      }
+    },
+    "tarot-turn": {
+      "mobile": {
+        "path": "fate/screenshots/11-tarot-turn-mobile.png",
+        "bytes": 231375,
+        "sha256": "485e228ffbef70da5b4b15204ad368459dfdc94a1d107922cef5759b7853926e"
+      },
+      "desktop": {
+        "path": "fate/screenshots/11-tarot-turn-desktop.png",
+        "bytes": 777345,
+        "sha256": "77bb87f5045e10f4dced3dd821102779df61892381761019f29e4d9cc0f5e439"
+      }
+    },
+    "tarot": {
+      "mobile": {
+        "path": "fate/screenshots/11-tarot-mobile.png",
+        "bytes": 167162,
+        "sha256": "6386ee938f03b30e4c18fbcb236f85cfe7cf5f7dd4b1dd29d0af3da788bd6522"
+      },
+      "desktop": {
+        "path": "fate/screenshots/11-tarot-desktop.png",
+        "bytes": 646973,
+        "sha256": "7978d8795c6016b36a7b8e112835bd50786785ccf7b1b9b1a65c0df0f44f988e"
+      }
+    },
+    "numerology": {
+      "mobile": {
+        "path": "fate/screenshots/11-numerology-mobile.png",
+        "bytes": 233152,
+        "sha256": "6fe4d79f7cfdb7b6f687e7b3cf54f00e62d70a0c143341eac12624126abe5783"
+      },
+      "desktop": {
+        "path": "fate/screenshots/11-numerology-desktop.png",
+        "bytes": 772401,
+        "sha256": "d555fd664d277ec5da7f99f079ae8b1a55e83201f19b60e6860e1351d718c5c3"
+      }
+    },
+    "western": {
+      "mobile": {
+        "path": "fate/screenshots/11-western-mobile.png",
+        "bytes": 285043,
+        "sha256": "e1e503bc630fbc7ebd0446b7fb6fb7fe4451f78a7a0a0964378595039ada1702"
+      },
+      "desktop": {
+        "path": "fate/screenshots/11-western-desktop.png",
+        "bytes": 1002922,
+        "sha256": "ecbe3df4dfcc614003fcd8182c50d7b15c492f01686fea7017e5f1ba4c30fa05"
+      }
+    },
+    "remote": {
+      "mobile": {
+        "path": "fate/screenshots/11-remote-mobile.png",
+        "bytes": 87241,
+        "sha256": "673cd10188b5f6e299d5df6b4b023020ded53d4d80443e682aa0c71c31873153"
+      },
+      "desktop": {
+        "path": "fate/screenshots/11-remote-desktop.png",
+        "bytes": 485202,
+        "sha256": "a41875c4608882659d6f0b9efc25e59bc4b8e37689a5a3e81b5749ab493ea85f"
+      }
+    },
+    "circuit": {
+      "mobile": {
+        "path": "fate/screenshots/11-circuit-mobile.png",
+        "bytes": 121056,
+        "sha256": "72810850d78bcc54d365048affe859f4e37ad7133cd735f3c9f6f85a94b6fe40"
+      },
+      "desktop": {
+        "path": "fate/screenshots/11-circuit-desktop.png",
+        "bytes": 345423,
+        "sha256": "6e441fe8fa9b8909dde696767a09589b80fc657a71bd0468fb4b38bfe94025b0"
+      }
+    },
+    "market": {
+      "mobile": {
+        "path": "fate/screenshots/11-market-mobile.png",
+        "bytes": 102573,
+        "sha256": "1d8af20a081d062c0f208e25eca39a57c998666b3ac5ebe58c1e400af2351ddc"
+      },
+      "desktop": {
+        "path": "fate/screenshots/11-market-desktop.png",
+        "bytes": 582843,
+        "sha256": "6b8a66902cf249a8ac0c3ac34682d780894e87d1dc7764ec769a734a4c694df1"
+      }
+    },
+    "lorenz": {
+      "mobile": {
+        "path": "fate/screenshots/11-lorenz-mobile.png",
+        "bytes": 126238,
+        "sha256": "8753b1d3759f36213b4aad4ced60bc24ed14613909062c337d65ab7776c24c34"
+      },
+      "desktop": {
+        "path": "fate/screenshots/11-lorenz-desktop.png",
+        "bytes": 391255,
+        "sha256": "860dc8a4b6b25f516a4716e9fa215648fc3f706c80e96fc6beb4b596de581f60"
+      }
+    },
+    "firefox": {
+      "path": "fate/screenshots/11-gallery-firefox-mobile.png",
+      "bytes": 282126,
+      "sha256": "4e3a5495325fc315f898a019695a0df584e364f27438152e23a21080b31898e2"
+    }
+  },
+  "recordings": {
+    "gallery": {
+      "path": "fate/evidence/block11-gallery.mp4",
+      "bytes": 507090,
+      "sha256": "3bf59145c5acde71bc4dafa401c9ffade0926d4a4a6b9ff4edde90f5f1aed78f",
+      "seconds": 6.28
+    },
+    "tarot": {
+      "path": "fate/evidence/block11-tarot.mp4",
+      "bytes": 409892,
+      "sha256": "d42e4868688c16688c66899835b1f00ba818f123ef379386712acb01a9856648",
+      "seconds": 7.52
+    },
+    "numerology": {
+      "path": "fate/evidence/block11-numerology.mp4",
+      "bytes": 351145,
+      "sha256": "7a557574d354d2183eecb0c241678deb36438ae8eacb2fb2343d17662104dfcb",
+      "seconds": 5.4
+    },
+    "western": {
+      "path": "fate/evidence/block11-western.mp4",
+      "bytes": 506871,
+      "sha256": "fa6ea4bc94ccfb95e85939f2f3431a194d3353c8819439588eb8334a014700b2",
+      "seconds": 7.96
+    },
+    "remote": {
+      "path": "fate/evidence/block11-remote.mp4",
+      "bytes": 279838,
+      "sha256": "9b34c8a7f0a112b5632e418459969bcafc007b9819a812593fc56eba404adc90",
+      "seconds": 13.48
+    },
+    "circuit": {
+      "path": "fate/evidence/block11-circuit.mp4",
+      "bytes": 119903,
+      "sha256": "b2ad929dc5803fbaae0aabb4a2d01d497368711b3d8d3f98fd047df36f9fc7a3",
+      "seconds": 3.32
+    },
+    "market": {
+      "path": "fate/evidence/block11-market.mp4",
+      "bytes": 140437,
+      "sha256": "da8e48f1223dc7c95bb974d8294fb2c8373d62bdbf2f7b34db8f6474a3b68c3b",
+      "seconds": 3.12
+    },
+    "lorenz": {
+      "path": "fate/evidence/block11-lorenz.mp4",
+      "bytes": 215391,
+      "sha256": "e44b2094d5beec5fcb0841d4ed4e5488fdeb267ff8248ecc041ccc0a733d8d0d",
+      "seconds": 5.96
+    },
+    "remote-judge": {
+      "path": "fate/evidence/block11-remote-judge.mp4",
+      "bytes": 201670,
+      "sha256": "49c8de5e65fb497a368e05c993314fe5f82c54dfefc5d350a84f7ebfbe6e312b",
+      "seconds": 7.64
+    }
+  },
+  "capture_receipt": {
+    "path": "fate/evidence/block11-media.json",
+    "bytes": 3376,
+    "sha256": "cf1859d08b16257fdba9284df7467564225632c00525437de57e7d2601b4e209"
+  },
+  "artwork_provenance": {
+    "folio-court": "fate/design/block09-artwork.json",
+    "folio-manuscript": "fate/design/block09-artwork.json",
+    "ritual-oracle": "fate/design/block07-artwork.json",
+    "signs-table": "fate/design/block08-artwork.json",
+    "future-dream": "fate/design/block10-artwork.json",
+    "future-tomorrow": "fate/design/block10-artwork.json"
+  },
+  "cross_engine": {
+    "path": "fate/evidence/block11-firefox.json",
+    "bytes": 1360,
+    "sha256": "5e15e5cb0c99d5fe31736feb0668c073a70b47bb573f17db4719b1a52f34421a"
+  },
+  "comparative": {
+    "raw": {
+      "path": "fate/evidence/block11-performance.json",
+      "bytes": 11309,
+      "sha256": "5828b99275757ce346c8f0e1100c6432e5c621b40926673aec1d3fe0a291f803"
+    },
+    "medians": {
+      "mobile": {
+        "gallery": {
+          "block10": {
+            "entryMs": 442,
+            "actionMs": 191,
+            "roomMs": 983,
+            "frameP95Ms": 16.7,
+            "imageKiB": 0.9
+          },
+          "block11": {
+            "entryMs": 390,
+            "actionMs": 190,
+            "roomMs": 1309,
+            "frameP95Ms": 16.7,
+            "imageKiB": 380.2
+          }
+        },
+        "50": {
+          "block10": {
+            "entryMs": 524,
+            "actionMs": 156,
+            "frameP95Ms": 16.7
+          },
+          "block11": {
+            "entryMs": 488,
+            "actionMs": 198,
+            "frameP95Ms": 16.8
+          }
+        },
+        "58": {
+          "block10": {
+            "entryMs": 467,
+            "actionMs": 208,
+            "frameP95Ms": 16.8
+          },
+          "block11": {
+            "entryMs": 497,
+            "actionMs": 201,
+            "frameP95Ms": 16.8
+          }
+        },
+        "59": {
+          "block10": {
+            "entryMs": 501,
+            "actionMs": 243,
+            "frameP95Ms": 16.7
+          },
+          "block11": {
+            "entryMs": 508,
+            "actionMs": 292,
+            "frameP95Ms": 16.7
+          }
+        }
+      },
+      "desktop": {
+        "gallery": {
+          "block10": {
+            "entryMs": 129,
+            "actionMs": 49,
+            "roomMs": 3764,
+            "frameP95Ms": 16.7,
+            "imageKiB": 0.9
+          },
+          "block11": {
+            "entryMs": 116,
+            "actionMs": 54,
+            "roomMs": 3119,
+            "frameP95Ms": 16.7,
+            "imageKiB": 380.2
+          }
+        },
+        "50": {
+          "block10": {
+            "entryMs": 126,
+            "actionMs": 60,
+            "frameP95Ms": 16.7
+          },
+          "block11": {
+            "entryMs": 119,
+            "actionMs": 58,
+            "frameP95Ms": 16.7
+          }
+        },
+        "58": {
+          "block10": {
+            "entryMs": 134,
+            "actionMs": 73,
+            "frameP95Ms": 16.7
+          },
+          "block11": {
+            "entryMs": 152,
+            "actionMs": 64,
+            "frameP95Ms": 16.8
+          }
+        },
+        "59": {
+          "block10": {
+            "entryMs": 190,
+            "actionMs": 166,
+            "frameP95Ms": 16.7
+          },
+          "block11": {
+            "entryMs": 183,
+            "actionMs": 180,
+            "frameP95Ms": 16.7
+          }
+        }
+      }
+    },
+    "main_bundle_bytes": {
+      "block10": {
+        "js": 349216,
+        "css": 176293
+      },
+      "block11": {
+        "js": 348293,
+        "css": 188136
+      }
+    }
+  },
+  "limits": [
+    "Mobile measurements use browser emulation and 4× CPU throttling. Physical handset and WebKit validation remain open.",
+    "The 47 other rooms received the Gallery navigation changes. Their existing forms, instruments and conclusions remain.",
+    "The blind trial QA uses independent browser contexts and a synthetic viewer transcript."
+  ]
+}

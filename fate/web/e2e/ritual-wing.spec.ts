@@ -248,7 +248,7 @@ test("Ritual Wing navigation, narrow screens, reduced motion and glass fallback"
   await page.getByText("The Ritual Wing", { exact: false }).first().click();
   await page
     .getByRole("navigation", { name: "The Ritual Wing rooms" })
-    .getByRole("button", { name: /Crystal Ball/ })
+    .getByRole("link", { name: /Crystal Ball/ })
     .click();
   await expect(page.locator(".ritual-intro h1")).toHaveText(
     "The Veil of Glass",

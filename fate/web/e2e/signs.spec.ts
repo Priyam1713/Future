@@ -131,8 +131,8 @@ test("all three World of Signs entrances respect 320px, reduced motion, and acce
   await page.goto("/#gallery");
   await page.getByText("The World of Signs", { exact: false }).first().click();
   await page
-    .getByRole("navigation", { name: "World of Signs rooms" })
-    .getByRole("button", { name: "Lithomancy", exact: true })
+    .getByRole("navigation", { name: "The World of Signs rooms" })
+    .getByRole("link", { name: "Enter Lithomancy", exact: true })
     .click();
   await expect(page.locator(".sign-intro h1")).toHaveText("The Stone Plan");
   for (const journey of journeys) {

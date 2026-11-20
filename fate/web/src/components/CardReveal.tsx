@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import CardArt from "../CardArt";
 import { PhysicalCard } from "./PhysicalCard";
+import { plainThemes } from "../experiences/tarotPresentation";
 import type { Oracle } from "../hooks/useOracle";
 export function CardReveal({ oracle }: { oracle: Oracle }) {
   const { result, revealed, reveal, allRevealed, readAll, reduced, paused } =
@@ -9,7 +10,9 @@ export function CardReveal({ oracle }: { oracle: Oracle }) {
   return (
     <>
       {result.question && <p className="question-echo">“{result.question}”</p>}
-      <div className={`reveal-spread count-${result.readings.length}`}>
+      <div
+        className={`reveal-spread card-table count-${result.readings.length}`}
+      >
         {result.readings.map((r, i) => (
           <div className="reveal-slot" key={r.card.id}>
             <p className="position-label">
@@ -18,7 +21,7 @@ export function CardReveal({ oracle }: { oracle: Oracle }) {
             </p>
             <PhysicalCard still={reduced || paused}>
               <button
-                className={`flip-card ${revealed.includes(i) ? "flipped" : ""}`}
+                className={`flip-card tactile ${revealed.includes(i) ? "flipped" : ""}`}
                 aria-label={
                   revealed.includes(i)
                     ? `${r.card.name}, ${r.orientation}`
@@ -61,20 +64,19 @@ export function CardReveal({ oracle }: { oracle: Oracle }) {
       </div>
       <div className="ritual-status" role="status" aria-live="polite">
         {allRevealed
-          ? "Your cards are here. Take a breath."
-          : `${revealed.length} of ${result.readings.length} revealed · tap a card to turn it`}
+          ? "Your cards are open."
+          : `${revealed.length} of ${result.readings.length} cards open`}
       </div>
       {revealed.length > 0 && (
-        <div className="reveal-insight" key={revealed.at(-1)}>
+        <div
+          className="reveal-insight artifact-arrival"
+          key={revealed.at(-1)}
+          aria-live="polite"
+        >
           <span className="eyebrow">
             {result.readings[revealed.at(-1)!].position.label}
           </span>
-          <p>
-            {result.readings[revealed.at(-1)!].direct_component.symbolic_focus
-              .split(";")
-              .join(" · ")}
-          </p>
-          <small>Source-derived motifs · a symbolic lens</small>
+          <p>{plainThemes(result.readings[revealed.at(-1)!])}</p>
         </div>
       )}
       <div className="ritual-actions">
@@ -86,10 +88,6 @@ export function CardReveal({ oracle }: { oracle: Oracle }) {
           <ArrowRight size={17} />
         </button>
       </div>
-      <p className="scope-note">
-        One digital draw, already complete. Turning the cards never changes the
-        result.
-      </p>
     </>
   );
 }

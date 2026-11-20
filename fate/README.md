@@ -1,6 +1,12 @@
-# FATE · Block 10 — The Dream Archive and Tomorrow Machine
+# FATE · The Living Gallery
 
 FATE opens all 54 retained Future techniques in a consumer Gallery. Each room leads from its own instrument or source workflow to a native result. Eligible public studies and bounded chapters can be saved locally.
+
+## Block 11
+
+Six illustrated entrances group the open rooms by experience. Search still uses the original inventory and variation names. World doors preserve keyboard focus on return, while direct links open their rooms without a search or an accordion.
+
+Tarot, Numerology, Western Astrology, Remote Viewing, Quantum Simulation, Prediction Markets and Lorenz Chaos received the detailed interaction pass. They share touch lighting, pressure feedback and concise result reveals. Existing artwork and native geometry remain the source for the instruments. See the [release evidence](evidence/block11-acceptance.json).
 
 ## Block 10
 

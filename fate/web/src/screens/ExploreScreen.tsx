@@ -4,7 +4,6 @@ import type { Oracle } from "../hooks/useOracle";
 import { lazy, Suspense } from "react";
 import type { Card } from "../types";
 import { OrbPoster } from "../orb/OrbPoster";
-import { ROOMS } from "../chambers/contracts";
 import { OracleGallery } from "../gallery/OracleGallery";
 const Orb = lazy(() => import("../Orb"));
 const previewCard: Card = {
@@ -42,29 +41,22 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
             Fifty-four open rooms in a universe of discovery.
           </p>
           <nav className="room-index" aria-label="Open oracle rooms">
-            <button onClick={begin}>
-              <span>01</span> Tarot
+            <button onClick={begin}>Tarot</button>
+            <span aria-hidden="true">/</span>
+            <button
+              aria-label="Explore Numerology"
+              onClick={() => oracle.navigate("numerology")}
+            >
+              Numerology
             </button>
             <span aria-hidden="true">/</span>
-            <button onClick={() => oracle.navigate("numerology")}>
-              <span>02</span> Numerology
-            </button>
-            <span aria-hidden="true">/</span>
-            <button onClick={() => oracle.navigate("western")}>
-              <span>03</span> Astrology
+            <button
+              aria-label="Explore Western Astrology"
+              onClick={() => oracle.navigate("western")}
+            >
+              Astrology
             </button>
           </nav>
-          <div className="new-room-links" aria-label="Four new chambers">
-            {Object.values(ROOMS).map((room) => (
-              <button
-                key={room.slug}
-                className="text-button"
-                onClick={() => oracle.navigate(room.slug)}
-              >
-                {room.name} <span aria-hidden="true">↗</span>
-              </button>
-            ))}
-          </div>
           <button
             className="collection-shortcut text-button"
             onClick={() => oracle.navigate("gallery")}
@@ -115,7 +107,12 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
         <button className="primary" onClick={begin}>
           Begin a reading <ArrowRight size={17} />
         </button>
-        <a href="#open-rooms">Choose your room ↓</a>
+        <button
+          className="text-button"
+          onClick={() => oracle.navigate("gallery")}
+        >
+          Choose a world <ArrowRight size={15} />
+        </button>
       </div>
       <section
         id="open-rooms"
@@ -162,7 +159,7 @@ export default function ExploreScreen({ oracle }: { oracle: Oracle }) {
           </span>
         </a>
       </section>
-      <OracleGallery oracle={oracle} />
+      <OracleGallery oracle={oracle} embedded />
       <div className="explore-invitation">
         <span className="gold-star">✦</span>
         <p>

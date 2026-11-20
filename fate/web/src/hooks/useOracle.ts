@@ -50,11 +50,15 @@ export function useOracle() {
     if (chamber) return ROOMS[chamber].slug;
     return location.hash === "#western"
       ? "western"
-      : location.hash === "#my-fate"
-        ? "codex"
-        : location.hash === "#gallery"
-          ? "gallery"
-          : "explore";
+      : location.hash === "#numerology"
+        ? "numerology"
+        : location.hash === "#ritual"
+          ? "ritual"
+          : location.hash === "#my-fate"
+            ? "codex"
+            : location.hash === "#gallery"
+              ? "gallery"
+              : "explore";
   });
   const [spread, setSpread] = useState<"one" | "three">("three");
   const [question, setQuestion] = useState(""),
