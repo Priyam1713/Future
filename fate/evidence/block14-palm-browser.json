@@ -1,0 +1,81 @@
+{
+  "scope": "Scripted manual descriptors on the CC0 intake fixture; not ground truth for recognition.",
+  "request": {
+    "confirmed": true,
+    "hand": {
+      "side": "left",
+      "shape": {},
+      "lines": {
+        "head": {
+          "presence": "present",
+          "curvature": "slight_slope"
+        },
+        "heart": {
+          "presence": "present",
+          "origin": "jupiter"
+        }
+      },
+      "mounts": {}
+    },
+    "fingertips": "unknown",
+    "mount_lean": "unknown"
+  },
+  "narrative": {
+    "title": "Patterns in the hand",
+    "chapters": [
+      {
+        "title": "Imagination",
+        "body": "In this tradition, the gentle slope of the head line gives the reading an imaginative thread.",
+        "rule_ids": [
+          "palm.cheiro.head.sloping"
+        ]
+      },
+      {
+        "title": "Steady affection",
+        "body": "Cheiro associates the heart line below your index finger with lasting affection.",
+        "rule_ids": [
+          "palm.cheiro.heart.origin.jupiter"
+        ]
+      }
+    ],
+    "connections": [],
+    "matched_sections": [
+      "Head line",
+      "Heart line"
+    ],
+    "abstained": false
+  },
+  "nativeMatches": [
+    {
+      "id": "palm.cheiro.head.sloping",
+      "version": 1,
+      "section": "Head line",
+      "text": "A slightly sloping Head line is associated with imaginative work; the source makes its expression dependent on hand type.",
+      "coverage": "direct",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chVII,pp88-89; upward branches:Part II,chIII,p76",
+      "exceptions": [
+        "General reading only; sloping lines have different significance with square versus conic/psychic hand types (p87)."
+      ],
+      "tags": [
+        "imaginative"
+      ]
+    },
+    {
+      "id": "palm.cheiro.heart.origin.jupiter",
+      "version": 1,
+      "section": "Heart line",
+      "text": "A Heart line rising from central Jupiter is associated with steady,idealistic affection.",
+      "coverage": "direct",
+      "source_id": "palmistry-cheiro-ninth-scan-v1",
+      "locator": "Part II,chX,p98",
+      "exceptions": [
+        "Source uses rise/origin on thumb side; do not confuse it with the little-finger end. Gender/class stereotypes omitted."
+      ],
+      "tags": [
+        "affection",
+        "steady"
+      ]
+    }
+  ]
+}

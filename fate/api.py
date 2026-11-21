@@ -168,7 +168,7 @@ def create_app(provider=None, signing_key=None, clock=time.time):
         response = await call_next(request)
         response.headers['X-Content-Type-Options'] = 'nosniff'
         response.headers['Referrer-Policy'] = 'no-referrer'
-        response.headers['Permissions-Policy'] = 'camera=(), microphone=(), geolocation=()'
+        response.headers['Permissions-Policy'] = 'camera=(self), microphone=(), geolocation=()'
         response.headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; media-src 'self'; connect-src 'self'; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
         if request.url.path.startswith('/api/'):
             response.headers['Cache-Control'] = 'no-store'

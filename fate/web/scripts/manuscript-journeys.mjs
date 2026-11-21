@@ -43,6 +43,7 @@ export async function openRoom(page, journey, origin = "") {
 export async function perform(page, { id, entry }, pause = async () => {}) {
   const stage = page.locator(".folio-stage");
   if (id === 8) {
+    await button(stage, "Explore the illustrated archive").click();
     await button(stage, "Head line").click();
     await pause();
     await button(stage, "Left hand").click();

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Oracle } from "../hooks/useOracle";
 import { ArchiveRoom } from "./ArchiveRoom";
 import { CompassRoom } from "./CompassRoom";
@@ -12,6 +13,7 @@ export default function ManuscriptScreen({
   id: Id;
   oracle: Oracle;
 }) {
+  const [archive, setArchive] = useState(false);
   const [slug, name, title, environment] = ROOMS[id];
   return (
     <article
@@ -47,8 +49,14 @@ export default function ManuscriptScreen({
         </div>
       </header>
       <div className="folio-stage">
-        {id === 8 && <PalmPhoto onRead={() => oracle.markExplored(8)} />}
-        {id === 40 ? (
+        {id === 8 ? (
+          <>
+            {archive ? <ArchiveRoom id={8} oracle={oracle} /> : <PalmPhoto onRead={() => oracle.markExplored(8)} />}
+            <button className="text-button palm-mode" onClick={() => setArchive(!archive)}>
+              {archive ? "Return to palm reading" : "Explore the illustrated archive"}
+            </button>
+          </>
+        ) : id === 40 ? (
           <CompassRoom oracle={oracle} />
         ) : id === 5 || id === 6 || id === 7 ? (
           <SkyRoom id={id} oracle={oracle} />

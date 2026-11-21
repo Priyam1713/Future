@@ -93,12 +93,16 @@ def compose(hand):
         else:
             title = " and ".join(THEMES[t][0].lower() for t in themes).capitalize()
             body = " ".join(THEMES[t][1] for t in themes)
-        if figures:
-            verb = "stands" if len(figures) == 1 else "stand"
-            body = f"{' and '.join(figures).capitalize()} {verb} out in this part of the reading. {body}"
+        figure = figures[0] if len(figures) == 1 else None
+        if figure and themes == ["imaginative"]:
+            body = f"In this tradition, {figure} gives the reading an imaginative thread."
+        elif figure and "heart line" in figure and set(themes) == {"steady", "affection"}:
+            body = f"Cheiro associates {figure} with lasting affection."
+        elif figures:
+            body = f"{body} You noted {' and '.join(figures)}."
         chapters.append(dict(title=title, body=body, rule_ids=list(ids)))
     connections = [
-        dict(body=f"{THEMES[a][0]} and {THEMES[b][0].lower()} appear together. The source-linked themes can coexist without one cancelling the other.",
+        dict(body=f"{THEMES[a][0]} and {THEMES[b][0].lower()} suggest different emphases in the historical reading. The observations leave room for both.",
              rule_ids=row["rule_ids"])
         for row in hand["interpretive_tensions"]
         for a, b in [row["topics"]]

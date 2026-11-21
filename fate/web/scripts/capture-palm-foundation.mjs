@@ -3,7 +3,7 @@ import { execFileSync } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const origin = process.env.FATE_CAPTURE_ORIGIN ?? "http://127.0.0.1:8014";
-const raw = "../../tmp/block13-media";
+const raw = "../../tmp/block14-media";
 mkdirSync(raw, { recursive: true });
 const browser = await chromium.launch({ channel: "chrome" });
 const receipts = {};
@@ -34,37 +34,34 @@ try {
     const wait = (ms) => page.waitForTimeout(ms);
     const screenshot = async (stage) => {
       await page.screenshot({
-        path: `../screenshots/13-palm-${stage}-${name}.png`,
+        path: `../screenshots/14-palm-${stage}-${name}.png`,
         animations: "disabled",
       });
     };
     try {
       await page.goto(origin + "/#palmistry");
+      await screenshot("capture");
+      await wait(1200);
       await page.getByLabel("I have permission to review this photo").check();
       await page
         .getByLabel("Palm photograph")
         .setInputFiles("../../workbench/tests/assets/palm-cc0.png");
       const photo = page.getByAltText("Your selected palm for manual review");
       await photo.waitFor();
-      await photo.scrollIntoViewIfNeeded();
-      const box = await photo.boundingBox();
-      for (const [x, y] of [
-        [0.49, 0.52],
-        [0.54, 0.59],
-        [0.59, 0.64],
-      ]) {
-        await page.mouse.click(box.x + box.width * x, box.y + box.height * y);
-        await wait(420);
-      }
-      await screenshot("overlay");
-      await page.getByLabel("Photographed hand").selectOption("left");
-      await page.getByLabel("Head line shape").selectOption("slight_slope");
-      await page
-        .getByLabel("Heart line endpoint toward the index finger")
-        .selectOption("jupiter");
-      await page
-        .getByLabel("I confirmed these descriptions against the photo")
-        .check();
+      await wait(850);
+      const button = (name) => page.getByRole("button", { name, exact: true });
+      await button("Left hand").click();
+      await button("Continue").click();
+      await button("Gently sloping").click();
+      await page.locator(".palm-layout").evaluate((element) => element.scrollIntoView({block: "start"}));
+      await wait(1300);
+      await screenshot("examine");
+      await button("Continue").click();
+      await wait(850);
+      await button("Below the index finger").click();
+      await button("Review observations").click();
+      await wait(950);
+      await page.getByLabel("I confirm these observations").check();
       const pending = page.waitForResponse((r) =>
         r.url().endsWith("/api/palm-reading"),
       );
@@ -80,7 +77,7 @@ try {
         );
       await wait(650);
       await screenshot("reading");
-      await wait(1450);
+      await wait(2400);
       const audio = await page.evaluate(() => {
         const stream = window.palmQaAudio.find((item) =>
           item.src.endsWith("/art/fate-ambient-v2.wav"),
@@ -112,7 +109,7 @@ try {
         throw Error("Ambient playback did not wrap to the beginning");
       const video = page.video();
       await context.close();
-      const path = `../evidence/block13-palm-${name}.mp4`;
+      const path = `../evidence/block14-palm-${name}.mp4`;
       execFileSync("ffmpeg", [
         "-y",
         "-v",
@@ -157,11 +154,11 @@ try {
     }
   }
   writeFileSync(
-    "../evidence/block13-palm-media.json",
+    "../evidence/block14-palm-media.json",
     JSON.stringify(
       {
         scope:
-          "Real browser workflow and known CC0 photo with scripted manual descriptors and overlays. The exercise does not establish recognition accuracy.",
+          "Chrome capture with the CC0 fixture, illustrated anatomy guide and scripted visitor observations. Mobile is emulated. No recognition was exercised.",
         browser: browser.version(),
         receipts,
       },

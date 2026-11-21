@@ -1713,3 +1713,9 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Added consent-based local photo review for Palmistry, visitor-confirmed features, manual overlays, and an observation-linked narrative with four new Cheiro combinations. The original illustrated reference and frozen native engine are preserved.
 - Replaced the main seal and sparkle motifs, moved Tarot commentary provenance into detail, and remastered ambience with automatic activation, fades and explicit persistent mute. Automatic palm feature recognition remains gated on independent photo evidence.
 - Passed 2,708 unit and boundary tests, 118 FATE browser tests, nine Workbench browser tests, 3,515 CLI cases and 52 independent verifiers. Privacy, native replay, and desktop and emulated mobile captures are indexed in `fate/evidence/block13-acceptance.json`.
+
+## 2026-11-21 — FATE Block 14
+
+- Consolidated Palmistry into Capture, Examine and Reading, with browser-local camera and file input, skip and confirmation controls, anatomical guides and a separate illustrated archive.
+- Added an offline scorer for independently labeled photos and negative controls. Recognition remains unavailable to consumers pending held-out phone-photo validation.
+- Passed 2,709 unit and boundary tests, 120 FATE and nine Workbench browser tests, 3,515 CLI cases and 52 independent verifiers. Browser accessibility, camera privacy, 200% zoom and captures are indexed in `fate/evidence/block14-acceptance.json`.

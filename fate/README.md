@@ -2,6 +2,10 @@
 
 FATE opens all 54 retained Future techniques in a consumer Gallery. Each room leads from its own instrument or source workflow to a native result. Eligible public studies and bounded chapters can be saved locally.
 
+## Block 14
+
+Palmistry follows Capture, Examine and Reading. Visitors can take a photo, choose a file, or examine their hands directly. The browser keeps photos in memory, and the reading uses only confirmed descriptions. The illustrated archive opens separately. The [offline evaluation contract and release gate](evidence/block14-palm-foundation.md) cover future recognition work.
+
 ## Block 13
 
 The [consumer gap audit](consumer-gap-audit.md) classifies all 54 retained rooms against what people can actually input and receive. Its judgments are separate from native verification and source coverage.
