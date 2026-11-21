@@ -1749,3 +1749,9 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - The Personal Code presents direct Life Path, birth-name Expression, Soul Urge, Personality, Birthday and Personal Year passages. Connections use documented roles. Month and Day values and current-name overlays retain calculation coverage.
 - Added date exploration and opt-in My Fate narratives in the existing schema-2 framework. A mixed browser profile reopened the same passages after restart with no calculation or provider requests. Names, full dates and letter traces stay outside the saved chapter.
 - Closed the Block 18 regression gap with a full 123/123 run on the prior release. Block 19 passed the full 124/124 FATE suite, nine Workbench browser tests, 2,724 unit and boundary tests, 3,515 CLI cases and 52 independent verifiers. Both builds and the dependency and inventory checks passed. Evidence is indexed in `fate/evidence/block19-acceptance.json`.
+
+## 2026-11-22 — FATE Block 20
+
+- Tarot now connects the opening, middle and closing through their card-specific motifs. All 156 orientation entries and 56 secondary accounts remain accessible. Four Waite rank recurrence rules have direct source coverage. The Celtic consumer layout stays deferred.
+- My Fate saves the ordered narrative and source references beside earlier chapters. A persistent Chrome restart reopened the same passages and exact card orientations with zero API requests. Live and saved readings passed 200% browser zoom and automated accessibility checks.
+- Passed 124 FATE and nine Workbench browser tests, 2,727 unit and boundary tests, 3,515 CLI cases and 52 independent verifiers. Both production builds, dependency checks and the frozen inventory passed. Inspected screenshots and coverage are indexed in `fate/evidence/block20-acceptance.json`.

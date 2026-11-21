@@ -207,7 +207,7 @@ export function CelestialBook({
                 </p>
               )}
             </details>
-            {current && (
+            {current && current.narrative?.technique !== 16 && (
               <div className="folio-desktop-art">
                 <ChapterIllustration chapter={current} />
                 <p className="folio-plate">

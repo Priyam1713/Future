@@ -1097,3 +1097,111 @@
     display: inline;
   }
 }
+
+/* The reading table keeps its cards and prose in the same field of view. */
+.connected-reading.narrow {
+  width: min(100% - 2rem, 76rem);
+  max-width: none;
+}
+.connected-spread {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  gap: clamp(1rem, 3.5vw, 2.8rem);
+  align-items: start;
+  --spread-line: #99846b65;
+  --spread-ink: #e7e3d5;
+  --spread-accent: #edc58a;
+  color: var(--spread-ink);
+}
+.connected-table {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.25rem, 1vw, 0.8rem);
+}
+.count-1 .connected-table { grid-template-columns: minmax(0, 12rem); justify-content: center; }
+.connected-table button {
+  display: grid;
+  grid-template-rows: minmax(2.45rem, auto) auto minmax(2.25rem, auto) auto;
+  gap: 0.36rem;
+  align-content: start;
+  min-width: 0;
+  padding: 0.4rem;
+  border: 1px solid var(--spread-line);
+  background: #111d20;
+  color: #f2e9d4;
+  text-align: start;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.connected-table button[aria-pressed="true"] {
+  border-color: var(--spread-accent);
+  background: #26322d;
+}
+.connected-position-label {
+  font: 400 0.78rem/1.25 var(--sans, sans-serif);
+  align-self: end;
+}
+.connected-card-art {
+  display: block;
+  position: relative;
+  aspect-ratio: 3 / 5;
+  overflow: hidden;
+}
+.connected-table strong { font: 400 clamp(0.85rem, 1.7vw, 1.12rem)/1.18 var(--serif, Georgia); }
+.connected-table small { font-size: 0.68rem; color: #e5cbaa; text-transform: capitalize; }
+.connected-copy { min-width: 0; }
+.spread-overview h2, .connected-position h2, .spread-connections h3, .spread-closing h3 {
+  font-family: var(--serif, Georgia);
+  color: var(--spread-accent);
+  font-weight: 400;
+  margin: 0 0 0.65rem;
+}
+.spread-overview h2 { font-size: clamp(1.6rem, 3.6vw, 2.65rem); line-height: 1.1; }
+.spread-passage, .connected-position .position-reading {
+  color: var(--spread-ink);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.connected-spread .connected-position {
+  margin: 1.05rem 0 0;
+  padding: 0.85rem 0;
+  border-block-start: 1px solid var(--spread-line);
+  border-bottom: 0;
+  background: transparent;
+  min-width: 0;
+}
+.connected-spread .connected-position .eyebrow { color: #d9bf97; }
+.connected-spread .connected-position summary { font-size: 0.88rem; }
+.spread-connections, .spread-closing {
+  margin-block: 1.05rem;
+  padding-block-start: 0.9rem;
+  border-block-start: 1px solid var(--spread-line);
+}
+.spread-connection + .spread-connection { margin-top: 0.7rem; }
+.spread-connection h4 { margin: 0 0 0.25rem; color: #e8d0aa; }
+.spread-connection small { color: #dbba86; }
+.spread-provenance { margin-top: 0.7rem; font-size: 0.8rem; color: var(--spread-ink); }
+.spread-provenance summary { color: var(--spread-accent); padding-block: 0.8rem; cursor: pointer; }
+.spread-provenance a { color: var(--spread-accent); }
+.connected-spread :is(button, a, summary):focus-visible { outline: 2px solid #eac889; outline-offset: 3px; }
+.connected-folio .connected-spread {
+  grid-template-columns: minmax(0, 1fr);
+  padding: clamp(0.65rem, 2vw, 1rem);
+  background: #142124;
+  gap: 1rem;
+}
+.connected-folio .connected-table { width: min(100%, 24rem); margin-inline: auto; }
+.connected-folio .count-1 .connected-table { grid-template-columns: minmax(0, 8rem); }
+.connected-folio :is(.connected-cards, .connected-copy) { display: contents; }
+.connected-folio .connected-table { order: -3; }
+.connected-folio .spread-overview { order: -2; }
+.connected-folio .connected-position { order: -1; }
+@media (max-width: 750px) {
+  .connected-spread { grid-template-columns: minmax(0, 1fr); }
+  .connected-reading :is(.connected-cards, .connected-copy) { display: contents; }
+  .connected-reading .connected-table { order: -3; width: min(100%, 32rem); margin-inline: auto; }
+  .connected-reading .spread-overview { order: -2; }
+  .connected-reading .connected-position { order: -1; }
+  .connected-reading .count-1 .connected-table { grid-template-columns: minmax(0, 8rem); }
+}

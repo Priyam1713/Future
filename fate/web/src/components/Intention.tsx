@@ -1,4 +1,4 @@
-import { Check, LoaderCircle, Sparkles } from "lucide-react";
+import { ArrowRight, Check, LoaderCircle } from "lucide-react";
 import CardArt from "../CardArt";
 import type { Oracle } from "../hooks/useOracle";
 export function Intention({ oracle }: { oracle: Oracle }) {
@@ -59,7 +59,7 @@ export function Intention({ oracle }: { oracle: Oracle }) {
               />
               <span className="spread-icon">Ⅲ</span>
               <strong>Three cards</strong>
-              <small>A story to reflect on</small>
+              <small>Opening, middle and consideration</small>
               {spread === "three" && <Check size={14} />}
             </label>
           </div>
@@ -72,7 +72,7 @@ export function Intention({ oracle }: { oracle: Oracle }) {
             maxLength={1000}
             rows={3}
             onChange={(e) => setQuestion(e.target.value)}
-            placeholder="What might help me see my next chapter differently?"
+            placeholder="An optional question for this visit"
           />
           <div className="question-helper">
             <span>
@@ -88,7 +88,7 @@ export function Intention({ oracle }: { oracle: Oracle }) {
             />
             <span>
               Include reversed cards{" "}
-              <small>A different meaning, not simply an opposite.</small>
+              <small>Use Waite’s entry for each orientation.</small>
             </span>
           </label>
           <p className="privacy-note">
@@ -108,7 +108,7 @@ export function Intention({ oracle }: { oracle: Oracle }) {
             ) : (
               <>
                 Draw {spread === "one" ? "my card" : "my three cards"}{" "}
-                <Sparkles size={17} />
+                <ArrowRight size={17} aria-hidden="true" />
               </>
             )}
           </button>

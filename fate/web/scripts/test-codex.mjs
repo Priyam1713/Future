@@ -17,6 +17,7 @@ await build({
     "src/astrology/source.ts",
     "src/turning/snapshot.ts",
     "src/turning/validation.ts",
+    "src/experiences/tarotStory.ts",
   ],
   outdir: "../../tmp/codex-tests",
   entryNames: "[name]",
@@ -39,6 +40,7 @@ const { baziNarrative } = await import(
   pathToFileURL(resolve("../../tmp/codex-tests/projectNarrative.mjs"))
 );
 const { personalCode } = await import(pathToFileURL(resolve("../../tmp/codex-tests/personalCode.mjs")));
+const { tarotStory, matchesLiveStory } = await import(pathToFileURL(resolve("../../tmp/codex-tests/tarotStory.mjs")));
 class Memory {
   data = new Map();
   writes = 0;
@@ -98,6 +100,94 @@ test("Tarot projection excludes questions, composition, replay and commentary ev
     "profile",
     "spread",
   ]);
+});
+const nativeDeck = JSON.parse(readFileSync("../../knowledge/tarot_waite_v1.json")).cards;
+const layout = ["What you carry", "Where you stand", "What to consider"];
+const threeCards = (...ids) => ({ ...tarot, spread: "three",
+  cards: ids.map((id) => ({ id, orientation: "upright" })) });
+
+test("Tarot saves every native card and orientation with its approved source", () => {
+  assert.equal(Object.keys(nativeDeck).length, 78);
+  const flags = new Set();
+  for (const card of Object.values(nativeDeck)) {
+    for (const orientation of ["upright", "reversed"]) {
+      const snapshot = { ...tarot, cards: [{ id: card.id, orientation }] };
+      const native = { profile: snapshot.profile, spread: "one", readings: [{
+        card, orientation, position: { label: "Focus" }, direct_component: card.meanings[orientation],
+      }] };
+      const story = tarotStory(snapshot);
+      assert(matchesLiveStory(native, snapshot), card.id + " " + orientation);
+      assert(r.validChapter(r.chapterFor(native, snapshot, story)), card.id + " " + orientation);
+      assert.deepEqual(story.sections.map((s) => s.id), ["overview", "position-1"]);
+      const [editorial, direct] = story.sections[1].passages;
+      assert.equal(editorial.coverage, "compositional");
+      const meaning = card.meanings[orientation];
+      assert.deepEqual(direct, { title: `Waite · ${orientation}`,
+        text: meaning.text, coverage: "direct", rules: [meaning.rule_id] });
+      for (const flag of meaning.flags) flags.add(flag);
+    }
+  }
+  assert.equal(flags.size, 3);
+  assert.match(tarotStory({ ...tarot, cards: [{ id: "wands-four", orientation: "reversed" }] })
+    .sections[1].passages[0].text, /unchanged/);
+  assert(nativeDeck["cups-two"].meanings.reversed.flags.includes(
+    "primary_section_has_no_reversed_entry_explicit_section4_gap_fill"));
+});
+
+test("Tarot composes position contrasts, recurrence and qualified abstention", () => {
+  const contrasts = threeCards("wands-four", "wands-eight", "swords-four");
+  const story = tarotStory(contrasts);
+  assert.deepEqual(story.sections.slice(1, 4).map((s) => s.title), layout);
+  assert.match(story.sections[0].title, /Movement beside stillness/);
+  const relationships = story.sections[4].passages;
+  assert(relationships.some((p) => p.title === "A recurring theme of stillness"));
+  assert(relationships.some((p) => p.text.includes("Where you stand") && p.text.includes("What you carry")));
+  assert.notDeepEqual(tarotStory(threeCards("swords-four", "wands-eight", "wands-four")), story);
+  assert.notEqual(tarotStory(threeCards("major-01", "wands-eight", "cups-two")).sections[5].passages[0].text,
+    story.sections[5].passages[0].text);
+
+  for (const [ids, rule, text] of [
+    [["cups-two", "swords-two", "wands-eight"], "two-2", "accord"],
+    [["cups-two", "swords-two", "pentacles-two"], "two-3", "security"],
+    [["cups-three", "swords-three", "wands-eight"], "three-2", "calm"],
+    [["cups-three", "wands-three", "pentacles-three"], "three-3", "unity"],
+  ]) {
+    const snapshot = threeCards(...ids);
+    const passages = tarotStory(snapshot).sections[4].passages;
+    const direct = passages.filter((p) => p.coverage === "direct");
+    assert.equal(direct.length, 1);
+    assert.deepEqual(direct[0].rules, [`tarot.waite1922.recurrence.${rule}.upright`]);
+    assert.match(direct[0].text, new RegExp(text));
+    snapshot.cards[0].orientation = "reversed";
+    assert(!tarotStory(snapshot).sections[4].passages.some((p) => p.coverage === "direct"));
+  }
+  const ambiguous = tarotStory(threeCards("wands-two", "major-17", "major-01"));
+  assert.deepEqual(ambiguous.sections[4].passages.map((p) => p.coverage), ["unsupported"]);
+  assert(ambiguous.sections[4].passages[0].rules.length === 3);
+  assert.match(ambiguous.sections[1].passages[0].text, /alternative account/);
+});
+
+test("Tarot schema 2 retains exact prose beside legacy chapters and rejects tampering", () => {
+  const storage = new Memory();
+  const legacy = chapter();
+  const snapshot = threeCards("cups-two", "swords-two", "wands-eight");
+  const saved = r.chapterFor({}, snapshot, tarotStory(snapshot));
+  r.saveChapter(storage, legacy);
+  r.saveChapter(storage, saved);
+  assert.deepEqual(r.readDocument(storage), { schemaVersion: 2, chapters: [legacy, saved] });
+  const evidence = ref.chapterEvidence(saved);
+  assert(evidence.some((item) => item.sourceId === "tarot.waite1922.recurrence.two-2.upright"));
+  for (const edit of [
+    (c) => c.narrative.sections.reverse(),
+    (c) => c.narrative.sections[0].passages[0].text = "PRIVATE_QUESTION",
+    (c) => c.snapshot.cards.reverse(),
+    (c) => c.snapshot.cards[2].orientation = "reversed",
+    (c) => c.narrative.edition = "unavailable",
+  ]) {
+    const changed = structuredClone(saved);
+    edit(changed);
+    assert.equal(r.validChapter(changed), false);
+  }
 });
 test("Numerology projection excludes names, dates, letter tokens and arithmetic traces", () => {
   const native = JSON.parse(

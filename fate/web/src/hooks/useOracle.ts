@@ -86,6 +86,7 @@ export function useOracle() {
     [aiBusy, setAiBusy] = useState(false),
     [aiError, setAiError] = useState("");
   const [gemini, setGemini] = useState(false);
+  const checkedGemini = useRef(false);
   const dialog = useRef<HTMLDialogElement>(null),
     heading = useRef<HTMLHeadingElement>(null),
     seed = useRef(""),
@@ -126,15 +127,19 @@ export function useOracle() {
     const media = matchMedia("(prefers-reduced-motion: reduce)");
     const change = () => setReduced(media.matches);
     media.addEventListener("change", change);
-    void api<{ gemini_available: boolean }>("/api/health")
-      .then((r) => setGemini(r.gemini_available))
-      .catch(() => {});
     return () => {
       media.removeEventListener("change", change);
       controller.current?.abort();
       aiController.current?.abort();
     };
   }, []);
+  useEffect(() => {
+    if (screen === "codex" || checkedGemini.current) return;
+    checkedGemini.current = true;
+    void api<{ gemini_available: boolean }>("/api/health")
+      .then((r) => setGemini(r.gemini_available))
+      .catch(() => {});
+  }, [screen]);
   function begin() {
     sound.cue("select");
     if (!envelope) {

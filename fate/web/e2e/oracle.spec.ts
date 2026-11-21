@@ -131,23 +131,23 @@ test("mobile complete real three-card journey, progressive reveal, source detail
   await expect(
     page.getByRole("heading", { name: "The story in your cards." }),
   ).toBeVisible();
-  for (const r of native.readings) {
-    await expect(
-      page.locator(".theme-row").filter({ hasText: r.position.label }),
-    ).toContainText(r.direct_component.symbolic_focus.split(";").join(" · "));
+  const spreadCards = page.locator(".connected-table [data-card]");
+  await expect(spreadCards).toHaveCount(native.readings.length);
+  await expect(page.locator(".spread-closing")).toBeVisible();
+  for (const [i, r] of native.readings.entries()) {
+    const card = spreadCards.nth(i);
+    await expect(card).toHaveAttribute("data-card", r.card.id);
+    await expect(card).toHaveAttribute("data-orientation", r.orientation);
+    await expect(card).toHaveAccessibleName(`${r.position.label}, ${r.card.name}, ${r.orientation}`);
+    await card.focus();
+    await card.press("Enter");
+    await expect(card).toHaveAttribute("aria-pressed", "true");
+    const selected = page.locator(".connected-position");
+    await selected.getByText("The traditional meaning", { exact: true }).click();
+    await expect(selected.locator("blockquote").first()).toHaveText(r.direct_component.text);
+    if (r.upright_reference)
+      await expect(selected.locator(".nested-detail blockquote")).toHaveText(r.upright_reference.text);
   }
-  await page
-    .locator(".interpretation")
-    .first()
-    .getByText("The traditional meaning", { exact: true })
-    .click();
-  await expect(page.locator("blockquote").first()).toHaveText(
-    native.readings[0].direct_component.text,
-  );
-  if (native.readings[0].upright_reference)
-    await expect(page.locator(".interpretation").first()).toContainText(
-      native.readings[0].upright_reference.text,
-    );
   await page.evaluate(() => (document.activeElement as HTMLElement)?.blur());
   await page.screenshot({
     animations: "disabled",

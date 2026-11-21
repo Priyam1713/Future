@@ -9,7 +9,7 @@ export interface Card {
   name: string;
   number: number | null;
   suit: string | null;
-  rank: string;
+  rank: string | null;
   rank_number: number | null;
   arcana: string;
 }

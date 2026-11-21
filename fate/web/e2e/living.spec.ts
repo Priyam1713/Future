@@ -130,7 +130,7 @@ test("a sealed-room protocol error explains the next step without a raw status",
   );
 });
 
-test("Tarot keeps original motifs in depth and edits their labels in the payoff", async ({
+test("Tarot keeps the unchanged reversal in its position and original source", async ({
   page,
 }) => {
   await page.route("**/api/readings", (route) =>
@@ -156,14 +156,18 @@ test("Tarot keeps original motifs in depth and edits their labels in the payoff"
     "prosperity, increase, beauty",
   );
   await button(page, "Skip reveal & read now").click();
-  await expect(page.locator(".tarot-payoff")).toContainText(
+  const card = page.locator('.connected-table [data-card="wands-four"]');
+  await card.click();
+  await expect(card.locator(".reversed-art")).toBeVisible();
+  const position = page.locator(".connected-position");
+  await expect(position).toContainText(
     "prosperity, increase, beauty",
   );
-  await expect(page.locator(".tarot-payoff")).not.toContainText("unchanged:");
-  await page.locator(".native-motifs summary").click();
-  await expect(page.locator(".native-motifs")).toContainText(
-    "unchanged:prosperity",
-  );
+  await expect(position).not.toContainText("unchanged:");
+  await position.getByText("The traditional meaning", { exact: true }).click();
+  await expect(position.locator("blockquote").first()).toHaveText(third.direct_component.text);
+  await expect(position.locator(".source-flags")).toContainText("unchanged in reversal");
+  await expect(page.locator(".spread-closing")).toBeVisible();
 });
 
 test("the narrow reduced-motion Gallery and key instruments pass accessibility scanning", async ({

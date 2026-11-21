@@ -1,81 +1,60 @@
 import { ArrowUpRight, ChevronDown } from "lucide-react";
-import CardArt from "../CardArt";
-import type { Oracle } from "../hooks/useOracle";
-import { reflectionPrompt } from "../experiences/tarotPresentation";
-export function ReadingDetails({ oracle }: { oracle: Oracle }) {
-  const { result } = oracle;
-  if (!result) return null;
+import type { ReadingSection } from "../codex/narrative";
+import { cardReference, tarotPage, tarotRule, type TarotSnapshot } from "../experiences/tarotEdition";
+
+export function ReadingDetails({ pick, section, heading }: {
+  pick: TarotSnapshot["cards"][number];
+  section: ReadingSection;
+  heading: string;
+}) {
+  const card = cardReference(pick.id);
+  const meaning = card.meanings[pick.orientation];
+  const [position, direct] = section.passages;
+  const rule = tarotRule(direct.rules[0])!;
   return (
-    <>
-      {result.readings.map((r, i) => (
-        <section className="interpretation" key={r.card.id}>
-          <div className="interpretation-heading">
-            <span className="chapter-number">0{i + 1}</span>
-            <div>
-              <span className="eyebrow">{r.position.label}</span>
-              <h2>{r.card.name}</h2>
-            </div>
-            <span className="orientation-pill">{r.orientation}</span>
-          </div>
-          <p className="reflection">
-            {reflectionPrompt(r, i, result.readings.length)}
-          </p>
-          <details>
-            <summary>
-              The traditional meaning <ChevronDown size={16} />
-            </summary>
-            <div className="detail-body">
-              <p className="source-label">
-                NATIVE COMPOSITION · SYMBOLIC CONTEXT
-              </p>
-              <p>{r.composition.reflection}</p>
-              <p className="source-label">HISTORICAL WORDING · WAITE, 1922</p>
-              <blockquote>{r.direct_component.text}</blockquote>
-              <a
-                href={r.direct_component.page_url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {r.direct_component.locator} <ArrowUpRight size={12} />
+    <section className="interpretation connected-position" aria-labelledby={heading}>
+      <div className="interpretation-heading">
+        <div>
+          <span className="eyebrow">{section.title} · {pick.orientation}</span>
+          <h2 id={heading} aria-live="polite">{card.name}</h2>
+        </div>
+      </div>
+      <p className="position-reading">{position.text}</p>
+      <details key={meaning.rule_id}>
+        <summary>The traditional meaning <ChevronDown size={16} /></summary>
+        <div className="detail-body">
+          <p className="source-label">WAITE, 1922 · {pick.orientation}</p>
+          <blockquote>{direct.text}</blockquote>
+          <a href={rule.url} target="_blank" rel="noreferrer">
+            {rule.locator} <ArrowUpRight size={12} />
+          </a>
+          <p className="rule-reference">{meaning.rule_id} · v{meaning.version}</p>
+          {rule.exceptions.length > 0 && (
+            <ul className="source-flags">
+              {rule.exceptions.map((exception) => <li key={exception}>{exception}</li>)}
+            </ul>
+          )}
+          {pick.orientation === "reversed" && (
+            <details open className="nested-detail">
+              <summary>Upright reference</summary>
+              <blockquote>{card.meanings.upright.text}</blockquote>
+              <a href={card.meanings.upright.page_url} target="_blank" rel="noreferrer">
+                {card.meanings.upright.locator}
               </a>
-              {r.upright_reference && (
-                <>
-                  <p className="source-label">
-                    UPRIGHT REFERENCE FOR THIS REVERSAL
-                  </p>
-                  <p>{r.upright_reference.text}</p>
-                </>
-              )}
-              <p className="source-caution">
-                Historical language may contain claims about health, appearance
-                or fate. It is recorded as doctrine, never a finding about you.
-              </p>
-              {r.additional_source_account && (
-                <details className="nested-detail">
-                  <summary>
-                    Separate source account <ChevronDown size={14} />
-                  </summary>
-                  <p>{r.additional_source_account.text}</p>
-                  <small>
-                    {r.additional_source_account.locator} · retained separately,
-                    not applied to this reading.
-                  </small>
-                </details>
-              )}
-              {r.ambiguity.length > 0 && (
-                <ul className="source-flags">
-                  {r.ambiguity.map((v) => (
-                    <li key={v}>{v.replaceAll("_", " ")}</li>
-                  ))}
-                </ul>
-              )}
-              <p className="rule-reference">
-                {r.direct_component.rule_id} · v{r.direct_component.version}
-              </p>
-            </div>
-          </details>
-        </section>
-      ))}
-    </>
+            </details>
+          )}
+          {card.additional_meanings && (
+            <details className="nested-detail">
+              <summary>Separate source account</summary>
+              <p>{card.additional_meanings.text}</p>
+              <a href={tarotPage(card.additional_meanings.page)} target="_blank" rel="noreferrer">
+                {card.additional_meanings.locator}
+              </a>
+            </details>
+          )}
+          <p className="source-caution">Historical wording can include claims about health, appearance or fate. Read it as the author’s account.</p>
+        </div>
+      </details>
+    </section>
   );
 }

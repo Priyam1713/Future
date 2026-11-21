@@ -1,5 +1,4 @@
 import { ArrowLeft } from "lucide-react";
-import CardArt from "../CardArt";
 import type { Oracle } from "../hooks/useOracle";
 import { Intention } from "../components/Intention";
 import { CardReveal } from "../components/CardReveal";
@@ -32,8 +31,8 @@ export default function RitualScreen({ oracle }: { oracle: Oracle }) {
         </h1>
         <p>
           {result
-            ? "Turn each card. Notice what speaks to you."
-            : "Bring a question, or simply bring yourself."}
+            ? "Turn the cards to see their positions and orientations."
+            : "Choose a single focus or a connected three-card reading."}
         </p>
       </div>
       {!result ? <Intention oracle={oracle} /> : <CardReveal oracle={oracle} />}

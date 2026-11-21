@@ -6,13 +6,13 @@ import { chapterFor, tarotSnapshot, numberSnapshot } from "./records";
 import { westernSnapshot, type WesternResult } from "../astrology/contracts";
 import type { Narrative } from "./narrative";
 type Props = { oracle: Oracle } & (
-  | { kind: "tarot"; result: Result }
+  | { kind: "tarot"; result: Result; narrative?: Narrative }
   | { kind: "numerology"; result: NumberResult; narrative?: Narrative }
   | { kind: "western"; result: WesternResult; narrative?: Narrative }
 );
 export function SaveChapter(props: Props) {
   const { oracle } = props;
-  const narrative = props.kind === "tarot" ? undefined : props.narrative;
+  const narrative = props.narrative;
   const chapter = useMemo(
     () => chapterFor(
         props.result,
@@ -25,7 +25,7 @@ export function SaveChapter(props: Props) {
       ),
     [props.kind, props.result, narrative],
   );
-  const unavailable = props.kind !== "tarot" && !chapter.narrative;
+  const unavailable = !chapter.narrative;
   const saved = oracle.codex.chapters.some((c) => c.id === chapter.id);
   return (
     <section className="save-chapter" aria-labelledby={`save-${props.kind}`}>
@@ -40,7 +40,7 @@ export function SaveChapter(props: Props) {
           ? "Save the natal passages, source references and calculated chart geometry. Celestial positions can reveal information about your birth moment."
           : props.kind === "numerology"
             ? "Save the calculated numbers, passages and sources. The Birthday passage includes the day of the month. The chosen calendar date, letter tokens and Y classifications stay outside the chapter."
-            : "Save the symbols to your personal Codex on this device."}{" "}
+            : "Save the cards in order, their orientations, the connected reading and its source references."}{" "}
         Names, entered dates and times, coordinates, timezone, questions and
         Gemini commentary are excluded.
       </p>

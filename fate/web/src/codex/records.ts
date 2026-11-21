@@ -27,6 +27,8 @@ import {
   type VedicGeometry,
 } from "../chambers/contracts";
 import { validNarrative, type Narrative } from "./narrative";
+import type { TarotSnapshot } from "../experiences/tarotEdition";
+import { tarotStory } from "../experiences/tarotStory";
 import { TRANSIT_REFERENCE, type TransitSnapshot } from "../turning/contracts";
 import { validTransit } from "../turning/validation";
 import {
@@ -55,12 +57,7 @@ export type Snapshot =
   | VedicGeometry
   | TransitSnapshot
   | WesternSnapshot
-  | {
-      oracle: 16;
-      profile: "waite-1922-text-v1";
-      spread: "one" | "three";
-      cards: { id: string; orientation: "upright" | "reversed" }[];
-    }
+  | TarotSnapshot
   | {
       oracle: 4;
       profile: "decoz-component-reduction";
@@ -242,6 +239,11 @@ function editionFor(snapshot: Snapshot): Chapter["reference"] {
 }
 function narrativeMatches(value: unknown, snapshot: Snapshot): boolean {
   if (snapshot.profile === "turning-sky-v1" || !validNarrative(value, snapshot.oracle)) return false;
+  if (snapshot.oracle === 16) {
+    const content = (story: Narrative) => story.sections.map(({ id, title, passages }) =>
+      [id, title, passages.map((p) => [p.title, p.text, p.coverage, p.rules])]);
+    return JSON.stringify(content(value)) === JSON.stringify(content(tarotStory(snapshot)));
+  }
   if (snapshot.oracle !== 4) return true;
   const [life, expression, , , , cycles] = value.sections;
   return life.passages[0].rules[0] === `decoz.life-path.${snapshot.lifePath}` &&
@@ -341,7 +343,7 @@ export function deleteChapter(storage: StoragePort, id: string): CodexDocument {
   else storage.removeItem(STORAGE_KEY);
   return next;
 }
-export function tarotSnapshot(result: Result): Snapshot {
+export function tarotSnapshot(result: Result): TarotSnapshot {
   return {
     oracle: 16,
     profile: result.profile as "waite-1922-text-v1",

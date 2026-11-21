@@ -14,7 +14,8 @@ export function NarrativeReading({ narrative, title, context, illustration }: {
   const { sections, edition, technique } = narrative;
   const section = sections[active];
   const rules = [...new Set(section.passages.flatMap((passage) => passage.rules))];
-  const room = technique === 1 ? "western" : technique === 4 ? "numerology" : ROOMS[technique].slug;
+  const room = technique === 1 ? "western" : technique === 4 ? "numerology"
+    : technique === 16 ? "tarot" : ROOMS[technique].slug;
   return (
     <div className={`narrative-folio chamber-folio chamber-${room}`} data-motion="still">
       <header className="folio-heading">

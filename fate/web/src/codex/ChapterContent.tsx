@@ -19,6 +19,7 @@ import { SavedSign } from "../signs/SignsScreen";
 import { isRitualSnapshot, RITUAL_ROOMS } from "../ritual/contracts";
 import { RitualChapter, RitualReading } from "../ritual/Readings";
 import { NarrativeReading } from "./NarrativeReading";
+import { ConnectedSpread } from "../components/ConnectedSpread";
 export function ChapterIllustration({ chapter }: { chapter: Chapter }) {
   const s = chapter.snapshot;
   if (isFutureBookmark(s)) return <FutureChapter s={s} compact />;
@@ -93,6 +94,13 @@ export function ChapterContent({
 }) {
   if (chapter.narrative) {
     const s = chapter.snapshot;
+    if (s.oracle === 16) return <div className="connected-folio">
+      <header className="folio-heading">
+        <p className="eyebrow">Tarot · Saved reading</p>
+        <h2 tabIndex={-1}>{chapterTitle(chapter)}</h2>
+      </header>
+      <ConnectedSpread key={chapter.id} snapshot={s} narrative={chapter.narrative} />
+    </div>;
     const context = s.oracle === 1 && s.profile === "modern-tropical-v1"
       ? `Tropical · ${s.houses} houses · Ascendant ${degree(s.angles[0])}`
       : s.oracle === 3 ? `Clock convention · ${s.profile}`

@@ -2,6 +2,10 @@
 
 FATE opens all 54 retained Future techniques in a consumer Gallery. Each room leads from its own instrument or source workflow to a native result. Eligible public studies and bounded chapters can be saved locally.
 
+## Block 20
+
+Tarot opens a connected reading around the drawn cards. The three-card reading follows the opening, middle and closing positions, with source details available for each card and a bounded set of Waite rank recurrences. My Fate keeps the complete reading locally when a visitor chooses to save it. [Tarot coverage, sources and verification](evidence/block20-tarot-foundation.md)
+
 ## Block 19
 
 Numerology opens the Personal Code, a seven-section reading with direct Life Path, birth-name and Birthday passages, calendar cycle exploration and My Fate saving. The original Decoz calculation and native download stay intact. [Interpretation coverage and sources](evidence/block19-numerology-foundation.md)

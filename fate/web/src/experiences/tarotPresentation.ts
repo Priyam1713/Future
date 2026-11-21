@@ -39,17 +39,3 @@ export function plainGloss(focus: string) {
     )
     .join(" — or, in an alternative account, ");
 }
-export function reflectionPrompt(
-  reading: Reading,
-  index: number,
-  total: number,
-) {
-  const themes = plainThemes(reading);
-  if (total === 1)
-    return `With “${themes}” in mind, what feels useful to explore in your question?`;
-  return [
-    `Looking back, which part of “${themes}” feels useful to reflect on?`,
-    `Pause with “${themes}”. What, if anything, resonates with the present moment?`,
-    `As you consider a next step, what would you like to explore in “${themes}”?`,
-  ][index];
-}

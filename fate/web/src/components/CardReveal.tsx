@@ -16,7 +16,6 @@ export function CardReveal({ oracle }: { oracle: Oracle }) {
         {result.readings.map((r, i) => (
           <div className="reveal-slot" key={r.card.id}>
             <p className="position-label">
-              {String(i + 1).padStart(2, "0")} <span />
               {r.position.label}
             </p>
             <PhysicalCard still={reduced || paused}>

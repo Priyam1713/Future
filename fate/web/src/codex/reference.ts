@@ -3,7 +3,6 @@ import { savedStudy, futureEvidence } from "../futures/reference";
 import { isBookmark } from "../manuscript/contracts";
 import { bookmarkEvidence, bookmarkTitle } from "../manuscript/reference";
 import reference from "./reference-v1.json";
-import type { Card } from "../types";
 import type { Chapter, Snapshot } from "./records";
 import { snapshotGeometry, signAt } from "../astrology/contracts";
 import { sourcePlacements } from "../astrology/source";
@@ -16,19 +15,8 @@ import { signTitle, signEvidence } from "../signs/reference";
 import { isRitualSnapshot } from "../ritual/contracts";
 import { ritualEvidence, ritualTitle } from "../ritual/reference";
 import { narrativeRule } from "./narrative";
-interface SourceMeaning {
-  symbolic_focus: string;
-  text: string;
-  rule_id: string;
-  locator: string;
-  page_url: string;
-  flags: string[];
-}
-export interface ReferenceCard extends Card {
-  meanings: Record<"upright" | "reversed", SourceMeaning>;
-  additional_meanings: { text: string; locator: string } | null;
-}
-const cards = reference.tarot.cards as unknown as Record<string, ReferenceCard>;
+import { cardReference, spreadPositions } from "../experiences/tarotEdition";
+export { cardReference };
 export interface Evidence {
   label: string;
   quote: string;
@@ -38,9 +26,6 @@ export interface Evidence {
   locator: string;
   alternative: boolean;
   rules?: { id: string; edition: string; url: string; locator: string; exceptions: string[] }[];
-}
-export function cardReference(id: string) {
-  return cards[id];
 }
 export function chapterTitle(chapter: Chapter) {
   if (isFutureBookmark(chapter.snapshot))
@@ -58,7 +43,7 @@ export function chapterTitle(chapter: Chapter) {
   if (chapter.snapshot.oracle === 1)
     return `${signAt(chapter.snapshot.planets[0][0])} Sun · ${signAt(chapter.snapshot.planets[1][0])} Moon`;
   return chapter.snapshot.oracle === 16
-    ? chapter.snapshot.cards.map((p) => cards[p.id].name).join(" · ")
+    ? chapter.snapshot.cards.map((p) => cardReference(p.id).name).join(" · ")
     : `A ${chapter.snapshot.expression} / ${chapter.snapshot.personalYear} constellation`;
 }
 export function evidenceFor(snapshot: Snapshot): Evidence[] {
@@ -114,10 +99,10 @@ export function evidenceFor(snapshot: Snapshot): Evidence[] {
       );
   if (snapshot.oracle === 16)
     return snapshot.cards.map((pick, i) => {
-      const card = cards[pick.id],
+      const card = cardReference(pick.id),
         meaning = card.meanings[pick.orientation];
       return {
-        label: `${snapshot.spread === "one" ? "Focus" : ["What you carry", "Where you stand", "What to consider"][i]} · ${card.name} · ${pick.orientation}`,
+        label: `${snapshot.spread === "one" ? "Focus" : spreadPositions[i]} · ${card.name} · ${pick.orientation}`,
         quote: meaning.symbolic_focus,
         wording: meaning.text,
         sourceId: meaning.rule_id,

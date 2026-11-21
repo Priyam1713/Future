@@ -1,0 +1,55 @@
+{
+  "baseline": "6c2471a",
+  "edition": "fate-waite-connected-v1",
+  "sourceDirectCoverage": {
+    "deckIdentities": 78,
+    "cardOrientationSlots": 156,
+    "separateAdditionalAccounts": 56,
+    "uprightRankRecurrences": 4
+  },
+  "editorialCoverage": {
+    "spreads": ["one", "three"],
+    "threeCardRoles": ["What you carry", "Where you stand", "What to consider"],
+    "motifFamilies": 8,
+    "supportedContrastFamilies": ["accord and discord", "movement and stillness", "fruition and loss"],
+    "ambiguousOrConditionalMatches": "Preserved and left out of editorial comparisons.",
+    "deferred": ["Celtic consumer layout", "additional historical recurrence rows"]
+  },
+  "verification": {
+    "nativeUnit": 2522,
+    "workbenchUnit": 77,
+    "fateUnit": 92,
+    "codexNode": 36,
+    "fateBrowser": {
+      "passed": 124,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationSeconds": 650.12
+    },
+    "workbenchBrowser": 9,
+    "cliCases": 3515,
+    "independentVerifiers": 52,
+    "protectedNativeFilesVerified": 576,
+    "gates": [
+      "Production builds for FATE and Workbench",
+      "Frozen workbook inventory and exclusions",
+      "Frozen Codex reference edition",
+      "pip check",
+      "FATE and Workbench npm audits"
+    ]
+  },
+  "checks": [
+    "All orientations match the frozen native card and rule records.",
+    "Synthetic contrasts, rank repetitions, position order changes and ambiguous combinations retain their declared coverage.",
+    "Source exception handling includes the unchanged Four of Wands and the Two of Cups reversal gap fill.",
+    "Real native seeded draw, artwork, orientation, native export and exact replay.",
+    "Exact schema-2 prose and references, schema-1 compatibility, storage limits and corruption rejection.",
+    "Same card order, text and citations after Chrome restart with zero API requests.",
+    "Questions, seeds and provider data excluded from saved records.",
+    "Keyboard, reduced motion, WCAG A and AA axe scans, desktop/mobile and 200% browser zoom.",
+    "Desktop spread, mobile spread and reopened folio individually inspected."
+  ],
+  "scopeRecord": "fate/evidence/block20-tarot-foundation.md",
+  "media": "fate/evidence/block20-tarot-media.json"
+}
