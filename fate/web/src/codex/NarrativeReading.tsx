@@ -1,6 +1,6 @@
 import { useId, useState, type ReactNode } from "react";
 import { oracleLabel, ROOMS } from "../chambers/contracts";
-import { narrativeRule, narrativeScope, type Narrative } from "./narrative";
+import { coverageLabel, narrativeRule, narrativeScope, type Narrative } from "./narrative";
 
 export function NarrativeReading({ narrative, title, context, illustration }: {
   narrative: Narrative;
@@ -14,7 +14,7 @@ export function NarrativeReading({ narrative, title, context, illustration }: {
   const { sections, edition, technique } = narrative;
   const section = sections[active];
   const rules = [...new Set(section.passages.flatMap((passage) => passage.rules))];
-  const room = technique === 1 ? "western" : ROOMS[technique].slug;
+  const room = technique === 1 ? "western" : technique === 4 ? "numerology" : ROOMS[technique].slug;
   return (
     <div className={`narrative-folio chamber-folio chamber-${room}`} data-motion="still">
       <header className="folio-heading">
@@ -36,7 +36,7 @@ export function NarrativeReading({ narrative, title, context, illustration }: {
       </nav>
       <div className="folio-mobile-art">
         <details className="chamber-depth narrative-illustration">
-          <summary>Chart illustration</summary>
+          <summary>{technique === 4 ? "Number illustration" : "Chart illustration"}</summary>
           {illustration}
         </details>
       </div>
@@ -46,7 +46,7 @@ export function NarrativeReading({ narrative, title, context, illustration }: {
           <article key={i} className="narrative-passage">
             <h4>{passage.title}</h4>
             <p>{passage.text}</p>
-            <small>{passage.coverage === "direct" ? "Source-grounded passage" : "Compositional reading"}</small>
+            <small>{coverageLabel[passage.coverage]}</small>
           </article>
         ))}
         <details className="chamber-depth" key={section.id}>

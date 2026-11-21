@@ -3,16 +3,18 @@ import { NumberInputForm } from "../numerology/NumberInputForm";
 import { NumberReading } from "../numerology/NumberReading";
 import { useNumerology } from "../numerology/useNumerology";
 import { SequenceMarks } from "../components/ArtifactSurface";
+import { personalCode } from "../numerology/personalCode";
 import type { Oracle } from "../hooks/useOracle";
 export default function NumerologyScreen({ oracle }: { oracle: Oracle }) {
   const state = useNumerology(oracle);
   const { stage, result, step, heading } = state;
+  const narrative = result && personalCode(result);
   const seals = result
     ? [
         {
           value: result.expression.result,
           label: "Expression",
-          text: result.readings.find((r) => r.scope === "expression")!.text,
+          text: narrative?.sections[1].passages[0].text,
         },
         {
           value: result.cycles.year.result,
@@ -21,8 +23,8 @@ export default function NumerologyScreen({ oracle }: { oracle: Oracle }) {
         },
         {
           value: result.life_path.result,
-          label: "Birth-date pattern",
-          text: "Your birth-date pattern.",
+          label: "Life Path",
+          text: narrative?.sections[0].passages[0].text,
         },
       ]
     : [];
@@ -55,9 +57,7 @@ export default function NumerologyScreen({ oracle }: { oracle: Oracle }) {
             </>
           ) : (
             <>
-              A rhythm to
-              <br />
-              <em>reflect on.</em>
+              Your <em>personal code.</em>
             </>
           )}
         </h1>
@@ -66,10 +66,10 @@ export default function NumerologyScreen({ oracle }: { oracle: Oracle }) {
             ? "Trace the symbols held in a name and a date."
             : stage === "ritual"
               ? "Begin with the name, the year and the birth date."
-              : "Your name and your year, each read through its own source."}
+              : "Read the five core numbers, then explore how they sit alongside the calendar cycles."}
         </p>
       </div>
-      <div className="number-room-layout">
+      {stage !== "reading" && <div className="number-room-layout">
         <div className="number-artifact">
           <NumberDial
             reduced={oracle.reduced}
@@ -81,7 +81,7 @@ export default function NumerologyScreen({ oracle }: { oracle: Oracle }) {
           <p className="dial-invitation">
             {oracle.reduced || oracle.paused
               ? "A MOMENT OF STILLNESS"
-              : "TOUCH TO TURN · MOVE TO CATCH THE LIGHT"}
+              : "Turn the instrument to inspect it. The number stays fixed."}
           </p>
         </div>
         {stage === "input" ? (
@@ -92,7 +92,6 @@ export default function NumerologyScreen({ oracle }: { oracle: Oracle }) {
               <p className="eyebrow">Seal {step + 1} of 3</p>
               <h2>{seal.label}</h2>
               <p className="seal-theme">{seal.text}</p>
-              {step === 2 && <p className="scope-note">Calculated context</p>}
             </div>
             <SequenceMarks step={step} total={seals.length} />
             <button className="primary tactile" onClick={state.reveal}>
@@ -104,8 +103,8 @@ export default function NumerologyScreen({ oracle }: { oracle: Oracle }) {
             </button>
           </section>
         ) : null}
-      </div>
-      {stage === "reading" && <NumberReading state={state} oracle={oracle} />}
+      </div>}
+      {stage === "reading" && <NumberReading state={state} oracle={oracle} narrative={narrative} />}
     </div>
   );
 }

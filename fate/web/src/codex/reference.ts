@@ -156,7 +156,7 @@ export function chapterEvidence(chapter: Chapter): Evidence[] {
       sourceId: rules[0].id,
       url: rules[0].url,
       locator: rules[0].locator,
-      alternative: false,
+      alternative: passage.coverage === "calculated" || passage.coverage === "unsupported",
       rules,
     };
   }));

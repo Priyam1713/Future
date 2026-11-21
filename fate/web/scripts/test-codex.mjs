@@ -11,6 +11,7 @@ await build({
     "src/codex/reference.ts",
     "src/codex/compare.ts",
     "src/codex/projectNarrative.ts",
+    "src/numerology/personalCode.ts",
     "src/astrology/contracts.ts",
     "src/astrology/geometry.ts",
     "src/astrology/source.ts",
@@ -37,6 +38,7 @@ const compare = await import(
 const { baziNarrative } = await import(
   pathToFileURL(resolve("../../tmp/codex-tests/projectNarrative.mjs"))
 );
+const { personalCode } = await import(pathToFileURL(resolve("../../tmp/codex-tests/personalCode.mjs")));
 class Memory {
   data = new Map();
   writes = 0;
@@ -739,5 +741,77 @@ test("failed upgrade and narrative capacity overflow keep previous records recov
     }
   }
   assert(overflow);
+  assert.throws(() => r.parseDocument(" ".repeat(65537)), /safe reading limit/);
+});
+
+function numberFixture(value = 1, day = 1, year = 1) {
+  return {
+    profile: "decoz-component-reduction", name: { basis: "birth", original: "PRIVATE_NAME", tokens: ["PRIVATE_TOKENS"] },
+    birth: "2000-02-29", target: "2026-12-31",
+    life_path: { result: value }, expression: { result: value },
+    soul_urge: { result: value }, personality: { result: value },
+    birthday: { original_day: day, companion: { result: day === 29 ? 11 : 1 } },
+    cycles: { year: { result: year }, month: { result: 4 }, day: { result: 8 } },
+  };
+}
+
+test("Personal Code covers every declared direct value within its own section and keeps short cycles numerical", () => {
+  for (const value of [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33]) {
+    const result = numberFixture(value);
+    const narrative = personalCode(result);
+    const rows = narrative.sections.slice(0, 4);
+    assert.equal(new Set(rows.map((row) => row.passages[0].text)).size, 4);
+    for (const row of rows) {
+      assert.equal(row.passages[0].coverage, "direct");
+      assert.deepEqual(row.passages[0].rules, [`decoz.${row.id}.${value}`]);
+    }
+    assert(r.validChapter(r.chapterFor(result, r.numberSnapshot(result), narrative)));
+  }
+  for (let day = 1; day <= 31; day++) {
+    const result = numberFixture(5, day, (day - 1) % 9 + 1);
+    const narrative = personalCode(result);
+    assert.deepEqual(narrative.sections[4].passages[0].rules, [`decoz.birthday.${day}`]);
+    assert.equal(narrative.sections[4].passages[1].coverage, "calculated");
+    assert.deepEqual(narrative.sections[5].passages.map((p) => p.coverage), ["direct", "calculated", "calculated"]);
+    assert.deepEqual(narrative.sections[5].passages[0].rules, [`decoz.year.${result.cycles.year.result}`]);
+    assert(r.validChapter(r.chapterFor(result, r.numberSnapshot(result), narrative)));
+  }
+});
+
+test("Personal Code keeps missing letters and Minor names separate from birth-name delineations", () => {
+  const result = numberFixture(11, 29, 3);
+  result.soul_urge.result = null;
+  assert.equal(personalCode(result).sections[2].passages[0].coverage, "unsupported");
+  result.name.basis = "current";
+  const narrative = personalCode(result);
+  assert(narrative.sections.slice(1, 4).every((row) => row.passages[0].coverage === "unsupported"));
+  assert.equal(narrative.sections[6].passages.length, 1);
+  assert.match(narrative.sections[4].passages[1].text, /records 11/);
+  assert(r.validChapter(r.chapterFor(result, r.numberSnapshot(result), narrative)));
+});
+
+test("Personal Code reopens schema 2 with legacy numbers and rejects edition, rule and scope mismatches", () => {
+  const result = numberFixture(22, 24, 9);
+  const reading = r.chapterFor(result, r.numberSnapshot(result), personalCode(result));
+  const legacy = chapter(number);
+  const storage = new Memory();
+  r.saveChapter(storage, legacy);
+  const written = r.saveChapter(storage, reading);
+  assert.equal(written.schemaVersion, 2);
+  assert.deepEqual(r.readDocument(storage).chapters, [legacy, reading]);
+  assert.equal(ref.exportChapters([legacy]).schemaVersion, 1);
+  const exported = ref.exportChapters(written.chapters);
+  assert.deepEqual(exported.chapters[1].narrative, reading.narrative);
+  assert(!JSON.stringify(exported).match(/PRIVATE_|2000-02-29|2026-12-31|tokens/));
+  for (const mutate of [
+    (c) => { c.narrative.edition = "unavailable"; },
+    (c) => { c.narrative.sections[0].passages[0].rules = ["missing"]; },
+    (c) => { c.narrative.sections[0].passages = c.narrative.sections[1].passages; },
+    (c) => { c.snapshot.lifePath = 7; },
+  ]) {
+    const invalid = structuredClone(reading);
+    mutate(invalid);
+    assert(!r.validChapter(invalid));
+  }
   assert.throws(() => r.parseDocument(" ".repeat(65537)), /safe reading limit/);
 });

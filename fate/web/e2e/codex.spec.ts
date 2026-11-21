@@ -163,6 +163,7 @@ test("explicit native saves exclude private inputs and Gemini, survive refresh, 
   ])
     expect(raw).not.toContain(secret);
   const document = JSON.parse(raw);
+  expect(document.schemaVersion).toBe(2);
   expect(Date.parse(document.chapters[0].savedAt)).toBeGreaterThanOrEqual(
     saveStarted,
   );
@@ -181,6 +182,8 @@ test("explicit native saves exclude private inputs and Gemini, survive refresh, 
     lifePath: nativeNumber.life_path.result,
   });
   await page.getByRole("button", { name: "Open in My Fate" }).click();
+  const readSection = () => page.locator(".codex-current").getByRole("combobox", { name: "Reading section", exact: true });
+  await readSection().selectOption({ label: "Expression" });
   await expect(page.locator(".codex-current")).toContainText(
     nativeNumber.readings[0].text,
   );
@@ -194,6 +197,14 @@ test("explicit native saves exclude private inputs and Gemini, survive refresh, 
     nativeTarot.readings.map((row: any) => row.card.name).join(" · "),
   );
   await page.getByRole("button", { name: "Next chapter", exact: true }).click();
+  const narrative = document.chapters[1].narrative;
+  expect(narrative.edition).toBe("fate-decoz-personal-code-v1");
+  for (const [index, section] of narrative.sections.entries()) {
+    await readSection().selectOption(String(index));
+    await expect(page.locator(".codex-current .narrative-passage > p"))
+      .toHaveText(section.passages.map((passage: any) => passage.text));
+  }
+  await readSection().selectOption({ label: "Expression" });
   await expect(page.locator(".codex-current")).toContainText(
     nativeNumber.readings[0].text,
   );
@@ -203,9 +214,10 @@ test("explicit native saves exclude private inputs and Gemini, survive refresh, 
     readFileSync((await (await downloading).path())!, "utf8"),
   );
   expect(exported.chapters).toHaveLength(2);
-  expect(exported.chapters[1].source_readings[0].quote).toBe(
-    nativeNumber.readings[0].text,
-  );
+  expect(exported.chapters[1].narrative).toEqual(narrative);
+  expect(exported.chapters[1].source_readings).toEqual(expect.arrayContaining([
+    expect.objectContaining({ quote: nativeNumber.readings[0].text }),
+  ]));
   for (const secret of [
     "PRIVATE_QUESTION",
     "PRIVATE_GEMINI",

@@ -95,7 +95,8 @@ export function ChapterContent({
     const s = chapter.snapshot;
     const context = s.oracle === 1 && s.profile === "modern-tropical-v1"
       ? `Tropical · ${s.houses} houses · Ascendant ${degree(s.angles[0])}`
-      : s.oracle === 3 ? `Clock convention · ${s.profile}` : "Sidereal · Rashi and Navamsa";
+      : s.oracle === 3 ? `Clock convention · ${s.profile}`
+      : s.oracle === 4 ? "Decoz · Personal Code" : "Sidereal · Rashi and Navamsa";
     return <NarrativeReading key={chapter.id} narrative={chapter.narrative}
       title={chapterTitle(chapter)} context={context}
       illustration={<ChapterIllustration chapter={chapter} />} />;

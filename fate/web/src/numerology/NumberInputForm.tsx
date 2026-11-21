@@ -12,18 +12,13 @@ export function NumberInputForm({ state }: { state: Numerology }) {
       }}
       autoComplete="off"
     >
-      <p className="eyebrow">YOUR COORDINATES</p>
-      <h2>
-        Every pattern
-        <br />
-        begins <em>somewhere.</em>
-      </h2>
+      <h2>Name and birth date</h2>
       <label>
         Your full name
         <input
           required
           maxLength={160}
-          pattern="[A-Za-z]+(?:[-'][A-Za-z]+)*(?: +[A-Za-z]+(?:[-'][A-Za-z]+)*)*"
+          pattern={String.raw`[A-Za-z]+(?:[\-'][A-Za-z]+)*(?: +[A-Za-z]+(?:[\-'][A-Za-z]+)*)*`}
           value={input.name}
           onChange={(e) => change("name", e.target.value)}
           aria-describedby="name-help"
@@ -58,7 +53,7 @@ export function NumberInputForm({ state }: { state: Numerology }) {
       </fieldset>
       {input.basis === "current" && (
         <p className="field-note">
-          A current-name overlay, kept separate from birth-name results.
+            A current-name overlay. Direct name interpretations use the birth-name basis.
         </p>
       )}
       {ys.length > 0 && (
@@ -77,13 +72,13 @@ export function NumberInputForm({ state }: { state: Numerology }) {
               )}
               <select
                 required
-                value={input.y_roles[i] ?? ""}
+                value={input.y_roles[i] === "_" ? "" : (input.y_roles[i] ?? "")}
                 onChange={(e) => {
                   const roles = Array.from(
                     { length: ys.length },
                     (_, j) => input.y_roles[j] ?? "_",
                   );
-                  roles[i] = e.target.value;
+                  roles[i] = e.target.value || "_";
                   change("y_roles", roles.join(""));
                 }}
               >

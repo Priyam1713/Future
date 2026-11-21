@@ -240,6 +240,15 @@ function editionFor(snapshot: Snapshot): Chapter["reference"] {
   if (snapshot.oracle === 2 && !("sub" in snapshot)) return JYOTISH_GEOMETRY_REFERENCE;
   return isChamberSnapshot(snapshot) ? CHAMBER_REFERENCE : REFERENCE;
 }
+function narrativeMatches(value: unknown, snapshot: Snapshot): boolean {
+  if (snapshot.profile === "turning-sky-v1" || !validNarrative(value, snapshot.oracle)) return false;
+  if (snapshot.oracle !== 4) return true;
+  const [life, expression, , , , cycles] = value.sections;
+  return life.passages[0].rules[0] === `decoz.life-path.${snapshot.lifePath}` &&
+    cycles.passages[0].rules[0] === `decoz.year.${snapshot.personalYear}` &&
+    (expression.passages[0].coverage === "unsupported" ||
+      expression.passages[0].rules[0] === `decoz.expression.${snapshot.expression}`);
+}
 export function validChapter(c: unknown): c is Chapter {
   if (!object(c)) return false;
   const hasNarrative = Object.hasOwn(c, "narrative");
@@ -255,8 +264,7 @@ export function validChapter(c: unknown): c is Chapter {
     /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/.test(c.savedAt) &&
     Number.isFinite(Date.parse(c.savedAt)) &&
     c.reference === editionFor(snapshot as Snapshot) &&
-    (!hasNarrative || (snapshot.profile !== "turning-sky-v1" &&
-      validNarrative(c.narrative, Number(snapshot.oracle))))
+    (!hasNarrative || narrativeMatches(c.narrative, snapshot as Snapshot))
   );
 }
 export function parseDocument(raw: string | null): CodexDocument {

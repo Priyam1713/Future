@@ -1,0 +1,65 @@
+{
+  "baseline": "93e5601",
+  "edition": "fate-decoz-personal-code-v1",
+  "scope": "Deterministic consumer interpretation over the frozen Decoz calculation and native export.",
+  "directCoverage": {
+    "lifePath": 12,
+    "birthNameExpression": 12,
+    "birthNameSoulUrge": 12,
+    "birthNamePersonality": 12,
+    "originalBirthday": 31,
+    "personalYear": 9,
+    "birthdayCompanion": 0,
+    "personalMonth": 0,
+    "personalDay": 0,
+    "minorNameOverlays": 0
+  },
+  "verification": {
+    "fullBlock18BaselineBrowser": {
+      "passed": 123,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationSeconds": 688.7
+    },
+    "fullBlock19ReleaseBrowser": {
+      "passed": 124,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationSeconds": 651.85
+    },
+    "workbenchBrowser": {
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationSeconds": 122.15
+    },
+    "nativeUnit": 2522,
+    "workbenchUnit": 77,
+    "fateUnit": 92,
+    "codexNode": 33,
+    "cliCases": 3515,
+    "independentVerifiers": 52,
+    "protectedNativeFilesVerified": 576,
+    "gates": [
+      "FATE production build",
+      "Workbench production build",
+      "frozen inventory",
+      "pip check",
+      "FATE npm audit",
+      "Workbench npm audit"
+    ]
+  },
+  "checks": [
+    "Exact native JSON download and unchanged engine",
+    "January rollover, leap day, separate Y roles and name-part conventions",
+    "Legacy and schema-2 save, reload, export, rejection and capacity",
+    "Persistent profile restart, exact saved passage order and no POST on reopen",
+    "Keyboard, reduced motion, emulated mobile and desktop, and 200% browser zoom"
+  ],
+  "savedSampleCharacters": 2967,
+  "media": "fate/evidence/block19-personal-code-media.json",
+  "scopeRecord": "fate/evidence/block19-numerology-foundation.md"
+}

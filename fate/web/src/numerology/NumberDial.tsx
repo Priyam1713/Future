@@ -94,11 +94,6 @@ export function NumberDial({
           <strong>{value ?? "∴"}</strong>
           <span>{label}</span>
         </div>
-        <div className="dial-sparks">
-          {Array.from({ length: 12 }, (_, i) => (
-            <i key={i} style={{ "--n": i } as CSSProperties} />
-          ))}
-        </div>
       </div>
     </>
   );

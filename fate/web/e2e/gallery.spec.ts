@@ -22,8 +22,8 @@ async function fill(page: Page) {
   await page.getByLabel("Date of birth", { exact: true }).fill(input.birth);
   await page.getByLabel("Date to explore").fill(input.target);
 }
-async function cast(page: Page) {
-  await fill(page);
+async function cast(page: Page, useSample = true) {
+  if (useSample) await fill(page);
   const response = page.waitForResponse((r) =>
     r.url().endsWith("/api/numerology"),
   );
@@ -136,15 +136,19 @@ test("complete mobile native Numerology ritual, exact export, session continuity
   await page.getByRole("button", { name: "Reveal the next seal" }).click();
   await expect(page.locator(".dial-core strong")).toHaveText("1");
   await page.getByRole("button", { name: "Read my constellation" }).click();
+  await expect(page.locator(".number-dial")).toHaveCount(0);
+  await expect(page.locator(".number-themes")).toContainText("Life Path 1");
+  await page.getByRole("navigation", { name: "Personal Code chapters" }).getByRole("button", { name: /Expression/ }).press("Enter");
   await expect(page.locator(".number-themes")).toContainText(
     result.readings[0].text.replace(/\.$/, ""),
   );
+  await page.getByRole("navigation", { name: "Personal Code chapters" }).getByRole("button", { name: /Personal cycles/ }).click();
   await expect(page.locator(".number-themes")).toContainText(
     result.readings[1].text.replace(/\.$/, ""),
   );
   await page.locator(".number-calculations>summary").click();
   await expect(page.locator(".number-calculations")).toContainText(
-    "does not supply direct number-specific interpretations",
+    "Birthday companion",
   );
   await accessible(page);
   await geometry(page);
@@ -217,6 +221,9 @@ test("Numerology preserves input on failure, guards double submit, requires ever
   ).toBe(false);
   await page.getByRole("combobox").nth(0).selectOption("v");
   await page.getByRole("combobox").nth(1).selectOption("c");
+  await page.getByRole("combobox").nth(0).selectOption("");
+  await expect(page.getByRole("combobox").nth(1)).toHaveValue("c");
+  await page.getByRole("combobox").nth(0).selectOption("v");
   let attempts = 0;
   const requests: unknown[] = [];
   await page.route("**/api/numerology", async (route) => {
@@ -248,6 +255,8 @@ test("Numerology preserves input on failure, guards double submit, requires ever
   expect(attempts).toBe(2);
   expect(requests[0]).toEqual(requests[1]);
   await page.getByRole("button", { name: "Go straight to my reading" }).click();
+  await page.getByRole("navigation", { name: "Personal Code chapters" }).getByRole("button", { name: /Soul Urge/ }).click();
+  await expect(page.locator(".number-themes")).toContainText("Interpretation unavailable");
   await page.getByRole("button", { name: "Explore another name" }).click();
   await expect(page.getByLabel("Your full name")).toHaveValue("Amy Young");
 });
@@ -391,4 +400,33 @@ test("Numerology desktop composition, responsive geometry and separately consent
   await page.setViewportSize({ width: 390, height: 844 });
   await page.addStyleTag({ content: "body{font-size:200%}" });
   await geometry(page);
+});
+
+test("Personal Code updates through leap day and the calendar-year boundary with native cycle values", async ({ page }) => {
+  await enter(page);
+  await fill(page);
+  await page.getByLabel("Your full name").fill("Éloise");
+  expect(await page.getByLabel("Your full name").evaluate((field: HTMLInputElement) => field.validity.patternMismatch)).toBe(true);
+  await page.getByLabel("Your full name").fill("A-J O'Neil");
+  await page.getByLabel("Date of birth").fill("2000-02-29");
+  await cast(page, false);
+  await page.getByRole("button", { name: "Go straight to my reading" }).click();
+  await page.getByRole("navigation", { name: "Personal Code chapters" })
+    .getByRole("button", { name: /Personal cycles/ }).press("Enter");
+  const panel = page.locator(".personal-code-section");
+  const provider: string[] = [];
+  page.on("request", (request) => { if (request.url().includes("/explain")) provider.push(request.url()); });
+  for (const [date, next] of [["2024-02-29", "2025-01-01"], ["2026-12-31", "2027-01-01"], ["2027-01-01", "2028-01-01"]]) {
+    const native = page.waitForResponse((r) => r.url().endsWith("/api/numerology"));
+    await panel.getByLabel("Explore a different date").fill(date);
+    await panel.getByRole("button", { name: "Update cycles" }).click();
+    const result = (await (await native).json()).result;
+    expect(result.target).toBe(date);
+    await expect(panel).toContainText(next);
+    for (const [key, label] of [["year", "Year"], ["month", "Month"], ["day", "Day"]])
+      await expect(panel.getByRole("heading", { name: `Personal ${label} ${result.cycles[key].result}` })).toBeVisible();
+    await expect(panel.getByText("Calculation only")).toHaveCount(2);
+  }
+  expect(provider).toEqual([]);
+  expect(await page.evaluate(() => localStorage.length)).toBe(0);
 });

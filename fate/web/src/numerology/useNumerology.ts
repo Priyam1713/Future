@@ -48,7 +48,7 @@ export function useNumerology(oracle: Oracle) {
       ...(key === "name" ? { y_roles: "" } : {}),
     }));
   }
-  async function calculate() {
+  async function calculate(target?: string) {
     if (inflight.current) return;
     inflight.current = true;
     setBusy(true);
@@ -56,7 +56,7 @@ export function useNumerology(oracle: Oracle) {
     const controller = new AbortController();
     abort.current = controller;
     const timeout = setTimeout(() => controller.abort(), 20000);
-    const q = { ...input, name: input.name.trim() };
+    const q = target === undefined ? input : { ...input, target };
     try {
       const response = await api<NumberEnvelope>(
         EXPERIENCES[4].endpoint,
@@ -65,8 +65,13 @@ export function useNumerology(oracle: Oracle) {
       );
       request.current = q;
       setEnvelope(response);
-      setStep(0);
-      setStage("ritual");
+      if (target === undefined) {
+        setStep(0);
+        setStage("ritual");
+      } else {
+        setInput(q);
+        clearCommentary();
+      }
       oracle.sound.cue("select");
     } catch (e) {
       if (!controller.signal.aborted)
@@ -96,12 +101,16 @@ export function useNumerology(oracle: Oracle) {
     oracle.markExplored(4);
     oracle.sound.cue("reveal");
   }
-  function fresh() {
+  function clearCommentary() {
     aiAbort.current?.abort();
+    aiAbort.current = null;
     setAi(null);
     setAiBusy(false);
     setAiError("");
     setConsent(false);
+  }
+  function fresh() {
+    clearCommentary();
     setEnvelope(null);
     setStage("input");
   }
@@ -113,18 +122,18 @@ export function useNumerology(oracle: Oracle) {
     setAiError("");
     const timeout = setTimeout(() => controller.abort(), 130000);
     try {
-      setAi(
-        await api<NumberCommentary>(
-          "/api/numerology/explain",
-          {
-            draw: request.current,
-            receipt: envelope.receipt,
-            cloud_consent: true,
-          },
-          controller.signal,
-        ),
+      const commentary = await api<NumberCommentary>(
+        "/api/numerology/explain",
+        {
+          draw: request.current,
+          receipt: envelope.receipt,
+          cloud_consent: true,
+        },
+        controller.signal,
       );
+      if (aiAbort.current === controller) setAi(commentary);
     } catch (e) {
+      if (aiAbort.current !== controller) return;
       setAiError(
         e instanceof Error && e.name !== "AbortError"
           ? e.message
@@ -132,7 +141,7 @@ export function useNumerology(oracle: Oracle) {
       );
     } finally {
       clearTimeout(timeout);
-      setAiBusy(false);
+      if (aiAbort.current === controller) setAiBusy(false);
     }
   }
   function download() {
