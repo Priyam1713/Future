@@ -352,3 +352,29 @@ test("failed calculation keeps inputs, duplicate clicks produce one native reque
   ).not.toContain("PRIVATE_GEMINI_SENTINEL");
   expect(explains).toBe(1);
 });
+
+test("natal chapters and the instrument connect only supported meanings to native contacts", async ({page}) => {
+  await reading(page);
+  const story = page.getByRole("region", {name: "Natal reading"});
+  await expect(story.getByRole("heading", {name: "Purpose and presence"})).toBeVisible();
+  await story.getByRole("button", {name: "Feelings", exact: true}).press("Enter");
+  await expect(story).toContainText("Warmth and reserve");
+  await story.getByRole("button", {name: "Themes", exact: true}).press("Enter");
+  await expect(story).toContainText("Room to grow, room for limits");
+  await expect(story).toContainText("Purpose and need pull differently");
+  await story.getByText("Sources and scope", {exact: true}).click();
+  await expect(story).toContainText("fate.natal.v1.aspect.sun.jupiter.0");
+  await story.getByRole("link", {name: "Explore the chart"}).press("Enter");
+  await expect(page.getByRole("heading", {name: "Explore your chart"})).toBeFocused();
+  const inspector = page.getByRole("region", {name: "Selected chart detail"});
+  await inspector.getByLabel("Choose a house").selectOption("10");
+  await expect(inspector).toContainText("A voice in public work");
+  await inspector.getByLabel("Choose an aspect").selectOption("aspect:Sun-Moon:90");
+  await expect(inspector).toContainText("Purpose and need pull differently");
+  await inspector.getByLabel("Choose an aspect").selectOption("aspect:Neptune-Pluto:60");
+  await expect(inspector).toContainText("A direct reading for this pair and angle is outside this edition");
+  await inspector.getByRole("button", {name: "Ascendant", exact: true}).press("Enter");
+  await expect(inspector).toContainText("Mars in Taurus");
+  await expect(page.locator(".western-chart-layout [data-bodies=Sun-Moon]")).toHaveCount(1);
+  expect(await page.evaluate(() => Object.keys(localStorage))).toEqual([]);
+});

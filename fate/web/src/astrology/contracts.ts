@@ -128,8 +128,25 @@ export interface WesternEnvelope {
   transit_origin?: import("../turning/contracts").TransitOrigin;
   oracle_id: 1;
   result: WesternResult;
+  natal_reading: NatalReading;
   receipt: string;
 }
+export interface NatalPassage {
+  title: string;
+  body: string;
+  coverage: "direct" | "editorial";
+  rule_ids: string[];
+}
+export interface NatalReading {
+  profile: string;
+  tradition: string;
+  chapters: { id: string; title: string; passages: NatalPassage[] }[];
+  sources: Record<string, Component & { title: string; edition: string }>;
+  focuses: Record<string, { passages: NatalPassage[]; connections: string[] }>;
+  patterns: { kind: string; apex: string; contacts: string[] }[];
+  chart_ruler?: { body: string; sign: string; house: number; rule_ids: string[] };
+}
+export const aspectKey = (a: Aspect) => `aspect:${a.bodies.join("-")}:${a.angle}`;
 export interface WesternCommentary {
   themes: { id: string; reflection: string }[];
   provenance: { provider: string; model: string };

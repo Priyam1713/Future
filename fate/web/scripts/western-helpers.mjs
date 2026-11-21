@@ -1,5 +1,5 @@
-export async function fillBirth(page) {
-  await page.goto("http://127.0.0.1:8010/#western");
+export async function fillBirth(page, origin = "http://127.0.0.1:8010") {
+  await page.goto(`${origin}/#western`);
   await page.getByLabel("Date of birth", { exact: true }).fill("1990-07-15");
   await page.getByLabel("Recorded birth time").fill("14:30:00");
   await page.getByLabel("Birth city", { exact: true }).fill("London GB");

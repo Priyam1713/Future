@@ -4,7 +4,7 @@ import type { Oracle } from "../hooks/useOracle";
 import { useWestern } from "../astrology/useWestern";
 import { BirthForm } from "../astrology/BirthForm";
 import { BirthChart } from "../astrology/BirthChart";
-import { ChartReading, PlacementFocus } from "../astrology/ChartReading";
+import { ChartCalculations, ChartReading, PlacementFocus } from "../astrology/ChartReading";
 import { degree, signAt } from "../astrology/contracts";
 import { SaveChapter } from "../codex/SaveChapter";
 import { ArtifactSurface, SequenceMarks } from "../components/ArtifactSurface";
@@ -22,6 +22,11 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
   const [turning, setTurning] = useState(false);
   const s = useWestern(oracle),
     r = s.result;
+  const reading = s.envelope?.natal_reading;
+  const select = (key: string) => {
+    s.setSelected(key);
+    oracle.sound.cue("select");
+  };
   const names = ["Sun", "Moon", "Ascendant"];
   const name = names[s.step],
     lon = r
@@ -84,17 +89,15 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
             </>
           ) : (
             <>
-              A constellation
-              <br />
-              <em>of perspectives.</em>
+              Your <em>natal reading.</em>
             </>
           )}
         </h1>
-        <p>
+        {s.stage !== "reading" && <p>
           {s.stage === "input"
             ? "Trace the real celestial geometry of your arrival."
             : "Explore the Sun, Moon and Ascendant before looking closer."}
-        </p>
+        </p>}
       </header>
       {s.stage === "input" ? (
         <div className="western-entry">
@@ -120,6 +123,8 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
       ) : (
         r && (
           <>
+            {s.stage === "reading" && reading && <ChartReading result={r} reading={reading} />}
+            {s.stage === "reading" && <h2 className="natal-instrument-title" id="western-instrument" tabIndex={-1}>Explore your chart</h2>}
             <div className="western-chart-layout">
               <div className="western-instrument">
                 <ArtifactSurface
@@ -131,10 +136,8 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
                     reduced={oracle.reduced}
                     paused={oracle.paused}
                     selected={s.selected}
-                    onSelect={(n) => {
-                      s.setSelected(n);
-                      oracle.sound.cue("select");
-                    }}
+                    onSelect={select}
+                    exploreDetails={s.stage === "reading"}
                   />
                 </ArtifactSurface>
                 <p className="chart-caption">
@@ -170,12 +173,12 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
                   </button>
                 </section>
               ) : (
-                <PlacementFocus result={r} selected={s.selected} />
+                reading && <PlacementFocus result={r} selected={s.selected} reading={reading} onSelect={select} />
               )}
             </div>
             {s.stage === "reading" && (
               <>
-                <ChartReading result={r} />
+                {reading && <ChartCalculations result={r} reading={reading} />}
                 <section className="turning-door">
                   <div>
                     <p className="eyebrow">

@@ -1719,3 +1719,9 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Consolidated Palmistry into Capture, Examine and Reading, with browser-local camera and file input, skip and confirmation controls, anatomical guides and a separate illustrated archive.
 - Added an offline scorer for independently labeled photos and negative controls. Recognition remains unavailable to consumers pending held-out phone-photo validation.
 - Passed 2,709 unit and boundary tests, 120 FATE and nine Workbench browser tests, 3,515 CLI cases and 52 independent verifiers. Browser accessibility, camera privacy, 200% zoom and captures are indexed in `fate/evidence/block14-acceptance.json`.
+
+## 2026-11-21 — FATE Block 15
+
+- Added the versioned Western natal reading with direct source records, bounded editorial connections, and planet, house and aspect exploration. The native chart result, signed transit basis and private Codex schema are preserved.
+- Defined remaining limits for direct interpretation, chart-ruler synthesis, patterns and timing. The optional Turning Sky keeps its transit sources distinct from natal symbolism.
+- Passed 2,712 unit and boundary tests, 121 FATE and nine Workbench browser tests, 3,515 CLI cases and 52 independent verifiers. Native replay, browser zoom and six viewport captures are indexed in `fate/evidence/block15-acceptance.json`.

@@ -1,208 +1,183 @@
-import type { Component, WesternResult } from "./contracts";
-import { BODY_NAMES, degree, signAt } from "./contracts";
-import { planetComponent, signComponent } from "./source";
+import { useState } from "react";
+import type { Component, NatalPassage, NatalReading, WesternResult } from "./contracts";
+import { aspectKey, BODY_NAMES, degree, signAt } from "./contracts";
 import { ASPECT_NAMES } from "./BirthChart";
-import reference from "./reference-v1.json";
+import { houseComponent } from "./source";
+
 export function SourceDepth({ parts }: { parts: Component[] }) {
+  if (!parts.length) return null;
   return (
     <details className="chart-source-depth">
-      <summary>
-        Source language & scope <span aria-hidden="true">＋</span>
-      </summary>
+      <summary>Sources and scope</summary>
       {parts.map((r) => (
         <blockquote key={r.id}>
           <p>{r.text}</p>
-          <cite>
-            <a href={r.url} target="_blank" rel="noreferrer">
-              {r.author} · {r.locator}
-            </a>
-          </cite>
-          <small>
-            {r.id} · v{r.version}
-          </small>
-          {r.exceptions?.length > 0 && <p>{r.exceptions.join(" ")}</p>}
+          <cite><a href={r.url} target="_blank" rel="noreferrer">{r.author} · {r.locator}</a></cite>
+          <small>{r.id} · v{r.version} · {r.tradition}</small>
+          {r.exceptions.map((exception) => <p key={exception}>{exception}</p>)}
         </blockquote>
       ))}
-      <p>
-        Separate symbolic components, not a documented combined placement
-        reading or an established fact about you.
-      </p>
     </details>
   );
 }
-export function CoreLights({ result }: { result: WesternResult }) {
-  return (
-    <div className="chart-core-lights">
-      {["Sun", "Moon", "Ascendant"].map((n, i) => {
-        const lon =
-            i === 2 ? result.angles.ascendant : result.planets[n].longitude,
-          row = result.reading.placements.find((r) => r.planet === n),
-          body = row && planetComponent(row),
-          sign = reference.records.find(
-            (r) => r.kind === "sign" && r.key === signAt(lon),
-          );
-        return (
-          <article key={n}>
-            <span className="eyebrow">
-              {
-                [
-                  "YOUR CENTRAL LIGHT",
-                  "YOUR INNER RHYTHM",
-                  "THE EASTERN HORIZON",
-                ][i]
-              }
-            </span>
-            <h3>
-              {n} <em>in {signAt(lon)}</em>
-            </h3>
-            <p className="light-coordinate">
-              {degree(lon)}
-              {i < 2 ? ` · House ${result.planets[n].house}` : ""}
-            </p>
-            {body && <p>{body.text}.</p>}
-            <p className="light-sign-theme">
-              <span>{signAt(lon)}’s source theme</span>
-              {sign?.text}.
-            </p>
-            {i === 2 && (
-              <p className="scope-note">
-                The calculated rising degree. The sign theme above is separate;
-                no direct Ascendant-personality interpretation is supplied.
-              </p>
-            )}
-            <SourceDepth
-              parts={[
-                ...(body ? [body] : []),
-                ...(sign ? [sign as Component] : []),
-              ]}
-            />
-          </article>
-        );
-      })}
-    </div>
-  );
-}
-export function PlacementFocus({
-  result,
-  selected,
-}: {
-  result: WesternResult;
-  selected: string;
+
+function Passages({ passages, reading, additional = [] }: {
+  passages: NatalPassage[]; reading: NatalReading; additional?: Component[];
 }) {
-  const row = result.reading.placements.find((r) => r.planet === selected);
-  if (!row)
-    return (
-      <section className="placement-focus">
-        <span className="eyebrow">EASTERN HORIZON</span>
-        <h2>
-          Ascendant <em>in {signAt(result.angles.ascendant)}</em>
-        </h2>
-        <p>{degree(result.angles.ascendant)}</p>
-        <p>
-          The intersection of the eastern horizon and the ecliptic at the
-          entered time and place. House 1 begins at the start of its sign in
-          whole-sign charts, rather than at this exact degree.
-        </p>
+  const ids = [...new Set(passages.flatMap((passage) => passage.rule_ids))];
+  return <>
+    {passages.map((passage) => (
+      <section className="natal-passage" key={passage.title}>
+        <h3>{passage.title}</h3>
+        <p>{passage.body}</p>
       </section>
-    );
-  const p = result.planets[selected],
-    body = planetComponent(row),
-    sign = signComponent(row);
+    ))}
+    {passages.some((passage) => passage.coverage === "editorial") && (
+      <p className="scope-note">This chapter includes an editorial reading of the contacts together.</p>
+    )}
+    <SourceDepth parts={[...ids.map((id) => reading.sources[id]), ...additional]} />
+  </>;
+}
+
+const shortTitles: Record<string, string> = {
+  identity: "Identity", emotion: "Feelings", communication: "Thought",
+  work: "Work", themes: "Themes", aspects: "Other aspects",
+};
+
+export function ChartReading({ result, reading }: { result: WesternResult; reading: NatalReading }) {
+  const [active, setActive] = useState("identity");
+  const chapter = reading.chapters.find((item) => item.id === active) ?? reading.chapters[0];
   return (
-    <section className="placement-focus" aria-live="polite">
-      <p className="eyebrow">A CALCULATED PLACEMENT / TOUCH TO EXPLORE</p>
-      <h2>
-        {selected} <em>in {p.sign}</em>
-      </h2>
-      <p className="placement-coordinate">
-        {degree(p.longitude)} <span>·</span> House {p.house}{" "}
-        {p.retrograde ? "· Retrograde" : ""}
-      </p>
-      {body && <p className="placement-meaning">{body.text}.</p>}
-      <p>{sign?.text}.</p>
-      <p className="scope-note">
-        {body
-          ? "Planet and sign themes are separate source components."
-          : "A sign theme is available; this edition supplies no planet-specific symbolic meaning for " +
-            selected +
-            "."}{" "}
-        {p.retrograde
-          ? "Retrograde is apparent astronomical motion, not an extra personality claim."
-          : ""}
-      </p>
-      <SourceDepth parts={row.components} />
+    <section className="chart-reading natal-story" aria-label="Natal reading">
+      <header className="natal-intro">
+        <div className="chart-core-lights natal-coordinates">
+          {["Sun", "Moon", "Ascendant"].map((name) => (
+            <article key={name}>
+              <span className="eyebrow">{name}</span>
+              <strong>{signAt(name === "Ascendant" ? result.angles.ascendant : result.planets[name].longitude)}</strong>
+            </article>
+          ))}
+        </div>
+        <p className="scope-note">A symbolic reading of your calculated birth chart.</p>
+      </header>
+      {chapter && <>
+        <nav className="natal-chapters" aria-label="Reading chapters">
+          {reading.chapters.map((item) => (
+            <button key={item.id} className="text-button" aria-pressed={chapter.id === item.id}
+              onClick={() => setActive(item.id)}>{shortTitles[item.id]}</button>
+          ))}
+        </nav>
+        <div className="natal-chapter" aria-live="polite">
+          <h2>{chapter.title}</h2>
+          <Passages passages={chapter.passages} reading={reading} />
+        </div>
+      </>}
+      <a className="text-button natal-chart-link" href="#western-instrument"
+        onClick={(event) => {
+          event.preventDefault();
+          const heading = document.getElementById("western-instrument");
+          heading?.scrollIntoView({block: "start"});
+          heading?.focus({preventScroll: true});
+        }}>Explore the chart ↓</a>
     </section>
   );
 }
-export function ChartReading({ result }: { result: WesternResult }) {
-  const notable = [...result.aspects].sort((a, b) => a.orb - b.orb).slice(0, 3);
+
+const aspectLabel = (aspect: WesternResult["aspects"][number]) =>
+  `${aspect.bodies[0]} ${ASPECT_NAMES[aspect.angle].toLowerCase()} ${aspect.bodies[1]}`;
+
+export function PlacementFocus({ result, selected, reading, onSelect }: {
+  result: WesternResult;
+  selected: string;
+  reading: NatalReading;
+  onSelect: (key: string) => void;
+}) {
+  const planet = result.planets[selected];
+  const house = selected.startsWith("house:") ? Number(selected.slice(6)) : undefined;
+  const occupants = house ? BODY_NAMES.filter((name) => result.planets[name].house === house) : [];
+  const aspect = result.aspects.find((item) => aspectKey(item) === selected);
+  const focus = reading.focuses[selected];
+  const base = result.reading.placements.find((item) => item.planet === selected);
+  const houseSource = house ? houseComponent(house) : undefined;
+  const references = [
+    ...(base?.components ?? []),
+    ...(houseSource ? [houseSource] : []),
+    ...(selected === "Ascendant" ? reading.chart_ruler?.rule_ids.map((id) => reading.sources[id]) ?? [] : []),
+  ];
+  const heading = planet ? `${selected} in ${planet.sign}`
+    : aspect ? aspectLabel(aspect) : house ? `House ${house}` : `Ascendant in ${signAt(result.angles.ascendant)}`;
   return (
-    <div className="chart-reading">
-      <header className="chart-reading-heading">
-        <p className="eyebrow">THREE LIGHTS / ONE SKY</p>
-        <h2>
-          The Sun, Moon and <em>Ascendant.</em>
-        </h2>
-        <p>
-          Your three calculated placements, with their separate source themes
-          where available.
-        </p>
-      </header>
-      <CoreLights result={result} />
-      <section className="notable-aspects">
-        <p className="eyebrow">LINES ACROSS YOUR SKY</p>
-        <h2>
-          Closer to <em>an exact angle.</em>
-        </h2>
-        <p>
-          These are the three major aspects nearest their exact angles, ordered
-          by orb. This selects geometry, not personal importance.
-        </p>
-        {notable.length ? (
-          notable.map((a, i) => {
-            const r = result.reading.aspects.find(
-              (r) => r.bodies.join() === a.bodies.join() && r.angle === a.angle,
-            );
-            return (
-              <article key={i}>
-                <span
-                  className={`aspect-sigil aspect-${a.angle}`}
-                  aria-hidden="true"
-                >
-                  {
-                    (
-                      {
-                        0: "☌",
-                        60: "⚹",
-                        90: "□",
-                        120: "△",
-                        180: "☍",
-                      } as Record<number, string>
-                    )[a.angle]
-                  }
-                </span>
-                <div>
-                  <h3>{a.bodies.join(" & ")}</h3>
-                  <p>
-                    {ASPECT_NAMES[a.angle]} · {a.angle}° · orb{" "}
-                    {a.orb.toFixed(2)}°
-                  </p>
-                  {r?.components.map((c) => (
-                    <p key={c.id}>{c.text}.</p>
-                  ))}
-                  <p className="scope-note">
-                    General aspect symbolism. Direct planet-pair interpretation
-                    is unsupported.
-                  </p>
-                  {r && <SourceDepth parts={r.components} />}
-                </div>
-              </article>
-            );
-          })
-        ) : (
-          <p>No major aspects fall within this profile’s declared orbs.</p>
-        )}
-      </section>
+    <section className="placement-focus" aria-label="Selected chart detail">
+      <div className="natal-inspector-controls">
+        <label>Choose a house
+          <select value={house ?? ""} onChange={(event) => onSelect(event.target.value ? `house:${event.target.value}` : "Ascendant")}>
+            <option value="">Houses</option>
+            {result.house_cusps.map((_, i) => <option key={i} value={i + 1}>House {i + 1}</option>)}
+          </select>
+        </label>
+        <label>Choose an aspect
+          <select value={aspect ? selected : ""} disabled={!result.aspects.length}
+            onChange={(event) => onSelect(event.target.value || "Ascendant")}>
+            <option value="">Aspects</option>
+            {result.aspects.map((item) => <option key={aspectKey(item)} value={aspectKey(item)}>
+              {aspectLabel(item)}{reading.focuses[aspectKey(item)]?.passages.length ? " · reading" : ""}
+            </option>)}
+          </select>
+        </label>
+        <button type="button" className="text-button" aria-pressed={selected === "Ascendant"}
+          onClick={() => onSelect("Ascendant")}>Ascendant</button>
+      </div>
+      <div aria-live="polite">
+        <h2>{heading}</h2>
+        {planet && <p className="placement-coordinate">
+          {degree(planet.longitude)} · House {planet.house}{planet.retrograde ? " · Retrograde" : ""}
+        </p>}
+        {aspect && <p className="placement-coordinate">{aspect.orb.toFixed(2)}° from exact</p>}
+        {house && <p className="placement-coordinate">{degree(result.house_cusps[house - 1])} · {occupants?.length ? occupants.join(", ") : "No planets"}</p>}
+        {houseSource && <p>House theme · {houseSource.text}.</p>}
+        {!planet && !house && !aspect && <>
+          <p className="placement-coordinate">{degree(result.angles.ascendant)}</p>
+          {reading.chart_ruler && <p>
+            Traditional ruler: <button className="text-button" onClick={() => onSelect(reading.chart_ruler!.body)}>
+              {reading.chart_ruler.body} in {reading.chart_ruler.sign} · House {reading.chart_ruler.house}
+            </button>
+          </p>}
+        </>}
+        {focus?.passages.length ? <Passages passages={focus.passages} reading={reading} additional={references} /> : (<>
+          <p>{planet && base?.missing_components.includes("planet meaning")
+            ? `This edition supplies no planet-specific symbolic meaning for ${selected} in this placement.`
+            : aspect ? "This contact is calculated. A direct reading for this pair and angle is outside this edition."
+            : "There is no direct placement reading for this selection in this edition."}</p>
+          <SourceDepth parts={references} />
+        </>)}
+      </div>
+      {!!focus?.connections.length && (
+        <ul className="natal-related" aria-label="Related interpretations">
+          {focus.connections.map((key) => {
+            const item = result.aspects.find((a) => aspectKey(a) === key);
+            return item && <li key={key}><button className="text-button" onClick={() => onSelect(key)}>{aspectLabel(item)} ↗</button></li>;
+          })}
+        </ul>
+      )}
+    </section>
+  );
+}
+
+export function ChartCalculations({ result, reading }: { result: WesternResult; reading: NatalReading }) {
+  return (
+    <div className="natal-chart-detail">
+      {!!reading.patterns.length && (
+        <details className="chart-calculations">
+          <summary>Calculated chart patterns</summary>
+          <p>These configurations describe the angles between planets. This edition adds no pattern-level interpretation.</p>
+          {reading.patterns.map((pattern) => <p key={pattern.contacts.join("/")}>
+            {pattern.kind} · {pattern.apex} at the apex · {pattern.contacts.map((key) => {
+              const contact = result.aspects.find((a) => aspectKey(a) === key);
+              return contact && aspectLabel(contact);
+            }).join(", ")}
+          </p>)}
+        </details>
+      )}
       <details className="chart-calculations">
         <summary>The full chart, conventions & limitations</summary>
         <p>
@@ -262,23 +237,6 @@ export function ChartReading({ result }: { result: WesternResult }) {
           )}
         </pre>
       </details>
-      <div className="chart-takeaway">
-        <span aria-hidden="true">○</span>
-        <h2>
-          Hold a question,
-          <br />
-          <em>rather than a verdict.</em>
-        </h2>
-        <p>
-          Which of these documented themes gives you a useful way to reflect?
-          Keep what opens your thinking, while leaving room for your own
-          experience.
-        </p>
-        <small>
-          Symbolic tradition · no event predictions or established personality
-          assessment.
-        </small>
-      </div>
     </div>
   );
 }

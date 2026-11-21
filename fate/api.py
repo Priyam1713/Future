@@ -22,6 +22,7 @@ from future.tarot_catalog import PROFILE
 from future.card_random import PROTOCOL
 from future.numerology import calculate, readings as number_readings
 from .western import WesternInput, WesternService, search_places
+from .natal_reading import summarize as natal_reading
 from .turning import TransitInput, TransitRunner, natal_basis
 from . import chambers
 from . import ritual
@@ -280,7 +281,9 @@ def create_app(provider=None, signing_key=None, clock=time.time):
         expiry = int(clock()) + 86400
         basis=natal_basis(result)
         basis_expiry=int(clock())+3600
-        return dict(result=result, oracle_id=1, receipt=f'{expiry}.{signature(q, expiry)}',transit_origin=dict(natal=basis,proof=f'{basis_expiry}.{basis_signature(basis,basis_expiry)}'))
+        return dict(result=result, natal_reading=natal_reading(result), oracle_id=1,
+                    receipt=f'{expiry}.{signature(q, expiry)}',
+                    transit_origin=dict(natal=basis, proof=f'{basis_expiry}.{basis_signature(basis,basis_expiry)}'))
 
     @app.post('/api/western/transits')
     async def transit_window(q: TransitInput, request: Request):

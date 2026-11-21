@@ -4,6 +4,7 @@ import {
   GLYPHS,
   SIGNS,
   SIGN_GLYPHS,
+  aspectKey,
   degree,
   type Geometry,
 } from "./contracts";
@@ -28,6 +29,7 @@ export function BirthChart({
   onSelect,
   selected = "Sun",
   compact = false,
+  exploreDetails = false,
   label = "Calculated tropical birth chart: planetary longitudes, house cusps and major aspects",
 }: {
   chart: Geometry;
@@ -36,6 +38,7 @@ export function BirthChart({
   onSelect?: (body: string) => void;
   selected?: string;
   compact?: boolean;
+  exploreDetails?: boolean;
   label?: string;
 }) {
   const host = useRef<HTMLDivElement>(null);
@@ -56,6 +59,8 @@ export function BirthChart({
     };
   }, []);
   const origin = chart.angles.ascendant;
+  const selectedAspect = exploreDetails && selected.startsWith("aspect:")
+    ? chart.aspects.find((aspect) => aspectKey(aspect) === selected) : undefined;
   // Resolve label collisions in display space, retaining a leader to the exact
   // native coordinate. Selected glyphs own the front lane; no modulo overlap.
   const locations = useMemo(() => {
@@ -224,9 +229,11 @@ export function BirthChart({
               <text
                 x={t.x}
                 y={t.y + 4}
-                fill="#9caf9c"
+                fill={selected === `house:${i + 1}` ? "#ffe0a7" : "#9caf9c"}
                 textAnchor="middle"
-                fontSize="10"
+                fontSize={selected === `house:${i + 1}` ? "16" : "11"}
+                onClick={exploreDetails ? () => onSelect?.(`house:${i + 1}`) : undefined}
+                style={exploreDetails ? { cursor: "pointer" } : undefined}
               >
                 {i + 1}
               </text>
@@ -238,7 +245,7 @@ export function BirthChart({
             if (a.bodies.some((name) => !chart.planets[name])) return null;
             const p = point(chart.planets[a.bodies[0]].longitude, 112, origin),
               q = point(chart.planets[a.bodies[1]].longitude, 112, origin),
-              active = a.bodies.includes(selected);
+              active = a.bodies.includes(selected) || (exploreDetails && aspectKey(a) === selected);
             return (
               <line
                 key={i}
@@ -253,6 +260,8 @@ export function BirthChart({
                 }
                 strokeWidth={active ? 1.6 : 0.65}
                 opacity={active ? 0.85 : 0.16}
+                onClick={exploreDetails ? () => onSelect?.(aspectKey(a)) : undefined}
+                style={exploreDetails ? { cursor: "pointer" } : undefined}
               >
                 <title>
                   {a.bodies.join(" / ")} · {ASPECT_NAMES[a.angle]} · orb{" "}
@@ -273,12 +282,13 @@ export function BirthChart({
         {locations.map(({ name, p, i, r, angle }) => {
           const a = point(p.longitude, 224, origin),
             b = point(angle, r, origin);
+          const highlighted = selected === name || selectedAspect?.bodies.includes(name) || selected === `house:${p.house}`;
           return (
             <g
               key={name}
               data-planet={name}
               data-longitude={p.longitude}
-              className={selected === name ? "planet-selected" : ""}
+              className={highlighted ? "planet-selected" : ""}
             >
               <line
                 x1={a.x}
@@ -297,9 +307,9 @@ export function BirthChart({
                   cx={b.x}
                   cy={b.y}
                   r="15"
-                  fill={selected === name ? "#385c57" : "#10262e"}
-                  stroke={selected === name ? "#e6d2a2" : "#6a887e"}
-                  strokeWidth={selected === name ? 1.5 : 0.6}
+                  fill={highlighted ? "#385c57" : "#10262e"}
+                  stroke={highlighted ? "#e6d2a2" : "#6a887e"}
+                  strokeWidth={highlighted ? 1.5 : 0.6}
                 />
                 <text
                   x={b.x}
@@ -351,7 +361,7 @@ export function BirthChart({
         <path d="M300 282v36m-18-18h36" stroke="#d5c18d" opacity=".4" />
       </svg>
     ),
-    [chart, origin, id, onSelect, selected, label, locations],
+    [chart, origin, id, onSelect, selected, label, locations, exploreDetails, selectedAspect],
   );
   return (
     <div
@@ -396,6 +406,10 @@ export function BirthChart({
                 {degree(chart.planets[selected].longitude)} · House{" "}
                 {chart.planets[selected].house}
               </>
+            ) : selected.startsWith("house:") ? (
+              <>House {selected.slice(6)}</>
+            ) : selected.startsWith("aspect:") ? (
+              <>Major aspect selected</>
             ) : (
               <>Ascendant · {degree(chart.angles.ascendant)}</>
             )}

@@ -42,6 +42,9 @@ export function sourcePlacements(g: Geometry): PlacementReading[] {
 export function aspectSource(angle: number) {
   return records.filter((r) => r.kind === "aspect" && Number(r.key) === angle);
 }
+export function houseComponent(house: number): Component | undefined {
+  return records.find((record) => record.kind === "house" && record.key === String(house));
+}
 export function planetComponent(row: PlacementReading) {
   return row.components.find((r) => r.id.includes(".symbol."));
 }

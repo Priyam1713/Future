@@ -91,10 +91,10 @@ export function ContactReading({
   config: TransitConfig;
 }) {
   const direct = event.interpretations.direct[0],
-    parts = event.interpretations.components;
+    general = event.interpretations.components.find((part) => part.scope === "aspect");
   return (
     <article className="contact-reading" aria-live="polite">
-      <p className="eyebrow">A MOMENT OF ALIGNMENT / CALCULATED CONTACT</p>
+      <p className="eyebrow">EXACT TRANSIT CONTACT</p>
       <h2>
         {event.transiting}
         <br />
@@ -114,14 +114,12 @@ export function ContactReading({
       <p className="contact-theme">
         {direct
           ? direct.text
-          : (parts.find((r) => r.scope === "aspect")?.text ??
+          : (general?.text ??
             "A calculated angular contact; no supported symbolic interpretation is supplied.")}
       </p>
       <p className="scope-note">
-        {direct
-          ? "A documented symbolic account under the matched conditions."
-          : "General aspect symbolism, without a direct pair interpretation."}{" "}
-        An exact astronomical time does not promise a life event.
+        {direct ? "Transit symbolism from the matched source." : general ? "General transit symbolism for this angle." : "Geometry only."}{" "}
+        The contact time describes the sky.
       </p>
       <TransitSources interpretation={event.interpretations} />
       <details className="contact-duration">
