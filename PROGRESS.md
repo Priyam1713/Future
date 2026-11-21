@@ -1725,3 +1725,9 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Added the versioned Western natal reading with direct source records, bounded editorial connections, and planet, house and aspect exploration. The native chart result, signed transit basis and private Codex schema are preserved.
 - Defined remaining limits for direct interpretation, chart-ruler synthesis, patterns and timing. The optional Turning Sky keeps its transit sources distinct from natal symbolism.
 - Passed 2,712 unit and boundary tests, 121 FATE and nine Workbench browser tests, 3,515 CLI cases and 52 independent verifiers. Native replay, browser zoom and six viewport captures are indexed in `fate/evidence/block15-acceptance.json`.
+
+## 2026-11-21 — FATE Block 16
+
+- Added a versioned Jyotish reading with Lagna and lunar context, synchronized D1/D9 graha comparison, and an interactive Vimshottari rail with exact UTC boundaries.
+- Moved the bounded consumer reading to P1 refinement. Western and Jyotish retain their existing private Codex formats while a shared narrative format remains deferred.
+- Passed 2,715 unit and boundary tests, 122 FATE and nine Workbench browser tests, 3,515 CLI cases and 52 independent verifiers. Native replay, exact UTC boundaries, 200% browser zoom and captures are indexed in `fate/evidence/block16-acceptance.json`.

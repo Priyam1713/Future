@@ -1,0 +1,17 @@
+# Block 16 · Jyotish reading scope
+
+`fate-jyotish-v1` is a deterministic sibling of the existing `/api/chambers` result and snapshot for technique 2. The frozen Parashari Lahiri/mean-node calculation supplies all positions, flags and times.
+
+| Area | Supported reading | Remaining gap |
+|---|---|---|
+| Lagna and Moon | Identify the classical Lagna lord and read its D1 house alongside Rao’s account of the lord as a reference. The Moon reveal connects the native rashi, mansion, pada and birth-period lord. | Individual rashi, mansion and pada delineations remain open. A close boundary stays visible. |
+| Grahas and houses | Selected natural significations and D1 house topics, all nine placements, classical ownership, sign condition and native drishti targets. | Pair outcomes, nodal outgoing aspects/dignity, disputed Mars moolatrikona, yogas and strength totals remain open. |
+| D1/D9 | Read the same graha across two house frames. Identify repeated rashi and keep differing dignity indications visible separately. | D9 is symbolic and receives no degree-specific interval. Relationship, compatibility and other event judgments remain open. |
+| Vimshottari | Read the two lords through their D1 house topics. The proportional rail marks the selected UTC instant inside the current Mahadasha. Subdivisions and the native upcoming windows show exact inclusive/exclusive boundaries. | The room uses midnight UTC on the entered day and displays UTC explicitly. No timezone conversion, alternative starting stars, predictive statements, or additional dasha layers. |
+| Chart drawing | Kept the inlaid dial and verified the plotted coordinates against both native frames. | Rao §1.3.4, printed pp.8–10, distinguishes fixed signs in the South Indian layout from fixed houses in the North Indian layout. A second drawing is deferred pending a dedicated orientation and cell-mapping fixture. |
+
+Reviewed Rao’s author-hosted edition, SHA-256 `1cafa828f34764ed5e85816882df2e8f0bc014c5c57ccdb27169416e117fd4db`. Primary locators include §7.2 pp.68–69, §7.3.5 pp.71–72, Tables 15–16 pp.83–84, and §16.5.1 p.214. Verified the D9 procedure against the existing Sanskrit witness locator and Rao §6.2.9 and Table 11. The edition is available to read and only concise original topic summaries are distributed. The retained savana calculation follows fixed elapsed 360-day years. Rao’s Example 50 approximate civil date and the frozen native arithmetic differ, as recorded in the Vedic core. [Rao’s edition](https://vedicastrologer.org/articles/vedic_astro_textbook.pdf) · [Bṛhatparāśarahorāśāstra 6.12](https://indike.org/pramana/in.astro.hora.yavana.brhatparasara.6)
+
+**My Fate boundary.** Western and Jyotish snapshots remain the exact allow-listed geometry profiles. Jyotish keeps UTC calendar-day period labels. A shared narrative format would need an explicit opt-in, immutable edition/version identifiers, allow-listed rule and observation references, and import/export compatibility for both old profiles. Exact initial period epochs may expose additional birth information and need a separate privacy review. Live readings and exact timing therefore stay in-session, and old chapters reopen as before.
+
+The browser captures use synthetic birth inputs and mobile emulation. Native replay, half-open subperiod transitions, zodiac boundaries and cross-frame conditions are checked separately from historical symbolism.

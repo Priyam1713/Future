@@ -32,7 +32,7 @@ export function Instrument({
     case 2:
       return (
         <>
-          <VedicDial s={snapshot} compact={compact} live={!!envelope} />
+          <VedicDial s={snapshot} compact={compact} live={!!envelope} reading={envelope?.jyotish_reading} />
           {!compact && (
             <Sources
               rows={chamberEvidence(snapshot)}

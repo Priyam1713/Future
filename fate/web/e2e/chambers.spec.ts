@@ -1,10 +1,12 @@
 import { expect, test, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { writeFileSync } from "node:fs";
+import type { JyotishReading } from "../src/chambers/JyotishReading";
 
 type Env = {
   snapshot: any;
   result: any;
+  jyotish_reading?: JyotishReading;
 };
 async function loadRoom(page: Page, room: string) {
   await page.goto("/#" + room);
@@ -282,4 +284,29 @@ test("chambers fit small screens, support reduced motion and declare accessible 
       audit.violations.map((x) => [x.id, x.nodes.map((n) => n.target)]),
     ).toEqual([]);
   }
+});
+
+test("Jyotish compares the selected graha and exposes the exact native boundaries and source rules", async ({page}) => {
+  const data = await birth(page, "vedic");
+  const reader = page.getByRole("region", {name: "Jyotish reading"});
+  if (!data.jyotish_reading) throw new Error("Missing the Jyotish reading");
+  await expect(reader).toContainText(data.jyotish_reading.lagna_lord);
+  await reader.getByText("Sources and scope", {exact: true}).click();
+  await expect(reader).toContainText("fate.jyotish.v1.lagna-lord");
+  await page.getByRole("group", {name: "Explore the nine grahas"}).getByRole("button", {name: "Saturn"}).press("Enter");
+  await page.getByRole("button", {name: "D9 · Navamsa"}).press("Enter");
+  await expect(page.locator("[data-graha=Saturn]")).toHaveAttribute("data-selected", "true");
+  await expect(page.locator(".jyotish-pair")).toContainText(data.result.d9.planets.Saturn.sign);
+  const timeline = page.getByRole("region", {name: "Vimshottari timeline"});
+  const period = data.result.vimshottari.current.antardasha;
+  await expect(timeline.locator(".chamber-measure time").first()).toHaveAttribute("datetime", period.start_inclusive_utc);
+  await expect(timeline.locator(".chamber-measure time").last()).toHaveAttribute("datetime", period.end_exclusive_utc);
+  await timeline.getByText("Upcoming main periods and subdivisions", {exact: true}).click();
+  await timeline.getByLabel("Choose an upcoming period").selectOption("sub:0");
+  await expect(timeline.locator("details[open] time").last()).toHaveAttribute("datetime", data.result.vimshottari.upcoming.antardashas[0].end_exclusive_utc);
+  for (const width of [320, 390, 768, 1440]) {
+    await page.setViewportSize({width, height: 900});
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
+  }
+  expect(await page.evaluate(() => Object.keys(localStorage))).toEqual([]);
 });

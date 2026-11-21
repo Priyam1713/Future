@@ -23,6 +23,7 @@ from future.card_random import PROTOCOL
 from future.numerology import calculate, readings as number_readings
 from .western import WesternInput, WesternService, search_places
 from .natal_reading import summarize as natal_reading
+from .jyotish_reading import reading as jyotish_reading
 from .turning import TransitInput, TransitRunner, natal_basis
 from . import chambers
 from . import ritual
@@ -199,8 +200,11 @@ def create_app(provider=None, signing_key=None, clock=time.time):
     def chamber(q: chambers.Input):
         result = chambers.read(q, western)
         expiry = int(clock()) + 86400
-        return dict(result=result, snapshot=chambers.snapshot(result),
-                    receipt=f'{expiry}.{signature(q, expiry)}')
+        response = dict(result=result, snapshot=chambers.snapshot(result),
+                        receipt=f'{expiry}.{signature(q, expiry)}')
+        if isinstance(q, chambers.VedicInput):
+            response['jyotish_reading'] = jyotish_reading(result)
+        return response
 
     @app.post('/api/ritual-wing')
     def ritual_wing(q: ritual.RitualInput):

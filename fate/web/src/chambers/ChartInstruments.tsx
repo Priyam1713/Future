@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { BaziSnapshot, VedicSnapshot } from "./contracts";
 import { bazi, citation, pillarNames, vedic } from "./reference";
 import { GLYPHS, SIGN_GLYPHS } from "../astrology/contracts";
+import { GrahaReading, JyotishOpening, JyotishTimeline, LunarReading, type JyotishReading } from "./JyotishReading";
 import type { Evidence } from "../codex/reference";
 
 export function Sources({
@@ -52,10 +53,12 @@ export function VedicDial({
   s,
   compact = false,
   live = false,
+  reading,
 }: {
   s: VedicSnapshot;
   compact?: boolean;
   live?: boolean;
+  reading?: JyotishReading;
 }) {
   const [d9, setD9] = useState(false),
     [selected, setSelected] = useState(1),
@@ -68,6 +71,7 @@ export function VedicDial({
   const active = s.sub[period];
   return (
     <div className="vedic-experience">
+      {reading && <JyotishOpening reading={reading} />}
       <div className="vedic-dial">
         <div className="vedic-inlay" aria-hidden="true" />
         <svg
@@ -134,6 +138,8 @@ export function VedicDial({
                 key={vedic.grahas[i]}
                 data-graha={vedic.grahas[i]}
                 data-longitude={lon}
+                data-selected={i === selected}
+                onClick={() => setSelected(i)}
               >
                 <line
                   x1={p.x}
@@ -200,6 +206,7 @@ export function VedicDial({
               </button>
             ))}
           </div>
+          {reading && <GrahaReading reading={reading} graha={graha} s={s} />}
           <section className="moon-mansion">
             <p className="eyebrow">Your lunar mansion</p>
             {mansionShown ? (
@@ -210,11 +217,11 @@ export function VedicDial({
                     <i key={i} className={i === pada ? "lit" : ""} />
                   ))}
                 </div>
-                <p>
+                {reading ? <LunarReading reading={reading} /> : <p>
                   Pada {pada} of 4 · {vedic.lords[mansion]} is the birth-star
                   lord.
-                  {sensitive ? " This placement is boundary-sensitive." : ""}
-                </p>
+                </p>}
+                {sensitive && <p>This placement is close to a mansion or quarter boundary.</p>}
               </div>
             ) : (
               <button
@@ -225,7 +232,7 @@ export function VedicDial({
               </button>
             )}
           </section>
-          <section className="dasha-rail">
+          {reading ? <JyotishTimeline reading={reading} active={s.active} /> : <section className="dasha-rail">
             <p className="eyebrow">
               Vimshottari ·{" "}
               {s.year === "pvr-2000-savana"
@@ -269,7 +276,7 @@ export function VedicDial({
                 end-exclusive times. These are the corresponding UTC days.
               </p>
             </details>
-          </section>
+          </section>}
         </>
       )}
     </div>

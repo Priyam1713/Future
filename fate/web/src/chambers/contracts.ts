@@ -100,6 +100,7 @@ export function oracleLabel(id: number) {
 }
 export type ChamberEnvelope = {
   snapshot: ChamberSnapshot;
+  jyotish_reading?: import("./JyotishReading").JyotishReading;
   result: {
     technique_id: ChamberId;
     limitations?: string[];

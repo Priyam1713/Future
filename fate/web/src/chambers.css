@@ -775,3 +775,60 @@
 .judgment-credit + .chamber-quote {
   margin-top: 0.45rem;
 }
+
+/* The live Navagraha reading keeps its reference text alongside the inlaid dial. */
+.jyotish-opening {
+  grid-column: 1 / -1;
+  max-width: 66ch;
+  margin: 0 0 clamp(1rem, 4vw, 2.8rem);
+}
+.jyotish-opening h2 {
+  font: 400 clamp(2rem, 5vw, 3.95rem)/1.06 var(--serif);
+  color: #f2d7a4;
+  margin: .35rem 0 1.15rem;
+}
+.jyotish-opening h3, .jyotish-graha h3 {
+  font: 400 clamp(1.3rem, 3vw, 1.8rem)/1.15 var(--serif);
+  color: #f2d7a4;
+  margin: 1rem 0 .4rem;
+}
+.jyotish-opening :is(p, a), .jyotish-graha :is(p, a) {
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+.vedic-experience:has(.jyotish-opening) { align-items: start; }
+.vedic-experience:has(.jyotish-opening) .vedic-dial { align-self: start; grid-row: span 5; }
+.vedic-dial [data-graha] { cursor: pointer; }
+.vedic-dial [data-graha] circle { transition: r .22s ease, opacity .22s ease; }
+[data-motion="still"] .vedic-dial [data-graha] circle { transition: none; }
+.jyotish-pair, .jyotish-bounds {
+  margin-block: .85rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .5rem 1rem;
+}
+.jyotish-pair > div { padding-block: .7rem; border-block: 1px solid #cdae7450; }
+.jyotish-pair dt, .jyotish-bounds dt { font-size: .82rem; color: #e5cfa7; }
+.jyotish-pair dd, .jyotish-bounds dd { margin: .35rem 0; overflow-wrap: anywhere; }
+.jyotish-pair dd + dd { font-size: .82rem; color: #e4d8cf; }
+.jyotish-scale {
+  display: flex;
+  position: relative;
+  margin-block: 1.15rem .8rem;
+  height: 1.1rem;
+  gap: 2px;
+}
+.jyotish-scale span { flex-basis: 0; background: #706186; min-width: 0; }
+.jyotish-scale [data-selected=true] { background: #e5bd7c; }
+.jyotish-scale i { position: absolute; top: -.22rem; bottom: -.22rem; border-left: 2px solid #fff0cd; }
+.jyotish-timeline .chamber-measure { max-width: 65ch; font-size: 1rem; }
+.jyotish-periods button { min-height: 44px; }
+.jyotish-upcoming { display: grid; gap: .45rem; max-width: 28rem; margin-block: .8rem; }
+.jyotish-upcoming select { min-width: 0; width: 100%; min-height: 44px; padding-inline: .5rem; color: #f3dbaf; background: #261f38; border: 1px solid #ab916b; }
+.jyotish-graha details small, .jyotish-opening details small, .jyotish-timeline details small {
+  display: block;
+  margin-bottom: .7rem;
+}
+@media (max-width: 590px) {
+  .jyotish-bounds { grid-template-columns: minmax(0, 1fr); }
+}
