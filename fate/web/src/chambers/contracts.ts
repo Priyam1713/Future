@@ -105,7 +105,7 @@ export type ChamberEnvelope = {
     technique_id: ChamberId;
     limitations?: string[];
     replay?: { casting?: { raw: number[][] } };
-  };
+  } & Partial<import("./BaziReading").BaziReading>;
   receipt: string;
 };
 export function validChamber(s: Record<string, unknown>): s is ChamberSnapshot {

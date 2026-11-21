@@ -42,7 +42,7 @@ export function Instrument({
         </>
       );
     case 3:
-      return <JadePillars s={snapshot} compact={compact} />;
+      return <JadePillars s={snapshot} compact={compact} native={envelope?.result} />;
     case 18:
       return (
         <Coins

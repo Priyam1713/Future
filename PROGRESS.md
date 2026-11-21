@@ -1731,3 +1731,9 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Added a versioned Jyotish reading with Lagna and lunar context, synchronized D1/D9 graha comparison, and an interactive Vimshottari rail with exact UTC boundaries.
 - Moved the bounded consumer reading to P1 refinement. Western and Jyotish retain their existing private Codex formats while a shared narrative format remains deferred.
 - Passed 2,715 unit and boundary tests, 122 FATE and nine Workbench browser tests, 3,515 CLI cases and 52 independent verifiers. Native replay, exact UTC boundaries, 200% browser zoom and captures are indexed in `fate/evidence/block16-acceptance.json`.
+
+## 2026-11-21 — FATE Block 17
+
+- Jade Hall displays the native BaZi solar month and exact UTC boundaries. Selecting a pillar reveals visible-stem relationships and sourced hidden-stem Ten Gods. A fixture near the published Li Chun time verifies the native sensitivity flag reaches the room.
+- My Fate keeps the existing profile and four pair IDs. Seasonal strength, transformations and luck-pillar onset remain deferred in the BaZi source audit.
+- Passed 2,715 unit and boundary tests, 123 FATE and nine Workbench browser tests, 3,515 CLI cases and 52 independent verifiers. Both production builds, the frozen inventory and the chamber edition passed. Desktop and mobile captures are indexed in `fate/evidence/block17-acceptance.json`.

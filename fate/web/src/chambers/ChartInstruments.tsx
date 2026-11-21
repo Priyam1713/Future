@@ -4,6 +4,7 @@ import { bazi, citation, pillarNames, vedic } from "./reference";
 import { GLYPHS, SIGN_GLYPHS } from "../astrology/contracts";
 import { GrahaReading, JyotishOpening, JyotishTimeline, LunarReading, type JyotishReading } from "./JyotishReading";
 import type { Evidence } from "../codex/reference";
+import { BaziContext, type BaziReading } from "./BaziReading";
 
 export function Sources({
   rows,
@@ -286,9 +287,11 @@ export function VedicDial({
 export function JadePillars({
   s,
   compact = false,
+  native,
 }: {
   s: BaziSnapshot;
   compact?: boolean;
+  native?: Partial<BaziReading>;
 }) {
   const [selected, setSelected] = useState(2);
   const pairs = s.pairs.map((index) => bazi.pairs[index]),
@@ -296,6 +299,9 @@ export function JadePillars({
   const picked = pairs[selected],
     relation = bazi.relations[day.index][picked.stem.index];
   const image = bazi.masters[day.index];
+  const name = pillarNames[selected];
+  const explanation = native?.reading?.pillars.find((row) => row.pillar === name);
+  const hidden = native?.pillars?.[name].hidden_stems;
   return (
     <div className="bazi-experience">
       <div
@@ -337,12 +343,12 @@ export function JadePillars({
           </h3>
           <p>
             {selected === 2
-              ? day.polarity +
+              ? native?.reading?.summary ?? day.polarity +
                 " " +
                 day.element +
                 " is the reference for stem relationships. " +
                 image.text
-              : relation.reason}
+              : explanation?.reason ?? relation.reason}
           </p>
           <p>
             {picked.branch.name} · {picked.branch.animal} ·{" "}
@@ -361,7 +367,7 @@ export function JadePillars({
               citation("Day Master imagery", image, bazi.sources),
               citation(
                 "Documented pillar topic",
-                bazi.topics[selected],
+                explanation?.documented_topic ?? bazi.topics[selected],
                 bazi.sources,
               ),
               ...(selected !== 2
@@ -377,7 +383,9 @@ export function JadePillars({
                 "Fixed hidden-stem membership",
                 {
                   ...bazi.hidden,
-                  text: bazi.hidden.stems_by_branch[picked.branch.index]
+                  text: hidden?.map(({ stem, ten_god }) =>
+                    stem.name + " · " + stem.element + " · " + ten_god.name
+                  ).join(" / ") ?? bazi.hidden.stems_by_branch[picked.branch.index]
                     .map(
                       (i) => bazi.stems[i].name + " · " + bazi.stems[i].element,
                     )
@@ -385,6 +393,13 @@ export function JadePillars({
                 },
                 bazi.sources,
               ),
+              ...(hidden?.length ? [
+                citation(
+                  "Hidden-stem relationship definitions",
+                  { ...hidden[0].ten_god, text: hidden.map((row) => row.ten_god.reason).join(" ") },
+                  bazi.sources,
+                ),
+              ] : []),
             ]}
           />
           <p className="scope-note">
@@ -393,6 +408,7 @@ export function JadePillars({
           </p>
         </section>
       )}
+      {!compact && native && <BaziContext native={native} selected={name} />}
     </div>
   );
 }

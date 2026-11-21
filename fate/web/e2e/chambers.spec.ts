@@ -21,10 +21,10 @@ async function calculate(page: Page, button: string): Promise<Env> {
   expect(native.ok()).toBeTruthy();
   return native.json();
 }
-async function birth(page: Page, room: "vedic" | "bazi") {
+async function birth(page: Page, room: "vedic" | "bazi", date = "1990-07-15", time = "14:30:00") {
   await loadRoom(page, room);
-  await page.getByLabel("Date of birth", { exact: true }).fill("1990-07-15");
-  await page.getByLabel("Recorded birth time").fill("14:30:00");
+  await page.getByLabel("Date of birth", { exact: true }).fill(date);
+  await page.getByLabel("Recorded birth time").fill(time);
   await page.getByLabel("Birth city", { exact: true }).fill("London GB");
   await page.getByRole("button", { name: "Find city", exact: true }).click();
   await page
@@ -171,10 +171,40 @@ test("Jade Hall shows native pillar characters, selected stem relationships and 
   await expect(page.locator(".jade-reading h3")).toHaveText(
     native.result.pillars.month.ten_god.name,
   );
+  const context = page.getByRole("region", { name: "Solar month & pillar relationships" });
+  const { start_inclusive: start, end_exclusive: end } = native.result.solar_month;
+  await expect(context.locator("time").first()).toHaveAttribute("datetime", start.utc);
+  await expect(context.locator("time").last()).toHaveAttribute("datetime", end.utc);
+  await expect(context.getByRole("heading", { name: "Visible stems toward the month pillar" })).toBeVisible();
+  await expect(context.getByRole("listitem")).toHaveCount(3);
+  const dayToMonth = native.result.reading.element_interactions.find(
+    (row: any) => row.from_pillar === "day" && row.to_pillar === "month",
+  );
+  await expect(context.getByRole("listitem").filter({ hasText: /^day/ }))
+    .toContainText(dayToMonth.from_element + " → " + dayToMonth.to_element);
+  await expect(context.getByRole("link", { name: /Solar term definitions/ })).toBeVisible();
+  await expect(context.getByRole("link", { name: /Generating and controlling cycles/ })).toBeVisible();
+  await expect(context.getByText(/within two minutes/)).toHaveCount(0);
+  await page.getByText("Pillar sources & hidden stems", { exact: true }).click();
+  for (const { stem, ten_god } of native.result.pillars.month.hidden_stems) {
+    await expect(page.locator(".jade-reading")).toContainText(stem.name + " · " + stem.element + " · " + ten_god.name);
+  }
   await save(page, native);
   await expect(page.locator(".chamber-folio .jade-reading h3")).toContainText(
     native.result.day_master.name,
   );
+  await expect(page.locator(".chamber-folio .jade-context")).toHaveCount(0);
+});
+test("Jade Hall surfaces native sensitivity near the published Li Chun time", async ({ page }) => {
+  const native = await birth(page, "bazi", "2026-02-03", "20:02:00");
+  expect(native.result.boundary_sensitivity.within_120_seconds_of_jie).toBe(true);
+  const context = page.getByRole("region", { name: "Solar month & pillar relationships" });
+  await expect(context.getByText(/within two minutes/)).toBeVisible();
+  await page.getByRole("button", { name: /^year pillar/ }).click();
+  await expect(context.getByRole("heading", { name: "Visible stems toward the year pillar" })).toBeVisible();
+  await expect(context.getByRole("listitem")).toHaveCount(3);
+  await expect(page.locator(".jade-context")).toBeVisible();
+  expect(await context.evaluate((node) => node.scrollWidth <= node.clientWidth)).toBe(true);
 });
 test("six native coin strokes reveal bottom-up, preserve values, and reopen the relating figure", async ({
   page,

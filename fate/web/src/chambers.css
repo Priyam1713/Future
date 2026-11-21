@@ -431,6 +431,48 @@
   padding: 1.25rem;
   border-inline-start: 2px solid #9a5a45;
 }
+.jade-context {
+  grid-column: 1 / -1;
+  padding: clamp(0.9rem, 3vw, 1.5rem);
+  background: #14241c;
+  border-block-start: 1px solid #708e68;
+  overflow-wrap: anywhere;
+}
+.jade-context-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+  gap: 1.5rem;
+}
+.jade-context h4 {
+  margin-block: 0 0.5rem;
+}
+.jade-context a {
+  color: #e5d9ab;
+  text-decoration: underline;
+}
+.jade-terms div,
+.jade-relations li {
+  padding-block: 0.45rem;
+  border-block-start: 1px solid #708e6880;
+}
+.jade-terms dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.jade-relations {
+  list-style: none;
+  padding: 0;
+}
+.jade-relations strong,
+.jade-relations span {
+  display: block;
+}
+.jade-relations strong::first-letter {
+  text-transform: uppercase;
+}
+.jade-boundary {
+  color: #ffe0b0;
+}
 
 .coin-experience {
   margin: auto;
