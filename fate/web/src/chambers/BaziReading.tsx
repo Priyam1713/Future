@@ -5,7 +5,7 @@ type Pillar = (typeof pillarNames)[number];
 type SourceRef = { source_id: string; locator: string };
 type Term = { name: string; utc: string; longitude: number };
 type Relation = SourceRef & { name: string; reason: string };
-const phaseRelationships = {
+export const phaseRelationships = {
   same: "Same element",
   produced_by_self: "Generates the selected element",
   controlled_by_self: "Controls the selected element",

@@ -65,7 +65,7 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
         <section className="codex-tools" aria-label="Manage saved chapters">
           <div>
             <p className="eyebrow">YOUR CHAPTERS, YOUR CHOICE</p>
-            <p>Keep a copy beyond this browser, or let a chapter go.</p>
+            <p>Export a copy to keep beyond this browser. Saved positions and pillar combinations can reveal inferred birth information.</p>
           </div>
           <button
             className="secondary"
@@ -156,9 +156,10 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
         <summary>About saving on this device</summary>
         <p>
           Saving keeps a small chapter in this browser profile. Chapters contain
-          selected results, chart geometry, dated transit snapshots, or source
-          bookmarks. They include the edition and save time. Codex exports use
-          the same scope and include source references.
+          selected results, chart geometry, versioned astrology passages,
+          dated transit snapshots, or source bookmarks. They include the
+          edition and save time. Codex exports include source references and
+          can contain sensitive inferred birth information.
         </p>
         <p>
           Local records are unencrypted. Anyone using the profile can read them,
@@ -170,7 +171,9 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
           <p>
             Names, birth details, questions, journal and dream notes,
             calibration, replay seeds and Gemini commentary stay outside the
-            Codex. Chart geometry can reveal information about a birth moment.
+            Codex. New Jyotish readings keep period topics without calendar
+            boundaries. Older Jyotish chapters retain their saved UTC days.
+            BaZi chapters keep the clock convention and four pair IDs.
             Saved transit chapters keep the dates you choose. Manuscript and
             compass bookmarks keep source IDs only. Dream Archive and Tomorrow
             Machine bookmarks keep the public study setting. Personal writing
@@ -179,7 +182,8 @@ export default function CodexScreen({ oracle }: { oracle: Oracle }) {
           <p>
             Comparison choices stay in memory. The app and artwork must be
             available to reopen chapters. This edition holds 50 chapters up to
-            65,536 characters in total. Private mode and browser policies can
+            65,536 characters in total. Longer readings can reach that limit
+            before all 50 places are used. Private mode and browser policies can
             restrict local saving.
           </p>
         </details>

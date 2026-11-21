@@ -1,4 +1,4 @@
-import { evidenceFor, type Evidence } from "./reference";
+import { chapterEvidence } from "./reference";
 import type { Chapter } from "./records";
 /** Small, explicit editorial vocabulary. Matching refers to source language,
  * not independent agreement, predictive validity or a combined interpretation. */
@@ -49,8 +49,8 @@ const vocabulary = [
   },
 ];
 export function compareChapters(left: Chapter, right: Chapter) {
-  const a = evidenceFor(left.snapshot),
-    b = evidenceFor(right.snapshot);
+  const a = chapterEvidence(left),
+    b = chapterEvidence(right);
   const groups = vocabulary.map((t) => ({
     label: t.label,
     left: a.filter((e) => !e.alternative && t.pattern.test(e.quote)),

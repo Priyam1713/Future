@@ -25,6 +25,7 @@ export function CelestialBook({
   const [old, setOld] = useState<Chapter | null>(null),
     [direction, setDirection] = useState(1);
   const host = useRef<HTMLDivElement>(null),
+    contents = useRef<HTMLDetailsElement>(null),
     cover = useRef<HTMLButtonElement>(null),
     timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const index = Math.max(
@@ -81,6 +82,8 @@ export function CelestialBook({
     setDirection(next > index ? 1 : -1);
     setOld(moving ? current : null);
     setOldScroll(host.current?.querySelector(".codex-current")?.scrollTop ?? 0);
+    if (!wide && codex.chapters[next].narrative && contents.current)
+      contents.current.open = false;
     codex.setSelectedId(codex.chapters[next].id);
     oracle.sound.cue("select");
     timer.current = setTimeout(() => setOld(null), 720);
@@ -174,7 +177,7 @@ export function CelestialBook({
           }}
         >
           <aside className="codex-verso">
-            <details className="codex-contents" open={wide}>
+            <details ref={contents} className="codex-contents" open={wide}>
               <summary>
                 Contents <span>{codex.chapters.length} {codex.chapters.length===1?'chapter':'chapters'}</span>
               </summary>
@@ -190,6 +193,7 @@ export function CelestialBook({
                         {chapterTitle(c)}
                         <small>
                           {oracleLabel(c.snapshot.oracle).toUpperCase()}
+                          {c.narrative && " · SAVED READING"}
                         </small>
                       </div>
                     </button>

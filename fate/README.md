@@ -2,6 +2,10 @@
 
 FATE opens all 54 retained Future techniques in a consumer Gallery. Each room leads from its own instrument or source workflow to a native result. Eligible public studies and bounded chapters can be saved locally.
 
+## Block 18
+
+My Fate reopens Western, Jyotish and BaZi readings with the passages, sources and chapter order preserved. Saving is optional and local to the browser. Older chapters remain available in their original editions. [Storage schema, privacy and source boundaries](evidence/block18-codex-foundation.md)
+
 ## Block 17
 
 Jade Hall shows the solar terms that bound the BaZi month, and selecting a pillar reveals its visible and hidden stem relationships. The reading flags recorded moments near a month boundary. [BaZi coverage and sources](evidence/block17-bazi-foundation.md)

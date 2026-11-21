@@ -376,7 +376,7 @@ test("mobile natal glyphs fan apart without moving native markers and comparison
   const cite = page.locator(".comparison-citation").first();
   await expect(cite).not.toHaveAttribute("open", "");
   await cite.locator("summary").click();
-  await expect(
-    cite.getByRole("link", { name: "Source", exact: true }),
-  ).toBeVisible();
+  await expect(cite.getByRole("link", { name: "Sun in Cancer", exact: true }))
+    .toHaveAttribute("href", /cafeastrology\.com/);
+  await expect(cite).toContainText("fate.natal.v1.sign.sun.cancer");
 });

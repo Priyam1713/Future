@@ -10,7 +10,13 @@ function Quotation({ evidence }: { evidence: Evidence }) {
       <p>“{evidence.quote}”</p>
       <details className="comparison-citation">
         <summary>Source & context</summary>
-        <cite>
+        {evidence.rules ? <ul>{evidence.rules.map((rule) => (
+          <li key={rule.id}>
+            {rule.url ? <a href={rule.url} target="_blank" rel="noreferrer">{rule.locator}</a> : rule.locator}
+            <p>{rule.edition} · {rule.id}</p>
+            {rule.exceptions.map((exception) => <p key={exception}>{exception}</p>)}
+          </li>
+        ))}</ul> : <><cite>
           {evidence.label} ·{" "}
           <a href={evidence.url} target="_blank" rel="noreferrer">
             Source
@@ -18,7 +24,7 @@ function Quotation({ evidence }: { evidence: Evidence }) {
         </cite>
         <p>{evidence.locator}</p>
         <small>{evidence.sourceId}</small>
-        <p>{evidence.wording}</p>
+        <p>{evidence.wording}</p></>}
       </details>
     </blockquote>
   );
@@ -173,17 +179,16 @@ export function ComparePerspectives({
         <summary>How this comparison works</summary>
         <p>
           A small versioned editorial vocabulary groups explicitly present words
-          in saved Tarot glosses, direct Numerology summaries and separate
-          Western Astrology source components. It uses no LLM, scores,
-          probabilities or new meanings. Vocabulary coverage is limited; a
-          shared heading describes language, rather than evidence about your
-          life. Alternative accounts remain separate. Tarot positions are
+          in saved narratives and earlier source chapters. Each passage stays
+          with its source tradition and coverage. Matching uses a fixed vocabulary
+          and adds no new interpretations or scores. Alternative accounts remain
+          separate. Tarot positions are
           editorial prompts; Numerology’s two direct themes concern Expression
           and Personal Year only.
         </p>
         <p>
-          {comparison.vocabulary} · Saved source editions {left.reference} /{" "}
-          {right.reference}
+          {comparison.vocabulary} · Saved source editions {left.narrative?.edition ?? left.reference} /{" "}
+          {right.narrative?.edition ?? right.reference}
         </p>
       </details>
       <p className="comparison-closing">

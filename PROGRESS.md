@@ -1737,3 +1737,9 @@ Current policy: **80/20 practical cores**, permanently recorded in `AGENTS.md`; 
 - Jade Hall displays the native BaZi solar month and exact UTC boundaries. Selecting a pillar reveals visible-stem relationships and sourced hidden-stem Ten Gods. A fixture near the published Li Chun time verifies the native sensitivity flag reaches the room.
 - My Fate keeps the existing profile and four pair IDs. Seasonal strength, transformations and luck-pillar onset remain deferred in the BaZi source audit.
 - Passed 2,715 unit and boundary tests, 123 FATE and nine Workbench browser tests, 3,515 CLI cases and 52 independent verifiers. Both production builds, the frozen inventory and the chamber edition passed. Desktop and mobile captures are indexed in `fate/evidence/block17-acceptance.json`.
+
+## 2026-11-21 — FATE Block 18
+
+- My Fate saves the supported Western, Jyotish and BaZi narratives alongside their calculated context and frozen source rules. Existing v1 chapters keep their IDs and archived views. New Jyotish saves leave out period dates, and BaZi solar-term instants stay in the live visit.
+- A mixed library with all three live saves reopened after Chrome restarted. The 28,695-character sample passed passage-order, source, keyboard, phone and 200% browser zoom checks. File import remains deferred.
+- Passed 2,718 unit and boundary tests, nine Workbench browser tests, 3,515 CLI cases and 52 independent verifiers. The full FATE run passed 122 of 123 scenarios. The release build passed all six focused rechecks, including the contrast fix for the failing scenario. See `fate/evidence/block18-acceptance.json`.

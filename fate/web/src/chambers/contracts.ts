@@ -61,6 +61,11 @@ export type VedicSnapshot = {
   sub: Period[];
   active: number;
 };
+export type VedicGeometry = Omit<VedicSnapshot, "year" | "main" | "sub" | "active">;
+export function vedicGeometry(s: VedicSnapshot): VedicGeometry {
+  const { oracle, profile, asc, d9Asc, planets, mansion } = s;
+  return { oracle, profile, asc, d9Asc, planets, mansion };
+}
 export type BaziSnapshot = {
   oracle: 3;
   profile: "civil-zi23" | "civil-split-zi" | "standard-zi23";
@@ -82,7 +87,8 @@ export type ChamberSnapshot =
   | BaziSnapshot
   | CoinSnapshot
   | RuneSnapshot;
-export function isChamberSnapshot(s: { oracle: number }): s is ChamberSnapshot {
+export type ChamberContext = ChamberSnapshot | VedicGeometry;
+export function isChamberSnapshot(s: { oracle: number }): s is ChamberContext {
   return isChamberId(s.oracle);
 }
 export function oracleLabel(id: number) {
@@ -108,7 +114,10 @@ export type ChamberEnvelope = {
   } & Partial<import("./BaziReading").BaziReading>;
   receipt: string;
 };
-export function validChamber(s: Record<string, unknown>): s is ChamberSnapshot {
+export function validChamber(s: Record<string, unknown>): s is ChamberSnapshot;
+export function validChamber(s: Record<string, unknown>, geometryOnly: true): s is VedicGeometry;
+export function validChamber(s: Record<string, unknown>, geometryOnly = false): boolean {
+  if (geometryOnly && s.oracle !== 2) return false;
   const keys = (...names: string[]) =>
     Object.keys(s).length === names.length + 2 &&
     names.every((key) => Object.hasOwn(s, key));
@@ -146,16 +155,8 @@ export function validChamber(s: Record<string, unknown>): s is ChamberSnapshot {
       array(p, 2) && longitude(p[0]) && integer(p[1], 0, 11);
     return (
       s.profile === edition.profiles["2"] &&
-      keys(
-        "asc",
-        "d9Asc",
-        "planets",
-        "mansion",
-        "year",
-        "main",
-        "sub",
-        "active",
-      ) &&
+      keys("asc", "d9Asc", "planets", "mansion",
+        ...(geometryOnly ? [] : ["year", "main", "sub", "active"])) &&
       point(s.asc) &&
       point(s.d9Asc) &&
       array(s.planets, 9) &&
@@ -173,11 +174,11 @@ export function validChamber(s: Record<string, unknown>): s is ChamberSnapshot {
       integer(s.mansion[0], 0, 26) &&
       integer(s.mansion[1], 1, 4) &&
       typeof s.mansion[2] === "boolean" &&
-      typeof s.year === "string" &&
+      (geometryOnly || (typeof s.year === "string" &&
       ["pvr-2000-savana", "solar-365.2425"].includes(s.year) &&
       periods(s.main, 10) &&
       periods(s.sub, 9) &&
-      integer(s.active, 0, 8)
+      integer(s.active, 0, 8)))
     );
   }
   if (s.oracle === 3)

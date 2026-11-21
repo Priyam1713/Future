@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { VedicSnapshot } from "./contracts";
+import type { VedicGeometry } from "./contracts";
 import { vedic } from "./reference";
 
 type Passage = { title: string; text: string; rule_ids: string[]; inputs: string[] };
@@ -47,10 +47,17 @@ export function LunarReading({ reading }: {reading: JyotishReading}) {
   </>;
 }
 
-const dignities: Record<string, string> = {
+export const dignities: Record<string, string> = {
   own_sign: "Own sign", exaltation_sign: "Exaltation sign", debilitation_sign: "Debilitation sign",
 };
-export function GrahaReading({ reading, graha, s }: {reading: JyotishReading; graha: string; s: VedicSnapshot}) {
+export const grahaTopics = (graha: string, evidence: Graha) =>
+  `Rao associates ${graha} with ${evidence.topic}. Its Rashi placement brings up the house topics of ${evidence.house_topic}.`;
+export const grahaOwnership = (graha: string, evidence: Graha) =>
+  evidence.nodal ? "This profile leaves nodal ownership, dignity and outgoing aspects open." :
+    `In Rashi, ${graha} rules ${evidence.d1.rules_houses.length === 1 ? "house" : "houses"} ${evidence.d1.rules_houses.join(" and ")}.`;
+export const subperiodTopic = (mainTopic: string, subTopic: string) =>
+  `The main lord’s Rashi house concerns ${mainTopic}. This subperiod’s lord brings the house topic of ${subTopic} into view.`;
+export function GrahaReading({ reading, graha, s }: {reading: JyotishReading; graha: string; s: VedicGeometry}) {
   const evidence = reading.grahas[graha];
   const row = s.planets[vedic.grahas.indexOf(graha)];
   return <section className="jyotish-graha" aria-live="polite">
@@ -62,9 +69,8 @@ export function GrahaReading({ reading, graha, s }: {reading: JyotishReading; gr
         <dd>{evidence.d9.dignities.map((flag) => dignities[flag]).join(" · ") || "No supported sign dignity"}</dd></div>
     </dl>
     <p>{evidence.comparison.text}</p>
-    <p>Rao associates {graha} with {evidence.topic}. Its Rashi placement brings up the house topics of {evidence.house_topic}.</p>
-    <p>{evidence.nodal ? "This profile leaves nodal ownership, dignity and outgoing aspects open." :
-      `In Rashi, ${graha} rules ${evidence.d1.rules_houses.length === 1 ? "house" : "houses"} ${evidence.d1.rules_houses.join(" and ")}.`}</p>
+    <p>{grahaTopics(graha, evidence)}</p>
+    <p>{grahaOwnership(graha, evidence)}</p>
     <details className="chamber-depth">
       <summary>Graha drishti and placement details</summary>
       <p>Sign rulers · {evidence.d1.ruler} in D1, {evidence.d9.ruler} in D9. D9 describes a symbolic house frame. Degree-specific dignity stays with D1.</p>
@@ -115,8 +121,7 @@ export function JyotishTimeline({ reading, active }: { reading: JyotishReading; 
     <div className="chamber-measure" aria-live="polite">
       <h4>{period.lord} subperiod</h4>
       <PeriodBounds period={period} />
-      <p>{selected === active ? periodReading.text :
-        `The main lord’s Rashi house concerns ${mainGraha.house_topic}. This subperiod’s lord brings the house topic of ${subGraha.house_topic} into view.`}</p>
+      <p>{selected === active ? periodReading.text : subperiodTopic(mainGraha.house_topic, subGraha.house_topic)}</p>
     </div>
     <details className="chamber-depth">
       <summary>Upcoming main periods and subdivisions</summary>

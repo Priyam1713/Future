@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { BaziSnapshot, VedicSnapshot } from "./contracts";
+import type { BaziSnapshot, VedicGeometry, VedicSnapshot } from "./contracts";
 import { bazi, citation, pillarNames, vedic } from "./reference";
 import { GLYPHS, SIGN_GLYPHS } from "../astrology/contracts";
 import { GrahaReading, JyotishOpening, JyotishTimeline, LunarReading, type JyotishReading } from "./JyotishReading";
@@ -53,23 +53,26 @@ const polar = (angle: number, radius: number) => {
 export function VedicDial({
   s,
   compact = false,
+  frames = false,
   live = false,
   reading,
 }: {
-  s: VedicSnapshot;
+  s: VedicGeometry | VedicSnapshot;
   compact?: boolean;
+  frames?: boolean;
   live?: boolean;
   reading?: JyotishReading;
 }) {
+  const timing = "sub" in s ? s : undefined;
   const [d9, setD9] = useState(false),
     [selected, setSelected] = useState(1),
-    [period, setPeriod] = useState(s.active);
+    [period, setPeriod] = useState(timing?.active ?? 0);
   const [mansionShown, setMansionShown] = useState(!live);
   const graha = vedic.grahas[selected],
     position = s.planets[selected],
     asc = d9 ? s.d9Asc : s.asc;
   const [mansion, pada, sensitive] = s.mansion;
-  const active = s.sub[period];
+  const active = timing?.sub[period];
   return (
     <div className="vedic-experience">
       {reading && <JyotishOpening reading={reading} />}
@@ -169,8 +172,7 @@ export function VedicDial({
           </text>
         </svg>
       </div>
-      {!compact && (
-        <>
+      {(!compact || frames) && (
           <div
             className="chamber-switch"
             role="group"
@@ -183,6 +185,9 @@ export function VedicDial({
               D9 · Navamsa
             </button>
           </div>
+      )}
+      {!compact && (
+        <>
           <p className="chamber-measure" aria-live="polite">
             {graha} · {vedic.signs[position[d9 ? 4 : 1]]} · House{" "}
             {position[d9 ? 5 : 2]} · {position[d9 ? 3 : 0].toFixed(3)}°{" "}
@@ -233,16 +238,16 @@ export function VedicDial({
               </button>
             )}
           </section>
-          {reading ? <JyotishTimeline reading={reading} active={s.active} /> : <section className="dasha-rail">
+          {reading && timing ? <JyotishTimeline reading={reading} active={timing.active} /> : timing && active && <section className="dasha-rail">
             <p className="eyebrow">
               Vimshottari ·{" "}
-              {s.year === "pvr-2000-savana"
+              {timing.year === "pvr-2000-savana"
                 ? "360-day savana year"
                 : "365.2425-day year"}
             </p>
-            <h3>{s.main[0][0]} main period</h3>
+            <h3>{timing.main[0][0]} main period</h3>
             <p>
-              Active subperiod at the selected instant: {s.sub[s.active][0]}.
+              Active subperiod at the selected instant: {timing.sub[timing.active][0]}.
               Explore the nine subdivisions.
             </p>
             <div
@@ -250,7 +255,7 @@ export function VedicDial({
               role="group"
               aria-label="Explore subperiods"
             >
-              {s.sub.map(([lord], i) => (
+              {timing.sub.map(([lord], i) => (
                 <button
                   key={lord}
                   aria-pressed={i === period}
@@ -266,7 +271,7 @@ export function VedicDial({
             <details className="chamber-depth">
               <summary>Main period boundaries and upcoming periods</summary>
               <ol>
-                {s.main.map(([lord, start, end]) => (
+                {timing.main.map(([lord, start, end]) => (
                   <li key={start}>
                     {lord} · {start} → {end}
                   </li>

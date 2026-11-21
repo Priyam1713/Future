@@ -1,0 +1,46 @@
+{
+  "baseline": "59ae377",
+  "scope": "New Western, Jyotish and BaZi narrative chapters alongside legacy chapters. Compare Perspectives preserves source context and technique boundaries.",
+  "verification": {
+    "nativeUnit": 2522,
+    "workbenchUnit": 77,
+    "fateUnit": 89,
+    "codexNode": 30,
+    "fullFateBrowser": {
+      "passed": 122,
+      "failed": 1,
+      "skipped": 0,
+      "followup": "Western folio contrast was fixed and the failing responsive accessibility scenario passed on the release build."
+    },
+    "releaseBrowserRechecks": {
+      "passed": 6,
+      "failed": 0,
+      "includes": [
+        "Western, Jyotish and BaZi save, export and reopen",
+        "Codex legacy and keyboard coverage",
+        "named Western comparison citations",
+        "Western responsive accessibility"
+      ]
+    },
+    "workbenchBrowser": 9,
+    "cliCases": 3515,
+    "independentVerifiers": 52,
+    "protectedNativeFilesVerified": 576,
+    "gates": [
+      "FATE and Workbench production builds",
+      "inventory and frozen chamber edition",
+      "frozen narrative source catalog",
+      "pip check",
+      "FATE npm audit"
+    ]
+  },
+  "media": "fate/evidence/block18-codex-media.json",
+  "restart": "One legacy Jyotish folio and three real UI saves reopened after a persistent Chrome restart with no POSTs. All saved passage text and order observed on desktop, emulated phone and 200% browser zoom.",
+  "capacitySampleCharacters": 28695,
+  "storage": "Schema-1 export remains intact for legacy-only selections. Mixed documents use schema 2 with parse-before-write at the existing browser key.",
+  "deferred": [
+    "File import and import-specific validation",
+    "Exact Jyotish timing retention",
+    "BaZi solar-term times and sensitivity flag retention"
+  ]
+}

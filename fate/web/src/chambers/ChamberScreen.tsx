@@ -1,14 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { BirthForm } from "../astrology/BirthForm";
 import type { WesternInput } from "../astrology/contracts";
 import { chapterFor } from "../codex/records";
+import { baziNarrative, jyotishNarrative } from "../codex/projectNarrative";
 import type { Oracle } from "../hooks/useOracle";
 import { api } from "../types";
 import {
   ROOMS,
+  vedicGeometry,
   type ChamberEnvelope,
   type ChamberId,
   type ChamberSnapshot,
+  type ChamberContext,
 } from "./contracts";
 import { chamberEvidence, chapterName } from "./reference";
 import { JadePillars, Sources, VedicDial } from "./ChartInstruments";
@@ -18,12 +21,14 @@ export function Instrument({
   snapshot,
   envelope,
   compact,
+  frames,
   oracle,
   complete,
 }: {
-  snapshot: ChamberSnapshot;
+  snapshot: ChamberContext;
   envelope?: ChamberEnvelope;
   compact?: boolean;
+  frames?: boolean;
   oracle?: Oracle;
   complete?: () => void;
 }) {
@@ -32,7 +37,7 @@ export function Instrument({
     case 2:
       return (
         <>
-          <VedicDial s={snapshot} compact={compact} live={!!envelope} reading={envelope?.jyotish_reading} />
+          <VedicDial s={snapshot} compact={compact} frames={frames} live={!!envelope} reading={envelope?.jyotish_reading} />
           {!compact && (
             <Sources
               rows={chamberEvidence(snapshot)}
@@ -84,7 +89,16 @@ function Save({
   envelope: ChamberEnvelope;
   oracle: Oracle;
 }) {
-  const chapter = chapterFor(envelope.result, envelope.snapshot);
+  const chapter = useMemo(() => {
+    const { snapshot, result, jyotish_reading } = envelope;
+    if (snapshot.oracle === 2)
+      return chapterFor(result, vedicGeometry(snapshot),
+        jyotish_reading && jyotishNarrative(snapshot, jyotish_reading));
+    return chapterFor(result, snapshot,
+      snapshot.oracle === 3 ? baziNarrative(snapshot, result) : undefined);
+  }, [envelope]);
+  const unavailable = (envelope.snapshot.oracle === 2 || envelope.snapshot.oracle === 3) &&
+    !chapter.narrative;
   const saved = oracle.codex.chapters.some((c) => c.id === chapter.id);
   const [error, setError] = useState("");
   return (
@@ -93,20 +107,20 @@ function Save({
       <p>
         Save a small, unencrypted record on this device.{" "}
         {envelope.snapshot.oracle === 2
-          ? "The chart and UTC period boundary days remain personal. The raw birth details and selected timing date are excluded."
+          ? "This keeps the D1 and D9 chart, sourced passages and period lords. Chart positions remain personal. Birth details, the selected timing date and all period dates stay outside this chapter."
           : envelope.snapshot.oracle === 3
-            ? "The four pillar identifiers are personal. The original birth details are excluded."
+            ? "This keeps the Day Master, Four Pillars, clock convention and sourced relationships. These are personal. Birth details and solar-term instants stay outside this chapter."
             : "This keeps only the selected symbols and their order."}{" "}
         Replay seeds and Gemini commentary are excluded.
       </p>
-      {error && <p role="alert">{error}</p>}
+      {(error || unavailable) && <p role="alert">{error || "This interpretation edition is unavailable for saving."}</p>}
       <button
         className="secondary"
-        disabled={saved}
+        disabled={saved || unavailable}
         onClick={() => {
           if (!oracle.codex.save(chapter))
             setError(
-              "My Fate could not write this chapter. Check browser storage or export a copy.",
+              "My Fate could not write this chapter. Check browser storage or export your existing Codex to make room.",
             );
           else setError("");
         }}
@@ -492,7 +506,7 @@ export function ChamberChapter({
   s,
   index,
 }: {
-  s: ChamberSnapshot;
+  s: ChamberContext;
   index: number;
 }) {
   return (

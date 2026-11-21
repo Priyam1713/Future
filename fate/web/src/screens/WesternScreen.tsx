@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useMemo, useState } from "react";
 const TurningSky = lazy(() => import("../turning/TurningSky"));
 import type { Oracle } from "../hooks/useOracle";
 import { useWestern } from "../astrology/useWestern";
@@ -7,6 +7,7 @@ import { BirthChart } from "../astrology/BirthChart";
 import { ChartCalculations, ChartReading, PlacementFocus } from "../astrology/ChartReading";
 import { degree, signAt } from "../astrology/contracts";
 import { SaveChapter } from "../codex/SaveChapter";
+import { westernNarrative } from "../astrology/savedReading";
 import { ArtifactSurface, SequenceMarks } from "../components/ArtifactSurface";
 function exportNative(result: unknown) {
   const url = URL.createObjectURL(
@@ -23,6 +24,7 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
   const s = useWestern(oracle),
     r = s.result;
   const reading = s.envelope?.natal_reading;
+  const narrative = useMemo(() => reading && westernNarrative(reading), [reading]);
   const select = (key: string) => {
     s.setSelected(key);
     oracle.sound.cue("select");
@@ -201,7 +203,7 @@ export default function WesternScreen({ oracle }: { oracle: Oracle }) {
                     </button>
                   </div>
                 </section>
-                <SaveChapter kind="western" result={r} oracle={oracle} />
+                <SaveChapter kind="western" result={r} narrative={narrative} oracle={oracle} />
                 <section className="western-commentary">
                   <p className="eyebrow">AN OPTIONAL SECOND VOICE</p>
                   <h2>Reflect with Gemini.</h2>

@@ -1,6 +1,6 @@
 import data from "./reference-v1.json";
 import type { Evidence } from "../codex/reference";
-import type { ChamberSnapshot, CoinSnapshot } from "./contracts";
+import type { ChamberContext, CoinSnapshot } from "./contracts";
 
 export const { vedic, bazi, iching, runes } = data;
 export const pillarNames = ["year", "month", "day", "hour"] as const;
@@ -48,7 +48,7 @@ export function coinTexts(snapshot: CoinSnapshot) {
   return { initial, resulting, moving };
 }
 
-export function chapterName(s: ChamberSnapshot) {
+export function chapterName(s: ChamberContext) {
   switch (s.oracle) {
     case 2:
       return (
@@ -68,7 +68,7 @@ export function chapterName(s: ChamberSnapshot) {
   }
 }
 
-export function chamberEvidence(s: ChamberSnapshot): Evidence[] {
+export function chamberEvidence(s: ChamberContext): Evidence[] {
   switch (s.oracle) {
     case 2:
       return vedic.rules

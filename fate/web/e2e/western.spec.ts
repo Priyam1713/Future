@@ -107,11 +107,13 @@ test("unknown birth time, real place confirmation and DST ambiguity fail honestl
   const r = await calculate(page);
   expect(r.birth.utc).toBe("2024-11-03T06:30:00+00:00");
 });
-test("Western Codex explicitly saves only geometry, reopens without POST and exports source components", async ({
-  page,
+test("Western Codex keeps the exact natal narrative and geometry, reopens without POST and exports sources", async ({
+  page, context,
 }) => {
   await page.route('**/CodexScreen-*.js',async route=>{await new Promise(resolve=>setTimeout(resolve,1000));await route.continue();});
+  const response = page.waitForResponse((r) => r.url().endsWith("/api/western"));
   const native = await reading(page);
+  const { natal_reading: live } = await (await response).json();
   expect(await page.evaluate(() => localStorage.length)).toBe(0);
   await page
     .getByRole("button", { name: "Save to this device", exact: true })
@@ -121,6 +123,14 @@ test("Western Codex explicitly saves only geometry, reopens without POST and exp
   ).toBeDisabled();
   const raw = await page.evaluate(() => localStorage.getItem("fate.codex.v1"));
   const saved = JSON.parse(raw!);
+  expect(saved.schemaVersion).toBe(2);
+  const narrative = saved.chapters[0].narrative;
+  expect(narrative.edition).toBe(live.profile);
+  expect(narrative.sections.slice(0, live.chapters.length)).toEqual(live.chapters.map(
+    ({ id, title, passages }: any) => ({ id, title, passages: passages.map((p: any) => ({
+      title: p.title, text: p.body, coverage: p.coverage === "direct" ? "direct" : "compositional", rules: p.rule_ids,
+    })) }),
+  ));
   expect(saved.chapters[0].snapshot.oracle).toBe(1);
   expect(saved.chapters[0].snapshot.angles).toEqual([
     native.angles.ascendant,
@@ -155,12 +165,32 @@ test("Western Codex explicitly saves only geometry, reopens without POST and exp
     "WESTERN ASTROLOGY",
   );
   await expect(page.locator(".codex-current .birth-chart")).toHaveCount(1);
+  const folio = page.locator(".narrative-folio");
+  for (const [i, section] of narrative.sections.entries()) {
+    await folio.getByRole("combobox", { name: "Reading section", exact: true }).selectOption(String(i));
+    await expect(folio.locator(".narrative-passage > p")).toHaveText(section.passages.map((p: any) => p.text));
+  }
+  await folio.getByText("Sources and scope", { exact: true }).click();
+  await expect(folio.getByText("fate.natal.v1", { exact: false }).first()).toBeVisible();
+  const tab = await context.newPage();
+  try {
+    await tab.goto("/#my-fate");
+    await tab.getByRole("button", { name: "Open your Codex", exact: true }).click();
+    await expect(tab.locator(".narrative-folio")).toContainText(narrative.sections[0].passages[0].text);
+  } finally {
+    await tab.close();
+  }
   const download = page.waitForEvent("download");
   await page
     .getByRole("button", { name: "Export this chapter", exact: true })
     .click();
   const dl = await download;
   expect(dl.suggestedFilename()).toContain(".json");
+  const { readFile } = await import("node:fs/promises");
+  const exported = JSON.parse(await readFile((await dl.path())!, "utf8"));
+  expect(exported.schemaVersion).toBe(2);
+  expect(exported.chapters[0].narrative).toEqual(narrative);
+  expect(exported.chapters[0].source_readings.flatMap((row: any) => row.rules).length).toBeGreaterThan(0);
   expect(posts).toEqual([]);
   expect(await page.evaluate(() => localStorage.getItem("fate.codex.v1"))).toBe(
     raw,

@@ -15,6 +15,7 @@ import { isSign } from "../signs/contracts";
 import { signTitle, signEvidence } from "../signs/reference";
 import { isRitualSnapshot } from "../ritual/contracts";
 import { ritualEvidence, ritualTitle } from "../ritual/reference";
+import { narrativeRule } from "./narrative";
 interface SourceMeaning {
   symbolic_focus: string;
   text: string;
@@ -36,6 +37,7 @@ export interface Evidence {
   url: string;
   locator: string;
   alternative: boolean;
+  rules?: { id: string; edition: string; url: string; locator: string; exceptions: string[] }[];
 }
 export function cardReference(id: string) {
   return cards[id];
@@ -139,15 +141,37 @@ export function evidenceFor(snapshot: Snapshot): Evidence[] {
     };
   });
 }
+export function chapterEvidence(chapter: Chapter): Evidence[] {
+  const { narrative } = chapter;
+  if (!narrative) return evidenceFor(chapter.snapshot);
+  return narrative.sections.flatMap((section) => section.passages.map((passage) => {
+    const rules = passage.rules.map((id) => {
+      const { edition, url, locator, exceptions } = narrativeRule(narrative.edition, id)!;
+      return { id, edition, url, locator, exceptions };
+    });
+    return {
+      label: `${section.title} · ${passage.title} · ${passage.coverage}`,
+      quote: passage.text,
+      wording: passage.text,
+      sourceId: rules[0].id,
+      url: rules[0].url,
+      locator: rules[0].locator,
+      alternative: false,
+      rules,
+    };
+  }));
+}
 export function exportChapters(chapters: Chapter[]) {
+  const narratives = chapters.some((chapter) => chapter.narrative);
   return {
-    schemaVersion: 1,
+    schemaVersion: narratives ? 2 : 1,
     application: "FATE · Living Codex",
-    scope:
-      "Minimal saved chapters and their versioned source references. Original inputs, replay seeds and Gemini commentary are excluded.",
+    scope: narratives
+      ? "Saved interpretations, calculated context and versioned sources. Chart geometry and pillar combinations can reveal inferred birth information."
+      : "Minimal saved chapters and their versioned source references. Original inputs, replay seeds and Gemini commentary are excluded.",
     chapters: chapters.map((chapter) => ({
       ...chapter,
-      source_readings: evidenceFor(chapter.snapshot),
+      source_readings: chapterEvidence(chapter),
     })),
   };
 }

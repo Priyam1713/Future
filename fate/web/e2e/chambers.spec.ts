@@ -54,8 +54,30 @@ async function save(page: Page, native: Env) {
   const raw = await page.evaluate(() => localStorage.getItem("fate.codex.v1"));
   if (!raw) throw new Error("No explicit chapter saved");
   const document = JSON.parse(raw);
-  expect(document.chapters[0].snapshot).toEqual(native.snapshot);
-  expect(document.chapters[0].reference).toBe("fate-four-chambers-v1");
+  const { oracle } = native.snapshot;
+  const saved = document.chapters[0];
+  if (oracle === 2) {
+    const { main, sub, year, active, ...geometry } = native.snapshot;
+    expect(saved.snapshot).toEqual(geometry);
+    expect(saved.reference).toBe("fate-jyotish-geometry-v1");
+    expect(saved.narrative.sections.map((section: any) => section.id)).toEqual([
+      "lagna", "lunar", "Sun", "Moon", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Rahu", "Ketu", "periods",
+    ]);
+    expect(saved.narrative.sections[0].passages[0].text).toBe(native.jyotish_reading!.chapters[0].text);
+    expect(saved.narrative.sections.at(-1).passages[0].text).toBe(native.jyotish_reading!.chapters[2].text);
+    expect(raw).not.toMatch(/"(main|sub|year|active|start_inclusive_utc|end_exclusive_utc)"/);
+    expect(raw).not.toContain(native.jyotish_reading!.timing.target);
+  } else {
+    expect(saved.snapshot).toEqual(native.snapshot);
+    expect(saved.reference).toBe("fate-four-chambers-v1");
+  }
+  if (oracle === 3) {
+    expect(saved.narrative.sections.map((section: any) => section.id)).toEqual(["day-master", "year", "month", "day", "hour"]);
+    expect(saved.narrative.sections[0].passages[0].text).toBe(native.result.reading.summary);
+    expect(raw).not.toContain(native.result.solar_month.start_inclusive.utc);
+    expect(raw).not.toContain(native.result.solar_month.end_exclusive.utc);
+  }
+  expect(document.schemaVersion).toBe(oracle === 2 || oracle === 3 ? 2 : 1);
   expect(raw).not.toMatch(
     /"(birth|local|zone|latitude|longitude|target|seed|replay|receipt|commentary|casting|question)"/,
   );
@@ -80,10 +102,23 @@ async function save(page: Page, native: Env) {
     path = await dl.path();
   const { readFile } = await import("node:fs/promises");
   const exported = JSON.parse(await readFile(path!, "utf8"));
-  expect(exported.chapters[0].snapshot).toEqual(native.snapshot);
+  expect(exported.chapters[0].snapshot).toEqual(saved.snapshot);
+  expect(exported.chapters[0].narrative).toEqual(saved.narrative);
   expect(exported.chapters[0].source_readings.length).toBeGreaterThan(0);
+  if (saved.narrative) {
+    const folio = page.locator(".narrative-folio");
+    for (const [i, section] of saved.narrative.sections.entries()) {
+      await folio.getByRole("combobox", { name: "Reading section", exact: true }).selectOption(String(i));
+      await expect(folio.locator(".narrative-passage > p")).toHaveText(
+        section.passages.map((passage: any) => passage.text),
+      );
+    }
+    await folio.getByRole("combobox", { name: "Reading section", exact: true }).selectOption("0");
+    await folio.getByText("Sources and scope", { exact: true }).click();
+    await expect(folio).toContainText(saved.narrative.sections[0].passages[0].rules[0]);
+  }
   expect(posts).toEqual([]);
-  writeFileSync(
+  if (!saved.narrative) writeFileSync(
     `../evidence/block06-privacy-${native.snapshot.oracle}.json`,
     JSON.stringify(
       {
@@ -140,6 +175,7 @@ test("Vedic D1 and D9 geometry, birth star and dasha controls round-trip through
     sub[1],
   );
   await save(page, native);
+  await page.getByText("Chart illustration", { exact: true }).click();
   await page.getByRole("button", { name: "D9 · Navamsa", exact: true }).click();
   await expect(
     page.locator(".chamber-folio [data-graha=Moon]"),
@@ -190,7 +226,7 @@ test("Jade Hall shows native pillar characters, selected stem relationships and 
     await expect(page.locator(".jade-reading")).toContainText(stem.name + " · " + stem.element + " · " + ten_god.name);
   }
   await save(page, native);
-  await expect(page.locator(".chamber-folio .jade-reading h3")).toContainText(
+  await expect(page.locator(".narrative-folio .narrative-passage h4")).toContainText(
     native.result.day_master.name,
   );
   await expect(page.locator(".chamber-folio .jade-context")).toHaveCount(0);

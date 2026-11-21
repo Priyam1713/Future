@@ -10,6 +10,7 @@ await build({
     "src/codex/records.ts",
     "src/codex/reference.ts",
     "src/codex/compare.ts",
+    "src/codex/projectNarrative.ts",
     "src/astrology/contracts.ts",
     "src/astrology/geometry.ts",
     "src/astrology/source.ts",
@@ -32,6 +33,9 @@ const ref = await import(
 );
 const compare = await import(
   pathToFileURL(resolve("../../tmp/codex-tests/compare.mjs"))
+);
+const { baziNarrative } = await import(
+  pathToFileURL(resolve("../../tmp/codex-tests/projectNarrative.mjs"))
 );
 class Memory {
   data = new Map();
@@ -123,7 +127,7 @@ test("explicit save persists a versioned chapter and duplicate taps keep one cha
 test("unknown versions and malformed records are retained byte-for-byte", () => {
   for (const raw of [
     "not json",
-    JSON.stringify({ schemaVersion: 2, chapters: [] }),
+    JSON.stringify({ schemaVersion: 3, chapters: [] }),
     JSON.stringify({ schemaVersion: 1, chapters: [{ name: "PRIVATE" }] }),
   ]) {
     const s = new Memory();
@@ -644,4 +648,96 @@ test("World of Signs Codex only accepts named, valid declarations and keeps haza
     }),
     false,
   );
+});
+
+const legacyVedic = () => JSON.parse(readFileSync("../evidence/block06-privacy-2.json")).stored.chapters[0];
+function savedBazi() {
+  const native = JSON.parse(readFileSync("../../data/bazi-core-1990.json"));
+  const snapshot = {
+    oracle: 3,
+    profile: native.profile,
+    pairs: ["year", "month", "day", "hour"].map((name) => native.pillars[name].sexagenary_index),
+  };
+  return r.chapterFor(native, snapshot, baziNarrative(snapshot, native));
+}
+
+test("first narrative save upgrades a mixed document atomically and preserves legacy IDs and exports", () => {
+  const storage = new Memory();
+  const legacy = legacyVedic();
+  const original = JSON.stringify({ schemaVersion: 1, chapters: [legacy] });
+  storage.data.set(r.STORAGE_KEY, original);
+  assert.deepEqual(r.readDocument(storage).chapters, [legacy]);
+  assert.equal(storage.writes, 0);
+  const reading = savedBazi();
+  assert(reading.narrative);
+  const next = r.saveChapter(storage, reading);
+  assert.deepEqual(next, { schemaVersion: 2, chapters: [legacy, reading] });
+  assert.deepEqual(r.readDocument(storage), next);
+  assert.equal(storage.writes, 1);
+  assert.deepEqual(r.saveChapter(storage, reading), next);
+  assert.equal(storage.writes, 1);
+  assert.throws(() => r.saveChapter(storage, { ...chapter(), id: reading.id }), /identifier/);
+  assert.throws(() => r.parseDocument(JSON.stringify({ ...next, chapters: [reading, reading] })));
+  const oldExport = ref.exportChapters([legacy]);
+  assert.equal(oldExport.schemaVersion, 1);
+  const combined = ref.exportChapters(next.chapters);
+  assert.equal(combined.schemaVersion, 2);
+  assert.deepEqual(combined.chapters[0], oldExport.chapters[0]);
+  assert.deepEqual(combined.chapters[1].narrative, reading.narrative);
+  const comparison = compare.compareChapters(legacy, reading);
+  assert(comparison.leftEvidence.every((e) => !e.rules));
+  assert(comparison.rightEvidence.every((e) => e.rules.every((rule) => rule.id.startsWith("chinese."))));
+  assert.deepEqual(r.deleteChapter(storage, reading.id), { schemaVersion: 2, chapters: [legacy] });
+});
+
+test("unavailable editions, missing rules, forged direct passages and private fields fail closed", () => {
+  for (const mutate of [
+    (n) => (n.edition = "unknown-edition"),
+    (n) => (n.technique = 2),
+    (n) => n.sections.reverse(),
+    (n) => (n.sections[0].passages[0].rules = []),
+    (n) => (n.sections[0].passages[0].rules = ["vedic.houses"]),
+    (n) => (n.sections[1].passages[0].text = "Changed direct source passage."),
+    (n) => (n.sections[0].passages[0].text = "<script>invalid</script>"),
+    (n) => (n.sections[0].passages[0].text = "x".repeat(1801)),
+    (n) => (n.sections[0].passages[0].url = "javascript:invalid"),
+    (n) => (n.sections[0].birth = "private"),
+  ]) {
+    const reading = savedBazi();
+    mutate(reading.narrative);
+    const raw = JSON.stringify({ schemaVersion: 2, chapters: [legacyVedic(), reading] });
+    const storage = new Memory();
+    storage.data.set(r.STORAGE_KEY, raw);
+    assert.throws(() => r.saveChapter(storage, chapter()), /unrecognized chapter or source edition/);
+    assert.equal(storage.getItem(r.STORAGE_KEY), raw);
+    assert.equal(storage.writes, 0);
+  }
+  assert.throws(() => r.parseDocument(JSON.stringify({ schemaVersion: 1, chapters: [savedBazi()] })));
+});
+
+test("failed upgrade and narrative capacity overflow keep previous records recoverable", () => {
+  const storage = new Memory();
+  const original = JSON.stringify({ schemaVersion: 1, chapters: [legacyVedic()] });
+  storage.data.set(r.STORAGE_KEY, original);
+  storage.setItem = () => { throw new DOMException("Quota", "QuotaExceededError"); };
+  const reading = savedBazi();
+  assert.throws(() => r.saveChapter(storage, reading), { name: "QuotaExceededError" });
+  assert.equal(storage.getItem(r.STORAGE_KEY), original);
+  storage.setItem = Memory.prototype.setItem;
+  assert.equal(r.saveChapter(storage, reading).chapters.length, 2);
+  let overflow = false;
+  for (let i = 0; i < 49; i++) {
+    const before = storage.getItem(r.STORAGE_KEY);
+    try {
+      r.saveChapter(storage, savedBazi());
+    } catch (error) {
+      assert.match(error.message, /Codex is full/);
+      assert.equal(storage.getItem(r.STORAGE_KEY), before);
+      assert.equal(r.readDocument(storage).chapters[0].id, legacyVedic().id);
+      overflow = true;
+      break;
+    }
+  }
+  assert(overflow);
+  assert.throws(() => r.parseDocument(" ".repeat(65537)), /safe reading limit/);
 });

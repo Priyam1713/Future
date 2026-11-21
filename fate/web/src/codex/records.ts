@@ -24,7 +24,9 @@ import {
   isChamberSnapshot,
   validChamber,
   type ChamberSnapshot,
+  type VedicGeometry,
 } from "../chambers/contracts";
+import { validNarrative, type Narrative } from "./narrative";
 import { TRANSIT_REFERENCE, type TransitSnapshot } from "../turning/contracts";
 import { validTransit } from "../turning/validation";
 import {
@@ -43,12 +45,14 @@ export const STORAGE_KEY = "fate.codex.v1";
 export const REFERENCE = "fate-codex-reference-v1";
 export const MAX_CHAPTERS = 50;
 const MAX_LENGTH = 65536;
+export const JYOTISH_GEOMETRY_REFERENCE = "fate-jyotish-geometry-v1";
 export type Snapshot =
   | FutureBookmark
   | Bookmark
   | SignSnapshot
   | RitualSnapshot
   | ChamberSnapshot
+  | VedicGeometry
   | TransitSnapshot
   | WesternSnapshot
   | {
@@ -73,13 +77,15 @@ export interface Chapter {
     | typeof REFERENCE
     | typeof WESTERN_REFERENCE
     | typeof CHAMBER_REFERENCE
+    | typeof JYOTISH_GEOMETRY_REFERENCE
     | typeof SIGN_REFERENCE
     | typeof RITUAL_REFERENCE
     | typeof TRANSIT_REFERENCE;
   snapshot: Snapshot;
+  narrative?: Narrative;
 }
 export interface CodexDocument {
-  schemaVersion: 1;
+  schemaVersion: 1 | 2;
   chapters: Chapter[];
 }
 export interface StoragePort {
@@ -231,19 +237,26 @@ function editionFor(snapshot: Snapshot): Chapter["reference"] {
   if (isRitualSnapshot(snapshot)) return RITUAL_REFERENCE;
   if (snapshot.profile === "turning-sky-v1") return TRANSIT_REFERENCE;
   if (snapshot.oracle === 1) return WESTERN_REFERENCE;
+  if (snapshot.oracle === 2 && !("sub" in snapshot)) return JYOTISH_GEOMETRY_REFERENCE;
   return isChamberSnapshot(snapshot) ? CHAMBER_REFERENCE : REFERENCE;
 }
 export function validChapter(c: unknown): c is Chapter {
+  if (!object(c)) return false;
+  const hasNarrative = Object.hasOwn(c, "narrative");
+  const snapshot = c.snapshot;
+  if (!(object(snapshot) && (hasNarrative && snapshot.oracle === 2
+    ? validChamber(snapshot, true)
+    : validSnapshot(snapshot)))) return false;
   return (
-    object(c) &&
-    keys(c, ["id", "savedAt", "reference", "snapshot"]) &&
+    keys(c, ["id", "savedAt", "reference", "snapshot", ...(hasNarrative ? ["narrative"] : [])]) &&
     typeof c.id === "string" &&
     /^[a-f0-9-]{36}$/.test(c.id) &&
     typeof c.savedAt === "string" &&
     /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/.test(c.savedAt) &&
     Number.isFinite(Date.parse(c.savedAt)) &&
-    validSnapshot(c.snapshot) &&
-    c.reference === editionFor(c.snapshot)
+    c.reference === editionFor(snapshot as Snapshot) &&
+    (!hasNarrative || (snapshot.profile !== "turning-sky-v1" &&
+      validNarrative(c.narrative, Number(snapshot.oracle))))
   );
 }
 export function parseDocument(raw: string | null): CodexDocument {
@@ -260,7 +273,7 @@ export function parseDocument(raw: string | null): CodexDocument {
       "This device’s Codex could not be read. Its stored record has been left untouched.",
     );
   }
-  if (!object(value) || value.schemaVersion !== 1)
+  if (!object(value) || (value.schemaVersion !== 1 && value.schemaVersion !== 2))
     throw new Error(
       "This Codex uses an unavailable version. Its stored record has been left untouched.",
     );
@@ -269,10 +282,11 @@ export function parseDocument(raw: string | null): CodexDocument {
     !Array.isArray(value.chapters) ||
     value.chapters.length > MAX_CHAPTERS ||
     !value.chapters.every(validChapter) ||
+    (value.schemaVersion === 1 && value.chapters.some((c) => c.narrative)) ||
     new Set(value.chapters.map((c) => c.id)).size !== value.chapters.length
   )
     throw new Error(
-      "This Codex contains an unrecognized chapter. Its stored record has been left untouched.",
+      "This Codex contains an unrecognized chapter or source edition. Its stored record has been left untouched.",
     );
   return value as unknown as CodexDocument;
 }
@@ -288,25 +302,31 @@ export function saveChapter(
       "This reading cannot be saved in the current Codex edition.",
     );
   const document = readDocument(storage);
-  if (document.chapters.some((c) => c.id === chapter.id)) return document;
+  const existing = document.chapters.find((c) => c.id === chapter.id);
+  if (existing) {
+    const payload = (c: Chapter) => JSON.stringify([c.reference, c.snapshot, c.narrative]);
+    if (payload(existing) === payload(chapter)) return document;
+    throw new Error("This Codex already contains a different chapter with that identifier.");
+  }
   if (document.chapters.length >= MAX_CHAPTERS)
     throw new Error(
       "This edition holds 50 chapters. Export your Codex, then delete a chapter to make room.",
     );
   const next: CodexDocument = {
-    schemaVersion: 1,
+    schemaVersion: chapter.narrative ? 2 : document.schemaVersion,
     chapters: [...document.chapters, chapter],
   };
   const encoded = JSON.stringify(next);
   if (encoded.length > MAX_LENGTH)
     throw new Error("This Codex is full. Export it before making room.");
+  const verified = parseDocument(encoded);
   storage.setItem(STORAGE_KEY, encoded);
-  return next;
+  return verified;
 }
 export function deleteChapter(storage: StoragePort, id: string): CodexDocument {
   const current = readDocument(storage);
   const next: CodexDocument = {
-    schemaVersion: 1,
+    schemaVersion: current.schemaVersion,
     chapters: current.chapters.filter((c) => c.id !== id),
   };
   if (next.chapters.length) storage.setItem(STORAGE_KEY, JSON.stringify(next));
@@ -334,7 +354,7 @@ export function numberSnapshot(result: NumberResult): Snapshot {
   };
 }
 const identities = new WeakMap<object, string>();
-export function chapterFor(native: object, snapshot: Snapshot): Chapter {
+export function chapterFor(native: object, snapshot: Snapshot, narrative?: Narrative): Chapter {
   let id = identities.get(native);
   if (!id) {
     id = crypto.randomUUID();
@@ -345,5 +365,6 @@ export function chapterFor(native: object, snapshot: Snapshot): Chapter {
     savedAt: new Date().toISOString(),
     reference: editionFor(snapshot),
     snapshot,
+    ...(narrative ? { narrative } : {}),
   };
 }

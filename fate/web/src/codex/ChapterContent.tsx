@@ -18,6 +18,7 @@ import { isSign } from "../signs/contracts";
 import { SavedSign } from "../signs/SignsScreen";
 import { isRitualSnapshot, RITUAL_ROOMS } from "../ritual/contracts";
 import { RitualChapter, RitualReading } from "../ritual/Readings";
+import { NarrativeReading } from "./NarrativeReading";
 export function ChapterIllustration({ chapter }: { chapter: Chapter }) {
   const s = chapter.snapshot;
   if (isFutureBookmark(s)) return <FutureChapter s={s} compact />;
@@ -34,8 +35,9 @@ export function ChapterIllustration({ chapter }: { chapter: Chapter }) {
       <div
         className={"chamber-miniature chamber-" + ROOMS[s.oracle].slug}
         data-motion="still"
+        data-reading={chapter.narrative?.technique}
       >
-        <Instrument snapshot={s} compact />
+        <Instrument snapshot={s} compact frames={chapter.narrative?.technique === 2} />
       </div>
     );
   if (s.profile === "turning-sky-v1")
@@ -89,6 +91,15 @@ export function ChapterContent({
   chapter: Chapter;
   index: number;
 }) {
+  if (chapter.narrative) {
+    const s = chapter.snapshot;
+    const context = s.oracle === 1 && s.profile === "modern-tropical-v1"
+      ? `Tropical · ${s.houses} houses · Ascendant ${degree(s.angles[0])}`
+      : s.oracle === 3 ? `Clock convention · ${s.profile}` : "Sidereal · Rashi and Navamsa";
+    return <NarrativeReading key={chapter.id} narrative={chapter.narrative}
+      title={chapterTitle(chapter)} context={context}
+      illustration={<ChapterIllustration chapter={chapter} />} />;
+  }
   if (isFutureBookmark(chapter.snapshot))
     return <FutureChapter key={chapter.id} s={chapter.snapshot} />;
   if (isBookmark(chapter.snapshot))
